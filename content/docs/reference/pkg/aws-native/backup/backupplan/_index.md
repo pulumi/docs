@@ -27,7 +27,7 @@ Resource Type definition for AWS::Backup::BackupPlan
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">BackupPlan</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-               <span class="nx">backup_plan</span><span class="p">:</span> <span class="nx">Optional[BackupPlanBackupPlanResourceTypeArgs]</span> = None<span class="p">,</span>
+               <span class="nx">backup_plan</span><span class="p">:</span> <span class="nx">Optional[BackupPlanResourceTypeArgs]</span> = None<span class="p">,</span>
                <span class="nx">backup_plan_tags</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">BackupPlan</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -162,7 +162,7 @@ The BackupPlan resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#backupplanvalue_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Plan<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupplanbackupplanresourcetype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Backup.<wbr>Inputs.<wbr>Backup<wbr>Plan<wbr>Backup<wbr>Plan<wbr>Resource<wbr>Type<wbr>Args</a></span>
+        <span class="property-type"><a href="#backupplanresourcetype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Backup.<wbr>Inputs.<wbr>Backup<wbr>Plan<wbr>Resource<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -182,7 +182,7 @@ The BackupPlan resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#backupplan_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupplanbackupplanresourcetype">Backup<wbr>Plan<wbr>Backup<wbr>Plan<wbr>Resource<wbr>Type<wbr>Args</a></span>
+        <span class="property-type"><a href="#backupplanresourcetype">Backup<wbr>Plan<wbr>Resource<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -202,7 +202,7 @@ The BackupPlan resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#backupplan_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupplanbackupplanresourcetype">Backup<wbr>Plan<wbr>Backup<wbr>Plan<wbr>Resource<wbr>Type<wbr>Args</a></span>
+        <span class="property-type"><a href="#backupplanresourcetype">Backup<wbr>Plan<wbr>Resource<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -222,7 +222,7 @@ The BackupPlan resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#backup_plan_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupplanbackupplanresourcetype">Backup<wbr>Plan<wbr>Backup<wbr>Plan<wbr>Resource<wbr>Type<wbr>Args</a></span>
+        <span class="property-type"><a href="#backupplanresourcetype">Backup<wbr>Plan<wbr>Resource<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -474,120 +474,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="backupplanbackupplanresourcetype">Backup<wbr>Plan<wbr>Backup<wbr>Plan<wbr>Resource<wbr>Type</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="backupplanname_csharp">
-<a href="#backupplanname_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Plan<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="backupplanrule_csharp">
-<a href="#backupplanrule_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Plan<wbr>Rule</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupplanbackupruleresourcetype">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Backup.<wbr>Inputs.<wbr>Backup<wbr>Plan<wbr>Backup<wbr>Rule<wbr>Resource<wbr>Type&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="advancedbackupsettings_csharp">
-<a href="#advancedbackupsettings_csharp" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Backup<wbr>Settings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupplanadvancedbackupsettingresourcetype">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Backup.<wbr>Inputs.<wbr>Backup<wbr>Plan<wbr>Advanced<wbr>Backup<wbr>Setting<wbr>Resource<wbr>Type&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="backupplanname_go">
-<a href="#backupplanname_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Plan<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="backupplanrule_go">
-<a href="#backupplanrule_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Plan<wbr>Rule</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupplanbackupruleresourcetype">[]Backup<wbr>Plan<wbr>Backup<wbr>Rule<wbr>Resource<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="advancedbackupsettings_go">
-<a href="#advancedbackupsettings_go" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Backup<wbr>Settings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupplanadvancedbackupsettingresourcetype">[]Backup<wbr>Plan<wbr>Advanced<wbr>Backup<wbr>Setting<wbr>Resource<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="backupplanname_nodejs">
-<a href="#backupplanname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Plan<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="backupplanrule_nodejs">
-<a href="#backupplanrule_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Plan<wbr>Rule</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupplanbackupruleresourcetype">Backup<wbr>Plan<wbr>Backup<wbr>Rule<wbr>Resource<wbr>Type[]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="advancedbackupsettings_nodejs">
-<a href="#advancedbackupsettings_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Backup<wbr>Settings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupplanadvancedbackupsettingresourcetype">Backup<wbr>Plan<wbr>Advanced<wbr>Backup<wbr>Setting<wbr>Resource<wbr>Type[]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="backup_plan_name_python">
-<a href="#backup_plan_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>plan_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="backup_plan_rule_python">
-<a href="#backup_plan_rule_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>plan_<wbr>rule</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupplanbackupruleresourcetype">Sequence[Backup<wbr>Plan<wbr>Backup<wbr>Rule<wbr>Resource<wbr>Type]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="advanced_backup_settings_python">
-<a href="#advanced_backup_settings_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>backup_<wbr>settings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupplanadvancedbackupsettingresourcetype">Sequence[Backup<wbr>Plan<wbr>Advanced<wbr>Backup<wbr>Setting<wbr>Resource<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1058,6 +944,120 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="backupplanresourcetype">Backup<wbr>Plan<wbr>Resource<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="backupplanname_csharp">
+<a href="#backupplanname_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Plan<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="backupplanrule_csharp">
+<a href="#backupplanrule_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Plan<wbr>Rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backupplanbackupruleresourcetype">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Backup.<wbr>Inputs.<wbr>Backup<wbr>Plan<wbr>Backup<wbr>Rule<wbr>Resource<wbr>Type&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="advancedbackupsettings_csharp">
+<a href="#advancedbackupsettings_csharp" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Backup<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backupplanadvancedbackupsettingresourcetype">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Backup.<wbr>Inputs.<wbr>Backup<wbr>Plan<wbr>Advanced<wbr>Backup<wbr>Setting<wbr>Resource<wbr>Type&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="backupplanname_go">
+<a href="#backupplanname_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Plan<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="backupplanrule_go">
+<a href="#backupplanrule_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Plan<wbr>Rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backupplanbackupruleresourcetype">[]Backup<wbr>Plan<wbr>Backup<wbr>Rule<wbr>Resource<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="advancedbackupsettings_go">
+<a href="#advancedbackupsettings_go" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Backup<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backupplanadvancedbackupsettingresourcetype">[]Backup<wbr>Plan<wbr>Advanced<wbr>Backup<wbr>Setting<wbr>Resource<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="backupplanname_nodejs">
+<a href="#backupplanname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Plan<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="backupplanrule_nodejs">
+<a href="#backupplanrule_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Plan<wbr>Rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backupplanbackupruleresourcetype">Backup<wbr>Plan<wbr>Backup<wbr>Rule<wbr>Resource<wbr>Type[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="advancedbackupsettings_nodejs">
+<a href="#advancedbackupsettings_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Backup<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backupplanadvancedbackupsettingresourcetype">Backup<wbr>Plan<wbr>Advanced<wbr>Backup<wbr>Setting<wbr>Resource<wbr>Type[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="backup_plan_name_python">
+<a href="#backup_plan_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>plan_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="backup_plan_rule_python">
+<a href="#backup_plan_rule_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>plan_<wbr>rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backupplanbackupruleresourcetype">Sequence[Backup<wbr>Plan<wbr>Backup<wbr>Rule<wbr>Resource<wbr>Type]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="advanced_backup_settings_python">
+<a href="#advanced_backup_settings_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>backup_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backupplanadvancedbackupsettingresourcetype">Sequence[Backup<wbr>Plan<wbr>Advanced<wbr>Backup<wbr>Setting<wbr>Resource<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

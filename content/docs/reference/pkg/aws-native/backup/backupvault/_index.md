@@ -20,7 +20,7 @@ Resource Type definition for AWS::Backup::BackupVault
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BackupVault</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">BackupVaultArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BackupVault</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BackupVaultArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -28,22 +28,23 @@ Resource Type definition for AWS::Backup::BackupVault
 <span class="k">def </span><span class="nx">BackupVault</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                 <span class="nx">access_policy</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">,</span>
+                <span class="nx">backup_vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">backup_vault_tags</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">,</span>
                 <span class="nx">encryption_key_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">lock_configuration</span><span class="p">:</span> <span class="nx">Optional[BackupVaultLockConfigurationTypeArgs]</span> = None<span class="p">,</span>
                 <span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[BackupVaultNotificationObjectTypeArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">BackupVault</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[BackupVaultArgs]</a></span> = None<span class="p">,</span>
+                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BackupVaultArgs</a></span><span class="p">,</span>
                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBackupVault</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">BackupVaultArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BackupVault</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBackupVault</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BackupVaultArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BackupVault</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BackupVault</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">BackupVaultArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BackupVault</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">BackupVaultArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -55,7 +56,7 @@ Resource Type definition for AWS::Backup::BackupVault
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-optional" title="Optional">
+        class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">BackupVaultArgs</a></span>
@@ -79,7 +80,7 @@ Resource Type definition for AWS::Backup::BackupVault
         <span class="property-type">str</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-optional" title="Optional">
+        class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">BackupVaultArgs</a></span>
@@ -109,7 +110,7 @@ Resource Type definition for AWS::Backup::BackupVault
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-optional" title="Optional">
+        class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">BackupVaultArgs</a></span>
@@ -133,7 +134,7 @@ Resource Type definition for AWS::Backup::BackupVault
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-optional" title="Optional">
+        class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">BackupVaultArgs</a></span>
@@ -159,7 +160,15 @@ The BackupVault resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="backupvaultname_csharp">
+<a href="#backupvaultname_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Vault<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesspolicy_csharp">
 <a href="#accesspolicy_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Policy</a>
@@ -203,7 +212,15 @@ The BackupVault resource accepts the following [input]({{< relref "/docs/intro/c
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="backupvaultname_go">
+<a href="#backupvaultname_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Vault<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesspolicy_go">
 <a href="#accesspolicy_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Policy</a>
@@ -247,7 +264,15 @@ The BackupVault resource accepts the following [input]({{< relref "/docs/intro/c
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="backupvaultname_nodejs">
+<a href="#backupvaultname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Vault<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesspolicy_nodejs">
 <a href="#accesspolicy_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Policy</a>
@@ -291,7 +316,15 @@ The BackupVault resource accepts the following [input]({{< relref "/docs/intro/c
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="backup_vault_name_python">
+<a href="#backup_vault_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>vault_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="access_policy_python">
 <a href="#access_policy_python" style="color: inherit; text-decoration: inherit;">access_<wbr>policy</a>
@@ -352,14 +385,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="backupvaultname_csharp">
-<a href="#backupvaultname_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Vault<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -374,14 +399,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="backupvaultarn_go">
 <a href="#backupvaultarn_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Vault<wbr>Arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="backupvaultname_go">
-<a href="#backupvaultname_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Vault<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -408,14 +425,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="backupvaultname_nodejs">
-<a href="#backupvaultname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Vault<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -430,14 +439,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="backup_vault_arn_python">
 <a href="#backup_vault_arn_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>vault_<wbr>arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="backup_vault_name_python">
-<a href="#backup_vault_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>vault_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -466,7 +467,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="backupvaultlockconfigurationtype">Backup<wbr>Vault<wbr>Lock<wbr>Configuration<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="minretentiondays_csharp">
+<a href="#minretentiondays_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Retention<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="changeablefordays_csharp">
 <a href="#changeablefordays_csharp" style="color: inherit; text-decoration: inherit;">Changeable<wbr>For<wbr>Days</a>
@@ -482,19 +491,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="minretentiondays_csharp">
-<a href="#minretentiondays_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Retention<wbr>Days</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">double</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="minretentiondays_go">
+<a href="#minretentiondays_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Retention<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="changeablefordays_go">
 <a href="#changeablefordays_go" style="color: inherit; text-decoration: inherit;">Changeable<wbr>For<wbr>Days</a>
@@ -510,19 +519,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="minretentiondays_go">
-<a href="#minretentiondays_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Retention<wbr>Days</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float64</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="minretentiondays_nodejs">
+<a href="#minretentiondays_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Retention<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="changeablefordays_nodejs">
 <a href="#changeablefordays_nodejs" style="color: inherit; text-decoration: inherit;">changeable<wbr>For<wbr>Days</a>
@@ -538,19 +547,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="minretentiondays_nodejs">
-<a href="#minretentiondays_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Retention<wbr>Days</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="min_retention_days_python">
+<a href="#min_retention_days_python" style="color: inherit; text-decoration: inherit;">min_<wbr>retention_<wbr>days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="changeable_for_days_python">
 <a href="#changeable_for_days_python" style="color: inherit; text-decoration: inherit;">changeable_<wbr>for_<wbr>days</a>
@@ -562,14 +571,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="max_retention_days_python">
 <a href="#max_retention_days_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retention_<wbr>days</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="min_retention_days_python">
-<a href="#min_retention_days_python" style="color: inherit; text-decoration: inherit;">min_<wbr>retention_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>

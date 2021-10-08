@@ -30,9 +30,9 @@ Resource Type definition for AWS::SageMaker::MonitoringSchedule
                        <span class="nx">endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                        <span class="nx">failure_reason</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                        <span class="nx">last_monitoring_execution_summary</span><span class="p">:</span> <span class="nx">Optional[MonitoringScheduleMonitoringExecutionSummaryArgs]</span> = None<span class="p">,</span>
-                       <span class="nx">monitoring_schedule_config</span><span class="p">:</span> <span class="nx">Optional[MonitoringScheduleMonitoringScheduleConfigArgs]</span> = None<span class="p">,</span>
+                       <span class="nx">monitoring_schedule_config</span><span class="p">:</span> <span class="nx">Optional[MonitoringScheduleConfigArgs]</span> = None<span class="p">,</span>
                        <span class="nx">monitoring_schedule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                       <span class="nx">monitoring_schedule_status</span><span class="p">:</span> <span class="nx">Optional[MonitoringScheduleMonitoringScheduleStatus]</span> = None<span class="p">,</span>
+                       <span class="nx">monitoring_schedule_status</span><span class="p">:</span> <span class="nx">Optional[MonitoringScheduleStatus]</span> = None<span class="p">,</span>
                        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[MonitoringScheduleTagArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">MonitoringSchedule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -167,7 +167,7 @@ The MonitoringSchedule resource accepts the following [input]({{< relref "/docs/
 <a href="#monitoringscheduleconfig_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Schedule<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitoringschedulemonitoringscheduleconfig">Pulumi.<wbr>Aws<wbr>Native.<wbr>Sage<wbr>Maker.<wbr>Inputs.<wbr>Monitoring<wbr>Schedule<wbr>Monitoring<wbr>Schedule<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#monitoringscheduleconfig">Pulumi.<wbr>Aws<wbr>Native.<wbr>Sage<wbr>Maker.<wbr>Inputs.<wbr>Monitoring<wbr>Schedule<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -207,7 +207,7 @@ The MonitoringSchedule resource accepts the following [input]({{< relref "/docs/
 <a href="#monitoringschedulestatus_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Schedule<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitoringschedulemonitoringschedulestatus">Pulumi.<wbr>Aws<wbr>Native.<wbr>Sage<wbr>Maker.<wbr>Monitoring<wbr>Schedule<wbr>Monitoring<wbr>Schedule<wbr>Status</a></span>
+        <span class="property-type"><a href="#monitoringschedulestatus">Pulumi.<wbr>Aws<wbr>Native.<wbr>Sage<wbr>Maker.<wbr>Monitoring<wbr>Schedule<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of a schedule job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -227,7 +227,7 @@ The MonitoringSchedule resource accepts the following [input]({{< relref "/docs/
 <a href="#monitoringscheduleconfig_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Schedule<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitoringschedulemonitoringscheduleconfig">Monitoring<wbr>Schedule<wbr>Monitoring<wbr>Schedule<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#monitoringscheduleconfig">Monitoring<wbr>Schedule<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -267,7 +267,7 @@ The MonitoringSchedule resource accepts the following [input]({{< relref "/docs/
 <a href="#monitoringschedulestatus_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Schedule<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitoringschedulemonitoringschedulestatus">Monitoring<wbr>Schedule<wbr>Monitoring<wbr>Schedule<wbr>Status</a></span>
+        <span class="property-type"><a href="#monitoringschedulestatus">Monitoring<wbr>Schedule<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of a schedule job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -287,7 +287,7 @@ The MonitoringSchedule resource accepts the following [input]({{< relref "/docs/
 <a href="#monitoringscheduleconfig_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Schedule<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitoringschedulemonitoringscheduleconfig">Monitoring<wbr>Schedule<wbr>Monitoring<wbr>Schedule<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#monitoringscheduleconfig">Monitoring<wbr>Schedule<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -327,7 +327,7 @@ The MonitoringSchedule resource accepts the following [input]({{< relref "/docs/
 <a href="#monitoringschedulestatus_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Schedule<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitoringschedulemonitoringschedulestatus">Monitoring<wbr>Schedule<wbr>Monitoring<wbr>Schedule<wbr>Status</a></span>
+        <span class="property-type"><a href="#monitoringschedulestatus">Monitoring<wbr>Schedule<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of a schedule job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -347,7 +347,7 @@ The MonitoringSchedule resource accepts the following [input]({{< relref "/docs/
 <a href="#monitoring_schedule_config_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>schedule_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitoringschedulemonitoringscheduleconfig">Monitoring<wbr>Schedule<wbr>Monitoring<wbr>Schedule<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#monitoringscheduleconfig">Monitoring<wbr>Schedule<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -387,7 +387,7 @@ The MonitoringSchedule resource accepts the following [input]({{< relref "/docs/
 <a href="#monitoring_schedule_status_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>schedule_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitoringschedulemonitoringschedulestatus">Monitoring<wbr>Schedule<wbr>Monitoring<wbr>Schedule<wbr>Status</a></span>
+        <span class="property-type"><a href="#monitoringschedulestatus">Monitoring<wbr>Schedule<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of a schedule job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -787,6 +787,152 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS Key Management Service (AWS KMS) key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance(s) that run the model monitoring job.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="monitoringscheduleconfig">Monitoring<wbr>Schedule<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="monitoringjobdefinition_csharp">
+<a href="#monitoringjobdefinition_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Job<wbr>Definition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitoringschedulemonitoringjobdefinition">Pulumi.<wbr>Aws<wbr>Native.<wbr>Sage<wbr>Maker.<wbr>Inputs.<wbr>Monitoring<wbr>Schedule<wbr>Monitoring<wbr>Job<wbr>Definition</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="monitoringjobdefinitionname_csharp">
+<a href="#monitoringjobdefinitionname_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Job<wbr>Definition<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the job definition{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="monitoringtype_csharp">
+<a href="#monitoringtype_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitoringschedulemonitoringtype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Sage<wbr>Maker.<wbr>Monitoring<wbr>Schedule<wbr>Monitoring<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="scheduleconfig_csharp">
+<a href="#scheduleconfig_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitoringschedulescheduleconfig">Pulumi.<wbr>Aws<wbr>Native.<wbr>Sage<wbr>Maker.<wbr>Inputs.<wbr>Monitoring<wbr>Schedule<wbr>Schedule<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="monitoringjobdefinition_go">
+<a href="#monitoringjobdefinition_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Job<wbr>Definition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitoringschedulemonitoringjobdefinition">Monitoring<wbr>Schedule<wbr>Monitoring<wbr>Job<wbr>Definition</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="monitoringjobdefinitionname_go">
+<a href="#monitoringjobdefinitionname_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Job<wbr>Definition<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the job definition{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="monitoringtype_go">
+<a href="#monitoringtype_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitoringschedulemonitoringtype">Monitoring<wbr>Schedule<wbr>Monitoring<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="scheduleconfig_go">
+<a href="#scheduleconfig_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitoringschedulescheduleconfig">Monitoring<wbr>Schedule<wbr>Schedule<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="monitoringjobdefinition_nodejs">
+<a href="#monitoringjobdefinition_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Job<wbr>Definition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitoringschedulemonitoringjobdefinition">Monitoring<wbr>Schedule<wbr>Monitoring<wbr>Job<wbr>Definition</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="monitoringjobdefinitionname_nodejs">
+<a href="#monitoringjobdefinitionname_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Job<wbr>Definition<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the job definition{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="monitoringtype_nodejs">
+<a href="#monitoringtype_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitoringschedulemonitoringtype">Monitoring<wbr>Schedule<wbr>Monitoring<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="scheduleconfig_nodejs">
+<a href="#scheduleconfig_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitoringschedulescheduleconfig">Monitoring<wbr>Schedule<wbr>Schedule<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="monitoring_job_definition_python">
+<a href="#monitoring_job_definition_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>job_<wbr>definition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitoringschedulemonitoringjobdefinition">Monitoring<wbr>Schedule<wbr>Monitoring<wbr>Job<wbr>Definition</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="monitoring_job_definition_name_python">
+<a href="#monitoring_job_definition_name_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>job_<wbr>definition_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the job definition{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="monitoring_type_python">
+<a href="#monitoring_type_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitoringschedulemonitoringtype">Monitoring<wbr>Schedule<wbr>Monitoring<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schedule_config_python">
+<a href="#schedule_config_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitoringschedulescheduleconfig">Monitoring<wbr>Schedule<wbr>Schedule<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="monitoringscheduleconstraintsresource">Monitoring<wbr>Schedule<wbr>Constraints<wbr>Resource</h4>
@@ -2073,186 +2219,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="monitoringschedulemonitoringscheduleconfig">Monitoring<wbr>Schedule<wbr>Monitoring<wbr>Schedule<wbr>Config</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="monitoringjobdefinition_csharp">
-<a href="#monitoringjobdefinition_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Job<wbr>Definition</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitoringschedulemonitoringjobdefinition">Pulumi.<wbr>Aws<wbr>Native.<wbr>Sage<wbr>Maker.<wbr>Inputs.<wbr>Monitoring<wbr>Schedule<wbr>Monitoring<wbr>Job<wbr>Definition</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="monitoringjobdefinitionname_csharp">
-<a href="#monitoringjobdefinitionname_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Job<wbr>Definition<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the job definition{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="monitoringtype_csharp">
-<a href="#monitoringtype_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitoringschedulemonitoringtype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Sage<wbr>Maker.<wbr>Monitoring<wbr>Schedule<wbr>Monitoring<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="scheduleconfig_csharp">
-<a href="#scheduleconfig_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Config</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitoringschedulescheduleconfig">Pulumi.<wbr>Aws<wbr>Native.<wbr>Sage<wbr>Maker.<wbr>Inputs.<wbr>Monitoring<wbr>Schedule<wbr>Schedule<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="monitoringjobdefinition_go">
-<a href="#monitoringjobdefinition_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Job<wbr>Definition</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitoringschedulemonitoringjobdefinition">Monitoring<wbr>Schedule<wbr>Monitoring<wbr>Job<wbr>Definition</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="monitoringjobdefinitionname_go">
-<a href="#monitoringjobdefinitionname_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Job<wbr>Definition<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the job definition{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="monitoringtype_go">
-<a href="#monitoringtype_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitoringschedulemonitoringtype">Monitoring<wbr>Schedule<wbr>Monitoring<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="scheduleconfig_go">
-<a href="#scheduleconfig_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Config</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitoringschedulescheduleconfig">Monitoring<wbr>Schedule<wbr>Schedule<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="monitoringjobdefinition_nodejs">
-<a href="#monitoringjobdefinition_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Job<wbr>Definition</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitoringschedulemonitoringjobdefinition">Monitoring<wbr>Schedule<wbr>Monitoring<wbr>Job<wbr>Definition</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="monitoringjobdefinitionname_nodejs">
-<a href="#monitoringjobdefinitionname_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Job<wbr>Definition<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the job definition{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="monitoringtype_nodejs">
-<a href="#monitoringtype_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitoringschedulemonitoringtype">Monitoring<wbr>Schedule<wbr>Monitoring<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="scheduleconfig_nodejs">
-<a href="#scheduleconfig_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Config</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitoringschedulescheduleconfig">Monitoring<wbr>Schedule<wbr>Schedule<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="monitoring_job_definition_python">
-<a href="#monitoring_job_definition_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>job_<wbr>definition</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitoringschedulemonitoringjobdefinition">Monitoring<wbr>Schedule<wbr>Monitoring<wbr>Job<wbr>Definition</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="monitoring_job_definition_name_python">
-<a href="#monitoring_job_definition_name_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>job_<wbr>definition_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the job definition{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="monitoring_type_python">
-<a href="#monitoring_type_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitoringschedulemonitoringtype">Monitoring<wbr>Schedule<wbr>Monitoring<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="schedule_config_python">
-<a href="#schedule_config_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>config</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitoringschedulescheduleconfig">Monitoring<wbr>Schedule<wbr>Schedule<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="monitoringschedulemonitoringschedulestatus">Monitoring<wbr>Schedule<wbr>Monitoring<wbr>Schedule<wbr>Status</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Pending</dt>
-    <dd>Pending</dd><dt>Failed</dt>
-    <dd>Failed</dd><dt>Scheduled</dt>
-    <dd>Scheduled</dd><dt>Stopped</dt>
-    <dd>Stopped</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Monitoring<wbr>Schedule<wbr>Monitoring<wbr>Schedule<wbr>Status<wbr>Pending</dt>
-    <dd>Pending</dd><dt>Monitoring<wbr>Schedule<wbr>Monitoring<wbr>Schedule<wbr>Status<wbr>Failed</dt>
-    <dd>Failed</dd><dt>Monitoring<wbr>Schedule<wbr>Monitoring<wbr>Schedule<wbr>Status<wbr>Scheduled</dt>
-    <dd>Scheduled</dd><dt>Monitoring<wbr>Schedule<wbr>Monitoring<wbr>Schedule<wbr>Status<wbr>Stopped</dt>
-    <dd>Stopped</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Pending</dt>
-    <dd>Pending</dd><dt>Failed</dt>
-    <dd>Failed</dd><dt>Scheduled</dt>
-    <dd>Scheduled</dd><dt>Stopped</dt>
-    <dd>Stopped</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>PENDING</dt>
-    <dd>Pending</dd><dt>FAILED</dt>
-    <dd>Failed</dd><dt>SCHEDULED</dt>
-    <dd>Scheduled</dd><dt>STOPPED</dt>
-    <dd>Stopped</dd></dl>
-{{% /choosable %}}
-
 <h4 id="monitoringschedulemonitoringtype">Monitoring<wbr>Schedule<wbr>Monitoring<wbr>Type</h4>
 
 {{% choosable language csharp %}}
@@ -2639,6 +2605,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon S3 URI for the baseline statistics file in Amazon S3 that the current monitoring job should be validated against.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="monitoringschedulestatus">Monitoring<wbr>Schedule<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Pending</dt>
+    <dd>Pending</dd><dt>Failed</dt>
+    <dd>Failed</dd><dt>Scheduled</dt>
+    <dd>Scheduled</dd><dt>Stopped</dt>
+    <dd>Stopped</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Monitoring<wbr>Schedule<wbr>Status<wbr>Pending</dt>
+    <dd>Pending</dd><dt>Monitoring<wbr>Schedule<wbr>Status<wbr>Failed</dt>
+    <dd>Failed</dd><dt>Monitoring<wbr>Schedule<wbr>Status<wbr>Scheduled</dt>
+    <dd>Scheduled</dd><dt>Monitoring<wbr>Schedule<wbr>Status<wbr>Stopped</dt>
+    <dd>Stopped</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Pending</dt>
+    <dd>Pending</dd><dt>Failed</dt>
+    <dd>Failed</dd><dt>Scheduled</dt>
+    <dd>Scheduled</dd><dt>Stopped</dt>
+    <dd>Stopped</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>PENDING</dt>
+    <dd>Pending</dd><dt>FAILED</dt>
+    <dd>Failed</dd><dt>SCHEDULED</dt>
+    <dd>Scheduled</dd><dt>STOPPED</dt>
+    <dd>Stopped</dd></dl>
 {{% /choosable %}}
 
 <h4 id="monitoringschedulestoppingcondition">Monitoring<wbr>Schedule<wbr>Stopping<wbr>Condition</h4>

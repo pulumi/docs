@@ -31,7 +31,7 @@ Creates a gateway task definition.
                    <span class="nx">lo_ra_wan_update_gateway_task_entry</span><span class="p">:</span> <span class="nx">Optional[TaskDefinitionLoRaWANUpdateGatewayTaskEntryArgs]</span> = None<span class="p">,</span>
                    <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[TaskDefinitionTagArgs]]</span> = None<span class="p">,</span>
-                   <span class="nx">task_definition_type</span><span class="p">:</span> <span class="nx">Optional[TaskDefinitionTaskDefinitionType]</span> = None<span class="p">,</span>
+                   <span class="nx">task_definition_type</span><span class="p">:</span> <span class="nx">Optional[TaskDefinitionType]</span> = None<span class="p">,</span>
                    <span class="nx">update</span><span class="p">:</span> <span class="nx">Optional[TaskDefinitionUpdateWirelessGatewayTaskCreateArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">TaskDefinition</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -198,7 +198,7 @@ The TaskDefinition resource accepts the following [input]({{< relref "/docs/intr
 <a href="#taskdefinitiontype_csharp" style="color: inherit; text-decoration: inherit;">Task<wbr>Definition<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitiontaskdefinitiontype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TWireless.<wbr>Task<wbr>Definition<wbr>Task<wbr>Definition<wbr>Type</a></span>
+        <span class="property-type"><a href="#taskdefinitiontype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TWireless.<wbr>Task<wbr>Definition<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}A filter to list only the wireless gateway task definitions that use this task definition type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -250,7 +250,7 @@ The TaskDefinition resource accepts the following [input]({{< relref "/docs/intr
 <a href="#taskdefinitiontype_go" style="color: inherit; text-decoration: inherit;">Task<wbr>Definition<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitiontaskdefinitiontype">Task<wbr>Definition<wbr>Task<wbr>Definition<wbr>Type</a></span>
+        <span class="property-type"><a href="#taskdefinitiontype">Task<wbr>Definition<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}A filter to list only the wireless gateway task definitions that use this task definition type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -302,7 +302,7 @@ The TaskDefinition resource accepts the following [input]({{< relref "/docs/intr
 <a href="#taskdefinitiontype_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>Definition<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitiontaskdefinitiontype">Task<wbr>Definition<wbr>Task<wbr>Definition<wbr>Type</a></span>
+        <span class="property-type"><a href="#taskdefinitiontype">Task<wbr>Definition<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}A filter to list only the wireless gateway task definitions that use this task definition type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -354,7 +354,7 @@ The TaskDefinition resource accepts the following [input]({{< relref "/docs/intr
 <a href="#task_definition_type_python" style="color: inherit; text-decoration: inherit;">task_<wbr>definition_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitiontaskdefinitiontype">Task<wbr>Definition<wbr>Task<wbr>Definition<wbr>Type</a></span>
+        <span class="property-type"><a href="#taskdefinitiontype">Task<wbr>Definition<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}A filter to list only the wireless gateway task definitions that use this task definition type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -888,7 +888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="taskdefinitiontaskdefinitiontype">Task<wbr>Definition<wbr>Task<wbr>Definition<wbr>Type</h4>
+<h4 id="taskdefinitiontype">Task<wbr>Definition<wbr>Type</h4>
 
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>Update</dt>
@@ -896,7 +896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular"><dt>Task<wbr>Definition<wbr>Task<wbr>Definition<wbr>Type<wbr>Update</dt>
+<dl class="tabular"><dt>Task<wbr>Definition<wbr>Type<wbr>Update</dt>
     <dd>UPDATE</dd></dl>
 {{% /choosable %}}
 

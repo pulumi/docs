@@ -28,7 +28,7 @@ Resource Type definition for SSO InstanceAccessControlAttributeConfiguration
 <span class="k">def </span><span class="nx">InstanceAccessControlAttributeConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                                                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                                                 <span class="nx">access_control_attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs]]</span> = None<span class="p">,</span>
-                                                <span class="nx">instance_access_control_attribute_configuration</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">,</span>
+                                                <span class="nx">instance_access_control_attribute_configuration</span><span class="p">:</span> <span class="nx">Optional[InstanceAccessControlAttributeConfigurationPropertiesArgs]</span> = None<span class="p">,</span>
                                                 <span class="nx">instance_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">InstanceAccessControlAttributeConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -179,7 +179,7 @@ The InstanceAccessControlAttributeConfiguration resource accepts the following [
 <a href="#instanceaccesscontrolattributeconfigurationvalue_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Access<wbr>Control<wbr>Attribute<wbr>Configuration<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">object</span>
+        <span class="property-type"><a href="#instanceaccesscontrolattributeconfigurationproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>SSO.<wbr>Inputs.<wbr>Instance<wbr>Access<wbr>Control<wbr>Attribute<wbr>Configuration<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The InstanceAccessControlAttributeConfiguration property has been deprecated but is still supported for backwards compatibility purposes. We recomend that you use  AccessControlAttributes property instead.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -207,7 +207,7 @@ The InstanceAccessControlAttributeConfiguration resource accepts the following [
 <a href="#instanceaccesscontrolattributeconfiguration_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Access<wbr>Control<wbr>Attribute<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#instanceaccesscontrolattributeconfigurationproperties">Instance<wbr>Access<wbr>Control<wbr>Attribute<wbr>Configuration<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The InstanceAccessControlAttributeConfiguration property has been deprecated but is still supported for backwards compatibility purposes. We recomend that you use  AccessControlAttributes property instead.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -235,7 +235,7 @@ The InstanceAccessControlAttributeConfiguration resource accepts the following [
 <a href="#instanceaccesscontrolattributeconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Access<wbr>Control<wbr>Attribute<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">any</span>
+        <span class="property-type"><a href="#instanceaccesscontrolattributeconfigurationproperties">Instance<wbr>Access<wbr>Control<wbr>Attribute<wbr>Configuration<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The InstanceAccessControlAttributeConfiguration property has been deprecated but is still supported for backwards compatibility purposes. We recomend that you use  AccessControlAttributes property instead.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -263,7 +263,7 @@ The InstanceAccessControlAttributeConfiguration resource accepts the following [
 <a href="#instance_access_control_attribute_configuration_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>access_<wbr>control_<wbr>attribute_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#instanceaccesscontrolattributeconfigurationproperties">Instance<wbr>Access<wbr>Control<wbr>Attribute<wbr>Configuration<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The InstanceAccessControlAttributeConfiguration property has been deprecated but is still supported for backwards compatibility purposes. We recomend that you use  AccessControlAttributes property instead.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -461,6 +461,56 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instanceaccesscontrolattributeconfigurationproperties">Instance<wbr>Access<wbr>Control<wbr>Attribute<wbr>Configuration<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="accesscontrolattributes_csharp">
+<a href="#accesscontrolattributes_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Control<wbr>Attributes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceaccesscontrolattributeconfigurationaccesscontrolattribute">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>SSO.<wbr>Inputs.<wbr>Instance<wbr>Access<wbr>Control<wbr>Attribute<wbr>Configuration<wbr>Access<wbr>Control<wbr>Attribute&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="accesscontrolattributes_go">
+<a href="#accesscontrolattributes_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Control<wbr>Attributes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceaccesscontrolattributeconfigurationaccesscontrolattribute">[]Instance<wbr>Access<wbr>Control<wbr>Attribute<wbr>Configuration<wbr>Access<wbr>Control<wbr>Attribute</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="accesscontrolattributes_nodejs">
+<a href="#accesscontrolattributes_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Control<wbr>Attributes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceaccesscontrolattributeconfigurationaccesscontrolattribute">Instance<wbr>Access<wbr>Control<wbr>Attribute<wbr>Configuration<wbr>Access<wbr>Control<wbr>Attribute[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="access_control_attributes_python">
+<a href="#access_control_attributes_python" style="color: inherit; text-decoration: inherit;">access_<wbr>control_<wbr>attributes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceaccesscontrolattributeconfigurationaccesscontrolattribute">Sequence[Instance<wbr>Access<wbr>Control<wbr>Attribute<wbr>Configuration<wbr>Access<wbr>Control<wbr>Attribute]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

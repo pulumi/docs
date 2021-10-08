@@ -29,11 +29,11 @@ Definition of the AWS::QuickSight::Analysis Resource Type.
              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
              <span class="nx">analysis_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">aws_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">errors</span><span class="p">:</span> <span class="nx">Optional[Sequence[AnalysisAnalysisErrorArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">errors</span><span class="p">:</span> <span class="nx">Optional[Sequence[AnalysisErrorArgs]]</span> = None<span class="p">,</span>
              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[AnalysisParametersArgs]</span> = None<span class="p">,</span>
              <span class="nx">permissions</span><span class="p">:</span> <span class="nx">Optional[Sequence[AnalysisResourcePermissionArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">source_entity</span><span class="p">:</span> <span class="nx">Optional[AnalysisAnalysisSourceEntityArgs]</span> = None<span class="p">,</span>
+             <span class="nx">source_entity</span><span class="p">:</span> <span class="nx">Optional[AnalysisSourceEntityArgs]</span> = None<span class="p">,</span>
              <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[AnalysisTagArgs]]</span> = None<span class="p">,</span>
              <span class="nx">theme_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -185,7 +185,7 @@ The Analysis resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analysisanalysiserror">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Analysis<wbr>Analysis<wbr>Error<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#analysiserror">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Analysis<wbr>Error<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}<p>Errors associated with the analysis.</p>{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -222,7 +222,7 @@ The Analysis resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sourceentity_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Entity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analysisanalysissourceentity">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Analysis<wbr>Analysis<wbr>Source<wbr>Entity<wbr>Args</a></span>
+        <span class="property-type"><a href="#analysissourceentity">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Analysis<wbr>Source<wbr>Entity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -267,7 +267,7 @@ The Analysis resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#errors_go" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analysisanalysiserror">[]Analysis<wbr>Analysis<wbr>Error<wbr>Args</a></span>
+        <span class="property-type"><a href="#analysiserror">[]Analysis<wbr>Error<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}<p>Errors associated with the analysis.</p>{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -304,7 +304,7 @@ The Analysis resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sourceentity_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Entity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analysisanalysissourceentity">Analysis<wbr>Analysis<wbr>Source<wbr>Entity<wbr>Args</a></span>
+        <span class="property-type"><a href="#analysissourceentity">Analysis<wbr>Source<wbr>Entity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -349,7 +349,7 @@ The Analysis resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analysisanalysiserror">Analysis<wbr>Analysis<wbr>Error<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#analysiserror">Analysis<wbr>Error<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}<p>Errors associated with the analysis.</p>{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -386,7 +386,7 @@ The Analysis resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sourceentity_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Entity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analysisanalysissourceentity">Analysis<wbr>Analysis<wbr>Source<wbr>Entity<wbr>Args</a></span>
+        <span class="property-type"><a href="#analysissourceentity">Analysis<wbr>Source<wbr>Entity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -431,7 +431,7 @@ The Analysis resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analysisanalysiserror">Sequence[Analysis<wbr>Analysis<wbr>Error<wbr>Args]</a></span>
+        <span class="property-type"><a href="#analysiserror">Sequence[Analysis<wbr>Error<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}<p>Errors associated with the analysis.</p>{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -468,7 +468,7 @@ The Analysis resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#source_entity_python" style="color: inherit; text-decoration: inherit;">source_<wbr>entity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analysisanalysissourceentity">Analysis<wbr>Analysis<wbr>Source<wbr>Entity<wbr>Args</a></span>
+        <span class="property-type"><a href="#analysissourceentity">Analysis<wbr>Source<wbr>Entity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -747,278 +747,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="analysisanalysiserror">Analysis<wbr>Analysis<wbr>Error</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="message_csharp">
-<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>The message associated with the analysis error.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analysisanalysiserrortype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Analysis<wbr>Analysis<wbr>Error<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="message_go">
-<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>The message associated with the analysis error.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analysisanalysiserrortype">Analysis<wbr>Analysis<wbr>Error<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="message_nodejs">
-<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>The message associated with the analysis error.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analysisanalysiserrortype">Analysis<wbr>Analysis<wbr>Error<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="message_python">
-<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}<p>The message associated with the analysis error.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analysisanalysiserrortype">Analysis<wbr>Analysis<wbr>Error<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="analysisanalysiserrortype">Analysis<wbr>Analysis<wbr>Error<wbr>Type</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Access<wbr>Denied</dt>
-    <dd>ACCESS_DENIED</dd><dt>Source<wbr>Not<wbr>Found</dt>
-    <dd>SOURCE_NOT_FOUND</dd><dt>Data<wbr>Set<wbr>Not<wbr>Found</dt>
-    <dd>DATA_SET_NOT_FOUND</dd><dt>Internal<wbr>Failure</dt>
-    <dd>INTERNAL_FAILURE</dd><dt>Parameter<wbr>Value<wbr>Incompatible</dt>
-    <dd>PARAMETER_VALUE_INCOMPATIBLE</dd><dt>Parameter<wbr>Type<wbr>Invalid</dt>
-    <dd>PARAMETER_TYPE_INVALID</dd><dt>Parameter<wbr>Not<wbr>Found</dt>
-    <dd>PARAMETER_NOT_FOUND</dd><dt>Column<wbr>Type<wbr>Mismatch</dt>
-    <dd>COLUMN_TYPE_MISMATCH</dd><dt>Column<wbr>Geographic<wbr>Role<wbr>Mismatch</dt>
-    <dd>COLUMN_GEOGRAPHIC_ROLE_MISMATCH</dd><dt>Column<wbr>Replacement<wbr>Missing</dt>
-    <dd>COLUMN_REPLACEMENT_MISSING</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Analysis<wbr>Analysis<wbr>Error<wbr>Type<wbr>Access<wbr>Denied</dt>
-    <dd>ACCESS_DENIED</dd><dt>Analysis<wbr>Analysis<wbr>Error<wbr>Type<wbr>Source<wbr>Not<wbr>Found</dt>
-    <dd>SOURCE_NOT_FOUND</dd><dt>Analysis<wbr>Analysis<wbr>Error<wbr>Type<wbr>Data<wbr>Set<wbr>Not<wbr>Found</dt>
-    <dd>DATA_SET_NOT_FOUND</dd><dt>Analysis<wbr>Analysis<wbr>Error<wbr>Type<wbr>Internal<wbr>Failure</dt>
-    <dd>INTERNAL_FAILURE</dd><dt>Analysis<wbr>Analysis<wbr>Error<wbr>Type<wbr>Parameter<wbr>Value<wbr>Incompatible</dt>
-    <dd>PARAMETER_VALUE_INCOMPATIBLE</dd><dt>Analysis<wbr>Analysis<wbr>Error<wbr>Type<wbr>Parameter<wbr>Type<wbr>Invalid</dt>
-    <dd>PARAMETER_TYPE_INVALID</dd><dt>Analysis<wbr>Analysis<wbr>Error<wbr>Type<wbr>Parameter<wbr>Not<wbr>Found</dt>
-    <dd>PARAMETER_NOT_FOUND</dd><dt>Analysis<wbr>Analysis<wbr>Error<wbr>Type<wbr>Column<wbr>Type<wbr>Mismatch</dt>
-    <dd>COLUMN_TYPE_MISMATCH</dd><dt>Analysis<wbr>Analysis<wbr>Error<wbr>Type<wbr>Column<wbr>Geographic<wbr>Role<wbr>Mismatch</dt>
-    <dd>COLUMN_GEOGRAPHIC_ROLE_MISMATCH</dd><dt>Analysis<wbr>Analysis<wbr>Error<wbr>Type<wbr>Column<wbr>Replacement<wbr>Missing</dt>
-    <dd>COLUMN_REPLACEMENT_MISSING</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Access<wbr>Denied</dt>
-    <dd>ACCESS_DENIED</dd><dt>Source<wbr>Not<wbr>Found</dt>
-    <dd>SOURCE_NOT_FOUND</dd><dt>Data<wbr>Set<wbr>Not<wbr>Found</dt>
-    <dd>DATA_SET_NOT_FOUND</dd><dt>Internal<wbr>Failure</dt>
-    <dd>INTERNAL_FAILURE</dd><dt>Parameter<wbr>Value<wbr>Incompatible</dt>
-    <dd>PARAMETER_VALUE_INCOMPATIBLE</dd><dt>Parameter<wbr>Type<wbr>Invalid</dt>
-    <dd>PARAMETER_TYPE_INVALID</dd><dt>Parameter<wbr>Not<wbr>Found</dt>
-    <dd>PARAMETER_NOT_FOUND</dd><dt>Column<wbr>Type<wbr>Mismatch</dt>
-    <dd>COLUMN_TYPE_MISMATCH</dd><dt>Column<wbr>Geographic<wbr>Role<wbr>Mismatch</dt>
-    <dd>COLUMN_GEOGRAPHIC_ROLE_MISMATCH</dd><dt>Column<wbr>Replacement<wbr>Missing</dt>
-    <dd>COLUMN_REPLACEMENT_MISSING</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>ACCESS_DENIED</dt>
-    <dd>ACCESS_DENIED</dd><dt>SOURCE_NOT_FOUND</dt>
-    <dd>SOURCE_NOT_FOUND</dd><dt>DATA_SET_NOT_FOUND</dt>
-    <dd>DATA_SET_NOT_FOUND</dd><dt>INTERNAL_FAILURE</dt>
-    <dd>INTERNAL_FAILURE</dd><dt>PARAMETER_VALUE_INCOMPATIBLE</dt>
-    <dd>PARAMETER_VALUE_INCOMPATIBLE</dd><dt>PARAMETER_TYPE_INVALID</dt>
-    <dd>PARAMETER_TYPE_INVALID</dd><dt>PARAMETER_NOT_FOUND</dt>
-    <dd>PARAMETER_NOT_FOUND</dd><dt>COLUMN_TYPE_MISMATCH</dt>
-    <dd>COLUMN_TYPE_MISMATCH</dd><dt>COLUMN_GEOGRAPHIC_ROLE_MISMATCH</dt>
-    <dd>COLUMN_GEOGRAPHIC_ROLE_MISMATCH</dd><dt>COLUMN_REPLACEMENT_MISSING</dt>
-    <dd>COLUMN_REPLACEMENT_MISSING</dd></dl>
-{{% /choosable %}}
-
-<h4 id="analysisanalysissourceentity">Analysis<wbr>Analysis<wbr>Source<wbr>Entity</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="sourcetemplate_csharp">
-<a href="#sourcetemplate_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Template</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analysisanalysissourcetemplate">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Analysis<wbr>Analysis<wbr>Source<wbr>Template</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="sourcetemplate_go">
-<a href="#sourcetemplate_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Template</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analysisanalysissourcetemplate">Analysis<wbr>Analysis<wbr>Source<wbr>Template</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="sourcetemplate_nodejs">
-<a href="#sourcetemplate_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Template</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analysisanalysissourcetemplate">Analysis<wbr>Analysis<wbr>Source<wbr>Template</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="source_template_python">
-<a href="#source_template_python" style="color: inherit; text-decoration: inherit;">source_<wbr>template</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analysisanalysissourcetemplate">Analysis<wbr>Analysis<wbr>Source<wbr>Template</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="analysisanalysissourcetemplate">Analysis<wbr>Analysis<wbr>Source<wbr>Template</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="arn_csharp">
-<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>The Amazon Resource Name (ARN) of the source template of an analysis.</p>{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="datasetreferences_csharp">
-<a href="#datasetreferences_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Set<wbr>References</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analysisdatasetreference">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Analysis<wbr>Data<wbr>Set<wbr>Reference&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}<p>The dataset references of the source template of an analysis.</p>{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="arn_go">
-<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>The Amazon Resource Name (ARN) of the source template of an analysis.</p>{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="datasetreferences_go">
-<a href="#datasetreferences_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Set<wbr>References</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analysisdatasetreference">[]Analysis<wbr>Data<wbr>Set<wbr>Reference</a></span>
-    </dt>
-    <dd>{{% md %}}<p>The dataset references of the source template of an analysis.</p>{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="arn_nodejs">
-<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>The Amazon Resource Name (ARN) of the source template of an analysis.</p>{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="datasetreferences_nodejs">
-<a href="#datasetreferences_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Set<wbr>References</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analysisdatasetreference">Analysis<wbr>Data<wbr>Set<wbr>Reference[]</a></span>
-    </dt>
-    <dd>{{% md %}}<p>The dataset references of the source template of an analysis.</p>{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="arn_python">
-<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}<p>The Amazon Resource Name (ARN) of the source template of an analysis.</p>{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="data_set_references_python">
-<a href="#data_set_references_python" style="color: inherit; text-decoration: inherit;">data_<wbr>set_<wbr>references</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analysisdatasetreference">Sequence[Analysis<wbr>Data<wbr>Set<wbr>Reference]</a></span>
-    </dt>
-    <dd>{{% md %}}<p>The dataset references of the source template of an analysis.</p>{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
 <h4 id="analysisdatasetreference">Analysis<wbr>Data<wbr>Set<wbr>Reference</h4>
 
 {{% choosable language csharp %}}
@@ -1263,6 +991,146 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[float]</span>
     </dt>
     <dd>{{% md %}}<p>The values for the decimal parameter.</p>{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="analysiserror">Analysis<wbr>Error</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="message_csharp">
+<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>The message associated with the analysis error.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analysiserrortype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Analysis<wbr>Error<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="message_go">
+<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>The message associated with the analysis error.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analysiserrortype">Analysis<wbr>Error<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="message_nodejs">
+<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>The message associated with the analysis error.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analysiserrortype">Analysis<wbr>Error<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="message_python">
+<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}<p>The message associated with the analysis error.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analysiserrortype">Analysis<wbr>Error<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="analysiserrortype">Analysis<wbr>Error<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Access<wbr>Denied</dt>
+    <dd>ACCESS_DENIED</dd><dt>Source<wbr>Not<wbr>Found</dt>
+    <dd>SOURCE_NOT_FOUND</dd><dt>Data<wbr>Set<wbr>Not<wbr>Found</dt>
+    <dd>DATA_SET_NOT_FOUND</dd><dt>Internal<wbr>Failure</dt>
+    <dd>INTERNAL_FAILURE</dd><dt>Parameter<wbr>Value<wbr>Incompatible</dt>
+    <dd>PARAMETER_VALUE_INCOMPATIBLE</dd><dt>Parameter<wbr>Type<wbr>Invalid</dt>
+    <dd>PARAMETER_TYPE_INVALID</dd><dt>Parameter<wbr>Not<wbr>Found</dt>
+    <dd>PARAMETER_NOT_FOUND</dd><dt>Column<wbr>Type<wbr>Mismatch</dt>
+    <dd>COLUMN_TYPE_MISMATCH</dd><dt>Column<wbr>Geographic<wbr>Role<wbr>Mismatch</dt>
+    <dd>COLUMN_GEOGRAPHIC_ROLE_MISMATCH</dd><dt>Column<wbr>Replacement<wbr>Missing</dt>
+    <dd>COLUMN_REPLACEMENT_MISSING</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Analysis<wbr>Error<wbr>Type<wbr>Access<wbr>Denied</dt>
+    <dd>ACCESS_DENIED</dd><dt>Analysis<wbr>Error<wbr>Type<wbr>Source<wbr>Not<wbr>Found</dt>
+    <dd>SOURCE_NOT_FOUND</dd><dt>Analysis<wbr>Error<wbr>Type<wbr>Data<wbr>Set<wbr>Not<wbr>Found</dt>
+    <dd>DATA_SET_NOT_FOUND</dd><dt>Analysis<wbr>Error<wbr>Type<wbr>Internal<wbr>Failure</dt>
+    <dd>INTERNAL_FAILURE</dd><dt>Analysis<wbr>Error<wbr>Type<wbr>Parameter<wbr>Value<wbr>Incompatible</dt>
+    <dd>PARAMETER_VALUE_INCOMPATIBLE</dd><dt>Analysis<wbr>Error<wbr>Type<wbr>Parameter<wbr>Type<wbr>Invalid</dt>
+    <dd>PARAMETER_TYPE_INVALID</dd><dt>Analysis<wbr>Error<wbr>Type<wbr>Parameter<wbr>Not<wbr>Found</dt>
+    <dd>PARAMETER_NOT_FOUND</dd><dt>Analysis<wbr>Error<wbr>Type<wbr>Column<wbr>Type<wbr>Mismatch</dt>
+    <dd>COLUMN_TYPE_MISMATCH</dd><dt>Analysis<wbr>Error<wbr>Type<wbr>Column<wbr>Geographic<wbr>Role<wbr>Mismatch</dt>
+    <dd>COLUMN_GEOGRAPHIC_ROLE_MISMATCH</dd><dt>Analysis<wbr>Error<wbr>Type<wbr>Column<wbr>Replacement<wbr>Missing</dt>
+    <dd>COLUMN_REPLACEMENT_MISSING</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Access<wbr>Denied</dt>
+    <dd>ACCESS_DENIED</dd><dt>Source<wbr>Not<wbr>Found</dt>
+    <dd>SOURCE_NOT_FOUND</dd><dt>Data<wbr>Set<wbr>Not<wbr>Found</dt>
+    <dd>DATA_SET_NOT_FOUND</dd><dt>Internal<wbr>Failure</dt>
+    <dd>INTERNAL_FAILURE</dd><dt>Parameter<wbr>Value<wbr>Incompatible</dt>
+    <dd>PARAMETER_VALUE_INCOMPATIBLE</dd><dt>Parameter<wbr>Type<wbr>Invalid</dt>
+    <dd>PARAMETER_TYPE_INVALID</dd><dt>Parameter<wbr>Not<wbr>Found</dt>
+    <dd>PARAMETER_NOT_FOUND</dd><dt>Column<wbr>Type<wbr>Mismatch</dt>
+    <dd>COLUMN_TYPE_MISMATCH</dd><dt>Column<wbr>Geographic<wbr>Role<wbr>Mismatch</dt>
+    <dd>COLUMN_GEOGRAPHIC_ROLE_MISMATCH</dd><dt>Column<wbr>Replacement<wbr>Missing</dt>
+    <dd>COLUMN_REPLACEMENT_MISSING</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ACCESS_DENIED</dt>
+    <dd>ACCESS_DENIED</dd><dt>SOURCE_NOT_FOUND</dt>
+    <dd>SOURCE_NOT_FOUND</dd><dt>DATA_SET_NOT_FOUND</dt>
+    <dd>DATA_SET_NOT_FOUND</dd><dt>INTERNAL_FAILURE</dt>
+    <dd>INTERNAL_FAILURE</dd><dt>PARAMETER_VALUE_INCOMPATIBLE</dt>
+    <dd>PARAMETER_VALUE_INCOMPATIBLE</dd><dt>PARAMETER_TYPE_INVALID</dt>
+    <dd>PARAMETER_TYPE_INVALID</dd><dt>PARAMETER_NOT_FOUND</dt>
+    <dd>PARAMETER_NOT_FOUND</dd><dt>COLUMN_TYPE_MISMATCH</dt>
+    <dd>COLUMN_TYPE_MISMATCH</dd><dt>COLUMN_GEOGRAPHIC_ROLE_MISMATCH</dt>
+    <dd>COLUMN_GEOGRAPHIC_ROLE_MISMATCH</dd><dt>COLUMN_REPLACEMENT_MISSING</dt>
+    <dd>COLUMN_REPLACEMENT_MISSING</dd></dl>
 {{% /choosable %}}
 
 <h4 id="analysisintegerparameter">Analysis<wbr>Integer<wbr>Parameter</h4>
@@ -1761,6 +1629,138 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}<p>The unique identifier associated with a sheet.</p>{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="analysissourceentity">Analysis<wbr>Source<wbr>Entity</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="sourcetemplate_csharp">
+<a href="#sourcetemplate_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analysissourcetemplate">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Analysis<wbr>Source<wbr>Template</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="sourcetemplate_go">
+<a href="#sourcetemplate_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analysissourcetemplate">Analysis<wbr>Source<wbr>Template</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="sourcetemplate_nodejs">
+<a href="#sourcetemplate_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analysissourcetemplate">Analysis<wbr>Source<wbr>Template</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="source_template_python">
+<a href="#source_template_python" style="color: inherit; text-decoration: inherit;">source_<wbr>template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analysissourcetemplate">Analysis<wbr>Source<wbr>Template</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="analysissourcetemplate">Analysis<wbr>Source<wbr>Template</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>The Amazon Resource Name (ARN) of the source template of an analysis.</p>{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="datasetreferences_csharp">
+<a href="#datasetreferences_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Set<wbr>References</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analysisdatasetreference">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Analysis<wbr>Data<wbr>Set<wbr>Reference&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}<p>The dataset references of the source template of an analysis.</p>{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>The Amazon Resource Name (ARN) of the source template of an analysis.</p>{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="datasetreferences_go">
+<a href="#datasetreferences_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Set<wbr>References</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analysisdatasetreference">[]Analysis<wbr>Data<wbr>Set<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}<p>The dataset references of the source template of an analysis.</p>{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>The Amazon Resource Name (ARN) of the source template of an analysis.</p>{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="datasetreferences_nodejs">
+<a href="#datasetreferences_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Set<wbr>References</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analysisdatasetreference">Analysis<wbr>Data<wbr>Set<wbr>Reference[]</a></span>
+    </dt>
+    <dd>{{% md %}}<p>The dataset references of the source template of an analysis.</p>{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}<p>The Amazon Resource Name (ARN) of the source template of an analysis.</p>{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="data_set_references_python">
+<a href="#data_set_references_python" style="color: inherit; text-decoration: inherit;">data_<wbr>set_<wbr>references</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analysisdatasetreference">Sequence[Analysis<wbr>Data<wbr>Set<wbr>Reference]</a></span>
+    </dt>
+    <dd>{{% md %}}<p>The dataset references of the source template of an analysis.</p>{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="analysisstringparameter">Analysis<wbr>String<wbr>Parameter</h4>

@@ -28,7 +28,7 @@ Resource Type definition for AWS::IoT::TopicRuleDestination
 <span class="k">def </span><span class="nx">TopicRuleDestination</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                          <span class="nx">http_url_properties</span><span class="p">:</span> <span class="nx">Optional[TopicRuleDestinationHttpUrlDestinationSummaryArgs]</span> = None<span class="p">,</span>
-                         <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[TopicRuleDestinationTopicRuleDestinationStatus]</span> = None<span class="p">,</span>
+                         <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[TopicRuleDestinationStatus]</span> = None<span class="p">,</span>
                          <span class="nx">vpc_properties</span><span class="p">:</span> <span class="nx">Optional[TopicRuleDestinationVpcDestinationPropertiesArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">TopicRuleDestination</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -171,7 +171,7 @@ The TopicRuleDestination resource accepts the following [input]({{< relref "/doc
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruledestinationtopicruledestinationstatus">Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>T.<wbr>Topic<wbr>Rule<wbr>Destination<wbr>Topic<wbr>Rule<wbr>Destination<wbr>Status</a></span>
+        <span class="property-type"><a href="#topicruledestinationstatus">Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>T.<wbr>Topic<wbr>Rule<wbr>Destination<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of the TopicRuleDestination.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -199,7 +199,7 @@ The TopicRuleDestination resource accepts the following [input]({{< relref "/doc
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruledestinationtopicruledestinationstatus">Topic<wbr>Rule<wbr>Destination<wbr>Topic<wbr>Rule<wbr>Destination<wbr>Status</a></span>
+        <span class="property-type"><a href="#topicruledestinationstatus">Topic<wbr>Rule<wbr>Destination<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of the TopicRuleDestination.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -227,7 +227,7 @@ The TopicRuleDestination resource accepts the following [input]({{< relref "/doc
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruledestinationtopicruledestinationstatus">Topic<wbr>Rule<wbr>Destination<wbr>Topic<wbr>Rule<wbr>Destination<wbr>Status</a></span>
+        <span class="property-type"><a href="#topicruledestinationstatus">Topic<wbr>Rule<wbr>Destination<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of the TopicRuleDestination.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -255,7 +255,7 @@ The TopicRuleDestination resource accepts the following [input]({{< relref "/doc
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruledestinationtopicruledestinationstatus">Topic<wbr>Rule<wbr>Destination<wbr>Topic<wbr>Rule<wbr>Destination<wbr>Status</a></span>
+        <span class="property-type"><a href="#topicruledestinationstatus">Topic<wbr>Rule<wbr>Destination<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of the TopicRuleDestination.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -447,7 +447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="topicruledestinationtopicruledestinationstatus">Topic<wbr>Rule<wbr>Destination<wbr>Topic<wbr>Rule<wbr>Destination<wbr>Status</h4>
+<h4 id="topicruledestinationstatus">Topic<wbr>Rule<wbr>Destination<wbr>Status</h4>
 
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>Enabled</dt>
@@ -457,9 +457,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular"><dt>Topic<wbr>Rule<wbr>Destination<wbr>Topic<wbr>Rule<wbr>Destination<wbr>Status<wbr>Enabled</dt>
-    <dd>ENABLED</dd><dt>Topic<wbr>Rule<wbr>Destination<wbr>Topic<wbr>Rule<wbr>Destination<wbr>Status<wbr>In<wbr>Progress</dt>
-    <dd>IN_PROGRESS</dd><dt>Topic<wbr>Rule<wbr>Destination<wbr>Topic<wbr>Rule<wbr>Destination<wbr>Status<wbr>Disabled</dt>
+<dl class="tabular"><dt>Topic<wbr>Rule<wbr>Destination<wbr>Status<wbr>Enabled</dt>
+    <dd>ENABLED</dd><dt>Topic<wbr>Rule<wbr>Destination<wbr>Status<wbr>In<wbr>Progress</dt>
+    <dd>IN_PROGRESS</dd><dt>Topic<wbr>Rule<wbr>Destination<wbr>Status<wbr>Disabled</dt>
     <dd>DISABLED</dd></dl>
 {{% /choosable %}}
 

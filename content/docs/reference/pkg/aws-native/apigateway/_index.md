@@ -13,6 +13,7 @@ Explore the resources and functions of the aws-native.apigateway module.
 <ul class="api">
     <li><a href="account" title="Account"><span class="symbol resource"></span>Account</a></li>
     <li><a href="apikey" title="ApiKey"><span class="symbol resource"></span>ApiKey</a></li>
+    <li><a href="authorizer" title="Authorizer"><span class="symbol resource"></span>Authorizer</a></li>
     <li><a href="basepathmapping" title="BasePathMapping"><span class="symbol resource"></span>BasePathMapping</a></li>
     <li><a href="clientcertificate" title="ClientCertificate"><span class="symbol resource"></span>ClientCertificate</a></li>
     <li><a href="documentationversion" title="DocumentationVersion"><span class="symbol resource"></span>DocumentationVersion</a></li>
@@ -33,6 +34,6 @@ Explore the resources and functions of the aws-native.apigateway module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.0</dd>
 </dl>
 

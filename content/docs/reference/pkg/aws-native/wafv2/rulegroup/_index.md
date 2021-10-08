@@ -884,6 +884,252 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="rulegroupcustomhttpheader">Rule<wbr>Group<wbr>Custom<wbr>HTTPHeader</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="rulegroupcustomrequesthandling">Rule<wbr>Group<wbr>Custom<wbr>Request<wbr>Handling</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="insertheaders_csharp">
+<a href="#insertheaders_csharp" style="color: inherit; text-decoration: inherit;">Insert<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupcustomhttpheader">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>WAFv2.<wbr>Inputs.<wbr>Rule<wbr>Group<wbr>Custom<wbr>HTTPHeader&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Collection of HTTP headers.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="insertheaders_go">
+<a href="#insertheaders_go" style="color: inherit; text-decoration: inherit;">Insert<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupcustomhttpheader">[]Rule<wbr>Group<wbr>Custom<wbr>HTTPHeader</a></span>
+    </dt>
+    <dd>{{% md %}}Collection of HTTP headers.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="insertheaders_nodejs">
+<a href="#insertheaders_nodejs" style="color: inherit; text-decoration: inherit;">insert<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupcustomhttpheader">Rule<wbr>Group<wbr>Custom<wbr>HTTPHeader[]</a></span>
+    </dt>
+    <dd>{{% md %}}Collection of HTTP headers.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="insert_headers_python">
+<a href="#insert_headers_python" style="color: inherit; text-decoration: inherit;">insert_<wbr>headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupcustomhttpheader">Sequence[Rule<wbr>Group<wbr>Custom<wbr>HTTPHeader]</a></span>
+    </dt>
+    <dd>{{% md %}}Collection of HTTP headers.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="rulegroupcustomresponse">Rule<wbr>Group<wbr>Custom<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="responsecode_csharp">
+<a href="#responsecode_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customresponsebodykey_csharp">
+<a href="#customresponsebodykey_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Response<wbr>Body<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Custom response body key.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="responseheaders_csharp">
+<a href="#responseheaders_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupcustomhttpheader">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>WAFv2.<wbr>Inputs.<wbr>Rule<wbr>Group<wbr>Custom<wbr>HTTPHeader&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Collection of HTTP headers.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="responsecode_go">
+<a href="#responsecode_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customresponsebodykey_go">
+<a href="#customresponsebodykey_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Response<wbr>Body<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Custom response body key.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="responseheaders_go">
+<a href="#responseheaders_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupcustomhttpheader">[]Rule<wbr>Group<wbr>Custom<wbr>HTTPHeader</a></span>
+    </dt>
+    <dd>{{% md %}}Collection of HTTP headers.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="responsecode_nodejs">
+<a href="#responsecode_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customresponsebodykey_nodejs">
+<a href="#customresponsebodykey_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Response<wbr>Body<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Custom response body key.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="responseheaders_nodejs">
+<a href="#responseheaders_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupcustomhttpheader">Rule<wbr>Group<wbr>Custom<wbr>HTTPHeader[]</a></span>
+    </dt>
+    <dd>{{% md %}}Collection of HTTP headers.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="response_code_python">
+<a href="#response_code_python" style="color: inherit; text-decoration: inherit;">response_<wbr>code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="custom_response_body_key_python">
+<a href="#custom_response_body_key_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>response_<wbr>body_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Custom response body key.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="response_headers_python">
+<a href="#response_headers_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupcustomhttpheader">Sequence[Rule<wbr>Group<wbr>Custom<wbr>HTTPHeader]</a></span>
+    </dt>
+    <dd>{{% md %}}Collection of HTTP headers.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="rulegroupfieldtomatch">Rule<wbr>Group<wbr>Field<wbr>To<wbr>Match</h4>
 
 {{% choosable language csharp %}}
@@ -933,7 +1179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#singleheader_csharp" style="color: inherit; text-decoration: inherit;">Single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">object</span>
+        <span class="property-type"><a href="#rulegroupfieldtomatchsingleheaderproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>WAFv2.<wbr>Inputs.<wbr>Rule<wbr>Group<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -941,7 +1187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#singlequeryargument_csharp" style="color: inherit; text-decoration: inherit;">Single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">object</span>
+        <span class="property-type"><a href="#rulegroupfieldtomatchsinglequeryargumentproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>WAFv2.<wbr>Inputs.<wbr>Rule<wbr>Group<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}One query argument in a web request, identified by name, for example UserName or SalesRegion. The name can be up to 30 characters long and isn't case sensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1001,7 +1247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#singleheader_go" style="color: inherit; text-decoration: inherit;">Single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#rulegroupfieldtomatchsingleheaderproperties">Rule<wbr>Group<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1009,7 +1255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#singlequeryargument_go" style="color: inherit; text-decoration: inherit;">Single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#rulegroupfieldtomatchsinglequeryargumentproperties">Rule<wbr>Group<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}One query argument in a web request, identified by name, for example UserName or SalesRegion. The name can be up to 30 characters long and isn't case sensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1069,7 +1315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">any</span>
+        <span class="property-type"><a href="#rulegroupfieldtomatchsingleheaderproperties">Rule<wbr>Group<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1077,7 +1323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">any</span>
+        <span class="property-type"><a href="#rulegroupfieldtomatchsinglequeryargumentproperties">Rule<wbr>Group<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}One query argument in a web request, identified by name, for example UserName or SalesRegion. The name can be up to 30 characters long and isn't case sensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1137,7 +1383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#single_header_python" style="color: inherit; text-decoration: inherit;">single_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#rulegroupfieldtomatchsingleheaderproperties">Rule<wbr>Group<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1145,7 +1391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#single_query_argument_python" style="color: inherit; text-decoration: inherit;">single_<wbr>query_<wbr>argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#rulegroupfieldtomatchsinglequeryargumentproperties">Rule<wbr>Group<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}One query argument in a web request, identified by name, for example UserName or SalesRegion. The name can be up to 30 characters long and isn't case sensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1156,6 +1402,106 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}The path component of the URI of a web request. This is the part of a web request that identifies a resource, for example, /images/daily-ad.jpg.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="rulegroupfieldtomatchsingleheaderproperties">Rule<wbr>Group<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="rulegroupfieldtomatchsinglequeryargumentproperties">Rule<wbr>Group<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="rulegroupforwardedipconfiguration">Rule<wbr>Group<wbr>Forwarded<wbr>IPConfiguration</h4>
@@ -2677,7 +3023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_csharp" style="color: inherit; text-decoration: inherit;">Allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">object</span>
+        <span class="property-type"><a href="#rulegroupruleactionallowproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>WAFv2.<wbr>Inputs.<wbr>Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Allow<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Allow traffic towards application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2685,7 +3031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#block_csharp" style="color: inherit; text-decoration: inherit;">Block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">object</span>
+        <span class="property-type"><a href="#rulegroupruleactionblockproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>WAFv2.<wbr>Inputs.<wbr>Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Block<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Block traffic towards application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2693,7 +3039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">object</span>
+        <span class="property-type"><a href="#rulegroupruleactioncountproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>WAFv2.<wbr>Inputs.<wbr>Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Count<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Count traffic towards application.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2705,7 +3051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_go" style="color: inherit; text-decoration: inherit;">Allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#rulegroupruleactionallowproperties">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Allow<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Allow traffic towards application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2713,7 +3059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#block_go" style="color: inherit; text-decoration: inherit;">Block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#rulegroupruleactionblockproperties">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Block<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Block traffic towards application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2721,7 +3067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#rulegroupruleactioncountproperties">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Count<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Count traffic towards application.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2733,7 +3079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_nodejs" style="color: inherit; text-decoration: inherit;">allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">any</span>
+        <span class="property-type"><a href="#rulegroupruleactionallowproperties">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Allow<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Allow traffic towards application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2741,7 +3087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#block_nodejs" style="color: inherit; text-decoration: inherit;">block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">any</span>
+        <span class="property-type"><a href="#rulegroupruleactionblockproperties">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Block<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Block traffic towards application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2749,7 +3095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">any</span>
+        <span class="property-type"><a href="#rulegroupruleactioncountproperties">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Count<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Count traffic towards application.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2761,7 +3107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_python" style="color: inherit; text-decoration: inherit;">allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#rulegroupruleactionallowproperties">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Allow<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Allow traffic towards application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2769,7 +3115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#block_python" style="color: inherit; text-decoration: inherit;">block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#rulegroupruleactionblockproperties">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Block<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Block traffic towards application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2777,9 +3123,159 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#rulegroupruleactioncountproperties">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Count<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Count traffic towards application.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="rulegroupruleactionallowproperties">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Allow<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="customrequesthandling_csharp">
+<a href="#customrequesthandling_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Request<wbr>Handling</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupcustomrequesthandling">Pulumi.<wbr>Aws<wbr>Native.<wbr>WAFv2.<wbr>Inputs.<wbr>Rule<wbr>Group<wbr>Custom<wbr>Request<wbr>Handling</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="customrequesthandling_go">
+<a href="#customrequesthandling_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Request<wbr>Handling</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupcustomrequesthandling">Rule<wbr>Group<wbr>Custom<wbr>Request<wbr>Handling</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="customrequesthandling_nodejs">
+<a href="#customrequesthandling_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Request<wbr>Handling</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupcustomrequesthandling">Rule<wbr>Group<wbr>Custom<wbr>Request<wbr>Handling</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="custom_request_handling_python">
+<a href="#custom_request_handling_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>request_<wbr>handling</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupcustomrequesthandling">Rule<wbr>Group<wbr>Custom<wbr>Request<wbr>Handling</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="rulegroupruleactionblockproperties">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Block<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="customresponse_csharp">
+<a href="#customresponse_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Response</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupcustomresponse">Pulumi.<wbr>Aws<wbr>Native.<wbr>WAFv2.<wbr>Inputs.<wbr>Rule<wbr>Group<wbr>Custom<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="customresponse_go">
+<a href="#customresponse_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Response</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupcustomresponse">Rule<wbr>Group<wbr>Custom<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="customresponse_nodejs">
+<a href="#customresponse_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Response</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupcustomresponse">Rule<wbr>Group<wbr>Custom<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="custom_response_python">
+<a href="#custom_response_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>response</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupcustomresponse">Rule<wbr>Group<wbr>Custom<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="rulegroupruleactioncountproperties">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Count<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="customrequesthandling_csharp">
+<a href="#customrequesthandling_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Request<wbr>Handling</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupcustomrequesthandling">Pulumi.<wbr>Aws<wbr>Native.<wbr>WAFv2.<wbr>Inputs.<wbr>Rule<wbr>Group<wbr>Custom<wbr>Request<wbr>Handling</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="customrequesthandling_go">
+<a href="#customrequesthandling_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Request<wbr>Handling</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupcustomrequesthandling">Rule<wbr>Group<wbr>Custom<wbr>Request<wbr>Handling</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="customrequesthandling_nodejs">
+<a href="#customrequesthandling_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Request<wbr>Handling</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupcustomrequesthandling">Rule<wbr>Group<wbr>Custom<wbr>Request<wbr>Handling</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="custom_request_handling_python">
+<a href="#custom_request_handling_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>request_<wbr>handling</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupcustomrequesthandling">Rule<wbr>Group<wbr>Custom<wbr>Request<wbr>Handling</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="rulegroupscope">Rule<wbr>Group<wbr>Scope</h4>

@@ -257,7 +257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policystatus_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">object</span>
+        <span class="property-type"><a href="#policystatusproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Outputs.<wbr>Policy<wbr>Status<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The Policy Status associated with this Multi Region Access Point{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -277,7 +277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policystatus_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#policystatusproperties">Policy<wbr>Status<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The Policy Status associated with this Multi Region Access Point{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -297,7 +297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policystatus_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">any</span>
+        <span class="property-type"><a href="#policystatusproperties">Policy<wbr>Status<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The Policy Status associated with this Multi Region Access Point{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -317,7 +317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_status_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#policystatusproperties">Policy<wbr>Status<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The Policy Status associated with this Multi Region Access Point{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -327,6 +327,86 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="multiregionaccesspointpolicypolicystatuspropertiesispublic">Multi<wbr>Region<wbr>Access<wbr>Point<wbr>Policy<wbr>Policy<wbr>Status<wbr>Properties<wbr>Is<wbr>Public</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>True</dt>
+    <dd>true</dd><dt>False</dt>
+    <dd>false</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Multi<wbr>Region<wbr>Access<wbr>Point<wbr>Policy<wbr>Policy<wbr>Status<wbr>Properties<wbr>Is<wbr>Public<wbr>True</dt>
+    <dd>true</dd><dt>Multi<wbr>Region<wbr>Access<wbr>Point<wbr>Policy<wbr>Policy<wbr>Status<wbr>Properties<wbr>Is<wbr>Public<wbr>False</dt>
+    <dd>false</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>True</dt>
+    <dd>true</dd><dt>False</dt>
+    <dd>false</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>TRUE</dt>
+    <dd>true</dd><dt>FALSE</dt>
+    <dd>false</dd></dl>
+{{% /choosable %}}
+
+<h4 id="policystatusproperties">Policy<wbr>Status<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="ispublic_csharp">
+<a href="#ispublic_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Public</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#multiregionaccesspointpolicypolicystatuspropertiesispublic">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Multi<wbr>Region<wbr>Access<wbr>Point<wbr>Policy<wbr>Policy<wbr>Status<wbr>Properties<wbr>Is<wbr>Public</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the policy is public or not.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="ispublic_go">
+<a href="#ispublic_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Public</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#multiregionaccesspointpolicypolicystatuspropertiesispublic">Multi<wbr>Region<wbr>Access<wbr>Point<wbr>Policy<wbr>Policy<wbr>Status<wbr>Properties<wbr>Is<wbr>Public</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the policy is public or not.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="ispublic_nodejs">
+<a href="#ispublic_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Public</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#multiregionaccesspointpolicypolicystatuspropertiesispublic">Multi<wbr>Region<wbr>Access<wbr>Point<wbr>Policy<wbr>Policy<wbr>Status<wbr>Properties<wbr>Is<wbr>Public</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the policy is public or not.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="is_public_python">
+<a href="#is_public_python" style="color: inherit; text-decoration: inherit;">is_<wbr>public</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#multiregionaccesspointpolicypolicystatuspropertiesispublic">Multi<wbr>Region<wbr>Access<wbr>Point<wbr>Policy<wbr>Policy<wbr>Status<wbr>Properties<wbr>Is<wbr>Public</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the policy is public or not.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 
 <h2 id="package-details">Package Details</h2>

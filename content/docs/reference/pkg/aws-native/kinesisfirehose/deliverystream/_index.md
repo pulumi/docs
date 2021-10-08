@@ -961,9 +961,9 @@ const deliverystream = new aws_native.kinesisfirehose.DeliveryStream("deliveryst
 <span class="k">def </span><span class="nx">DeliveryStream</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                    <span class="nx">amazonopensearchservice_destination_configuration</span><span class="p">:</span> <span class="nx">Optional[DeliveryStreamAmazonopensearchserviceDestinationConfigurationArgs]</span> = None<span class="p">,</span>
-                   <span class="nx">delivery_stream_encryption_configuration_input</span><span class="p">:</span> <span class="nx">Optional[DeliveryStreamDeliveryStreamEncryptionConfigurationInputArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">delivery_stream_encryption_configuration_input</span><span class="p">:</span> <span class="nx">Optional[DeliveryStreamEncryptionConfigurationInputArgs]</span> = None<span class="p">,</span>
                    <span class="nx">delivery_stream_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                   <span class="nx">delivery_stream_type</span><span class="p">:</span> <span class="nx">Optional[DeliveryStreamDeliveryStreamType]</span> = None<span class="p">,</span>
+                   <span class="nx">delivery_stream_type</span><span class="p">:</span> <span class="nx">Optional[DeliveryStreamType]</span> = None<span class="p">,</span>
                    <span class="nx">elasticsearch_destination_configuration</span><span class="p">:</span> <span class="nx">Optional[DeliveryStreamElasticsearchDestinationConfigurationArgs]</span> = None<span class="p">,</span>
                    <span class="nx">extended_s3_destination_configuration</span><span class="p">:</span> <span class="nx">Optional[DeliveryStreamExtendedS3DestinationConfigurationArgs]</span> = None<span class="p">,</span>
                    <span class="nx">http_endpoint_destination_configuration</span><span class="p">:</span> <span class="nx">Optional[DeliveryStreamHttpEndpointDestinationConfigurationArgs]</span> = None<span class="p">,</span>
@@ -1113,7 +1113,7 @@ The DeliveryStream resource accepts the following [input]({{< relref "/docs/intr
 <a href="#deliverystreamencryptionconfigurationinput_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Stream<wbr>Encryption<wbr>Configuration<wbr>Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliverystreamdeliverystreamencryptionconfigurationinput">Pulumi.<wbr>Aws<wbr>Native.<wbr>Kinesis<wbr>Firehose.<wbr>Inputs.<wbr>Delivery<wbr>Stream<wbr>Delivery<wbr>Stream<wbr>Encryption<wbr>Configuration<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#deliverystreamencryptionconfigurationinput">Pulumi.<wbr>Aws<wbr>Native.<wbr>Kinesis<wbr>Firehose.<wbr>Inputs.<wbr>Delivery<wbr>Stream<wbr>Encryption<wbr>Configuration<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1129,7 +1129,7 @@ The DeliveryStream resource accepts the following [input]({{< relref "/docs/intr
 <a href="#deliverystreamtype_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Stream<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliverystreamdeliverystreamtype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Kinesis<wbr>Firehose.<wbr>Delivery<wbr>Stream<wbr>Delivery<wbr>Stream<wbr>Type</a></span>
+        <span class="property-type"><a href="#deliverystreamtype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Kinesis<wbr>Firehose.<wbr>Delivery<wbr>Stream<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1213,7 +1213,7 @@ The DeliveryStream resource accepts the following [input]({{< relref "/docs/intr
 <a href="#deliverystreamencryptionconfigurationinput_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Stream<wbr>Encryption<wbr>Configuration<wbr>Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliverystreamdeliverystreamencryptionconfigurationinput">Delivery<wbr>Stream<wbr>Delivery<wbr>Stream<wbr>Encryption<wbr>Configuration<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#deliverystreamencryptionconfigurationinput">Delivery<wbr>Stream<wbr>Encryption<wbr>Configuration<wbr>Input<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1229,7 +1229,7 @@ The DeliveryStream resource accepts the following [input]({{< relref "/docs/intr
 <a href="#deliverystreamtype_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Stream<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliverystreamdeliverystreamtype">Delivery<wbr>Stream<wbr>Delivery<wbr>Stream<wbr>Type</a></span>
+        <span class="property-type"><a href="#deliverystreamtype">Delivery<wbr>Stream<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1313,7 +1313,7 @@ The DeliveryStream resource accepts the following [input]({{< relref "/docs/intr
 <a href="#deliverystreamencryptionconfigurationinput_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Stream<wbr>Encryption<wbr>Configuration<wbr>Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliverystreamdeliverystreamencryptionconfigurationinput">Delivery<wbr>Stream<wbr>Delivery<wbr>Stream<wbr>Encryption<wbr>Configuration<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#deliverystreamencryptionconfigurationinput">Delivery<wbr>Stream<wbr>Encryption<wbr>Configuration<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1329,7 +1329,7 @@ The DeliveryStream resource accepts the following [input]({{< relref "/docs/intr
 <a href="#deliverystreamtype_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Stream<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliverystreamdeliverystreamtype">Delivery<wbr>Stream<wbr>Delivery<wbr>Stream<wbr>Type</a></span>
+        <span class="property-type"><a href="#deliverystreamtype">Delivery<wbr>Stream<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1413,7 +1413,7 @@ The DeliveryStream resource accepts the following [input]({{< relref "/docs/intr
 <a href="#delivery_stream_encryption_configuration_input_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>stream_<wbr>encryption_<wbr>configuration_<wbr>input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliverystreamdeliverystreamencryptionconfigurationinput">Delivery<wbr>Stream<wbr>Delivery<wbr>Stream<wbr>Encryption<wbr>Configuration<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#deliverystreamencryptionconfigurationinput">Delivery<wbr>Stream<wbr>Encryption<wbr>Configuration<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1429,7 +1429,7 @@ The DeliveryStream resource accepts the following [input]({{< relref "/docs/intr
 <a href="#delivery_stream_type_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>stream_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliverystreamdeliverystreamtype">Delivery<wbr>Stream<wbr>Delivery<wbr>Stream<wbr>Type</a></span>
+        <span class="property-type"><a href="#deliverystreamtype">Delivery<wbr>Stream<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2681,140 +2681,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="deliverystreamdeliverystreamencryptionconfigurationinput">Delivery<wbr>Stream<wbr>Delivery<wbr>Stream<wbr>Encryption<wbr>Configuration<wbr>Input</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="keytype_csharp">
-<a href="#keytype_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliverystreamdeliverystreamencryptionconfigurationinputkeytype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Kinesis<wbr>Firehose.<wbr>Delivery<wbr>Stream<wbr>Delivery<wbr>Stream<wbr>Encryption<wbr>Configuration<wbr>Input<wbr>Key<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="keyarn_csharp">
-<a href="#keyarn_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>ARN</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="keytype_go">
-<a href="#keytype_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliverystreamdeliverystreamencryptionconfigurationinputkeytype">Delivery<wbr>Stream<wbr>Delivery<wbr>Stream<wbr>Encryption<wbr>Configuration<wbr>Input<wbr>Key<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="keyarn_go">
-<a href="#keyarn_go" style="color: inherit; text-decoration: inherit;">Key<wbr>ARN</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="keytype_nodejs">
-<a href="#keytype_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliverystreamdeliverystreamencryptionconfigurationinputkeytype">Delivery<wbr>Stream<wbr>Delivery<wbr>Stream<wbr>Encryption<wbr>Configuration<wbr>Input<wbr>Key<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="keyarn_nodejs">
-<a href="#keyarn_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>ARN</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="key_type_python">
-<a href="#key_type_python" style="color: inherit; text-decoration: inherit;">key_<wbr>type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliverystreamdeliverystreamencryptionconfigurationinputkeytype">Delivery<wbr>Stream<wbr>Delivery<wbr>Stream<wbr>Encryption<wbr>Configuration<wbr>Input<wbr>Key<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="key_arn_python">
-<a href="#key_arn_python" style="color: inherit; text-decoration: inherit;">key_<wbr>arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="deliverystreamdeliverystreamencryptionconfigurationinputkeytype">Delivery<wbr>Stream<wbr>Delivery<wbr>Stream<wbr>Encryption<wbr>Configuration<wbr>Input<wbr>Key<wbr>Type</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Aws<wbr>Owned<wbr>Cmk</dt>
-    <dd>AWS_OWNED_CMK</dd><dt>Customer<wbr>Managed<wbr>Cmk</dt>
-    <dd>CUSTOMER_MANAGED_CMK</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Delivery<wbr>Stream<wbr>Delivery<wbr>Stream<wbr>Encryption<wbr>Configuration<wbr>Input<wbr>Key<wbr>Type<wbr>Aws<wbr>Owned<wbr>Cmk</dt>
-    <dd>AWS_OWNED_CMK</dd><dt>Delivery<wbr>Stream<wbr>Delivery<wbr>Stream<wbr>Encryption<wbr>Configuration<wbr>Input<wbr>Key<wbr>Type<wbr>Customer<wbr>Managed<wbr>Cmk</dt>
-    <dd>CUSTOMER_MANAGED_CMK</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Aws<wbr>Owned<wbr>Cmk</dt>
-    <dd>AWS_OWNED_CMK</dd><dt>Customer<wbr>Managed<wbr>Cmk</dt>
-    <dd>CUSTOMER_MANAGED_CMK</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>AWS_OWNED_CMK</dt>
-    <dd>AWS_OWNED_CMK</dd><dt>CUSTOMER_MANAGED_CMK</dt>
-    <dd>CUSTOMER_MANAGED_CMK</dd></dl>
-{{% /choosable %}}
-
-<h4 id="deliverystreamdeliverystreamtype">Delivery<wbr>Stream<wbr>Delivery<wbr>Stream<wbr>Type</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Direct<wbr>Put</dt>
-    <dd>DirectPut</dd><dt>Kinesis<wbr>Stream<wbr>As<wbr>Source</dt>
-    <dd>KinesisStreamAsSource</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Delivery<wbr>Stream<wbr>Delivery<wbr>Stream<wbr>Type<wbr>Direct<wbr>Put</dt>
-    <dd>DirectPut</dd><dt>Delivery<wbr>Stream<wbr>Delivery<wbr>Stream<wbr>Type<wbr>Kinesis<wbr>Stream<wbr>As<wbr>Source</dt>
-    <dd>KinesisStreamAsSource</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Direct<wbr>Put</dt>
-    <dd>DirectPut</dd><dt>Kinesis<wbr>Stream<wbr>As<wbr>Source</dt>
-    <dd>KinesisStreamAsSource</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>DIRECT_PUT</dt>
-    <dd>DirectPut</dd><dt>KINESIS_STREAM_AS_SOURCE</dt>
-    <dd>KinesisStreamAsSource</dd></dl>
-{{% /choosable %}}
-
 <h4 id="deliverystreamdeserializer">Delivery<wbr>Stream<wbr>Deserializer</h4>
 
 {{% choosable language csharp %}}
@@ -3689,6 +3555,114 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#deliverystreamencryptionconfigurationnoencryptionconfig">Delivery<wbr>Stream<wbr>Encryption<wbr>Configuration<wbr>No<wbr>Encryption<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="deliverystreamencryptionconfigurationinput">Delivery<wbr>Stream<wbr>Encryption<wbr>Configuration<wbr>Input</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="keytype_csharp">
+<a href="#keytype_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deliverystreamencryptionconfigurationinputkeytype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Kinesis<wbr>Firehose.<wbr>Delivery<wbr>Stream<wbr>Encryption<wbr>Configuration<wbr>Input<wbr>Key<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyarn_csharp">
+<a href="#keyarn_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>ARN</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="keytype_go">
+<a href="#keytype_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deliverystreamencryptionconfigurationinputkeytype">Delivery<wbr>Stream<wbr>Encryption<wbr>Configuration<wbr>Input<wbr>Key<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyarn_go">
+<a href="#keyarn_go" style="color: inherit; text-decoration: inherit;">Key<wbr>ARN</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="keytype_nodejs">
+<a href="#keytype_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deliverystreamencryptionconfigurationinputkeytype">Delivery<wbr>Stream<wbr>Encryption<wbr>Configuration<wbr>Input<wbr>Key<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyarn_nodejs">
+<a href="#keyarn_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>ARN</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_type_python">
+<a href="#key_type_python" style="color: inherit; text-decoration: inherit;">key_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deliverystreamencryptionconfigurationinputkeytype">Delivery<wbr>Stream<wbr>Encryption<wbr>Configuration<wbr>Input<wbr>Key<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="key_arn_python">
+<a href="#key_arn_python" style="color: inherit; text-decoration: inherit;">key_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="deliverystreamencryptionconfigurationinputkeytype">Delivery<wbr>Stream<wbr>Encryption<wbr>Configuration<wbr>Input<wbr>Key<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Aws<wbr>Owned<wbr>Cmk</dt>
+    <dd>AWS_OWNED_CMK</dd><dt>Customer<wbr>Managed<wbr>Cmk</dt>
+    <dd>CUSTOMER_MANAGED_CMK</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Delivery<wbr>Stream<wbr>Encryption<wbr>Configuration<wbr>Input<wbr>Key<wbr>Type<wbr>Aws<wbr>Owned<wbr>Cmk</dt>
+    <dd>AWS_OWNED_CMK</dd><dt>Delivery<wbr>Stream<wbr>Encryption<wbr>Configuration<wbr>Input<wbr>Key<wbr>Type<wbr>Customer<wbr>Managed<wbr>Cmk</dt>
+    <dd>CUSTOMER_MANAGED_CMK</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Aws<wbr>Owned<wbr>Cmk</dt>
+    <dd>AWS_OWNED_CMK</dd><dt>Customer<wbr>Managed<wbr>Cmk</dt>
+    <dd>CUSTOMER_MANAGED_CMK</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>AWS_OWNED_CMK</dt>
+    <dd>AWS_OWNED_CMK</dd><dt>CUSTOMER_MANAGED_CMK</dt>
+    <dd>CUSTOMER_MANAGED_CMK</dd></dl>
 {{% /choosable %}}
 
 <h4 id="deliverystreamencryptionconfigurationnoencryptionconfig">Delivery<wbr>Stream<wbr>Encryption<wbr>Configuration<wbr>No<wbr>Encryption<wbr>Config</h4>
@@ -7607,6 +7581,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="deliverystreamtype">Delivery<wbr>Stream<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Direct<wbr>Put</dt>
+    <dd>DirectPut</dd><dt>Kinesis<wbr>Stream<wbr>As<wbr>Source</dt>
+    <dd>KinesisStreamAsSource</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Delivery<wbr>Stream<wbr>Type<wbr>Direct<wbr>Put</dt>
+    <dd>DirectPut</dd><dt>Delivery<wbr>Stream<wbr>Type<wbr>Kinesis<wbr>Stream<wbr>As<wbr>Source</dt>
+    <dd>KinesisStreamAsSource</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Direct<wbr>Put</dt>
+    <dd>DirectPut</dd><dt>Kinesis<wbr>Stream<wbr>As<wbr>Source</dt>
+    <dd>KinesisStreamAsSource</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DIRECT_PUT</dt>
+    <dd>DirectPut</dd><dt>KINESIS_STREAM_AS_SOURCE</dt>
+    <dd>KinesisStreamAsSource</dd></dl>
 {{% /choosable %}}
 
 <h4 id="deliverystreamvpcconfiguration">Delivery<wbr>Stream<wbr>Vpc<wbr>Configuration</h4>

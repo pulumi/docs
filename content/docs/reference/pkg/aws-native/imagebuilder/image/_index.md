@@ -31,7 +31,7 @@ Resource schema for AWS::ImageBuilder::Image
           <span class="nx">distribution_configuration_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">enhanced_image_metadata_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
           <span class="nx">image_recipe_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-          <span class="nx">image_tests_configuration</span><span class="p">:</span> <span class="nx">Optional[ImageImageTestsConfigurationArgs]</span> = None<span class="p">,</span>
+          <span class="nx">image_tests_configuration</span><span class="p">:</span> <span class="nx">Optional[ImageTestsConfigurationArgs]</span> = None<span class="p">,</span>
           <span class="nx">infrastructure_configuration_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -199,7 +199,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#imagetestsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Tests<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageimagetestsconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Image<wbr>Builder.<wbr>Inputs.<wbr>Image<wbr>Image<wbr>Tests<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagetestsconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Image<wbr>Builder.<wbr>Inputs.<wbr>Image<wbr>Tests<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The image tests configuration used when creating this image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -259,7 +259,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#imagetestsconfiguration_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Tests<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageimagetestsconfiguration">Image<wbr>Image<wbr>Tests<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagetestsconfiguration">Image<wbr>Tests<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The image tests configuration used when creating this image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -319,7 +319,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#imagetestsconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Tests<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageimagetestsconfiguration">Image<wbr>Image<wbr>Tests<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagetestsconfiguration">Image<wbr>Tests<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The image tests configuration used when creating this image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -379,7 +379,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#image_tests_configuration_python" style="color: inherit; text-decoration: inherit;">image_<wbr>tests_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageimagetestsconfiguration">Image<wbr>Image<wbr>Tests<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagetestsconfiguration">Image<wbr>Tests<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The image tests configuration used when creating this image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -561,7 +561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="imageimagetestsconfiguration">Image<wbr>Image<wbr>Tests<wbr>Configuration</h4>
+<h4 id="imagetestsconfiguration">Image<wbr>Tests<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"

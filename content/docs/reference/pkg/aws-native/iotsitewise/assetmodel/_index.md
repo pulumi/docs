@@ -27,11 +27,11 @@ Resource schema for AWS::IoTSiteWise::AssetModel
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">AssetModel</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-               <span class="nx">asset_model_composite_models</span><span class="p">:</span> <span class="nx">Optional[Sequence[AssetModelAssetModelCompositeModelArgs]]</span> = None<span class="p">,</span>
+               <span class="nx">asset_model_composite_models</span><span class="p">:</span> <span class="nx">Optional[Sequence[AssetModelCompositeModelArgs]]</span> = None<span class="p">,</span>
                <span class="nx">asset_model_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">asset_model_hierarchies</span><span class="p">:</span> <span class="nx">Optional[Sequence[AssetModelAssetModelHierarchyArgs]]</span> = None<span class="p">,</span>
+               <span class="nx">asset_model_hierarchies</span><span class="p">:</span> <span class="nx">Optional[Sequence[AssetModelHierarchyArgs]]</span> = None<span class="p">,</span>
                <span class="nx">asset_model_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">asset_model_properties</span><span class="p">:</span> <span class="nx">Optional[Sequence[AssetModelAssetModelPropertyArgs]]</span> = None<span class="p">,</span>
+               <span class="nx">asset_model_properties</span><span class="p">:</span> <span class="nx">Optional[Sequence[AssetModelPropertyArgs]]</span> = None<span class="p">,</span>
                <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[AssetModelTagArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">AssetModel</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -174,7 +174,7 @@ The AssetModel resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#assetmodelcompositemodels_csharp" style="color: inherit; text-decoration: inherit;">Asset<wbr>Model<wbr>Composite<wbr>Models</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetmodelassetmodelcompositemodel">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TSite<wbr>Wise.<wbr>Inputs.<wbr>Asset<wbr>Model<wbr>Asset<wbr>Model<wbr>Composite<wbr>Model<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#assetmodelcompositemodel">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TSite<wbr>Wise.<wbr>Inputs.<wbr>Asset<wbr>Model<wbr>Composite<wbr>Model<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The composite asset models that are part of this asset model. Composite asset models are asset models that contain specific properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -190,7 +190,7 @@ The AssetModel resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#assetmodelhierarchies_csharp" style="color: inherit; text-decoration: inherit;">Asset<wbr>Model<wbr>Hierarchies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetmodelassetmodelhierarchy">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TSite<wbr>Wise.<wbr>Inputs.<wbr>Asset<wbr>Model<wbr>Asset<wbr>Model<wbr>Hierarchy<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#assetmodelhierarchy">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TSite<wbr>Wise.<wbr>Inputs.<wbr>Asset<wbr>Model<wbr>Hierarchy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The hierarchy definitions of the asset model. Each hierarchy specifies an asset model whose assets can be children of any other assets created from this asset model. You can specify up to 10 hierarchies per asset model.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -198,7 +198,7 @@ The AssetModel resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#assetmodelproperties_csharp" style="color: inherit; text-decoration: inherit;">Asset<wbr>Model<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetmodelassetmodelproperty">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TSite<wbr>Wise.<wbr>Inputs.<wbr>Asset<wbr>Model<wbr>Asset<wbr>Model<wbr>Property<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#assetmodelproperty">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TSite<wbr>Wise.<wbr>Inputs.<wbr>Asset<wbr>Model<wbr>Property<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The property definitions of the asset model. You can specify up to 200 properties per asset model.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -226,7 +226,7 @@ The AssetModel resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#assetmodelcompositemodels_go" style="color: inherit; text-decoration: inherit;">Asset<wbr>Model<wbr>Composite<wbr>Models</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetmodelassetmodelcompositemodel">[]Asset<wbr>Model<wbr>Asset<wbr>Model<wbr>Composite<wbr>Model<wbr>Args</a></span>
+        <span class="property-type"><a href="#assetmodelcompositemodel">[]Asset<wbr>Model<wbr>Composite<wbr>Model<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The composite asset models that are part of this asset model. Composite asset models are asset models that contain specific properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -242,7 +242,7 @@ The AssetModel resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#assetmodelhierarchies_go" style="color: inherit; text-decoration: inherit;">Asset<wbr>Model<wbr>Hierarchies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetmodelassetmodelhierarchy">[]Asset<wbr>Model<wbr>Asset<wbr>Model<wbr>Hierarchy<wbr>Args</a></span>
+        <span class="property-type"><a href="#assetmodelhierarchy">[]Asset<wbr>Model<wbr>Hierarchy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The hierarchy definitions of the asset model. Each hierarchy specifies an asset model whose assets can be children of any other assets created from this asset model. You can specify up to 10 hierarchies per asset model.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -250,7 +250,7 @@ The AssetModel resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#assetmodelproperties_go" style="color: inherit; text-decoration: inherit;">Asset<wbr>Model<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetmodelassetmodelproperty">[]Asset<wbr>Model<wbr>Asset<wbr>Model<wbr>Property<wbr>Args</a></span>
+        <span class="property-type"><a href="#assetmodelproperty">[]Asset<wbr>Model<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The property definitions of the asset model. You can specify up to 200 properties per asset model.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -278,7 +278,7 @@ The AssetModel resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#assetmodelcompositemodels_nodejs" style="color: inherit; text-decoration: inherit;">asset<wbr>Model<wbr>Composite<wbr>Models</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetmodelassetmodelcompositemodel">Asset<wbr>Model<wbr>Asset<wbr>Model<wbr>Composite<wbr>Model<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#assetmodelcompositemodel">Asset<wbr>Model<wbr>Composite<wbr>Model<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The composite asset models that are part of this asset model. Composite asset models are asset models that contain specific properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -294,7 +294,7 @@ The AssetModel resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#assetmodelhierarchies_nodejs" style="color: inherit; text-decoration: inherit;">asset<wbr>Model<wbr>Hierarchies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetmodelassetmodelhierarchy">Asset<wbr>Model<wbr>Asset<wbr>Model<wbr>Hierarchy<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#assetmodelhierarchy">Asset<wbr>Model<wbr>Hierarchy<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The hierarchy definitions of the asset model. Each hierarchy specifies an asset model whose assets can be children of any other assets created from this asset model. You can specify up to 10 hierarchies per asset model.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -302,7 +302,7 @@ The AssetModel resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#assetmodelproperties_nodejs" style="color: inherit; text-decoration: inherit;">asset<wbr>Model<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetmodelassetmodelproperty">Asset<wbr>Model<wbr>Asset<wbr>Model<wbr>Property<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#assetmodelproperty">Asset<wbr>Model<wbr>Property<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The property definitions of the asset model. You can specify up to 200 properties per asset model.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -330,7 +330,7 @@ The AssetModel resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#asset_model_composite_models_python" style="color: inherit; text-decoration: inherit;">asset_<wbr>model_<wbr>composite_<wbr>models</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetmodelassetmodelcompositemodel">Sequence[Asset<wbr>Model<wbr>Asset<wbr>Model<wbr>Composite<wbr>Model<wbr>Args]</a></span>
+        <span class="property-type"><a href="#assetmodelcompositemodel">Sequence[Asset<wbr>Model<wbr>Composite<wbr>Model<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The composite asset models that are part of this asset model. Composite asset models are asset models that contain specific properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -346,7 +346,7 @@ The AssetModel resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#asset_model_hierarchies_python" style="color: inherit; text-decoration: inherit;">asset_<wbr>model_<wbr>hierarchies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetmodelassetmodelhierarchy">Sequence[Asset<wbr>Model<wbr>Asset<wbr>Model<wbr>Hierarchy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#assetmodelhierarchy">Sequence[Asset<wbr>Model<wbr>Hierarchy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The hierarchy definitions of the asset model. Each hierarchy specifies an asset model whose assets can be children of any other assets created from this asset model. You can specify up to 10 hierarchies per asset model.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -354,7 +354,7 @@ The AssetModel resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#asset_model_properties_python" style="color: inherit; text-decoration: inherit;">asset_<wbr>model_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetmodelassetmodelproperty">Sequence[Asset<wbr>Model<wbr>Asset<wbr>Model<wbr>Property<wbr>Args]</a></span>
+        <span class="property-type"><a href="#assetmodelproperty">Sequence[Asset<wbr>Model<wbr>Property<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The property definitions of the asset model. You can specify up to 200 properties per asset model.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -496,7 +496,57 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="assetmodelassetmodelcompositemodel">Asset<wbr>Model<wbr>Asset<wbr>Model<wbr>Composite<wbr>Model</h4>
+<h4 id="assetmodelattribute">Asset<wbr>Model<wbr>Attribute</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="defaultvalue_csharp">
+<a href="#defaultvalue_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="defaultvalue_go">
+<a href="#defaultvalue_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="defaultvalue_nodejs">
+<a href="#defaultvalue_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="default_value_python">
+<a href="#default_value_python" style="color: inherit; text-decoration: inherit;">default_<wbr>value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="assetmodelcompositemodel">Asset<wbr>Model<wbr>Composite<wbr>Model</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
@@ -521,7 +571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compositemodelproperties_csharp" style="color: inherit; text-decoration: inherit;">Composite<wbr>Model<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetmodelassetmodelproperty">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TSite<wbr>Wise.<wbr>Inputs.<wbr>Asset<wbr>Model<wbr>Asset<wbr>Model<wbr>Property&gt;</a></span>
+        <span class="property-type"><a href="#assetmodelproperty">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TSite<wbr>Wise.<wbr>Inputs.<wbr>Asset<wbr>Model<wbr>Property&gt;</a></span>
     </dt>
     <dd>{{% md %}}The property definitions of the asset model. You can specify up to 200 properties per asset model.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -557,7 +607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compositemodelproperties_go" style="color: inherit; text-decoration: inherit;">Composite<wbr>Model<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetmodelassetmodelproperty">[]Asset<wbr>Model<wbr>Asset<wbr>Model<wbr>Property</a></span>
+        <span class="property-type"><a href="#assetmodelproperty">[]Asset<wbr>Model<wbr>Property</a></span>
     </dt>
     <dd>{{% md %}}The property definitions of the asset model. You can specify up to 200 properties per asset model.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -593,7 +643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compositemodelproperties_nodejs" style="color: inherit; text-decoration: inherit;">composite<wbr>Model<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetmodelassetmodelproperty">Asset<wbr>Model<wbr>Asset<wbr>Model<wbr>Property[]</a></span>
+        <span class="property-type"><a href="#assetmodelproperty">Asset<wbr>Model<wbr>Property[]</a></span>
     </dt>
     <dd>{{% md %}}The property definitions of the asset model. You can specify up to 200 properties per asset model.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -629,7 +679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#composite_model_properties_python" style="color: inherit; text-decoration: inherit;">composite_<wbr>model_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetmodelassetmodelproperty">Sequence[Asset<wbr>Model<wbr>Asset<wbr>Model<wbr>Property]</a></span>
+        <span class="property-type"><a href="#assetmodelproperty">Sequence[Asset<wbr>Model<wbr>Property]</a></span>
     </dt>
     <dd>{{% md %}}The property definitions of the asset model. You can specify up to 200 properties per asset model.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -642,7 +692,149 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}A description for the asset composite model.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="assetmodelassetmodelhierarchy">Asset<wbr>Model<wbr>Asset<wbr>Model<wbr>Hierarchy</h4>
+<h4 id="assetmodeldatatype">Asset<wbr>Model<wbr>Data<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>String</dt>
+    <dd>STRING</dd><dt>Integer</dt>
+    <dd>INTEGER</dd><dt>Double</dt>
+    <dd>DOUBLE</dd><dt>Boolean</dt>
+    <dd>BOOLEAN</dd><dt>Struct</dt>
+    <dd>STRUCT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Asset<wbr>Model<wbr>Data<wbr>Type<wbr>String</dt>
+    <dd>STRING</dd><dt>Asset<wbr>Model<wbr>Data<wbr>Type<wbr>Integer</dt>
+    <dd>INTEGER</dd><dt>Asset<wbr>Model<wbr>Data<wbr>Type<wbr>Double</dt>
+    <dd>DOUBLE</dd><dt>Asset<wbr>Model<wbr>Data<wbr>Type<wbr>Boolean</dt>
+    <dd>BOOLEAN</dd><dt>Asset<wbr>Model<wbr>Data<wbr>Type<wbr>Struct</dt>
+    <dd>STRUCT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>String</dt>
+    <dd>STRING</dd><dt>Integer</dt>
+    <dd>INTEGER</dd><dt>Double</dt>
+    <dd>DOUBLE</dd><dt>Boolean</dt>
+    <dd>BOOLEAN</dd><dt>Struct</dt>
+    <dd>STRUCT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>STRING</dt>
+    <dd>STRING</dd><dt>INTEGER</dt>
+    <dd>INTEGER</dd><dt>DOUBLE</dt>
+    <dd>DOUBLE</dd><dt>BOOLEAN</dt>
+    <dd>BOOLEAN</dd><dt>STRUCT</dt>
+    <dd>STRUCT</dd></dl>
+{{% /choosable %}}
+
+<h4 id="assetmodeldatatypespec">Asset<wbr>Model<wbr>Data<wbr>Type<wbr>Spec</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Awsalarm<wbr>State</dt>
+    <dd>AWS/ALARM_STATE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Asset<wbr>Model<wbr>Data<wbr>Type<wbr>Spec<wbr>Awsalarm<wbr>State</dt>
+    <dd>AWS/ALARM_STATE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Awsalarm<wbr>State</dt>
+    <dd>AWS/ALARM_STATE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>AWSALARM_STATE</dt>
+    <dd>AWS/ALARM_STATE</dd></dl>
+{{% /choosable %}}
+
+<h4 id="assetmodelexpressionvariable">Asset<wbr>Model<wbr>Expression<wbr>Variable</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The friendly name of the variable to be used in the expression.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#assetmodelvariablevalue">Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TSite<wbr>Wise.<wbr>Inputs.<wbr>Asset<wbr>Model<wbr>Variable<wbr>Value</a></span>
+    </dt>
+    <dd>{{% md %}}The variable that identifies an asset property from which to use values.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The friendly name of the variable to be used in the expression.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#assetmodelvariablevalue">Asset<wbr>Model<wbr>Variable<wbr>Value</a></span>
+    </dt>
+    <dd>{{% md %}}The variable that identifies an asset property from which to use values.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The friendly name of the variable to be used in the expression.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#assetmodelvariablevalue">Asset<wbr>Model<wbr>Variable<wbr>Value</a></span>
+    </dt>
+    <dd>{{% md %}}The variable that identifies an asset property from which to use values.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The friendly name of the variable to be used in the expression.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#assetmodelvariablevalue">Asset<wbr>Model<wbr>Variable<wbr>Value</a></span>
+    </dt>
+    <dd>{{% md %}}The variable that identifies an asset property from which to use values.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="assetmodelhierarchy">Asset<wbr>Model<wbr>Hierarchy</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
@@ -756,7 +948,171 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The name of the asset model hierarchy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="assetmodelassetmodelproperty">Asset<wbr>Model<wbr>Asset<wbr>Model<wbr>Property</h4>
+<h4 id="assetmodelmetric">Asset<wbr>Model<wbr>Metric</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="expression_csharp">
+<a href="#expression_csharp" style="color: inherit; text-decoration: inherit;">Expression</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The mathematical expression that defines the metric aggregation function. You can specify up to 10 functions per expression.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="variables_csharp">
+<a href="#variables_csharp" style="color: inherit; text-decoration: inherit;">Variables</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#assetmodelexpressionvariable">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TSite<wbr>Wise.<wbr>Inputs.<wbr>Asset<wbr>Model<wbr>Expression<wbr>Variable&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of variables used in the expression.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="window_csharp">
+<a href="#window_csharp" style="color: inherit; text-decoration: inherit;">Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#assetmodelmetricwindow">Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TSite<wbr>Wise.<wbr>Inputs.<wbr>Asset<wbr>Model<wbr>Metric<wbr>Window</a></span>
+    </dt>
+    <dd>{{% md %}}The window (time interval) over which AWS IoT SiteWise computes the metric's aggregation expression{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="expression_go">
+<a href="#expression_go" style="color: inherit; text-decoration: inherit;">Expression</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The mathematical expression that defines the metric aggregation function. You can specify up to 10 functions per expression.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="variables_go">
+<a href="#variables_go" style="color: inherit; text-decoration: inherit;">Variables</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#assetmodelexpressionvariable">[]Asset<wbr>Model<wbr>Expression<wbr>Variable</a></span>
+    </dt>
+    <dd>{{% md %}}The list of variables used in the expression.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="window_go">
+<a href="#window_go" style="color: inherit; text-decoration: inherit;">Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#assetmodelmetricwindow">Asset<wbr>Model<wbr>Metric<wbr>Window</a></span>
+    </dt>
+    <dd>{{% md %}}The window (time interval) over which AWS IoT SiteWise computes the metric's aggregation expression{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="expression_nodejs">
+<a href="#expression_nodejs" style="color: inherit; text-decoration: inherit;">expression</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The mathematical expression that defines the metric aggregation function. You can specify up to 10 functions per expression.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="variables_nodejs">
+<a href="#variables_nodejs" style="color: inherit; text-decoration: inherit;">variables</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#assetmodelexpressionvariable">Asset<wbr>Model<wbr>Expression<wbr>Variable[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of variables used in the expression.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="window_nodejs">
+<a href="#window_nodejs" style="color: inherit; text-decoration: inherit;">window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#assetmodelmetricwindow">Asset<wbr>Model<wbr>Metric<wbr>Window</a></span>
+    </dt>
+    <dd>{{% md %}}The window (time interval) over which AWS IoT SiteWise computes the metric's aggregation expression{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="expression_python">
+<a href="#expression_python" style="color: inherit; text-decoration: inherit;">expression</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The mathematical expression that defines the metric aggregation function. You can specify up to 10 functions per expression.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="variables_python">
+<a href="#variables_python" style="color: inherit; text-decoration: inherit;">variables</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#assetmodelexpressionvariable">Sequence[Asset<wbr>Model<wbr>Expression<wbr>Variable]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of variables used in the expression.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="window_python">
+<a href="#window_python" style="color: inherit; text-decoration: inherit;">window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#assetmodelmetricwindow">Asset<wbr>Model<wbr>Metric<wbr>Window</a></span>
+    </dt>
+    <dd>{{% md %}}The window (time interval) over which AWS IoT SiteWise computes the metric's aggregation expression{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="assetmodelmetricwindow">Asset<wbr>Model<wbr>Metric<wbr>Window</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="tumbling_csharp">
+<a href="#tumbling_csharp" style="color: inherit; text-decoration: inherit;">Tumbling</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#assetmodeltumblingwindow">Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TSite<wbr>Wise.<wbr>Inputs.<wbr>Asset<wbr>Model<wbr>Tumbling<wbr>Window</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="tumbling_go">
+<a href="#tumbling_go" style="color: inherit; text-decoration: inherit;">Tumbling</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#assetmodeltumblingwindow">Asset<wbr>Model<wbr>Tumbling<wbr>Window</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="tumbling_nodejs">
+<a href="#tumbling_nodejs" style="color: inherit; text-decoration: inherit;">tumbling</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#assetmodeltumblingwindow">Asset<wbr>Model<wbr>Tumbling<wbr>Window</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="tumbling_python">
+<a href="#tumbling_python" style="color: inherit; text-decoration: inherit;">tumbling</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#assetmodeltumblingwindow">Asset<wbr>Model<wbr>Tumbling<wbr>Window</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="assetmodelproperty">Asset<wbr>Model<wbr>Property</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
@@ -964,362 +1320,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unit of the asset model property, such as Newtons or RPM.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="assetmodelattribute">Asset<wbr>Model<wbr>Attribute</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="defaultvalue_csharp">
-<a href="#defaultvalue_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="defaultvalue_go">
-<a href="#defaultvalue_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="defaultvalue_nodejs">
-<a href="#defaultvalue_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="default_value_python">
-<a href="#default_value_python" style="color: inherit; text-decoration: inherit;">default_<wbr>value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="assetmodeldatatype">Asset<wbr>Model<wbr>Data<wbr>Type</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>String</dt>
-    <dd>STRING</dd><dt>Integer</dt>
-    <dd>INTEGER</dd><dt>Double</dt>
-    <dd>DOUBLE</dd><dt>Boolean</dt>
-    <dd>BOOLEAN</dd><dt>Struct</dt>
-    <dd>STRUCT</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Asset<wbr>Model<wbr>Data<wbr>Type<wbr>String</dt>
-    <dd>STRING</dd><dt>Asset<wbr>Model<wbr>Data<wbr>Type<wbr>Integer</dt>
-    <dd>INTEGER</dd><dt>Asset<wbr>Model<wbr>Data<wbr>Type<wbr>Double</dt>
-    <dd>DOUBLE</dd><dt>Asset<wbr>Model<wbr>Data<wbr>Type<wbr>Boolean</dt>
-    <dd>BOOLEAN</dd><dt>Asset<wbr>Model<wbr>Data<wbr>Type<wbr>Struct</dt>
-    <dd>STRUCT</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>String</dt>
-    <dd>STRING</dd><dt>Integer</dt>
-    <dd>INTEGER</dd><dt>Double</dt>
-    <dd>DOUBLE</dd><dt>Boolean</dt>
-    <dd>BOOLEAN</dd><dt>Struct</dt>
-    <dd>STRUCT</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>STRING</dt>
-    <dd>STRING</dd><dt>INTEGER</dt>
-    <dd>INTEGER</dd><dt>DOUBLE</dt>
-    <dd>DOUBLE</dd><dt>BOOLEAN</dt>
-    <dd>BOOLEAN</dd><dt>STRUCT</dt>
-    <dd>STRUCT</dd></dl>
-{{% /choosable %}}
-
-<h4 id="assetmodeldatatypespec">Asset<wbr>Model<wbr>Data<wbr>Type<wbr>Spec</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Awsalarm<wbr>State</dt>
-    <dd>AWS/ALARM_STATE</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Asset<wbr>Model<wbr>Data<wbr>Type<wbr>Spec<wbr>Awsalarm<wbr>State</dt>
-    <dd>AWS/ALARM_STATE</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Awsalarm<wbr>State</dt>
-    <dd>AWS/ALARM_STATE</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>AWSALARM_STATE</dt>
-    <dd>AWS/ALARM_STATE</dd></dl>
-{{% /choosable %}}
-
-<h4 id="assetmodelexpressionvariable">Asset<wbr>Model<wbr>Expression<wbr>Variable</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The friendly name of the variable to be used in the expression.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="value_csharp">
-<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetmodelvariablevalue">Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TSite<wbr>Wise.<wbr>Inputs.<wbr>Asset<wbr>Model<wbr>Variable<wbr>Value</a></span>
-    </dt>
-    <dd>{{% md %}}The variable that identifies an asset property from which to use values.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The friendly name of the variable to be used in the expression.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="value_go">
-<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetmodelvariablevalue">Asset<wbr>Model<wbr>Variable<wbr>Value</a></span>
-    </dt>
-    <dd>{{% md %}}The variable that identifies an asset property from which to use values.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The friendly name of the variable to be used in the expression.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="value_nodejs">
-<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetmodelvariablevalue">Asset<wbr>Model<wbr>Variable<wbr>Value</a></span>
-    </dt>
-    <dd>{{% md %}}The variable that identifies an asset property from which to use values.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The friendly name of the variable to be used in the expression.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="value_python">
-<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetmodelvariablevalue">Asset<wbr>Model<wbr>Variable<wbr>Value</a></span>
-    </dt>
-    <dd>{{% md %}}The variable that identifies an asset property from which to use values.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="assetmodelmetric">Asset<wbr>Model<wbr>Metric</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="expression_csharp">
-<a href="#expression_csharp" style="color: inherit; text-decoration: inherit;">Expression</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The mathematical expression that defines the metric aggregation function. You can specify up to 10 functions per expression.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="variables_csharp">
-<a href="#variables_csharp" style="color: inherit; text-decoration: inherit;">Variables</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetmodelexpressionvariable">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TSite<wbr>Wise.<wbr>Inputs.<wbr>Asset<wbr>Model<wbr>Expression<wbr>Variable&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The list of variables used in the expression.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="window_csharp">
-<a href="#window_csharp" style="color: inherit; text-decoration: inherit;">Window</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetmodelmetricwindow">Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TSite<wbr>Wise.<wbr>Inputs.<wbr>Asset<wbr>Model<wbr>Metric<wbr>Window</a></span>
-    </dt>
-    <dd>{{% md %}}The window (time interval) over which AWS IoT SiteWise computes the metric's aggregation expression{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="expression_go">
-<a href="#expression_go" style="color: inherit; text-decoration: inherit;">Expression</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The mathematical expression that defines the metric aggregation function. You can specify up to 10 functions per expression.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="variables_go">
-<a href="#variables_go" style="color: inherit; text-decoration: inherit;">Variables</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetmodelexpressionvariable">[]Asset<wbr>Model<wbr>Expression<wbr>Variable</a></span>
-    </dt>
-    <dd>{{% md %}}The list of variables used in the expression.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="window_go">
-<a href="#window_go" style="color: inherit; text-decoration: inherit;">Window</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetmodelmetricwindow">Asset<wbr>Model<wbr>Metric<wbr>Window</a></span>
-    </dt>
-    <dd>{{% md %}}The window (time interval) over which AWS IoT SiteWise computes the metric's aggregation expression{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="expression_nodejs">
-<a href="#expression_nodejs" style="color: inherit; text-decoration: inherit;">expression</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The mathematical expression that defines the metric aggregation function. You can specify up to 10 functions per expression.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="variables_nodejs">
-<a href="#variables_nodejs" style="color: inherit; text-decoration: inherit;">variables</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetmodelexpressionvariable">Asset<wbr>Model<wbr>Expression<wbr>Variable[]</a></span>
-    </dt>
-    <dd>{{% md %}}The list of variables used in the expression.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="window_nodejs">
-<a href="#window_nodejs" style="color: inherit; text-decoration: inherit;">window</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetmodelmetricwindow">Asset<wbr>Model<wbr>Metric<wbr>Window</a></span>
-    </dt>
-    <dd>{{% md %}}The window (time interval) over which AWS IoT SiteWise computes the metric's aggregation expression{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="expression_python">
-<a href="#expression_python" style="color: inherit; text-decoration: inherit;">expression</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The mathematical expression that defines the metric aggregation function. You can specify up to 10 functions per expression.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="variables_python">
-<a href="#variables_python" style="color: inherit; text-decoration: inherit;">variables</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetmodelexpressionvariable">Sequence[Asset<wbr>Model<wbr>Expression<wbr>Variable]</a></span>
-    </dt>
-    <dd>{{% md %}}The list of variables used in the expression.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="window_python">
-<a href="#window_python" style="color: inherit; text-decoration: inherit;">window</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetmodelmetricwindow">Asset<wbr>Model<wbr>Metric<wbr>Window</a></span>
-    </dt>
-    <dd>{{% md %}}The window (time interval) over which AWS IoT SiteWise computes the metric's aggregation expression{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="assetmodelmetricwindow">Asset<wbr>Model<wbr>Metric<wbr>Window</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="tumbling_csharp">
-<a href="#tumbling_csharp" style="color: inherit; text-decoration: inherit;">Tumbling</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetmodeltumblingwindow">Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TSite<wbr>Wise.<wbr>Inputs.<wbr>Asset<wbr>Model<wbr>Tumbling<wbr>Window</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="tumbling_go">
-<a href="#tumbling_go" style="color: inherit; text-decoration: inherit;">Tumbling</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetmodeltumblingwindow">Asset<wbr>Model<wbr>Tumbling<wbr>Window</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="tumbling_nodejs">
-<a href="#tumbling_nodejs" style="color: inherit; text-decoration: inherit;">tumbling</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetmodeltumblingwindow">Asset<wbr>Model<wbr>Tumbling<wbr>Window</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="tumbling_python">
-<a href="#tumbling_python" style="color: inherit; text-decoration: inherit;">tumbling</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetmodeltumblingwindow">Asset<wbr>Model<wbr>Tumbling<wbr>Window</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="assetmodelpropertytype">Asset<wbr>Model<wbr>Property<wbr>Type</h4>

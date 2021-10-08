@@ -28,7 +28,7 @@ Resource Type definition for AWS::AppFlow::ConnectorProfile
 <span class="k">def </span><span class="nx">ConnectorProfile</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                      <span class="nx">connection_mode</span><span class="p">:</span> <span class="nx">Optional[ConnectorProfileConnectionMode]</span> = None<span class="p">,</span>
-                     <span class="nx">connector_profile_config</span><span class="p">:</span> <span class="nx">Optional[ConnectorProfileConnectorProfileConfigArgs]</span> = None<span class="p">,</span>
+                     <span class="nx">connector_profile_config</span><span class="p">:</span> <span class="nx">Optional[ConnectorProfileConfigArgs]</span> = None<span class="p">,</span>
                      <span class="nx">connector_profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">connector_type</span><span class="p">:</span> <span class="nx">Optional[ConnectorProfileConnectorType]</span> = None<span class="p">,</span>
                      <span class="nx">k_ms_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
@@ -189,7 +189,7 @@ The ConnectorProfile resource accepts the following [input]({{< relref "/docs/in
 <a href="#connectorprofileconfig_csharp" style="color: inherit; text-decoration: inherit;">Connector<wbr>Profile<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofileconnectorprofileconfig">Pulumi.<wbr>Aws<wbr>Native.<wbr>App<wbr>Flow.<wbr>Inputs.<wbr>Connector<wbr>Profile<wbr>Connector<wbr>Profile<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectorprofileconfig">Pulumi.<wbr>Aws<wbr>Native.<wbr>App<wbr>Flow.<wbr>Inputs.<wbr>Connector<wbr>Profile<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connector specific configurations needed to create connector profile{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -233,7 +233,7 @@ The ConnectorProfile resource accepts the following [input]({{< relref "/docs/in
 <a href="#connectorprofileconfig_go" style="color: inherit; text-decoration: inherit;">Connector<wbr>Profile<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofileconnectorprofileconfig">Connector<wbr>Profile<wbr>Connector<wbr>Profile<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectorprofileconfig">Connector<wbr>Profile<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connector specific configurations needed to create connector profile{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -277,7 +277,7 @@ The ConnectorProfile resource accepts the following [input]({{< relref "/docs/in
 <a href="#connectorprofileconfig_nodejs" style="color: inherit; text-decoration: inherit;">connector<wbr>Profile<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofileconnectorprofileconfig">Connector<wbr>Profile<wbr>Connector<wbr>Profile<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectorprofileconfig">Connector<wbr>Profile<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connector specific configurations needed to create connector profile{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -321,7 +321,7 @@ The ConnectorProfile resource accepts the following [input]({{< relref "/docs/in
 <a href="#connector_profile_config_python" style="color: inherit; text-decoration: inherit;">connector_<wbr>profile_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofileconnectorprofileconfig">Connector<wbr>Profile<wbr>Connector<wbr>Profile<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectorprofileconfig">Connector<wbr>Profile<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connector specific configurations needed to create connector profile{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -545,6 +545,88 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="connectorprofileconfig">Connector<wbr>Profile<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="connectorprofilecredentials_csharp">
+<a href="#connectorprofilecredentials_csharp" style="color: inherit; text-decoration: inherit;">Connector<wbr>Profile<wbr>Credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofilecredentials">Pulumi.<wbr>Aws<wbr>Native.<wbr>App<wbr>Flow.<wbr>Inputs.<wbr>Connector<wbr>Profile<wbr>Credentials</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connectorprofileproperties_csharp">
+<a href="#connectorprofileproperties_csharp" style="color: inherit; text-decoration: inherit;">Connector<wbr>Profile<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofileproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>App<wbr>Flow.<wbr>Inputs.<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="connectorprofilecredentials_go">
+<a href="#connectorprofilecredentials_go" style="color: inherit; text-decoration: inherit;">Connector<wbr>Profile<wbr>Credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofilecredentials">Connector<wbr>Profile<wbr>Credentials</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connectorprofileproperties_go">
+<a href="#connectorprofileproperties_go" style="color: inherit; text-decoration: inherit;">Connector<wbr>Profile<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofileproperties">Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="connectorprofilecredentials_nodejs">
+<a href="#connectorprofilecredentials_nodejs" style="color: inherit; text-decoration: inherit;">connector<wbr>Profile<wbr>Credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofilecredentials">Connector<wbr>Profile<wbr>Credentials</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connectorprofileproperties_nodejs">
+<a href="#connectorprofileproperties_nodejs" style="color: inherit; text-decoration: inherit;">connector<wbr>Profile<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofileproperties">Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="connector_profile_credentials_python">
+<a href="#connector_profile_credentials_python" style="color: inherit; text-decoration: inherit;">connector_<wbr>profile_<wbr>credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofilecredentials">Connector<wbr>Profile<wbr>Credentials</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connector_profile_properties_python">
+<a href="#connector_profile_properties_python" style="color: inherit; text-decoration: inherit;">connector_<wbr>profile_<wbr>properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofileproperties">Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="connectorprofileconnectionmode">Connector<wbr>Profile<wbr>Connection<wbr>Mode</h4>
 
 {{% choosable language csharp %}}
@@ -657,89 +739,85 @@ granted.{{% /md %}}</dd></dl>
 granted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="connectorprofileconnectorprofileconfig">Connector<wbr>Profile<wbr>Connector<wbr>Profile<wbr>Config</h4>
+<h4 id="connectorprofileconnectortype">Connector<wbr>Profile<wbr>Connector<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="connectorprofilecredentials_csharp">
-<a href="#connectorprofilecredentials_csharp" style="color: inherit; text-decoration: inherit;">Connector<wbr>Profile<wbr>Credentials</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofileconnectorprofilecredentials">Pulumi.<wbr>Aws<wbr>Native.<wbr>App<wbr>Flow.<wbr>Inputs.<wbr>Connector<wbr>Profile<wbr>Connector<wbr>Profile<wbr>Credentials</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="connectorprofileproperties_csharp">
-<a href="#connectorprofileproperties_csharp" style="color: inherit; text-decoration: inherit;">Connector<wbr>Profile<wbr>Properties</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofileconnectorprofileproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>App<wbr>Flow.<wbr>Inputs.<wbr>Connector<wbr>Profile<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+<dl class="tabular"><dt>Salesforce</dt>
+    <dd>Salesforce</dd><dt>Singular</dt>
+    <dd>Singular</dd><dt>Slack</dt>
+    <dd>Slack</dd><dt>Redshift</dt>
+    <dd>Redshift</dd><dt>Marketo</dt>
+    <dd>Marketo</dd><dt>Googleanalytics</dt>
+    <dd>Googleanalytics</dd><dt>Zendesk</dt>
+    <dd>Zendesk</dd><dt>Servicenow</dt>
+    <dd>Servicenow</dd><dt>Datadog</dt>
+    <dd>Datadog</dd><dt>Trendmicro</dt>
+    <dd>Trendmicro</dd><dt>Snowflake</dt>
+    <dd>Snowflake</dd><dt>Dynatrace</dt>
+    <dd>Dynatrace</dd><dt>Infornexus</dt>
+    <dd>Infornexus</dd><dt>Amplitude</dt>
+    <dd>Amplitude</dd><dt>Veeva</dt>
+    <dd>Veeva</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="connectorprofilecredentials_go">
-<a href="#connectorprofilecredentials_go" style="color: inherit; text-decoration: inherit;">Connector<wbr>Profile<wbr>Credentials</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofileconnectorprofilecredentials">Connector<wbr>Profile<wbr>Connector<wbr>Profile<wbr>Credentials</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="connectorprofileproperties_go">
-<a href="#connectorprofileproperties_go" style="color: inherit; text-decoration: inherit;">Connector<wbr>Profile<wbr>Properties</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofileconnectorprofileproperties">Connector<wbr>Profile<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+<dl class="tabular"><dt>Connector<wbr>Profile<wbr>Connector<wbr>Type<wbr>Salesforce</dt>
+    <dd>Salesforce</dd><dt>Connector<wbr>Profile<wbr>Connector<wbr>Type<wbr>Singular</dt>
+    <dd>Singular</dd><dt>Connector<wbr>Profile<wbr>Connector<wbr>Type<wbr>Slack</dt>
+    <dd>Slack</dd><dt>Connector<wbr>Profile<wbr>Connector<wbr>Type<wbr>Redshift</dt>
+    <dd>Redshift</dd><dt>Connector<wbr>Profile<wbr>Connector<wbr>Type<wbr>Marketo</dt>
+    <dd>Marketo</dd><dt>Connector<wbr>Profile<wbr>Connector<wbr>Type<wbr>Googleanalytics</dt>
+    <dd>Googleanalytics</dd><dt>Connector<wbr>Profile<wbr>Connector<wbr>Type<wbr>Zendesk</dt>
+    <dd>Zendesk</dd><dt>Connector<wbr>Profile<wbr>Connector<wbr>Type<wbr>Servicenow</dt>
+    <dd>Servicenow</dd><dt>Connector<wbr>Profile<wbr>Connector<wbr>Type<wbr>Datadog</dt>
+    <dd>Datadog</dd><dt>Connector<wbr>Profile<wbr>Connector<wbr>Type<wbr>Trendmicro</dt>
+    <dd>Trendmicro</dd><dt>Connector<wbr>Profile<wbr>Connector<wbr>Type<wbr>Snowflake</dt>
+    <dd>Snowflake</dd><dt>Connector<wbr>Profile<wbr>Connector<wbr>Type<wbr>Dynatrace</dt>
+    <dd>Dynatrace</dd><dt>Connector<wbr>Profile<wbr>Connector<wbr>Type<wbr>Infornexus</dt>
+    <dd>Infornexus</dd><dt>Connector<wbr>Profile<wbr>Connector<wbr>Type<wbr>Amplitude</dt>
+    <dd>Amplitude</dd><dt>Connector<wbr>Profile<wbr>Connector<wbr>Type<wbr>Veeva</dt>
+    <dd>Veeva</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="connectorprofilecredentials_nodejs">
-<a href="#connectorprofilecredentials_nodejs" style="color: inherit; text-decoration: inherit;">connector<wbr>Profile<wbr>Credentials</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofileconnectorprofilecredentials">Connector<wbr>Profile<wbr>Connector<wbr>Profile<wbr>Credentials</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="connectorprofileproperties_nodejs">
-<a href="#connectorprofileproperties_nodejs" style="color: inherit; text-decoration: inherit;">connector<wbr>Profile<wbr>Properties</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofileconnectorprofileproperties">Connector<wbr>Profile<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+<dl class="tabular"><dt>Salesforce</dt>
+    <dd>Salesforce</dd><dt>Singular</dt>
+    <dd>Singular</dd><dt>Slack</dt>
+    <dd>Slack</dd><dt>Redshift</dt>
+    <dd>Redshift</dd><dt>Marketo</dt>
+    <dd>Marketo</dd><dt>Googleanalytics</dt>
+    <dd>Googleanalytics</dd><dt>Zendesk</dt>
+    <dd>Zendesk</dd><dt>Servicenow</dt>
+    <dd>Servicenow</dd><dt>Datadog</dt>
+    <dd>Datadog</dd><dt>Trendmicro</dt>
+    <dd>Trendmicro</dd><dt>Snowflake</dt>
+    <dd>Snowflake</dd><dt>Dynatrace</dt>
+    <dd>Dynatrace</dd><dt>Infornexus</dt>
+    <dd>Infornexus</dd><dt>Amplitude</dt>
+    <dd>Amplitude</dd><dt>Veeva</dt>
+    <dd>Veeva</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="connector_profile_credentials_python">
-<a href="#connector_profile_credentials_python" style="color: inherit; text-decoration: inherit;">connector_<wbr>profile_<wbr>credentials</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofileconnectorprofilecredentials">Connector<wbr>Profile<wbr>Connector<wbr>Profile<wbr>Credentials</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="connector_profile_properties_python">
-<a href="#connector_profile_properties_python" style="color: inherit; text-decoration: inherit;">connector_<wbr>profile_<wbr>properties</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofileconnectorprofileproperties">Connector<wbr>Profile<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+<dl class="tabular"><dt>SALESFORCE</dt>
+    <dd>Salesforce</dd><dt>SINGULAR</dt>
+    <dd>Singular</dd><dt>SLACK</dt>
+    <dd>Slack</dd><dt>REDSHIFT</dt>
+    <dd>Redshift</dd><dt>MARKETO</dt>
+    <dd>Marketo</dd><dt>GOOGLEANALYTICS</dt>
+    <dd>Googleanalytics</dd><dt>ZENDESK</dt>
+    <dd>Zendesk</dd><dt>SERVICENOW</dt>
+    <dd>Servicenow</dd><dt>DATADOG</dt>
+    <dd>Datadog</dd><dt>TRENDMICRO</dt>
+    <dd>Trendmicro</dd><dt>SNOWFLAKE</dt>
+    <dd>Snowflake</dd><dt>DYNATRACE</dt>
+    <dd>Dynatrace</dd><dt>INFORNEXUS</dt>
+    <dd>Infornexus</dd><dt>AMPLITUDE</dt>
+    <dd>Amplitude</dd><dt>VEEVA</dt>
+    <dd>Veeva</dd></dl>
 {{% /choosable %}}
 
-<h4 id="connectorprofileconnectorprofilecredentials">Connector<wbr>Profile<wbr>Connector<wbr>Profile<wbr>Credentials</h4>
+<h4 id="connectorprofilecredentials">Connector<wbr>Profile<wbr>Credentials</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
@@ -1235,454 +1313,6 @@ granted.{{% /md %}}</dd></dl>
         <span class="property-type"><a href="#connectorprofilezendeskconnectorprofilecredentials">Connector<wbr>Profile<wbr>Zendesk<wbr>Connector<wbr>Profile<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="connectorprofileconnectorprofileproperties">Connector<wbr>Profile<wbr>Connector<wbr>Profile<wbr>Properties</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="datadog_csharp">
-<a href="#datadog_csharp" style="color: inherit; text-decoration: inherit;">Datadog</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofiledatadogconnectorprofileproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>App<wbr>Flow.<wbr>Inputs.<wbr>Connector<wbr>Profile<wbr>Datadog<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="dynatrace_csharp">
-<a href="#dynatrace_csharp" style="color: inherit; text-decoration: inherit;">Dynatrace</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofiledynatraceconnectorprofileproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>App<wbr>Flow.<wbr>Inputs.<wbr>Connector<wbr>Profile<wbr>Dynatrace<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="infornexus_csharp">
-<a href="#infornexus_csharp" style="color: inherit; text-decoration: inherit;">Infor<wbr>Nexus</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofileinfornexusconnectorprofileproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>App<wbr>Flow.<wbr>Inputs.<wbr>Connector<wbr>Profile<wbr>Infor<wbr>Nexus<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="marketo_csharp">
-<a href="#marketo_csharp" style="color: inherit; text-decoration: inherit;">Marketo</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofilemarketoconnectorprofileproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>App<wbr>Flow.<wbr>Inputs.<wbr>Connector<wbr>Profile<wbr>Marketo<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="redshift_csharp">
-<a href="#redshift_csharp" style="color: inherit; text-decoration: inherit;">Redshift</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofileredshiftconnectorprofileproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>App<wbr>Flow.<wbr>Inputs.<wbr>Connector<wbr>Profile<wbr>Redshift<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="salesforce_csharp">
-<a href="#salesforce_csharp" style="color: inherit; text-decoration: inherit;">Salesforce</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofilesalesforceconnectorprofileproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>App<wbr>Flow.<wbr>Inputs.<wbr>Connector<wbr>Profile<wbr>Salesforce<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="servicenow_csharp">
-<a href="#servicenow_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Now</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofileservicenowconnectorprofileproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>App<wbr>Flow.<wbr>Inputs.<wbr>Connector<wbr>Profile<wbr>Service<wbr>Now<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="slack_csharp">
-<a href="#slack_csharp" style="color: inherit; text-decoration: inherit;">Slack</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofileslackconnectorprofileproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>App<wbr>Flow.<wbr>Inputs.<wbr>Connector<wbr>Profile<wbr>Slack<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="snowflake_csharp">
-<a href="#snowflake_csharp" style="color: inherit; text-decoration: inherit;">Snowflake</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofilesnowflakeconnectorprofileproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>App<wbr>Flow.<wbr>Inputs.<wbr>Connector<wbr>Profile<wbr>Snowflake<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="veeva_csharp">
-<a href="#veeva_csharp" style="color: inherit; text-decoration: inherit;">Veeva</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofileveevaconnectorprofileproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>App<wbr>Flow.<wbr>Inputs.<wbr>Connector<wbr>Profile<wbr>Veeva<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="zendesk_csharp">
-<a href="#zendesk_csharp" style="color: inherit; text-decoration: inherit;">Zendesk</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofilezendeskconnectorprofileproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>App<wbr>Flow.<wbr>Inputs.<wbr>Connector<wbr>Profile<wbr>Zendesk<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="datadog_go">
-<a href="#datadog_go" style="color: inherit; text-decoration: inherit;">Datadog</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofiledatadogconnectorprofileproperties">Connector<wbr>Profile<wbr>Datadog<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="dynatrace_go">
-<a href="#dynatrace_go" style="color: inherit; text-decoration: inherit;">Dynatrace</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofiledynatraceconnectorprofileproperties">Connector<wbr>Profile<wbr>Dynatrace<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="infornexus_go">
-<a href="#infornexus_go" style="color: inherit; text-decoration: inherit;">Infor<wbr>Nexus</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofileinfornexusconnectorprofileproperties">Connector<wbr>Profile<wbr>Infor<wbr>Nexus<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="marketo_go">
-<a href="#marketo_go" style="color: inherit; text-decoration: inherit;">Marketo</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofilemarketoconnectorprofileproperties">Connector<wbr>Profile<wbr>Marketo<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="redshift_go">
-<a href="#redshift_go" style="color: inherit; text-decoration: inherit;">Redshift</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofileredshiftconnectorprofileproperties">Connector<wbr>Profile<wbr>Redshift<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="salesforce_go">
-<a href="#salesforce_go" style="color: inherit; text-decoration: inherit;">Salesforce</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofilesalesforceconnectorprofileproperties">Connector<wbr>Profile<wbr>Salesforce<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="servicenow_go">
-<a href="#servicenow_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Now</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofileservicenowconnectorprofileproperties">Connector<wbr>Profile<wbr>Service<wbr>Now<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="slack_go">
-<a href="#slack_go" style="color: inherit; text-decoration: inherit;">Slack</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofileslackconnectorprofileproperties">Connector<wbr>Profile<wbr>Slack<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="snowflake_go">
-<a href="#snowflake_go" style="color: inherit; text-decoration: inherit;">Snowflake</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofilesnowflakeconnectorprofileproperties">Connector<wbr>Profile<wbr>Snowflake<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="veeva_go">
-<a href="#veeva_go" style="color: inherit; text-decoration: inherit;">Veeva</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofileveevaconnectorprofileproperties">Connector<wbr>Profile<wbr>Veeva<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="zendesk_go">
-<a href="#zendesk_go" style="color: inherit; text-decoration: inherit;">Zendesk</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofilezendeskconnectorprofileproperties">Connector<wbr>Profile<wbr>Zendesk<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="datadog_nodejs">
-<a href="#datadog_nodejs" style="color: inherit; text-decoration: inherit;">datadog</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofiledatadogconnectorprofileproperties">Connector<wbr>Profile<wbr>Datadog<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="dynatrace_nodejs">
-<a href="#dynatrace_nodejs" style="color: inherit; text-decoration: inherit;">dynatrace</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofiledynatraceconnectorprofileproperties">Connector<wbr>Profile<wbr>Dynatrace<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="infornexus_nodejs">
-<a href="#infornexus_nodejs" style="color: inherit; text-decoration: inherit;">infor<wbr>Nexus</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofileinfornexusconnectorprofileproperties">Connector<wbr>Profile<wbr>Infor<wbr>Nexus<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="marketo_nodejs">
-<a href="#marketo_nodejs" style="color: inherit; text-decoration: inherit;">marketo</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofilemarketoconnectorprofileproperties">Connector<wbr>Profile<wbr>Marketo<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="redshift_nodejs">
-<a href="#redshift_nodejs" style="color: inherit; text-decoration: inherit;">redshift</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofileredshiftconnectorprofileproperties">Connector<wbr>Profile<wbr>Redshift<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="salesforce_nodejs">
-<a href="#salesforce_nodejs" style="color: inherit; text-decoration: inherit;">salesforce</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofilesalesforceconnectorprofileproperties">Connector<wbr>Profile<wbr>Salesforce<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="servicenow_nodejs">
-<a href="#servicenow_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Now</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofileservicenowconnectorprofileproperties">Connector<wbr>Profile<wbr>Service<wbr>Now<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="slack_nodejs">
-<a href="#slack_nodejs" style="color: inherit; text-decoration: inherit;">slack</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofileslackconnectorprofileproperties">Connector<wbr>Profile<wbr>Slack<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="snowflake_nodejs">
-<a href="#snowflake_nodejs" style="color: inherit; text-decoration: inherit;">snowflake</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofilesnowflakeconnectorprofileproperties">Connector<wbr>Profile<wbr>Snowflake<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="veeva_nodejs">
-<a href="#veeva_nodejs" style="color: inherit; text-decoration: inherit;">veeva</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofileveevaconnectorprofileproperties">Connector<wbr>Profile<wbr>Veeva<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="zendesk_nodejs">
-<a href="#zendesk_nodejs" style="color: inherit; text-decoration: inherit;">zendesk</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofilezendeskconnectorprofileproperties">Connector<wbr>Profile<wbr>Zendesk<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="datadog_python">
-<a href="#datadog_python" style="color: inherit; text-decoration: inherit;">datadog</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofiledatadogconnectorprofileproperties">Connector<wbr>Profile<wbr>Datadog<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="dynatrace_python">
-<a href="#dynatrace_python" style="color: inherit; text-decoration: inherit;">dynatrace</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofiledynatraceconnectorprofileproperties">Connector<wbr>Profile<wbr>Dynatrace<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="infor_nexus_python">
-<a href="#infor_nexus_python" style="color: inherit; text-decoration: inherit;">infor_<wbr>nexus</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofileinfornexusconnectorprofileproperties">Connector<wbr>Profile<wbr>Infor<wbr>Nexus<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="marketo_python">
-<a href="#marketo_python" style="color: inherit; text-decoration: inherit;">marketo</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofilemarketoconnectorprofileproperties">Connector<wbr>Profile<wbr>Marketo<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="redshift_python">
-<a href="#redshift_python" style="color: inherit; text-decoration: inherit;">redshift</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofileredshiftconnectorprofileproperties">Connector<wbr>Profile<wbr>Redshift<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="salesforce_python">
-<a href="#salesforce_python" style="color: inherit; text-decoration: inherit;">salesforce</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofilesalesforceconnectorprofileproperties">Connector<wbr>Profile<wbr>Salesforce<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="service_now_python">
-<a href="#service_now_python" style="color: inherit; text-decoration: inherit;">service_<wbr>now</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofileservicenowconnectorprofileproperties">Connector<wbr>Profile<wbr>Service<wbr>Now<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="slack_python">
-<a href="#slack_python" style="color: inherit; text-decoration: inherit;">slack</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofileslackconnectorprofileproperties">Connector<wbr>Profile<wbr>Slack<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="snowflake_python">
-<a href="#snowflake_python" style="color: inherit; text-decoration: inherit;">snowflake</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofilesnowflakeconnectorprofileproperties">Connector<wbr>Profile<wbr>Snowflake<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="veeva_python">
-<a href="#veeva_python" style="color: inherit; text-decoration: inherit;">veeva</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofileveevaconnectorprofileproperties">Connector<wbr>Profile<wbr>Veeva<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="zendesk_python">
-<a href="#zendesk_python" style="color: inherit; text-decoration: inherit;">zendesk</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorprofilezendeskconnectorprofileproperties">Connector<wbr>Profile<wbr>Zendesk<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="connectorprofileconnectortype">Connector<wbr>Profile<wbr>Connector<wbr>Type</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Salesforce</dt>
-    <dd>Salesforce</dd><dt>Singular</dt>
-    <dd>Singular</dd><dt>Slack</dt>
-    <dd>Slack</dd><dt>Redshift</dt>
-    <dd>Redshift</dd><dt>Marketo</dt>
-    <dd>Marketo</dd><dt>Googleanalytics</dt>
-    <dd>Googleanalytics</dd><dt>Zendesk</dt>
-    <dd>Zendesk</dd><dt>Servicenow</dt>
-    <dd>Servicenow</dd><dt>Datadog</dt>
-    <dd>Datadog</dd><dt>Trendmicro</dt>
-    <dd>Trendmicro</dd><dt>Snowflake</dt>
-    <dd>Snowflake</dd><dt>Dynatrace</dt>
-    <dd>Dynatrace</dd><dt>Infornexus</dt>
-    <dd>Infornexus</dd><dt>Amplitude</dt>
-    <dd>Amplitude</dd><dt>Veeva</dt>
-    <dd>Veeva</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Connector<wbr>Profile<wbr>Connector<wbr>Type<wbr>Salesforce</dt>
-    <dd>Salesforce</dd><dt>Connector<wbr>Profile<wbr>Connector<wbr>Type<wbr>Singular</dt>
-    <dd>Singular</dd><dt>Connector<wbr>Profile<wbr>Connector<wbr>Type<wbr>Slack</dt>
-    <dd>Slack</dd><dt>Connector<wbr>Profile<wbr>Connector<wbr>Type<wbr>Redshift</dt>
-    <dd>Redshift</dd><dt>Connector<wbr>Profile<wbr>Connector<wbr>Type<wbr>Marketo</dt>
-    <dd>Marketo</dd><dt>Connector<wbr>Profile<wbr>Connector<wbr>Type<wbr>Googleanalytics</dt>
-    <dd>Googleanalytics</dd><dt>Connector<wbr>Profile<wbr>Connector<wbr>Type<wbr>Zendesk</dt>
-    <dd>Zendesk</dd><dt>Connector<wbr>Profile<wbr>Connector<wbr>Type<wbr>Servicenow</dt>
-    <dd>Servicenow</dd><dt>Connector<wbr>Profile<wbr>Connector<wbr>Type<wbr>Datadog</dt>
-    <dd>Datadog</dd><dt>Connector<wbr>Profile<wbr>Connector<wbr>Type<wbr>Trendmicro</dt>
-    <dd>Trendmicro</dd><dt>Connector<wbr>Profile<wbr>Connector<wbr>Type<wbr>Snowflake</dt>
-    <dd>Snowflake</dd><dt>Connector<wbr>Profile<wbr>Connector<wbr>Type<wbr>Dynatrace</dt>
-    <dd>Dynatrace</dd><dt>Connector<wbr>Profile<wbr>Connector<wbr>Type<wbr>Infornexus</dt>
-    <dd>Infornexus</dd><dt>Connector<wbr>Profile<wbr>Connector<wbr>Type<wbr>Amplitude</dt>
-    <dd>Amplitude</dd><dt>Connector<wbr>Profile<wbr>Connector<wbr>Type<wbr>Veeva</dt>
-    <dd>Veeva</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Salesforce</dt>
-    <dd>Salesforce</dd><dt>Singular</dt>
-    <dd>Singular</dd><dt>Slack</dt>
-    <dd>Slack</dd><dt>Redshift</dt>
-    <dd>Redshift</dd><dt>Marketo</dt>
-    <dd>Marketo</dd><dt>Googleanalytics</dt>
-    <dd>Googleanalytics</dd><dt>Zendesk</dt>
-    <dd>Zendesk</dd><dt>Servicenow</dt>
-    <dd>Servicenow</dd><dt>Datadog</dt>
-    <dd>Datadog</dd><dt>Trendmicro</dt>
-    <dd>Trendmicro</dd><dt>Snowflake</dt>
-    <dd>Snowflake</dd><dt>Dynatrace</dt>
-    <dd>Dynatrace</dd><dt>Infornexus</dt>
-    <dd>Infornexus</dd><dt>Amplitude</dt>
-    <dd>Amplitude</dd><dt>Veeva</dt>
-    <dd>Veeva</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>SALESFORCE</dt>
-    <dd>Salesforce</dd><dt>SINGULAR</dt>
-    <dd>Singular</dd><dt>SLACK</dt>
-    <dd>Slack</dd><dt>REDSHIFT</dt>
-    <dd>Redshift</dd><dt>MARKETO</dt>
-    <dd>Marketo</dd><dt>GOOGLEANALYTICS</dt>
-    <dd>Googleanalytics</dd><dt>ZENDESK</dt>
-    <dd>Zendesk</dd><dt>SERVICENOW</dt>
-    <dd>Servicenow</dd><dt>DATADOG</dt>
-    <dd>Datadog</dd><dt>TRENDMICRO</dt>
-    <dd>Trendmicro</dd><dt>SNOWFLAKE</dt>
-    <dd>Snowflake</dd><dt>DYNATRACE</dt>
-    <dd>Dynatrace</dd><dt>INFORNEXUS</dt>
-    <dd>Infornexus</dd><dt>AMPLITUDE</dt>
-    <dd>Amplitude</dd><dt>VEEVA</dt>
-    <dd>Veeva</dd></dl>
 {{% /choosable %}}
 
 <h4 id="connectorprofiledatadogconnectorprofilecredentials">Connector<wbr>Profile<wbr>Datadog<wbr>Connector<wbr>Profile<wbr>Credentials</h4>
@@ -2485,6 +2115,376 @@ granted.{{% /md %}}</dd></dl>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the Marketo resource{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="connectorprofileproperties">Connector<wbr>Profile<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="datadog_csharp">
+<a href="#datadog_csharp" style="color: inherit; text-decoration: inherit;">Datadog</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofiledatadogconnectorprofileproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>App<wbr>Flow.<wbr>Inputs.<wbr>Connector<wbr>Profile<wbr>Datadog<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dynatrace_csharp">
+<a href="#dynatrace_csharp" style="color: inherit; text-decoration: inherit;">Dynatrace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofiledynatraceconnectorprofileproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>App<wbr>Flow.<wbr>Inputs.<wbr>Connector<wbr>Profile<wbr>Dynatrace<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="infornexus_csharp">
+<a href="#infornexus_csharp" style="color: inherit; text-decoration: inherit;">Infor<wbr>Nexus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofileinfornexusconnectorprofileproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>App<wbr>Flow.<wbr>Inputs.<wbr>Connector<wbr>Profile<wbr>Infor<wbr>Nexus<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="marketo_csharp">
+<a href="#marketo_csharp" style="color: inherit; text-decoration: inherit;">Marketo</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofilemarketoconnectorprofileproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>App<wbr>Flow.<wbr>Inputs.<wbr>Connector<wbr>Profile<wbr>Marketo<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redshift_csharp">
+<a href="#redshift_csharp" style="color: inherit; text-decoration: inherit;">Redshift</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofileredshiftconnectorprofileproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>App<wbr>Flow.<wbr>Inputs.<wbr>Connector<wbr>Profile<wbr>Redshift<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="salesforce_csharp">
+<a href="#salesforce_csharp" style="color: inherit; text-decoration: inherit;">Salesforce</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofilesalesforceconnectorprofileproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>App<wbr>Flow.<wbr>Inputs.<wbr>Connector<wbr>Profile<wbr>Salesforce<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servicenow_csharp">
+<a href="#servicenow_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Now</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofileservicenowconnectorprofileproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>App<wbr>Flow.<wbr>Inputs.<wbr>Connector<wbr>Profile<wbr>Service<wbr>Now<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="slack_csharp">
+<a href="#slack_csharp" style="color: inherit; text-decoration: inherit;">Slack</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofileslackconnectorprofileproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>App<wbr>Flow.<wbr>Inputs.<wbr>Connector<wbr>Profile<wbr>Slack<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="snowflake_csharp">
+<a href="#snowflake_csharp" style="color: inherit; text-decoration: inherit;">Snowflake</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofilesnowflakeconnectorprofileproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>App<wbr>Flow.<wbr>Inputs.<wbr>Connector<wbr>Profile<wbr>Snowflake<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="veeva_csharp">
+<a href="#veeva_csharp" style="color: inherit; text-decoration: inherit;">Veeva</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofileveevaconnectorprofileproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>App<wbr>Flow.<wbr>Inputs.<wbr>Connector<wbr>Profile<wbr>Veeva<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zendesk_csharp">
+<a href="#zendesk_csharp" style="color: inherit; text-decoration: inherit;">Zendesk</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofilezendeskconnectorprofileproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>App<wbr>Flow.<wbr>Inputs.<wbr>Connector<wbr>Profile<wbr>Zendesk<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="datadog_go">
+<a href="#datadog_go" style="color: inherit; text-decoration: inherit;">Datadog</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofiledatadogconnectorprofileproperties">Connector<wbr>Profile<wbr>Datadog<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dynatrace_go">
+<a href="#dynatrace_go" style="color: inherit; text-decoration: inherit;">Dynatrace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofiledynatraceconnectorprofileproperties">Connector<wbr>Profile<wbr>Dynatrace<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="infornexus_go">
+<a href="#infornexus_go" style="color: inherit; text-decoration: inherit;">Infor<wbr>Nexus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofileinfornexusconnectorprofileproperties">Connector<wbr>Profile<wbr>Infor<wbr>Nexus<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="marketo_go">
+<a href="#marketo_go" style="color: inherit; text-decoration: inherit;">Marketo</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofilemarketoconnectorprofileproperties">Connector<wbr>Profile<wbr>Marketo<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redshift_go">
+<a href="#redshift_go" style="color: inherit; text-decoration: inherit;">Redshift</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofileredshiftconnectorprofileproperties">Connector<wbr>Profile<wbr>Redshift<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="salesforce_go">
+<a href="#salesforce_go" style="color: inherit; text-decoration: inherit;">Salesforce</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofilesalesforceconnectorprofileproperties">Connector<wbr>Profile<wbr>Salesforce<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servicenow_go">
+<a href="#servicenow_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Now</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofileservicenowconnectorprofileproperties">Connector<wbr>Profile<wbr>Service<wbr>Now<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="slack_go">
+<a href="#slack_go" style="color: inherit; text-decoration: inherit;">Slack</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofileslackconnectorprofileproperties">Connector<wbr>Profile<wbr>Slack<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="snowflake_go">
+<a href="#snowflake_go" style="color: inherit; text-decoration: inherit;">Snowflake</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofilesnowflakeconnectorprofileproperties">Connector<wbr>Profile<wbr>Snowflake<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="veeva_go">
+<a href="#veeva_go" style="color: inherit; text-decoration: inherit;">Veeva</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofileveevaconnectorprofileproperties">Connector<wbr>Profile<wbr>Veeva<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zendesk_go">
+<a href="#zendesk_go" style="color: inherit; text-decoration: inherit;">Zendesk</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofilezendeskconnectorprofileproperties">Connector<wbr>Profile<wbr>Zendesk<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="datadog_nodejs">
+<a href="#datadog_nodejs" style="color: inherit; text-decoration: inherit;">datadog</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofiledatadogconnectorprofileproperties">Connector<wbr>Profile<wbr>Datadog<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dynatrace_nodejs">
+<a href="#dynatrace_nodejs" style="color: inherit; text-decoration: inherit;">dynatrace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofiledynatraceconnectorprofileproperties">Connector<wbr>Profile<wbr>Dynatrace<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="infornexus_nodejs">
+<a href="#infornexus_nodejs" style="color: inherit; text-decoration: inherit;">infor<wbr>Nexus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofileinfornexusconnectorprofileproperties">Connector<wbr>Profile<wbr>Infor<wbr>Nexus<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="marketo_nodejs">
+<a href="#marketo_nodejs" style="color: inherit; text-decoration: inherit;">marketo</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofilemarketoconnectorprofileproperties">Connector<wbr>Profile<wbr>Marketo<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redshift_nodejs">
+<a href="#redshift_nodejs" style="color: inherit; text-decoration: inherit;">redshift</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofileredshiftconnectorprofileproperties">Connector<wbr>Profile<wbr>Redshift<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="salesforce_nodejs">
+<a href="#salesforce_nodejs" style="color: inherit; text-decoration: inherit;">salesforce</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofilesalesforceconnectorprofileproperties">Connector<wbr>Profile<wbr>Salesforce<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servicenow_nodejs">
+<a href="#servicenow_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Now</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofileservicenowconnectorprofileproperties">Connector<wbr>Profile<wbr>Service<wbr>Now<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="slack_nodejs">
+<a href="#slack_nodejs" style="color: inherit; text-decoration: inherit;">slack</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofileslackconnectorprofileproperties">Connector<wbr>Profile<wbr>Slack<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="snowflake_nodejs">
+<a href="#snowflake_nodejs" style="color: inherit; text-decoration: inherit;">snowflake</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofilesnowflakeconnectorprofileproperties">Connector<wbr>Profile<wbr>Snowflake<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="veeva_nodejs">
+<a href="#veeva_nodejs" style="color: inherit; text-decoration: inherit;">veeva</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofileveevaconnectorprofileproperties">Connector<wbr>Profile<wbr>Veeva<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zendesk_nodejs">
+<a href="#zendesk_nodejs" style="color: inherit; text-decoration: inherit;">zendesk</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofilezendeskconnectorprofileproperties">Connector<wbr>Profile<wbr>Zendesk<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="datadog_python">
+<a href="#datadog_python" style="color: inherit; text-decoration: inherit;">datadog</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofiledatadogconnectorprofileproperties">Connector<wbr>Profile<wbr>Datadog<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dynatrace_python">
+<a href="#dynatrace_python" style="color: inherit; text-decoration: inherit;">dynatrace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofiledynatraceconnectorprofileproperties">Connector<wbr>Profile<wbr>Dynatrace<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="infor_nexus_python">
+<a href="#infor_nexus_python" style="color: inherit; text-decoration: inherit;">infor_<wbr>nexus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofileinfornexusconnectorprofileproperties">Connector<wbr>Profile<wbr>Infor<wbr>Nexus<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="marketo_python">
+<a href="#marketo_python" style="color: inherit; text-decoration: inherit;">marketo</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofilemarketoconnectorprofileproperties">Connector<wbr>Profile<wbr>Marketo<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redshift_python">
+<a href="#redshift_python" style="color: inherit; text-decoration: inherit;">redshift</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofileredshiftconnectorprofileproperties">Connector<wbr>Profile<wbr>Redshift<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="salesforce_python">
+<a href="#salesforce_python" style="color: inherit; text-decoration: inherit;">salesforce</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofilesalesforceconnectorprofileproperties">Connector<wbr>Profile<wbr>Salesforce<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="service_now_python">
+<a href="#service_now_python" style="color: inherit; text-decoration: inherit;">service_<wbr>now</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofileservicenowconnectorprofileproperties">Connector<wbr>Profile<wbr>Service<wbr>Now<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="slack_python">
+<a href="#slack_python" style="color: inherit; text-decoration: inherit;">slack</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofileslackconnectorprofileproperties">Connector<wbr>Profile<wbr>Slack<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="snowflake_python">
+<a href="#snowflake_python" style="color: inherit; text-decoration: inherit;">snowflake</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofilesnowflakeconnectorprofileproperties">Connector<wbr>Profile<wbr>Snowflake<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="veeva_python">
+<a href="#veeva_python" style="color: inherit; text-decoration: inherit;">veeva</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofileveevaconnectorprofileproperties">Connector<wbr>Profile<wbr>Veeva<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zendesk_python">
+<a href="#zendesk_python" style="color: inherit; text-decoration: inherit;">zendesk</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofilezendeskconnectorprofileproperties">Connector<wbr>Profile<wbr>Zendesk<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="connectorprofileredshiftconnectorprofilecredentials">Connector<wbr>Profile<wbr>Redshift<wbr>Connector<wbr>Profile<wbr>Credentials</h4>

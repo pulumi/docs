@@ -27,7 +27,7 @@ Resource schema for AWS::IoTSiteWise::Portal
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Portal</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-           <span class="nx">alarms</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">,</span>
+           <span class="nx">alarms</span><span class="p">:</span> <span class="nx">Optional[AlarmsPropertiesArgs]</span> = None<span class="p">,</span>
            <span class="nx">notification_sender_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">portal_auth_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">portal_contact_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -192,7 +192,7 @@ The Portal resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#alarms_csharp" style="color: inherit; text-decoration: inherit;">Alarms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">object</span>
+        <span class="property-type"><a href="#alarmsproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TSite<wbr>Wise.<wbr>Inputs.<wbr>Alarms<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains the configuration information of an alarm created in an AWS IoT SiteWise Monitor portal. You can use the alarm to monitor an asset property and get notified when the asset property value is outside a specified range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -260,7 +260,7 @@ The Portal resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#alarms_go" style="color: inherit; text-decoration: inherit;">Alarms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#alarmsproperties">Alarms<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains the configuration information of an alarm created in an AWS IoT SiteWise Monitor portal. You can use the alarm to monitor an asset property and get notified when the asset property value is outside a specified range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -328,7 +328,7 @@ The Portal resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#alarms_nodejs" style="color: inherit; text-decoration: inherit;">alarms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">any</span>
+        <span class="property-type"><a href="#alarmsproperties">Alarms<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains the configuration information of an alarm created in an AWS IoT SiteWise Monitor portal. You can use the alarm to monitor an asset property and get notified when the asset property value is outside a specified range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -396,7 +396,7 @@ The Portal resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#alarms_python" style="color: inherit; text-decoration: inherit;">alarms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#alarmsproperties">Alarms<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains the configuration information of an alarm created in an AWS IoT SiteWise Monitor portal. You can use the alarm to monitor an asset property and get notified when the asset property value is outside a specified range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -625,6 +625,88 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="alarmsproperties">Alarms<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="alarmrolearn_csharp">
+<a href="#alarmrolearn_csharp" style="color: inherit; text-decoration: inherit;">Alarm<wbr>Role<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that allows the alarm to perform actions and access AWS resources and services, such as AWS IoT Events.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="notificationlambdaarn_csharp">
+<a href="#notificationlambdaarn_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Lambda<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the AWS Lambda function that manages alarm notifications. For more information, see Managing alarm notifications in the AWS IoT Events Developer Guide.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="alarmrolearn_go">
+<a href="#alarmrolearn_go" style="color: inherit; text-decoration: inherit;">Alarm<wbr>Role<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that allows the alarm to perform actions and access AWS resources and services, such as AWS IoT Events.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="notificationlambdaarn_go">
+<a href="#notificationlambdaarn_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Lambda<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the AWS Lambda function that manages alarm notifications. For more information, see Managing alarm notifications in the AWS IoT Events Developer Guide.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="alarmrolearn_nodejs">
+<a href="#alarmrolearn_nodejs" style="color: inherit; text-decoration: inherit;">alarm<wbr>Role<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that allows the alarm to perform actions and access AWS resources and services, such as AWS IoT Events.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="notificationlambdaarn_nodejs">
+<a href="#notificationlambdaarn_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Lambda<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the AWS Lambda function that manages alarm notifications. For more information, see Managing alarm notifications in the AWS IoT Events Developer Guide.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="alarm_role_arn_python">
+<a href="#alarm_role_arn_python" style="color: inherit; text-decoration: inherit;">alarm_<wbr>role_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that allows the alarm to perform actions and access AWS resources and services, such as AWS IoT Events.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="notification_lambda_arn_python">
+<a href="#notification_lambda_arn_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>lambda_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the AWS Lambda function that manages alarm notifications. For more information, see Managing alarm notifications in the AWS IoT Events Developer Guide.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="portaltag">Portal<wbr>Tag</h4>
 

@@ -35,7 +35,7 @@ class MyStack : Stack
     {
         var cloudfrontoriginaccessidentity = new AwsNative.CloudFront.CloudFrontOriginAccessIdentity("cloudfrontoriginaccessidentity", new AwsNative.CloudFront.CloudFrontOriginAccessIdentityArgs
         {
-            CloudFrontOriginAccessIdentityConfig = new AwsNative.CloudFront.Inputs.CloudFrontOriginAccessIdentityCloudFrontOriginAccessIdentityConfigArgs
+            CloudFrontOriginAccessIdentityConfig = new AwsNative.CloudFront.Inputs.CloudFrontOriginAccessIdentityConfigArgs
             {
                 Comment = "string-value",
             },
@@ -64,7 +64,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := cloudfront.NewCloudFrontOriginAccessIdentity(ctx, "cloudfrontoriginaccessidentity", &cloudfront.CloudFrontOriginAccessIdentityArgs{
-			CloudFrontOriginAccessIdentityConfig: &cloudfront.CloudFrontOriginAccessIdentityCloudFrontOriginAccessIdentityConfigArgs{
+			CloudFrontOriginAccessIdentityConfig: &cloudfront.CloudFrontOriginAccessIdentityConfigArgs{
 				Comment: pulumi.String("string-value"),
 			},
 		})
@@ -88,7 +88,7 @@ func main() {
 import pulumi
 import pulumi_aws_native as aws_native
 
-cloudfrontoriginaccessidentity = aws_native.cloudfront.CloudFrontOriginAccessIdentity("cloudfrontoriginaccessidentity", cloud_front_origin_access_identity_config=aws_native.cloudfront.CloudFrontOriginAccessIdentityCloudFrontOriginAccessIdentityConfigArgs(
+cloudfrontoriginaccessidentity = aws_native.cloudfront.CloudFrontOriginAccessIdentity("cloudfrontoriginaccessidentity", cloud_front_origin_access_identity_config=aws_native.cloudfront.CloudFrontOriginAccessIdentityConfigArgs(
     comment="string-value",
 ))
 
@@ -132,7 +132,7 @@ class MyStack : Stack
     {
         var cloudfrontoriginaccessidentity = new AwsNative.CloudFront.CloudFrontOriginAccessIdentity("cloudfrontoriginaccessidentity", new AwsNative.CloudFront.CloudFrontOriginAccessIdentityArgs
         {
-            CloudFrontOriginAccessIdentityConfig = new AwsNative.CloudFront.Inputs.CloudFrontOriginAccessIdentityCloudFrontOriginAccessIdentityConfigArgs
+            CloudFrontOriginAccessIdentityConfig = new AwsNative.CloudFront.Inputs.CloudFrontOriginAccessIdentityConfigArgs
             {
                 Comment = "string-value",
             },
@@ -161,7 +161,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := cloudfront.NewCloudFrontOriginAccessIdentity(ctx, "cloudfrontoriginaccessidentity", &cloudfront.CloudFrontOriginAccessIdentityArgs{
-			CloudFrontOriginAccessIdentityConfig: &cloudfront.CloudFrontOriginAccessIdentityCloudFrontOriginAccessIdentityConfigArgs{
+			CloudFrontOriginAccessIdentityConfig: &cloudfront.CloudFrontOriginAccessIdentityConfigArgs{
 				Comment: pulumi.String("string-value"),
 			},
 		})
@@ -185,7 +185,7 @@ func main() {
 import pulumi
 import pulumi_aws_native as aws_native
 
-cloudfrontoriginaccessidentity = aws_native.cloudfront.CloudFrontOriginAccessIdentity("cloudfrontoriginaccessidentity", cloud_front_origin_access_identity_config=aws_native.cloudfront.CloudFrontOriginAccessIdentityCloudFrontOriginAccessIdentityConfigArgs(
+cloudfrontoriginaccessidentity = aws_native.cloudfront.CloudFrontOriginAccessIdentity("cloudfrontoriginaccessidentity", cloud_front_origin_access_identity_config=aws_native.cloudfront.CloudFrontOriginAccessIdentityConfigArgs(
     comment="string-value",
 ))
 
@@ -232,7 +232,7 @@ const cloudfrontoriginaccessidentity = new aws_native.cloudfront.CloudFrontOrigi
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">CloudFrontOriginAccessIdentity</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                                   <span class="nx">cloud_front_origin_access_identity_config</span><span class="p">:</span> <span class="nx">Optional[CloudFrontOriginAccessIdentityCloudFrontOriginAccessIdentityConfigArgs]</span> = None<span class="p">)</span>
+                                   <span class="nx">cloud_front_origin_access_identity_config</span><span class="p">:</span> <span class="nx">Optional[CloudFrontOriginAccessIdentityConfigArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">CloudFrontOriginAccessIdentity</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CloudFrontOriginAccessIdentityArgs</a></span><span class="p">,</span>
@@ -366,7 +366,7 @@ The CloudFrontOriginAccessIdentity resource accepts the following [input]({{< re
 <a href="#cloudfrontoriginaccessidentityconfig_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Front<wbr>Origin<wbr>Access<wbr>Identity<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudfrontoriginaccessidentitycloudfrontoriginaccessidentityconfig">Pulumi.<wbr>Aws<wbr>Native.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Cloud<wbr>Front<wbr>Origin<wbr>Access<wbr>Identity<wbr>Cloud<wbr>Front<wbr>Origin<wbr>Access<wbr>Identity<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudfrontoriginaccessidentityconfig">Pulumi.<wbr>Aws<wbr>Native.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Cloud<wbr>Front<wbr>Origin<wbr>Access<wbr>Identity<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -378,7 +378,7 @@ The CloudFrontOriginAccessIdentity resource accepts the following [input]({{< re
 <a href="#cloudfrontoriginaccessidentityconfig_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Front<wbr>Origin<wbr>Access<wbr>Identity<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudfrontoriginaccessidentitycloudfrontoriginaccessidentityconfig">Cloud<wbr>Front<wbr>Origin<wbr>Access<wbr>Identity<wbr>Cloud<wbr>Front<wbr>Origin<wbr>Access<wbr>Identity<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudfrontoriginaccessidentityconfig">Cloud<wbr>Front<wbr>Origin<wbr>Access<wbr>Identity<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -390,7 +390,7 @@ The CloudFrontOriginAccessIdentity resource accepts the following [input]({{< re
 <a href="#cloudfrontoriginaccessidentityconfig_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Front<wbr>Origin<wbr>Access<wbr>Identity<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudfrontoriginaccessidentitycloudfrontoriginaccessidentityconfig">Cloud<wbr>Front<wbr>Origin<wbr>Access<wbr>Identity<wbr>Cloud<wbr>Front<wbr>Origin<wbr>Access<wbr>Identity<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudfrontoriginaccessidentityconfig">Cloud<wbr>Front<wbr>Origin<wbr>Access<wbr>Identity<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -402,7 +402,7 @@ The CloudFrontOriginAccessIdentity resource accepts the following [input]({{< re
 <a href="#cloud_front_origin_access_identity_config_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>front_<wbr>origin_<wbr>access_<wbr>identity_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudfrontoriginaccessidentitycloudfrontoriginaccessidentityconfig">Cloud<wbr>Front<wbr>Origin<wbr>Access<wbr>Identity<wbr>Cloud<wbr>Front<wbr>Origin<wbr>Access<wbr>Identity<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudfrontoriginaccessidentityconfig">Cloud<wbr>Front<wbr>Origin<wbr>Access<wbr>Identity<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -504,7 +504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="cloudfrontoriginaccessidentitycloudfrontoriginaccessidentityconfig">Cloud<wbr>Front<wbr>Origin<wbr>Access<wbr>Identity<wbr>Cloud<wbr>Front<wbr>Origin<wbr>Access<wbr>Identity<wbr>Config</h4>
+<h4 id="cloudfrontoriginaccessidentityconfig">Cloud<wbr>Front<wbr>Origin<wbr>Access<wbr>Identity<wbr>Config</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"

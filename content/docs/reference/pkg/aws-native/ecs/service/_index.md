@@ -45,7 +45,7 @@ Resource Type definition for AWS::ECS::Service
             <span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">scheduling_strategy</span><span class="p">:</span> <span class="nx">Optional[ServiceSchedulingStrategy]</span> = None<span class="p">,</span>
             <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-            <span class="nx">service_registries</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceServiceRegistryArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">service_registries</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceRegistryArgs]]</span> = None<span class="p">,</span>
             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceTagArgs]]</span> = None<span class="p">,</span>
             <span class="nx">task_definition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -325,7 +325,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#serviceregistries_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceserviceregistry">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>ECS.<wbr>Inputs.<wbr>Service<wbr>Service<wbr>Registry<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceregistry">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>ECS.<wbr>Inputs.<wbr>Service<wbr>Registry<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -497,7 +497,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#serviceregistries_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceserviceregistry">[]Service<wbr>Service<wbr>Registry<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceregistry">[]Service<wbr>Registry<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -669,7 +669,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#serviceregistries_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceserviceregistry">Service<wbr>Service<wbr>Registry<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#serviceregistry">Service<wbr>Registry<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -841,7 +841,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#service_registries_python" style="color: inherit; text-decoration: inherit;">service_<wbr>registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceserviceregistry">Sequence[Service<wbr>Service<wbr>Registry<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceregistry">Sequence[Service<wbr>Registry<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1993,33 +1993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>TASK_DEFINITION</dd></dl>
 {{% /choosable %}}
 
-<h4 id="serviceschedulingstrategy">Service<wbr>Scheduling<wbr>Strategy</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Daemon</dt>
-    <dd>DAEMON</dd><dt>Replica</dt>
-    <dd>REPLICA</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Service<wbr>Scheduling<wbr>Strategy<wbr>Daemon</dt>
-    <dd>DAEMON</dd><dt>Service<wbr>Scheduling<wbr>Strategy<wbr>Replica</dt>
-    <dd>REPLICA</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Daemon</dt>
-    <dd>DAEMON</dd><dt>Replica</dt>
-    <dd>REPLICA</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>DAEMON</dt>
-    <dd>DAEMON</dd><dt>REPLICA</dt>
-    <dd>REPLICA</dd></dl>
-{{% /choosable %}}
-
-<h4 id="serviceserviceregistry">Service<wbr>Service<wbr>Registry</h4>
+<h4 id="serviceregistry">Service<wbr>Registry</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
@@ -2163,6 +2137,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="serviceschedulingstrategy">Service<wbr>Scheduling<wbr>Strategy</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Daemon</dt>
+    <dd>DAEMON</dd><dt>Replica</dt>
+    <dd>REPLICA</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Service<wbr>Scheduling<wbr>Strategy<wbr>Daemon</dt>
+    <dd>DAEMON</dd><dt>Service<wbr>Scheduling<wbr>Strategy<wbr>Replica</dt>
+    <dd>REPLICA</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Daemon</dt>
+    <dd>DAEMON</dd><dt>Replica</dt>
+    <dd>REPLICA</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DAEMON</dt>
+    <dd>DAEMON</dd><dt>REPLICA</dt>
+    <dd>REPLICA</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicetag">Service<wbr>Tag</h4>

@@ -31,8 +31,8 @@ Resource Type definition for AWS::SageMaker::FeatureGroup
                  <span class="nx">event_time_feature_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">feature_definitions</span><span class="p">:</span> <span class="nx">Optional[Sequence[FeatureGroupFeatureDefinitionArgs]]</span> = None<span class="p">,</span>
                  <span class="nx">feature_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                 <span class="nx">offline_store_config</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">,</span>
-                 <span class="nx">online_store_config</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">,</span>
+                 <span class="nx">offline_store_config</span><span class="p">:</span> <span class="nx">Optional[OfflineStoreConfigPropertiesArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">online_store_config</span><span class="p">:</span> <span class="nx">Optional[OnlineStoreConfigPropertiesArgs]</span> = None<span class="p">,</span>
                  <span class="nx">record_identifier_feature_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[FeatureGroupTagArgs]]</span> = None<span class="p">)</span>
@@ -209,7 +209,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#offlinestoreconfig_csharp" style="color: inherit; text-decoration: inherit;">Offline<wbr>Store<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">object</span>
+        <span class="property-type"><a href="#offlinestoreconfigproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>Sage<wbr>Maker.<wbr>Inputs.<wbr>Offline<wbr>Store<wbr>Config<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -217,7 +217,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#onlinestoreconfig_csharp" style="color: inherit; text-decoration: inherit;">Online<wbr>Store<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">object</span>
+        <span class="property-type"><a href="#onlinestoreconfigproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>Sage<wbr>Maker.<wbr>Inputs.<wbr>Online<wbr>Store<wbr>Config<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -285,7 +285,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#offlinestoreconfig_go" style="color: inherit; text-decoration: inherit;">Offline<wbr>Store<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#offlinestoreconfigproperties">Offline<wbr>Store<wbr>Config<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -293,7 +293,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#onlinestoreconfig_go" style="color: inherit; text-decoration: inherit;">Online<wbr>Store<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#onlinestoreconfigproperties">Online<wbr>Store<wbr>Config<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -361,7 +361,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#offlinestoreconfig_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Store<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">any</span>
+        <span class="property-type"><a href="#offlinestoreconfigproperties">Offline<wbr>Store<wbr>Config<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -369,7 +369,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#onlinestoreconfig_nodejs" style="color: inherit; text-decoration: inherit;">online<wbr>Store<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">any</span>
+        <span class="property-type"><a href="#onlinestoreconfigproperties">Online<wbr>Store<wbr>Config<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -437,7 +437,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#offline_store_config_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>store_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#offlinestoreconfigproperties">Offline<wbr>Store<wbr>Config<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -445,7 +445,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#online_store_config_python" style="color: inherit; text-decoration: inherit;">online_<wbr>store_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#onlinestoreconfigproperties">Online<wbr>Store<wbr>Config<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -530,6 +530,120 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="featuregroupdatacatalogconfig">Feature<wbr>Group<wbr>Data<wbr>Catalog<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="catalog_csharp">
+<a href="#catalog_csharp" style="color: inherit; text-decoration: inherit;">Catalog</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="database_csharp">
+<a href="#database_csharp" style="color: inherit; text-decoration: inherit;">Database</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tablename_csharp">
+<a href="#tablename_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="catalog_go">
+<a href="#catalog_go" style="color: inherit; text-decoration: inherit;">Catalog</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="database_go">
+<a href="#database_go" style="color: inherit; text-decoration: inherit;">Database</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tablename_go">
+<a href="#tablename_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="catalog_nodejs">
+<a href="#catalog_nodejs" style="color: inherit; text-decoration: inherit;">catalog</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="database_nodejs">
+<a href="#database_nodejs" style="color: inherit; text-decoration: inherit;">database</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tablename_nodejs">
+<a href="#tablename_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="catalog_python">
+<a href="#catalog_python" style="color: inherit; text-decoration: inherit;">catalog</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="database_python">
+<a href="#database_python" style="color: inherit; text-decoration: inherit;">database</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="table_name_python">
+<a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="featuregroupfeaturedefinition">Feature<wbr>Group<wbr>Feature<wbr>Definition</h4>
 
@@ -643,6 +757,138 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>String</dd></dl>
 {{% /choosable %}}
 
+<h4 id="featuregrouponlinestoresecurityconfig">Feature<wbr>Group<wbr>Online<wbr>Store<wbr>Security<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyid_csharp">
+<a href="#kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyid_go">
+<a href="#kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyid_nodejs">
+<a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="kms_key_id_python">
+<a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="featuregroups3storageconfig">Feature<wbr>Group<wbr>S3Storage<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="s3uri_csharp">
+<a href="#s3uri_csharp" style="color: inherit; text-decoration: inherit;">S3Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyid_csharp">
+<a href="#kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="s3uri_go">
+<a href="#s3uri_go" style="color: inherit; text-decoration: inherit;">S3Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyid_go">
+<a href="#kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="s3uri_nodejs">
+<a href="#s3uri_nodejs" style="color: inherit; text-decoration: inherit;">s3Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyid_nodejs">
+<a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="s3_uri_python">
+<a href="#s3_uri_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kms_key_id_python">
+<a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="featuregrouptag">Feature<wbr>Group<wbr>Tag</h4>
 
 {{% choosable language csharp %}}
@@ -721,6 +967,202 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="offlinestoreconfigproperties">Offline<wbr>Store<wbr>Config<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="s3storageconfig_csharp">
+<a href="#s3storageconfig_csharp" style="color: inherit; text-decoration: inherit;">S3Storage<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#featuregroups3storageconfig">Pulumi.<wbr>Aws<wbr>Native.<wbr>Sage<wbr>Maker.<wbr>Inputs.<wbr>Feature<wbr>Group<wbr>S3Storage<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datacatalogconfig_csharp">
+<a href="#datacatalogconfig_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Catalog<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#featuregroupdatacatalogconfig">Pulumi.<wbr>Aws<wbr>Native.<wbr>Sage<wbr>Maker.<wbr>Inputs.<wbr>Feature<wbr>Group<wbr>Data<wbr>Catalog<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablegluetablecreation_csharp">
+<a href="#disablegluetablecreation_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Glue<wbr>Table<wbr>Creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="s3storageconfig_go">
+<a href="#s3storageconfig_go" style="color: inherit; text-decoration: inherit;">S3Storage<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#featuregroups3storageconfig">Feature<wbr>Group<wbr>S3Storage<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datacatalogconfig_go">
+<a href="#datacatalogconfig_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Catalog<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#featuregroupdatacatalogconfig">Feature<wbr>Group<wbr>Data<wbr>Catalog<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablegluetablecreation_go">
+<a href="#disablegluetablecreation_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Glue<wbr>Table<wbr>Creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="s3storageconfig_nodejs">
+<a href="#s3storageconfig_nodejs" style="color: inherit; text-decoration: inherit;">s3Storage<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#featuregroups3storageconfig">Feature<wbr>Group<wbr>S3Storage<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datacatalogconfig_nodejs">
+<a href="#datacatalogconfig_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Catalog<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#featuregroupdatacatalogconfig">Feature<wbr>Group<wbr>Data<wbr>Catalog<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablegluetablecreation_nodejs">
+<a href="#disablegluetablecreation_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Glue<wbr>Table<wbr>Creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="s3_storage_config_python">
+<a href="#s3_storage_config_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>storage_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#featuregroups3storageconfig">Feature<wbr>Group<wbr>S3Storage<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="data_catalog_config_python">
+<a href="#data_catalog_config_python" style="color: inherit; text-decoration: inherit;">data_<wbr>catalog_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#featuregroupdatacatalogconfig">Feature<wbr>Group<wbr>Data<wbr>Catalog<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_glue_table_creation_python">
+<a href="#disable_glue_table_creation_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>glue_<wbr>table_<wbr>creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="onlinestoreconfigproperties">Online<wbr>Store<wbr>Config<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enableonlinestore_csharp">
+<a href="#enableonlinestore_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Online<wbr>Store</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="securityconfig_csharp">
+<a href="#securityconfig_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#featuregrouponlinestoresecurityconfig">Pulumi.<wbr>Aws<wbr>Native.<wbr>Sage<wbr>Maker.<wbr>Inputs.<wbr>Feature<wbr>Group<wbr>Online<wbr>Store<wbr>Security<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enableonlinestore_go">
+<a href="#enableonlinestore_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Online<wbr>Store</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="securityconfig_go">
+<a href="#securityconfig_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#featuregrouponlinestoresecurityconfig">Feature<wbr>Group<wbr>Online<wbr>Store<wbr>Security<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enableonlinestore_nodejs">
+<a href="#enableonlinestore_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Online<wbr>Store</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="securityconfig_nodejs">
+<a href="#securityconfig_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#featuregrouponlinestoresecurityconfig">Feature<wbr>Group<wbr>Online<wbr>Store<wbr>Security<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enable_online_store_python">
+<a href="#enable_online_store_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>online_<wbr>store</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="security_config_python">
+<a href="#security_config_python" style="color: inherit; text-decoration: inherit;">security_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#featuregrouponlinestoresecurityconfig">Feature<wbr>Group<wbr>Online<wbr>Store<wbr>Security<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

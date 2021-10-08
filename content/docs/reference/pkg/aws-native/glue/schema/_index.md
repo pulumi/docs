@@ -27,7 +27,7 @@ This resource represents a schema of Glue Schema Registry.
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Schema</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-           <span class="nx">checkpoint_version</span><span class="p">:</span> <span class="nx">Optional[SchemaSchemaVersionArgs]</span> = None<span class="p">,</span>
+           <span class="nx">checkpoint_version</span><span class="p">:</span> <span class="nx">Optional[SchemaVersionArgs]</span> = None<span class="p">,</span>
            <span class="nx">compatibility</span><span class="p">:</span> <span class="nx">Optional[SchemaCompatibility]</span> = None<span class="p">,</span>
            <span class="nx">data_format</span><span class="p">:</span> <span class="nx">Optional[SchemaDataFormat]</span> = None<span class="p">,</span>
            <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -200,7 +200,7 @@ The Schema resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#checkpointversion_csharp" style="color: inherit; text-decoration: inherit;">Checkpoint<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schemaschemaversion">Pulumi.<wbr>Aws<wbr>Native.<wbr>Glue.<wbr>Inputs.<wbr>Schema<wbr>Schema<wbr>Version<wbr>Args</a></span>
+        <span class="property-type"><a href="#schemaversion">Pulumi.<wbr>Aws<wbr>Native.<wbr>Glue.<wbr>Inputs.<wbr>Schema<wbr>Version<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -268,7 +268,7 @@ The Schema resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#checkpointversion_go" style="color: inherit; text-decoration: inherit;">Checkpoint<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schemaschemaversion">Schema<wbr>Schema<wbr>Version<wbr>Args</a></span>
+        <span class="property-type"><a href="#schemaversion">Schema<wbr>Version<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -336,7 +336,7 @@ The Schema resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#checkpointversion_nodejs" style="color: inherit; text-decoration: inherit;">checkpoint<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schemaschemaversion">Schema<wbr>Schema<wbr>Version<wbr>Args</a></span>
+        <span class="property-type"><a href="#schemaversion">Schema<wbr>Version<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -404,7 +404,7 @@ The Schema resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#checkpoint_version_python" style="color: inherit; text-decoration: inherit;">checkpoint_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schemaschemaversion">Schema<wbr>Schema<wbr>Version<wbr>Args</a></span>
+        <span class="property-type"><a href="#schemaversion">Schema<wbr>Version<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -720,88 +720,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Name of the registry in which the schema will be created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="schemaschemaversion">Schema<wbr>Schema<wbr>Version</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="islatest_csharp">
-<a href="#islatest_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Latest</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Indicates if the latest version needs to be updated.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="versionnumber_csharp">
-<a href="#versionnumber_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Number</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Indicates the version number in the schema to update.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="islatest_go">
-<a href="#islatest_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Latest</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Indicates if the latest version needs to be updated.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="versionnumber_go">
-<a href="#versionnumber_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Number</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Indicates the version number in the schema to update.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="islatest_nodejs">
-<a href="#islatest_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Latest</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Indicates if the latest version needs to be updated.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="versionnumber_nodejs">
-<a href="#versionnumber_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Number</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Indicates the version number in the schema to update.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="is_latest_python">
-<a href="#is_latest_python" style="color: inherit; text-decoration: inherit;">is_<wbr>latest</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Indicates if the latest version needs to be updated.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="version_number_python">
-<a href="#version_number_python" style="color: inherit; text-decoration: inherit;">version_<wbr>number</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Indicates the version number in the schema to update.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
 <h4 id="schematag">Schema<wbr>Tag</h4>
 
 {{% choosable language csharp %}}
@@ -882,6 +800,88 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Corresponding tag value for the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="schemaversion">Schema<wbr>Version</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="islatest_csharp">
+<a href="#islatest_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Latest</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates if the latest version needs to be updated.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="versionnumber_csharp">
+<a href="#versionnumber_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Indicates the version number in the schema to update.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="islatest_go">
+<a href="#islatest_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Latest</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates if the latest version needs to be updated.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="versionnumber_go">
+<a href="#versionnumber_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Indicates the version number in the schema to update.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="islatest_nodejs">
+<a href="#islatest_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Latest</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates if the latest version needs to be updated.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="versionnumber_nodejs">
+<a href="#versionnumber_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Indicates the version number in the schema to update.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="is_latest_python">
+<a href="#is_latest_python" style="color: inherit; text-decoration: inherit;">is_<wbr>latest</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates if the latest version needs to be updated.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_number_python">
+<a href="#version_number_python" style="color: inherit; text-decoration: inherit;">version_<wbr>number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Indicates the version number in the schema to update.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

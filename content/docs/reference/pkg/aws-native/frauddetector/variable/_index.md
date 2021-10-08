@@ -33,7 +33,7 @@ A resource schema for a Variable in Amazon Fraud Detector.
              <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[VariableTagArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">variable_type</span><span class="p">:</span> <span class="nx">Optional[VariableVariableType]</span> = None<span class="p">)</span>
+             <span class="nx">variable_type</span><span class="p">:</span> <span class="nx">Optional[VariableType]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Variable</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VariableArgs</a></span><span class="p">,</span>
@@ -215,7 +215,7 @@ The Variable resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#variabletype_csharp" style="color: inherit; text-decoration: inherit;">Variable<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#variablevariabletype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Fraud<wbr>Detector.<wbr>Variable<wbr>Variable<wbr>Type</a></span>
+        <span class="property-type"><a href="#variabletype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Fraud<wbr>Detector.<wbr>Variable<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The variable type. For more information see https://docs.aws.amazon.com/frauddetector/latest/ug/create-a-variable.html#variable-types{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -275,7 +275,7 @@ The Variable resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#variabletype_go" style="color: inherit; text-decoration: inherit;">Variable<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#variablevariabletype">Variable<wbr>Variable<wbr>Type</a></span>
+        <span class="property-type"><a href="#variabletype">Variable<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The variable type. For more information see https://docs.aws.amazon.com/frauddetector/latest/ug/create-a-variable.html#variable-types{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -335,7 +335,7 @@ The Variable resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#variabletype_nodejs" style="color: inherit; text-decoration: inherit;">variable<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#variablevariabletype">Variable<wbr>Variable<wbr>Type</a></span>
+        <span class="property-type"><a href="#variabletype">Variable<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The variable type. For more information see https://docs.aws.amazon.com/frauddetector/latest/ug/create-a-variable.html#variable-types{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -395,7 +395,7 @@ The Variable resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#variable_type_python" style="color: inherit; text-decoration: inherit;">variable_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#variablevariabletype">Variable<wbr>Variable<wbr>Type</a></span>
+        <span class="property-type"><a href="#variabletype">Variable<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The variable type. For more information see https://docs.aws.amazon.com/frauddetector/latest/ug/create-a-variable.html#variable-types{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -703,7 +703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="variablevariabletype">Variable<wbr>Variable<wbr>Type</h4>
+<h4 id="variabletype">Variable<wbr>Type</h4>
 
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>Auth<wbr>Code</dt>
@@ -743,39 +743,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular"><dt>Variable<wbr>Variable<wbr>Type<wbr>Auth<wbr>Code</dt>
-    <dd>AUTH_CODE</dd><dt>Variable<wbr>Variable<wbr>Type<wbr>Avs</dt>
-    <dd>AVS</dd><dt>Variable<wbr>Variable<wbr>Type<wbr>Billing<wbr>Address<wbr>L1</dt>
-    <dd>BILLING_ADDRESS_L1</dd><dt>Variable<wbr>Variable<wbr>Type<wbr>Billing<wbr>Address<wbr>L2</dt>
-    <dd>BILLING_ADDRESS_L2</dd><dt>Variable<wbr>Variable<wbr>Type<wbr>Billing<wbr>City</dt>
-    <dd>BILLING_CITY</dd><dt>Variable<wbr>Variable<wbr>Type<wbr>Billing<wbr>Country</dt>
-    <dd>BILLING_COUNTRY</dd><dt>Variable<wbr>Variable<wbr>Type<wbr>Billing<wbr>Name</dt>
-    <dd>BILLING_NAME</dd><dt>Variable<wbr>Variable<wbr>Type<wbr>Billing<wbr>Phone</dt>
-    <dd>BILLING_PHONE</dd><dt>Variable<wbr>Variable<wbr>Type<wbr>Billing<wbr>State</dt>
-    <dd>BILLING_STATE</dd><dt>Variable<wbr>Variable<wbr>Type<wbr>Billing<wbr>Zip</dt>
-    <dd>BILLING_ZIP</dd><dt>Variable<wbr>Variable<wbr>Type<wbr>Card<wbr>Bin</dt>
-    <dd>CARD_BIN</dd><dt>Variable<wbr>Variable<wbr>Type<wbr>Categorical</dt>
-    <dd>CATEGORICAL</dd><dt>Variable<wbr>Variable<wbr>Type<wbr>Currency<wbr>Code</dt>
-    <dd>CURRENCY_CODE</dd><dt>Variable<wbr>Variable<wbr>Type<wbr>Email<wbr>Address</dt>
-    <dd>EMAIL_ADDRESS</dd><dt>Variable<wbr>Variable<wbr>Type<wbr>Fingerprint</dt>
-    <dd>FINGERPRINT</dd><dt>Variable<wbr>Variable<wbr>Type<wbr>Fraud<wbr>Label</dt>
-    <dd>FRAUD_LABEL</dd><dt>Variable<wbr>Variable<wbr>Type<wbr>Free<wbr>Form<wbr>Text</dt>
-    <dd>FREE_FORM_TEXT</dd><dt>Variable<wbr>Variable<wbr>Type<wbr>Ip<wbr>Address</dt>
-    <dd>IP_ADDRESS</dd><dt>Variable<wbr>Variable<wbr>Type<wbr>Numeric</dt>
-    <dd>NUMERIC</dd><dt>Variable<wbr>Variable<wbr>Type<wbr>Order<wbr>Id</dt>
-    <dd>ORDER_ID</dd><dt>Variable<wbr>Variable<wbr>Type<wbr>Payment<wbr>Type</dt>
-    <dd>PAYMENT_TYPE</dd><dt>Variable<wbr>Variable<wbr>Type<wbr>Phone<wbr>Number</dt>
-    <dd>PHONE_NUMBER</dd><dt>Variable<wbr>Variable<wbr>Type<wbr>Price</dt>
-    <dd>PRICE</dd><dt>Variable<wbr>Variable<wbr>Type<wbr>Product<wbr>Category</dt>
-    <dd>PRODUCT_CATEGORY</dd><dt>Variable<wbr>Variable<wbr>Type<wbr>Shipping<wbr>Address<wbr>L1</dt>
-    <dd>SHIPPING_ADDRESS_L1</dd><dt>Variable<wbr>Variable<wbr>Type<wbr>Shipping<wbr>Address<wbr>L2</dt>
-    <dd>SHIPPING_ADDRESS_L2</dd><dt>Variable<wbr>Variable<wbr>Type<wbr>Shipping<wbr>City</dt>
-    <dd>SHIPPING_CITY</dd><dt>Variable<wbr>Variable<wbr>Type<wbr>Shipping<wbr>Country</dt>
-    <dd>SHIPPING_COUNTRY</dd><dt>Variable<wbr>Variable<wbr>Type<wbr>Shipping<wbr>Name</dt>
-    <dd>SHIPPING_NAME</dd><dt>Variable<wbr>Variable<wbr>Type<wbr>Shipping<wbr>Phone</dt>
-    <dd>SHIPPING_PHONE</dd><dt>Variable<wbr>Variable<wbr>Type<wbr>Shipping<wbr>State</dt>
-    <dd>SHIPPING_STATE</dd><dt>Variable<wbr>Variable<wbr>Type<wbr>Shipping<wbr>Zip</dt>
-    <dd>SHIPPING_ZIP</dd><dt>Variable<wbr>Variable<wbr>Type<wbr>Useragent</dt>
+<dl class="tabular"><dt>Variable<wbr>Type<wbr>Auth<wbr>Code</dt>
+    <dd>AUTH_CODE</dd><dt>Variable<wbr>Type<wbr>Avs</dt>
+    <dd>AVS</dd><dt>Variable<wbr>Type<wbr>Billing<wbr>Address<wbr>L1</dt>
+    <dd>BILLING_ADDRESS_L1</dd><dt>Variable<wbr>Type<wbr>Billing<wbr>Address<wbr>L2</dt>
+    <dd>BILLING_ADDRESS_L2</dd><dt>Variable<wbr>Type<wbr>Billing<wbr>City</dt>
+    <dd>BILLING_CITY</dd><dt>Variable<wbr>Type<wbr>Billing<wbr>Country</dt>
+    <dd>BILLING_COUNTRY</dd><dt>Variable<wbr>Type<wbr>Billing<wbr>Name</dt>
+    <dd>BILLING_NAME</dd><dt>Variable<wbr>Type<wbr>Billing<wbr>Phone</dt>
+    <dd>BILLING_PHONE</dd><dt>Variable<wbr>Type<wbr>Billing<wbr>State</dt>
+    <dd>BILLING_STATE</dd><dt>Variable<wbr>Type<wbr>Billing<wbr>Zip</dt>
+    <dd>BILLING_ZIP</dd><dt>Variable<wbr>Type<wbr>Card<wbr>Bin</dt>
+    <dd>CARD_BIN</dd><dt>Variable<wbr>Type<wbr>Categorical</dt>
+    <dd>CATEGORICAL</dd><dt>Variable<wbr>Type<wbr>Currency<wbr>Code</dt>
+    <dd>CURRENCY_CODE</dd><dt>Variable<wbr>Type<wbr>Email<wbr>Address</dt>
+    <dd>EMAIL_ADDRESS</dd><dt>Variable<wbr>Type<wbr>Fingerprint</dt>
+    <dd>FINGERPRINT</dd><dt>Variable<wbr>Type<wbr>Fraud<wbr>Label</dt>
+    <dd>FRAUD_LABEL</dd><dt>Variable<wbr>Type<wbr>Free<wbr>Form<wbr>Text</dt>
+    <dd>FREE_FORM_TEXT</dd><dt>Variable<wbr>Type<wbr>Ip<wbr>Address</dt>
+    <dd>IP_ADDRESS</dd><dt>Variable<wbr>Type<wbr>Numeric</dt>
+    <dd>NUMERIC</dd><dt>Variable<wbr>Type<wbr>Order<wbr>Id</dt>
+    <dd>ORDER_ID</dd><dt>Variable<wbr>Type<wbr>Payment<wbr>Type</dt>
+    <dd>PAYMENT_TYPE</dd><dt>Variable<wbr>Type<wbr>Phone<wbr>Number</dt>
+    <dd>PHONE_NUMBER</dd><dt>Variable<wbr>Type<wbr>Price</dt>
+    <dd>PRICE</dd><dt>Variable<wbr>Type<wbr>Product<wbr>Category</dt>
+    <dd>PRODUCT_CATEGORY</dd><dt>Variable<wbr>Type<wbr>Shipping<wbr>Address<wbr>L1</dt>
+    <dd>SHIPPING_ADDRESS_L1</dd><dt>Variable<wbr>Type<wbr>Shipping<wbr>Address<wbr>L2</dt>
+    <dd>SHIPPING_ADDRESS_L2</dd><dt>Variable<wbr>Type<wbr>Shipping<wbr>City</dt>
+    <dd>SHIPPING_CITY</dd><dt>Variable<wbr>Type<wbr>Shipping<wbr>Country</dt>
+    <dd>SHIPPING_COUNTRY</dd><dt>Variable<wbr>Type<wbr>Shipping<wbr>Name</dt>
+    <dd>SHIPPING_NAME</dd><dt>Variable<wbr>Type<wbr>Shipping<wbr>Phone</dt>
+    <dd>SHIPPING_PHONE</dd><dt>Variable<wbr>Type<wbr>Shipping<wbr>State</dt>
+    <dd>SHIPPING_STATE</dd><dt>Variable<wbr>Type<wbr>Shipping<wbr>Zip</dt>
+    <dd>SHIPPING_ZIP</dd><dt>Variable<wbr>Type<wbr>Useragent</dt>
     <dd>USERAGENT</dd></dl>
 {{% /choosable %}}
 

@@ -13,6 +13,215 @@ meta_desc: "Documentation for the aws-native.configuration.OrganizationConforman
 Resource schema for AWS::Config::OrganizationConformancePack.
 
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+### Example
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AwsNative = Pulumi.AwsNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var organizationConformancePack = new AwsNative.Configuration.OrganizationConformancePack("organizationConformancePack", new AwsNative.Configuration.OrganizationConformancePackArgs
+        {
+            OrganizationConformancePackName = "OrganizationConformancePackName",
+            DeliveryS3Bucket = "DeliveryS3Bucket",
+            TemplateS3Uri = "s3://bucketname/prefix",
+        });
+    }
+
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/configuration"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := configuration.NewOrganizationConformancePack(ctx, "organizationConformancePack", &configuration.OrganizationConformancePackArgs{
+			OrganizationConformancePackName: pulumi.String("OrganizationConformancePackName"),
+			DeliveryS3Bucket:                pulumi.String("DeliveryS3Bucket"),
+			TemplateS3Uri:                   pulumi.String("s3://bucketname/prefix"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_aws_native as aws_native
+
+organization_conformance_pack = aws_native.configuration.OrganizationConformancePack("organizationConformancePack",
+    organization_conformance_pack_name="OrganizationConformancePackName",
+    delivery_s3_bucket="DeliveryS3Bucket",
+    template_s3_uri="s3://bucketname/prefix")
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws_native from "@pulumi/aws-native";
+
+const organizationConformancePack = new aws_native.configuration.OrganizationConformancePack("organizationConformancePack", {
+    organizationConformancePackName: "OrganizationConformancePackName",
+    deliveryS3Bucket: "DeliveryS3Bucket",
+    templateS3Uri: "s3://bucketname/prefix",
+});
+
+```
+
+
+{{< /example >}}
+
+
+
+
+### Example
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AwsNative = Pulumi.AwsNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var organizationConformancePack = new AwsNative.Configuration.OrganizationConformancePack("organizationConformancePack", new AwsNative.Configuration.OrganizationConformancePackArgs
+        {
+            OrganizationConformancePackName = "OrganizationConformancePackName",
+            DeliveryS3Bucket = "DeliveryS3Bucket",
+            TemplateS3Uri = "s3://bucketname/prefix",
+        });
+    }
+
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/configuration"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := configuration.NewOrganizationConformancePack(ctx, "organizationConformancePack", &configuration.OrganizationConformancePackArgs{
+			OrganizationConformancePackName: pulumi.String("OrganizationConformancePackName"),
+			DeliveryS3Bucket:                pulumi.String("DeliveryS3Bucket"),
+			TemplateS3Uri:                   pulumi.String("s3://bucketname/prefix"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_aws_native as aws_native
+
+organization_conformance_pack = aws_native.configuration.OrganizationConformancePack("organizationConformancePack",
+    organization_conformance_pack_name="OrganizationConformancePackName",
+    delivery_s3_bucket="DeliveryS3Bucket",
+    template_s3_uri="s3://bucketname/prefix")
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws_native from "@pulumi/aws-native";
+
+const organizationConformancePack = new aws_native.configuration.OrganizationConformancePack("organizationConformancePack", {
+    organizationConformancePackName: "OrganizationConformancePackName",
+    deliveryS3Bucket: "DeliveryS3Bucket",
+    templateS3Uri: "s3://bucketname/prefix",
+});
+
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a OrganizationConformancePack Resource {#create}

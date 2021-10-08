@@ -1100,214 +1100,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="datasetdatasetparameter">Dataset<wbr>Dataset<wbr>Parameter</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetdatasetparametertype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Data<wbr>Brew.<wbr>Dataset<wbr>Dataset<wbr>Parameter<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}Parameter type{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="createcolumn_csharp">
-<a href="#createcolumn_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Column</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Add the value of this parameter as a column in a dataset.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="datetimeoptions_csharp">
-<a href="#datetimeoptions_csharp" style="color: inherit; text-decoration: inherit;">Datetime<wbr>Options</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetdatetimeoptions">Pulumi.<wbr>Aws<wbr>Native.<wbr>Data<wbr>Brew.<wbr>Inputs.<wbr>Dataset<wbr>Datetime<wbr>Options</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="filter_csharp">
-<a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfilterexpression">Pulumi.<wbr>Aws<wbr>Native.<wbr>Data<wbr>Brew.<wbr>Inputs.<wbr>Dataset<wbr>Filter<wbr>Expression</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetdatasetparametertype">Dataset<wbr>Dataset<wbr>Parameter<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}Parameter type{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="createcolumn_go">
-<a href="#createcolumn_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Column</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Add the value of this parameter as a column in a dataset.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="datetimeoptions_go">
-<a href="#datetimeoptions_go" style="color: inherit; text-decoration: inherit;">Datetime<wbr>Options</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetdatetimeoptions">Dataset<wbr>Datetime<wbr>Options</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="filter_go">
-<a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfilterexpression">Dataset<wbr>Filter<wbr>Expression</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetdatasetparametertype">Dataset<wbr>Dataset<wbr>Parameter<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}Parameter type{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="createcolumn_nodejs">
-<a href="#createcolumn_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Column</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Add the value of this parameter as a column in a dataset.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="datetimeoptions_nodejs">
-<a href="#datetimeoptions_nodejs" style="color: inherit; text-decoration: inherit;">datetime<wbr>Options</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetdatetimeoptions">Dataset<wbr>Datetime<wbr>Options</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="filter_nodejs">
-<a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfilterexpression">Dataset<wbr>Filter<wbr>Expression</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetdatasetparametertype">Dataset<wbr>Dataset<wbr>Parameter<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}Parameter type{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="create_column_python">
-<a href="#create_column_python" style="color: inherit; text-decoration: inherit;">create_<wbr>column</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Add the value of this parameter as a column in a dataset.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="datetime_options_python">
-<a href="#datetime_options_python" style="color: inherit; text-decoration: inherit;">datetime_<wbr>options</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetdatetimeoptions">Dataset<wbr>Datetime<wbr>Options</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="filter_python">
-<a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfilterexpression">Dataset<wbr>Filter<wbr>Expression</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="datasetdatasetparametertype">Dataset<wbr>Dataset<wbr>Parameter<wbr>Type</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>String</dt>
-    <dd>String</dd><dt>Number</dt>
-    <dd>Number</dd><dt>Datetime</dt>
-    <dd>Datetime</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Dataset<wbr>Dataset<wbr>Parameter<wbr>Type<wbr>String</dt>
-    <dd>String</dd><dt>Dataset<wbr>Dataset<wbr>Parameter<wbr>Type<wbr>Number</dt>
-    <dd>Number</dd><dt>Dataset<wbr>Dataset<wbr>Parameter<wbr>Type<wbr>Datetime</dt>
-    <dd>Datetime</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>String</dt>
-    <dd>String</dd><dt>Number</dt>
-    <dd>Number</dd><dt>Datetime</dt>
-    <dd>Datetime</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>STRING</dt>
-    <dd>String</dd><dt>NUMBER</dt>
-    <dd>Number</dd><dt>DATETIME</dt>
-    <dd>Datetime</dd></dl>
-{{% /choosable %}}
-
 <h4 id="datasetdatetimeoptions">Dataset<wbr>Datetime<wbr>Options</h4>
 
 {{% choosable language csharp %}}
@@ -2174,6 +1966,214 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="datasetparameter">Dataset<wbr>Parameter</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetparametertype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Data<wbr>Brew.<wbr>Dataset<wbr>Parameter<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Parameter type{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createcolumn_csharp">
+<a href="#createcolumn_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Column</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Add the value of this parameter as a column in a dataset.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datetimeoptions_csharp">
+<a href="#datetimeoptions_csharp" style="color: inherit; text-decoration: inherit;">Datetime<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetdatetimeoptions">Pulumi.<wbr>Aws<wbr>Native.<wbr>Data<wbr>Brew.<wbr>Inputs.<wbr>Dataset<wbr>Datetime<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filter_csharp">
+<a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetfilterexpression">Pulumi.<wbr>Aws<wbr>Native.<wbr>Data<wbr>Brew.<wbr>Inputs.<wbr>Dataset<wbr>Filter<wbr>Expression</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetparametertype">Dataset<wbr>Parameter<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Parameter type{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createcolumn_go">
+<a href="#createcolumn_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Column</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Add the value of this parameter as a column in a dataset.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datetimeoptions_go">
+<a href="#datetimeoptions_go" style="color: inherit; text-decoration: inherit;">Datetime<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetdatetimeoptions">Dataset<wbr>Datetime<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filter_go">
+<a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetfilterexpression">Dataset<wbr>Filter<wbr>Expression</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetparametertype">Dataset<wbr>Parameter<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Parameter type{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createcolumn_nodejs">
+<a href="#createcolumn_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Column</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Add the value of this parameter as a column in a dataset.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datetimeoptions_nodejs">
+<a href="#datetimeoptions_nodejs" style="color: inherit; text-decoration: inherit;">datetime<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetdatetimeoptions">Dataset<wbr>Datetime<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filter_nodejs">
+<a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetfilterexpression">Dataset<wbr>Filter<wbr>Expression</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetparametertype">Dataset<wbr>Parameter<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Parameter type{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="create_column_python">
+<a href="#create_column_python" style="color: inherit; text-decoration: inherit;">create_<wbr>column</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Add the value of this parameter as a column in a dataset.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datetime_options_python">
+<a href="#datetime_options_python" style="color: inherit; text-decoration: inherit;">datetime_<wbr>options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetdatetimeoptions">Dataset<wbr>Datetime<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filter_python">
+<a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetfilterexpression">Dataset<wbr>Filter<wbr>Expression</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="datasetparametertype">Dataset<wbr>Parameter<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>String</dt>
+    <dd>String</dd><dt>Number</dt>
+    <dd>Number</dd><dt>Datetime</dt>
+    <dd>Datetime</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Dataset<wbr>Parameter<wbr>Type<wbr>String</dt>
+    <dd>String</dd><dt>Dataset<wbr>Parameter<wbr>Type<wbr>Number</dt>
+    <dd>Number</dd><dt>Dataset<wbr>Parameter<wbr>Type<wbr>Datetime</dt>
+    <dd>Datetime</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>String</dt>
+    <dd>String</dd><dt>Number</dt>
+    <dd>Number</dd><dt>Datetime</dt>
+    <dd>Datetime</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>STRING</dt>
+    <dd>String</dd><dt>NUMBER</dt>
+    <dd>Number</dd><dt>DATETIME</dt>
+    <dd>Datetime</dd></dl>
+{{% /choosable %}}
+
 <h4 id="datasetpathoptions">Dataset<wbr>Path<wbr>Options</h4>
 
 {{% choosable language csharp %}}
@@ -2297,7 +2297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasetparameter_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Parameter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetdatasetparameter">Pulumi.<wbr>Aws<wbr>Native.<wbr>Data<wbr>Brew.<wbr>Inputs.<wbr>Dataset<wbr>Dataset<wbr>Parameter</a></span>
+        <span class="property-type"><a href="#datasetparameter">Pulumi.<wbr>Aws<wbr>Native.<wbr>Data<wbr>Brew.<wbr>Inputs.<wbr>Dataset<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2317,7 +2317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasetparameter_go" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Parameter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetdatasetparameter">Dataset<wbr>Dataset<wbr>Parameter</a></span>
+        <span class="property-type"><a href="#datasetparameter">Dataset<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2337,7 +2337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasetparameter_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Parameter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetdatasetparameter">Dataset<wbr>Dataset<wbr>Parameter</a></span>
+        <span class="property-type"><a href="#datasetparameter">Dataset<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2357,7 +2357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_parameter_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>parameter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetdatasetparameter">Dataset<wbr>Dataset<wbr>Parameter</a></span>
+        <span class="property-type"><a href="#datasetparameter">Dataset<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">

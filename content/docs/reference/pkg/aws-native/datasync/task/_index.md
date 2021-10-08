@@ -234,7 +234,7 @@ const task = new aws_native.datasync.Task("task", {
          <span class="nx">includes</span><span class="p">:</span> <span class="nx">Optional[Sequence[TaskFilterRuleArgs]]</span> = None<span class="p">,</span>
          <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[TaskOptionsArgs]</span> = None<span class="p">,</span>
-         <span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[TaskTaskScheduleArgs]</span> = None<span class="p">,</span>
+         <span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[TaskScheduleArgs]</span> = None<span class="p">,</span>
          <span class="nx">source_location_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[TaskTagArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -426,7 +426,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tasktaskschedule">Pulumi.<wbr>Aws<wbr>Native.<wbr>Data<wbr>Sync.<wbr>Inputs.<wbr>Task<wbr>Task<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#taskschedule">Pulumi.<wbr>Aws<wbr>Native.<wbr>Data<wbr>Sync.<wbr>Inputs.<wbr>Task<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -502,7 +502,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tasktaskschedule">Task<wbr>Task<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#taskschedule">Task<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -578,7 +578,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tasktaskschedule">Task<wbr>Task<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#taskschedule">Task<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -654,7 +654,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tasktaskschedule">Task<wbr>Task<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#taskschedule">Task<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1860,6 +1860,56 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>NONE</dd></dl>
 {{% /choosable %}}
 
+<h4 id="taskschedule">Task<wbr>Schedule</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="scheduleexpression_csharp">
+<a href="#scheduleexpression_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Expression</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A cron expression that specifies when AWS DataSync initiates a scheduled transfer from a source to a destination location{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="scheduleexpression_go">
+<a href="#scheduleexpression_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Expression</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A cron expression that specifies when AWS DataSync initiates a scheduled transfer from a source to a destination location{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="scheduleexpression_nodejs">
+<a href="#scheduleexpression_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Expression</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A cron expression that specifies when AWS DataSync initiates a scheduled transfer from a source to a destination location{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="schedule_expression_python">
+<a href="#schedule_expression_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>expression</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A cron expression that specifies when AWS DataSync initiates a scheduled transfer from a source to a destination location{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="taskstatus">Task<wbr>Status</h4>
 
 {{% choosable language csharp %}}
@@ -1978,56 +2028,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value for an AWS resource tag.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="tasktaskschedule">Task<wbr>Task<wbr>Schedule</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="scheduleexpression_csharp">
-<a href="#scheduleexpression_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Expression</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A cron expression that specifies when AWS DataSync initiates a scheduled transfer from a source to a destination location{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="scheduleexpression_go">
-<a href="#scheduleexpression_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Expression</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A cron expression that specifies when AWS DataSync initiates a scheduled transfer from a source to a destination location{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="scheduleexpression_nodejs">
-<a href="#scheduleexpression_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Expression</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A cron expression that specifies when AWS DataSync initiates a scheduled transfer from a source to a destination location{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="schedule_expression_python">
-<a href="#schedule_expression_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>expression</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A cron expression that specifies when AWS DataSync initiates a scheduled transfer from a source to a destination location{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

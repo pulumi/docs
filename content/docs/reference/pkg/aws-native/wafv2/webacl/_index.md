@@ -1429,7 +1429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#singleheader_csharp" style="color: inherit; text-decoration: inherit;">Single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">object</span>
+        <span class="property-type"><a href="#webaclfieldtomatchsingleheaderproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>WAFv2.<wbr>Inputs.<wbr>Web<wbr>ACLField<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1437,7 +1437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#singlequeryargument_csharp" style="color: inherit; text-decoration: inherit;">Single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">object</span>
+        <span class="property-type"><a href="#webaclfieldtomatchsinglequeryargumentproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>WAFv2.<wbr>Inputs.<wbr>Web<wbr>ACLField<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}One query argument in a web request, identified by name, for example UserName or SalesRegion. The name can be up to 30 characters long and isn't case sensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1497,7 +1497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#singleheader_go" style="color: inherit; text-decoration: inherit;">Single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#webaclfieldtomatchsingleheaderproperties">Web<wbr>ACLField<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1505,7 +1505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#singlequeryargument_go" style="color: inherit; text-decoration: inherit;">Single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#webaclfieldtomatchsinglequeryargumentproperties">Web<wbr>ACLField<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}One query argument in a web request, identified by name, for example UserName or SalesRegion. The name can be up to 30 characters long and isn't case sensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1565,7 +1565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">any</span>
+        <span class="property-type"><a href="#webaclfieldtomatchsingleheaderproperties">Web<wbr>ACLField<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1573,7 +1573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">any</span>
+        <span class="property-type"><a href="#webaclfieldtomatchsinglequeryargumentproperties">Web<wbr>ACLField<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}One query argument in a web request, identified by name, for example UserName or SalesRegion. The name can be up to 30 characters long and isn't case sensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1633,7 +1633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#single_header_python" style="color: inherit; text-decoration: inherit;">single_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#webaclfieldtomatchsingleheaderproperties">Web<wbr>ACLField<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1641,7 +1641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#single_query_argument_python" style="color: inherit; text-decoration: inherit;">single_<wbr>query_<wbr>argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#webaclfieldtomatchsinglequeryargumentproperties">Web<wbr>ACLField<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}One query argument in a web request, identified by name, for example UserName or SalesRegion. The name can be up to 30 characters long and isn't case sensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1652,6 +1652,106 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}The path component of the URI of a web request. This is the part of a web request that identifies a resource, for example, /images/daily-ad.jpg.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="webaclfieldtomatchsingleheaderproperties">Web<wbr>ACLField<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="webaclfieldtomatchsinglequeryargumentproperties">Web<wbr>ACLField<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="webaclforwardedipconfiguration">Web<wbr>ACLForwarded<wbr>IPConfiguration</h4>

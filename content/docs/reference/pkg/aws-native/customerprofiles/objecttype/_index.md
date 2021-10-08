@@ -45,7 +45,7 @@ class MyStack : Stack
                 new AwsNative.CustomerProfiles.Inputs.ObjectTypeFieldMapArgs
                 {
                     Name = "email",
-                    ObjectTypeField = new AwsNative.CustomerProfiles.Inputs.ObjectTypeObjectTypeFieldArgs
+                    ObjectTypeField = new AwsNative.CustomerProfiles.Inputs.ObjectTypeFieldArgs
                     {
                         Source = "_source.email",
                         Target = "_profile.BusinessEmail",
@@ -60,7 +60,7 @@ class MyStack : Stack
                     Name = "_email",
                     ObjectTypeKeyList = 
                     {
-                        new AwsNative.CustomerProfiles.Inputs.ObjectTypeObjectTypeKeyArgs
+                        new AwsNative.CustomerProfiles.Inputs.ObjectTypeKeyArgs
                         {
                             FieldNames = 
                             {
@@ -108,7 +108,7 @@ func main() {
 			Fields: []customerprofiles.ObjectTypeFieldMapArgs{
 				&customerprofiles.ObjectTypeFieldMapArgs{
 					Name: pulumi.String("email"),
-					ObjectTypeField: &customerprofiles.ObjectTypeObjectTypeFieldArgs{
+					ObjectTypeField: &customerprofiles.ObjectTypeFieldArgs{
 						Source:      pulumi.String("_source.email"),
 						Target:      pulumi.String("_profile.BusinessEmail"),
 						ContentType: "EMAIL_ADDRESS",
@@ -118,12 +118,12 @@ func main() {
 			Keys: []customerprofiles.ObjectTypeKeyMapArgs{
 				&customerprofiles.ObjectTypeKeyMapArgs{
 					Name: pulumi.String("_email"),
-					ObjectTypeKeyList: customerprofiles.ObjectTypeObjectTypeKeyArray{
-						&customerprofiles.ObjectTypeObjectTypeKeyArgs{
+					ObjectTypeKeyList: customerprofiles.ObjectTypeKeyArray{
+						&customerprofiles.ObjectTypeKeyArgs{
 							FieldNames: pulumi.StringArray{
 								pulumi.String("email"),
 							},
-							StandardIdentifiers: customerprofiles.ObjectTypeObjectTypeKeyStandardIdentifiersItemArray{
+							StandardIdentifiers: customerprofiles.ObjectTypeKeyStandardIdentifiersItemArray{
 								"PROFILE",
 								"UNIQUE",
 							},
@@ -160,7 +160,7 @@ object_type = aws_native.customerprofiles.ObjectType("objectType",
     expiration_days=1,
     fields=[aws_native.customerprofiles.ObjectTypeFieldMapArgs(
         name="email",
-        object_type_field=aws_native.customerprofiles.ObjectTypeObjectTypeFieldArgs(
+        object_type_field=aws_native.customerprofiles.ObjectTypeFieldArgs(
             source="_source.email",
             target="_profile.BusinessEmail",
             content_type="EMAIL_ADDRESS",
@@ -168,7 +168,7 @@ object_type = aws_native.customerprofiles.ObjectType("objectType",
     )],
     keys=[aws_native.customerprofiles.ObjectTypeKeyMapArgs(
         name="_email",
-        object_type_key_list=[aws_native.customerprofiles.ObjectTypeObjectTypeKeyArgs(
+        object_type_key_list=[aws_native.customerprofiles.ObjectTypeKeyArgs(
             field_names=["email"],
             standard_identifiers=[
                 "PROFILE",
@@ -249,7 +249,7 @@ class MyStack : Stack
                 new AwsNative.CustomerProfiles.Inputs.ObjectTypeFieldMapArgs
                 {
                     Name = "email",
-                    ObjectTypeField = new AwsNative.CustomerProfiles.Inputs.ObjectTypeObjectTypeFieldArgs
+                    ObjectTypeField = new AwsNative.CustomerProfiles.Inputs.ObjectTypeFieldArgs
                     {
                         Source = "_source.email",
                         Target = "_profile.BusinessEmail",
@@ -264,7 +264,7 @@ class MyStack : Stack
                     Name = "_email",
                     ObjectTypeKeyList = 
                     {
-                        new AwsNative.CustomerProfiles.Inputs.ObjectTypeObjectTypeKeyArgs
+                        new AwsNative.CustomerProfiles.Inputs.ObjectTypeKeyArgs
                         {
                             FieldNames = 
                             {
@@ -312,7 +312,7 @@ func main() {
 			Fields: []customerprofiles.ObjectTypeFieldMapArgs{
 				&customerprofiles.ObjectTypeFieldMapArgs{
 					Name: pulumi.String("email"),
-					ObjectTypeField: &customerprofiles.ObjectTypeObjectTypeFieldArgs{
+					ObjectTypeField: &customerprofiles.ObjectTypeFieldArgs{
 						Source:      pulumi.String("_source.email"),
 						Target:      pulumi.String("_profile.BusinessEmail"),
 						ContentType: "EMAIL_ADDRESS",
@@ -322,12 +322,12 @@ func main() {
 			Keys: []customerprofiles.ObjectTypeKeyMapArgs{
 				&customerprofiles.ObjectTypeKeyMapArgs{
 					Name: pulumi.String("_email"),
-					ObjectTypeKeyList: customerprofiles.ObjectTypeObjectTypeKeyArray{
-						&customerprofiles.ObjectTypeObjectTypeKeyArgs{
+					ObjectTypeKeyList: customerprofiles.ObjectTypeKeyArray{
+						&customerprofiles.ObjectTypeKeyArgs{
 							FieldNames: pulumi.StringArray{
 								pulumi.String("email"),
 							},
-							StandardIdentifiers: customerprofiles.ObjectTypeObjectTypeKeyStandardIdentifiersItemArray{
+							StandardIdentifiers: customerprofiles.ObjectTypeKeyStandardIdentifiersItemArray{
 								"PROFILE",
 								"UNIQUE",
 							},
@@ -364,7 +364,7 @@ object_type = aws_native.customerprofiles.ObjectType("objectType",
     expiration_days=1,
     fields=[aws_native.customerprofiles.ObjectTypeFieldMapArgs(
         name="email",
-        object_type_field=aws_native.customerprofiles.ObjectTypeObjectTypeFieldArgs(
+        object_type_field=aws_native.customerprofiles.ObjectTypeFieldArgs(
             source="_source.email",
             target="_profile.BusinessEmail",
             content_type="EMAIL_ADDRESS",
@@ -372,7 +372,7 @@ object_type = aws_native.customerprofiles.ObjectType("objectType",
     )],
     keys=[aws_native.customerprofiles.ObjectTypeKeyMapArgs(
         name="_email",
-        object_type_key_list=[aws_native.customerprofiles.ObjectTypeObjectTypeKeyArgs(
+        object_type_key_list=[aws_native.customerprofiles.ObjectTypeKeyArgs(
             field_names=["email"],
             standard_identifiers=[
                 "PROFILE",
@@ -1047,171 +1047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="objecttypefieldmap">Object<wbr>Type<wbr>Field<wbr>Map</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="objecttypefield_csharp">
-<a href="#objecttypefield_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Type<wbr>Field</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objecttypeobjecttypefield">Pulumi.<wbr>Aws<wbr>Native.<wbr>Customer<wbr>Profiles.<wbr>Inputs.<wbr>Object<wbr>Type<wbr>Object<wbr>Type<wbr>Field</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="objecttypefield_go">
-<a href="#objecttypefield_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Type<wbr>Field</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objecttypeobjecttypefield">Object<wbr>Type<wbr>Object<wbr>Type<wbr>Field</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="objecttypefield_nodejs">
-<a href="#objecttypefield_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Type<wbr>Field</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objecttypeobjecttypefield">Object<wbr>Type<wbr>Object<wbr>Type<wbr>Field</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="object_type_field_python">
-<a href="#object_type_field_python" style="color: inherit; text-decoration: inherit;">object_<wbr>type_<wbr>field</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objecttypeobjecttypefield">Object<wbr>Type<wbr>Object<wbr>Type<wbr>Field</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="objecttypekeymap">Object<wbr>Type<wbr>Key<wbr>Map</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="objecttypekeylist_csharp">
-<a href="#objecttypekeylist_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Type<wbr>Key<wbr>List</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objecttypeobjecttypekey">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Customer<wbr>Profiles.<wbr>Inputs.<wbr>Object<wbr>Type<wbr>Object<wbr>Type<wbr>Key&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="objecttypekeylist_go">
-<a href="#objecttypekeylist_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Type<wbr>Key<wbr>List</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objecttypeobjecttypekey">[]Object<wbr>Type<wbr>Object<wbr>Type<wbr>Key</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="objecttypekeylist_nodejs">
-<a href="#objecttypekeylist_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Type<wbr>Key<wbr>List</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objecttypeobjecttypekey">Object<wbr>Type<wbr>Object<wbr>Type<wbr>Key[]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="object_type_key_list_python">
-<a href="#object_type_key_list_python" style="color: inherit; text-decoration: inherit;">object_<wbr>type_<wbr>key_<wbr>list</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objecttypeobjecttypekey">Sequence[Object<wbr>Type<wbr>Object<wbr>Type<wbr>Key]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="objecttypeobjecttypefield">Object<wbr>Type<wbr>Object<wbr>Type<wbr>Field</h4>
+<h4 id="objecttypefield">Object<wbr>Type<wbr>Field</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
@@ -1220,7 +1056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objecttypeobjecttypefieldcontenttype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Customer<wbr>Profiles.<wbr>Object<wbr>Type<wbr>Object<wbr>Type<wbr>Field<wbr>Content<wbr>Type</a></span>
+        <span class="property-type"><a href="#objecttypefieldcontenttype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Customer<wbr>Profiles.<wbr>Object<wbr>Type<wbr>Field<wbr>Content<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The content type of the field. Used for determining equality when searching.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1248,7 +1084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objecttypeobjecttypefieldcontenttype">Object<wbr>Type<wbr>Object<wbr>Type<wbr>Field<wbr>Content<wbr>Type</a></span>
+        <span class="property-type"><a href="#objecttypefieldcontenttype">Object<wbr>Type<wbr>Field<wbr>Content<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The content type of the field. Used for determining equality when searching.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1276,7 +1112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objecttypeobjecttypefieldcontenttype">Object<wbr>Type<wbr>Object<wbr>Type<wbr>Field<wbr>Content<wbr>Type</a></span>
+        <span class="property-type"><a href="#objecttypefieldcontenttype">Object<wbr>Type<wbr>Field<wbr>Content<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The content type of the field. Used for determining equality when searching.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1304,7 +1140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objecttypeobjecttypefieldcontenttype">Object<wbr>Type<wbr>Object<wbr>Type<wbr>Field<wbr>Content<wbr>Type</a></span>
+        <span class="property-type"><a href="#objecttypefieldcontenttype">Object<wbr>Type<wbr>Field<wbr>Content<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The content type of the field. Used for determining equality when searching.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1325,7 +1161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The location of the data in the standard ProfileObject model. For example: _profile.Address.PostalCode.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="objecttypeobjecttypefieldcontenttype">Object<wbr>Type<wbr>Object<wbr>Type<wbr>Field<wbr>Content<wbr>Type</h4>
+<h4 id="objecttypefieldcontenttype">Object<wbr>Type<wbr>Field<wbr>Content<wbr>Type</h4>
 
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>String</dt>
@@ -1337,11 +1173,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular"><dt>Object<wbr>Type<wbr>Object<wbr>Type<wbr>Field<wbr>Content<wbr>Type<wbr>String</dt>
-    <dd>STRING</dd><dt>Object<wbr>Type<wbr>Object<wbr>Type<wbr>Field<wbr>Content<wbr>Type<wbr>Number</dt>
-    <dd>NUMBER</dd><dt>Object<wbr>Type<wbr>Object<wbr>Type<wbr>Field<wbr>Content<wbr>Type<wbr>Phone<wbr>Number</dt>
-    <dd>PHONE_NUMBER</dd><dt>Object<wbr>Type<wbr>Object<wbr>Type<wbr>Field<wbr>Content<wbr>Type<wbr>Email<wbr>Address</dt>
-    <dd>EMAIL_ADDRESS</dd><dt>Object<wbr>Type<wbr>Object<wbr>Type<wbr>Field<wbr>Content<wbr>Type<wbr>Name</dt>
+<dl class="tabular"><dt>Object<wbr>Type<wbr>Field<wbr>Content<wbr>Type<wbr>String</dt>
+    <dd>STRING</dd><dt>Object<wbr>Type<wbr>Field<wbr>Content<wbr>Type<wbr>Number</dt>
+    <dd>NUMBER</dd><dt>Object<wbr>Type<wbr>Field<wbr>Content<wbr>Type<wbr>Phone<wbr>Number</dt>
+    <dd>PHONE_NUMBER</dd><dt>Object<wbr>Type<wbr>Field<wbr>Content<wbr>Type<wbr>Email<wbr>Address</dt>
+    <dd>EMAIL_ADDRESS</dd><dt>Object<wbr>Type<wbr>Field<wbr>Content<wbr>Type<wbr>Name</dt>
     <dd>NAME</dd></dl>
 {{% /choosable %}}
 
@@ -1363,7 +1199,89 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>NAME</dd></dl>
 {{% /choosable %}}
 
-<h4 id="objecttypeobjecttypekey">Object<wbr>Type<wbr>Object<wbr>Type<wbr>Key</h4>
+<h4 id="objecttypefieldmap">Object<wbr>Type<wbr>Field<wbr>Map</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="objecttypefield_csharp">
+<a href="#objecttypefield_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Type<wbr>Field</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objecttypefield">Pulumi.<wbr>Aws<wbr>Native.<wbr>Customer<wbr>Profiles.<wbr>Inputs.<wbr>Object<wbr>Type<wbr>Field</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="objecttypefield_go">
+<a href="#objecttypefield_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Type<wbr>Field</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objecttypefield">Object<wbr>Type<wbr>Field</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="objecttypefield_nodejs">
+<a href="#objecttypefield_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Type<wbr>Field</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objecttypefield">Object<wbr>Type<wbr>Field</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="object_type_field_python">
+<a href="#object_type_field_python" style="color: inherit; text-decoration: inherit;">object_<wbr>type_<wbr>field</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objecttypefield">Object<wbr>Type<wbr>Field</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="objecttypekey">Object<wbr>Type<wbr>Key</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
@@ -1380,7 +1298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#standardidentifiers_csharp" style="color: inherit; text-decoration: inherit;">Standard<wbr>Identifiers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objecttypeobjecttypekeystandardidentifiersitem">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Customer<wbr>Profiles.<wbr>Object<wbr>Type<wbr>Object<wbr>Type<wbr>Key<wbr>Standard<wbr>Identifiers<wbr>Item&gt;</a></span>
+        <span class="property-type"><a href="#objecttypekeystandardidentifiersitem">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Customer<wbr>Profiles.<wbr>Object<wbr>Type<wbr>Key<wbr>Standard<wbr>Identifiers<wbr>Item&gt;</a></span>
     </dt>
     <dd>{{% md %}}The types of keys that a ProfileObject can have. Each ProfileObject can have only 1 UNIQUE key but multiple PROFILE keys. PROFILE means that this key can be used to tie an object to a PROFILE. UNIQUE means that it can be used to uniquely identify an object. If a key a is marked as SECONDARY, it will be used to search for profiles after all other PROFILE keys have been searched. A LOOKUP_ONLY key is only used to match a profile but is not persisted to be used for searching of the profile. A NEW_ONLY key is only used if the profile does not already exist before the object is ingested, otherwise it is only used for matching objects to profiles.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1400,7 +1318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#standardidentifiers_go" style="color: inherit; text-decoration: inherit;">Standard<wbr>Identifiers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objecttypeobjecttypekeystandardidentifiersitem">[]Object<wbr>Type<wbr>Object<wbr>Type<wbr>Key<wbr>Standard<wbr>Identifiers<wbr>Item</a></span>
+        <span class="property-type"><a href="#objecttypekeystandardidentifiersitem">[]Object<wbr>Type<wbr>Key<wbr>Standard<wbr>Identifiers<wbr>Item</a></span>
     </dt>
     <dd>{{% md %}}The types of keys that a ProfileObject can have. Each ProfileObject can have only 1 UNIQUE key but multiple PROFILE keys. PROFILE means that this key can be used to tie an object to a PROFILE. UNIQUE means that it can be used to uniquely identify an object. If a key a is marked as SECONDARY, it will be used to search for profiles after all other PROFILE keys have been searched. A LOOKUP_ONLY key is only used to match a profile but is not persisted to be used for searching of the profile. A NEW_ONLY key is only used if the profile does not already exist before the object is ingested, otherwise it is only used for matching objects to profiles.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1420,7 +1338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#standardidentifiers_nodejs" style="color: inherit; text-decoration: inherit;">standard<wbr>Identifiers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objecttypeobjecttypekeystandardidentifiersitem">Object<wbr>Type<wbr>Object<wbr>Type<wbr>Key<wbr>Standard<wbr>Identifiers<wbr>Item[]</a></span>
+        <span class="property-type"><a href="#objecttypekeystandardidentifiersitem">Object<wbr>Type<wbr>Key<wbr>Standard<wbr>Identifiers<wbr>Item[]</a></span>
     </dt>
     <dd>{{% md %}}The types of keys that a ProfileObject can have. Each ProfileObject can have only 1 UNIQUE key but multiple PROFILE keys. PROFILE means that this key can be used to tie an object to a PROFILE. UNIQUE means that it can be used to uniquely identify an object. If a key a is marked as SECONDARY, it will be used to search for profiles after all other PROFILE keys have been searched. A LOOKUP_ONLY key is only used to match a profile but is not persisted to be used for searching of the profile. A NEW_ONLY key is only used if the profile does not already exist before the object is ingested, otherwise it is only used for matching objects to profiles.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1440,12 +1358,94 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#standard_identifiers_python" style="color: inherit; text-decoration: inherit;">standard_<wbr>identifiers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objecttypeobjecttypekeystandardidentifiersitem">Sequence[Object<wbr>Type<wbr>Object<wbr>Type<wbr>Key<wbr>Standard<wbr>Identifiers<wbr>Item]</a></span>
+        <span class="property-type"><a href="#objecttypekeystandardidentifiersitem">Sequence[Object<wbr>Type<wbr>Key<wbr>Standard<wbr>Identifiers<wbr>Item]</a></span>
     </dt>
     <dd>{{% md %}}The types of keys that a ProfileObject can have. Each ProfileObject can have only 1 UNIQUE key but multiple PROFILE keys. PROFILE means that this key can be used to tie an object to a PROFILE. UNIQUE means that it can be used to uniquely identify an object. If a key a is marked as SECONDARY, it will be used to search for profiles after all other PROFILE keys have been searched. A LOOKUP_ONLY key is only used to match a profile but is not persisted to be used for searching of the profile. A NEW_ONLY key is only used if the profile does not already exist before the object is ingested, otherwise it is only used for matching objects to profiles.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="objecttypeobjecttypekeystandardidentifiersitem">Object<wbr>Type<wbr>Object<wbr>Type<wbr>Key<wbr>Standard<wbr>Identifiers<wbr>Item</h4>
+<h4 id="objecttypekeymap">Object<wbr>Type<wbr>Key<wbr>Map</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="objecttypekeylist_csharp">
+<a href="#objecttypekeylist_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Type<wbr>Key<wbr>List</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objecttypekey">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Customer<wbr>Profiles.<wbr>Inputs.<wbr>Object<wbr>Type<wbr>Key&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="objecttypekeylist_go">
+<a href="#objecttypekeylist_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Type<wbr>Key<wbr>List</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objecttypekey">[]Object<wbr>Type<wbr>Key</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="objecttypekeylist_nodejs">
+<a href="#objecttypekeylist_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Type<wbr>Key<wbr>List</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objecttypekey">Object<wbr>Type<wbr>Key[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="object_type_key_list_python">
+<a href="#object_type_key_list_python" style="color: inherit; text-decoration: inherit;">object_<wbr>type_<wbr>key_<wbr>list</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objecttypekey">Sequence[Object<wbr>Type<wbr>Key]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="objecttypekeystandardidentifiersitem">Object<wbr>Type<wbr>Key<wbr>Standard<wbr>Identifiers<wbr>Item</h4>
 
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>Profile</dt>
@@ -1457,11 +1457,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular"><dt>Object<wbr>Type<wbr>Object<wbr>Type<wbr>Key<wbr>Standard<wbr>Identifiers<wbr>Item<wbr>Profile</dt>
-    <dd>PROFILE</dd><dt>Object<wbr>Type<wbr>Object<wbr>Type<wbr>Key<wbr>Standard<wbr>Identifiers<wbr>Item<wbr>Unique</dt>
-    <dd>UNIQUE</dd><dt>Object<wbr>Type<wbr>Object<wbr>Type<wbr>Key<wbr>Standard<wbr>Identifiers<wbr>Item<wbr>Secondary</dt>
-    <dd>SECONDARY</dd><dt>Object<wbr>Type<wbr>Object<wbr>Type<wbr>Key<wbr>Standard<wbr>Identifiers<wbr>Item<wbr>Lookup<wbr>Only</dt>
-    <dd>LOOKUP_ONLY</dd><dt>Object<wbr>Type<wbr>Object<wbr>Type<wbr>Key<wbr>Standard<wbr>Identifiers<wbr>Item<wbr>New<wbr>Only</dt>
+<dl class="tabular"><dt>Object<wbr>Type<wbr>Key<wbr>Standard<wbr>Identifiers<wbr>Item<wbr>Profile</dt>
+    <dd>PROFILE</dd><dt>Object<wbr>Type<wbr>Key<wbr>Standard<wbr>Identifiers<wbr>Item<wbr>Unique</dt>
+    <dd>UNIQUE</dd><dt>Object<wbr>Type<wbr>Key<wbr>Standard<wbr>Identifiers<wbr>Item<wbr>Secondary</dt>
+    <dd>SECONDARY</dd><dt>Object<wbr>Type<wbr>Key<wbr>Standard<wbr>Identifiers<wbr>Item<wbr>Lookup<wbr>Only</dt>
+    <dd>LOOKUP_ONLY</dd><dt>Object<wbr>Type<wbr>Key<wbr>Standard<wbr>Identifiers<wbr>Item<wbr>New<wbr>Only</dt>
     <dd>NEW_ONLY</dd></dl>
 {{% /choosable %}}
 

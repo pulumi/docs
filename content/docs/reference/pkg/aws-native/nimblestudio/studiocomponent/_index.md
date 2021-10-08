@@ -27,10 +27,10 @@ Resource schema for AWS::NimbleStudio::StudioComponent.
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">StudioComponent</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                    <span class="nx">configuration</span><span class="p">:</span> <span class="nx">Optional[StudioComponentStudioComponentConfigurationArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">configuration</span><span class="p">:</span> <span class="nx">Optional[StudioComponentConfigurationArgs]</span> = None<span class="p">,</span>
                     <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">ec2_security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
-                    <span class="nx">initialization_scripts</span><span class="p">:</span> <span class="nx">Optional[Sequence[StudioComponentStudioComponentInitializationScriptArgs]]</span> = None<span class="p">,</span>
+                    <span class="nx">initialization_scripts</span><span class="p">:</span> <span class="nx">Optional[Sequence[StudioComponentInitializationScriptArgs]]</span> = None<span class="p">,</span>
                     <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">script_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[StudioComponentScriptParameterKeyValueArgs]]</span> = None<span class="p">,</span>
                     <span class="nx">studio_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -194,7 +194,7 @@ The StudioComponent resource accepts the following [input]({{< relref "/docs/int
 <a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#studiocomponentstudiocomponentconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Nimble<wbr>Studio.<wbr>Inputs.<wbr>Studio<wbr>Component<wbr>Studio<wbr>Component<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#studiocomponentconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Nimble<wbr>Studio.<wbr>Inputs.<wbr>Studio<wbr>Component<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -218,7 +218,7 @@ The StudioComponent resource accepts the following [input]({{< relref "/docs/int
 <a href="#initializationscripts_csharp" style="color: inherit; text-decoration: inherit;">Initialization<wbr>Scripts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#studiocomponentstudiocomponentinitializationscript">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Nimble<wbr>Studio.<wbr>Inputs.<wbr>Studio<wbr>Component<wbr>Studio<wbr>Component<wbr>Initialization<wbr>Script<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#studiocomponentinitializationscript">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Nimble<wbr>Studio.<wbr>Inputs.<wbr>Studio<wbr>Component<wbr>Initialization<wbr>Script<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -278,7 +278,7 @@ The StudioComponent resource accepts the following [input]({{< relref "/docs/int
 <a href="#configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#studiocomponentstudiocomponentconfiguration">Studio<wbr>Component<wbr>Studio<wbr>Component<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#studiocomponentconfiguration">Studio<wbr>Component<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -302,7 +302,7 @@ The StudioComponent resource accepts the following [input]({{< relref "/docs/int
 <a href="#initializationscripts_go" style="color: inherit; text-decoration: inherit;">Initialization<wbr>Scripts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#studiocomponentstudiocomponentinitializationscript">[]Studio<wbr>Component<wbr>Studio<wbr>Component<wbr>Initialization<wbr>Script<wbr>Args</a></span>
+        <span class="property-type"><a href="#studiocomponentinitializationscript">[]Studio<wbr>Component<wbr>Initialization<wbr>Script<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -362,7 +362,7 @@ The StudioComponent resource accepts the following [input]({{< relref "/docs/int
 <a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#studiocomponentstudiocomponentconfiguration">Studio<wbr>Component<wbr>Studio<wbr>Component<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#studiocomponentconfiguration">Studio<wbr>Component<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -386,7 +386,7 @@ The StudioComponent resource accepts the following [input]({{< relref "/docs/int
 <a href="#initializationscripts_nodejs" style="color: inherit; text-decoration: inherit;">initialization<wbr>Scripts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#studiocomponentstudiocomponentinitializationscript">Studio<wbr>Component<wbr>Studio<wbr>Component<wbr>Initialization<wbr>Script<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#studiocomponentinitializationscript">Studio<wbr>Component<wbr>Initialization<wbr>Script<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -446,7 +446,7 @@ The StudioComponent resource accepts the following [input]({{< relref "/docs/int
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#studiocomponentstudiocomponentconfiguration">Studio<wbr>Component<wbr>Studio<wbr>Component<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#studiocomponentconfiguration">Studio<wbr>Component<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -470,7 +470,7 @@ The StudioComponent resource accepts the following [input]({{< relref "/docs/int
 <a href="#initialization_scripts_python" style="color: inherit; text-decoration: inherit;">initialization_<wbr>scripts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#studiocomponentstudiocomponentinitializationscript">Sequence[Studio<wbr>Component<wbr>Studio<wbr>Component<wbr>Initialization<wbr>Script<wbr>Args]</a></span>
+        <span class="property-type"><a href="#studiocomponentinitializationscript">Sequence[Studio<wbr>Component<wbr>Initialization<wbr>Script<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -874,6 +874,298 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="studiocomponentconfiguration">Studio<wbr>Component<wbr>Configuration</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="activedirectoryconfiguration_csharp">
+<a href="#activedirectoryconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#studiocomponentactivedirectoryconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Nimble<wbr>Studio.<wbr>Inputs.<wbr>Studio<wbr>Component<wbr>Active<wbr>Directory<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="computefarmconfiguration_csharp">
+<a href="#computefarmconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Farm<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#studiocomponentcomputefarmconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Nimble<wbr>Studio.<wbr>Inputs.<wbr>Studio<wbr>Component<wbr>Compute<wbr>Farm<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="licenseserviceconfiguration_csharp">
+<a href="#licenseserviceconfiguration_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Service<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#studiocomponentlicenseserviceconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Nimble<wbr>Studio.<wbr>Inputs.<wbr>Studio<wbr>Component<wbr>License<wbr>Service<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sharedfilesystemconfiguration_csharp">
+<a href="#sharedfilesystemconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>File<wbr>System<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#studiocomponentsharedfilesystemconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Nimble<wbr>Studio.<wbr>Inputs.<wbr>Studio<wbr>Component<wbr>Shared<wbr>File<wbr>System<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="activedirectoryconfiguration_go">
+<a href="#activedirectoryconfiguration_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#studiocomponentactivedirectoryconfiguration">Studio<wbr>Component<wbr>Active<wbr>Directory<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="computefarmconfiguration_go">
+<a href="#computefarmconfiguration_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Farm<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#studiocomponentcomputefarmconfiguration">Studio<wbr>Component<wbr>Compute<wbr>Farm<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="licenseserviceconfiguration_go">
+<a href="#licenseserviceconfiguration_go" style="color: inherit; text-decoration: inherit;">License<wbr>Service<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#studiocomponentlicenseserviceconfiguration">Studio<wbr>Component<wbr>License<wbr>Service<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sharedfilesystemconfiguration_go">
+<a href="#sharedfilesystemconfiguration_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>File<wbr>System<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#studiocomponentsharedfilesystemconfiguration">Studio<wbr>Component<wbr>Shared<wbr>File<wbr>System<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="activedirectoryconfiguration_nodejs">
+<a href="#activedirectoryconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Directory<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#studiocomponentactivedirectoryconfiguration">Studio<wbr>Component<wbr>Active<wbr>Directory<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="computefarmconfiguration_nodejs">
+<a href="#computefarmconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Farm<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#studiocomponentcomputefarmconfiguration">Studio<wbr>Component<wbr>Compute<wbr>Farm<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="licenseserviceconfiguration_nodejs">
+<a href="#licenseserviceconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Service<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#studiocomponentlicenseserviceconfiguration">Studio<wbr>Component<wbr>License<wbr>Service<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sharedfilesystemconfiguration_nodejs">
+<a href="#sharedfilesystemconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>File<wbr>System<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#studiocomponentsharedfilesystemconfiguration">Studio<wbr>Component<wbr>Shared<wbr>File<wbr>System<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="active_directory_configuration_python">
+<a href="#active_directory_configuration_python" style="color: inherit; text-decoration: inherit;">active_<wbr>directory_<wbr>configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#studiocomponentactivedirectoryconfiguration">Studio<wbr>Component<wbr>Active<wbr>Directory<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="compute_farm_configuration_python">
+<a href="#compute_farm_configuration_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>farm_<wbr>configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#studiocomponentcomputefarmconfiguration">Studio<wbr>Component<wbr>Compute<wbr>Farm<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="license_service_configuration_python">
+<a href="#license_service_configuration_python" style="color: inherit; text-decoration: inherit;">license_<wbr>service_<wbr>configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#studiocomponentlicenseserviceconfiguration">Studio<wbr>Component<wbr>License<wbr>Service<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shared_file_system_configuration_python">
+<a href="#shared_file_system_configuration_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>file_<wbr>system_<wbr>configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#studiocomponentsharedfilesystemconfiguration">Studio<wbr>Component<wbr>Shared<wbr>File<wbr>System<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="studiocomponentinitializationscript">Studio<wbr>Component<wbr>Initialization<wbr>Script</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="launchprofileprotocolversion_csharp">
+<a href="#launchprofileprotocolversion_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Profile<wbr>Protocol<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="platform_csharp">
+<a href="#platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="runcontext_csharp">
+<a href="#runcontext_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Context</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="script_csharp">
+<a href="#script_csharp" style="color: inherit; text-decoration: inherit;">Script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="launchprofileprotocolversion_go">
+<a href="#launchprofileprotocolversion_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Profile<wbr>Protocol<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="platform_go">
+<a href="#platform_go" style="color: inherit; text-decoration: inherit;">Platform</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="runcontext_go">
+<a href="#runcontext_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Context</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="script_go">
+<a href="#script_go" style="color: inherit; text-decoration: inherit;">Script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="launchprofileprotocolversion_nodejs">
+<a href="#launchprofileprotocolversion_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Profile<wbr>Protocol<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="platform_nodejs">
+<a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="runcontext_nodejs">
+<a href="#runcontext_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Context</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="script_nodejs">
+<a href="#script_nodejs" style="color: inherit; text-decoration: inherit;">script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="launch_profile_protocol_version_python">
+<a href="#launch_profile_protocol_version_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>profile_<wbr>protocol_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="platform_python">
+<a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="run_context_python">
+<a href="#run_context_python" style="color: inherit; text-decoration: inherit;">run_<wbr>context</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="script_python">
+<a href="#script_python" style="color: inherit; text-decoration: inherit;">script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="studiocomponentlicenseserviceconfiguration">Studio<wbr>Component<wbr>License<wbr>Service<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
@@ -1177,298 +1469,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="windows_mount_drive_python">
 <a href="#windows_mount_drive_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>mount_<wbr>drive</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="studiocomponentstudiocomponentconfiguration">Studio<wbr>Component<wbr>Studio<wbr>Component<wbr>Configuration</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="activedirectoryconfiguration_csharp">
-<a href="#activedirectoryconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#studiocomponentactivedirectoryconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Nimble<wbr>Studio.<wbr>Inputs.<wbr>Studio<wbr>Component<wbr>Active<wbr>Directory<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="computefarmconfiguration_csharp">
-<a href="#computefarmconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Farm<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#studiocomponentcomputefarmconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Nimble<wbr>Studio.<wbr>Inputs.<wbr>Studio<wbr>Component<wbr>Compute<wbr>Farm<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="licenseserviceconfiguration_csharp">
-<a href="#licenseserviceconfiguration_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Service<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#studiocomponentlicenseserviceconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Nimble<wbr>Studio.<wbr>Inputs.<wbr>Studio<wbr>Component<wbr>License<wbr>Service<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sharedfilesystemconfiguration_csharp">
-<a href="#sharedfilesystemconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>File<wbr>System<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#studiocomponentsharedfilesystemconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Nimble<wbr>Studio.<wbr>Inputs.<wbr>Studio<wbr>Component<wbr>Shared<wbr>File<wbr>System<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="activedirectoryconfiguration_go">
-<a href="#activedirectoryconfiguration_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#studiocomponentactivedirectoryconfiguration">Studio<wbr>Component<wbr>Active<wbr>Directory<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="computefarmconfiguration_go">
-<a href="#computefarmconfiguration_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Farm<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#studiocomponentcomputefarmconfiguration">Studio<wbr>Component<wbr>Compute<wbr>Farm<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="licenseserviceconfiguration_go">
-<a href="#licenseserviceconfiguration_go" style="color: inherit; text-decoration: inherit;">License<wbr>Service<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#studiocomponentlicenseserviceconfiguration">Studio<wbr>Component<wbr>License<wbr>Service<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sharedfilesystemconfiguration_go">
-<a href="#sharedfilesystemconfiguration_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>File<wbr>System<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#studiocomponentsharedfilesystemconfiguration">Studio<wbr>Component<wbr>Shared<wbr>File<wbr>System<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="activedirectoryconfiguration_nodejs">
-<a href="#activedirectoryconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Directory<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#studiocomponentactivedirectoryconfiguration">Studio<wbr>Component<wbr>Active<wbr>Directory<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="computefarmconfiguration_nodejs">
-<a href="#computefarmconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Farm<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#studiocomponentcomputefarmconfiguration">Studio<wbr>Component<wbr>Compute<wbr>Farm<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="licenseserviceconfiguration_nodejs">
-<a href="#licenseserviceconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Service<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#studiocomponentlicenseserviceconfiguration">Studio<wbr>Component<wbr>License<wbr>Service<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sharedfilesystemconfiguration_nodejs">
-<a href="#sharedfilesystemconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>File<wbr>System<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#studiocomponentsharedfilesystemconfiguration">Studio<wbr>Component<wbr>Shared<wbr>File<wbr>System<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="active_directory_configuration_python">
-<a href="#active_directory_configuration_python" style="color: inherit; text-decoration: inherit;">active_<wbr>directory_<wbr>configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#studiocomponentactivedirectoryconfiguration">Studio<wbr>Component<wbr>Active<wbr>Directory<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="compute_farm_configuration_python">
-<a href="#compute_farm_configuration_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>farm_<wbr>configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#studiocomponentcomputefarmconfiguration">Studio<wbr>Component<wbr>Compute<wbr>Farm<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="license_service_configuration_python">
-<a href="#license_service_configuration_python" style="color: inherit; text-decoration: inherit;">license_<wbr>service_<wbr>configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#studiocomponentlicenseserviceconfiguration">Studio<wbr>Component<wbr>License<wbr>Service<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="shared_file_system_configuration_python">
-<a href="#shared_file_system_configuration_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>file_<wbr>system_<wbr>configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#studiocomponentsharedfilesystemconfiguration">Studio<wbr>Component<wbr>Shared<wbr>File<wbr>System<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="studiocomponentstudiocomponentinitializationscript">Studio<wbr>Component<wbr>Studio<wbr>Component<wbr>Initialization<wbr>Script</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="launchprofileprotocolversion_csharp">
-<a href="#launchprofileprotocolversion_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Profile<wbr>Protocol<wbr>Version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="platform_csharp">
-<a href="#platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="runcontext_csharp">
-<a href="#runcontext_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Context</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="script_csharp">
-<a href="#script_csharp" style="color: inherit; text-decoration: inherit;">Script</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="launchprofileprotocolversion_go">
-<a href="#launchprofileprotocolversion_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Profile<wbr>Protocol<wbr>Version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="platform_go">
-<a href="#platform_go" style="color: inherit; text-decoration: inherit;">Platform</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="runcontext_go">
-<a href="#runcontext_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Context</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="script_go">
-<a href="#script_go" style="color: inherit; text-decoration: inherit;">Script</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="launchprofileprotocolversion_nodejs">
-<a href="#launchprofileprotocolversion_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Profile<wbr>Protocol<wbr>Version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="platform_nodejs">
-<a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="runcontext_nodejs">
-<a href="#runcontext_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Context</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="script_nodejs">
-<a href="#script_nodejs" style="color: inherit; text-decoration: inherit;">script</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="launch_profile_protocol_version_python">
-<a href="#launch_profile_protocol_version_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>profile_<wbr>protocol_<wbr>version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="platform_python">
-<a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="run_context_python">
-<a href="#run_context_python" style="color: inherit; text-decoration: inherit;">run_<wbr>context</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="script_python">
-<a href="#script_python" style="color: inherit; text-decoration: inherit;">script</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

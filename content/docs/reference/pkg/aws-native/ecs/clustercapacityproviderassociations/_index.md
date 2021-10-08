@@ -566,7 +566,7 @@ The ClusterCapacityProviderAssociations resource accepts the following [input]({
 <a href="#capacityproviders_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Cluster<wbr>Capacity<wbr>Provider<wbr>Associations<wbr>Capacity<wbr>Provider | string[]</span>
+        <span class="property-type">(Cluster<wbr>Capacity<wbr>Provider<wbr>Associations<wbr>Capacity<wbr>Provider | string)[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">

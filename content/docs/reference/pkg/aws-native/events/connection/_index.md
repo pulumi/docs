@@ -39,13 +39,13 @@ class MyStack : Stack
         {
             AuthorizationType = "API_KEY",
             Description = "Connection to PagerDuty API",
-            AuthParameters = 
+            AuthParameters = new AwsNative.Events.Inputs.AuthParametersPropertiesArgs
             {
-                { "apiKeyAuthParameters", 
+                ApiKeyAuthParameters = new AwsNative.Events.Inputs.ConnectionApiKeyAuthParametersArgs
                 {
-                    { "apiKeyName", "PagerDuty Authorization" },
-                    { "apiKeyValue", pagerDutyAPIKeyParam },
-                } },
+                    ApiKeyName = "PagerDuty Authorization",
+                    ApiKeyValue = pagerDutyAPIKeyParam,
+                },
             },
         });
         var myApiDestination = new AwsNative.Events.ApiDestination("myApiDestination", new AwsNative.Events.ApiDestinationArgs
@@ -84,10 +84,10 @@ func main() {
 		myConnection, err := events.NewConnection(ctx, "myConnection", &events.ConnectionArgs{
 			AuthorizationType: "API_KEY",
 			Description:       pulumi.String("Connection to PagerDuty API"),
-			AuthParameters: pulumi.Any{
-				ApiKeyAuthParameters: map[string]interface{}{
-					"apiKeyName":  "PagerDuty Authorization",
-					"apiKeyValue": pagerDutyAPIKeyParam,
+			AuthParameters: &events.AuthParametersPropertiesArgs{
+				ApiKeyAuthParameters: &events.ConnectionApiKeyAuthParametersArgs{
+					ApiKeyName:  pulumi.String("PagerDuty Authorization"),
+					ApiKeyValue: pulumi.String(pagerDutyAPIKeyParam),
 				},
 			},
 		})
@@ -125,12 +125,12 @@ pager_duty_api_key_param = config.require("pagerDutyAPIKeyParam")
 my_connection = aws_native.events.Connection("myConnection",
     authorization_type="API_KEY",
     description="Connection to PagerDuty API",
-    auth_parameters={
-        "apiKeyAuthParameters": {
-            "apiKeyName": "PagerDuty Authorization",
-            "apiKeyValue": pager_duty_api_key_param,
-        },
-    })
+    auth_parameters=aws_native.events.AuthParametersPropertiesArgs(
+        api_key_auth_parameters=aws_native.events.ConnectionApiKeyAuthParametersArgs(
+            api_key_name="PagerDuty Authorization",
+            api_key_value=pager_duty_api_key_param,
+        ),
+    ))
 my_api_destination = aws_native.events.ApiDestination("myApiDestination",
     connection_arn=my_connection.arn,
     description="API Destination to send events to PagerDuty",
@@ -195,7 +195,7 @@ const myApiDestination = new aws_native.events.ApiDestination("myApiDestination"
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Connection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-               <span class="nx">auth_parameters</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">,</span>
+               <span class="nx">auth_parameters</span><span class="p">:</span> <span class="nx">Optional[AuthParametersPropertiesArgs]</span> = None<span class="p">,</span>
                <span class="nx">authorization_type</span><span class="p">:</span> <span class="nx">Optional[ConnectionAuthorizationType]</span> = None<span class="p">,</span>
                <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
@@ -332,7 +332,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#authparameters_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">object</span>
+        <span class="property-type"><a href="#authparametersproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>Events.<wbr>Inputs.<wbr>Auth<wbr>Parameters<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -368,7 +368,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#authparameters_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#authparametersproperties">Auth<wbr>Parameters<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -404,7 +404,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#authparameters_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">any</span>
+        <span class="property-type"><a href="#authparametersproperties">Auth<wbr>Parameters<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -440,7 +440,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#auth_parameters_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#authparametersproperties">Auth<wbr>Parameters<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -598,6 +598,234 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="authparametersproperties">Auth<wbr>Parameters<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="apikeyauthparameters_csharp">
+<a href="#apikeyauthparameters_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Key<wbr>Auth<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionapikeyauthparameters">Pulumi.<wbr>Aws<wbr>Native.<wbr>Events.<wbr>Inputs.<wbr>Connection<wbr>Api<wbr>Key<wbr>Auth<wbr>Parameters</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="basicauthparameters_csharp">
+<a href="#basicauthparameters_csharp" style="color: inherit; text-decoration: inherit;">Basic<wbr>Auth<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionbasicauthparameters">Pulumi.<wbr>Aws<wbr>Native.<wbr>Events.<wbr>Inputs.<wbr>Connection<wbr>Basic<wbr>Auth<wbr>Parameters</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="invocationhttpparameters_csharp">
+<a href="#invocationhttpparameters_csharp" style="color: inherit; text-decoration: inherit;">Invocation<wbr>Http<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionhttpparameters">Pulumi.<wbr>Aws<wbr>Native.<wbr>Events.<wbr>Inputs.<wbr>Connection<wbr>Http<wbr>Parameters</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="oauthparameters_csharp">
+<a href="#oauthparameters_csharp" style="color: inherit; text-decoration: inherit;">OAuth<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionoauthparameters">Pulumi.<wbr>Aws<wbr>Native.<wbr>Events.<wbr>Inputs.<wbr>Connection<wbr>OAuth<wbr>Parameters</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="apikeyauthparameters_go">
+<a href="#apikeyauthparameters_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Key<wbr>Auth<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionapikeyauthparameters">Connection<wbr>Api<wbr>Key<wbr>Auth<wbr>Parameters</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="basicauthparameters_go">
+<a href="#basicauthparameters_go" style="color: inherit; text-decoration: inherit;">Basic<wbr>Auth<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionbasicauthparameters">Connection<wbr>Basic<wbr>Auth<wbr>Parameters</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="invocationhttpparameters_go">
+<a href="#invocationhttpparameters_go" style="color: inherit; text-decoration: inherit;">Invocation<wbr>Http<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionhttpparameters">Connection<wbr>Http<wbr>Parameters</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="oauthparameters_go">
+<a href="#oauthparameters_go" style="color: inherit; text-decoration: inherit;">OAuth<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionoauthparameters">Connection<wbr>OAuth<wbr>Parameters</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="apikeyauthparameters_nodejs">
+<a href="#apikeyauthparameters_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Key<wbr>Auth<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionapikeyauthparameters">Connection<wbr>Api<wbr>Key<wbr>Auth<wbr>Parameters</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="basicauthparameters_nodejs">
+<a href="#basicauthparameters_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Auth<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionbasicauthparameters">Connection<wbr>Basic<wbr>Auth<wbr>Parameters</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="invocationhttpparameters_nodejs">
+<a href="#invocationhttpparameters_nodejs" style="color: inherit; text-decoration: inherit;">invocation<wbr>Http<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionhttpparameters">Connection<wbr>Http<wbr>Parameters</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="oauthparameters_nodejs">
+<a href="#oauthparameters_nodejs" style="color: inherit; text-decoration: inherit;">o<wbr>Auth<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionoauthparameters">Connection<wbr>OAuth<wbr>Parameters</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="api_key_auth_parameters_python">
+<a href="#api_key_auth_parameters_python" style="color: inherit; text-decoration: inherit;">api_<wbr>key_<wbr>auth_<wbr>parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionapikeyauthparameters">Connection<wbr>Api<wbr>Key<wbr>Auth<wbr>Parameters</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="basic_auth_parameters_python">
+<a href="#basic_auth_parameters_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>auth_<wbr>parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionbasicauthparameters">Connection<wbr>Basic<wbr>Auth<wbr>Parameters</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="invocation_http_parameters_python">
+<a href="#invocation_http_parameters_python" style="color: inherit; text-decoration: inherit;">invocation_<wbr>http_<wbr>parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionhttpparameters">Connection<wbr>Http<wbr>Parameters</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="o_auth_parameters_python">
+<a href="#o_auth_parameters_python" style="color: inherit; text-decoration: inherit;">o_<wbr>auth_<wbr>parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionoauthparameters">Connection<wbr>OAuth<wbr>Parameters</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="connectionapikeyauthparameters">Connection<wbr>Api<wbr>Key<wbr>Auth<wbr>Parameters</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="apikeyname_csharp">
+<a href="#apikeyname_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="apikeyvalue_csharp">
+<a href="#apikeyvalue_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Key<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="apikeyname_go">
+<a href="#apikeyname_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="apikeyvalue_go">
+<a href="#apikeyvalue_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Key<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="apikeyname_nodejs">
+<a href="#apikeyname_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="apikeyvalue_nodejs">
+<a href="#apikeyvalue_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Key<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="api_key_name_python">
+<a href="#api_key_name_python" style="color: inherit; text-decoration: inherit;">api_<wbr>key_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="api_key_value_python">
+<a href="#api_key_value_python" style="color: inherit; text-decoration: inherit;">api_<wbr>key_<wbr>value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="connectionauthorizationtype">Connection<wbr>Authorization<wbr>Type</h4>
 
 {{% choosable language csharp %}}
@@ -626,6 +854,574 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>API_KEY</dd><dt>BASIC</dt>
     <dd>BASIC</dd><dt>OAUTH_CLIENT_CREDENTIALS</dt>
     <dd>OAUTH_CLIENT_CREDENTIALS</dd></dl>
+{{% /choosable %}}
+
+<h4 id="connectionbasicauthparameters">Connection<wbr>Basic<wbr>Auth<wbr>Parameters</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="password_csharp">
+<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="username_csharp">
+<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="password_go">
+<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="username_go">
+<a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="password_nodejs">
+<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="username_nodejs">
+<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="password_python">
+<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="username_python">
+<a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="connectionclientparameters">Connection<wbr>Client<wbr>Parameters</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="clientid_csharp">
+<a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>ID</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="clientsecret_csharp">
+<a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="clientid_go">
+<a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>ID</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="clientsecret_go">
+<a href="#clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="clientid_nodejs">
+<a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>ID</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="clientsecret_nodejs">
+<a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="client_id_python">
+<a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="client_secret_python">
+<a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="connectionhttpparameters">Connection<wbr>Http<wbr>Parameters</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="bodyparameters_csharp">
+<a href="#bodyparameters_csharp" style="color: inherit; text-decoration: inherit;">Body<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionparameter">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Events.<wbr>Inputs.<wbr>Connection<wbr>Parameter&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="headerparameters_csharp">
+<a href="#headerparameters_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionparameter">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Events.<wbr>Inputs.<wbr>Connection<wbr>Parameter&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="querystringparameters_csharp">
+<a href="#querystringparameters_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>String<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionparameter">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Events.<wbr>Inputs.<wbr>Connection<wbr>Parameter&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="bodyparameters_go">
+<a href="#bodyparameters_go" style="color: inherit; text-decoration: inherit;">Body<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionparameter">[]Connection<wbr>Parameter</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="headerparameters_go">
+<a href="#headerparameters_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionparameter">[]Connection<wbr>Parameter</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="querystringparameters_go">
+<a href="#querystringparameters_go" style="color: inherit; text-decoration: inherit;">Query<wbr>String<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionparameter">[]Connection<wbr>Parameter</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="bodyparameters_nodejs">
+<a href="#bodyparameters_nodejs" style="color: inherit; text-decoration: inherit;">body<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionparameter">Connection<wbr>Parameter[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="headerparameters_nodejs">
+<a href="#headerparameters_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionparameter">Connection<wbr>Parameter[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="querystringparameters_nodejs">
+<a href="#querystringparameters_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionparameter">Connection<wbr>Parameter[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="body_parameters_python">
+<a href="#body_parameters_python" style="color: inherit; text-decoration: inherit;">body_<wbr>parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionparameter">Sequence[Connection<wbr>Parameter]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="header_parameters_python">
+<a href="#header_parameters_python" style="color: inherit; text-decoration: inherit;">header_<wbr>parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionparameter">Sequence[Connection<wbr>Parameter]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="query_string_parameters_python">
+<a href="#query_string_parameters_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionparameter">Sequence[Connection<wbr>Parameter]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="connectionoauthparameters">Connection<wbr>OAuth<wbr>Parameters</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="authorizationendpoint_csharp">
+<a href="#authorizationendpoint_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="clientparameters_csharp">
+<a href="#clientparameters_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionclientparameters">Pulumi.<wbr>Aws<wbr>Native.<wbr>Events.<wbr>Inputs.<wbr>Connection<wbr>Client<wbr>Parameters</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="httpmethod_csharp">
+<a href="#httpmethod_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionoauthparametershttpmethod">Pulumi.<wbr>Aws<wbr>Native.<wbr>Events.<wbr>Connection<wbr>OAuth<wbr>Parameters<wbr>Http<wbr>Method</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="oauthhttpparameters_csharp">
+<a href="#oauthhttpparameters_csharp" style="color: inherit; text-decoration: inherit;">OAuth<wbr>Http<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionhttpparameters">Pulumi.<wbr>Aws<wbr>Native.<wbr>Events.<wbr>Inputs.<wbr>Connection<wbr>Http<wbr>Parameters</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="authorizationendpoint_go">
+<a href="#authorizationendpoint_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="clientparameters_go">
+<a href="#clientparameters_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionclientparameters">Connection<wbr>Client<wbr>Parameters</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="httpmethod_go">
+<a href="#httpmethod_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionoauthparametershttpmethod">Connection<wbr>OAuth<wbr>Parameters<wbr>Http<wbr>Method</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="oauthhttpparameters_go">
+<a href="#oauthhttpparameters_go" style="color: inherit; text-decoration: inherit;">OAuth<wbr>Http<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionhttpparameters">Connection<wbr>Http<wbr>Parameters</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="authorizationendpoint_nodejs">
+<a href="#authorizationendpoint_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="clientparameters_nodejs">
+<a href="#clientparameters_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionclientparameters">Connection<wbr>Client<wbr>Parameters</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="httpmethod_nodejs">
+<a href="#httpmethod_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionoauthparametershttpmethod">Connection<wbr>OAuth<wbr>Parameters<wbr>Http<wbr>Method</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="oauthhttpparameters_nodejs">
+<a href="#oauthhttpparameters_nodejs" style="color: inherit; text-decoration: inherit;">o<wbr>Auth<wbr>Http<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionhttpparameters">Connection<wbr>Http<wbr>Parameters</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="authorization_endpoint_python">
+<a href="#authorization_endpoint_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="client_parameters_python">
+<a href="#client_parameters_python" style="color: inherit; text-decoration: inherit;">client_<wbr>parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionclientparameters">Connection<wbr>Client<wbr>Parameters</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="http_method_python">
+<a href="#http_method_python" style="color: inherit; text-decoration: inherit;">http_<wbr>method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionoauthparametershttpmethod">Connection<wbr>OAuth<wbr>Parameters<wbr>Http<wbr>Method</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="o_auth_http_parameters_python">
+<a href="#o_auth_http_parameters_python" style="color: inherit; text-decoration: inherit;">o_<wbr>auth_<wbr>http_<wbr>parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionhttpparameters">Connection<wbr>Http<wbr>Parameters</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="connectionoauthparametershttpmethod">Connection<wbr>OAuth<wbr>Parameters<wbr>Http<wbr>Method</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Get</dt>
+    <dd>GET</dd><dt>Post</dt>
+    <dd>POST</dd><dt>Put</dt>
+    <dd>PUT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Connection<wbr>OAuth<wbr>Parameters<wbr>Http<wbr>Method<wbr>Get</dt>
+    <dd>GET</dd><dt>Connection<wbr>OAuth<wbr>Parameters<wbr>Http<wbr>Method<wbr>Post</dt>
+    <dd>POST</dd><dt>Connection<wbr>OAuth<wbr>Parameters<wbr>Http<wbr>Method<wbr>Put</dt>
+    <dd>PUT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Get</dt>
+    <dd>GET</dd><dt>Post</dt>
+    <dd>POST</dd><dt>Put</dt>
+    <dd>PUT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>GET</dt>
+    <dd>GET</dd><dt>POST</dt>
+    <dd>POST</dd><dt>PUT</dt>
+    <dd>PUT</dd></dl>
+{{% /choosable %}}
+
+<h4 id="connectionparameter">Connection<wbr>Parameter</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="isvaluesecret_csharp">
+<a href="#isvaluesecret_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Value<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="isvaluesecret_go">
+<a href="#isvaluesecret_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Value<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="isvaluesecret_nodejs">
+<a href="#isvaluesecret_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Value<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="is_value_secret_python">
+<a href="#is_value_secret_python" style="color: inherit; text-decoration: inherit;">is_<wbr>value_<wbr>secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

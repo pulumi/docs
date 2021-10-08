@@ -615,7 +615,7 @@ const myStateMachine = new aws_native.stepfunctions.StateMachine("myStateMachine
                  <span class="nx">logging_configuration</span><span class="p">:</span> <span class="nx">Optional[StateMachineLoggingConfigurationArgs]</span> = None<span class="p">,</span>
                  <span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">state_machine_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                 <span class="nx">state_machine_type</span><span class="p">:</span> <span class="nx">Optional[StateMachineStateMachineType]</span> = None<span class="p">,</span>
+                 <span class="nx">state_machine_type</span><span class="p">:</span> <span class="nx">Optional[StateMachineType]</span> = None<span class="p">,</span>
                  <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[StateMachineTagsEntryArgs]]</span> = None<span class="p">,</span>
                  <span class="nx">tracing_configuration</span><span class="p">:</span> <span class="nx">Optional[StateMachineTracingConfigurationArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -807,7 +807,7 @@ The StateMachine resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#statemachinetype_csharp" style="color: inherit; text-decoration: inherit;">State<wbr>Machine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statemachinestatemachinetype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Step<wbr>Functions.<wbr>State<wbr>Machine<wbr>State<wbr>Machine<wbr>Type</a></span>
+        <span class="property-type"><a href="#statemachinetype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Step<wbr>Functions.<wbr>State<wbr>Machine<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -891,7 +891,7 @@ The StateMachine resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#statemachinetype_go" style="color: inherit; text-decoration: inherit;">State<wbr>Machine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statemachinestatemachinetype">State<wbr>Machine<wbr>State<wbr>Machine<wbr>Type</a></span>
+        <span class="property-type"><a href="#statemachinetype">State<wbr>Machine<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -975,7 +975,7 @@ The StateMachine resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#statemachinetype_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Machine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statemachinestatemachinetype">State<wbr>Machine<wbr>State<wbr>Machine<wbr>Type</a></span>
+        <span class="property-type"><a href="#statemachinetype">State<wbr>Machine<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1059,7 +1059,7 @@ The StateMachine resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#state_machine_type_python" style="color: inherit; text-decoration: inherit;">state_<wbr>machine_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statemachinestatemachinetype">State<wbr>Machine<wbr>State<wbr>Machine<wbr>Type</a></span>
+        <span class="property-type"><a href="#statemachinetype">State<wbr>Machine<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1571,32 +1571,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="statemachinestatemachinetype">State<wbr>Machine<wbr>State<wbr>Machine<wbr>Type</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Standard</dt>
-    <dd>STANDARD</dd><dt>Express</dt>
-    <dd>EXPRESS</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>State<wbr>Machine<wbr>State<wbr>Machine<wbr>Type<wbr>Standard</dt>
-    <dd>STANDARD</dd><dt>State<wbr>Machine<wbr>State<wbr>Machine<wbr>Type<wbr>Express</dt>
-    <dd>EXPRESS</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Standard</dt>
-    <dd>STANDARD</dd><dt>Express</dt>
-    <dd>EXPRESS</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>STANDARD</dt>
-    <dd>STANDARD</dd><dt>EXPRESS</dt>
-    <dd>EXPRESS</dd></dl>
-{{% /choosable %}}
-
 <h4 id="statemachinetagsentry">State<wbr>Machine<wbr>Tags<wbr>Entry</h4>
 
 {{% choosable language csharp %}}
@@ -1727,6 +1701,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="statemachinetype">State<wbr>Machine<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Standard</dt>
+    <dd>STANDARD</dd><dt>Express</dt>
+    <dd>EXPRESS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>State<wbr>Machine<wbr>Type<wbr>Standard</dt>
+    <dd>STANDARD</dd><dt>State<wbr>Machine<wbr>Type<wbr>Express</dt>
+    <dd>EXPRESS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Standard</dt>
+    <dd>STANDARD</dd><dt>Express</dt>
+    <dd>EXPRESS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>STANDARD</dt>
+    <dd>STANDARD</dd><dt>EXPRESS</dt>
+    <dd>EXPRESS</dd></dl>
 {{% /choosable %}}
 
 
