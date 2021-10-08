@@ -81,11 +81,11 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		opt0 := false
 		opt1 := false
-		_, err := cloudinit.LookupConfig(ctx, &cloudinit.LookupConfigArgs{
+		_, err := cloudinit.LookupConfig(ctx, &GetConfigArgs{
 			Base64Encode: &opt0,
 			Gzip:         &opt1,
-			Parts: []cloudinit.GetConfigPart{
-				cloudinit.GetConfigPart{
+			Parts: []GetConfigPart{
+				GetConfigPart{
 					Content:     "baz",
 					ContentType: "text/x-shellscript",
 					Filename:    "foobar.sh",
