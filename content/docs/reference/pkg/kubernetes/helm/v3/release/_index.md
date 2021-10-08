@@ -151,15 +151,7 @@ The Release resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#repositoryopts">Repository<wbr>Opts<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specification defining the Helm chart repository to use.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="values_csharp">
-<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
-    </dt>
-    <dd>{{% md %}}Custom values set for the release.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specification defining the Helm chart repository to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="atomic_csharp">
 <a href="#atomic_csharp" style="color: inherit; text-decoration: inherit;">Atomic</a>
@@ -377,6 +369,14 @@ The Release resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}List of assets (raw yaml files). Content is read and merged with values. Not yet supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Custom values set for the release.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="verify_csharp">
 <a href="#verify_csharp" style="color: inherit; text-decoration: inherit;">Verify</a>
 </span>
@@ -419,15 +419,7 @@ The Release resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#repositoryopts">Repository<wbr>Opts<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specification defining the Helm chart repository to use.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="values_go">
-<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Custom values set for the release.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specification defining the Helm chart repository to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="atomic_go">
 <a href="#atomic_go" style="color: inherit; text-decoration: inherit;">Atomic</a>
@@ -645,6 +637,14 @@ The Release resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}List of assets (raw yaml files). Content is read and merged with values. Not yet supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Custom values set for the release.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="verify_go">
 <a href="#verify_go" style="color: inherit; text-decoration: inherit;">Verify</a>
 </span>
@@ -687,15 +687,7 @@ The Release resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#repositoryopts">helm.sh.v3.<wbr>Repository<wbr>Opts<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specification defining the Helm chart repository to use.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="values_nodejs">
-<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
-    </dt>
-    <dd>{{% md %}}Custom values set for the release.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specification defining the Helm chart repository to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="atomic_nodejs">
 <a href="#atomic_nodejs" style="color: inherit; text-decoration: inherit;">atomic</a>
@@ -913,6 +905,14 @@ The Release resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}List of assets (raw yaml files). Content is read and merged with values. Not yet supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Custom values set for the release.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="verify_nodejs">
 <a href="#verify_nodejs" style="color: inherit; text-decoration: inherit;">verify</a>
 </span>
@@ -955,15 +955,7 @@ The Release resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#repositoryopts">Repository<wbr>Opts<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specification defining the Helm chart repository to use.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="values_python">
-<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Custom values set for the release.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specification defining the Helm chart repository to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="atomic_python">
 <a href="#atomic_python" style="color: inherit; text-decoration: inherit;">atomic</a>
@@ -1180,6 +1172,14 @@ The Release resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">Archive]]</span>
     </dt>
     <dd>{{% md %}}List of assets (raw yaml files). Content is read and merged with values. Not yet supported.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Custom values set for the release.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verify_python">
 <a href="#verify_python" style="color: inherit; text-decoration: inherit;">verify</a>
