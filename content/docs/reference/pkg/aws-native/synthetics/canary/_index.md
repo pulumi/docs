@@ -476,6 +476,7 @@ return await pageLoadBlueprint();
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Canary</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+           <span class="nx">artifact_config</span><span class="p">:</span> <span class="nx">Optional[CanaryArtifactConfigArgs]</span> = None<span class="p">,</span>
            <span class="nx">artifact_s3_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">code</span><span class="p">:</span> <span class="nx">Optional[CanaryCodeArgs]</span> = None<span class="p">,</span>
            <span class="nx">execution_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -674,6 +675,14 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}Runs canary if set to True. Default is False{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="artifactconfig_csharp">
+<a href="#artifactconfig_csharp" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#canaryartifactconfig">Pulumi.<wbr>Aws<wbr>Native.<wbr>Synthetics.<wbr>Inputs.<wbr>Canary<wbr>Artifact<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Provide artifact configuration{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="failureretentionperiod_csharp">
 <a href="#failureretentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Failure<wbr>Retention<wbr>Period</a>
 </span>
@@ -781,6 +790,14 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Runs canary if set to True. Default is False{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="artifactconfig_go">
+<a href="#artifactconfig_go" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#canaryartifactconfig">Canary<wbr>Artifact<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Provide artifact configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failureretentionperiod_go">
 <a href="#failureretentionperiod_go" style="color: inherit; text-decoration: inherit;">Failure<wbr>Retention<wbr>Period</a>
@@ -890,6 +907,14 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}Runs canary if set to True. Default is False{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="artifactconfig_nodejs">
+<a href="#artifactconfig_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#canaryartifactconfig">Canary<wbr>Artifact<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Provide artifact configuration{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="failureretentionperiod_nodejs">
 <a href="#failureretentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Retention<wbr>Period</a>
 </span>
@@ -997,6 +1022,14 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Runs canary if set to True. Default is False{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="artifact_config_python">
+<a href="#artifact_config_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#canaryartifactconfig">Canary<wbr>Artifact<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Provide artifact configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failure_retention_period_python">
 <a href="#failure_retention_period_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>retention_<wbr>period</a>
@@ -1143,6 +1176,56 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="canaryartifactconfig">Canary<wbr>Artifact<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="s3encryption_csharp">
+<a href="#s3encryption_csharp" style="color: inherit; text-decoration: inherit;">S3Encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#canarys3encryption">Pulumi.<wbr>Aws<wbr>Native.<wbr>Synthetics.<wbr>Inputs.<wbr>Canary<wbr>S3Encryption</a></span>
+    </dt>
+    <dd>{{% md %}}Encryption configuration for uploading artifacts to S3{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="s3encryption_go">
+<a href="#s3encryption_go" style="color: inherit; text-decoration: inherit;">S3Encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#canarys3encryption">Canary<wbr>S3Encryption</a></span>
+    </dt>
+    <dd>{{% md %}}Encryption configuration for uploading artifacts to S3{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="s3encryption_nodejs">
+<a href="#s3encryption_nodejs" style="color: inherit; text-decoration: inherit;">s3Encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#canarys3encryption">Canary<wbr>S3Encryption</a></span>
+    </dt>
+    <dd>{{% md %}}Encryption configuration for uploading artifacts to S3{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="s3_encryption_python">
+<a href="#s3_encryption_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#canarys3encryption">Canary<wbr>S3Encryption</a></span>
+    </dt>
+    <dd>{{% md %}}Encryption configuration for uploading artifacts to S3{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="canarybasescreenshot">Canary<wbr>Base<wbr>Screenshot</h4>
 
@@ -1548,6 +1631,88 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Provide maximum canary timeout per run in seconds{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="canarys3encryption">Canary<wbr>S3Encryption</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="encryptionmode_csharp">
+<a href="#encryptionmode_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Encryption mode for encrypting artifacts when uploading to S3. Valid values: SSE_S3 and SSE_KMS.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyarn_csharp">
+<a href="#kmskeyarn_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}KMS key Arn for encrypting artifacts when uploading to S3. You must specify KMS key Arn for SSE_KMS encryption mode only.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="encryptionmode_go">
+<a href="#encryptionmode_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Encryption mode for encrypting artifacts when uploading to S3. Valid values: SSE_S3 and SSE_KMS.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyarn_go">
+<a href="#kmskeyarn_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}KMS key Arn for encrypting artifacts when uploading to S3. You must specify KMS key Arn for SSE_KMS encryption mode only.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="encryptionmode_nodejs">
+<a href="#encryptionmode_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Encryption mode for encrypting artifacts when uploading to S3. Valid values: SSE_S3 and SSE_KMS.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyarn_nodejs">
+<a href="#kmskeyarn_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}KMS key Arn for encrypting artifacts when uploading to S3. You must specify KMS key Arn for SSE_KMS encryption mode only.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="encryption_mode_python">
+<a href="#encryption_mode_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Encryption mode for encrypting artifacts when uploading to S3. Valid values: SSE_S3 and SSE_KMS.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kms_key_arn_python">
+<a href="#kms_key_arn_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}KMS key Arn for encrypting artifacts when uploading to S3. You must specify KMS key Arn for SSE_KMS encryption mode only.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="canaryschedule">Canary<wbr>Schedule</h4>

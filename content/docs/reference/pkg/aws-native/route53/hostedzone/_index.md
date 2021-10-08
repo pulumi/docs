@@ -27,8 +27,8 @@ Resource schema for AWS::Route53::HostedZone.
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">HostedZone</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-               <span class="nx">hosted_zone_config</span><span class="p">:</span> <span class="nx">Optional[HostedZoneHostedZoneConfigArgs]</span> = None<span class="p">,</span>
-               <span class="nx">hosted_zone_tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[HostedZoneHostedZoneTagArgs]]</span> = None<span class="p">,</span>
+               <span class="nx">hosted_zone_config</span><span class="p">:</span> <span class="nx">Optional[HostedZoneConfigArgs]</span> = None<span class="p">,</span>
+               <span class="nx">hosted_zone_tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[HostedZoneTagArgs]]</span> = None<span class="p">,</span>
                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">query_logging_config</span><span class="p">:</span> <span class="nx">Optional[HostedZoneQueryLoggingConfigArgs]</span> = None<span class="p">,</span>
                <span class="nx">v_pcs</span><span class="p">:</span> <span class="nx">Optional[Sequence[HostedZoneVPCArgs]]</span> = None<span class="p">)</span>
@@ -175,7 +175,7 @@ If you're creating a public hosted zone, this is the name you have registered wi
 <a href="#hostedzoneconfig_csharp" style="color: inherit; text-decoration: inherit;">Hosted<wbr>Zone<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostedzonehostedzoneconfig">Pulumi.<wbr>Aws<wbr>Native.<wbr>Route53.<wbr>Inputs.<wbr>Hosted<wbr>Zone<wbr>Hosted<wbr>Zone<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#hostedzoneconfig">Pulumi.<wbr>Aws<wbr>Native.<wbr>Route53.<wbr>Inputs.<wbr>Hosted<wbr>Zone<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -183,7 +183,7 @@ If you're creating a public hosted zone, this is the name you have registered wi
 <a href="#hostedzonetags_csharp" style="color: inherit; text-decoration: inherit;">Hosted<wbr>Zone<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostedzonehostedzonetag">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Route53.<wbr>Inputs.<wbr>Hosted<wbr>Zone<wbr>Hosted<wbr>Zone<wbr>Tag<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#hostedzonetag">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Route53.<wbr>Inputs.<wbr>Hosted<wbr>Zone<wbr>Tag<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Adds, edits, or deletes tags for a health check or a hosted zone.
 
@@ -223,7 +223,7 @@ If you're creating a public hosted zone, this is the name you have registered wi
 <a href="#hostedzoneconfig_go" style="color: inherit; text-decoration: inherit;">Hosted<wbr>Zone<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostedzonehostedzoneconfig">Hosted<wbr>Zone<wbr>Hosted<wbr>Zone<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#hostedzoneconfig">Hosted<wbr>Zone<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -231,7 +231,7 @@ If you're creating a public hosted zone, this is the name you have registered wi
 <a href="#hostedzonetags_go" style="color: inherit; text-decoration: inherit;">Hosted<wbr>Zone<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostedzonehostedzonetag">[]Hosted<wbr>Zone<wbr>Hosted<wbr>Zone<wbr>Tag<wbr>Args</a></span>
+        <span class="property-type"><a href="#hostedzonetag">[]Hosted<wbr>Zone<wbr>Tag<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Adds, edits, or deletes tags for a health check or a hosted zone.
 
@@ -271,7 +271,7 @@ If you're creating a public hosted zone, this is the name you have registered wi
 <a href="#hostedzoneconfig_nodejs" style="color: inherit; text-decoration: inherit;">hosted<wbr>Zone<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostedzonehostedzoneconfig">Hosted<wbr>Zone<wbr>Hosted<wbr>Zone<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#hostedzoneconfig">Hosted<wbr>Zone<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -279,7 +279,7 @@ If you're creating a public hosted zone, this is the name you have registered wi
 <a href="#hostedzonetags_nodejs" style="color: inherit; text-decoration: inherit;">hosted<wbr>Zone<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostedzonehostedzonetag">Hosted<wbr>Zone<wbr>Hosted<wbr>Zone<wbr>Tag<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#hostedzonetag">Hosted<wbr>Zone<wbr>Tag<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Adds, edits, or deletes tags for a health check or a hosted zone.
 
@@ -319,7 +319,7 @@ If you're creating a public hosted zone, this is the name you have registered wi
 <a href="#hosted_zone_config_python" style="color: inherit; text-decoration: inherit;">hosted_<wbr>zone_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostedzonehostedzoneconfig">Hosted<wbr>Zone<wbr>Hosted<wbr>Zone<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#hostedzoneconfig">Hosted<wbr>Zone<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -327,7 +327,7 @@ If you're creating a public hosted zone, this is the name you have registered wi
 <a href="#hosted_zone_tags_python" style="color: inherit; text-decoration: inherit;">hosted_<wbr>zone_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostedzonehostedzonetag">Sequence[Hosted<wbr>Zone<wbr>Hosted<wbr>Zone<wbr>Tag<wbr>Args]</a></span>
+        <span class="property-type"><a href="#hostedzonetag">Sequence[Hosted<wbr>Zone<wbr>Tag<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Adds, edits, or deletes tags for a health check or a hosted zone.
 
@@ -447,7 +447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="hostedzonehostedzoneconfig">Hosted<wbr>Zone<wbr>Hosted<wbr>Zone<wbr>Config</h4>
+<h4 id="hostedzoneconfig">Hosted<wbr>Zone<wbr>Config</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
@@ -497,7 +497,57 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Any comments that you want to include about the hosted zone.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="hostedzonehostedzonetag">Hosted<wbr>Zone<wbr>Hosted<wbr>Zone<wbr>Tag</h4>
+<h4 id="hostedzonequeryloggingconfig">Hosted<wbr>Zone<wbr>Query<wbr>Logging<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cloudwatchlogsloggrouparn_csharp">
+<a href="#cloudwatchlogsloggrouparn_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Watch<wbr>Logs<wbr>Log<wbr>Group<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the CloudWatch Logs log group that Amazon Route 53 is publishing logs to.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cloudwatchlogsloggrouparn_go">
+<a href="#cloudwatchlogsloggrouparn_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Watch<wbr>Logs<wbr>Log<wbr>Group<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the CloudWatch Logs log group that Amazon Route 53 is publishing logs to.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cloudwatchlogsloggrouparn_nodejs">
+<a href="#cloudwatchlogsloggrouparn_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Watch<wbr>Logs<wbr>Log<wbr>Group<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the CloudWatch Logs log group that Amazon Route 53 is publishing logs to.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cloud_watch_logs_log_group_arn_python">
+<a href="#cloud_watch_logs_log_group_arn_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>watch_<wbr>logs_<wbr>log_<wbr>group_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the CloudWatch Logs log group that Amazon Route 53 is publishing logs to.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="hostedzonetag">Hosted<wbr>Zone<wbr>Tag</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
@@ -577,56 +627,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value for the tag.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="hostedzonequeryloggingconfig">Hosted<wbr>Zone<wbr>Query<wbr>Logging<wbr>Config</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="cloudwatchlogsloggrouparn_csharp">
-<a href="#cloudwatchlogsloggrouparn_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Watch<wbr>Logs<wbr>Log<wbr>Group<wbr>Arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the CloudWatch Logs log group that Amazon Route 53 is publishing logs to.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="cloudwatchlogsloggrouparn_go">
-<a href="#cloudwatchlogsloggrouparn_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Watch<wbr>Logs<wbr>Log<wbr>Group<wbr>Arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the CloudWatch Logs log group that Amazon Route 53 is publishing logs to.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="cloudwatchlogsloggrouparn_nodejs">
-<a href="#cloudwatchlogsloggrouparn_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Watch<wbr>Logs<wbr>Log<wbr>Group<wbr>Arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the CloudWatch Logs log group that Amazon Route 53 is publishing logs to.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="cloud_watch_logs_log_group_arn_python">
-<a href="#cloud_watch_logs_log_group_arn_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>watch_<wbr>logs_<wbr>log_<wbr>group_<wbr>arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the CloudWatch Logs log group that Amazon Route 53 is publishing logs to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="hostedzonevpc">Hosted<wbr>Zone<wbr>VPC</h4>

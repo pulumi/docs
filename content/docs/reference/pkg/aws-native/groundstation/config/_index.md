@@ -27,7 +27,7 @@ AWS Ground Station config resource type for CloudFormation.
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Config</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-           <span class="nx">config_data</span><span class="p">:</span> <span class="nx">Optional[ConfigConfigDataArgs]</span> = None<span class="p">,</span>
+           <span class="nx">config_data</span><span class="p">:</span> <span class="nx">Optional[ConfigDataArgs]</span> = None<span class="p">,</span>
            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[ConfigTagArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -163,7 +163,7 @@ The Config resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#configdata_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configconfigdata">Pulumi.<wbr>Aws<wbr>Native.<wbr>Ground<wbr>Station.<wbr>Inputs.<wbr>Config<wbr>Config<wbr>Data<wbr>Args</a></span>
+        <span class="property-type"><a href="#configdata">Pulumi.<wbr>Aws<wbr>Native.<wbr>Ground<wbr>Station.<wbr>Inputs.<wbr>Config<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -191,7 +191,7 @@ The Config resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#configdata_go" style="color: inherit; text-decoration: inherit;">Config<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configconfigdata">Config<wbr>Config<wbr>Data<wbr>Args</a></span>
+        <span class="property-type"><a href="#configdata">Config<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -219,7 +219,7 @@ The Config resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#configdata_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configconfigdata">Config<wbr>Config<wbr>Data<wbr>Args</a></span>
+        <span class="property-type"><a href="#configdata">Config<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -247,7 +247,7 @@ The Config resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#config_data_python" style="color: inherit; text-decoration: inherit;">config_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configconfigdata">Config<wbr>Config<wbr>Data<wbr>Args</a></span>
+        <span class="property-type"><a href="#configdata">Config<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -705,7 +705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>kHz</dd></dl>
 {{% /choosable %}}
 
-<h4 id="configconfigdata">Config<wbr>Config<wbr>Data</h4>
+<h4 id="configdata">Config<wbr>Data</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"

@@ -273,7 +273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policystatus_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">object</span>
+        <span class="property-type"><a href="#policystatusproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3Object<wbr>Lambda.<wbr>Outputs.<wbr>Policy<wbr>Status<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -317,7 +317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policystatus_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#policystatusproperties">Policy<wbr>Status<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -361,7 +361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policystatus_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">any</span>
+        <span class="property-type"><a href="#policystatusproperties">Policy<wbr>Status<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -405,7 +405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_status_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#policystatusproperties">Policy<wbr>Status<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -820,6 +820,56 @@ Enabling this setting doesn't affect previously stored bucket policies, except t
         <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="policystatusproperties">Policy<wbr>Status<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ispublic_csharp">
+<a href="#ispublic_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Public</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the Object lambda Access Point Policy is Public or not. Object lambda Access Points are private by default.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ispublic_go">
+<a href="#ispublic_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Public</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the Object lambda Access Point Policy is Public or not. Object lambda Access Points are private by default.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ispublic_nodejs">
+<a href="#ispublic_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Public</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the Object lambda Access Point Policy is Public or not. Object lambda Access Points are private by default.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="is_public_python">
+<a href="#is_public_python" style="color: inherit; text-decoration: inherit;">is_<wbr>public</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the Object lambda Access Point Policy is Public or not. Object lambda Access Points are private by default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

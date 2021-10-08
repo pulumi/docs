@@ -35,7 +35,7 @@ class MyStack : Stack
     {
         var myResourceCollection = new AwsNative.DevOpsGuru.ResourceCollection("myResourceCollection", new AwsNative.DevOpsGuru.ResourceCollectionArgs
         {
-            ResourceCollectionFilter = new AwsNative.DevOpsGuru.Inputs.ResourceCollectionResourceCollectionFilterArgs
+            ResourceCollectionFilter = new AwsNative.DevOpsGuru.Inputs.ResourceCollectionFilterArgs
             {
                 CloudFormation = new AwsNative.DevOpsGuru.Inputs.ResourceCollectionCloudFormationCollectionFilterArgs
                 {
@@ -71,7 +71,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := devopsguru.NewResourceCollection(ctx, "myResourceCollection", &devopsguru.ResourceCollectionArgs{
-			ResourceCollectionFilter: &devopsguru.ResourceCollectionResourceCollectionFilterArgs{
+			ResourceCollectionFilter: &devopsguru.ResourceCollectionFilterArgs{
 				CloudFormation: &devopsguru.ResourceCollectionCloudFormationCollectionFilterArgs{
 					StackNames: pulumi.StringArray{
 						pulumi.String("StackA"),
@@ -100,7 +100,7 @@ func main() {
 import pulumi
 import pulumi_aws_native as aws_native
 
-my_resource_collection = aws_native.devopsguru.ResourceCollection("myResourceCollection", resource_collection_filter=aws_native.devopsguru.ResourceCollectionResourceCollectionFilterArgs(
+my_resource_collection = aws_native.devopsguru.ResourceCollection("myResourceCollection", resource_collection_filter=aws_native.devopsguru.ResourceCollectionFilterArgs(
     cloud_formation=aws_native.devopsguru.ResourceCollectionCloudFormationCollectionFilterArgs(
         stack_names=[
             "StackA",
@@ -154,7 +154,7 @@ class MyStack : Stack
     {
         var myResourceCollection = new AwsNative.DevOpsGuru.ResourceCollection("myResourceCollection", new AwsNative.DevOpsGuru.ResourceCollectionArgs
         {
-            ResourceCollectionFilter = new AwsNative.DevOpsGuru.Inputs.ResourceCollectionResourceCollectionFilterArgs
+            ResourceCollectionFilter = new AwsNative.DevOpsGuru.Inputs.ResourceCollectionFilterArgs
             {
                 CloudFormation = new AwsNative.DevOpsGuru.Inputs.ResourceCollectionCloudFormationCollectionFilterArgs
                 {
@@ -190,7 +190,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := devopsguru.NewResourceCollection(ctx, "myResourceCollection", &devopsguru.ResourceCollectionArgs{
-			ResourceCollectionFilter: &devopsguru.ResourceCollectionResourceCollectionFilterArgs{
+			ResourceCollectionFilter: &devopsguru.ResourceCollectionFilterArgs{
 				CloudFormation: &devopsguru.ResourceCollectionCloudFormationCollectionFilterArgs{
 					StackNames: pulumi.StringArray{
 						pulumi.String("StackA"),
@@ -219,7 +219,7 @@ func main() {
 import pulumi
 import pulumi_aws_native as aws_native
 
-my_resource_collection = aws_native.devopsguru.ResourceCollection("myResourceCollection", resource_collection_filter=aws_native.devopsguru.ResourceCollectionResourceCollectionFilterArgs(
+my_resource_collection = aws_native.devopsguru.ResourceCollection("myResourceCollection", resource_collection_filter=aws_native.devopsguru.ResourceCollectionFilterArgs(
     cloud_formation=aws_native.devopsguru.ResourceCollectionCloudFormationCollectionFilterArgs(
         stack_names=[
             "StackA",
@@ -273,7 +273,7 @@ class MyStack : Stack
     {
         var myResourceCollection = new AwsNative.DevOpsGuru.ResourceCollection("myResourceCollection", new AwsNative.DevOpsGuru.ResourceCollectionArgs
         {
-            ResourceCollectionFilter = new AwsNative.DevOpsGuru.Inputs.ResourceCollectionResourceCollectionFilterArgs
+            ResourceCollectionFilter = new AwsNative.DevOpsGuru.Inputs.ResourceCollectionFilterArgs
             {
                 CloudFormation = new AwsNative.DevOpsGuru.Inputs.ResourceCollectionCloudFormationCollectionFilterArgs
                 {
@@ -308,7 +308,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := devopsguru.NewResourceCollection(ctx, "myResourceCollection", &devopsguru.ResourceCollectionArgs{
-			ResourceCollectionFilter: &devopsguru.ResourceCollectionResourceCollectionFilterArgs{
+			ResourceCollectionFilter: &devopsguru.ResourceCollectionFilterArgs{
 				CloudFormation: &devopsguru.ResourceCollectionCloudFormationCollectionFilterArgs{
 					StackNames: pulumi.StringArray{
 						pulumi.String("*"),
@@ -336,7 +336,7 @@ func main() {
 import pulumi
 import pulumi_aws_native as aws_native
 
-my_resource_collection = aws_native.devopsguru.ResourceCollection("myResourceCollection", resource_collection_filter=aws_native.devopsguru.ResourceCollectionResourceCollectionFilterArgs(
+my_resource_collection = aws_native.devopsguru.ResourceCollection("myResourceCollection", resource_collection_filter=aws_native.devopsguru.ResourceCollectionFilterArgs(
     cloud_formation=aws_native.devopsguru.ResourceCollectionCloudFormationCollectionFilterArgs(
         stack_names=["*"],
     ),
@@ -384,7 +384,7 @@ class MyStack : Stack
     {
         var myResourceCollection = new AwsNative.DevOpsGuru.ResourceCollection("myResourceCollection", new AwsNative.DevOpsGuru.ResourceCollectionArgs
         {
-            ResourceCollectionFilter = new AwsNative.DevOpsGuru.Inputs.ResourceCollectionResourceCollectionFilterArgs
+            ResourceCollectionFilter = new AwsNative.DevOpsGuru.Inputs.ResourceCollectionFilterArgs
             {
                 CloudFormation = new AwsNative.DevOpsGuru.Inputs.ResourceCollectionCloudFormationCollectionFilterArgs
                 {
@@ -419,7 +419,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := devopsguru.NewResourceCollection(ctx, "myResourceCollection", &devopsguru.ResourceCollectionArgs{
-			ResourceCollectionFilter: &devopsguru.ResourceCollectionResourceCollectionFilterArgs{
+			ResourceCollectionFilter: &devopsguru.ResourceCollectionFilterArgs{
 				CloudFormation: &devopsguru.ResourceCollectionCloudFormationCollectionFilterArgs{
 					StackNames: pulumi.StringArray{
 						pulumi.String("*"),
@@ -447,7 +447,7 @@ func main() {
 import pulumi
 import pulumi_aws_native as aws_native
 
-my_resource_collection = aws_native.devopsguru.ResourceCollection("myResourceCollection", resource_collection_filter=aws_native.devopsguru.ResourceCollectionResourceCollectionFilterArgs(
+my_resource_collection = aws_native.devopsguru.ResourceCollection("myResourceCollection", resource_collection_filter=aws_native.devopsguru.ResourceCollectionFilterArgs(
     cloud_formation=aws_native.devopsguru.ResourceCollectionCloudFormationCollectionFilterArgs(
         stack_names=["*"],
     ),
@@ -498,7 +498,7 @@ const myResourceCollection = new aws_native.devopsguru.ResourceCollection("myRes
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ResourceCollection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                       <span class="nx">resource_collection_filter</span><span class="p">:</span> <span class="nx">Optional[ResourceCollectionResourceCollectionFilterArgs]</span> = None<span class="p">)</span>
+                       <span class="nx">resource_collection_filter</span><span class="p">:</span> <span class="nx">Optional[ResourceCollectionFilterArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ResourceCollection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ResourceCollectionArgs</a></span><span class="p">,</span>
@@ -632,7 +632,7 @@ The ResourceCollection resource accepts the following [input]({{< relref "/docs/
 <a href="#resourcecollectionfilter_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Collection<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcecollectionresourcecollectionfilter">Pulumi.<wbr>Aws<wbr>Native.<wbr>Dev<wbr>Ops<wbr>Guru.<wbr>Inputs.<wbr>Resource<wbr>Collection<wbr>Resource<wbr>Collection<wbr>Filter<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcecollectionfilter">Pulumi.<wbr>Aws<wbr>Native.<wbr>Dev<wbr>Ops<wbr>Guru.<wbr>Inputs.<wbr>Resource<wbr>Collection<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -644,7 +644,7 @@ The ResourceCollection resource accepts the following [input]({{< relref "/docs/
 <a href="#resourcecollectionfilter_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Collection<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcecollectionresourcecollectionfilter">Resource<wbr>Collection<wbr>Resource<wbr>Collection<wbr>Filter<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcecollectionfilter">Resource<wbr>Collection<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -656,7 +656,7 @@ The ResourceCollection resource accepts the following [input]({{< relref "/docs/
 <a href="#resourcecollectionfilter_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Collection<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcecollectionresourcecollectionfilter">Resource<wbr>Collection<wbr>Resource<wbr>Collection<wbr>Filter<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcecollectionfilter">Resource<wbr>Collection<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -668,7 +668,7 @@ The ResourceCollection resource accepts the following [input]({{< relref "/docs/
 <a href="#resource_collection_filter_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>collection_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcecollectionresourcecollectionfilter">Resource<wbr>Collection<wbr>Resource<wbr>Collection<wbr>Filter<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcecollectionfilter">Resource<wbr>Collection<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -695,7 +695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcecollectiontype_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Collection<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcecollectionresourcecollectiontype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Dev<wbr>Ops<wbr>Guru.<wbr>Resource<wbr>Collection<wbr>Resource<wbr>Collection<wbr>Type</a></span>
+        <span class="property-type"><a href="#resourcecollectiontype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Dev<wbr>Ops<wbr>Guru.<wbr>Resource<wbr>Collection<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of ResourceCollection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -715,7 +715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcecollectiontype_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Collection<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcecollectionresourcecollectiontype">Resource<wbr>Collection<wbr>Resource<wbr>Collection<wbr>Type</a></span>
+        <span class="property-type"><a href="#resourcecollectiontype">Resource<wbr>Collection<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of ResourceCollection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -735,7 +735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcecollectiontype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Collection<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcecollectionresourcecollectiontype">Resource<wbr>Collection<wbr>Resource<wbr>Collection<wbr>Type</a></span>
+        <span class="property-type"><a href="#resourcecollectiontype">Resource<wbr>Collection<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of ResourceCollection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -755,7 +755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_collection_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>collection_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcecollectionresourcecollectiontype">Resource<wbr>Collection<wbr>Resource<wbr>Collection<wbr>Type</a></span>
+        <span class="property-type"><a href="#resourcecollectiontype">Resource<wbr>Collection<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of ResourceCollection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -820,7 +820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}An array of CloudFormation stack names.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="resourcecollectionresourcecollectionfilter">Resource<wbr>Collection<wbr>Resource<wbr>Collection<wbr>Filter</h4>
+<h4 id="resourcecollectionfilter">Resource<wbr>Collection<wbr>Filter</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
@@ -870,7 +870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="resourcecollectionresourcecollectiontype">Resource<wbr>Collection<wbr>Resource<wbr>Collection<wbr>Type</h4>
+<h4 id="resourcecollectiontype">Resource<wbr>Collection<wbr>Type</h4>
 
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>Aws<wbr>Cloud<wbr>Formation</dt>
@@ -878,7 +878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular"><dt>Resource<wbr>Collection<wbr>Resource<wbr>Collection<wbr>Type<wbr>Aws<wbr>Cloud<wbr>Formation</dt>
+<dl class="tabular"><dt>Resource<wbr>Collection<wbr>Type<wbr>Aws<wbr>Cloud<wbr>Formation</dt>
     <dd>AWS_CLOUD_FORMATION</dd></dl>
 {{% /choosable %}}
 

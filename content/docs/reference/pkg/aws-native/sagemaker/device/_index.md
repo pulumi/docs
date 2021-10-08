@@ -27,12 +27,12 @@ Resource schema for AWS::SageMaker::Device
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Device</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-           <span class="nx">device</span><span class="p">:</span> <span class="nx">Optional[DeviceDeviceArgs]</span> = None<span class="p">,</span>
+           <span class="nx">device</span><span class="p">:</span> <span class="nx">Optional[DeviceArgs]</span> = None<span class="p">,</span>
            <span class="nx">device_fleet_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeviceTagArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Device</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DeviceArgs</a></span><span class="p">,</span>
+           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DeviceInitArgs</a></span><span class="p">,</span>
            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
@@ -80,7 +80,7 @@ Resource schema for AWS::SageMaker::Device
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">DeviceArgs</a></span>
+        <span class="property-type"><a href="#inputs">DeviceInitArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
@@ -171,7 +171,7 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#devicevalue_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicedevice">Pulumi.<wbr>Aws<wbr>Native.<wbr>Sage<wbr>Maker.<wbr>Inputs.<wbr>Device<wbr>Device<wbr>Args</a></span>
+        <span class="property-type"><a href="#device">Pulumi.<wbr>Aws<wbr>Native.<wbr>Sage<wbr>Maker.<wbr>Inputs.<wbr>Device<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Edge Device you want to register against a device fleet{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -199,7 +199,7 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#device_go" style="color: inherit; text-decoration: inherit;">Device</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicedevice">Device<wbr>Device<wbr>Args</a></span>
+        <span class="property-type"><a href="#device">Device<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Edge Device you want to register against a device fleet{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -227,7 +227,7 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#device_nodejs" style="color: inherit; text-decoration: inherit;">device</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicedevice">Device<wbr>Device<wbr>Args</a></span>
+        <span class="property-type"><a href="#device">Device<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Edge Device you want to register against a device fleet{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -255,7 +255,7 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#device_python" style="color: inherit; text-decoration: inherit;">device</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicedevice">Device<wbr>Device<wbr>Args</a></span>
+        <span class="property-type"><a href="#device">Device<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Edge Device you want to register against a device fleet{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -333,7 +333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="devicedevice">Device<wbr>Device</h4>
+<h4 id="device">Device</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"

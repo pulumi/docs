@@ -34,7 +34,7 @@ The AWS::ElastiCache::GlobalReplicationGroup resource creates an Amazon ElastiCa
                            <span class="nx">global_node_group_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                            <span class="nx">global_replication_group_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">global_replication_group_id_suffix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                           <span class="nx">members</span><span class="p">:</span> <span class="nx">Optional[Sequence[GlobalReplicationGroupGlobalReplicationGroupMemberArgs]]</span> = None<span class="p">,</span>
+                           <span class="nx">members</span><span class="p">:</span> <span class="nx">Optional[Sequence[GlobalReplicationGroupMemberArgs]]</span> = None<span class="p">,</span>
                            <span class="nx">regional_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[GlobalReplicationGroupRegionalConfigurationArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">GlobalReplicationGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -169,7 +169,7 @@ The GlobalReplicationGroup resource accepts the following [input]({{< relref "/d
 <a href="#members_csharp" style="color: inherit; text-decoration: inherit;">Members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalreplicationgroupglobalreplicationgroupmember">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Elasti<wbr>Cache.<wbr>Inputs.<wbr>Global<wbr>Replication<wbr>Group<wbr>Global<wbr>Replication<wbr>Group<wbr>Member<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#globalreplicationgroupmember">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Elasti<wbr>Cache.<wbr>Inputs.<wbr>Global<wbr>Replication<wbr>Group<wbr>Member<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The replication groups that comprise the Global Datastore.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -245,7 +245,7 @@ The GlobalReplicationGroup resource accepts the following [input]({{< relref "/d
 <a href="#members_go" style="color: inherit; text-decoration: inherit;">Members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalreplicationgroupglobalreplicationgroupmember">[]Global<wbr>Replication<wbr>Group<wbr>Global<wbr>Replication<wbr>Group<wbr>Member<wbr>Args</a></span>
+        <span class="property-type"><a href="#globalreplicationgroupmember">[]Global<wbr>Replication<wbr>Group<wbr>Member<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The replication groups that comprise the Global Datastore.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -321,7 +321,7 @@ The GlobalReplicationGroup resource accepts the following [input]({{< relref "/d
 <a href="#members_nodejs" style="color: inherit; text-decoration: inherit;">members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalreplicationgroupglobalreplicationgroupmember">Global<wbr>Replication<wbr>Group<wbr>Global<wbr>Replication<wbr>Group<wbr>Member<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#globalreplicationgroupmember">Global<wbr>Replication<wbr>Group<wbr>Member<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The replication groups that comprise the Global Datastore.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -397,7 +397,7 @@ The GlobalReplicationGroup resource accepts the following [input]({{< relref "/d
 <a href="#members_python" style="color: inherit; text-decoration: inherit;">members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalreplicationgroupglobalreplicationgroupmember">Sequence[Global<wbr>Replication<wbr>Group<wbr>Global<wbr>Replication<wbr>Group<wbr>Member<wbr>Args]</a></span>
+        <span class="property-type"><a href="#globalreplicationgroupmember">Sequence[Global<wbr>Replication<wbr>Group<wbr>Member<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The replication groups that comprise the Global Datastore.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -595,7 +595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="globalreplicationgroupglobalreplicationgroupmember">Global<wbr>Replication<wbr>Group<wbr>Global<wbr>Replication<wbr>Group<wbr>Member</h4>
+<h4 id="globalreplicationgroupmember">Global<wbr>Replication<wbr>Group<wbr>Member</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
@@ -620,7 +620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalreplicationgroupglobalreplicationgroupmemberrole">Pulumi.<wbr>Aws<wbr>Native.<wbr>Elasti<wbr>Cache.<wbr>Global<wbr>Replication<wbr>Group<wbr>Global<wbr>Replication<wbr>Group<wbr>Member<wbr>Role</a></span>
+        <span class="property-type"><a href="#globalreplicationgroupmemberrole">Pulumi.<wbr>Aws<wbr>Native.<wbr>Elasti<wbr>Cache.<wbr>Global<wbr>Replication<wbr>Group<wbr>Member<wbr>Role</a></span>
     </dt>
     <dd>{{% md %}}Indicates the role of the member, primary or secondary.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -648,7 +648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalreplicationgroupglobalreplicationgroupmemberrole">Global<wbr>Replication<wbr>Group<wbr>Global<wbr>Replication<wbr>Group<wbr>Member<wbr>Role</a></span>
+        <span class="property-type"><a href="#globalreplicationgroupmemberrole">Global<wbr>Replication<wbr>Group<wbr>Member<wbr>Role</a></span>
     </dt>
     <dd>{{% md %}}Indicates the role of the member, primary or secondary.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -676,7 +676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalreplicationgroupglobalreplicationgroupmemberrole">Global<wbr>Replication<wbr>Group<wbr>Global<wbr>Replication<wbr>Group<wbr>Member<wbr>Role</a></span>
+        <span class="property-type"><a href="#globalreplicationgroupmemberrole">Global<wbr>Replication<wbr>Group<wbr>Member<wbr>Role</a></span>
     </dt>
     <dd>{{% md %}}Indicates the role of the member, primary or secondary.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -704,12 +704,12 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalreplicationgroupglobalreplicationgroupmemberrole">Global<wbr>Replication<wbr>Group<wbr>Global<wbr>Replication<wbr>Group<wbr>Member<wbr>Role</a></span>
+        <span class="property-type"><a href="#globalreplicationgroupmemberrole">Global<wbr>Replication<wbr>Group<wbr>Member<wbr>Role</a></span>
     </dt>
     <dd>{{% md %}}Indicates the role of the member, primary or secondary.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="globalreplicationgroupglobalreplicationgroupmemberrole">Global<wbr>Replication<wbr>Group<wbr>Global<wbr>Replication<wbr>Group<wbr>Member<wbr>Role</h4>
+<h4 id="globalreplicationgroupmemberrole">Global<wbr>Replication<wbr>Group<wbr>Member<wbr>Role</h4>
 
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>Primary</dt>
@@ -718,8 +718,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular"><dt>Global<wbr>Replication<wbr>Group<wbr>Global<wbr>Replication<wbr>Group<wbr>Member<wbr>Role<wbr>Primary</dt>
-    <dd>PRIMARY</dd><dt>Global<wbr>Replication<wbr>Group<wbr>Global<wbr>Replication<wbr>Group<wbr>Member<wbr>Role<wbr>Secondary</dt>
+<dl class="tabular"><dt>Global<wbr>Replication<wbr>Group<wbr>Member<wbr>Role<wbr>Primary</dt>
+    <dd>PRIMARY</dd><dt>Global<wbr>Replication<wbr>Group<wbr>Member<wbr>Role<wbr>Secondary</dt>
     <dd>SECONDARY</dd></dl>
 {{% /choosable %}}
 

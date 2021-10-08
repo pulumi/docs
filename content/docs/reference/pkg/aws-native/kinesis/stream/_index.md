@@ -30,7 +30,7 @@ Resource Type definition for AWS::Kinesis::Stream
            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">retention_period_hours</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
            <span class="nx">shard_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
-           <span class="nx">stream_encryption</span><span class="p">:</span> <span class="nx">Optional[StreamStreamEncryptionArgs]</span> = None<span class="p">,</span>
+           <span class="nx">stream_encryption</span><span class="p">:</span> <span class="nx">Optional[StreamEncryptionArgs]</span> = None<span class="p">,</span>
            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[StreamTagArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Stream</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -189,7 +189,7 @@ The Stream resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#streamencryption_csharp" style="color: inherit; text-decoration: inherit;">Stream<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamstreamencryption">Pulumi.<wbr>Aws<wbr>Native.<wbr>Kinesis.<wbr>Inputs.<wbr>Stream<wbr>Stream<wbr>Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamencryption">Pulumi.<wbr>Aws<wbr>Native.<wbr>Kinesis.<wbr>Inputs.<wbr>Stream<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When specified, enables or updates server-side encryption using an AWS KMS key for a specified stream.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -233,7 +233,7 @@ The Stream resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#streamencryption_go" style="color: inherit; text-decoration: inherit;">Stream<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamstreamencryption">Stream<wbr>Stream<wbr>Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamencryption">Stream<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When specified, enables or updates server-side encryption using an AWS KMS key for a specified stream.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -277,7 +277,7 @@ The Stream resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#streamencryption_nodejs" style="color: inherit; text-decoration: inherit;">stream<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamstreamencryption">Stream<wbr>Stream<wbr>Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamencryption">Stream<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When specified, enables or updates server-side encryption using an AWS KMS key for a specified stream.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -321,7 +321,7 @@ The Stream resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#stream_encryption_python" style="color: inherit; text-decoration: inherit;">stream_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamstreamencryption">Stream<wbr>Stream<wbr>Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamencryption">Stream<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When specified, enables or updates server-side encryption using an AWS KMS key for a specified stream.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -431,7 +431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="streamstreamencryption">Stream<wbr>Stream<wbr>Encryption</h4>
+<h4 id="streamencryption">Stream<wbr>Encryption</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
@@ -440,7 +440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptiontype_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamstreamencryptionencryptiontype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Kinesis.<wbr>Stream<wbr>Stream<wbr>Encryption<wbr>Encryption<wbr>Type</a></span>
+        <span class="property-type"><a href="#streamencryptionencryptiontype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Kinesis.<wbr>Stream<wbr>Encryption<wbr>Encryption<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The encryption type to use. The only valid value is KMS. {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -460,7 +460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptiontype_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamstreamencryptionencryptiontype">Stream<wbr>Stream<wbr>Encryption<wbr>Encryption<wbr>Type</a></span>
+        <span class="property-type"><a href="#streamencryptionencryptiontype">Stream<wbr>Encryption<wbr>Encryption<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The encryption type to use. The only valid value is KMS. {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -480,7 +480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptiontype_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamstreamencryptionencryptiontype">Stream<wbr>Stream<wbr>Encryption<wbr>Encryption<wbr>Type</a></span>
+        <span class="property-type"><a href="#streamencryptionencryptiontype">Stream<wbr>Encryption<wbr>Encryption<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The encryption type to use. The only valid value is KMS. {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -500,7 +500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_type_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamstreamencryptionencryptiontype">Stream<wbr>Stream<wbr>Encryption<wbr>Encryption<wbr>Type</a></span>
+        <span class="property-type"><a href="#streamencryptionencryptiontype">Stream<wbr>Encryption<wbr>Encryption<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The encryption type to use. The only valid value is KMS. {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -513,7 +513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The GUID for the customer-managed AWS KMS key to use for encryption. This value can be a globally unique identifier, a fully specified Amazon Resource Name (ARN) to either an alias or a key, or an alias name prefixed by "alias/".You can also use a master key owned by Kinesis Data Streams by specifying the alias aws/kinesis.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="streamstreamencryptionencryptiontype">Stream<wbr>Stream<wbr>Encryption<wbr>Encryption<wbr>Type</h4>
+<h4 id="streamencryptionencryptiontype">Stream<wbr>Encryption<wbr>Encryption<wbr>Type</h4>
 
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>Kms</dt>
@@ -521,7 +521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular"><dt>Stream<wbr>Stream<wbr>Encryption<wbr>Encryption<wbr>Type<wbr>Kms</dt>
+<dl class="tabular"><dt>Stream<wbr>Encryption<wbr>Encryption<wbr>Type<wbr>Kms</dt>
     <dd>KMS</dd></dl>
 {{% /choosable %}}
 

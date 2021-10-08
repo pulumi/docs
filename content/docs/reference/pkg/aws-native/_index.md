@@ -1,6 +1,6 @@
 ---
-title: "AWS Native (preview)"
-title_tag: "AWS Native (preview) Package"
+title: "AWS Native"
+title_tag: "AWS Native Package"
 meta_desc: "A native Pulumi package for creating and managing Amazon Web Services (AWS) resources."
 menu:
     reference:
@@ -85,6 +85,7 @@ A native Pulumi package for creating and managing Amazon Web Services (AWS) reso
     <li><a href="kms/" title="kms"><span class="symbol module"></span>kms</a></li>
     <li><a href="lambda/" title="lambda"><span class="symbol module"></span>lambda</a></li>
     <li><a href="licensemanager/" title="licensemanager"><span class="symbol module"></span>licensemanager</a></li>
+    <li><a href="lightsail/" title="lightsail"><span class="symbol module"></span>lightsail</a></li>
     <li><a href="location/" title="location"><span class="symbol module"></span>location</a></li>
     <li><a href="logs/" title="logs"><span class="symbol module"></span>logs</a></li>
     <li><a href="lookoutmetrics/" title="lookoutmetrics"><span class="symbol module"></span>lookoutmetrics</a></li>
@@ -154,6 +155,6 @@ A native Pulumi package for creating and managing Amazon Web Services (AWS) reso
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.0</dd>
 </dl>
 

@@ -348,7 +348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#associations_csharp" style="color: inherit; text-decoration: inherit;">Associations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventintegrationeventintegrationassociation">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>App<wbr>Integrations.<wbr>Outputs.<wbr>Event<wbr>Integration<wbr>Event<wbr>Integration<wbr>Association&gt;</a></span>
+        <span class="property-type"><a href="#eventintegrationassociation">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>App<wbr>Integrations.<wbr>Outputs.<wbr>Event<wbr>Integration<wbr>Association&gt;</a></span>
     </dt>
     <dd>{{% md %}}The associations with the event integration.{{% /md %}}</dd><dt class="property-"
             title="">
@@ -376,7 +376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#associations_go" style="color: inherit; text-decoration: inherit;">Associations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventintegrationeventintegrationassociation">[]Event<wbr>Integration<wbr>Event<wbr>Integration<wbr>Association</a></span>
+        <span class="property-type"><a href="#eventintegrationassociation">[]Event<wbr>Integration<wbr>Association</a></span>
     </dt>
     <dd>{{% md %}}The associations with the event integration.{{% /md %}}</dd><dt class="property-"
             title="">
@@ -404,7 +404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#associations_nodejs" style="color: inherit; text-decoration: inherit;">associations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventintegrationeventintegrationassociation">Event<wbr>Integration<wbr>Event<wbr>Integration<wbr>Association[]</a></span>
+        <span class="property-type"><a href="#eventintegrationassociation">Event<wbr>Integration<wbr>Association[]</a></span>
     </dt>
     <dd>{{% md %}}The associations with the event integration.{{% /md %}}</dd><dt class="property-"
             title="">
@@ -432,7 +432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#associations_python" style="color: inherit; text-decoration: inherit;">associations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventintegrationeventintegrationassociation">Sequence[Event<wbr>Integration<wbr>Event<wbr>Integration<wbr>Association]</a></span>
+        <span class="property-type"><a href="#eventintegrationassociation">Sequence[Event<wbr>Integration<wbr>Association]</a></span>
     </dt>
     <dd>{{% md %}}The associations with the event integration.{{% /md %}}</dd><dt class="property-"
             title="">
@@ -463,57 +463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="eventintegrationeventfilter">Event<wbr>Integration<wbr>Event<wbr>Filter</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="source_csharp">
-<a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The source of the events.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="source_go">
-<a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The source of the events.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="source_nodejs">
-<a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The source of the events.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="source_python">
-<a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The source of the events.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="eventintegrationeventintegrationassociation">Event<wbr>Integration<wbr>Event<wbr>Integration<wbr>Association</h4>
+<h4 id="eventintegrationassociation">Event<wbr>Integration<wbr>Association</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
@@ -689,6 +639,56 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier for the event integration association.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="eventintegrationeventfilter">Event<wbr>Integration<wbr>Event<wbr>Filter</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="source_csharp">
+<a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The source of the events.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="source_go">
+<a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The source of the events.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="source_nodejs">
+<a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The source of the events.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="source_python">
+<a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The source of the events.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="eventintegrationmetadata">Event<wbr>Integration<wbr>Metadata</h4>

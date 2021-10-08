@@ -36,8 +36,8 @@ Creates an AWS Firewall Manager policy.
            <span class="nx">resource_tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[PolicyResourceTagArgs]]</span> = None<span class="p">,</span>
            <span class="nx">resource_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">resource_type_list</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
-           <span class="nx">security_service_policy_data</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">,</span>
-           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[PolicyPolicyTagArgs]]</span> = None<span class="p">)</span>
+           <span class="nx">security_service_policy_data</span><span class="p">:</span> <span class="nx">Optional[SecurityServicePolicyDataPropertiesArgs]</span> = None<span class="p">,</span>
+           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[PolicyTagArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Policy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PolicyArgs</a></span><span class="p">,</span>
@@ -203,7 +203,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#securityservicepolicydata_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Service<wbr>Policy<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">object</span>
+        <span class="property-type"><a href="#securityservicepolicydataproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>FMS.<wbr>Inputs.<wbr>Security<wbr>Service<wbr>Policy<wbr>Data<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -251,7 +251,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policypolicytag">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>FMS.<wbr>Inputs.<wbr>Policy<wbr>Policy<wbr>Tag<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#policytag">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>FMS.<wbr>Inputs.<wbr>Policy<wbr>Tag<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -295,7 +295,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#securityservicepolicydata_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Service<wbr>Policy<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#securityservicepolicydataproperties">Security<wbr>Service<wbr>Policy<wbr>Data<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -343,7 +343,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policypolicytag">[]Policy<wbr>Policy<wbr>Tag<wbr>Args</a></span>
+        <span class="property-type"><a href="#policytag">[]Policy<wbr>Tag<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -387,7 +387,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#securityservicepolicydata_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Service<wbr>Policy<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">any</span>
+        <span class="property-type"><a href="#securityservicepolicydataproperties">Security<wbr>Service<wbr>Policy<wbr>Data<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -435,7 +435,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policypolicytag">Policy<wbr>Policy<wbr>Tag<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#policytag">Policy<wbr>Tag<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -479,7 +479,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#security_service_policy_data_python" style="color: inherit; text-decoration: inherit;">security_<wbr>service_<wbr>policy_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#securityservicepolicydataproperties">Security<wbr>Service<wbr>Policy<wbr>Data<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -527,7 +527,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policypolicytag">Sequence[Policy<wbr>Policy<wbr>Tag<wbr>Args]</a></span>
+        <span class="property-type"><a href="#policytag">Sequence[Policy<wbr>Tag<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -711,88 +711,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="policypolicytag">Policy<wbr>Policy<wbr>Tag</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="key_csharp">
-<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="value_csharp">
-<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="key_go">
-<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="value_go">
-<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="key_nodejs">
-<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="value_nodejs">
-<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="key_python">
-<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="value_python">
-<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
 <h4 id="policyresourcetag">Policy<wbr>Resource<wbr>Tag</h4>
 
 {{% choosable language csharp %}}
@@ -868,6 +786,220 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="policysecurityservicepolicydatapropertiestype">Policy<wbr>Security<wbr>Service<wbr>Policy<wbr>Data<wbr>Properties<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Waf</dt>
+    <dd>WAF</dd><dt>Wafv2</dt>
+    <dd>WAFV2</dd><dt>Shield<wbr>Advanced</dt>
+    <dd>SHIELD_ADVANCED</dd><dt>Security<wbr>Groups<wbr>Common</dt>
+    <dd>SECURITY_GROUPS_COMMON</dd><dt>Security<wbr>Groups<wbr>Content<wbr>Audit</dt>
+    <dd>SECURITY_GROUPS_CONTENT_AUDIT</dd><dt>Security<wbr>Groups<wbr>Usage<wbr>Audit</dt>
+    <dd>SECURITY_GROUPS_USAGE_AUDIT</dd><dt>Network<wbr>Firewall</dt>
+    <dd>NETWORK_FIREWALL</dd><dt>Dns<wbr>Firewall</dt>
+    <dd>DNS_FIREWALL</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Policy<wbr>Security<wbr>Service<wbr>Policy<wbr>Data<wbr>Properties<wbr>Type<wbr>Waf</dt>
+    <dd>WAF</dd><dt>Policy<wbr>Security<wbr>Service<wbr>Policy<wbr>Data<wbr>Properties<wbr>Type<wbr>Wafv2</dt>
+    <dd>WAFV2</dd><dt>Policy<wbr>Security<wbr>Service<wbr>Policy<wbr>Data<wbr>Properties<wbr>Type<wbr>Shield<wbr>Advanced</dt>
+    <dd>SHIELD_ADVANCED</dd><dt>Policy<wbr>Security<wbr>Service<wbr>Policy<wbr>Data<wbr>Properties<wbr>Type<wbr>Security<wbr>Groups<wbr>Common</dt>
+    <dd>SECURITY_GROUPS_COMMON</dd><dt>Policy<wbr>Security<wbr>Service<wbr>Policy<wbr>Data<wbr>Properties<wbr>Type<wbr>Security<wbr>Groups<wbr>Content<wbr>Audit</dt>
+    <dd>SECURITY_GROUPS_CONTENT_AUDIT</dd><dt>Policy<wbr>Security<wbr>Service<wbr>Policy<wbr>Data<wbr>Properties<wbr>Type<wbr>Security<wbr>Groups<wbr>Usage<wbr>Audit</dt>
+    <dd>SECURITY_GROUPS_USAGE_AUDIT</dd><dt>Policy<wbr>Security<wbr>Service<wbr>Policy<wbr>Data<wbr>Properties<wbr>Type<wbr>Network<wbr>Firewall</dt>
+    <dd>NETWORK_FIREWALL</dd><dt>Policy<wbr>Security<wbr>Service<wbr>Policy<wbr>Data<wbr>Properties<wbr>Type<wbr>Dns<wbr>Firewall</dt>
+    <dd>DNS_FIREWALL</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Waf</dt>
+    <dd>WAF</dd><dt>Wafv2</dt>
+    <dd>WAFV2</dd><dt>Shield<wbr>Advanced</dt>
+    <dd>SHIELD_ADVANCED</dd><dt>Security<wbr>Groups<wbr>Common</dt>
+    <dd>SECURITY_GROUPS_COMMON</dd><dt>Security<wbr>Groups<wbr>Content<wbr>Audit</dt>
+    <dd>SECURITY_GROUPS_CONTENT_AUDIT</dd><dt>Security<wbr>Groups<wbr>Usage<wbr>Audit</dt>
+    <dd>SECURITY_GROUPS_USAGE_AUDIT</dd><dt>Network<wbr>Firewall</dt>
+    <dd>NETWORK_FIREWALL</dd><dt>Dns<wbr>Firewall</dt>
+    <dd>DNS_FIREWALL</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>WAF</dt>
+    <dd>WAF</dd><dt>WAFV2</dt>
+    <dd>WAFV2</dd><dt>SHIELD_ADVANCED</dt>
+    <dd>SHIELD_ADVANCED</dd><dt>SECURITY_GROUPS_COMMON</dt>
+    <dd>SECURITY_GROUPS_COMMON</dd><dt>SECURITY_GROUPS_CONTENT_AUDIT</dt>
+    <dd>SECURITY_GROUPS_CONTENT_AUDIT</dd><dt>SECURITY_GROUPS_USAGE_AUDIT</dt>
+    <dd>SECURITY_GROUPS_USAGE_AUDIT</dd><dt>NETWORK_FIREWALL</dt>
+    <dd>NETWORK_FIREWALL</dd><dt>DNS_FIREWALL</dt>
+    <dd>DNS_FIREWALL</dd></dl>
+{{% /choosable %}}
+
+<h4 id="policytag">Policy<wbr>Tag</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="securityservicepolicydataproperties">Security<wbr>Service<wbr>Policy<wbr>Data<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policysecurityservicepolicydatapropertiestype">Pulumi.<wbr>Aws<wbr>Native.<wbr>FMS.<wbr>Policy<wbr>Security<wbr>Service<wbr>Policy<wbr>Data<wbr>Properties<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="managedservicedata_csharp">
+<a href="#managedservicedata_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Service<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policysecurityservicepolicydatapropertiestype">Policy<wbr>Security<wbr>Service<wbr>Policy<wbr>Data<wbr>Properties<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="managedservicedata_go">
+<a href="#managedservicedata_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Service<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policysecurityservicepolicydatapropertiestype">Policy<wbr>Security<wbr>Service<wbr>Policy<wbr>Data<wbr>Properties<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="managedservicedata_nodejs">
+<a href="#managedservicedata_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Service<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policysecurityservicepolicydatapropertiestype">Policy<wbr>Security<wbr>Service<wbr>Policy<wbr>Data<wbr>Properties<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="managed_service_data_python">
+<a href="#managed_service_data_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>service_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

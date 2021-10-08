@@ -27,7 +27,7 @@ This resource schema represents the Profiling Group resource in the Amazon CodeG
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ProfilingGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                   <span class="nx">agent_permissions</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">,</span>
+                   <span class="nx">agent_permissions</span><span class="p">:</span> <span class="nx">Optional[AgentPermissionsPropertiesArgs]</span> = None<span class="p">,</span>
                    <span class="nx">anomaly_detection_notification_configuration</span><span class="p">:</span> <span class="nx">Optional[Sequence[ProfilingGroupChannelArgs]]</span> = None<span class="p">,</span>
                    <span class="nx">compute_platform</span><span class="p">:</span> <span class="nx">Optional[ProfilingGroupComputePlatform]</span> = None<span class="p">,</span>
                    <span class="nx">profiling_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -173,7 +173,7 @@ The ProfilingGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#agentpermissions_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">object</span>
+        <span class="property-type"><a href="#agentpermissionsproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>Code<wbr>Guru<wbr>Profiler.<wbr>Inputs.<wbr>Agent<wbr>Permissions<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The agent permissions attached to this profiling group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -217,7 +217,7 @@ The ProfilingGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#agentpermissions_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#agentpermissionsproperties">Agent<wbr>Permissions<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The agent permissions attached to this profiling group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -261,7 +261,7 @@ The ProfilingGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#agentpermissions_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">any</span>
+        <span class="property-type"><a href="#agentpermissionsproperties">Agent<wbr>Permissions<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The agent permissions attached to this profiling group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -305,7 +305,7 @@ The ProfilingGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#agent_permissions_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#agentpermissionsproperties">Agent<wbr>Permissions<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The agent permissions attached to this profiling group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -430,6 +430,56 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="agentpermissionsproperties">Agent<wbr>Permissions<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="principals_csharp">
+<a href="#principals_csharp" style="color: inherit; text-decoration: inherit;">Principals</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The principals for the agent permissions.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="principals_go">
+<a href="#principals_go" style="color: inherit; text-decoration: inherit;">Principals</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The principals for the agent permissions.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="principals_nodejs">
+<a href="#principals_nodejs" style="color: inherit; text-decoration: inherit;">principals</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The principals for the agent permissions.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="principals_python">
+<a href="#principals_python" style="color: inherit; text-decoration: inherit;">principals</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The principals for the agent permissions.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="profilinggroupchannel">Profiling<wbr>Group<wbr>Channel</h4>
 

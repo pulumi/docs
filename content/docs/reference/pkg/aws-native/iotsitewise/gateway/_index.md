@@ -27,9 +27,9 @@ Resource schema for AWS::IoTSiteWise::Gateway
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Gateway</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-            <span class="nx">gateway_capability_summaries</span><span class="p">:</span> <span class="nx">Optional[Sequence[GatewayGatewayCapabilitySummaryArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">gateway_capability_summaries</span><span class="p">:</span> <span class="nx">Optional[Sequence[GatewayCapabilitySummaryArgs]]</span> = None<span class="p">,</span>
             <span class="nx">gateway_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-            <span class="nx">gateway_platform</span><span class="p">:</span> <span class="nx">Optional[GatewayGatewayPlatformArgs]</span> = None<span class="p">,</span>
+            <span class="nx">gateway_platform</span><span class="p">:</span> <span class="nx">Optional[GatewayPlatformArgs]</span> = None<span class="p">,</span>
             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[GatewayTagArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Gateway</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -172,7 +172,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#gatewayplatform_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaygatewayplatform">Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TSite<wbr>Wise.<wbr>Inputs.<wbr>Gateway<wbr>Gateway<wbr>Platform<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayplatform">Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TSite<wbr>Wise.<wbr>Inputs.<wbr>Gateway<wbr>Platform<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gateway's platform. You can only specify one platform in a gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -180,7 +180,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#gatewaycapabilitysummaries_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Capability<wbr>Summaries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaygatewaycapabilitysummary">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TSite<wbr>Wise.<wbr>Inputs.<wbr>Gateway<wbr>Gateway<wbr>Capability<wbr>Summary<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#gatewaycapabilitysummary">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TSite<wbr>Wise.<wbr>Inputs.<wbr>Gateway<wbr>Capability<wbr>Summary<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of gateway capability summaries that each contain a namespace and status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -208,7 +208,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#gatewayplatform_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaygatewayplatform">Gateway<wbr>Gateway<wbr>Platform<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayplatform">Gateway<wbr>Platform<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gateway's platform. You can only specify one platform in a gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -216,7 +216,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#gatewaycapabilitysummaries_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Capability<wbr>Summaries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaygatewaycapabilitysummary">[]Gateway<wbr>Gateway<wbr>Capability<wbr>Summary<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewaycapabilitysummary">[]Gateway<wbr>Capability<wbr>Summary<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of gateway capability summaries that each contain a namespace and status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -244,7 +244,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#gatewayplatform_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaygatewayplatform">Gateway<wbr>Gateway<wbr>Platform<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayplatform">Gateway<wbr>Platform<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gateway's platform. You can only specify one platform in a gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -252,7 +252,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#gatewaycapabilitysummaries_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Capability<wbr>Summaries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaygatewaycapabilitysummary">Gateway<wbr>Gateway<wbr>Capability<wbr>Summary<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#gatewaycapabilitysummary">Gateway<wbr>Capability<wbr>Summary<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of gateway capability summaries that each contain a namespace and status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -280,7 +280,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#gateway_platform_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaygatewayplatform">Gateway<wbr>Gateway<wbr>Platform<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayplatform">Gateway<wbr>Platform<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gateway's platform. You can only specify one platform in a gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -288,7 +288,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#gateway_capability_summaries_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>capability_<wbr>summaries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaygatewaycapabilitysummary">Sequence[Gateway<wbr>Gateway<wbr>Capability<wbr>Summary<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gatewaycapabilitysummary">Sequence[Gateway<wbr>Capability<wbr>Summary<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of gateway capability summaries that each contain a namespace and status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -398,7 +398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="gatewaygatewaycapabilitysummary">Gateway<wbr>Gateway<wbr>Capability<wbr>Summary</h4>
+<h4 id="gatewaycapabilitysummary">Gateway<wbr>Capability<wbr>Summary</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
@@ -480,56 +480,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="gatewaygatewayplatform">Gateway<wbr>Gateway<wbr>Platform</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="greengrass_csharp">
-<a href="#greengrass_csharp" style="color: inherit; text-decoration: inherit;">Greengrass</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaygreengrass">Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TSite<wbr>Wise.<wbr>Inputs.<wbr>Gateway<wbr>Greengrass</a></span>
-    </dt>
-    <dd>{{% md %}}A gateway that runs on AWS IoT Greengrass.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="greengrass_go">
-<a href="#greengrass_go" style="color: inherit; text-decoration: inherit;">Greengrass</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaygreengrass">Gateway<wbr>Greengrass</a></span>
-    </dt>
-    <dd>{{% md %}}A gateway that runs on AWS IoT Greengrass.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="greengrass_nodejs">
-<a href="#greengrass_nodejs" style="color: inherit; text-decoration: inherit;">greengrass</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaygreengrass">Gateway<wbr>Greengrass</a></span>
-    </dt>
-    <dd>{{% md %}}A gateway that runs on AWS IoT Greengrass.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="greengrass_python">
-<a href="#greengrass_python" style="color: inherit; text-decoration: inherit;">greengrass</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaygreengrass">Gateway<wbr>Greengrass</a></span>
-    </dt>
-    <dd>{{% md %}}A gateway that runs on AWS IoT Greengrass.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
 <h4 id="gatewaygreengrass">Gateway<wbr>Greengrass</h4>
 
 {{% choosable language csharp %}}
@@ -578,6 +528,56 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the Greengrass group.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="gatewayplatform">Gateway<wbr>Platform</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="greengrass_csharp">
+<a href="#greengrass_csharp" style="color: inherit; text-decoration: inherit;">Greengrass</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gatewaygreengrass">Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TSite<wbr>Wise.<wbr>Inputs.<wbr>Gateway<wbr>Greengrass</a></span>
+    </dt>
+    <dd>{{% md %}}A gateway that runs on AWS IoT Greengrass.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="greengrass_go">
+<a href="#greengrass_go" style="color: inherit; text-decoration: inherit;">Greengrass</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gatewaygreengrass">Gateway<wbr>Greengrass</a></span>
+    </dt>
+    <dd>{{% md %}}A gateway that runs on AWS IoT Greengrass.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="greengrass_nodejs">
+<a href="#greengrass_nodejs" style="color: inherit; text-decoration: inherit;">greengrass</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gatewaygreengrass">Gateway<wbr>Greengrass</a></span>
+    </dt>
+    <dd>{{% md %}}A gateway that runs on AWS IoT Greengrass.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="greengrass_python">
+<a href="#greengrass_python" style="color: inherit; text-decoration: inherit;">greengrass</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gatewaygreengrass">Gateway<wbr>Greengrass</a></span>
+    </dt>
+    <dd>{{% md %}}A gateway that runs on AWS IoT Greengrass.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="gatewaytag">Gateway<wbr>Tag</h4>

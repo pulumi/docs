@@ -29,10 +29,10 @@ Resource type definition for AWS::NetworkFirewall::LoggingConfiguration
                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                          <span class="nx">firewall_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">firewall_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                         <span class="nx">logging_configuration</span><span class="p">:</span> <span class="nx">Optional[LoggingConfigurationLoggingConfigurationArgs]</span> = None<span class="p">)</span>
+                         <span class="nx">logging_configuration</span><span class="p">:</span> <span class="nx">Optional[LoggingConfigurationArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">LoggingConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LoggingConfigurationArgs</a></span><span class="p">,</span>
+                         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LoggingConfigurationInitArgs</a></span><span class="p">,</span>
                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
@@ -80,7 +80,7 @@ Resource type definition for AWS::NetworkFirewall::LoggingConfiguration
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">LoggingConfigurationArgs</a></span>
+        <span class="property-type"><a href="#inputs">LoggingConfigurationInitArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
@@ -171,7 +171,7 @@ The LoggingConfiguration resource accepts the following [input]({{< relref "/doc
 <a href="#loggingconfigurationvalue_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Configuration<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingconfigurationloggingconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Network<wbr>Firewall.<wbr>Inputs.<wbr>Logging<wbr>Configuration<wbr>Logging<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#loggingconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Network<wbr>Firewall.<wbr>Inputs.<wbr>Logging<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -199,7 +199,7 @@ The LoggingConfiguration resource accepts the following [input]({{< relref "/doc
 <a href="#loggingconfiguration_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingconfigurationloggingconfiguration">Logging<wbr>Configuration<wbr>Logging<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#loggingconfiguration">Logging<wbr>Configuration<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -227,7 +227,7 @@ The LoggingConfiguration resource accepts the following [input]({{< relref "/doc
 <a href="#loggingconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingconfigurationloggingconfiguration">Logging<wbr>Configuration<wbr>Logging<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#loggingconfiguration">Logging<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -255,7 +255,7 @@ The LoggingConfiguration resource accepts the following [input]({{< relref "/doc
 <a href="#logging_configuration_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingconfigurationloggingconfiguration">Logging<wbr>Configuration<wbr>Logging<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#loggingconfiguration">Logging<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -332,6 +332,56 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="loggingconfiguration">Logging<wbr>Configuration</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="logdestinationconfigs_csharp">
+<a href="#logdestinationconfigs_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Destination<wbr>Configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationlogdestinationconfig">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Network<wbr>Firewall.<wbr>Inputs.<wbr>Logging<wbr>Configuration<wbr>Log<wbr>Destination<wbr>Config&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="logdestinationconfigs_go">
+<a href="#logdestinationconfigs_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Destination<wbr>Configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationlogdestinationconfig">[]Logging<wbr>Configuration<wbr>Log<wbr>Destination<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="logdestinationconfigs_nodejs">
+<a href="#logdestinationconfigs_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Destination<wbr>Configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationlogdestinationconfig">Logging<wbr>Configuration<wbr>Log<wbr>Destination<wbr>Config[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="log_destination_configs_python">
+<a href="#log_destination_configs_python" style="color: inherit; text-decoration: inherit;">log_<wbr>destination_<wbr>configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationlogdestinationconfig">Sequence[Logging<wbr>Configuration<wbr>Log<wbr>Destination<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="loggingconfigurationlogdestinationconfig">Logging<wbr>Configuration<wbr>Log<wbr>Destination<wbr>Config</h4>
 
@@ -501,56 +551,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular"><dt>ALERT</dt>
     <dd>ALERT</dd><dt>FLOW</dt>
     <dd>FLOW</dd></dl>
-{{% /choosable %}}
-
-<h4 id="loggingconfigurationloggingconfiguration">Logging<wbr>Configuration<wbr>Logging<wbr>Configuration</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="logdestinationconfigs_csharp">
-<a href="#logdestinationconfigs_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Destination<wbr>Configs</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingconfigurationlogdestinationconfig">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Network<wbr>Firewall.<wbr>Inputs.<wbr>Logging<wbr>Configuration<wbr>Log<wbr>Destination<wbr>Config&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="logdestinationconfigs_go">
-<a href="#logdestinationconfigs_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Destination<wbr>Configs</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingconfigurationlogdestinationconfig">[]Logging<wbr>Configuration<wbr>Log<wbr>Destination<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="logdestinationconfigs_nodejs">
-<a href="#logdestinationconfigs_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Destination<wbr>Configs</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingconfigurationlogdestinationconfig">Logging<wbr>Configuration<wbr>Log<wbr>Destination<wbr>Config[]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="log_destination_configs_python">
-<a href="#log_destination_configs_python" style="color: inherit; text-decoration: inherit;">log_<wbr>destination_<wbr>configs</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingconfigurationlogdestinationconfig">Sequence[Logging<wbr>Configuration<wbr>Log<wbr>Destination<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

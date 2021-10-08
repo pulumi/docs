@@ -41,7 +41,7 @@ class MyStack : Stack
             Name = "job-name",
             DatasetName = "dataset-name",
             RoleArn = "arn:aws:iam::12345678910:role/PassRoleAdmin",
-            JobSample = new AwsNative.DataBrew.Inputs.JobJobSampleArgs
+            JobSample = new AwsNative.DataBrew.Inputs.JobSampleArgs
             {
                 Mode = "CUSTOM_ROWS",
                 Size = 50000,
@@ -91,7 +91,7 @@ func main() {
 			Name:        pulumi.String("job-name"),
 			DatasetName: pulumi.String("dataset-name"),
 			RoleArn:     pulumi.String("arn:aws:iam::12345678910:role/PassRoleAdmin"),
-			JobSample: &databrew.JobJobSampleArgs{
+			JobSample: &databrew.JobSampleArgs{
 				Mode: "CUSTOM_ROWS",
 				Size: pulumi.Int(50000),
 			},
@@ -132,7 +132,7 @@ test_data_brew_job = aws_native.databrew.Job("testDataBrewJob",
     name="job-name",
     dataset_name="dataset-name",
     role_arn="arn:aws:iam::12345678910:role/PassRoleAdmin",
-    job_sample=aws_native.databrew.JobJobSampleArgs(
+    job_sample=aws_native.databrew.JobSampleArgs(
         mode="CUSTOM_ROWS",
         size=50000,
     ),
@@ -204,7 +204,7 @@ class MyStack : Stack
             Name = "job-test",
             DatasetName = "dataset-test",
             RoleArn = "arn:aws:iam::1234567891011:role/PassRoleAdmin",
-            JobSample = new AwsNative.DataBrew.Inputs.JobJobSampleArgs
+            JobSample = new AwsNative.DataBrew.Inputs.JobSampleArgs
             {
                 Mode = "FULL_DATASET",
             },
@@ -250,7 +250,7 @@ func main() {
 			Name:        pulumi.String("job-test"),
 			DatasetName: pulumi.String("dataset-test"),
 			RoleArn:     pulumi.String("arn:aws:iam::1234567891011:role/PassRoleAdmin"),
-			JobSample: &databrew.JobJobSampleArgs{
+			JobSample: &databrew.JobSampleArgs{
 				Mode: "FULL_DATASET",
 			},
 			OutputLocation: &databrew.JobOutputLocationArgs{
@@ -289,7 +289,7 @@ my_data_brew_profile_job = aws_native.databrew.Job("myDataBrewProfileJob",
     name="job-test",
     dataset_name="dataset-test",
     role_arn="arn:aws:iam::1234567891011:role/PassRoleAdmin",
-    job_sample=aws_native.databrew.JobJobSampleArgs(
+    job_sample=aws_native.databrew.JobSampleArgs(
         mode="FULL_DATASET",
     ),
     output_location=aws_native.databrew.JobOutputLocationArgs(
@@ -363,7 +363,7 @@ const myDataBrewProfileJob = new aws_native.databrew.Job("myDataBrewProfileJob",
         <span class="nx">dataset_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">encryption_key_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">encryption_mode</span><span class="p">:</span> <span class="nx">Optional[JobEncryptionMode]</span> = None<span class="p">,</span>
-        <span class="nx">job_sample</span><span class="p">:</span> <span class="nx">Optional[JobJobSampleArgs]</span> = None<span class="p">,</span>
+        <span class="nx">job_sample</span><span class="p">:</span> <span class="nx">Optional[JobSampleArgs]</span> = None<span class="p">,</span>
         <span class="nx">log_subscription</span><span class="p">:</span> <span class="nx">Optional[JobLogSubscription]</span> = None<span class="p">,</span>
         <span class="nx">max_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">max_retries</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -574,7 +574,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#jobsample_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Sample</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobjobsample">Pulumi.<wbr>Aws<wbr>Native.<wbr>Data<wbr>Brew.<wbr>Inputs.<wbr>Job<wbr>Job<wbr>Sample<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobsample">Pulumi.<wbr>Aws<wbr>Native.<wbr>Data<wbr>Brew.<wbr>Inputs.<wbr>Job<wbr>Sample<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Job Sample{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -730,7 +730,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#jobsample_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Sample</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobjobsample">Job<wbr>Job<wbr>Sample<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobsample">Job<wbr>Sample<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Job Sample{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -886,7 +886,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#jobsample_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Sample</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobjobsample">Job<wbr>Job<wbr>Sample<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobsample">Job<wbr>Sample<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Job Sample{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1042,7 +1042,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#job_sample_python" style="color: inherit; text-decoration: inherit;">job_<wbr>sample</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobjobsample">Job<wbr>Job<wbr>Sample<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobsample">Job<wbr>Sample<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Job Sample{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1860,88 +1860,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>SSE-S3</dd></dl>
 {{% /choosable %}}
 
-<h4 id="jobjobsample">Job<wbr>Job<wbr>Sample</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="mode_csharp">
-<a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobsamplemode">Pulumi.<wbr>Aws<wbr>Native.<wbr>Data<wbr>Brew.<wbr>Job<wbr>Sample<wbr>Mode</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="size_csharp">
-<a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="mode_go">
-<a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobsamplemode">Job<wbr>Sample<wbr>Mode</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="size_go">
-<a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="mode_nodejs">
-<a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobsamplemode">Job<wbr>Sample<wbr>Mode</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="size_nodejs">
-<a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="mode_python">
-<a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobsamplemode">Job<wbr>Sample<wbr>Mode</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="size_python">
-<a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
 <h4 id="joblogsubscription">Job<wbr>Log<wbr>Subscription</h4>
 
 {{% choosable language csharp %}}
@@ -2738,6 +2656,88 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobs3location">Job<wbr>S3Location</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="jobsample">Job<wbr>Sample</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="mode_csharp">
+<a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobsamplemode">Pulumi.<wbr>Aws<wbr>Native.<wbr>Data<wbr>Brew.<wbr>Job<wbr>Sample<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="size_csharp">
+<a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="mode_go">
+<a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobsamplemode">Job<wbr>Sample<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="size_go">
+<a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="mode_nodejs">
+<a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobsamplemode">Job<wbr>Sample<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="size_nodejs">
+<a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="mode_python">
+<a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobsamplemode">Job<wbr>Sample<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="size_python">
+<a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

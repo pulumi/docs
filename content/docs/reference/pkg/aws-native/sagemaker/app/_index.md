@@ -28,7 +28,7 @@ Resource Type definition for AWS::SageMaker::App
 <span class="k">def </span><span class="nx">App</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">app_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-        <span class="nx">app_type</span><span class="p">:</span> <span class="nx">Optional[AppAppType]</span> = None<span class="p">,</span>
+        <span class="nx">app_type</span><span class="p">:</span> <span class="nx">Optional[AppType]</span> = None<span class="p">,</span>
         <span class="nx">domain_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">resource_spec</span><span class="p">:</span> <span class="nx">Optional[AppResourceSpecArgs]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[AppTagArgs]]</span> = None<span class="p">,</span>
@@ -174,7 +174,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#apptype_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appapptype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Sage<wbr>Maker.<wbr>App<wbr>App<wbr>Type</a></span>
+        <span class="property-type"><a href="#apptype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Sage<wbr>Maker.<wbr>App<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -226,7 +226,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#apptype_go" style="color: inherit; text-decoration: inherit;">App<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appapptype">App<wbr>App<wbr>Type</a></span>
+        <span class="property-type"><a href="#apptype">App<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -278,7 +278,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#apptype_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appapptype">App<wbr>App<wbr>Type</a></span>
+        <span class="property-type"><a href="#apptype">App<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -330,7 +330,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#app_type_python" style="color: inherit; text-decoration: inherit;">app_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appapptype">App<wbr>App<wbr>Type</a></span>
+        <span class="property-type"><a href="#apptype">App<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -463,32 +463,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
-
-<h4 id="appapptype">App<wbr>App<wbr>Type</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Jupyter<wbr>Server</dt>
-    <dd>JupyterServer</dd><dt>Kernel<wbr>Gateway</dt>
-    <dd>KernelGateway</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>App<wbr>App<wbr>Type<wbr>Jupyter<wbr>Server</dt>
-    <dd>JupyterServer</dd><dt>App<wbr>App<wbr>Type<wbr>Kernel<wbr>Gateway</dt>
-    <dd>KernelGateway</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Jupyter<wbr>Server</dt>
-    <dd>JupyterServer</dd><dt>Kernel<wbr>Gateway</dt>
-    <dd>KernelGateway</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>JUPYTER_SERVER</dt>
-    <dd>JupyterServer</dd><dt>KERNEL_GATEWAY</dt>
-    <dd>KernelGateway</dd></dl>
-{{% /choosable %}}
 
 <h4 id="appresourcespec">App<wbr>Resource<wbr>Spec</h4>
 
@@ -830,6 +804,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="apptype">App<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Jupyter<wbr>Server</dt>
+    <dd>JupyterServer</dd><dt>Kernel<wbr>Gateway</dt>
+    <dd>KernelGateway</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>App<wbr>Type<wbr>Jupyter<wbr>Server</dt>
+    <dd>JupyterServer</dd><dt>App<wbr>Type<wbr>Kernel<wbr>Gateway</dt>
+    <dd>KernelGateway</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Jupyter<wbr>Server</dt>
+    <dd>JupyterServer</dd><dt>Kernel<wbr>Gateway</dt>
+    <dd>KernelGateway</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>JUPYTER_SERVER</dt>
+    <dd>JupyterServer</dd><dt>KERNEL_GATEWAY</dt>
+    <dd>KernelGateway</dd></dl>
 {{% /choosable %}}
 
 

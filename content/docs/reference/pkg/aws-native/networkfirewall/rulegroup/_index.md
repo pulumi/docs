@@ -29,13 +29,13 @@ Resource type definition for AWS::NetworkFirewall::RuleGroup
               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
               <span class="nx">capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
               <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-              <span class="nx">rule_group</span><span class="p">:</span> <span class="nx">Optional[RuleGroupRuleGroupArgs]</span> = None<span class="p">,</span>
+              <span class="nx">rule_group</span><span class="p">:</span> <span class="nx">Optional[RuleGroupArgs]</span> = None<span class="p">,</span>
               <span class="nx">rule_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[RuleGroupTagArgs]]</span> = None<span class="p">,</span>
-              <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[RuleGroupType]</span> = None<span class="p">)</span>
+              <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[RuleGroupTypeEnum]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">RuleGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RuleGroupArgs</a></span><span class="p">,</span>
+              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RuleGroupInitArgs</a></span><span class="p">,</span>
               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
@@ -83,7 +83,7 @@ Resource type definition for AWS::NetworkFirewall::RuleGroup
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">RuleGroupArgs</a></span>
+        <span class="property-type"><a href="#inputs">RuleGroupInitArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
@@ -182,7 +182,7 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouptype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Network<wbr>Firewall.<wbr>Rule<wbr>Group<wbr>Type</a></span>
+        <span class="property-type"><a href="#rulegrouptypeenum">Pulumi.<wbr>Aws<wbr>Native.<wbr>Network<wbr>Firewall.<wbr>Rule<wbr>Group<wbr>Type<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -198,7 +198,7 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#rulegroupvalue_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Group<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegroup">Pulumi.<wbr>Aws<wbr>Native.<wbr>Network<wbr>Firewall.<wbr>Inputs.<wbr>Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegroup">Pulumi.<wbr>Aws<wbr>Native.<wbr>Network<wbr>Firewall.<wbr>Inputs.<wbr>Rule<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -234,7 +234,7 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouptype">Rule<wbr>Group<wbr>Type</a></span>
+        <span class="property-type"><a href="#rulegrouptypeenum">Rule<wbr>Group<wbr>Type<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -250,7 +250,7 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#rulegroup_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegroup">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegroup">Rule<wbr>Group<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -286,7 +286,7 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouptype">Rule<wbr>Group<wbr>Type</a></span>
+        <span class="property-type"><a href="#rulegrouptypeenum">Rule<wbr>Group<wbr>Type<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -302,7 +302,7 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#rulegroup_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegroup">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegroup">Rule<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -338,7 +338,7 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouptype">Rule<wbr>Group<wbr>Type</a></span>
+        <span class="property-type"><a href="#rulegrouptypeenum">Rule<wbr>Group<wbr>Type<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -354,7 +354,7 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#rule_group_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegroup">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegroup">Rule<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -495,6 +495,88 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="rulegroup">Rule<wbr>Group</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="rulessource_csharp">
+<a href="#rulessource_csharp" style="color: inherit; text-decoration: inherit;">Rules<wbr>Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulessource">Pulumi.<wbr>Aws<wbr>Native.<wbr>Network<wbr>Firewall.<wbr>Inputs.<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rulevariables_csharp">
+<a href="#rulevariables_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Variables</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulevariables">Pulumi.<wbr>Aws<wbr>Native.<wbr>Network<wbr>Firewall.<wbr>Inputs.<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="rulessource_go">
+<a href="#rulessource_go" style="color: inherit; text-decoration: inherit;">Rules<wbr>Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulessource">Rule<wbr>Group<wbr>Rules<wbr>Source</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rulevariables_go">
+<a href="#rulevariables_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Variables</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulevariables">Rule<wbr>Group<wbr>Rule<wbr>Variables</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="rulessource_nodejs">
+<a href="#rulessource_nodejs" style="color: inherit; text-decoration: inherit;">rules<wbr>Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulessource">Rule<wbr>Group<wbr>Rules<wbr>Source</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rulevariables_nodejs">
+<a href="#rulevariables_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Variables</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulevariables">Rule<wbr>Group<wbr>Rule<wbr>Variables</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="rules_source_python">
+<a href="#rules_source_python" style="color: inherit; text-decoration: inherit;">rules_<wbr>source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulessource">Rule<wbr>Group<wbr>Rules<wbr>Source</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rule_variables_python">
+<a href="#rule_variables_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>variables</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulevariables">Rule<wbr>Group<wbr>Rule<wbr>Variables</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="rulegroupactiondefinition">Rule<wbr>Group<wbr>Action<wbr>Definition</h4>
 
@@ -1508,88 +1590,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="rulegrouprulegroup">Rule<wbr>Group<wbr>Rule<wbr>Group</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="rulessource_csharp">
-<a href="#rulessource_csharp" style="color: inherit; text-decoration: inherit;">Rules<wbr>Source</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulessource">Pulumi.<wbr>Aws<wbr>Native.<wbr>Network<wbr>Firewall.<wbr>Inputs.<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="rulevariables_csharp">
-<a href="#rulevariables_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Variables</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulevariables">Pulumi.<wbr>Aws<wbr>Native.<wbr>Network<wbr>Firewall.<wbr>Inputs.<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="rulessource_go">
-<a href="#rulessource_go" style="color: inherit; text-decoration: inherit;">Rules<wbr>Source</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulessource">Rule<wbr>Group<wbr>Rules<wbr>Source</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="rulevariables_go">
-<a href="#rulevariables_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Variables</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulevariables">Rule<wbr>Group<wbr>Rule<wbr>Variables</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="rulessource_nodejs">
-<a href="#rulessource_nodejs" style="color: inherit; text-decoration: inherit;">rules<wbr>Source</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulessource">Rule<wbr>Group<wbr>Rules<wbr>Source</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="rulevariables_nodejs">
-<a href="#rulevariables_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Variables</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulevariables">Rule<wbr>Group<wbr>Rule<wbr>Variables</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="rules_source_python">
-<a href="#rules_source_python" style="color: inherit; text-decoration: inherit;">rules_<wbr>source</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulessource">Rule<wbr>Group<wbr>Rules<wbr>Source</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="rule_variables_python">
-<a href="#rule_variables_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>variables</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulevariables">Rule<wbr>Group<wbr>Rule<wbr>Variables</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
 <h4 id="rulegroupruleoption">Rule<wbr>Group<wbr>Rule<wbr>Option</h4>
 
 {{% choosable language csharp %}}
@@ -2562,7 +2562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>HTTP_HOST</dd></dl>
 {{% /choosable %}}
 
-<h4 id="rulegrouptype">Rule<wbr>Group<wbr>Type</h4>
+<h4 id="rulegrouptypeenum">Rule<wbr>Group<wbr>Type<wbr>Enum</h4>
 
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>Stateless</dt>
@@ -2571,8 +2571,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular"><dt>Rule<wbr>Group<wbr>Type<wbr>Stateless</dt>
-    <dd>STATELESS</dd><dt>Rule<wbr>Group<wbr>Type<wbr>Stateful</dt>
+<dl class="tabular"><dt>Rule<wbr>Group<wbr>Type<wbr>Enum<wbr>Stateless</dt>
+    <dd>STATELESS</dd><dt>Rule<wbr>Group<wbr>Type<wbr>Enum<wbr>Stateful</dt>
     <dd>STATEFUL</dd></dl>
 {{% /choosable %}}
 

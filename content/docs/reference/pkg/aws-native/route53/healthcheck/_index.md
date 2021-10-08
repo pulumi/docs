@@ -27,8 +27,8 @@ Resource schema for AWS::Route53::HealthCheck.
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">HealthCheck</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                <span class="nx">health_check_config</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">,</span>
-                <span class="nx">health_check_tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[HealthCheckHealthCheckTagArgs]]</span> = None<span class="p">)</span>
+                <span class="nx">health_check_config</span><span class="p">:</span> <span class="nx">Optional[HealthCheckConfigPropertiesArgs]</span> = None<span class="p">,</span>
+                <span class="nx">health_check_tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[HealthCheckTagArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">HealthCheck</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">HealthCheckArgs</a></span><span class="p">,</span>
@@ -162,7 +162,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#healthcheckconfig_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">object</span>
+        <span class="property-type"><a href="#healthcheckconfigproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>Route53.<wbr>Inputs.<wbr>Health<wbr>Check<wbr>Config<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A complex type that contains information about the health check.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -170,7 +170,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#healthchecktags_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthcheckhealthchecktag">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Route53.<wbr>Inputs.<wbr>Health<wbr>Check<wbr>Health<wbr>Check<wbr>Tag<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#healthchecktag">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Route53.<wbr>Inputs.<wbr>Health<wbr>Check<wbr>Tag<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of key-value pairs to apply to this resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -182,7 +182,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#healthcheckconfig_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#healthcheckconfigproperties">Health<wbr>Check<wbr>Config<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A complex type that contains information about the health check.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -190,7 +190,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#healthchecktags_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthcheckhealthchecktag">[]Health<wbr>Check<wbr>Health<wbr>Check<wbr>Tag<wbr>Args</a></span>
+        <span class="property-type"><a href="#healthchecktag">[]Health<wbr>Check<wbr>Tag<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An array of key-value pairs to apply to this resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -202,7 +202,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#healthcheckconfig_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">any</span>
+        <span class="property-type"><a href="#healthcheckconfigproperties">Health<wbr>Check<wbr>Config<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A complex type that contains information about the health check.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -210,7 +210,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#healthchecktags_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthcheckhealthchecktag">Health<wbr>Check<wbr>Health<wbr>Check<wbr>Tag<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#healthchecktag">Health<wbr>Check<wbr>Tag<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}An array of key-value pairs to apply to this resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -222,7 +222,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#health_check_config_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#healthcheckconfigproperties">Health<wbr>Check<wbr>Config<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A complex type that contains information about the health check.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -230,7 +230,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#health_check_tags_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthcheckhealthchecktag">Sequence[Health<wbr>Check<wbr>Health<wbr>Check<wbr>Tag<wbr>Args]</a></span>
+        <span class="property-type"><a href="#healthchecktag">Sequence[Health<wbr>Check<wbr>Tag<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of key-value pairs to apply to this resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -332,7 +332,731 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="healthcheckhealthchecktag">Health<wbr>Check<wbr>Health<wbr>Check<wbr>Tag</h4>
+<h4 id="healthcheckalarmidentifier">Health<wbr>Check<wbr>Alarm<wbr>Identifier</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the CloudWatch alarm that you want Amazon Route 53 health checkers to use to determine whether this health check is healthy.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}For the CloudWatch alarm that you want Route 53 health checkers to use to determine whether this health check is healthy, the region that the alarm was created in.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the CloudWatch alarm that you want Amazon Route 53 health checkers to use to determine whether this health check is healthy.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}For the CloudWatch alarm that you want Route 53 health checkers to use to determine whether this health check is healthy, the region that the alarm was created in.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the CloudWatch alarm that you want Amazon Route 53 health checkers to use to determine whether this health check is healthy.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}For the CloudWatch alarm that you want Route 53 health checkers to use to determine whether this health check is healthy, the region that the alarm was created in.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the CloudWatch alarm that you want Amazon Route 53 health checkers to use to determine whether this health check is healthy.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}For the CloudWatch alarm that you want Route 53 health checkers to use to determine whether this health check is healthy, the region that the alarm was created in.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="healthcheckconfigproperties">Health<wbr>Check<wbr>Config<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#healthcheckconfigpropertiestype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Route53.<wbr>Health<wbr>Check<wbr>Config<wbr>Properties<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="alarmidentifier_csharp">
+<a href="#alarmidentifier_csharp" style="color: inherit; text-decoration: inherit;">Alarm<wbr>Identifier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#healthcheckalarmidentifier">Pulumi.<wbr>Aws<wbr>Native.<wbr>Route53.<wbr>Inputs.<wbr>Health<wbr>Check<wbr>Alarm<wbr>Identifier</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="childhealthchecks_csharp">
+<a href="#childhealthchecks_csharp" style="color: inherit; text-decoration: inherit;">Child<wbr>Health<wbr>Checks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enablesni_csharp">
+<a href="#enablesni_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>SNI</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="failurethreshold_csharp">
+<a href="#failurethreshold_csharp" style="color: inherit; text-decoration: inherit;">Failure<wbr>Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fullyqualifieddomainname_csharp">
+<a href="#fullyqualifieddomainname_csharp" style="color: inherit; text-decoration: inherit;">Fully<wbr>Qualified<wbr>Domain<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="healththreshold_csharp">
+<a href="#healththreshold_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipaddress_csharp">
+<a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">IPAddress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="insufficientdatahealthstatus_csharp">
+<a href="#insufficientdatahealthstatus_csharp" style="color: inherit; text-decoration: inherit;">Insufficient<wbr>Data<wbr>Health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#healthcheckconfigpropertiesinsufficientdatahealthstatus">Pulumi.<wbr>Aws<wbr>Native.<wbr>Route53.<wbr>Health<wbr>Check<wbr>Config<wbr>Properties<wbr>Insufficient<wbr>Data<wbr>Health<wbr>Status</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="inverted_csharp">
+<a href="#inverted_csharp" style="color: inherit; text-decoration: inherit;">Inverted</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="measurelatency_csharp">
+<a href="#measurelatency_csharp" style="color: inherit; text-decoration: inherit;">Measure<wbr>Latency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="port_csharp">
+<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="regions_csharp">
+<a href="#regions_csharp" style="color: inherit; text-decoration: inherit;">Regions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requestinterval_csharp">
+<a href="#requestinterval_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resourcepath_csharp">
+<a href="#resourcepath_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="routingcontrolarn_csharp">
+<a href="#routingcontrolarn_csharp" style="color: inherit; text-decoration: inherit;">Routing<wbr>Control<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="searchstring_csharp">
+<a href="#searchstring_csharp" style="color: inherit; text-decoration: inherit;">Search<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#healthcheckconfigpropertiestype">Health<wbr>Check<wbr>Config<wbr>Properties<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="alarmidentifier_go">
+<a href="#alarmidentifier_go" style="color: inherit; text-decoration: inherit;">Alarm<wbr>Identifier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#healthcheckalarmidentifier">Health<wbr>Check<wbr>Alarm<wbr>Identifier</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="childhealthchecks_go">
+<a href="#childhealthchecks_go" style="color: inherit; text-decoration: inherit;">Child<wbr>Health<wbr>Checks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enablesni_go">
+<a href="#enablesni_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>SNI</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="failurethreshold_go">
+<a href="#failurethreshold_go" style="color: inherit; text-decoration: inherit;">Failure<wbr>Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fullyqualifieddomainname_go">
+<a href="#fullyqualifieddomainname_go" style="color: inherit; text-decoration: inherit;">Fully<wbr>Qualified<wbr>Domain<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="healththreshold_go">
+<a href="#healththreshold_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipaddress_go">
+<a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">IPAddress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="insufficientdatahealthstatus_go">
+<a href="#insufficientdatahealthstatus_go" style="color: inherit; text-decoration: inherit;">Insufficient<wbr>Data<wbr>Health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#healthcheckconfigpropertiesinsufficientdatahealthstatus">Health<wbr>Check<wbr>Config<wbr>Properties<wbr>Insufficient<wbr>Data<wbr>Health<wbr>Status</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="inverted_go">
+<a href="#inverted_go" style="color: inherit; text-decoration: inherit;">Inverted</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="measurelatency_go">
+<a href="#measurelatency_go" style="color: inherit; text-decoration: inherit;">Measure<wbr>Latency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="port_go">
+<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="regions_go">
+<a href="#regions_go" style="color: inherit; text-decoration: inherit;">Regions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requestinterval_go">
+<a href="#requestinterval_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resourcepath_go">
+<a href="#resourcepath_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="routingcontrolarn_go">
+<a href="#routingcontrolarn_go" style="color: inherit; text-decoration: inherit;">Routing<wbr>Control<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="searchstring_go">
+<a href="#searchstring_go" style="color: inherit; text-decoration: inherit;">Search<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#healthcheckconfigpropertiestype">Health<wbr>Check<wbr>Config<wbr>Properties<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="alarmidentifier_nodejs">
+<a href="#alarmidentifier_nodejs" style="color: inherit; text-decoration: inherit;">alarm<wbr>Identifier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#healthcheckalarmidentifier">Health<wbr>Check<wbr>Alarm<wbr>Identifier</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="childhealthchecks_nodejs">
+<a href="#childhealthchecks_nodejs" style="color: inherit; text-decoration: inherit;">child<wbr>Health<wbr>Checks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enablesni_nodejs">
+<a href="#enablesni_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>SNI</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="failurethreshold_nodejs">
+<a href="#failurethreshold_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fullyqualifieddomainname_nodejs">
+<a href="#fullyqualifieddomainname_nodejs" style="color: inherit; text-decoration: inherit;">fully<wbr>Qualified<wbr>Domain<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="healththreshold_nodejs">
+<a href="#healththreshold_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipaddress_nodejs">
+<a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">i<wbr>PAddress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="insufficientdatahealthstatus_nodejs">
+<a href="#insufficientdatahealthstatus_nodejs" style="color: inherit; text-decoration: inherit;">insufficient<wbr>Data<wbr>Health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#healthcheckconfigpropertiesinsufficientdatahealthstatus">Health<wbr>Check<wbr>Config<wbr>Properties<wbr>Insufficient<wbr>Data<wbr>Health<wbr>Status</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="inverted_nodejs">
+<a href="#inverted_nodejs" style="color: inherit; text-decoration: inherit;">inverted</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="measurelatency_nodejs">
+<a href="#measurelatency_nodejs" style="color: inherit; text-decoration: inherit;">measure<wbr>Latency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="port_nodejs">
+<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="regions_nodejs">
+<a href="#regions_nodejs" style="color: inherit; text-decoration: inherit;">regions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requestinterval_nodejs">
+<a href="#requestinterval_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resourcepath_nodejs">
+<a href="#resourcepath_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="routingcontrolarn_nodejs">
+<a href="#routingcontrolarn_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Control<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="searchstring_nodejs">
+<a href="#searchstring_nodejs" style="color: inherit; text-decoration: inherit;">search<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#healthcheckconfigpropertiestype">Health<wbr>Check<wbr>Config<wbr>Properties<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="alarm_identifier_python">
+<a href="#alarm_identifier_python" style="color: inherit; text-decoration: inherit;">alarm_<wbr>identifier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#healthcheckalarmidentifier">Health<wbr>Check<wbr>Alarm<wbr>Identifier</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="child_health_checks_python">
+<a href="#child_health_checks_python" style="color: inherit; text-decoration: inherit;">child_<wbr>health_<wbr>checks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enable_sni_python">
+<a href="#enable_sni_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>sni</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="failure_threshold_python">
+<a href="#failure_threshold_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fully_qualified_domain_name_python">
+<a href="#fully_qualified_domain_name_python" style="color: inherit; text-decoration: inherit;">fully_<wbr>qualified_<wbr>domain_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="health_threshold_python">
+<a href="#health_threshold_python" style="color: inherit; text-decoration: inherit;">health_<wbr>threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="i_p_address_python">
+<a href="#i_p_address_python" style="color: inherit; text-decoration: inherit;">i_<wbr>p_<wbr>address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="insufficient_data_health_status_python">
+<a href="#insufficient_data_health_status_python" style="color: inherit; text-decoration: inherit;">insufficient_<wbr>data_<wbr>health_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#healthcheckconfigpropertiesinsufficientdatahealthstatus">Health<wbr>Check<wbr>Config<wbr>Properties<wbr>Insufficient<wbr>Data<wbr>Health<wbr>Status</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="inverted_python">
+<a href="#inverted_python" style="color: inherit; text-decoration: inherit;">inverted</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="measure_latency_python">
+<a href="#measure_latency_python" style="color: inherit; text-decoration: inherit;">measure_<wbr>latency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="port_python">
+<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="regions_python">
+<a href="#regions_python" style="color: inherit; text-decoration: inherit;">regions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="request_interval_python">
+<a href="#request_interval_python" style="color: inherit; text-decoration: inherit;">request_<wbr>interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resource_path_python">
+<a href="#resource_path_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="routing_control_arn_python">
+<a href="#routing_control_arn_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>control_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="search_string_python">
+<a href="#search_string_python" style="color: inherit; text-decoration: inherit;">search_<wbr>string</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="healthcheckconfigpropertiesinsufficientdatahealthstatus">Health<wbr>Check<wbr>Config<wbr>Properties<wbr>Insufficient<wbr>Data<wbr>Health<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Healthy</dt>
+    <dd>Healthy</dd><dt>Last<wbr>Known<wbr>Status</dt>
+    <dd>LastKnownStatus</dd><dt>Unhealthy</dt>
+    <dd>Unhealthy</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Health<wbr>Check<wbr>Config<wbr>Properties<wbr>Insufficient<wbr>Data<wbr>Health<wbr>Status<wbr>Healthy</dt>
+    <dd>Healthy</dd><dt>Health<wbr>Check<wbr>Config<wbr>Properties<wbr>Insufficient<wbr>Data<wbr>Health<wbr>Status<wbr>Last<wbr>Known<wbr>Status</dt>
+    <dd>LastKnownStatus</dd><dt>Health<wbr>Check<wbr>Config<wbr>Properties<wbr>Insufficient<wbr>Data<wbr>Health<wbr>Status<wbr>Unhealthy</dt>
+    <dd>Unhealthy</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Healthy</dt>
+    <dd>Healthy</dd><dt>Last<wbr>Known<wbr>Status</dt>
+    <dd>LastKnownStatus</dd><dt>Unhealthy</dt>
+    <dd>Unhealthy</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>HEALTHY</dt>
+    <dd>Healthy</dd><dt>LAST_KNOWN_STATUS</dt>
+    <dd>LastKnownStatus</dd><dt>UNHEALTHY</dt>
+    <dd>Unhealthy</dd></dl>
+{{% /choosable %}}
+
+<h4 id="healthcheckconfigpropertiestype">Health<wbr>Check<wbr>Config<wbr>Properties<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Calculated</dt>
+    <dd>CALCULATED</dd><dt>Cloudwatch<wbr>Metric</dt>
+    <dd>CLOUDWATCH_METRIC</dd><dt>Http</dt>
+    <dd>HTTP</dd><dt>Http<wbr>Str<wbr>Match</dt>
+    <dd>HTTP_STR_MATCH</dd><dt>Https</dt>
+    <dd>HTTPS</dd><dt>Https<wbr>Str<wbr>Match</dt>
+    <dd>HTTPS_STR_MATCH</dd><dt>Tcp</dt>
+    <dd>TCP</dd><dt>Recovery<wbr>Control</dt>
+    <dd>RECOVERY_CONTROL</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Health<wbr>Check<wbr>Config<wbr>Properties<wbr>Type<wbr>Calculated</dt>
+    <dd>CALCULATED</dd><dt>Health<wbr>Check<wbr>Config<wbr>Properties<wbr>Type<wbr>Cloudwatch<wbr>Metric</dt>
+    <dd>CLOUDWATCH_METRIC</dd><dt>Health<wbr>Check<wbr>Config<wbr>Properties<wbr>Type<wbr>Http</dt>
+    <dd>HTTP</dd><dt>Health<wbr>Check<wbr>Config<wbr>Properties<wbr>Type<wbr>Http<wbr>Str<wbr>Match</dt>
+    <dd>HTTP_STR_MATCH</dd><dt>Health<wbr>Check<wbr>Config<wbr>Properties<wbr>Type<wbr>Https</dt>
+    <dd>HTTPS</dd><dt>Health<wbr>Check<wbr>Config<wbr>Properties<wbr>Type<wbr>Https<wbr>Str<wbr>Match</dt>
+    <dd>HTTPS_STR_MATCH</dd><dt>Health<wbr>Check<wbr>Config<wbr>Properties<wbr>Type<wbr>Tcp</dt>
+    <dd>TCP</dd><dt>Health<wbr>Check<wbr>Config<wbr>Properties<wbr>Type<wbr>Recovery<wbr>Control</dt>
+    <dd>RECOVERY_CONTROL</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Calculated</dt>
+    <dd>CALCULATED</dd><dt>Cloudwatch<wbr>Metric</dt>
+    <dd>CLOUDWATCH_METRIC</dd><dt>Http</dt>
+    <dd>HTTP</dd><dt>Http<wbr>Str<wbr>Match</dt>
+    <dd>HTTP_STR_MATCH</dd><dt>Https</dt>
+    <dd>HTTPS</dd><dt>Https<wbr>Str<wbr>Match</dt>
+    <dd>HTTPS_STR_MATCH</dd><dt>Tcp</dt>
+    <dd>TCP</dd><dt>Recovery<wbr>Control</dt>
+    <dd>RECOVERY_CONTROL</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CALCULATED</dt>
+    <dd>CALCULATED</dd><dt>CLOUDWATCH_METRIC</dt>
+    <dd>CLOUDWATCH_METRIC</dd><dt>HTTP</dt>
+    <dd>HTTP</dd><dt>HTTP_STR_MATCH</dt>
+    <dd>HTTP_STR_MATCH</dd><dt>HTTPS</dt>
+    <dd>HTTPS</dd><dt>HTTPS_STR_MATCH</dt>
+    <dd>HTTPS_STR_MATCH</dd><dt>TCP</dt>
+    <dd>TCP</dd><dt>RECOVERY_CONTROL</dt>
+    <dd>RECOVERY_CONTROL</dd></dl>
+{{% /choosable %}}
+
+<h4 id="healthchecktag">Health<wbr>Check<wbr>Tag</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"

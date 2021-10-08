@@ -37,7 +37,7 @@ class MyStack : Stack
         {
             InputName = "myInput",
             InputDescription = "My Input created by CloudFormation",
-            InputDefinition = new AwsNative.IoTEvents.Inputs.InputInputDefinitionArgs
+            InputDefinition = new AwsNative.IoTEvents.Inputs.InputDefinitionArgs
             {
                 Attributes = 
                 {
@@ -78,7 +78,7 @@ func main() {
 		_, err := iotevents.NewInput(ctx, "myInput", &iotevents.InputArgs{
 			InputName:        pulumi.String("myInput"),
 			InputDescription: pulumi.String("My Input created by CloudFormation"),
-			InputDefinition: &iotevents.InputInputDefinitionArgs{
+			InputDefinition: &iotevents.InputDefinitionArgs{
 				Attributes: iotevents.InputAttributeArray{
 					&iotevents.InputAttributeArgs{
 						JsonPath: pulumi.String("foo"),
@@ -112,7 +112,7 @@ import pulumi_aws_native as aws_native
 my_input = aws_native.iotevents.Input("myInput",
     input_name="myInput",
     input_description="My Input created by CloudFormation",
-    input_definition=aws_native.iotevents.InputInputDefinitionArgs(
+    input_definition=aws_native.iotevents.InputDefinitionArgs(
         attributes=[
             aws_native.iotevents.InputAttributeArgs(
                 json_path="foo",
@@ -176,7 +176,7 @@ class MyStack : Stack
         {
             InputName = "myInput",
             InputDescription = "My Input created by CloudFormation",
-            InputDefinition = new AwsNative.IoTEvents.Inputs.InputInputDefinitionArgs
+            InputDefinition = new AwsNative.IoTEvents.Inputs.InputDefinitionArgs
             {
                 Attributes = 
                 {
@@ -217,7 +217,7 @@ func main() {
 		_, err := iotevents.NewInput(ctx, "myInput", &iotevents.InputArgs{
 			InputName:        pulumi.String("myInput"),
 			InputDescription: pulumi.String("My Input created by CloudFormation"),
-			InputDefinition: &iotevents.InputInputDefinitionArgs{
+			InputDefinition: &iotevents.InputDefinitionArgs{
 				Attributes: iotevents.InputAttributeArray{
 					&iotevents.InputAttributeArgs{
 						JsonPath: pulumi.String("foo"),
@@ -251,7 +251,7 @@ import pulumi_aws_native as aws_native
 my_input = aws_native.iotevents.Input("myInput",
     input_name="myInput",
     input_description="My Input created by CloudFormation",
-    input_definition=aws_native.iotevents.InputInputDefinitionArgs(
+    input_definition=aws_native.iotevents.InputDefinitionArgs(
         attributes=[
             aws_native.iotevents.InputAttributeArgs(
                 json_path="foo",
@@ -316,7 +316,7 @@ const myInput = new aws_native.iotevents.Input("myInput", {
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Input</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-          <span class="nx">input_definition</span><span class="p">:</span> <span class="nx">Optional[InputInputDefinitionArgs]</span> = None<span class="p">,</span>
+          <span class="nx">input_definition</span><span class="p">:</span> <span class="nx">Optional[InputDefinitionArgs]</span> = None<span class="p">,</span>
           <span class="nx">input_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">input_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[InputTagArgs]]</span> = None<span class="p">)</span>
@@ -453,7 +453,7 @@ The Input resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#inputdefinition_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputinputdefinition">Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TEvents.<wbr>Inputs.<wbr>Input<wbr>Input<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#inputdefinition">Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TEvents.<wbr>Inputs.<wbr>Input<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -491,7 +491,7 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 <a href="#inputdefinition_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputinputdefinition">Input<wbr>Input<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#inputdefinition">Input<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -529,7 +529,7 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 <a href="#inputdefinition_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputinputdefinition">Input<wbr>Input<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#inputdefinition">Input<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -567,7 +567,7 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 <a href="#input_definition_python" style="color: inherit; text-decoration: inherit;">input_<wbr>definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputinputdefinition">Input<wbr>Input<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#inputdefinition">Input<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -721,7 +721,7 @@ _Syntax_: `<field-name>.<field-name>...`{{% /md %}}</dd></dl>
 _Syntax_: `<field-name>.<field-name>...`{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="inputinputdefinition">Input<wbr>Input<wbr>Definition</h4>
+<h4 id="inputdefinition">Input<wbr>Definition</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"

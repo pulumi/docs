@@ -27,7 +27,7 @@ Definition of AWS::Location::Map Resource Type
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Map</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">configuration</span><span class="p">:</span> <span class="nx">Optional[MapMapConfigurationArgs]</span> = None<span class="p">,</span>
+        <span class="nx">configuration</span><span class="p">:</span> <span class="nx">Optional[MapConfigurationArgs]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">map_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">pricing_plan</span><span class="p">:</span> <span class="nx">Optional[MapPricingPlan]</span> = None<span class="p">)</span>
@@ -164,7 +164,7 @@ The Map resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mapmapconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Location.<wbr>Inputs.<wbr>Map<wbr>Map<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#mapconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Location.<wbr>Inputs.<wbr>Map<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -200,7 +200,7 @@ The Map resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mapmapconfiguration">Map<wbr>Map<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#mapconfiguration">Map<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -236,7 +236,7 @@ The Map resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mapmapconfiguration">Map<wbr>Map<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#mapconfiguration">Map<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -272,7 +272,7 @@ The Map resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mapmapconfiguration">Map<wbr>Map<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#mapconfiguration">Map<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -526,7 +526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="mapmapconfiguration">Map<wbr>Map<wbr>Configuration</h4>
+<h4 id="mapconfiguration">Map<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"

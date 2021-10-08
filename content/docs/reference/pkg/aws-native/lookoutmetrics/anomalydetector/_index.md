@@ -27,7 +27,7 @@ An Amazon Lookout for Metrics Detector
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">AnomalyDetector</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                    <span class="nx">anomaly_detector_config</span><span class="p">:</span> <span class="nx">Optional[AnomalyDetectorAnomalyDetectorConfigArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">anomaly_detector_config</span><span class="p">:</span> <span class="nx">Optional[AnomalyDetectorConfigArgs]</span> = None<span class="p">,</span>
                     <span class="nx">anomaly_detector_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">anomaly_detector_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">kms_key_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -165,7 +165,7 @@ The AnomalyDetector resource accepts the following [input]({{< relref "/docs/int
 <a href="#anomalydetectorconfig_csharp" style="color: inherit; text-decoration: inherit;">Anomaly<wbr>Detector<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#anomalydetectoranomalydetectorconfig">Pulumi.<wbr>Aws<wbr>Native.<wbr>Lookout<wbr>Metrics.<wbr>Inputs.<wbr>Anomaly<wbr>Detector<wbr>Anomaly<wbr>Detector<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#anomalydetectorconfig">Pulumi.<wbr>Aws<wbr>Native.<wbr>Lookout<wbr>Metrics.<wbr>Inputs.<wbr>Anomaly<wbr>Detector<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration options for the AnomalyDetector{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -209,7 +209,7 @@ The AnomalyDetector resource accepts the following [input]({{< relref "/docs/int
 <a href="#anomalydetectorconfig_go" style="color: inherit; text-decoration: inherit;">Anomaly<wbr>Detector<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#anomalydetectoranomalydetectorconfig">Anomaly<wbr>Detector<wbr>Anomaly<wbr>Detector<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#anomalydetectorconfig">Anomaly<wbr>Detector<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration options for the AnomalyDetector{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -253,7 +253,7 @@ The AnomalyDetector resource accepts the following [input]({{< relref "/docs/int
 <a href="#anomalydetectorconfig_nodejs" style="color: inherit; text-decoration: inherit;">anomaly<wbr>Detector<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#anomalydetectoranomalydetectorconfig">Anomaly<wbr>Detector<wbr>Anomaly<wbr>Detector<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#anomalydetectorconfig">Anomaly<wbr>Detector<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration options for the AnomalyDetector{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -297,7 +297,7 @@ The AnomalyDetector resource accepts the following [input]({{< relref "/docs/int
 <a href="#anomaly_detector_config_python" style="color: inherit; text-decoration: inherit;">anomaly_<wbr>detector_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#anomalydetectoranomalydetectorconfig">Anomaly<wbr>Detector<wbr>Anomaly<wbr>Detector<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#anomalydetectorconfig">Anomaly<wbr>Detector<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration options for the AnomalyDetector{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -431,90 +431,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="anomalydetectoranomalydetectorconfig">Anomaly<wbr>Detector<wbr>Anomaly<wbr>Detector<wbr>Config</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="anomalydetectorfrequency_csharp">
-<a href="#anomalydetectorfrequency_csharp" style="color: inherit; text-decoration: inherit;">Anomaly<wbr>Detector<wbr>Frequency</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#anomalydetectoranomalydetectorfrequency">Pulumi.<wbr>Aws<wbr>Native.<wbr>Lookout<wbr>Metrics.<wbr>Anomaly<wbr>Detector<wbr>Anomaly<wbr>Detector<wbr>Frequency</a></span>
-    </dt>
-    <dd>{{% md %}}Frequency of anomaly detection{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="anomalydetectorfrequency_go">
-<a href="#anomalydetectorfrequency_go" style="color: inherit; text-decoration: inherit;">Anomaly<wbr>Detector<wbr>Frequency</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#anomalydetectoranomalydetectorfrequency">Anomaly<wbr>Detector<wbr>Anomaly<wbr>Detector<wbr>Frequency</a></span>
-    </dt>
-    <dd>{{% md %}}Frequency of anomaly detection{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="anomalydetectorfrequency_nodejs">
-<a href="#anomalydetectorfrequency_nodejs" style="color: inherit; text-decoration: inherit;">anomaly<wbr>Detector<wbr>Frequency</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#anomalydetectoranomalydetectorfrequency">Anomaly<wbr>Detector<wbr>Anomaly<wbr>Detector<wbr>Frequency</a></span>
-    </dt>
-    <dd>{{% md %}}Frequency of anomaly detection{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="anomaly_detector_frequency_python">
-<a href="#anomaly_detector_frequency_python" style="color: inherit; text-decoration: inherit;">anomaly_<wbr>detector_<wbr>frequency</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#anomalydetectoranomalydetectorfrequency">Anomaly<wbr>Detector<wbr>Anomaly<wbr>Detector<wbr>Frequency</a></span>
-    </dt>
-    <dd>{{% md %}}Frequency of anomaly detection{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="anomalydetectoranomalydetectorfrequency">Anomaly<wbr>Detector<wbr>Anomaly<wbr>Detector<wbr>Frequency</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Pt5m</dt>
-    <dd>PT5M</dd><dt>Pt10m</dt>
-    <dd>PT10M</dd><dt>Pt1h</dt>
-    <dd>PT1H</dd><dt>P1d</dt>
-    <dd>P1D</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Anomaly<wbr>Detector<wbr>Anomaly<wbr>Detector<wbr>Frequency<wbr>Pt5m</dt>
-    <dd>PT5M</dd><dt>Anomaly<wbr>Detector<wbr>Anomaly<wbr>Detector<wbr>Frequency<wbr>Pt10m</dt>
-    <dd>PT10M</dd><dt>Anomaly<wbr>Detector<wbr>Anomaly<wbr>Detector<wbr>Frequency<wbr>Pt1h</dt>
-    <dd>PT1H</dd><dt>Anomaly<wbr>Detector<wbr>Anomaly<wbr>Detector<wbr>Frequency<wbr>P1d</dt>
-    <dd>P1D</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Pt5m</dt>
-    <dd>PT5M</dd><dt>Pt10m</dt>
-    <dd>PT10M</dd><dt>Pt1h</dt>
-    <dd>PT1H</dd><dt>P1d</dt>
-    <dd>P1D</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>PT5M</dt>
-    <dd>PT5M</dd><dt>PT10M</dt>
-    <dd>PT10M</dd><dt>PT1H</dt>
-    <dd>PT1H</dd><dt>P1D</dt>
-    <dd>P1D</dd></dl>
-{{% /choosable %}}
-
 <h4 id="anomalydetectorappflowconfig">Anomaly<wbr>Detector<wbr>App<wbr>Flow<wbr>Config</h4>
 
 {{% choosable language csharp %}}
@@ -645,6 +561,56 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="anomalydetectorconfig">Anomaly<wbr>Detector<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="anomalydetectorfrequency_csharp">
+<a href="#anomalydetectorfrequency_csharp" style="color: inherit; text-decoration: inherit;">Anomaly<wbr>Detector<wbr>Frequency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#anomalydetectorfrequency">Pulumi.<wbr>Aws<wbr>Native.<wbr>Lookout<wbr>Metrics.<wbr>Anomaly<wbr>Detector<wbr>Frequency</a></span>
+    </dt>
+    <dd>{{% md %}}Frequency of anomaly detection{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="anomalydetectorfrequency_go">
+<a href="#anomalydetectorfrequency_go" style="color: inherit; text-decoration: inherit;">Anomaly<wbr>Detector<wbr>Frequency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#anomalydetectorfrequency">Anomaly<wbr>Detector<wbr>Frequency</a></span>
+    </dt>
+    <dd>{{% md %}}Frequency of anomaly detection{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="anomalydetectorfrequency_nodejs">
+<a href="#anomalydetectorfrequency_nodejs" style="color: inherit; text-decoration: inherit;">anomaly<wbr>Detector<wbr>Frequency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#anomalydetectorfrequency">Anomaly<wbr>Detector<wbr>Frequency</a></span>
+    </dt>
+    <dd>{{% md %}}Frequency of anomaly detection{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="anomaly_detector_frequency_python">
+<a href="#anomaly_detector_frequency_python" style="color: inherit; text-decoration: inherit;">anomaly_<wbr>detector_<wbr>frequency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#anomalydetectorfrequency">Anomaly<wbr>Detector<wbr>Frequency</a></span>
+    </dt>
+    <dd>{{% md %}}Frequency of anomaly detection{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="anomalydetectorcsvformatdescriptor">Anomaly<wbr>Detector<wbr>Csv<wbr>Format<wbr>Descriptor</h4>
@@ -963,6 +929,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#anomalydetectorjsonformatdescriptor">Anomaly<wbr>Detector<wbr>Json<wbr>Format<wbr>Descriptor</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="anomalydetectorfrequency">Anomaly<wbr>Detector<wbr>Frequency</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Pt5m</dt>
+    <dd>PT5M</dd><dt>Pt10m</dt>
+    <dd>PT10M</dd><dt>Pt1h</dt>
+    <dd>PT1H</dd><dt>P1d</dt>
+    <dd>P1D</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Anomaly<wbr>Detector<wbr>Frequency<wbr>Pt5m</dt>
+    <dd>PT5M</dd><dt>Anomaly<wbr>Detector<wbr>Frequency<wbr>Pt10m</dt>
+    <dd>PT10M</dd><dt>Anomaly<wbr>Detector<wbr>Frequency<wbr>Pt1h</dt>
+    <dd>PT1H</dd><dt>Anomaly<wbr>Detector<wbr>Frequency<wbr>P1d</dt>
+    <dd>P1D</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Pt5m</dt>
+    <dd>PT5M</dd><dt>Pt10m</dt>
+    <dd>PT10M</dd><dt>Pt1h</dt>
+    <dd>PT1H</dd><dt>P1d</dt>
+    <dd>P1D</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>PT5M</dt>
+    <dd>PT5M</dd><dt>PT10M</dt>
+    <dd>PT10M</dd><dt>PT1H</dt>
+    <dd>PT1H</dd><dt>P1D</dt>
+    <dd>P1D</dd></dl>
 {{% /choosable %}}
 
 <h4 id="anomalydetectorjsonformatdescriptor">Anomaly<wbr>Detector<wbr>Json<wbr>Format<wbr>Descriptor</h4>

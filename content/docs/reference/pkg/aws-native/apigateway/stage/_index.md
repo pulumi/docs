@@ -176,7 +176,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the RestApi resource that you're deploying with this stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesslogsetting_csharp">
 <a href="#accesslogsetting_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Log<wbr>Setting</a>
@@ -184,7 +184,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#stageaccesslogsetting">Pulumi.<wbr>Aws<wbr>Native.<wbr>Api<wbr>Gateway.<wbr>Inputs.<wbr>Stage<wbr>Access<wbr>Log<wbr>Setting<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies settings for logging access in this stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacheclusterenabled_csharp">
 <a href="#cacheclusterenabled_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Cluster<wbr>Enabled</a>
@@ -192,7 +192,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Indicates whether cache clustering is enabled for the stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacheclustersize_csharp">
 <a href="#cacheclustersize_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Cluster<wbr>Size</a>
@@ -200,7 +200,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The stage's cache cluster size.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canarysetting_csharp">
 <a href="#canarysetting_csharp" style="color: inherit; text-decoration: inherit;">Canary<wbr>Setting</a>
@@ -208,7 +208,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#stagecanarysetting">Pulumi.<wbr>Aws<wbr>Native.<wbr>Api<wbr>Gateway.<wbr>Inputs.<wbr>Stage<wbr>Canary<wbr>Setting<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies settings for the canary deployment in this stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientcertificateid_csharp">
 <a href="#clientcertificateid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Id</a>
@@ -216,7 +216,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the client certificate that API Gateway uses to call your integration endpoints in the stage. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymentid_csharp">
 <a href="#deploymentid_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Id</a>
@@ -224,7 +224,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the deployment that the stage is associated with. This parameter is required to create a stage. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -232,7 +232,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A description of the stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="documentationversion_csharp">
 <a href="#documentationversion_csharp" style="color: inherit; text-decoration: inherit;">Documentation<wbr>Version</a>
@@ -240,7 +240,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The version ID of the API documentation snapshot.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="methodsettings_csharp">
 <a href="#methodsettings_csharp" style="color: inherit; text-decoration: inherit;">Method<wbr>Settings</a>
@@ -248,7 +248,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#stagemethodsetting">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Api<wbr>Gateway.<wbr>Inputs.<wbr>Stage<wbr>Method<wbr>Setting<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Settings for all methods in the stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stagename_csharp">
 <a href="#stagename_csharp" style="color: inherit; text-decoration: inherit;">Stage<wbr>Name</a>
@@ -256,7 +256,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the stage, which API Gateway uses as the first path segment in the invoked Uniform Resource Identifier (URI).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -264,7 +264,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#stagetag">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Api<wbr>Gateway.<wbr>Inputs.<wbr>Stage<wbr>Tag<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}An array of arbitrary tags (key-value pairs) to associate with the stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tracingenabled_csharp">
 <a href="#tracingenabled_csharp" style="color: inherit; text-decoration: inherit;">Tracing<wbr>Enabled</a>
@@ -272,7 +272,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies whether active X-Ray tracing is enabled for this stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="variables_csharp">
 <a href="#variables_csharp" style="color: inherit; text-decoration: inherit;">Variables</a>
@@ -280,7 +280,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A map (string-to-string map) that defines the stage variables, where the variable name is the key and the variable value is the value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -292,7 +292,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the RestApi resource that you're deploying with this stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesslogsetting_go">
 <a href="#accesslogsetting_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Log<wbr>Setting</a>
@@ -300,7 +300,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#stageaccesslogsetting">Stage<wbr>Access<wbr>Log<wbr>Setting<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies settings for logging access in this stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacheclusterenabled_go">
 <a href="#cacheclusterenabled_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Cluster<wbr>Enabled</a>
@@ -308,7 +308,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Indicates whether cache clustering is enabled for the stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacheclustersize_go">
 <a href="#cacheclustersize_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Cluster<wbr>Size</a>
@@ -316,7 +316,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The stage's cache cluster size.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canarysetting_go">
 <a href="#canarysetting_go" style="color: inherit; text-decoration: inherit;">Canary<wbr>Setting</a>
@@ -324,7 +324,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#stagecanarysetting">Stage<wbr>Canary<wbr>Setting<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies settings for the canary deployment in this stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientcertificateid_go">
 <a href="#clientcertificateid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Id</a>
@@ -332,7 +332,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the client certificate that API Gateway uses to call your integration endpoints in the stage. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymentid_go">
 <a href="#deploymentid_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Id</a>
@@ -340,7 +340,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the deployment that the stage is associated with. This parameter is required to create a stage. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -348,7 +348,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A description of the stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="documentationversion_go">
 <a href="#documentationversion_go" style="color: inherit; text-decoration: inherit;">Documentation<wbr>Version</a>
@@ -356,7 +356,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The version ID of the API documentation snapshot.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="methodsettings_go">
 <a href="#methodsettings_go" style="color: inherit; text-decoration: inherit;">Method<wbr>Settings</a>
@@ -364,7 +364,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#stagemethodsetting">[]Stage<wbr>Method<wbr>Setting<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Settings for all methods in the stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stagename_go">
 <a href="#stagename_go" style="color: inherit; text-decoration: inherit;">Stage<wbr>Name</a>
@@ -372,7 +372,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the stage, which API Gateway uses as the first path segment in the invoked Uniform Resource Identifier (URI).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -380,7 +380,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#stagetag">[]Stage<wbr>Tag<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}An array of arbitrary tags (key-value pairs) to associate with the stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tracingenabled_go">
 <a href="#tracingenabled_go" style="color: inherit; text-decoration: inherit;">Tracing<wbr>Enabled</a>
@@ -388,7 +388,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies whether active X-Ray tracing is enabled for this stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="variables_go">
 <a href="#variables_go" style="color: inherit; text-decoration: inherit;">Variables</a>
@@ -396,7 +396,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A map (string-to-string map) that defines the stage variables, where the variable name is the key and the variable value is the value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -408,7 +408,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the RestApi resource that you're deploying with this stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesslogsetting_nodejs">
 <a href="#accesslogsetting_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Log<wbr>Setting</a>
@@ -416,7 +416,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#stageaccesslogsetting">Stage<wbr>Access<wbr>Log<wbr>Setting<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies settings for logging access in this stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacheclusterenabled_nodejs">
 <a href="#cacheclusterenabled_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Cluster<wbr>Enabled</a>
@@ -424,7 +424,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Indicates whether cache clustering is enabled for the stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacheclustersize_nodejs">
 <a href="#cacheclustersize_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Cluster<wbr>Size</a>
@@ -432,7 +432,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The stage's cache cluster size.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canarysetting_nodejs">
 <a href="#canarysetting_nodejs" style="color: inherit; text-decoration: inherit;">canary<wbr>Setting</a>
@@ -440,7 +440,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#stagecanarysetting">Stage<wbr>Canary<wbr>Setting<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies settings for the canary deployment in this stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientcertificateid_nodejs">
 <a href="#clientcertificateid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate<wbr>Id</a>
@@ -448,7 +448,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the client certificate that API Gateway uses to call your integration endpoints in the stage. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymentid_nodejs">
 <a href="#deploymentid_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Id</a>
@@ -456,7 +456,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the deployment that the stage is associated with. This parameter is required to create a stage. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -464,7 +464,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A description of the stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="documentationversion_nodejs">
 <a href="#documentationversion_nodejs" style="color: inherit; text-decoration: inherit;">documentation<wbr>Version</a>
@@ -472,7 +472,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The version ID of the API documentation snapshot.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="methodsettings_nodejs">
 <a href="#methodsettings_nodejs" style="color: inherit; text-decoration: inherit;">method<wbr>Settings</a>
@@ -480,7 +480,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#stagemethodsetting">Stage<wbr>Method<wbr>Setting<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Settings for all methods in the stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stagename_nodejs">
 <a href="#stagename_nodejs" style="color: inherit; text-decoration: inherit;">stage<wbr>Name</a>
@@ -488,7 +488,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the stage, which API Gateway uses as the first path segment in the invoked Uniform Resource Identifier (URI).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -496,7 +496,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#stagetag">Stage<wbr>Tag<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}An array of arbitrary tags (key-value pairs) to associate with the stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tracingenabled_nodejs">
 <a href="#tracingenabled_nodejs" style="color: inherit; text-decoration: inherit;">tracing<wbr>Enabled</a>
@@ -504,7 +504,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies whether active X-Ray tracing is enabled for this stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="variables_nodejs">
 <a href="#variables_nodejs" style="color: inherit; text-decoration: inherit;">variables</a>
@@ -512,7 +512,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A map (string-to-string map) that defines the stage variables, where the variable name is the key and the variable value is the value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -524,7 +524,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the RestApi resource that you're deploying with this stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="access_log_setting_python">
 <a href="#access_log_setting_python" style="color: inherit; text-decoration: inherit;">access_<wbr>log_<wbr>setting</a>
@@ -532,7 +532,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#stageaccesslogsetting">Stage<wbr>Access<wbr>Log<wbr>Setting<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies settings for logging access in this stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cache_cluster_enabled_python">
 <a href="#cache_cluster_enabled_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>cluster_<wbr>enabled</a>
@@ -540,7 +540,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Indicates whether cache clustering is enabled for the stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cache_cluster_size_python">
 <a href="#cache_cluster_size_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>cluster_<wbr>size</a>
@@ -548,7 +548,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The stage's cache cluster size.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canary_setting_python">
 <a href="#canary_setting_python" style="color: inherit; text-decoration: inherit;">canary_<wbr>setting</a>
@@ -556,7 +556,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#stagecanarysetting">Stage<wbr>Canary<wbr>Setting<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies settings for the canary deployment in this stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_certificate_id_python">
 <a href="#client_certificate_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate_<wbr>id</a>
@@ -564,7 +564,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the client certificate that API Gateway uses to call your integration endpoints in the stage. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deployment_id_python">
 <a href="#deployment_id_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>id</a>
@@ -572,7 +572,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the deployment that the stage is associated with. This parameter is required to create a stage. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -580,7 +580,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A description of the stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="documentation_version_python">
 <a href="#documentation_version_python" style="color: inherit; text-decoration: inherit;">documentation_<wbr>version</a>
@@ -588,7 +588,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The version ID of the API documentation snapshot.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_settings_python">
 <a href="#method_settings_python" style="color: inherit; text-decoration: inherit;">method_<wbr>settings</a>
@@ -596,7 +596,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#stagemethodsetting">Sequence[Stage<wbr>Method<wbr>Setting<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Settings for all methods in the stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stage_name_python">
 <a href="#stage_name_python" style="color: inherit; text-decoration: inherit;">stage_<wbr>name</a>
@@ -604,7 +604,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the stage, which API Gateway uses as the first path segment in the invoked Uniform Resource Identifier (URI).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -612,7 +612,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#stagetag">Sequence[Stage<wbr>Tag<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}An array of arbitrary tags (key-value pairs) to associate with the stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tracing_enabled_python">
 <a href="#tracing_enabled_python" style="color: inherit; text-decoration: inherit;">tracing_<wbr>enabled</a>
@@ -620,7 +620,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies whether active X-Ray tracing is enabled for this stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="variables_python">
 <a href="#variables_python" style="color: inherit; text-decoration: inherit;">variables</a>
@@ -628,7 +628,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A map (string-to-string map) that defines the stage variables, where the variable name is the key and the variable value is the value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -707,7 +707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the CloudWatch Logs log group or Kinesis Data Firehose delivery stream to receive access logs. If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with amazon-apigateway-. This parameter is required to enable access logging.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="format_csharp">
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
@@ -715,7 +715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A single line format of the access logs of data, as specified by selected $context variables (https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-mapping-template-reference.html#context-variable-reference). The format must include at least $context.requestId. This parameter is required to enable access logging.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -727,7 +727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the CloudWatch Logs log group or Kinesis Data Firehose delivery stream to receive access logs. If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with amazon-apigateway-. This parameter is required to enable access logging.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="format_go">
 <a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
@@ -735,7 +735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A single line format of the access logs of data, as specified by selected $context variables (https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-mapping-template-reference.html#context-variable-reference). The format must include at least $context.requestId. This parameter is required to enable access logging.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -747,7 +747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the CloudWatch Logs log group or Kinesis Data Firehose delivery stream to receive access logs. If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with amazon-apigateway-. This parameter is required to enable access logging.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="format_nodejs">
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
@@ -755,7 +755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A single line format of the access logs of data, as specified by selected $context variables (https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-mapping-template-reference.html#context-variable-reference). The format must include at least $context.requestId. This parameter is required to enable access logging.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -767,7 +767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the CloudWatch Logs log group or Kinesis Data Firehose delivery stream to receive access logs. If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with amazon-apigateway-. This parameter is required to enable access logging.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="format_python">
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
@@ -775,7 +775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A single line format of the access logs of data, as specified by selected $context variables (https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-mapping-template-reference.html#context-variable-reference). The format must include at least $context.requestId. This parameter is required to enable access logging.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="stagecanarysetting">Stage<wbr>Canary<wbr>Setting</h4>
@@ -789,7 +789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The identifier of the deployment that the stage points to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percenttraffic_csharp">
 <a href="#percenttraffic_csharp" style="color: inherit; text-decoration: inherit;">Percent<wbr>Traffic</a>
@@ -797,7 +797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The percentage (0-100) of traffic diverted to a canary deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stagevariableoverrides_csharp">
 <a href="#stagevariableoverrides_csharp" style="color: inherit; text-decoration: inherit;">Stage<wbr>Variable<wbr>Overrides</a>
@@ -805,7 +805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Stage variables overridden for a canary release deployment, including new stage variables introduced in the canary. These stage variables are represented as a string-to-string map between stage variable names and their values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usestagecache_csharp">
 <a href="#usestagecache_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Stage<wbr>Cache</a>
@@ -813,7 +813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Whether the canary deployment uses the stage cache or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -825,7 +825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The identifier of the deployment that the stage points to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percenttraffic_go">
 <a href="#percenttraffic_go" style="color: inherit; text-decoration: inherit;">Percent<wbr>Traffic</a>
@@ -833,7 +833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The percentage (0-100) of traffic diverted to a canary deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stagevariableoverrides_go">
 <a href="#stagevariableoverrides_go" style="color: inherit; text-decoration: inherit;">Stage<wbr>Variable<wbr>Overrides</a>
@@ -841,7 +841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Stage variables overridden for a canary release deployment, including new stage variables introduced in the canary. These stage variables are represented as a string-to-string map between stage variable names and their values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usestagecache_go">
 <a href="#usestagecache_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Stage<wbr>Cache</a>
@@ -849,7 +849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Whether the canary deployment uses the stage cache or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -861,7 +861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The identifier of the deployment that the stage points to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percenttraffic_nodejs">
 <a href="#percenttraffic_nodejs" style="color: inherit; text-decoration: inherit;">percent<wbr>Traffic</a>
@@ -869,7 +869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The percentage (0-100) of traffic diverted to a canary deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stagevariableoverrides_nodejs">
 <a href="#stagevariableoverrides_nodejs" style="color: inherit; text-decoration: inherit;">stage<wbr>Variable<wbr>Overrides</a>
@@ -877,7 +877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Stage variables overridden for a canary release deployment, including new stage variables introduced in the canary. These stage variables are represented as a string-to-string map between stage variable names and their values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usestagecache_nodejs">
 <a href="#usestagecache_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Stage<wbr>Cache</a>
@@ -885,7 +885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Whether the canary deployment uses the stage cache or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -897,7 +897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The identifier of the deployment that the stage points to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percent_traffic_python">
 <a href="#percent_traffic_python" style="color: inherit; text-decoration: inherit;">percent_<wbr>traffic</a>
@@ -905,7 +905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The percentage (0-100) of traffic diverted to a canary deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stage_variable_overrides_python">
 <a href="#stage_variable_overrides_python" style="color: inherit; text-decoration: inherit;">stage_<wbr>variable_<wbr>overrides</a>
@@ -913,7 +913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Stage variables overridden for a canary release deployment, including new stage variables introduced in the canary. These stage variables are represented as a string-to-string map between stage variable names and their values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_stage_cache_python">
 <a href="#use_stage_cache_python" style="color: inherit; text-decoration: inherit;">use_<wbr>stage_<wbr>cache</a>
@@ -921,7 +921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Whether the canary deployment uses the stage cache or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="stagemethodsetting">Stage<wbr>Method<wbr>Setting</h4>
@@ -935,7 +935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Indicates whether the cached responses are encrypted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachettlinseconds_csharp">
 <a href="#cachettlinseconds_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Ttl<wbr>In<wbr>Seconds</a>
@@ -943,7 +943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The time-to-live (TTL) period, in seconds, that specifies how long API Gateway caches responses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachingenabled_csharp">
 <a href="#cachingenabled_csharp" style="color: inherit; text-decoration: inherit;">Caching<wbr>Enabled</a>
@@ -951,7 +951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Indicates whether responses are cached and returned for requests. You must enable a cache cluster on the stage to cache responses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datatraceenabled_csharp">
 <a href="#datatraceenabled_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Trace<wbr>Enabled</a>
@@ -959,7 +959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Indicates whether data trace logging is enabled for methods in the stage. API Gateway pushes these logs to Amazon CloudWatch Logs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpmethod_csharp">
 <a href="#httpmethod_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Method</a>
@@ -967,7 +967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The HTTP method. You can use an asterisk (*) as a wildcard to apply method settings to multiple methods.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logginglevel_csharp">
 <a href="#logginglevel_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Level</a>
@@ -975,7 +975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The logging level for this method. For valid values, see the loggingLevel property of the Stage (https://docs.aws.amazon.com/apigateway/api-reference/resource/stage/#loggingLevel) resource in the Amazon API Gateway API Reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricsenabled_csharp">
 <a href="#metricsenabled_csharp" style="color: inherit; text-decoration: inherit;">Metrics<wbr>Enabled</a>
@@ -983,7 +983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Indicates whether Amazon CloudWatch metrics are enabled for methods in the stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcepath_csharp">
 <a href="#resourcepath_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Path</a>
@@ -991,7 +991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The resource path for this method. Forward slashes (/) are encoded as ~1 and the initial slash must include a forward slash. For example, the path value /resource/subresource must be encoded as /~1resource~1subresource. To specify the root path, use only a slash (/). You can use an asterisk (*) as a wildcard to apply method settings to multiple methods.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throttlingburstlimit_csharp">
 <a href="#throttlingburstlimit_csharp" style="color: inherit; text-decoration: inherit;">Throttling<wbr>Burst<wbr>Limit</a>
@@ -999,7 +999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The number of burst requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throttlingratelimit_csharp">
 <a href="#throttlingratelimit_csharp" style="color: inherit; text-decoration: inherit;">Throttling<wbr>Rate<wbr>Limit</a>
@@ -1007,7 +1007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The number of steady-state requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1019,7 +1019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Indicates whether the cached responses are encrypted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachettlinseconds_go">
 <a href="#cachettlinseconds_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Ttl<wbr>In<wbr>Seconds</a>
@@ -1027,7 +1027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The time-to-live (TTL) period, in seconds, that specifies how long API Gateway caches responses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachingenabled_go">
 <a href="#cachingenabled_go" style="color: inherit; text-decoration: inherit;">Caching<wbr>Enabled</a>
@@ -1035,7 +1035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Indicates whether responses are cached and returned for requests. You must enable a cache cluster on the stage to cache responses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datatraceenabled_go">
 <a href="#datatraceenabled_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Trace<wbr>Enabled</a>
@@ -1043,7 +1043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Indicates whether data trace logging is enabled for methods in the stage. API Gateway pushes these logs to Amazon CloudWatch Logs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpmethod_go">
 <a href="#httpmethod_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Method</a>
@@ -1051,7 +1051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The HTTP method. You can use an asterisk (*) as a wildcard to apply method settings to multiple methods.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logginglevel_go">
 <a href="#logginglevel_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Level</a>
@@ -1059,7 +1059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The logging level for this method. For valid values, see the loggingLevel property of the Stage (https://docs.aws.amazon.com/apigateway/api-reference/resource/stage/#loggingLevel) resource in the Amazon API Gateway API Reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricsenabled_go">
 <a href="#metricsenabled_go" style="color: inherit; text-decoration: inherit;">Metrics<wbr>Enabled</a>
@@ -1067,7 +1067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Indicates whether Amazon CloudWatch metrics are enabled for methods in the stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcepath_go">
 <a href="#resourcepath_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Path</a>
@@ -1075,7 +1075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The resource path for this method. Forward slashes (/) are encoded as ~1 and the initial slash must include a forward slash. For example, the path value /resource/subresource must be encoded as /~1resource~1subresource. To specify the root path, use only a slash (/). You can use an asterisk (*) as a wildcard to apply method settings to multiple methods.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throttlingburstlimit_go">
 <a href="#throttlingburstlimit_go" style="color: inherit; text-decoration: inherit;">Throttling<wbr>Burst<wbr>Limit</a>
@@ -1083,7 +1083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The number of burst requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throttlingratelimit_go">
 <a href="#throttlingratelimit_go" style="color: inherit; text-decoration: inherit;">Throttling<wbr>Rate<wbr>Limit</a>
@@ -1091,7 +1091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The number of steady-state requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1103,7 +1103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Indicates whether the cached responses are encrypted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachettlinseconds_nodejs">
 <a href="#cachettlinseconds_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Ttl<wbr>In<wbr>Seconds</a>
@@ -1111,7 +1111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The time-to-live (TTL) period, in seconds, that specifies how long API Gateway caches responses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachingenabled_nodejs">
 <a href="#cachingenabled_nodejs" style="color: inherit; text-decoration: inherit;">caching<wbr>Enabled</a>
@@ -1119,7 +1119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Indicates whether responses are cached and returned for requests. You must enable a cache cluster on the stage to cache responses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datatraceenabled_nodejs">
 <a href="#datatraceenabled_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Trace<wbr>Enabled</a>
@@ -1127,7 +1127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Indicates whether data trace logging is enabled for methods in the stage. API Gateway pushes these logs to Amazon CloudWatch Logs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpmethod_nodejs">
 <a href="#httpmethod_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Method</a>
@@ -1135,7 +1135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The HTTP method. You can use an asterisk (*) as a wildcard to apply method settings to multiple methods.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logginglevel_nodejs">
 <a href="#logginglevel_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Level</a>
@@ -1143,7 +1143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The logging level for this method. For valid values, see the loggingLevel property of the Stage (https://docs.aws.amazon.com/apigateway/api-reference/resource/stage/#loggingLevel) resource in the Amazon API Gateway API Reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricsenabled_nodejs">
 <a href="#metricsenabled_nodejs" style="color: inherit; text-decoration: inherit;">metrics<wbr>Enabled</a>
@@ -1151,7 +1151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Indicates whether Amazon CloudWatch metrics are enabled for methods in the stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcepath_nodejs">
 <a href="#resourcepath_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Path</a>
@@ -1159,7 +1159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The resource path for this method. Forward slashes (/) are encoded as ~1 and the initial slash must include a forward slash. For example, the path value /resource/subresource must be encoded as /~1resource~1subresource. To specify the root path, use only a slash (/). You can use an asterisk (*) as a wildcard to apply method settings to multiple methods.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throttlingburstlimit_nodejs">
 <a href="#throttlingburstlimit_nodejs" style="color: inherit; text-decoration: inherit;">throttling<wbr>Burst<wbr>Limit</a>
@@ -1167,7 +1167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The number of burst requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throttlingratelimit_nodejs">
 <a href="#throttlingratelimit_nodejs" style="color: inherit; text-decoration: inherit;">throttling<wbr>Rate<wbr>Limit</a>
@@ -1175,7 +1175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The number of steady-state requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1187,7 +1187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Indicates whether the cached responses are encrypted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cache_ttl_in_seconds_python">
 <a href="#cache_ttl_in_seconds_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>ttl_<wbr>in_<wbr>seconds</a>
@@ -1195,7 +1195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The time-to-live (TTL) period, in seconds, that specifies how long API Gateway caches responses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="caching_enabled_python">
 <a href="#caching_enabled_python" style="color: inherit; text-decoration: inherit;">caching_<wbr>enabled</a>
@@ -1203,7 +1203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Indicates whether responses are cached and returned for requests. You must enable a cache cluster on the stage to cache responses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_trace_enabled_python">
 <a href="#data_trace_enabled_python" style="color: inherit; text-decoration: inherit;">data_<wbr>trace_<wbr>enabled</a>
@@ -1211,7 +1211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Indicates whether data trace logging is enabled for methods in the stage. API Gateway pushes these logs to Amazon CloudWatch Logs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_method_python">
 <a href="#http_method_python" style="color: inherit; text-decoration: inherit;">http_<wbr>method</a>
@@ -1219,7 +1219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The HTTP method. You can use an asterisk (*) as a wildcard to apply method settings to multiple methods.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logging_level_python">
 <a href="#logging_level_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>level</a>
@@ -1227,7 +1227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The logging level for this method. For valid values, see the loggingLevel property of the Stage (https://docs.aws.amazon.com/apigateway/api-reference/resource/stage/#loggingLevel) resource in the Amazon API Gateway API Reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metrics_enabled_python">
 <a href="#metrics_enabled_python" style="color: inherit; text-decoration: inherit;">metrics_<wbr>enabled</a>
@@ -1235,7 +1235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Indicates whether Amazon CloudWatch metrics are enabled for methods in the stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_path_python">
 <a href="#resource_path_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>path</a>
@@ -1243,7 +1243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The resource path for this method. Forward slashes (/) are encoded as ~1 and the initial slash must include a forward slash. For example, the path value /resource/subresource must be encoded as /~1resource~1subresource. To specify the root path, use only a slash (/). You can use an asterisk (*) as a wildcard to apply method settings to multiple methods.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throttling_burst_limit_python">
 <a href="#throttling_burst_limit_python" style="color: inherit; text-decoration: inherit;">throttling_<wbr>burst_<wbr>limit</a>
@@ -1251,7 +1251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The number of burst requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throttling_rate_limit_python">
 <a href="#throttling_rate_limit_python" style="color: inherit; text-decoration: inherit;">throttling_<wbr>rate_<wbr>limit</a>
@@ -1259,7 +1259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The number of steady-state requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="stagetag">Stage<wbr>Tag</h4>
@@ -1273,7 +1273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The key name of the tag. You can specify a value that is 1 to 128 Unicode characters in length and cannot be prefixed with aws:.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1281,7 +1281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The value for the tag. You can specify a value that is 0 to 256 Unicode characters in length and cannot be prefixed with aws:.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1293,7 +1293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The key name of the tag. You can specify a value that is 1 to 128 Unicode characters in length and cannot be prefixed with aws:.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1301,7 +1301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The value for the tag. You can specify a value that is 0 to 256 Unicode characters in length and cannot be prefixed with aws:.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1313,7 +1313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The key name of the tag. You can specify a value that is 1 to 128 Unicode characters in length and cannot be prefixed with aws:.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1321,7 +1321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The value for the tag. You can specify a value that is 0 to 256 Unicode characters in length and cannot be prefixed with aws:.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1333,7 +1333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The key name of the tag. You can specify a value that is 1 to 128 Unicode characters in length and cannot be prefixed with aws:.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1341,7 +1341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The value for the tag. You can specify a value that is 0 to 256 Unicode characters in length and cannot be prefixed with aws:.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

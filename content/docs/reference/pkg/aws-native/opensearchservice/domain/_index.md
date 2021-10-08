@@ -32,7 +32,7 @@ An example resource schema demonstrating some basic constructs and validation ru
            <span class="nx">advanced_security_options</span><span class="p">:</span> <span class="nx">Optional[DomainAdvancedSecurityOptionsInputArgs]</span> = None<span class="p">,</span>
            <span class="nx">cluster_config</span><span class="p">:</span> <span class="nx">Optional[DomainClusterConfigArgs]</span> = None<span class="p">,</span>
            <span class="nx">cognito_options</span><span class="p">:</span> <span class="nx">Optional[DomainCognitoOptionsArgs]</span> = None<span class="p">,</span>
-           <span class="nx">domain_endpoint_options</span><span class="p">:</span> <span class="nx">Optional[DomainDomainEndpointOptionsArgs]</span> = None<span class="p">,</span>
+           <span class="nx">domain_endpoint_options</span><span class="p">:</span> <span class="nx">Optional[DomainEndpointOptionsArgs]</span> = None<span class="p">,</span>
            <span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">e_bs_options</span><span class="p">:</span> <span class="nx">Optional[DomainEBSOptionsArgs]</span> = None<span class="p">,</span>
            <span class="nx">encryption_at_rest_options</span><span class="p">:</span> <span class="nx">Optional[DomainEncryptionAtRestOptionsArgs]</span> = None<span class="p">,</span>
@@ -215,7 +215,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#domainendpointoptions_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Endpoint<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaindomainendpointoptions">Pulumi.<wbr>Aws<wbr>Native.<wbr>Open<wbr>Search<wbr>Service.<wbr>Inputs.<wbr>Domain<wbr>Domain<wbr>Endpoint<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#domainendpointoptions">Pulumi.<wbr>Aws<wbr>Native.<wbr>Open<wbr>Search<wbr>Service.<wbr>Inputs.<wbr>Domain<wbr>Endpoint<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -339,7 +339,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#domainendpointoptions_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Endpoint<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaindomainendpointoptions">Domain<wbr>Domain<wbr>Endpoint<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#domainendpointoptions">Domain<wbr>Endpoint<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -463,7 +463,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#domainendpointoptions_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Endpoint<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaindomainendpointoptions">Domain<wbr>Domain<wbr>Endpoint<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#domainendpointoptions">Domain<wbr>Endpoint<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -587,7 +587,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#domain_endpoint_options_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>endpoint_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaindomainendpointoptions">Domain<wbr>Domain<wbr>Endpoint<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#domainendpointoptions">Domain<wbr>Endpoint<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1487,184 +1487,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="domaindomainendpointoptions">Domain<wbr>Domain<wbr>Endpoint<wbr>Options</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="customendpoint_csharp">
-<a href="#customendpoint_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Endpoint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="customendpointcertificatearn_csharp">
-<a href="#customendpointcertificatearn_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Endpoint<wbr>Certificate<wbr>Arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="customendpointenabled_csharp">
-<a href="#customendpointenabled_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Endpoint<wbr>Enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="enforcehttps_csharp">
-<a href="#enforcehttps_csharp" style="color: inherit; text-decoration: inherit;">Enforce<wbr>HTTPS</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tlssecuritypolicy_csharp">
-<a href="#tlssecuritypolicy_csharp" style="color: inherit; text-decoration: inherit;">TLSSecurity<wbr>Policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="customendpoint_go">
-<a href="#customendpoint_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Endpoint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="customendpointcertificatearn_go">
-<a href="#customendpointcertificatearn_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Endpoint<wbr>Certificate<wbr>Arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="customendpointenabled_go">
-<a href="#customendpointenabled_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Endpoint<wbr>Enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="enforcehttps_go">
-<a href="#enforcehttps_go" style="color: inherit; text-decoration: inherit;">Enforce<wbr>HTTPS</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tlssecuritypolicy_go">
-<a href="#tlssecuritypolicy_go" style="color: inherit; text-decoration: inherit;">TLSSecurity<wbr>Policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="customendpoint_nodejs">
-<a href="#customendpoint_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Endpoint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="customendpointcertificatearn_nodejs">
-<a href="#customendpointcertificatearn_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Endpoint<wbr>Certificate<wbr>Arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="customendpointenabled_nodejs">
-<a href="#customendpointenabled_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Endpoint<wbr>Enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="enforcehttps_nodejs">
-<a href="#enforcehttps_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>HTTPS</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tlssecuritypolicy_nodejs">
-<a href="#tlssecuritypolicy_nodejs" style="color: inherit; text-decoration: inherit;">t<wbr>LSSecurity<wbr>Policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="custom_endpoint_python">
-<a href="#custom_endpoint_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>endpoint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="custom_endpoint_certificate_arn_python">
-<a href="#custom_endpoint_certificate_arn_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>endpoint_<wbr>certificate_<wbr>arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="custom_endpoint_enabled_python">
-<a href="#custom_endpoint_enabled_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>endpoint_<wbr>enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="enforce_https_python">
-<a href="#enforce_https_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>https</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="t_ls_security_policy_python">
-<a href="#t_ls_security_policy_python" style="color: inherit; text-decoration: inherit;">t_<wbr>ls_<wbr>security_<wbr>policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
 <h4 id="domainebsoptions">Domain<wbr>EBSOptions</h4>
 
 {{% choosable language csharp %}}
@@ -1886,6 +1708,184 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="kms_key_id_python">
 <a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="domainendpointoptions">Domain<wbr>Endpoint<wbr>Options</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="customendpoint_csharp">
+<a href="#customendpoint_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customendpointcertificatearn_csharp">
+<a href="#customendpointcertificatearn_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Endpoint<wbr>Certificate<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customendpointenabled_csharp">
+<a href="#customendpointenabled_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Endpoint<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enforcehttps_csharp">
+<a href="#enforcehttps_csharp" style="color: inherit; text-decoration: inherit;">Enforce<wbr>HTTPS</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tlssecuritypolicy_csharp">
+<a href="#tlssecuritypolicy_csharp" style="color: inherit; text-decoration: inherit;">TLSSecurity<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="customendpoint_go">
+<a href="#customendpoint_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customendpointcertificatearn_go">
+<a href="#customendpointcertificatearn_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Endpoint<wbr>Certificate<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customendpointenabled_go">
+<a href="#customendpointenabled_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Endpoint<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enforcehttps_go">
+<a href="#enforcehttps_go" style="color: inherit; text-decoration: inherit;">Enforce<wbr>HTTPS</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tlssecuritypolicy_go">
+<a href="#tlssecuritypolicy_go" style="color: inherit; text-decoration: inherit;">TLSSecurity<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="customendpoint_nodejs">
+<a href="#customendpoint_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customendpointcertificatearn_nodejs">
+<a href="#customendpointcertificatearn_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Endpoint<wbr>Certificate<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customendpointenabled_nodejs">
+<a href="#customendpointenabled_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Endpoint<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enforcehttps_nodejs">
+<a href="#enforcehttps_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>HTTPS</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tlssecuritypolicy_nodejs">
+<a href="#tlssecuritypolicy_nodejs" style="color: inherit; text-decoration: inherit;">t<wbr>LSSecurity<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="custom_endpoint_python">
+<a href="#custom_endpoint_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="custom_endpoint_certificate_arn_python">
+<a href="#custom_endpoint_certificate_arn_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>endpoint_<wbr>certificate_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="custom_endpoint_enabled_python">
+<a href="#custom_endpoint_enabled_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>endpoint_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enforce_https_python">
+<a href="#enforce_https_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>https</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="t_ls_security_policy_python">
+<a href="#t_ls_security_policy_python" style="color: inherit; text-decoration: inherit;">t_<wbr>ls_<wbr>security_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

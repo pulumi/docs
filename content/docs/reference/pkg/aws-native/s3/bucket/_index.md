@@ -367,9 +367,9 @@ const channel = new aws_native.ivs.Channel("channel", {
 <span class="k">def </span><span class="nx">Bucket</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
            <span class="nx">accelerate_configuration</span><span class="p">:</span> <span class="nx">Optional[BucketAccelerateConfigurationArgs]</span> = None<span class="p">,</span>
-           <span class="nx">access_control</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">access_control</span><span class="p">:</span> <span class="nx">Optional[BucketAccessControl]</span> = None<span class="p">,</span>
            <span class="nx">analytics_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketAnalyticsConfigurationArgs]]</span> = None<span class="p">,</span>
-           <span class="nx">bucket_encryption</span><span class="p">:</span> <span class="nx">Optional[BucketBucketEncryptionArgs]</span> = None<span class="p">,</span>
+           <span class="nx">bucket_encryption</span><span class="p">:</span> <span class="nx">Optional[BucketEncryptionArgs]</span> = None<span class="p">,</span>
            <span class="nx">bucket_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">cors_configuration</span><span class="p">:</span> <span class="nx">Optional[BucketCorsConfigurationArgs]</span> = None<span class="p">,</span>
            <span class="nx">intelligent_tiering_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketIntelligentTieringConfigurationArgs]]</span> = None<span class="p">,</span>
@@ -521,15 +521,15 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketaccelerateconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Inputs.<wbr>Bucket<wbr>Accelerate<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Configuration for the transfer acceleration state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesscontrol_csharp">
 <a href="#accesscontrol_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketaccesscontrol">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Bucket<wbr>Access<wbr>Control</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A canned access control list (ACL) that grants predefined permissions to the bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="analyticsconfigurations_csharp">
 <a href="#analyticsconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Analytics<wbr>Configurations</a>
@@ -537,13 +537,13 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketanalyticsconfiguration">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Inputs.<wbr>Bucket<wbr>Analytics<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The configuration and any analyses for the analytics filter of an Amazon S3 bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bucketencryption_csharp">
 <a href="#bucketencryption_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketbucketencryption">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Inputs.<wbr>Bucket<wbr>Bucket<wbr>Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketencryption">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Inputs.<wbr>Bucket<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -553,7 +553,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A name for the bucket. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the bucket name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="corsconfiguration_csharp">
 <a href="#corsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Configuration</a>
@@ -561,7 +561,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketcorsconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Inputs.<wbr>Bucket<wbr>Cors<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Rules that define cross-origin resource sharing of objects in this bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="intelligenttieringconfigurations_csharp">
 <a href="#intelligenttieringconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Intelligent<wbr>Tiering<wbr>Configurations</a>
@@ -569,7 +569,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketintelligenttieringconfiguration">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Inputs.<wbr>Bucket<wbr>Intelligent<wbr>Tiering<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the S3 Intelligent-Tiering configuration for an Amazon S3 bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inventoryconfigurations_csharp">
 <a href="#inventoryconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Inventory<wbr>Configurations</a>
@@ -577,7 +577,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketinventoryconfiguration">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Inputs.<wbr>Bucket<wbr>Inventory<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The inventory configuration for an Amazon S3 bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifecycleconfiguration_csharp">
 <a href="#lifecycleconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>Configuration</a>
@@ -585,7 +585,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlifecycleconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Inputs.<wbr>Bucket<wbr>Lifecycle<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Rules that define how Amazon S3 manages objects during their lifetime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingconfiguration_csharp">
 <a href="#loggingconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Configuration</a>
@@ -593,7 +593,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketloggingconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Inputs.<wbr>Bucket<wbr>Logging<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Settings that define where logs are stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricsconfigurations_csharp">
 <a href="#metricsconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Metrics<wbr>Configurations</a>
@@ -601,7 +601,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketmetricsconfiguration">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Inputs.<wbr>Bucket<wbr>Metrics<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Settings that define a metrics configuration for the CloudWatch request metrics from the bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationconfiguration_csharp">
 <a href="#notificationconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Configuration</a>
@@ -609,7 +609,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketnotificationconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Inputs.<wbr>Bucket<wbr>Notification<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Configuration that defines how Amazon S3 handles bucket notifications.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectlockconfiguration_csharp">
 <a href="#objectlockconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Lock<wbr>Configuration</a>
@@ -617,7 +617,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketobjectlockconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Inputs.<wbr>Bucket<wbr>Object<wbr>Lock<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Places an Object Lock configuration on the specified bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectlockenabled_csharp">
 <a href="#objectlockenabled_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Lock<wbr>Enabled</a>
@@ -625,7 +625,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Indicates whether this bucket has an Object Lock configuration enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ownershipcontrols_csharp">
 <a href="#ownershipcontrols_csharp" style="color: inherit; text-decoration: inherit;">Ownership<wbr>Controls</a>
@@ -633,7 +633,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketownershipcontrols">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Inputs.<wbr>Bucket<wbr>Ownership<wbr>Controls<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the container element for object ownership rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicaccessblockconfiguration_csharp">
 <a href="#publicaccessblockconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access<wbr>Block<wbr>Configuration</a>
@@ -649,7 +649,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketreplicationconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Inputs.<wbr>Bucket<wbr>Replication<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Configuration for replicating objects in an S3 bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -657,7 +657,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#buckettag">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Inputs.<wbr>Bucket<wbr>Tag<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}An arbitrary set of tags (key-value pairs) for this S3 bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versioningconfiguration_csharp">
 <a href="#versioningconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Versioning<wbr>Configuration</a>
@@ -685,15 +685,15 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketaccelerateconfiguration">Bucket<wbr>Accelerate<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Configuration for the transfer acceleration state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesscontrol_go">
 <a href="#accesscontrol_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketaccesscontrol">Bucket<wbr>Access<wbr>Control</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A canned access control list (ACL) that grants predefined permissions to the bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="analyticsconfigurations_go">
 <a href="#analyticsconfigurations_go" style="color: inherit; text-decoration: inherit;">Analytics<wbr>Configurations</a>
@@ -701,13 +701,13 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketanalyticsconfiguration">[]Bucket<wbr>Analytics<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The configuration and any analyses for the analytics filter of an Amazon S3 bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bucketencryption_go">
 <a href="#bucketencryption_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketbucketencryption">Bucket<wbr>Bucket<wbr>Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketencryption">Bucket<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -717,7 +717,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A name for the bucket. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the bucket name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="corsconfiguration_go">
 <a href="#corsconfiguration_go" style="color: inherit; text-decoration: inherit;">Cors<wbr>Configuration</a>
@@ -725,7 +725,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketcorsconfiguration">Bucket<wbr>Cors<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Rules that define cross-origin resource sharing of objects in this bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="intelligenttieringconfigurations_go">
 <a href="#intelligenttieringconfigurations_go" style="color: inherit; text-decoration: inherit;">Intelligent<wbr>Tiering<wbr>Configurations</a>
@@ -733,7 +733,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketintelligenttieringconfiguration">[]Bucket<wbr>Intelligent<wbr>Tiering<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the S3 Intelligent-Tiering configuration for an Amazon S3 bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inventoryconfigurations_go">
 <a href="#inventoryconfigurations_go" style="color: inherit; text-decoration: inherit;">Inventory<wbr>Configurations</a>
@@ -741,7 +741,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketinventoryconfiguration">[]Bucket<wbr>Inventory<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The inventory configuration for an Amazon S3 bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifecycleconfiguration_go">
 <a href="#lifecycleconfiguration_go" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>Configuration</a>
@@ -749,7 +749,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlifecycleconfiguration">Bucket<wbr>Lifecycle<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Rules that define how Amazon S3 manages objects during their lifetime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingconfiguration_go">
 <a href="#loggingconfiguration_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Configuration</a>
@@ -757,7 +757,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketloggingconfiguration">Bucket<wbr>Logging<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Settings that define where logs are stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricsconfigurations_go">
 <a href="#metricsconfigurations_go" style="color: inherit; text-decoration: inherit;">Metrics<wbr>Configurations</a>
@@ -765,7 +765,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketmetricsconfiguration">[]Bucket<wbr>Metrics<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Settings that define a metrics configuration for the CloudWatch request metrics from the bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationconfiguration_go">
 <a href="#notificationconfiguration_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Configuration</a>
@@ -773,7 +773,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketnotificationconfiguration">Bucket<wbr>Notification<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Configuration that defines how Amazon S3 handles bucket notifications.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectlockconfiguration_go">
 <a href="#objectlockconfiguration_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Lock<wbr>Configuration</a>
@@ -781,7 +781,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketobjectlockconfiguration">Bucket<wbr>Object<wbr>Lock<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Places an Object Lock configuration on the specified bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectlockenabled_go">
 <a href="#objectlockenabled_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Lock<wbr>Enabled</a>
@@ -789,7 +789,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Indicates whether this bucket has an Object Lock configuration enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ownershipcontrols_go">
 <a href="#ownershipcontrols_go" style="color: inherit; text-decoration: inherit;">Ownership<wbr>Controls</a>
@@ -797,7 +797,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketownershipcontrols">Bucket<wbr>Ownership<wbr>Controls<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the container element for object ownership rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicaccessblockconfiguration_go">
 <a href="#publicaccessblockconfiguration_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Access<wbr>Block<wbr>Configuration</a>
@@ -813,7 +813,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketreplicationconfiguration">Bucket<wbr>Replication<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Configuration for replicating objects in an S3 bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -821,7 +821,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#buckettag">[]Bucket<wbr>Tag<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}An arbitrary set of tags (key-value pairs) for this S3 bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versioningconfiguration_go">
 <a href="#versioningconfiguration_go" style="color: inherit; text-decoration: inherit;">Versioning<wbr>Configuration</a>
@@ -849,15 +849,15 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketaccelerateconfiguration">Bucket<wbr>Accelerate<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Configuration for the transfer acceleration state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesscontrol_nodejs">
 <a href="#accesscontrol_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketaccesscontrol">Bucket<wbr>Access<wbr>Control</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A canned access control list (ACL) that grants predefined permissions to the bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="analyticsconfigurations_nodejs">
 <a href="#analyticsconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">analytics<wbr>Configurations</a>
@@ -865,13 +865,13 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketanalyticsconfiguration">Bucket<wbr>Analytics<wbr>Configuration<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The configuration and any analyses for the analytics filter of an Amazon S3 bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bucketencryption_nodejs">
 <a href="#bucketencryption_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketbucketencryption">Bucket<wbr>Bucket<wbr>Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketencryption">Bucket<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -881,7 +881,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A name for the bucket. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the bucket name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="corsconfiguration_nodejs">
 <a href="#corsconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Configuration</a>
@@ -889,7 +889,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketcorsconfiguration">Bucket<wbr>Cors<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Rules that define cross-origin resource sharing of objects in this bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="intelligenttieringconfigurations_nodejs">
 <a href="#intelligenttieringconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">intelligent<wbr>Tiering<wbr>Configurations</a>
@@ -897,7 +897,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketintelligenttieringconfiguration">Bucket<wbr>Intelligent<wbr>Tiering<wbr>Configuration<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the S3 Intelligent-Tiering configuration for an Amazon S3 bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inventoryconfigurations_nodejs">
 <a href="#inventoryconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">inventory<wbr>Configurations</a>
@@ -905,7 +905,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketinventoryconfiguration">Bucket<wbr>Inventory<wbr>Configuration<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The inventory configuration for an Amazon S3 bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifecycleconfiguration_nodejs">
 <a href="#lifecycleconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle<wbr>Configuration</a>
@@ -913,7 +913,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlifecycleconfiguration">Bucket<wbr>Lifecycle<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Rules that define how Amazon S3 manages objects during their lifetime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingconfiguration_nodejs">
 <a href="#loggingconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Configuration</a>
@@ -921,7 +921,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketloggingconfiguration">Bucket<wbr>Logging<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Settings that define where logs are stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricsconfigurations_nodejs">
 <a href="#metricsconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">metrics<wbr>Configurations</a>
@@ -929,7 +929,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketmetricsconfiguration">Bucket<wbr>Metrics<wbr>Configuration<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Settings that define a metrics configuration for the CloudWatch request metrics from the bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationconfiguration_nodejs">
 <a href="#notificationconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Configuration</a>
@@ -937,7 +937,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketnotificationconfiguration">Bucket<wbr>Notification<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Configuration that defines how Amazon S3 handles bucket notifications.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectlockconfiguration_nodejs">
 <a href="#objectlockconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Lock<wbr>Configuration</a>
@@ -945,7 +945,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketobjectlockconfiguration">Bucket<wbr>Object<wbr>Lock<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Places an Object Lock configuration on the specified bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectlockenabled_nodejs">
 <a href="#objectlockenabled_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Lock<wbr>Enabled</a>
@@ -953,7 +953,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Indicates whether this bucket has an Object Lock configuration enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ownershipcontrols_nodejs">
 <a href="#ownershipcontrols_nodejs" style="color: inherit; text-decoration: inherit;">ownership<wbr>Controls</a>
@@ -961,7 +961,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketownershipcontrols">Bucket<wbr>Ownership<wbr>Controls<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the container element for object ownership rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicaccessblockconfiguration_nodejs">
 <a href="#publicaccessblockconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access<wbr>Block<wbr>Configuration</a>
@@ -977,7 +977,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketreplicationconfiguration">Bucket<wbr>Replication<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Configuration for replicating objects in an S3 bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -985,7 +985,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#buckettag">Bucket<wbr>Tag<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}An arbitrary set of tags (key-value pairs) for this S3 bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versioningconfiguration_nodejs">
 <a href="#versioningconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">versioning<wbr>Configuration</a>
@@ -1013,15 +1013,15 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketaccelerateconfiguration">Bucket<wbr>Accelerate<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Configuration for the transfer acceleration state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="access_control_python">
 <a href="#access_control_python" style="color: inherit; text-decoration: inherit;">access_<wbr>control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#bucketaccesscontrol">Bucket<wbr>Access<wbr>Control</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A canned access control list (ACL) that grants predefined permissions to the bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="analytics_configurations_python">
 <a href="#analytics_configurations_python" style="color: inherit; text-decoration: inherit;">analytics_<wbr>configurations</a>
@@ -1029,13 +1029,13 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketanalyticsconfiguration">Sequence[Bucket<wbr>Analytics<wbr>Configuration<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The configuration and any analyses for the analytics filter of an Amazon S3 bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bucket_encryption_python">
 <a href="#bucket_encryption_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketbucketencryption">Bucket<wbr>Bucket<wbr>Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketencryption">Bucket<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1045,7 +1045,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A name for the bucket. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the bucket name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cors_configuration_python">
 <a href="#cors_configuration_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>configuration</a>
@@ -1053,7 +1053,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketcorsconfiguration">Bucket<wbr>Cors<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Rules that define cross-origin resource sharing of objects in this bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="intelligent_tiering_configurations_python">
 <a href="#intelligent_tiering_configurations_python" style="color: inherit; text-decoration: inherit;">intelligent_<wbr>tiering_<wbr>configurations</a>
@@ -1061,7 +1061,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketintelligenttieringconfiguration">Sequence[Bucket<wbr>Intelligent<wbr>Tiering<wbr>Configuration<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the S3 Intelligent-Tiering configuration for an Amazon S3 bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inventory_configurations_python">
 <a href="#inventory_configurations_python" style="color: inherit; text-decoration: inherit;">inventory_<wbr>configurations</a>
@@ -1069,7 +1069,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketinventoryconfiguration">Sequence[Bucket<wbr>Inventory<wbr>Configuration<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The inventory configuration for an Amazon S3 bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifecycle_configuration_python">
 <a href="#lifecycle_configuration_python" style="color: inherit; text-decoration: inherit;">lifecycle_<wbr>configuration</a>
@@ -1077,7 +1077,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlifecycleconfiguration">Bucket<wbr>Lifecycle<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Rules that define how Amazon S3 manages objects during their lifetime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logging_configuration_python">
 <a href="#logging_configuration_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>configuration</a>
@@ -1085,7 +1085,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketloggingconfiguration">Bucket<wbr>Logging<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Settings that define where logs are stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metrics_configurations_python">
 <a href="#metrics_configurations_python" style="color: inherit; text-decoration: inherit;">metrics_<wbr>configurations</a>
@@ -1093,7 +1093,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketmetricsconfiguration">Sequence[Bucket<wbr>Metrics<wbr>Configuration<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Settings that define a metrics configuration for the CloudWatch request metrics from the bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notification_configuration_python">
 <a href="#notification_configuration_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>configuration</a>
@@ -1101,7 +1101,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketnotificationconfiguration">Bucket<wbr>Notification<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Configuration that defines how Amazon S3 handles bucket notifications.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="object_lock_configuration_python">
 <a href="#object_lock_configuration_python" style="color: inherit; text-decoration: inherit;">object_<wbr>lock_<wbr>configuration</a>
@@ -1109,7 +1109,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketobjectlockconfiguration">Bucket<wbr>Object<wbr>Lock<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Places an Object Lock configuration on the specified bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="object_lock_enabled_python">
 <a href="#object_lock_enabled_python" style="color: inherit; text-decoration: inherit;">object_<wbr>lock_<wbr>enabled</a>
@@ -1117,7 +1117,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Indicates whether this bucket has an Object Lock configuration enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ownership_controls_python">
 <a href="#ownership_controls_python" style="color: inherit; text-decoration: inherit;">ownership_<wbr>controls</a>
@@ -1125,7 +1125,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketownershipcontrols">Bucket<wbr>Ownership<wbr>Controls<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the container element for object ownership rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_access_block_configuration_python">
 <a href="#public_access_block_configuration_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access_<wbr>block_<wbr>configuration</a>
@@ -1141,7 +1141,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketreplicationconfiguration">Bucket<wbr>Replication<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Configuration for replicating objects in an S3 bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1149,7 +1149,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#buckettag">Sequence[Bucket<wbr>Tag<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}An arbitrary set of tags (key-value pairs) for this S3 bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versioning_configuration_python">
 <a href="#versioning_configuration_python" style="color: inherit; text-decoration: inherit;">versioning_<wbr>configuration</a>
@@ -1184,7 +1184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the specified bucket.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="domainname_csharp">
 <a href="#domainname_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
@@ -1192,7 +1192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The IPv4 DNS name of the specified bucket.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dualstackdomainname_csharp">
 <a href="#dualstackdomainname_csharp" style="color: inherit; text-decoration: inherit;">Dual<wbr>Stack<wbr>Domain<wbr>Name</a>
@@ -1200,7 +1200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The IPv6 DNS name of the specified bucket. For more information about dual-stack endpoints, see [Using Amazon S3 Dual-Stack Endpoints](https://docs.aws.amazon.com/AmazonS3/latest/dev/dual-stack-endpoints.html).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1216,7 +1216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Returns the regional domain name of the specified bucket.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="websiteurl_csharp">
 <a href="#websiteurl_csharp" style="color: inherit; text-decoration: inherit;">Website<wbr>URL</a>
@@ -1224,7 +1224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The Amazon S3 website endpoint for the specified bucket.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1236,7 +1236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the specified bucket.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="domainname_go">
 <a href="#domainname_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
@@ -1244,7 +1244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The IPv4 DNS name of the specified bucket.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dualstackdomainname_go">
 <a href="#dualstackdomainname_go" style="color: inherit; text-decoration: inherit;">Dual<wbr>Stack<wbr>Domain<wbr>Name</a>
@@ -1252,7 +1252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The IPv6 DNS name of the specified bucket. For more information about dual-stack endpoints, see [Using Amazon S3 Dual-Stack Endpoints](https://docs.aws.amazon.com/AmazonS3/latest/dev/dual-stack-endpoints.html).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1268,7 +1268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Returns the regional domain name of the specified bucket.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="websiteurl_go">
 <a href="#websiteurl_go" style="color: inherit; text-decoration: inherit;">Website<wbr>URL</a>
@@ -1276,7 +1276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The Amazon S3 website endpoint for the specified bucket.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1288,7 +1288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the specified bucket.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="domainname_nodejs">
 <a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
@@ -1296,7 +1296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The IPv4 DNS name of the specified bucket.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dualstackdomainname_nodejs">
 <a href="#dualstackdomainname_nodejs" style="color: inherit; text-decoration: inherit;">dual<wbr>Stack<wbr>Domain<wbr>Name</a>
@@ -1304,7 +1304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The IPv6 DNS name of the specified bucket. For more information about dual-stack endpoints, see [Using Amazon S3 Dual-Stack Endpoints](https://docs.aws.amazon.com/AmazonS3/latest/dev/dual-stack-endpoints.html).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1320,7 +1320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Returns the regional domain name of the specified bucket.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="websiteurl_nodejs">
 <a href="#websiteurl_nodejs" style="color: inherit; text-decoration: inherit;">website<wbr>URL</a>
@@ -1328,7 +1328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The Amazon S3 website endpoint for the specified bucket.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1340,7 +1340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the specified bucket.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="domain_name_python">
 <a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
@@ -1348,7 +1348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The IPv4 DNS name of the specified bucket.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dual_stack_domain_name_python">
 <a href="#dual_stack_domain_name_python" style="color: inherit; text-decoration: inherit;">dual_<wbr>stack_<wbr>domain_<wbr>name</a>
@@ -1356,7 +1356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The IPv6 DNS name of the specified bucket. For more information about dual-stack endpoints, see [Using Amazon S3 Dual-Stack Endpoints](https://docs.aws.amazon.com/AmazonS3/latest/dev/dual-stack-endpoints.html).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1372,7 +1372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Returns the regional domain name of the specified bucket.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="website_url_python">
 <a href="#website_url_python" style="color: inherit; text-decoration: inherit;">website_<wbr>url</a>
@@ -1380,7 +1380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The Amazon S3 website endpoint for the specified bucket.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1404,7 +1404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the number of days after which Amazon S3 aborts an incomplete multipart upload.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1416,7 +1416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the number of days after which Amazon S3 aborts an incomplete multipart upload.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1428,7 +1428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the number of days after which Amazon S3 aborts an incomplete multipart upload.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1440,7 +1440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the number of days after which Amazon S3 aborts an incomplete multipart upload.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="bucketaccelerateconfiguration">Bucket<wbr>Accelerate<wbr>Configuration</h4>
@@ -1452,9 +1452,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerationstatus_csharp" style="color: inherit; text-decoration: inherit;">Acceleration<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketaccelerateconfigurationaccelerationstatus">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Bucket<wbr>Accelerate<wbr>Configuration<wbr>Acceleration<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Configures the transfer acceleration state for an Amazon S3 bucket.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1464,9 +1464,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerationstatus_go" style="color: inherit; text-decoration: inherit;">Acceleration<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketaccelerateconfigurationaccelerationstatus">Bucket<wbr>Accelerate<wbr>Configuration<wbr>Acceleration<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Configures the transfer acceleration state for an Amazon S3 bucket.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1476,9 +1476,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerationstatus_nodejs" style="color: inherit; text-decoration: inherit;">acceleration<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketaccelerateconfigurationaccelerationstatus">Bucket<wbr>Accelerate<wbr>Configuration<wbr>Acceleration<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Configures the transfer acceleration state for an Amazon S3 bucket.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1488,9 +1488,85 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acceleration_status_python" style="color: inherit; text-decoration: inherit;">acceleration_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#bucketaccelerateconfigurationaccelerationstatus">Bucket<wbr>Accelerate<wbr>Configuration<wbr>Acceleration<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Configures the transfer acceleration state for an Amazon S3 bucket.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketaccelerateconfigurationaccelerationstatus">Bucket<wbr>Accelerate<wbr>Configuration<wbr>Acceleration<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Suspended</dt>
+    <dd>Suspended</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Bucket<wbr>Accelerate<wbr>Configuration<wbr>Acceleration<wbr>Status<wbr>Enabled</dt>
+    <dd>Enabled</dd><dt>Bucket<wbr>Accelerate<wbr>Configuration<wbr>Acceleration<wbr>Status<wbr>Suspended</dt>
+    <dd>Suspended</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Suspended</dt>
+    <dd>Suspended</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ENABLED</dt>
+    <dd>Enabled</dd><dt>SUSPENDED</dt>
+    <dd>Suspended</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketaccesscontrol">Bucket<wbr>Access<wbr>Control</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Authenticated<wbr>Read</dt>
+    <dd>AuthenticatedRead</dd><dt>Aws<wbr>Exec<wbr>Read</dt>
+    <dd>AwsExecRead</dd><dt>Bucket<wbr>Owner<wbr>Full<wbr>Control</dt>
+    <dd>BucketOwnerFullControl</dd><dt>Bucket<wbr>Owner<wbr>Read</dt>
+    <dd>BucketOwnerRead</dd><dt>Log<wbr>Delivery<wbr>Write</dt>
+    <dd>LogDeliveryWrite</dd><dt>Private</dt>
+    <dd>Private</dd><dt>Public<wbr>Read</dt>
+    <dd>PublicRead</dd><dt>Public<wbr>Read<wbr>Write</dt>
+    <dd>PublicReadWrite</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Bucket<wbr>Access<wbr>Control<wbr>Authenticated<wbr>Read</dt>
+    <dd>AuthenticatedRead</dd><dt>Bucket<wbr>Access<wbr>Control<wbr>Aws<wbr>Exec<wbr>Read</dt>
+    <dd>AwsExecRead</dd><dt>Bucket<wbr>Access<wbr>Control<wbr>Bucket<wbr>Owner<wbr>Full<wbr>Control</dt>
+    <dd>BucketOwnerFullControl</dd><dt>Bucket<wbr>Access<wbr>Control<wbr>Bucket<wbr>Owner<wbr>Read</dt>
+    <dd>BucketOwnerRead</dd><dt>Bucket<wbr>Access<wbr>Control<wbr>Log<wbr>Delivery<wbr>Write</dt>
+    <dd>LogDeliveryWrite</dd><dt>Bucket<wbr>Access<wbr>Control<wbr>Private</dt>
+    <dd>Private</dd><dt>Bucket<wbr>Access<wbr>Control<wbr>Public<wbr>Read</dt>
+    <dd>PublicRead</dd><dt>Bucket<wbr>Access<wbr>Control<wbr>Public<wbr>Read<wbr>Write</dt>
+    <dd>PublicReadWrite</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Authenticated<wbr>Read</dt>
+    <dd>AuthenticatedRead</dd><dt>Aws<wbr>Exec<wbr>Read</dt>
+    <dd>AwsExecRead</dd><dt>Bucket<wbr>Owner<wbr>Full<wbr>Control</dt>
+    <dd>BucketOwnerFullControl</dd><dt>Bucket<wbr>Owner<wbr>Read</dt>
+    <dd>BucketOwnerRead</dd><dt>Log<wbr>Delivery<wbr>Write</dt>
+    <dd>LogDeliveryWrite</dd><dt>Private</dt>
+    <dd>Private</dd><dt>Public<wbr>Read</dt>
+    <dd>PublicRead</dd><dt>Public<wbr>Read<wbr>Write</dt>
+    <dd>PublicReadWrite</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>AUTHENTICATED_READ</dt>
+    <dd>AuthenticatedRead</dd><dt>AWS_EXEC_READ</dt>
+    <dd>AwsExecRead</dd><dt>BUCKET_OWNER_FULL_CONTROL</dt>
+    <dd>BucketOwnerFullControl</dd><dt>BUCKET_OWNER_READ</dt>
+    <dd>BucketOwnerRead</dd><dt>LOG_DELIVERY_WRITE</dt>
+    <dd>LogDeliveryWrite</dd><dt>PRIVATE</dt>
+    <dd>Private</dd><dt>PUBLIC_READ</dt>
+    <dd>PublicRead</dd><dt>PUBLIC_READ_WRITE</dt>
+    <dd>PublicReadWrite</dd></dl>
 {{% /choosable %}}
 
 <h4 id="bucketaccesscontroltranslation">Bucket<wbr>Access<wbr>Control<wbr>Translation</h4>
@@ -1554,7 +1630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The ID that identifies the analytics configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageclassanalysis_csharp">
 <a href="#storageclassanalysis_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class<wbr>Analysis</a>
@@ -1570,7 +1646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The prefix that an object must have to be included in the analytics results.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagfilters_csharp">
 <a href="#tagfilters_csharp" style="color: inherit; text-decoration: inherit;">Tag<wbr>Filters</a>
@@ -1590,7 +1666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The ID that identifies the analytics configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageclassanalysis_go">
 <a href="#storageclassanalysis_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class<wbr>Analysis</a>
@@ -1606,7 +1682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The prefix that an object must have to be included in the analytics results.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagfilters_go">
 <a href="#tagfilters_go" style="color: inherit; text-decoration: inherit;">Tag<wbr>Filters</a>
@@ -1626,7 +1702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The ID that identifies the analytics configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageclassanalysis_nodejs">
 <a href="#storageclassanalysis_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Class<wbr>Analysis</a>
@@ -1642,7 +1718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The prefix that an object must have to be included in the analytics results.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagfilters_nodejs">
 <a href="#tagfilters_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Filters</a>
@@ -1662,7 +1738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The ID that identifies the analytics configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storage_class_analysis_python">
 <a href="#storage_class_analysis_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>class_<wbr>analysis</a>
@@ -1678,63 +1754,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The prefix that an object must have to be included in the analytics results.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tag_filters_python">
 <a href="#tag_filters_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#buckettagfilter">Sequence[Bucket<wbr>Tag<wbr>Filter]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="bucketbucketencryption">Bucket<wbr>Bucket<wbr>Encryption</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="serversideencryptionconfiguration_csharp">
-<a href="#serversideencryptionconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Side<wbr>Encryption<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketserversideencryptionrule">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Inputs.<wbr>Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Rule&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="serversideencryptionconfiguration_go">
-<a href="#serversideencryptionconfiguration_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Side<wbr>Encryption<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketserversideencryptionrule">[]Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Rule</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="serversideencryptionconfiguration_nodejs">
-<a href="#serversideencryptionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Side<wbr>Encryption<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketserversideencryptionrule">Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Rule[]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="server_side_encryption_configuration_python">
-<a href="#server_side_encryption_configuration_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>encryption_<wbr>configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketserversideencryptionrule">Sequence[Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1798,9 +1824,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedmethods_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="#bucketcorsruleallowedmethodsitem">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Bucket<wbr>Cors<wbr>Rule<wbr>Allowed<wbr>Methods<wbr>Item&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}An HTTP method that you allow the origin to execute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="allowedorigins_csharp">
 <a href="#allowedorigins_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Origins</a>
@@ -1808,7 +1834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}One or more origins you want customers to be able to access the bucket from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedheaders_csharp">
 <a href="#allowedheaders_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Headers</a>
@@ -1816,7 +1842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Headers that are specified in the Access-Control-Request-Headers header.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exposedheaders_csharp">
 <a href="#exposedheaders_csharp" style="color: inherit; text-decoration: inherit;">Exposed<wbr>Headers</a>
@@ -1824,7 +1850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}One or more headers in the response that you want customers to be able to access from their applications (for example, from a JavaScript XMLHttpRequest object).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1832,7 +1858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A unique identifier for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxage_csharp">
 <a href="#maxage_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
@@ -1840,7 +1866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The time in seconds that your browser is to cache the preflight response for the specified resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1850,9 +1876,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedmethods_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="#bucketcorsruleallowedmethodsitem">[]Bucket<wbr>Cors<wbr>Rule<wbr>Allowed<wbr>Methods<wbr>Item</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}An HTTP method that you allow the origin to execute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="allowedorigins_go">
 <a href="#allowedorigins_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Origins</a>
@@ -1860,7 +1886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}One or more origins you want customers to be able to access the bucket from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedheaders_go">
 <a href="#allowedheaders_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Headers</a>
@@ -1868,7 +1894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Headers that are specified in the Access-Control-Request-Headers header.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exposedheaders_go">
 <a href="#exposedheaders_go" style="color: inherit; text-decoration: inherit;">Exposed<wbr>Headers</a>
@@ -1876,7 +1902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}One or more headers in the response that you want customers to be able to access from their applications (for example, from a JavaScript XMLHttpRequest object).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1884,7 +1910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A unique identifier for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxage_go">
 <a href="#maxage_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
@@ -1892,7 +1918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The time in seconds that your browser is to cache the preflight response for the specified resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1902,9 +1928,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedmethods_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="#bucketcorsruleallowedmethodsitem">Bucket<wbr>Cors<wbr>Rule<wbr>Allowed<wbr>Methods<wbr>Item[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}An HTTP method that you allow the origin to execute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="allowedorigins_nodejs">
 <a href="#allowedorigins_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
@@ -1912,7 +1938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}One or more origins you want customers to be able to access the bucket from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedheaders_nodejs">
 <a href="#allowedheaders_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Headers</a>
@@ -1920,7 +1946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Headers that are specified in the Access-Control-Request-Headers header.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exposedheaders_nodejs">
 <a href="#exposedheaders_nodejs" style="color: inherit; text-decoration: inherit;">exposed<wbr>Headers</a>
@@ -1928,7 +1954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}One or more headers in the response that you want customers to be able to access from their applications (for example, from a JavaScript XMLHttpRequest object).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1936,7 +1962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A unique identifier for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxage_nodejs">
 <a href="#maxage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age</a>
@@ -1944,7 +1970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The time in seconds that your browser is to cache the preflight response for the specified resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1954,9 +1980,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_methods_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type"><a href="#bucketcorsruleallowedmethodsitem">Sequence[Bucket<wbr>Cors<wbr>Rule<wbr>Allowed<wbr>Methods<wbr>Item]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}An HTTP method that you allow the origin to execute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="allowed_origins_python">
 <a href="#allowed_origins_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>origins</a>
@@ -1964,7 +1990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}One or more origins you want customers to be able to access the bucket from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowed_headers_python">
 <a href="#allowed_headers_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>headers</a>
@@ -1972,7 +1998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Headers that are specified in the Access-Control-Request-Headers header.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exposed_headers_python">
 <a href="#exposed_headers_python" style="color: inherit; text-decoration: inherit;">exposed_<wbr>headers</a>
@@ -1980,7 +2006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}One or more headers in the response that you want customers to be able to access from their applications (for example, from a JavaScript XMLHttpRequest object).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1988,7 +2014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A unique identifier for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_age_python">
 <a href="#max_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age</a>
@@ -1996,7 +2022,45 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The time in seconds that your browser is to cache the preflight response for the specified resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketcorsruleallowedmethodsitem">Bucket<wbr>Cors<wbr>Rule<wbr>Allowed<wbr>Methods<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Get</dt>
+    <dd>GET</dd><dt>Put</dt>
+    <dd>PUT</dd><dt>Head</dt>
+    <dd>HEAD</dd><dt>Post</dt>
+    <dd>POST</dd><dt>Delete</dt>
+    <dd>DELETE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Bucket<wbr>Cors<wbr>Rule<wbr>Allowed<wbr>Methods<wbr>Item<wbr>Get</dt>
+    <dd>GET</dd><dt>Bucket<wbr>Cors<wbr>Rule<wbr>Allowed<wbr>Methods<wbr>Item<wbr>Put</dt>
+    <dd>PUT</dd><dt>Bucket<wbr>Cors<wbr>Rule<wbr>Allowed<wbr>Methods<wbr>Item<wbr>Head</dt>
+    <dd>HEAD</dd><dt>Bucket<wbr>Cors<wbr>Rule<wbr>Allowed<wbr>Methods<wbr>Item<wbr>Post</dt>
+    <dd>POST</dd><dt>Bucket<wbr>Cors<wbr>Rule<wbr>Allowed<wbr>Methods<wbr>Item<wbr>Delete</dt>
+    <dd>DELETE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Get</dt>
+    <dd>GET</dd><dt>Put</dt>
+    <dd>PUT</dd><dt>Head</dt>
+    <dd>HEAD</dd><dt>Post</dt>
+    <dd>POST</dd><dt>Delete</dt>
+    <dd>DELETE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>GET</dt>
+    <dd>GET</dd><dt>PUT</dt>
+    <dd>PUT</dd><dt>HEAD</dt>
+    <dd>HEAD</dd><dt>POST</dt>
+    <dd>POST</dd><dt>DELETE</dt>
+    <dd>DELETE</dd></dl>
 {{% /choosable %}}
 
 <h4 id="bucketdataexport">Bucket<wbr>Data<wbr>Export</h4>
@@ -2018,7 +2082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The version of the output schema to use when exporting data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2038,7 +2102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The version of the output schema to use when exporting data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2058,7 +2122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The version of the output schema to use when exporting data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2078,7 +2142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The version of the output schema to use when exporting data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="bucketdefaultretention">Bucket<wbr>Default<wbr>Retention</h4>
@@ -2098,7 +2162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketdefaultretentionmode">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Bucket<wbr>Default<wbr>Retention<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2126,7 +2190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketdefaultretentionmode">Bucket<wbr>Default<wbr>Retention<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2154,7 +2218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketdefaultretentionmode">Bucket<wbr>Default<wbr>Retention<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2182,7 +2246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#bucketdefaultretentionmode">Bucket<wbr>Default<wbr>Retention<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2195,6 +2259,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="bucketdefaultretentionmode">Bucket<wbr>Default<wbr>Retention<wbr>Mode</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Compliance</dt>
+    <dd>COMPLIANCE</dd><dt>Governance</dt>
+    <dd>GOVERNANCE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Bucket<wbr>Default<wbr>Retention<wbr>Mode<wbr>Compliance</dt>
+    <dd>COMPLIANCE</dd><dt>Bucket<wbr>Default<wbr>Retention<wbr>Mode<wbr>Governance</dt>
+    <dd>GOVERNANCE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Compliance</dt>
+    <dd>COMPLIANCE</dd><dt>Governance</dt>
+    <dd>GOVERNANCE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>COMPLIANCE</dt>
+    <dd>COMPLIANCE</dd><dt>GOVERNANCE</dt>
+    <dd>GOVERNANCE</dd></dl>
+{{% /choosable %}}
+
 <h4 id="bucketdeletemarkerreplication">Bucket<wbr>Delete<wbr>Marker<wbr>Replication</h4>
 
 {{% choosable language csharp %}}
@@ -2204,7 +2294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketdeletemarkerreplicationstatus">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Bucket<wbr>Delete<wbr>Marker<wbr>Replication<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2216,7 +2306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketdeletemarkerreplicationstatus">Bucket<wbr>Delete<wbr>Marker<wbr>Replication<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2228,7 +2318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketdeletemarkerreplicationstatus">Bucket<wbr>Delete<wbr>Marker<wbr>Replication<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2240,9 +2330,35 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#bucketdeletemarkerreplicationstatus">Bucket<wbr>Delete<wbr>Marker<wbr>Replication<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketdeletemarkerreplicationstatus">Bucket<wbr>Delete<wbr>Marker<wbr>Replication<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Disabled</dt>
+    <dd>Disabled</dd><dt>Enabled</dt>
+    <dd>Enabled</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Bucket<wbr>Delete<wbr>Marker<wbr>Replication<wbr>Status<wbr>Disabled</dt>
+    <dd>Disabled</dd><dt>Bucket<wbr>Delete<wbr>Marker<wbr>Replication<wbr>Status<wbr>Enabled</dt>
+    <dd>Enabled</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Disabled</dt>
+    <dd>Disabled</dd><dt>Enabled</dt>
+    <dd>Enabled</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DISABLED</dt>
+    <dd>Disabled</dd><dt>ENABLED</dt>
+    <dd>Enabled</dd></dl>
 {{% /choosable %}}
 
 <h4 id="bucketdestination">Bucket<wbr>Destination</h4>
@@ -2256,15 +2372,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the bucket to which data is exported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="format_csharp">
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketdestinationformat">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Bucket<wbr>Destination<wbr>Format</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the file format used when exporting data to Amazon S3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bucketaccountid_csharp">
 <a href="#bucketaccountid_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Account<wbr>Id</a>
@@ -2272,7 +2388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The account ID that owns the destination S3 bucket. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_csharp">
 <a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
@@ -2280,7 +2396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The prefix to use when exporting data. The prefix is prepended to all results.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2292,15 +2408,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the bucket to which data is exported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="format_go">
 <a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketdestinationformat">Bucket<wbr>Destination<wbr>Format</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the file format used when exporting data to Amazon S3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bucketaccountid_go">
 <a href="#bucketaccountid_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Account<wbr>Id</a>
@@ -2308,7 +2424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The account ID that owns the destination S3 bucket. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_go">
 <a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
@@ -2316,7 +2432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The prefix to use when exporting data. The prefix is prepended to all results.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2328,15 +2444,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the bucket to which data is exported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="format_nodejs">
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketdestinationformat">Bucket<wbr>Destination<wbr>Format</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the file format used when exporting data to Amazon S3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bucketaccountid_nodejs">
 <a href="#bucketaccountid_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Account<wbr>Id</a>
@@ -2344,7 +2460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The account ID that owns the destination S3 bucket. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_nodejs">
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
@@ -2352,7 +2468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The prefix to use when exporting data. The prefix is prepended to all results.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2364,15 +2480,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the bucket to which data is exported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="format_python">
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#bucketdestinationformat">Bucket<wbr>Destination<wbr>Format</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the file format used when exporting data to Amazon S3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bucket_account_id_python">
 <a href="#bucket_account_id_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>account_<wbr>id</a>
@@ -2380,7 +2496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The account ID that owns the destination S3 bucket. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_python">
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
@@ -2388,7 +2504,87 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The prefix to use when exporting data. The prefix is prepended to all results.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketdestinationformat">Bucket<wbr>Destination<wbr>Format</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Csv</dt>
+    <dd>CSV</dd><dt>Orc</dt>
+    <dd>ORC</dd><dt>Parquet</dt>
+    <dd>Parquet</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Bucket<wbr>Destination<wbr>Format<wbr>Csv</dt>
+    <dd>CSV</dd><dt>Bucket<wbr>Destination<wbr>Format<wbr>Orc</dt>
+    <dd>ORC</dd><dt>Bucket<wbr>Destination<wbr>Format<wbr>Parquet</dt>
+    <dd>Parquet</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Csv</dt>
+    <dd>CSV</dd><dt>Orc</dt>
+    <dd>ORC</dd><dt>Parquet</dt>
+    <dd>Parquet</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CSV</dt>
+    <dd>CSV</dd><dt>ORC</dt>
+    <dd>ORC</dd><dt>PARQUET</dt>
+    <dd>Parquet</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketencryption">Bucket<wbr>Encryption</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="serversideencryptionconfiguration_csharp">
+<a href="#serversideencryptionconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Side<wbr>Encryption<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketserversideencryptionrule">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Inputs.<wbr>Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Rule&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the default server-side-encryption configuration.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="serversideencryptionconfiguration_go">
+<a href="#serversideencryptionconfiguration_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Side<wbr>Encryption<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketserversideencryptionrule">[]Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Rule</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the default server-side-encryption configuration.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="serversideencryptionconfiguration_nodejs">
+<a href="#serversideencryptionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Side<wbr>Encryption<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketserversideencryptionrule">Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Rule[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the default server-side-encryption configuration.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="server_side_encryption_configuration_python">
+<a href="#server_side_encryption_configuration_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>encryption_<wbr>configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketserversideencryptionrule">Sequence[Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Rule]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the default server-side-encryption configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="bucketencryptionconfiguration">Bucket<wbr>Encryption<wbr>Configuration</h4>
@@ -2402,7 +2598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the ID (Key ARN or Alias ARN) of the customer managed customer master key (CMK) stored in AWS Key Management Service (KMS) for the destination bucket.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2414,7 +2610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the ID (Key ARN or Alias ARN) of the customer managed customer master key (CMK) stored in AWS Key Management Service (KMS) for the destination bucket.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2426,7 +2622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the ID (Key ARN or Alias ARN) of the customer managed customer master key (CMK) stored in AWS Key Management Service (KMS) for the destination bucket.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2438,7 +2634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the ID (Key ARN or Alias ARN) of the customer managed customer master key (CMK) stored in AWS Key Management Service (KMS) for the destination bucket.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="bucketfilterrule">Bucket<wbr>Filter<wbr>Rule</h4>
@@ -2534,15 +2730,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The ID used to identify the S3 Intelligent-Tiering configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketintelligenttieringconfigurationstatus">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Bucket<wbr>Intelligent<wbr>Tiering<wbr>Configuration<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Specifies the status of the configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tierings_csharp">
 <a href="#tierings_csharp" style="color: inherit; text-decoration: inherit;">Tierings</a>
@@ -2550,7 +2746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#buckettiering">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Inputs.<wbr>Bucket<wbr>Tiering&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies a list of S3 Intelligent-Tiering storage class tiers in the configuration. At least one tier must be defined in the list. At most, you can specify two tiers in the list, one for each available AccessTier: ARCHIVE_ACCESS and DEEP_ARCHIVE_ACCESS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_csharp">
 <a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
@@ -2558,7 +2754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}An object key name prefix that identifies the subset of objects to which the rule applies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagfilters_csharp">
 <a href="#tagfilters_csharp" style="color: inherit; text-decoration: inherit;">Tag<wbr>Filters</a>
@@ -2566,7 +2762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#buckettagfilter">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Inputs.<wbr>Bucket<wbr>Tag<wbr>Filter&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A container for a key-value pair.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2578,15 +2774,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The ID used to identify the S3 Intelligent-Tiering configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketintelligenttieringconfigurationstatus">Bucket<wbr>Intelligent<wbr>Tiering<wbr>Configuration<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Specifies the status of the configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tierings_go">
 <a href="#tierings_go" style="color: inherit; text-decoration: inherit;">Tierings</a>
@@ -2594,7 +2790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#buckettiering">[]Bucket<wbr>Tiering</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies a list of S3 Intelligent-Tiering storage class tiers in the configuration. At least one tier must be defined in the list. At most, you can specify two tiers in the list, one for each available AccessTier: ARCHIVE_ACCESS and DEEP_ARCHIVE_ACCESS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_go">
 <a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
@@ -2602,7 +2798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}An object key name prefix that identifies the subset of objects to which the rule applies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagfilters_go">
 <a href="#tagfilters_go" style="color: inherit; text-decoration: inherit;">Tag<wbr>Filters</a>
@@ -2610,7 +2806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#buckettagfilter">[]Bucket<wbr>Tag<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A container for a key-value pair.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2622,15 +2818,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The ID used to identify the S3 Intelligent-Tiering configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketintelligenttieringconfigurationstatus">Bucket<wbr>Intelligent<wbr>Tiering<wbr>Configuration<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Specifies the status of the configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tierings_nodejs">
 <a href="#tierings_nodejs" style="color: inherit; text-decoration: inherit;">tierings</a>
@@ -2638,7 +2834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#buckettiering">Bucket<wbr>Tiering[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies a list of S3 Intelligent-Tiering storage class tiers in the configuration. At least one tier must be defined in the list. At most, you can specify two tiers in the list, one for each available AccessTier: ARCHIVE_ACCESS and DEEP_ARCHIVE_ACCESS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_nodejs">
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
@@ -2646,7 +2842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}An object key name prefix that identifies the subset of objects to which the rule applies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagfilters_nodejs">
 <a href="#tagfilters_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Filters</a>
@@ -2654,7 +2850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#buckettagfilter">Bucket<wbr>Tag<wbr>Filter[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A container for a key-value pair.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2666,15 +2862,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The ID used to identify the S3 Intelligent-Tiering configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#bucketintelligenttieringconfigurationstatus">Bucket<wbr>Intelligent<wbr>Tiering<wbr>Configuration<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Specifies the status of the configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tierings_python">
 <a href="#tierings_python" style="color: inherit; text-decoration: inherit;">tierings</a>
@@ -2682,7 +2878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#buckettiering">Sequence[Bucket<wbr>Tiering]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies a list of S3 Intelligent-Tiering storage class tiers in the configuration. At least one tier must be defined in the list. At most, you can specify two tiers in the list, one for each available AccessTier: ARCHIVE_ACCESS and DEEP_ARCHIVE_ACCESS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_python">
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
@@ -2690,7 +2886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}An object key name prefix that identifies the subset of objects to which the rule applies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tag_filters_python">
 <a href="#tag_filters_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>filters</a>
@@ -2698,7 +2894,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#buckettagfilter">Sequence[Bucket<wbr>Tag<wbr>Filter]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A container for a key-value pair.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketintelligenttieringconfigurationstatus">Bucket<wbr>Intelligent<wbr>Tiering<wbr>Configuration<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Disabled</dt>
+    <dd>Disabled</dd><dt>Enabled</dt>
+    <dd>Enabled</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Bucket<wbr>Intelligent<wbr>Tiering<wbr>Configuration<wbr>Status<wbr>Disabled</dt>
+    <dd>Disabled</dd><dt>Bucket<wbr>Intelligent<wbr>Tiering<wbr>Configuration<wbr>Status<wbr>Enabled</dt>
+    <dd>Enabled</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Disabled</dt>
+    <dd>Disabled</dd><dt>Enabled</dt>
+    <dd>Enabled</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DISABLED</dt>
+    <dd>Disabled</dd><dt>ENABLED</dt>
+    <dd>Enabled</dd></dl>
 {{% /choosable %}}
 
 <h4 id="bucketinventoryconfiguration">Bucket<wbr>Inventory<wbr>Configuration</h4>
@@ -2720,7 +2942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Specifies whether the inventory is enabled or disabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2728,31 +2950,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The ID used to identify the inventory configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="includedobjectversions_csharp">
 <a href="#includedobjectversions_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Object<wbr>Versions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketinventoryconfigurationincludedobjectversions">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Bucket<wbr>Inventory<wbr>Configuration<wbr>Included<wbr>Object<wbr>Versions</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Object versions to include in the inventory list.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedulefrequency_csharp">
 <a href="#schedulefrequency_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketinventoryconfigurationschedulefrequency">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Bucket<wbr>Inventory<wbr>Configuration<wbr>Schedule<wbr>Frequency</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the schedule for generating inventory results.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="optionalfields_csharp">
 <a href="#optionalfields_csharp" style="color: inherit; text-decoration: inherit;">Optional<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="#bucketinventoryconfigurationoptionalfieldsitem">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Bucket<wbr>Inventory<wbr>Configuration<wbr>Optional<wbr>Fields<wbr>Item&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Contains the optional fields that are included in the inventory results.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_csharp">
 <a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
@@ -2760,7 +2982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The prefix that is prepended to all inventory results.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2780,7 +3002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Specifies whether the inventory is enabled or disabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2788,31 +3010,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The ID used to identify the inventory configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="includedobjectversions_go">
 <a href="#includedobjectversions_go" style="color: inherit; text-decoration: inherit;">Included<wbr>Object<wbr>Versions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketinventoryconfigurationincludedobjectversions">Bucket<wbr>Inventory<wbr>Configuration<wbr>Included<wbr>Object<wbr>Versions</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Object versions to include in the inventory list.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedulefrequency_go">
 <a href="#schedulefrequency_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketinventoryconfigurationschedulefrequency">Bucket<wbr>Inventory<wbr>Configuration<wbr>Schedule<wbr>Frequency</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the schedule for generating inventory results.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="optionalfields_go">
 <a href="#optionalfields_go" style="color: inherit; text-decoration: inherit;">Optional<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="#bucketinventoryconfigurationoptionalfieldsitem">[]Bucket<wbr>Inventory<wbr>Configuration<wbr>Optional<wbr>Fields<wbr>Item</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Contains the optional fields that are included in the inventory results.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_go">
 <a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
@@ -2820,7 +3042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The prefix that is prepended to all inventory results.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2840,7 +3062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Specifies whether the inventory is enabled or disabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2848,31 +3070,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The ID used to identify the inventory configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="includedobjectversions_nodejs">
 <a href="#includedobjectversions_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Object<wbr>Versions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketinventoryconfigurationincludedobjectversions">Bucket<wbr>Inventory<wbr>Configuration<wbr>Included<wbr>Object<wbr>Versions</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Object versions to include in the inventory list.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedulefrequency_nodejs">
 <a href="#schedulefrequency_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketinventoryconfigurationschedulefrequency">Bucket<wbr>Inventory<wbr>Configuration<wbr>Schedule<wbr>Frequency</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the schedule for generating inventory results.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="optionalfields_nodejs">
 <a href="#optionalfields_nodejs" style="color: inherit; text-decoration: inherit;">optional<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="#bucketinventoryconfigurationoptionalfieldsitem">Bucket<wbr>Inventory<wbr>Configuration<wbr>Optional<wbr>Fields<wbr>Item[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Contains the optional fields that are included in the inventory results.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_nodejs">
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
@@ -2880,7 +3102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The prefix that is prepended to all inventory results.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2900,7 +3122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Specifies whether the inventory is enabled or disabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2908,31 +3130,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The ID used to identify the inventory configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="included_object_versions_python">
 <a href="#included_object_versions_python" style="color: inherit; text-decoration: inherit;">included_<wbr>object_<wbr>versions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#bucketinventoryconfigurationincludedobjectversions">Bucket<wbr>Inventory<wbr>Configuration<wbr>Included<wbr>Object<wbr>Versions</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Object versions to include in the inventory list.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedule_frequency_python">
 <a href="#schedule_frequency_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#bucketinventoryconfigurationschedulefrequency">Bucket<wbr>Inventory<wbr>Configuration<wbr>Schedule<wbr>Frequency</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the schedule for generating inventory results.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="optional_fields_python">
 <a href="#optional_fields_python" style="color: inherit; text-decoration: inherit;">optional_<wbr>fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type"><a href="#bucketinventoryconfigurationoptionalfieldsitem">Sequence[Bucket<wbr>Inventory<wbr>Configuration<wbr>Optional<wbr>Fields<wbr>Item]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Contains the optional fields that are included in the inventory results.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_python">
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
@@ -2940,7 +3162,125 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The prefix that is prepended to all inventory results.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketinventoryconfigurationincludedobjectversions">Bucket<wbr>Inventory<wbr>Configuration<wbr>Included<wbr>Object<wbr>Versions</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>All</dt>
+    <dd>All</dd><dt>Current</dt>
+    <dd>Current</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Bucket<wbr>Inventory<wbr>Configuration<wbr>Included<wbr>Object<wbr>Versions<wbr>All</dt>
+    <dd>All</dd><dt>Bucket<wbr>Inventory<wbr>Configuration<wbr>Included<wbr>Object<wbr>Versions<wbr>Current</dt>
+    <dd>Current</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>All</dt>
+    <dd>All</dd><dt>Current</dt>
+    <dd>Current</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ALL</dt>
+    <dd>All</dd><dt>CURRENT</dt>
+    <dd>Current</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketinventoryconfigurationoptionalfieldsitem">Bucket<wbr>Inventory<wbr>Configuration<wbr>Optional<wbr>Fields<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Size</dt>
+    <dd>Size</dd><dt>Last<wbr>Modified<wbr>Date</dt>
+    <dd>LastModifiedDate</dd><dt>Storage<wbr>Class</dt>
+    <dd>StorageClass</dd><dt>ETag</dt>
+    <dd>ETag</dd><dt>Is<wbr>Multipart<wbr>Uploaded</dt>
+    <dd>IsMultipartUploaded</dd><dt>Replication<wbr>Status</dt>
+    <dd>ReplicationStatus</dd><dt>Encryption<wbr>Status</dt>
+    <dd>EncryptionStatus</dd><dt>Object<wbr>Lock<wbr>Retain<wbr>Until<wbr>Date</dt>
+    <dd>ObjectLockRetainUntilDate</dd><dt>Object<wbr>Lock<wbr>Mode</dt>
+    <dd>ObjectLockMode</dd><dt>Object<wbr>Lock<wbr>Legal<wbr>Hold<wbr>Status</dt>
+    <dd>ObjectLockLegalHoldStatus</dd><dt>Intelligent<wbr>Tiering<wbr>Access<wbr>Tier</dt>
+    <dd>IntelligentTieringAccessTier</dd><dt>Bucket<wbr>Key<wbr>Status</dt>
+    <dd>BucketKeyStatus</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Bucket<wbr>Inventory<wbr>Configuration<wbr>Optional<wbr>Fields<wbr>Item<wbr>Size</dt>
+    <dd>Size</dd><dt>Bucket<wbr>Inventory<wbr>Configuration<wbr>Optional<wbr>Fields<wbr>Item<wbr>Last<wbr>Modified<wbr>Date</dt>
+    <dd>LastModifiedDate</dd><dt>Bucket<wbr>Inventory<wbr>Configuration<wbr>Optional<wbr>Fields<wbr>Item<wbr>Storage<wbr>Class</dt>
+    <dd>StorageClass</dd><dt>Bucket<wbr>Inventory<wbr>Configuration<wbr>Optional<wbr>Fields<wbr>Item<wbr>ETag</dt>
+    <dd>ETag</dd><dt>Bucket<wbr>Inventory<wbr>Configuration<wbr>Optional<wbr>Fields<wbr>Item<wbr>Is<wbr>Multipart<wbr>Uploaded</dt>
+    <dd>IsMultipartUploaded</dd><dt>Bucket<wbr>Inventory<wbr>Configuration<wbr>Optional<wbr>Fields<wbr>Item<wbr>Replication<wbr>Status</dt>
+    <dd>ReplicationStatus</dd><dt>Bucket<wbr>Inventory<wbr>Configuration<wbr>Optional<wbr>Fields<wbr>Item<wbr>Encryption<wbr>Status</dt>
+    <dd>EncryptionStatus</dd><dt>Bucket<wbr>Inventory<wbr>Configuration<wbr>Optional<wbr>Fields<wbr>Item<wbr>Object<wbr>Lock<wbr>Retain<wbr>Until<wbr>Date</dt>
+    <dd>ObjectLockRetainUntilDate</dd><dt>Bucket<wbr>Inventory<wbr>Configuration<wbr>Optional<wbr>Fields<wbr>Item<wbr>Object<wbr>Lock<wbr>Mode</dt>
+    <dd>ObjectLockMode</dd><dt>Bucket<wbr>Inventory<wbr>Configuration<wbr>Optional<wbr>Fields<wbr>Item<wbr>Object<wbr>Lock<wbr>Legal<wbr>Hold<wbr>Status</dt>
+    <dd>ObjectLockLegalHoldStatus</dd><dt>Bucket<wbr>Inventory<wbr>Configuration<wbr>Optional<wbr>Fields<wbr>Item<wbr>Intelligent<wbr>Tiering<wbr>Access<wbr>Tier</dt>
+    <dd>IntelligentTieringAccessTier</dd><dt>Bucket<wbr>Inventory<wbr>Configuration<wbr>Optional<wbr>Fields<wbr>Item<wbr>Bucket<wbr>Key<wbr>Status</dt>
+    <dd>BucketKeyStatus</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Size</dt>
+    <dd>Size</dd><dt>Last<wbr>Modified<wbr>Date</dt>
+    <dd>LastModifiedDate</dd><dt>Storage<wbr>Class</dt>
+    <dd>StorageClass</dd><dt>ETag</dt>
+    <dd>ETag</dd><dt>Is<wbr>Multipart<wbr>Uploaded</dt>
+    <dd>IsMultipartUploaded</dd><dt>Replication<wbr>Status</dt>
+    <dd>ReplicationStatus</dd><dt>Encryption<wbr>Status</dt>
+    <dd>EncryptionStatus</dd><dt>Object<wbr>Lock<wbr>Retain<wbr>Until<wbr>Date</dt>
+    <dd>ObjectLockRetainUntilDate</dd><dt>Object<wbr>Lock<wbr>Mode</dt>
+    <dd>ObjectLockMode</dd><dt>Object<wbr>Lock<wbr>Legal<wbr>Hold<wbr>Status</dt>
+    <dd>ObjectLockLegalHoldStatus</dd><dt>Intelligent<wbr>Tiering<wbr>Access<wbr>Tier</dt>
+    <dd>IntelligentTieringAccessTier</dd><dt>Bucket<wbr>Key<wbr>Status</dt>
+    <dd>BucketKeyStatus</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SIZE</dt>
+    <dd>Size</dd><dt>LAST_MODIFIED_DATE</dt>
+    <dd>LastModifiedDate</dd><dt>STORAGE_CLASS</dt>
+    <dd>StorageClass</dd><dt>E_TAG</dt>
+    <dd>ETag</dd><dt>IS_MULTIPART_UPLOADED</dt>
+    <dd>IsMultipartUploaded</dd><dt>REPLICATION_STATUS</dt>
+    <dd>ReplicationStatus</dd><dt>ENCRYPTION_STATUS</dt>
+    <dd>EncryptionStatus</dd><dt>OBJECT_LOCK_RETAIN_UNTIL_DATE</dt>
+    <dd>ObjectLockRetainUntilDate</dd><dt>OBJECT_LOCK_MODE</dt>
+    <dd>ObjectLockMode</dd><dt>OBJECT_LOCK_LEGAL_HOLD_STATUS</dt>
+    <dd>ObjectLockLegalHoldStatus</dd><dt>INTELLIGENT_TIERING_ACCESS_TIER</dt>
+    <dd>IntelligentTieringAccessTier</dd><dt>BUCKET_KEY_STATUS</dt>
+    <dd>BucketKeyStatus</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketinventoryconfigurationschedulefrequency">Bucket<wbr>Inventory<wbr>Configuration<wbr>Schedule<wbr>Frequency</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Daily</dt>
+    <dd>Daily</dd><dt>Weekly</dt>
+    <dd>Weekly</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Bucket<wbr>Inventory<wbr>Configuration<wbr>Schedule<wbr>Frequency<wbr>Daily</dt>
+    <dd>Daily</dd><dt>Bucket<wbr>Inventory<wbr>Configuration<wbr>Schedule<wbr>Frequency<wbr>Weekly</dt>
+    <dd>Weekly</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Daily</dt>
+    <dd>Daily</dd><dt>Weekly</dt>
+    <dd>Weekly</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DAILY</dt>
+    <dd>Daily</dd><dt>WEEKLY</dt>
+    <dd>Weekly</dd></dl>
 {{% /choosable %}}
 
 <h4 id="bucketlambdaconfiguration">Bucket<wbr>Lambda<wbr>Configuration</h4>
@@ -2954,7 +3294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The Amazon S3 bucket event for which to invoke the AWS Lambda function.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="function_csharp">
 <a href="#function_csharp" style="color: inherit; text-decoration: inherit;">Function</a>
@@ -2962,7 +3302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the AWS Lambda function that Amazon S3 invokes when the specified event type occurs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -2970,7 +3310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketnotificationfilter">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Inputs.<wbr>Bucket<wbr>Notification<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The filtering rules that determine which objects invoke the AWS Lambda function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2982,7 +3322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The Amazon S3 bucket event for which to invoke the AWS Lambda function.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="function_go">
 <a href="#function_go" style="color: inherit; text-decoration: inherit;">Function</a>
@@ -2990,7 +3330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the AWS Lambda function that Amazon S3 invokes when the specified event type occurs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -2998,7 +3338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketnotificationfilter">Bucket<wbr>Notification<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The filtering rules that determine which objects invoke the AWS Lambda function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3010,7 +3350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The Amazon S3 bucket event for which to invoke the AWS Lambda function.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="function_nodejs">
 <a href="#function_nodejs" style="color: inherit; text-decoration: inherit;">function</a>
@@ -3018,7 +3358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the AWS Lambda function that Amazon S3 invokes when the specified event type occurs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -3026,7 +3366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketnotificationfilter">Bucket<wbr>Notification<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The filtering rules that determine which objects invoke the AWS Lambda function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3038,7 +3378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The Amazon S3 bucket event for which to invoke the AWS Lambda function.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="function_python">
 <a href="#function_python" style="color: inherit; text-decoration: inherit;">function</a>
@@ -3046,7 +3386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the AWS Lambda function that Amazon S3 invokes when the specified event type occurs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -3054,7 +3394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketnotificationfilter">Bucket<wbr>Notification<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The filtering rules that determine which objects invoke the AWS Lambda function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="bucketlifecycleconfiguration">Bucket<wbr>Lifecycle<wbr>Configuration</h4>
@@ -3068,7 +3408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketrule">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Inputs.<wbr>Bucket<wbr>Rule&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A lifecycle rule for individual objects in an Amazon S3 bucket.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3080,7 +3420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketrule">[]Bucket<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A lifecycle rule for individual objects in an Amazon S3 bucket.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3092,7 +3432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketrule">Bucket<wbr>Rule[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A lifecycle rule for individual objects in an Amazon S3 bucket.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3104,7 +3444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketrule">Sequence[Bucket<wbr>Rule]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A lifecycle rule for individual objects in an Amazon S3 bucket.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="bucketloggingconfiguration">Bucket<wbr>Logging<wbr>Configuration</h4>
@@ -3118,7 +3458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of an Amazon S3 bucket where Amazon S3 store server access log files. You can store log files in any bucket that you own. By default, logs are stored in the bucket where the LoggingConfiguration property is defined.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logfileprefix_csharp">
 <a href="#logfileprefix_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>File<wbr>Prefix</a>
@@ -3138,7 +3478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of an Amazon S3 bucket where Amazon S3 store server access log files. You can store log files in any bucket that you own. By default, logs are stored in the bucket where the LoggingConfiguration property is defined.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logfileprefix_go">
 <a href="#logfileprefix_go" style="color: inherit; text-decoration: inherit;">Log<wbr>File<wbr>Prefix</a>
@@ -3158,7 +3498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of an Amazon S3 bucket where Amazon S3 store server access log files. You can store log files in any bucket that you own. By default, logs are stored in the bucket where the LoggingConfiguration property is defined.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logfileprefix_nodejs">
 <a href="#logfileprefix_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>File<wbr>Prefix</a>
@@ -3178,7 +3518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of an Amazon S3 bucket where Amazon S3 store server access log files. You can store log files in any bucket that you own. By default, logs are stored in the bucket where the LoggingConfiguration property is defined.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_file_prefix_python">
 <a href="#log_file_prefix_python" style="color: inherit; text-decoration: inherit;">log_<wbr>file_<wbr>prefix</a>
@@ -3198,7 +3538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketmetricsstatus">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Bucket<wbr>Metrics<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3218,7 +3558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketmetricsstatus">Bucket<wbr>Metrics<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3238,7 +3578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketmetricsstatus">Bucket<wbr>Metrics<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3258,7 +3598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#bucketmetricsstatus">Bucket<wbr>Metrics<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3417,6 +3757,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="bucketmetricsstatus">Bucket<wbr>Metrics<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Disabled</dt>
+    <dd>Disabled</dd><dt>Enabled</dt>
+    <dd>Enabled</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Bucket<wbr>Metrics<wbr>Status<wbr>Disabled</dt>
+    <dd>Disabled</dd><dt>Bucket<wbr>Metrics<wbr>Status<wbr>Enabled</dt>
+    <dd>Enabled</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Disabled</dt>
+    <dd>Disabled</dd><dt>Enabled</dt>
+    <dd>Enabled</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DISABLED</dt>
+    <dd>Disabled</dd><dt>ENABLED</dt>
+    <dd>Enabled</dd></dl>
+{{% /choosable %}}
+
 <h4 id="bucketnoncurrentversiontransition">Bucket<wbr>Noncurrent<wbr>Version<wbr>Transition</h4>
 
 {{% choosable language csharp %}}
@@ -3426,9 +3792,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageclass_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketnoncurrentversiontransitionstorageclass">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Bucket<wbr>Noncurrent<wbr>Version<wbr>Transition<wbr>Storage<wbr>Class</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The class of storage used to store the object.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transitionindays_csharp">
 <a href="#transitionindays_csharp" style="color: inherit; text-decoration: inherit;">Transition<wbr>In<wbr>Days</a>
@@ -3436,7 +3802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the number of days an object is noncurrent before Amazon S3 can perform the associated action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3446,9 +3812,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageclass_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketnoncurrentversiontransitionstorageclass">Bucket<wbr>Noncurrent<wbr>Version<wbr>Transition<wbr>Storage<wbr>Class</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The class of storage used to store the object.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transitionindays_go">
 <a href="#transitionindays_go" style="color: inherit; text-decoration: inherit;">Transition<wbr>In<wbr>Days</a>
@@ -3456,7 +3822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the number of days an object is noncurrent before Amazon S3 can perform the associated action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3466,9 +3832,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageclass_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketnoncurrentversiontransitionstorageclass">Bucket<wbr>Noncurrent<wbr>Version<wbr>Transition<wbr>Storage<wbr>Class</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The class of storage used to store the object.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transitionindays_nodejs">
 <a href="#transitionindays_nodejs" style="color: inherit; text-decoration: inherit;">transition<wbr>In<wbr>Days</a>
@@ -3476,7 +3842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the number of days an object is noncurrent before Amazon S3 can perform the associated action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3486,9 +3852,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_class_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#bucketnoncurrentversiontransitionstorageclass">Bucket<wbr>Noncurrent<wbr>Version<wbr>Transition<wbr>Storage<wbr>Class</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The class of storage used to store the object.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transition_in_days_python">
 <a href="#transition_in_days_python" style="color: inherit; text-decoration: inherit;">transition_<wbr>in_<wbr>days</a>
@@ -3496,7 +3862,45 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the number of days an object is noncurrent before Amazon S3 can perform the associated action.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketnoncurrentversiontransitionstorageclass">Bucket<wbr>Noncurrent<wbr>Version<wbr>Transition<wbr>Storage<wbr>Class</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Deep<wbr>Archive</dt>
+    <dd>DEEP_ARCHIVE</dd><dt>Glacier</dt>
+    <dd>GLACIER</dd><dt>Intelligent<wbr>Tiering</dt>
+    <dd>INTELLIGENT_TIERING</dd><dt>Onezone<wbr>Ia</dt>
+    <dd>ONEZONE_IA</dd><dt>Standard<wbr>Ia</dt>
+    <dd>STANDARD_IA</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Bucket<wbr>Noncurrent<wbr>Version<wbr>Transition<wbr>Storage<wbr>Class<wbr>Deep<wbr>Archive</dt>
+    <dd>DEEP_ARCHIVE</dd><dt>Bucket<wbr>Noncurrent<wbr>Version<wbr>Transition<wbr>Storage<wbr>Class<wbr>Glacier</dt>
+    <dd>GLACIER</dd><dt>Bucket<wbr>Noncurrent<wbr>Version<wbr>Transition<wbr>Storage<wbr>Class<wbr>Intelligent<wbr>Tiering</dt>
+    <dd>INTELLIGENT_TIERING</dd><dt>Bucket<wbr>Noncurrent<wbr>Version<wbr>Transition<wbr>Storage<wbr>Class<wbr>Onezone<wbr>Ia</dt>
+    <dd>ONEZONE_IA</dd><dt>Bucket<wbr>Noncurrent<wbr>Version<wbr>Transition<wbr>Storage<wbr>Class<wbr>Standard<wbr>Ia</dt>
+    <dd>STANDARD_IA</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Deep<wbr>Archive</dt>
+    <dd>DEEP_ARCHIVE</dd><dt>Glacier</dt>
+    <dd>GLACIER</dd><dt>Intelligent<wbr>Tiering</dt>
+    <dd>INTELLIGENT_TIERING</dd><dt>Onezone<wbr>Ia</dt>
+    <dd>ONEZONE_IA</dd><dt>Standard<wbr>Ia</dt>
+    <dd>STANDARD_IA</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DEEP_ARCHIVE</dt>
+    <dd>DEEP_ARCHIVE</dd><dt>GLACIER</dt>
+    <dd>GLACIER</dd><dt>INTELLIGENT_TIERING</dt>
+    <dd>INTELLIGENT_TIERING</dd><dt>ONEZONE_IA</dt>
+    <dd>ONEZONE_IA</dd><dt>STANDARD_IA</dt>
+    <dd>STANDARD_IA</dd></dl>
 {{% /choosable %}}
 
 <h4 id="bucketnotificationconfiguration">Bucket<wbr>Notification<wbr>Configuration</h4>
@@ -3854,9 +4258,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#objectownership_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Ownership</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketownershipcontrolsruleobjectownership">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Bucket<wbr>Ownership<wbr>Controls<wbr>Rule<wbr>Object<wbr>Ownership</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies an object ownership rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3866,9 +4270,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#objectownership_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Ownership</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketownershipcontrolsruleobjectownership">Bucket<wbr>Ownership<wbr>Controls<wbr>Rule<wbr>Object<wbr>Ownership</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies an object ownership rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3878,9 +4282,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#objectownership_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Ownership</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketownershipcontrolsruleobjectownership">Bucket<wbr>Ownership<wbr>Controls<wbr>Rule<wbr>Object<wbr>Ownership</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies an object ownership rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3890,9 +4294,35 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_ownership_python" style="color: inherit; text-decoration: inherit;">object_<wbr>ownership</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#bucketownershipcontrolsruleobjectownership">Bucket<wbr>Ownership<wbr>Controls<wbr>Rule<wbr>Object<wbr>Ownership</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies an object ownership rule.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketownershipcontrolsruleobjectownership">Bucket<wbr>Ownership<wbr>Controls<wbr>Rule<wbr>Object<wbr>Ownership</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Object<wbr>Writer</dt>
+    <dd>ObjectWriter</dd><dt>Bucket<wbr>Owner<wbr>Preferred</dt>
+    <dd>BucketOwnerPreferred</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Bucket<wbr>Ownership<wbr>Controls<wbr>Rule<wbr>Object<wbr>Ownership<wbr>Object<wbr>Writer</dt>
+    <dd>ObjectWriter</dd><dt>Bucket<wbr>Ownership<wbr>Controls<wbr>Rule<wbr>Object<wbr>Ownership<wbr>Bucket<wbr>Owner<wbr>Preferred</dt>
+    <dd>BucketOwnerPreferred</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Object<wbr>Writer</dt>
+    <dd>ObjectWriter</dd><dt>Bucket<wbr>Owner<wbr>Preferred</dt>
+    <dd>BucketOwnerPreferred</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>OBJECT_WRITER</dt>
+    <dd>ObjectWriter</dd><dt>BUCKET_OWNER_PREFERRED</dt>
+    <dd>BucketOwnerPreferred</dd></dl>
 {{% /choosable %}}
 
 <h4 id="bucketpublicaccessblockconfiguration">Bucket<wbr>Public<wbr>Access<wbr>Block<wbr>Configuration</h4>
@@ -3906,7 +4336,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies whether Amazon S3 should block public access control lists (ACLs) for this bucket and objects in this bucket. Setting this element to TRUE causes the following behavior:
+- PUT Bucket acl and PUT Object acl calls fail if the specified ACL is public.
+ - PUT Object calls fail if the request includes a public ACL.
+Enabling this setting doesn't affect existing policies or ACLs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blockpublicpolicy_csharp">
 <a href="#blockpublicpolicy_csharp" style="color: inherit; text-decoration: inherit;">Block<wbr>Public<wbr>Policy</a>
@@ -3914,7 +4347,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies whether Amazon S3 should block public bucket policies for this bucket. Setting this element to TRUE causes Amazon S3 to reject calls to PUT Bucket policy if the specified bucket policy allows public access.
+Enabling this setting doesn't affect existing bucket policies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignorepublicacls_csharp">
 <a href="#ignorepublicacls_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Public<wbr>Acls</a>
@@ -3922,7 +4356,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies whether Amazon S3 should ignore public ACLs for this bucket and objects in this bucket. Setting this element to TRUE causes Amazon S3 to ignore all public ACLs on this bucket and objects in this bucket.
+Enabling this setting doesn't affect the persistence of any existing ACLs and doesn't prevent new public ACLs from being set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restrictpublicbuckets_csharp">
 <a href="#restrictpublicbuckets_csharp" style="color: inherit; text-decoration: inherit;">Restrict<wbr>Public<wbr>Buckets</a>
@@ -3930,7 +4365,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies whether Amazon S3 should restrict public bucket policies for this bucket. Setting this element to TRUE restricts access to this bucket to only AWS services and authorized users within this account if the bucket has a public policy.
+Enabling this setting doesn't affect previously stored bucket policies, except that public and cross-account access within any public bucket policy, including non-public delegation to specific accounts, is blocked.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3942,7 +4378,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies whether Amazon S3 should block public access control lists (ACLs) for this bucket and objects in this bucket. Setting this element to TRUE causes the following behavior:
+- PUT Bucket acl and PUT Object acl calls fail if the specified ACL is public.
+ - PUT Object calls fail if the request includes a public ACL.
+Enabling this setting doesn't affect existing policies or ACLs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blockpublicpolicy_go">
 <a href="#blockpublicpolicy_go" style="color: inherit; text-decoration: inherit;">Block<wbr>Public<wbr>Policy</a>
@@ -3950,7 +4389,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies whether Amazon S3 should block public bucket policies for this bucket. Setting this element to TRUE causes Amazon S3 to reject calls to PUT Bucket policy if the specified bucket policy allows public access.
+Enabling this setting doesn't affect existing bucket policies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignorepublicacls_go">
 <a href="#ignorepublicacls_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Public<wbr>Acls</a>
@@ -3958,7 +4398,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies whether Amazon S3 should ignore public ACLs for this bucket and objects in this bucket. Setting this element to TRUE causes Amazon S3 to ignore all public ACLs on this bucket and objects in this bucket.
+Enabling this setting doesn't affect the persistence of any existing ACLs and doesn't prevent new public ACLs from being set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restrictpublicbuckets_go">
 <a href="#restrictpublicbuckets_go" style="color: inherit; text-decoration: inherit;">Restrict<wbr>Public<wbr>Buckets</a>
@@ -3966,7 +4407,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies whether Amazon S3 should restrict public bucket policies for this bucket. Setting this element to TRUE restricts access to this bucket to only AWS services and authorized users within this account if the bucket has a public policy.
+Enabling this setting doesn't affect previously stored bucket policies, except that public and cross-account access within any public bucket policy, including non-public delegation to specific accounts, is blocked.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3978,7 +4420,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies whether Amazon S3 should block public access control lists (ACLs) for this bucket and objects in this bucket. Setting this element to TRUE causes the following behavior:
+- PUT Bucket acl and PUT Object acl calls fail if the specified ACL is public.
+ - PUT Object calls fail if the request includes a public ACL.
+Enabling this setting doesn't affect existing policies or ACLs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blockpublicpolicy_nodejs">
 <a href="#blockpublicpolicy_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Public<wbr>Policy</a>
@@ -3986,7 +4431,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies whether Amazon S3 should block public bucket policies for this bucket. Setting this element to TRUE causes Amazon S3 to reject calls to PUT Bucket policy if the specified bucket policy allows public access.
+Enabling this setting doesn't affect existing bucket policies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignorepublicacls_nodejs">
 <a href="#ignorepublicacls_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Public<wbr>Acls</a>
@@ -3994,7 +4440,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies whether Amazon S3 should ignore public ACLs for this bucket and objects in this bucket. Setting this element to TRUE causes Amazon S3 to ignore all public ACLs on this bucket and objects in this bucket.
+Enabling this setting doesn't affect the persistence of any existing ACLs and doesn't prevent new public ACLs from being set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restrictpublicbuckets_nodejs">
 <a href="#restrictpublicbuckets_nodejs" style="color: inherit; text-decoration: inherit;">restrict<wbr>Public<wbr>Buckets</a>
@@ -4002,7 +4449,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies whether Amazon S3 should restrict public bucket policies for this bucket. Setting this element to TRUE restricts access to this bucket to only AWS services and authorized users within this account if the bucket has a public policy.
+Enabling this setting doesn't affect previously stored bucket policies, except that public and cross-account access within any public bucket policy, including non-public delegation to specific accounts, is blocked.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -4014,7 +4462,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies whether Amazon S3 should block public access control lists (ACLs) for this bucket and objects in this bucket. Setting this element to TRUE causes the following behavior:
+- PUT Bucket acl and PUT Object acl calls fail if the specified ACL is public.
+ - PUT Object calls fail if the request includes a public ACL.
+Enabling this setting doesn't affect existing policies or ACLs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="block_public_policy_python">
 <a href="#block_public_policy_python" style="color: inherit; text-decoration: inherit;">block_<wbr>public_<wbr>policy</a>
@@ -4022,7 +4473,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies whether Amazon S3 should block public bucket policies for this bucket. Setting this element to TRUE causes Amazon S3 to reject calls to PUT Bucket policy if the specified bucket policy allows public access.
+Enabling this setting doesn't affect existing bucket policies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignore_public_acls_python">
 <a href="#ignore_public_acls_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>public_<wbr>acls</a>
@@ -4030,7 +4482,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies whether Amazon S3 should ignore public ACLs for this bucket and objects in this bucket. Setting this element to TRUE causes Amazon S3 to ignore all public ACLs on this bucket and objects in this bucket.
+Enabling this setting doesn't affect the persistence of any existing ACLs and doesn't prevent new public ACLs from being set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restrict_public_buckets_python">
 <a href="#restrict_public_buckets_python" style="color: inherit; text-decoration: inherit;">restrict_<wbr>public_<wbr>buckets</a>
@@ -4038,7 +4491,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies whether Amazon S3 should restrict public bucket policies for this bucket. Setting this element to TRUE restricts access to this bucket to only AWS services and authorized users within this account if the bucket has a public policy.
+Enabling this setting doesn't affect previously stored bucket policies, except that public and cross-account access within any public bucket policy, including non-public delegation to specific accounts, is blocked.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="bucketqueueconfiguration">Bucket<wbr>Queue<wbr>Configuration</h4>
@@ -4052,7 +4506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The Amazon S3 bucket event about which you want to publish messages to Amazon SQS.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="queue_csharp">
 <a href="#queue_csharp" style="color: inherit; text-decoration: inherit;">Queue</a>
@@ -4060,7 +4514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon SQS queue to which Amazon S3 publishes a message when it detects events of the specified type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -4068,7 +4522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketnotificationfilter">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Inputs.<wbr>Bucket<wbr>Notification<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The filtering rules that determine which objects trigger notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4080,7 +4534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The Amazon S3 bucket event about which you want to publish messages to Amazon SQS.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="queue_go">
 <a href="#queue_go" style="color: inherit; text-decoration: inherit;">Queue</a>
@@ -4088,7 +4542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon SQS queue to which Amazon S3 publishes a message when it detects events of the specified type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -4096,7 +4550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketnotificationfilter">Bucket<wbr>Notification<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The filtering rules that determine which objects trigger notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4108,7 +4562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The Amazon S3 bucket event about which you want to publish messages to Amazon SQS.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="queue_nodejs">
 <a href="#queue_nodejs" style="color: inherit; text-decoration: inherit;">queue</a>
@@ -4116,7 +4570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon SQS queue to which Amazon S3 publishes a message when it detects events of the specified type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -4124,7 +4578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketnotificationfilter">Bucket<wbr>Notification<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The filtering rules that determine which objects trigger notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -4136,7 +4590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The Amazon S3 bucket event about which you want to publish messages to Amazon SQS.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="queue_python">
 <a href="#queue_python" style="color: inherit; text-decoration: inherit;">queue</a>
@@ -4144,7 +4598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon SQS queue to which Amazon S3 publishes a message when it detects events of the specified type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -4152,7 +4606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketnotificationfilter">Bucket<wbr>Notification<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The filtering rules that determine which objects trigger notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="bucketredirectallrequeststo">Bucket<wbr>Redirect<wbr>All<wbr>Requests<wbr>To</h4>
@@ -4166,15 +4620,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Name of the host where requests are redirected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketredirectallrequeststoprotocol">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Bucket<wbr>Redirect<wbr>All<wbr>Requests<wbr>To<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Protocol to use when redirecting requests. The default is the protocol that is used in the original request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4186,15 +4640,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Name of the host where requests are redirected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketredirectallrequeststoprotocol">Bucket<wbr>Redirect<wbr>All<wbr>Requests<wbr>To<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Protocol to use when redirecting requests. The default is the protocol that is used in the original request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4206,15 +4660,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Name of the host where requests are redirected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketredirectallrequeststoprotocol">Bucket<wbr>Redirect<wbr>All<wbr>Requests<wbr>To<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Protocol to use when redirecting requests. The default is the protocol that is used in the original request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -4226,15 +4680,41 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Name of the host where requests are redirected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#bucketredirectallrequeststoprotocol">Bucket<wbr>Redirect<wbr>All<wbr>Requests<wbr>To<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Protocol to use when redirecting requests. The default is the protocol that is used in the original request.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketredirectallrequeststoprotocol">Bucket<wbr>Redirect<wbr>All<wbr>Requests<wbr>To<wbr>Protocol</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Http</dt>
+    <dd>http</dd><dt>Https</dt>
+    <dd>https</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Bucket<wbr>Redirect<wbr>All<wbr>Requests<wbr>To<wbr>Protocol<wbr>Http</dt>
+    <dd>http</dd><dt>Bucket<wbr>Redirect<wbr>All<wbr>Requests<wbr>To<wbr>Protocol<wbr>Https</dt>
+    <dd>https</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Http</dt>
+    <dd>http</dd><dt>Https</dt>
+    <dd>https</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>HTTP</dt>
+    <dd>http</dd><dt>HTTPS</dt>
+    <dd>https</dd></dl>
 {{% /choosable %}}
 
 <h4 id="bucketredirectrule">Bucket<wbr>Redirect<wbr>Rule</h4>
@@ -4248,7 +4728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The host name to use in the redirect request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpredirectcode_csharp">
 <a href="#httpredirectcode_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Redirect<wbr>Code</a>
@@ -4256,15 +4736,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The HTTP redirect code to use on the response. Not required if one of the siblings is present.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketredirectruleprotocol">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Bucket<wbr>Redirect<wbr>Rule<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Protocol to use when redirecting requests. The default is the protocol that is used in the original request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replacekeyprefixwith_csharp">
 <a href="#replacekeyprefixwith_csharp" style="color: inherit; text-decoration: inherit;">Replace<wbr>Key<wbr>Prefix<wbr>With</a>
@@ -4272,7 +4752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The object key prefix to use in the redirect request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replacekeywith_csharp">
 <a href="#replacekeywith_csharp" style="color: inherit; text-decoration: inherit;">Replace<wbr>Key<wbr>With</a>
@@ -4280,7 +4760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The specific object key to use in the redirect request.d{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4292,7 +4772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The host name to use in the redirect request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpredirectcode_go">
 <a href="#httpredirectcode_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Redirect<wbr>Code</a>
@@ -4300,15 +4780,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The HTTP redirect code to use on the response. Not required if one of the siblings is present.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketredirectruleprotocol">Bucket<wbr>Redirect<wbr>Rule<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Protocol to use when redirecting requests. The default is the protocol that is used in the original request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replacekeyprefixwith_go">
 <a href="#replacekeyprefixwith_go" style="color: inherit; text-decoration: inherit;">Replace<wbr>Key<wbr>Prefix<wbr>With</a>
@@ -4316,7 +4796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The object key prefix to use in the redirect request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replacekeywith_go">
 <a href="#replacekeywith_go" style="color: inherit; text-decoration: inherit;">Replace<wbr>Key<wbr>With</a>
@@ -4324,7 +4804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The specific object key to use in the redirect request.d{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4336,7 +4816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The host name to use in the redirect request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpredirectcode_nodejs">
 <a href="#httpredirectcode_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Redirect<wbr>Code</a>
@@ -4344,15 +4824,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The HTTP redirect code to use on the response. Not required if one of the siblings is present.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketredirectruleprotocol">Bucket<wbr>Redirect<wbr>Rule<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Protocol to use when redirecting requests. The default is the protocol that is used in the original request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replacekeyprefixwith_nodejs">
 <a href="#replacekeyprefixwith_nodejs" style="color: inherit; text-decoration: inherit;">replace<wbr>Key<wbr>Prefix<wbr>With</a>
@@ -4360,7 +4840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The object key prefix to use in the redirect request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replacekeywith_nodejs">
 <a href="#replacekeywith_nodejs" style="color: inherit; text-decoration: inherit;">replace<wbr>Key<wbr>With</a>
@@ -4368,7 +4848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The specific object key to use in the redirect request.d{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -4380,7 +4860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The host name to use in the redirect request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_redirect_code_python">
 <a href="#http_redirect_code_python" style="color: inherit; text-decoration: inherit;">http_<wbr>redirect_<wbr>code</a>
@@ -4388,15 +4868,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The HTTP redirect code to use on the response. Not required if one of the siblings is present.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#bucketredirectruleprotocol">Bucket<wbr>Redirect<wbr>Rule<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Protocol to use when redirecting requests. The default is the protocol that is used in the original request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replace_key_prefix_with_python">
 <a href="#replace_key_prefix_with_python" style="color: inherit; text-decoration: inherit;">replace_<wbr>key_<wbr>prefix_<wbr>with</a>
@@ -4404,7 +4884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The object key prefix to use in the redirect request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replace_key_with_python">
 <a href="#replace_key_with_python" style="color: inherit; text-decoration: inherit;">replace_<wbr>key_<wbr>with</a>
@@ -4412,7 +4892,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The specific object key to use in the redirect request.d{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketredirectruleprotocol">Bucket<wbr>Redirect<wbr>Rule<wbr>Protocol</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Http</dt>
+    <dd>http</dd><dt>Https</dt>
+    <dd>https</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Bucket<wbr>Redirect<wbr>Rule<wbr>Protocol<wbr>Http</dt>
+    <dd>http</dd><dt>Bucket<wbr>Redirect<wbr>Rule<wbr>Protocol<wbr>Https</dt>
+    <dd>https</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Http</dt>
+    <dd>http</dd><dt>Https</dt>
+    <dd>https</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>HTTP</dt>
+    <dd>http</dd><dt>HTTPS</dt>
+    <dd>https</dd></dl>
 {{% /choosable %}}
 
 <h4 id="bucketreplicamodifications">Bucket<wbr>Replica<wbr>Modifications</h4>
@@ -4424,9 +4930,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketreplicamodificationsstatus">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Bucket<wbr>Replica<wbr>Modifications<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies whether Amazon S3 replicates modifications on replicas.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4436,9 +4942,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketreplicamodificationsstatus">Bucket<wbr>Replica<wbr>Modifications<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies whether Amazon S3 replicates modifications on replicas.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4448,9 +4954,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketreplicamodificationsstatus">Bucket<wbr>Replica<wbr>Modifications<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies whether Amazon S3 replicates modifications on replicas.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -4460,9 +4966,35 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#bucketreplicamodificationsstatus">Bucket<wbr>Replica<wbr>Modifications<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies whether Amazon S3 replicates modifications on replicas.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketreplicamodificationsstatus">Bucket<wbr>Replica<wbr>Modifications<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Bucket<wbr>Replica<wbr>Modifications<wbr>Status<wbr>Enabled</dt>
+    <dd>Enabled</dd><dt>Bucket<wbr>Replica<wbr>Modifications<wbr>Status<wbr>Disabled</dt>
+    <dd>Disabled</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ENABLED</dt>
+    <dd>Enabled</dd><dt>DISABLED</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 <h4 id="bucketreplicationconfiguration">Bucket<wbr>Replication<wbr>Configuration</h4>
@@ -4476,7 +5008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that Amazon S3 assumes when replicating objects.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rules_csharp">
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -4484,7 +5016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketreplicationrule">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Inputs.<wbr>Bucket<wbr>Replication<wbr>Rule&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A container for one or more replication rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4496,7 +5028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that Amazon S3 assumes when replicating objects.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rules_go">
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -4504,7 +5036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketreplicationrule">[]Bucket<wbr>Replication<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A container for one or more replication rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4516,7 +5048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that Amazon S3 assumes when replicating objects.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rules_nodejs">
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -4524,7 +5056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketreplicationrule">Bucket<wbr>Replication<wbr>Rule[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A container for one or more replication rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -4536,7 +5068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that Amazon S3 assumes when replicating objects.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rules_python">
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -4544,7 +5076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketreplicationrule">Sequence[Bucket<wbr>Replication<wbr>Rule]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A container for one or more replication rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="bucketreplicationdestination">Bucket<wbr>Replication<wbr>Destination</h4>
@@ -4604,9 +5136,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageclass_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketreplicationdestinationstorageclass">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Bucket<wbr>Replication<wbr>Destination<wbr>Storage<wbr>Class</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The storage class to use when replicating objects, such as S3 Standard or reduced redundancy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4664,9 +5196,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageclass_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketreplicationdestinationstorageclass">Bucket<wbr>Replication<wbr>Destination<wbr>Storage<wbr>Class</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The storage class to use when replicating objects, such as S3 Standard or reduced redundancy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4724,9 +5256,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageclass_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketreplicationdestinationstorageclass">Bucket<wbr>Replication<wbr>Destination<wbr>Storage<wbr>Class</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The storage class to use when replicating objects, such as S3 Standard or reduced redundancy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -4784,9 +5316,55 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_class_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#bucketreplicationdestinationstorageclass">Bucket<wbr>Replication<wbr>Destination<wbr>Storage<wbr>Class</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The storage class to use when replicating objects, such as S3 Standard or reduced redundancy.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketreplicationdestinationstorageclass">Bucket<wbr>Replication<wbr>Destination<wbr>Storage<wbr>Class</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Deep<wbr>Archive</dt>
+    <dd>DEEP_ARCHIVE</dd><dt>Glacier</dt>
+    <dd>GLACIER</dd><dt>Intelligent<wbr>Tiering</dt>
+    <dd>INTELLIGENT_TIERING</dd><dt>Onezone<wbr>Ia</dt>
+    <dd>ONEZONE_IA</dd><dt>Reduced<wbr>Redundancy</dt>
+    <dd>REDUCED_REDUNDANCY</dd><dt>Standard</dt>
+    <dd>STANDARD</dd><dt>Standard<wbr>Ia</dt>
+    <dd>STANDARD_IA</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Bucket<wbr>Replication<wbr>Destination<wbr>Storage<wbr>Class<wbr>Deep<wbr>Archive</dt>
+    <dd>DEEP_ARCHIVE</dd><dt>Bucket<wbr>Replication<wbr>Destination<wbr>Storage<wbr>Class<wbr>Glacier</dt>
+    <dd>GLACIER</dd><dt>Bucket<wbr>Replication<wbr>Destination<wbr>Storage<wbr>Class<wbr>Intelligent<wbr>Tiering</dt>
+    <dd>INTELLIGENT_TIERING</dd><dt>Bucket<wbr>Replication<wbr>Destination<wbr>Storage<wbr>Class<wbr>Onezone<wbr>Ia</dt>
+    <dd>ONEZONE_IA</dd><dt>Bucket<wbr>Replication<wbr>Destination<wbr>Storage<wbr>Class<wbr>Reduced<wbr>Redundancy</dt>
+    <dd>REDUCED_REDUNDANCY</dd><dt>Bucket<wbr>Replication<wbr>Destination<wbr>Storage<wbr>Class<wbr>Standard</dt>
+    <dd>STANDARD</dd><dt>Bucket<wbr>Replication<wbr>Destination<wbr>Storage<wbr>Class<wbr>Standard<wbr>Ia</dt>
+    <dd>STANDARD_IA</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Deep<wbr>Archive</dt>
+    <dd>DEEP_ARCHIVE</dd><dt>Glacier</dt>
+    <dd>GLACIER</dd><dt>Intelligent<wbr>Tiering</dt>
+    <dd>INTELLIGENT_TIERING</dd><dt>Onezone<wbr>Ia</dt>
+    <dd>ONEZONE_IA</dd><dt>Reduced<wbr>Redundancy</dt>
+    <dd>REDUCED_REDUNDANCY</dd><dt>Standard</dt>
+    <dd>STANDARD</dd><dt>Standard<wbr>Ia</dt>
+    <dd>STANDARD_IA</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DEEP_ARCHIVE</dt>
+    <dd>DEEP_ARCHIVE</dd><dt>GLACIER</dt>
+    <dd>GLACIER</dd><dt>INTELLIGENT_TIERING</dt>
+    <dd>INTELLIGENT_TIERING</dd><dt>ONEZONE_IA</dt>
+    <dd>ONEZONE_IA</dd><dt>REDUCED_REDUNDANCY</dt>
+    <dd>REDUCED_REDUNDANCY</dd><dt>STANDARD</dt>
+    <dd>STANDARD</dd><dt>STANDARD_IA</dt>
+    <dd>STANDARD_IA</dd></dl>
 {{% /choosable %}}
 
 <h4 id="bucketreplicationrule">Bucket<wbr>Replication<wbr>Rule</h4>
@@ -4806,9 +5384,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketreplicationrulestatus">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Bucket<wbr>Replication<wbr>Rule<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies whether the rule is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletemarkerreplication_csharp">
 <a href="#deletemarkerreplication_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Marker<wbr>Replication</a>
@@ -4832,7 +5410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A unique identifier for the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_csharp">
 <a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
@@ -4840,7 +5418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}An object key name prefix that identifies the object or objects to which the rule applies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -4874,9 +5452,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketreplicationrulestatus">Bucket<wbr>Replication<wbr>Rule<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies whether the rule is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletemarkerreplication_go">
 <a href="#deletemarkerreplication_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Marker<wbr>Replication</a>
@@ -4900,7 +5478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A unique identifier for the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_go">
 <a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
@@ -4908,7 +5486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}An object key name prefix that identifies the object or objects to which the rule applies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -4942,9 +5520,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketreplicationrulestatus">Bucket<wbr>Replication<wbr>Rule<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies whether the rule is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletemarkerreplication_nodejs">
 <a href="#deletemarkerreplication_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Marker<wbr>Replication</a>
@@ -4968,7 +5546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A unique identifier for the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_nodejs">
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
@@ -4976,7 +5554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}An object key name prefix that identifies the object or objects to which the rule applies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -5010,9 +5588,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#bucketreplicationrulestatus">Bucket<wbr>Replication<wbr>Rule<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies whether the rule is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delete_marker_replication_python">
 <a href="#delete_marker_replication_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>marker_<wbr>replication</a>
@@ -5036,7 +5614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A unique identifier for the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_python">
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
@@ -5044,7 +5622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}An object key name prefix that identifies the object or objects to which the rule applies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -5259,6 +5837,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="bucketreplicationrulestatus">Bucket<wbr>Replication<wbr>Rule<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Disabled</dt>
+    <dd>Disabled</dd><dt>Enabled</dt>
+    <dd>Enabled</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Bucket<wbr>Replication<wbr>Rule<wbr>Status<wbr>Disabled</dt>
+    <dd>Disabled</dd><dt>Bucket<wbr>Replication<wbr>Rule<wbr>Status<wbr>Enabled</dt>
+    <dd>Enabled</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Disabled</dt>
+    <dd>Disabled</dd><dt>Enabled</dt>
+    <dd>Enabled</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DISABLED</dt>
+    <dd>Disabled</dd><dt>ENABLED</dt>
+    <dd>Enabled</dd></dl>
+{{% /choosable %}}
+
 <h4 id="bucketreplicationtime">Bucket<wbr>Replication<wbr>Time</h4>
 
 {{% choosable language csharp %}}
@@ -5268,7 +5872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketreplicationtimestatus">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Bucket<wbr>Replication<wbr>Time<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5288,7 +5892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketreplicationtimestatus">Bucket<wbr>Replication<wbr>Time<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5308,7 +5912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketreplicationtimestatus">Bucket<wbr>Replication<wbr>Time<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5328,7 +5932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#bucketreplicationtimestatus">Bucket<wbr>Replication<wbr>Time<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5339,6 +5943,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#bucketreplicationtimevalue">Bucket<wbr>Replication<wbr>Time<wbr>Value</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketreplicationtimestatus">Bucket<wbr>Replication<wbr>Time<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Disabled</dt>
+    <dd>Disabled</dd><dt>Enabled</dt>
+    <dd>Enabled</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Bucket<wbr>Replication<wbr>Time<wbr>Status<wbr>Disabled</dt>
+    <dd>Disabled</dd><dt>Bucket<wbr>Replication<wbr>Time<wbr>Status<wbr>Enabled</dt>
+    <dd>Enabled</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Disabled</dt>
+    <dd>Disabled</dd><dt>Enabled</dt>
+    <dd>Enabled</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DISABLED</dt>
+    <dd>Disabled</dd><dt>ENABLED</dt>
+    <dd>Enabled</dd></dl>
 {{% /choosable %}}
 
 <h4 id="bucketreplicationtimevalue">Bucket<wbr>Replication<wbr>Time<wbr>Value</h4>
@@ -5402,7 +6032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketredirectrule">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Inputs.<wbr>Bucket<wbr>Redirect<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Container for redirect information. You can redirect requests to another host, to another page, or with another protocol. In the event of an error, you can specify a different error code to return.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routingrulecondition_csharp">
 <a href="#routingrulecondition_csharp" style="color: inherit; text-decoration: inherit;">Routing<wbr>Rule<wbr>Condition</a>
@@ -5422,7 +6052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketredirectrule">Bucket<wbr>Redirect<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Container for redirect information. You can redirect requests to another host, to another page, or with another protocol. In the event of an error, you can specify a different error code to return.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routingrulecondition_go">
 <a href="#routingrulecondition_go" style="color: inherit; text-decoration: inherit;">Routing<wbr>Rule<wbr>Condition</a>
@@ -5442,7 +6072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketredirectrule">Bucket<wbr>Redirect<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Container for redirect information. You can redirect requests to another host, to another page, or with another protocol. In the event of an error, you can specify a different error code to return.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routingrulecondition_nodejs">
 <a href="#routingrulecondition_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Rule<wbr>Condition</a>
@@ -5462,7 +6092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketredirectrule">Bucket<wbr>Redirect<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Container for redirect information. You can redirect requests to another host, to another page, or with another protocol. In the event of an error, you can specify a different error code to return.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routing_rule_condition_python">
 <a href="#routing_rule_condition_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>rule_<wbr>condition</a>
@@ -5484,7 +6114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The HTTP error code when the redirect is applied. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyprefixequals_csharp">
 <a href="#keyprefixequals_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Prefix<wbr>Equals</a>
@@ -5492,7 +6122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The object key name prefix when the redirect is applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -5504,7 +6134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The HTTP error code when the redirect is applied. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyprefixequals_go">
 <a href="#keyprefixequals_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Prefix<wbr>Equals</a>
@@ -5512,7 +6142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The object key name prefix when the redirect is applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -5524,7 +6154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The HTTP error code when the redirect is applied. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyprefixequals_nodejs">
 <a href="#keyprefixequals_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Prefix<wbr>Equals</a>
@@ -5532,7 +6162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The object key name prefix when the redirect is applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -5544,7 +6174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The HTTP error code when the redirect is applied. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_prefix_equals_python">
 <a href="#key_prefix_equals_python" style="color: inherit; text-decoration: inherit;">key_<wbr>prefix_<wbr>equals</a>
@@ -5552,7 +6182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The object key name prefix when the redirect is applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="bucketrule">Bucket<wbr>Rule</h4>
@@ -5564,7 +6194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketrulestatus">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Bucket<wbr>Rule<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5672,7 +6302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketrulestatus">Bucket<wbr>Rule<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5780,7 +6410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketrulestatus">Bucket<wbr>Rule<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5888,7 +6518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#bucketrulestatus">Bucket<wbr>Rule<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5989,6 +6619,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="bucketrulestatus">Bucket<wbr>Rule<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Bucket<wbr>Rule<wbr>Status<wbr>Enabled</dt>
+    <dd>Enabled</dd><dt>Bucket<wbr>Rule<wbr>Status<wbr>Disabled</dt>
+    <dd>Disabled</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ENABLED</dt>
+    <dd>Enabled</dd><dt>DISABLED</dt>
+    <dd>Disabled</dd></dl>
+{{% /choosable %}}
+
 <h4 id="buckets3keyfilter">Bucket<wbr>S3Key<wbr>Filter</h4>
 
 {{% choosable language csharp %}}
@@ -6048,7 +6704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssealgorithm_csharp" style="color: inherit; text-decoration: inherit;">SSEAlgorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketserversideencryptionbydefaultssealgorithm">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>By<wbr>Default<wbr>SSEAlgorithm</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6058,7 +6714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}"KMSMasterKeyID" can only be used when you set the value of SSEAlgorithm as aws:kms.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -6068,7 +6724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssealgorithm_go" style="color: inherit; text-decoration: inherit;">SSEAlgorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketserversideencryptionbydefaultssealgorithm">Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>By<wbr>Default<wbr>SSEAlgorithm</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6078,7 +6734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}"KMSMasterKeyID" can only be used when you set the value of SSEAlgorithm as aws:kms.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -6088,7 +6744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssealgorithm_nodejs" style="color: inherit; text-decoration: inherit;">s<wbr>SEAlgorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketserversideencryptionbydefaultssealgorithm">Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>By<wbr>Default<wbr>SSEAlgorithm</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6098,7 +6754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}"KMSMasterKeyID" can only be used when you set the value of SSEAlgorithm as aws:kms.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -6108,7 +6764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#s_se_algorithm_python" style="color: inherit; text-decoration: inherit;">s_<wbr>se_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#bucketserversideencryptionbydefaultssealgorithm">Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>By<wbr>Default<wbr>SSEAlgorithm</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6118,7 +6774,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}"KMSMasterKeyID" can only be used when you set the value of SSEAlgorithm as aws:kms.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketserversideencryptionbydefaultssealgorithm">Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>By<wbr>Default<wbr>SSEAlgorithm</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Awskms</dt>
+    <dd>aws:kms</dd><dt>Aes256</dt>
+    <dd>AES256</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>By<wbr>Default<wbr>SSEAlgorithm<wbr>Awskms</dt>
+    <dd>aws:kms</dd><dt>Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>By<wbr>Default<wbr>SSEAlgorithm<wbr>Aes256</dt>
+    <dd>AES256</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Awskms</dt>
+    <dd>aws:kms</dd><dt>Aes256</dt>
+    <dd>AES256</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>AWSKMS</dt>
+    <dd>aws:kms</dd><dt>AES256</dt>
+    <dd>AES256</dd></dl>
 {{% /choosable %}}
 
 <h4 id="bucketserversideencryptionrule">Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Rule</h4>
@@ -6132,7 +6814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies whether Amazon S3 should use an S3 Bucket Key with server-side encryption using KMS (SSE-KMS) for new objects in the bucket. Existing objects are not affected. Setting the BucketKeyEnabled element to true causes Amazon S3 to use an S3 Bucket Key. By default, S3 Bucket Key is not enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serversideencryptionbydefault_csharp">
 <a href="#serversideencryptionbydefault_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Side<wbr>Encryption<wbr>By<wbr>Default</a>
@@ -6152,7 +6834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies whether Amazon S3 should use an S3 Bucket Key with server-side encryption using KMS (SSE-KMS) for new objects in the bucket. Existing objects are not affected. Setting the BucketKeyEnabled element to true causes Amazon S3 to use an S3 Bucket Key. By default, S3 Bucket Key is not enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serversideencryptionbydefault_go">
 <a href="#serversideencryptionbydefault_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Side<wbr>Encryption<wbr>By<wbr>Default</a>
@@ -6172,7 +6854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies whether Amazon S3 should use an S3 Bucket Key with server-side encryption using KMS (SSE-KMS) for new objects in the bucket. Existing objects are not affected. Setting the BucketKeyEnabled element to true causes Amazon S3 to use an S3 Bucket Key. By default, S3 Bucket Key is not enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serversideencryptionbydefault_nodejs">
 <a href="#serversideencryptionbydefault_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Side<wbr>Encryption<wbr>By<wbr>Default</a>
@@ -6192,7 +6874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies whether Amazon S3 should use an S3 Bucket Key with server-side encryption using KMS (SSE-KMS) for new objects in the bucket. Existing objects are not affected. Setting the BucketKeyEnabled element to true causes Amazon S3 to use an S3 Bucket Key. By default, S3 Bucket Key is not enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="server_side_encryption_by_default_python">
 <a href="#server_side_encryption_by_default_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>encryption_<wbr>by_<wbr>default</a>
@@ -6214,7 +6896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketreplicamodifications">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Inputs.<wbr>Bucket<wbr>Replica<wbr>Modifications</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A filter that you can specify for selection for modifications on replicas.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssekmsencryptedobjects_csharp">
 <a href="#ssekmsencryptedobjects_csharp" style="color: inherit; text-decoration: inherit;">Sse<wbr>Kms<wbr>Encrypted<wbr>Objects</a>
@@ -6222,7 +6904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketssekmsencryptedobjects">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Inputs.<wbr>Bucket<wbr>Sse<wbr>Kms<wbr>Encrypted<wbr>Objects</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A container for filter information for the selection of Amazon S3 objects encrypted with AWS KMS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -6234,7 +6916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketreplicamodifications">Bucket<wbr>Replica<wbr>Modifications</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A filter that you can specify for selection for modifications on replicas.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssekmsencryptedobjects_go">
 <a href="#ssekmsencryptedobjects_go" style="color: inherit; text-decoration: inherit;">Sse<wbr>Kms<wbr>Encrypted<wbr>Objects</a>
@@ -6242,7 +6924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketssekmsencryptedobjects">Bucket<wbr>Sse<wbr>Kms<wbr>Encrypted<wbr>Objects</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A container for filter information for the selection of Amazon S3 objects encrypted with AWS KMS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -6254,7 +6936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketreplicamodifications">Bucket<wbr>Replica<wbr>Modifications</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A filter that you can specify for selection for modifications on replicas.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssekmsencryptedobjects_nodejs">
 <a href="#ssekmsencryptedobjects_nodejs" style="color: inherit; text-decoration: inherit;">sse<wbr>Kms<wbr>Encrypted<wbr>Objects</a>
@@ -6262,7 +6944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketssekmsencryptedobjects">Bucket<wbr>Sse<wbr>Kms<wbr>Encrypted<wbr>Objects</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A container for filter information for the selection of Amazon S3 objects encrypted with AWS KMS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -6274,7 +6956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketreplicamodifications">Bucket<wbr>Replica<wbr>Modifications</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A filter that you can specify for selection for modifications on replicas.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sse_kms_encrypted_objects_python">
 <a href="#sse_kms_encrypted_objects_python" style="color: inherit; text-decoration: inherit;">sse_<wbr>kms_<wbr>encrypted_<wbr>objects</a>
@@ -6282,7 +6964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketssekmsencryptedobjects">Bucket<wbr>Sse<wbr>Kms<wbr>Encrypted<wbr>Objects</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A container for filter information for the selection of Amazon S3 objects encrypted with AWS KMS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="bucketssekmsencryptedobjects">Bucket<wbr>Sse<wbr>Kms<wbr>Encrypted<wbr>Objects</h4>
@@ -6294,9 +6976,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketssekmsencryptedobjectsstatus">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Bucket<wbr>Sse<wbr>Kms<wbr>Encrypted<wbr>Objects<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies whether Amazon S3 replicates objects created with server-side encryption using a customer master key (CMK) stored in AWS Key Management Service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -6306,9 +6988,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketssekmsencryptedobjectsstatus">Bucket<wbr>Sse<wbr>Kms<wbr>Encrypted<wbr>Objects<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies whether Amazon S3 replicates objects created with server-side encryption using a customer master key (CMK) stored in AWS Key Management Service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -6318,9 +7000,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketssekmsencryptedobjectsstatus">Bucket<wbr>Sse<wbr>Kms<wbr>Encrypted<wbr>Objects<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies whether Amazon S3 replicates objects created with server-side encryption using a customer master key (CMK) stored in AWS Key Management Service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -6330,9 +7012,35 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#bucketssekmsencryptedobjectsstatus">Bucket<wbr>Sse<wbr>Kms<wbr>Encrypted<wbr>Objects<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies whether Amazon S3 replicates objects created with server-side encryption using a customer master key (CMK) stored in AWS Key Management Service.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketssekmsencryptedobjectsstatus">Bucket<wbr>Sse<wbr>Kms<wbr>Encrypted<wbr>Objects<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Disabled</dt>
+    <dd>Disabled</dd><dt>Enabled</dt>
+    <dd>Enabled</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Bucket<wbr>Sse<wbr>Kms<wbr>Encrypted<wbr>Objects<wbr>Status<wbr>Disabled</dt>
+    <dd>Disabled</dd><dt>Bucket<wbr>Sse<wbr>Kms<wbr>Encrypted<wbr>Objects<wbr>Status<wbr>Enabled</dt>
+    <dd>Enabled</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Disabled</dt>
+    <dd>Disabled</dd><dt>Enabled</dt>
+    <dd>Enabled</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DISABLED</dt>
+    <dd>Disabled</dd><dt>ENABLED</dt>
+    <dd>Enabled</dd></dl>
 {{% /choosable %}}
 
 <h4 id="bucketstorageclassanalysis">Bucket<wbr>Storage<wbr>Class<wbr>Analysis</h4>
@@ -6558,9 +7266,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesstier_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#buckettieringaccesstier">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Bucket<wbr>Tiering<wbr>Access<wbr>Tier</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}S3 Intelligent-Tiering access tier. See Storage class for automatically optimizing frequently and infrequently accessed objects for a list of access tiers in the S3 Intelligent-Tiering storage class.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="days_csharp">
 <a href="#days_csharp" style="color: inherit; text-decoration: inherit;">Days</a>
@@ -6568,7 +7276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The number of consecutive days of no access after which an object will be eligible to be transitioned to the corresponding tier. The minimum number of days specified for Archive Access tier must be at least 90 days and Deep Archive Access tier must be at least 180 days. The maximum can be up to 2 years (730 days).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -6578,9 +7286,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesstier_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#buckettieringaccesstier">Bucket<wbr>Tiering<wbr>Access<wbr>Tier</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}S3 Intelligent-Tiering access tier. See Storage class for automatically optimizing frequently and infrequently accessed objects for a list of access tiers in the S3 Intelligent-Tiering storage class.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="days_go">
 <a href="#days_go" style="color: inherit; text-decoration: inherit;">Days</a>
@@ -6588,7 +7296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The number of consecutive days of no access after which an object will be eligible to be transitioned to the corresponding tier. The minimum number of days specified for Archive Access tier must be at least 90 days and Deep Archive Access tier must be at least 180 days. The maximum can be up to 2 years (730 days).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -6598,9 +7306,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesstier_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#buckettieringaccesstier">Bucket<wbr>Tiering<wbr>Access<wbr>Tier</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}S3 Intelligent-Tiering access tier. See Storage class for automatically optimizing frequently and infrequently accessed objects for a list of access tiers in the S3 Intelligent-Tiering storage class.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="days_nodejs">
 <a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
@@ -6608,7 +7316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The number of consecutive days of no access after which an object will be eligible to be transitioned to the corresponding tier. The minimum number of days specified for Archive Access tier must be at least 90 days and Deep Archive Access tier must be at least 180 days. The maximum can be up to 2 years (730 days).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -6618,9 +7326,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_tier_python" style="color: inherit; text-decoration: inherit;">access_<wbr>tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#buckettieringaccesstier">Bucket<wbr>Tiering<wbr>Access<wbr>Tier</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}S3 Intelligent-Tiering access tier. See Storage class for automatically optimizing frequently and infrequently accessed objects for a list of access tiers in the S3 Intelligent-Tiering storage class.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="days_python">
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
@@ -6628,7 +7336,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The number of consecutive days of no access after which an object will be eligible to be transitioned to the corresponding tier. The minimum number of days specified for Archive Access tier must be at least 90 days and Deep Archive Access tier must be at least 180 days. The maximum can be up to 2 years (730 days).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="buckettieringaccesstier">Bucket<wbr>Tiering<wbr>Access<wbr>Tier</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Archive<wbr>Access</dt>
+    <dd>ARCHIVE_ACCESS</dd><dt>Deep<wbr>Archive<wbr>Access</dt>
+    <dd>DEEP_ARCHIVE_ACCESS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Bucket<wbr>Tiering<wbr>Access<wbr>Tier<wbr>Archive<wbr>Access</dt>
+    <dd>ARCHIVE_ACCESS</dd><dt>Bucket<wbr>Tiering<wbr>Access<wbr>Tier<wbr>Deep<wbr>Archive<wbr>Access</dt>
+    <dd>DEEP_ARCHIVE_ACCESS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Archive<wbr>Access</dt>
+    <dd>ARCHIVE_ACCESS</dd><dt>Deep<wbr>Archive<wbr>Access</dt>
+    <dd>DEEP_ARCHIVE_ACCESS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ARCHIVE_ACCESS</dt>
+    <dd>ARCHIVE_ACCESS</dd><dt>DEEP_ARCHIVE_ACCESS</dt>
+    <dd>DEEP_ARCHIVE_ACCESS</dd></dl>
 {{% /choosable %}}
 
 <h4 id="buckettopicconfiguration">Bucket<wbr>Topic<wbr>Configuration</h4>
@@ -6642,7 +7376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The Amazon S3 bucket event about which to send notifications.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="topic_csharp">
 <a href="#topic_csharp" style="color: inherit; text-decoration: inherit;">Topic</a>
@@ -6650,7 +7384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon SNS topic to which Amazon S3 publishes a message when it detects events of the specified type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -6658,7 +7392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketnotificationfilter">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Inputs.<wbr>Bucket<wbr>Notification<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The filtering rules that determine for which objects to send notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -6670,7 +7404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The Amazon S3 bucket event about which to send notifications.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="topic_go">
 <a href="#topic_go" style="color: inherit; text-decoration: inherit;">Topic</a>
@@ -6678,7 +7412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon SNS topic to which Amazon S3 publishes a message when it detects events of the specified type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -6686,7 +7420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketnotificationfilter">Bucket<wbr>Notification<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The filtering rules that determine for which objects to send notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -6698,7 +7432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The Amazon S3 bucket event about which to send notifications.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="topic_nodejs">
 <a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
@@ -6706,7 +7440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon SNS topic to which Amazon S3 publishes a message when it detects events of the specified type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -6714,7 +7448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketnotificationfilter">Bucket<wbr>Notification<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The filtering rules that determine for which objects to send notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -6726,7 +7460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The Amazon S3 bucket event about which to send notifications.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="topic_python">
 <a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
@@ -6734,7 +7468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon SNS topic to which Amazon S3 publishes a message when it detects events of the specified type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -6742,7 +7476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketnotificationfilter">Bucket<wbr>Notification<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The filtering rules that determine for which objects to send notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="buckettransition">Bucket<wbr>Transition</h4>
@@ -6754,7 +7488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageclass_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#buckettransitionstorageclass">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Bucket<wbr>Transition<wbr>Storage<wbr>Class</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6782,7 +7516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageclass_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#buckettransitionstorageclass">Bucket<wbr>Transition<wbr>Storage<wbr>Class</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6810,7 +7544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageclass_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#buckettransitionstorageclass">Bucket<wbr>Transition<wbr>Storage<wbr>Class</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6838,7 +7572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_class_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#buckettransitionstorageclass">Bucket<wbr>Transition<wbr>Storage<wbr>Class</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6859,6 +7593,44 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="buckettransitionstorageclass">Bucket<wbr>Transition<wbr>Storage<wbr>Class</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Deep<wbr>Archive</dt>
+    <dd>DEEP_ARCHIVE</dd><dt>Glacier</dt>
+    <dd>GLACIER</dd><dt>Intelligent<wbr>Tiering</dt>
+    <dd>INTELLIGENT_TIERING</dd><dt>Onezone<wbr>Ia</dt>
+    <dd>ONEZONE_IA</dd><dt>Standard<wbr>Ia</dt>
+    <dd>STANDARD_IA</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Bucket<wbr>Transition<wbr>Storage<wbr>Class<wbr>Deep<wbr>Archive</dt>
+    <dd>DEEP_ARCHIVE</dd><dt>Bucket<wbr>Transition<wbr>Storage<wbr>Class<wbr>Glacier</dt>
+    <dd>GLACIER</dd><dt>Bucket<wbr>Transition<wbr>Storage<wbr>Class<wbr>Intelligent<wbr>Tiering</dt>
+    <dd>INTELLIGENT_TIERING</dd><dt>Bucket<wbr>Transition<wbr>Storage<wbr>Class<wbr>Onezone<wbr>Ia</dt>
+    <dd>ONEZONE_IA</dd><dt>Bucket<wbr>Transition<wbr>Storage<wbr>Class<wbr>Standard<wbr>Ia</dt>
+    <dd>STANDARD_IA</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Deep<wbr>Archive</dt>
+    <dd>DEEP_ARCHIVE</dd><dt>Glacier</dt>
+    <dd>GLACIER</dd><dt>Intelligent<wbr>Tiering</dt>
+    <dd>INTELLIGENT_TIERING</dd><dt>Onezone<wbr>Ia</dt>
+    <dd>ONEZONE_IA</dd><dt>Standard<wbr>Ia</dt>
+    <dd>STANDARD_IA</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DEEP_ARCHIVE</dt>
+    <dd>DEEP_ARCHIVE</dd><dt>GLACIER</dt>
+    <dd>GLACIER</dd><dt>INTELLIGENT_TIERING</dt>
+    <dd>INTELLIGENT_TIERING</dd><dt>ONEZONE_IA</dt>
+    <dd>ONEZONE_IA</dd><dt>STANDARD_IA</dt>
+    <dd>STANDARD_IA</dd></dl>
+{{% /choosable %}}
+
 <h4 id="bucketversioningconfiguration">Bucket<wbr>Versioning<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
@@ -6868,9 +7640,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketversioningconfigurationstatus">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Bucket<wbr>Versioning<wbr>Configuration<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The versioning state of the bucket.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -6880,9 +7652,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketversioningconfigurationstatus">Bucket<wbr>Versioning<wbr>Configuration<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The versioning state of the bucket.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -6892,9 +7664,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#bucketversioningconfigurationstatus">Bucket<wbr>Versioning<wbr>Configuration<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The versioning state of the bucket.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -6904,9 +7676,35 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#bucketversioningconfigurationstatus">Bucket<wbr>Versioning<wbr>Configuration<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The versioning state of the bucket.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketversioningconfigurationstatus">Bucket<wbr>Versioning<wbr>Configuration<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Suspended</dt>
+    <dd>Suspended</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Bucket<wbr>Versioning<wbr>Configuration<wbr>Status<wbr>Enabled</dt>
+    <dd>Enabled</dd><dt>Bucket<wbr>Versioning<wbr>Configuration<wbr>Status<wbr>Suspended</dt>
+    <dd>Suspended</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Suspended</dt>
+    <dd>Suspended</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ENABLED</dt>
+    <dd>Enabled</dd><dt>SUSPENDED</dt>
+    <dd>Suspended</dd></dl>
 {{% /choosable %}}
 
 <h4 id="bucketwebsiteconfiguration">Bucket<wbr>Website<wbr>Configuration</h4>
@@ -6920,7 +7718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the error document for the website.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indexdocument_csharp">
 <a href="#indexdocument_csharp" style="color: inherit; text-decoration: inherit;">Index<wbr>Document</a>
@@ -6928,7 +7726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the index document for the website.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirectallrequeststo_csharp">
 <a href="#redirectallrequeststo_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>All<wbr>Requests<wbr>To</a>
@@ -6956,7 +7754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the error document for the website.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indexdocument_go">
 <a href="#indexdocument_go" style="color: inherit; text-decoration: inherit;">Index<wbr>Document</a>
@@ -6964,7 +7762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the index document for the website.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirectallrequeststo_go">
 <a href="#redirectallrequeststo_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>All<wbr>Requests<wbr>To</a>
@@ -6992,7 +7790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the error document for the website.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indexdocument_nodejs">
 <a href="#indexdocument_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Document</a>
@@ -7000,7 +7798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the index document for the website.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirectallrequeststo_nodejs">
 <a href="#redirectallrequeststo_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>All<wbr>Requests<wbr>To</a>
@@ -7028,7 +7826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the error document for the website.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="index_document_python">
 <a href="#index_document_python" style="color: inherit; text-decoration: inherit;">index_<wbr>document</a>
@@ -7036,7 +7834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the index document for the website.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirect_all_requests_to_python">
 <a href="#redirect_all_requests_to_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>all_<wbr>requests_<wbr>to</a>

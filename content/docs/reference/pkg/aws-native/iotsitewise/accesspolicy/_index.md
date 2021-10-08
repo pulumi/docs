@@ -27,9 +27,9 @@ Resource schema for AWS::IoTSiteWise::AccessPolicy
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">AccessPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                 <span class="nx">access_policy_identity</span><span class="p">:</span> <span class="nx">Optional[AccessPolicyAccessPolicyIdentityArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">access_policy_identity</span><span class="p">:</span> <span class="nx">Optional[AccessPolicyIdentityArgs]</span> = None<span class="p">,</span>
                  <span class="nx">access_policy_permission</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                 <span class="nx">access_policy_resource</span><span class="p">:</span> <span class="nx">Optional[AccessPolicyAccessPolicyResourceArgs]</span> = None<span class="p">)</span>
+                 <span class="nx">access_policy_resource</span><span class="p">:</span> <span class="nx">Optional[AccessPolicyResourceArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">AccessPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccessPolicyArgs</a></span><span class="p">,</span>
@@ -163,7 +163,7 @@ The AccessPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#accesspolicyidentity_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Policy<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyaccesspolicyidentity">Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TSite<wbr>Wise.<wbr>Inputs.<wbr>Access<wbr>Policy<wbr>Access<wbr>Policy<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#accesspolicyidentity">Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TSite<wbr>Wise.<wbr>Inputs.<wbr>Access<wbr>Policy<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity for this access policy. Choose either a user or a group but not both.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -179,7 +179,7 @@ The AccessPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#accesspolicyresource_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Policy<wbr>Resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyaccesspolicyresource">Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TSite<wbr>Wise.<wbr>Inputs.<wbr>Access<wbr>Policy<wbr>Access<wbr>Policy<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#accesspolicyresource">Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TSite<wbr>Wise.<wbr>Inputs.<wbr>Access<wbr>Policy<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AWS IoT SiteWise Monitor resource for this access policy. Choose either portal or project but not both.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -191,7 +191,7 @@ The AccessPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#accesspolicyidentity_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Policy<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyaccesspolicyidentity">Access<wbr>Policy<wbr>Access<wbr>Policy<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#accesspolicyidentity">Access<wbr>Policy<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity for this access policy. Choose either a user or a group but not both.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -207,7 +207,7 @@ The AccessPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#accesspolicyresource_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Policy<wbr>Resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyaccesspolicyresource">Access<wbr>Policy<wbr>Access<wbr>Policy<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#accesspolicyresource">Access<wbr>Policy<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AWS IoT SiteWise Monitor resource for this access policy. Choose either portal or project but not both.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -219,7 +219,7 @@ The AccessPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#accesspolicyidentity_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Policy<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyaccesspolicyidentity">Access<wbr>Policy<wbr>Access<wbr>Policy<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#accesspolicyidentity">Access<wbr>Policy<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity for this access policy. Choose either a user or a group but not both.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -235,7 +235,7 @@ The AccessPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#accesspolicyresource_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Policy<wbr>Resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyaccesspolicyresource">Access<wbr>Policy<wbr>Access<wbr>Policy<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#accesspolicyresource">Access<wbr>Policy<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AWS IoT SiteWise Monitor resource for this access policy. Choose either portal or project but not both.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -247,7 +247,7 @@ The AccessPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#access_policy_identity_python" style="color: inherit; text-decoration: inherit;">access_<wbr>policy_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyaccesspolicyidentity">Access<wbr>Policy<wbr>Access<wbr>Policy<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#accesspolicyidentity">Access<wbr>Policy<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity for this access policy. Choose either a user or a group but not both.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -263,7 +263,7 @@ The AccessPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#access_policy_resource_python" style="color: inherit; text-decoration: inherit;">access_<wbr>policy_<wbr>resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyaccesspolicyresource">Access<wbr>Policy<wbr>Access<wbr>Policy<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#accesspolicyresource">Access<wbr>Policy<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AWS IoT SiteWise Monitor resource for this access policy. Choose either portal or project but not both.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -397,7 +397,107 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="accesspolicyaccesspolicyidentity">Access<wbr>Policy<wbr>Access<wbr>Policy<wbr>Identity</h4>
+<h4 id="accesspolicyiamrole">Access<wbr>Policy<wbr>Iam<wbr>Role</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="accesspolicyiamuser">Access<wbr>Policy<wbr>Iam<wbr>User</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM user.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM user.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM user.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM user.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="accesspolicyidentity">Access<wbr>Policy<wbr>Identity</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
@@ -511,188 +611,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="accesspolicyaccesspolicyresource">Access<wbr>Policy<wbr>Access<wbr>Policy<wbr>Resource</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="portal_csharp">
-<a href="#portal_csharp" style="color: inherit; text-decoration: inherit;">Portal</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyportal">Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TSite<wbr>Wise.<wbr>Inputs.<wbr>Access<wbr>Policy<wbr>Portal</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="project_csharp">
-<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyproject">Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TSite<wbr>Wise.<wbr>Inputs.<wbr>Access<wbr>Policy<wbr>Project</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="portal_go">
-<a href="#portal_go" style="color: inherit; text-decoration: inherit;">Portal</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyportal">Access<wbr>Policy<wbr>Portal</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="project_go">
-<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyproject">Access<wbr>Policy<wbr>Project</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="portal_nodejs">
-<a href="#portal_nodejs" style="color: inherit; text-decoration: inherit;">portal</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyportal">Access<wbr>Policy<wbr>Portal</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="project_nodejs">
-<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyproject">Access<wbr>Policy<wbr>Project</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="portal_python">
-<a href="#portal_python" style="color: inherit; text-decoration: inherit;">portal</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyportal">Access<wbr>Policy<wbr>Portal</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="project_python">
-<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyproject">Access<wbr>Policy<wbr>Project</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="accesspolicyiamrole">Access<wbr>Policy<wbr>Iam<wbr>Role</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="arn_csharp">
-<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the IAM role.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="arn_go">
-<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the IAM role.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="arn_nodejs">
-<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the IAM role.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="arn_python">
-<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the IAM role.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="accesspolicyiamuser">Access<wbr>Policy<wbr>Iam<wbr>User</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="arn_csharp">
-<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the IAM user.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="arn_go">
-<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the IAM user.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="arn_nodejs">
-<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the IAM user.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="arn_python">
-<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the IAM user.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
 <h4 id="accesspolicyportal">Access<wbr>Policy<wbr>Portal</h4>
 
 {{% choosable language csharp %}}
@@ -791,6 +709,88 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="accesspolicyresource">Access<wbr>Policy<wbr>Resource</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="portal_csharp">
+<a href="#portal_csharp" style="color: inherit; text-decoration: inherit;">Portal</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accesspolicyportal">Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TSite<wbr>Wise.<wbr>Inputs.<wbr>Access<wbr>Policy<wbr>Portal</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accesspolicyproject">Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TSite<wbr>Wise.<wbr>Inputs.<wbr>Access<wbr>Policy<wbr>Project</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="portal_go">
+<a href="#portal_go" style="color: inherit; text-decoration: inherit;">Portal</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accesspolicyportal">Access<wbr>Policy<wbr>Portal</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accesspolicyproject">Access<wbr>Policy<wbr>Project</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="portal_nodejs">
+<a href="#portal_nodejs" style="color: inherit; text-decoration: inherit;">portal</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accesspolicyportal">Access<wbr>Policy<wbr>Portal</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accesspolicyproject">Access<wbr>Policy<wbr>Project</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="portal_python">
+<a href="#portal_python" style="color: inherit; text-decoration: inherit;">portal</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accesspolicyportal">Access<wbr>Policy<wbr>Portal</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accesspolicyproject">Access<wbr>Policy<wbr>Project</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="accesspolicyuser">Access<wbr>Policy<wbr>User</h4>

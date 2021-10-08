@@ -415,7 +415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#amidistributionconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Ami<wbr>Distribution<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">object</span>
+        <span class="property-type"><a href="#distributionconfigurationdistributionamidistributionconfigurationproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>Image<wbr>Builder.<wbr>Inputs.<wbr>Distribution<wbr>Configuration<wbr>Distribution<wbr>Ami<wbr>Distribution<wbr>Configuration<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The specific AMI settings (for example, launch permissions, AMI tags).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -423,7 +423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containerdistributionconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Distribution<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">object</span>
+        <span class="property-type"><a href="#distributionconfigurationdistributioncontainerdistributionconfigurationproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>Image<wbr>Builder.<wbr>Inputs.<wbr>Distribution<wbr>Configuration<wbr>Distribution<wbr>Container<wbr>Distribution<wbr>Configuration<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Container distribution settings for encryption, licensing, and sharing in a specific Region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -459,7 +459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#amidistributionconfiguration_go" style="color: inherit; text-decoration: inherit;">Ami<wbr>Distribution<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#distributionconfigurationdistributionamidistributionconfigurationproperties">Distribution<wbr>Configuration<wbr>Distribution<wbr>Ami<wbr>Distribution<wbr>Configuration<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The specific AMI settings (for example, launch permissions, AMI tags).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -467,7 +467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containerdistributionconfiguration_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Distribution<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#distributionconfigurationdistributioncontainerdistributionconfigurationproperties">Distribution<wbr>Configuration<wbr>Distribution<wbr>Container<wbr>Distribution<wbr>Configuration<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Container distribution settings for encryption, licensing, and sharing in a specific Region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -503,7 +503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#amidistributionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">ami<wbr>Distribution<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">any</span>
+        <span class="property-type"><a href="#distributionconfigurationdistributionamidistributionconfigurationproperties">Distribution<wbr>Configuration<wbr>Distribution<wbr>Ami<wbr>Distribution<wbr>Configuration<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The specific AMI settings (for example, launch permissions, AMI tags).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -511,7 +511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containerdistributionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Distribution<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">any</span>
+        <span class="property-type"><a href="#distributionconfigurationdistributioncontainerdistributionconfigurationproperties">Distribution<wbr>Configuration<wbr>Distribution<wbr>Container<wbr>Distribution<wbr>Configuration<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Container distribution settings for encryption, licensing, and sharing in a specific Region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -547,7 +547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ami_distribution_configuration_python" style="color: inherit; text-decoration: inherit;">ami_<wbr>distribution_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#distributionconfigurationdistributionamidistributionconfigurationproperties">Distribution<wbr>Configuration<wbr>Distribution<wbr>Ami<wbr>Distribution<wbr>Configuration<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The specific AMI settings (for example, launch permissions, AMI tags).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -555,7 +555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_distribution_configuration_python" style="color: inherit; text-decoration: inherit;">container_<wbr>distribution_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#distributionconfigurationdistributioncontainerdistributionconfigurationproperties">Distribution<wbr>Configuration<wbr>Distribution<wbr>Container<wbr>Distribution<wbr>Configuration<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Container distribution settings for encryption, licensing, and sharing in a specific Region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -574,6 +574,412 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The License Manager Configuration to associate with the AMI in the specified Region.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="distributionconfigurationdistributionamidistributionconfigurationproperties">Distribution<wbr>Configuration<wbr>Distribution<wbr>Ami<wbr>Distribution<wbr>Configuration<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="amitags_csharp">
+<a href="#amitags_csharp" style="color: inherit; text-decoration: inherit;">Ami<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}The tags to apply to AMIs distributed to this Region.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the AMI distribution configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyid_csharp">
+<a href="#kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The KMS key identifier used to encrypt the distributed image.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="launchpermissionconfiguration_csharp">
+<a href="#launchpermissionconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Permission<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionconfigurationdistributionamidistributionconfigurationpropertieslaunchpermissionconfigurationproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>Image<wbr>Builder.<wbr>Inputs.<wbr>Distribution<wbr>Configuration<wbr>Distribution<wbr>Ami<wbr>Distribution<wbr>Configuration<wbr>Properties<wbr>Launch<wbr>Permission<wbr>Configuration<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}Launch permissions can be used to configure which AWS accounts can use the AMI to launch instances.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the AMI distribution configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targetaccountids_csharp">
+<a href="#targetaccountids_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Account<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The ID of accounts to which you want to distribute an image.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="amitags_go">
+<a href="#amitags_go" style="color: inherit; text-decoration: inherit;">Ami<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The tags to apply to AMIs distributed to this Region.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the AMI distribution configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyid_go">
+<a href="#kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The KMS key identifier used to encrypt the distributed image.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="launchpermissionconfiguration_go">
+<a href="#launchpermissionconfiguration_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Permission<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionconfigurationdistributionamidistributionconfigurationpropertieslaunchpermissionconfigurationproperties">Distribution<wbr>Configuration<wbr>Distribution<wbr>Ami<wbr>Distribution<wbr>Configuration<wbr>Properties<wbr>Launch<wbr>Permission<wbr>Configuration<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}Launch permissions can be used to configure which AWS accounts can use the AMI to launch instances.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the AMI distribution configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targetaccountids_go">
+<a href="#targetaccountids_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Account<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The ID of accounts to which you want to distribute an image.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="amitags_nodejs">
+<a href="#amitags_nodejs" style="color: inherit; text-decoration: inherit;">ami<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}The tags to apply to AMIs distributed to this Region.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the AMI distribution configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyid_nodejs">
+<a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The KMS key identifier used to encrypt the distributed image.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="launchpermissionconfiguration_nodejs">
+<a href="#launchpermissionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Permission<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionconfigurationdistributionamidistributionconfigurationpropertieslaunchpermissionconfigurationproperties">Distribution<wbr>Configuration<wbr>Distribution<wbr>Ami<wbr>Distribution<wbr>Configuration<wbr>Properties<wbr>Launch<wbr>Permission<wbr>Configuration<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}Launch permissions can be used to configure which AWS accounts can use the AMI to launch instances.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the AMI distribution configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targetaccountids_nodejs">
+<a href="#targetaccountids_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Account<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The ID of accounts to which you want to distribute an image.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ami_tags_python">
+<a href="#ami_tags_python" style="color: inherit; text-decoration: inherit;">ami_<wbr>tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}The tags to apply to AMIs distributed to this Region.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The description of the AMI distribution configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kms_key_id_python">
+<a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The KMS key identifier used to encrypt the distributed image.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="launch_permission_configuration_python">
+<a href="#launch_permission_configuration_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>permission_<wbr>configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionconfigurationdistributionamidistributionconfigurationpropertieslaunchpermissionconfigurationproperties">Distribution<wbr>Configuration<wbr>Distribution<wbr>Ami<wbr>Distribution<wbr>Configuration<wbr>Properties<wbr>Launch<wbr>Permission<wbr>Configuration<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}Launch permissions can be used to configure which AWS accounts can use the AMI to launch instances.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the AMI distribution configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="target_account_ids_python">
+<a href="#target_account_ids_python" style="color: inherit; text-decoration: inherit;">target_<wbr>account_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The ID of accounts to which you want to distribute an image.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="distributionconfigurationdistributionamidistributionconfigurationpropertieslaunchpermissionconfigurationproperties">Distribution<wbr>Configuration<wbr>Distribution<wbr>Ami<wbr>Distribution<wbr>Configuration<wbr>Properties<wbr>Launch<wbr>Permission<wbr>Configuration<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="usergroups_csharp">
+<a href="#usergroups_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The name of the group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userids_csharp">
+<a href="#userids_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The AWS account ID.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="usergroups_go">
+<a href="#usergroups_go" style="color: inherit; text-decoration: inherit;">User<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The name of the group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userids_go">
+<a href="#userids_go" style="color: inherit; text-decoration: inherit;">User<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The AWS account ID.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="usergroups_nodejs">
+<a href="#usergroups_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The name of the group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userids_nodejs">
+<a href="#userids_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The AWS account ID.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="user_groups_python">
+<a href="#user_groups_python" style="color: inherit; text-decoration: inherit;">user_<wbr>groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The name of the group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="user_ids_python">
+<a href="#user_ids_python" style="color: inherit; text-decoration: inherit;">user_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The AWS account ID.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="distributionconfigurationdistributioncontainerdistributionconfigurationproperties">Distribution<wbr>Configuration<wbr>Distribution<wbr>Container<wbr>Distribution<wbr>Configuration<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="containertags_csharp">
+<a href="#containertags_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Tags that are attached to the container distribution configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the container distribution configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targetrepository_csharp">
+<a href="#targetrepository_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Repository</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionconfigurationtargetcontainerrepository">Pulumi.<wbr>Aws<wbr>Native.<wbr>Image<wbr>Builder.<wbr>Inputs.<wbr>Distribution<wbr>Configuration<wbr>Target<wbr>Container<wbr>Repository</a></span>
+    </dt>
+    <dd>{{% md %}}The destination repository for the container distribution configuration.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="containertags_go">
+<a href="#containertags_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Tags that are attached to the container distribution configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the container distribution configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targetrepository_go">
+<a href="#targetrepository_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Repository</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionconfigurationtargetcontainerrepository">Distribution<wbr>Configuration<wbr>Target<wbr>Container<wbr>Repository</a></span>
+    </dt>
+    <dd>{{% md %}}The destination repository for the container distribution configuration.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="containertags_nodejs">
+<a href="#containertags_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Tags that are attached to the container distribution configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the container distribution configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targetrepository_nodejs">
+<a href="#targetrepository_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Repository</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionconfigurationtargetcontainerrepository">Distribution<wbr>Configuration<wbr>Target<wbr>Container<wbr>Repository</a></span>
+    </dt>
+    <dd>{{% md %}}The destination repository for the container distribution configuration.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="container_tags_python">
+<a href="#container_tags_python" style="color: inherit; text-decoration: inherit;">container_<wbr>tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Tags that are attached to the container distribution configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The description of the container distribution configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="target_repository_python">
+<a href="#target_repository_python" style="color: inherit; text-decoration: inherit;">target_<wbr>repository</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionconfigurationtargetcontainerrepository">Distribution<wbr>Configuration<wbr>Target<wbr>Container<wbr>Repository</a></span>
+    </dt>
+    <dd>{{% md %}}The destination repository for the container distribution configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="distributionconfigurationlaunchtemplateconfiguration">Distribution<wbr>Configuration<wbr>Launch<wbr>Template<wbr>Configuration</h4>
@@ -688,6 +1094,110 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set the specified EC2 launch template as the default launch template for the specified account.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="distributionconfigurationtargetcontainerrepository">Distribution<wbr>Configuration<wbr>Target<wbr>Container<wbr>Repository</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="repositoryname_csharp">
+<a href="#repositoryname_csharp" style="color: inherit; text-decoration: inherit;">Repository<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The repository name of target container repository.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="service_csharp">
+<a href="#service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionconfigurationtargetcontainerrepositoryservice">Pulumi.<wbr>Aws<wbr>Native.<wbr>Image<wbr>Builder.<wbr>Distribution<wbr>Configuration<wbr>Target<wbr>Container<wbr>Repository<wbr>Service</a></span>
+    </dt>
+    <dd>{{% md %}}The service of target container repository.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="repositoryname_go">
+<a href="#repositoryname_go" style="color: inherit; text-decoration: inherit;">Repository<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The repository name of target container repository.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="service_go">
+<a href="#service_go" style="color: inherit; text-decoration: inherit;">Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionconfigurationtargetcontainerrepositoryservice">Distribution<wbr>Configuration<wbr>Target<wbr>Container<wbr>Repository<wbr>Service</a></span>
+    </dt>
+    <dd>{{% md %}}The service of target container repository.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="repositoryname_nodejs">
+<a href="#repositoryname_nodejs" style="color: inherit; text-decoration: inherit;">repository<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The repository name of target container repository.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="service_nodejs">
+<a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionconfigurationtargetcontainerrepositoryservice">Distribution<wbr>Configuration<wbr>Target<wbr>Container<wbr>Repository<wbr>Service</a></span>
+    </dt>
+    <dd>{{% md %}}The service of target container repository.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="repository_name_python">
+<a href="#repository_name_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The repository name of target container repository.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="service_python">
+<a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionconfigurationtargetcontainerrepositoryservice">Distribution<wbr>Configuration<wbr>Target<wbr>Container<wbr>Repository<wbr>Service</a></span>
+    </dt>
+    <dd>{{% md %}}The service of target container repository.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="distributionconfigurationtargetcontainerrepositoryservice">Distribution<wbr>Configuration<wbr>Target<wbr>Container<wbr>Repository<wbr>Service</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Ecr</dt>
+    <dd>ECR</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Distribution<wbr>Configuration<wbr>Target<wbr>Container<wbr>Repository<wbr>Service<wbr>Ecr</dt>
+    <dd>ECR</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Ecr</dt>
+    <dd>ECR</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ECR</dt>
+    <dd>ECR</dd></dl>
 {{% /choosable %}}
 
 

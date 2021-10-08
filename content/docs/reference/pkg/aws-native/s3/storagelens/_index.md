@@ -27,7 +27,7 @@ The AWS::S3::StorageLens resource is an Amazon S3 resource type that you can use
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">StorageLens</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                <span class="nx">storage_lens_configuration</span><span class="p">:</span> <span class="nx">Optional[StorageLensStorageLensConfigurationArgs]</span> = None<span class="p">,</span>
+                <span class="nx">storage_lens_configuration</span><span class="p">:</span> <span class="nx">Optional[StorageLensConfigurationArgs]</span> = None<span class="p">,</span>
                 <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[StorageLensTagArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">StorageLens</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -162,7 +162,7 @@ The StorageLens resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#storagelensconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Lens<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagelensstoragelensconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Inputs.<wbr>Storage<wbr>Lens<wbr>Storage<wbr>Lens<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#storagelensconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Inputs.<wbr>Storage<wbr>Lens<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -182,7 +182,7 @@ The StorageLens resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#storagelensconfiguration_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Lens<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagelensstoragelensconfiguration">Storage<wbr>Lens<wbr>Storage<wbr>Lens<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#storagelensconfiguration">Storage<wbr>Lens<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -202,7 +202,7 @@ The StorageLens resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#storagelensconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Lens<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagelensstoragelensconfiguration">Storage<wbr>Lens<wbr>Storage<wbr>Lens<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#storagelensconfiguration">Storage<wbr>Lens<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -222,7 +222,7 @@ The StorageLens resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#storage_lens_configuration_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>lens_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagelensstoragelensconfiguration">Storage<wbr>Lens<wbr>Storage<wbr>Lens<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#storagelensconfiguration">Storage<wbr>Lens<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -644,6 +644,280 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="storagelensconfiguration">Storage<wbr>Lens<wbr>Configuration</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="accountlevel_csharp">
+<a href="#accountlevel_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storagelensaccountlevel">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Inputs.<wbr>Storage<wbr>Lens<wbr>Account<wbr>Level</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="isenabled_csharp">
+<a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the Amazon S3 Storage Lens configuration is enabled or disabled.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="awsorg_csharp">
+<a href="#awsorg_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Org</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storagelensawsorg">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Inputs.<wbr>Storage<wbr>Lens<wbr>Aws<wbr>Org</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dataexport_csharp">
+<a href="#dataexport_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Export</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storagelensdataexport">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Inputs.<wbr>Storage<wbr>Lens<wbr>Data<wbr>Export</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exclude_csharp">
+<a href="#exclude_csharp" style="color: inherit; text-decoration: inherit;">Exclude</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storagelensbucketsandregions">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Inputs.<wbr>Storage<wbr>Lens<wbr>Buckets<wbr>And<wbr>Regions</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="include_csharp">
+<a href="#include_csharp" style="color: inherit; text-decoration: inherit;">Include</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storagelensbucketsandregions">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Inputs.<wbr>Storage<wbr>Lens<wbr>Buckets<wbr>And<wbr>Regions</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storagelensarn_csharp">
+<a href="#storagelensarn_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Lens<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN for the Amazon S3 Storage Lens configuration.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="accountlevel_go">
+<a href="#accountlevel_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storagelensaccountlevel">Storage<wbr>Lens<wbr>Account<wbr>Level</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="isenabled_go">
+<a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the Amazon S3 Storage Lens configuration is enabled or disabled.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="awsorg_go">
+<a href="#awsorg_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Org</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storagelensawsorg">Storage<wbr>Lens<wbr>Aws<wbr>Org</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dataexport_go">
+<a href="#dataexport_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Export</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storagelensdataexport">Storage<wbr>Lens<wbr>Data<wbr>Export</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exclude_go">
+<a href="#exclude_go" style="color: inherit; text-decoration: inherit;">Exclude</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storagelensbucketsandregions">Storage<wbr>Lens<wbr>Buckets<wbr>And<wbr>Regions</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="include_go">
+<a href="#include_go" style="color: inherit; text-decoration: inherit;">Include</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storagelensbucketsandregions">Storage<wbr>Lens<wbr>Buckets<wbr>And<wbr>Regions</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storagelensarn_go">
+<a href="#storagelensarn_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Lens<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN for the Amazon S3 Storage Lens configuration.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="accountlevel_nodejs">
+<a href="#accountlevel_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storagelensaccountlevel">Storage<wbr>Lens<wbr>Account<wbr>Level</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="isenabled_nodejs">
+<a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the Amazon S3 Storage Lens configuration is enabled or disabled.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="awsorg_nodejs">
+<a href="#awsorg_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Org</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storagelensawsorg">Storage<wbr>Lens<wbr>Aws<wbr>Org</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dataexport_nodejs">
+<a href="#dataexport_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Export</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storagelensdataexport">Storage<wbr>Lens<wbr>Data<wbr>Export</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exclude_nodejs">
+<a href="#exclude_nodejs" style="color: inherit; text-decoration: inherit;">exclude</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storagelensbucketsandregions">Storage<wbr>Lens<wbr>Buckets<wbr>And<wbr>Regions</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="include_nodejs">
+<a href="#include_nodejs" style="color: inherit; text-decoration: inherit;">include</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storagelensbucketsandregions">Storage<wbr>Lens<wbr>Buckets<wbr>And<wbr>Regions</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storagelensarn_nodejs">
+<a href="#storagelensarn_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Lens<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN for the Amazon S3 Storage Lens configuration.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="account_level_python">
+<a href="#account_level_python" style="color: inherit; text-decoration: inherit;">account_<wbr>level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storagelensaccountlevel">Storage<wbr>Lens<wbr>Account<wbr>Level</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="is_enabled_python">
+<a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the Amazon S3 Storage Lens configuration is enabled or disabled.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="aws_org_python">
+<a href="#aws_org_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>org</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storagelensawsorg">Storage<wbr>Lens<wbr>Aws<wbr>Org</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="data_export_python">
+<a href="#data_export_python" style="color: inherit; text-decoration: inherit;">data_<wbr>export</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storagelensdataexport">Storage<wbr>Lens<wbr>Data<wbr>Export</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exclude_python">
+<a href="#exclude_python" style="color: inherit; text-decoration: inherit;">exclude</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storagelensbucketsandregions">Storage<wbr>Lens<wbr>Buckets<wbr>And<wbr>Regions</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="include_python">
+<a href="#include_python" style="color: inherit; text-decoration: inherit;">include</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storagelensbucketsandregions">Storage<wbr>Lens<wbr>Buckets<wbr>And<wbr>Regions</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storage_lens_arn_python">
+<a href="#storage_lens_arn_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>lens_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN for the Amazon S3 Storage Lens configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="storagelensdataexport">Storage<wbr>Lens<wbr>Data<wbr>Export</h4>
@@ -1198,280 +1472,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The minimum storage bytes threshold for the prefixes to be included in the analysis.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="storagelensstoragelensconfiguration">Storage<wbr>Lens<wbr>Storage<wbr>Lens<wbr>Configuration</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="accountlevel_csharp">
-<a href="#accountlevel_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Level</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagelensaccountlevel">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Inputs.<wbr>Storage<wbr>Lens<wbr>Account<wbr>Level</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="isenabled_csharp">
-<a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether the Amazon S3 Storage Lens configuration is enabled or disabled.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="awsorg_csharp">
-<a href="#awsorg_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Org</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagelensawsorg">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Inputs.<wbr>Storage<wbr>Lens<wbr>Aws<wbr>Org</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="dataexport_csharp">
-<a href="#dataexport_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Export</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagelensdataexport">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Inputs.<wbr>Storage<wbr>Lens<wbr>Data<wbr>Export</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="exclude_csharp">
-<a href="#exclude_csharp" style="color: inherit; text-decoration: inherit;">Exclude</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagelensbucketsandregions">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Inputs.<wbr>Storage<wbr>Lens<wbr>Buckets<wbr>And<wbr>Regions</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="include_csharp">
-<a href="#include_csharp" style="color: inherit; text-decoration: inherit;">Include</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagelensbucketsandregions">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Inputs.<wbr>Storage<wbr>Lens<wbr>Buckets<wbr>And<wbr>Regions</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="storagelensarn_csharp">
-<a href="#storagelensarn_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Lens<wbr>Arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ARN for the Amazon S3 Storage Lens configuration.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="accountlevel_go">
-<a href="#accountlevel_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Level</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagelensaccountlevel">Storage<wbr>Lens<wbr>Account<wbr>Level</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="isenabled_go">
-<a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether the Amazon S3 Storage Lens configuration is enabled or disabled.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="awsorg_go">
-<a href="#awsorg_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Org</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagelensawsorg">Storage<wbr>Lens<wbr>Aws<wbr>Org</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="dataexport_go">
-<a href="#dataexport_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Export</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagelensdataexport">Storage<wbr>Lens<wbr>Data<wbr>Export</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="exclude_go">
-<a href="#exclude_go" style="color: inherit; text-decoration: inherit;">Exclude</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagelensbucketsandregions">Storage<wbr>Lens<wbr>Buckets<wbr>And<wbr>Regions</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="include_go">
-<a href="#include_go" style="color: inherit; text-decoration: inherit;">Include</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagelensbucketsandregions">Storage<wbr>Lens<wbr>Buckets<wbr>And<wbr>Regions</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="storagelensarn_go">
-<a href="#storagelensarn_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Lens<wbr>Arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ARN for the Amazon S3 Storage Lens configuration.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="accountlevel_nodejs">
-<a href="#accountlevel_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Level</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagelensaccountlevel">Storage<wbr>Lens<wbr>Account<wbr>Level</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="isenabled_nodejs">
-<a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether the Amazon S3 Storage Lens configuration is enabled or disabled.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="awsorg_nodejs">
-<a href="#awsorg_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Org</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagelensawsorg">Storage<wbr>Lens<wbr>Aws<wbr>Org</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="dataexport_nodejs">
-<a href="#dataexport_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Export</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagelensdataexport">Storage<wbr>Lens<wbr>Data<wbr>Export</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="exclude_nodejs">
-<a href="#exclude_nodejs" style="color: inherit; text-decoration: inherit;">exclude</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagelensbucketsandregions">Storage<wbr>Lens<wbr>Buckets<wbr>And<wbr>Regions</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="include_nodejs">
-<a href="#include_nodejs" style="color: inherit; text-decoration: inherit;">include</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagelensbucketsandregions">Storage<wbr>Lens<wbr>Buckets<wbr>And<wbr>Regions</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="storagelensarn_nodejs">
-<a href="#storagelensarn_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Lens<wbr>Arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ARN for the Amazon S3 Storage Lens configuration.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="account_level_python">
-<a href="#account_level_python" style="color: inherit; text-decoration: inherit;">account_<wbr>level</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagelensaccountlevel">Storage<wbr>Lens<wbr>Account<wbr>Level</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="is_enabled_python">
-<a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether the Amazon S3 Storage Lens configuration is enabled or disabled.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="aws_org_python">
-<a href="#aws_org_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>org</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagelensawsorg">Storage<wbr>Lens<wbr>Aws<wbr>Org</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="data_export_python">
-<a href="#data_export_python" style="color: inherit; text-decoration: inherit;">data_<wbr>export</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagelensdataexport">Storage<wbr>Lens<wbr>Data<wbr>Export</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="exclude_python">
-<a href="#exclude_python" style="color: inherit; text-decoration: inherit;">exclude</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagelensbucketsandregions">Storage<wbr>Lens<wbr>Buckets<wbr>And<wbr>Regions</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="include_python">
-<a href="#include_python" style="color: inherit; text-decoration: inherit;">include</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagelensbucketsandregions">Storage<wbr>Lens<wbr>Buckets<wbr>And<wbr>Regions</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="storage_lens_arn_python">
-<a href="#storage_lens_arn_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>lens_<wbr>arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ARN for the Amazon S3 Storage Lens configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="storagelenstag">Storage<wbr>Lens<wbr>Tag</h4>

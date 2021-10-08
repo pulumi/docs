@@ -339,7 +339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modelpackagegroupstatus_csharp" style="color: inherit; text-decoration: inherit;">Model<wbr>Package<wbr>Group<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelpackagegroupmodelpackagegroupstatus">Pulumi.<wbr>Aws<wbr>Native.<wbr>Sage<wbr>Maker.<wbr>Model<wbr>Package<wbr>Group<wbr>Model<wbr>Package<wbr>Group<wbr>Status</a></span>
+        <span class="property-type"><a href="#modelpackagegroupstatus">Pulumi.<wbr>Aws<wbr>Native.<wbr>Sage<wbr>Maker.<wbr>Model<wbr>Package<wbr>Group<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of a modelpackage group job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -375,7 +375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modelpackagegroupstatus_go" style="color: inherit; text-decoration: inherit;">Model<wbr>Package<wbr>Group<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelpackagegroupmodelpackagegroupstatus">Model<wbr>Package<wbr>Group<wbr>Model<wbr>Package<wbr>Group<wbr>Status</a></span>
+        <span class="property-type"><a href="#modelpackagegroupstatus">Model<wbr>Package<wbr>Group<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of a modelpackage group job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -411,7 +411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modelpackagegroupstatus_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Package<wbr>Group<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelpackagegroupmodelpackagegroupstatus">Model<wbr>Package<wbr>Group<wbr>Model<wbr>Package<wbr>Group<wbr>Status</a></span>
+        <span class="property-type"><a href="#modelpackagegroupstatus">Model<wbr>Package<wbr>Group<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of a modelpackage group job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -447,7 +447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#model_package_group_status_python" style="color: inherit; text-decoration: inherit;">model_<wbr>package_<wbr>group_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelpackagegroupmodelpackagegroupstatus">Model<wbr>Package<wbr>Group<wbr>Model<wbr>Package<wbr>Group<wbr>Status</a></span>
+        <span class="property-type"><a href="#modelpackagegroupstatus">Model<wbr>Package<wbr>Group<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of a modelpackage group job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -462,7 +462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="modelpackagegroupmodelpackagegroupstatus">Model<wbr>Package<wbr>Group<wbr>Model<wbr>Package<wbr>Group<wbr>Status</h4>
+<h4 id="modelpackagegroupstatus">Model<wbr>Package<wbr>Group<wbr>Status</h4>
 
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>Pending</dt>
@@ -475,12 +475,12 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular"><dt>Model<wbr>Package<wbr>Group<wbr>Model<wbr>Package<wbr>Group<wbr>Status<wbr>Pending</dt>
-    <dd>Pending</dd><dt>Model<wbr>Package<wbr>Group<wbr>Model<wbr>Package<wbr>Group<wbr>Status<wbr>In<wbr>Progress</dt>
-    <dd>InProgress</dd><dt>Model<wbr>Package<wbr>Group<wbr>Model<wbr>Package<wbr>Group<wbr>Status<wbr>Completed</dt>
-    <dd>Completed</dd><dt>Model<wbr>Package<wbr>Group<wbr>Model<wbr>Package<wbr>Group<wbr>Status<wbr>Failed</dt>
-    <dd>Failed</dd><dt>Model<wbr>Package<wbr>Group<wbr>Model<wbr>Package<wbr>Group<wbr>Status<wbr>Deleting</dt>
-    <dd>Deleting</dd><dt>Model<wbr>Package<wbr>Group<wbr>Model<wbr>Package<wbr>Group<wbr>Status<wbr>Delete<wbr>Failed</dt>
+<dl class="tabular"><dt>Model<wbr>Package<wbr>Group<wbr>Status<wbr>Pending</dt>
+    <dd>Pending</dd><dt>Model<wbr>Package<wbr>Group<wbr>Status<wbr>In<wbr>Progress</dt>
+    <dd>InProgress</dd><dt>Model<wbr>Package<wbr>Group<wbr>Status<wbr>Completed</dt>
+    <dd>Completed</dd><dt>Model<wbr>Package<wbr>Group<wbr>Status<wbr>Failed</dt>
+    <dd>Failed</dd><dt>Model<wbr>Package<wbr>Group<wbr>Status<wbr>Deleting</dt>
+    <dd>Deleting</dd><dt>Model<wbr>Package<wbr>Group<wbr>Status<wbr>Delete<wbr>Failed</dt>
     <dd>DeleteFailed</dd></dl>
 {{% /choosable %}}
 

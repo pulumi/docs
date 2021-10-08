@@ -27,7 +27,7 @@ Resource Type definition for AWS::CloudFront::CachePolicy
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">CachePolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                <span class="nx">cache_policy_config</span><span class="p">:</span> <span class="nx">Optional[CachePolicyCachePolicyConfigArgs]</span> = None<span class="p">)</span>
+                <span class="nx">cache_policy_config</span><span class="p">:</span> <span class="nx">Optional[CachePolicyConfigArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">CachePolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CachePolicyArgs</a></span><span class="p">,</span>
@@ -161,7 +161,7 @@ The CachePolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#cachepolicyconfig_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Policy<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachepolicycachepolicyconfig">Pulumi.<wbr>Aws<wbr>Native.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Cache<wbr>Policy<wbr>Cache<wbr>Policy<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#cachepolicyconfig">Pulumi.<wbr>Aws<wbr>Native.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Cache<wbr>Policy<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -173,7 +173,7 @@ The CachePolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#cachepolicyconfig_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Policy<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachepolicycachepolicyconfig">Cache<wbr>Policy<wbr>Cache<wbr>Policy<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#cachepolicyconfig">Cache<wbr>Policy<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -185,7 +185,7 @@ The CachePolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#cachepolicyconfig_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Policy<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachepolicycachepolicyconfig">Cache<wbr>Policy<wbr>Cache<wbr>Policy<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#cachepolicyconfig">Cache<wbr>Policy<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -197,7 +197,7 @@ The CachePolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#cache_policy_config_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>policy_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachepolicycachepolicyconfig">Cache<wbr>Policy<wbr>Cache<wbr>Policy<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#cachepolicyconfig">Cache<wbr>Policy<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -299,7 +299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="cachepolicycachepolicyconfig">Cache<wbr>Policy<wbr>Cache<wbr>Policy<wbr>Config</h4>
+<h4 id="cachepolicyconfig">Cache<wbr>Policy<wbr>Config</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
