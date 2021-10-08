@@ -39,8 +39,8 @@ postcss([
         // We need to extract the Tailwind screen size selectors (e.g. sm, md, lg)
         // so that we do not strip them out. As long as a class name appears in the HTML
         // in its entirety, PurgeCSS will not remove it.
-        // Ex. https://tailwindcss.com/docs/controlling-file-size/#writing-purgeable-html
-        defaultExtractor: content => content.match(/[\w-/:]*[\w-/:]/g) || [],
+        // Ex. https://tailwindcss.com/docs/optimizing-for-production#writing-purgeable-html
+        defaultExtractor: content => content.match(/[\w-/.:]+(?<!:)/g) || [],
     }),
 
     // CSSNano minifies our rendered CSS by removing whitespace, comments, etc.
