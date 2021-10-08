@@ -14,9 +14,11 @@ Explore the resources and functions of the aws.directconnect module.
     <li><a href="bgppeer" title="BgpPeer"><span class="symbol resource"></span>BgpPeer</a></li>
     <li><a href="connection" title="Connection"><span class="symbol resource"></span>Connection</a></li>
     <li><a href="connectionassociation" title="ConnectionAssociation"><span class="symbol resource"></span>ConnectionAssociation</a></li>
+    <li><a href="connectionconfirmation" title="ConnectionConfirmation"><span class="symbol resource"></span>ConnectionConfirmation</a></li>
     <li><a href="gateway" title="Gateway"><span class="symbol resource"></span>Gateway</a></li>
     <li><a href="gatewayassociation" title="GatewayAssociation"><span class="symbol resource"></span>GatewayAssociation</a></li>
     <li><a href="gatewayassociationproposal" title="GatewayAssociationProposal"><span class="symbol resource"></span>GatewayAssociationProposal</a></li>
+    <li><a href="hostedconnection" title="HostedConnection"><span class="symbol resource"></span>HostedConnection</a></li>
     <li><a href="hostedprivatevirtualinterface" title="HostedPrivateVirtualInterface"><span class="symbol resource"></span>HostedPrivateVirtualInterface</a></li>
     <li><a href="hostedprivatevirtualinterfaceaccepter" title="HostedPrivateVirtualInterfaceAccepter"><span class="symbol resource"></span>HostedPrivateVirtualInterfaceAccepter</a></li>
     <li><a href="hostedpublicvirtualinterface" title="HostedPublicVirtualInterface"><span class="symbol resource"></span>HostedPublicVirtualInterface</a></li>
@@ -46,6 +48,6 @@ Explore the resources and functions of the aws.directconnect module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.22.1</dd>
+	<dd>4.24.0</dd>
 </dl>
 

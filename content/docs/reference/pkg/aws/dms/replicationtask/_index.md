@@ -168,6 +168,7 @@ const test = new aws.dms.ReplicationTask("test", {
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ReplicationTask</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                    <span class="nx">cdc_start_position</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">cdc_start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">migration_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">replication_instance_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -360,6 +361,15 @@ The ReplicationTask resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}The Amazon Resource Name (ARN) string that uniquely identifies the target endpoint.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="cdcstartposition_csharp">
+<a href="#cdcstartposition_csharp" style="color: inherit; text-decoration: inherit;">Cdc<wbr>Start<wbr>Position</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates when you want a change data capture (CDC) operation to start. The value can be in date, checkpoint, or LSN/SCN format depending on the source engine. For more information, see [Determining a CDC native start point](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Task.CDC.html#CHAP_Task.CDC.StartPoint.Native).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="cdcstarttime_csharp">
 <a href="#cdcstarttime_csharp" style="color: inherit; text-decoration: inherit;">Cdc<wbr>Start<wbr>Time</a>
 </span>
@@ -443,6 +453,15 @@ The ReplicationTask resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) string that uniquely identifies the target endpoint.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cdcstartposition_go">
+<a href="#cdcstartposition_go" style="color: inherit; text-decoration: inherit;">Cdc<wbr>Start<wbr>Position</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates when you want a change data capture (CDC) operation to start. The value can be in date, checkpoint, or LSN/SCN format depending on the source engine. For more information, see [Determining a CDC native start point](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Task.CDC.html#CHAP_Task.CDC.StartPoint.Native).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cdcstarttime_go">
@@ -530,6 +549,15 @@ The ReplicationTask resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}The Amazon Resource Name (ARN) string that uniquely identifies the target endpoint.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="cdcstartposition_nodejs">
+<a href="#cdcstartposition_nodejs" style="color: inherit; text-decoration: inherit;">cdc<wbr>Start<wbr>Position</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates when you want a change data capture (CDC) operation to start. The value can be in date, checkpoint, or LSN/SCN format depending on the source engine. For more information, see [Determining a CDC native start point](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Task.CDC.html#CHAP_Task.CDC.StartPoint.Native).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="cdcstarttime_nodejs">
 <a href="#cdcstarttime_nodejs" style="color: inherit; text-decoration: inherit;">cdc<wbr>Start<wbr>Time</a>
 </span>
@@ -613,6 +641,15 @@ The ReplicationTask resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) string that uniquely identifies the target endpoint.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cdc_start_position_python">
+<a href="#cdc_start_position_python" style="color: inherit; text-decoration: inherit;">cdc_<wbr>start_<wbr>position</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Indicates when you want a change data capture (CDC) operation to start. The value can be in date, checkpoint, or LSN/SCN format depending on the source engine. For more information, see [Determining a CDC native start point](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Task.CDC.html#CHAP_Task.CDC.StartPoint.Native).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cdc_start_time_python">
@@ -786,6 +823,7 @@ Get an existing ReplicationTask resource's state with the given name, ID, and op
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">cdc_start_position</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">cdc_start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">migration_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">replication_instance_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -909,6 +947,15 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_cdcstartposition_csharp">
+<a href="#state_cdcstartposition_csharp" style="color: inherit; text-decoration: inherit;">Cdc<wbr>Start<wbr>Position</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates when you want a change data capture (CDC) operation to start. The value can be in date, checkpoint, or LSN/SCN format depending on the source engine. For more information, see [Determining a CDC native start point](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Task.CDC.html#CHAP_Task.CDC.StartPoint.Native).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_cdcstarttime_csharp">
 <a href="#state_cdcstarttime_csharp" style="color: inherit; text-decoration: inherit;">Cdc<wbr>Start<wbr>Time</a>
 </span>
@@ -1011,6 +1058,15 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_cdcstartposition_go">
+<a href="#state_cdcstartposition_go" style="color: inherit; text-decoration: inherit;">Cdc<wbr>Start<wbr>Position</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates when you want a change data capture (CDC) operation to start. The value can be in date, checkpoint, or LSN/SCN format depending on the source engine. For more information, see [Determining a CDC native start point](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Task.CDC.html#CHAP_Task.CDC.StartPoint.Native).
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cdcstarttime_go">
 <a href="#state_cdcstarttime_go" style="color: inherit; text-decoration: inherit;">Cdc<wbr>Start<wbr>Time</a>
@@ -1115,6 +1171,15 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_cdcstartposition_nodejs">
+<a href="#state_cdcstartposition_nodejs" style="color: inherit; text-decoration: inherit;">cdc<wbr>Start<wbr>Position</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates when you want a change data capture (CDC) operation to start. The value can be in date, checkpoint, or LSN/SCN format depending on the source engine. For more information, see [Determining a CDC native start point](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Task.CDC.html#CHAP_Task.CDC.StartPoint.Native).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_cdcstarttime_nodejs">
 <a href="#state_cdcstarttime_nodejs" style="color: inherit; text-decoration: inherit;">cdc<wbr>Start<wbr>Time</a>
 </span>
@@ -1217,6 +1282,15 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_cdc_start_position_python">
+<a href="#state_cdc_start_position_python" style="color: inherit; text-decoration: inherit;">cdc_<wbr>start_<wbr>position</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Indicates when you want a change data capture (CDC) operation to start. The value can be in date, checkpoint, or LSN/SCN format depending on the source engine. For more information, see [Determining a CDC native start point](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Task.CDC.html#CHAP_Task.CDC.StartPoint.Native).
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cdc_start_time_python">
 <a href="#state_cdc_start_time_python" style="color: inherit; text-decoration: inherit;">cdc_<wbr>start_<wbr>time</a>

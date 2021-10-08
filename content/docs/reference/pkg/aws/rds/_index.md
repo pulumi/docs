@@ -41,6 +41,7 @@ Explore the resources and functions of the aws.rds module.
     <li><a href="geteventcategories" title="GetEventCategories"><span class="symbol function"></span>GetEventCategories</a></li>
     <li><a href="getinstance" title="GetInstance"><span class="symbol function"></span>GetInstance</a></li>
     <li><a href="getorderabledbinstance" title="GetOrderableDbInstance"><span class="symbol function"></span>GetOrderableDbInstance</a></li>
+    <li><a href="getproxy" title="GetProxy"><span class="symbol function"></span>GetProxy</a></li>
     <li><a href="getsnapshot" title="GetSnapshot"><span class="symbol function"></span>GetSnapshot</a></li>
     <li><a href="getsubnetgroup" title="GetSubnetGroup"><span class="symbol function"></span>GetSubnetGroup</a></li>
 </ul>
@@ -54,6 +55,6 @@ Explore the resources and functions of the aws.rds module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.22.1</dd>
+	<dd>4.24.0</dd>
 </dl>
 

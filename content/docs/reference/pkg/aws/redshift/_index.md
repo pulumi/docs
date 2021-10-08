@@ -14,6 +14,7 @@ Explore the resources and functions of the aws.redshift module.
     <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
     <li><a href="eventsubscription" title="EventSubscription"><span class="symbol resource"></span>EventSubscription</a></li>
     <li><a href="parametergroup" title="ParameterGroup"><span class="symbol resource"></span>ParameterGroup</a></li>
+    <li><a href="scheduledaction" title="ScheduledAction"><span class="symbol resource"></span>ScheduledAction</a></li>
     <li><a href="securitygroup" title="SecurityGroup"><span class="symbol resource"></span>SecurityGroup</a></li>
     <li><a href="snapshotcopygrant" title="SnapshotCopyGrant"><span class="symbol resource"></span>SnapshotCopyGrant</a></li>
     <li><a href="snapshotschedule" title="SnapshotSchedule"><span class="symbol resource"></span>SnapshotSchedule</a></li>
@@ -37,6 +38,6 @@ Explore the resources and functions of the aws.redshift module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.22.1</dd>
+	<dd>4.24.0</dd>
 </dl>
 

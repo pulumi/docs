@@ -12,6 +12,7 @@ Explore the resources and functions of the aws.appstream module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="fleet" title="Fleet"><span class="symbol resource"></span>Fleet</a></li>
+    <li><a href="imagebuilder" title="ImageBuilder"><span class="symbol resource"></span>ImageBuilder</a></li>
     <li><a href="stack" title="Stack"><span class="symbol resource"></span>Stack</a></li>
 </ul>
 
@@ -24,6 +25,6 @@ Explore the resources and functions of the aws.appstream module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.22.1</dd>
+	<dd>4.24.0</dd>
 </dl>
 

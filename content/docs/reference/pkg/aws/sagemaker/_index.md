@@ -27,6 +27,7 @@ Explore the resources and functions of the aws.sagemaker module.
     <li><a href="modelpackagegroup" title="ModelPackageGroup"><span class="symbol resource"></span>ModelPackageGroup</a></li>
     <li><a href="notebookinstance" title="NotebookInstance"><span class="symbol resource"></span>NotebookInstance</a></li>
     <li><a href="notebookinstancelifecycleconfiguration" title="NotebookInstanceLifecycleConfiguration"><span class="symbol resource"></span>NotebookInstanceLifecycleConfiguration</a></li>
+    <li><a href="studiolifecycleconfig" title="StudioLifecycleConfig"><span class="symbol resource"></span>StudioLifecycleConfig</a></li>
     <li><a href="userprofile" title="UserProfile"><span class="symbol resource"></span>UserProfile</a></li>
     <li><a href="workforce" title="Workforce"><span class="symbol resource"></span>Workforce</a></li>
     <li><a href="workteam" title="Workteam"><span class="symbol resource"></span>Workteam</a></li>
@@ -46,6 +47,6 @@ Explore the resources and functions of the aws.sagemaker module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.22.1</dd>
+	<dd>4.24.0</dd>
 </dl>
 
