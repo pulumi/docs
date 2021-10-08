@@ -4,6 +4,7 @@ title: "getExportPipeline"
 title_tag: "azure-native.containerregistry.getExportPipeline"
 meta_desc: "Documentation for the azure-native.containerregistry.getExportPipeline function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

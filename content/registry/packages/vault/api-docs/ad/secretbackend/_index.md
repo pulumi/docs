@@ -4,6 +4,7 @@ title: "SecretBackend"
 title_tag: "vault.ad.SecretBackend"
 meta_desc: "Documentation for the vault.ad.SecretBackend resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

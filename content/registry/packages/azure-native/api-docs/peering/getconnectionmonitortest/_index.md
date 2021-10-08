@@ -4,6 +4,7 @@ title: "getConnectionMonitorTest"
 title_tag: "azure-native.peering.getConnectionMonitorTest"
 meta_desc: "Documentation for the azure-native.peering.getConnectionMonitorTest function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

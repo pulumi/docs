@@ -4,6 +4,7 @@ title: "getLink"
 title_tag: "azure-native.customerinsights.getLink"
 meta_desc: "Documentation for the azure-native.customerinsights.getLink function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

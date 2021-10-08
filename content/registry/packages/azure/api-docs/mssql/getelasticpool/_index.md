@@ -4,6 +4,7 @@ title: "getElasticPool"
 title_tag: "azure.mssql.getElasticPool"
 meta_desc: "Documentation for the azure.mssql.getElasticPool function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

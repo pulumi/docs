@@ -4,6 +4,7 @@ title: "getAccessPolicy"
 title_tag: "google-native.accesscontextmanager/v1.getAccessPolicy"
 meta_desc: "Documentation for the google-native.accesscontextmanager/v1.getAccessPolicy function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

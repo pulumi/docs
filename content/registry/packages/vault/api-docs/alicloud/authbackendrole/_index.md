@@ -4,6 +4,7 @@ title: "AuthBackendRole"
 title_tag: "vault.alicloud.AuthBackendRole"
 meta_desc: "Documentation for the vault.alicloud.AuthBackendRole resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

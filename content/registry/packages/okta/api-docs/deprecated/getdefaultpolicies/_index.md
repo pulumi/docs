@@ -4,6 +4,7 @@ title: "getDefaultPolicies"
 title_tag: "okta.deprecated.getDefaultPolicies"
 meta_desc: "Documentation for the okta.deprecated.getDefaultPolicies function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

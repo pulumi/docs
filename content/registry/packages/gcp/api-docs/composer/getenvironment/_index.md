@@ -4,6 +4,7 @@ title: "getEnvironment"
 title_tag: "gcp.composer.getEnvironment"
 meta_desc: "Documentation for the gcp.composer.getEnvironment function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 
@@ -1749,6 +1750,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="schedulercount_csharp">
+<a href="#schedulercount_csharp" style="color: inherit; text-decoration: inherit;">Scheduler<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1792,6 +1801,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="schedulercount_go">
+<a href="#schedulercount_go" style="color: inherit; text-decoration: inherit;">Scheduler<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1837,6 +1854,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="schedulercount_nodejs">
+<a href="#schedulercount_nodejs" style="color: inherit; text-decoration: inherit;">scheduler<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1880,6 +1905,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="scheduler_count_python">
+<a href="#scheduler_count_python" style="color: inherit; text-decoration: inherit;">scheduler_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

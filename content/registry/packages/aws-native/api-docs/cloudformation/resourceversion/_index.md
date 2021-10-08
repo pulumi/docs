@@ -4,6 +4,7 @@ title: "ResourceVersion"
 title_tag: "aws-native.cloudformation.ResourceVersion"
 meta_desc: "Documentation for the aws-native.cloudformation.ResourceVersion resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

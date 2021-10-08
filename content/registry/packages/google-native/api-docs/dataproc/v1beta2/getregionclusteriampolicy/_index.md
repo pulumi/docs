@@ -4,6 +4,7 @@ title: "getRegionClusterIamPolicy"
 title_tag: "google-native.dataproc/v1beta2.getRegionClusterIamPolicy"
 meta_desc: "Documentation for the google-native.dataproc/v1beta2.getRegionClusterIamPolicy function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

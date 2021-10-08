@@ -4,6 +4,7 @@ title: "EnvironmentEC2"
 title_tag: "aws.cloud9.EnvironmentEC2"
 meta_desc: "Documentation for the aws.cloud9.EnvironmentEC2 resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

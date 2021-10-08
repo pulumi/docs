@@ -4,6 +4,7 @@ title: "getGlobalRoleBinding"
 title_tag: "rancher2.getGlobalRoleBinding"
 meta_desc: "Documentation for the rancher2.getGlobalRoleBinding function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

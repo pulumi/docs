@@ -4,6 +4,7 @@ title: "UserMembershipV3"
 title_tag: "openstack.identity.UserMembershipV3"
 meta_desc: "Documentation for the openstack.identity.UserMembershipV3 resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

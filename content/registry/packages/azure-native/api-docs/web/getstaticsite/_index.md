@@ -4,6 +4,7 @@ title: "getStaticSite"
 title_tag: "azure-native.web.getStaticSite"
 meta_desc: "Documentation for the azure-native.web.getStaticSite function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

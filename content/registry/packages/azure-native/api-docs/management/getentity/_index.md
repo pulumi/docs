@@ -4,6 +4,7 @@ title: "getEntity"
 title_tag: "azure-native.management.getEntity"
 meta_desc: "Documentation for the azure-native.management.getEntity function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

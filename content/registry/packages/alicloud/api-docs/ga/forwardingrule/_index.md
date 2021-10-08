@@ -4,6 +4,7 @@ title: "ForwardingRule"
 title_tag: "alicloud.ga.ForwardingRule"
 meta_desc: "Documentation for the alicloud.ga.ForwardingRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

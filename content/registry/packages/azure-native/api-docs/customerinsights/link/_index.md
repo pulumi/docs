@@ -4,6 +4,7 @@ title: "Link"
 title_tag: "azure-native.customerinsights.Link"
 meta_desc: "Documentation for the azure-native.customerinsights.Link resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

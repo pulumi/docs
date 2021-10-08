@@ -4,6 +4,7 @@ title: "BranchPolicyBuildValidation"
 title_tag: "azuredevops.Policy.BranchPolicyBuildValidation"
 meta_desc: "Documentation for the azuredevops.Policy.BranchPolicyBuildValidation resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

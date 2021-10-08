@@ -4,6 +4,7 @@ title: "Branch"
 title_tag: "github.Branch"
 meta_desc: "Documentation for the github.Branch resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "X509AuthenticationDatabaseUser"
 title_tag: "mongodbatlas.X509AuthenticationDatabaseUser"
 meta_desc: "Documentation for the mongodbatlas.X509AuthenticationDatabaseUser resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "AccessServiceToken"
 title_tag: "cloudflare.AccessServiceToken"
 meta_desc: "Documentation for the cloudflare.AccessServiceToken resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

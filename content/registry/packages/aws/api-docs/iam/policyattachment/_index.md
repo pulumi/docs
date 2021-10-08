@@ -4,6 +4,7 @@ title: "PolicyAttachment"
 title_tag: "aws.iam.PolicyAttachment"
 meta_desc: "Documentation for the aws.iam.PolicyAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

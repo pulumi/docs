@@ -4,6 +4,7 @@ title: "InstanceDatabaseIamPolicy"
 title_tag: "google-native.spanner/v1.InstanceDatabaseIamPolicy"
 meta_desc: "Documentation for the google-native.spanner/v1.InstanceDatabaseIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

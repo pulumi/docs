@@ -4,6 +4,7 @@ title: "WafPackage"
 title_tag: "cloudflare.WafPackage"
 meta_desc: "Documentation for the cloudflare.WafPackage resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "DicomStore"
 title_tag: "gcp.healthcare.DicomStore"
 meta_desc: "Documentation for the gcp.healthcare.DicomStore resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

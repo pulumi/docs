@@ -4,6 +4,7 @@ title: "TlsSubscriptionValidation"
 title_tag: "fastly.TlsSubscriptionValidation"
 meta_desc: "Documentation for the fastly.TlsSubscriptionValidation resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

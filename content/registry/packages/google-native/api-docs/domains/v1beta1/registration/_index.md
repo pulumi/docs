@@ -4,6 +4,7 @@ title: "Registration"
 title_tag: "google-native.domains/v1beta1.Registration"
 meta_desc: "Documentation for the google-native.domains/v1beta1.Registration resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

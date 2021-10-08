@@ -4,6 +4,7 @@ title: "getTemplateSpecVersion"
 title_tag: "azure-native.resources.getTemplateSpecVersion"
 meta_desc: "Documentation for the azure-native.resources.getTemplateSpecVersion function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

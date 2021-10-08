@@ -4,6 +4,7 @@ title: "SpringCloudCustomDomain"
 title_tag: "azure.appplatform.SpringCloudCustomDomain"
 meta_desc: "Documentation for the azure.appplatform.SpringCloudCustomDomain resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

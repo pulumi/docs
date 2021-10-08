@@ -4,6 +4,7 @@ title: "getDomainOwnershipIdentifier"
 title_tag: "azure-native.domainregistration.getDomainOwnershipIdentifier"
 meta_desc: "Documentation for the azure-native.domainregistration.getDomainOwnershipIdentifier function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

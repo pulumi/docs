@@ -4,6 +4,7 @@ title: "getAuthorization"
 title_tag: "azure-native.avs.getAuthorization"
 meta_desc: "Documentation for the azure-native.avs.getAuthorization function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

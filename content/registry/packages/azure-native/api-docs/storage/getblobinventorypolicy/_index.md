@@ -4,6 +4,7 @@ title: "getBlobInventoryPolicy"
 title_tag: "azure-native.storage.getBlobInventoryPolicy"
 meta_desc: "Documentation for the azure-native.storage.getBlobInventoryPolicy function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

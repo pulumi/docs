@@ -4,6 +4,7 @@ title: "getNamespaceAuthorizationRule"
 title_tag: "azure.servicebus.getNamespaceAuthorizationRule"
 meta_desc: "Documentation for the azure.servicebus.getNamespaceAuthorizationRule function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getMonitorDefaultKey"
 title_tag: "azure-native.datadog.getMonitorDefaultKey"
 meta_desc: "Documentation for the azure-native.datadog.getMonitorDefaultKey function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

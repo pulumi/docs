@@ -4,6 +4,7 @@ title: "getAuthorizationToken"
 title_tag: "aws.ecr.getAuthorizationToken"
 meta_desc: "Documentation for the aws.ecr.getAuthorizationToken function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

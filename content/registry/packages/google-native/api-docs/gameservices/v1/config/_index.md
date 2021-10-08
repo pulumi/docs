@@ -4,6 +4,7 @@ title: "Config"
 title_tag: "google-native.gameservices/v1.Config"
 meta_desc: "Documentation for the google-native.gameservices/v1.Config resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

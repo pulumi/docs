@@ -4,6 +4,7 @@ title: "getIamRole"
 title_tag: "yandex.getIamRole"
 meta_desc: "Documentation for the yandex.getIamRole function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

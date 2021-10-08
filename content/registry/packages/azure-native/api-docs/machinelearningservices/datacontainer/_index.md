@@ -4,6 +4,7 @@ title: "DataContainer"
 title_tag: "azure-native.machinelearningservices.DataContainer"
 meta_desc: "Documentation for the azure-native.machinelearningservices.DataContainer resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getTransferProjectServieAccount"
 title_tag: "gcp.storage.getTransferProjectServieAccount"
 meta_desc: "Documentation for the gcp.storage.getTransferProjectServieAccount function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

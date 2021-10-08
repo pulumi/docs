@@ -4,6 +4,7 @@ title: "StorageIntegration"
 title_tag: "snowflake.StorageIntegration"
 meta_desc: "Documentation for the snowflake.StorageIntegration resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

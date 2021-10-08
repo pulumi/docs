@@ -4,6 +4,7 @@ title: "getDeploymentLogFileUrl"
 title_tag: "azure-native.appplatform.getDeploymentLogFileUrl"
 meta_desc: "Documentation for the azure-native.appplatform.getDeploymentLogFileUrl function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

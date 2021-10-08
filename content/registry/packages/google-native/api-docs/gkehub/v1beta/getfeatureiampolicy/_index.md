@@ -4,6 +4,7 @@ title: "getFeatureIamPolicy"
 title_tag: "google-native.gkehub/v1beta.getFeatureIamPolicy"
 meta_desc: "Documentation for the google-native.gkehub/v1beta.getFeatureIamPolicy function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

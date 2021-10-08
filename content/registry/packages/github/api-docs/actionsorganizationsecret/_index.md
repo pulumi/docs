@@ -4,6 +4,7 @@ title: "ActionsOrganizationSecret"
 title_tag: "github.ActionsOrganizationSecret"
 meta_desc: "Documentation for the github.ActionsOrganizationSecret resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

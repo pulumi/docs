@@ -4,6 +4,7 @@ title: "getAFDEndpoint"
 title_tag: "azure-native.cdn.getAFDEndpoint"
 meta_desc: "Documentation for the azure-native.cdn.getAFDEndpoint function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

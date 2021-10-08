@@ -4,6 +4,7 @@ title: "AnalyticsFirewallRule"
 title_tag: "azure.datalake.AnalyticsFirewallRule"
 meta_desc: "Documentation for the azure.datalake.AnalyticsFirewallRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

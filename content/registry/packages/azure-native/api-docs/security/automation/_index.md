@@ -4,6 +4,7 @@ title: "Automation"
 title_tag: "azure-native.security.Automation"
 meta_desc: "Documentation for the azure-native.security.Automation resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "Remediation"
 title_tag: "azure.policy.Remediation"
 meta_desc: "Documentation for the azure.policy.Remediation resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

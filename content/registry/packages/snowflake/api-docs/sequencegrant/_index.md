@@ -4,6 +4,7 @@ title: "SequenceGrant"
 title_tag: "snowflake.SequenceGrant"
 meta_desc: "Documentation for the snowflake.SequenceGrant resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "TransitRouter"
 title_tag: "alicloud.cen.TransitRouter"
 meta_desc: "Documentation for the alicloud.cen.TransitRouter resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

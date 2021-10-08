@@ -4,6 +4,7 @@ title: "ClusterAlterGroup"
 title_tag: "rancher2.ClusterAlterGroup"
 meta_desc: "Documentation for the rancher2.ClusterAlterGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

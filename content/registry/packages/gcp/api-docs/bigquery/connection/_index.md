@@ -4,6 +4,7 @@ title: "Connection"
 title_tag: "gcp.bigquery.Connection"
 meta_desc: "Documentation for the gcp.bigquery.Connection resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

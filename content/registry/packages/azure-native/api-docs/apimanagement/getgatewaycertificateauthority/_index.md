@@ -4,6 +4,7 @@ title: "getGatewayCertificateAuthority"
 title_tag: "azure-native.apimanagement.getGatewayCertificateAuthority"
 meta_desc: "Documentation for the azure-native.apimanagement.getGatewayCertificateAuthority function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

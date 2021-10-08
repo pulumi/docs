@@ -4,6 +4,7 @@ title: "CloudToCloudSource"
 title_tag: "sumologic.CloudToCloudSource"
 meta_desc: "Documentation for the sumologic.CloudToCloudSource resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

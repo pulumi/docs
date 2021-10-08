@@ -4,6 +4,7 @@ title: "SecGroup"
 title_tag: "openstack.compute.SecGroup"
 meta_desc: "Documentation for the openstack.compute.SecGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

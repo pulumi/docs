@@ -4,6 +4,7 @@ title: "EndpointV3"
 title_tag: "openstack.identity.EndpointV3"
 meta_desc: "Documentation for the openstack.identity.EndpointV3 resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

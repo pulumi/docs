@@ -4,6 +4,7 @@ title: "AlbHttpRouter"
 title_tag: "yandex.AlbHttpRouter"
 meta_desc: "Documentation for the yandex.AlbHttpRouter resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

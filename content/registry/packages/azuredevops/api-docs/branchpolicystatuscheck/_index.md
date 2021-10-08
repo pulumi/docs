@@ -4,6 +4,7 @@ title: "BranchPolicyStatusCheck"
 title_tag: "azuredevops.BranchPolicyStatusCheck"
 meta_desc: "Documentation for the azuredevops.BranchPolicyStatusCheck resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

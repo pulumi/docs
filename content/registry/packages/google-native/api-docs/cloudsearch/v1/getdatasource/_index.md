@@ -4,6 +4,7 @@ title: "getDataSource"
 title_tag: "google-native.cloudsearch/v1.getDataSource"
 meta_desc: "Documentation for the google-native.cloudsearch/v1.getDataSource function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

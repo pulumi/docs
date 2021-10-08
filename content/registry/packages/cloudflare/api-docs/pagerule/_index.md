@@ -4,6 +4,7 @@ title: "PageRule"
 title_tag: "cloudflare.PageRule"
 meta_desc: "Documentation for the cloudflare.PageRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

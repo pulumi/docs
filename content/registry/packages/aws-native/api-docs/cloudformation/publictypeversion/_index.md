@@ -4,6 +4,7 @@ title: "PublicTypeVersion"
 title_tag: "aws-native.cloudformation.PublicTypeVersion"
 meta_desc: "Documentation for the aws-native.cloudformation.PublicTypeVersion resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

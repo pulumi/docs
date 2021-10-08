@@ -4,6 +4,7 @@ title: "getListener"
 title_tag: "aws.lb.getListener"
 meta_desc: "Documentation for the aws.lb.getListener function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

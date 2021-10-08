@@ -4,6 +4,7 @@ title: "SignalR"
 title_tag: "azure-native.signalrservice.SignalR"
 meta_desc: "Documentation for the azure-native.signalrservice.SignalR resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

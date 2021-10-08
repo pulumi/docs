@@ -4,6 +4,7 @@ title: "Store"
 title_tag: "azure.datalake.Store"
 meta_desc: "Documentation for the azure.datalake.Store resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

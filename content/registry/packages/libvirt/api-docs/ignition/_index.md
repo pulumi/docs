@@ -4,6 +4,7 @@ title: "Ignition"
 title_tag: "libvirt.Ignition"
 meta_desc: "Documentation for the libvirt.Ignition resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

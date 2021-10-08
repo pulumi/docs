@@ -4,6 +4,7 @@ title: "BastionHostInstance"
 title_tag: "alicloud.yundun.BastionHostInstance"
 meta_desc: "Documentation for the alicloud.yundun.BastionHostInstance resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

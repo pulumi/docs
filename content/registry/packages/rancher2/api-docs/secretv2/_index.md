@@ -4,6 +4,7 @@ title: "SecretV2"
 title_tag: "rancher2.SecretV2"
 meta_desc: "Documentation for the rancher2.SecretV2 resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

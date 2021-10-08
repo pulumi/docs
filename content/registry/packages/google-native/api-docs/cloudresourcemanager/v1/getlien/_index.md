@@ -4,6 +4,7 @@ title: "getLien"
 title_tag: "google-native.cloudresourcemanager/v1.getLien"
 meta_desc: "Documentation for the google-native.cloudresourcemanager/v1.getLien function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

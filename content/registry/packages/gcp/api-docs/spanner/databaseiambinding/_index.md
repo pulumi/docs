@@ -4,6 +4,7 @@ title: "DatabaseIAMBinding"
 title_tag: "gcp.spanner.DatabaseIAMBinding"
 meta_desc: "Documentation for the gcp.spanner.DatabaseIAMBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "RgpPolicy"
 title_tag: "vault.RgpPolicy"
 meta_desc: "Documentation for the vault.RgpPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

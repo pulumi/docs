@@ -4,6 +4,7 @@ title: "NetworkPolicyList"
 title_tag: "kubernetes.networking.k8s.io/v1.NetworkPolicyList"
 meta_desc: "Documentation for the kubernetes.networking.k8s.io/v1.NetworkPolicyList resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "TagTemplate"
 title_tag: "google-native.datacatalog/v1beta1.TagTemplate"
 meta_desc: "Documentation for the google-native.datacatalog/v1beta1.TagTemplate resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

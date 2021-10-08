@@ -4,6 +4,7 @@ title: "getAnomalies"
 title_tag: "azure-native.securityinsights.getAnomalies"
 meta_desc: "Documentation for the azure-native.securityinsights.getAnomalies function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

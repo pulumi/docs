@@ -4,6 +4,7 @@ title: "K8sCluster"
 title_tag: "alicloud.edas.K8sCluster"
 meta_desc: "Documentation for the alicloud.edas.K8sCluster resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

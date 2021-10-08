@@ -4,6 +4,7 @@ title: "getTagRule"
 title_tag: "azure-native.elastic.getTagRule"
 meta_desc: "Documentation for the azure-native.elastic.getTagRule function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

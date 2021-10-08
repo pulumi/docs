@@ -4,6 +4,7 @@ title: "VPC"
 title_tag: "aws-native.ec2.VPC"
 meta_desc: "Documentation for the aws-native.ec2.VPC resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

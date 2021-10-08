@@ -4,6 +4,7 @@ title: "listShareSubscriptionSynchronizationDetails"
 title_tag: "azure-native.datashare.listShareSubscriptionSynchronizationDetails"
 meta_desc: "Documentation for the azure-native.datashare.listShareSubscriptionSynchronizationDetails function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

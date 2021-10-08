@@ -4,6 +4,7 @@ title: "getApplicationGateway"
 title_tag: "azure-native.network.getApplicationGateway"
 meta_desc: "Documentation for the azure-native.network.getApplicationGateway function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

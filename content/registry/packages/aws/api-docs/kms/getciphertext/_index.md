@@ -4,6 +4,7 @@ title: "getCipherText"
 title_tag: "aws.kms.getCipherText"
 meta_desc: "Documentation for the aws.kms.getCipherText function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

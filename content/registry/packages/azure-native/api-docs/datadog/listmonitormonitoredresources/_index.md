@@ -4,6 +4,7 @@ title: "listMonitorMonitoredResources"
 title_tag: "azure-native.datadog.listMonitorMonitoredResources"
 meta_desc: "Documentation for the azure-native.datadog.listMonitorMonitoredResources function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

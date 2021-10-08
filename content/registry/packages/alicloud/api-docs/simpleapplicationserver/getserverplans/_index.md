@@ -4,6 +4,7 @@ title: "getServerPlans"
 title_tag: "alicloud.simpleapplicationserver.getServerPlans"
 meta_desc: "Documentation for the alicloud.simpleapplicationserver.getServerPlans function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

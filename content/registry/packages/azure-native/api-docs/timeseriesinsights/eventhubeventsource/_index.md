@@ -4,6 +4,7 @@ title: "EventHubEventSource"
 title_tag: "azure-native.timeseriesinsights.EventHubEventSource"
 meta_desc: "Documentation for the azure-native.timeseriesinsights.EventHubEventSource resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

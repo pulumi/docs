@@ -4,6 +4,7 @@ title: "getRedis"
 title_tag: "azure-native.cache.getRedis"
 meta_desc: "Documentation for the azure-native.cache.getRedis function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 
@@ -311,7 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Static IP address. Required when deploying a Redis cache inside an existing Azure Virtual Network.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Static IP address. Optionally, may be specified when deploying a Redis cache inside an existing Azure Virtual Network; auto assigned by default.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -515,7 +516,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Static IP address. Required when deploying a Redis cache inside an existing Azure Virtual Network.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Static IP address. Optionally, may be specified when deploying a Redis cache inside an existing Azure Virtual Network; auto assigned by default.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subnetid_go">
 <a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -719,7 +720,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Static IP address. Required when deploying a Redis cache inside an existing Azure Virtual Network.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Static IP address. Optionally, may be specified when deploying a Redis cache inside an existing Azure Virtual Network; auto assigned by default.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
@@ -923,7 +924,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Static IP address. Required when deploying a Redis cache inside an existing Azure Virtual Network.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Static IP address. Optionally, may be specified when deploying a Redis cache inside an existing Azure Virtual Network; auto assigned by default.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subnet_id_python">
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>

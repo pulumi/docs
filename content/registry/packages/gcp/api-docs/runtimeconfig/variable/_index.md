@@ -4,6 +4,7 @@ title: "Variable"
 title_tag: "gcp.runtimeconfig.Variable"
 meta_desc: "Documentation for the gcp.runtimeconfig.Variable resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

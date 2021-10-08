@@ -4,6 +4,7 @@ title: "getPolicyIamPolicy"
 title_tag: "google-native.binaryauthorization/v1.getPolicyIamPolicy"
 meta_desc: "Documentation for the google-native.binaryauthorization/v1.getPolicyIamPolicy function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

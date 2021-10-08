@@ -4,6 +4,7 @@ title: "Monitor"
 title_tag: "newrelic.synthetics.Monitor"
 meta_desc: "Documentation for the newrelic.synthetics.Monitor resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

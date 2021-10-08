@@ -4,6 +4,7 @@ title: "getRulesEngine"
 title_tag: "azure-native.network.getRulesEngine"
 meta_desc: "Documentation for the azure-native.network.getRulesEngine function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

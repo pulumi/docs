@@ -4,6 +4,7 @@ title: "getBinding"
 title_tag: "azure-native.appplatform.getBinding"
 meta_desc: "Documentation for the azure-native.appplatform.getBinding function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

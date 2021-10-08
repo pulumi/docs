@@ -4,6 +4,7 @@ title: "WebAppVnetConnection"
 title_tag: "azure-native.web.WebAppVnetConnection"
 meta_desc: "Documentation for the azure-native.web.WebAppVnetConnection resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

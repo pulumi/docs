@@ -4,6 +4,7 @@ title: "ChannelAlexa"
 title_tag: "azure.bot.ChannelAlexa"
 meta_desc: "Documentation for the azure.bot.ChannelAlexa resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

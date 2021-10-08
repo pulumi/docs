@@ -4,6 +4,7 @@ title: "AccountPasswordPolicy"
 title_tag: "alicloud.ram.AccountPasswordPolicy"
 meta_desc: "Documentation for the alicloud.ram.AccountPasswordPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getManagedNetwork"
 title_tag: "azure-native.managednetwork.getManagedNetwork"
 meta_desc: "Documentation for the azure-native.managednetwork.getManagedNetwork function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

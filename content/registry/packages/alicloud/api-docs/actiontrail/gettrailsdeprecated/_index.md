@@ -4,6 +4,7 @@ title: "getTrailsDeprecated"
 title_tag: "alicloud.actiontrail.getTrailsDeprecated"
 meta_desc: "Documentation for the alicloud.actiontrail.getTrailsDeprecated function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

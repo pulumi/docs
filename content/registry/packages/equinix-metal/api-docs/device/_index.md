@@ -4,6 +4,7 @@ title: "Device"
 title_tag: "equinix-metal.Device"
 meta_desc: "Documentation for the equinix-metal.Device resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

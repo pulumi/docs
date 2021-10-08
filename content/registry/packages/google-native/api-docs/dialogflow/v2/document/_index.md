@@ -4,6 +4,7 @@ title: "Document"
 title_tag: "google-native.dialogflow/v2.Document"
 meta_desc: "Documentation for the google-native.dialogflow/v2.Document resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

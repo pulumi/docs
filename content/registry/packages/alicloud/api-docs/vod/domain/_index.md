@@ -4,6 +4,7 @@ title: "Domain"
 title_tag: "alicloud.vod.Domain"
 meta_desc: "Documentation for the alicloud.vod.Domain resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

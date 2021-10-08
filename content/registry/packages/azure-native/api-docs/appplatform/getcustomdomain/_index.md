@@ -4,6 +4,7 @@ title: "getCustomDomain"
 title_tag: "azure-native.appplatform.getCustomDomain"
 meta_desc: "Documentation for the azure-native.appplatform.getCustomDomain function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

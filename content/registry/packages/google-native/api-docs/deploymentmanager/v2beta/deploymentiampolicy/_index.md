@@ -4,6 +4,7 @@ title: "DeploymentIamPolicy"
 title_tag: "google-native.deploymentmanager/v2beta.DeploymentIamPolicy"
 meta_desc: "Documentation for the google-native.deploymentmanager/v2beta.DeploymentIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

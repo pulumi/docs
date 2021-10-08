@@ -4,6 +4,7 @@ title: "FloatingIp"
 title_tag: "hcloud.FloatingIp"
 meta_desc: "Documentation for the hcloud.FloatingIp resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "RdsAccount"
 title_tag: "alicloud.rds.RdsAccount"
 meta_desc: "Documentation for the alicloud.rds.RdsAccount resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

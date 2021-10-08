@@ -4,6 +4,7 @@ title: "CassandraTable"
 title_tag: "azure.cosmosdb.CassandraTable"
 meta_desc: "Documentation for the azure.cosmosdb.CassandraTable resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

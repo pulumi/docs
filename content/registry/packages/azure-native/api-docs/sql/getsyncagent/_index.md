@@ -4,6 +4,7 @@ title: "getSyncAgent"
 title_tag: "azure-native.sql.getSyncAgent"
 meta_desc: "Documentation for the azure-native.sql.getSyncAgent function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

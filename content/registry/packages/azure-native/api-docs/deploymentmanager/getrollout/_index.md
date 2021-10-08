@@ -4,6 +4,7 @@ title: "getRollout"
 title_tag: "azure-native.deploymentmanager.getRollout"
 meta_desc: "Documentation for the azure-native.deploymentmanager.getRollout function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

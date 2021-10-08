@@ -4,6 +4,7 @@ title: "getServiceEndpointConnections"
 title_tag: "azure.privatelink.getServiceEndpointConnections"
 meta_desc: "Documentation for the azure.privatelink.getServiceEndpointConnections function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

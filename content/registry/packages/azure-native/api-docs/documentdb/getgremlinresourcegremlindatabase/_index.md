@@ -4,6 +4,7 @@ title: "getGremlinResourceGremlinDatabase"
 title_tag: "azure-native.documentdb.getGremlinResourceGremlinDatabase"
 meta_desc: "Documentation for the azure-native.documentdb.getGremlinResourceGremlinDatabase function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

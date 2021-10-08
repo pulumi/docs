@@ -4,6 +4,7 @@ title: "getEndpointGroups"
 title_tag: "alicloud.ga.getEndpointGroups"
 meta_desc: "Documentation for the alicloud.ga.getEndpointGroups function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "Group"
 title_tag: "azure-native.migrate.Group"
 meta_desc: "Documentation for the azure-native.migrate.Group resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

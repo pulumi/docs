@@ -4,6 +4,7 @@ title: "getprivateLinkForAzureAd"
 title_tag: "azure-native.aadiam.getprivateLinkForAzureAd"
 meta_desc: "Documentation for the azure-native.aadiam.getprivateLinkForAzureAd function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "RServerCluster"
 title_tag: "azure.hdinsight.RServerCluster"
 meta_desc: "Documentation for the azure.hdinsight.RServerCluster resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

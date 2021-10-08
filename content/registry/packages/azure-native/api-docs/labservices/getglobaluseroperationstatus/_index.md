@@ -4,6 +4,7 @@ title: "getGlobalUserOperationStatus"
 title_tag: "azure-native.labservices.getGlobalUserOperationStatus"
 meta_desc: "Documentation for the azure-native.labservices.getGlobalUserOperationStatus function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

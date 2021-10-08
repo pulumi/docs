@@ -4,6 +4,7 @@ title: "getIotConnectorFhirDestination"
 title_tag: "azure-native.healthcareapis.getIotConnectorFhirDestination"
 meta_desc: "Documentation for the azure-native.healthcareapis.getIotConnectorFhirDestination function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

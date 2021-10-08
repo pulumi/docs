@@ -4,6 +4,7 @@ title: "QuotaV2"
 title_tag: "openstack.networking.QuotaV2"
 meta_desc: "Documentation for the openstack.networking.QuotaV2 resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getSolution"
 title_tag: "azure-native.operationsmanagement.getSolution"
 meta_desc: "Documentation for the azure-native.operationsmanagement.getSolution function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

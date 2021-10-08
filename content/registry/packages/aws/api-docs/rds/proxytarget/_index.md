@@ -4,6 +4,7 @@ title: "ProxyTarget"
 title_tag: "aws.rds.ProxyTarget"
 meta_desc: "Documentation for the aws.rds.ProxyTarget resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

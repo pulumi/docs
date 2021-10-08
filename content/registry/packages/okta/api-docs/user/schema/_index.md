@@ -4,6 +4,7 @@ title: "Schema"
 title_tag: "okta.user.Schema"
 meta_desc: "Documentation for the okta.user.Schema resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

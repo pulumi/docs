@@ -4,6 +4,7 @@ title: "RepositoryIamPolicy"
 title_tag: "gcp.sourcerepo.RepositoryIamPolicy"
 meta_desc: "Documentation for the gcp.sourcerepo.RepositoryIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

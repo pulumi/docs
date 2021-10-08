@@ -4,6 +4,7 @@ title: "getService"
 title_tag: "google-native.servicedirectory/v1.getService"
 meta_desc: "Documentation for the google-native.servicedirectory/v1.getService function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

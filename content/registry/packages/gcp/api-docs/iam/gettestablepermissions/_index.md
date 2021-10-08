@@ -4,6 +4,7 @@ title: "getTestablePermissions"
 title_tag: "gcp.iam.getTestablePermissions"
 meta_desc: "Documentation for the gcp.iam.getTestablePermissions function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getPatchSchedule"
 title_tag: "azure-native.cache.getPatchSchedule"
 meta_desc: "Documentation for the azure-native.cache.getPatchSchedule function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

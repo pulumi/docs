@@ -4,6 +4,7 @@ title: "getAnalyticsItem"
 title_tag: "azure-native.insights.getAnalyticsItem"
 meta_desc: "Documentation for the azure-native.insights.getAnalyticsItem function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

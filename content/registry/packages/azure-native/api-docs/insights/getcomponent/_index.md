@@ -4,6 +4,7 @@ title: "getComponent"
 title_tag: "azure-native.insights.getComponent"
 meta_desc: "Documentation for the azure-native.insights.getComponent function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

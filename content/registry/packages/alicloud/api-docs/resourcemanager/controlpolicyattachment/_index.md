@@ -4,6 +4,7 @@ title: "ControlPolicyAttachment"
 title_tag: "alicloud.resourcemanager.ControlPolicyAttachment"
 meta_desc: "Documentation for the alicloud.resourcemanager.ControlPolicyAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

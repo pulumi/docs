@@ -4,6 +4,7 @@ title: "EventHubConsumerGroup"
 title_tag: "azure.eventhub.EventHubConsumerGroup"
 meta_desc: "Documentation for the azure.eventhub.EventHubConsumerGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

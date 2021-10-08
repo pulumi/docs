@@ -4,6 +4,7 @@ title: "TemplateArtifact"
 title_tag: "azure-native.blueprint.TemplateArtifact"
 meta_desc: "Documentation for the azure-native.blueprint.TemplateArtifact resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

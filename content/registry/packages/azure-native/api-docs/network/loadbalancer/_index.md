@@ -4,6 +4,7 @@ title: "LoadBalancer"
 title_tag: "azure-native.network.LoadBalancer"
 meta_desc: "Documentation for the azure-native.network.LoadBalancer resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

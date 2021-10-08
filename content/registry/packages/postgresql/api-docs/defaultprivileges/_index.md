@@ -4,6 +4,7 @@ title: "DefaultPrivileges"
 title_tag: "postgresql.DefaultPrivileges"
 meta_desc: "Documentation for the postgresql.DefaultPrivileges resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

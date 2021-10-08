@@ -4,6 +4,7 @@ title: "getProduct"
 title_tag: "aws.pricing.getProduct"
 meta_desc: "Documentation for the aws.pricing.getProduct function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

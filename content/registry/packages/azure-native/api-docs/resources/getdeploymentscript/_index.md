@@ -4,6 +4,7 @@ title: "getDeploymentScript"
 title_tag: "azure-native.resources.getDeploymentScript"
 meta_desc: "Documentation for the azure-native.resources.getDeploymentScript function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

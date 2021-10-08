@@ -4,6 +4,7 @@ title: "getRealTimeLogDeliveries"
 title_tag: "alicloud.cdn.getRealTimeLogDeliveries"
 meta_desc: "Documentation for the alicloud.cdn.getRealTimeLogDeliveries function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

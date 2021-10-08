@@ -4,6 +4,7 @@ title: "getDscNodeConfiguration"
 title_tag: "azure-native.automation.getDscNodeConfiguration"
 meta_desc: "Documentation for the azure-native.automation.getDscNodeConfiguration function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

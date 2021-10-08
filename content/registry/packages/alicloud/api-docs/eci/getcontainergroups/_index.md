@@ -4,6 +4,7 @@ title: "getContainerGroups"
 title_tag: "alicloud.eci.getContainerGroups"
 meta_desc: "Documentation for the alicloud.eci.getContainerGroups function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

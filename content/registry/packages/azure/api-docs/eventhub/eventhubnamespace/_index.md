@@ -4,6 +4,7 @@ title: "EventHubNamespace"
 title_tag: "azure.eventhub.EventHubNamespace"
 meta_desc: "Documentation for the azure.eventhub.EventHubNamespace resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "Factor"
 title_tag: "okta.factor.Factor"
 meta_desc: "Documentation for the okta.factor.Factor resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

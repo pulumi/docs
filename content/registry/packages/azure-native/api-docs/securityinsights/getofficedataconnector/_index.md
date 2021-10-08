@@ -4,6 +4,7 @@ title: "getOfficeDataConnector"
 title_tag: "azure-native.securityinsights.getOfficeDataConnector"
 meta_desc: "Documentation for the azure-native.securityinsights.getOfficeDataConnector function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

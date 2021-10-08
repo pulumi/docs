@@ -4,6 +4,7 @@ title: "getInstanceIamPolicy"
 title_tag: "google-native.bigtableadmin/v2.getInstanceIamPolicy"
 meta_desc: "Documentation for the google-native.bigtableadmin/v2.getInstanceIamPolicy function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

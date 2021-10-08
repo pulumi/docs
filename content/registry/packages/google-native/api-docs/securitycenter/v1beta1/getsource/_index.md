@@ -4,6 +4,7 @@ title: "getSource"
 title_tag: "google-native.securitycenter/v1beta1.getSource"
 meta_desc: "Documentation for the google-native.securitycenter/v1beta1.getSource function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

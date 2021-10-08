@@ -4,6 +4,7 @@ title: "getConnection"
 title_tag: "azure-native.web.getConnection"
 meta_desc: "Documentation for the azure-native.web.getConnection function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

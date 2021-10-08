@@ -4,6 +4,7 @@ title: "DataConnectorAwsCloudTrail"
 title_tag: "azure.sentinel.DataConnectorAwsCloudTrail"
 meta_desc: "Documentation for the azure.sentinel.DataConnectorAwsCloudTrail resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

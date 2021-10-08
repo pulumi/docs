@@ -4,6 +4,7 @@ title: "getDatasetBlobStorage"
 title_tag: "azure.datashare.getDatasetBlobStorage"
 meta_desc: "Documentation for the azure.datashare.getDatasetBlobStorage function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

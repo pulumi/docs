@@ -4,6 +4,7 @@ title: "getDedicatedHost"
 title_tag: "azure.compute.getDedicatedHost"
 meta_desc: "Documentation for the azure.compute.getDedicatedHost function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

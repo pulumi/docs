@@ -4,6 +4,7 @@ title: "Routine"
 title_tag: "gcp.bigquery.Routine"
 meta_desc: "Documentation for the gcp.bigquery.Routine resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

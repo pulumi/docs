@@ -4,6 +4,7 @@ title: "getRoute"
 title_tag: "azure-native.network.getRoute"
 meta_desc: "Documentation for the azure-native.network.getRoute function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

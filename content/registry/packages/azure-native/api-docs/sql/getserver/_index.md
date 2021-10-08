@@ -4,6 +4,7 @@ title: "getServer"
 title_tag: "azure-native.sql.getServer"
 meta_desc: "Documentation for the azure-native.sql.getServer function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

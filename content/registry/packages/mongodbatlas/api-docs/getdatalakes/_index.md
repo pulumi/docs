@@ -4,6 +4,7 @@ title: "getDataLakes"
 title_tag: "mongodbatlas.getDataLakes"
 meta_desc: "Documentation for the mongodbatlas.getDataLakes function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

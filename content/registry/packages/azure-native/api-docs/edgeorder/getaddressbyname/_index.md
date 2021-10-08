@@ -4,6 +4,7 @@ title: "getAddressByName"
 title_tag: "azure-native.edgeorder.getAddressByName"
 meta_desc: "Documentation for the azure-native.edgeorder.getAddressByName function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

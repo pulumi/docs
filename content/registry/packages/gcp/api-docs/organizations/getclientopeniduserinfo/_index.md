@@ -4,6 +4,7 @@ title: "getClientOpenIdUserInfo"
 title_tag: "gcp.organizations.getClientOpenIdUserInfo"
 meta_desc: "Documentation for the gcp.organizations.getClientOpenIdUserInfo function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

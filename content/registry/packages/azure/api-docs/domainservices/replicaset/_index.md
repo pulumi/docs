@@ -4,6 +4,7 @@ title: "ReplicaSet"
 title_tag: "azure.domainservices.ReplicaSet"
 meta_desc: "Documentation for the azure.domainservices.ReplicaSet resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

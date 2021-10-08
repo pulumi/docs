@@ -4,6 +4,7 @@ title: "listIntegrationAccountCallbackUrl"
 title_tag: "azure-native.logic.listIntegrationAccountCallbackUrl"
 meta_desc: "Documentation for the azure-native.logic.listIntegrationAccountCallbackUrl function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

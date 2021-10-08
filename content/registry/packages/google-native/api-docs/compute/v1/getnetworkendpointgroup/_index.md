@@ -4,6 +4,7 @@ title: "getNetworkEndpointGroup"
 title_tag: "google-native.compute/v1.getNetworkEndpointGroup"
 meta_desc: "Documentation for the google-native.compute/v1.getNetworkEndpointGroup function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

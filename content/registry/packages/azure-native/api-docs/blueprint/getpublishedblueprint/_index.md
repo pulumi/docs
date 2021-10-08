@@ -4,6 +4,7 @@ title: "getPublishedBlueprint"
 title_tag: "azure-native.blueprint.getPublishedBlueprint"
 meta_desc: "Documentation for the azure-native.blueprint.getPublishedBlueprint function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

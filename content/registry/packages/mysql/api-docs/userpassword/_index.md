@@ -4,6 +4,7 @@ title: "UserPassword"
 title_tag: "mysql.UserPassword"
 meta_desc: "Documentation for the mysql.UserPassword resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "AssetFilter"
 title_tag: "azure-native.media.AssetFilter"
 meta_desc: "Documentation for the azure-native.media.AssetFilter resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

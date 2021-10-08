@@ -4,6 +4,7 @@ title: "getBehaviour"
 title_tag: "okta.getBehaviour"
 meta_desc: "Documentation for the okta.getBehaviour function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

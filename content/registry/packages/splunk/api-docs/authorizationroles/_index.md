@@ -4,6 +4,7 @@ title: "AuthorizationRoles"
 title_tag: "splunk.AuthorizationRoles"
 meta_desc: "Documentation for the splunk.AuthorizationRoles resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

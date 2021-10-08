@@ -4,6 +4,7 @@ title: "getKubernetesCluster"
 title_tag: "digitalocean.getKubernetesCluster"
 meta_desc: "Documentation for the digitalocean.getKubernetesCluster function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

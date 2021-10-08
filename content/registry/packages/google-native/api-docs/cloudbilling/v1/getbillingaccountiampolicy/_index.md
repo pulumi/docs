@@ -4,6 +4,7 @@ title: "getBillingAccountIamPolicy"
 title_tag: "google-native.cloudbilling/v1.getBillingAccountIamPolicy"
 meta_desc: "Documentation for the google-native.cloudbilling/v1.getBillingAccountIamPolicy function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

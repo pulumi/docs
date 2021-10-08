@@ -4,6 +4,7 @@ title: "DatabaseConnectionPool"
 title_tag: "digitalocean.DatabaseConnectionPool"
 meta_desc: "Documentation for the digitalocean.DatabaseConnectionPool resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

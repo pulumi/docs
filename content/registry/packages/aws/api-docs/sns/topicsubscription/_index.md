@@ -4,6 +4,7 @@ title: "TopicSubscription"
 title_tag: "aws.sns.TopicSubscription"
 meta_desc: "Documentation for the aws.sns.TopicSubscription resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

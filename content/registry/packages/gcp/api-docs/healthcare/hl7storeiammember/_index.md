@@ -4,6 +4,7 @@ title: "Hl7StoreIamMember"
 title_tag: "gcp.healthcare.Hl7StoreIamMember"
 meta_desc: "Documentation for the gcp.healthcare.Hl7StoreIamMember resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

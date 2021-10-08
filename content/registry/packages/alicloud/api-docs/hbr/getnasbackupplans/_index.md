@@ -4,6 +4,7 @@ title: "getNasBackupPlans"
 title_tag: "alicloud.hbr.getNasBackupPlans"
 meta_desc: "Documentation for the alicloud.hbr.getNasBackupPlans function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

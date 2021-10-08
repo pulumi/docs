@@ -4,6 +4,7 @@ title: "getTlsPrivateKey"
 title_tag: "fastly.getTlsPrivateKey"
 meta_desc: "Documentation for the fastly.getTlsPrivateKey function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

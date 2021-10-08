@@ -4,6 +4,7 @@ title: "getEventTrigger"
 title_tag: "mongodbatlas.getEventTrigger"
 meta_desc: "Documentation for the mongodbatlas.getEventTrigger function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

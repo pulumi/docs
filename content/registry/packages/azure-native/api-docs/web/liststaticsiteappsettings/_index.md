@@ -4,6 +4,7 @@ title: "listStaticSiteAppSettings"
 title_tag: "azure-native.web.listStaticSiteAppSettings"
 meta_desc: "Documentation for the azure-native.web.listStaticSiteAppSettings function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "ActionGroup"
 title_tag: "azure.monitoring.ActionGroup"
 meta_desc: "Documentation for the azure.monitoring.ActionGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

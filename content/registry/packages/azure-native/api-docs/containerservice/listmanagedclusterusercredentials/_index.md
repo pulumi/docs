@@ -4,6 +4,7 @@ title: "listManagedClusterUserCredentials"
 title_tag: "azure-native.containerservice.listManagedClusterUserCredentials"
 meta_desc: "Documentation for the azure-native.containerservice.listManagedClusterUserCredentials function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

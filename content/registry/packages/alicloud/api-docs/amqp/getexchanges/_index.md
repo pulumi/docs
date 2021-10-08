@@ -4,6 +4,7 @@ title: "getExchanges"
 title_tag: "alicloud.amqp.getExchanges"
 meta_desc: "Documentation for the alicloud.amqp.getExchanges function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

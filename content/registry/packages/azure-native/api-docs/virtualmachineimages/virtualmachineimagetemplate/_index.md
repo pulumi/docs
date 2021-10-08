@@ -4,6 +4,7 @@ title: "VirtualMachineImageTemplate"
 title_tag: "azure-native.virtualmachineimages.VirtualMachineImageTemplate"
 meta_desc: "Documentation for the azure-native.virtualmachineimages.VirtualMachineImageTemplate resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

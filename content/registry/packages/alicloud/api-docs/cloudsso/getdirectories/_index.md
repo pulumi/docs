@@ -4,6 +4,7 @@ title: "getDirectories"
 title_tag: "alicloud.cloudsso.getDirectories"
 meta_desc: "Documentation for the alicloud.cloudsso.getDirectories function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

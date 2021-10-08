@@ -4,6 +4,7 @@ title: "getFeature"
 title_tag: "google-native.gkehub/v1beta.getFeature"
 meta_desc: "Documentation for the google-native.gkehub/v1beta.getFeature function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

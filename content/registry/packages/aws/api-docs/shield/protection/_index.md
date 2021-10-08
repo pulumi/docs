@@ -4,6 +4,7 @@ title: "Protection"
 title_tag: "aws.shield.Protection"
 meta_desc: "Documentation for the aws.shield.Protection resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

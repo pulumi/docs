@@ -4,6 +4,7 @@ title: "SecurityConfiguration"
 title_tag: "aws.emr.SecurityConfiguration"
 meta_desc: "Documentation for the aws.emr.SecurityConfiguration resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getNamespaceDisasterRecoveryConfig"
 title_tag: "azure.servicebus.getNamespaceDisasterRecoveryConfig"
 meta_desc: "Documentation for the azure.servicebus.getNamespaceDisasterRecoveryConfig function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

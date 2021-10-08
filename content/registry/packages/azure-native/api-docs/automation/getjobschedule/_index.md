@@ -4,6 +4,7 @@ title: "getJobSchedule"
 title_tag: "azure-native.automation.getJobSchedule"
 meta_desc: "Documentation for the azure-native.automation.getJobSchedule function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

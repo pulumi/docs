@@ -4,6 +4,7 @@ title: "getPrivateLinkEndpoint"
 title_tag: "mongodbatlas.getPrivateLinkEndpoint"
 meta_desc: "Documentation for the mongodbatlas.getPrivateLinkEndpoint function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

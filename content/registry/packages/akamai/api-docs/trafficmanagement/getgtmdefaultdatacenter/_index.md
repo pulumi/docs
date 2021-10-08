@@ -4,6 +4,7 @@ title: "getGtmDefaultDatacenter"
 title_tag: "akamai.trafficmanagement.getGtmDefaultDatacenter"
 meta_desc: "Documentation for the akamai.trafficmanagement.getGtmDefaultDatacenter function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

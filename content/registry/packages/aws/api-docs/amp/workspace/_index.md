@@ -4,6 +4,7 @@ title: "Workspace"
 title_tag: "aws.amp.Workspace"
 meta_desc: "Documentation for the aws.amp.Workspace resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

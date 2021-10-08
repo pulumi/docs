@@ -4,6 +4,7 @@ title: "getNamespace"
 title_tag: "azure-native.relay.getNamespace"
 meta_desc: "Documentation for the azure-native.relay.getNamespace function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

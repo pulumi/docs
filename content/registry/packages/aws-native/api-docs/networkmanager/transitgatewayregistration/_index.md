@@ -4,6 +4,7 @@ title: "TransitGatewayRegistration"
 title_tag: "aws-native.networkmanager.TransitGatewayRegistration"
 meta_desc: "Documentation for the aws-native.networkmanager.TransitGatewayRegistration resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getDefenderSetting"
 title_tag: "azure-native.iotsecurity.getDefenderSetting"
 meta_desc: "Documentation for the azure-native.iotsecurity.getDefenderSetting function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

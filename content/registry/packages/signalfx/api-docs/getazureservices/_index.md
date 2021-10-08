@@ -4,6 +4,7 @@ title: "getAzureServices"
 title_tag: "signalfx.getAzureServices"
 meta_desc: "Documentation for the signalfx.getAzureServices function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

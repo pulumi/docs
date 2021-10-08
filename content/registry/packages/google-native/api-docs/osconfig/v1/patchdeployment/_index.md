@@ -4,6 +4,7 @@ title: "PatchDeployment"
 title_tag: "google-native.osconfig/v1.PatchDeployment"
 meta_desc: "Documentation for the google-native.osconfig/v1.PatchDeployment resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

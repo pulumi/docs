@@ -4,6 +4,7 @@ title: "getDataCatalogEncryptionSettings"
 title_tag: "aws.glue.getDataCatalogEncryptionSettings"
 meta_desc: "Documentation for the aws.glue.getDataCatalogEncryptionSettings function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getRuntime"
 title_tag: "google-native.notebooks/v1.getRuntime"
 meta_desc: "Documentation for the google-native.notebooks/v1.getRuntime function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "Zone"
 title_tag: "alicloud.pvtz.Zone"
 meta_desc: "Documentation for the alicloud.pvtz.Zone resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

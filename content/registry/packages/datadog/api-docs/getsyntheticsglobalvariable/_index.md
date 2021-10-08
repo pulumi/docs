@@ -4,6 +4,7 @@ title: "getSyntheticsGlobalVariable"
 title_tag: "datadog.getSyntheticsGlobalVariable"
 meta_desc: "Documentation for the datadog.getSyntheticsGlobalVariable function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "BackupVault"
 title_tag: "azure-native.dataprotection.BackupVault"
 meta_desc: "Documentation for the azure-native.dataprotection.BackupVault resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

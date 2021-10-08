@@ -4,6 +4,7 @@ title: "getReservedIpBlock"
 title_tag: "equinix-metal.getReservedIpBlock"
 meta_desc: "Documentation for the equinix-metal.getReservedIpBlock function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

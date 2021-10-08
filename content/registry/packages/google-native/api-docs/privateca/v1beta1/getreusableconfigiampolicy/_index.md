@@ -4,6 +4,7 @@ title: "getReusableConfigIamPolicy"
 title_tag: "google-native.privateca/v1beta1.getReusableConfigIamPolicy"
 meta_desc: "Documentation for the google-native.privateca/v1beta1.getReusableConfigIamPolicy function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

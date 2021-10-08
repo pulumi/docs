@@ -4,6 +4,7 @@ title: "BillingAccountExclusion"
 title_tag: "gcp.logging.BillingAccountExclusion"
 meta_desc: "Documentation for the gcp.logging.BillingAccountExclusion resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

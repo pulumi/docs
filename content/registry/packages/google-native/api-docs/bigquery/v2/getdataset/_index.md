@@ -4,6 +4,7 @@ title: "getDataset"
 title_tag: "google-native.bigquery/v2.getDataset"
 meta_desc: "Documentation for the google-native.bigquery/v2.getDataset function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

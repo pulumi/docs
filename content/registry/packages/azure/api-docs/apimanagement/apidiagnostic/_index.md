@@ -4,6 +4,7 @@ title: "ApiDiagnostic"
 title_tag: "azure.apimanagement.ApiDiagnostic"
 meta_desc: "Documentation for the azure.apimanagement.ApiDiagnostic resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

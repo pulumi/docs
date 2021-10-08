@@ -4,6 +4,7 @@ title: "Cluster"
 title_tag: "gcp.container.Cluster"
 meta_desc: "Documentation for the gcp.container.Cluster resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 
@@ -407,11 +408,13 @@ const primary = new gcp.container.Cluster("primary", {
             <span class="nx">initial_node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
             <span class="nx">ip_allocation_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterIpAllocationPolicyArgs]</span> = None<span class="p">,</span>
             <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">logging_config</span><span class="p">:</span> <span class="nx">Optional[ClusterLoggingConfigArgs]</span> = None<span class="p">,</span>
             <span class="nx">logging_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">maintenance_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterMaintenancePolicyArgs]</span> = None<span class="p">,</span>
             <span class="nx">master_auth</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterAuthArgs]</span> = None<span class="p">,</span>
             <span class="nx">master_authorized_networks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterAuthorizedNetworksConfigArgs]</span> = None<span class="p">,</span>
             <span class="nx">min_master_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">monitoring_config</span><span class="p">:</span> <span class="nx">Optional[ClusterMonitoringConfigArgs]</span> = None<span class="p">,</span>
             <span class="nx">monitoring_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -810,6 +813,16 @@ cluster will be a regional cluster with multiple masters spread across zones in
 the region, and with default node locations in those zones as well
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="loggingconfig_csharp">
+<a href="#loggingconfig_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterloggingconfig">Cluster<wbr>Logging<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Logging configuration for the cluster.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="loggingservice_csharp">
 <a href="#loggingservice_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Service</a>
 </span>
@@ -871,6 +884,16 @@ the `gcp.container.getEngineVersions` data source useful - it indicates which ve
 are available. If you intend to specify versions manually,
 [the docs](https://cloud.google.com/kubernetes-engine/versioning-and-upgrades#specifying_cluster_version)
 describe the various acceptable formats for this field.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="monitoringconfig_csharp">
+<a href="#monitoringconfig_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermonitoringconfig">Cluster<wbr>Monitoring<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Monitoring configuration for the cluster.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoringservice_csharp">
@@ -1367,6 +1390,16 @@ cluster will be a regional cluster with multiple masters spread across zones in
 the region, and with default node locations in those zones as well
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="loggingconfig_go">
+<a href="#loggingconfig_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterloggingconfig">Cluster<wbr>Logging<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Logging configuration for the cluster.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="loggingservice_go">
 <a href="#loggingservice_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Service</a>
 </span>
@@ -1428,6 +1461,16 @@ the `gcp.container.getEngineVersions` data source useful - it indicates which ve
 are available. If you intend to specify versions manually,
 [the docs](https://cloud.google.com/kubernetes-engine/versioning-and-upgrades#specifying_cluster_version)
 describe the various acceptable formats for this field.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="monitoringconfig_go">
+<a href="#monitoringconfig_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermonitoringconfig">Cluster<wbr>Monitoring<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Monitoring configuration for the cluster.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoringservice_go">
@@ -1924,6 +1967,16 @@ cluster will be a regional cluster with multiple masters spread across zones in
 the region, and with default node locations in those zones as well
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="loggingconfig_nodejs">
+<a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterloggingconfig">Cluster<wbr>Logging<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Logging configuration for the cluster.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="loggingservice_nodejs">
 <a href="#loggingservice_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Service</a>
 </span>
@@ -1985,6 +2038,16 @@ the `gcp.container.getEngineVersions` data source useful - it indicates which ve
 are available. If you intend to specify versions manually,
 [the docs](https://cloud.google.com/kubernetes-engine/versioning-and-upgrades#specifying_cluster_version)
 describe the various acceptable formats for this field.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="monitoringconfig_nodejs">
+<a href="#monitoringconfig_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermonitoringconfig">Cluster<wbr>Monitoring<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Monitoring configuration for the cluster.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoringservice_nodejs">
@@ -2481,6 +2544,16 @@ cluster will be a regional cluster with multiple masters spread across zones in
 the region, and with default node locations in those zones as well
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="logging_config_python">
+<a href="#logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterloggingconfig">Cluster<wbr>Logging<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Logging configuration for the cluster.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="logging_service_python">
 <a href="#logging_service_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>service</a>
 </span>
@@ -2542,6 +2615,16 @@ the `gcp.container.getEngineVersions` data source useful - it indicates which ve
 are available. If you intend to specify versions manually,
 [the docs](https://cloud.google.com/kubernetes-engine/versioning-and-upgrades#specifying_cluster_version)
 describe the various acceptable formats for this field.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="monitoring_config_python">
+<a href="#monitoring_config_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermonitoringconfig">Cluster<wbr>Monitoring<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Monitoring configuration for the cluster.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoring_service_python">
@@ -3200,12 +3283,14 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
         <span class="nx">ip_allocation_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterIpAllocationPolicyArgs]</span> = None<span class="p">,</span>
         <span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">logging_config</span><span class="p">:</span> <span class="nx">Optional[ClusterLoggingConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">logging_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">maintenance_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterMaintenancePolicyArgs]</span> = None<span class="p">,</span>
         <span class="nx">master_auth</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterAuthArgs]</span> = None<span class="p">,</span>
         <span class="nx">master_authorized_networks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterAuthorizedNetworksConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">master_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">min_master_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">monitoring_config</span><span class="p">:</span> <span class="nx">Optional[ClusterMonitoringConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">monitoring_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -3619,6 +3704,16 @@ cluster will be a regional cluster with multiple masters spread across zones in
 the region, and with default node locations in those zones as well
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_loggingconfig_csharp">
+<a href="#state_loggingconfig_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterloggingconfig">Cluster<wbr>Logging<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Logging configuration for the cluster.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_loggingservice_csharp">
 <a href="#state_loggingservice_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Service</a>
 </span>
@@ -3691,6 +3786,16 @@ the `gcp.container.getEngineVersions` data source useful - it indicates which ve
 are available. If you intend to specify versions manually,
 [the docs](https://cloud.google.com/kubernetes-engine/versioning-and-upgrades#specifying_cluster_version)
 describe the various acceptable formats for this field.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_monitoringconfig_csharp">
+<a href="#state_monitoringconfig_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermonitoringconfig">Cluster<wbr>Monitoring<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Monitoring configuration for the cluster.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoringservice_csharp">
@@ -4255,6 +4360,16 @@ cluster will be a regional cluster with multiple masters spread across zones in
 the region, and with default node locations in those zones as well
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_loggingconfig_go">
+<a href="#state_loggingconfig_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterloggingconfig">Cluster<wbr>Logging<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Logging configuration for the cluster.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_loggingservice_go">
 <a href="#state_loggingservice_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Service</a>
 </span>
@@ -4327,6 +4442,16 @@ the `gcp.container.getEngineVersions` data source useful - it indicates which ve
 are available. If you intend to specify versions manually,
 [the docs](https://cloud.google.com/kubernetes-engine/versioning-and-upgrades#specifying_cluster_version)
 describe the various acceptable formats for this field.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_monitoringconfig_go">
+<a href="#state_monitoringconfig_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermonitoringconfig">Cluster<wbr>Monitoring<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Monitoring configuration for the cluster.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoringservice_go">
@@ -4891,6 +5016,16 @@ cluster will be a regional cluster with multiple masters spread across zones in
 the region, and with default node locations in those zones as well
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_loggingconfig_nodejs">
+<a href="#state_loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterloggingconfig">Cluster<wbr>Logging<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Logging configuration for the cluster.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_loggingservice_nodejs">
 <a href="#state_loggingservice_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Service</a>
 </span>
@@ -4963,6 +5098,16 @@ the `gcp.container.getEngineVersions` data source useful - it indicates which ve
 are available. If you intend to specify versions manually,
 [the docs](https://cloud.google.com/kubernetes-engine/versioning-and-upgrades#specifying_cluster_version)
 describe the various acceptable formats for this field.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_monitoringconfig_nodejs">
+<a href="#state_monitoringconfig_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermonitoringconfig">Cluster<wbr>Monitoring<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Monitoring configuration for the cluster.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoringservice_nodejs">
@@ -5527,6 +5672,16 @@ cluster will be a regional cluster with multiple masters spread across zones in
 the region, and with default node locations in those zones as well
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_logging_config_python">
+<a href="#state_logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterloggingconfig">Cluster<wbr>Logging<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Logging configuration for the cluster.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_logging_service_python">
 <a href="#state_logging_service_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>service</a>
 </span>
@@ -5599,6 +5754,16 @@ the `gcp.container.getEngineVersions` data source useful - it indicates which ve
 are available. If you intend to specify versions manually,
 [the docs](https://cloud.google.com/kubernetes-engine/versioning-and-upgrades#specifying_cluster_version)
 describe the various acceptable formats for this field.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_monitoring_config_python">
+<a href="#state_monitoring_config_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermonitoringconfig">Cluster<wbr>Monitoring<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Monitoring configuration for the cluster.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoring_service_python">
@@ -8037,6 +8202,64 @@ GKE-managed one.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="clusterloggingconfig">Cluster<wbr>Logging<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enablecomponents_csharp">
+<a href="#enablecomponents_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Components</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The GKE components exposing logs. Only `SYSTEM_COMPONENTS`
+is supported.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enablecomponents_go">
+<a href="#enablecomponents_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Components</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The GKE components exposing logs. Only `SYSTEM_COMPONENTS`
+is supported.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enablecomponents_nodejs">
+<a href="#enablecomponents_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Components</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The GKE components exposing logs. Only `SYSTEM_COMPONENTS`
+is supported.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enable_components_python">
+<a href="#enable_components_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>components</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The GKE components exposing logs. Only `SYSTEM_COMPONENTS`
+is supported.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="clustermaintenancepolicy">Cluster<wbr>Maintenance<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
@@ -8910,6 +9133,64 @@ Must be specified in CIDR notation.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Field for users to identify CIDR blocks.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="clustermonitoringconfig">Cluster<wbr>Monitoring<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enablecomponents_csharp">
+<a href="#enablecomponents_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Components</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The GKE components exposing logs. Only `SYSTEM_COMPONENTS`
+is supported.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enablecomponents_go">
+<a href="#enablecomponents_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Components</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The GKE components exposing logs. Only `SYSTEM_COMPONENTS`
+is supported.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enablecomponents_nodejs">
+<a href="#enablecomponents_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Components</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The GKE components exposing logs. Only `SYSTEM_COMPONENTS`
+is supported.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enable_components_python">
+<a href="#enable_components_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>components</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The GKE components exposing logs. Only `SYSTEM_COMPONENTS`
+is supported.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

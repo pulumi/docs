@@ -4,6 +4,7 @@ title: "Template"
 title_tag: "aws.ses.Template"
 meta_desc: "Documentation for the aws.ses.Template resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

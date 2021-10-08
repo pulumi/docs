@@ -4,6 +4,7 @@ title: "AppSecRateProtection"
 title_tag: "akamai.AppSecRateProtection"
 meta_desc: "Documentation for the akamai.AppSecRateProtection resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

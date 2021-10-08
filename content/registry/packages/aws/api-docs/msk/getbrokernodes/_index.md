@@ -4,6 +4,7 @@ title: "getBrokerNodes"
 title_tag: "aws.msk.getBrokerNodes"
 meta_desc: "Documentation for the aws.msk.getBrokerNodes function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

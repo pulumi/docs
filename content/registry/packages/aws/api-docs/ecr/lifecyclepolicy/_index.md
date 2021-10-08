@@ -4,6 +4,7 @@ title: "LifecyclePolicy"
 title_tag: "aws.ecr.LifecyclePolicy"
 meta_desc: "Documentation for the aws.ecr.LifecyclePolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "GtmProperty"
 title_tag: "akamai.GtmProperty"
 meta_desc: "Documentation for the akamai.GtmProperty resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

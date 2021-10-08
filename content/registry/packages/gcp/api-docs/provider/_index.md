@@ -4,6 +4,7 @@ title: "Provider"
 title_tag: "gcp.Provider"
 meta_desc: "Documentation for the gcp.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 
@@ -56,6 +57,7 @@ construction to achieve fine-grained programmatic control over provider settings
              <span class="nx">cloud_functions_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">cloud_identity_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">cloud_iot_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">cloud_resource_manager_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">cloud_run_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">cloud_scheduler_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">cloud_tasks_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -104,6 +106,7 @@ construction to achieve fine-grained programmatic control over provider settings
              <span class="nx">network_management_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">network_services_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">notebooks_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">org_policy_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">os_config_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">os_login_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">privateca_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -461,6 +464,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="cloudiotcustomendpoint_csharp">
 <a href="#cloudiotcustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Iot<wbr>Custom<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cloudresourcemanagercustomendpoint_csharp">
+<a href="#cloudresourcemanagercustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Resource<wbr>Manager<wbr>Custom<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -845,6 +856,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="notebookscustomendpoint_csharp">
 <a href="#notebookscustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Notebooks<wbr>Custom<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="orgpolicycustomendpoint_csharp">
+<a href="#orgpolicycustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Org<wbr>Policy<wbr>Custom<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1327,6 +1346,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="cloudresourcemanagercustomendpoint_go">
+<a href="#cloudresourcemanagercustomendpoint_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Resource<wbr>Manager<wbr>Custom<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="cloudruncustomendpoint_go">
 <a href="#cloudruncustomendpoint_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Run<wbr>Custom<wbr>Endpoint</a>
 </span>
@@ -1705,6 +1732,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="notebookscustomendpoint_go">
 <a href="#notebookscustomendpoint_go" style="color: inherit; text-decoration: inherit;">Notebooks<wbr>Custom<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="orgpolicycustomendpoint_go">
+<a href="#orgpolicycustomendpoint_go" style="color: inherit; text-decoration: inherit;">Org<wbr>Policy<wbr>Custom<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2187,6 +2222,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="cloudresourcemanagercustomendpoint_nodejs">
+<a href="#cloudresourcemanagercustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Resource<wbr>Manager<wbr>Custom<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="cloudruncustomendpoint_nodejs">
 <a href="#cloudruncustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Run<wbr>Custom<wbr>Endpoint</a>
 </span>
@@ -2565,6 +2608,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="notebookscustomendpoint_nodejs">
 <a href="#notebookscustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">notebooks<wbr>Custom<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="orgpolicycustomendpoint_nodejs">
+<a href="#orgpolicycustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">org<wbr>Policy<wbr>Custom<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -3047,6 +3098,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="cloud_resource_manager_custom_endpoint_python">
+<a href="#cloud_resource_manager_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>resource_<wbr>manager_<wbr>custom_<wbr>endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="cloud_run_custom_endpoint_python">
 <a href="#cloud_run_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>run_<wbr>custom_<wbr>endpoint</a>
 </span>
@@ -3425,6 +3484,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="notebooks_custom_endpoint_python">
 <a href="#notebooks_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">notebooks_<wbr>custom_<wbr>endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="org_policy_custom_endpoint_python">
+<a href="#org_policy_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">org_<wbr>policy_<wbr>custom_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

@@ -4,6 +4,7 @@ title: "getUser"
 title_tag: "rancher2.getUser"
 meta_desc: "Documentation for the rancher2.getUser function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

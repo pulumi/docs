@@ -4,6 +4,7 @@ title: "getBlobDataSetMapping"
 title_tag: "azure-native.datashare.getBlobDataSetMapping"
 meta_desc: "Documentation for the azure-native.datashare.getBlobDataSetMapping function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

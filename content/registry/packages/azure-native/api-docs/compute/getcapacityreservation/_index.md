@@ -4,6 +4,7 @@ title: "getCapacityReservation"
 title_tag: "azure-native.compute.getCapacityReservation"
 meta_desc: "Documentation for the azure-native.compute.getCapacityReservation function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

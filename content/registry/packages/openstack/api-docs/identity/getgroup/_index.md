@@ -4,6 +4,7 @@ title: "getGroup"
 title_tag: "openstack.identity.getGroup"
 meta_desc: "Documentation for the openstack.identity.getGroup function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

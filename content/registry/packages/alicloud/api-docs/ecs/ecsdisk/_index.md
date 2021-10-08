@@ -4,6 +4,7 @@ title: "EcsDisk"
 title_tag: "alicloud.ecs.EcsDisk"
 meta_desc: "Documentation for the alicloud.ecs.EcsDisk resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

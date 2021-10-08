@@ -4,6 +4,7 @@ title: "Detector"
 title_tag: "aws-native.frauddetector.Detector"
 meta_desc: "Documentation for the aws-native.frauddetector.Detector resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

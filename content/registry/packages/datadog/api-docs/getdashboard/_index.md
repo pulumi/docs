@@ -4,6 +4,7 @@ title: "getDashboard"
 title_tag: "datadog.getDashboard"
 meta_desc: "Documentation for the datadog.getDashboard function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

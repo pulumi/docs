@@ -4,6 +4,7 @@ title: "getDataConnection"
 title_tag: "azure-native.synapse.getDataConnection"
 meta_desc: "Documentation for the azure-native.synapse.getDataConnection function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

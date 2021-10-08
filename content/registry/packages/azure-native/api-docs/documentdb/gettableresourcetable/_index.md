@@ -4,6 +4,7 @@ title: "getTableResourceTable"
 title_tag: "azure-native.documentdb.getTableResourceTable"
 meta_desc: "Documentation for the azure-native.documentdb.getTableResourceTable function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

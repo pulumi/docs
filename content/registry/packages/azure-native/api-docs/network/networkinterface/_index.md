@@ -4,6 +4,7 @@ title: "NetworkInterface"
 title_tag: "azure-native.network.NetworkInterface"
 meta_desc: "Documentation for the azure-native.network.NetworkInterface resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 
@@ -82,15 +83,15 @@ import pulumi_azure_native as azure_native
 
 network_interface = azure_native.network.NetworkInterface("networkInterface",
     enable_accelerated_networking=True,
-    ip_configurations=[azure_native.network.NetworkInterfaceIPConfigurationArgs(
-        name="ipconfig1",
-        public_ip_address=azure_native.network.PublicIPAddressArgs(
+    ip_configurations=[{
+        "name": "ipconfig1",
+        "publicIPAddress": azure_native.network.PublicIPAddressArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/test-ip",
         ),
-        subnet=azure_native.network.SubnetArgs(
+        "subnet": azure_native.network.SubnetArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/rg1-vnet/subnets/default",
         ),
-    )],
+    }],
     location="eastus",
     network_interface_name="test-nic",
     resource_group_name="rg1")

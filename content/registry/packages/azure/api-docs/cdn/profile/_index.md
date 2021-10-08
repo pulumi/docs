@@ -4,6 +4,7 @@ title: "Profile"
 title_tag: "azure.cdn.Profile"
 meta_desc: "Documentation for the azure.cdn.Profile resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getSchedulerPolicy"
 title_tag: "nomad.getSchedulerPolicy"
 meta_desc: "Documentation for the nomad.getSchedulerPolicy function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "RepositoryIamBinding"
 title_tag: "gcp.sourcerepo.RepositoryIamBinding"
 meta_desc: "Documentation for the gcp.sourcerepo.RepositoryIamBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

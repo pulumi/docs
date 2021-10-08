@@ -4,6 +4,7 @@ title: "ScheduledView"
 title_tag: "sumologic.ScheduledView"
 meta_desc: "Documentation for the sumologic.ScheduledView resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

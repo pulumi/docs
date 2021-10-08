@@ -4,6 +4,7 @@ title: "getWebhookCallbackConfig"
 title_tag: "azure-native.containerregistry.getWebhookCallbackConfig"
 meta_desc: "Documentation for the azure-native.containerregistry.getWebhookCallbackConfig function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

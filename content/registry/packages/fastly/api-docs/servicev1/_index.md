@@ -4,6 +4,7 @@ title: "Servicev1"
 title_tag: "fastly.Servicev1"
 meta_desc: "Documentation for the fastly.Servicev1 resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

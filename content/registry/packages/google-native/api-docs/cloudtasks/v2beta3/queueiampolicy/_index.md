@@ -4,6 +4,7 @@ title: "QueueIamPolicy"
 title_tag: "google-native.cloudtasks/v2beta3.QueueIamPolicy"
 meta_desc: "Documentation for the google-native.cloudtasks/v2beta3.QueueIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getLab"
 title_tag: "azure.devtest.getLab"
 meta_desc: "Documentation for the azure.devtest.getLab function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

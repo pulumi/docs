@@ -4,6 +4,7 @@ title: "AnalyticsItem"
 title_tag: "azure.appinsights.AnalyticsItem"
 meta_desc: "Documentation for the azure.appinsights.AnalyticsItem resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

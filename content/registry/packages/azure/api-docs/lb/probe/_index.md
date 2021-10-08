@@ -4,6 +4,7 @@ title: "Probe"
 title_tag: "azure.lb.Probe"
 meta_desc: "Documentation for the azure.lb.Probe resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

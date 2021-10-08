@@ -4,6 +4,7 @@ title: "BucketACL"
 title_tag: "gcp.storage.BucketACL"
 meta_desc: "Documentation for the gcp.storage.BucketACL resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "InputsUdp"
 title_tag: "splunk.InputsUdp"
 meta_desc: "Documentation for the splunk.InputsUdp resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

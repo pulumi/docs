@@ -4,6 +4,7 @@ title: "ObjectAccessControl"
 title_tag: "gcp.storage.ObjectAccessControl"
 meta_desc: "Documentation for the gcp.storage.ObjectAccessControl resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

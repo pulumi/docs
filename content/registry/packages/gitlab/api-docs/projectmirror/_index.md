@@ -4,6 +4,7 @@ title: "ProjectMirror"
 title_tag: "gitlab.ProjectMirror"
 meta_desc: "Documentation for the gitlab.ProjectMirror resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

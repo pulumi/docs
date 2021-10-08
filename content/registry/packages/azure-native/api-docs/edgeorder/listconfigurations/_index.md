@@ -4,6 +4,7 @@ title: "listConfigurations"
 title_tag: "azure-native.edgeorder.listConfigurations"
 meta_desc: "Documentation for the azure-native.edgeorder.listConfigurations function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

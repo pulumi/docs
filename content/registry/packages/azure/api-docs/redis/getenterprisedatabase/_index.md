@@ -4,6 +4,7 @@ title: "getEnterpriseDatabase"
 title_tag: "azure.redis.getEnterpriseDatabase"
 meta_desc: "Documentation for the azure.redis.getEnterpriseDatabase function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

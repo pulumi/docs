@@ -4,6 +4,7 @@ title: "getServiceIntegration"
 title_tag: "pagerduty.getServiceIntegration"
 meta_desc: "Documentation for the pagerduty.getServiceIntegration function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

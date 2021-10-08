@@ -4,6 +4,7 @@ title: "PreparedQuery"
 title_tag: "consul.PreparedQuery"
 meta_desc: "Documentation for the consul.PreparedQuery resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

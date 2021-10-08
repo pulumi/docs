@@ -4,6 +4,7 @@ title: "getNotificationHubPnsCredentials"
 title_tag: "azure-native.notificationhubs.getNotificationHubPnsCredentials"
 meta_desc: "Documentation for the azure-native.notificationhubs.getNotificationHubPnsCredentials function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

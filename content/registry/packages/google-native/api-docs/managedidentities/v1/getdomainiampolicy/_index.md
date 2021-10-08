@@ -4,6 +4,7 @@ title: "getDomainIamPolicy"
 title_tag: "google-native.managedidentities/v1.getDomainIamPolicy"
 meta_desc: "Documentation for the google-native.managedidentities/v1.getDomainIamPolicy function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

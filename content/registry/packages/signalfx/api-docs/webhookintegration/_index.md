@@ -4,6 +4,7 @@ title: "WebhookIntegration"
 title_tag: "signalfx.WebhookIntegration"
 meta_desc: "Documentation for the signalfx.WebhookIntegration resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

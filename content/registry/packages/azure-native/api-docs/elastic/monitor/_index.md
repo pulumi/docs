@@ -4,6 +4,7 @@ title: "Monitor"
 title_tag: "azure-native.elastic.Monitor"
 meta_desc: "Documentation for the azure-native.elastic.Monitor resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

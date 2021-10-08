@@ -4,6 +4,7 @@ title: "CSINodeList"
 title_tag: "kubernetes.storage.k8s.io/v1.CSINodeList"
 meta_desc: "Documentation for the kubernetes.storage.k8s.io/v1.CSINodeList resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "Quota"
 title_tag: "openstack.loadbalancer.Quota"
 meta_desc: "Documentation for the openstack.loadbalancer.Quota resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

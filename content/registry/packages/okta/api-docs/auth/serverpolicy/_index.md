@@ -4,6 +4,7 @@ title: "ServerPolicy"
 title_tag: "okta.auth.ServerPolicy"
 meta_desc: "Documentation for the okta.auth.ServerPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

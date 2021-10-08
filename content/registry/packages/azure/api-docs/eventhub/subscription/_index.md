@@ -4,6 +4,7 @@ title: "Subscription"
 title_tag: "azure.eventhub.Subscription"
 meta_desc: "Documentation for the azure.eventhub.Subscription resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 
@@ -394,7 +395,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The idle interval after which the topic is automatically deleted as an [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). The minimum duration is `5` minutes or `P5M`.
+    <dd>{{% md %}}The idle interval after which the topic is automatically deleted as an [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). The minimum duration is `5` minutes or `PT5M`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deadletteringonfilterevaluationerror_csharp">
@@ -457,7 +458,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The lock duration for the subscription as an [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). The default value is `1` minute or `P1M`.
+    <dd>{{% md %}}The lock duration for the subscription as an [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). The default value is `1` minute or `PT1M`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -533,7 +534,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The idle interval after which the topic is automatically deleted as an [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). The minimum duration is `5` minutes or `P5M`.
+    <dd>{{% md %}}The idle interval after which the topic is automatically deleted as an [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). The minimum duration is `5` minutes or `PT5M`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deadletteringonfilterevaluationerror_go">
@@ -596,7 +597,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The lock duration for the subscription as an [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). The default value is `1` minute or `P1M`.
+    <dd>{{% md %}}The lock duration for the subscription as an [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). The default value is `1` minute or `PT1M`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -672,7 +673,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The idle interval after which the topic is automatically deleted as an [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). The minimum duration is `5` minutes or `P5M`.
+    <dd>{{% md %}}The idle interval after which the topic is automatically deleted as an [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). The minimum duration is `5` minutes or `PT5M`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deadletteringonfilterevaluationerror_nodejs">
@@ -735,7 +736,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The lock duration for the subscription as an [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). The default value is `1` minute or `P1M`.
+    <dd>{{% md %}}The lock duration for the subscription as an [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). The default value is `1` minute or `PT1M`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -811,7 +812,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The idle interval after which the topic is automatically deleted as an [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). The minimum duration is `5` minutes or `P5M`.
+    <dd>{{% md %}}The idle interval after which the topic is automatically deleted as an [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). The minimum duration is `5` minutes or `PT5M`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dead_lettering_on_filter_evaluation_error_python">
@@ -874,7 +875,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The lock duration for the subscription as an [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). The default value is `1` minute or `P1M`.
+    <dd>{{% md %}}The lock duration for the subscription as an [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). The default value is `1` minute or `PT1M`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -1109,7 +1110,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The idle interval after which the topic is automatically deleted as an [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). The minimum duration is `5` minutes or `P5M`.
+    <dd>{{% md %}}The idle interval after which the topic is automatically deleted as an [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). The minimum duration is `5` minutes or `PT5M`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deadletteringonfilterevaluationerror_csharp">
@@ -1172,7 +1173,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The lock duration for the subscription as an [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). The default value is `1` minute or `P1M`.
+    <dd>{{% md %}}The lock duration for the subscription as an [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). The default value is `1` minute or `PT1M`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxdeliverycount_csharp">
@@ -1248,7 +1249,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The idle interval after which the topic is automatically deleted as an [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). The minimum duration is `5` minutes or `P5M`.
+    <dd>{{% md %}}The idle interval after which the topic is automatically deleted as an [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). The minimum duration is `5` minutes or `PT5M`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deadletteringonfilterevaluationerror_go">
@@ -1311,7 +1312,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The lock duration for the subscription as an [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). The default value is `1` minute or `P1M`.
+    <dd>{{% md %}}The lock duration for the subscription as an [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). The default value is `1` minute or `PT1M`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxdeliverycount_go">
@@ -1387,7 +1388,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The idle interval after which the topic is automatically deleted as an [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). The minimum duration is `5` minutes or `P5M`.
+    <dd>{{% md %}}The idle interval after which the topic is automatically deleted as an [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). The minimum duration is `5` minutes or `PT5M`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deadletteringonfilterevaluationerror_nodejs">
@@ -1450,7 +1451,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The lock duration for the subscription as an [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). The default value is `1` minute or `P1M`.
+    <dd>{{% md %}}The lock duration for the subscription as an [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). The default value is `1` minute or `PT1M`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxdeliverycount_nodejs">
@@ -1526,7 +1527,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The idle interval after which the topic is automatically deleted as an [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). The minimum duration is `5` minutes or `P5M`.
+    <dd>{{% md %}}The idle interval after which the topic is automatically deleted as an [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). The minimum duration is `5` minutes or `PT5M`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dead_lettering_on_filter_evaluation_error_python">
@@ -1589,7 +1590,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The lock duration for the subscription as an [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). The default value is `1` minute or `P1M`.
+    <dd>{{% md %}}The lock duration for the subscription as an [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). The default value is `1` minute or `PT1M`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_delivery_count_python">

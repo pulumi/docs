@@ -4,6 +4,7 @@ title: "getInstanceTypes"
 title_tag: "alicloud.emr.getInstanceTypes"
 meta_desc: "Documentation for the alicloud.emr.getInstanceTypes function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

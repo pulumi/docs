@@ -4,6 +4,7 @@ title: "LinkedServiceAzureSqlDatabase"
 title_tag: "azure.datafactory.LinkedServiceAzureSqlDatabase"
 meta_desc: "Documentation for the azure.datafactory.LinkedServiceAzureSqlDatabase resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "DatasetIamMember"
 title_tag: "gcp.healthcare.DatasetIamMember"
 meta_desc: "Documentation for the gcp.healthcare.DatasetIamMember resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

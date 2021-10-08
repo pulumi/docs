@@ -4,6 +4,7 @@ title: "Instance"
 title_tag: "azure-native.deviceupdate.Instance"
 meta_desc: "Documentation for the azure-native.deviceupdate.Instance resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 
@@ -37,6 +38,12 @@ class MyStack : Stack
         var instance = new AzureNative.DeviceUpdate.Instance("instance", new AzureNative.DeviceUpdate.InstanceArgs
         {
             AccountName = "contoso",
+            DiagnosticStorageProperties = new AzureNative.DeviceUpdate.Inputs.DiagnosticStoragePropertiesArgs
+            {
+                AuthenticationType = "KeyBased",
+                ConnectionString = "string",
+                ResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/adu-resource-group/providers/Microsoft.Storage/storageAccounts/testAccount",
+            },
             EnableDiagnostics = false,
             InstanceName = "blue",
             IotHubs = 
@@ -75,7 +82,12 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := deviceupdate.NewInstance(ctx, "instance", &deviceupdate.InstanceArgs{
-			AccountName:       pulumi.String("contoso"),
+			AccountName: pulumi.String("contoso"),
+			DiagnosticStorageProperties: &deviceupdate.DiagnosticStoragePropertiesArgs{
+				AuthenticationType: pulumi.String("KeyBased"),
+				ConnectionString:   pulumi.String("string"),
+				ResourceId:         pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/adu-resource-group/providers/Microsoft.Storage/storageAccounts/testAccount"),
+			},
 			EnableDiagnostics: pulumi.Bool(false),
 			InstanceName:      pulumi.String("blue"),
 			IotHubs: []deviceupdate.IotHubSettingsArgs{
@@ -110,6 +122,11 @@ import pulumi_azure_native as azure_native
 
 instance = azure_native.deviceupdate.Instance("instance",
     account_name="contoso",
+    diagnostic_storage_properties=azure_native.deviceupdate.DiagnosticStoragePropertiesArgs(
+        authentication_type="KeyBased",
+        connection_string="string",
+        resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/adu-resource-group/providers/Microsoft.Storage/storageAccounts/testAccount",
+    ),
     enable_diagnostics=False,
     instance_name="blue",
     iot_hubs=[azure_native.deviceupdate.IotHubSettingsArgs(
@@ -135,6 +152,11 @@ import * as azure_native from "@pulumi/azure-native";
 
 const instance = new azure_native.deviceupdate.Instance("instance", {
     accountName: "contoso",
+    diagnosticStorageProperties: {
+        authenticationType: "KeyBased",
+        connectionString: "string",
+        resourceId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/adu-resource-group/providers/Microsoft.Storage/storageAccounts/testAccount",
+    },
     enableDiagnostics: false,
     instanceName: "blue",
     iotHubs: [{
@@ -173,6 +195,7 @@ const instance = new azure_native.deviceupdate.Instance("instance", {
 <span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
              <span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">diagnostic_storage_properties</span><span class="p">:</span> <span class="nx">Optional[DiagnosticStoragePropertiesArgs]</span> = None<span class="p">,</span>
              <span class="nx">enable_diagnostics</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">iot_hubs</span><span class="p">:</span> <span class="nx">Optional[Sequence[IotHubSettingsArgs]]</span> = None<span class="p">,</span>
@@ -324,6 +347,14 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="diagnosticstorageproperties_csharp">
+<a href="#diagnosticstorageproperties_csharp" style="color: inherit; text-decoration: inherit;">Diagnostic<wbr>Storage<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticstorageproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Device<wbr>Update.<wbr>Inputs.<wbr>Diagnostic<wbr>Storage<wbr>Properties<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Customer-initiated diagnostic log collection storage properties{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enablediagnostics_csharp">
 <a href="#enablediagnostics_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Diagnostics</a>
 </span>
@@ -383,6 +414,14 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="diagnosticstorageproperties_go">
+<a href="#diagnosticstorageproperties_go" style="color: inherit; text-decoration: inherit;">Diagnostic<wbr>Storage<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticstorageproperties">Diagnostic<wbr>Storage<wbr>Properties<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Customer-initiated diagnostic log collection storage properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablediagnostics_go">
 <a href="#enablediagnostics_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Diagnostics</a>
@@ -444,6 +483,14 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="diagnosticstorageproperties_nodejs">
+<a href="#diagnosticstorageproperties_nodejs" style="color: inherit; text-decoration: inherit;">diagnostic<wbr>Storage<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticstorageproperties">Diagnostic<wbr>Storage<wbr>Properties<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Customer-initiated diagnostic log collection storage properties{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enablediagnostics_nodejs">
 <a href="#enablediagnostics_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Diagnostics</a>
 </span>
@@ -503,6 +550,14 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="diagnostic_storage_properties_python">
+<a href="#diagnostic_storage_properties_python" style="color: inherit; text-decoration: inherit;">diagnostic_<wbr>storage_<wbr>properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticstorageproperties">Diagnostic<wbr>Storage<wbr>Properties<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Customer-initiated diagnostic log collection storage properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_diagnostics_python">
 <a href="#enable_diagnostics_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>diagnostics</a>
@@ -737,6 +792,256 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="authenticationtype">Authentication<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Key<wbr>Based</dt>
+    <dd>KeyBased</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Authentication<wbr>Type<wbr>Key<wbr>Based</dt>
+    <dd>KeyBased</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Key<wbr>Based</dt>
+    <dd>KeyBased</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>KEY_BASED</dt>
+    <dd>KeyBased</dd></dl>
+{{% /choosable %}}
+
+<h4 id="diagnosticstorageproperties">Diagnostic<wbr>Storage<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="authenticationtype_csharp">
+<a href="#authenticationtype_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#authenticationtype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Device<wbr>Update.<wbr>Authentication<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Authentication Type{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resourceid_csharp">
+<a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ResourceId of the diagnostic storage account{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connectionstring_csharp">
+<a href="#connectionstring_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ConnectionString of the diagnostic storage account{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="authenticationtype_go">
+<a href="#authenticationtype_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#authenticationtype">Authentication<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Authentication Type{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resourceid_go">
+<a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ResourceId of the diagnostic storage account{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connectionstring_go">
+<a href="#connectionstring_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ConnectionString of the diagnostic storage account{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="authenticationtype_nodejs">
+<a href="#authenticationtype_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#authenticationtype">Authentication<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Authentication Type{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resourceid_nodejs">
+<a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ResourceId of the diagnostic storage account{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connectionstring_nodejs">
+<a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ConnectionString of the diagnostic storage account{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="authentication_type_python">
+<a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#authenticationtype">Authentication<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Authentication Type{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resource_id_python">
+<a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ResourceId of the diagnostic storage account{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connection_string_python">
+<a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ConnectionString of the diagnostic storage account{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="diagnosticstoragepropertiesresponse">Diagnostic<wbr>Storage<wbr>Properties<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="authenticationtype_csharp">
+<a href="#authenticationtype_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Authentication Type{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resourceid_csharp">
+<a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ResourceId of the diagnostic storage account{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connectionstring_csharp">
+<a href="#connectionstring_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ConnectionString of the diagnostic storage account{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="authenticationtype_go">
+<a href="#authenticationtype_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Authentication Type{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resourceid_go">
+<a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ResourceId of the diagnostic storage account{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connectionstring_go">
+<a href="#connectionstring_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ConnectionString of the diagnostic storage account{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="authenticationtype_nodejs">
+<a href="#authenticationtype_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Authentication Type{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resourceid_nodejs">
+<a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ResourceId of the diagnostic storage account{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connectionstring_nodejs">
+<a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ConnectionString of the diagnostic storage account{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="authentication_type_python">
+<a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Authentication Type{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resource_id_python">
+<a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ResourceId of the diagnostic storage account{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connection_string_python">
+<a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ConnectionString of the diagnostic storage account{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="iothubsettings">Iot<wbr>Hub<wbr>Settings</h4>
 

@@ -4,6 +4,7 @@ title: "listSubAccountMonitoredResources"
 title_tag: "azure-native.logz.listSubAccountMonitoredResources"
 meta_desc: "Documentation for the azure-native.logz.listSubAccountMonitoredResources function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

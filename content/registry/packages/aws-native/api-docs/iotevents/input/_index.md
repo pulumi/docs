@@ -4,6 +4,7 @@ title: "Input"
 title_tag: "aws-native.iotevents.Input"
 meta_desc: "Documentation for the aws-native.iotevents.Input resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

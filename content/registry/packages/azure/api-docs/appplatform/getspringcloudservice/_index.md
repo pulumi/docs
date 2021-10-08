@@ -4,6 +4,7 @@ title: "getSpringCloudService"
 title_tag: "azure.appplatform.getSpringCloudService"
 meta_desc: "Documentation for the azure.appplatform.getSpringCloudService function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

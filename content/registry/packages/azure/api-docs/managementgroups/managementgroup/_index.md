@@ -4,6 +4,7 @@ title: "ManagementGroup"
 title_tag: "azure.managementgroups.ManagementGroup"
 meta_desc: "Documentation for the azure.managementgroups.ManagementGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

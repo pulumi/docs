@@ -4,6 +4,7 @@ title: "getSubscriptionDiagnosticSetting"
 title_tag: "azure-native.insights.getSubscriptionDiagnosticSetting"
 meta_desc: "Documentation for the azure-native.insights.getSubscriptionDiagnosticSetting function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

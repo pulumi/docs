@@ -4,6 +4,7 @@ title: "AutomationAccount"
 title_tag: "azure-native.automation.AutomationAccount"
 meta_desc: "Documentation for the azure-native.automation.AutomationAccount resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 
@@ -2749,7 +2750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-native:automation:AutomationAccount ContoseAutomationAccount /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/myAutomationAccount9 
+$ pulumi import azure-native:automation:AutomationAccount myAutomationAccount9 /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/myAutomationAccount9 
 ```
 
 

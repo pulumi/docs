@@ -4,6 +4,7 @@ title: "ServerScope"
 title_tag: "okta.auth.ServerScope"
 meta_desc: "Documentation for the okta.auth.ServerScope resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

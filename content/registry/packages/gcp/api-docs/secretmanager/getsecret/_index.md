@@ -4,6 +4,7 @@ title: "getSecret"
 title_tag: "gcp.secretmanager.getSecret"
 meta_desc: "Documentation for the gcp.secretmanager.getSecret function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

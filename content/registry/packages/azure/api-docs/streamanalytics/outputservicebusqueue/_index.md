@@ -4,6 +4,7 @@ title: "OutputServiceBusQueue"
 title_tag: "azure.streamanalytics.OutputServiceBusQueue"
 meta_desc: "Documentation for the azure.streamanalytics.OutputServiceBusQueue resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

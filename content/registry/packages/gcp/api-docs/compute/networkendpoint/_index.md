@@ -4,6 +4,7 @@ title: "NetworkEndpoint"
 title_tag: "gcp.compute.NetworkEndpoint"
 meta_desc: "Documentation for the gcp.compute.NetworkEndpoint resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

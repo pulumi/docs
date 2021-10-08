@@ -4,6 +4,7 @@ title: "FederationUpstream"
 title_tag: "rabbitmq.FederationUpstream"
 meta_desc: "Documentation for the rabbitmq.FederationUpstream resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

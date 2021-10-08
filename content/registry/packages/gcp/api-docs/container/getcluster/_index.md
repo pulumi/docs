@@ -4,6 +4,7 @@ title: "getCluster"
 title_tag: "gcp.container.getCluster"
 meta_desc: "Documentation for the gcp.container.getCluster function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 
@@ -546,6 +547,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="loggingconfigs_csharp">
+<a href="#loggingconfigs_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusterloggingconfig">List&lt;Get<wbr>Cluster<wbr>Logging<wbr>Config&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="loggingservice_csharp">
 <a href="#loggingservice_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Service</a>
 </span>
@@ -591,6 +600,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="monitoringconfigs_csharp">
+<a href="#monitoringconfigs_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclustermonitoringconfig">List&lt;Get<wbr>Cluster<wbr>Monitoring<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -1015,6 +1032,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="loggingconfigs_go">
+<a href="#loggingconfigs_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusterloggingconfig">[]Get<wbr>Cluster<wbr>Logging<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="loggingservice_go">
 <a href="#loggingservice_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Service</a>
 </span>
@@ -1060,6 +1085,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="monitoringconfigs_go">
+<a href="#monitoringconfigs_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclustermonitoringconfig">[]Get<wbr>Cluster<wbr>Monitoring<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -1484,6 +1517,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="loggingconfigs_nodejs">
+<a href="#loggingconfigs_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusterloggingconfig">Get<wbr>Cluster<wbr>Logging<wbr>Config[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="loggingservice_nodejs">
 <a href="#loggingservice_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Service</a>
 </span>
@@ -1529,6 +1570,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="monitoringconfigs_nodejs">
+<a href="#monitoringconfigs_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclustermonitoringconfig">Get<wbr>Cluster<wbr>Monitoring<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -1953,6 +2002,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="logging_configs_python">
+<a href="#logging_configs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusterloggingconfig">Sequence[Get<wbr>Cluster<wbr>Logging<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="logging_service_python">
 <a href="#logging_service_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>service</a>
 </span>
@@ -1998,6 +2055,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="monitoring_configs_python">
+<a href="#monitoring_configs_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclustermonitoringconfig">Sequence[Get<wbr>Cluster<wbr>Monitoring<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -3992,6 +4057,58 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="getclusterloggingconfig">Get<wbr>Cluster<wbr>Logging<wbr>Config</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enablecomponents_csharp">
+<a href="#enablecomponents_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Components</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enablecomponents_go">
+<a href="#enablecomponents_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Components</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enablecomponents_nodejs">
+<a href="#enablecomponents_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Components</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enable_components_python">
+<a href="#enable_components_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>components</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="getclustermaintenancepolicy">Get<wbr>Cluster<wbr>Maintenance<wbr>Policy</h4>
 
 
@@ -4820,6 +4937,58 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getclustermonitoringconfig">Get<wbr>Cluster<wbr>Monitoring<wbr>Config</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enablecomponents_csharp">
+<a href="#enablecomponents_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Components</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enablecomponents_go">
+<a href="#enablecomponents_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Components</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enablecomponents_nodejs">
+<a href="#enablecomponents_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Components</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enable_components_python">
+<a href="#enable_components_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>components</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

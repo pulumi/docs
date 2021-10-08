@@ -4,6 +4,7 @@ title: "TableIamMember"
 title_tag: "gcp.bigtable.TableIamMember"
 meta_desc: "Documentation for the gcp.bigtable.TableIamMember resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

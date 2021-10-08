@@ -4,6 +4,7 @@ title: "getDetector"
 title_tag: "aws.guardduty.getDetector"
 meta_desc: "Documentation for the aws.guardduty.getDetector function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getGatewayConnection"
 title_tag: "azure.network.getGatewayConnection"
 meta_desc: "Documentation for the azure.network.getGatewayConnection function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

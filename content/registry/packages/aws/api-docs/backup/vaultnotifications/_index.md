@@ -4,6 +4,7 @@ title: "VaultNotifications"
 title_tag: "aws.backup.VaultNotifications"
 meta_desc: "Documentation for the aws.backup.VaultNotifications resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

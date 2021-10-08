@@ -4,6 +4,7 @@ title: "getBlobContainerImmutabilityPolicy"
 title_tag: "azure-native.storage.getBlobContainerImmutabilityPolicy"
 meta_desc: "Documentation for the azure-native.storage.getBlobContainerImmutabilityPolicy function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

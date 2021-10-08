@@ -4,6 +4,7 @@ title: "getScalingGroups"
 title_tag: "alicloud.ess.getScalingGroups"
 meta_desc: "Documentation for the alicloud.ess.getScalingGroups function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

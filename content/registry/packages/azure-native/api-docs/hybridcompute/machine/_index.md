@@ -4,6 +4,7 @@ title: "Machine"
 title_tag: "azure-native.hybridcompute.Machine"
 meta_desc: "Documentation for the azure-native.hybridcompute.Machine resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getStacks"
 title_tag: "alicloud.ros.getStacks"
 meta_desc: "Documentation for the alicloud.ros.getStacks function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getAADDataConnector"
 title_tag: "azure-native.securityinsights.getAADDataConnector"
 meta_desc: "Documentation for the azure-native.securityinsights.getAADDataConnector function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

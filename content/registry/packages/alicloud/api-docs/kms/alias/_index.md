@@ -4,6 +4,7 @@ title: "Alias"
 title_tag: "alicloud.kms.Alias"
 meta_desc: "Documentation for the alicloud.kms.Alias resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "NotificationConfig"
 title_tag: "gcp.securitycenter.NotificationConfig"
 meta_desc: "Documentation for the gcp.securitycenter.NotificationConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

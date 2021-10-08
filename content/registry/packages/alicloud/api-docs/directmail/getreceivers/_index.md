@@ -4,6 +4,7 @@ title: "getReceivers"
 title_tag: "alicloud.directmail.getReceivers"
 meta_desc: "Documentation for the alicloud.directmail.getReceivers function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

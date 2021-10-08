@@ -4,6 +4,7 @@ title: "getStaticSiteUserProvidedFunctionAppForStaticSite"
 title_tag: "azure-native.web.getStaticSiteUserProvidedFunctionAppForStaticSite"
 meta_desc: "Documentation for the azure-native.web.getStaticSiteUserProvidedFunctionAppForStaticSite function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

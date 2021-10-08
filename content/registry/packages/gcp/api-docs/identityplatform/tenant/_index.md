@@ -4,6 +4,7 @@ title: "Tenant"
 title_tag: "gcp.identityplatform.Tenant"
 meta_desc: "Documentation for the gcp.identityplatform.Tenant resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

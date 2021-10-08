@@ -4,6 +4,7 @@ title: "getCpCode"
 title_tag: "akamai.getCpCode"
 meta_desc: "Documentation for the akamai.getCpCode function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

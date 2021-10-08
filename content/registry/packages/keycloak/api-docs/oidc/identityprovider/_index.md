@@ -4,6 +4,7 @@ title: "IdentityProvider"
 title_tag: "keycloak.oidc.IdentityProvider"
 meta_desc: "Documentation for the keycloak.oidc.IdentityProvider resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

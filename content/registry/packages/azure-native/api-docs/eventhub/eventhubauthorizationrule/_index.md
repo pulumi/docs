@@ -4,6 +4,7 @@ title: "EventHubAuthorizationRule"
 title_tag: "azure-native.eventhub.EventHubAuthorizationRule"
 meta_desc: "Documentation for the azure-native.eventhub.EventHubAuthorizationRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

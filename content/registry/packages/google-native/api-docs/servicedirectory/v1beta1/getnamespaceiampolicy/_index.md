@@ -4,6 +4,7 @@ title: "getNamespaceIamPolicy"
 title_tag: "google-native.servicedirectory/v1beta1.getNamespaceIamPolicy"
 meta_desc: "Documentation for the google-native.servicedirectory/v1beta1.getNamespaceIamPolicy function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

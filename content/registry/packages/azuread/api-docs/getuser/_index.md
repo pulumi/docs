@@ -4,6 +4,7 @@ title: "getUser"
 title_tag: "azuread.getUser"
 meta_desc: "Documentation for the azuread.getUser function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 
@@ -347,6 +348,15 @@ The following output properties are available:
     <dd>{{% md %}}Whether consent has been obtained for minors. Supported values are `Granted`, `Denied` and `NotRequired`.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="costcenter_csharp">
+<a href="#costcenter_csharp" style="color: inherit; text-decoration: inherit;">Cost<wbr>Center</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cost center associated with the user.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="country_csharp">
 <a href="#country_csharp" style="color: inherit; text-decoration: inherit;">Country</a>
 </span>
@@ -383,6 +393,15 @@ The following output properties are available:
     <dd>{{% md %}}The display name of the user.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="division_csharp">
+<a href="#division_csharp" style="color: inherit; text-decoration: inherit;">Division</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the division in which the user works.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="employeeid_csharp">
 <a href="#employeeid_csharp" style="color: inherit; text-decoration: inherit;">Employee<wbr>Id</a>
 </span>
@@ -390,6 +409,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The employee identifier assigned to the user by the organisation.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="employeetype_csharp">
+<a href="#employeetype_csharp" style="color: inherit; text-decoration: inherit;">Employee<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Captures enterprise worker type. For example, Employee, Contractor, Consultant, or Vendor.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="externaluserstate_csharp">
@@ -711,6 +739,15 @@ The following output properties are available:
     <dd>{{% md %}}Whether consent has been obtained for minors. Supported values are `Granted`, `Denied` and `NotRequired`.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="costcenter_go">
+<a href="#costcenter_go" style="color: inherit; text-decoration: inherit;">Cost<wbr>Center</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cost center associated with the user.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="country_go">
 <a href="#country_go" style="color: inherit; text-decoration: inherit;">Country</a>
 </span>
@@ -747,6 +784,15 @@ The following output properties are available:
     <dd>{{% md %}}The display name of the user.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="division_go">
+<a href="#division_go" style="color: inherit; text-decoration: inherit;">Division</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the division in which the user works.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="employeeid_go">
 <a href="#employeeid_go" style="color: inherit; text-decoration: inherit;">Employee<wbr>Id</a>
 </span>
@@ -754,6 +800,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The employee identifier assigned to the user by the organisation.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="employeetype_go">
+<a href="#employeetype_go" style="color: inherit; text-decoration: inherit;">Employee<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Captures enterprise worker type. For example, Employee, Contractor, Consultant, or Vendor.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="externaluserstate_go">
@@ -1075,6 +1130,15 @@ The following output properties are available:
     <dd>{{% md %}}Whether consent has been obtained for minors. Supported values are `Granted`, `Denied` and `NotRequired`.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="costcenter_nodejs">
+<a href="#costcenter_nodejs" style="color: inherit; text-decoration: inherit;">cost<wbr>Center</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cost center associated with the user.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="country_nodejs">
 <a href="#country_nodejs" style="color: inherit; text-decoration: inherit;">country</a>
 </span>
@@ -1111,6 +1175,15 @@ The following output properties are available:
     <dd>{{% md %}}The display name of the user.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="division_nodejs">
+<a href="#division_nodejs" style="color: inherit; text-decoration: inherit;">division</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the division in which the user works.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="employeeid_nodejs">
 <a href="#employeeid_nodejs" style="color: inherit; text-decoration: inherit;">employee<wbr>Id</a>
 </span>
@@ -1118,6 +1191,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The employee identifier assigned to the user by the organisation.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="employeetype_nodejs">
+<a href="#employeetype_nodejs" style="color: inherit; text-decoration: inherit;">employee<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Captures enterprise worker type. For example, Employee, Contractor, Consultant, or Vendor.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="externaluserstate_nodejs">
@@ -1439,6 +1521,15 @@ The following output properties are available:
     <dd>{{% md %}}Whether consent has been obtained for minors. Supported values are `Granted`, `Denied` and `NotRequired`.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="cost_center_python">
+<a href="#cost_center_python" style="color: inherit; text-decoration: inherit;">cost_<wbr>center</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The cost center associated with the user.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="country_python">
 <a href="#country_python" style="color: inherit; text-decoration: inherit;">country</a>
 </span>
@@ -1475,6 +1566,15 @@ The following output properties are available:
     <dd>{{% md %}}The display name of the user.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="division_python">
+<a href="#division_python" style="color: inherit; text-decoration: inherit;">division</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the division in which the user works.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="employee_id_python">
 <a href="#employee_id_python" style="color: inherit; text-decoration: inherit;">employee_<wbr>id</a>
 </span>
@@ -1482,6 +1582,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The employee identifier assigned to the user by the organisation.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="employee_type_python">
+<a href="#employee_type_python" style="color: inherit; text-decoration: inherit;">employee_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Captures enterprise worker type. For example, Employee, Contractor, Consultant, or Vendor.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="external_user_state_python">

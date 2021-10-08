@@ -4,6 +4,7 @@ title: "NatPool"
 title_tag: "azure.lb.NatPool"
 meta_desc: "Documentation for the azure.lb.NatPool resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

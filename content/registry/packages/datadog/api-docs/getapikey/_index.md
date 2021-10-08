@@ -4,6 +4,7 @@ title: "getApiKey"
 title_tag: "datadog.getApiKey"
 meta_desc: "Documentation for the datadog.getApiKey function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

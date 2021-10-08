@@ -4,6 +4,7 @@ title: "getService"
 title_tag: "alicloud.eventbridge.getService"
 meta_desc: "Documentation for the alicloud.eventbridge.getService function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

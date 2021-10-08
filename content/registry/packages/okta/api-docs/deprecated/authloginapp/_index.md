@@ -4,6 +4,7 @@ title: "AuthLoginApp"
 title_tag: "okta.deprecated.AuthLoginApp"
 meta_desc: "Documentation for the okta.deprecated.AuthLoginApp resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

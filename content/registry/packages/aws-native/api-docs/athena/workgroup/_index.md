@@ -4,6 +4,7 @@ title: "WorkGroup"
 title_tag: "aws-native.athena.WorkGroup"
 meta_desc: "Documentation for the aws-native.athena.WorkGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "DatasetHttp"
 title_tag: "azure.datafactory.DatasetHttp"
 meta_desc: "Documentation for the azure.datafactory.DatasetHttp resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

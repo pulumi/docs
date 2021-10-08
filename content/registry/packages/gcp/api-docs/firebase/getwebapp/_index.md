@@ -4,6 +4,7 @@ title: "getWebApp"
 title_tag: "gcp.firebase.getWebApp"
 meta_desc: "Documentation for the gcp.firebase.getWebApp function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

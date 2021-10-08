@@ -4,6 +4,7 @@ title: "getBackendAddressPool"
 title_tag: "azure.lb.getBackendAddressPool"
 meta_desc: "Documentation for the azure.lb.getBackendAddressPool function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

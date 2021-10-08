@@ -4,6 +4,7 @@ title: "ServiceIncidentRule"
 title_tag: "opsgenie.ServiceIncidentRule"
 meta_desc: "Documentation for the opsgenie.ServiceIncidentRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

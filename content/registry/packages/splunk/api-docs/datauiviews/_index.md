@@ -4,6 +4,7 @@ title: "DataUiViews"
 title_tag: "splunk.DataUiViews"
 meta_desc: "Documentation for the splunk.DataUiViews resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

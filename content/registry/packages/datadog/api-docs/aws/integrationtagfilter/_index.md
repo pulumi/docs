@@ -4,6 +4,7 @@ title: "IntegrationTagFilter"
 title_tag: "datadog.aws.IntegrationTagFilter"
 meta_desc: "Documentation for the datadog.aws.IntegrationTagFilter resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

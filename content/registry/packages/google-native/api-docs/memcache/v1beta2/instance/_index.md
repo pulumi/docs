@@ -4,6 +4,7 @@ title: "Instance"
 title_tag: "google-native.memcache/v1beta2.Instance"
 meta_desc: "Documentation for the google-native.memcache/v1beta2.Instance resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

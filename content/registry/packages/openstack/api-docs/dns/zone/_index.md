@@ -4,6 +4,7 @@ title: "Zone"
 title_tag: "openstack.dns.Zone"
 meta_desc: "Documentation for the openstack.dns.Zone resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

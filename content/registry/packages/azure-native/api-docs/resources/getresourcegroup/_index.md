@@ -4,6 +4,7 @@ title: "getResourceGroup"
 title_tag: "azure-native.resources.getResourceGroup"
 meta_desc: "Documentation for the azure-native.resources.getResourceGroup function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

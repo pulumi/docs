@@ -4,6 +4,7 @@ title: "WebAppVnetConnectionSlot"
 title_tag: "azure-native.web.WebAppVnetConnectionSlot"
 meta_desc: "Documentation for the azure-native.web.WebAppVnetConnectionSlot resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

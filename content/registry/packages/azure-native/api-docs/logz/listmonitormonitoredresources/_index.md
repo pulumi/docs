@@ -4,6 +4,7 @@ title: "listMonitorMonitoredResources"
 title_tag: "azure-native.logz.listMonitorMonitoredResources"
 meta_desc: "Documentation for the azure-native.logz.listMonitorMonitoredResources function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

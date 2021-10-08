@@ -4,6 +4,7 @@ title: "getPolicyDefinitionAtManagementGroup"
 title_tag: "azure-native.authorization.getPolicyDefinitionAtManagementGroup"
 meta_desc: "Documentation for the azure-native.authorization.getPolicyDefinitionAtManagementGroup function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

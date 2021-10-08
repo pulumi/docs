@@ -4,6 +4,7 @@ title: "QueueAuthorizationRule"
 title_tag: "azure.eventhub.QueueAuthorizationRule"
 meta_desc: "Documentation for the azure.eventhub.QueueAuthorizationRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

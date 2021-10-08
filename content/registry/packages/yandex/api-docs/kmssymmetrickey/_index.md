@@ -4,6 +4,7 @@ title: "KmsSymmetricKey"
 title_tag: "yandex.KmsSymmetricKey"
 meta_desc: "Documentation for the yandex.KmsSymmetricKey resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

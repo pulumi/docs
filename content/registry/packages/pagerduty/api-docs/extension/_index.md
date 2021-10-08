@@ -4,6 +4,7 @@ title: "Extension"
 title_tag: "pagerduty.Extension"
 meta_desc: "Documentation for the pagerduty.Extension resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

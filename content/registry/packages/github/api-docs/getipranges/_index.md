@@ -4,6 +4,7 @@ title: "getIpRanges"
 title_tag: "github.getIpRanges"
 meta_desc: "Documentation for the github.getIpRanges function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

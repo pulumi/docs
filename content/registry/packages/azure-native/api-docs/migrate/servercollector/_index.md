@@ -4,6 +4,7 @@ title: "ServerCollector"
 title_tag: "azure-native.migrate.ServerCollector"
 meta_desc: "Documentation for the azure-native.migrate.ServerCollector resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

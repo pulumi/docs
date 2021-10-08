@@ -4,6 +4,7 @@ title: "EncryptionConfig"
 title_tag: "aws.xray.EncryptionConfig"
 meta_desc: "Documentation for the aws.xray.EncryptionConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

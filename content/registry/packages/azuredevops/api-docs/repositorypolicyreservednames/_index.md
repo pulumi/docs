@@ -4,6 +4,7 @@ title: "RepositoryPolicyReservedNames"
 title_tag: "azuredevops.RepositoryPolicyReservedNames"
 meta_desc: "Documentation for the azuredevops.RepositoryPolicyReservedNames resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

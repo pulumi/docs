@@ -4,6 +4,7 @@ title: "listVideoStreamingToken"
 title_tag: "azure-native.videoanalyzer.listVideoStreamingToken"
 meta_desc: "Documentation for the azure-native.videoanalyzer.listVideoStreamingToken function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

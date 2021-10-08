@@ -4,6 +4,7 @@ title: "S3Bucket"
 title_tag: "minio.S3Bucket"
 meta_desc: "Documentation for the minio.S3Bucket resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

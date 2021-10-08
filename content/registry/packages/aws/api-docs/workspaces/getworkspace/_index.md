@@ -4,6 +4,7 @@ title: "getWorkspace"
 title_tag: "aws.workspaces.getWorkspace"
 meta_desc: "Documentation for the aws.workspaces.getWorkspace function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

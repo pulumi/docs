@@ -4,6 +4,7 @@ title: "getWebPubSub"
 title_tag: "azure-native.webpubsub.getWebPubSub"
 meta_desc: "Documentation for the azure-native.webpubsub.getWebPubSub function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

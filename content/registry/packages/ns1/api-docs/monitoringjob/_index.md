@@ -4,6 +4,7 @@ title: "MonitoringJob"
 title_tag: "ns1.MonitoringJob"
 meta_desc: "Documentation for the ns1.MonitoringJob resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

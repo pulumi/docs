@@ -4,6 +4,7 @@ title: "getServiceIntegrationEndpoint"
 title_tag: "aiven.getServiceIntegrationEndpoint"
 meta_desc: "Documentation for the aiven.getServiceIntegrationEndpoint function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

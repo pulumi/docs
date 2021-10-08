@@ -4,6 +4,7 @@ title: "SparkCluster"
 title_tag: "azure.hdinsight.SparkCluster"
 meta_desc: "Documentation for the azure.hdinsight.SparkCluster resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getPrivateEndpointConnectionsAdtAPI"
 title_tag: "azure-native.m365securityandcompliance.getPrivateEndpointConnectionsAdtAPI"
 meta_desc: "Documentation for the azure-native.m365securityandcompliance.getPrivateEndpointConnectionsAdtAPI function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getDatasetDataLakeGen2"
 title_tag: "azure.datashare.getDatasetDataLakeGen2"
 meta_desc: "Documentation for the azure.datashare.getDatasetDataLakeGen2 function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

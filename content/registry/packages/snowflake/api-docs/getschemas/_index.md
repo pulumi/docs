@@ -4,6 +4,7 @@ title: "getSchemas"
 title_tag: "snowflake.getSchemas"
 meta_desc: "Documentation for the snowflake.getSchemas function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

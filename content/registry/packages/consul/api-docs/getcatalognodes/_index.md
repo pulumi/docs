@@ -4,6 +4,7 @@ title: "getCatalogNodes"
 title_tag: "consul.getCatalogNodes"
 meta_desc: "Documentation for the consul.getCatalogNodes function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

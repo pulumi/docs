@@ -4,6 +4,7 @@ title: "getPropertyRulesTemplate"
 title_tag: "akamai.getPropertyRulesTemplate"
 meta_desc: "Documentation for the akamai.getPropertyRulesTemplate function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

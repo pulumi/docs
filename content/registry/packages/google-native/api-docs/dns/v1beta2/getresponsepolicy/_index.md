@@ -4,6 +4,7 @@ title: "getResponsePolicy"
 title_tag: "google-native.dns/v1beta2.getResponsePolicy"
 meta_desc: "Documentation for the google-native.dns/v1beta2.getResponsePolicy function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "GroupMemberships"
 title_tag: "okta.GroupMemberships"
 meta_desc: "Documentation for the okta.GroupMemberships resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

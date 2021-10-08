@@ -4,6 +4,7 @@ title: "NamedValue"
 title_tag: "azure.apimanagement.NamedValue"
 meta_desc: "Documentation for the azure.apimanagement.NamedValue resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

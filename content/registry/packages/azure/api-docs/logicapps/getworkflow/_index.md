@@ -4,6 +4,7 @@ title: "getWorkflow"
 title_tag: "azure.logicapps.getWorkflow"
 meta_desc: "Documentation for the azure.logicapps.getWorkflow function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

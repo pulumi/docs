@@ -4,6 +4,7 @@ title: "Config"
 title_tag: "cloudinit.Config"
 meta_desc: "Documentation for the cloudinit.Config resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

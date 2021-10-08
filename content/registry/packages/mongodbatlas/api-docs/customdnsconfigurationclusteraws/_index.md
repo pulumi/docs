@@ -4,6 +4,7 @@ title: "CustomDnsConfigurationClusterAws"
 title_tag: "mongodbatlas.CustomDnsConfigurationClusterAws"
 meta_desc: "Documentation for the mongodbatlas.CustomDnsConfigurationClusterAws resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

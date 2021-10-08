@@ -4,6 +4,7 @@ title: "getPolicyAssignmentArtifact"
 title_tag: "azure-native.blueprint.getPolicyAssignmentArtifact"
 meta_desc: "Documentation for the azure-native.blueprint.getPolicyAssignmentArtifact function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

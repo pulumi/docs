@@ -4,6 +4,7 @@ title: "getSpotMarketRequest"
 title_tag: "packet.getSpotMarketRequest"
 meta_desc: "Documentation for the packet.getSpotMarketRequest function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

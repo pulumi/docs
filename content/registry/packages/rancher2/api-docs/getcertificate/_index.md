@@ -4,6 +4,7 @@ title: "getCertificate"
 title_tag: "rancher2.getCertificate"
 meta_desc: "Documentation for the rancher2.getCertificate function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

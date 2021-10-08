@@ -4,6 +4,7 @@ title: "listTenantAccessGitSecrets"
 title_tag: "azure-native.apimanagement.listTenantAccessGitSecrets"
 meta_desc: "Documentation for the azure-native.apimanagement.listTenantAccessGitSecrets function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

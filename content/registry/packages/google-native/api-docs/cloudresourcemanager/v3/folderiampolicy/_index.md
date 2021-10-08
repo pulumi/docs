@@ -4,6 +4,7 @@ title: "FolderIamPolicy"
 title_tag: "google-native.cloudresourcemanager/v3.FolderIamPolicy"
 meta_desc: "Documentation for the google-native.cloudresourcemanager/v3.FolderIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

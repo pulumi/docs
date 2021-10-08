@@ -4,6 +4,7 @@ title: "ContentLibrary"
 title_tag: "vsphere.ContentLibrary"
 meta_desc: "Documentation for the vsphere.ContentLibrary resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

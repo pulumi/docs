@@ -4,6 +4,7 @@ title: "getAzureCliScript"
 title_tag: "azure-native.resources.getAzureCliScript"
 meta_desc: "Documentation for the azure-native.resources.getAzureCliScript function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

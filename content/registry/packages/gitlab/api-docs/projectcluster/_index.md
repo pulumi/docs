@@ -4,6 +4,7 @@ title: "ProjectCluster"
 title_tag: "gitlab.ProjectCluster"
 meta_desc: "Documentation for the gitlab.ProjectCluster resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

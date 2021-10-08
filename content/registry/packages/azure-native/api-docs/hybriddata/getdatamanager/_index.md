@@ -4,6 +4,7 @@ title: "getDataManager"
 title_tag: "azure-native.hybriddata.getDataManager"
 meta_desc: "Documentation for the azure-native.hybriddata.getDataManager function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

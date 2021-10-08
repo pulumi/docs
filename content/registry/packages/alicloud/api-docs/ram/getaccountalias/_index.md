@@ -4,6 +4,7 @@ title: "getAccountAlias"
 title_tag: "alicloud.ram.getAccountAlias"
 meta_desc: "Documentation for the alicloud.ram.getAccountAlias function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "TriggerTumblingWindow"
 title_tag: "azure.datafactory.TriggerTumblingWindow"
 meta_desc: "Documentation for the azure.datafactory.TriggerTumblingWindow resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

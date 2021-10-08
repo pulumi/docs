@@ -4,6 +4,7 @@ title: "getManagedHardwareSecurityModule"
 title_tag: "azure.keyvault.getManagedHardwareSecurityModule"
 meta_desc: "Documentation for the azure.keyvault.getManagedHardwareSecurityModule function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

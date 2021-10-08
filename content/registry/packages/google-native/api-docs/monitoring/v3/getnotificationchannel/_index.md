@@ -4,6 +4,7 @@ title: "getNotificationChannel"
 title_tag: "google-native.monitoring/v3.getNotificationChannel"
 meta_desc: "Documentation for the google-native.monitoring/v3.getNotificationChannel function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

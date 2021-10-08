@@ -4,6 +4,7 @@ title: "GtmASmap"
 title_tag: "akamai.trafficmanagement.GtmASmap"
 meta_desc: "Documentation for the akamai.trafficmanagement.GtmASmap resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

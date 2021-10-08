@@ -4,6 +4,7 @@ title: "getPort"
 title_tag: "equinix-metal.getPort"
 meta_desc: "Documentation for the equinix-metal.getPort function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

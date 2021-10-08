@@ -4,6 +4,7 @@ title: "YdbDatabaseDedicated"
 title_tag: "yandex.YdbDatabaseDedicated"
 meta_desc: "Documentation for the yandex.YdbDatabaseDedicated resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "RaftSnapshotAgentConfig"
 title_tag: "vault.RaftSnapshotAgentConfig"
 meta_desc: "Documentation for the vault.RaftSnapshotAgentConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

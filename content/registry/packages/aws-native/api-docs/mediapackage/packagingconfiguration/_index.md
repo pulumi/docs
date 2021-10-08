@@ -4,6 +4,7 @@ title: "PackagingConfiguration"
 title_tag: "aws-native.mediapackage.PackagingConfiguration"
 meta_desc: "Documentation for the aws-native.mediapackage.PackagingConfiguration resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "ConsumerJwtAuth"
 title_tag: "kong.ConsumerJwtAuth"
 meta_desc: "Documentation for the kong.ConsumerJwtAuth resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

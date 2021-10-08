@@ -4,6 +4,7 @@ title: "SecurityProfile"
 title_tag: "aws-native.iot.SecurityProfile"
 meta_desc: "Documentation for the aws-native.iot.SecurityProfile resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

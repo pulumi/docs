@@ -4,6 +4,7 @@ title: "TlsActivation"
 title_tag: "fastly.TlsActivation"
 meta_desc: "Documentation for the fastly.TlsActivation resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

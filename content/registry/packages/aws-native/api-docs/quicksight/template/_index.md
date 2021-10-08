@@ -4,6 +4,7 @@ title: "Template"
 title_tag: "aws-native.quicksight.Template"
 meta_desc: "Documentation for the aws-native.quicksight.Template resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

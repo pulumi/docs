@@ -4,6 +4,7 @@ title: "ThirdPartyIntegration"
 title_tag: "mongodbatlas.ThirdPartyIntegration"
 meta_desc: "Documentation for the mongodbatlas.ThirdPartyIntegration resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

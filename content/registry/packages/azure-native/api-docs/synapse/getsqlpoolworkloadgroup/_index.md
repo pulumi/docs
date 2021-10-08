@@ -4,6 +4,7 @@ title: "getSqlPoolWorkloadGroup"
 title_tag: "azure-native.synapse.getSqlPoolWorkloadGroup"
 meta_desc: "Documentation for the azure-native.synapse.getSqlPoolWorkloadGroup function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

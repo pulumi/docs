@@ -4,6 +4,7 @@ title: "SecurityPartnerProvider"
 title_tag: "azure.network.SecurityPartnerProvider"
 meta_desc: "Documentation for the azure.network.SecurityPartnerProvider resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

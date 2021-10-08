@@ -4,6 +4,7 @@ title: "PrivateVirtualInterface"
 title_tag: "aws.directconnect.PrivateVirtualInterface"
 meta_desc: "Documentation for the aws.directconnect.PrivateVirtualInterface resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

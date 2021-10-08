@@ -4,6 +4,7 @@ title: "getConnections"
 title_tag: "alicloud.vpn.getConnections"
 meta_desc: "Documentation for the alicloud.vpn.getConnections function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

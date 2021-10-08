@@ -4,6 +4,7 @@ title: "getWorkbook"
 title_tag: "azure-native.insights.getWorkbook"
 meta_desc: "Documentation for the azure-native.insights.getWorkbook function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

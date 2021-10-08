@@ -4,6 +4,7 @@ title: "getServerTypes"
 title_tag: "hcloud.getServerTypes"
 meta_desc: "Documentation for the hcloud.getServerTypes function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

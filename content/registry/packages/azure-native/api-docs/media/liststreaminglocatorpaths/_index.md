@@ -4,6 +4,7 @@ title: "listStreamingLocatorPaths"
 title_tag: "azure-native.media.listStreamingLocatorPaths"
 meta_desc: "Documentation for the azure-native.media.listStreamingLocatorPaths function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

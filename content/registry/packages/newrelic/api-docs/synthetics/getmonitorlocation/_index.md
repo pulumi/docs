@@ -4,6 +4,7 @@ title: "getMonitorLocation"
 title_tag: "newrelic.synthetics.getMonitorLocation"
 meta_desc: "Documentation for the newrelic.synthetics.getMonitorLocation function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

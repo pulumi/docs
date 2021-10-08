@@ -4,6 +4,7 @@ title: "TopicIamPolicy"
 title_tag: "google-native.pubsub/v1beta2.TopicIamPolicy"
 meta_desc: "Documentation for the google-native.pubsub/v1beta2.TopicIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

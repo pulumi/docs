@@ -4,6 +4,7 @@ title: "getHostPciDevice"
 title_tag: "vsphere.getHostPciDevice"
 meta_desc: "Documentation for the vsphere.getHostPciDevice function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

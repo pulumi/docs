@@ -4,6 +4,7 @@ title: "License"
 title_tag: "aws-native.licensemanager.License"
 meta_desc: "Documentation for the aws-native.licensemanager.License resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

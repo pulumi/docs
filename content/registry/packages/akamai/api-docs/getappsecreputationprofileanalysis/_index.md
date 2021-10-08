@@ -4,6 +4,7 @@ title: "getAppSecReputationProfileAnalysis"
 title_tag: "akamai.getAppSecReputationProfileAnalysis"
 meta_desc: "Documentation for the akamai.getAppSecReputationProfileAnalysis function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

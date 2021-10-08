@@ -4,6 +4,7 @@ title: "SpringCloudJavaDeployment"
 title_tag: "azure.appplatform.SpringCloudJavaDeployment"
 meta_desc: "Documentation for the azure.appplatform.SpringCloudJavaDeployment resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

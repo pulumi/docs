@@ -4,6 +4,7 @@ title: "getOsPolicyAssignment"
 title_tag: "google-native.osconfig/v1alpha.getOsPolicyAssignment"
 meta_desc: "Documentation for the google-native.osconfig/v1alpha.getOsPolicyAssignment function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

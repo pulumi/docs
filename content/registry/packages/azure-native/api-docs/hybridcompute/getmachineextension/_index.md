@@ -4,6 +4,7 @@ title: "getMachineExtension"
 title_tag: "azure-native.hybridcompute.getMachineExtension"
 meta_desc: "Documentation for the azure-native.hybridcompute.getMachineExtension function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

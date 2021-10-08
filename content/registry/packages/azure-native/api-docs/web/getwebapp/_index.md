@@ -4,6 +4,7 @@ title: "getWebApp"
 title_tag: "azure-native.web.getWebApp"
 meta_desc: "Documentation for the azure-native.web.getWebApp function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

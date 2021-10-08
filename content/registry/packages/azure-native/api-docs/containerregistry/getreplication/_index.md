@@ -4,6 +4,7 @@ title: "getReplication"
 title_tag: "azure-native.containerregistry.getReplication"
 meta_desc: "Documentation for the azure-native.containerregistry.getReplication function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

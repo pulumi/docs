@@ -4,6 +4,7 @@ title: "IntegrationAccountAgreement"
 title_tag: "azure-native.logic.IntegrationAccountAgreement"
 meta_desc: "Documentation for the azure-native.logic.IntegrationAccountAgreement resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

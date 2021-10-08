@@ -4,6 +4,7 @@ title: "GtmCidrmap"
 title_tag: "akamai.trafficmanagement.GtmCidrmap"
 meta_desc: "Documentation for the akamai.trafficmanagement.GtmCidrmap resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "Grant"
 title_tag: "mysql.Grant"
 meta_desc: "Documentation for the mysql.Grant resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

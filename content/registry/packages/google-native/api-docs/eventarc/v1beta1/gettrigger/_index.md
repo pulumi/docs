@@ -4,6 +4,7 @@ title: "getTrigger"
 title_tag: "google-native.eventarc/v1beta1.getTrigger"
 meta_desc: "Documentation for the google-native.eventarc/v1beta1.getTrigger function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

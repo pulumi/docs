@@ -4,6 +4,7 @@ title: "Node"
 title_tag: "gcp.tpu.Node"
 meta_desc: "Documentation for the gcp.tpu.Node resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

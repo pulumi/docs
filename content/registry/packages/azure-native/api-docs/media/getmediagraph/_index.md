@@ -4,6 +4,7 @@ title: "getMediaGraph"
 title_tag: "azure-native.media.getMediaGraph"
 meta_desc: "Documentation for the azure-native.media.getMediaGraph function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

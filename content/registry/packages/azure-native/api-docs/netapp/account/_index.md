@@ -4,6 +4,7 @@ title: "Account"
 title_tag: "azure-native.netapp.Account"
 meta_desc: "Documentation for the azure-native.netapp.Account resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "Healthcheck"
 title_tag: "cloudflare.Healthcheck"
 meta_desc: "Documentation for the cloudflare.Healthcheck resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

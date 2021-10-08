@@ -4,6 +4,7 @@ title: "getRepositories"
 title_tag: "azuredevops.Repository.getRepositories"
 meta_desc: "Documentation for the azuredevops.Repository.getRepositories function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

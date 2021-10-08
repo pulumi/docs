@@ -4,6 +4,7 @@ title: "DataFlow"
 title_tag: "azure-native.datafactory.DataFlow"
 meta_desc: "Documentation for the azure-native.datafactory.DataFlow resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 
@@ -3383,6 +3384,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The description of the data flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="documentlocale_csharp">
+<a href="#documentlocale_csharp" style="color: inherit; text-decoration: inherit;">Document<wbr>Locale</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Locale of the Power query mashup document.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="folder_csharp">
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
@@ -3426,6 +3435,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the data flow.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="documentlocale_go">
+<a href="#documentlocale_go" style="color: inherit; text-decoration: inherit;">Document<wbr>Locale</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Locale of the Power query mashup document.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="folder_go">
 <a href="#folder_go" style="color: inherit; text-decoration: inherit;">Folder</a>
@@ -3471,6 +3488,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The description of the data flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="documentlocale_nodejs">
+<a href="#documentlocale_nodejs" style="color: inherit; text-decoration: inherit;">document<wbr>Locale</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Locale of the Power query mashup document.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="folder_nodejs">
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
@@ -3514,6 +3539,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the data flow.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="document_locale_python">
+<a href="#document_locale_python" style="color: inherit; text-decoration: inherit;">document_<wbr>locale</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Locale of the Power query mashup document.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="folder_python">
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
@@ -3561,6 +3594,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The description of the data flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="documentlocale_csharp">
+<a href="#documentlocale_csharp" style="color: inherit; text-decoration: inherit;">Document<wbr>Locale</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Locale of the Power query mashup document.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="folder_csharp">
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
@@ -3604,6 +3645,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the data flow.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="documentlocale_go">
+<a href="#documentlocale_go" style="color: inherit; text-decoration: inherit;">Document<wbr>Locale</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Locale of the Power query mashup document.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="folder_go">
 <a href="#folder_go" style="color: inherit; text-decoration: inherit;">Folder</a>
@@ -3649,6 +3698,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The description of the data flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="documentlocale_nodejs">
+<a href="#documentlocale_nodejs" style="color: inherit; text-decoration: inherit;">document<wbr>Locale</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Locale of the Power query mashup document.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="folder_nodejs">
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
@@ -3692,6 +3749,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the data flow.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="document_locale_python">
+<a href="#document_locale_python" style="color: inherit; text-decoration: inherit;">document_<wbr>locale</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Locale of the Power query mashup document.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="folder_python">
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>

@@ -4,6 +4,7 @@ title: "getSecretVersion"
 title_tag: "gcp.secretmanager.getSecretVersion"
 meta_desc: "Documentation for the gcp.secretmanager.getSecretVersion function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

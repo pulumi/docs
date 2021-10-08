@@ -4,6 +4,7 @@ title: "RuleIdpDiscovery"
 title_tag: "okta.policy.RuleIdpDiscovery"
 meta_desc: "Documentation for the okta.policy.RuleIdpDiscovery resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

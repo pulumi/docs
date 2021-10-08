@@ -4,6 +4,7 @@ title: "getOriginGroup"
 title_tag: "azure-native.cdn.getOriginGroup"
 meta_desc: "Documentation for the azure-native.cdn.getOriginGroup function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

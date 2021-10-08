@@ -4,6 +4,7 @@ title: "ConfigIamPolicy"
 title_tag: "google-native.runtimeconfig/v1beta1.ConfigIamPolicy"
 meta_desc: "Documentation for the google-native.runtimeconfig/v1beta1.ConfigIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

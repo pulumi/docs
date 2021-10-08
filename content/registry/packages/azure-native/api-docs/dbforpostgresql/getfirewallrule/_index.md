@@ -4,6 +4,7 @@ title: "getFirewallRule"
 title_tag: "azure-native.dbforpostgresql.getFirewallRule"
 meta_desc: "Documentation for the azure-native.dbforpostgresql.getFirewallRule function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

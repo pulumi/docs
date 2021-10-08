@@ -4,6 +4,7 @@ title: "getService"
 title_tag: "alicloud.privatelink.getService"
 meta_desc: "Documentation for the alicloud.privatelink.getService function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "Provider"
 title_tag: "azure.Provider"
 meta_desc: "Documentation for the azure.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

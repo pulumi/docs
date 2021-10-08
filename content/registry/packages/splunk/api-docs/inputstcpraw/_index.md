@@ -4,6 +4,7 @@ title: "InputsTcpRaw"
 title_tag: "splunk.InputsTcpRaw"
 meta_desc: "Documentation for the splunk.InputsTcpRaw resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

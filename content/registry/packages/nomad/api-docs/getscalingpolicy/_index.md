@@ -4,6 +4,7 @@ title: "getScalingPolicy"
 title_tag: "nomad.getScalingPolicy"
 meta_desc: "Documentation for the nomad.getScalingPolicy function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

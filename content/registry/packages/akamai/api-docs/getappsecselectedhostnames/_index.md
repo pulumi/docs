@@ -4,6 +4,7 @@ title: "getAppSecSelectedHostnames"
 title_tag: "akamai.getAppSecSelectedHostnames"
 meta_desc: "Documentation for the akamai.getAppSecSelectedHostnames function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

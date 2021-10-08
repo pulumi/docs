@@ -4,6 +4,7 @@ title: "CertificateAuthorityActivation"
 title_tag: "aws-native.acmpca.CertificateAuthorityActivation"
 meta_desc: "Documentation for the aws-native.acmpca.CertificateAuthorityActivation resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

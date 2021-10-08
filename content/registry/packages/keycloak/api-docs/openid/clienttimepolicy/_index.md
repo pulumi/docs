@@ -4,6 +4,7 @@ title: "ClientTimePolicy"
 title_tag: "keycloak.openid.ClientTimePolicy"
 meta_desc: "Documentation for the keycloak.openid.ClientTimePolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

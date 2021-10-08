@@ -4,6 +4,7 @@ title: "GroupPolicies"
 title_tag: "vault.identity.GroupPolicies"
 meta_desc: "Documentation for the vault.identity.GroupPolicies resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

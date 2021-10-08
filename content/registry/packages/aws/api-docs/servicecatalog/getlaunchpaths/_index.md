@@ -4,6 +4,7 @@ title: "getLaunchPaths"
 title_tag: "aws.servicecatalog.getLaunchPaths"
 meta_desc: "Documentation for the aws.servicecatalog.getLaunchPaths function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

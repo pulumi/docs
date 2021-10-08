@@ -4,6 +4,7 @@ title: "getResourceManagementPrivateLink"
 title_tag: "azure-native.authorization.getResourceManagementPrivateLink"
 meta_desc: "Documentation for the azure-native.authorization.getResourceManagementPrivateLink function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

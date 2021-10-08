@@ -4,6 +4,7 @@ title: "BastionHost"
 title_tag: "azure.compute.BastionHost"
 meta_desc: "Documentation for the azure.compute.BastionHost resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

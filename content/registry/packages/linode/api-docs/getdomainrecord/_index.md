@@ -4,6 +4,7 @@ title: "getDomainRecord"
 title_tag: "linode.getDomainRecord"
 meta_desc: "Documentation for the linode.getDomainRecord function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

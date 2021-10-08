@@ -4,6 +4,7 @@ title: "getServerScopes"
 title_tag: "okta.auth.getServerScopes"
 meta_desc: "Documentation for the okta.auth.getServerScopes function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

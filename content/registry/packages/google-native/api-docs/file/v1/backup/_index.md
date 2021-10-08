@@ -4,6 +4,7 @@ title: "Backup"
 title_tag: "google-native.file/v1.Backup"
 meta_desc: "Documentation for the google-native.file/v1.Backup resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

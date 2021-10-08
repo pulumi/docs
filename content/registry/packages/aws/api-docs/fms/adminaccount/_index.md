@@ -4,6 +4,7 @@ title: "AdminAccount"
 title_tag: "aws.fms.AdminAccount"
 meta_desc: "Documentation for the aws.fms.AdminAccount resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getRouteFilter"
 title_tag: "azure.network.getRouteFilter"
 meta_desc: "Documentation for the azure.network.getRouteFilter function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

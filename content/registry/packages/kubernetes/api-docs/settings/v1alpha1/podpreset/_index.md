@@ -4,6 +4,7 @@ title: "PodPreset"
 title_tag: "kubernetes.settings.k8s.io/v1alpha1.PodPreset"
 meta_desc: "Documentation for the kubernetes.settings.k8s.io/v1alpha1.PodPreset resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

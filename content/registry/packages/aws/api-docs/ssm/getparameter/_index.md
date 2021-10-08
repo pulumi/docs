@@ -4,6 +4,7 @@ title: "getParameter"
 title_tag: "aws.ssm.getParameter"
 meta_desc: "Documentation for the aws.ssm.getParameter function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "SparkPool"
 title_tag: "azure.synapse.SparkPool"
 meta_desc: "Documentation for the azure.synapse.SparkPool resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

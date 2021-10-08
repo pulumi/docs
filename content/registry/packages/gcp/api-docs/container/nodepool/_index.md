@@ -4,6 +4,7 @@ title: "NodePool"
 title_tag: "gcp.container.NodePool"
 meta_desc: "Documentation for the gcp.container.NodePool resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 
@@ -516,7 +517,7 @@ gcp.container.Cluster for schema.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The network configuration of the pool. See
+    <dd>{{% md %}}Parameters used in creating the default node pool. See
 gcp.container.Cluster for schema.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -683,7 +684,7 @@ gcp.container.Cluster for schema.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The network configuration of the pool. See
+    <dd>{{% md %}}Parameters used in creating the default node pool. See
 gcp.container.Cluster for schema.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -850,7 +851,7 @@ gcp.container.Cluster for schema.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The network configuration of the pool. See
+    <dd>{{% md %}}Parameters used in creating the default node pool. See
 gcp.container.Cluster for schema.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1017,7 +1018,7 @@ gcp.container.Cluster for schema.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The network configuration of the pool. See
+    <dd>{{% md %}}Parameters used in creating the default node pool. See
 gcp.container.Cluster for schema.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1458,7 +1459,7 @@ gcp.container.Cluster for schema.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The network configuration of the pool. See
+    <dd>{{% md %}}Parameters used in creating the default node pool. See
 gcp.container.Cluster for schema.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1642,7 +1643,7 @@ gcp.container.Cluster for schema.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The network configuration of the pool. See
+    <dd>{{% md %}}Parameters used in creating the default node pool. See
 gcp.container.Cluster for schema.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1826,7 +1827,7 @@ gcp.container.Cluster for schema.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The network configuration of the pool. See
+    <dd>{{% md %}}Parameters used in creating the default node pool. See
 gcp.container.Cluster for schema.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2010,7 +2011,7 @@ gcp.container.Cluster for schema.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The network configuration of the pool. See
+    <dd>{{% md %}}Parameters used in creating the default node pool. See
 gcp.container.Cluster for schema.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">

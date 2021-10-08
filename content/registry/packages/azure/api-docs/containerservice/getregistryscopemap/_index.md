@@ -4,6 +4,7 @@ title: "getRegistryScopeMap"
 title_tag: "azure.containerservice.getRegistryScopeMap"
 meta_desc: "Documentation for the azure.containerservice.getRegistryScopeMap function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

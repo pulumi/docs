@@ -4,6 +4,7 @@ title: "getDefaultServiceAccount"
 title_tag: "gcp.bigquery.getDefaultServiceAccount"
 meta_desc: "Documentation for the gcp.bigquery.getDefaultServiceAccount function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

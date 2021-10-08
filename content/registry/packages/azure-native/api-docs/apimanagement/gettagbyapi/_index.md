@@ -4,6 +4,7 @@ title: "getTagByApi"
 title_tag: "azure-native.apimanagement.getTagByApi"
 meta_desc: "Documentation for the azure-native.apimanagement.getTagByApi function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

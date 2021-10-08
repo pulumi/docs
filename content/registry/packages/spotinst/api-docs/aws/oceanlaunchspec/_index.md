@@ -4,6 +4,7 @@ title: "OceanLaunchSpec"
 title_tag: "spotinst.aws.OceanLaunchSpec"
 meta_desc: "Documentation for the spotinst.aws.OceanLaunchSpec resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

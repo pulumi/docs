@@ -4,6 +4,7 @@ title: "AuthServerDefault"
 title_tag: "okta.AuthServerDefault"
 meta_desc: "Documentation for the okta.AuthServerDefault resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

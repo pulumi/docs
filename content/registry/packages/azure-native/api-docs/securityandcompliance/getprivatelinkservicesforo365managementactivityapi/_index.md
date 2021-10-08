@@ -4,6 +4,7 @@ title: "getprivateLinkServicesForO365ManagementActivityAPI"
 title_tag: "azure-native.securityandcompliance.getprivateLinkServicesForO365ManagementActivityAPI"
 meta_desc: "Documentation for the azure-native.securityandcompliance.getprivateLinkServicesForO365ManagementActivityAPI function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

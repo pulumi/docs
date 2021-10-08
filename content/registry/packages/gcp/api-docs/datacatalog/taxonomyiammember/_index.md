@@ -4,6 +4,7 @@ title: "TaxonomyIamMember"
 title_tag: "gcp.datacatalog.TaxonomyIamMember"
 meta_desc: "Documentation for the gcp.datacatalog.TaxonomyIamMember resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

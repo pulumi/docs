@@ -4,6 +4,7 @@ title: "getKustoClusterDataSet"
 title_tag: "azure-native.datashare.getKustoClusterDataSet"
 meta_desc: "Documentation for the azure-native.datashare.getKustoClusterDataSet function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

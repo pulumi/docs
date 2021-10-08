@@ -4,6 +4,7 @@ title: "getApiVersionSet"
 title_tag: "azure-native.apimanagement.getApiVersionSet"
 meta_desc: "Documentation for the azure-native.apimanagement.getApiVersionSet function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

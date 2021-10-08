@@ -4,6 +4,7 @@ title: "ResourceServer"
 title_tag: "auth0.ResourceServer"
 meta_desc: "Documentation for the auth0.ResourceServer resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

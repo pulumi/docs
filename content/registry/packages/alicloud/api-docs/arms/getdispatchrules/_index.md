@@ -4,6 +4,7 @@ title: "getDispatchRules"
 title_tag: "alicloud.arms.getDispatchRules"
 meta_desc: "Documentation for the alicloud.arms.getDispatchRules function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

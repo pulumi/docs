@@ -4,6 +4,7 @@ title: "IdentityProviderTokenExchangeScopePermission"
 title_tag: "keycloak.IdentityProviderTokenExchangeScopePermission"
 meta_desc: "Documentation for the keycloak.IdentityProviderTokenExchangeScopePermission resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

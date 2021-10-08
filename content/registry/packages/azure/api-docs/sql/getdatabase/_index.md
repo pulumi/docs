@@ -4,6 +4,7 @@ title: "getDatabase"
 title_tag: "azure.sql.getDatabase"
 meta_desc: "Documentation for the azure.sql.getDatabase function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

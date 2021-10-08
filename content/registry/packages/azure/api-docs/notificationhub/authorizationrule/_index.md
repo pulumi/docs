@@ -4,6 +4,7 @@ title: "AuthorizationRule"
 title_tag: "azure.notificationhub.AuthorizationRule"
 meta_desc: "Documentation for the azure.notificationhub.AuthorizationRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

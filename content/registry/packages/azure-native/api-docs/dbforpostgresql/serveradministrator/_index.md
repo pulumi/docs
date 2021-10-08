@@ -4,6 +4,7 @@ title: "ServerAdministrator"
 title_tag: "azure-native.dbforpostgresql.ServerAdministrator"
 meta_desc: "Documentation for the azure-native.dbforpostgresql.ServerAdministrator resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

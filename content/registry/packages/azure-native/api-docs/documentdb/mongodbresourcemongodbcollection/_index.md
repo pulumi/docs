@@ -4,6 +4,7 @@ title: "MongoDBResourceMongoDBCollection"
 title_tag: "azure-native.documentdb.MongoDBResourceMongoDBCollection"
 meta_desc: "Documentation for the azure-native.documentdb.MongoDBResourceMongoDBCollection resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

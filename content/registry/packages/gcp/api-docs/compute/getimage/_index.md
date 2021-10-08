@@ -4,6 +4,7 @@ title: "getImage"
 title_tag: "gcp.compute.getImage"
 meta_desc: "Documentation for the gcp.compute.getImage function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

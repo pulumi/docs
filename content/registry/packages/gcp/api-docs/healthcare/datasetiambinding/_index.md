@@ -4,6 +4,7 @@ title: "DatasetIamBinding"
 title_tag: "gcp.healthcare.DatasetIamBinding"
 meta_desc: "Documentation for the gcp.healthcare.DatasetIamBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

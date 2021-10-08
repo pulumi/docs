@@ -4,6 +4,7 @@ title: "listStorageAccountServiceSAS"
 title_tag: "azure-native.storage.listStorageAccountServiceSAS"
 meta_desc: "Documentation for the azure-native.storage.listStorageAccountServiceSAS function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

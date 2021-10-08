@@ -4,6 +4,7 @@ title: "getAwsServices"
 title_tag: "signalfx.getAwsServices"
 meta_desc: "Documentation for the signalfx.getAwsServices function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

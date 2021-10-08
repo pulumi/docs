@@ -4,6 +4,7 @@ title: "getAwsCloudTrailDataConnector"
 title_tag: "azure-native.securityinsights.getAwsCloudTrailDataConnector"
 meta_desc: "Documentation for the azure-native.securityinsights.getAwsCloudTrailDataConnector function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

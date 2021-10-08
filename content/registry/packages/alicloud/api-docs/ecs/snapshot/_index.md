@@ -4,6 +4,7 @@ title: "Snapshot"
 title_tag: "alicloud.ecs.Snapshot"
 meta_desc: "Documentation for the alicloud.ecs.Snapshot resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

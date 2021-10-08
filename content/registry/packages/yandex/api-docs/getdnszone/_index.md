@@ -4,6 +4,7 @@ title: "getDnsZone"
 title_tag: "yandex.getDnsZone"
 meta_desc: "Documentation for the yandex.getDnsZone function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

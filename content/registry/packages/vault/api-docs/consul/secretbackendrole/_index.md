@@ -4,6 +4,7 @@ title: "SecretBackendRole"
 title_tag: "vault.consul.SecretBackendRole"
 meta_desc: "Documentation for the vault.consul.SecretBackendRole resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getTemplates"
 title_tag: "alicloud.oos.getTemplates"
 meta_desc: "Documentation for the alicloud.oos.getTemplates function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "BucketObject"
 title_tag: "google-native.storage/v1.BucketObject"
 meta_desc: "Documentation for the google-native.storage/v1.BucketObject resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getComponentLinkedStorageAccount"
 title_tag: "azure-native.insights.getComponentLinkedStorageAccount"
 meta_desc: "Documentation for the azure-native.insights.getComponentLinkedStorageAccount function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

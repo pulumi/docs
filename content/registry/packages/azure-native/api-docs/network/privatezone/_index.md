@@ -4,6 +4,7 @@ title: "PrivateZone"
 title_tag: "azure-native.network.PrivateZone"
 meta_desc: "Documentation for the azure-native.network.PrivateZone resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

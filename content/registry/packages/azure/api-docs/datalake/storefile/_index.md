@@ -4,6 +4,7 @@ title: "StoreFile"
 title_tag: "azure.datalake.StoreFile"
 meta_desc: "Documentation for the azure.datalake.StoreFile resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

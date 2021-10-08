@@ -4,6 +4,7 @@ title: "getControllerDetails"
 title_tag: "azure-native.delegatednetwork.getControllerDetails"
 meta_desc: "Documentation for the azure-native.delegatednetwork.getControllerDetails function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

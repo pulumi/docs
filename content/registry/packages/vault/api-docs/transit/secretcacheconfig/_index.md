@@ -4,6 +4,7 @@ title: "SecretCacheConfig"
 title_tag: "vault.transit.SecretCacheConfig"
 meta_desc: "Documentation for the vault.transit.SecretCacheConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

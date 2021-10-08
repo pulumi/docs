@@ -4,6 +4,7 @@ title: "getFactory"
 title_tag: "azure.datafactory.getFactory"
 meta_desc: "Documentation for the azure.datafactory.getFactory function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

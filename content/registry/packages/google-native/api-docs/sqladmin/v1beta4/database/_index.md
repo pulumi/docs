@@ -4,6 +4,7 @@ title: "Database"
 title_tag: "google-native.sqladmin/v1beta4.Database"
 meta_desc: "Documentation for the google-native.sqladmin/v1beta4.Database resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

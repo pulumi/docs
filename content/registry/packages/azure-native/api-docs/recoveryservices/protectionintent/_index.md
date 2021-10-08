@@ -4,6 +4,7 @@ title: "ProtectionIntent"
 title_tag: "azure-native.recoveryservices.ProtectionIntent"
 meta_desc: "Documentation for the azure-native.recoveryservices.ProtectionIntent resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

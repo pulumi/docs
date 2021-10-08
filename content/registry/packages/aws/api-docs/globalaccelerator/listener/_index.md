@@ -4,6 +4,7 @@ title: "Listener"
 title_tag: "aws.globalaccelerator.Listener"
 meta_desc: "Documentation for the aws.globalaccelerator.Listener resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

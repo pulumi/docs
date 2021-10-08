@@ -4,6 +4,7 @@ title: "IamServiceAccountStaticAccessKey"
 title_tag: "yandex.IamServiceAccountStaticAccessKey"
 meta_desc: "Documentation for the yandex.IamServiceAccountStaticAccessKey resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

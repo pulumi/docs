@@ -4,6 +4,7 @@ title: "OrganizationFeed"
 title_tag: "gcp.cloudasset.OrganizationFeed"
 meta_desc: "Documentation for the gcp.cloudasset.OrganizationFeed resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

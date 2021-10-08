@@ -4,6 +4,7 @@ title: "getDatabase"
 title_tag: "azure-native.synapse.getDatabase"
 meta_desc: "Documentation for the azure-native.synapse.getDatabase function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getUsers"
 title_tag: "azuread.getUsers"
 meta_desc: "Documentation for the azuread.getUsers function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getLocalDisk"
 title_tag: "aws.storagegateway.getLocalDisk"
 meta_desc: "Documentation for the aws.storagegateway.getLocalDisk function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

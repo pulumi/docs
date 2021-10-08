@@ -4,6 +4,7 @@ title: "ImageIamPolicy"
 title_tag: "google-native.compute/beta.ImageIamPolicy"
 meta_desc: "Documentation for the google-native.compute/beta.ImageIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

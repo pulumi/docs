@@ -4,6 +4,7 @@ title: "getIndustrialPidProjects"
 title_tag: "alicloud.brain.getIndustrialPidProjects"
 meta_desc: "Documentation for the alicloud.brain.getIndustrialPidProjects function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

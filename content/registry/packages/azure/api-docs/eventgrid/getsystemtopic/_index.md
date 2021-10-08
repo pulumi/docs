@@ -4,6 +4,7 @@ title: "GetSystemTopic"
 title_tag: "azure.eventgrid.GetSystemTopic"
 meta_desc: "Documentation for the azure.eventgrid.GetSystemTopic resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

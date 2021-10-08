@@ -4,6 +4,7 @@ title: "OceanLaunchSpecImport"
 title_tag: "spotinst.gke.OceanLaunchSpecImport"
 meta_desc: "Documentation for the spotinst.gke.OceanLaunchSpecImport resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "ResourcemanagerFolderIamBinding"
 title_tag: "yandex.ResourcemanagerFolderIamBinding"
 meta_desc: "Documentation for the yandex.ResourcemanagerFolderIamBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "VirtualNetworkRule"
 title_tag: "azure.mssql.VirtualNetworkRule"
 meta_desc: "Documentation for the azure.mssql.VirtualNetworkRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

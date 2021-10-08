@@ -4,6 +4,7 @@ title: "getSites"
 title_tag: "aws.outposts.getSites"
 meta_desc: "Documentation for the aws.outposts.getSites function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

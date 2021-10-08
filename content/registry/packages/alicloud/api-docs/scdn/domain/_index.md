@@ -4,6 +4,7 @@ title: "Domain"
 title_tag: "alicloud.scdn.Domain"
 meta_desc: "Documentation for the alicloud.scdn.Domain resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "AdminRule"
 title_tag: "azure-native.network.AdminRule"
 meta_desc: "Documentation for the azure-native.network.AdminRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 
@@ -1036,7 +1037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-native:network:AdminRule SampleAdminRule /subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/networkManagers/testNetworkManager/securityAdminConfigurations/myTestSecurityConfig/ruleCollections/rules/SampleAdminRule 
+$ pulumi import azure-native:network:AdminRule SampleAdminRule /subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/networkManagers/testNetworkManager/securityAdminConfigurations/myTestSecurityConfig/ruleCollections/testRuleCollection/rules/SampleAdminRule 
 ```
 
 

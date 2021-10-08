@@ -4,6 +4,7 @@ title: "AiDataset"
 title_tag: "gcp.vertex.AiDataset"
 meta_desc: "Documentation for the gcp.vertex.AiDataset resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

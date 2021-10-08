@@ -4,6 +4,7 @@ title: "ManagedZone"
 title_tag: "google-native.dns/v1beta2.ManagedZone"
 meta_desc: "Documentation for the google-native.dns/v1beta2.ManagedZone resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

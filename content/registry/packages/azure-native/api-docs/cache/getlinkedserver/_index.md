@@ -4,6 +4,7 @@ title: "getLinkedServer"
 title_tag: "azure-native.cache.getLinkedServer"
 meta_desc: "Documentation for the azure-native.cache.getLinkedServer function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getIoTRole"
 title_tag: "azure-native.databoxedge.getIoTRole"
 meta_desc: "Documentation for the azure-native.databoxedge.getIoTRole function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

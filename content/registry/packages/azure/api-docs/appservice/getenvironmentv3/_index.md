@@ -4,6 +4,7 @@ title: "getEnvironmentV3"
 title_tag: "azure.appservice.getEnvironmentV3"
 meta_desc: "Documentation for the azure.appservice.getEnvironmentV3 function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

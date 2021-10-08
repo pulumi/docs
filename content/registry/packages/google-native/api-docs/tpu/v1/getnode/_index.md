@@ -4,6 +4,7 @@ title: "getNode"
 title_tag: "google-native.tpu/v1.getNode"
 meta_desc: "Documentation for the google-native.tpu/v1.getNode function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "Pg"
 title_tag: "aiven.Pg"
 meta_desc: "Documentation for the aiven.Pg resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

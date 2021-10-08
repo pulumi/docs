@@ -4,6 +4,7 @@ title: "getProfile"
 title_tag: "azure-native.cdn.getProfile"
 meta_desc: "Documentation for the azure-native.cdn.getProfile function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getPlaintext"
 title_tag: "alicloud.kms.getPlaintext"
 meta_desc: "Documentation for the alicloud.kms.getPlaintext function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

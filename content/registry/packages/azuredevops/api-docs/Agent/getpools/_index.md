@@ -4,6 +4,7 @@ title: "getPools"
 title_tag: "azuredevops.Agent.getPools"
 meta_desc: "Documentation for the azuredevops.Agent.getPools function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

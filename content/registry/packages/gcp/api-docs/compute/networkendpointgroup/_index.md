@@ -4,6 +4,7 @@ title: "NetworkEndpointGroup"
 title_tag: "gcp.compute.NetworkEndpointGroup"
 meta_desc: "Documentation for the gcp.compute.NetworkEndpointGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

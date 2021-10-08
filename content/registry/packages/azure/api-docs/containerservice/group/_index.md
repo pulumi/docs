@@ -4,6 +4,7 @@ title: "Group"
 title_tag: "azure.containerservice.Group"
 meta_desc: "Documentation for the azure.containerservice.Group resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

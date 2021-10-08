@@ -4,6 +4,7 @@ title: "getServiceBackupIamPolicy"
 title_tag: "google-native.metastore/v1alpha.getServiceBackupIamPolicy"
 meta_desc: "Documentation for the google-native.metastore/v1alpha.getServiceBackupIamPolicy function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

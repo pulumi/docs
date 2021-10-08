@@ -4,6 +4,7 @@ title: "getBackendServiceIamPolicy"
 title_tag: "google-native.compute/alpha.getBackendServiceIamPolicy"
 meta_desc: "Documentation for the google-native.compute/alpha.getBackendServiceIamPolicy function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

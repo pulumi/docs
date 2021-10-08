@@ -4,6 +4,7 @@ title: "getRepositoryPullRequest"
 title_tag: "github.getRepositoryPullRequest"
 meta_desc: "Documentation for the github.getRepositoryPullRequest function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

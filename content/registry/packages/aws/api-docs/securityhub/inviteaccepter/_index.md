@@ -4,6 +4,7 @@ title: "InviteAccepter"
 title_tag: "aws.securityhub.InviteAccepter"
 meta_desc: "Documentation for the aws.securityhub.InviteAccepter resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 
@@ -58,7 +59,7 @@ class MyStack : Stack
             Provider = "aws.invitee",
             DependsOn = 
             {
-                aws_securityhub_account.Accepter,
+                inviteeAccount,
             },
         });
     }
@@ -94,14 +95,14 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = securityhub.NewAccount(ctx, "inviteeAccount", nil, pulumi.Provider("aws.invitee"))
+		inviteeAccount, err := securityhub.NewAccount(ctx, "inviteeAccount", nil, pulumi.Provider("aws.invitee"))
 		if err != nil {
 			return err
 		}
 		_, err = securityhub.NewInviteAccepter(ctx, "inviteeInviteAccepter", &securityhub.InviteAccepterArgs{
 			MasterId: exampleMember.MasterId,
 		}, pulumi.Provider("aws.invitee"), pulumi.DependsOn([]pulumi.Resource{
-			aws_securityhub_account.Accepter,
+			inviteeAccount,
 		}))
 		if err != nil {
 			return err
@@ -129,7 +130,7 @@ example_member = aws.securityhub.Member("exampleMember",
 invitee_account = aws.securityhub.Account("inviteeAccount", opts=pulumi.ResourceOptions(provider="aws.invitee"))
 invitee_invite_accepter = aws.securityhub.InviteAccepter("inviteeInviteAccepter", master_id=example_member.master_id,
 opts=pulumi.ResourceOptions(provider="aws.invitee",
-    depends_on=[aws_securityhub_account["accepter"]]))
+    depends_on=[invitee_account]))
 ```
 
 
@@ -154,7 +155,7 @@ const inviteeAccount = new aws.securityhub.Account("inviteeAccount", {}, {
 });
 const inviteeInviteAccepter = new aws.securityhub.InviteAccepter("inviteeInviteAccepter", {masterId: exampleMember.masterId}, {
     provider: "aws.invitee",
-    dependsOn: [aws_securityhub_account.accepter],
+    dependsOn: [inviteeAccount],
 });
 ```
 

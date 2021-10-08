@@ -4,6 +4,7 @@ title: "EventSubscription"
 title_tag: "aws.neptune.EventSubscription"
 meta_desc: "Documentation for the aws.neptune.EventSubscription resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

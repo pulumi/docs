@@ -4,6 +4,7 @@ title: "TopicIAMBinding"
 title_tag: "gcp.pubsub.TopicIAMBinding"
 meta_desc: "Documentation for the gcp.pubsub.TopicIAMBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

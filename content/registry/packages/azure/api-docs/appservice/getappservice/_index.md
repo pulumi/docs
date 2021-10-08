@@ -4,6 +4,7 @@ title: "getAppService"
 title_tag: "azure.appservice.getAppService"
 meta_desc: "Documentation for the azure.appservice.getAppService function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

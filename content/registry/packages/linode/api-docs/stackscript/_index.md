@@ -4,6 +4,7 @@ title: "StackScript"
 title_tag: "linode.StackScript"
 meta_desc: "Documentation for the linode.StackScript resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

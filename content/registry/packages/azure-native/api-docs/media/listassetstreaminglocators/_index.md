@@ -4,6 +4,7 @@ title: "listAssetStreamingLocators"
 title_tag: "azure-native.media.listAssetStreamingLocators"
 meta_desc: "Documentation for the azure-native.media.listAssetStreamingLocators function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

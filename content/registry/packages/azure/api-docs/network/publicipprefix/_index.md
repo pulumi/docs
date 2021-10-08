@@ -4,6 +4,7 @@ title: "PublicIpPrefix"
 title_tag: "azure.network.PublicIpPrefix"
 meta_desc: "Documentation for the azure.network.PublicIpPrefix resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

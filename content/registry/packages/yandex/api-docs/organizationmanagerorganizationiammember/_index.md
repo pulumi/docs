@@ -4,6 +4,7 @@ title: "OrganizationManagerOrganizationIamMember"
 title_tag: "yandex.OrganizationManagerOrganizationIamMember"
 meta_desc: "Documentation for the yandex.OrganizationManagerOrganizationIamMember resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "Route"
 title_tag: "azure.iot.Route"
 meta_desc: "Documentation for the azure.iot.Route resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getPool"
 title_tag: "azure.batch.getPool"
 meta_desc: "Documentation for the azure.batch.getPool function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

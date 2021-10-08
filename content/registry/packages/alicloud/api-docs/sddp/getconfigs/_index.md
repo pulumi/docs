@@ -4,6 +4,7 @@ title: "getConfigs"
 title_tag: "alicloud.sddp.getConfigs"
 meta_desc: "Documentation for the alicloud.sddp.getConfigs function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

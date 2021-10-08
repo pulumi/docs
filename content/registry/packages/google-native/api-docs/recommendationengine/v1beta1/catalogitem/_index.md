@@ -4,6 +4,7 @@ title: "CatalogItem"
 title_tag: "google-native.recommendationengine/v1beta1.CatalogItem"
 meta_desc: "Documentation for the google-native.recommendationengine/v1beta1.CatalogItem resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

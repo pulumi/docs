@@ -4,6 +4,7 @@ title: "getServerPolicy"
 title_tag: "okta.auth.getServerPolicy"
 meta_desc: "Documentation for the okta.auth.getServerPolicy function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

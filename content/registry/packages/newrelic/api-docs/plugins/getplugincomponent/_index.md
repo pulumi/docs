@@ -4,6 +4,7 @@ title: "getPluginComponent"
 title_tag: "newrelic.plugins.getPluginComponent"
 meta_desc: "Documentation for the newrelic.plugins.getPluginComponent function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

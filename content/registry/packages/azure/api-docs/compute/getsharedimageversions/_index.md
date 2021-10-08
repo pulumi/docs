@@ -4,6 +4,7 @@ title: "getSharedImageVersions"
 title_tag: "azure.compute.getSharedImageVersions"
 meta_desc: "Documentation for the azure.compute.getSharedImageVersions function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

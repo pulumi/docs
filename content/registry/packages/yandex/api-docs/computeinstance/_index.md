@@ -4,6 +4,7 @@ title: "ComputeInstance"
 title_tag: "yandex.ComputeInstance"
 meta_desc: "Documentation for the yandex.ComputeInstance resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

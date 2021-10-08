@@ -4,6 +4,7 @@ title: "PatchDeployment"
 title_tag: "gcp.osconfig.PatchDeployment"
 meta_desc: "Documentation for the gcp.osconfig.PatchDeployment resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

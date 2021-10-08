@@ -4,6 +4,7 @@ title: "getASCDataConnector"
 title_tag: "azure-native.securityinsights.getASCDataConnector"
 meta_desc: "Documentation for the azure-native.securityinsights.getASCDataConnector function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

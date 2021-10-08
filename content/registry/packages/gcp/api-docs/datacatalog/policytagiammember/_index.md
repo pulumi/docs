@@ -4,6 +4,7 @@ title: "PolicyTagIamMember"
 title_tag: "gcp.datacatalog.PolicyTagIamMember"
 meta_desc: "Documentation for the gcp.datacatalog.PolicyTagIamMember resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

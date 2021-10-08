@@ -4,6 +4,7 @@ title: "Dataset"
 title_tag: "gcp.bigquery.Dataset"
 meta_desc: "Documentation for the gcp.bigquery.Dataset resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

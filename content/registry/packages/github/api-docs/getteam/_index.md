@@ -4,6 +4,7 @@ title: "getTeam"
 title_tag: "github.getTeam"
 meta_desc: "Documentation for the github.getTeam function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

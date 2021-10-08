@@ -4,6 +4,7 @@ title: "KustoClusterDataSetMapping"
 title_tag: "azure-native.datashare.KustoClusterDataSetMapping"
 meta_desc: "Documentation for the azure-native.datashare.KustoClusterDataSetMapping resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getConfigMaps"
 title_tag: "alicloud.sae.getConfigMaps"
 meta_desc: "Documentation for the alicloud.sae.getConfigMaps function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

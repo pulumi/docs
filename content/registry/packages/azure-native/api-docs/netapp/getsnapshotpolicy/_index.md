@@ -4,6 +4,7 @@ title: "getSnapshotPolicy"
 title_tag: "azure-native.netapp.getSnapshotPolicy"
 meta_desc: "Documentation for the azure-native.netapp.getSnapshotPolicy function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

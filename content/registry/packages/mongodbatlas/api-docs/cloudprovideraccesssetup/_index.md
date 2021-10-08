@@ -4,6 +4,7 @@ title: "CloudProviderAccessSetup"
 title_tag: "mongodbatlas.CloudProviderAccessSetup"
 meta_desc: "Documentation for the mongodbatlas.CloudProviderAccessSetup resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

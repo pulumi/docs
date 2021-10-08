@@ -4,6 +4,7 @@ title: "ProjectSshKey"
 title_tag: "equinix-metal.ProjectSshKey"
 meta_desc: "Documentation for the equinix-metal.ProjectSshKey resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getScopeMap"
 title_tag: "azure-native.containerregistry.getScopeMap"
 meta_desc: "Documentation for the azure-native.containerregistry.getScopeMap function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

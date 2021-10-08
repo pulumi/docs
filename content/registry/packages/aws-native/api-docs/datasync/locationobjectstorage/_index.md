@@ -4,6 +4,7 @@ title: "LocationObjectStorage"
 title_tag: "aws-native.datasync.LocationObjectStorage"
 meta_desc: "Documentation for the aws-native.datasync.LocationObjectStorage resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

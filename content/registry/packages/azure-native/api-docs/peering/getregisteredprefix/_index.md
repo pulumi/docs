@@ -4,6 +4,7 @@ title: "getRegisteredPrefix"
 title_tag: "azure-native.peering.getRegisteredPrefix"
 meta_desc: "Documentation for the azure-native.peering.getRegisteredPrefix function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "DomainTopic"
 title_tag: "azure.eventgrid.DomainTopic"
 meta_desc: "Documentation for the azure.eventgrid.DomainTopic resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

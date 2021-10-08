@@ -4,6 +4,7 @@ title: "getTemplate"
 title_tag: "civo.getTemplate"
 meta_desc: "Documentation for the civo.getTemplate function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

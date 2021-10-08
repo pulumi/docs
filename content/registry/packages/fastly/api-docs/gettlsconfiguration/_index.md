@@ -4,6 +4,7 @@ title: "getTlsConfiguration"
 title_tag: "fastly.getTlsConfiguration"
 meta_desc: "Documentation for the fastly.getTlsConfiguration function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

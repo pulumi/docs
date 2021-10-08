@@ -4,6 +4,7 @@ title: "ModuleDefaultVersion"
 title_tag: "aws-native.cloudformation.ModuleDefaultVersion"
 meta_desc: "Documentation for the aws-native.cloudformation.ModuleDefaultVersion resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

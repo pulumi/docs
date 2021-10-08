@@ -4,6 +4,7 @@ title: "getRouteServices"
 title_tag: "alicloud.cen.getRouteServices"
 meta_desc: "Documentation for the alicloud.cen.getRouteServices function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

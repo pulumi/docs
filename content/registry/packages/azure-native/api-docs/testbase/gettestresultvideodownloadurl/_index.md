@@ -4,6 +4,7 @@ title: "getTestResultVideoDownloadURL"
 title_tag: "azure-native.testbase.getTestResultVideoDownloadURL"
 meta_desc: "Documentation for the azure-native.testbase.getTestResultVideoDownloadURL function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

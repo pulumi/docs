@@ -4,6 +4,7 @@ title: "IdentityNotificationTopic"
 title_tag: "aws.ses.IdentityNotificationTopic"
 meta_desc: "Documentation for the aws.ses.IdentityNotificationTopic resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

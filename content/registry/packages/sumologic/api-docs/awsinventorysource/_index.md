@@ -4,6 +4,7 @@ title: "AwsInventorySource"
 title_tag: "sumologic.AwsInventorySource"
 meta_desc: "Documentation for the sumologic.AwsInventorySource resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

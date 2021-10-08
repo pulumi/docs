@@ -4,6 +4,7 @@ title: "CpsDvValidation"
 title_tag: "akamai.CpsDvValidation"
 meta_desc: "Documentation for the akamai.CpsDvValidation resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

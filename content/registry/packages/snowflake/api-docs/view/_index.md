@@ -4,6 +4,7 @@ title: "View"
 title_tag: "snowflake.View"
 meta_desc: "Documentation for the snowflake.View resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

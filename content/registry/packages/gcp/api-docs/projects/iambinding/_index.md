@@ -4,6 +4,7 @@ title: "IAMBinding"
 title_tag: "gcp.projects.IAMBinding"
 meta_desc: "Documentation for the gcp.projects.IAMBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

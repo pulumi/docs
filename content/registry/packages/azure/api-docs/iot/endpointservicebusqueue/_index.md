@@ -4,6 +4,7 @@ title: "EndpointServicebusQueue"
 title_tag: "azure.iot.EndpointServicebusQueue"
 meta_desc: "Documentation for the azure.iot.EndpointServicebusQueue resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

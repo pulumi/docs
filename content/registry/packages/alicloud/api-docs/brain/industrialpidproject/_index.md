@@ -4,6 +4,7 @@ title: "IndustrialPidProject"
 title_tag: "alicloud.brain.IndustrialPidProject"
 meta_desc: "Documentation for the alicloud.brain.IndustrialPidProject resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

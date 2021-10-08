@@ -4,6 +4,7 @@ title: "NetworkArea"
 title_tag: "consul.NetworkArea"
 meta_desc: "Documentation for the consul.NetworkArea resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

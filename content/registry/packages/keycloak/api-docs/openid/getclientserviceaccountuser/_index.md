@@ -4,6 +4,7 @@ title: "getClientServiceAccountUser"
 title_tag: "keycloak.openid.getClientServiceAccountUser"
 meta_desc: "Documentation for the keycloak.openid.getClientServiceAccountUser function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

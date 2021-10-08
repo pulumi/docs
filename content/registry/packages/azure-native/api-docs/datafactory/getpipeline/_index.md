@@ -4,6 +4,7 @@ title: "getPipeline"
 title_tag: "azure-native.datafactory.getPipeline"
 meta_desc: "Documentation for the azure-native.datafactory.getPipeline function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 
@@ -25864,6 +25865,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="queries_csharp">
+<a href="#queries_csharp" style="color: inherit; text-decoration: inherit;">Queries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#powerquerysinkmappingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Power<wbr>Query<wbr>Sink<wbr>Mapping<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of mapping for Power Query mashup query to sink dataset(s).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="runconcurrently_csharp">
 <a href="#runconcurrently_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Concurrently</a>
 </span>
@@ -25878,7 +25887,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Power<wbr>Query<wbr>Sink<wbr>Response&gt;</span>
     </dt>
-    <dd>{{% md %}}List of Power Query activity sinks mapped to a queryName.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Deprecated. Please use Queries). List of Power Query activity sinks mapped to a queryName.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="staging_csharp">
 <a href="#staging_csharp" style="color: inherit; text-decoration: inherit;">Staging</a>
@@ -25972,6 +25981,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="queries_go">
+<a href="#queries_go" style="color: inherit; text-decoration: inherit;">Queries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#powerquerysinkmappingresponse">[]Power<wbr>Query<wbr>Sink<wbr>Mapping<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}List of mapping for Power Query mashup query to sink dataset(s).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="runconcurrently_go">
 <a href="#runconcurrently_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Concurrently</a>
 </span>
@@ -25986,7 +26003,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]Power<wbr>Query<wbr>Sink<wbr>Response</span>
     </dt>
-    <dd>{{% md %}}List of Power Query activity sinks mapped to a queryName.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Deprecated. Please use Queries). List of Power Query activity sinks mapped to a queryName.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="staging_go">
 <a href="#staging_go" style="color: inherit; text-decoration: inherit;">Staging</a>
@@ -26080,6 +26097,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="queries_nodejs">
+<a href="#queries_nodejs" style="color: inherit; text-decoration: inherit;">queries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#powerquerysinkmappingresponse">Power<wbr>Query<wbr>Sink<wbr>Mapping<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of mapping for Power Query mashup query to sink dataset(s).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="runconcurrently_nodejs">
 <a href="#runconcurrently_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Concurrently</a>
 </span>
@@ -26094,7 +26119,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: Power<wbr>Query<wbr>Sink<wbr>Response}</span>
     </dt>
-    <dd>{{% md %}}List of Power Query activity sinks mapped to a queryName.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Deprecated. Please use Queries). List of Power Query activity sinks mapped to a queryName.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="staging_nodejs">
 <a href="#staging_nodejs" style="color: inherit; text-decoration: inherit;">staging</a>
@@ -26188,6 +26213,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="queries_python">
+<a href="#queries_python" style="color: inherit; text-decoration: inherit;">queries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#powerquerysinkmappingresponse">Sequence[Power<wbr>Query<wbr>Sink<wbr>Mapping<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}List of mapping for Power Query mashup query to sink dataset(s).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="run_concurrently_python">
 <a href="#run_concurrently_python" style="color: inherit; text-decoration: inherit;">run_<wbr>concurrently</a>
 </span>
@@ -26202,7 +26235,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Power<wbr>Query<wbr>Sink<wbr>Response]</span>
     </dt>
-    <dd>{{% md %}}List of Power Query activity sinks mapped to a queryName.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Deprecated. Please use Queries). List of Power Query activity sinks mapped to a queryName.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="staging_python">
 <a href="#staging_python" style="color: inherit; text-decoration: inherit;">staging</a>
@@ -44947,6 +44980,90 @@ The following output properties are available:
         <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="powerquerysinkmappingresponse">Power<wbr>Query<wbr>Sink<wbr>Mapping<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="dataflowsinks_csharp">
+<a href="#dataflowsinks_csharp" style="color: inherit; text-decoration: inherit;">Dataflow<wbr>Sinks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#powerquerysinkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Power<wbr>Query<wbr>Sink<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of sinks mapped to Power Query mashup query.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="queryname_csharp">
+<a href="#queryname_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the query in Power Query mashup document.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="dataflowsinks_go">
+<a href="#dataflowsinks_go" style="color: inherit; text-decoration: inherit;">Dataflow<wbr>Sinks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#powerquerysinkresponse">[]Power<wbr>Query<wbr>Sink<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}List of sinks mapped to Power Query mashup query.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="queryname_go">
+<a href="#queryname_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the query in Power Query mashup document.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="dataflowsinks_nodejs">
+<a href="#dataflowsinks_nodejs" style="color: inherit; text-decoration: inherit;">dataflow<wbr>Sinks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#powerquerysinkresponse">Power<wbr>Query<wbr>Sink<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of sinks mapped to Power Query mashup query.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="queryname_nodejs">
+<a href="#queryname_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the query in Power Query mashup document.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="dataflow_sinks_python">
+<a href="#dataflow_sinks_python" style="color: inherit; text-decoration: inherit;">dataflow_<wbr>sinks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#powerquerysinkresponse">Sequence[Power<wbr>Query<wbr>Sink<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}List of sinks mapped to Power Query mashup query.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="query_name_python">
+<a href="#query_name_python" style="color: inherit; text-decoration: inherit;">query_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the query in Power Query mashup document.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="powerquerysinkresponse">Power<wbr>Query<wbr>Sink<wbr>Response</h4>

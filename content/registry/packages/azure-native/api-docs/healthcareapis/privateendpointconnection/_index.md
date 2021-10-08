@@ -4,6 +4,7 @@ title: "PrivateEndpointConnection"
 title_tag: "azure-native.healthcareapis.PrivateEndpointConnection"
 meta_desc: "Documentation for the azure-native.healthcareapis.PrivateEndpointConnection resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

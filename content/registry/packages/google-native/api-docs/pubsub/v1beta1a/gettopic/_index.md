@@ -4,6 +4,7 @@ title: "getTopic"
 title_tag: "google-native.pubsub/v1beta1a.getTopic"
 meta_desc: "Documentation for the google-native.pubsub/v1beta1a.getTopic function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

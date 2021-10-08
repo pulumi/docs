@@ -4,6 +4,7 @@ title: "getDbClusters"
 title_tag: "alicloud.clickhouse.getDbClusters"
 meta_desc: "Documentation for the alicloud.clickhouse.getDbClusters function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

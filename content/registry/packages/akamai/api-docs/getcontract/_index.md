@@ -4,6 +4,7 @@ title: "getContract"
 title_tag: "akamai.getContract"
 meta_desc: "Documentation for the akamai.getContract function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

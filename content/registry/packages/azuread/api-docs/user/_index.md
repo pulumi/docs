@@ -4,6 +4,7 @@ title: "User"
 title_tag: "azuread.User"
 meta_desc: "Documentation for the azuread.User resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 
@@ -149,12 +150,15 @@ const example = new azuread.User("example", {
          <span class="nx">city</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">company_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">consent_provided_for_minor</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">cost_center</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">country</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">department</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">disable_password_expiration</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
          <span class="nx">disable_strong_password</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
          <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">division</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">employee_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">employee_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">fax_number</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">force_password_change</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
          <span class="nx">given_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -375,6 +379,15 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}Whether consent has been obtained for minors. Supported values are `Granted`, `Denied` and `NotRequired`. Omit this property or specify a blank string to unset.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="costcenter_csharp">
+<a href="#costcenter_csharp" style="color: inherit; text-decoration: inherit;">Cost<wbr>Center</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cost center associated with the user.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="country_csharp">
 <a href="#country_csharp" style="color: inherit; text-decoration: inherit;">Country</a>
 </span>
@@ -399,7 +412,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the users password is exempt from expiring. Defaults to `false`.
+    <dd>{{% md %}}Whether the user's password is exempt from expiring. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablestrongpassword_csharp">
@@ -411,6 +424,15 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}Whether the user is allowed weaker passwords than the default policy to be specified. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="division_csharp">
+<a href="#division_csharp" style="color: inherit; text-decoration: inherit;">Division</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the division in which the user works.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="employeeid_csharp">
 <a href="#employeeid_csharp" style="color: inherit; text-decoration: inherit;">Employee<wbr>Id</a>
 </span>
@@ -418,6 +440,15 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The employee identifier assigned to the user by the organisation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="employeetype_csharp">
+<a href="#employeetype_csharp" style="color: inherit; text-decoration: inherit;">Employee<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Captures enterprise worker type. For example, Employee, Contractor, Consultant, or Vendor.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="faxnumber_csharp">
@@ -658,6 +689,15 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}Whether consent has been obtained for minors. Supported values are `Granted`, `Denied` and `NotRequired`. Omit this property or specify a blank string to unset.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="costcenter_go">
+<a href="#costcenter_go" style="color: inherit; text-decoration: inherit;">Cost<wbr>Center</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cost center associated with the user.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="country_go">
 <a href="#country_go" style="color: inherit; text-decoration: inherit;">Country</a>
 </span>
@@ -682,7 +722,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the users password is exempt from expiring. Defaults to `false`.
+    <dd>{{% md %}}Whether the user's password is exempt from expiring. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablestrongpassword_go">
@@ -694,6 +734,15 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}Whether the user is allowed weaker passwords than the default policy to be specified. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="division_go">
+<a href="#division_go" style="color: inherit; text-decoration: inherit;">Division</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the division in which the user works.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="employeeid_go">
 <a href="#employeeid_go" style="color: inherit; text-decoration: inherit;">Employee<wbr>Id</a>
 </span>
@@ -701,6 +750,15 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The employee identifier assigned to the user by the organisation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="employeetype_go">
+<a href="#employeetype_go" style="color: inherit; text-decoration: inherit;">Employee<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Captures enterprise worker type. For example, Employee, Contractor, Consultant, or Vendor.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="faxnumber_go">
@@ -941,6 +999,15 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}Whether consent has been obtained for minors. Supported values are `Granted`, `Denied` and `NotRequired`. Omit this property or specify a blank string to unset.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="costcenter_nodejs">
+<a href="#costcenter_nodejs" style="color: inherit; text-decoration: inherit;">cost<wbr>Center</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cost center associated with the user.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="country_nodejs">
 <a href="#country_nodejs" style="color: inherit; text-decoration: inherit;">country</a>
 </span>
@@ -965,7 +1032,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the users password is exempt from expiring. Defaults to `false`.
+    <dd>{{% md %}}Whether the user's password is exempt from expiring. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablestrongpassword_nodejs">
@@ -977,6 +1044,15 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}Whether the user is allowed weaker passwords than the default policy to be specified. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="division_nodejs">
+<a href="#division_nodejs" style="color: inherit; text-decoration: inherit;">division</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the division in which the user works.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="employeeid_nodejs">
 <a href="#employeeid_nodejs" style="color: inherit; text-decoration: inherit;">employee<wbr>Id</a>
 </span>
@@ -984,6 +1060,15 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The employee identifier assigned to the user by the organisation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="employeetype_nodejs">
+<a href="#employeetype_nodejs" style="color: inherit; text-decoration: inherit;">employee<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Captures enterprise worker type. For example, Employee, Contractor, Consultant, or Vendor.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="faxnumber_nodejs">
@@ -1224,6 +1309,15 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}Whether consent has been obtained for minors. Supported values are `Granted`, `Denied` and `NotRequired`. Omit this property or specify a blank string to unset.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="cost_center_python">
+<a href="#cost_center_python" style="color: inherit; text-decoration: inherit;">cost_<wbr>center</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The cost center associated with the user.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="country_python">
 <a href="#country_python" style="color: inherit; text-decoration: inherit;">country</a>
 </span>
@@ -1248,7 +1342,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the users password is exempt from expiring. Defaults to `false`.
+    <dd>{{% md %}}Whether the user's password is exempt from expiring. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_strong_password_python">
@@ -1260,6 +1354,15 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}Whether the user is allowed weaker passwords than the default policy to be specified. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="division_python">
+<a href="#division_python" style="color: inherit; text-decoration: inherit;">division</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the division in which the user works.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="employee_id_python">
 <a href="#employee_id_python" style="color: inherit; text-decoration: inherit;">employee_<wbr>id</a>
 </span>
@@ -1267,6 +1370,15 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The employee identifier assigned to the user by the organisation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="employee_type_python">
+<a href="#employee_type_python" style="color: inherit; text-decoration: inherit;">employee_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Captures enterprise worker type. For example, Employee, Contractor, Consultant, or Vendor.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fax_number_python">
@@ -1978,13 +2090,16 @@ Get an existing User resource's state with the given name, ID, and optional extr
         <span class="nx">city</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">company_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">consent_provided_for_minor</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">cost_center</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">country</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">creation_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">department</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">disable_password_expiration</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">disable_strong_password</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">division</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">employee_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">employee_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">external_user_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">fax_number</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">force_password_change</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -2190,6 +2305,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Whether consent has been obtained for minors. Supported values are `Granted`, `Denied` and `NotRequired`. Omit this property or specify a blank string to unset.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_costcenter_csharp">
+<a href="#state_costcenter_csharp" style="color: inherit; text-decoration: inherit;">Cost<wbr>Center</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cost center associated with the user.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_country_csharp">
 <a href="#state_country_csharp" style="color: inherit; text-decoration: inherit;">Country</a>
 </span>
@@ -2223,7 +2347,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the users password is exempt from expiring. Defaults to `false`.
+    <dd>{{% md %}}Whether the user's password is exempt from expiring. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disablestrongpassword_csharp">
@@ -2244,6 +2368,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The name to display in the address book for the user.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_division_csharp">
+<a href="#state_division_csharp" style="color: inherit; text-decoration: inherit;">Division</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the division in which the user works.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_employeeid_csharp">
 <a href="#state_employeeid_csharp" style="color: inherit; text-decoration: inherit;">Employee<wbr>Id</a>
 </span>
@@ -2251,6 +2384,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The employee identifier assigned to the user by the organisation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_employeetype_csharp">
+<a href="#state_employeetype_csharp" style="color: inherit; text-decoration: inherit;">Employee<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Captures enterprise worker type. For example, Employee, Contractor, Consultant, or Vendor.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externaluserstate_csharp">
@@ -2590,6 +2732,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Whether consent has been obtained for minors. Supported values are `Granted`, `Denied` and `NotRequired`. Omit this property or specify a blank string to unset.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_costcenter_go">
+<a href="#state_costcenter_go" style="color: inherit; text-decoration: inherit;">Cost<wbr>Center</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cost center associated with the user.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_country_go">
 <a href="#state_country_go" style="color: inherit; text-decoration: inherit;">Country</a>
 </span>
@@ -2623,7 +2774,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the users password is exempt from expiring. Defaults to `false`.
+    <dd>{{% md %}}Whether the user's password is exempt from expiring. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disablestrongpassword_go">
@@ -2644,6 +2795,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The name to display in the address book for the user.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_division_go">
+<a href="#state_division_go" style="color: inherit; text-decoration: inherit;">Division</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the division in which the user works.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_employeeid_go">
 <a href="#state_employeeid_go" style="color: inherit; text-decoration: inherit;">Employee<wbr>Id</a>
 </span>
@@ -2651,6 +2811,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The employee identifier assigned to the user by the organisation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_employeetype_go">
+<a href="#state_employeetype_go" style="color: inherit; text-decoration: inherit;">Employee<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Captures enterprise worker type. For example, Employee, Contractor, Consultant, or Vendor.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externaluserstate_go">
@@ -2990,6 +3159,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Whether consent has been obtained for minors. Supported values are `Granted`, `Denied` and `NotRequired`. Omit this property or specify a blank string to unset.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_costcenter_nodejs">
+<a href="#state_costcenter_nodejs" style="color: inherit; text-decoration: inherit;">cost<wbr>Center</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cost center associated with the user.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_country_nodejs">
 <a href="#state_country_nodejs" style="color: inherit; text-decoration: inherit;">country</a>
 </span>
@@ -3023,7 +3201,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the users password is exempt from expiring. Defaults to `false`.
+    <dd>{{% md %}}Whether the user's password is exempt from expiring. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disablestrongpassword_nodejs">
@@ -3044,6 +3222,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The name to display in the address book for the user.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_division_nodejs">
+<a href="#state_division_nodejs" style="color: inherit; text-decoration: inherit;">division</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the division in which the user works.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_employeeid_nodejs">
 <a href="#state_employeeid_nodejs" style="color: inherit; text-decoration: inherit;">employee<wbr>Id</a>
 </span>
@@ -3051,6 +3238,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The employee identifier assigned to the user by the organisation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_employeetype_nodejs">
+<a href="#state_employeetype_nodejs" style="color: inherit; text-decoration: inherit;">employee<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Captures enterprise worker type. For example, Employee, Contractor, Consultant, or Vendor.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externaluserstate_nodejs">
@@ -3390,6 +3586,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Whether consent has been obtained for minors. Supported values are `Granted`, `Denied` and `NotRequired`. Omit this property or specify a blank string to unset.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_cost_center_python">
+<a href="#state_cost_center_python" style="color: inherit; text-decoration: inherit;">cost_<wbr>center</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The cost center associated with the user.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_country_python">
 <a href="#state_country_python" style="color: inherit; text-decoration: inherit;">country</a>
 </span>
@@ -3423,7 +3628,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the users password is exempt from expiring. Defaults to `false`.
+    <dd>{{% md %}}Whether the user's password is exempt from expiring. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disable_strong_password_python">
@@ -3444,6 +3649,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The name to display in the address book for the user.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_division_python">
+<a href="#state_division_python" style="color: inherit; text-decoration: inherit;">division</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the division in which the user works.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_employee_id_python">
 <a href="#state_employee_id_python" style="color: inherit; text-decoration: inherit;">employee_<wbr>id</a>
 </span>
@@ -3451,6 +3665,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The employee identifier assigned to the user by the organisation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_employee_type_python">
+<a href="#state_employee_type_python" style="color: inherit; text-decoration: inherit;">employee_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Captures enterprise worker type. For example, Employee, Contractor, Consultant, or Vendor.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_external_user_state_python">

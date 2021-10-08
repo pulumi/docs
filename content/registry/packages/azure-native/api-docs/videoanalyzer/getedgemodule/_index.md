@@ -4,6 +4,7 @@ title: "getEdgeModule"
 title_tag: "azure-native.videoanalyzer.getEdgeModule"
 meta_desc: "Documentation for the azure-native.videoanalyzer.getEdgeModule function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

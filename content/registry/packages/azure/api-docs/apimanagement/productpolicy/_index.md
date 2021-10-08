@@ -4,6 +4,7 @@ title: "ProductPolicy"
 title_tag: "azure.apimanagement.ProductPolicy"
 meta_desc: "Documentation for the azure.apimanagement.ProductPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "ProductGroup"
 title_tag: "azure.apimanagement.ProductGroup"
 meta_desc: "Documentation for the azure.apimanagement.ProductGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

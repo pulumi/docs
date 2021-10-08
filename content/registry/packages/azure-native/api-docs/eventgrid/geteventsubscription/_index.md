@@ -4,6 +4,7 @@ title: "getEventSubscription"
 title_tag: "azure-native.eventgrid.getEventSubscription"
 meta_desc: "Documentation for the azure-native.eventgrid.getEventSubscription function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

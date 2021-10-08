@@ -4,6 +4,7 @@ title: "ManagedDisk"
 title_tag: "azure.compute.ManagedDisk"
 meta_desc: "Documentation for the azure.compute.ManagedDisk resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 
@@ -349,6 +350,7 @@ const copy = new azure.compute.ManagedDisk("copy", {
                 <span class="nx">encryption_settings</span><span class="p">:</span> <span class="nx">Optional[ManagedDiskEncryptionSettingsArgs]</span> = None<span class="p">,</span>
                 <span class="nx">image_reference_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">max_shares</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">network_access_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -588,6 +590,15 @@ The ManagedDisk resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}Specified the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="maxshares_csharp">
+<a href="#maxshares_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Shares</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of VMs that can attach to the disk at the same time. Value greater than one indicates a disk that can be mounted on multiple VMs at the same time.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -770,6 +781,15 @@ The ManagedDisk resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specified the supported Azure location where the resource exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxshares_go">
+<a href="#maxshares_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Shares</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of VMs that can attach to the disk at the same time. Value greater than one indicates a disk that can be mounted on multiple VMs at the same time.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -956,6 +976,15 @@ The ManagedDisk resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}Specified the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="maxshares_nodejs">
+<a href="#maxshares_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Shares</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of VMs that can attach to the disk at the same time. Value greater than one indicates a disk that can be mounted on multiple VMs at the same time.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -1140,6 +1169,15 @@ The ManagedDisk resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}Specified the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="max_shares_python">
+<a href="#max_shares_python" style="color: inherit; text-decoration: inherit;">max_<wbr>shares</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of VMs that can attach to the disk at the same time. Value greater than one indicates a disk that can be mounted on multiple VMs at the same time.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -1302,6 +1340,7 @@ Get an existing ManagedDisk resource's state with the given name, ID, and option
         <span class="nx">encryption_settings</span><span class="p">:</span> <span class="nx">Optional[ManagedDiskEncryptionSettingsArgs]</span> = None<span class="p">,</span>
         <span class="nx">image_reference_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">max_shares</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">network_access_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1506,6 +1545,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specified the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_maxshares_csharp">
+<a href="#state_maxshares_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Shares</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of VMs that can attach to the disk at the same time. Value greater than one indicates a disk that can be mounted on multiple VMs at the same time.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -1688,6 +1736,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specified the supported Azure location where the resource exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_maxshares_go">
+<a href="#state_maxshares_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Shares</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of VMs that can attach to the disk at the same time. Value greater than one indicates a disk that can be mounted on multiple VMs at the same time.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -1874,6 +1931,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specified the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_maxshares_nodejs">
+<a href="#state_maxshares_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Shares</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of VMs that can attach to the disk at the same time. Value greater than one indicates a disk that can be mounted on multiple VMs at the same time.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -2056,6 +2122,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specified the supported Azure location where the resource exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_max_shares_python">
+<a href="#state_max_shares_python" style="color: inherit; text-decoration: inherit;">max_<wbr>shares</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of VMs that can attach to the disk at the same time. Value greater than one indicates a disk that can be mounted on multiple VMs at the same time.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">

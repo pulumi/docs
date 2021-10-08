@@ -4,6 +4,7 @@ title: "getTableEntity"
 title_tag: "azure.storage.getTableEntity"
 meta_desc: "Documentation for the azure.storage.getTableEntity function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

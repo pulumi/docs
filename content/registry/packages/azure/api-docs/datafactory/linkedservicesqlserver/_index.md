@@ -4,6 +4,7 @@ title: "LinkedServiceSqlServer"
 title_tag: "azure.datafactory.LinkedServiceSqlServer"
 meta_desc: "Documentation for the azure.datafactory.LinkedServiceSqlServer resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

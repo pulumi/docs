@@ -4,6 +4,7 @@ title: "OrganizationIamPolicy"
 title_tag: "google-native.cloudresourcemanager/v1.OrganizationIamPolicy"
 meta_desc: "Documentation for the google-native.cloudresourcemanager/v1.OrganizationIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

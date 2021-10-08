@@ -4,6 +4,7 @@ title: "getCertificateData"
 title_tag: "azure.keyvault.getCertificateData"
 meta_desc: "Documentation for the azure.keyvault.getCertificateData function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 
@@ -375,6 +376,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="notbefore_csharp">
+<a href="#notbefore_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Not Before date of certificate in RFC3339 format.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="pem_csharp">
 <a href="#pem_csharp" style="color: inherit; text-decoration: inherit;">Pem</a>
 </span>
@@ -465,6 +475,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="notbefore_go">
+<a href="#notbefore_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Not Before date of certificate in RFC3339 format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pem_go">
 <a href="#pem_go" style="color: inherit; text-decoration: inherit;">Pem</a>
@@ -557,6 +576,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="notbefore_nodejs">
+<a href="#notbefore_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Not Before date of certificate in RFC3339 format.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="pem_nodejs">
 <a href="#pem_nodejs" style="color: inherit; text-decoration: inherit;">pem</a>
 </span>
@@ -647,6 +675,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="not_before_python">
+<a href="#not_before_python" style="color: inherit; text-decoration: inherit;">not_<wbr>before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Not Before date of certificate in RFC3339 format.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pem_python">
 <a href="#pem_python" style="color: inherit; text-decoration: inherit;">pem</a>

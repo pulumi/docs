@@ -4,6 +4,7 @@ title: "Heartbeat"
 title_tag: "opsgenie.Heartbeat"
 meta_desc: "Documentation for the opsgenie.Heartbeat resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

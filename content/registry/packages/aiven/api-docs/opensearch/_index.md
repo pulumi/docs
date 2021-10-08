@@ -4,6 +4,7 @@ title: "OpenSearch"
 title_tag: "aiven.OpenSearch"
 meta_desc: "Documentation for the aiven.OpenSearch resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

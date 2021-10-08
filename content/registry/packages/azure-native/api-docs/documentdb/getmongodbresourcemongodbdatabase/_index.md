@@ -4,6 +4,7 @@ title: "getMongoDBResourceMongoDBDatabase"
 title_tag: "azure-native.documentdb.getMongoDBResourceMongoDBDatabase"
 meta_desc: "Documentation for the azure-native.documentdb.getMongoDBResourceMongoDBDatabase function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

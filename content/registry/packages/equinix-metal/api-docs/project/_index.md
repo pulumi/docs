@@ -4,6 +4,7 @@ title: "Project"
 title_tag: "equinix-metal.Project"
 meta_desc: "Documentation for the equinix-metal.Project resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

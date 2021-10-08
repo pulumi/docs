@@ -4,6 +4,7 @@ title: "getDomains"
 title_tag: "alicloud.waf.getDomains"
 meta_desc: "Documentation for the alicloud.waf.getDomains function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

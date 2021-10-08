@@ -4,6 +4,7 @@ title: "getBoolVariable"
 title_tag: "azure.automation.getBoolVariable"
 meta_desc: "Documentation for the azure.automation.getBoolVariable function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "AppSecPenaltyBox"
 title_tag: "akamai.AppSecPenaltyBox"
 meta_desc: "Documentation for the akamai.AppSecPenaltyBox resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

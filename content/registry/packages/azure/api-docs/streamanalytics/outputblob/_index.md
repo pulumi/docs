@@ -4,6 +4,7 @@ title: "OutputBlob"
 title_tag: "azure.streamanalytics.OutputBlob"
 meta_desc: "Documentation for the azure.streamanalytics.OutputBlob resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

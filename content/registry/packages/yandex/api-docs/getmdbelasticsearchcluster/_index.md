@@ -4,6 +4,7 @@ title: "getMdbElasticSearchCluster"
 title_tag: "yandex.getMdbElasticSearchCluster"
 meta_desc: "Documentation for the yandex.getMdbElasticSearchCluster function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

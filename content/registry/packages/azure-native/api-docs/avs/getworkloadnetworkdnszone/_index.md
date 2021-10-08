@@ -4,6 +4,7 @@ title: "getWorkloadNetworkDnsZone"
 title_tag: "azure-native.avs.getWorkloadNetworkDnsZone"
 meta_desc: "Documentation for the azure-native.avs.getWorkloadNetworkDnsZone function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

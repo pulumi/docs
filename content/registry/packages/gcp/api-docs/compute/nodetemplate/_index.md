@@ -4,6 +4,7 @@ title: "NodeTemplate"
 title_tag: "gcp.compute.NodeTemplate"
 meta_desc: "Documentation for the gcp.compute.NodeTemplate resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

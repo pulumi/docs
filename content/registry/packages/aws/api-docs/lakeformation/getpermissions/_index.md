@@ -4,6 +4,7 @@ title: "getPermissions"
 title_tag: "aws.lakeformation.getPermissions"
 meta_desc: "Documentation for the aws.lakeformation.getPermissions function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

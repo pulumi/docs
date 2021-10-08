@@ -4,6 +4,7 @@ title: "User"
 title_tag: "openstack.identity.User"
 meta_desc: "Documentation for the openstack.identity.User resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

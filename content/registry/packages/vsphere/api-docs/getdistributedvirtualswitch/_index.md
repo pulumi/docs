@@ -4,6 +4,7 @@ title: "getDistributedVirtualSwitch"
 title_tag: "vsphere.getDistributedVirtualSwitch"
 meta_desc: "Documentation for the vsphere.getDistributedVirtualSwitch function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

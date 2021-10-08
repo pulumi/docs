@@ -4,6 +4,7 @@ title: "getSelection"
 title_tag: "aws.backup.getSelection"
 meta_desc: "Documentation for the aws.backup.getSelection function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

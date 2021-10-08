@@ -4,6 +4,7 @@ title: "MdbClickhouseCluster"
 title_tag: "yandex.MdbClickhouseCluster"
 meta_desc: "Documentation for the yandex.MdbClickhouseCluster resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

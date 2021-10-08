@@ -4,6 +4,7 @@ title: "getIpRanges"
 title_tag: "datadog.getIpRanges"
 meta_desc: "Documentation for the datadog.getIpRanges function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

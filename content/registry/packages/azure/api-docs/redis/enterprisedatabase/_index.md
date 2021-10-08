@@ -4,6 +4,7 @@ title: "EnterpriseDatabase"
 title_tag: "azure.redis.EnterpriseDatabase"
 meta_desc: "Documentation for the azure.redis.EnterpriseDatabase resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

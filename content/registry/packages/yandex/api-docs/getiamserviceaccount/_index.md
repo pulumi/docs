@@ -4,6 +4,7 @@ title: "getIamServiceAccount"
 title_tag: "yandex.getIamServiceAccount"
 meta_desc: "Documentation for the yandex.getIamServiceAccount function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

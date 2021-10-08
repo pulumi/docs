@@ -4,6 +4,7 @@ title: "getPrivateEndpointConnectionsForEDM"
 title_tag: "azure-native.securityandcompliance.getPrivateEndpointConnectionsForEDM"
 meta_desc: "Documentation for the azure-native.securityandcompliance.getPrivateEndpointConnectionsForEDM function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

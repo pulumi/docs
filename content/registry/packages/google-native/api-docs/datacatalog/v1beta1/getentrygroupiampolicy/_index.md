@@ -4,6 +4,7 @@ title: "getEntryGroupIamPolicy"
 title_tag: "google-native.datacatalog/v1beta1.getEntryGroupIamPolicy"
 meta_desc: "Documentation for the google-native.datacatalog/v1beta1.getEntryGroupIamPolicy function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

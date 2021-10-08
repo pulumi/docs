@@ -4,6 +4,7 @@ title: "TargetSSLProxy"
 title_tag: "gcp.compute.TargetSSLProxy"
 meta_desc: "Documentation for the gcp.compute.TargetSSLProxy resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 
@@ -83,7 +84,66 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"io/ioutil"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func readFileOrPanic(path string) pulumi.StringPtrInput {
+	data, err := ioutil.ReadFile(path)
+	if err != nil {
+		panic(err.Error())
+	}
+	return pulumi.String(string(data))
+}
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		defaultSSLCertificate, err := compute.NewSSLCertificate(ctx, "defaultSSLCertificate", &compute.SSLCertificateArgs{
+			PrivateKey:  readFileOrPanic("path/to/private.key"),
+			Certificate: readFileOrPanic("path/to/certificate.crt"),
+		})
+		if err != nil {
+			return err
+		}
+		defaultHealthCheck, err := compute.NewHealthCheck(ctx, "defaultHealthCheck", &compute.HealthCheckArgs{
+			CheckIntervalSec: pulumi.Int(1),
+			TimeoutSec:       pulumi.Int(1),
+			TcpHealthCheck: &compute.HealthCheckTcpHealthCheckArgs{
+				Port: pulumi.Int(443),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		defaultBackendService, err := compute.NewBackendService(ctx, "defaultBackendService", &compute.BackendServiceArgs{
+			Protocol: pulumi.String("SSL"),
+			HealthChecks: pulumi.String{
+				defaultHealthCheck.ID(),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewTargetSSLProxy(ctx, "defaultTargetSSLProxy", &compute.TargetSSLProxyArgs{
+			BackendService: defaultBackendService.ID(),
+			SslCertificates: pulumi.StringArray{
+				defaultSSLCertificate.ID(),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 

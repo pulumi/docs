@@ -4,6 +4,7 @@ title: "GlobalVMShutdownSchedule"
 title_tag: "azure.devtest.GlobalVMShutdownSchedule"
 meta_desc: "Documentation for the azure.devtest.GlobalVMShutdownSchedule resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "SecurityService"
 title_tag: "openstack.sharedfilesystem.SecurityService"
 meta_desc: "Documentation for the openstack.sharedfilesystem.SecurityService resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

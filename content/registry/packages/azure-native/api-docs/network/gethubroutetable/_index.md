@@ -4,6 +4,7 @@ title: "getHubRouteTable"
 title_tag: "azure-native.network.getHubRouteTable"
 meta_desc: "Documentation for the azure-native.network.getHubRouteTable function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

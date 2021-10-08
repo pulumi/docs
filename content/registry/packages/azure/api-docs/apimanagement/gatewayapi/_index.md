@@ -4,6 +4,7 @@ title: "GatewayApi"
 title_tag: "azure.apimanagement.GatewayApi"
 meta_desc: "Documentation for the azure.apimanagement.GatewayApi resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

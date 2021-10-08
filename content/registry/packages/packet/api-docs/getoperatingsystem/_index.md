@@ -4,6 +4,7 @@ title: "getOperatingSystem"
 title_tag: "packet.getOperatingSystem"
 meta_desc: "Documentation for the packet.getOperatingSystem function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

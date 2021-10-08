@@ -4,6 +4,7 @@ title: "listMonitoredResource"
 title_tag: "azure-native.elastic.listMonitoredResource"
 meta_desc: "Documentation for the azure-native.elastic.listMonitoredResource function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getVolumes"
 title_tag: "nomad.getVolumes"
 meta_desc: "Documentation for the nomad.getVolumes function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

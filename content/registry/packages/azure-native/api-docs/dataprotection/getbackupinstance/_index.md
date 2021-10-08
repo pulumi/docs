@@ -4,6 +4,7 @@ title: "getBackupInstance"
 title_tag: "azure-native.dataprotection.getBackupInstance"
 meta_desc: "Documentation for the azure-native.dataprotection.getBackupInstance function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

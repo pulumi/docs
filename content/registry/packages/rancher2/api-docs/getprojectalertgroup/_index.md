@@ -4,6 +4,7 @@ title: "getProjectAlertGroup"
 title_tag: "rancher2.getProjectAlertGroup"
 meta_desc: "Documentation for the rancher2.getProjectAlertGroup function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

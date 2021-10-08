@@ -4,6 +4,7 @@ title: "getObjectAnchorsAccount"
 title_tag: "azure-native.mixedreality.getObjectAnchorsAccount"
 meta_desc: "Documentation for the azure-native.mixedreality.getObjectAnchorsAccount function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

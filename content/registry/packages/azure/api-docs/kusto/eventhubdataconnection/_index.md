@@ -4,6 +4,7 @@ title: "EventhubDataConnection"
 title_tag: "azure.kusto.EventhubDataConnection"
 meta_desc: "Documentation for the azure.kusto.EventhubDataConnection resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

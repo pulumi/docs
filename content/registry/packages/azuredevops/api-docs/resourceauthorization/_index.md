@@ -4,6 +4,7 @@ title: "ResourceAuthorization"
 title_tag: "azuredevops.ResourceAuthorization"
 meta_desc: "Documentation for the azuredevops.ResourceAuthorization resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

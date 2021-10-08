@@ -4,6 +4,7 @@ title: "EventTarget"
 title_tag: "aws.cloudwatch.EventTarget"
 meta_desc: "Documentation for the aws.cloudwatch.EventTarget resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

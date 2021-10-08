@@ -4,6 +4,7 @@ title: "SubscriptionFeatureRegistration"
 title_tag: "azure-native.features.SubscriptionFeatureRegistration"
 meta_desc: "Documentation for the azure-native.features.SubscriptionFeatureRegistration resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getFileShare"
 title_tag: "azure-native.storage.getFileShare"
 meta_desc: "Documentation for the azure-native.storage.getFileShare function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

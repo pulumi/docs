@@ -4,6 +4,7 @@ title: "DevicePostureRule"
 title_tag: "cloudflare.DevicePostureRule"
 meta_desc: "Documentation for the cloudflare.DevicePostureRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

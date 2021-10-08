@@ -4,6 +4,7 @@ title: "RegionSettings"
 title_tag: "aws.backup.RegionSettings"
 meta_desc: "Documentation for the aws.backup.RegionSettings resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

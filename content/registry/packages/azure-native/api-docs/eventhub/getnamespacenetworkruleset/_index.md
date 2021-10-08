@@ -4,6 +4,7 @@ title: "getNamespaceNetworkRuleSet"
 title_tag: "azure-native.eventhub.getNamespaceNetworkRuleSet"
 meta_desc: "Documentation for the azure-native.eventhub.getNamespaceNetworkRuleSet function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

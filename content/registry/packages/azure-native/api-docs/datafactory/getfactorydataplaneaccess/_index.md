@@ -4,6 +4,7 @@ title: "getFactoryDataPlaneAccess"
 title_tag: "azure-native.datafactory.getFactoryDataPlaneAccess"
 meta_desc: "Documentation for the azure-native.datafactory.getFactoryDataPlaneAccess function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

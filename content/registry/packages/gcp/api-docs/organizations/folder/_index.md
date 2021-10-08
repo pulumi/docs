@@ -4,6 +4,7 @@ title: "Folder"
 title_tag: "gcp.organizations.Folder"
 meta_desc: "Documentation for the gcp.organizations.Folder resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

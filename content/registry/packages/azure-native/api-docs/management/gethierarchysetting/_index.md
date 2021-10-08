@@ -4,6 +4,7 @@ title: "getHierarchySetting"
 title_tag: "azure-native.management.getHierarchySetting"
 meta_desc: "Documentation for the azure-native.management.getHierarchySetting function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

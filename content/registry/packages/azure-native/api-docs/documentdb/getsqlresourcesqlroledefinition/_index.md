@@ -4,6 +4,7 @@ title: "getSqlResourceSqlRoleDefinition"
 title_tag: "azure-native.documentdb.getSqlResourceSqlRoleDefinition"
 meta_desc: "Documentation for the azure-native.documentdb.getSqlResourceSqlRoleDefinition function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

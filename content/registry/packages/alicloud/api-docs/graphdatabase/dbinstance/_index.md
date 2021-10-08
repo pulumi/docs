@@ -4,6 +4,7 @@ title: "DbInstance"
 title_tag: "alicloud.graphdatabase.DbInstance"
 meta_desc: "Documentation for the alicloud.graphdatabase.DbInstance resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getAvailabilityGroupListener"
 title_tag: "azure-native.sqlvirtualmachine.getAvailabilityGroupListener"
 meta_desc: "Documentation for the azure-native.sqlvirtualmachine.getAvailabilityGroupListener function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

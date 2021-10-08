@@ -4,6 +4,7 @@ title: "CommitmentPlan"
 title_tag: "azure-native.machinelearning.CommitmentPlan"
 meta_desc: "Documentation for the azure-native.machinelearning.CommitmentPlan resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

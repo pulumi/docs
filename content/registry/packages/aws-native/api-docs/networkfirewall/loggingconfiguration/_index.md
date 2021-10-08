@@ -4,6 +4,7 @@ title: "LoggingConfiguration"
 title_tag: "aws-native.networkfirewall.LoggingConfiguration"
 meta_desc: "Documentation for the aws-native.networkfirewall.LoggingConfiguration resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

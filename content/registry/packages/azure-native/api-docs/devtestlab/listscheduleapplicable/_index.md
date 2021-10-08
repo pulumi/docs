@@ -4,6 +4,7 @@ title: "listScheduleApplicable"
 title_tag: "azure-native.devtestlab.listScheduleApplicable"
 meta_desc: "Documentation for the azure-native.devtestlab.listScheduleApplicable function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

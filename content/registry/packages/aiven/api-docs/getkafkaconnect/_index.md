@@ -4,6 +4,7 @@ title: "getKafkaConnect"
 title_tag: "aiven.getKafkaConnect"
 meta_desc: "Documentation for the aiven.getKafkaConnect function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

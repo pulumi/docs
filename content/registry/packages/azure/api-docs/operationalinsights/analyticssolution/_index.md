@@ -4,6 +4,7 @@ title: "AnalyticsSolution"
 title_tag: "azure.operationalinsights.AnalyticsSolution"
 meta_desc: "Documentation for the azure.operationalinsights.AnalyticsSolution resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

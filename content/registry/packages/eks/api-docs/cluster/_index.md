@@ -4,6 +4,7 @@ title: "Cluster"
 title_tag: "eks.Cluster"
 meta_desc: "Documentation for the eks.Cluster resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 
@@ -2405,6 +2406,204 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The default Node Group configuration, or undefined if `skipDefaultNodeGroup` was specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
+
+
+## Cluster Resource Methods {#methods}
+
+
+### GetKubeconfig Method {#method_GetKubeconfig}
+
+Generate a kubeconfig for cluster authentication that does not use the default AWS credential provider chain, and instead is scoped to the supported options in `KubeconfigOptions`.
+
+The kubeconfig generated is automatically stringified for ease of use with the pulumi/kubernetes provider.
+
+See for more details:
+- https://docs.aws.amazon.com/eks/latest/userguide/create-kubeconfig.html
+- https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-role.html
+- https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html
+
+
+
+#### Using GetKubeconfig
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+{{% choosable language nodejs %}}
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript">getKubeconfig<span class="p">(</span><span class="nx">args</span><span class="p">?:</span> <span class="nx">Cluster.GetKubeconfigArgs</span><span class="p">): Output&lt;<span class="nx"><a href="#method_GetKubeconfig_result">Cluster.GetKubeconfigResult</a></span>&gt;</span></code></pre></div>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_kubeconfig(</span><span class="nx">self</span><span class="p">,</span>
+                   <span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Output[<span class="nx"><a href="#method_GetKubeconfig_result">str</a></span>]</code></pre></div>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func</span> <span class="p">(r *Cluster)</span> GetKubeconfig<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">ClusterGetKubeconfigArgs</span><span class="p">) (<span class="nx"><a href="#method_GetKubeconfig_result">pulumi.StringOutput</a></span>, error)</span></code></pre></div>
+{{% /choosable %}}
+
+
+{{% choosable language csharp %}}
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span>Output&lt;<span class="nx"><a href="#method_GetKubeconfig_result">string</a></span>&gt; <span class="nx">GetKubeconfig</span><span class="p">(<span class="nx">Cluster.GetKubeconfigArgs</span><span class="p">? </span><span class="nx">args)</span></code></pre></div>
+{{% /choosable %}}
+
+
+
+The following arguments are supported:
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="getKubeconfig_arg_profilename_csharp">
+<a href="#getKubeconfig_arg_profilename_csharp" style="color: inherit; text-decoration: inherit;">Profile<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}AWS credential profile name to always use instead of the default AWS credential provider chain.
+
+The profile is passed to kubeconfig as an authentication environment setting.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="getKubeconfig_arg_rolearn_csharp">
+<a href="#getKubeconfig_arg_rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Role ARN to assume instead of the default AWS credential provider chain.
+
+The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="getKubeconfig_arg_profilename_go">
+<a href="#getKubeconfig_arg_profilename_go" style="color: inherit; text-decoration: inherit;">Profile<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}AWS credential profile name to always use instead of the default AWS credential provider chain.
+
+The profile is passed to kubeconfig as an authentication environment setting.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="getKubeconfig_arg_rolearn_go">
+<a href="#getKubeconfig_arg_rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Role ARN to assume instead of the default AWS credential provider chain.
+
+The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="getKubeconfig_arg_profilename_nodejs">
+<a href="#getKubeconfig_arg_profilename_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}AWS credential profile name to always use instead of the default AWS credential provider chain.
+
+The profile is passed to kubeconfig as an authentication environment setting.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="getKubeconfig_arg_rolearn_nodejs">
+<a href="#getKubeconfig_arg_rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Role ARN to assume instead of the default AWS credential provider chain.
+
+The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="getKubeconfig_arg_profile_name_python">
+<a href="#getKubeconfig_arg_profile_name_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}AWS credential profile name to always use instead of the default AWS credential provider chain.
+
+The profile is passed to kubeconfig as an authentication environment setting.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="getKubeconfig_arg_role_arn_python">
+<a href="#getKubeconfig_arg_role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Role ARN to assume instead of the default AWS credential provider chain.
+
+The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+
+
+#### GetKubeconfig Result {#method_GetKubeconfig_result}
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="getKubeconfig_result_result_csharp">
+<a href="#getKubeconfig_result_result_csharp" style="color: inherit; text-decoration: inherit;">Result</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="getKubeconfig_result_result_go">
+<a href="#getKubeconfig_result_result_go" style="color: inherit; text-decoration: inherit;">Result</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="getKubeconfig_result_result_nodejs">
+<a href="#getKubeconfig_result_result_nodejs" style="color: inherit; text-decoration: inherit;">result</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="getKubeconfig_result_result_python">
+<a href="#getKubeconfig_result_result_python" style="color: inherit; text-decoration: inherit;">result</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 
 
 

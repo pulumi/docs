@@ -4,6 +4,7 @@ title: "getSecGroup"
 title_tag: "openstack.networking.getSecGroup"
 meta_desc: "Documentation for the openstack.networking.getSecGroup function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

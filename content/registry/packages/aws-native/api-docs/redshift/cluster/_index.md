@@ -4,6 +4,7 @@ title: "Cluster"
 title_tag: "aws-native.redshift.Cluster"
 meta_desc: "Documentation for the aws-native.redshift.Cluster resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

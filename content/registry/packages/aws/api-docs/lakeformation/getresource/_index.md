@@ -4,6 +4,7 @@ title: "getResource"
 title_tag: "aws.lakeformation.getResource"
 meta_desc: "Documentation for the aws.lakeformation.getResource function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

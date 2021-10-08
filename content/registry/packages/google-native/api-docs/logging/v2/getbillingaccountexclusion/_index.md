@@ -4,6 +4,7 @@ title: "getBillingAccountExclusion"
 title_tag: "google-native.logging/v2.getBillingAccountExclusion"
 meta_desc: "Documentation for the google-native.logging/v2.getBillingAccountExclusion function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "CertificateSigningRequest"
 title_tag: "kubernetes.certificates.k8s.io/v1.CertificateSigningRequest"
 meta_desc: "Documentation for the kubernetes.certificates.k8s.io/v1.CertificateSigningRequest resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

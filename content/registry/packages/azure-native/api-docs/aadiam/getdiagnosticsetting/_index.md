@@ -4,6 +4,7 @@ title: "getDiagnosticSetting"
 title_tag: "azure-native.aadiam.getDiagnosticSetting"
 meta_desc: "Documentation for the azure-native.aadiam.getDiagnosticSetting function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

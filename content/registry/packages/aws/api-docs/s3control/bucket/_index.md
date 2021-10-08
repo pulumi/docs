@@ -4,6 +4,7 @@ title: "Bucket"
 title_tag: "aws.s3control.Bucket"
 meta_desc: "Documentation for the aws.s3control.Bucket resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

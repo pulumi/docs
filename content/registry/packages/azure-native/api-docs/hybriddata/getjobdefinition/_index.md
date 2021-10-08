@@ -4,6 +4,7 @@ title: "getJobDefinition"
 title_tag: "azure-native.hybriddata.getJobDefinition"
 meta_desc: "Documentation for the azure-native.hybriddata.getJobDefinition function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

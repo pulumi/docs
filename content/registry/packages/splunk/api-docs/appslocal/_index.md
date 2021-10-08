@@ -4,6 +4,7 @@ title: "AppsLocal"
 title_tag: "splunk.AppsLocal"
 meta_desc: "Documentation for the splunk.AppsLocal resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

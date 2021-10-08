@@ -4,6 +4,7 @@ title: "getSqlVirtualMachine"
 title_tag: "azure-native.sqlvirtualmachine.getSqlVirtualMachine"
 meta_desc: "Documentation for the azure-native.sqlvirtualmachine.getSqlVirtualMachine function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "TopicRuleDestination"
 title_tag: "aws-native.iot.TopicRuleDestination"
 meta_desc: "Documentation for the aws-native.iot.TopicRuleDestination resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

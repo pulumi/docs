@@ -4,6 +4,7 @@ title: "getManagementGroupSubscription"
 title_tag: "azure-native.management.getManagementGroupSubscription"
 meta_desc: "Documentation for the azure-native.management.getManagementGroupSubscription function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

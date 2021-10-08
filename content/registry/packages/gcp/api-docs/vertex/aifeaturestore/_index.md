@@ -4,6 +4,7 @@ title: "AiFeatureStore"
 title_tag: "gcp.vertex.AiFeatureStore"
 meta_desc: "Documentation for the gcp.vertex.AiFeatureStore resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "Archive"
 title_tag: "aws-native.events.Archive"
 meta_desc: "Documentation for the aws-native.events.Archive resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

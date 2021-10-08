@@ -4,6 +4,7 @@ title: "getSkusNestedResourceTypeThird"
 title_tag: "azure-native.providerhub.getSkusNestedResourceTypeThird"
 meta_desc: "Documentation for the azure-native.providerhub.getSkusNestedResourceTypeThird function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

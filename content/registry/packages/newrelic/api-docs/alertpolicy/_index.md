@@ -4,6 +4,7 @@ title: "AlertPolicy"
 title_tag: "newrelic.AlertPolicy"
 meta_desc: "Documentation for the newrelic.AlertPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

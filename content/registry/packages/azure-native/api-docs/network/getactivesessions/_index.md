@@ -4,6 +4,7 @@ title: "getActiveSessions"
 title_tag: "azure-native.network.getActiveSessions"
 meta_desc: "Documentation for the azure-native.network.getActiveSessions function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

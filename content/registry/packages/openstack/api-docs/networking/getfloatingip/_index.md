@@ -4,6 +4,7 @@ title: "getFloatingIp"
 title_tag: "openstack.networking.getFloatingIp"
 meta_desc: "Documentation for the openstack.networking.getFloatingIp function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

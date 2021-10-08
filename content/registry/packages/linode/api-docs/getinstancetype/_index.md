@@ -4,6 +4,7 @@ title: "getInstanceType"
 title_tag: "linode.getInstanceType"
 meta_desc: "Documentation for the linode.getInstanceType function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

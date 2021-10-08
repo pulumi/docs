@@ -4,6 +4,7 @@ title: "getManagedInstanceKey"
 title_tag: "azure-native.sql.getManagedInstanceKey"
 meta_desc: "Documentation for the azure-native.sql.getManagedInstanceKey function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

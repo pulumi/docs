@@ -4,6 +4,7 @@ title: "getBusinessService"
 title_tag: "pagerduty.getBusinessService"
 meta_desc: "Documentation for the pagerduty.getBusinessService function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getExport"
 title_tag: "google-native.apigee/v1.getExport"
 meta_desc: "Documentation for the google-native.apigee/v1.getExport function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

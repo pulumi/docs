@@ -4,6 +4,7 @@ title: "getHostThumbprint"
 title_tag: "vsphere.getHostThumbprint"
 meta_desc: "Documentation for the vsphere.getHostThumbprint function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

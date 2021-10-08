@@ -4,6 +4,7 @@ title: "AppTemplate"
 title_tag: "alicloud.imp.AppTemplate"
 meta_desc: "Documentation for the alicloud.imp.AppTemplate resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

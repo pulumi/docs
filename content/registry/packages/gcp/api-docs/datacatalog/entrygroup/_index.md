@@ -4,6 +4,7 @@ title: "EntryGroup"
 title_tag: "gcp.datacatalog.EntryGroup"
 meta_desc: "Documentation for the gcp.datacatalog.EntryGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

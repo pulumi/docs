@@ -4,6 +4,7 @@ title: "getKubernetesPermission"
 title_tag: "alicloud.cs.getKubernetesPermission"
 meta_desc: "Documentation for the alicloud.cs.getKubernetesPermission function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

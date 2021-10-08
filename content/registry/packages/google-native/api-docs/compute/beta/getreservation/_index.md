@@ -4,6 +4,7 @@ title: "getReservation"
 title_tag: "google-native.compute/beta.getReservation"
 meta_desc: "Documentation for the google-native.compute/beta.getReservation function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

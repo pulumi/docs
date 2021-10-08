@@ -4,6 +4,7 @@ title: "AppSecWafProtection"
 title_tag: "akamai.AppSecWafProtection"
 meta_desc: "Documentation for the akamai.AppSecWafProtection resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

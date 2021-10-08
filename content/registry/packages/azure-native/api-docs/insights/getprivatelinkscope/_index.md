@@ -4,6 +4,7 @@ title: "getPrivateLinkScope"
 title_tag: "azure-native.insights.getPrivateLinkScope"
 meta_desc: "Documentation for the azure-native.insights.getPrivateLinkScope function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

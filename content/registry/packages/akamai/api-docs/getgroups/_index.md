@@ -4,6 +4,7 @@ title: "getGroups"
 title_tag: "akamai.getGroups"
 meta_desc: "Documentation for the akamai.getGroups function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

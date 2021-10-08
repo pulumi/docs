@@ -4,6 +4,7 @@ title: "getVirtualNetworkGatewayConnection"
 title_tag: "azure-native.network.getVirtualNetworkGatewayConnection"
 meta_desc: "Documentation for the azure-native.network.getVirtualNetworkGatewayConnection function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

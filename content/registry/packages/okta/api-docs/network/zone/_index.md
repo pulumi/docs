@@ -4,6 +4,7 @@ title: "Zone"
 title_tag: "okta.network.Zone"
 meta_desc: "Documentation for the okta.network.Zone resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

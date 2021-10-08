@@ -4,6 +4,7 @@ title: "RegionNotificationEndpoint"
 title_tag: "google-native.compute/beta.RegionNotificationEndpoint"
 meta_desc: "Documentation for the google-native.compute/beta.RegionNotificationEndpoint resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

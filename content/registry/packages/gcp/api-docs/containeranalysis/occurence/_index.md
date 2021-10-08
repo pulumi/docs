@@ -4,6 +4,7 @@ title: "Occurence"
 title_tag: "gcp.containeranalysis.Occurence"
 meta_desc: "Documentation for the gcp.containeranalysis.Occurence resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 
@@ -19,6 +20,298 @@ To get more information about Occurrence, see:
 * [API documentation](https://cloud.google.com/container-analysis/api/reference/rest/)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/container-analysis/)
+
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+### Container Analysis Occurrence Kms
+
+
+{{< example csharp >}}
+
+```csharp
+using System;
+using System.IO;
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+	private static string ReadFileBase64(string path) {
+		return Convert.ToBase64String(System.Text.UTF8.GetBytes(File.ReadAllText(path)))
+	}
+
+    public MyStack()
+    {
+        var note = new Gcp.ContainerAnalysis.Note("note", new Gcp.ContainerAnalysis.NoteArgs
+        {
+            AttestationAuthority = new Gcp.ContainerAnalysis.Inputs.NoteAttestationAuthorityArgs
+            {
+                Hint = new Gcp.ContainerAnalysis.Inputs.NoteAttestationAuthorityHintArgs
+                {
+                    HumanReadableName = "Attestor Note",
+                },
+            },
+        });
+        var keyring = Output.Create(Gcp.Kms.GetKMSKeyRing.InvokeAsync(new Gcp.Kms.GetKMSKeyRingArgs
+        {
+            Name = "my-key-ring",
+            Location = "global",
+        }));
+        var crypto_key = keyring.Apply(keyring => Output.Create(Gcp.Kms.GetKMSCryptoKey.InvokeAsync(new Gcp.Kms.GetKMSCryptoKeyArgs
+        {
+            Name = "my-key",
+            KeyRing = keyring.SelfLink,
+        })));
+        var version = crypto_key.Apply(crypto_key => Output.Create(Gcp.Kms.GetKMSCryptoKeyVersion.InvokeAsync(new Gcp.Kms.GetKMSCryptoKeyVersionArgs
+        {
+            CryptoKey = crypto_key.SelfLink,
+        })));
+        var attestor = new Gcp.BinaryAuthorization.Attestor("attestor", new Gcp.BinaryAuthorization.AttestorArgs
+        {
+            AttestationAuthorityNote = new Gcp.BinaryAuthorization.Inputs.AttestorAttestationAuthorityNoteArgs
+            {
+                NoteReference = note.Name,
+                PublicKeys = 
+                {
+                    new Gcp.BinaryAuthorization.Inputs.AttestorAttestationAuthorityNotePublicKeyArgs
+                    {
+                        Id = version.Apply(version => version.Id),
+                        PkixPublicKey = new Gcp.BinaryAuthorization.Inputs.AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs
+                        {
+                            PublicKeyPem = version.Apply(version => version.PublicKeys?[0]?.Pem),
+                            SignatureAlgorithm = version.Apply(version => version.PublicKeys?[0]?.Algorithm),
+                        },
+                    },
+                },
+            },
+        });
+        var occurrence = new Gcp.ContainerAnalysis.Occurence("occurrence", new Gcp.ContainerAnalysis.OccurenceArgs
+        {
+            ResourceUri = "gcr.io/my-project/my-image",
+            NoteName = note.Id,
+            Attestation = new Gcp.ContainerAnalysis.Inputs.OccurenceAttestationArgs
+            {
+                SerializedPayload = ReadFileBase64("path/to/my/payload.json"),
+                Signatures = 
+                {
+                    new Gcp.ContainerAnalysis.Inputs.OccurenceAttestationSignatureArgs
+                    {
+                        PublicKeyId = version.Apply(version => version.Id),
+                        SerializedPayload = ReadFileBase64("path/to/my/payload.json.sig"),
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"encoding/base64"
+	"io/ioutil"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/binaryauthorization"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/containeranalysis"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/kms"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func filebase64OrPanic(path string) pulumi.StringPtrInput {
+	if fileData, err := ioutil.ReadFile(path); err == nil {
+		return pulumi.String(base64.StdEncoding.EncodeToString(fileData[:]))
+	} else {
+		panic(err.Error())
+	}
+}
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		note, err := containeranalysis.NewNote(ctx, "note", &containeranalysis.NoteArgs{
+			AttestationAuthority: &containeranalysis.NoteAttestationAuthorityArgs{
+				Hint: &containeranalysis.NoteAttestationAuthorityHintArgs{
+					HumanReadableName: pulumi.String("Attestor Note"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		keyring, err := kms.GetKMSKeyRing(ctx, &kms.GetKMSKeyRingArgs{
+			Name:     "my-key-ring",
+			Location: "global",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		crypto_key, err := kms.GetKMSCryptoKey(ctx, &kms.GetKMSCryptoKeyArgs{
+			Name:    "my-key",
+			KeyRing: keyring.SelfLink,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		version, err := kms.GetKMSCryptoKeyVersion(ctx, &kms.GetKMSCryptoKeyVersionArgs{
+			CryptoKey: crypto_key.SelfLink,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = binaryauthorization.NewAttestor(ctx, "attestor", &binaryauthorization.AttestorArgs{
+			AttestationAuthorityNote: &binaryauthorization.AttestorAttestationAuthorityNoteArgs{
+				NoteReference: note.Name,
+				PublicKeys: binaryauthorization.AttestorAttestationAuthorityNotePublicKeyArray{
+					&binaryauthorization.AttestorAttestationAuthorityNotePublicKeyArgs{
+						Id: pulumi.String(version.Id),
+						PkixPublicKey: &binaryauthorization.AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs{
+							PublicKeyPem:       pulumi.String(version.PublicKeys[0].Pem),
+							SignatureAlgorithm: pulumi.String(version.PublicKeys[0].Algorithm),
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = containeranalysis.NewOccurence(ctx, "occurrence", &containeranalysis.OccurenceArgs{
+			ResourceUri: pulumi.String("gcr.io/my-project/my-image"),
+			NoteName:    note.ID(),
+			Attestation: &containeranalysis.OccurenceAttestationArgs{
+				SerializedPayload: filebase64OrPanic("path/to/my/payload.json"),
+				Signatures: containeranalysis.OccurenceAttestationSignatureArray{
+					&containeranalysis.OccurenceAttestationSignatureArgs{
+						PublicKeyId:       pulumi.String(version.Id),
+						SerializedPayload: filebase64OrPanic("path/to/my/payload.json.sig"),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import base64
+import pulumi_gcp as gcp
+
+note = gcp.containeranalysis.Note("note", attestation_authority=gcp.containeranalysis.NoteAttestationAuthorityArgs(
+    hint=gcp.containeranalysis.NoteAttestationAuthorityHintArgs(
+        human_readable_name="Attestor Note",
+    ),
+))
+keyring = gcp.kms.get_kms_key_ring(name="my-key-ring",
+    location="global")
+crypto_key = gcp.kms.get_kms_crypto_key(name="my-key",
+    key_ring=keyring.self_link)
+version = gcp.kms.get_kms_crypto_key_version(crypto_key=crypto_key.self_link)
+attestor = gcp.binaryauthorization.Attestor("attestor", attestation_authority_note=gcp.binaryauthorization.AttestorAttestationAuthorityNoteArgs(
+    note_reference=note.name,
+    public_keys=[gcp.binaryauthorization.AttestorAttestationAuthorityNotePublicKeyArgs(
+        id=version.id,
+        pkix_public_key=gcp.binaryauthorization.AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs(
+            public_key_pem=version.public_keys[0].pem,
+            signature_algorithm=version.public_keys[0].algorithm,
+        ),
+    )],
+))
+occurrence = gcp.containeranalysis.Occurence("occurrence",
+    resource_uri="gcr.io/my-project/my-image",
+    note_name=note.id,
+    attestation=gcp.containeranalysis.OccurenceAttestationArgs(
+        serialized_payload=(lambda path: base64.b64encode(open(path).read().encode()).decode())("path/to/my/payload.json"),
+        signatures=[gcp.containeranalysis.OccurenceAttestationSignatureArgs(
+            public_key_id=version.id,
+            serialized_payload=(lambda path: base64.b64encode(open(path).read().encode()).decode())("path/to/my/payload.json.sig"),
+        )],
+    ))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * from "fs";
+
+const note = new gcp.containeranalysis.Note("note", {attestationAuthority: {
+    hint: {
+        humanReadableName: "Attestor Note",
+    },
+}});
+const keyring = gcp.kms.getKMSKeyRing({
+    name: "my-key-ring",
+    location: "global",
+});
+const crypto-key = keyring.then(keyring => gcp.kms.getKMSCryptoKey({
+    name: "my-key",
+    keyRing: keyring.selfLink,
+}));
+const version = crypto_key.then(crypto_key => gcp.kms.getKMSCryptoKeyVersion({
+    cryptoKey: crypto_key.selfLink,
+}));
+const attestor = new gcp.binaryauthorization.Attestor("attestor", {attestationAuthorityNote: {
+    noteReference: note.name,
+    publicKeys: [{
+        id: version.then(version => version.id),
+        pkixPublicKey: {
+            publicKeyPem: version.then(version => version.publicKeys?[0]?.pem),
+            signatureAlgorithm: version.then(version => version.publicKeys?[0]?.algorithm),
+        },
+    }],
+}});
+const occurrence = new gcp.containeranalysis.Occurence("occurrence", {
+    resourceUri: "gcr.io/my-project/my-image",
+    noteName: note.id,
+    attestation: {
+        serializedPayload: Buffer.from(fs.readFileSync("path/to/my/payload.json"), 'binary').toString('base64'),
+        signatures: [{
+            publicKeyId: version.then(version => version.id),
+            serializedPayload: Buffer.from(fs.readFileSync("path/to/my/payload.json.sig"), 'binary').toString('base64'),
+        }],
+    },
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
 
 
 

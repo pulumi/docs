@@ -4,6 +4,7 @@ title: "ApiConfig"
 title_tag: "gcp.apigateway.ApiConfig"
 meta_desc: "Documentation for the gcp.apigateway.ApiConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 
@@ -18,6 +19,180 @@ To get more information about ApiConfig, see:
 * [API documentation](https://cloud.google.com/api-gateway/docs/reference/rest/v1beta/projects.locations.apis.configs)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/api-gateway/docs/creating-api-config)
+
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+### Apigateway Api Config Basic
+
+
+{{< example csharp >}}
+
+```csharp
+using System;
+using System.IO;
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+	private static string ReadFileBase64(string path) {
+		return Convert.ToBase64String(System.Text.UTF8.GetBytes(File.ReadAllText(path)))
+	}
+
+    public MyStack()
+    {
+        var apiCfgApi = new Gcp.ApiGateway.Api("apiCfgApi", new Gcp.ApiGateway.ApiArgs
+        {
+            ApiId = "api-cfg",
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var apiCfgApiConfig = new Gcp.ApiGateway.ApiConfig("apiCfgApiConfig", new Gcp.ApiGateway.ApiConfigArgs
+        {
+            Api = apiCfgApi.ApiId,
+            ApiConfigId = "cfg",
+            OpenapiDocuments = 
+            {
+                new Gcp.ApiGateway.Inputs.ApiConfigOpenapiDocumentArgs
+                {
+                    Document = new Gcp.ApiGateway.Inputs.ApiConfigOpenapiDocumentDocumentArgs
+                    {
+                        Path = "spec.yaml",
+                        Contents = ReadFileBase64("test-fixtures/apigateway/openapi.yaml"),
+                    },
+                },
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"encoding/base64"
+	"io/ioutil"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/apigateway"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func filebase64OrPanic(path string) pulumi.StringPtrInput {
+	if fileData, err := ioutil.ReadFile(path); err == nil {
+		return pulumi.String(base64.StdEncoding.EncodeToString(fileData[:]))
+	} else {
+		panic(err.Error())
+	}
+}
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		apiCfgApi, err := apigateway.NewApi(ctx, "apiCfgApi", &apigateway.ApiArgs{
+			ApiId: pulumi.String("api-cfg"),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		_, err = apigateway.NewApiConfig(ctx, "apiCfgApiConfig", &apigateway.ApiConfigArgs{
+			Api:         apiCfgApi.ApiId,
+			ApiConfigId: pulumi.String("cfg"),
+			OpenapiDocuments: apigateway.ApiConfigOpenapiDocumentArray{
+				&apigateway.ApiConfigOpenapiDocumentArgs{
+					Document: &apigateway.ApiConfigOpenapiDocumentDocumentArgs{
+						Path:     pulumi.String("spec.yaml"),
+						Contents: filebase64OrPanic("test-fixtures/apigateway/openapi.yaml"),
+					},
+				},
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import base64
+import pulumi_gcp as gcp
+
+api_cfg_api = gcp.apigateway.Api("apiCfgApi", api_id="api-cfg",
+opts=pulumi.ResourceOptions(provider=google_beta))
+api_cfg_api_config = gcp.apigateway.ApiConfig("apiCfgApiConfig",
+    api=api_cfg_api.api_id,
+    api_config_id="cfg",
+    openapi_documents=[gcp.apigateway.ApiConfigOpenapiDocumentArgs(
+        document=gcp.apigateway.ApiConfigOpenapiDocumentDocumentArgs(
+            path="spec.yaml",
+            contents=(lambda path: base64.b64encode(open(path).read().encode()).decode())("test-fixtures/apigateway/openapi.yaml"),
+        ),
+    )],
+    opts=pulumi.ResourceOptions(provider=google_beta))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * from "fs";
+
+const apiCfgApi = new gcp.apigateway.Api("apiCfgApi", {apiId: "api-cfg"}, {
+    provider: google_beta,
+});
+const apiCfgApiConfig = new gcp.apigateway.ApiConfig("apiCfgApiConfig", {
+    api: apiCfgApi.apiId,
+    apiConfigId: "cfg",
+    openapiDocuments: [{
+        document: {
+            path: "spec.yaml",
+            contents: Buffer.from(fs.readFileSync("test-fixtures/apigateway/openapi.yaml"), 'binary').toString('base64'),
+        },
+    }],
+}, {
+    provider: google_beta,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
 
 
 

@@ -4,6 +4,7 @@ title: "getProduct"
 title_tag: "google-native.retail/v2alpha.getProduct"
 meta_desc: "Documentation for the google-native.retail/v2alpha.getProduct function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

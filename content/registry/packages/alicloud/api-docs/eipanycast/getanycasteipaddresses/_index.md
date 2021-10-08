@@ -4,6 +4,7 @@ title: "getAnycastEipAddresses"
 title_tag: "alicloud.eipanycast.getAnycastEipAddresses"
 meta_desc: "Documentation for the alicloud.eipanycast.getAnycastEipAddresses function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

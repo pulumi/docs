@@ -4,6 +4,7 @@ title: "Feed"
 title_tag: "google-native.cloudasset/v1.Feed"
 meta_desc: "Documentation for the google-native.cloudasset/v1.Feed resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

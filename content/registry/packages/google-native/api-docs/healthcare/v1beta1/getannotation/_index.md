@@ -4,6 +4,7 @@ title: "getAnnotation"
 title_tag: "google-native.healthcare/v1beta1.getAnnotation"
 meta_desc: "Documentation for the google-native.healthcare/v1beta1.getAnnotation function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

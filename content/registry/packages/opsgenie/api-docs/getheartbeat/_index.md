@@ -4,6 +4,7 @@ title: "getHeartbeat"
 title_tag: "opsgenie.getHeartbeat"
 meta_desc: "Documentation for the opsgenie.getHeartbeat function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

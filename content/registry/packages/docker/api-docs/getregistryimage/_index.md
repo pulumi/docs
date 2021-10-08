@@ -4,6 +4,7 @@ title: "getRegistryImage"
 title_tag: "docker.getRegistryImage"
 meta_desc: "Documentation for the docker.getRegistryImage function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

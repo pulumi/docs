@@ -4,6 +4,7 @@ title: "V1beta1IamPolicy"
 title_tag: "google-native.iap/v1beta1.V1beta1IamPolicy"
 meta_desc: "Documentation for the google-native.iap/v1beta1.V1beta1IamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

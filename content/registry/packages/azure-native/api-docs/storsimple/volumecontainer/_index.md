@@ -4,6 +4,7 @@ title: "VolumeContainer"
 title_tag: "azure-native.storsimple.VolumeContainer"
 meta_desc: "Documentation for the azure-native.storsimple.VolumeContainer resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

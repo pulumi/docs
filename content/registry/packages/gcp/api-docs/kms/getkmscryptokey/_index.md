@@ -4,6 +4,7 @@ title: "getKMSCryptoKey"
 title_tag: "gcp.kms.getKMSCryptoKey"
 meta_desc: "Documentation for the gcp.kms.getKMSCryptoKey function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 
@@ -296,6 +297,14 @@ The following output properties are available:
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="importonly_csharp">
+<a href="#importonly_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="keyring_csharp">
 <a href="#keyring_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Ring</a>
 </span>
@@ -385,6 +394,14 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="importonly_go">
+<a href="#importonly_go" style="color: inherit; text-decoration: inherit;">Import<wbr>Only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="keyring_go">
 <a href="#keyring_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Ring</a>
@@ -476,6 +493,14 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="importonly_nodejs">
+<a href="#importonly_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="keyring_nodejs">
 <a href="#keyring_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Ring</a>
 </span>
@@ -565,6 +590,14 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="import_only_python">
+<a href="#import_only_python" style="color: inherit; text-decoration: inherit;">import_<wbr>only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="key_ring_python">
 <a href="#key_ring_python" style="color: inherit; text-decoration: inherit;">key_<wbr>ring</a>

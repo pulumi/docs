@@ -4,6 +4,7 @@ title: "AppSecSecurityPolicy"
 title_tag: "akamai.AppSecSecurityPolicy"
 meta_desc: "Documentation for the akamai.AppSecSecurityPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

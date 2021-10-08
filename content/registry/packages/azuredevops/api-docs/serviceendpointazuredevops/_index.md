@@ -4,6 +4,7 @@ title: "ServiceEndpointAzureDevOps"
 title_tag: "azuredevops.ServiceEndpointAzureDevOps"
 meta_desc: "Documentation for the azuredevops.ServiceEndpointAzureDevOps resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

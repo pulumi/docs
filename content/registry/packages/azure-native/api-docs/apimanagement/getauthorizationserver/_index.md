@@ -4,6 +4,7 @@ title: "getAuthorizationServer"
 title_tag: "azure-native.apimanagement.getAuthorizationServer"
 meta_desc: "Documentation for the azure-native.apimanagement.getAuthorizationServer function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

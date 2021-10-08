@@ -4,6 +4,7 @@ title: "getVirtualHubBgpConnection"
 title_tag: "azure-native.network.getVirtualHubBgpConnection"
 meta_desc: "Documentation for the azure-native.network.getVirtualHubBgpConnection function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

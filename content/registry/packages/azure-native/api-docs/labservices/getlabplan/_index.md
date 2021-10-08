@@ -4,6 +4,7 @@ title: "getLabPlan"
 title_tag: "azure-native.labservices.getLabPlan"
 meta_desc: "Documentation for the azure-native.labservices.getLabPlan function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "Target"
 title_tag: "spotinst.multai.Target"
 meta_desc: "Documentation for the spotinst.multai.Target resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

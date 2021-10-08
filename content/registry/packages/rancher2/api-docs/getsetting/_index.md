@@ -4,6 +4,7 @@ title: "getSetting"
 title_tag: "rancher2.getSetting"
 meta_desc: "Documentation for the rancher2.getSetting function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

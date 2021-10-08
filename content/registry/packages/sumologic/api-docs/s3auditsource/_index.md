@@ -4,6 +4,7 @@ title: "S3AuditSource"
 title_tag: "sumologic.S3AuditSource"
 meta_desc: "Documentation for the sumologic.S3AuditSource resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

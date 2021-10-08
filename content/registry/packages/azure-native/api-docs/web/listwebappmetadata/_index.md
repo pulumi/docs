@@ -4,6 +4,7 @@ title: "listWebAppMetadata"
 title_tag: "azure-native.web.listWebAppMetadata"
 meta_desc: "Documentation for the azure-native.web.listWebAppMetadata function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

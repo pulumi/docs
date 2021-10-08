@@ -4,6 +4,7 @@ title: "getAccessPoints"
 title_tag: "alicloud.expressconnect.getAccessPoints"
 meta_desc: "Documentation for the alicloud.expressconnect.getAccessPoints function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getAddon"
 title_tag: "aws.eks.getAddon"
 meta_desc: "Documentation for the aws.eks.getAddon function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

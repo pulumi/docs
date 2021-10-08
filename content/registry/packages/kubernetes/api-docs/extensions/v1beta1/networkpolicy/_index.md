@@ -4,6 +4,7 @@ title: "NetworkPolicy"
 title_tag: "kubernetes.extensions/v1beta1.NetworkPolicy"
 meta_desc: "Documentation for the kubernetes.extensions/v1beta1.NetworkPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

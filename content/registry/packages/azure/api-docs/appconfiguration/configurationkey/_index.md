@@ -4,6 +4,7 @@ title: "ConfigurationKey"
 title_tag: "azure.appconfiguration.ConfigurationKey"
 meta_desc: "Documentation for the azure.appconfiguration.ConfigurationKey resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 
@@ -12,6 +13,8 @@ layout: api
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Manages an Azure App Configuration Key.
+
+> **Note:** App Configuration Keys are provisioned using a Data Plane API which requires the role `App Configuration Data Owner` on either the App Configuration or a parent scope (such as the Resource Group/Subscription). [More information can be found in the Azure Documentation for App Configuration](https://docs.microsoft.com/azure/azure-app-configuration/concept-enable-rbac#azure-built-in-roles-for-azure-app-configuration).
 
 {{% examples %}}
 
@@ -42,12 +45,25 @@ class MyStack : Stack
             ResourceGroupName = rg.Name,
             Location = rg.Location,
         });
+        var current = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
+        var appconfDataowner = new Azure.Authorization.Assignment("appconfDataowner", new Azure.Authorization.AssignmentArgs
+        {
+            Scope = appconf.Id,
+            RoleDefinitionName = "App Configuration Data Owner",
+            PrincipalId = current.Apply(current => current.ObjectId),
+        });
         var test = new Azure.AppConfiguration.ConfigurationKey("test", new Azure.AppConfiguration.ConfigurationKeyArgs
         {
             ConfigurationStoreId = appconf.Id,
             Key = "appConfKey1",
             Label = "somelabel",
             Value = "a test",
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                appconfDataowner,
+            },
         });
     }
 
@@ -65,6 +81,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/appconfiguration"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/authorization"
 	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
@@ -84,12 +101,26 @@ func main() {
 		if err != nil {
 			return err
 		}
+		current, err := core.GetClientConfig(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		appconfDataowner, err := authorization.NewAssignment(ctx, "appconfDataowner", &authorization.AssignmentArgs{
+			Scope:              appconf.ID(),
+			RoleDefinitionName: pulumi.String("App Configuration Data Owner"),
+			PrincipalId:        pulumi.String(current.ObjectId),
+		})
+		if err != nil {
+			return err
+		}
 		_, err = appconfiguration.NewConfigurationKey(ctx, "test", &appconfiguration.ConfigurationKeyArgs{
 			ConfigurationStoreId: appconf.ID(),
 			Key:                  pulumi.String("appConfKey1"),
 			Label:                pulumi.String("somelabel"),
 			Value:                pulumi.String("a test"),
-		})
+		}, pulumi.DependsOn([]pulumi.Resource{
+			appconfDataowner,
+		}))
 		if err != nil {
 			return err
 		}
@@ -112,11 +143,17 @@ rg = azure.core.ResourceGroup("rg", location="West Europe")
 appconf = azure.appconfiguration.ConfigurationStore("appconf",
     resource_group_name=rg.name,
     location=rg.location)
+current = azure.core.get_client_config()
+appconf_dataowner = azure.authorization.Assignment("appconfDataowner",
+    scope=appconf.id,
+    role_definition_name="App Configuration Data Owner",
+    principal_id=current.object_id)
 test = azure.appconfiguration.ConfigurationKey("test",
     configuration_store_id=appconf.id,
     key="appConfKey1",
     label="somelabel",
-    value="a test")
+    value="a test",
+    opts=pulumi.ResourceOptions(depends_on=[appconf_dataowner]))
 ```
 
 
@@ -135,11 +172,19 @@ const appconf = new azure.appconfiguration.ConfigurationStore("appconf", {
     resourceGroupName: rg.name,
     location: rg.location,
 });
+const current = azure.core.getClientConfig({});
+const appconfDataowner = new azure.authorization.Assignment("appconfDataowner", {
+    scope: appconf.id,
+    roleDefinitionName: "App Configuration Data Owner",
+    principalId: current.then(current => current.objectId),
+});
 const test = new azure.appconfiguration.ConfigurationKey("test", {
     configurationStoreId: appconf.id,
     key: "appConfKey1",
     label: "somelabel",
     value: "a test",
+}, {
+    dependsOn: [appconfDataowner],
 });
 ```
 
@@ -206,6 +251,12 @@ class MyStack : Stack
             Value = "szechuan",
             KeyVaultId = kv.Id,
         });
+        var appconfDataowner = new Azure.Authorization.Assignment("appconfDataowner", new Azure.Authorization.AssignmentArgs
+        {
+            Scope = appconf.Id,
+            RoleDefinitionName = "App Configuration Data Owner",
+            PrincipalId = current.Apply(current => current.ObjectId),
+        });
         var test = new Azure.AppConfiguration.ConfigurationKey("test", new Azure.AppConfiguration.ConfigurationKeyArgs
         {
             ConfigurationStoreId = azurerm_app_configuration.Test.Id,
@@ -213,6 +264,12 @@ class MyStack : Stack
             Type = "vault",
             Label = "label1",
             VaultKeyReference = kvs.Id,
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                appconfDataowner,
+            },
         });
     }
 
@@ -230,6 +287,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/appconfiguration"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/authorization"
 	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
 	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/keyvault"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
@@ -243,7 +301,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = appconfiguration.NewConfigurationStore(ctx, "appconf", &appconfiguration.ConfigurationStoreArgs{
+		appconf, err := appconfiguration.NewConfigurationStore(ctx, "appconf", &appconfiguration.ConfigurationStoreArgs{
 			ResourceGroupName: rg.Name,
 			Location:          rg.Location,
 		})
@@ -288,13 +346,23 @@ func main() {
 		if err != nil {
 			return err
 		}
+		appconfDataowner, err := authorization.NewAssignment(ctx, "appconfDataowner", &authorization.AssignmentArgs{
+			Scope:              appconf.ID(),
+			RoleDefinitionName: pulumi.String("App Configuration Data Owner"),
+			PrincipalId:        pulumi.String(current.ObjectId),
+		})
+		if err != nil {
+			return err
+		}
 		_, err = appconfiguration.NewConfigurationKey(ctx, "test", &appconfiguration.ConfigurationKeyArgs{
 			ConfigurationStoreId: pulumi.Any(azurerm_app_configuration.Test.Id),
 			Key:                  pulumi.String("key1"),
 			Type:                 pulumi.String("vault"),
 			Label:                pulumi.String("label1"),
 			VaultKeyReference:    kvs.ID(),
-		})
+		}, pulumi.DependsOn([]pulumi.Resource{
+			appconfDataowner,
+		}))
 		if err != nil {
 			return err
 		}
@@ -342,12 +410,17 @@ kv = azure.keyvault.KeyVault("kv",
 kvs = azure.keyvault.Secret("kvs",
     value="szechuan",
     key_vault_id=kv.id)
+appconf_dataowner = azure.authorization.Assignment("appconfDataowner",
+    scope=appconf.id,
+    role_definition_name="App Configuration Data Owner",
+    principal_id=current.object_id)
 test = azure.appconfiguration.ConfigurationKey("test",
     configuration_store_id=azurerm_app_configuration["test"]["id"],
     key="key1",
     type="vault",
     label="label1",
-    vault_key_reference=kvs.id)
+    vault_key_reference=kvs.id,
+    opts=pulumi.ResourceOptions(depends_on=[appconf_dataowner]))
 ```
 
 
@@ -392,12 +465,19 @@ const kvs = new azure.keyvault.Secret("kvs", {
     value: "szechuan",
     keyVaultId: kv.id,
 });
+const appconfDataowner = new azure.authorization.Assignment("appconfDataowner", {
+    scope: appconf.id,
+    roleDefinitionName: "App Configuration Data Owner",
+    principalId: current.then(current => current.objectId),
+});
 const test = new azure.appconfiguration.ConfigurationKey("test", {
     configurationStoreId: azurerm_app_configuration.test.id,
     key: "key1",
     type: "vault",
     label: "label1",
     vaultKeyReference: kvs.id,
+}, {
+    dependsOn: [appconfDataowner],
 });
 ```
 

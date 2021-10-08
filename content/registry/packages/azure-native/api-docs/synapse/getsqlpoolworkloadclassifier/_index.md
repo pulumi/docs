@@ -4,6 +4,7 @@ title: "getSqlPoolWorkloadClassifier"
 title_tag: "azure-native.synapse.getSqlPoolWorkloadClassifier"
 meta_desc: "Documentation for the azure-native.synapse.getSqlPoolWorkloadClassifier function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

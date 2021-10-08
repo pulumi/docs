@@ -4,6 +4,7 @@ title: "AuthBackendRole"
 title_tag: "vault.tokenauth.AuthBackendRole"
 meta_desc: "Documentation for the vault.tokenauth.AuthBackendRole resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 
@@ -401,7 +402,7 @@ value of this field. Specified in seconds.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Wether to disable the ability of the token to be renewed past its initial TTL.
+    <dd>{{% md %}}Whether to disable the ability of the token to be renewed past its initial TTL.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenboundcidrs_csharp">
@@ -589,7 +590,7 @@ value of this field. Specified in seconds.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Wether to disable the ability of the token to be renewed past its initial TTL.
+    <dd>{{% md %}}Whether to disable the ability of the token to be renewed past its initial TTL.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenboundcidrs_go">
@@ -777,7 +778,7 @@ value of this field. Specified in seconds.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Wether to disable the ability of the token to be renewed past its initial TTL.
+    <dd>{{% md %}}Whether to disable the ability of the token to be renewed past its initial TTL.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenboundcidrs_nodejs">
@@ -965,7 +966,7 @@ value of this field. Specified in seconds.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Wether to disable the ability of the token to be renewed past its initial TTL.
+    <dd>{{% md %}}Whether to disable the ability of the token to be renewed past its initial TTL.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_bound_cidrs_python">
@@ -1342,7 +1343,7 @@ value of this field. Specified in seconds.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Wether to disable the ability of the token to be renewed past its initial TTL.
+    <dd>{{% md %}}Whether to disable the ability of the token to be renewed past its initial TTL.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rolename_csharp">
@@ -1530,7 +1531,7 @@ value of this field. Specified in seconds.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Wether to disable the ability of the token to be renewed past its initial TTL.
+    <dd>{{% md %}}Whether to disable the ability of the token to be renewed past its initial TTL.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rolename_go">
@@ -1718,7 +1719,7 @@ value of this field. Specified in seconds.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Wether to disable the ability of the token to be renewed past its initial TTL.
+    <dd>{{% md %}}Whether to disable the ability of the token to be renewed past its initial TTL.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rolename_nodejs">
@@ -1906,7 +1907,7 @@ value of this field. Specified in seconds.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Wether to disable the ability of the token to be renewed past its initial TTL.
+    <dd>{{% md %}}Whether to disable the ability of the token to be renewed past its initial TTL.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_name_python">

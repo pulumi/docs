@@ -4,6 +4,7 @@ title: "getPodSecurityPolicyTemplate"
 title_tag: "rancher2.getPodSecurityPolicyTemplate"
 meta_desc: "Documentation for the rancher2.getPodSecurityPolicyTemplate function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "CxPage"
 title_tag: "gcp.diagflow.CxPage"
 meta_desc: "Documentation for the gcp.diagflow.CxPage resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

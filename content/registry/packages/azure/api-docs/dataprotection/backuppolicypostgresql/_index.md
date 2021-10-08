@@ -4,6 +4,7 @@ title: "BackupPolicyPostgresql"
 title_tag: "azure.dataprotection.BackupPolicyPostgresql"
 meta_desc: "Documentation for the azure.dataprotection.BackupPolicyPostgresql resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

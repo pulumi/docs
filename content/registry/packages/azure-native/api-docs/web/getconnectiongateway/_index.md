@@ -4,6 +4,7 @@ title: "getConnectionGateway"
 title_tag: "azure-native.web.getConnectionGateway"
 meta_desc: "Documentation for the azure-native.web.getConnectionGateway function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

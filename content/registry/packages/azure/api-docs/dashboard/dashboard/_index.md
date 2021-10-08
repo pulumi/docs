@@ -4,6 +4,7 @@ title: "Dashboard"
 title_tag: "azure.dashboard.Dashboard"
 meta_desc: "Documentation for the azure.dashboard.Dashboard resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

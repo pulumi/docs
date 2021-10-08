@@ -4,6 +4,7 @@ title: "getGateway"
 title_tag: "azure.apimanagement.getGateway"
 meta_desc: "Documentation for the azure.apimanagement.getGateway function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

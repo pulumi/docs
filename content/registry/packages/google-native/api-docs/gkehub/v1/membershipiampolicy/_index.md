@@ -4,6 +4,7 @@ title: "MembershipIamPolicy"
 title_tag: "google-native.gkehub/v1.MembershipIamPolicy"
 meta_desc: "Documentation for the google-native.gkehub/v1.MembershipIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getLogGroups"
 title_tag: "aws.cloudwatch.getLogGroups"
 meta_desc: "Documentation for the aws.cloudwatch.getLogGroups function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

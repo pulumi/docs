@@ -4,6 +4,7 @@ title: "getProvider"
 title_tag: "google-native.iam/v1.getProvider"
 meta_desc: "Documentation for the google-native.iam/v1.getProvider function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

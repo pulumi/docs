@@ -4,6 +4,7 @@ title: "OriginCaCertificate"
 title_tag: "cloudflare.OriginCaCertificate"
 meta_desc: "Documentation for the cloudflare.OriginCaCertificate resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

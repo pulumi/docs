@@ -4,6 +4,7 @@ title: "IamMember"
 title_tag: "gcp.bigquery.IamMember"
 meta_desc: "Documentation for the gcp.bigquery.IamMember resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

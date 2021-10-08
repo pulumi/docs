@@ -4,6 +4,7 @@ title: "getSyncGroup"
 title_tag: "azure-native.storagesync.getSyncGroup"
 meta_desc: "Documentation for the azure-native.storagesync.getSyncGroup function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

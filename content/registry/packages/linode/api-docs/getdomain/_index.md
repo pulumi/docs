@@ -4,6 +4,7 @@ title: "getDomain"
 title_tag: "linode.getDomain"
 meta_desc: "Documentation for the linode.getDomain function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

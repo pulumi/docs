@@ -4,6 +4,7 @@ title: "CaaRecord"
 title_tag: "azure.dns.CaaRecord"
 meta_desc: "Documentation for the azure.dns.CaaRecord resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

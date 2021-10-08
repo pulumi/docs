@@ -4,6 +4,7 @@ title: "listAuthorizationServerSecrets"
 title_tag: "azure-native.apimanagement.listAuthorizationServerSecrets"
 meta_desc: "Documentation for the azure-native.apimanagement.listAuthorizationServerSecrets function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

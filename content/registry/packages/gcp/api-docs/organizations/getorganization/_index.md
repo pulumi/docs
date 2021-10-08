@@ -4,6 +4,7 @@ title: "getOrganization"
 title_tag: "gcp.organizations.getOrganization"
 meta_desc: "Documentation for the gcp.organizations.getOrganization function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

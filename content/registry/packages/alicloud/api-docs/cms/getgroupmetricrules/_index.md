@@ -4,6 +4,7 @@ title: "getGroupMetricRules"
 title_tag: "alicloud.cms.getGroupMetricRules"
 meta_desc: "Documentation for the alicloud.cms.getGroupMetricRules function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

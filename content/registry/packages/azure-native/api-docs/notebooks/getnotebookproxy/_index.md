@@ -4,6 +4,7 @@ title: "getNotebookProxy"
 title_tag: "azure-native.notebooks.getNotebookProxy"
 meta_desc: "Documentation for the azure-native.notebooks.getNotebookProxy function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

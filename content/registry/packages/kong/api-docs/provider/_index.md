@@ -4,6 +4,7 @@ title: "Provider"
 title_tag: "kong.Provider"
 meta_desc: "Documentation for the kong.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

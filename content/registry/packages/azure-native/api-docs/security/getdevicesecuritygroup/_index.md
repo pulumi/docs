@@ -4,6 +4,7 @@ title: "getDeviceSecurityGroup"
 title_tag: "azure-native.security.getDeviceSecurityGroup"
 meta_desc: "Documentation for the azure-native.security.getDeviceSecurityGroup function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

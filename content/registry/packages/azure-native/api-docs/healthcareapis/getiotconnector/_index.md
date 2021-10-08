@@ -4,6 +4,7 @@ title: "getIotConnector"
 title_tag: "azure-native.healthcareapis.getIotConnector"
 meta_desc: "Documentation for the azure-native.healthcareapis.getIotConnector function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

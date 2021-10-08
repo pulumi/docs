@@ -4,6 +4,7 @@ title: "IpSet"
 title_tag: "aws.wafv2.IpSet"
 meta_desc: "Documentation for the aws.wafv2.IpSet resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

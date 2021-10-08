@@ -4,6 +4,7 @@ title: "getEveryoneGroup"
 title_tag: "okta.group.getEveryoneGroup"
 meta_desc: "Documentation for the okta.group.getEveryoneGroup function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

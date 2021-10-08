@@ -4,6 +4,7 @@ title: "IscsiTarget"
 title_tag: "azure-native.storagepool.IscsiTarget"
 meta_desc: "Documentation for the azure-native.storagepool.IscsiTarget resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

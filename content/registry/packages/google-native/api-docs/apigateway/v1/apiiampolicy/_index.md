@@ -4,6 +4,7 @@ title: "ApiIamPolicy"
 title_tag: "google-native.apigateway/v1.ApiIamPolicy"
 meta_desc: "Documentation for the google-native.apigateway/v1.ApiIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

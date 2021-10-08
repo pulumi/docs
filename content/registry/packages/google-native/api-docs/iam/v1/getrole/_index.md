@@ -4,6 +4,7 @@ title: "getRole"
 title_tag: "google-native.iam/v1.getRole"
 meta_desc: "Documentation for the google-native.iam/v1.getRole function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

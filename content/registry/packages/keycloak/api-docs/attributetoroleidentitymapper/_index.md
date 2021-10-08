@@ -4,6 +4,7 @@ title: "AttributeToRoleIdentityMapper"
 title_tag: "keycloak.AttributeToRoleIdentityMapper"
 meta_desc: "Documentation for the keycloak.AttributeToRoleIdentityMapper resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

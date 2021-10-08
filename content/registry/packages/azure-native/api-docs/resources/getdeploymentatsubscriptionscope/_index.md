@@ -4,6 +4,7 @@ title: "getDeploymentAtSubscriptionScope"
 title_tag: "azure-native.resources.getDeploymentAtSubscriptionScope"
 meta_desc: "Documentation for the azure-native.resources.getDeploymentAtSubscriptionScope function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

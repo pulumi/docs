@@ -4,6 +4,7 @@ title: "getRestorePointCollection"
 title_tag: "azure-native.compute.getRestorePointCollection"
 meta_desc: "Documentation for the azure-native.compute.getRestorePointCollection function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

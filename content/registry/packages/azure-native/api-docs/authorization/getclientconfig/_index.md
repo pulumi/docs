@@ -4,6 +4,7 @@ title: "getClientConfig"
 title_tag: "azure-native.authorization.getClientConfig"
 meta_desc: "Documentation for the azure-native.authorization.getClientConfig function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

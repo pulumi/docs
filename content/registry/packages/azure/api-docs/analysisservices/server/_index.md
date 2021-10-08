@@ -4,6 +4,7 @@ title: "Server"
 title_tag: "azure.analysisservices.Server"
 meta_desc: "Documentation for the azure.analysisservices.Server resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

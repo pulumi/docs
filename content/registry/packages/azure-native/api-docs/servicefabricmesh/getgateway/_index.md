@@ -4,6 +4,7 @@ title: "getGateway"
 title_tag: "azure-native.servicefabricmesh.getGateway"
 meta_desc: "Documentation for the azure-native.servicefabricmesh.getGateway function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

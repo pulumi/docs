@@ -4,6 +4,7 @@ title: "getTlsPlatformCertificate"
 title_tag: "fastly.getTlsPlatformCertificate"
 meta_desc: "Documentation for the fastly.getTlsPlatformCertificate function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

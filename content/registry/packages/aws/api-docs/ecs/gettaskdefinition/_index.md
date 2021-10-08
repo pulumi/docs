@@ -4,6 +4,7 @@ title: "getTaskDefinition"
 title_tag: "aws.ecs.getTaskDefinition"
 meta_desc: "Documentation for the aws.ecs.getTaskDefinition function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

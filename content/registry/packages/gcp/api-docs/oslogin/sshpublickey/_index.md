@@ -4,6 +4,7 @@ title: "SshPublicKey"
 title_tag: "gcp.oslogin.SshPublicKey"
 meta_desc: "Documentation for the gcp.oslogin.SshPublicKey resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 
@@ -57,7 +58,43 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"io/ioutil"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/organizations"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/oslogin"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func readFileOrPanic(path string) pulumi.StringPtrInput {
+	data, err := ioutil.ReadFile(path)
+	if err != nil {
+		panic(err.Error())
+	}
+	return pulumi.String(string(data))
+}
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		me, err := organizations.GetClientOpenIdUserInfo(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		_, err = oslogin.NewSshPublicKey(ctx, "cache", &oslogin.SshPublicKeyArgs{
+			User: pulumi.String(me.Email),
+			Key:  readFileOrPanic("path/to/id_rsa.pub"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 

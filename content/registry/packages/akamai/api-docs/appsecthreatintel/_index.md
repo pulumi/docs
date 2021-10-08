@@ -4,6 +4,7 @@ title: "AppSecThreatIntel"
 title_tag: "akamai.AppSecThreatIntel"
 meta_desc: "Documentation for the akamai.AppSecThreatIntel resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

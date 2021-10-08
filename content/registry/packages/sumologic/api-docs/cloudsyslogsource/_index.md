@@ -4,6 +4,7 @@ title: "CloudSyslogSource"
 title_tag: "sumologic.CloudSyslogSource"
 meta_desc: "Documentation for the sumologic.CloudSyslogSource resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

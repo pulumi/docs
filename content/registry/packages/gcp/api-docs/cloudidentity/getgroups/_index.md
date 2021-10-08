@@ -4,6 +4,7 @@ title: "getGroups"
 title_tag: "gcp.cloudidentity.getGroups"
 meta_desc: "Documentation for the gcp.cloudidentity.getGroups function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

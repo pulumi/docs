@@ -4,6 +4,7 @@ title: "RegionSslCertificate"
 title_tag: "gcp.compute.RegionSslCertificate"
 meta_desc: "Documentation for the gcp.compute.RegionSslCertificate resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 
@@ -64,7 +65,41 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"io/ioutil"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func readFileOrPanic(path string) pulumi.StringPtrInput {
+	data, err := ioutil.ReadFile(path)
+	if err != nil {
+		panic(err.Error())
+	}
+	return pulumi.String(string(data))
+}
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewRegionSslCertificate(ctx, "_default", &compute.RegionSslCertificateArgs{
+			Region:      pulumi.String("us-central1"),
+			NamePrefix:  pulumi.String("my-certificate-"),
+			Description: pulumi.String("a description"),
+			PrivateKey:  readFileOrPanic("path/to/private.key"),
+			Certificate: readFileOrPanic("path/to/certificate.crt"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 
@@ -215,7 +250,101 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"io/ioutil"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func readFileOrPanic(path string) pulumi.StringPtrInput {
+	data, err := ioutil.ReadFile(path)
+	if err != nil {
+		panic(err.Error())
+	}
+	return pulumi.String(string(data))
+}
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		defaultRegionSslCertificate, err := compute.NewRegionSslCertificate(ctx, "defaultRegionSslCertificate", &compute.RegionSslCertificateArgs{
+			Region:      pulumi.String("us-central1"),
+			NamePrefix:  pulumi.String("my-certificate-"),
+			PrivateKey:  readFileOrPanic("path/to/private.key"),
+			Certificate: readFileOrPanic("path/to/certificate.crt"),
+		})
+		if err != nil {
+			return err
+		}
+		defaultRegionHealthCheck, err := compute.NewRegionHealthCheck(ctx, "defaultRegionHealthCheck", &compute.RegionHealthCheckArgs{
+			Region: pulumi.String("us-central1"),
+			HttpHealthCheck: &compute.RegionHealthCheckHttpHealthCheckArgs{
+				Port: pulumi.Int(80),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		defaultRegionBackendService, err := compute.NewRegionBackendService(ctx, "defaultRegionBackendService", &compute.RegionBackendServiceArgs{
+			Region:              pulumi.String("us-central1"),
+			Protocol:            pulumi.String("HTTP"),
+			LoadBalancingScheme: pulumi.String("INTERNAL_MANAGED"),
+			TimeoutSec:          pulumi.Int(10),
+			HealthChecks: pulumi.String{
+				defaultRegionHealthCheck.ID(),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		defaultRegionUrlMap, err := compute.NewRegionUrlMap(ctx, "defaultRegionUrlMap", &compute.RegionUrlMapArgs{
+			Region:         pulumi.String("us-central1"),
+			Description:    pulumi.String("a description"),
+			DefaultService: defaultRegionBackendService.ID(),
+			HostRules: compute.RegionUrlMapHostRuleArray{
+				&compute.RegionUrlMapHostRuleArgs{
+					Hosts: pulumi.StringArray{
+						pulumi.String("mysite.com"),
+					},
+					PathMatcher: pulumi.String("allpaths"),
+				},
+			},
+			PathMatchers: compute.RegionUrlMapPathMatcherArray{
+				&compute.RegionUrlMapPathMatcherArgs{
+					Name:           pulumi.String("allpaths"),
+					DefaultService: defaultRegionBackendService.ID(),
+					PathRules: compute.RegionUrlMapPathMatcherPathRuleArray{
+						&compute.RegionUrlMapPathMatcherPathRuleArgs{
+							Paths: pulumi.StringArray{
+								pulumi.String("/*"),
+							},
+							Service: defaultRegionBackendService.ID(),
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewRegionTargetHttpsProxy(ctx, "defaultRegionTargetHttpsProxy", &compute.RegionTargetHttpsProxyArgs{
+			Region: pulumi.String("us-central1"),
+			UrlMap: defaultRegionUrlMap.ID(),
+			SslCertificates: pulumi.StringArray{
+				defaultRegionSslCertificate.ID(),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 

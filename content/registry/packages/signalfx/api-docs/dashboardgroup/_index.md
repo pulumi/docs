@@ -4,6 +4,7 @@ title: "DashboardGroup"
 title_tag: "signalfx.DashboardGroup"
 meta_desc: "Documentation for the signalfx.DashboardGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

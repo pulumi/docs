@@ -4,6 +4,7 @@ title: "WorkflowTemplate"
 title_tag: "gcp.dataproc.WorkflowTemplate"
 meta_desc: "Documentation for the gcp.dataproc.WorkflowTemplate resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 
@@ -556,8 +557,8 @@ The WorkflowTemplate resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project for the resource
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
@@ -565,7 +566,7 @@ The WorkflowTemplate resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. Used to perform a consistent read-modify-write. This field should be left blank for a `CreateWorkflowTemplate` request. It is required for an `UpdateWorkflowTemplate` request, and must match the current server version. A typical update template flow would fetch the current template with a `GetWorkflowTemplate` request, which will return the current template with the `version` field filled in with the current server version. The user updates other fields in the template, then returns it as part of the `UpdateWorkflowTemplate` request.
-{{% /md %}}</dd></dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}version is not useful as a configurable field, and will be removed in the future.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -641,8 +642,8 @@ The WorkflowTemplate resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project for the resource
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
@@ -650,7 +651,7 @@ The WorkflowTemplate resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. Used to perform a consistent read-modify-write. This field should be left blank for a `CreateWorkflowTemplate` request. It is required for an `UpdateWorkflowTemplate` request, and must match the current server version. A typical update template flow would fetch the current template with a `GetWorkflowTemplate` request, which will return the current template with the `version` field filled in with the current server version. The user updates other fields in the template, then returns it as part of the `UpdateWorkflowTemplate` request.
-{{% /md %}}</dd></dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}version is not useful as a configurable field, and will be removed in the future.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -726,8 +727,8 @@ The WorkflowTemplate resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project for the resource
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
@@ -735,7 +736,7 @@ The WorkflowTemplate resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. Used to perform a consistent read-modify-write. This field should be left blank for a `CreateWorkflowTemplate` request. It is required for an `UpdateWorkflowTemplate` request, and must match the current server version. A typical update template flow would fetch the current template with a `GetWorkflowTemplate` request, which will return the current template with the `version` field filled in with the current server version. The user updates other fields in the template, then returns it as part of the `UpdateWorkflowTemplate` request.
-{{% /md %}}</dd></dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}version is not useful as a configurable field, and will be removed in the future.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -811,8 +812,8 @@ The WorkflowTemplate resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project for the resource
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
@@ -820,7 +821,7 @@ The WorkflowTemplate resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. Used to perform a consistent read-modify-write. This field should be left blank for a `CreateWorkflowTemplate` request. It is required for an `UpdateWorkflowTemplate` request, and must match the current server version. A typical update template flow would fetch the current template with a `GetWorkflowTemplate` request, which will return the current template with the `version` field filled in with the current server version. The user updates other fields in the template, then returns it as part of the `UpdateWorkflowTemplate` request.
-{{% /md %}}</dd></dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}version is not useful as a configurable field, and will be removed in the future.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 
@@ -1177,8 +1178,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. The time template was last updated.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_version_csharp">
 <a href="#state_version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
@@ -1186,7 +1187,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. Used to perform a consistent read-modify-write. This field should be left blank for a `CreateWorkflowTemplate` request. It is required for an `UpdateWorkflowTemplate` request, and must match the current server version. A typical update template flow would fetch the current template with a `GetWorkflowTemplate` request, which will return the current template with the `version` field filled in with the current server version. The user updates other fields in the template, then returns it as part of the `UpdateWorkflowTemplate` request.
-{{% /md %}}</dd></dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}version is not useful as a configurable field, and will be removed in the future.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1280,8 +1281,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. The time template was last updated.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_version_go">
 <a href="#state_version_go" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
@@ -1289,7 +1290,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. Used to perform a consistent read-modify-write. This field should be left blank for a `CreateWorkflowTemplate` request. It is required for an `UpdateWorkflowTemplate` request, and must match the current server version. A typical update template flow would fetch the current template with a `GetWorkflowTemplate` request, which will return the current template with the `version` field filled in with the current server version. The user updates other fields in the template, then returns it as part of the `UpdateWorkflowTemplate` request.
-{{% /md %}}</dd></dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}version is not useful as a configurable field, and will be removed in the future.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1383,8 +1384,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. The time template was last updated.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_version_nodejs">
 <a href="#state_version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
@@ -1392,7 +1393,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. Used to perform a consistent read-modify-write. This field should be left blank for a `CreateWorkflowTemplate` request. It is required for an `UpdateWorkflowTemplate` request, and must match the current server version. A typical update template flow would fetch the current template with a `GetWorkflowTemplate` request, which will return the current template with the `version` field filled in with the current server version. The user updates other fields in the template, then returns it as part of the `UpdateWorkflowTemplate` request.
-{{% /md %}}</dd></dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}version is not useful as a configurable field, and will be removed in the future.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1486,8 +1487,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Output only. The time template was last updated.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_version_python">
 <a href="#state_version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
@@ -1495,7 +1496,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. Used to perform a consistent read-modify-write. This field should be left blank for a `CreateWorkflowTemplate` request. It is required for an `UpdateWorkflowTemplate` request, and must match the current server version. A typical update template flow would fetch the current template with a `GetWorkflowTemplate` request, which will return the current template with the `version` field filled in with the current server version. The user updates other fields in the template, then returns it as part of the `UpdateWorkflowTemplate` request.
-{{% /md %}}</dd></dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}version is not useful as a configurable field, and will be removed in the future.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 
@@ -9277,6 +9278,14 @@ Output only. The config for Compute Engine Instance Group Manager that manages t
     <dd>{{% md %}}Optional. The version of software inside the cluster. It must be one of the supported (https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#other_versions). If unspecified, it defaults to the latest Debian version.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="optionalcomponents_csharp">
+<a href="#optionalcomponents_csharp" style="color: inherit; text-decoration: inherit;">Optional<wbr>Components</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
@@ -9298,6 +9307,14 @@ Output only. The config for Compute Engine Instance Group Manager that manages t
     </dt>
     <dd>{{% md %}}Optional. The version of software inside the cluster. It must be one of the supported (https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#other_versions). If unspecified, it defaults to the latest Debian version.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="optionalcomponents_go">
+<a href="#optionalcomponents_go" style="color: inherit; text-decoration: inherit;">Optional<wbr>Components</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -9321,6 +9338,14 @@ Output only. The config for Compute Engine Instance Group Manager that manages t
     <dd>{{% md %}}Optional. The version of software inside the cluster. It must be one of the supported (https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#other_versions). If unspecified, it defaults to the latest Debian version.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="optionalcomponents_nodejs">
+<a href="#optionalcomponents_nodejs" style="color: inherit; text-decoration: inherit;">optional<wbr>Components</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
@@ -9342,6 +9367,14 @@ Output only. The config for Compute Engine Instance Group Manager that manages t
     </dt>
     <dd>{{% md %}}Optional. The version of software inside the cluster. It must be one of the supported (https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#other_versions). If unspecified, it defaults to the latest Debian version.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="optional_components_python">
+<a href="#optional_components_python" style="color: inherit; text-decoration: inherit;">optional_<wbr>components</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>

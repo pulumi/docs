@@ -4,6 +4,7 @@ title: "DatasetPostgresql"
 title_tag: "azure.datafactory.DatasetPostgresql"
 meta_desc: "Documentation for the azure.datafactory.DatasetPostgresql resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

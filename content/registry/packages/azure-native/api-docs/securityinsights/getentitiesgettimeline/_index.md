@@ -4,6 +4,7 @@ title: "getEntitiesGetTimeline"
 title_tag: "azure-native.securityinsights.getEntitiesGetTimeline"
 meta_desc: "Documentation for the azure-native.securityinsights.getEntitiesGetTimeline function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "RecordingConfiguration"
 title_tag: "aws-native.ivs.RecordingConfiguration"
 meta_desc: "Documentation for the aws-native.ivs.RecordingConfiguration resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "Alert"
 title_tag: "wavefront.Alert"
 meta_desc: "Documentation for the wavefront.Alert resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

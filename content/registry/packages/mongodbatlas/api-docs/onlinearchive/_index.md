@@ -4,6 +4,7 @@ title: "OnlineArchive"
 title_tag: "mongodbatlas.OnlineArchive"
 meta_desc: "Documentation for the mongodbatlas.OnlineArchive resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

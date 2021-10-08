@@ -4,6 +4,7 @@ title: "getAlbBackendGroup"
 title_tag: "yandex.getAlbBackendGroup"
 meta_desc: "Documentation for the yandex.getAlbBackendGroup function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

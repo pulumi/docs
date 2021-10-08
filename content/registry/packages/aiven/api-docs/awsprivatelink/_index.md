@@ -4,6 +4,7 @@ title: "AwsPrivatelink"
 title_tag: "aiven.AwsPrivatelink"
 meta_desc: "Documentation for the aiven.AwsPrivatelink resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

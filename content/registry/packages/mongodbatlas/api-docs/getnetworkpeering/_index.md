@@ -4,6 +4,7 @@ title: "getNetworkPeering"
 title_tag: "mongodbatlas.getNetworkPeering"
 meta_desc: "Documentation for the mongodbatlas.getNetworkPeering function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

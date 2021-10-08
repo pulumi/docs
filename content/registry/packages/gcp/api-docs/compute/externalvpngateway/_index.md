@@ -4,6 +4,7 @@ title: "ExternalVpnGateway"
 title_tag: "gcp.compute.ExternalVpnGateway"
 meta_desc: "Documentation for the gcp.compute.ExternalVpnGateway resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

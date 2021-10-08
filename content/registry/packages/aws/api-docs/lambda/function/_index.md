@@ -4,6 +4,7 @@ title: "Function"
 title_tag: "aws.lambda.Function"
 meta_desc: "Documentation for the aws.lambda.Function resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 
@@ -1082,7 +1083,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The target architectures for the function. Only a single value is value at this time. Valid values are `arm64` and `x86_64`. If not provided, AWS will default to `x86_64`.
+    <dd>{{% md %}}Instruction set architecture for your Lambda function. Valid values are `["x86_64"]` and `["arm64"]`. Default is `["x86_64"]`. Removing this attribute, function's architecture stay the same.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="code_csharp">
@@ -1329,7 +1330,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The target architectures for the function. Only a single value is value at this time. Valid values are `arm64` and `x86_64`. If not provided, AWS will default to `x86_64`.
+    <dd>{{% md %}}Instruction set architecture for your Lambda function. Valid values are `["x86_64"]` and `["arm64"]`. Default is `["x86_64"]`. Removing this attribute, function's architecture stay the same.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="code_go">
@@ -1576,7 +1577,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The target architectures for the function. Only a single value is value at this time. Valid values are `arm64` and `x86_64`. If not provided, AWS will default to `x86_64`.
+    <dd>{{% md %}}Instruction set architecture for your Lambda function. Valid values are `["x86_64"]` and `["arm64"]`. Default is `["x86_64"]`. Removing this attribute, function's architecture stay the same.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="code_nodejs">
@@ -1823,7 +1824,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The target architectures for the function. Only a single value is value at this time. Valid values are `arm64` and `x86_64`. If not provided, AWS will default to `x86_64`.
+    <dd>{{% md %}}Instruction set architecture for your Lambda function. Valid values are `["x86_64"]` and `["arm64"]`. Default is `["x86_64"]`. Removing this attribute, function's architecture stay the same.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="code_python">
@@ -2605,7 +2606,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The target architectures for the function. Only a single value is value at this time. Valid values are `arm64` and `x86_64`. If not provided, AWS will default to `x86_64`.
+    <dd>{{% md %}}Instruction set architecture for your Lambda function. Valid values are `["x86_64"]` and `["arm64"]`. Default is `["x86_64"]`. Removing this attribute, function's architecture stay the same.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
@@ -2934,7 +2935,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The target architectures for the function. Only a single value is value at this time. Valid values are `arm64` and `x86_64`. If not provided, AWS will default to `x86_64`.
+    <dd>{{% md %}}Instruction set architecture for your Lambda function. Valid values are `["x86_64"]` and `["arm64"]`. Default is `["x86_64"]`. Removing this attribute, function's architecture stay the same.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
@@ -3263,7 +3264,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The target architectures for the function. Only a single value is value at this time. Valid values are `arm64` and `x86_64`. If not provided, AWS will default to `x86_64`.
+    <dd>{{% md %}}Instruction set architecture for your Lambda function. Valid values are `["x86_64"]` and `["arm64"]`. Default is `["x86_64"]`. Removing this attribute, function's architecture stay the same.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
@@ -3592,7 +3593,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The target architectures for the function. Only a single value is value at this time. Valid values are `arm64` and `x86_64`. If not provided, AWS will default to `x86_64`.
+    <dd>{{% md %}}Instruction set architecture for your Lambda function. Valid values are `["x86_64"]` and `["arm64"]`. Default is `["x86_64"]`. Removing this attribute, function's architecture stay the same.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">

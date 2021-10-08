@@ -4,6 +4,7 @@ title: "EventHubNamespaceAuthorizationRule"
 title_tag: "azure.eventhub.EventHubNamespaceAuthorizationRule"
 meta_desc: "Documentation for the azure.eventhub.EventHubNamespaceAuthorizationRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

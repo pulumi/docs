@@ -4,6 +4,7 @@ title: "EventhubNamespaceDisasterRecoveryConfig"
 title_tag: "azure.eventhub.EventhubNamespaceDisasterRecoveryConfig"
 meta_desc: "Documentation for the azure.eventhub.EventhubNamespaceDisasterRecoveryConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

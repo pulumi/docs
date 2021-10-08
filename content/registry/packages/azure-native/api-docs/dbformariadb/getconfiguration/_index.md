@@ -4,6 +4,7 @@ title: "getConfiguration"
 title_tag: "azure-native.dbformariadb.getConfiguration"
 meta_desc: "Documentation for the azure-native.dbformariadb.getConfiguration function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

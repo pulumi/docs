@@ -4,6 +4,7 @@ title: "getGalleryImageVersion"
 title_tag: "azure-native.compute.getGalleryImageVersion"
 meta_desc: "Documentation for the azure-native.compute.getGalleryImageVersion function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

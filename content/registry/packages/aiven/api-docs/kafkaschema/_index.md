@@ -4,6 +4,7 @@ title: "KafkaSchema"
 title_tag: "aiven.KafkaSchema"
 meta_desc: "Documentation for the aiven.KafkaSchema resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

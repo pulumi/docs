@@ -4,6 +4,7 @@ title: "FirewallNatRuleCollection"
 title_tag: "azure.network.FirewallNatRuleCollection"
 meta_desc: "Documentation for the azure.network.FirewallNatRuleCollection resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

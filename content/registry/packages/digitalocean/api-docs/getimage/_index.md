@@ -4,6 +4,7 @@ title: "getImage"
 title_tag: "digitalocean.getImage"
 meta_desc: "Documentation for the digitalocean.getImage function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

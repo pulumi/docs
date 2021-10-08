@@ -4,6 +4,7 @@ title: "getAATPDataConnector"
 title_tag: "azure-native.securityinsights.getAATPDataConnector"
 meta_desc: "Documentation for the azure-native.securityinsights.getAATPDataConnector function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "App"
 title_tag: "digitalocean.App"
 meta_desc: "Documentation for the digitalocean.App resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 
@@ -2372,7 +2373,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The instance size to use for this component.
+    <dd>{{% md %}}The instance size to use for this component. This determines the plan (basic or professional) and the available CPU and memory. The list of available instance sizes can be [found with the API](https://docs.digitalocean.com/reference/api/api-reference/#operation/list_instance_sizes) or using the [doctl CLI](https://docs.digitalocean.com/reference/doctl/) (`doctl apps tier instance-size list`). Default: `basic-xxs`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_csharp">
@@ -2506,7 +2507,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The instance size to use for this component.
+    <dd>{{% md %}}The instance size to use for this component. This determines the plan (basic or professional) and the available CPU and memory. The list of available instance sizes can be [found with the API](https://docs.digitalocean.com/reference/api/api-reference/#operation/list_instance_sizes) or using the [doctl CLI](https://docs.digitalocean.com/reference/doctl/) (`doctl apps tier instance-size list`). Default: `basic-xxs`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_go">
@@ -2640,7 +2641,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The instance size to use for this component.
+    <dd>{{% md %}}The instance size to use for this component. This determines the plan (basic or professional) and the available CPU and memory. The list of available instance sizes can be [found with the API](https://docs.digitalocean.com/reference/api/api-reference/#operation/list_instance_sizes) or using the [doctl CLI](https://docs.digitalocean.com/reference/doctl/) (`doctl apps tier instance-size list`). Default: `basic-xxs`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_nodejs">
@@ -2774,7 +2775,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The instance size to use for this component.
+    <dd>{{% md %}}The instance size to use for this component. This determines the plan (basic or professional) and the available CPU and memory. The list of available instance sizes can be [found with the API](https://docs.digitalocean.com/reference/api/api-reference/#operation/list_instance_sizes) or using the [doctl CLI](https://docs.digitalocean.com/reference/doctl/) (`doctl apps tier instance-size list`). Default: `basic-xxs`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_python">
@@ -3498,6 +3499,15 @@ The following state arguments are supported:
     <dd>{{% md %}}An optional build command to run while building this component from source.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="cors_csharp">
+<a href="#cors_csharp" style="color: inherit; text-decoration: inherit;">Cors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#appspecservicecors">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>App<wbr>Spec<wbr>Service<wbr>Cors</a></span>
+    </dt>
+    <dd>{{% md %}}The [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) policies of the app.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="dockerfilepath_csharp">
 <a href="#dockerfilepath_csharp" style="color: inherit; text-decoration: inherit;">Dockerfile<wbr>Path</a>
 </span>
@@ -3594,7 +3604,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The instance size to use for this component.
+    <dd>{{% md %}}The instance size to use for this component. This determines the plan (basic or professional) and the available CPU and memory. The list of available instance sizes can be [found with the API](https://docs.digitalocean.com/reference/api/api-reference/#operation/list_instance_sizes) or using the [doctl CLI](https://docs.digitalocean.com/reference/doctl/) (`doctl apps tier instance-size list`). Default: `basic-xxs`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internalports_csharp">
@@ -3652,6 +3662,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional build command to run while building this component from source.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cors_go">
+<a href="#cors_go" style="color: inherit; text-decoration: inherit;">Cors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#appspecservicecors">App<wbr>Spec<wbr>Service<wbr>Cors</a></span>
+    </dt>
+    <dd>{{% md %}}The [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) policies of the app.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dockerfilepath_go">
@@ -3750,7 +3769,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The instance size to use for this component.
+    <dd>{{% md %}}The instance size to use for this component. This determines the plan (basic or professional) and the available CPU and memory. The list of available instance sizes can be [found with the API](https://docs.digitalocean.com/reference/api/api-reference/#operation/list_instance_sizes) or using the [doctl CLI](https://docs.digitalocean.com/reference/doctl/) (`doctl apps tier instance-size list`). Default: `basic-xxs`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internalports_go">
@@ -3808,6 +3827,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional build command to run while building this component from source.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cors_nodejs">
+<a href="#cors_nodejs" style="color: inherit; text-decoration: inherit;">cors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#appspecservicecors">App<wbr>Spec<wbr>Service<wbr>Cors</a></span>
+    </dt>
+    <dd>{{% md %}}The [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) policies of the app.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dockerfilepath_nodejs">
@@ -3906,7 +3934,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The instance size to use for this component.
+    <dd>{{% md %}}The instance size to use for this component. This determines the plan (basic or professional) and the available CPU and memory. The list of available instance sizes can be [found with the API](https://docs.digitalocean.com/reference/api/api-reference/#operation/list_instance_sizes) or using the [doctl CLI](https://docs.digitalocean.com/reference/doctl/) (`doctl apps tier instance-size list`). Default: `basic-xxs`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internalports_nodejs">
@@ -3964,6 +3992,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional build command to run while building this component from source.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cors_python">
+<a href="#cors_python" style="color: inherit; text-decoration: inherit;">cors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#appspecservicecors">App<wbr>Spec<wbr>Service<wbr>Cors</a></span>
+    </dt>
+    <dd>{{% md %}}The [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) policies of the app.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dockerfile_path_python">
@@ -4062,7 +4099,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The instance size to use for this component.
+    <dd>{{% md %}}The instance size to use for this component. This determines the plan (basic or professional) and the available CPU and memory. The list of available instance sizes can be [found with the API](https://docs.digitalocean.com/reference/api/api-reference/#operation/list_instance_sizes) or using the [doctl CLI](https://docs.digitalocean.com/reference/doctl/) (`doctl apps tier instance-size list`). Default: `basic-xxs`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internal_ports_python">
@@ -4098,6 +4135,366 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional path to the working directory to use for the build.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="appspecservicecors">App<wbr>Spec<wbr>Service<wbr>Cors</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="allowcredentials_csharp">
+<a href="#allowcredentials_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether browsers should expose the response to the client-side JavaScript code when the request's credentials mode is `include`. This configures the `Access-Control-Allow-Credentials` header.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowheaders_csharp">
+<a href="#allowheaders_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The set of allowed HTTP request headers. This configures the `Access-Control-Allow-Headers` header.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowmethods_csharp">
+<a href="#allowmethods_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Methods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The set of allowed HTTP methods. This configures the `Access-Control-Allow-Methods` header.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="alloworigins_csharp">
+<a href="#alloworigins_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Origins</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#appspecservicecorsalloworigins">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>App<wbr>Spec<wbr>Service<wbr>Cors<wbr>Allow<wbr>Origins</a></span>
+    </dt>
+    <dd>{{% md %}}The `Access-Control-Allow-Origin` can be
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exposeheaders_csharp">
+<a href="#exposeheaders_csharp" style="color: inherit; text-decoration: inherit;">Expose<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The set of HTTP response headers that browsers are allowed to access. This configures the `Access-Control-Expose-Headers` header.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxage_csharp">
+<a href="#maxage_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional duration specifying how long browsers can cache the results of a preflight request. This configures the Access-Control-Max-Age header. Example: `5h30m`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="allowcredentials_go">
+<a href="#allowcredentials_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether browsers should expose the response to the client-side JavaScript code when the request's credentials mode is `include`. This configures the `Access-Control-Allow-Credentials` header.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowheaders_go">
+<a href="#allowheaders_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The set of allowed HTTP request headers. This configures the `Access-Control-Allow-Headers` header.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowmethods_go">
+<a href="#allowmethods_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Methods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The set of allowed HTTP methods. This configures the `Access-Control-Allow-Methods` header.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="alloworigins_go">
+<a href="#alloworigins_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Origins</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#appspecservicecorsalloworigins">App<wbr>Spec<wbr>Service<wbr>Cors<wbr>Allow<wbr>Origins</a></span>
+    </dt>
+    <dd>{{% md %}}The `Access-Control-Allow-Origin` can be
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exposeheaders_go">
+<a href="#exposeheaders_go" style="color: inherit; text-decoration: inherit;">Expose<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The set of HTTP response headers that browsers are allowed to access. This configures the `Access-Control-Expose-Headers` header.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxage_go">
+<a href="#maxage_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional duration specifying how long browsers can cache the results of a preflight request. This configures the Access-Control-Max-Age header. Example: `5h30m`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="allowcredentials_nodejs">
+<a href="#allowcredentials_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether browsers should expose the response to the client-side JavaScript code when the request's credentials mode is `include`. This configures the `Access-Control-Allow-Credentials` header.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowheaders_nodejs">
+<a href="#allowheaders_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The set of allowed HTTP request headers. This configures the `Access-Control-Allow-Headers` header.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowmethods_nodejs">
+<a href="#allowmethods_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Methods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The set of allowed HTTP methods. This configures the `Access-Control-Allow-Methods` header.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="alloworigins_nodejs">
+<a href="#alloworigins_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Origins</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#appspecservicecorsalloworigins">App<wbr>Spec<wbr>Service<wbr>Cors<wbr>Allow<wbr>Origins</a></span>
+    </dt>
+    <dd>{{% md %}}The `Access-Control-Allow-Origin` can be
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exposeheaders_nodejs">
+<a href="#exposeheaders_nodejs" style="color: inherit; text-decoration: inherit;">expose<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The set of HTTP response headers that browsers are allowed to access. This configures the `Access-Control-Expose-Headers` header.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxage_nodejs">
+<a href="#maxage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional duration specifying how long browsers can cache the results of a preflight request. This configures the Access-Control-Max-Age header. Example: `5h30m`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="allow_credentials_python">
+<a href="#allow_credentials_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether browsers should expose the response to the client-side JavaScript code when the request's credentials mode is `include`. This configures the `Access-Control-Allow-Credentials` header.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allow_headers_python">
+<a href="#allow_headers_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The set of allowed HTTP request headers. This configures the `Access-Control-Allow-Headers` header.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allow_methods_python">
+<a href="#allow_methods_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>methods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The set of allowed HTTP methods. This configures the `Access-Control-Allow-Methods` header.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allow_origins_python">
+<a href="#allow_origins_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>origins</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#appspecservicecorsalloworigins">App<wbr>Spec<wbr>Service<wbr>Cors<wbr>Allow<wbr>Origins</a></span>
+    </dt>
+    <dd>{{% md %}}The `Access-Control-Allow-Origin` can be
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expose_headers_python">
+<a href="#expose_headers_python" style="color: inherit; text-decoration: inherit;">expose_<wbr>headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The set of HTTP response headers that browsers are allowed to access. This configures the `Access-Control-Expose-Headers` header.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="max_age_python">
+<a href="#max_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An optional duration specifying how long browsers can cache the results of a preflight request. This configures the Access-Control-Max-Age header. Example: `5h30m`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="appspecservicecorsalloworigins">App<wbr>Spec<wbr>Service<wbr>Cors<wbr>Allow<wbr>Origins</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="exact_csharp">
+<a href="#exact_csharp" style="color: inherit; text-decoration: inherit;">Exact</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The `Access-Control-Allow-Origin` header will be set to the client's origin only if the client's origin exactly matches the value you provide.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prefix_csharp">
+<a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The `Access-Control-Allow-Origin` header will be set to the client's origin if the beginning of the client's origin matches the value you provide.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="regex_csharp">
+<a href="#regex_csharp" style="color: inherit; text-decoration: inherit;">Regex</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The `Access-Control-Allow-Origin` header will be set to the client's origin if the client’s origin matches the regex you provide, in [RE2 style syntax](https://github.com/google/re2/wiki/Syntax).
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="exact_go">
+<a href="#exact_go" style="color: inherit; text-decoration: inherit;">Exact</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The `Access-Control-Allow-Origin` header will be set to the client's origin only if the client's origin exactly matches the value you provide.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prefix_go">
+<a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The `Access-Control-Allow-Origin` header will be set to the client's origin if the beginning of the client's origin matches the value you provide.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="regex_go">
+<a href="#regex_go" style="color: inherit; text-decoration: inherit;">Regex</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The `Access-Control-Allow-Origin` header will be set to the client's origin if the client’s origin matches the regex you provide, in [RE2 style syntax](https://github.com/google/re2/wiki/Syntax).
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="exact_nodejs">
+<a href="#exact_nodejs" style="color: inherit; text-decoration: inherit;">exact</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The `Access-Control-Allow-Origin` header will be set to the client's origin only if the client's origin exactly matches the value you provide.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prefix_nodejs">
+<a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The `Access-Control-Allow-Origin` header will be set to the client's origin if the beginning of the client's origin matches the value you provide.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="regex_nodejs">
+<a href="#regex_nodejs" style="color: inherit; text-decoration: inherit;">regex</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The `Access-Control-Allow-Origin` header will be set to the client's origin if the client’s origin matches the regex you provide, in [RE2 style syntax](https://github.com/google/re2/wiki/Syntax).
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="exact_python">
+<a href="#exact_python" style="color: inherit; text-decoration: inherit;">exact</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The `Access-Control-Allow-Origin` header will be set to the client's origin only if the client's origin exactly matches the value you provide.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prefix_python">
+<a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The `Access-Control-Allow-Origin` header will be set to the client's origin if the beginning of the client's origin matches the value you provide.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="regex_python">
+<a href="#regex_python" style="color: inherit; text-decoration: inherit;">regex</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The `Access-Control-Allow-Origin` header will be set to the client's origin if the client’s origin matches the regex you provide, in [RE2 style syntax](https://github.com/google/re2/wiki/Syntax).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5087,6 +5484,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the document to use as the fallback for any requests to documents that are not found when serving this static site.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="cors_csharp">
+<a href="#cors_csharp" style="color: inherit; text-decoration: inherit;">Cors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#appspecstaticsitecors">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Cors</a></span>
+    </dt>
+    <dd>{{% md %}}The [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) policies of the app.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="dockerfilepath_csharp">
 <a href="#dockerfilepath_csharp" style="color: inherit; text-decoration: inherit;">Dockerfile<wbr>Path</a>
 </span>
@@ -5214,6 +5620,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the document to use as the fallback for any requests to documents that are not found when serving this static site.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cors_go">
+<a href="#cors_go" style="color: inherit; text-decoration: inherit;">Cors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#appspecstaticsitecors">App<wbr>Spec<wbr>Static<wbr>Site<wbr>Cors</a></span>
+    </dt>
+    <dd>{{% md %}}The [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) policies of the app.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dockerfilepath_go">
@@ -5345,6 +5760,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the document to use as the fallback for any requests to documents that are not found when serving this static site.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="cors_nodejs">
+<a href="#cors_nodejs" style="color: inherit; text-decoration: inherit;">cors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#appspecstaticsitecors">App<wbr>Spec<wbr>Static<wbr>Site<wbr>Cors</a></span>
+    </dt>
+    <dd>{{% md %}}The [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) policies of the app.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="dockerfilepath_nodejs">
 <a href="#dockerfilepath_nodejs" style="color: inherit; text-decoration: inherit;">dockerfile<wbr>Path</a>
 </span>
@@ -5474,6 +5898,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the document to use as the fallback for any requests to documents that are not found when serving this static site.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="cors_python">
+<a href="#cors_python" style="color: inherit; text-decoration: inherit;">cors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#appspecstaticsitecors">App<wbr>Spec<wbr>Static<wbr>Site<wbr>Cors</a></span>
+    </dt>
+    <dd>{{% md %}}The [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) policies of the app.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="dockerfile_path_python">
 <a href="#dockerfile_path_python" style="color: inherit; text-decoration: inherit;">dockerfile_<wbr>path</a>
 </span>
@@ -5570,6 +6003,366 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional path to the working directory to use for the build.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="appspecstaticsitecors">App<wbr>Spec<wbr>Static<wbr>Site<wbr>Cors</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="allowcredentials_csharp">
+<a href="#allowcredentials_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether browsers should expose the response to the client-side JavaScript code when the request's credentials mode is `include`. This configures the `Access-Control-Allow-Credentials` header.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowheaders_csharp">
+<a href="#allowheaders_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The set of allowed HTTP request headers. This configures the `Access-Control-Allow-Headers` header.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowmethods_csharp">
+<a href="#allowmethods_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Methods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The set of allowed HTTP methods. This configures the `Access-Control-Allow-Methods` header.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="alloworigins_csharp">
+<a href="#alloworigins_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Origins</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#appspecstaticsitecorsalloworigins">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Cors<wbr>Allow<wbr>Origins</a></span>
+    </dt>
+    <dd>{{% md %}}The `Access-Control-Allow-Origin` can be
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exposeheaders_csharp">
+<a href="#exposeheaders_csharp" style="color: inherit; text-decoration: inherit;">Expose<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The set of HTTP response headers that browsers are allowed to access. This configures the `Access-Control-Expose-Headers` header.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxage_csharp">
+<a href="#maxage_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional duration specifying how long browsers can cache the results of a preflight request. This configures the Access-Control-Max-Age header. Example: `5h30m`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="allowcredentials_go">
+<a href="#allowcredentials_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether browsers should expose the response to the client-side JavaScript code when the request's credentials mode is `include`. This configures the `Access-Control-Allow-Credentials` header.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowheaders_go">
+<a href="#allowheaders_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The set of allowed HTTP request headers. This configures the `Access-Control-Allow-Headers` header.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowmethods_go">
+<a href="#allowmethods_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Methods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The set of allowed HTTP methods. This configures the `Access-Control-Allow-Methods` header.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="alloworigins_go">
+<a href="#alloworigins_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Origins</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#appspecstaticsitecorsalloworigins">App<wbr>Spec<wbr>Static<wbr>Site<wbr>Cors<wbr>Allow<wbr>Origins</a></span>
+    </dt>
+    <dd>{{% md %}}The `Access-Control-Allow-Origin` can be
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exposeheaders_go">
+<a href="#exposeheaders_go" style="color: inherit; text-decoration: inherit;">Expose<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The set of HTTP response headers that browsers are allowed to access. This configures the `Access-Control-Expose-Headers` header.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxage_go">
+<a href="#maxage_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional duration specifying how long browsers can cache the results of a preflight request. This configures the Access-Control-Max-Age header. Example: `5h30m`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="allowcredentials_nodejs">
+<a href="#allowcredentials_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether browsers should expose the response to the client-side JavaScript code when the request's credentials mode is `include`. This configures the `Access-Control-Allow-Credentials` header.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowheaders_nodejs">
+<a href="#allowheaders_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The set of allowed HTTP request headers. This configures the `Access-Control-Allow-Headers` header.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowmethods_nodejs">
+<a href="#allowmethods_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Methods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The set of allowed HTTP methods. This configures the `Access-Control-Allow-Methods` header.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="alloworigins_nodejs">
+<a href="#alloworigins_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Origins</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#appspecstaticsitecorsalloworigins">App<wbr>Spec<wbr>Static<wbr>Site<wbr>Cors<wbr>Allow<wbr>Origins</a></span>
+    </dt>
+    <dd>{{% md %}}The `Access-Control-Allow-Origin` can be
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exposeheaders_nodejs">
+<a href="#exposeheaders_nodejs" style="color: inherit; text-decoration: inherit;">expose<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The set of HTTP response headers that browsers are allowed to access. This configures the `Access-Control-Expose-Headers` header.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxage_nodejs">
+<a href="#maxage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional duration specifying how long browsers can cache the results of a preflight request. This configures the Access-Control-Max-Age header. Example: `5h30m`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="allow_credentials_python">
+<a href="#allow_credentials_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether browsers should expose the response to the client-side JavaScript code when the request's credentials mode is `include`. This configures the `Access-Control-Allow-Credentials` header.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allow_headers_python">
+<a href="#allow_headers_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The set of allowed HTTP request headers. This configures the `Access-Control-Allow-Headers` header.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allow_methods_python">
+<a href="#allow_methods_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>methods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The set of allowed HTTP methods. This configures the `Access-Control-Allow-Methods` header.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allow_origins_python">
+<a href="#allow_origins_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>origins</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#appspecstaticsitecorsalloworigins">App<wbr>Spec<wbr>Static<wbr>Site<wbr>Cors<wbr>Allow<wbr>Origins</a></span>
+    </dt>
+    <dd>{{% md %}}The `Access-Control-Allow-Origin` can be
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expose_headers_python">
+<a href="#expose_headers_python" style="color: inherit; text-decoration: inherit;">expose_<wbr>headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The set of HTTP response headers that browsers are allowed to access. This configures the `Access-Control-Expose-Headers` header.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="max_age_python">
+<a href="#max_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An optional duration specifying how long browsers can cache the results of a preflight request. This configures the Access-Control-Max-Age header. Example: `5h30m`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="appspecstaticsitecorsalloworigins">App<wbr>Spec<wbr>Static<wbr>Site<wbr>Cors<wbr>Allow<wbr>Origins</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="exact_csharp">
+<a href="#exact_csharp" style="color: inherit; text-decoration: inherit;">Exact</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The `Access-Control-Allow-Origin` header will be set to the client's origin only if the client's origin exactly matches the value you provide.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prefix_csharp">
+<a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The `Access-Control-Allow-Origin` header will be set to the client's origin if the beginning of the client's origin matches the value you provide.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="regex_csharp">
+<a href="#regex_csharp" style="color: inherit; text-decoration: inherit;">Regex</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The `Access-Control-Allow-Origin` header will be set to the client's origin if the client’s origin matches the regex you provide, in [RE2 style syntax](https://github.com/google/re2/wiki/Syntax).
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="exact_go">
+<a href="#exact_go" style="color: inherit; text-decoration: inherit;">Exact</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The `Access-Control-Allow-Origin` header will be set to the client's origin only if the client's origin exactly matches the value you provide.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prefix_go">
+<a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The `Access-Control-Allow-Origin` header will be set to the client's origin if the beginning of the client's origin matches the value you provide.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="regex_go">
+<a href="#regex_go" style="color: inherit; text-decoration: inherit;">Regex</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The `Access-Control-Allow-Origin` header will be set to the client's origin if the client’s origin matches the regex you provide, in [RE2 style syntax](https://github.com/google/re2/wiki/Syntax).
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="exact_nodejs">
+<a href="#exact_nodejs" style="color: inherit; text-decoration: inherit;">exact</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The `Access-Control-Allow-Origin` header will be set to the client's origin only if the client's origin exactly matches the value you provide.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prefix_nodejs">
+<a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The `Access-Control-Allow-Origin` header will be set to the client's origin if the beginning of the client's origin matches the value you provide.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="regex_nodejs">
+<a href="#regex_nodejs" style="color: inherit; text-decoration: inherit;">regex</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The `Access-Control-Allow-Origin` header will be set to the client's origin if the client’s origin matches the regex you provide, in [RE2 style syntax](https://github.com/google/re2/wiki/Syntax).
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="exact_python">
+<a href="#exact_python" style="color: inherit; text-decoration: inherit;">exact</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The `Access-Control-Allow-Origin` header will be set to the client's origin only if the client's origin exactly matches the value you provide.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prefix_python">
+<a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The `Access-Control-Allow-Origin` header will be set to the client's origin if the beginning of the client's origin matches the value you provide.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="regex_python">
+<a href="#regex_python" style="color: inherit; text-decoration: inherit;">regex</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The `Access-Control-Allow-Origin` header will be set to the client's origin if the client’s origin matches the regex you provide, in [RE2 style syntax](https://github.com/google/re2/wiki/Syntax).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6232,7 +7025,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The instance size to use for this component.
+    <dd>{{% md %}}The instance size to use for this component. This determines the plan (basic or professional) and the available CPU and memory. The list of available instance sizes can be [found with the API](https://docs.digitalocean.com/reference/api/api-reference/#operation/list_instance_sizes) or using the [doctl CLI](https://docs.digitalocean.com/reference/doctl/) (`doctl apps tier instance-size list`). Default: `basic-xxs`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runcommand_csharp">
@@ -6353,7 +7146,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The instance size to use for this component.
+    <dd>{{% md %}}The instance size to use for this component. This determines the plan (basic or professional) and the available CPU and memory. The list of available instance sizes can be [found with the API](https://docs.digitalocean.com/reference/api/api-reference/#operation/list_instance_sizes) or using the [doctl CLI](https://docs.digitalocean.com/reference/doctl/) (`doctl apps tier instance-size list`). Default: `basic-xxs`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runcommand_go">
@@ -6474,7 +7267,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The instance size to use for this component.
+    <dd>{{% md %}}The instance size to use for this component. This determines the plan (basic or professional) and the available CPU and memory. The list of available instance sizes can be [found with the API](https://docs.digitalocean.com/reference/api/api-reference/#operation/list_instance_sizes) or using the [doctl CLI](https://docs.digitalocean.com/reference/doctl/) (`doctl apps tier instance-size list`). Default: `basic-xxs`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runcommand_nodejs">
@@ -6595,7 +7388,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The instance size to use for this component.
+    <dd>{{% md %}}The instance size to use for this component. This determines the plan (basic or professional) and the available CPU and memory. The list of available instance sizes can be [found with the API](https://docs.digitalocean.com/reference/api/api-reference/#operation/list_instance_sizes) or using the [doctl CLI](https://docs.digitalocean.com/reference/doctl/) (`doctl apps tier instance-size list`). Default: `basic-xxs`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="run_command_python">

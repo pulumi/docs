@@ -4,6 +4,7 @@ title: "getTransferConfig"
 title_tag: "google-native.bigquerydatatransfer/v1.getTransferConfig"
 meta_desc: "Documentation for the google-native.bigquerydatatransfer/v1.getTransferConfig function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

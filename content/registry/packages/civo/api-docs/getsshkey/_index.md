@@ -4,6 +4,7 @@ title: "getSshKey"
 title_tag: "civo.getSshKey"
 meta_desc: "Documentation for the civo.getSshKey function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

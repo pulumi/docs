@@ -4,6 +4,7 @@ title: "getMCASDataConnector"
 title_tag: "azure-native.securityinsights.getMCASDataConnector"
 meta_desc: "Documentation for the azure-native.securityinsights.getMCASDataConnector function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

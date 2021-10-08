@@ -4,6 +4,7 @@ title: "M3Db"
 title_tag: "aiven.M3Db"
 meta_desc: "Documentation for the aiven.M3Db resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

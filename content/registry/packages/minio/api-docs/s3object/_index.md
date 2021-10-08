@@ -4,6 +4,7 @@ title: "S3Object"
 title_tag: "minio.S3Object"
 meta_desc: "Documentation for the minio.S3Object resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

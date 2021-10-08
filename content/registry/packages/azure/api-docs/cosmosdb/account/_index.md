@@ -4,6 +4,7 @@ title: "Account"
 title_tag: "azure.cosmosdb.Account"
 meta_desc: "Documentation for the azure.cosmosdb.Account resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 
@@ -619,7 +620,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Server Version of a MongoDB account. Possible values are `4.0`, `3.6`, and `3.2`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The Server Version of a MongoDB account. Possible values are `4.0`, `3.6`, and `3.2`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -857,7 +858,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Server Version of a MongoDB account. Possible values are `4.0`, `3.6`, and `3.2`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The Server Version of a MongoDB account. Possible values are `4.0`, `3.6`, and `3.2`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -1095,7 +1096,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Server Version of a MongoDB account. Possible values are `4.0`, `3.6`, and `3.2`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The Server Version of a MongoDB account. Possible values are `4.0`, `3.6`, and `3.2`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -1333,7 +1334,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Server Version of a MongoDB account. Possible values are `4.0`, `3.6`, and `3.2`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The Server Version of a MongoDB account. Possible values are `4.0`, `3.6`, and `3.2`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -2205,7 +2206,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Server Version of a MongoDB account. Possible values are `4.0`, `3.6`, and `3.2`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The Server Version of a MongoDB account. Possible values are `4.0`, `3.6`, and `3.2`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
@@ -2547,7 +2548,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Server Version of a MongoDB account. Possible values are `4.0`, `3.6`, and `3.2`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The Server Version of a MongoDB account. Possible values are `4.0`, `3.6`, and `3.2`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -2889,7 +2890,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Server Version of a MongoDB account. Possible values are `4.0`, `3.6`, and `3.2`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The Server Version of a MongoDB account. Possible values are `4.0`, `3.6`, and `3.2`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
@@ -3231,7 +3232,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Server Version of a MongoDB account. Possible values are `4.0`, `3.6`, and `3.2`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The Server Version of a MongoDB account. Possible values are `4.0`, `3.6`, and `3.2`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">

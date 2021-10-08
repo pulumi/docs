@@ -4,6 +4,7 @@ title: "listIotHubResourceKeysForKeyName"
 title_tag: "azure-native.devices.listIotHubResourceKeysForKeyName"
 meta_desc: "Documentation for the azure-native.devices.listIotHubResourceKeysForKeyName function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getKMSKeyRing"
 title_tag: "gcp.kms.getKMSKeyRing"
 meta_desc: "Documentation for the gcp.kms.getKMSKeyRing function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

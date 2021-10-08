@@ -4,6 +4,7 @@ title: "getOnlineArchives"
 title_tag: "mongodbatlas.getOnlineArchives"
 meta_desc: "Documentation for the mongodbatlas.getOnlineArchives function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

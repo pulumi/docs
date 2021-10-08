@@ -4,6 +4,7 @@ title: "ResourceDataSync"
 title_tag: "aws.ssm.ResourceDataSync"
 meta_desc: "Documentation for the aws.ssm.ResourceDataSync resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

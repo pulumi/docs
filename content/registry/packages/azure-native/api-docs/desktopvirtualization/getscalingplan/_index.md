@@ -4,6 +4,7 @@ title: "getScalingPlan"
 title_tag: "azure-native.desktopvirtualization.getScalingPlan"
 meta_desc: "Documentation for the azure-native.desktopvirtualization.getScalingPlan function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

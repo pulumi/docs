@@ -4,6 +4,7 @@ title: "getEndpointVariant"
 title_tag: "azure-native.machinelearningservices.getEndpointVariant"
 meta_desc: "Documentation for the azure-native.machinelearningservices.getEndpointVariant function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

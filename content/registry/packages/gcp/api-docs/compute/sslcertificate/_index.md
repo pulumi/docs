@@ -4,6 +4,7 @@ title: "SSLCertificate"
 title_tag: "gcp.compute.SSLCertificate"
 meta_desc: "Documentation for the gcp.compute.SSLCertificate resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 
@@ -63,7 +64,40 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"io/ioutil"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func readFileOrPanic(path string) pulumi.StringPtrInput {
+	data, err := ioutil.ReadFile(path)
+	if err != nil {
+		panic(err.Error())
+	}
+	return pulumi.String(string(data))
+}
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewSSLCertificate(ctx, "_default", &compute.SSLCertificateArgs{
+			NamePrefix:  pulumi.String("my-certificate-"),
+			Description: pulumi.String("a description"),
+			PrivateKey:  readFileOrPanic("path/to/private.key"),
+			Certificate: readFileOrPanic("path/to/certificate.crt"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 
@@ -202,7 +236,96 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"io/ioutil"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func readFileOrPanic(path string) pulumi.StringPtrInput {
+	data, err := ioutil.ReadFile(path)
+	if err != nil {
+		panic(err.Error())
+	}
+	return pulumi.String(string(data))
+}
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		defaultSSLCertificate, err := compute.NewSSLCertificate(ctx, "defaultSSLCertificate", &compute.SSLCertificateArgs{
+			NamePrefix:  pulumi.String("my-certificate-"),
+			PrivateKey:  readFileOrPanic("path/to/private.key"),
+			Certificate: readFileOrPanic("path/to/certificate.crt"),
+		})
+		if err != nil {
+			return err
+		}
+		defaultHttpHealthCheck, err := compute.NewHttpHealthCheck(ctx, "defaultHttpHealthCheck", &compute.HttpHealthCheckArgs{
+			RequestPath:      pulumi.String("/"),
+			CheckIntervalSec: pulumi.Int(1),
+			TimeoutSec:       pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		defaultBackendService, err := compute.NewBackendService(ctx, "defaultBackendService", &compute.BackendServiceArgs{
+			PortName:   pulumi.String("http"),
+			Protocol:   pulumi.String("HTTP"),
+			TimeoutSec: pulumi.Int(10),
+			HealthChecks: pulumi.String{
+				defaultHttpHealthCheck.ID(),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		defaultURLMap, err := compute.NewURLMap(ctx, "defaultURLMap", &compute.URLMapArgs{
+			Description:    pulumi.String("a description"),
+			DefaultService: defaultBackendService.ID(),
+			HostRules: compute.URLMapHostRuleArray{
+				&compute.URLMapHostRuleArgs{
+					Hosts: pulumi.StringArray{
+						pulumi.String("mysite.com"),
+					},
+					PathMatcher: pulumi.String("allpaths"),
+				},
+			},
+			PathMatchers: compute.URLMapPathMatcherArray{
+				&compute.URLMapPathMatcherArgs{
+					Name:           pulumi.String("allpaths"),
+					DefaultService: defaultBackendService.ID(),
+					PathRules: compute.URLMapPathMatcherPathRuleArray{
+						&compute.URLMapPathMatcherPathRuleArgs{
+							Paths: pulumi.StringArray{
+								pulumi.String("/*"),
+							},
+							Service: defaultBackendService.ID(),
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewTargetHttpsProxy(ctx, "defaultTargetHttpsProxy", &compute.TargetHttpsProxyArgs{
+			UrlMap: defaultURLMap.ID(),
+			SslCertificates: pulumi.StringArray{
+				defaultSSLCertificate.ID(),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 

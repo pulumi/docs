@@ -4,6 +4,7 @@ title: "getPrivateEndpoint"
 title_tag: "azure-native.network.getPrivateEndpoint"
 meta_desc: "Documentation for the azure-native.network.getPrivateEndpoint function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

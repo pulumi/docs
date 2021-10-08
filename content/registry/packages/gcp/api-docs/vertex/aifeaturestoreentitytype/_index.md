@@ -4,6 +4,7 @@ title: "AiFeatureStoreEntityType"
 title_tag: "gcp.vertex.AiFeatureStoreEntityType"
 meta_desc: "Documentation for the gcp.vertex.AiFeatureStoreEntityType resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

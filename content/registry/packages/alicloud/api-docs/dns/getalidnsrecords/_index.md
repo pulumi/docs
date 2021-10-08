@@ -4,6 +4,7 @@ title: "getAlidnsRecords"
 title_tag: "alicloud.dns.getAlidnsRecords"
 meta_desc: "Documentation for the alicloud.dns.getAlidnsRecords function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

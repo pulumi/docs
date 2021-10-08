@@ -4,6 +4,7 @@ title: "getForwardingRule"
 title_tag: "gcp.compute.getForwardingRule"
 meta_desc: "Documentation for the gcp.compute.getForwardingRule function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

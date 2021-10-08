@@ -4,6 +4,7 @@ title: "getAuthorizationPolicy"
 title_tag: "google-native.networksecurity/v1beta1.getAuthorizationPolicy"
 meta_desc: "Documentation for the google-native.networksecurity/v1beta1.getAuthorizationPolicy function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

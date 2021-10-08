@@ -4,6 +4,7 @@ title: "getEndpoints"
 title_tag: "alicloud.polardb.getEndpoints"
 meta_desc: "Documentation for the alicloud.polardb.getEndpoints function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

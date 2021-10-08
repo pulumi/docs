@@ -4,6 +4,7 @@ title: "getBindings"
 title_tag: "alicloud.amqp.getBindings"
 meta_desc: "Documentation for the alicloud.amqp.getBindings function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

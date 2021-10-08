@@ -4,6 +4,7 @@ title: "PreparedStatement"
 title_tag: "aws-native.athena.PreparedStatement"
 meta_desc: "Documentation for the aws-native.athena.PreparedStatement resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

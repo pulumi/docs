@@ -4,6 +4,7 @@ title: "SqlFunction"
 title_tag: "azure.cosmosdb.SqlFunction"
 meta_desc: "Documentation for the azure.cosmosdb.SqlFunction resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

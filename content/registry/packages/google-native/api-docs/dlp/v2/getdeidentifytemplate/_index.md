@@ -4,6 +4,7 @@ title: "getDeidentifyTemplate"
 title_tag: "google-native.dlp/v2.getDeidentifyTemplate"
 meta_desc: "Documentation for the google-native.dlp/v2.getDeidentifyTemplate function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

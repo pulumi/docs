@@ -4,6 +4,7 @@ title: "LinkedServiceKusto"
 title_tag: "azure.datafactory.LinkedServiceKusto"
 meta_desc: "Documentation for the azure.datafactory.LinkedServiceKusto resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

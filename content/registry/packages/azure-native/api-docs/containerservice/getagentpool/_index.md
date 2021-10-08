@@ -4,6 +4,7 @@ title: "getAgentPool"
 title_tag: "azure-native.containerservice.getAgentPool"
 meta_desc: "Documentation for the azure-native.containerservice.getAgentPool function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

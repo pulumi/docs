@@ -4,6 +4,7 @@ title: "getDateTimeVariable"
 title_tag: "azure.automation.getDateTimeVariable"
 meta_desc: "Documentation for the azure.automation.getDateTimeVariable function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

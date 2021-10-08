@@ -4,6 +4,7 @@ title: "UserPoolDomain"
 title_tag: "aws.cognito.UserPoolDomain"
 meta_desc: "Documentation for the aws.cognito.UserPoolDomain resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

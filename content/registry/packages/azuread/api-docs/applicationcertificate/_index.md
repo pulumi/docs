@@ -4,6 +4,7 @@ title: "ApplicationCertificate"
 title_tag: "azuread.ApplicationCertificate"
 meta_desc: "Documentation for the azuread.ApplicationCertificate resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

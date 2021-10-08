@@ -4,6 +4,7 @@ title: "getRegistryGroupIamPolicy"
 title_tag: "google-native.cloudiot/v1.getRegistryGroupIamPolicy"
 meta_desc: "Documentation for the google-native.cloudiot/v1.getRegistryGroupIamPolicy function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

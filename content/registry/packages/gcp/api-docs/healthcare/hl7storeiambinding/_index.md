@@ -4,6 +4,7 @@ title: "Hl7StoreIamBinding"
 title_tag: "gcp.healthcare.Hl7StoreIamBinding"
 meta_desc: "Documentation for the gcp.healthcare.Hl7StoreIamBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

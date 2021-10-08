@@ -4,6 +4,7 @@ title: "EventSubscription"
 title_tag: "azure.eventhub.EventSubscription"
 meta_desc: "Documentation for the azure.eventhub.EventSubscription resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

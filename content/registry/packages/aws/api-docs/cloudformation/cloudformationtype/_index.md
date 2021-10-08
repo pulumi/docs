@@ -4,6 +4,7 @@ title: "CloudFormationType"
 title_tag: "aws.cloudformation.CloudFormationType"
 meta_desc: "Documentation for the aws.cloudformation.CloudFormationType resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

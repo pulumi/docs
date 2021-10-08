@@ -4,6 +4,7 @@ title: "ZoneAttachment"
 title_tag: "alicloud.pvtz.ZoneAttachment"
 meta_desc: "Documentation for the alicloud.pvtz.ZoneAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

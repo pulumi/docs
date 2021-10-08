@@ -4,6 +4,7 @@ title: "GeoBackupPolicy"
 title_tag: "azure-native.sql.GeoBackupPolicy"
 meta_desc: "Documentation for the azure-native.sql.GeoBackupPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

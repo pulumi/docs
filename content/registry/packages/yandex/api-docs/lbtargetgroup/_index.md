@@ -4,6 +4,7 @@ title: "LbTargetGroup"
 title_tag: "yandex.LbTargetGroup"
 meta_desc: "Documentation for the yandex.LbTargetGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

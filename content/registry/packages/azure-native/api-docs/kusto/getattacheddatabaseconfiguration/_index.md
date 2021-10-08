@@ -4,6 +4,7 @@ title: "getAttachedDatabaseConfiguration"
 title_tag: "azure-native.kusto.getAttachedDatabaseConfiguration"
 meta_desc: "Documentation for the azure-native.kusto.getAttachedDatabaseConfiguration function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

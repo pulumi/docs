@@ -4,6 +4,7 @@ title: "getAuthBackendConfig"
 title_tag: "vault.kubernetes.getAuthBackendConfig"
 meta_desc: "Documentation for the vault.kubernetes.getAuthBackendConfig function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

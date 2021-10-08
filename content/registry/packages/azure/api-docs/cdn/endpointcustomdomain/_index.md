@@ -4,6 +4,7 @@ title: "EndpointCustomDomain"
 title_tag: "azure.cdn.EndpointCustomDomain"
 meta_desc: "Documentation for the azure.cdn.EndpointCustomDomain resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getPartner"
 title_tag: "azure-native.managementpartner.getPartner"
 meta_desc: "Documentation for the azure-native.managementpartner.getPartner function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

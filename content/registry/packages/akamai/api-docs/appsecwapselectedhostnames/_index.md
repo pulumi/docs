@@ -4,6 +4,7 @@ title: "AppSecWapSelectedHostnames"
 title_tag: "akamai.AppSecWapSelectedHostnames"
 meta_desc: "Documentation for the akamai.AppSecWapSelectedHostnames resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getBackupRun"
 title_tag: "google-native.sqladmin/v1beta4.getBackupRun"
 meta_desc: "Documentation for the google-native.sqladmin/v1beta4.getBackupRun function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

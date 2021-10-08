@@ -4,6 +4,7 @@ title: "VpcEndpointServiceResource"
 title_tag: "alicloud.privatelink.VpcEndpointServiceResource"
 meta_desc: "Documentation for the alicloud.privatelink.VpcEndpointServiceResource resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

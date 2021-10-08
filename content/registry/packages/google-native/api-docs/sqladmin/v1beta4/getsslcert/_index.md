@@ -4,6 +4,7 @@ title: "getSslCert"
 title_tag: "google-native.sqladmin/v1beta4.getSslCert"
 meta_desc: "Documentation for the google-native.sqladmin/v1beta4.getSslCert function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

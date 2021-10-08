@@ -4,6 +4,7 @@ title: "getEntitlement"
 title_tag: "google-native.cloudchannel/v1.getEntitlement"
 meta_desc: "Documentation for the google-native.cloudchannel/v1.getEntitlement function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

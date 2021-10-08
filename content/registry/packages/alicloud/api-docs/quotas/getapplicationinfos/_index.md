@@ -4,6 +4,7 @@ title: "getApplicationInfos"
 title_tag: "alicloud.quotas.getApplicationInfos"
 meta_desc: "Documentation for the alicloud.quotas.getApplicationInfos function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

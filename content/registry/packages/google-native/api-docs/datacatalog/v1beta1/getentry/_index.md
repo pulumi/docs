@@ -4,6 +4,7 @@ title: "getEntry"
 title_tag: "google-native.datacatalog/v1beta1.getEntry"
 meta_desc: "Documentation for the google-native.datacatalog/v1beta1.getEntry function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

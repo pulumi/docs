@@ -4,6 +4,7 @@ title: "getConnectionMonitor"
 title_tag: "azure-native.network.getConnectionMonitor"
 meta_desc: "Documentation for the azure-native.network.getConnectionMonitor function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

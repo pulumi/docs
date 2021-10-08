@@ -4,6 +4,7 @@ title: "getVault"
 title_tag: "aws.backup.getVault"
 meta_desc: "Documentation for the aws.backup.getVault function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getRegistryRepository"
 title_tag: "gcp.container.getRegistryRepository"
 meta_desc: "Documentation for the gcp.container.getRegistryRepository function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

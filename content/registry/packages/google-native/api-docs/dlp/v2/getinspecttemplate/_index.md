@@ -4,6 +4,7 @@ title: "getInspectTemplate"
 title_tag: "google-native.dlp/v2.getInspectTemplate"
 meta_desc: "Documentation for the google-native.dlp/v2.getInspectTemplate function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

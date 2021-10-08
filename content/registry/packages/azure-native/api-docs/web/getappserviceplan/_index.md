@@ -4,6 +4,7 @@ title: "getAppServicePlan"
 title_tag: "azure-native.web.getAppServicePlan"
 meta_desc: "Documentation for the azure-native.web.getAppServicePlan function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

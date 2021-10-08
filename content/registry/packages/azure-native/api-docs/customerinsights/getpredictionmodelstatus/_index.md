@@ -4,6 +4,7 @@ title: "getPredictionModelStatus"
 title_tag: "azure-native.customerinsights.getPredictionModelStatus"
 meta_desc: "Documentation for the azure-native.customerinsights.getPredictionModelStatus function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

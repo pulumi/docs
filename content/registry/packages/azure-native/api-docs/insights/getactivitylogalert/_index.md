@@ -4,6 +4,7 @@ title: "getActivityLogAlert"
 title_tag: "azure-native.insights.getActivityLogAlert"
 meta_desc: "Documentation for the azure-native.insights.getActivityLogAlert function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

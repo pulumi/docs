@@ -4,6 +4,7 @@ title: "getInstanceProfile"
 title_tag: "aws.iam.getInstanceProfile"
 meta_desc: "Documentation for the aws.iam.getInstanceProfile function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

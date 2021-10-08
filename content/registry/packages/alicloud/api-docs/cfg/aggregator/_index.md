@@ -4,6 +4,7 @@ title: "Aggregator"
 title_tag: "alicloud.cfg.Aggregator"
 meta_desc: "Documentation for the alicloud.cfg.Aggregator resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getBotAlias"
 title_tag: "aws.lex.getBotAlias"
 meta_desc: "Documentation for the aws.lex.getBotAlias function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

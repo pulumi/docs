@@ -4,6 +4,7 @@ title: "HumanTaskUI"
 title_tag: "aws.sagemaker.HumanTaskUI"
 meta_desc: "Documentation for the aws.sagemaker.HumanTaskUI resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

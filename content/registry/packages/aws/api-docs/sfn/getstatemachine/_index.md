@@ -4,6 +4,7 @@ title: "getStateMachine"
 title_tag: "aws.sfn.getStateMachine"
 meta_desc: "Documentation for the aws.sfn.getStateMachine function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getMetricRuleTemplates"
 title_tag: "alicloud.cms.getMetricRuleTemplates"
 meta_desc: "Documentation for the alicloud.cms.getMetricRuleTemplates function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

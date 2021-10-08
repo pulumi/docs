@@ -4,6 +4,7 @@ title: "getScheduledQueryRulesLog"
 title_tag: "azure.monitoring.getScheduledQueryRulesLog"
 meta_desc: "Documentation for the azure.monitoring.getScheduledQueryRulesLog function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

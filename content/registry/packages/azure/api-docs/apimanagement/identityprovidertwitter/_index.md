@@ -4,6 +4,7 @@ title: "IdentityProviderTwitter"
 title_tag: "azure.apimanagement.IdentityProviderTwitter"
 meta_desc: "Documentation for the azure.apimanagement.IdentityProviderTwitter resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

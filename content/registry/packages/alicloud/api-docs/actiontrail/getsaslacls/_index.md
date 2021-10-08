@@ -4,6 +4,7 @@ title: "getSaslAcls"
 title_tag: "alicloud.actiontrail.getSaslAcls"
 meta_desc: "Documentation for the alicloud.actiontrail.getSaslAcls function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

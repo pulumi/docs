@@ -4,6 +4,7 @@ title: "getProtectionPolicy"
 title_tag: "azure-native.recoveryservices.getProtectionPolicy"
 meta_desc: "Documentation for the azure-native.recoveryservices.getProtectionPolicy function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

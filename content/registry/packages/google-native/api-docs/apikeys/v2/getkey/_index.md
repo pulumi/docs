@@ -4,6 +4,7 @@ title: "getKey"
 title_tag: "google-native.apikeys/v2.getKey"
 meta_desc: "Documentation for the google-native.apikeys/v2.getKey function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getScheduledTrigger"
 title_tag: "azure-native.datashare.getScheduledTrigger"
 meta_desc: "Documentation for the azure-native.datashare.getScheduledTrigger function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "DicomStoreIamBinding"
 title_tag: "gcp.healthcare.DicomStoreIamBinding"
 meta_desc: "Documentation for the gcp.healthcare.DicomStoreIamBinding resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

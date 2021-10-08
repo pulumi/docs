@@ -4,6 +4,7 @@ title: "getServer"
 title_tag: "azure.postgresql.getServer"
 meta_desc: "Documentation for the azure.postgresql.getServer function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

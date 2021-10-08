@@ -4,6 +4,7 @@ title: "NetworkListSubscription"
 title_tag: "akamai.NetworkListSubscription"
 meta_desc: "Documentation for the akamai.NetworkListSubscription resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getAvailabilitySet"
 title_tag: "azure-native.compute.getAvailabilitySet"
 meta_desc: "Documentation for the azure-native.compute.getAvailabilitySet function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

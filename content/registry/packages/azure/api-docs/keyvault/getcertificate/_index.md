@@ -4,6 +4,7 @@ title: "getCertificate"
 title_tag: "azure.keyvault.getCertificate"
 meta_desc: "Documentation for the azure.keyvault.getCertificate function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 
@@ -339,6 +340,15 @@ The following output properties are available:
     <dd>{{% md %}}A `certificate_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="expires_csharp">
+<a href="#expires_csharp" style="color: inherit; text-decoration: inherit;">Expires</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Expiry date of certificate in RFC3339 format.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -363,6 +373,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Certificate Issuer.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="notbefore_csharp">
+<a href="#notbefore_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Not Before date of certificate in RFC3339 format.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secretid_csharp">
@@ -432,6 +451,15 @@ The following output properties are available:
     <dd>{{% md %}}A `certificate_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="expires_go">
+<a href="#expires_go" style="color: inherit; text-decoration: inherit;">Expires</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Expiry date of certificate in RFC3339 format.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -456,6 +484,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Certificate Issuer.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="notbefore_go">
+<a href="#notbefore_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Not Before date of certificate in RFC3339 format.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secretid_go">
@@ -525,6 +562,15 @@ The following output properties are available:
     <dd>{{% md %}}A `certificate_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="expires_nodejs">
+<a href="#expires_nodejs" style="color: inherit; text-decoration: inherit;">expires</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Expiry date of certificate in RFC3339 format.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -549,6 +595,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Certificate Issuer.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="notbefore_nodejs">
+<a href="#notbefore_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Not Before date of certificate in RFC3339 format.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secretid_nodejs">
@@ -618,6 +673,15 @@ The following output properties are available:
     <dd>{{% md %}}A `certificate_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="expires_python">
+<a href="#expires_python" style="color: inherit; text-decoration: inherit;">expires</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Expiry date of certificate in RFC3339 format.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -642,6 +706,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Certificate Issuer.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="not_before_python">
+<a href="#not_before_python" style="color: inherit; text-decoration: inherit;">not_<wbr>before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Not Before date of certificate in RFC3339 format.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secret_id_python">

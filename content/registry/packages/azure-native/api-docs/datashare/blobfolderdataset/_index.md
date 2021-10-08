@@ -4,6 +4,7 @@ title: "BlobFolderDataSet"
 title_tag: "azure-native.datashare.BlobFolderDataSet"
 meta_desc: "Documentation for the azure-native.datashare.BlobFolderDataSet resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

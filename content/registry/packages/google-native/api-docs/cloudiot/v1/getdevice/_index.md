@@ -4,6 +4,7 @@ title: "getDevice"
 title_tag: "google-native.cloudiot/v1.getDevice"
 meta_desc: "Documentation for the google-native.cloudiot/v1.getDevice function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

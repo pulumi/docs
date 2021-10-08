@@ -4,6 +4,7 @@ title: "getUser"
 title_tag: "github.getUser"
 meta_desc: "Documentation for the github.getUser function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

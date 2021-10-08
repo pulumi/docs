@@ -4,6 +4,7 @@ title: "SapMonitor"
 title_tag: "azure-native.hanaonazure.SapMonitor"
 meta_desc: "Documentation for the azure-native.hanaonazure.SapMonitor resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getUsers"
 title_tag: "azuredevops.Identities.getUsers"
 meta_desc: "Documentation for the azuredevops.Identities.getUsers function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

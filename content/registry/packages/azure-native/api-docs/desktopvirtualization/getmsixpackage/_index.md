@@ -4,6 +4,7 @@ title: "getMSIXPackage"
 title_tag: "azure-native.desktopvirtualization.getMSIXPackage"
 meta_desc: "Documentation for the azure-native.desktopvirtualization.getMSIXPackage function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

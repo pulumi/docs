@@ -4,6 +4,7 @@ title: "listVMHost"
 title_tag: "azure-native.elastic.listVMHost"
 meta_desc: "Documentation for the azure-native.elastic.listVMHost function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

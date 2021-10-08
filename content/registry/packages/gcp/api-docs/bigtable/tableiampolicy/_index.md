@@ -4,6 +4,7 @@ title: "TableIamPolicy"
 title_tag: "gcp.bigtable.TableIamPolicy"
 meta_desc: "Documentation for the gcp.bigtable.TableIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

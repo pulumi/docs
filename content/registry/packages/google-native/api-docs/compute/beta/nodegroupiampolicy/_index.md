@@ -4,6 +4,7 @@ title: "NodeGroupIamPolicy"
 title_tag: "google-native.compute/beta.NodeGroupIamPolicy"
 meta_desc: "Documentation for the google-native.compute/beta.NodeGroupIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

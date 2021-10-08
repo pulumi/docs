@@ -4,6 +4,7 @@ title: "ApiIamMember"
 title_tag: "gcp.apigateway.ApiIamMember"
 meta_desc: "Documentation for the gcp.apigateway.ApiIamMember resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

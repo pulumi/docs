@@ -4,6 +4,7 @@ title: "Route"
 title_tag: "gcp.compute.Route"
 meta_desc: "Documentation for the gcp.compute.Route resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

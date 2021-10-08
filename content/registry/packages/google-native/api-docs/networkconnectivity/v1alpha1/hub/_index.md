@@ -4,6 +4,7 @@ title: "Hub"
 title_tag: "google-native.networkconnectivity/v1alpha1.Hub"
 meta_desc: "Documentation for the google-native.networkconnectivity/v1alpha1.Hub resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

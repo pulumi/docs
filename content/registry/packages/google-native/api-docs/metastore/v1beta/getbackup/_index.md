@@ -4,6 +4,7 @@ title: "getBackup"
 title_tag: "google-native.metastore/v1beta.getBackup"
 meta_desc: "Documentation for the google-native.metastore/v1beta.getBackup function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

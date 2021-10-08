@@ -4,6 +4,7 @@ title: "DatasetAzureBlob"
 title_tag: "azure.datafactory.DatasetAzureBlob"
 meta_desc: "Documentation for the azure.datafactory.DatasetAzureBlob resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

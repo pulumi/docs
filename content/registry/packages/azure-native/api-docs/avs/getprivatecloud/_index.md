@@ -4,6 +4,7 @@ title: "getPrivateCloud"
 title_tag: "azure-native.avs.getPrivateCloud"
 meta_desc: "Documentation for the azure-native.avs.getPrivateCloud function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

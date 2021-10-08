@@ -4,6 +4,7 @@ title: "getEncrypt"
 title_tag: "vault.transit.getEncrypt"
 meta_desc: "Documentation for the vault.transit.getEncrypt function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

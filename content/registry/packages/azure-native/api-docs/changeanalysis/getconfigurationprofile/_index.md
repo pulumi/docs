@@ -4,6 +4,7 @@ title: "getConfigurationProfile"
 title_tag: "azure-native.changeanalysis.getConfigurationProfile"
 meta_desc: "Documentation for the azure-native.changeanalysis.getConfigurationProfile function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

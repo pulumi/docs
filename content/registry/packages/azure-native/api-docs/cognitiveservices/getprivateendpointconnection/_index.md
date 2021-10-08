@@ -4,6 +4,7 @@ title: "getPrivateEndpointConnection"
 title_tag: "azure-native.cognitiveservices.getPrivateEndpointConnection"
 meta_desc: "Documentation for the azure-native.cognitiveservices.getPrivateEndpointConnection function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

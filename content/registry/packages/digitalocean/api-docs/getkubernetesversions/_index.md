@@ -4,6 +4,7 @@ title: "getKubernetesVersions"
 title_tag: "digitalocean.getKubernetesVersions"
 meta_desc: "Documentation for the digitalocean.getKubernetesVersions function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

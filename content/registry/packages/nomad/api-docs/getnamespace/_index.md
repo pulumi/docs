@@ -4,6 +4,7 @@ title: "getNamespace"
 title_tag: "nomad.getNamespace"
 meta_desc: "Documentation for the nomad.getNamespace function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

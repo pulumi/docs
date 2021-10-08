@@ -4,6 +4,7 @@ title: "getSubscription"
 title_tag: "azure-native.apimanagement.getSubscription"
 meta_desc: "Documentation for the azure-native.apimanagement.getSubscription function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

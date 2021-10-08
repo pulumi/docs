@@ -4,6 +4,7 @@ title: "listEffectiveVirtualNetworkByNetworkGroup"
 title_tag: "azure-native.network.listEffectiveVirtualNetworkByNetworkGroup"
 meta_desc: "Documentation for the azure-native.network.listEffectiveVirtualNetworkByNetworkGroup function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

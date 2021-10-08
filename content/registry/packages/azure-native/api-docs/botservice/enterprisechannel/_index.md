@@ -4,6 +4,7 @@ title: "EnterpriseChannel"
 title_tag: "azure-native.botservice.EnterpriseChannel"
 meta_desc: "Documentation for the azure-native.botservice.EnterpriseChannel resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

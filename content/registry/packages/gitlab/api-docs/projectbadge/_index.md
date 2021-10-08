@@ -4,6 +4,7 @@ title: "ProjectBadge"
 title_tag: "gitlab.ProjectBadge"
 meta_desc: "Documentation for the gitlab.ProjectBadge resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "ResourceAssociation"
 title_tag: "aws-native.servicecatalogappregistry.ResourceAssociation"
 meta_desc: "Documentation for the aws-native.servicecatalogappregistry.ResourceAssociation resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

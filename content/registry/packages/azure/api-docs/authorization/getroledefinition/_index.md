@@ -4,6 +4,7 @@ title: "getRoleDefinition"
 title_tag: "azure.authorization.getRoleDefinition"
 meta_desc: "Documentation for the azure.authorization.getRoleDefinition function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

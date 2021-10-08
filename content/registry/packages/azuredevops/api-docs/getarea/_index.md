@@ -4,6 +4,7 @@ title: "getArea"
 title_tag: "azuredevops.getArea"
 meta_desc: "Documentation for the azuredevops.getArea function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

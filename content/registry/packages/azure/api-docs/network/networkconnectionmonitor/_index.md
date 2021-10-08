@@ -4,6 +4,7 @@ title: "NetworkConnectionMonitor"
 title_tag: "azure.network.NetworkConnectionMonitor"
 meta_desc: "Documentation for the azure.network.NetworkConnectionMonitor resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

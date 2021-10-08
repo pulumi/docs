@@ -4,6 +4,7 @@ title: "getApplication"
 title_tag: "azure-native.desktopvirtualization.getApplication"
 meta_desc: "Documentation for the azure-native.desktopvirtualization.getApplication function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

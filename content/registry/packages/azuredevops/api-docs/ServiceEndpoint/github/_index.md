@@ -4,6 +4,7 @@ title: "GitHub"
 title_tag: "azuredevops.ServiceEndpoint.GitHub"
 meta_desc: "Documentation for the azuredevops.ServiceEndpoint.GitHub resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

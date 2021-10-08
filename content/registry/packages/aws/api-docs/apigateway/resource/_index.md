@@ -4,6 +4,7 @@ title: "Resource"
 title_tag: "aws.apigateway.Resource"
 meta_desc: "Documentation for the aws.apigateway.Resource resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

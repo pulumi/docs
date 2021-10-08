@@ -4,6 +4,7 @@ title: "getIamPolicyDocument"
 title_tag: "minio.getIamPolicyDocument"
 meta_desc: "Documentation for the minio.getIamPolicyDocument function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

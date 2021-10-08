@@ -4,6 +4,7 @@ title: "getSchedule"
 title_tag: "azure-native.devtestlab.getSchedule"
 meta_desc: "Documentation for the azure-native.devtestlab.getSchedule function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "ServerKey"
 title_tag: "azure.postgresql.ServerKey"
 meta_desc: "Documentation for the azure.postgresql.ServerKey resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

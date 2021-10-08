@@ -4,6 +4,7 @@ title: "getPolicyAttachments"
 title_tag: "alicloud.resourcemanager.getPolicyAttachments"
 meta_desc: "Documentation for the alicloud.resourcemanager.getPolicyAttachments function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

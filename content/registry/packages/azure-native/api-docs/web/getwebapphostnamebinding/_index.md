@@ -4,6 +4,7 @@ title: "getWebAppHostNameBinding"
 title_tag: "azure-native.web.getWebAppHostNameBinding"
 meta_desc: "Documentation for the azure-native.web.getWebAppHostNameBinding function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

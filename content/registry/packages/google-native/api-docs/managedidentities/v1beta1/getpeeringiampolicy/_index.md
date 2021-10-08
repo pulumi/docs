@@ -4,6 +4,7 @@ title: "getPeeringIamPolicy"
 title_tag: "google-native.managedidentities/v1beta1.getPeeringIamPolicy"
 meta_desc: "Documentation for the google-native.managedidentities/v1beta1.getPeeringIamPolicy function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getKnowledgeBase"
 title_tag: "google-native.dialogflow/v2.getKnowledgeBase"
 meta_desc: "Documentation for the google-native.dialogflow/v2.getKnowledgeBase function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

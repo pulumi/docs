@@ -4,6 +4,7 @@ title: "getStorageInsightConfig"
 title_tag: "azure-native.operationalinsights.getStorageInsightConfig"
 meta_desc: "Documentation for the azure-native.operationalinsights.getStorageInsightConfig function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

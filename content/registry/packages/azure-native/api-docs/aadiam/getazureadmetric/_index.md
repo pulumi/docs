@@ -4,6 +4,7 @@ title: "getazureADMetric"
 title_tag: "azure-native.aadiam.getazureADMetric"
 meta_desc: "Documentation for the azure-native.aadiam.getazureADMetric function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

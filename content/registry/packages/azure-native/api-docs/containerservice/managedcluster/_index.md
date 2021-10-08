@@ -4,6 +4,7 @@ title: "ManagedCluster"
 title_tag: "azure-native.containerservice.ManagedCluster"
 meta_desc: "Documentation for the azure-native.containerservice.ManagedCluster resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

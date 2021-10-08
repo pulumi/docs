@@ -4,6 +4,7 @@ title: "getDdosCustomPolicy"
 title_tag: "azure-native.network.getDdosCustomPolicy"
 meta_desc: "Documentation for the azure-native.network.getDdosCustomPolicy function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

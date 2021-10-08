@@ -4,6 +4,7 @@ title: "AlertChannel"
 title_tag: "newrelic.AlertChannel"
 meta_desc: "Documentation for the newrelic.AlertChannel resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

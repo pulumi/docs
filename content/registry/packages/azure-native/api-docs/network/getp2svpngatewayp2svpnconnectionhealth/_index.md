@@ -4,6 +4,7 @@ title: "getP2sVpnGatewayP2sVpnConnectionHealth"
 title_tag: "azure-native.network.getP2sVpnGatewayP2sVpnConnectionHealth"
 meta_desc: "Documentation for the azure-native.network.getP2sVpnGatewayP2sVpnConnectionHealth function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

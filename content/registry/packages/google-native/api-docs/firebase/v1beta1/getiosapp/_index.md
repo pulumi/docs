@@ -4,6 +4,7 @@ title: "getIosApp"
 title_tag: "google-native.firebase/v1beta1.getIosApp"
 meta_desc: "Documentation for the google-native.firebase/v1beta1.getIosApp function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

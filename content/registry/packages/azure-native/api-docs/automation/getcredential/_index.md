@@ -4,6 +4,7 @@ title: "getCredential"
 title_tag: "azure-native.automation.getCredential"
 meta_desc: "Documentation for the azure-native.automation.getCredential function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

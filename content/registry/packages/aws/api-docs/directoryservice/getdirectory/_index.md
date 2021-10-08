@@ -4,6 +4,7 @@ title: "getDirectory"
 title_tag: "aws.directoryservice.getDirectory"
 meta_desc: "Documentation for the aws.directoryservice.getDirectory function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

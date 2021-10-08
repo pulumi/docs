@@ -4,6 +4,7 @@ title: "getVolumeV2"
 title_tag: "openstack.blockstorage.getVolumeV2"
 meta_desc: "Documentation for the openstack.blockstorage.getVolumeV2 function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getAppSecRatePolicies"
 title_tag: "akamai.getAppSecRatePolicies"
 meta_desc: "Documentation for the akamai.getAppSecRatePolicies function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

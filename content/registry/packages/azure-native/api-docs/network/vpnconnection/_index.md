@@ -4,6 +4,7 @@ title: "VpnConnection"
 title_tag: "azure-native.network.VpnConnection"
 meta_desc: "Documentation for the azure-native.network.VpnConnection resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

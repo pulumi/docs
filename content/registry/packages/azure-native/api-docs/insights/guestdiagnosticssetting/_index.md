@@ -4,6 +4,7 @@ title: "GuestDiagnosticsSetting"
 title_tag: "azure-native.insights.GuestDiagnosticsSetting"
 meta_desc: "Documentation for the azure-native.insights.GuestDiagnosticsSetting resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 
@@ -2245,7 +2246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-native:insights:guestDiagnosticsSetting productionMachineSetting /subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/Default-ResourceGroup/providers/microsoft.insights/guestDiagnosticSettings/SampleDiagSetting 
+$ pulumi import azure-native:insights:guestDiagnosticsSetting SampleDiagSetting /subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/Default-ResourceGroup/providers/microsoft.insights/guestDiagnosticSettings/SampleDiagSetting 
 ```
 
 

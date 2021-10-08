@@ -4,6 +4,7 @@ title: "getConnectedCluster"
 title_tag: "azure-native.kubernetes.getConnectedCluster"
 meta_desc: "Documentation for the azure-native.kubernetes.getConnectedCluster function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

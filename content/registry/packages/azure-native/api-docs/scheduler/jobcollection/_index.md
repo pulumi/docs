@@ -4,6 +4,7 @@ title: "JobCollection"
 title_tag: "azure-native.scheduler.JobCollection"
 meta_desc: "Documentation for the azure-native.scheduler.JobCollection resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

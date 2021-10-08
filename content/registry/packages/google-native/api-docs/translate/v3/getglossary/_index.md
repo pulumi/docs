@@ -4,6 +4,7 @@ title: "getGlossary"
 title_tag: "google-native.translate/v3.getGlossary"
 meta_desc: "Documentation for the google-native.translate/v3.getGlossary function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "Subscription"
 title_tag: "google-native.pubsublite/v1.Subscription"
 meta_desc: "Documentation for the google-native.pubsublite/v1.Subscription resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getPropertyRuleFormats"
 title_tag: "akamai.getPropertyRuleFormats"
 meta_desc: "Documentation for the akamai.getPropertyRuleFormats function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

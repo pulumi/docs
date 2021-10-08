@@ -4,6 +4,7 @@ title: "getSharedKeys"
 title_tag: "azure-native.operationalinsights.getSharedKeys"
 meta_desc: "Documentation for the azure-native.operationalinsights.getSharedKeys function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

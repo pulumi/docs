@@ -4,6 +4,7 @@ title: "getAuthBackend"
 title_tag: "vault.getAuthBackend"
 meta_desc: "Documentation for the vault.getAuthBackend function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 
@@ -251,7 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Speficies whether to show this mount in the UI-specific listing endpoint.
+    <dd>{{% md %}}Specifies whether to show this mount in the UI-specific listing endpoint.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="local_csharp">
@@ -335,7 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Speficies whether to show this mount in the UI-specific listing endpoint.
+    <dd>{{% md %}}Specifies whether to show this mount in the UI-specific listing endpoint.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="local_go">
@@ -419,7 +420,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Speficies whether to show this mount in the UI-specific listing endpoint.
+    <dd>{{% md %}}Specifies whether to show this mount in the UI-specific listing endpoint.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="local_nodejs">
@@ -503,7 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Speficies whether to show this mount in the UI-specific listing endpoint.
+    <dd>{{% md %}}Specifies whether to show this mount in the UI-specific listing endpoint.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="local_python">

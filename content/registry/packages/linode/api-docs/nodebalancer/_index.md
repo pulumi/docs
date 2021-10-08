@@ -4,6 +4,7 @@ title: "NodeBalancer"
 title_tag: "linode.NodeBalancer"
 meta_desc: "Documentation for the linode.NodeBalancer resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

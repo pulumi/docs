@@ -4,6 +4,7 @@ title: "MDATPDataConnector"
 title_tag: "azure-native.securityinsights.MDATPDataConnector"
 meta_desc: "Documentation for the azure-native.securityinsights.MDATPDataConnector resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getSystemTopicEventSubscription"
 title_tag: "azure-native.eventgrid.getSystemTopicEventSubscription"
 meta_desc: "Documentation for the azure-native.eventgrid.getSystemTopicEventSubscription function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

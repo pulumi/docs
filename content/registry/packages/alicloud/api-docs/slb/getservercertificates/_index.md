@@ -4,6 +4,7 @@ title: "getServerCertificates"
 title_tag: "alicloud.slb.getServerCertificates"
 meta_desc: "Documentation for the alicloud.slb.getServerCertificates function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

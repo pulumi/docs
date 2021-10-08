@@ -4,6 +4,7 @@ title: "getGroup"
 title_tag: "gitlab.getGroup"
 meta_desc: "Documentation for the gitlab.getGroup function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getHealthAlert"
 title_tag: "azure-native.alertsmanagement.getHealthAlert"
 meta_desc: "Documentation for the azure-native.alertsmanagement.getHealthAlert function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "ScimIntegration"
 title_tag: "snowflake.ScimIntegration"
 meta_desc: "Documentation for the snowflake.ScimIntegration resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

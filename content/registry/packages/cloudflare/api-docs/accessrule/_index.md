@@ -4,6 +4,7 @@ title: "AccessRule"
 title_tag: "cloudflare.AccessRule"
 meta_desc: "Documentation for the cloudflare.AccessRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

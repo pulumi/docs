@@ -4,6 +4,7 @@ title: "User"
 title_tag: "azure.apimanagement.User"
 meta_desc: "Documentation for the azure.apimanagement.User resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

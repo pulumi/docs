@@ -4,6 +4,7 @@ title: "getServiceCertificates"
 title_tag: "alicloud.cas.getServiceCertificates"
 meta_desc: "Documentation for the alicloud.cas.getServiceCertificates function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

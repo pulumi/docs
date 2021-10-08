@@ -4,6 +4,7 @@ title: "Certificate"
 title_tag: "alicloud.cas.Certificate"
 meta_desc: "Documentation for the alicloud.cas.Certificate resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

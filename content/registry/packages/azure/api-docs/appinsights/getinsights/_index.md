@@ -4,6 +4,7 @@ title: "getInsights"
 title_tag: "azure.appinsights.getInsights"
 meta_desc: "Documentation for the azure.appinsights.getInsights function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

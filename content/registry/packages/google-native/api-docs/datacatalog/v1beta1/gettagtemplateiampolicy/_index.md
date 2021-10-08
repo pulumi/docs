@@ -4,6 +4,7 @@ title: "getTagTemplateIamPolicy"
 title_tag: "google-native.datacatalog/v1beta1.getTagTemplateIamPolicy"
 meta_desc: "Documentation for the google-native.datacatalog/v1beta1.getTagTemplateIamPolicy function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

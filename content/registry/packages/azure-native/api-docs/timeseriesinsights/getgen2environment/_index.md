@@ -4,6 +4,7 @@ title: "getGen2Environment"
 title_tag: "azure-native.timeseriesinsights.getGen2Environment"
 meta_desc: "Documentation for the azure-native.timeseriesinsights.getGen2Environment function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

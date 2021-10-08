@@ -4,6 +4,7 @@ title: "getProtectedItem"
 title_tag: "azure-native.recoveryservices.getProtectedItem"
 meta_desc: "Documentation for the azure-native.recoveryservices.getProtectedItem function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

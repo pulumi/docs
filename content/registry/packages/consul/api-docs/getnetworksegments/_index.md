@@ -4,6 +4,7 @@ title: "getNetworkSegments"
 title_tag: "consul.getNetworkSegments"
 meta_desc: "Documentation for the consul.getNetworkSegments function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

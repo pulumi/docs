@@ -4,6 +4,7 @@ title: "Deployment"
 title_tag: "kubernetes.extensions/v1beta1.Deployment"
 meta_desc: "Documentation for the kubernetes.extensions/v1beta1.Deployment resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

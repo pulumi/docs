@@ -4,6 +4,7 @@ title: "getWebPubSubSharedPrivateLinkResource"
 title_tag: "azure-native.webpubsub.getWebPubSubSharedPrivateLinkResource"
 meta_desc: "Documentation for the azure-native.webpubsub.getWebPubSubSharedPrivateLinkResource function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

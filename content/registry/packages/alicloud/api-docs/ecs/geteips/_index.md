@@ -4,6 +4,7 @@ title: "getEips"
 title_tag: "alicloud.ecs.getEips"
 meta_desc: "Documentation for the alicloud.ecs.getEips function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

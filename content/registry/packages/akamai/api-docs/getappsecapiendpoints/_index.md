@@ -4,6 +4,7 @@ title: "getAppSecApiEndpoints"
 title_tag: "akamai.getAppSecApiEndpoints"
 meta_desc: "Documentation for the akamai.getAppSecApiEndpoints function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

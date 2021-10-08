@@ -4,6 +4,7 @@ title: "PrivateStoreCollectionOffer"
 title_tag: "azure-native.marketplace.PrivateStoreCollectionOffer"
 meta_desc: "Documentation for the azure-native.marketplace.PrivateStoreCollectionOffer resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

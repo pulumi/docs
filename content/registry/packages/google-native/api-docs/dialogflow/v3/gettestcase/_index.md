@@ -4,6 +4,7 @@ title: "getTestCase"
 title_tag: "google-native.dialogflow/v3.getTestCase"
 meta_desc: "Documentation for the google-native.dialogflow/v3.getTestCase function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

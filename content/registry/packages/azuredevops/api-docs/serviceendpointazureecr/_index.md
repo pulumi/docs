@@ -4,6 +4,7 @@ title: "ServiceEndpointAzureEcr"
 title_tag: "azuredevops.ServiceEndpointAzureEcr"
 meta_desc: "Documentation for the azuredevops.ServiceEndpointAzureEcr resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

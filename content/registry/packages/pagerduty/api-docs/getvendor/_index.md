@@ -4,6 +4,7 @@ title: "getVendor"
 title_tag: "pagerduty.getVendor"
 meta_desc: "Documentation for the pagerduty.getVendor function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getDatabaseSecurityAlertPolicy"
 title_tag: "azure-native.sql.getDatabaseSecurityAlertPolicy"
 meta_desc: "Documentation for the azure-native.sql.getDatabaseSecurityAlertPolicy function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

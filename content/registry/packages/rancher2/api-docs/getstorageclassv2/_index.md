@@ -4,6 +4,7 @@ title: "getStorageClassV2"
 title_tag: "rancher2.getStorageClassV2"
 meta_desc: "Documentation for the rancher2.getStorageClassV2 function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

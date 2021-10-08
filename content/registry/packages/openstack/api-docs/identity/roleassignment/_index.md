@@ -4,6 +4,7 @@ title: "RoleAssignment"
 title_tag: "openstack.identity.RoleAssignment"
 meta_desc: "Documentation for the openstack.identity.RoleAssignment resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

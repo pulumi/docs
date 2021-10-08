@@ -4,6 +4,7 @@ title: "getLedger"
 title_tag: "aws.qldb.getLedger"
 meta_desc: "Documentation for the aws.qldb.getLedger function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getRuleset"
 title_tag: "pagerduty.getRuleset"
 meta_desc: "Documentation for the pagerduty.getRuleset function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

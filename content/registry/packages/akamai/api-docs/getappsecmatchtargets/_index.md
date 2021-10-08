@@ -4,6 +4,7 @@ title: "getAppSecMatchTargets"
 title_tag: "akamai.getAppSecMatchTargets"
 meta_desc: "Documentation for the akamai.getAppSecMatchTargets function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

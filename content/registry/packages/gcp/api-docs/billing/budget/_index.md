@@ -4,6 +4,7 @@ title: "Budget"
 title_tag: "gcp.billing.Budget"
 meta_desc: "Documentation for the gcp.billing.Budget resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

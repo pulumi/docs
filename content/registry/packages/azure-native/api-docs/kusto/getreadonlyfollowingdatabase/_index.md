@@ -4,6 +4,7 @@ title: "getReadOnlyFollowingDatabase"
 title_tag: "azure-native.kusto.getReadOnlyFollowingDatabase"
 meta_desc: "Documentation for the azure-native.kusto.getReadOnlyFollowingDatabase function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getInstanceGroupManager"
 title_tag: "google-native.compute/alpha.getInstanceGroupManager"
 meta_desc: "Documentation for the google-native.compute/alpha.getInstanceGroupManager function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

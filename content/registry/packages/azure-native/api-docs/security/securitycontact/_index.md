@@ -4,6 +4,7 @@ title: "SecurityContact"
 title_tag: "azure-native.security.SecurityContact"
 meta_desc: "Documentation for the azure-native.security.SecurityContact resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

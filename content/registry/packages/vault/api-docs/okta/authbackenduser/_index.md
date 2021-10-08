@@ -4,6 +4,7 @@ title: "AuthBackendUser"
 title_tag: "vault.okta.AuthBackendUser"
 meta_desc: "Documentation for the vault.okta.AuthBackendUser resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 
@@ -13,7 +14,6 @@ layout: api
 
 Provides a resource to create a user in an
 [Okta auth backend within Vault](https://www.vaultproject.io/docs/auth/okta.html).
-
 
 {{% examples %}}
 
@@ -801,6 +801,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Okta authentication backend users can be imported using its `path/user` ID format, e.g.
+
+```sh
+ $ pulumi import vault:okta/authBackendUser:AuthBackendUser example okta/foo
+```
 
 
 

@@ -4,6 +4,7 @@ title: "FlowSchema"
 title_tag: "kubernetes.flowcontrol.apiserver.k8s.io/v1beta1.FlowSchema"
 meta_desc: "Documentation for the kubernetes.flowcontrol.apiserver.k8s.io/v1beta1.FlowSchema resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

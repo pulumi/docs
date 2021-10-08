@@ -4,6 +4,7 @@ title: "getCloudProviderSnapshot"
 title_tag: "mongodbatlas.getCloudProviderSnapshot"
 meta_desc: "Documentation for the mongodbatlas.getCloudProviderSnapshot function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "VpcSecurityGroupRule"
 title_tag: "yandex.VpcSecurityGroupRule"
 meta_desc: "Documentation for the yandex.VpcSecurityGroupRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

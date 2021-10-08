@@ -4,6 +4,7 @@ title: "SecurityPolicy"
 title_tag: "gcp.compute.SecurityPolicy"
 meta_desc: "Documentation for the gcp.compute.SecurityPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "TeamSyncGroupMapping"
 title_tag: "github.TeamSyncGroupMapping"
 meta_desc: "Documentation for the github.TeamSyncGroupMapping resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

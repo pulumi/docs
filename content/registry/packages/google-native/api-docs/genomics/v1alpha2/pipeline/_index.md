@@ -4,6 +4,7 @@ title: "Pipeline"
 title_tag: "google-native.genomics/v1alpha2.Pipeline"
 meta_desc: "Documentation for the google-native.genomics/v1alpha2.Pipeline resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

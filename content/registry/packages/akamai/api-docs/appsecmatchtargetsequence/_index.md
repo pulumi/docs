@@ -4,6 +4,7 @@ title: "AppSecMatchTargetSequence"
 title_tag: "akamai.AppSecMatchTargetSequence"
 meta_desc: "Documentation for the akamai.AppSecMatchTargetSequence resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

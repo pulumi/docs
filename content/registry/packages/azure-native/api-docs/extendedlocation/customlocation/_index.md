@@ -4,6 +4,7 @@ title: "CustomLocation"
 title_tag: "azure-native.extendedlocation.CustomLocation"
 meta_desc: "Documentation for the azure-native.extendedlocation.CustomLocation resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

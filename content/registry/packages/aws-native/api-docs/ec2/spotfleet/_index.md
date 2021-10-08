@@ -4,6 +4,7 @@ title: "SpotFleet"
 title_tag: "aws-native.ec2.SpotFleet"
 meta_desc: "Documentation for the aws-native.ec2.SpotFleet resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

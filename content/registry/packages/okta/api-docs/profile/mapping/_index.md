@@ -4,6 +4,7 @@ title: "Mapping"
 title_tag: "okta.profile.Mapping"
 meta_desc: "Documentation for the okta.profile.Mapping resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

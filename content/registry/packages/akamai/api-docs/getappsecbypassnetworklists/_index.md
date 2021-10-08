@@ -4,6 +4,7 @@ title: "getAppSecBypassNetworkLists"
 title_tag: "akamai.getAppSecBypassNetworkLists"
 meta_desc: "Documentation for the akamai.getAppSecBypassNetworkLists function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

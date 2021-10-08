@@ -4,6 +4,7 @@ title: "Hub"
 title_tag: "azure-native.customerinsights.Hub"
 meta_desc: "Documentation for the azure-native.customerinsights.Hub resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

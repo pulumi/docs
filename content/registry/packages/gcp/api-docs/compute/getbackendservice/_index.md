@@ -4,6 +4,7 @@ title: "getBackendService"
 title_tag: "gcp.compute.getBackendService"
 meta_desc: "Documentation for the gcp.compute.getBackendService function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

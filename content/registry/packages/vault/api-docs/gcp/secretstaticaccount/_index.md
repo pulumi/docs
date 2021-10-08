@@ -4,6 +4,7 @@ title: "SecretStaticAccount"
 title_tag: "vault.gcp.SecretStaticAccount"
 meta_desc: "Documentation for the vault.gcp.SecretStaticAccount resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

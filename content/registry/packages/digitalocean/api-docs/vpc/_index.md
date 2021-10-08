@@ -4,6 +4,7 @@ title: "Vpc"
 title_tag: "digitalocean.Vpc"
 meta_desc: "Documentation for the digitalocean.Vpc resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

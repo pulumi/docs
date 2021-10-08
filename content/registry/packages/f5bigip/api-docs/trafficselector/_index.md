@@ -4,6 +4,7 @@ title: "TrafficSelector"
 title_tag: "f5bigip.TrafficSelector"
 meta_desc: "Documentation for the f5bigip.TrafficSelector resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

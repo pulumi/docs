@@ -4,6 +4,7 @@ title: "getLocations"
 title_tag: "gcp.cloudrun.getLocations"
 meta_desc: "Documentation for the gcp.cloudrun.getLocations function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

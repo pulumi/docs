@@ -4,6 +4,7 @@ title: "getServicePerimeter"
 title_tag: "google-native.accesscontextmanager/v1.getServicePerimeter"
 meta_desc: "Documentation for the google-native.accesscontextmanager/v1.getServicePerimeter function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

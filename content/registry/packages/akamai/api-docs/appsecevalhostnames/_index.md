@@ -4,6 +4,7 @@ title: "AppSecEvalHostnames"
 title_tag: "akamai.AppSecEvalHostnames"
 meta_desc: "Documentation for the akamai.AppSecEvalHostnames resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

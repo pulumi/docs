@@ -4,6 +4,7 @@ title: "getTransferJob"
 title_tag: "google-native.storagetransfer/v1.getTransferJob"
 meta_desc: "Documentation for the google-native.storagetransfer/v1.getTransferJob function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

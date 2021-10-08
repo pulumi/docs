@@ -4,6 +4,7 @@ title: "getResourceShare"
 title_tag: "aws.ram.getResourceShare"
 meta_desc: "Documentation for the aws.ram.getResourceShare function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

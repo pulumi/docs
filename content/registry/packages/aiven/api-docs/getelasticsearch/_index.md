@@ -4,6 +4,7 @@ title: "getElasticSearch"
 title_tag: "aiven.getElasticSearch"
 meta_desc: "Documentation for the aiven.getElasticSearch function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

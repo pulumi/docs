@@ -4,6 +4,7 @@ title: "getDatabases"
 title_tag: "alicloud.polardb.getDatabases"
 meta_desc: "Documentation for the alicloud.polardb.getDatabases function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "Instance"
 title_tag: "gcp.redis.Instance"
 meta_desc: "Documentation for the gcp.redis.Instance resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

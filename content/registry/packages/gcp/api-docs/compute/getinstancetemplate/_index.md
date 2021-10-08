@@ -4,6 +4,7 @@ title: "getInstanceTemplate"
 title_tag: "gcp.compute.getInstanceTemplate"
 meta_desc: "Documentation for the gcp.compute.getInstanceTemplate function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

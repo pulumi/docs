@@ -4,6 +4,7 @@ title: "ApplicationTypeVersion"
 title_tag: "azure-native.servicefabric.ApplicationTypeVersion"
 meta_desc: "Documentation for the azure-native.servicefabric.ApplicationTypeVersion resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

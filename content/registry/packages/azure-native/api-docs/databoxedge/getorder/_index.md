@@ -4,6 +4,7 @@ title: "getOrder"
 title_tag: "azure-native.databoxedge.getOrder"
 meta_desc: "Documentation for the azure-native.databoxedge.getOrder function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

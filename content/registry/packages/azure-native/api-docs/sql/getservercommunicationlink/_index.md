@@ -4,6 +4,7 @@ title: "getServerCommunicationLink"
 title_tag: "azure-native.sql.getServerCommunicationLink"
 meta_desc: "Documentation for the azure-native.sql.getServerCommunicationLink function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getResources"
 title_tag: "aws.resourcegroupstaggingapi.getResources"
 meta_desc: "Documentation for the aws.resourcegroupstaggingapi.getResources function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

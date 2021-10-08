@@ -4,6 +4,7 @@ title: "TransitRouterVbrAttachment"
 title_tag: "alicloud.cen.TransitRouterVbrAttachment"
 meta_desc: "Documentation for the alicloud.cen.TransitRouterVbrAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

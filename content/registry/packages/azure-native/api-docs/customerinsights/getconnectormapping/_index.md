@@ -4,6 +4,7 @@ title: "getConnectorMapping"
 title_tag: "azure-native.customerinsights.getConnectorMapping"
 meta_desc: "Documentation for the azure-native.customerinsights.getConnectorMapping function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

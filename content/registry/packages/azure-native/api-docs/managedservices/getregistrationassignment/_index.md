@@ -4,6 +4,7 @@ title: "getRegistrationAssignment"
 title_tag: "azure-native.managedservices.getRegistrationAssignment"
 meta_desc: "Documentation for the azure-native.managedservices.getRegistrationAssignment function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getRouter"
 title_tag: "openstack.networking.getRouter"
 meta_desc: "Documentation for the openstack.networking.getRouter function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

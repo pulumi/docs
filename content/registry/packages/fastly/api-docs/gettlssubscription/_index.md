@@ -4,6 +4,7 @@ title: "getTlsSubscription"
 title_tag: "fastly.getTlsSubscription"
 meta_desc: "Documentation for the fastly.getTlsSubscription function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

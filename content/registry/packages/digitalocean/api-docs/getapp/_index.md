@@ -4,6 +4,7 @@ title: "getApp"
 title_tag: "digitalocean.getApp"
 meta_desc: "Documentation for the digitalocean.getApp function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 
@@ -2538,6 +2539,14 @@ The following output properties are available:
     <dd>{{% md %}}An optional build command to run while building this component from source.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="cors_csharp">
+<a href="#cors_csharp" style="color: inherit; text-decoration: inherit;">Cors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecservicecors">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Service<wbr>Cors</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="dockerfilepath_csharp">
 <a href="#dockerfilepath_csharp" style="color: inherit; text-decoration: inherit;">Dockerfile<wbr>Path</a>
 </span>
@@ -2693,6 +2702,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}An optional build command to run while building this component from source.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cors_go">
+<a href="#cors_go" style="color: inherit; text-decoration: inherit;">Cors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecservicecors">Get<wbr>App<wbr>Spec<wbr>Service<wbr>Cors</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dockerfilepath_go">
 <a href="#dockerfilepath_go" style="color: inherit; text-decoration: inherit;">Dockerfile<wbr>Path</a>
@@ -2850,6 +2867,14 @@ The following output properties are available:
     <dd>{{% md %}}An optional build command to run while building this component from source.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="cors_nodejs">
+<a href="#cors_nodejs" style="color: inherit; text-decoration: inherit;">cors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecservicecors">Get<wbr>App<wbr>Spec<wbr>Service<wbr>Cors</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="dockerfilepath_nodejs">
 <a href="#dockerfilepath_nodejs" style="color: inherit; text-decoration: inherit;">dockerfile<wbr>Path</a>
 </span>
@@ -3006,6 +3031,14 @@ The following output properties are available:
     <dd>{{% md %}}An optional build command to run while building this component from source.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="cors_python">
+<a href="#cors_python" style="color: inherit; text-decoration: inherit;">cors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecservicecors">Get<wbr>App<wbr>Spec<wbr>Service<wbr>Cors</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="dockerfile_path_python">
 <a href="#dockerfile_path_python" style="color: inherit; text-decoration: inherit;">dockerfile_<wbr>path</a>
 </span>
@@ -3113,6 +3146,334 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}An optional path to the working directory to use for the build.
 {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getappspecservicecors">Get<wbr>App<wbr>Spec<wbr>Service<wbr>Cors</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="allowcredentials_csharp">
+<a href="#allowcredentials_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowheaders_csharp">
+<a href="#allowheaders_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowmethods_csharp">
+<a href="#allowmethods_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Methods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="alloworigins_csharp">
+<a href="#alloworigins_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Origins</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecservicecorsalloworigins">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Service<wbr>Cors<wbr>Allow<wbr>Origins</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exposeheaders_csharp">
+<a href="#exposeheaders_csharp" style="color: inherit; text-decoration: inherit;">Expose<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxage_csharp">
+<a href="#maxage_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="allowcredentials_go">
+<a href="#allowcredentials_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowheaders_go">
+<a href="#allowheaders_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowmethods_go">
+<a href="#allowmethods_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Methods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="alloworigins_go">
+<a href="#alloworigins_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Origins</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecservicecorsalloworigins">Get<wbr>App<wbr>Spec<wbr>Service<wbr>Cors<wbr>Allow<wbr>Origins</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exposeheaders_go">
+<a href="#exposeheaders_go" style="color: inherit; text-decoration: inherit;">Expose<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxage_go">
+<a href="#maxage_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="allowcredentials_nodejs">
+<a href="#allowcredentials_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowheaders_nodejs">
+<a href="#allowheaders_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowmethods_nodejs">
+<a href="#allowmethods_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Methods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="alloworigins_nodejs">
+<a href="#alloworigins_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Origins</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecservicecorsalloworigins">Get<wbr>App<wbr>Spec<wbr>Service<wbr>Cors<wbr>Allow<wbr>Origins</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exposeheaders_nodejs">
+<a href="#exposeheaders_nodejs" style="color: inherit; text-decoration: inherit;">expose<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxage_nodejs">
+<a href="#maxage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="allow_credentials_python">
+<a href="#allow_credentials_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allow_headers_python">
+<a href="#allow_headers_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allow_methods_python">
+<a href="#allow_methods_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>methods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allow_origins_python">
+<a href="#allow_origins_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>origins</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecservicecorsalloworigins">Get<wbr>App<wbr>Spec<wbr>Service<wbr>Cors<wbr>Allow<wbr>Origins</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expose_headers_python">
+<a href="#expose_headers_python" style="color: inherit; text-decoration: inherit;">expose_<wbr>headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="max_age_python">
+<a href="#max_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getappspecservicecorsalloworigins">Get<wbr>App<wbr>Spec<wbr>Service<wbr>Cors<wbr>Allow<wbr>Origins</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="exact_csharp">
+<a href="#exact_csharp" style="color: inherit; text-decoration: inherit;">Exact</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prefix_csharp">
+<a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="regex_csharp">
+<a href="#regex_csharp" style="color: inherit; text-decoration: inherit;">Regex</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="exact_go">
+<a href="#exact_go" style="color: inherit; text-decoration: inherit;">Exact</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prefix_go">
+<a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="regex_go">
+<a href="#regex_go" style="color: inherit; text-decoration: inherit;">Regex</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="exact_nodejs">
+<a href="#exact_nodejs" style="color: inherit; text-decoration: inherit;">exact</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prefix_nodejs">
+<a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="regex_nodejs">
+<a href="#regex_nodejs" style="color: inherit; text-decoration: inherit;">regex</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="exact_python">
+<a href="#exact_python" style="color: inherit; text-decoration: inherit;">exact</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prefix_python">
+<a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="regex_python">
+<a href="#regex_python" style="color: inherit; text-decoration: inherit;">regex</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getappspecserviceenv">Get<wbr>App<wbr>Spec<wbr>Service<wbr>Env</h4>
@@ -4125,6 +4486,14 @@ The following output properties are available:
     <dd>{{% md %}}The name of the document to use as the fallback for any requests to documents that are not found when serving this static site.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="cors_csharp">
+<a href="#cors_csharp" style="color: inherit; text-decoration: inherit;">Cors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecstaticsitecors">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Cors</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="dockerfilepath_csharp">
 <a href="#dockerfilepath_csharp" style="color: inherit; text-decoration: inherit;">Dockerfile<wbr>Path</a>
 </span>
@@ -4253,6 +4622,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The name of the document to use as the fallback for any requests to documents that are not found when serving this static site.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cors_go">
+<a href="#cors_go" style="color: inherit; text-decoration: inherit;">Cors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecstaticsitecors">Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Cors</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dockerfilepath_go">
 <a href="#dockerfilepath_go" style="color: inherit; text-decoration: inherit;">Dockerfile<wbr>Path</a>
@@ -4383,6 +4760,14 @@ The following output properties are available:
     <dd>{{% md %}}The name of the document to use as the fallback for any requests to documents that are not found when serving this static site.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="cors_nodejs">
+<a href="#cors_nodejs" style="color: inherit; text-decoration: inherit;">cors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecstaticsitecors">Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Cors</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="dockerfilepath_nodejs">
 <a href="#dockerfilepath_nodejs" style="color: inherit; text-decoration: inherit;">dockerfile<wbr>Path</a>
 </span>
@@ -4512,6 +4897,14 @@ The following output properties are available:
     <dd>{{% md %}}The name of the document to use as the fallback for any requests to documents that are not found when serving this static site.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="cors_python">
+<a href="#cors_python" style="color: inherit; text-decoration: inherit;">cors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecstaticsitecors">Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Cors</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="dockerfile_path_python">
 <a href="#dockerfile_path_python" style="color: inherit; text-decoration: inherit;">dockerfile_<wbr>path</a>
 </span>
@@ -4601,6 +4994,334 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}An optional path to the working directory to use for the build.
 {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getappspecstaticsitecors">Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Cors</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="allowcredentials_csharp">
+<a href="#allowcredentials_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowheaders_csharp">
+<a href="#allowheaders_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowmethods_csharp">
+<a href="#allowmethods_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Methods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="alloworigins_csharp">
+<a href="#alloworigins_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Origins</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecstaticsitecorsalloworigins">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Cors<wbr>Allow<wbr>Origins</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exposeheaders_csharp">
+<a href="#exposeheaders_csharp" style="color: inherit; text-decoration: inherit;">Expose<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxage_csharp">
+<a href="#maxage_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="allowcredentials_go">
+<a href="#allowcredentials_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowheaders_go">
+<a href="#allowheaders_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowmethods_go">
+<a href="#allowmethods_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Methods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="alloworigins_go">
+<a href="#alloworigins_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Origins</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecstaticsitecorsalloworigins">Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Cors<wbr>Allow<wbr>Origins</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exposeheaders_go">
+<a href="#exposeheaders_go" style="color: inherit; text-decoration: inherit;">Expose<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxage_go">
+<a href="#maxage_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="allowcredentials_nodejs">
+<a href="#allowcredentials_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowheaders_nodejs">
+<a href="#allowheaders_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowmethods_nodejs">
+<a href="#allowmethods_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Methods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="alloworigins_nodejs">
+<a href="#alloworigins_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Origins</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecstaticsitecorsalloworigins">Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Cors<wbr>Allow<wbr>Origins</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exposeheaders_nodejs">
+<a href="#exposeheaders_nodejs" style="color: inherit; text-decoration: inherit;">expose<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxage_nodejs">
+<a href="#maxage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="allow_credentials_python">
+<a href="#allow_credentials_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allow_headers_python">
+<a href="#allow_headers_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allow_methods_python">
+<a href="#allow_methods_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>methods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allow_origins_python">
+<a href="#allow_origins_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>origins</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecstaticsitecorsalloworigins">Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Cors<wbr>Allow<wbr>Origins</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expose_headers_python">
+<a href="#expose_headers_python" style="color: inherit; text-decoration: inherit;">expose_<wbr>headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="max_age_python">
+<a href="#max_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getappspecstaticsitecorsalloworigins">Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Cors<wbr>Allow<wbr>Origins</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="exact_csharp">
+<a href="#exact_csharp" style="color: inherit; text-decoration: inherit;">Exact</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prefix_csharp">
+<a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="regex_csharp">
+<a href="#regex_csharp" style="color: inherit; text-decoration: inherit;">Regex</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="exact_go">
+<a href="#exact_go" style="color: inherit; text-decoration: inherit;">Exact</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prefix_go">
+<a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="regex_go">
+<a href="#regex_go" style="color: inherit; text-decoration: inherit;">Regex</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="exact_nodejs">
+<a href="#exact_nodejs" style="color: inherit; text-decoration: inherit;">exact</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prefix_nodejs">
+<a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="regex_nodejs">
+<a href="#regex_nodejs" style="color: inherit; text-decoration: inherit;">regex</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="exact_python">
+<a href="#exact_python" style="color: inherit; text-decoration: inherit;">exact</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prefix_python">
+<a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="regex_python">
+<a href="#regex_python" style="color: inherit; text-decoration: inherit;">regex</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getappspecstaticsiteenv">Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Env</h4>

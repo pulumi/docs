@@ -4,6 +4,7 @@ title: "MongoCollection"
 title_tag: "azure.cosmosdb.MongoCollection"
 meta_desc: "Documentation for the azure.cosmosdb.MongoCollection resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

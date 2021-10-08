@@ -4,6 +4,7 @@ title: "ProjectVariable"
 title_tag: "gitlab.ProjectVariable"
 meta_desc: "Documentation for the gitlab.ProjectVariable resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

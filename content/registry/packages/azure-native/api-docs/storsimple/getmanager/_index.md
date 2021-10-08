@@ -4,6 +4,7 @@ title: "getManager"
 title_tag: "azure-native.storsimple.getManager"
 meta_desc: "Documentation for the azure-native.storsimple.getManager function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

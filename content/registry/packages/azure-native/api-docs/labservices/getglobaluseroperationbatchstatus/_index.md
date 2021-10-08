@@ -4,6 +4,7 @@ title: "getGlobalUserOperationBatchStatus"
 title_tag: "azure-native.labservices.getGlobalUserOperationBatchStatus"
 meta_desc: "Documentation for the azure-native.labservices.getGlobalUserOperationBatchStatus function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

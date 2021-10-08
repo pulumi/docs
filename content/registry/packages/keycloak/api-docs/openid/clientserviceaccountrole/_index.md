@@ -4,6 +4,7 @@ title: "ClientServiceAccountRole"
 title_tag: "keycloak.openid.ClientServiceAccountRole"
 meta_desc: "Documentation for the keycloak.openid.ClientServiceAccountRole resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

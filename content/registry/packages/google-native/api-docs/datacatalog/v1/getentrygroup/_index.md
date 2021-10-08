@@ -4,6 +4,7 @@ title: "getEntryGroup"
 title_tag: "google-native.datacatalog/v1.getEntryGroup"
 meta_desc: "Documentation for the google-native.datacatalog/v1.getEntryGroup function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

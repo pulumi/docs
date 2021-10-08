@@ -4,6 +4,7 @@ title: "IkePolicy"
 title_tag: "openstack.vpnaas.IkePolicy"
 meta_desc: "Documentation for the openstack.vpnaas.IkePolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

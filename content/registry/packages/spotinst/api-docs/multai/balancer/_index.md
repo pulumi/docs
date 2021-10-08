@@ -4,6 +4,7 @@ title: "Balancer"
 title_tag: "spotinst.multai.Balancer"
 meta_desc: "Documentation for the spotinst.multai.Balancer resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

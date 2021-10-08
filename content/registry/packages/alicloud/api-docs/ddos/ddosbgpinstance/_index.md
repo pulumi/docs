@@ -4,6 +4,7 @@ title: "DdosBgpInstance"
 title_tag: "alicloud.ddos.DdosBgpInstance"
 meta_desc: "Documentation for the alicloud.ddos.DdosBgpInstance resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

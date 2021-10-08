@@ -4,6 +4,7 @@ title: "SmartDetectionRule"
 title_tag: "azure.appinsights.SmartDetectionRule"
 meta_desc: "Documentation for the azure.appinsights.SmartDetectionRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getTransparentDataEncryption"
 title_tag: "azure-native.sql.getTransparentDataEncryption"
 meta_desc: "Documentation for the azure-native.sql.getTransparentDataEncryption function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

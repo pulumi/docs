@@ -4,6 +4,7 @@ title: "getProperties"
 title_tag: "akamai.getProperties"
 meta_desc: "Documentation for the akamai.getProperties function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

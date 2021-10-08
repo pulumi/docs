@@ -4,6 +4,7 @@ title: "getExpressRouteCircuit"
 title_tag: "azure.network.getExpressRouteCircuit"
 meta_desc: "Documentation for the azure.network.getExpressRouteCircuit function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

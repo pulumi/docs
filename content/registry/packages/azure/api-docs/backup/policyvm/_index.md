@@ -4,6 +4,7 @@ title: "PolicyVM"
 title_tag: "azure.backup.PolicyVM"
 meta_desc: "Documentation for the azure.backup.PolicyVM resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

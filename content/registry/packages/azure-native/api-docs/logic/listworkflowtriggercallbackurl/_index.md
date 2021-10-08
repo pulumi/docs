@@ -4,6 +4,7 @@ title: "listWorkflowTriggerCallbackUrl"
 title_tag: "azure-native.logic.listWorkflowTriggerCallbackUrl"
 meta_desc: "Documentation for the azure-native.logic.listWorkflowTriggerCallbackUrl function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getFusionAlertRule"
 title_tag: "azure-native.securityinsights.getFusionAlertRule"
 meta_desc: "Documentation for the azure-native.securityinsights.getFusionAlertRule function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

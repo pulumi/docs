@@ -4,6 +4,7 @@ title: "getOauth"
 title_tag: "okta.app.getOauth"
 meta_desc: "Documentation for the okta.app.getOauth function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

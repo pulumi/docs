@@ -4,6 +4,7 @@ title: "getIntent"
 title_tag: "aws.lex.getIntent"
 meta_desc: "Documentation for the aws.lex.getIntent function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

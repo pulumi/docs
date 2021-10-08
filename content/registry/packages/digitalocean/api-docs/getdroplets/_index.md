@@ -4,6 +4,7 @@ title: "getDroplets"
 title_tag: "digitalocean.getDroplets"
 meta_desc: "Documentation for the digitalocean.getDroplets function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

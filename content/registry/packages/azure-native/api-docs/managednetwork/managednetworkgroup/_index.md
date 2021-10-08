@@ -4,6 +4,7 @@ title: "ManagedNetworkGroup"
 title_tag: "azure-native.managednetwork.ManagedNetworkGroup"
 meta_desc: "Documentation for the azure-native.managednetwork.ManagedNetworkGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 
@@ -958,7 +959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-native:managednetwork:ManagedNetworkGroup myManagedNetworkGroup1 /subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.ManagedNetwork/managedNetworks/myManagedNetwork/managedNetworkGroups/myManagedNetworkGroup1 
+$ pulumi import azure-native:managednetwork:ManagedNetworkGroup myManagedNetworkGroup1 /subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.ManagedNetwork/managedNetworks/myManagedNetwork/managedNetworkGroups/myManagedNetworkGroup1 
 ```
 
 

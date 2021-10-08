@@ -4,6 +4,7 @@ title: "UserPolicyAttachment"
 title_tag: "aws.iam.UserPolicyAttachment"
 meta_desc: "Documentation for the aws.iam.UserPolicyAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

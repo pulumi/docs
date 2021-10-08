@@ -4,6 +4,7 @@ title: "listIotDpsResourceKeysForKeyName"
 title_tag: "azure-native.devices.listIotDpsResourceKeysForKeyName"
 meta_desc: "Documentation for the azure-native.devices.listIotDpsResourceKeysForKeyName function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

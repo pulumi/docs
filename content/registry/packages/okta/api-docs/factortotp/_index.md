@@ -4,6 +4,7 @@ title: "FactorTotp"
 title_tag: "okta.FactorTotp"
 meta_desc: "Documentation for the okta.FactorTotp resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

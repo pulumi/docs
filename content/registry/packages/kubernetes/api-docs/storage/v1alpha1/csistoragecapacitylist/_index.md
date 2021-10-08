@@ -4,6 +4,7 @@ title: "CSIStorageCapacityList"
 title_tag: "kubernetes.storage.k8s.io/v1alpha1.CSIStorageCapacityList"
 meta_desc: "Documentation for the kubernetes.storage.k8s.io/v1alpha1.CSIStorageCapacityList resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

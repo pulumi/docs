@@ -4,6 +4,7 @@ title: "DatasetConsentStoreIamPolicy"
 title_tag: "google-native.healthcare/v1.DatasetConsentStoreIamPolicy"
 meta_desc: "Documentation for the google-native.healthcare/v1.DatasetConsentStoreIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getServerKey"
 title_tag: "azure-native.dbformysql.getServerKey"
 meta_desc: "Documentation for the azure-native.dbformysql.getServerKey function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "QuickConnect"
 title_tag: "aws-native.connect.QuickConnect"
 meta_desc: "Documentation for the aws-native.connect.QuickConnect resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

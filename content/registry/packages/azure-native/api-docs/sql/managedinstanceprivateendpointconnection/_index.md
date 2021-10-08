@@ -4,6 +4,7 @@ title: "ManagedInstancePrivateEndpointConnection"
 title_tag: "azure-native.sql.ManagedInstancePrivateEndpointConnection"
 meta_desc: "Documentation for the azure-native.sql.ManagedInstancePrivateEndpointConnection resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

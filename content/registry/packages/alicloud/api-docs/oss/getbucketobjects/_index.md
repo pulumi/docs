@@ -4,6 +4,7 @@ title: "getBucketObjects"
 title_tag: "alicloud.oss.getBucketObjects"
 meta_desc: "Documentation for the alicloud.oss.getBucketObjects function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getAgentConfig"
 title_tag: "consul.getAgentConfig"
 meta_desc: "Documentation for the consul.getAgentConfig function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

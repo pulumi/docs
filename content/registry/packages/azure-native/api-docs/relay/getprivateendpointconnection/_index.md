@@ -4,6 +4,7 @@ title: "getPrivateEndpointConnection"
 title_tag: "azure-native.relay.getPrivateEndpointConnection"
 meta_desc: "Documentation for the azure-native.relay.getPrivateEndpointConnection function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

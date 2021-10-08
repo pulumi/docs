@@ -4,6 +4,7 @@ title: "HealthCheckTemplate"
 title_tag: "alicloud.alb.HealthCheckTemplate"
 meta_desc: "Documentation for the alicloud.alb.HealthCheckTemplate resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

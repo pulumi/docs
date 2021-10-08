@@ -4,6 +4,7 @@ title: "SnapshotIamPolicy"
 title_tag: "google-native.compute/v1.SnapshotIamPolicy"
 meta_desc: "Documentation for the google-native.compute/v1.SnapshotIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

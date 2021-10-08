@@ -4,6 +4,7 @@ title: "getPropertyHostnames"
 title_tag: "akamai.getPropertyHostnames"
 meta_desc: "Documentation for the akamai.getPropertyHostnames function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

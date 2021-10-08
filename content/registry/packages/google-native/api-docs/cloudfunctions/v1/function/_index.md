@@ -4,6 +4,7 @@ title: "Function"
 title_tag: "google-native.cloudfunctions/v1.Function"
 meta_desc: "Documentation for the google-native.cloudfunctions/v1.Function resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getBackend"
 title_tag: "azure-native.apimanagement.getBackend"
 meta_desc: "Documentation for the azure-native.apimanagement.getBackend function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

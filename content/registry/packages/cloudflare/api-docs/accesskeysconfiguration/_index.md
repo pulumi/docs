@@ -4,6 +4,7 @@ title: "AccessKeysConfiguration"
 title_tag: "cloudflare.AccessKeysConfiguration"
 meta_desc: "Documentation for the cloudflare.AccessKeysConfiguration resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

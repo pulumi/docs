@@ -4,6 +4,7 @@ title: "Password"
 title_tag: "okta.policy.Password"
 meta_desc: "Documentation for the okta.policy.Password resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

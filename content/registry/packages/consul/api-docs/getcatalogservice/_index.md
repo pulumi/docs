@@ -4,6 +4,7 @@ title: "getCatalogService"
 title_tag: "consul.getCatalogService"
 meta_desc: "Documentation for the consul.getCatalogService function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

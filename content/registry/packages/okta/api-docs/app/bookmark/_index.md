@@ -4,6 +4,7 @@ title: "Bookmark"
 title_tag: "okta.app.Bookmark"
 meta_desc: "Documentation for the okta.app.Bookmark resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "AccountPrivilege"
 title_tag: "alicloud.polardb.AccountPrivilege"
 meta_desc: "Documentation for the alicloud.polardb.AccountPrivilege resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

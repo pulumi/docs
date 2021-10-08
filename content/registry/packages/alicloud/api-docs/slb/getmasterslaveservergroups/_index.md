@@ -4,6 +4,7 @@ title: "getMasterSlaveServerGroups"
 title_tag: "alicloud.slb.getMasterSlaveServerGroups"
 meta_desc: "Documentation for the alicloud.slb.getMasterSlaveServerGroups function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

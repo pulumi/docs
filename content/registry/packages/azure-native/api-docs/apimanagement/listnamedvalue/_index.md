@@ -4,6 +4,7 @@ title: "listNamedValue"
 title_tag: "azure-native.apimanagement.listNamedValue"
 meta_desc: "Documentation for the azure-native.apimanagement.listNamedValue function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

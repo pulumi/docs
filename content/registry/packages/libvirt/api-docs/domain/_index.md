@@ -4,6 +4,7 @@ title: "Domain"
 title_tag: "libvirt.Domain"
 meta_desc: "Documentation for the libvirt.Domain resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

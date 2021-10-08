@@ -4,6 +4,7 @@ title: "getJob"
 title_tag: "azure.streamanalytics.getJob"
 meta_desc: "Documentation for the azure.streamanalytics.getJob function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "getKafkaVersion"
 title_tag: "aws.msk.getKafkaVersion"
 meta_desc: "Documentation for the aws.msk.getKafkaVersion function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

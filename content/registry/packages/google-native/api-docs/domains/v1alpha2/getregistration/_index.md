@@ -4,6 +4,7 @@ title: "getRegistration"
 title_tag: "google-native.domains/v1alpha2.getRegistration"
 meta_desc: "Documentation for the google-native.domains/v1alpha2.getRegistration function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

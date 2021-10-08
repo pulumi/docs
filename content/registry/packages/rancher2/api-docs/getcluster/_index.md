@@ -4,6 +4,7 @@ title: "getCluster"
 title_tag: "rancher2.getCluster"
 meta_desc: "Documentation for the rancher2.getCluster function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

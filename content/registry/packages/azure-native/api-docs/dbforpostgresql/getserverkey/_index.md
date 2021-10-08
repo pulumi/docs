@@ -4,6 +4,7 @@ title: "getServerKey"
 title_tag: "azure-native.dbforpostgresql.getServerKey"
 meta_desc: "Documentation for the azure-native.dbforpostgresql.getServerKey function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

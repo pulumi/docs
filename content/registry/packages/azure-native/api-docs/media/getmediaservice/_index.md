@@ -4,6 +4,7 @@ title: "getMediaService"
 title_tag: "azure-native.media.getMediaService"
 meta_desc: "Documentation for the azure-native.media.getMediaService function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

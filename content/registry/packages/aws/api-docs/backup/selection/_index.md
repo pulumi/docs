@@ -4,6 +4,7 @@ title: "Selection"
 title_tag: "aws.backup.Selection"
 meta_desc: "Documentation for the aws.backup.Selection resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

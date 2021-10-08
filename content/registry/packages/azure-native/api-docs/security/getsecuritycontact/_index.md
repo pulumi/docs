@@ -4,6 +4,7 @@ title: "getSecurityContact"
 title_tag: "azure-native.security.getSecurityContact"
 meta_desc: "Documentation for the azure-native.security.getSecurityContact function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

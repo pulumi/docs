@@ -4,6 +4,7 @@ title: "getRegions"
 title_tag: "digitalocean.getRegions"
 meta_desc: "Documentation for the digitalocean.getRegions function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

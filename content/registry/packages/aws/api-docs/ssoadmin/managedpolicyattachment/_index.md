@@ -4,6 +4,7 @@ title: "ManagedPolicyAttachment"
 title_tag: "aws.ssoadmin.ManagedPolicyAttachment"
 meta_desc: "Documentation for the aws.ssoadmin.ManagedPolicyAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "Mount"
 title_tag: "vault.Mount"
 meta_desc: "Documentation for the vault.Mount resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

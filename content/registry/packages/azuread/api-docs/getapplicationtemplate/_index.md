@@ -4,6 +4,7 @@ title: "getApplicationTemplate"
 title_tag: "azuread.getApplicationTemplate"
 meta_desc: "Documentation for the azuread.getApplicationTemplate function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

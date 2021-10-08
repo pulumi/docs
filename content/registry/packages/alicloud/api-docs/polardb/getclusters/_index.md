@@ -4,6 +4,7 @@ title: "getClusters"
 title_tag: "alicloud.polardb.getClusters"
 meta_desc: "Documentation for the alicloud.polardb.getClusters function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

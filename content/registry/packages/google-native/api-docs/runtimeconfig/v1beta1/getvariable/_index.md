@@ -4,6 +4,7 @@ title: "getVariable"
 title_tag: "google-native.runtimeconfig/v1beta1.getVariable"
 meta_desc: "Documentation for the google-native.runtimeconfig/v1beta1.getVariable function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

@@ -4,6 +4,7 @@ title: "ProactiveDetectionConfiguration"
 title_tag: "azure-native.insights.ProactiveDetectionConfiguration"
 meta_desc: "Documentation for the azure-native.insights.ProactiveDetectionConfiguration resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

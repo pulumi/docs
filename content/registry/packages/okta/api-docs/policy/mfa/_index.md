@@ -4,6 +4,7 @@ title: "Mfa"
 title_tag: "okta.policy.Mfa"
 meta_desc: "Documentation for the okta.policy.Mfa resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

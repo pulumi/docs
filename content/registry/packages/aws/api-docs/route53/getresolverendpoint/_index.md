@@ -4,6 +4,7 @@ title: "getResolverEndpoint"
 title_tag: "aws.route53.getResolverEndpoint"
 meta_desc: "Documentation for the aws.route53.getResolverEndpoint function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

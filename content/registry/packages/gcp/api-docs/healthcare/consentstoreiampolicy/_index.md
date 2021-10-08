@@ -4,6 +4,7 @@ title: "ConsentStoreIamPolicy"
 title_tag: "gcp.healthcare.ConsentStoreIamPolicy"
 meta_desc: "Documentation for the gcp.healthcare.ConsentStoreIamPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

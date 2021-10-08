@@ -4,6 +4,7 @@ title: "getDiskPool"
 title_tag: "azure-native.storagepool.getDiskPool"
 meta_desc: "Documentation for the azure-native.storagepool.getDiskPool function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

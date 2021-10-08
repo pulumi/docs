@@ -4,6 +4,7 @@ title: "getService"
 title_tag: "azure.privatelink.getService"
 meta_desc: "Documentation for the azure.privatelink.getService function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

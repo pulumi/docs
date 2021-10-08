@@ -4,6 +4,7 @@ title: "InfrastructureConfiguration"
 title_tag: "aws-native.imagebuilder.InfrastructureConfiguration"
 meta_desc: "Documentation for the aws-native.imagebuilder.InfrastructureConfiguration resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

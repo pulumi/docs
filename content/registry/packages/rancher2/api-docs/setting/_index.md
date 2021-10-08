@@ -4,6 +4,7 @@ title: "Setting"
 title_tag: "rancher2.Setting"
 meta_desc: "Documentation for the rancher2.Setting resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

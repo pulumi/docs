@@ -4,6 +4,7 @@ title: "getProjectUser"
 title_tag: "aiven.getProjectUser"
 meta_desc: "Documentation for the aiven.getProjectUser function with examples, input properties, output properties, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 

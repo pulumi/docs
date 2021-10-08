@@ -4,6 +4,7 @@ title: "DBProxy"
 title_tag: "aws-native.rds.DBProxy"
 meta_desc: "Documentation for the aws-native.rds.DBProxy resource with examples, input properties, output properties, lookup functions, and supporting types."
 layout: api
+no_edit_this_page: true
 ---
 
 
