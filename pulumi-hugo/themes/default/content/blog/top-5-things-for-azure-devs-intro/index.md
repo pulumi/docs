@@ -76,7 +76,7 @@ Azure provides many ways to deploy an AKS cluster, including:
 - [Azure portal](https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough-portal)
 - [Azure Resource Manager templates](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/overview)
 - [Bicep](https://github.com/Azure/bicep)
-- [Infrastructure as Code]({{< relref "/registry/packages/azure/how-to-guides/azure-cs-aks" >}})
+- [Infrastructure as Code]({{< relref "/registry/packages/azure-native/how-to-guides/azure-cs-aks" >}})
 
 When you deploy an AKS Cluster, the worker nodes and Kubernetes master are configured with a basic configuration. You can additionally configure networking, storage, monitoring, and policies. We'll cover configuring AKS in this series.
 
