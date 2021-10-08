@@ -555,7 +555,7 @@ The ManagedStorageAccountSasTokenDefinition resource accepts the following [inpu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SAS definition token template signed with an arbitrary key. Tokens created according to the SAS definition will have the same properties as the template, but regenerated with a new validaty period.
+    <dd>{{% md %}}The SAS definition token template signed with an arbitrary key. Tokens created according to the SAS definition will have the same properties as the template, but regenerated with a new validity period.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sastype_csharp">
@@ -613,7 +613,7 @@ The ManagedStorageAccountSasTokenDefinition resource accepts the following [inpu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SAS definition token template signed with an arbitrary key. Tokens created according to the SAS definition will have the same properties as the template, but regenerated with a new validaty period.
+    <dd>{{% md %}}The SAS definition token template signed with an arbitrary key. Tokens created according to the SAS definition will have the same properties as the template, but regenerated with a new validity period.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sastype_go">
@@ -671,7 +671,7 @@ The ManagedStorageAccountSasTokenDefinition resource accepts the following [inpu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SAS definition token template signed with an arbitrary key. Tokens created according to the SAS definition will have the same properties as the template, but regenerated with a new validaty period.
+    <dd>{{% md %}}The SAS definition token template signed with an arbitrary key. Tokens created according to the SAS definition will have the same properties as the template, but regenerated with a new validity period.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sastype_nodejs">
@@ -729,7 +729,7 @@ The ManagedStorageAccountSasTokenDefinition resource accepts the following [inpu
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The SAS definition token template signed with an arbitrary key. Tokens created according to the SAS definition will have the same properties as the template, but regenerated with a new validaty period.
+    <dd>{{% md %}}The SAS definition token template signed with an arbitrary key. Tokens created according to the SAS definition will have the same properties as the template, but regenerated with a new validity period.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sas_type_python">
@@ -1019,7 +1019,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SAS definition token template signed with an arbitrary key. Tokens created according to the SAS definition will have the same properties as the template, but regenerated with a new validaty period.
+    <dd>{{% md %}}The SAS definition token template signed with an arbitrary key. Tokens created according to the SAS definition will have the same properties as the template, but regenerated with a new validity period.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sastype_csharp">
@@ -1086,7 +1086,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SAS definition token template signed with an arbitrary key. Tokens created according to the SAS definition will have the same properties as the template, but regenerated with a new validaty period.
+    <dd>{{% md %}}The SAS definition token template signed with an arbitrary key. Tokens created according to the SAS definition will have the same properties as the template, but regenerated with a new validity period.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sastype_go">
@@ -1153,7 +1153,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SAS definition token template signed with an arbitrary key. Tokens created according to the SAS definition will have the same properties as the template, but regenerated with a new validaty period.
+    <dd>{{% md %}}The SAS definition token template signed with an arbitrary key. Tokens created according to the SAS definition will have the same properties as the template, but regenerated with a new validity period.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sastype_nodejs">
@@ -1220,7 +1220,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The SAS definition token template signed with an arbitrary key. Tokens created according to the SAS definition will have the same properties as the template, but regenerated with a new validaty period.
+    <dd>{{% md %}}The SAS definition token template signed with an arbitrary key. Tokens created according to the SAS definition will have the same properties as the template, but regenerated with a new validity period.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sas_type_python">

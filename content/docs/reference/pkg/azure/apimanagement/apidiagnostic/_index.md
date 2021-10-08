@@ -78,6 +78,7 @@ class MyStack : Stack
         });
         var exampleApiDiagnostic = new Azure.ApiManagement.ApiDiagnostic("exampleApiDiagnostic", new Azure.ApiManagement.ApiDiagnosticArgs
         {
+            Identifier = "applicationinsights",
             ResourceGroupName = exampleResourceGroup.Name,
             ApiManagementName = exampleService.Name,
             ApiName = exampleApi.Name,
@@ -85,7 +86,7 @@ class MyStack : Stack
             SamplingPercentage = 5,
             AlwaysLogErrors = true,
             LogClientIp = true,
-            Verbosity = "Verbose",
+            Verbosity = "verbose",
             HttpCorrelationProtocol = "W3C",
             FrontendRequest = new Azure.ApiManagement.Inputs.ApiDiagnosticFrontendRequestArgs
             {
@@ -203,6 +204,7 @@ func main() {
 			return err
 		}
 		_, err = apimanagement.NewApiDiagnostic(ctx, "exampleApiDiagnostic", &apimanagement.ApiDiagnosticArgs{
+			Identifier:              pulumi.String("applicationinsights"),
 			ResourceGroupName:       exampleResourceGroup.Name,
 			ApiManagementName:       exampleService.Name,
 			ApiName:                 exampleApi.Name,
@@ -210,7 +212,7 @@ func main() {
 			SamplingPercentage:      pulumi.Float64(5),
 			AlwaysLogErrors:         pulumi.Bool(true),
 			LogClientIp:             pulumi.Bool(true),
-			Verbosity:               pulumi.String("Verbose"),
+			Verbosity:               pulumi.String("verbose"),
 			HttpCorrelationProtocol: pulumi.String("W3C"),
 			FrontendRequest: &apimanagement.ApiDiagnosticFrontendRequestArgs{
 				BodyBytes: pulumi.Int(32),
@@ -292,6 +294,7 @@ example_logger = azure.apimanagement.Logger("exampleLogger",
         instrumentation_key=example_insights.instrumentation_key,
     ))
 example_api_diagnostic = azure.apimanagement.ApiDiagnostic("exampleApiDiagnostic",
+    identifier="applicationinsights",
     resource_group_name=example_resource_group.name,
     api_management_name=example_service.name,
     api_name=example_api.name,
@@ -299,7 +302,7 @@ example_api_diagnostic = azure.apimanagement.ApiDiagnostic("exampleApiDiagnostic
     sampling_percentage=5,
     always_log_errors=True,
     log_client_ip=True,
-    verbosity="Verbose",
+    verbosity="verbose",
     http_correlation_protocol="W3C",
     frontend_request=azure.apimanagement.ApiDiagnosticFrontendRequestArgs(
         body_bytes=32,
@@ -379,6 +382,7 @@ const exampleLogger = new azure.apimanagement.Logger("exampleLogger", {
     },
 });
 const exampleApiDiagnostic = new azure.apimanagement.ApiDiagnostic("exampleApiDiagnostic", {
+    identifier: "applicationinsights",
     resourceGroupName: exampleResourceGroup.name,
     apiManagementName: exampleService.name,
     apiName: exampleApi.name,
@@ -386,7 +390,7 @@ const exampleApiDiagnostic = new azure.apimanagement.ApiDiagnostic("exampleApiDi
     samplingPercentage: 5,
     alwaysLogErrors: true,
     logClientIp: true,
-    verbosity: "Verbose",
+    verbosity: "verbose",
     httpCorrelationProtocol: "W3C",
     frontendRequest: {
         bodyBytes: 32,
@@ -2140,7 +2144,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+    <dd>{{% md %}}The name of the header or the query parameter to mask.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2162,7 +2166,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+    <dd>{{% md %}}The name of the header or the query parameter to mask.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2184,7 +2188,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+    <dd>{{% md %}}The name of the header or the query parameter to mask.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2206,7 +2210,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+    <dd>{{% md %}}The name of the header or the query parameter to mask.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2230,7 +2234,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+    <dd>{{% md %}}The name of the header or the query parameter to mask.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2252,7 +2256,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+    <dd>{{% md %}}The name of the header or the query parameter to mask.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2274,7 +2278,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+    <dd>{{% md %}}The name of the header or the query parameter to mask.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2296,7 +2300,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+    <dd>{{% md %}}The name of the header or the query parameter to mask.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2536,7 +2540,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+    <dd>{{% md %}}The name of the header or the query parameter to mask.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2558,7 +2562,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+    <dd>{{% md %}}The name of the header or the query parameter to mask.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2580,7 +2584,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+    <dd>{{% md %}}The name of the header or the query parameter to mask.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2602,7 +2606,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+    <dd>{{% md %}}The name of the header or the query parameter to mask.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2626,7 +2630,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+    <dd>{{% md %}}The name of the header or the query parameter to mask.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2648,7 +2652,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+    <dd>{{% md %}}The name of the header or the query parameter to mask.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2670,7 +2674,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+    <dd>{{% md %}}The name of the header or the query parameter to mask.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2692,7 +2696,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+    <dd>{{% md %}}The name of the header or the query parameter to mask.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2932,7 +2936,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+    <dd>{{% md %}}The name of the header or the query parameter to mask.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2954,7 +2958,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+    <dd>{{% md %}}The name of the header or the query parameter to mask.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2976,7 +2980,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+    <dd>{{% md %}}The name of the header or the query parameter to mask.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2998,7 +3002,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+    <dd>{{% md %}}The name of the header or the query parameter to mask.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3022,7 +3026,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+    <dd>{{% md %}}The name of the header or the query parameter to mask.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3044,7 +3048,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+    <dd>{{% md %}}The name of the header or the query parameter to mask.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3066,7 +3070,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+    <dd>{{% md %}}The name of the header or the query parameter to mask.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3088,7 +3092,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+    <dd>{{% md %}}The name of the header or the query parameter to mask.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3328,7 +3332,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+    <dd>{{% md %}}The name of the header or the query parameter to mask.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3350,7 +3354,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+    <dd>{{% md %}}The name of the header or the query parameter to mask.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3372,7 +3376,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+    <dd>{{% md %}}The name of the header or the query parameter to mask.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3394,7 +3398,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+    <dd>{{% md %}}The name of the header or the query parameter to mask.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3418,7 +3422,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+    <dd>{{% md %}}The name of the header or the query parameter to mask.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3440,7 +3444,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+    <dd>{{% md %}}The name of the header or the query parameter to mask.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3462,7 +3466,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+    <dd>{{% md %}}The name of the header or the query parameter to mask.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3484,7 +3488,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+    <dd>{{% md %}}The name of the header or the query parameter to mask.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import

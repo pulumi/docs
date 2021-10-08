@@ -2117,8 +2117,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is the CIFS protocol allowed?
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `protocols_enabled`{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `protocols_enabled`{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="nfsv3enabled_csharp">
 <a href="#nfsv3enabled_csharp" style="color: inherit; text-decoration: inherit;">Nfsv3Enabled</a>
@@ -2126,8 +2125,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is the NFSv3 protocol allowed?
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `protocols_enabled`{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `protocols_enabled`{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="nfsv4enabled_csharp">
 <a href="#nfsv4enabled_csharp" style="color: inherit; text-decoration: inherit;">Nfsv4Enabled</a>
@@ -2135,8 +2133,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is the NFSv4 protocol allowed?
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `protocols_enabled`{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `protocols_enabled`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="protocolsenabled_csharp">
 <a href="#protocolsenabled_csharp" style="color: inherit; text-decoration: inherit;">Protocols<wbr>Enabled</a>
@@ -2202,8 +2199,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is the CIFS protocol allowed?
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `protocols_enabled`{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `protocols_enabled`{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="nfsv3enabled_go">
 <a href="#nfsv3enabled_go" style="color: inherit; text-decoration: inherit;">Nfsv3Enabled</a>
@@ -2211,8 +2207,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is the NFSv3 protocol allowed?
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `protocols_enabled`{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `protocols_enabled`{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="nfsv4enabled_go">
 <a href="#nfsv4enabled_go" style="color: inherit; text-decoration: inherit;">Nfsv4Enabled</a>
@@ -2220,8 +2215,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is the NFSv4 protocol allowed?
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `protocols_enabled`{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `protocols_enabled`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="protocolsenabled_go">
 <a href="#protocolsenabled_go" style="color: inherit; text-decoration: inherit;">Protocols<wbr>Enabled</a>
@@ -2287,8 +2281,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Is the CIFS protocol allowed?
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `protocols_enabled`{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `protocols_enabled`{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="nfsv3enabled_nodejs">
 <a href="#nfsv3enabled_nodejs" style="color: inherit; text-decoration: inherit;">nfsv3Enabled</a>
@@ -2296,8 +2289,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Is the NFSv3 protocol allowed?
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `protocols_enabled`{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `protocols_enabled`{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="nfsv4enabled_nodejs">
 <a href="#nfsv4enabled_nodejs" style="color: inherit; text-decoration: inherit;">nfsv4Enabled</a>
@@ -2305,8 +2297,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Is the NFSv4 protocol allowed?
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `protocols_enabled`{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `protocols_enabled`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="protocolsenabled_nodejs">
 <a href="#protocolsenabled_nodejs" style="color: inherit; text-decoration: inherit;">protocols<wbr>Enabled</a>
@@ -2372,8 +2363,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is the CIFS protocol allowed?
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `protocols_enabled`{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `protocols_enabled`{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="nfsv3_enabled_python">
 <a href="#nfsv3_enabled_python" style="color: inherit; text-decoration: inherit;">nfsv3_<wbr>enabled</a>
@@ -2381,8 +2371,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is the NFSv3 protocol allowed?
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `protocols_enabled`{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `protocols_enabled`{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="nfsv4_enabled_python">
 <a href="#nfsv4_enabled_python" style="color: inherit; text-decoration: inherit;">nfsv4_<wbr>enabled</a>
@@ -2390,8 +2379,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is the NFSv4 protocol allowed?
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `protocols_enabled`{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `protocols_enabled`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="protocols_enabled_python">
 <a href="#protocols_enabled_python" style="color: inherit; text-decoration: inherit;">protocols_<wbr>enabled</a>

@@ -364,7 +364,7 @@ The LinkedServiceSftp resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The TCP port number that the SFTP server uses to lsiten for client connection. Default value is 22.
+    <dd>{{% md %}}The TCP port number that the SFTP server uses to listen for client connection. Default value is 22.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
@@ -504,7 +504,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The TCP port number that the SFTP server uses to lsiten for client connection. Default value is 22.
+    <dd>{{% md %}}The TCP port number that the SFTP server uses to listen for client connection. Default value is 22.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
@@ -644,7 +644,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The TCP port number that the SFTP server uses to lsiten for client connection. Default value is 22.
+    <dd>{{% md %}}The TCP port number that the SFTP server uses to listen for client connection. Default value is 22.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
@@ -784,7 +784,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The TCP port number that the SFTP server uses to lsiten for client connection. Default value is 22.
+    <dd>{{% md %}}The TCP port number that the SFTP server uses to listen for client connection. Default value is 22.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
@@ -1183,7 +1183,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The TCP port number that the SFTP server uses to lsiten for client connection. Default value is 22.
+    <dd>{{% md %}}The TCP port number that the SFTP server uses to listen for client connection. Default value is 22.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
@@ -1323,7 +1323,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The TCP port number that the SFTP server uses to lsiten for client connection. Default value is 22.
+    <dd>{{% md %}}The TCP port number that the SFTP server uses to listen for client connection. Default value is 22.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
@@ -1463,7 +1463,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The TCP port number that the SFTP server uses to lsiten for client connection. Default value is 22.
+    <dd>{{% md %}}The TCP port number that the SFTP server uses to listen for client connection. Default value is 22.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
@@ -1603,7 +1603,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The TCP port number that the SFTP server uses to lsiten for client connection. Default value is 22.
+    <dd>{{% md %}}The TCP port number that the SFTP server uses to listen for client connection. Default value is 22.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
