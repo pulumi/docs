@@ -288,7 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}LINT.IfChange(default_experiment_length) Maximum number of days to run the experiment/rollout. If auto-rollout is not enabled, default value and maximum will be 30 days. If auto-rollout is enabled, default value and maximum will be 6 days. LINT.ThenChange(//depot/google3/cloud/ml/api/conversation/analytics/compute.cc:default_experiment_length){{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Maximum number of days to run the experiment/rollout. If auto-rollout is not enabled, default value and maximum will be 30 days. If auto-rollout is enabled, default value and maximum will be 6 days.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastupdatetime_csharp">
 <a href="#lastupdatetime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Update<wbr>Time</a>
@@ -313,6 +313,30 @@ The following output properties are available:
         <span class="property-type"><a href="#googleclouddialogflowcxv3experimentresultresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V3.<wbr>Outputs.<wbr>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Experiment<wbr>Result<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Inference result of the experiment.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="rolloutconfig_csharp">
+<a href="#rolloutconfig_csharp" style="color: inherit; text-decoration: inherit;">Rollout<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3rolloutconfigresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V3.<wbr>Outputs.<wbr>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Rollout<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for auto rollout. If set, there should be exactly two variants in the experiment (control variant being the default version of the flow), the traffic allocation for the non-control variant will gradually increase to 100% when conditions are met, and eventually replace the control variant to become the default version of the flow.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="rolloutfailurereason_csharp">
+<a href="#rolloutfailurereason_csharp" style="color: inherit; text-decoration: inherit;">Rollout<wbr>Failure<wbr>Reason</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The reason why rollout has failed. Should only be set when state is ROLLOUT_FAILED.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="rolloutstate_csharp">
+<a href="#rolloutstate_csharp" style="color: inherit; text-decoration: inherit;">Rollout<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3rolloutstateresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V3.<wbr>Outputs.<wbr>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Rollout<wbr>State<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}State of the auto rollout process.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -388,7 +412,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}LINT.IfChange(default_experiment_length) Maximum number of days to run the experiment/rollout. If auto-rollout is not enabled, default value and maximum will be 30 days. If auto-rollout is enabled, default value and maximum will be 6 days. LINT.ThenChange(//depot/google3/cloud/ml/api/conversation/analytics/compute.cc:default_experiment_length){{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Maximum number of days to run the experiment/rollout. If auto-rollout is not enabled, default value and maximum will be 30 days. If auto-rollout is enabled, default value and maximum will be 6 days.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastupdatetime_go">
 <a href="#lastupdatetime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Update<wbr>Time</a>
@@ -413,6 +437,30 @@ The following output properties are available:
         <span class="property-type"><a href="#googleclouddialogflowcxv3experimentresultresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Experiment<wbr>Result<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Inference result of the experiment.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="rolloutconfig_go">
+<a href="#rolloutconfig_go" style="color: inherit; text-decoration: inherit;">Rollout<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3rolloutconfigresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Rollout<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for auto rollout. If set, there should be exactly two variants in the experiment (control variant being the default version of the flow), the traffic allocation for the non-control variant will gradually increase to 100% when conditions are met, and eventually replace the control variant to become the default version of the flow.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="rolloutfailurereason_go">
+<a href="#rolloutfailurereason_go" style="color: inherit; text-decoration: inherit;">Rollout<wbr>Failure<wbr>Reason</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The reason why rollout has failed. Should only be set when state is ROLLOUT_FAILED.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="rolloutstate_go">
+<a href="#rolloutstate_go" style="color: inherit; text-decoration: inherit;">Rollout<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3rolloutstateresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Rollout<wbr>State<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}State of the auto rollout process.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -488,7 +536,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}LINT.IfChange(default_experiment_length) Maximum number of days to run the experiment/rollout. If auto-rollout is not enabled, default value and maximum will be 30 days. If auto-rollout is enabled, default value and maximum will be 6 days. LINT.ThenChange(//depot/google3/cloud/ml/api/conversation/analytics/compute.cc:default_experiment_length){{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Maximum number of days to run the experiment/rollout. If auto-rollout is not enabled, default value and maximum will be 30 days. If auto-rollout is enabled, default value and maximum will be 6 days.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastupdatetime_nodejs">
 <a href="#lastupdatetime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Update<wbr>Time</a>
@@ -513,6 +561,30 @@ The following output properties are available:
         <span class="property-type"><a href="#googleclouddialogflowcxv3experimentresultresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Experiment<wbr>Result<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Inference result of the experiment.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="rolloutconfig_nodejs">
+<a href="#rolloutconfig_nodejs" style="color: inherit; text-decoration: inherit;">rollout<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3rolloutconfigresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Rollout<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for auto rollout. If set, there should be exactly two variants in the experiment (control variant being the default version of the flow), the traffic allocation for the non-control variant will gradually increase to 100% when conditions are met, and eventually replace the control variant to become the default version of the flow.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="rolloutfailurereason_nodejs">
+<a href="#rolloutfailurereason_nodejs" style="color: inherit; text-decoration: inherit;">rollout<wbr>Failure<wbr>Reason</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The reason why rollout has failed. Should only be set when state is ROLLOUT_FAILED.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="rolloutstate_nodejs">
+<a href="#rolloutstate_nodejs" style="color: inherit; text-decoration: inherit;">rollout<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3rolloutstateresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Rollout<wbr>State<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}State of the auto rollout process.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
@@ -588,7 +660,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}LINT.IfChange(default_experiment_length) Maximum number of days to run the experiment/rollout. If auto-rollout is not enabled, default value and maximum will be 30 days. If auto-rollout is enabled, default value and maximum will be 6 days. LINT.ThenChange(//depot/google3/cloud/ml/api/conversation/analytics/compute.cc:default_experiment_length){{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Maximum number of days to run the experiment/rollout. If auto-rollout is not enabled, default value and maximum will be 30 days. If auto-rollout is enabled, default value and maximum will be 6 days.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_update_time_python">
 <a href="#last_update_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>update_<wbr>time</a>
@@ -613,6 +685,30 @@ The following output properties are available:
         <span class="property-type"><a href="#googleclouddialogflowcxv3experimentresultresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Experiment<wbr>Result<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Inference result of the experiment.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="rollout_config_python">
+<a href="#rollout_config_python" style="color: inherit; text-decoration: inherit;">rollout_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3rolloutconfigresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Rollout<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for auto rollout. If set, there should be exactly two variants in the experiment (control variant being the default version of the flow), the traffic allocation for the non-control variant will gradually increase to 100% when conditions are met, and eventually replace the control variant to become the default version of the flow.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="rollout_failure_reason_python">
+<a href="#rollout_failure_reason_python" style="color: inherit; text-decoration: inherit;">rollout_<wbr>failure_<wbr>reason</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The reason why rollout has failed. Should only be set when state is ROLLOUT_FAILED.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="rollout_state_python">
+<a href="#rollout_state_python" style="color: inherit; text-decoration: inherit;">rollout_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3rolloutstateresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Rollout<wbr>State<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}State of the auto rollout process.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
@@ -1255,6 +1351,354 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the flow Version. Format: `projects//locations//agents//flows//versions/`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googleclouddialogflowcxv3rolloutconfigresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Rollout<wbr>Config<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="failurecondition_csharp">
+<a href="#failurecondition_csharp" style="color: inherit; text-decoration: inherit;">Failure<wbr>Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The conditions that are used to evaluate the failure of a rollout step. If not specified, no rollout steps will fail. E.g. "containment_rate < 10% OR average_turn_count < 3". See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rolloutcondition_csharp">
+<a href="#rolloutcondition_csharp" style="color: inherit; text-decoration: inherit;">Rollout<wbr>Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The conditions that are used to evaluate the success of a rollout step. If not specified, all rollout steps will proceed to the next one unless failure conditions are met. E.g. "containment_rate > 60% AND callback_rate < 20%". See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rolloutsteps_csharp">
+<a href="#rolloutsteps_csharp" style="color: inherit; text-decoration: inherit;">Rollout<wbr>Steps</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3rolloutconfigrolloutstepresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V3.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Rollout<wbr>Config<wbr>Rollout<wbr>Step<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Steps to roll out a flow version. Steps should be sorted by percentage in ascending order.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="failurecondition_go">
+<a href="#failurecondition_go" style="color: inherit; text-decoration: inherit;">Failure<wbr>Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The conditions that are used to evaluate the failure of a rollout step. If not specified, no rollout steps will fail. E.g. "containment_rate < 10% OR average_turn_count < 3". See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rolloutcondition_go">
+<a href="#rolloutcondition_go" style="color: inherit; text-decoration: inherit;">Rollout<wbr>Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The conditions that are used to evaluate the success of a rollout step. If not specified, all rollout steps will proceed to the next one unless failure conditions are met. E.g. "containment_rate > 60% AND callback_rate < 20%". See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rolloutsteps_go">
+<a href="#rolloutsteps_go" style="color: inherit; text-decoration: inherit;">Rollout<wbr>Steps</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3rolloutconfigrolloutstepresponse">[]Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Rollout<wbr>Config<wbr>Rollout<wbr>Step<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Steps to roll out a flow version. Steps should be sorted by percentage in ascending order.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="failurecondition_nodejs">
+<a href="#failurecondition_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The conditions that are used to evaluate the failure of a rollout step. If not specified, no rollout steps will fail. E.g. "containment_rate < 10% OR average_turn_count < 3". See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rolloutcondition_nodejs">
+<a href="#rolloutcondition_nodejs" style="color: inherit; text-decoration: inherit;">rollout<wbr>Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The conditions that are used to evaluate the success of a rollout step. If not specified, all rollout steps will proceed to the next one unless failure conditions are met. E.g. "containment_rate > 60% AND callback_rate < 20%". See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rolloutsteps_nodejs">
+<a href="#rolloutsteps_nodejs" style="color: inherit; text-decoration: inherit;">rollout<wbr>Steps</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3rolloutconfigrolloutstepresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Rollout<wbr>Config<wbr>Rollout<wbr>Step<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Steps to roll out a flow version. Steps should be sorted by percentage in ascending order.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="failure_condition_python">
+<a href="#failure_condition_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The conditions that are used to evaluate the failure of a rollout step. If not specified, no rollout steps will fail. E.g. "containment_rate < 10% OR average_turn_count < 3". See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rollout_condition_python">
+<a href="#rollout_condition_python" style="color: inherit; text-decoration: inherit;">rollout_<wbr>condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The conditions that are used to evaluate the success of a rollout step. If not specified, all rollout steps will proceed to the next one unless failure conditions are met. E.g. "containment_rate > 60% AND callback_rate < 20%". See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rollout_steps_python">
+<a href="#rollout_steps_python" style="color: inherit; text-decoration: inherit;">rollout_<wbr>steps</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3rolloutconfigrolloutstepresponse">Sequence[Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Rollout<wbr>Config<wbr>Rollout<wbr>Step<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Steps to roll out a flow version. Steps should be sorted by percentage in ascending order.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googleclouddialogflowcxv3rolloutconfigrolloutstepresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Rollout<wbr>Config<wbr>Rollout<wbr>Step<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="displayname_csharp">
+<a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the rollout step;{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="minduration_csharp">
+<a href="#minduration_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The minimum time that this step should last. Should be longer than 1 hour. If not set, the default minimum duration for each step will be 1 hour.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="trafficpercent_csharp">
+<a href="#trafficpercent_csharp" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Percent</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The percentage of traffic allocated to the flow version of this rollout step. (0%, 100%].{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="displayname_go">
+<a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the rollout step;{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="minduration_go">
+<a href="#minduration_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The minimum time that this step should last. Should be longer than 1 hour. If not set, the default minimum duration for each step will be 1 hour.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="trafficpercent_go">
+<a href="#trafficpercent_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Percent</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The percentage of traffic allocated to the flow version of this rollout step. (0%, 100%].{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="displayname_nodejs">
+<a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the rollout step;{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="minduration_nodejs">
+<a href="#minduration_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The minimum time that this step should last. Should be longer than 1 hour. If not set, the default minimum duration for each step will be 1 hour.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="trafficpercent_nodejs">
+<a href="#trafficpercent_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Percent</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The percentage of traffic allocated to the flow version of this rollout step. (0%, 100%].{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="display_name_python">
+<a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the rollout step;{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="min_duration_python">
+<a href="#min_duration_python" style="color: inherit; text-decoration: inherit;">min_<wbr>duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The minimum time that this step should last. Should be longer than 1 hour. If not set, the default minimum duration for each step will be 1 hour.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="traffic_percent_python">
+<a href="#traffic_percent_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>percent</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The percentage of traffic allocated to the flow version of this rollout step. (0%, 100%].{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googleclouddialogflowcxv3rolloutstateresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Rollout<wbr>State<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="starttime_csharp">
+<a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Start time of the current step.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="step_csharp">
+<a href="#step_csharp" style="color: inherit; text-decoration: inherit;">Step</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Display name of the current auto rollout step.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="stepindex_csharp">
+<a href="#stepindex_csharp" style="color: inherit; text-decoration: inherit;">Step<wbr>Index</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Index of the current step in the auto rollout steps list.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="starttime_go">
+<a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Start time of the current step.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="step_go">
+<a href="#step_go" style="color: inherit; text-decoration: inherit;">Step</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Display name of the current auto rollout step.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="stepindex_go">
+<a href="#stepindex_go" style="color: inherit; text-decoration: inherit;">Step<wbr>Index</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Index of the current step in the auto rollout steps list.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="starttime_nodejs">
+<a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Start time of the current step.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="step_nodejs">
+<a href="#step_nodejs" style="color: inherit; text-decoration: inherit;">step</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Display name of the current auto rollout step.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="stepindex_nodejs">
+<a href="#stepindex_nodejs" style="color: inherit; text-decoration: inherit;">step<wbr>Index</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Index of the current step in the auto rollout steps list.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="start_time_python">
+<a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Start time of the current step.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="step_python">
+<a href="#step_python" style="color: inherit; text-decoration: inherit;">step</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Display name of the current auto rollout step.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="step_index_python">
+<a href="#step_index_python" style="color: inherit; text-decoration: inherit;">step_<wbr>index</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Index of the current step in the auto rollout steps list.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googleclouddialogflowcxv3variantshistoryresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Variants<wbr>History<wbr>Response</h4>

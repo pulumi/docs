@@ -218,7 +218,7 @@ The Backup resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name of the source Cloud Filestore instance, in the format projects/{project_number}/locations/{location_id}/instances/{instance_id}, used to create this backup.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The resource name of the source Cloud Filestore instance, in the format `projects/{project_number}/locations/{location_id}/instances/{instance_id}`, used to create this backup.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -278,7 +278,7 @@ The Backup resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name of the source Cloud Filestore instance, in the format projects/{project_number}/locations/{location_id}/instances/{instance_id}, used to create this backup.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The resource name of the source Cloud Filestore instance, in the format `projects/{project_number}/locations/{location_id}/instances/{instance_id}`, used to create this backup.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -338,7 +338,7 @@ The Backup resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name of the source Cloud Filestore instance, in the format projects/{project_number}/locations/{location_id}/instances/{instance_id}, used to create this backup.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The resource name of the source Cloud Filestore instance, in the format `projects/{project_number}/locations/{location_id}/instances/{instance_id}`, used to create this backup.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -398,7 +398,7 @@ The Backup resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource name of the source Cloud Filestore instance, in the format projects/{project_number}/locations/{location_id}/instances/{instance_id}, used to create this backup.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The resource name of the source Cloud Filestore instance, in the format `projects/{project_number}/locations/{location_id}/instances/{instance_id}`, used to create this backup.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -449,7 +449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name of the backup, in the format projects/{project_number}/locations/{location_id}/backups/{backup_id}.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The resource name of the backup, in the format `projects/{project_number}/locations/{location_id}/backups/{backup_id}`.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="satisfiespzs_csharp">
 <a href="#satisfiespzs_csharp" style="color: inherit; text-decoration: inherit;">Satisfies<wbr>Pzs</a>
@@ -525,7 +525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name of the backup, in the format projects/{project_number}/locations/{location_id}/backups/{backup_id}.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The resource name of the backup, in the format `projects/{project_number}/locations/{location_id}/backups/{backup_id}`.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="satisfiespzs_go">
 <a href="#satisfiespzs_go" style="color: inherit; text-decoration: inherit;">Satisfies<wbr>Pzs</a>
@@ -601,7 +601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name of the backup, in the format projects/{project_number}/locations/{location_id}/backups/{backup_id}.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The resource name of the backup, in the format `projects/{project_number}/locations/{location_id}/backups/{backup_id}`.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="satisfiespzs_nodejs">
 <a href="#satisfiespzs_nodejs" style="color: inherit; text-decoration: inherit;">satisfies<wbr>Pzs</a>
@@ -677,7 +677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource name of the backup, in the format projects/{project_number}/locations/{location_id}/backups/{backup_id}.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The resource name of the backup, in the format `projects/{project_number}/locations/{location_id}/backups/{backup_id}`.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="satisfies_pzs_python">
 <a href="#satisfies_pzs_python" style="color: inherit; text-decoration: inherit;">satisfies_<wbr>pzs</a>

@@ -157,7 +157,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An optional string description of this rule. This field has a maximum length of 100 characters.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An optional string description of this rule. This field has a maximum length of 400 characters.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -193,7 +193,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An optional string description of this rule. This field has a maximum length of 100 characters.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An optional string description of this rule. This field has a maximum length of 400 characters.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -229,7 +229,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An optional string description of this rule. This field has a maximum length of 100 characters.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An optional string description of this rule. This field has a maximum length of 400 characters.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -265,7 +265,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An optional string description of this rule. This field has a maximum length of 100 characters.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An optional string description of this rule. This field has a maximum length of 400 characters.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>

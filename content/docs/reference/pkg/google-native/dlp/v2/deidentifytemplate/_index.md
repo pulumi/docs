@@ -2072,7 +2072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#googleprivacydlpv2kmswrappedcryptokey">Pulumi.<wbr>Google<wbr>Native.<wbr>DLP.<wbr>V2.<wbr>Inputs.<wbr>Google<wbr>Privacy<wbr>Dlp<wbr>V2Kms<wbr>Wrapped<wbr>Crypto<wbr>Key</a></span>
     </dt>
-    <dd>{{% md %}}Kms wrapped key{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Key wrapped using Cloud KMS{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transient_csharp">
 <a href="#transient_csharp" style="color: inherit; text-decoration: inherit;">Transient</a>
@@ -2100,7 +2100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#googleprivacydlpv2kmswrappedcryptokey">Google<wbr>Privacy<wbr>Dlp<wbr>V2Kms<wbr>Wrapped<wbr>Crypto<wbr>Key</a></span>
     </dt>
-    <dd>{{% md %}}Kms wrapped key{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Key wrapped using Cloud KMS{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transient_go">
 <a href="#transient_go" style="color: inherit; text-decoration: inherit;">Transient</a>
@@ -2128,7 +2128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#googleprivacydlpv2kmswrappedcryptokey">Google<wbr>Privacy<wbr>Dlp<wbr>V2Kms<wbr>Wrapped<wbr>Crypto<wbr>Key</a></span>
     </dt>
-    <dd>{{% md %}}Kms wrapped key{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Key wrapped using Cloud KMS{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transient_nodejs">
 <a href="#transient_nodejs" style="color: inherit; text-decoration: inherit;">transient</a>
@@ -2156,7 +2156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#googleprivacydlpv2kmswrappedcryptokey">Google<wbr>Privacy<wbr>Dlp<wbr>V2Kms<wbr>Wrapped<wbr>Crypto<wbr>Key</a></span>
     </dt>
-    <dd>{{% md %}}Kms wrapped key{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Key wrapped using Cloud KMS{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transient_python">
 <a href="#transient_python" style="color: inherit; text-decoration: inherit;">transient</a>
@@ -2186,7 +2186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#googleprivacydlpv2kmswrappedcryptokeyresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>DLP.<wbr>V2.<wbr>Inputs.<wbr>Google<wbr>Privacy<wbr>Dlp<wbr>V2Kms<wbr>Wrapped<wbr>Crypto<wbr>Key<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Kms wrapped key{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Key wrapped using Cloud KMS{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transient_csharp">
 <a href="#transient_csharp" style="color: inherit; text-decoration: inherit;">Transient</a>
@@ -2214,7 +2214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#googleprivacydlpv2kmswrappedcryptokeyresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Kms<wbr>Wrapped<wbr>Crypto<wbr>Key<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Kms wrapped key{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Key wrapped using Cloud KMS{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transient_go">
 <a href="#transient_go" style="color: inherit; text-decoration: inherit;">Transient</a>
@@ -2242,7 +2242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#googleprivacydlpv2kmswrappedcryptokeyresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Kms<wbr>Wrapped<wbr>Crypto<wbr>Key<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Kms wrapped key{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Key wrapped using Cloud KMS{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transient_nodejs">
 <a href="#transient_nodejs" style="color: inherit; text-decoration: inherit;">transient</a>
@@ -2270,7 +2270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#googleprivacydlpv2kmswrappedcryptokeyresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Kms<wbr>Wrapped<wbr>Crypto<wbr>Key<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Kms wrapped key{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Key wrapped using Cloud KMS{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transient_python">
 <a href="#transient_python" style="color: inherit; text-decoration: inherit;">transient</a>
@@ -4680,7 +4680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#googleprivacydlpv2replacevalueconfig">Pulumi.<wbr>Google<wbr>Native.<wbr>DLP.<wbr>V2.<wbr>Inputs.<wbr>Google<wbr>Privacy<wbr>Dlp<wbr>V2Replace<wbr>Value<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Replace{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Replace with a specified value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replacewithinfotypeconfig_csharp">
 <a href="#replacewithinfotypeconfig_csharp" style="color: inherit; text-decoration: inherit;">Replace<wbr>With<wbr>Info<wbr>Type<wbr>Config</a>
@@ -4772,7 +4772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#googleprivacydlpv2replacevalueconfig">Google<wbr>Privacy<wbr>Dlp<wbr>V2Replace<wbr>Value<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Replace{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Replace with a specified value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replacewithinfotypeconfig_go">
 <a href="#replacewithinfotypeconfig_go" style="color: inherit; text-decoration: inherit;">Replace<wbr>With<wbr>Info<wbr>Type<wbr>Config</a>
@@ -4864,7 +4864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#googleprivacydlpv2replacevalueconfig">Google<wbr>Privacy<wbr>Dlp<wbr>V2Replace<wbr>Value<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Replace{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Replace with a specified value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replacewithinfotypeconfig_nodejs">
 <a href="#replacewithinfotypeconfig_nodejs" style="color: inherit; text-decoration: inherit;">replace<wbr>With<wbr>Info<wbr>Type<wbr>Config</a>
@@ -4956,7 +4956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#googleprivacydlpv2replacevalueconfig">Google<wbr>Privacy<wbr>Dlp<wbr>V2Replace<wbr>Value<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Replace{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Replace with a specified value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replace_with_info_type_config_python">
 <a href="#replace_with_info_type_config_python" style="color: inherit; text-decoration: inherit;">replace_<wbr>with_<wbr>info_<wbr>type_<wbr>config</a>
@@ -5050,7 +5050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#googleprivacydlpv2replacevalueconfigresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>DLP.<wbr>V2.<wbr>Inputs.<wbr>Google<wbr>Privacy<wbr>Dlp<wbr>V2Replace<wbr>Value<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Replace{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Replace with a specified value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replacewithinfotypeconfig_csharp">
 <a href="#replacewithinfotypeconfig_csharp" style="color: inherit; text-decoration: inherit;">Replace<wbr>With<wbr>Info<wbr>Type<wbr>Config</a>
@@ -5142,7 +5142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#googleprivacydlpv2replacevalueconfigresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Replace<wbr>Value<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Replace{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Replace with a specified value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replacewithinfotypeconfig_go">
 <a href="#replacewithinfotypeconfig_go" style="color: inherit; text-decoration: inherit;">Replace<wbr>With<wbr>Info<wbr>Type<wbr>Config</a>
@@ -5234,7 +5234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#googleprivacydlpv2replacevalueconfigresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Replace<wbr>Value<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Replace{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Replace with a specified value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replacewithinfotypeconfig_nodejs">
 <a href="#replacewithinfotypeconfig_nodejs" style="color: inherit; text-decoration: inherit;">replace<wbr>With<wbr>Info<wbr>Type<wbr>Config</a>
@@ -5326,7 +5326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#googleprivacydlpv2replacevalueconfigresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Replace<wbr>Value<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Replace{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Replace with a specified value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replace_with_info_type_config_python">
 <a href="#replace_with_info_type_config_python" style="color: inherit; text-decoration: inherit;">replace_<wbr>with_<wbr>info_<wbr>type_<wbr>config</a>

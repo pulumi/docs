@@ -239,7 +239,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name of this policy tag in the URL format. The policy tag manager generates unique taxonomy IDs and policy tag IDs. {{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Resource name of this policy tag in the URL format. The policy tag manager generates unique taxonomy IDs and policy tag IDs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="parentpolicytag_csharp">
 <a href="#parentpolicytag_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Policy<wbr>Tag</a>
@@ -283,7 +283,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name of this policy tag in the URL format. The policy tag manager generates unique taxonomy IDs and policy tag IDs. {{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Resource name of this policy tag in the URL format. The policy tag manager generates unique taxonomy IDs and policy tag IDs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="parentpolicytag_go">
 <a href="#parentpolicytag_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Policy<wbr>Tag</a>
@@ -327,7 +327,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name of this policy tag in the URL format. The policy tag manager generates unique taxonomy IDs and policy tag IDs. {{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Resource name of this policy tag in the URL format. The policy tag manager generates unique taxonomy IDs and policy tag IDs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="parentpolicytag_nodejs">
 <a href="#parentpolicytag_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Policy<wbr>Tag</a>
@@ -371,7 +371,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name of this policy tag in the URL format. The policy tag manager generates unique taxonomy IDs and policy tag IDs. {{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Resource name of this policy tag in the URL format. The policy tag manager generates unique taxonomy IDs and policy tag IDs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="parent_policy_tag_python">
 <a href="#parent_policy_tag_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>policy_<wbr>tag</a>

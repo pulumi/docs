@@ -6702,6 +6702,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}List of ports, or port pairs, to forward from the virtual machine to the application container. Only applicable in the App Engine flexible environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="instanceipmode_csharp">
+<a href="#instanceipmode_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Ip<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkinstanceipmode">Pulumi.<wbr>Google<wbr>Native.<wbr>App<wbr>Engine.<wbr>V1Beta.<wbr>Network<wbr>Instance<wbr>Ip<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The IP mode for instances. Only applicable in the App Engine flexible environment.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="instancetag_csharp">
 <a href="#instancetag_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Tag</a>
 </span>
@@ -6745,6 +6753,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of ports, or port pairs, to forward from the virtual machine to the application container. Only applicable in the App Engine flexible environment.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="instanceipmode_go">
+<a href="#instanceipmode_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Ip<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkinstanceipmode">Network<wbr>Instance<wbr>Ip<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The IP mode for instances. Only applicable in the App Engine flexible environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancetag_go">
 <a href="#instancetag_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Tag</a>
@@ -6790,6 +6806,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}List of ports, or port pairs, to forward from the virtual machine to the application container. Only applicable in the App Engine flexible environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="instanceipmode_nodejs">
+<a href="#instanceipmode_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Ip<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkinstanceipmode">Network<wbr>Instance<wbr>Ip<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The IP mode for instances. Only applicable in the App Engine flexible environment.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="instancetag_nodejs">
 <a href="#instancetag_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Tag</a>
 </span>
@@ -6833,6 +6857,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of ports, or port pairs, to forward from the virtual machine to the application container. Only applicable in the App Engine flexible environment.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="instance_ip_mode_python">
+<a href="#instance_ip_mode_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>ip_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkinstanceipmode">Network<wbr>Instance<wbr>Ip<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The IP mode for instances. Only applicable in the App Engine flexible environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_tag_python">
 <a href="#instance_tag_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>tag</a>
@@ -6867,6 +6899,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Google Cloud Platform sub-network where the virtual machines are created. Specify the short name, not the resource path.If a subnetwork name is specified, a network name will also be required unless it is for the default network. If the network that the instance is being created in is a Legacy network, then the IP address is allocated from the IPv4Range. If the network that the instance is being created in is an auto Subnet Mode Network, then only network name should be specified (not the subnetwork_name) and the IP address is created from the IPCidrRange of the subnetwork that exists in that zone for that network. If the network that the instance is being created in is a custom Subnet Mode Network, then the subnetwork_name must be specified and the IP address is created from the IPCidrRange of the subnetwork.If specified, the subnetwork must exist in the same region as the App Engine flexible environment application.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="networkinstanceipmode">Network<wbr>Instance<wbr>Ip<wbr>Mode</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Instance<wbr>Ip<wbr>Mode<wbr>Unspecified</dt>
+    <dd>INSTANCE_IP_MODE_UNSPECIFIED{{% md %}}Unspecified should be treated as EXTERNAL{{% /md %}}</dd><dt>External</dt>
+    <dd>EXTERNAL{{% md %}}VMs should be created with external and internal IPs{{% /md %}}</dd><dt>Internal</dt>
+    <dd>INTERNAL{{% md %}}VMs should be created with internal IPs only{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Network<wbr>Instance<wbr>Ip<wbr>Mode<wbr>Instance<wbr>Ip<wbr>Mode<wbr>Unspecified</dt>
+    <dd>INSTANCE_IP_MODE_UNSPECIFIED{{% md %}}Unspecified should be treated as EXTERNAL{{% /md %}}</dd><dt>Network<wbr>Instance<wbr>Ip<wbr>Mode<wbr>External</dt>
+    <dd>EXTERNAL{{% md %}}VMs should be created with external and internal IPs{{% /md %}}</dd><dt>Network<wbr>Instance<wbr>Ip<wbr>Mode<wbr>Internal</dt>
+    <dd>INTERNAL{{% md %}}VMs should be created with internal IPs only{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Instance<wbr>Ip<wbr>Mode<wbr>Unspecified</dt>
+    <dd>INSTANCE_IP_MODE_UNSPECIFIED{{% md %}}Unspecified should be treated as EXTERNAL{{% /md %}}</dd><dt>External</dt>
+    <dd>EXTERNAL{{% md %}}VMs should be created with external and internal IPs{{% /md %}}</dd><dt>Internal</dt>
+    <dd>INTERNAL{{% md %}}VMs should be created with internal IPs only{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>INSTANCE_IP_MODE_UNSPECIFIED</dt>
+    <dd>INSTANCE_IP_MODE_UNSPECIFIED{{% md %}}Unspecified should be treated as EXTERNAL{{% /md %}}</dd><dt>EXTERNAL</dt>
+    <dd>EXTERNAL{{% md %}}VMs should be created with external and internal IPs{{% /md %}}</dd><dt>INTERNAL</dt>
+    <dd>INTERNAL{{% md %}}VMs should be created with internal IPs only{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="networkresponse">Network<wbr>Response</h4>
 
 {{% choosable language csharp %}}
@@ -6879,6 +6941,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of ports, or port pairs, to forward from the virtual machine to the application container. Only applicable in the App Engine flexible environment.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="instanceipmode_csharp">
+<a href="#instanceipmode_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Ip<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IP mode for instances. Only applicable in the App Engine flexible environment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instancetag_csharp">
 <a href="#instancetag_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Tag</a>
@@ -6924,6 +6994,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}List of ports, or port pairs, to forward from the virtual machine to the application container. Only applicable in the App Engine flexible environment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="instanceipmode_go">
+<a href="#instanceipmode_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Ip<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IP mode for instances. Only applicable in the App Engine flexible environment.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="instancetag_go">
 <a href="#instancetag_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Tag</a>
 </span>
@@ -6968,6 +7046,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}List of ports, or port pairs, to forward from the virtual machine to the application container. Only applicable in the App Engine flexible environment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="instanceipmode_nodejs">
+<a href="#instanceipmode_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Ip<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IP mode for instances. Only applicable in the App Engine flexible environment.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="instancetag_nodejs">
 <a href="#instancetag_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Tag</a>
 </span>
@@ -7011,6 +7097,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of ports, or port pairs, to forward from the virtual machine to the application container. Only applicable in the App Engine flexible environment.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="instance_ip_mode_python">
+<a href="#instance_ip_mode_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>ip_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The IP mode for instances. Only applicable in the App Engine flexible environment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instance_tag_python">
 <a href="#instance_tag_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>tag</a>

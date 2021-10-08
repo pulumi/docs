@@ -1,6 +1,6 @@
 ---
-title: "Google Native (preview)"
-title_tag: "Google Native (preview) Package"
+title: "Google Cloud Native"
+title_tag: "Google Cloud Native Package"
 meta_desc: "A native Pulumi package for creating and managing Google Cloud resources."
 menu:
     reference:
@@ -43,6 +43,8 @@ A native Pulumi package for creating and managing Google Cloud resources.
     <li><a href="cloudtrace/" title="cloudtrace"><span class="symbol module"></span>cloudtrace</a></li>
     <li><a href="composer/" title="composer"><span class="symbol module"></span>composer</a></li>
     <li><a href="compute/" title="compute"><span class="symbol module"></span>compute</a></li>
+    <li><a href="connectors/" title="connectors"><span class="symbol module"></span>connectors</a></li>
+    <li><a href="contactcenterinsights/" title="contactcenterinsights"><span class="symbol module"></span>contactcenterinsights</a></li>
     <li><a href="container/" title="container"><span class="symbol module"></span>container</a></li>
     <li><a href="containeranalysis/" title="containeranalysis"><span class="symbol module"></span>containeranalysis</a></li>
     <li><a href="datacatalog/" title="datacatalog"><span class="symbol module"></span>datacatalog</a></li>
@@ -56,6 +58,7 @@ A native Pulumi package for creating and managing Google Cloud resources.
     <li><a href="dialogflow/" title="dialogflow"><span class="symbol module"></span>dialogflow</a></li>
     <li><a href="dlp/" title="dlp"><span class="symbol module"></span>dlp</a></li>
     <li><a href="dns/" title="dns"><span class="symbol module"></span>dns</a></li>
+    <li><a href="documentai/" title="documentai"><span class="symbol module"></span>documentai</a></li>
     <li><a href="domains/" title="domains"><span class="symbol module"></span>domains</a></li>
     <li><a href="essentialcontacts/" title="essentialcontacts"><span class="symbol module"></span>essentialcontacts</a></li>
     <li><a href="eventarc/" title="eventarc"><span class="symbol module"></span>eventarc</a></li>
@@ -83,6 +86,7 @@ A native Pulumi package for creating and managing Google Cloud resources.
     <li><a href="networkconnectivity/" title="networkconnectivity"><span class="symbol module"></span>networkconnectivity</a></li>
     <li><a href="networkmanagement/" title="networkmanagement"><span class="symbol module"></span>networkmanagement</a></li>
     <li><a href="networksecurity/" title="networksecurity"><span class="symbol module"></span>networksecurity</a></li>
+    <li><a href="networkservices/" title="networkservices"><span class="symbol module"></span>networkservices</a></li>
     <li><a href="notebooks/" title="notebooks"><span class="symbol module"></span>notebooks</a></li>
     <li><a href="orgpolicy/" title="orgpolicy"><span class="symbol module"></span>orgpolicy</a></li>
     <li><a href="osconfig/" title="osconfig"><span class="symbol module"></span>osconfig</a></li>
@@ -130,6 +134,6 @@ A native Pulumi package for creating and managing Google Cloud resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.0</dd>
+	<dd>0.8.0</dd>
 </dl>
 

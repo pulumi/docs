@@ -38,7 +38,8 @@ on Google Cloud even though it will be deleted from Pulumi state.
                      <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">reservations</span><span class="p">:</span> <span class="nx">Optional[Sequence[ReservationArgs]]</span> = None<span class="p">,</span>
-                     <span class="nx">resources</span><span class="p">:</span> <span class="nx">Optional[Sequence[ResourceCommitmentArgs]]</span> = None<span class="p">)</span>
+                     <span class="nx">resources</span><span class="p">:</span> <span class="nx">Optional[Sequence[ResourceCommitmentArgs]]</span> = None<span class="p">,</span>
+                     <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[RegionCommitmentType]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">RegionCommitment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RegionCommitmentArgs</a></span><span class="p">,</span>
@@ -246,7 +247,15 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcecommitment">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Inputs.<wbr>Resource<wbr>Commitment<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of commitment amounts for particular resources. Note that VCPU and MEMORY resource commitments must occur together.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of commitment amounts for particular resources. Note that VCPU and MEMORY resource commitments must occur together.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regioncommitmenttype">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Region<wbr>Commitment<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The type of commitment, which affects the discount rate and the eligible resources. Type MEMORY_OPTIMIZED specifies a commitment that will only apply to memory optimized machines. Type ACCELERATOR_OPTIMIZED specifies a commitment that will only apply to accelerator optimized machines.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -330,7 +339,15 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcecommitment">[]Resource<wbr>Commitment<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A list of commitment amounts for particular resources. Note that VCPU and MEMORY resource commitments must occur together.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of commitment amounts for particular resources. Note that VCPU and MEMORY resource commitments must occur together.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regioncommitmenttype">Region<wbr>Commitment<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The type of commitment, which affects the discount rate and the eligible resources. Type MEMORY_OPTIMIZED specifies a commitment that will only apply to memory optimized machines. Type ACCELERATOR_OPTIMIZED specifies a commitment that will only apply to accelerator optimized machines.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -414,7 +431,15 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcecommitment">Resource<wbr>Commitment<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of commitment amounts for particular resources. Note that VCPU and MEMORY resource commitments must occur together.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of commitment amounts for particular resources. Note that VCPU and MEMORY resource commitments must occur together.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regioncommitmenttype">Region<wbr>Commitment<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The type of commitment, which affects the discount rate and the eligible resources. Type MEMORY_OPTIMIZED specifies a commitment that will only apply to memory optimized machines. Type ACCELERATOR_OPTIMIZED specifies a commitment that will only apply to accelerator optimized machines.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -498,7 +523,15 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcecommitment">Sequence[Resource<wbr>Commitment<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A list of commitment amounts for particular resources. Note that VCPU and MEMORY resource commitments must occur together.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of commitment amounts for particular resources. Note that VCPU and MEMORY resource commitments must occur together.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regioncommitmenttype">Region<wbr>Commitment<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The type of commitment, which affects the discount rate and the eligible resources. Type MEMORY_OPTIMIZED specifies a commitment that will only apply to memory optimized machines. Type ACCELERATOR_OPTIMIZED specifies a commitment that will only apply to accelerator optimized machines.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1982,6 +2015,56 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>INVALID</dd><dt>THIRTY_SIX_MONTH</dt>
     <dd>THIRTY_SIX_MONTH</dd><dt>TWELVE_MONTH</dt>
     <dd>TWELVE_MONTH</dd></dl>
+{{% /choosable %}}
+
+<h4 id="regioncommitmenttype">Region<wbr>Commitment<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Accelerator<wbr>Optimized</dt>
+    <dd>ACCELERATOR_OPTIMIZED</dd><dt>Compute<wbr>Optimized</dt>
+    <dd>COMPUTE_OPTIMIZED</dd><dt>General<wbr>Purpose</dt>
+    <dd>GENERAL_PURPOSE</dd><dt>General<wbr>Purpose<wbr>E2</dt>
+    <dd>GENERAL_PURPOSE_E2</dd><dt>General<wbr>Purpose<wbr>N2</dt>
+    <dd>GENERAL_PURPOSE_N2</dd><dt>General<wbr>Purpose<wbr>N2d</dt>
+    <dd>GENERAL_PURPOSE_N2D</dd><dt>Memory<wbr>Optimized</dt>
+    <dd>MEMORY_OPTIMIZED</dd><dt>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Region<wbr>Commitment<wbr>Type<wbr>Accelerator<wbr>Optimized</dt>
+    <dd>ACCELERATOR_OPTIMIZED</dd><dt>Region<wbr>Commitment<wbr>Type<wbr>Compute<wbr>Optimized</dt>
+    <dd>COMPUTE_OPTIMIZED</dd><dt>Region<wbr>Commitment<wbr>Type<wbr>General<wbr>Purpose</dt>
+    <dd>GENERAL_PURPOSE</dd><dt>Region<wbr>Commitment<wbr>Type<wbr>General<wbr>Purpose<wbr>E2</dt>
+    <dd>GENERAL_PURPOSE_E2</dd><dt>Region<wbr>Commitment<wbr>Type<wbr>General<wbr>Purpose<wbr>N2</dt>
+    <dd>GENERAL_PURPOSE_N2</dd><dt>Region<wbr>Commitment<wbr>Type<wbr>General<wbr>Purpose<wbr>N2d</dt>
+    <dd>GENERAL_PURPOSE_N2D</dd><dt>Region<wbr>Commitment<wbr>Type<wbr>Memory<wbr>Optimized</dt>
+    <dd>MEMORY_OPTIMIZED</dd><dt>Region<wbr>Commitment<wbr>Type<wbr>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Accelerator<wbr>Optimized</dt>
+    <dd>ACCELERATOR_OPTIMIZED</dd><dt>Compute<wbr>Optimized</dt>
+    <dd>COMPUTE_OPTIMIZED</dd><dt>General<wbr>Purpose</dt>
+    <dd>GENERAL_PURPOSE</dd><dt>General<wbr>Purpose<wbr>E2</dt>
+    <dd>GENERAL_PURPOSE_E2</dd><dt>General<wbr>Purpose<wbr>N2</dt>
+    <dd>GENERAL_PURPOSE_N2</dd><dt>General<wbr>Purpose<wbr>N2d</dt>
+    <dd>GENERAL_PURPOSE_N2D</dd><dt>Memory<wbr>Optimized</dt>
+    <dd>MEMORY_OPTIMIZED</dd><dt>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ACCELERATOR_OPTIMIZED</dt>
+    <dd>ACCELERATOR_OPTIMIZED</dd><dt>COMPUTE_OPTIMIZED</dt>
+    <dd>COMPUTE_OPTIMIZED</dd><dt>GENERAL_PURPOSE</dt>
+    <dd>GENERAL_PURPOSE</dd><dt>GENERAL_PURPOSE_E2</dt>
+    <dd>GENERAL_PURPOSE_E2</dd><dt>GENERAL_PURPOSE_N2</dt>
+    <dd>GENERAL_PURPOSE_N2</dd><dt>GENERAL_PURPOSE_N2D</dt>
+    <dd>GENERAL_PURPOSE_N2D</dd><dt>MEMORY_OPTIMIZED</dt>
+    <dd>MEMORY_OPTIMIZED</dd><dt>TYPE_UNSPECIFIED</dt>
+    <dd>TYPE_UNSPECIFIED</dd></dl>
 {{% /choosable %}}
 
 <h4 id="reservation">Reservation</h4>

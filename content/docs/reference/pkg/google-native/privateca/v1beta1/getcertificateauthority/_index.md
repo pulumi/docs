@@ -4080,7 +4080,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This can refer to a CertificateAuthority in the same project that was used to create a subordinate CertificateAuthority. This field is used for information and usability purposes only. The resource name is in the format `projects/*/locations/*/certificateAuthorities/*`.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This can refer to a CertificateAuthority that was used to create a subordinate CertificateAuthority. This field is used for information and usability purposes only. The resource name is in the format `projects/*/locations/*/certificateAuthorities/*`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pemissuerchain_csharp">
 <a href="#pemissuerchain_csharp" style="color: inherit; text-decoration: inherit;">Pem<wbr>Issuer<wbr>Chain</a>
@@ -4100,7 +4100,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This can refer to a CertificateAuthority in the same project that was used to create a subordinate CertificateAuthority. This field is used for information and usability purposes only. The resource name is in the format `projects/*/locations/*/certificateAuthorities/*`.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This can refer to a CertificateAuthority that was used to create a subordinate CertificateAuthority. This field is used for information and usability purposes only. The resource name is in the format `projects/*/locations/*/certificateAuthorities/*`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pemissuerchain_go">
 <a href="#pemissuerchain_go" style="color: inherit; text-decoration: inherit;">Pem<wbr>Issuer<wbr>Chain</a>
@@ -4120,7 +4120,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This can refer to a CertificateAuthority in the same project that was used to create a subordinate CertificateAuthority. This field is used for information and usability purposes only. The resource name is in the format `projects/*/locations/*/certificateAuthorities/*`.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This can refer to a CertificateAuthority that was used to create a subordinate CertificateAuthority. This field is used for information and usability purposes only. The resource name is in the format `projects/*/locations/*/certificateAuthorities/*`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pemissuerchain_nodejs">
 <a href="#pemissuerchain_nodejs" style="color: inherit; text-decoration: inherit;">pem<wbr>Issuer<wbr>Chain</a>
@@ -4140,7 +4140,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This can refer to a CertificateAuthority in the same project that was used to create a subordinate CertificateAuthority. This field is used for information and usability purposes only. The resource name is in the format `projects/*/locations/*/certificateAuthorities/*`.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This can refer to a CertificateAuthority that was used to create a subordinate CertificateAuthority. This field is used for information and usability purposes only. The resource name is in the format `projects/*/locations/*/certificateAuthorities/*`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pem_issuer_chain_python">
 <a href="#pem_issuer_chain_python" style="color: inherit; text-decoration: inherit;">pem_<wbr>issuer_<wbr>chain</a>

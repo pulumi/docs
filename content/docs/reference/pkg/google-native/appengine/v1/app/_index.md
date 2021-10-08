@@ -39,6 +39,7 @@ on Google Cloud even though it will be deleted from Pulumi state.
         <span class="nx">iap</span><span class="p">:</span> <span class="nx">Optional[IdentityAwareProxyArgs]</span> = None<span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">serving_status</span><span class="p">:</span> <span class="nx">Optional[AppServingStatus]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">App</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -241,6 +242,14 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
     </dt>
     <dd>{{% md %}}Location from which this application runs. Application instances run out of the data centers in the specified location, which is also where all of the application's end user content is stored.Defaults to us-central.View the list of supported locations (https://cloud.google.com/appengine/docs/locations).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="serviceaccount_csharp">
+<a href="#serviceaccount_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The service account associated with the application. This is the app-level default identity. If no identity provided during create version, Admin API will fallback to this one.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="servingstatus_csharp">
 <a href="#servingstatus_csharp" style="color: inherit; text-decoration: inherit;">Serving<wbr>Status</a>
 </span>
@@ -324,6 +333,14 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location from which this application runs. Application instances run out of the data centers in the specified location, which is also where all of the application's end user content is stored.Defaults to us-central.View the list of supported locations (https://cloud.google.com/appengine/docs/locations).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceaccount_go">
+<a href="#serviceaccount_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The service account associated with the application. This is the app-level default identity. If no identity provided during create version, Admin API will fallback to this one.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servingstatus_go">
 <a href="#servingstatus_go" style="color: inherit; text-decoration: inherit;">Serving<wbr>Status</a>
@@ -409,6 +426,14 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
     </dt>
     <dd>{{% md %}}Location from which this application runs. Application instances run out of the data centers in the specified location, which is also where all of the application's end user content is stored.Defaults to us-central.View the list of supported locations (https://cloud.google.com/appengine/docs/locations).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="serviceaccount_nodejs">
+<a href="#serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The service account associated with the application. This is the app-level default identity. If no identity provided during create version, Admin API will fallback to this one.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="servingstatus_nodejs">
 <a href="#servingstatus_nodejs" style="color: inherit; text-decoration: inherit;">serving<wbr>Status</a>
 </span>
@@ -492,6 +517,14 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Location from which this application runs. Application instances run out of the data centers in the specified location, which is also where all of the application's end user content is stored.Defaults to us-central.View the list of supported locations (https://cloud.google.com/appengine/docs/locations).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="service_account_python">
+<a href="#service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The service account associated with the application. This is the app-level default identity. If no identity provided during create version, Admin API will fallback to this one.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serving_status_python">
 <a href="#serving_status_python" style="color: inherit; text-decoration: inherit;">serving_<wbr>status</a>

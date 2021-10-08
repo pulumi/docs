@@ -13,12 +13,16 @@ Explore the resources and functions of the google-native.managedidentities/v1 mo
 <ul class="api">
     <li><a href="domain" title="Domain"><span class="symbol resource"></span>Domain</a></li>
     <li><a href="domainiampolicy" title="DomainIamPolicy"><span class="symbol resource"></span>DomainIamPolicy</a></li>
+    <li><a href="peering" title="Peering"><span class="symbol resource"></span>Peering</a></li>
+    <li><a href="peeringiampolicy" title="PeeringIamPolicy"><span class="symbol resource"></span>PeeringIamPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getdomain" title="GetDomain"><span class="symbol function"></span>GetDomain</a></li>
     <li><a href="getdomainiampolicy" title="GetDomainIamPolicy"><span class="symbol function"></span>GetDomainIamPolicy</a></li>
+    <li><a href="getpeering" title="GetPeering"><span class="symbol function"></span>GetPeering</a></li>
+    <li><a href="getpeeringiampolicy" title="GetPeeringIamPolicy"><span class="symbol function"></span>GetPeeringIamPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -28,6 +32,6 @@ Explore the resources and functions of the google-native.managedidentities/v1 mo
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.0</dd>
+	<dd>0.8.0</dd>
 </dl>
 

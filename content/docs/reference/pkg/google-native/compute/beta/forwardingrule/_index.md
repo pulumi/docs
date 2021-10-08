@@ -49,6 +49,7 @@ Creates a ForwardingRule resource in the specified project and region using the 
                    <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">service_directory_registrations</span><span class="p">:</span> <span class="nx">Optional[Sequence[ForwardingRuleServiceDirectoryRegistrationArgs]]</span> = None<span class="p">,</span>
                    <span class="nx">service_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">source_ip_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                    <span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -356,6 +357,14 @@ The ForwardingRule resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}An optional prefix to the service name for this Forwarding Rule. If specified, the prefix is the first label of the fully qualified service name. The label must be 1-63 characters long, and comply with RFC1035. Specifically, the label must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash. This field is only used for internal load balancing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sourceipranges_csharp">
+<a href="#sourceipranges_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Ip<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}If not empty, this Forwarding Rule will only forward the traffic when the source IP address matches one of the IP addresses or CIDR ranges set here. Note that a Forwarding Rule can only have up to 64 source IP ranges, and this field can only be used with a regional Forwarding Rule whose scheme is EXTERNAL. Each source_ip_range entry should be either an IP address (for example, 1.2.3.4) or a CIDR range (for example, 1.2.3.0/24).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="subnetwork_csharp">
 <a href="#subnetwork_csharp" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
 </span>
@@ -551,6 +560,14 @@ The ForwardingRule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional prefix to the service name for this Forwarding Rule. If specified, the prefix is the first label of the fully qualified service name. The label must be 1-63 characters long, and comply with RFC1035. Specifically, the label must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash. This field is only used for internal load balancing.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sourceipranges_go">
+<a href="#sourceipranges_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Ip<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}If not empty, this Forwarding Rule will only forward the traffic when the source IP address matches one of the IP addresses or CIDR ranges set here. Note that a Forwarding Rule can only have up to 64 source IP ranges, and this field can only be used with a regional Forwarding Rule whose scheme is EXTERNAL. Each source_ip_range entry should be either an IP address (for example, 1.2.3.4) or a CIDR range (for example, 1.2.3.0/24).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetwork_go">
 <a href="#subnetwork_go" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
@@ -748,6 +765,14 @@ The ForwardingRule resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}An optional prefix to the service name for this Forwarding Rule. If specified, the prefix is the first label of the fully qualified service name. The label must be 1-63 characters long, and comply with RFC1035. Specifically, the label must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash. This field is only used for internal load balancing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sourceipranges_nodejs">
+<a href="#sourceipranges_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ip<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}If not empty, this Forwarding Rule will only forward the traffic when the source IP address matches one of the IP addresses or CIDR ranges set here. Note that a Forwarding Rule can only have up to 64 source IP ranges, and this field can only be used with a regional Forwarding Rule whose scheme is EXTERNAL. Each source_ip_range entry should be either an IP address (for example, 1.2.3.4) or a CIDR range (for example, 1.2.3.0/24).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="subnetwork_nodejs">
 <a href="#subnetwork_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
@@ -943,6 +968,14 @@ The ForwardingRule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional prefix to the service name for this Forwarding Rule. If specified, the prefix is the first label of the fully qualified service name. The label must be 1-63 characters long, and comply with RFC1035. Specifically, the label must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash. This field is only used for internal load balancing.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="source_ip_ranges_python">
+<a href="#source_ip_ranges_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip_<wbr>ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}If not empty, this Forwarding Rule will only forward the traffic when the source IP address matches one of the IP addresses or CIDR ranges set here. Note that a Forwarding Rule can only have up to 64 source IP ranges, and this field can only be used with a regional Forwarding Rule whose scheme is EXTERNAL. Each source_ip_range entry should be either an IP address (for example, 1.2.3.4) or a CIDR range (for example, 1.2.3.0/24).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetwork_python">
 <a href="#subnetwork_python" style="color: inherit; text-decoration: inherit;">subnetwork</a>
@@ -1330,7 +1363,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>External</dt>
-    <dd>EXTERNAL</dd><dt>Internal</dt>
+    <dd>EXTERNAL</dd><dt>External<wbr>Managed</dt>
+    <dd>EXTERNAL_MANAGED</dd><dt>Internal</dt>
     <dd>INTERNAL</dd><dt>Internal<wbr>Managed</dt>
     <dd>INTERNAL_MANAGED</dd><dt>Internal<wbr>Self<wbr>Managed</dt>
     <dd>INTERNAL_SELF_MANAGED</dd><dt>Invalid</dt>
@@ -1339,7 +1373,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="tabular"><dt>Forwarding<wbr>Rule<wbr>Load<wbr>Balancing<wbr>Scheme<wbr>External</dt>
-    <dd>EXTERNAL</dd><dt>Forwarding<wbr>Rule<wbr>Load<wbr>Balancing<wbr>Scheme<wbr>Internal</dt>
+    <dd>EXTERNAL</dd><dt>Forwarding<wbr>Rule<wbr>Load<wbr>Balancing<wbr>Scheme<wbr>External<wbr>Managed</dt>
+    <dd>EXTERNAL_MANAGED</dd><dt>Forwarding<wbr>Rule<wbr>Load<wbr>Balancing<wbr>Scheme<wbr>Internal</dt>
     <dd>INTERNAL</dd><dt>Forwarding<wbr>Rule<wbr>Load<wbr>Balancing<wbr>Scheme<wbr>Internal<wbr>Managed</dt>
     <dd>INTERNAL_MANAGED</dd><dt>Forwarding<wbr>Rule<wbr>Load<wbr>Balancing<wbr>Scheme<wbr>Internal<wbr>Self<wbr>Managed</dt>
     <dd>INTERNAL_SELF_MANAGED</dd><dt>Forwarding<wbr>Rule<wbr>Load<wbr>Balancing<wbr>Scheme<wbr>Invalid</dt>
@@ -1348,7 +1383,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="tabular"><dt>External</dt>
-    <dd>EXTERNAL</dd><dt>Internal</dt>
+    <dd>EXTERNAL</dd><dt>External<wbr>Managed</dt>
+    <dd>EXTERNAL_MANAGED</dd><dt>Internal</dt>
     <dd>INTERNAL</dd><dt>Internal<wbr>Managed</dt>
     <dd>INTERNAL_MANAGED</dd><dt>Internal<wbr>Self<wbr>Managed</dt>
     <dd>INTERNAL_SELF_MANAGED</dd><dt>Invalid</dt>
@@ -1357,7 +1393,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="tabular"><dt>EXTERNAL</dt>
-    <dd>EXTERNAL</dd><dt>INTERNAL</dt>
+    <dd>EXTERNAL</dd><dt>EXTERNAL_MANAGED</dt>
+    <dd>EXTERNAL_MANAGED</dd><dt>INTERNAL</dt>
     <dd>INTERNAL</dd><dt>INTERNAL_MANAGED</dt>
     <dd>INTERNAL_MANAGED</dd><dt>INTERNAL_SELF_MANAGED</dt>
     <dd>INTERNAL_SELF_MANAGED</dd><dt>INVALID</dt>

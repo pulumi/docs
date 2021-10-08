@@ -223,6 +223,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Port number of the exposed Apigee endpoint.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="runtimeversion_csharp">
+<a href="#runtimeversion_csharp" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Version of the runtime system running in the instance. The runtime system is the set of components that serve the API Proxy traffic in your Environments.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
@@ -314,6 +322,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Port number of the exposed Apigee endpoint.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="runtimeversion_go">
+<a href="#runtimeversion_go" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Version of the runtime system running in the instance. The runtime system is the set of components that serve the API Proxy traffic in your Environments.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -407,6 +423,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Port number of the exposed Apigee endpoint.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="runtimeversion_nodejs">
+<a href="#runtimeversion_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Version of the runtime system running in the instance. The runtime system is the set of components that serve the API Proxy traffic in your Environments.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
@@ -498,6 +522,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Port number of the exposed Apigee endpoint.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="runtime_version_python">
+<a href="#runtime_version_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Version of the runtime system running in the instance. The runtime system is the set of components that serve the API Proxy traffic in your Environments.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>

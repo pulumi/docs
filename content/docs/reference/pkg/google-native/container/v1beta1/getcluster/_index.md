@@ -320,6 +320,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}[Output only] The time the cluster will be automatically deleted in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="identityserviceconfig_csharp">
+<a href="#identityserviceconfig_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Service<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#identityserviceconfigresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Container.<wbr>V1Beta1.<wbr>Outputs.<wbr>Identity<wbr>Service<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for Identity Service component.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="initialclusterversion_csharp">
 <a href="#initialclusterversion_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Cluster<wbr>Version</a>
 </span>
@@ -368,6 +376,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster's nodes should be located. This field provides a default value if [NodePool.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations) are not specified during node pool creation. Warning: changing cluster locations will update the [NodePool.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations) of all node pools and will result in nodes being added and/or removed.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="loggingconfig_csharp">
+<a href="#loggingconfig_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Container.<wbr>V1Beta1.<wbr>Outputs.<wbr>Logging<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Logging configuration for the cluster.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="loggingservice_csharp">
 <a href="#loggingservice_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Service</a>
 </span>
@@ -407,6 +423,22 @@ The following output properties are available:
         <span class="property-type"><a href="#masterauthorizednetworksconfigresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Container.<wbr>V1Beta1.<wbr>Outputs.<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration options for master authorized networks feature.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="meshcertificates_csharp">
+<a href="#meshcertificates_csharp" style="color: inherit; text-decoration: inherit;">Mesh<wbr>Certificates</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#meshcertificatesresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Container.<wbr>V1Beta1.<wbr>Outputs.<wbr>Mesh<wbr>Certificates<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for issuance of mTLS keys and certificates to Kubernetes pods.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="monitoringconfig_csharp">
+<a href="#monitoringconfig_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitoringconfigresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Container.<wbr>V1Beta1.<wbr>Outputs.<wbr>Monitoring<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Monitoring configuration for the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitoringservice_csharp">
 <a href="#monitoringservice_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Service</a>
@@ -748,6 +780,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}[Output only] The time the cluster will be automatically deleted in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="identityserviceconfig_go">
+<a href="#identityserviceconfig_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Service<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#identityserviceconfigresponse">Identity<wbr>Service<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for Identity Service component.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="initialclusterversion_go">
 <a href="#initialclusterversion_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Cluster<wbr>Version</a>
 </span>
@@ -796,6 +836,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster's nodes should be located. This field provides a default value if [NodePool.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations) are not specified during node pool creation. Warning: changing cluster locations will update the [NodePool.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations) of all node pools and will result in nodes being added and/or removed.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="loggingconfig_go">
+<a href="#loggingconfig_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigresponse">Logging<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Logging configuration for the cluster.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="loggingservice_go">
 <a href="#loggingservice_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Service</a>
 </span>
@@ -835,6 +883,22 @@ The following output properties are available:
         <span class="property-type"><a href="#masterauthorizednetworksconfigresponse">Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration options for master authorized networks feature.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="meshcertificates_go">
+<a href="#meshcertificates_go" style="color: inherit; text-decoration: inherit;">Mesh<wbr>Certificates</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#meshcertificatesresponse">Mesh<wbr>Certificates<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for issuance of mTLS keys and certificates to Kubernetes pods.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="monitoringconfig_go">
+<a href="#monitoringconfig_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitoringconfigresponse">Monitoring<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Monitoring configuration for the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitoringservice_go">
 <a href="#monitoringservice_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Service</a>
@@ -1176,6 +1240,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}[Output only] The time the cluster will be automatically deleted in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="identityserviceconfig_nodejs">
+<a href="#identityserviceconfig_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Service<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#identityserviceconfigresponse">Identity<wbr>Service<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for Identity Service component.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="initialclusterversion_nodejs">
 <a href="#initialclusterversion_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Cluster<wbr>Version</a>
 </span>
@@ -1224,6 +1296,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster's nodes should be located. This field provides a default value if [NodePool.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations) are not specified during node pool creation. Warning: changing cluster locations will update the [NodePool.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations) of all node pools and will result in nodes being added and/or removed.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="loggingconfig_nodejs">
+<a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigresponse">Logging<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Logging configuration for the cluster.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="loggingservice_nodejs">
 <a href="#loggingservice_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Service</a>
 </span>
@@ -1263,6 +1343,22 @@ The following output properties are available:
         <span class="property-type"><a href="#masterauthorizednetworksconfigresponse">Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration options for master authorized networks feature.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="meshcertificates_nodejs">
+<a href="#meshcertificates_nodejs" style="color: inherit; text-decoration: inherit;">mesh<wbr>Certificates</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#meshcertificatesresponse">Mesh<wbr>Certificates<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for issuance of mTLS keys and certificates to Kubernetes pods.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="monitoringconfig_nodejs">
+<a href="#monitoringconfig_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitoringconfigresponse">Monitoring<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Monitoring configuration for the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitoringservice_nodejs">
 <a href="#monitoringservice_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Service</a>
@@ -1604,6 +1700,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}[Output only] The time the cluster will be automatically deleted in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="identity_service_config_python">
+<a href="#identity_service_config_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>service_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#identityserviceconfigresponse">Identity<wbr>Service<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for Identity Service component.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="initial_cluster_version_python">
 <a href="#initial_cluster_version_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>cluster_<wbr>version</a>
 </span>
@@ -1652,6 +1756,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster's nodes should be located. This field provides a default value if [NodePool.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations) are not specified during node pool creation. Warning: changing cluster locations will update the [NodePool.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations) of all node pools and will result in nodes being added and/or removed.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="logging_config_python">
+<a href="#logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigresponse">Logging<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Logging configuration for the cluster.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="logging_service_python">
 <a href="#logging_service_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>service</a>
 </span>
@@ -1691,6 +1803,22 @@ The following output properties are available:
         <span class="property-type"><a href="#masterauthorizednetworksconfigresponse">Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration options for master authorized networks feature.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="mesh_certificates_python">
+<a href="#mesh_certificates_python" style="color: inherit; text-decoration: inherit;">mesh_<wbr>certificates</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#meshcertificatesresponse">Mesh<wbr>Certificates<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for issuance of mTLS keys and certificates to Kubernetes pods.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="monitoring_config_python">
+<a href="#monitoring_config_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitoringconfigresponse">Monitoring<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Monitoring configuration for the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitoring_service_python">
 <a href="#monitoring_service_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>service</a>
@@ -2046,6 +2174,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Configuration for the Compute Engine Persistent Disk CSI driver.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="gcpfilestorecsidriverconfig_csharp">
+<a href="#gcpfilestorecsidriverconfig_csharp" style="color: inherit; text-decoration: inherit;">Gcp<wbr>Filestore<wbr>Csi<wbr>Driver<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gcpfilestorecsidriverconfigresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Container.<wbr>V1Beta1.<wbr>Inputs.<wbr>Gcp<wbr>Filestore<wbr>Csi<wbr>Driver<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for the GCP Filestore CSI driver.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="horizontalpodautoscaling_csharp">
 <a href="#horizontalpodautoscaling_csharp" style="color: inherit; text-decoration: inherit;">Horizontal<wbr>Pod<wbr>Autoscaling</a>
 </span>
@@ -2129,6 +2265,14 @@ The following output properties are available:
         <span class="property-type"><a href="#gcepersistentdiskcsidriverconfigresponse">Gce<wbr>Persistent<wbr>Disk<wbr>Csi<wbr>Driver<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the Compute Engine Persistent Disk CSI driver.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="gcpfilestorecsidriverconfig_go">
+<a href="#gcpfilestorecsidriverconfig_go" style="color: inherit; text-decoration: inherit;">Gcp<wbr>Filestore<wbr>Csi<wbr>Driver<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gcpfilestorecsidriverconfigresponse">Gcp<wbr>Filestore<wbr>Csi<wbr>Driver<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for the GCP Filestore CSI driver.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="horizontalpodautoscaling_go">
 <a href="#horizontalpodautoscaling_go" style="color: inherit; text-decoration: inherit;">Horizontal<wbr>Pod<wbr>Autoscaling</a>
@@ -2214,6 +2358,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Configuration for the Compute Engine Persistent Disk CSI driver.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="gcpfilestorecsidriverconfig_nodejs">
+<a href="#gcpfilestorecsidriverconfig_nodejs" style="color: inherit; text-decoration: inherit;">gcp<wbr>Filestore<wbr>Csi<wbr>Driver<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gcpfilestorecsidriverconfigresponse">Gcp<wbr>Filestore<wbr>Csi<wbr>Driver<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for the GCP Filestore CSI driver.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="horizontalpodautoscaling_nodejs">
 <a href="#horizontalpodautoscaling_nodejs" style="color: inherit; text-decoration: inherit;">horizontal<wbr>Pod<wbr>Autoscaling</a>
 </span>
@@ -2297,6 +2449,14 @@ The following output properties are available:
         <span class="property-type"><a href="#gcepersistentdiskcsidriverconfigresponse">Gce<wbr>Persistent<wbr>Disk<wbr>Csi<wbr>Driver<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the Compute Engine Persistent Disk CSI driver.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="gcp_filestore_csi_driver_config_python">
+<a href="#gcp_filestore_csi_driver_config_python" style="color: inherit; text-decoration: inherit;">gcp_<wbr>filestore_<wbr>csi_<wbr>driver_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gcpfilestorecsidriverconfigresponse">Gcp<wbr>Filestore<wbr>Csi<wbr>Driver<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for the GCP Filestore CSI driver.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="horizontal_pod_autoscaling_python">
 <a href="#horizontal_pod_autoscaling_python" style="color: inherit; text-decoration: inherit;">horizontal_<wbr>pod_<wbr>autoscaling</a>
@@ -4111,6 +4271,58 @@ The following output properties are available:
     <dd>{{% md %}}Whether the Compute Engine PD CSI driver is enabled for this cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="gcpfilestorecsidriverconfigresponse">Gcp<wbr>Filestore<wbr>Csi<wbr>Driver<wbr>Config<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the GCP Filestore CSI driver is enabled for this cluster.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the GCP Filestore CSI driver is enabled for this cluster.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the GCP Filestore CSI driver is enabled for this cluster.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the GCP Filestore CSI driver is enabled for this cluster.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="horizontalpodautoscalingresponse">Horizontal<wbr>Pod<wbr>Autoscaling<wbr>Response</h4>
 
 
@@ -4555,6 +4767,58 @@ The following output properties are available:
     <dd>{{% md %}}Whether routes will be used for pod IPs in the cluster. This is used in conjunction with use_ip_aliases. It cannot be true if use_ip_aliases is true. If both use_ip_aliases and use_routes are false, then the server picks the default IP allocation mode{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="identityserviceconfigresponse">Identity<wbr>Service<wbr>Config<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable the Identity Service component{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable the Identity Service component{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable the Identity Service component{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable the Identity Service component{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="istioconfigresponse">Istio<wbr>Config<wbr>Response</h4>
 
 
@@ -4845,6 +5109,110 @@ The following output properties are available:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The Linux kernel parameters to be applied to the nodes and all pods running on the nodes. The following parameters are supported. net.core.netdev_max_backlog net.core.rmem_max net.core.wmem_default net.core.wmem_max net.core.optmem_max net.core.somaxconn net.ipv4.tcp_rmem net.ipv4.tcp_wmem net.ipv4.tcp_tw_reuse{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="loggingcomponentconfigresponse">Logging<wbr>Component<wbr>Config<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enablecomponents_csharp">
+<a href="#enablecomponents_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Components</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Select components to collect logs. An empty set would disable all logging.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enablecomponents_go">
+<a href="#enablecomponents_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Components</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Select components to collect logs. An empty set would disable all logging.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enablecomponents_nodejs">
+<a href="#enablecomponents_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Components</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Select components to collect logs. An empty set would disable all logging.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enable_components_python">
+<a href="#enable_components_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>components</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Select components to collect logs. An empty set would disable all logging.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="loggingconfigresponse">Logging<wbr>Config<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="componentconfig_csharp">
+<a href="#componentconfig_csharp" style="color: inherit; text-decoration: inherit;">Component<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingcomponentconfigresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Container.<wbr>V1Beta1.<wbr>Inputs.<wbr>Logging<wbr>Component<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Logging components configuration{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="componentconfig_go">
+<a href="#componentconfig_go" style="color: inherit; text-decoration: inherit;">Component<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingcomponentconfigresponse">Logging<wbr>Component<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Logging components configuration{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="componentconfig_nodejs">
+<a href="#componentconfig_nodejs" style="color: inherit; text-decoration: inherit;">component<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingcomponentconfigresponse">Logging<wbr>Component<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Logging components configuration{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="component_config_python">
+<a href="#component_config_python" style="color: inherit; text-decoration: inherit;">component_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingcomponentconfigresponse">Logging<wbr>Component<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Logging components configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="maintenancepolicyresponse">Maintenance<wbr>Policy<wbr>Response</h4>
@@ -5395,6 +5763,162 @@ The following output properties are available:
     <dd>{{% md %}}Constraint enforced on the max num of pods per node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="meshcertificatesresponse">Mesh<wbr>Certificates<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enablecertificates_csharp">
+<a href="#enablecertificates_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Certificates</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}enable_certificates controls issuance of workload mTLS certificates. If set, the GKE Workload Identity Certificates controller and node agent will be deployed in the cluster, which can then be configured by creating a WorkloadCertificateConfig Custom Resource. Requires Workload Identity (workload_pool must be non-empty).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enablecertificates_go">
+<a href="#enablecertificates_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Certificates</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}enable_certificates controls issuance of workload mTLS certificates. If set, the GKE Workload Identity Certificates controller and node agent will be deployed in the cluster, which can then be configured by creating a WorkloadCertificateConfig Custom Resource. Requires Workload Identity (workload_pool must be non-empty).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enablecertificates_nodejs">
+<a href="#enablecertificates_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Certificates</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}enable_certificates controls issuance of workload mTLS certificates. If set, the GKE Workload Identity Certificates controller and node agent will be deployed in the cluster, which can then be configured by creating a WorkloadCertificateConfig Custom Resource. Requires Workload Identity (workload_pool must be non-empty).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enable_certificates_python">
+<a href="#enable_certificates_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>certificates</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}enable_certificates controls issuance of workload mTLS certificates. If set, the GKE Workload Identity Certificates controller and node agent will be deployed in the cluster, which can then be configured by creating a WorkloadCertificateConfig Custom Resource. Requires Workload Identity (workload_pool must be non-empty).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="monitoringcomponentconfigresponse">Monitoring<wbr>Component<wbr>Config<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enablecomponents_csharp">
+<a href="#enablecomponents_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Components</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Select components to collect metrics. An empty set would disable all monitoring.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enablecomponents_go">
+<a href="#enablecomponents_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Components</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Select components to collect metrics. An empty set would disable all monitoring.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enablecomponents_nodejs">
+<a href="#enablecomponents_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Components</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Select components to collect metrics. An empty set would disable all monitoring.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enable_components_python">
+<a href="#enable_components_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>components</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Select components to collect metrics. An empty set would disable all monitoring.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="monitoringconfigresponse">Monitoring<wbr>Config<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="componentconfig_csharp">
+<a href="#componentconfig_csharp" style="color: inherit; text-decoration: inherit;">Component<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitoringcomponentconfigresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Container.<wbr>V1Beta1.<wbr>Inputs.<wbr>Monitoring<wbr>Component<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Monitoring components configuration{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="componentconfig_go">
+<a href="#componentconfig_go" style="color: inherit; text-decoration: inherit;">Component<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitoringcomponentconfigresponse">Monitoring<wbr>Component<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Monitoring components configuration{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="componentconfig_nodejs">
+<a href="#componentconfig_nodejs" style="color: inherit; text-decoration: inherit;">component<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitoringcomponentconfigresponse">Monitoring<wbr>Component<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Monitoring components configuration{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="component_config_python">
+<a href="#component_config_python" style="color: inherit; text-decoration: inherit;">component_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitoringcomponentconfigresponse">Monitoring<wbr>Component<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Monitoring components configuration{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="networkconfigresponse">Network<wbr>Config<wbr>Response</h4>
 
 
@@ -5886,6 +6410,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="gvnic_csharp">
+<a href="#gvnic_csharp" style="color: inherit; text-decoration: inherit;">Gvnic</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnicresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Container.<wbr>V1Beta1.<wbr>Inputs.<wbr>Virtual<wbr>NICResponse</a></span>
+    </dt>
+    <dd>{{% md %}}Enable or disable gvnic on the node pool.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="imagetype_csharp">
 <a href="#imagetype_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Type</a>
 </span>
@@ -5940,7 +6472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The metadata key/value pairs assigned to instances in the cluster. Keys must conform to the regexp `[a-zA-Z0-9-_]+` and be less than 128 bytes in length. These are reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must not conflict with any other metadata keys for the project or be one of the reserved keys: - "cluster-location" - "cluster-name" - "cluster-uid" - "configure-sh" - "containerd-configure-sh" - "enable-oslogin" - "gci-ensure-gke-docker" - "gci-metrics-enabled" - "gci-update-strategy" - "instance-template" - "kube-env" - "startup-script" - "user-data" - "disable-address-manager" - "windows-startup-script-ps1" - "common-psm1" - "k8s-node-setup-psm1" - "install-ssh-psm1" - "user-profile-psm1" The following keys are reserved for Windows nodes: - "serial-port-logging-enable" Values are free-form strings, and only have meaning as interpreted by the image running in the instance. The only restriction placed on them is that each value's size must be less than or equal to 32 KB. The total size of all keys and values must be less than 512 KB.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The metadata key/value pairs assigned to instances in the cluster. Keys must conform to the regexp `[a-zA-Z0-9-_]+` and be less than 128 bytes in length. These are reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must not conflict with any other metadata keys for the project or be one of the reserved keys: - "cluster-location" - "cluster-name" - "cluster-uid" - "configure-sh" - "containerd-configure-sh" - "enable-oslogin" - "gci-ensure-gke-docker" - "gci-metrics-enabled" - "gci-update-strategy" - "instance-template" - "kube-env" - "startup-script" - "user-data" - "disable-address-manager" - "windows-startup-script-ps1" - "common-psm1" - "k8s-node-setup-psm1" - "install-ssh-psm1" - "user-profile-psm1" Values are free-form strings, and only have meaning as interpreted by the image running in the instance. The only restriction placed on them is that each value's size must be less than or equal to 32 KB. The total size of all keys and values must be less than 512 KB.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mincpuplatform_csharp">
 <a href="#mincpuplatform_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Cpu<wbr>Platform</a>
@@ -6005,6 +6537,14 @@ The following output properties are available:
         <span class="property-type"><a href="#shieldedinstanceconfigresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Container.<wbr>V1Beta1.<wbr>Inputs.<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Shielded Instance options.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="spot_csharp">
+<a href="#spot_csharp" style="color: inherit; text-decoration: inherit;">Spot</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Spot flag for enabling Spot VM, which is a rebrand of the existing preemptible flag.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -6074,6 +6614,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="gvnic_go">
+<a href="#gvnic_go" style="color: inherit; text-decoration: inherit;">Gvnic</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnicresponse">Virtual<wbr>NICResponse</a></span>
+    </dt>
+    <dd>{{% md %}}Enable or disable gvnic on the node pool.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="imagetype_go">
 <a href="#imagetype_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Type</a>
 </span>
@@ -6128,7 +6676,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The metadata key/value pairs assigned to instances in the cluster. Keys must conform to the regexp `[a-zA-Z0-9-_]+` and be less than 128 bytes in length. These are reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must not conflict with any other metadata keys for the project or be one of the reserved keys: - "cluster-location" - "cluster-name" - "cluster-uid" - "configure-sh" - "containerd-configure-sh" - "enable-oslogin" - "gci-ensure-gke-docker" - "gci-metrics-enabled" - "gci-update-strategy" - "instance-template" - "kube-env" - "startup-script" - "user-data" - "disable-address-manager" - "windows-startup-script-ps1" - "common-psm1" - "k8s-node-setup-psm1" - "install-ssh-psm1" - "user-profile-psm1" The following keys are reserved for Windows nodes: - "serial-port-logging-enable" Values are free-form strings, and only have meaning as interpreted by the image running in the instance. The only restriction placed on them is that each value's size must be less than or equal to 32 KB. The total size of all keys and values must be less than 512 KB.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The metadata key/value pairs assigned to instances in the cluster. Keys must conform to the regexp `[a-zA-Z0-9-_]+` and be less than 128 bytes in length. These are reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must not conflict with any other metadata keys for the project or be one of the reserved keys: - "cluster-location" - "cluster-name" - "cluster-uid" - "configure-sh" - "containerd-configure-sh" - "enable-oslogin" - "gci-ensure-gke-docker" - "gci-metrics-enabled" - "gci-update-strategy" - "instance-template" - "kube-env" - "startup-script" - "user-data" - "disable-address-manager" - "windows-startup-script-ps1" - "common-psm1" - "k8s-node-setup-psm1" - "install-ssh-psm1" - "user-profile-psm1" Values are free-form strings, and only have meaning as interpreted by the image running in the instance. The only restriction placed on them is that each value's size must be less than or equal to 32 KB. The total size of all keys and values must be less than 512 KB.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mincpuplatform_go">
 <a href="#mincpuplatform_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Cpu<wbr>Platform</a>
@@ -6193,6 +6741,14 @@ The following output properties are available:
         <span class="property-type"><a href="#shieldedinstanceconfigresponse">Shielded<wbr>Instance<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Shielded Instance options.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="spot_go">
+<a href="#spot_go" style="color: inherit; text-decoration: inherit;">Spot</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Spot flag for enabling Spot VM, which is a rebrand of the existing preemptible flag.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -6262,6 +6818,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="gvnic_nodejs">
+<a href="#gvnic_nodejs" style="color: inherit; text-decoration: inherit;">gvnic</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnicresponse">Virtual<wbr>NICResponse</a></span>
+    </dt>
+    <dd>{{% md %}}Enable or disable gvnic on the node pool.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="imagetype_nodejs">
 <a href="#imagetype_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Type</a>
 </span>
@@ -6316,7 +6880,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The metadata key/value pairs assigned to instances in the cluster. Keys must conform to the regexp `[a-zA-Z0-9-_]+` and be less than 128 bytes in length. These are reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must not conflict with any other metadata keys for the project or be one of the reserved keys: - "cluster-location" - "cluster-name" - "cluster-uid" - "configure-sh" - "containerd-configure-sh" - "enable-oslogin" - "gci-ensure-gke-docker" - "gci-metrics-enabled" - "gci-update-strategy" - "instance-template" - "kube-env" - "startup-script" - "user-data" - "disable-address-manager" - "windows-startup-script-ps1" - "common-psm1" - "k8s-node-setup-psm1" - "install-ssh-psm1" - "user-profile-psm1" The following keys are reserved for Windows nodes: - "serial-port-logging-enable" Values are free-form strings, and only have meaning as interpreted by the image running in the instance. The only restriction placed on them is that each value's size must be less than or equal to 32 KB. The total size of all keys and values must be less than 512 KB.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The metadata key/value pairs assigned to instances in the cluster. Keys must conform to the regexp `[a-zA-Z0-9-_]+` and be less than 128 bytes in length. These are reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must not conflict with any other metadata keys for the project or be one of the reserved keys: - "cluster-location" - "cluster-name" - "cluster-uid" - "configure-sh" - "containerd-configure-sh" - "enable-oslogin" - "gci-ensure-gke-docker" - "gci-metrics-enabled" - "gci-update-strategy" - "instance-template" - "kube-env" - "startup-script" - "user-data" - "disable-address-manager" - "windows-startup-script-ps1" - "common-psm1" - "k8s-node-setup-psm1" - "install-ssh-psm1" - "user-profile-psm1" Values are free-form strings, and only have meaning as interpreted by the image running in the instance. The only restriction placed on them is that each value's size must be less than or equal to 32 KB. The total size of all keys and values must be less than 512 KB.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mincpuplatform_nodejs">
 <a href="#mincpuplatform_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Cpu<wbr>Platform</a>
@@ -6381,6 +6945,14 @@ The following output properties are available:
         <span class="property-type"><a href="#shieldedinstanceconfigresponse">Shielded<wbr>Instance<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Shielded Instance options.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="spot_nodejs">
+<a href="#spot_nodejs" style="color: inherit; text-decoration: inherit;">spot</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Spot flag for enabling Spot VM, which is a rebrand of the existing preemptible flag.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -6450,6 +7022,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="gvnic_python">
+<a href="#gvnic_python" style="color: inherit; text-decoration: inherit;">gvnic</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnicresponse">Virtual<wbr>NICResponse</a></span>
+    </dt>
+    <dd>{{% md %}}Enable or disable gvnic on the node pool.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="image_type_python">
 <a href="#image_type_python" style="color: inherit; text-decoration: inherit;">image_<wbr>type</a>
 </span>
@@ -6504,7 +7084,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The metadata key/value pairs assigned to instances in the cluster. Keys must conform to the regexp `[a-zA-Z0-9-_]+` and be less than 128 bytes in length. These are reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must not conflict with any other metadata keys for the project or be one of the reserved keys: - "cluster-location" - "cluster-name" - "cluster-uid" - "configure-sh" - "containerd-configure-sh" - "enable-oslogin" - "gci-ensure-gke-docker" - "gci-metrics-enabled" - "gci-update-strategy" - "instance-template" - "kube-env" - "startup-script" - "user-data" - "disable-address-manager" - "windows-startup-script-ps1" - "common-psm1" - "k8s-node-setup-psm1" - "install-ssh-psm1" - "user-profile-psm1" The following keys are reserved for Windows nodes: - "serial-port-logging-enable" Values are free-form strings, and only have meaning as interpreted by the image running in the instance. The only restriction placed on them is that each value's size must be less than or equal to 32 KB. The total size of all keys and values must be less than 512 KB.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The metadata key/value pairs assigned to instances in the cluster. Keys must conform to the regexp `[a-zA-Z0-9-_]+` and be less than 128 bytes in length. These are reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must not conflict with any other metadata keys for the project or be one of the reserved keys: - "cluster-location" - "cluster-name" - "cluster-uid" - "configure-sh" - "containerd-configure-sh" - "enable-oslogin" - "gci-ensure-gke-docker" - "gci-metrics-enabled" - "gci-update-strategy" - "instance-template" - "kube-env" - "startup-script" - "user-data" - "disable-address-manager" - "windows-startup-script-ps1" - "common-psm1" - "k8s-node-setup-psm1" - "install-ssh-psm1" - "user-profile-psm1" Values are free-form strings, and only have meaning as interpreted by the image running in the instance. The only restriction placed on them is that each value's size must be less than or equal to 32 KB. The total size of all keys and values must be less than 512 KB.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="min_cpu_platform_python">
 <a href="#min_cpu_platform_python" style="color: inherit; text-decoration: inherit;">min_<wbr>cpu_<wbr>platform</a>
@@ -6569,6 +7149,14 @@ The following output properties are available:
         <span class="property-type"><a href="#shieldedinstanceconfigresponse">Shielded<wbr>Instance<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Shielded Instance options.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="spot_python">
+<a href="#spot_python" style="color: inherit; text-decoration: inherit;">spot</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Spot flag for enabling Spot VM, which is a rebrand of the existing preemptible flag.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -6840,7 +7428,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Input only. Whether to create a new range for pod IPs in this node pool. Defaults are provided for `pod_range` and `pod_ipv4_cidr_block` if they are not specified. If neither `create_pod_range` or `pod_range` are specified, the cluster-level default (`ip_allocation_policy.cluster_ipv4_cidr_block`) is used.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Input only. Whether to create a new range for pod IPs in this node pool. Defaults are provided for `pod_range` and `pod_ipv4_cidr_block` if they are not specified. If neither `create_pod_range` or `pod_range` are specified, the cluster-level default (`ip_allocation_policy.cluster_ipv4_cidr_block`) is used. Only applicable if `ip_allocation_policy.use_ip_aliases` is true. This field cannot be changed after the node pool has been created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="podipv4cidrblock_csharp">
 <a href="#podipv4cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Ipv4Cidr<wbr>Block</a>
@@ -6848,7 +7436,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP address range for pod IPs in this node pool. Only applicable if `create_pod_range` is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) to pick a specific range to use.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The IP address range for pod IPs in this node pool. Only applicable if `create_pod_range` is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) to pick a specific range to use. Only applicable if `ip_allocation_policy.use_ip_aliases` is true. This field cannot be changed after the node pool has been created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="podrange_csharp">
 <a href="#podrange_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Range</a>
@@ -6856,7 +7444,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the secondary range for pod IPs. If `create_pod_range` is true, this ID is used for the new range. If `create_pod_range` is false, uses an existing secondary range with this ID.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The ID of the secondary range for pod IPs. If `create_pod_range` is true, this ID is used for the new range. If `create_pod_range` is false, uses an existing secondary range with this ID. Only applicable if `ip_allocation_policy.use_ip_aliases` is true. This field cannot be changed after the node pool has been created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -6868,7 +7456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Input only. Whether to create a new range for pod IPs in this node pool. Defaults are provided for `pod_range` and `pod_ipv4_cidr_block` if they are not specified. If neither `create_pod_range` or `pod_range` are specified, the cluster-level default (`ip_allocation_policy.cluster_ipv4_cidr_block`) is used.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Input only. Whether to create a new range for pod IPs in this node pool. Defaults are provided for `pod_range` and `pod_ipv4_cidr_block` if they are not specified. If neither `create_pod_range` or `pod_range` are specified, the cluster-level default (`ip_allocation_policy.cluster_ipv4_cidr_block`) is used. Only applicable if `ip_allocation_policy.use_ip_aliases` is true. This field cannot be changed after the node pool has been created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="podipv4cidrblock_go">
 <a href="#podipv4cidrblock_go" style="color: inherit; text-decoration: inherit;">Pod<wbr>Ipv4Cidr<wbr>Block</a>
@@ -6876,7 +7464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP address range for pod IPs in this node pool. Only applicable if `create_pod_range` is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) to pick a specific range to use.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The IP address range for pod IPs in this node pool. Only applicable if `create_pod_range` is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) to pick a specific range to use. Only applicable if `ip_allocation_policy.use_ip_aliases` is true. This field cannot be changed after the node pool has been created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="podrange_go">
 <a href="#podrange_go" style="color: inherit; text-decoration: inherit;">Pod<wbr>Range</a>
@@ -6884,7 +7472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the secondary range for pod IPs. If `create_pod_range` is true, this ID is used for the new range. If `create_pod_range` is false, uses an existing secondary range with this ID.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The ID of the secondary range for pod IPs. If `create_pod_range` is true, this ID is used for the new range. If `create_pod_range` is false, uses an existing secondary range with this ID. Only applicable if `ip_allocation_policy.use_ip_aliases` is true. This field cannot be changed after the node pool has been created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -6896,7 +7484,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Input only. Whether to create a new range for pod IPs in this node pool. Defaults are provided for `pod_range` and `pod_ipv4_cidr_block` if they are not specified. If neither `create_pod_range` or `pod_range` are specified, the cluster-level default (`ip_allocation_policy.cluster_ipv4_cidr_block`) is used.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Input only. Whether to create a new range for pod IPs in this node pool. Defaults are provided for `pod_range` and `pod_ipv4_cidr_block` if they are not specified. If neither `create_pod_range` or `pod_range` are specified, the cluster-level default (`ip_allocation_policy.cluster_ipv4_cidr_block`) is used. Only applicable if `ip_allocation_policy.use_ip_aliases` is true. This field cannot be changed after the node pool has been created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="podipv4cidrblock_nodejs">
 <a href="#podipv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Ipv4Cidr<wbr>Block</a>
@@ -6904,7 +7492,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP address range for pod IPs in this node pool. Only applicable if `create_pod_range` is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) to pick a specific range to use.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The IP address range for pod IPs in this node pool. Only applicable if `create_pod_range` is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) to pick a specific range to use. Only applicable if `ip_allocation_policy.use_ip_aliases` is true. This field cannot be changed after the node pool has been created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="podrange_nodejs">
 <a href="#podrange_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Range</a>
@@ -6912,7 +7500,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the secondary range for pod IPs. If `create_pod_range` is true, this ID is used for the new range. If `create_pod_range` is false, uses an existing secondary range with this ID.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The ID of the secondary range for pod IPs. If `create_pod_range` is true, this ID is used for the new range. If `create_pod_range` is false, uses an existing secondary range with this ID. Only applicable if `ip_allocation_policy.use_ip_aliases` is true. This field cannot be changed after the node pool has been created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -6924,7 +7512,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Input only. Whether to create a new range for pod IPs in this node pool. Defaults are provided for `pod_range` and `pod_ipv4_cidr_block` if they are not specified. If neither `create_pod_range` or `pod_range` are specified, the cluster-level default (`ip_allocation_policy.cluster_ipv4_cidr_block`) is used.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Input only. Whether to create a new range for pod IPs in this node pool. Defaults are provided for `pod_range` and `pod_ipv4_cidr_block` if they are not specified. If neither `create_pod_range` or `pod_range` are specified, the cluster-level default (`ip_allocation_policy.cluster_ipv4_cidr_block`) is used. Only applicable if `ip_allocation_policy.use_ip_aliases` is true. This field cannot be changed after the node pool has been created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pod_ipv4_cidr_block_python">
 <a href="#pod_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
@@ -6932,7 +7520,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The IP address range for pod IPs in this node pool. Only applicable if `create_pod_range` is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) to pick a specific range to use.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The IP address range for pod IPs in this node pool. Only applicable if `create_pod_range` is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) to pick a specific range to use. Only applicable if `ip_allocation_policy.use_ip_aliases` is true. This field cannot be changed after the node pool has been created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pod_range_python">
 <a href="#pod_range_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>range</a>
@@ -6940,7 +7528,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the secondary range for pod IPs. If `create_pod_range` is true, this ID is used for the new range. If `create_pod_range` is false, uses an existing secondary range with this ID.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The ID of the secondary range for pod IPs. If `create_pod_range` is true, this ID is used for the new range. If `create_pod_range` is false, uses an existing secondary range with this ID. Only applicable if `ip_allocation_policy.use_ip_aliases` is true. This field cannot be changed after the node pool has been created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="nodepoolautoscalingresponse">Node<wbr>Pool<wbr>Autoscaling<wbr>Response</h4>
@@ -6972,7 +7560,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= min_node_count. There has to be enough quota to scale up the cluster.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Maximum number of nodes for one location in the NodePool. Must be >= min_node_count. There has to be enough quota to scale up the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minnodecount_csharp">
 <a href="#minnodecount_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Node<wbr>Count</a>
@@ -6980,7 +7568,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of nodes in the NodePool. Must be >= 1 and <= max_node_count.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Minimum number of nodes for one location in the NodePool. Must be >= 1 and <= max_node_count.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -7008,7 +7596,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= min_node_count. There has to be enough quota to scale up the cluster.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Maximum number of nodes for one location in the NodePool. Must be >= min_node_count. There has to be enough quota to scale up the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minnodecount_go">
 <a href="#minnodecount_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Node<wbr>Count</a>
@@ -7016,7 +7604,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of nodes in the NodePool. Must be >= 1 and <= max_node_count.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Minimum number of nodes for one location in the NodePool. Must be >= 1 and <= max_node_count.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -7044,7 +7632,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= min_node_count. There has to be enough quota to scale up the cluster.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Maximum number of nodes for one location in the NodePool. Must be >= min_node_count. There has to be enough quota to scale up the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minnodecount_nodejs">
 <a href="#minnodecount_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Node<wbr>Count</a>
@@ -7052,7 +7640,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Minimum number of nodes in the NodePool. Must be >= 1 and <= max_node_count.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Minimum number of nodes for one location in the NodePool. Must be >= 1 and <= max_node_count.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -7080,7 +7668,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= min_node_count. There has to be enough quota to scale up the cluster.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Maximum number of nodes for one location in the NodePool. Must be >= min_node_count. There has to be enough quota to scale up the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="min_node_count_python">
 <a href="#min_node_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>node_<wbr>count</a>
@@ -7088,7 +7676,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of nodes in the NodePool. Must be >= 1 and <= max_node_count.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Minimum number of nodes for one location in the NodePool. Must be >= 1 and <= max_node_count.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="nodepooldefaultsresponse">Node<wbr>Pool<wbr>Defaults<wbr>Response</h4>
@@ -9417,6 +10005,58 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables vertical pod autoscaling.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="virtualnicresponse">Virtual<wbr>NICResponse</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether gVNIC features are enabled in the node pool.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether gVNIC features are enabled in the node pool.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether gVNIC features are enabled in the node pool.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether gVNIC features are enabled in the node pool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="workloadcertificatesresponse">Workload<wbr>Certificates<wbr>Response</h4>

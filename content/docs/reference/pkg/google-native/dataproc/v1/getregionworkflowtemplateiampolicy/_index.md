@@ -182,7 +182,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bindingresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Dataproc.<wbr>V1.<wbr>Outputs.<wbr>Binding<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Associates a list of members to a role. Optionally, may specify a condition that determines how and when the bindings are applied. Each of the bindings must contain at least one member.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Associates a list of members to a role. Optionally, may specify a condition that determines how and when the bindings are applied. Each of the bindings must contain at least one member.The bindings in a Policy can refer to up to 1,500 members; up to 250 of these members can be Google groups. Each occurrence of a member counts towards these limits. For example, if the bindings grant 50 different roles to user:alice@example.com, and not to any other member, then you can add another 1,450 members to the bindings in the Policy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -210,7 +210,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bindingresponse">[]Binding<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Associates a list of members to a role. Optionally, may specify a condition that determines how and when the bindings are applied. Each of the bindings must contain at least one member.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Associates a list of members to a role. Optionally, may specify a condition that determines how and when the bindings are applied. Each of the bindings must contain at least one member.The bindings in a Policy can refer to up to 1,500 members; up to 250 of these members can be Google groups. Each occurrence of a member counts towards these limits. For example, if the bindings grant 50 different roles to user:alice@example.com, and not to any other member, then you can add another 1,450 members to the bindings in the Policy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -238,7 +238,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bindingresponse">Binding<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Associates a list of members to a role. Optionally, may specify a condition that determines how and when the bindings are applied. Each of the bindings must contain at least one member.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Associates a list of members to a role. Optionally, may specify a condition that determines how and when the bindings are applied. Each of the bindings must contain at least one member.The bindings in a Policy can refer to up to 1,500 members; up to 250 of these members can be Google groups. Each occurrence of a member counts towards these limits. For example, if the bindings grant 50 different roles to user:alice@example.com, and not to any other member, then you can add another 1,450 members to the bindings in the Policy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -266,7 +266,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bindingresponse">Sequence[Binding<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Associates a list of members to a role. Optionally, may specify a condition that determines how and when the bindings are applied. Each of the bindings must contain at least one member.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Associates a list of members to a role. Optionally, may specify a condition that determines how and when the bindings are applied. Each of the bindings must contain at least one member.The bindings in a Policy can refer to up to 1,500 members; up to 250 of these members can be Google groups. Each occurrence of a member counts towards these limits. For example, if the bindings grant 50 different roles to user:alice@example.com, and not to any other member, then you can add another 1,450 members to the bindings in the Policy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>

@@ -31,6 +31,7 @@ Creates a new topic.
           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">partition_config</span><span class="p">:</span> <span class="nx">Optional[PartitionConfigArgs]</span> = None<span class="p">,</span>
           <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">reservation_config</span><span class="p">:</span> <span class="nx">Optional[ReservationConfigArgs]</span> = None<span class="p">,</span>
           <span class="nx">retention_config</span><span class="p">:</span> <span class="nx">Optional[RetentionConfigArgs]</span> = None<span class="p">,</span>
           <span class="nx">topic_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -202,6 +203,14 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="reservationconfig_csharp">
+<a href="#reservationconfig_csharp" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#reservationconfig">Pulumi.<wbr>Google<wbr>Native.<wbr>Pubsublite.<wbr>V1.<wbr>Inputs.<wbr>Reservation<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The settings for this topic's Reservation usage.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="retentionconfig_csharp">
 <a href="#retentionconfig_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Config</a>
 </span>
@@ -253,6 +262,14 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="reservationconfig_go">
+<a href="#reservationconfig_go" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#reservationconfig">Reservation<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The settings for this topic's Reservation usage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionconfig_go">
 <a href="#retentionconfig_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Config</a>
@@ -306,6 +323,14 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="reservationconfig_nodejs">
+<a href="#reservationconfig_nodejs" style="color: inherit; text-decoration: inherit;">reservation<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#reservationconfig">Reservation<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The settings for this topic's Reservation usage.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="retentionconfig_nodejs">
 <a href="#retentionconfig_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Config</a>
 </span>
@@ -357,6 +382,14 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="reservation_config_python">
+<a href="#reservation_config_python" style="color: inherit; text-decoration: inherit;">reservation_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#reservationconfig">Reservation<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The settings for this topic's Reservation usage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retention_config_python">
 <a href="#retention_config_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>config</a>
@@ -758,6 +791,106 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The number of partitions in the topic. Must be at least 1. Once a topic has been created the number of partitions can be increased but not decreased. Message ordering is not guaranteed across a topic resize. For more information see https://cloud.google.com/pubsub/lite/docs/topics#scaling_capacity{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="reservationconfig">Reservation<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="throughputreservation_csharp">
+<a href="#throughputreservation_csharp" style="color: inherit; text-decoration: inherit;">Throughput<wbr>Reservation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Reservation to use for this topic's throughput capacity. Structured like: projects/{project_number}/locations/{location}/reservations/{reservation_id}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="throughputreservation_go">
+<a href="#throughputreservation_go" style="color: inherit; text-decoration: inherit;">Throughput<wbr>Reservation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Reservation to use for this topic's throughput capacity. Structured like: projects/{project_number}/locations/{location}/reservations/{reservation_id}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="throughputreservation_nodejs">
+<a href="#throughputreservation_nodejs" style="color: inherit; text-decoration: inherit;">throughput<wbr>Reservation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Reservation to use for this topic's throughput capacity. Structured like: projects/{project_number}/locations/{location}/reservations/{reservation_id}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="throughput_reservation_python">
+<a href="#throughput_reservation_python" style="color: inherit; text-decoration: inherit;">throughput_<wbr>reservation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Reservation to use for this topic's throughput capacity. Structured like: projects/{project_number}/locations/{location}/reservations/{reservation_id}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="reservationconfigresponse">Reservation<wbr>Config<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="throughputreservation_csharp">
+<a href="#throughputreservation_csharp" style="color: inherit; text-decoration: inherit;">Throughput<wbr>Reservation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Reservation to use for this topic's throughput capacity. Structured like: projects/{project_number}/locations/{location}/reservations/{reservation_id}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="throughputreservation_go">
+<a href="#throughputreservation_go" style="color: inherit; text-decoration: inherit;">Throughput<wbr>Reservation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Reservation to use for this topic's throughput capacity. Structured like: projects/{project_number}/locations/{location}/reservations/{reservation_id}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="throughputreservation_nodejs">
+<a href="#throughputreservation_nodejs" style="color: inherit; text-decoration: inherit;">throughput<wbr>Reservation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Reservation to use for this topic's throughput capacity. Structured like: projects/{project_number}/locations/{location}/reservations/{reservation_id}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="throughput_reservation_python">
+<a href="#throughput_reservation_python" style="color: inherit; text-decoration: inherit;">throughput_<wbr>reservation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Reservation to use for this topic's throughput capacity. Structured like: projects/{project_number}/locations/{location}/reservations/{reservation_id}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="retentionconfig">Retention<wbr>Config</h4>

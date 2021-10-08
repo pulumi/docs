@@ -31,6 +31,8 @@ on Google Cloud even though it will be deleted from Pulumi state.
 <span class="k">def </span><span class="nx">CryptoKey</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
               <span class="nx">crypto_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">destroy_scheduled_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">import_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
               <span class="nx">key_ring_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
               <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -185,6 +187,22 @@ The CryptoKey resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="destroyscheduledduration_csharp">
+<a href="#destroyscheduledduration_csharp" style="color: inherit; text-decoration: inherit;">Destroy<wbr>Scheduled<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Immutable. The period of time that versions of this key spend in the DESTROY_SCHEDULED state before transitioning to DESTROYED. If not specified at creation time, the default duration is 24 hours.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="importonly_csharp">
+<a href="#importonly_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Immutable. Whether this key may contain imported versions only.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span>
@@ -268,6 +286,22 @@ The CryptoKey resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destroyscheduledduration_go">
+<a href="#destroyscheduledduration_go" style="color: inherit; text-decoration: inherit;">Destroy<wbr>Scheduled<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Immutable. The period of time that versions of this key spend in the DESTROY_SCHEDULED state before transitioning to DESTROYED. If not specified at creation time, the default duration is 24 hours.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="importonly_go">
+<a href="#importonly_go" style="color: inherit; text-decoration: inherit;">Import<wbr>Only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Immutable. Whether this key may contain imported versions only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -353,6 +387,22 @@ The CryptoKey resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="destroyscheduledduration_nodejs">
+<a href="#destroyscheduledduration_nodejs" style="color: inherit; text-decoration: inherit;">destroy<wbr>Scheduled<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Immutable. The period of time that versions of this key spend in the DESTROY_SCHEDULED state before transitioning to DESTROYED. If not specified at creation time, the default duration is 24 hours.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="importonly_nodejs">
+<a href="#importonly_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Immutable. Whether this key may contain imported versions only.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
@@ -436,6 +486,22 @@ The CryptoKey resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destroy_scheduled_duration_python">
+<a href="#destroy_scheduled_duration_python" style="color: inherit; text-decoration: inherit;">destroy_<wbr>scheduled_<wbr>duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Immutable. The period of time that versions of this key spend in the DESTROY_SCHEDULED state before transitioning to DESTROYED. If not specified at creation time, the default duration is 24 hours.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="import_only_python">
+<a href="#import_only_python" style="color: inherit; text-decoration: inherit;">import_<wbr>only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Immutable. Whether this key may contain imported versions only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -784,7 +850,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>CRYPTO_KEY_PURPOSE_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Encrypt<wbr>Decrypt</dt>
     <dd>ENCRYPT_DECRYPT{{% md %}}CryptoKeys with this purpose may be used with Encrypt and Decrypt.{{% /md %}}</dd><dt>Asymmetric<wbr>Sign</dt>
     <dd>ASYMMETRIC_SIGN{{% md %}}CryptoKeys with this purpose may be used with AsymmetricSign and GetPublicKey.{{% /md %}}</dd><dt>Asymmetric<wbr>Decrypt</dt>
-    <dd>ASYMMETRIC_DECRYPT{{% md %}}CryptoKeys with this purpose may be used with AsymmetricDecrypt and GetPublicKey.{{% /md %}}</dd></dl>
+    <dd>ASYMMETRIC_DECRYPT{{% md %}}CryptoKeys with this purpose may be used with AsymmetricDecrypt and GetPublicKey.{{% /md %}}</dd><dt>Mac</dt>
+    <dd>MAC{{% md %}}CryptoKeys with this purpose may be used with MacSign.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -792,7 +859,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>CRYPTO_KEY_PURPOSE_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Purpose<wbr>Encrypt<wbr>Decrypt</dt>
     <dd>ENCRYPT_DECRYPT{{% md %}}CryptoKeys with this purpose may be used with Encrypt and Decrypt.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Purpose<wbr>Asymmetric<wbr>Sign</dt>
     <dd>ASYMMETRIC_SIGN{{% md %}}CryptoKeys with this purpose may be used with AsymmetricSign and GetPublicKey.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Purpose<wbr>Asymmetric<wbr>Decrypt</dt>
-    <dd>ASYMMETRIC_DECRYPT{{% md %}}CryptoKeys with this purpose may be used with AsymmetricDecrypt and GetPublicKey.{{% /md %}}</dd></dl>
+    <dd>ASYMMETRIC_DECRYPT{{% md %}}CryptoKeys with this purpose may be used with AsymmetricDecrypt and GetPublicKey.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Purpose<wbr>Mac</dt>
+    <dd>MAC{{% md %}}CryptoKeys with this purpose may be used with MacSign.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -800,7 +868,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>CRYPTO_KEY_PURPOSE_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Encrypt<wbr>Decrypt</dt>
     <dd>ENCRYPT_DECRYPT{{% md %}}CryptoKeys with this purpose may be used with Encrypt and Decrypt.{{% /md %}}</dd><dt>Asymmetric<wbr>Sign</dt>
     <dd>ASYMMETRIC_SIGN{{% md %}}CryptoKeys with this purpose may be used with AsymmetricSign and GetPublicKey.{{% /md %}}</dd><dt>Asymmetric<wbr>Decrypt</dt>
-    <dd>ASYMMETRIC_DECRYPT{{% md %}}CryptoKeys with this purpose may be used with AsymmetricDecrypt and GetPublicKey.{{% /md %}}</dd></dl>
+    <dd>ASYMMETRIC_DECRYPT{{% md %}}CryptoKeys with this purpose may be used with AsymmetricDecrypt and GetPublicKey.{{% /md %}}</dd><dt>Mac</dt>
+    <dd>MAC{{% md %}}CryptoKeys with this purpose may be used with MacSign.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -808,7 +877,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>CRYPTO_KEY_PURPOSE_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>ENCRYPT_DECRYPT</dt>
     <dd>ENCRYPT_DECRYPT{{% md %}}CryptoKeys with this purpose may be used with Encrypt and Decrypt.{{% /md %}}</dd><dt>ASYMMETRIC_SIGN</dt>
     <dd>ASYMMETRIC_SIGN{{% md %}}CryptoKeys with this purpose may be used with AsymmetricSign and GetPublicKey.{{% /md %}}</dd><dt>ASYMMETRIC_DECRYPT</dt>
-    <dd>ASYMMETRIC_DECRYPT{{% md %}}CryptoKeys with this purpose may be used with AsymmetricDecrypt and GetPublicKey.{{% /md %}}</dd></dl>
+    <dd>ASYMMETRIC_DECRYPT{{% md %}}CryptoKeys with this purpose may be used with AsymmetricDecrypt and GetPublicKey.{{% /md %}}</dd><dt>MAC</dt>
+    <dd>MAC{{% md %}}CryptoKeys with this purpose may be used with MacSign.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="cryptokeyversionresponse">Crypto<wbr>Key<wbr>Version<wbr>Response</h4>
@@ -878,7 +948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The root cause of an import failure. Only present if state is IMPORT_FAILED.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The root cause of the most recent import failure. Only present if state is IMPORT_FAILED.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="importjob_csharp">
 <a href="#importjob_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Job</a>
@@ -886,7 +956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the ImportJob used to import this CryptoKeyVersion. Only present if the underlying key material was imported.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the ImportJob used in the most recent import of this CryptoKeyVersion. Only present if the underlying key material was imported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="importtime_csharp">
 <a href="#importtime_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Time</a>
@@ -894,7 +964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time at which this CryptoKeyVersion's key material was imported.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The time at which this CryptoKeyVersion's key material was most recently imported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -911,6 +981,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ProtectionLevel describing how crypto operations are performed with this CryptoKeyVersion.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="reimporteligible_csharp">
+<a href="#reimporteligible_csharp" style="color: inherit; text-decoration: inherit;">Reimport<wbr>Eligible</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not this key version is eligible for reimport, by being specified as a target in ImportCryptoKeyVersionRequest.crypto_key_version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -986,7 +1064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The root cause of an import failure. Only present if state is IMPORT_FAILED.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The root cause of the most recent import failure. Only present if state is IMPORT_FAILED.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="importjob_go">
 <a href="#importjob_go" style="color: inherit; text-decoration: inherit;">Import<wbr>Job</a>
@@ -994,7 +1072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the ImportJob used to import this CryptoKeyVersion. Only present if the underlying key material was imported.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the ImportJob used in the most recent import of this CryptoKeyVersion. Only present if the underlying key material was imported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="importtime_go">
 <a href="#importtime_go" style="color: inherit; text-decoration: inherit;">Import<wbr>Time</a>
@@ -1002,7 +1080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time at which this CryptoKeyVersion's key material was imported.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The time at which this CryptoKeyVersion's key material was most recently imported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1019,6 +1097,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ProtectionLevel describing how crypto operations are performed with this CryptoKeyVersion.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="reimporteligible_go">
+<a href="#reimporteligible_go" style="color: inherit; text-decoration: inherit;">Reimport<wbr>Eligible</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not this key version is eligible for reimport, by being specified as a target in ImportCryptoKeyVersionRequest.crypto_key_version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1094,7 +1180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The root cause of an import failure. Only present if state is IMPORT_FAILED.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The root cause of the most recent import failure. Only present if state is IMPORT_FAILED.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="importjob_nodejs">
 <a href="#importjob_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Job</a>
@@ -1102,7 +1188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the ImportJob used to import this CryptoKeyVersion. Only present if the underlying key material was imported.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the ImportJob used in the most recent import of this CryptoKeyVersion. Only present if the underlying key material was imported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="importtime_nodejs">
 <a href="#importtime_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Time</a>
@@ -1110,7 +1196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time at which this CryptoKeyVersion's key material was imported.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The time at which this CryptoKeyVersion's key material was most recently imported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1127,6 +1213,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ProtectionLevel describing how crypto operations are performed with this CryptoKeyVersion.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="reimporteligible_nodejs">
+<a href="#reimporteligible_nodejs" style="color: inherit; text-decoration: inherit;">reimport<wbr>Eligible</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether or not this key version is eligible for reimport, by being specified as a target in ImportCryptoKeyVersionRequest.crypto_key_version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1202,7 +1296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The root cause of an import failure. Only present if state is IMPORT_FAILED.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The root cause of the most recent import failure. Only present if state is IMPORT_FAILED.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="import_job_python">
 <a href="#import_job_python" style="color: inherit; text-decoration: inherit;">import_<wbr>job</a>
@@ -1210,7 +1304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the ImportJob used to import this CryptoKeyVersion. Only present if the underlying key material was imported.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the ImportJob used in the most recent import of this CryptoKeyVersion. Only present if the underlying key material was imported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="import_time_python">
 <a href="#import_time_python" style="color: inherit; text-decoration: inherit;">import_<wbr>time</a>
@@ -1218,7 +1312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time at which this CryptoKeyVersion's key material was imported.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The time at which this CryptoKeyVersion's key material was most recently imported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1235,6 +1329,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ProtectionLevel describing how crypto operations are performed with this CryptoKeyVersion.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="reimport_eligible_python">
+<a href="#reimport_eligible_python" style="color: inherit; text-decoration: inherit;">reimport_<wbr>eligible</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not this key version is eligible for reimport, by being specified as a target in ImportCryptoKeyVersionRequest.crypto_key_version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1344,10 +1446,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>RSA_DECRYPT_OAEP_2048_SHA256{{% md %}}RSAES-OAEP 2048 bit key with a SHA256 digest.{{% /md %}}</dd><dt>Rsa<wbr>Decrypt<wbr>Oaep3072Sha256</dt>
     <dd>RSA_DECRYPT_OAEP_3072_SHA256{{% md %}}RSAES-OAEP 3072 bit key with a SHA256 digest.{{% /md %}}</dd><dt>Rsa<wbr>Decrypt<wbr>Oaep4096Sha256</dt>
     <dd>RSA_DECRYPT_OAEP_4096_SHA256{{% md %}}RSAES-OAEP 4096 bit key with a SHA256 digest.{{% /md %}}</dd><dt>Rsa<wbr>Decrypt<wbr>Oaep4096Sha512</dt>
-    <dd>RSA_DECRYPT_OAEP_4096_SHA512{{% md %}}RSAES-OAEP 4096 bit key with a SHA512 digest.{{% /md %}}</dd><dt>Ec<wbr>Sign<wbr>P256Sha256</dt>
+    <dd>RSA_DECRYPT_OAEP_4096_SHA512{{% md %}}RSAES-OAEP 4096 bit key with a SHA512 digest.{{% /md %}}</dd><dt>Rsa<wbr>Decrypt<wbr>Oaep2048Sha1</dt>
+    <dd>RSA_DECRYPT_OAEP_2048_SHA1{{% md %}}RSAES-OAEP 2048 bit key with a SHA1 digest.{{% /md %}}</dd><dt>Rsa<wbr>Decrypt<wbr>Oaep3072Sha1</dt>
+    <dd>RSA_DECRYPT_OAEP_3072_SHA1{{% md %}}RSAES-OAEP 3072 bit key with a SHA1 digest.{{% /md %}}</dd><dt>Rsa<wbr>Decrypt<wbr>Oaep4096Sha1</dt>
+    <dd>RSA_DECRYPT_OAEP_4096_SHA1{{% md %}}RSAES-OAEP 4096 bit key with a SHA1 digest.{{% /md %}}</dd><dt>Ec<wbr>Sign<wbr>P256Sha256</dt>
     <dd>EC_SIGN_P256_SHA256{{% md %}}ECDSA on the NIST P-256 curve with a SHA256 digest.{{% /md %}}</dd><dt>Ec<wbr>Sign<wbr>P384Sha384</dt>
     <dd>EC_SIGN_P384_SHA384{{% md %}}ECDSA on the NIST P-384 curve with a SHA384 digest.{{% /md %}}</dd><dt>Ec<wbr>Sign<wbr>Secp256k1Sha256</dt>
-    <dd>EC_SIGN_SECP256K1_SHA256{{% md %}}ECDSA on the non-NIST secp256k1 curve. This curve is only supported for HSM protection level.{{% /md %}}</dd><dt>External<wbr>Symmetric<wbr>Encryption</dt>
+    <dd>EC_SIGN_SECP256K1_SHA256{{% md %}}ECDSA on the non-NIST secp256k1 curve. This curve is only supported for HSM protection level.{{% /md %}}</dd><dt>Hmac<wbr>Sha256</dt>
+    <dd>HMAC_SHA256{{% md %}}HMAC-SHA256 signing with a 256 bit key.{{% /md %}}</dd><dt>External<wbr>Symmetric<wbr>Encryption</dt>
     <dd>EXTERNAL_SYMMETRIC_ENCRYPTION{{% md %}}Algorithm representing symmetric encryption by an external key manager.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1366,10 +1472,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>RSA_DECRYPT_OAEP_2048_SHA256{{% md %}}RSAES-OAEP 2048 bit key with a SHA256 digest.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Algorithm<wbr>Rsa<wbr>Decrypt<wbr>Oaep3072Sha256</dt>
     <dd>RSA_DECRYPT_OAEP_3072_SHA256{{% md %}}RSAES-OAEP 3072 bit key with a SHA256 digest.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Algorithm<wbr>Rsa<wbr>Decrypt<wbr>Oaep4096Sha256</dt>
     <dd>RSA_DECRYPT_OAEP_4096_SHA256{{% md %}}RSAES-OAEP 4096 bit key with a SHA256 digest.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Algorithm<wbr>Rsa<wbr>Decrypt<wbr>Oaep4096Sha512</dt>
-    <dd>RSA_DECRYPT_OAEP_4096_SHA512{{% md %}}RSAES-OAEP 4096 bit key with a SHA512 digest.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Algorithm<wbr>Ec<wbr>Sign<wbr>P256Sha256</dt>
+    <dd>RSA_DECRYPT_OAEP_4096_SHA512{{% md %}}RSAES-OAEP 4096 bit key with a SHA512 digest.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Algorithm<wbr>Rsa<wbr>Decrypt<wbr>Oaep2048Sha1</dt>
+    <dd>RSA_DECRYPT_OAEP_2048_SHA1{{% md %}}RSAES-OAEP 2048 bit key with a SHA1 digest.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Algorithm<wbr>Rsa<wbr>Decrypt<wbr>Oaep3072Sha1</dt>
+    <dd>RSA_DECRYPT_OAEP_3072_SHA1{{% md %}}RSAES-OAEP 3072 bit key with a SHA1 digest.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Algorithm<wbr>Rsa<wbr>Decrypt<wbr>Oaep4096Sha1</dt>
+    <dd>RSA_DECRYPT_OAEP_4096_SHA1{{% md %}}RSAES-OAEP 4096 bit key with a SHA1 digest.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Algorithm<wbr>Ec<wbr>Sign<wbr>P256Sha256</dt>
     <dd>EC_SIGN_P256_SHA256{{% md %}}ECDSA on the NIST P-256 curve with a SHA256 digest.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Algorithm<wbr>Ec<wbr>Sign<wbr>P384Sha384</dt>
     <dd>EC_SIGN_P384_SHA384{{% md %}}ECDSA on the NIST P-384 curve with a SHA384 digest.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Algorithm<wbr>Ec<wbr>Sign<wbr>Secp256k1Sha256</dt>
-    <dd>EC_SIGN_SECP256K1_SHA256{{% md %}}ECDSA on the non-NIST secp256k1 curve. This curve is only supported for HSM protection level.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Algorithm<wbr>External<wbr>Symmetric<wbr>Encryption</dt>
+    <dd>EC_SIGN_SECP256K1_SHA256{{% md %}}ECDSA on the non-NIST secp256k1 curve. This curve is only supported for HSM protection level.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Algorithm<wbr>Hmac<wbr>Sha256</dt>
+    <dd>HMAC_SHA256{{% md %}}HMAC-SHA256 signing with a 256 bit key.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Algorithm<wbr>External<wbr>Symmetric<wbr>Encryption</dt>
     <dd>EXTERNAL_SYMMETRIC_ENCRYPTION{{% md %}}Algorithm representing symmetric encryption by an external key manager.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1388,10 +1498,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>RSA_DECRYPT_OAEP_2048_SHA256{{% md %}}RSAES-OAEP 2048 bit key with a SHA256 digest.{{% /md %}}</dd><dt>Rsa<wbr>Decrypt<wbr>Oaep3072Sha256</dt>
     <dd>RSA_DECRYPT_OAEP_3072_SHA256{{% md %}}RSAES-OAEP 3072 bit key with a SHA256 digest.{{% /md %}}</dd><dt>Rsa<wbr>Decrypt<wbr>Oaep4096Sha256</dt>
     <dd>RSA_DECRYPT_OAEP_4096_SHA256{{% md %}}RSAES-OAEP 4096 bit key with a SHA256 digest.{{% /md %}}</dd><dt>Rsa<wbr>Decrypt<wbr>Oaep4096Sha512</dt>
-    <dd>RSA_DECRYPT_OAEP_4096_SHA512{{% md %}}RSAES-OAEP 4096 bit key with a SHA512 digest.{{% /md %}}</dd><dt>Ec<wbr>Sign<wbr>P256Sha256</dt>
+    <dd>RSA_DECRYPT_OAEP_4096_SHA512{{% md %}}RSAES-OAEP 4096 bit key with a SHA512 digest.{{% /md %}}</dd><dt>Rsa<wbr>Decrypt<wbr>Oaep2048Sha1</dt>
+    <dd>RSA_DECRYPT_OAEP_2048_SHA1{{% md %}}RSAES-OAEP 2048 bit key with a SHA1 digest.{{% /md %}}</dd><dt>Rsa<wbr>Decrypt<wbr>Oaep3072Sha1</dt>
+    <dd>RSA_DECRYPT_OAEP_3072_SHA1{{% md %}}RSAES-OAEP 3072 bit key with a SHA1 digest.{{% /md %}}</dd><dt>Rsa<wbr>Decrypt<wbr>Oaep4096Sha1</dt>
+    <dd>RSA_DECRYPT_OAEP_4096_SHA1{{% md %}}RSAES-OAEP 4096 bit key with a SHA1 digest.{{% /md %}}</dd><dt>Ec<wbr>Sign<wbr>P256Sha256</dt>
     <dd>EC_SIGN_P256_SHA256{{% md %}}ECDSA on the NIST P-256 curve with a SHA256 digest.{{% /md %}}</dd><dt>Ec<wbr>Sign<wbr>P384Sha384</dt>
     <dd>EC_SIGN_P384_SHA384{{% md %}}ECDSA on the NIST P-384 curve with a SHA384 digest.{{% /md %}}</dd><dt>Ec<wbr>Sign<wbr>Secp256k1Sha256</dt>
-    <dd>EC_SIGN_SECP256K1_SHA256{{% md %}}ECDSA on the non-NIST secp256k1 curve. This curve is only supported for HSM protection level.{{% /md %}}</dd><dt>External<wbr>Symmetric<wbr>Encryption</dt>
+    <dd>EC_SIGN_SECP256K1_SHA256{{% md %}}ECDSA on the non-NIST secp256k1 curve. This curve is only supported for HSM protection level.{{% /md %}}</dd><dt>Hmac<wbr>Sha256</dt>
+    <dd>HMAC_SHA256{{% md %}}HMAC-SHA256 signing with a 256 bit key.{{% /md %}}</dd><dt>External<wbr>Symmetric<wbr>Encryption</dt>
     <dd>EXTERNAL_SYMMETRIC_ENCRYPTION{{% md %}}Algorithm representing symmetric encryption by an external key manager.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1410,10 +1524,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>RSA_DECRYPT_OAEP_2048_SHA256{{% md %}}RSAES-OAEP 2048 bit key with a SHA256 digest.{{% /md %}}</dd><dt>RSA_DECRYPT_OAEP3072_SHA256</dt>
     <dd>RSA_DECRYPT_OAEP_3072_SHA256{{% md %}}RSAES-OAEP 3072 bit key with a SHA256 digest.{{% /md %}}</dd><dt>RSA_DECRYPT_OAEP4096_SHA256</dt>
     <dd>RSA_DECRYPT_OAEP_4096_SHA256{{% md %}}RSAES-OAEP 4096 bit key with a SHA256 digest.{{% /md %}}</dd><dt>RSA_DECRYPT_OAEP4096_SHA512</dt>
-    <dd>RSA_DECRYPT_OAEP_4096_SHA512{{% md %}}RSAES-OAEP 4096 bit key with a SHA512 digest.{{% /md %}}</dd><dt>EC_SIGN_P256_SHA256</dt>
+    <dd>RSA_DECRYPT_OAEP_4096_SHA512{{% md %}}RSAES-OAEP 4096 bit key with a SHA512 digest.{{% /md %}}</dd><dt>RSA_DECRYPT_OAEP2048_SHA1</dt>
+    <dd>RSA_DECRYPT_OAEP_2048_SHA1{{% md %}}RSAES-OAEP 2048 bit key with a SHA1 digest.{{% /md %}}</dd><dt>RSA_DECRYPT_OAEP3072_SHA1</dt>
+    <dd>RSA_DECRYPT_OAEP_3072_SHA1{{% md %}}RSAES-OAEP 3072 bit key with a SHA1 digest.{{% /md %}}</dd><dt>RSA_DECRYPT_OAEP4096_SHA1</dt>
+    <dd>RSA_DECRYPT_OAEP_4096_SHA1{{% md %}}RSAES-OAEP 4096 bit key with a SHA1 digest.{{% /md %}}</dd><dt>EC_SIGN_P256_SHA256</dt>
     <dd>EC_SIGN_P256_SHA256{{% md %}}ECDSA on the NIST P-256 curve with a SHA256 digest.{{% /md %}}</dd><dt>EC_SIGN_P384_SHA384</dt>
     <dd>EC_SIGN_P384_SHA384{{% md %}}ECDSA on the NIST P-384 curve with a SHA384 digest.{{% /md %}}</dd><dt>EC_SIGN_SECP256K1_SHA256</dt>
-    <dd>EC_SIGN_SECP256K1_SHA256{{% md %}}ECDSA on the non-NIST secp256k1 curve. This curve is only supported for HSM protection level.{{% /md %}}</dd><dt>EXTERNAL_SYMMETRIC_ENCRYPTION</dt>
+    <dd>EC_SIGN_SECP256K1_SHA256{{% md %}}ECDSA on the non-NIST secp256k1 curve. This curve is only supported for HSM protection level.{{% /md %}}</dd><dt>HMAC_SHA256</dt>
+    <dd>HMAC_SHA256{{% md %}}HMAC-SHA256 signing with a 256 bit key.{{% /md %}}</dd><dt>EXTERNAL_SYMMETRIC_ENCRYPTION</dt>
     <dd>EXTERNAL_SYMMETRIC_ENCRYPTION{{% md %}}Algorithm representing symmetric encryption by an external key manager.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 

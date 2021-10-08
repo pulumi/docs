@@ -35,6 +35,7 @@ Auto-naming is currently not supported for this resource.
          <span class="nx">feed_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">feed_output_config</span><span class="p">:</span> <span class="nx">Optional[FeedOutputConfigArgs]</span> = None<span class="p">,</span>
          <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">relationship_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
          <span class="nx">v1_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">v1_id1</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -236,7 +237,15 @@ The Feed resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#feedcontenttype">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Asset.<wbr>V1.<wbr>Feed<wbr>Content<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Asset content type. If not specified, no content but the asset name and type will be returned.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Asset content type. If not specified, no content but the asset name and type will be returned.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="relationshiptypes_csharp">
+<a href="#relationshiptypes_csharp" style="color: inherit; text-decoration: inherit;">Relationship<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of relationship types to output, for example: `INSTANCE_TO_INSTANCEGROUP`. This field should only be specified if content_type=RELATIONSHIP. * If specified: it outputs specified relationship updates on the [asset_names] or the [asset_types]. It returns an error if any of the [relationship_types] doesn't belong to the supported relationship types of the [asset_names] or [asset_types], or any of the [asset_names] or the [asset_types] doesn't belong to the source types of the [relationship_types]. * Otherwise: it outputs the supported relationships of the types of [asset_names] and [asset_types] or returns an error if any of the [asset_names] or the [asset_types] has no replationship support. See [Introduction to Cloud Asset Inventory](https://cloud.google.com/asset-inventory/docs/overview) for all supported asset types and relationship types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -312,7 +321,15 @@ The Feed resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#feedcontenttype">Feed<wbr>Content<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Asset content type. If not specified, no content but the asset name and type will be returned.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Asset content type. If not specified, no content but the asset name and type will be returned.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="relationshiptypes_go">
+<a href="#relationshiptypes_go" style="color: inherit; text-decoration: inherit;">Relationship<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of relationship types to output, for example: `INSTANCE_TO_INSTANCEGROUP`. This field should only be specified if content_type=RELATIONSHIP. * If specified: it outputs specified relationship updates on the [asset_names] or the [asset_types]. It returns an error if any of the [relationship_types] doesn't belong to the supported relationship types of the [asset_names] or [asset_types], or any of the [asset_names] or the [asset_types] doesn't belong to the source types of the [relationship_types]. * Otherwise: it outputs the supported relationships of the types of [asset_names] and [asset_types] or returns an error if any of the [asset_names] or the [asset_types] has no replationship support. See [Introduction to Cloud Asset Inventory](https://cloud.google.com/asset-inventory/docs/overview) for all supported asset types and relationship types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -388,7 +405,15 @@ The Feed resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#feedcontenttype">Feed<wbr>Content<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Asset content type. If not specified, no content but the asset name and type will be returned.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Asset content type. If not specified, no content but the asset name and type will be returned.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="relationshiptypes_nodejs">
+<a href="#relationshiptypes_nodejs" style="color: inherit; text-decoration: inherit;">relationship<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of relationship types to output, for example: `INSTANCE_TO_INSTANCEGROUP`. This field should only be specified if content_type=RELATIONSHIP. * If specified: it outputs specified relationship updates on the [asset_names] or the [asset_types]. It returns an error if any of the [relationship_types] doesn't belong to the supported relationship types of the [asset_names] or [asset_types], or any of the [asset_names] or the [asset_types] doesn't belong to the source types of the [relationship_types]. * Otherwise: it outputs the supported relationships of the types of [asset_names] and [asset_types] or returns an error if any of the [asset_names] or the [asset_types] has no replationship support. See [Introduction to Cloud Asset Inventory](https://cloud.google.com/asset-inventory/docs/overview) for all supported asset types and relationship types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -464,7 +489,15 @@ The Feed resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#feedcontenttype">Feed<wbr>Content<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Asset content type. If not specified, no content but the asset name and type will be returned.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Asset content type. If not specified, no content but the asset name and type will be returned.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="relationship_types_python">
+<a href="#relationship_types_python" style="color: inherit; text-decoration: inherit;">relationship_<wbr>types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of relationship types to output, for example: `INSTANCE_TO_INSTANCEGROUP`. This field should only be specified if content_type=RELATIONSHIP. * If specified: it outputs specified relationship updates on the [asset_names] or the [asset_types]. It returns an error if any of the [relationship_types] doesn't belong to the supported relationship types of the [asset_names] or [asset_types], or any of the [asset_names] or the [asset_types] doesn't belong to the source types of the [relationship_types]. * Otherwise: it outputs the supported relationships of the types of [asset_names] and [asset_types] or returns an error if any of the [asset_names] or the [asset_types] has no replationship support. See [Introduction to Cloud Asset Inventory](https://cloud.google.com/asset-inventory/docs/overview) for all supported asset types and relationship types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -833,7 +866,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>IAM_POLICY{{% md %}}The actual IAM policy set on a resource.{{% /md %}}</dd><dt>Org<wbr>Policy</dt>
     <dd>ORG_POLICY{{% md %}}The Cloud Organization Policy set on an asset.{{% /md %}}</dd><dt>Access<wbr>Policy</dt>
     <dd>ACCESS_POLICY{{% md %}}The Cloud Access context manager Policy set on an asset.{{% /md %}}</dd><dt>Os<wbr>Inventory</dt>
-    <dd>OS_INVENTORY{{% md %}}The runtime OS Inventory information.{{% /md %}}</dd></dl>
+    <dd>OS_INVENTORY{{% md %}}The runtime OS Inventory information.{{% /md %}}</dd><dt>Relationship</dt>
+    <dd>RELATIONSHIP{{% md %}}The related resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -843,7 +877,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>IAM_POLICY{{% md %}}The actual IAM policy set on a resource.{{% /md %}}</dd><dt>Feed<wbr>Content<wbr>Type<wbr>Org<wbr>Policy</dt>
     <dd>ORG_POLICY{{% md %}}The Cloud Organization Policy set on an asset.{{% /md %}}</dd><dt>Feed<wbr>Content<wbr>Type<wbr>Access<wbr>Policy</dt>
     <dd>ACCESS_POLICY{{% md %}}The Cloud Access context manager Policy set on an asset.{{% /md %}}</dd><dt>Feed<wbr>Content<wbr>Type<wbr>Os<wbr>Inventory</dt>
-    <dd>OS_INVENTORY{{% md %}}The runtime OS Inventory information.{{% /md %}}</dd></dl>
+    <dd>OS_INVENTORY{{% md %}}The runtime OS Inventory information.{{% /md %}}</dd><dt>Feed<wbr>Content<wbr>Type<wbr>Relationship</dt>
+    <dd>RELATIONSHIP{{% md %}}The related resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -853,7 +888,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>IAM_POLICY{{% md %}}The actual IAM policy set on a resource.{{% /md %}}</dd><dt>Org<wbr>Policy</dt>
     <dd>ORG_POLICY{{% md %}}The Cloud Organization Policy set on an asset.{{% /md %}}</dd><dt>Access<wbr>Policy</dt>
     <dd>ACCESS_POLICY{{% md %}}The Cloud Access context manager Policy set on an asset.{{% /md %}}</dd><dt>Os<wbr>Inventory</dt>
-    <dd>OS_INVENTORY{{% md %}}The runtime OS Inventory information.{{% /md %}}</dd></dl>
+    <dd>OS_INVENTORY{{% md %}}The runtime OS Inventory information.{{% /md %}}</dd><dt>Relationship</dt>
+    <dd>RELATIONSHIP{{% md %}}The related resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -863,7 +899,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>IAM_POLICY{{% md %}}The actual IAM policy set on a resource.{{% /md %}}</dd><dt>ORG_POLICY</dt>
     <dd>ORG_POLICY{{% md %}}The Cloud Organization Policy set on an asset.{{% /md %}}</dd><dt>ACCESS_POLICY</dt>
     <dd>ACCESS_POLICY{{% md %}}The Cloud Access context manager Policy set on an asset.{{% /md %}}</dd><dt>OS_INVENTORY</dt>
-    <dd>OS_INVENTORY{{% md %}}The runtime OS Inventory information.{{% /md %}}</dd></dl>
+    <dd>OS_INVENTORY{{% md %}}The runtime OS Inventory information.{{% /md %}}</dd><dt>RELATIONSHIP</dt>
+    <dd>RELATIONSHIP{{% md %}}The related resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="feedoutputconfig">Feed<wbr>Output<wbr>Config</h4>

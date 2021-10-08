@@ -495,7 +495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}[Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in format: `devices/{device_id}`, where device_id is the unique id assigned to the Device.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}[Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in format: `devices/{device}`, where device is the unique id assigned to the Device.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkoperator_csharp">
 <a href="#networkoperator_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Operator</a>
@@ -699,7 +699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}[Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in format: `devices/{device_id}`, where device_id is the unique id assigned to the Device.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}[Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in format: `devices/{device}`, where device is the unique id assigned to the Device.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkoperator_go">
 <a href="#networkoperator_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Operator</a>
@@ -903,7 +903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}[Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in format: `devices/{device_id}`, where device_id is the unique id assigned to the Device.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}[Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in format: `devices/{device}`, where device is the unique id assigned to the Device.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkoperator_nodejs">
 <a href="#networkoperator_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Operator</a>
@@ -1107,7 +1107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}[Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in format: `devices/{device_id}`, where device_id is the unique id assigned to the Device.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}[Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in format: `devices/{device}`, where device is the unique id assigned to the Device.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="network_operator_python">
 <a href="#network_operator_python" style="color: inherit; text-decoration: inherit;">network_<wbr>operator</a>

@@ -27,6 +27,8 @@ Creates an environment in an organization.
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Environment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">api_proxy_type</span><span class="p">:</span> <span class="nx">Optional[EnvironmentApiProxyType]</span> = None<span class="p">,</span>
+                <span class="nx">deployment_type</span><span class="p">:</span> <span class="nx">Optional[EnvironmentDeploymentType]</span> = None<span class="p">,</span>
                 <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -169,6 +171,22 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="apiproxytype_csharp">
+<a href="#apiproxytype_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Proxy<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentapiproxytype">Pulumi.<wbr>Google<wbr>Native.<wbr>Apigee.<wbr>V1.<wbr>Environment<wbr>Api<wbr>Proxy<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. API Proxy type supported by the environment. The type can be set when creating the Environment and cannot be changed.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deploymenttype_csharp">
+<a href="#deploymenttype_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentdeploymenttype">Pulumi.<wbr>Google<wbr>Native.<wbr>Apigee.<wbr>V1.<wbr>Environment<wbr>Deployment<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. Deployment type supported by the environment. The deployment type can be set when creating the environment and cannot be changed. When you enable archive deployment, you will be **prevented from performing** a [subset of actions](/apigee/docs/api-platform/local-development/overview#prevented-actions) within the environment, including: * Managing the deployment of API proxy or shared flow revisions * Creating, updating, or deleting resource files * Creating, updating, or deleting target servers{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -212,6 +230,22 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="apiproxytype_go">
+<a href="#apiproxytype_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Proxy<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentapiproxytype">Environment<wbr>Api<wbr>Proxy<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. API Proxy type supported by the environment. The type can be set when creating the Environment and cannot be changed.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deploymenttype_go">
+<a href="#deploymenttype_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentdeploymenttype">Environment<wbr>Deployment<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. Deployment type supported by the environment. The deployment type can be set when creating the environment and cannot be changed. When you enable archive deployment, you will be **prevented from performing** a [subset of actions](/apigee/docs/api-platform/local-development/overview#prevented-actions) within the environment, including: * Managing the deployment of API proxy or shared flow revisions * Creating, updating, or deleting resource files * Creating, updating, or deleting target servers{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -257,6 +291,22 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="apiproxytype_nodejs">
+<a href="#apiproxytype_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Proxy<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentapiproxytype">Environment<wbr>Api<wbr>Proxy<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. API Proxy type supported by the environment. The type can be set when creating the Environment and cannot be changed.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deploymenttype_nodejs">
+<a href="#deploymenttype_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentdeploymenttype">Environment<wbr>Deployment<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. Deployment type supported by the environment. The deployment type can be set when creating the environment and cannot be changed. When you enable archive deployment, you will be **prevented from performing** a [subset of actions](/apigee/docs/api-platform/local-development/overview#prevented-actions) within the environment, including: * Managing the deployment of API proxy or shared flow revisions * Creating, updating, or deleting resource files * Creating, updating, or deleting target servers{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -300,6 +350,22 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="api_proxy_type_python">
+<a href="#api_proxy_type_python" style="color: inherit; text-decoration: inherit;">api_<wbr>proxy_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentapiproxytype">Environment<wbr>Api<wbr>Proxy<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. API Proxy type supported by the environment. The type can be set when creating the Environment and cannot be changed.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deployment_type_python">
+<a href="#deployment_type_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentdeploymenttype">Environment<wbr>Deployment<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. Deployment type supported by the environment. The deployment type can be set when creating the environment and cannot be changed. When you enable archive deployment, you will be **prevented from performing** a [subset of actions](/apigee/docs/api-platform/local-development/overview#prevented-actions) within the environment, including: * Managing the deployment of API proxy or shared flow revisions * Creating, updating, or deleting resource files * Creating, updating, or deleting target servers{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -494,6 +560,66 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="environmentapiproxytype">Environment<wbr>Api<wbr>Proxy<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Api<wbr>Proxy<wbr>Type<wbr>Unspecified</dt>
+    <dd>API_PROXY_TYPE_UNSPECIFIED{{% md %}}API proxy type not specified.{{% /md %}}</dd><dt>Programmable</dt>
+    <dd>PROGRAMMABLE{{% md %}}Programmable API Proxies enable you to develop APIs with highly flexible behavior using bundled policy configuration and one or more programming languages to describe complex sequential and/or conditional flows of logic.{{% /md %}}</dd><dt>Configurable</dt>
+    <dd>CONFIGURABLE{{% md %}}Configurable API Proxies enable you to develop efficient APIs using simple configuration while complex execution control flow logic is handled by Apigee. This type only works with the ARCHIVE deployment type and cannot be combined with the PROXY deployment type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Environment<wbr>Api<wbr>Proxy<wbr>Type<wbr>Api<wbr>Proxy<wbr>Type<wbr>Unspecified</dt>
+    <dd>API_PROXY_TYPE_UNSPECIFIED{{% md %}}API proxy type not specified.{{% /md %}}</dd><dt>Environment<wbr>Api<wbr>Proxy<wbr>Type<wbr>Programmable</dt>
+    <dd>PROGRAMMABLE{{% md %}}Programmable API Proxies enable you to develop APIs with highly flexible behavior using bundled policy configuration and one or more programming languages to describe complex sequential and/or conditional flows of logic.{{% /md %}}</dd><dt>Environment<wbr>Api<wbr>Proxy<wbr>Type<wbr>Configurable</dt>
+    <dd>CONFIGURABLE{{% md %}}Configurable API Proxies enable you to develop efficient APIs using simple configuration while complex execution control flow logic is handled by Apigee. This type only works with the ARCHIVE deployment type and cannot be combined with the PROXY deployment type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Api<wbr>Proxy<wbr>Type<wbr>Unspecified</dt>
+    <dd>API_PROXY_TYPE_UNSPECIFIED{{% md %}}API proxy type not specified.{{% /md %}}</dd><dt>Programmable</dt>
+    <dd>PROGRAMMABLE{{% md %}}Programmable API Proxies enable you to develop APIs with highly flexible behavior using bundled policy configuration and one or more programming languages to describe complex sequential and/or conditional flows of logic.{{% /md %}}</dd><dt>Configurable</dt>
+    <dd>CONFIGURABLE{{% md %}}Configurable API Proxies enable you to develop efficient APIs using simple configuration while complex execution control flow logic is handled by Apigee. This type only works with the ARCHIVE deployment type and cannot be combined with the PROXY deployment type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>API_PROXY_TYPE_UNSPECIFIED</dt>
+    <dd>API_PROXY_TYPE_UNSPECIFIED{{% md %}}API proxy type not specified.{{% /md %}}</dd><dt>PROGRAMMABLE</dt>
+    <dd>PROGRAMMABLE{{% md %}}Programmable API Proxies enable you to develop APIs with highly flexible behavior using bundled policy configuration and one or more programming languages to describe complex sequential and/or conditional flows of logic.{{% /md %}}</dd><dt>CONFIGURABLE</dt>
+    <dd>CONFIGURABLE{{% md %}}Configurable API Proxies enable you to develop efficient APIs using simple configuration while complex execution control flow logic is handled by Apigee. This type only works with the ARCHIVE deployment type and cannot be combined with the PROXY deployment type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="environmentdeploymenttype">Environment<wbr>Deployment<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Deployment<wbr>Type<wbr>Unspecified</dt>
+    <dd>DEPLOYMENT_TYPE_UNSPECIFIED{{% md %}}Deployment type not specified.{{% /md %}}</dd><dt>Proxy</dt>
+    <dd>PROXY{{% md %}}Proxy deployment enables you to develop and deploy API proxies using Apigee on Google Cloud. This cannot currently be combined with the CONFIGURABLE API proxy type.{{% /md %}}</dd><dt>Archive</dt>
+    <dd>ARCHIVE{{% md %}}Archive deployment enables you to develop API proxies locally then deploy an archive of your API proxy configuration to an environment in Apigee on Google Cloud. You will be prevented from performing a [subset of actions](/apigee/docs/api-platform/local-development/overview#prevented-actions) within the environment.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Environment<wbr>Deployment<wbr>Type<wbr>Deployment<wbr>Type<wbr>Unspecified</dt>
+    <dd>DEPLOYMENT_TYPE_UNSPECIFIED{{% md %}}Deployment type not specified.{{% /md %}}</dd><dt>Environment<wbr>Deployment<wbr>Type<wbr>Proxy</dt>
+    <dd>PROXY{{% md %}}Proxy deployment enables you to develop and deploy API proxies using Apigee on Google Cloud. This cannot currently be combined with the CONFIGURABLE API proxy type.{{% /md %}}</dd><dt>Environment<wbr>Deployment<wbr>Type<wbr>Archive</dt>
+    <dd>ARCHIVE{{% md %}}Archive deployment enables you to develop API proxies locally then deploy an archive of your API proxy configuration to an environment in Apigee on Google Cloud. You will be prevented from performing a [subset of actions](/apigee/docs/api-platform/local-development/overview#prevented-actions) within the environment.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Deployment<wbr>Type<wbr>Unspecified</dt>
+    <dd>DEPLOYMENT_TYPE_UNSPECIFIED{{% md %}}Deployment type not specified.{{% /md %}}</dd><dt>Proxy</dt>
+    <dd>PROXY{{% md %}}Proxy deployment enables you to develop and deploy API proxies using Apigee on Google Cloud. This cannot currently be combined with the CONFIGURABLE API proxy type.{{% /md %}}</dd><dt>Archive</dt>
+    <dd>ARCHIVE{{% md %}}Archive deployment enables you to develop API proxies locally then deploy an archive of your API proxy configuration to an environment in Apigee on Google Cloud. You will be prevented from performing a [subset of actions](/apigee/docs/api-platform/local-development/overview#prevented-actions) within the environment.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DEPLOYMENT_TYPE_UNSPECIFIED</dt>
+    <dd>DEPLOYMENT_TYPE_UNSPECIFIED{{% md %}}Deployment type not specified.{{% /md %}}</dd><dt>PROXY</dt>
+    <dd>PROXY{{% md %}}Proxy deployment enables you to develop and deploy API proxies using Apigee on Google Cloud. This cannot currently be combined with the CONFIGURABLE API proxy type.{{% /md %}}</dd><dt>ARCHIVE</dt>
+    <dd>ARCHIVE{{% md %}}Archive deployment enables you to develop API proxies locally then deploy an archive of your API proxy configuration to an environment in Apigee on Google Cloud. You will be prevented from performing a [subset of actions](/apigee/docs/api-platform/local-development/overview#prevented-actions) within the environment.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="googlecloudapigeev1properties">Google<wbr>Cloud<wbr>Apigee<wbr>V1Properties</h4>
 

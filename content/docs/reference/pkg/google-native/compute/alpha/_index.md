@@ -40,6 +40,8 @@ Explore the resources and functions of the google-native.compute/alpha module.
     <li><a href="instanceiampolicy" title="InstanceIamPolicy"><span class="symbol resource"></span>InstanceIamPolicy</a></li>
     <li><a href="instancetemplate" title="InstanceTemplate"><span class="symbol resource"></span>InstanceTemplate</a></li>
     <li><a href="instancetemplateiampolicy" title="InstanceTemplateIamPolicy"><span class="symbol resource"></span>InstanceTemplateIamPolicy</a></li>
+    <li><a href="instantsnapshot" title="InstantSnapshot"><span class="symbol resource"></span>InstantSnapshot</a></li>
+    <li><a href="instantsnapshotiampolicy" title="InstantSnapshotIamPolicy"><span class="symbol resource"></span>InstantSnapshotIamPolicy</a></li>
     <li><a href="interconnect" title="Interconnect"><span class="symbol resource"></span>Interconnect</a></li>
     <li><a href="interconnectattachment" title="InterconnectAttachment"><span class="symbol resource"></span>InterconnectAttachment</a></li>
     <li><a href="interconnectattachmentiampolicy" title="InterconnectAttachmentIamPolicy"><span class="symbol resource"></span>InterconnectAttachmentIamPolicy</a></li>
@@ -70,8 +72,6 @@ Explore the resources and functions of the google-native.compute/alpha module.
     <li><a href="regiondiskiampolicy" title="RegionDiskIamPolicy"><span class="symbol resource"></span>RegionDiskIamPolicy</a></li>
     <li><a href="regionhealthcheck" title="RegionHealthCheck"><span class="symbol resource"></span>RegionHealthCheck</a></li>
     <li><a href="regionhealthcheckservice" title="RegionHealthCheckService"><span class="symbol resource"></span>RegionHealthCheckService</a></li>
-    <li><a href="regioninplacesnapshot" title="RegionInPlaceSnapshot"><span class="symbol resource"></span>RegionInPlaceSnapshot</a></li>
-    <li><a href="regioninplacesnapshotiampolicy" title="RegionInPlaceSnapshotIamPolicy"><span class="symbol resource"></span>RegionInPlaceSnapshotIamPolicy</a></li>
     <li><a href="regioninstancegroupmanager" title="RegionInstanceGroupManager"><span class="symbol resource"></span>RegionInstanceGroupManager</a></li>
     <li><a href="regioninstantsnapshot" title="RegionInstantSnapshot"><span class="symbol resource"></span>RegionInstantSnapshot</a></li>
     <li><a href="regioninstantsnapshotiampolicy" title="RegionInstantSnapshotIamPolicy"><span class="symbol resource"></span>RegionInstantSnapshotIamPolicy</a></li>
@@ -110,10 +110,6 @@ Explore the resources and functions of the google-native.compute/alpha module.
     <li><a href="urlmap" title="UrlMap"><span class="symbol resource"></span>UrlMap</a></li>
     <li><a href="vpngateway" title="VpnGateway"><span class="symbol resource"></span>VpnGateway</a></li>
     <li><a href="vpntunnel" title="VpnTunnel"><span class="symbol resource"></span>VpnTunnel</a></li>
-    <li><a href="zoneinplacesnapshot" title="ZoneInPlaceSnapshot"><span class="symbol resource"></span>ZoneInPlaceSnapshot</a></li>
-    <li><a href="zoneinplacesnapshotiampolicy" title="ZoneInPlaceSnapshotIamPolicy"><span class="symbol resource"></span>ZoneInPlaceSnapshotIamPolicy</a></li>
-    <li><a href="zoneinstantsnapshot" title="ZoneInstantSnapshot"><span class="symbol resource"></span>ZoneInstantSnapshot</a></li>
-    <li><a href="zoneinstantsnapshotiampolicy" title="ZoneInstantSnapshotIamPolicy"><span class="symbol resource"></span>ZoneInstantSnapshotIamPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -147,6 +143,8 @@ Explore the resources and functions of the google-native.compute/alpha module.
     <li><a href="getinstanceiampolicy" title="GetInstanceIamPolicy"><span class="symbol function"></span>GetInstanceIamPolicy</a></li>
     <li><a href="getinstancetemplate" title="GetInstanceTemplate"><span class="symbol function"></span>GetInstanceTemplate</a></li>
     <li><a href="getinstancetemplateiampolicy" title="GetInstanceTemplateIamPolicy"><span class="symbol function"></span>GetInstanceTemplateIamPolicy</a></li>
+    <li><a href="getinstantsnapshot" title="GetInstantSnapshot"><span class="symbol function"></span>GetInstantSnapshot</a></li>
+    <li><a href="getinstantsnapshotiampolicy" title="GetInstantSnapshotIamPolicy"><span class="symbol function"></span>GetInstantSnapshotIamPolicy</a></li>
     <li><a href="getinterconnect" title="GetInterconnect"><span class="symbol function"></span>GetInterconnect</a></li>
     <li><a href="getinterconnectattachment" title="GetInterconnectAttachment"><span class="symbol function"></span>GetInterconnectAttachment</a></li>
     <li><a href="getinterconnectattachmentiampolicy" title="GetInterconnectAttachmentIamPolicy"><span class="symbol function"></span>GetInterconnectAttachmentIamPolicy</a></li>
@@ -177,8 +175,6 @@ Explore the resources and functions of the google-native.compute/alpha module.
     <li><a href="getregiondiskiampolicy" title="GetRegionDiskIamPolicy"><span class="symbol function"></span>GetRegionDiskIamPolicy</a></li>
     <li><a href="getregionhealthcheck" title="GetRegionHealthCheck"><span class="symbol function"></span>GetRegionHealthCheck</a></li>
     <li><a href="getregionhealthcheckservice" title="GetRegionHealthCheckService"><span class="symbol function"></span>GetRegionHealthCheckService</a></li>
-    <li><a href="getregioninplacesnapshot" title="GetRegionInPlaceSnapshot"><span class="symbol function"></span>GetRegionInPlaceSnapshot</a></li>
-    <li><a href="getregioninplacesnapshotiampolicy" title="GetRegionInPlaceSnapshotIamPolicy"><span class="symbol function"></span>GetRegionInPlaceSnapshotIamPolicy</a></li>
     <li><a href="getregioninstancegroupmanager" title="GetRegionInstanceGroupManager"><span class="symbol function"></span>GetRegionInstanceGroupManager</a></li>
     <li><a href="getregioninstantsnapshot" title="GetRegionInstantSnapshot"><span class="symbol function"></span>GetRegionInstantSnapshot</a></li>
     <li><a href="getregioninstantsnapshotiampolicy" title="GetRegionInstantSnapshotIamPolicy"><span class="symbol function"></span>GetRegionInstantSnapshotIamPolicy</a></li>
@@ -217,10 +213,6 @@ Explore the resources and functions of the google-native.compute/alpha module.
     <li><a href="geturlmap" title="GetUrlMap"><span class="symbol function"></span>GetUrlMap</a></li>
     <li><a href="getvpngateway" title="GetVpnGateway"><span class="symbol function"></span>GetVpnGateway</a></li>
     <li><a href="getvpntunnel" title="GetVpnTunnel"><span class="symbol function"></span>GetVpnTunnel</a></li>
-    <li><a href="getzoneinplacesnapshot" title="GetZoneInPlaceSnapshot"><span class="symbol function"></span>GetZoneInPlaceSnapshot</a></li>
-    <li><a href="getzoneinplacesnapshotiampolicy" title="GetZoneInPlaceSnapshotIamPolicy"><span class="symbol function"></span>GetZoneInPlaceSnapshotIamPolicy</a></li>
-    <li><a href="getzoneinstantsnapshot" title="GetZoneInstantSnapshot"><span class="symbol function"></span>GetZoneInstantSnapshot</a></li>
-    <li><a href="getzoneinstantsnapshotiampolicy" title="GetZoneInstantSnapshotIamPolicy"><span class="symbol function"></span>GetZoneInstantSnapshotIamPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -230,6 +222,6 @@ Explore the resources and functions of the google-native.compute/alpha module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.0</dd>
+	<dd>0.8.0</dd>
 </dl>
 

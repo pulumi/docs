@@ -168,14 +168,6 @@ The Workload resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="billingaccount_csharp">
-<a href="#billingaccount_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Account</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Input only. The billing account used for the resources which are direct children of workload. This billing account is initially associated with the resources created as part of Workload creation. After the initial creation of these resources, the customer can change the assigned billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For example, `billingAccounts/012345-567890-ABCDEF`.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="complianceregime_csharp">
 <a href="#complianceregime_csharp" style="color: inherit; text-decoration: inherit;">Compliance<wbr>Regime</a>
 </span>
@@ -199,6 +191,14 @@ The Workload resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="billingaccount_csharp">
+<a href="#billingaccount_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. The billing account used for the resources which are direct children of workload. This billing account is initially associated with the resources created as part of Workload creation. After the initial creation of these resources, the customer can change the assigned billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For example, `billingAccounts/012345-567890-ABCDEF`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -254,7 +254,7 @@ The Workload resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Input only. The parent resource for the resources managed by this Assured Workload. May be either an organization or a folder. Must be the same or a child of the Workload parent. If not specified all resources are created under the Workload parent. Formats: folders/{folder_id} organizations/{organization_id}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Input only. The parent resource for the resources managed by this Assured Workload. May be either empty or a folder resource which is a child of the Workload parent. If not specified all resources are created under the parent organization. Format: folders/{folder_id}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcesettings_csharp">
 <a href="#resourcesettings_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Settings</a>
@@ -267,14 +267,6 @@ The Workload resource accepts the following [input]({{< relref "/docs/intro/conc
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="billingaccount_go">
-<a href="#billingaccount_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Account</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Input only. The billing account used for the resources which are direct children of workload. This billing account is initially associated with the resources created as part of Workload creation. After the initial creation of these resources, the customer can change the assigned billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For example, `billingAccounts/012345-567890-ABCDEF`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="complianceregime_go">
 <a href="#complianceregime_go" style="color: inherit; text-decoration: inherit;">Compliance<wbr>Regime</a>
@@ -299,6 +291,14 @@ The Workload resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="billingaccount_go">
+<a href="#billingaccount_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. The billing account used for the resources which are direct children of workload. This billing account is initially associated with the resources created as part of Workload creation. After the initial creation of these resources, the customer can change the assigned billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For example, `billingAccounts/012345-567890-ABCDEF`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -354,7 +354,7 @@ The Workload resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Input only. The parent resource for the resources managed by this Assured Workload. May be either an organization or a folder. Must be the same or a child of the Workload parent. If not specified all resources are created under the Workload parent. Formats: folders/{folder_id} organizations/{organization_id}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Input only. The parent resource for the resources managed by this Assured Workload. May be either empty or a folder resource which is a child of the Workload parent. If not specified all resources are created under the parent organization. Format: folders/{folder_id}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcesettings_go">
 <a href="#resourcesettings_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Settings</a>
@@ -367,14 +367,6 @@ The Workload resource accepts the following [input]({{< relref "/docs/intro/conc
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="billingaccount_nodejs">
-<a href="#billingaccount_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Account</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Input only. The billing account used for the resources which are direct children of workload. This billing account is initially associated with the resources created as part of Workload creation. After the initial creation of these resources, the customer can change the assigned billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For example, `billingAccounts/012345-567890-ABCDEF`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="complianceregime_nodejs">
 <a href="#complianceregime_nodejs" style="color: inherit; text-decoration: inherit;">compliance<wbr>Regime</a>
@@ -399,6 +391,14 @@ The Workload resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="billingaccount_nodejs">
+<a href="#billingaccount_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. The billing account used for the resources which are direct children of workload. This billing account is initially associated with the resources created as part of Workload creation. After the initial creation of these resources, the customer can change the assigned billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For example, `billingAccounts/012345-567890-ABCDEF`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -454,7 +454,7 @@ The Workload resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Input only. The parent resource for the resources managed by this Assured Workload. May be either an organization or a folder. Must be the same or a child of the Workload parent. If not specified all resources are created under the Workload parent. Formats: folders/{folder_id} organizations/{organization_id}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Input only. The parent resource for the resources managed by this Assured Workload. May be either empty or a folder resource which is a child of the Workload parent. If not specified all resources are created under the parent organization. Format: folders/{folder_id}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcesettings_nodejs">
 <a href="#resourcesettings_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Settings</a>
@@ -467,14 +467,6 @@ The Workload resource accepts the following [input]({{< relref "/docs/intro/conc
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="billing_account_python">
-<a href="#billing_account_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>account</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Input only. The billing account used for the resources which are direct children of workload. This billing account is initially associated with the resources created as part of Workload creation. After the initial creation of these resources, the customer can change the assigned billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For example, `billingAccounts/012345-567890-ABCDEF`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="compliance_regime_python">
 <a href="#compliance_regime_python" style="color: inherit; text-decoration: inherit;">compliance_<wbr>regime</a>
@@ -499,6 +491,14 @@ The Workload resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="billing_account_python">
+<a href="#billing_account_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Optional. The billing account used for the resources which are direct children of workload. This billing account is initially associated with the resources created as part of Workload creation. After the initial creation of these resources, the customer can change the assigned billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For example, `billingAccounts/012345-567890-ABCDEF`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -554,7 +554,7 @@ The Workload resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Input only. The parent resource for the resources managed by this Assured Workload. May be either an organization or a folder. Must be the same or a child of the Workload parent. If not specified all resources are created under the Workload parent. Formats: folders/{folder_id} organizations/{organization_id}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Input only. The parent resource for the resources managed by this Assured Workload. May be either empty or a folder resource which is a child of the Workload parent. If not specified all resources are created under the parent organization. Format: folders/{folder_id}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_settings_python">
 <a href="#resource_settings_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>settings</a>
@@ -1213,7 +1213,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>FEDRAMP_MODERATE{{% md %}}FedRAMP Moderate data protection controls{{% /md %}}</dd><dt>Us<wbr>Regional<wbr>Access</dt>
     <dd>US_REGIONAL_ACCESS{{% md %}}Assured Workloads For US Regions data protection controls{{% /md %}}</dd><dt>Hipaa</dt>
     <dd>HIPAA{{% md %}}Health Insurance Portability and Accountability Act controls{{% /md %}}</dd><dt>Hitrust</dt>
-    <dd>HITRUST{{% md %}}Health Information Trust Alliance controls{{% /md %}}</dd></dl>
+    <dd>HITRUST{{% md %}}Health Information Trust Alliance controls{{% /md %}}</dd><dt>Eu<wbr>Regions<wbr>And<wbr>Support</dt>
+    <dd>EU_REGIONS_AND_SUPPORT{{% md %}}Assured Workloads For EU Regions and Support controls{{% /md %}}</dd><dt>Ca<wbr>Regions<wbr>And<wbr>Support</dt>
+    <dd>CA_REGIONS_AND_SUPPORT{{% md %}}Assured Workloads For Canada Regions and Support controls{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1225,7 +1227,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>FEDRAMP_MODERATE{{% md %}}FedRAMP Moderate data protection controls{{% /md %}}</dd><dt>Workload<wbr>Compliance<wbr>Regime<wbr>Us<wbr>Regional<wbr>Access</dt>
     <dd>US_REGIONAL_ACCESS{{% md %}}Assured Workloads For US Regions data protection controls{{% /md %}}</dd><dt>Workload<wbr>Compliance<wbr>Regime<wbr>Hipaa</dt>
     <dd>HIPAA{{% md %}}Health Insurance Portability and Accountability Act controls{{% /md %}}</dd><dt>Workload<wbr>Compliance<wbr>Regime<wbr>Hitrust</dt>
-    <dd>HITRUST{{% md %}}Health Information Trust Alliance controls{{% /md %}}</dd></dl>
+    <dd>HITRUST{{% md %}}Health Information Trust Alliance controls{{% /md %}}</dd><dt>Workload<wbr>Compliance<wbr>Regime<wbr>Eu<wbr>Regions<wbr>And<wbr>Support</dt>
+    <dd>EU_REGIONS_AND_SUPPORT{{% md %}}Assured Workloads For EU Regions and Support controls{{% /md %}}</dd><dt>Workload<wbr>Compliance<wbr>Regime<wbr>Ca<wbr>Regions<wbr>And<wbr>Support</dt>
+    <dd>CA_REGIONS_AND_SUPPORT{{% md %}}Assured Workloads For Canada Regions and Support controls{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1237,7 +1241,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>FEDRAMP_MODERATE{{% md %}}FedRAMP Moderate data protection controls{{% /md %}}</dd><dt>Us<wbr>Regional<wbr>Access</dt>
     <dd>US_REGIONAL_ACCESS{{% md %}}Assured Workloads For US Regions data protection controls{{% /md %}}</dd><dt>Hipaa</dt>
     <dd>HIPAA{{% md %}}Health Insurance Portability and Accountability Act controls{{% /md %}}</dd><dt>Hitrust</dt>
-    <dd>HITRUST{{% md %}}Health Information Trust Alliance controls{{% /md %}}</dd></dl>
+    <dd>HITRUST{{% md %}}Health Information Trust Alliance controls{{% /md %}}</dd><dt>Eu<wbr>Regions<wbr>And<wbr>Support</dt>
+    <dd>EU_REGIONS_AND_SUPPORT{{% md %}}Assured Workloads For EU Regions and Support controls{{% /md %}}</dd><dt>Ca<wbr>Regions<wbr>And<wbr>Support</dt>
+    <dd>CA_REGIONS_AND_SUPPORT{{% md %}}Assured Workloads For Canada Regions and Support controls{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1249,7 +1255,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>FEDRAMP_MODERATE{{% md %}}FedRAMP Moderate data protection controls{{% /md %}}</dd><dt>US_REGIONAL_ACCESS</dt>
     <dd>US_REGIONAL_ACCESS{{% md %}}Assured Workloads For US Regions data protection controls{{% /md %}}</dd><dt>HIPAA</dt>
     <dd>HIPAA{{% md %}}Health Insurance Portability and Accountability Act controls{{% /md %}}</dd><dt>HITRUST</dt>
-    <dd>HITRUST{{% md %}}Health Information Trust Alliance controls{{% /md %}}</dd></dl>
+    <dd>HITRUST{{% md %}}Health Information Trust Alliance controls{{% /md %}}</dd><dt>EU_REGIONS_AND_SUPPORT</dt>
+    <dd>EU_REGIONS_AND_SUPPORT{{% md %}}Assured Workloads For EU Regions and Support controls{{% /md %}}</dd><dt>CA_REGIONS_AND_SUPPORT</dt>
+    <dd>CA_REGIONS_AND_SUPPORT{{% md %}}Assured Workloads For Canada Regions and Support controls{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

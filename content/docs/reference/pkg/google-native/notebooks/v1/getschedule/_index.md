@@ -190,7 +190,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cron-tab formatted schedule by which the job will execute Format: minute, hour, day of month, month, day of week e.g. 0 0 * * WED = every Wednesday More examples: https://crontab.guru/examples.html{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Cron-tab formatted schedule by which the job will execute. Format: minute, hour, day of month, month, day of week, e.g. 0 0 * * WED = every Wednesday More examples: https://crontab.guru/examples.html{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -274,7 +274,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cron-tab formatted schedule by which the job will execute Format: minute, hour, day of month, month, day of week e.g. 0 0 * * WED = every Wednesday More examples: https://crontab.guru/examples.html{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Cron-tab formatted schedule by which the job will execute. Format: minute, hour, day of month, month, day of week, e.g. 0 0 * * WED = every Wednesday More examples: https://crontab.guru/examples.html{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -358,7 +358,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cron-tab formatted schedule by which the job will execute Format: minute, hour, day of month, month, day of week e.g. 0 0 * * WED = every Wednesday More examples: https://crontab.guru/examples.html{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Cron-tab formatted schedule by which the job will execute. Format: minute, hour, day of month, month, day of week, e.g. 0 0 * * WED = every Wednesday More examples: https://crontab.guru/examples.html{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -442,7 +442,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Cron-tab formatted schedule by which the job will execute Format: minute, hour, day of month, month, day of week e.g. 0 0 * * WED = every Wednesday More examples: https://crontab.guru/examples.html{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Cron-tab formatted schedule by which the job will execute. Format: minute, hour, day of month, month, day of week, e.g. 0 0 * * WED = every Wednesday More examples: https://crontab.guru/examples.html{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -515,6 +515,58 @@ The following output properties are available:
 ## Supporting Types
 
 
+<h4 id="dataprocparametersresponse">Dataproc<wbr>Parameters<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cluster_csharp">
+<a href="#cluster_csharp" style="color: inherit; text-decoration: inherit;">Cluster</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URI for cluster used to run Dataproc execution. Format: 'projects/{PROJECT_ID}/regions/{REGION}/clusters/{CLUSTER_NAME}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cluster_go">
+<a href="#cluster_go" style="color: inherit; text-decoration: inherit;">Cluster</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URI for cluster used to run Dataproc execution. Format: 'projects/{PROJECT_ID}/regions/{REGION}/clusters/{CLUSTER_NAME}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cluster_nodejs">
+<a href="#cluster_nodejs" style="color: inherit; text-decoration: inherit;">cluster</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URI for cluster used to run Dataproc execution. Format: 'projects/{PROJECT_ID}/regions/{REGION}/clusters/{CLUSTER_NAME}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cluster_python">
+<a href="#cluster_python" style="color: inherit; text-decoration: inherit;">cluster</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}URI for cluster used to run Dataproc execution. Format: 'projects/{PROJECT_ID}/regions/{REGION}/clusters/{CLUSTER_NAME}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="executionresponse">Execution<wbr>Response</h4>
 
 
@@ -568,7 +620,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name of the execute. Format: `projects/{project_id}/locations/{location}/execution/{execution_id}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The resource name of the execute. Format: `projects/{project_id}/locations/{location}/executions/{execution_id}`{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="outputnotebookfile_csharp">
 <a href="#outputnotebookfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Notebook<wbr>File</a>
@@ -644,7 +696,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name of the execute. Format: `projects/{project_id}/locations/{location}/execution/{execution_id}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The resource name of the execute. Format: `projects/{project_id}/locations/{location}/executions/{execution_id}`{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="outputnotebookfile_go">
 <a href="#outputnotebookfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>Notebook<wbr>File</a>
@@ -720,7 +772,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name of the execute. Format: `projects/{project_id}/locations/{location}/execution/{execution_id}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The resource name of the execute. Format: `projects/{project_id}/locations/{location}/executions/{execution_id}`{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="outputnotebookfile_nodejs">
 <a href="#outputnotebookfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Notebook<wbr>File</a>
@@ -796,7 +848,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource name of the execute. Format: `projects/{project_id}/locations/{location}/execution/{execution_id}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The resource name of the execute. Format: `projects/{project_id}/locations/{location}/executions/{execution_id}`{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="output_notebook_file_python">
 <a href="#output_notebook_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>notebook_<wbr>file</a>
@@ -846,13 +898,29 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Container Image URI to a DLVM Example: 'gcr.io/deeplearning-platform-release/base-cu100' More examples can be found at: https://cloud.google.com/ai-platform/deep-learning-containers/docs/choosing-container{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="dataprocparameters_csharp">
+<a href="#dataprocparameters_csharp" style="color: inherit; text-decoration: inherit;">Dataproc<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataprocparametersresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Notebooks.<wbr>V1.<wbr>Inputs.<wbr>Dataproc<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters used in Dataproc JobType executions.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="inputnotebookfile_csharp">
 <a href="#inputnotebookfile_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Notebook<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path to the notebook file to execute. Must be in a Google Cloud Storage bucket. Format: gs://{project_id}/{folder}/{notebook_file_name} Ex: gs://notebook_user/scheduled_notebooks/sentiment_notebook.ipynb{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Path to the notebook file to execute. Must be in a Google Cloud Storage bucket. Format: gs://{bucket_name}/{folder}/{notebook_file_name} Ex: gs://notebook_user/scheduled_notebooks/sentiment_notebook.ipynb{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="jobtype_csharp">
+<a href="#jobtype_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of Job to be used on this execution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -868,7 +936,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of virtual machine to use for your training job's master worker. You must specify this field when `scaleTier` is set to `CUSTOM`. You can use certain Compute Engine machine types directly in this field. The following types are supported: - `n1-standard-4` - `n1-standard-8` - `n1-standard-16` - `n1-standard-32` - `n1-standard-64` - `n1-standard-96` - `n1-highmem-2` - `n1-highmem-4` - `n1-highmem-8` - `n1-highmem-16` - `n1-highmem-32` - `n1-highmem-64` - `n1-highmem-96` - `n1-highcpu-16` - `n1-highcpu-32` - `n1-highcpu-64` - `n1-highcpu-96` Alternatively, you can use the following legacy machine types: - `standard` - `large_model` - `complex_model_s` - `complex_model_m` - `complex_model_l` - `standard_gpu` - `complex_model_m_gpu` - `complex_model_l_gpu` - `standard_p100` - `complex_model_m_p100` - `standard_v100` - `large_model_v100` - `complex_model_m_v100` - `complex_model_l_v100` Finally, if you want to use a TPU for training, specify `cloud_tpu` in this field. Learn more about the [special configuration options for training with TPU.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Specifies the type of virtual machine to use for your training job's master worker. You must specify this field when `scaleTier` is set to `CUSTOM`. You can use certain Compute Engine machine types directly in this field. The following types are supported: - `n1-standard-4` - `n1-standard-8` - `n1-standard-16` - `n1-standard-32` - `n1-standard-64` - `n1-standard-96` - `n1-highmem-2` - `n1-highmem-4` - `n1-highmem-8` - `n1-highmem-16` - `n1-highmem-32` - `n1-highmem-64` - `n1-highmem-96` - `n1-highcpu-16` - `n1-highcpu-32` - `n1-highcpu-64` - `n1-highcpu-96` Alternatively, you can use the following legacy machine types: - `standard` - `large_model` - `complex_model_s` - `complex_model_m` - `complex_model_l` - `standard_gpu` - `complex_model_m_gpu` - `complex_model_l_gpu` - `standard_p100` - `complex_model_m_p100` - `standard_v100` - `large_model_v100` - `complex_model_m_v100` - `complex_model_l_v100` Finally, if you want to use a TPU for training, specify `cloud_tpu` in this field. Learn more about the [special configuration options for training with TPU](https://cloud.google.com/ai-platform/training/docs/using-tpus#configuring_a_custom_tpu_machine).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="outputnotebookfolder_csharp">
 <a href="#outputnotebookfolder_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Notebook<wbr>Folder</a>
@@ -876,7 +944,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path to the notebook folder to write to. Must be in a Google Cloud Storage bucket path. Format: gs://{project_id}/{folder} Ex: gs://notebook_user/scheduled_notebooks{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Path to the notebook folder to write to. Must be in a Google Cloud Storage bucket path. Format: gs://{bucket_name}/{folder} Ex: gs://notebook_user/scheduled_notebooks{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parameters_csharp">
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -900,7 +968,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The email address of a service account to use when running the execution. You must have the `iam.serviceAccounts.actAs` permission for the specified service account.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The email address of a service account to use when running the execution. You must have the `iam.serviceAccounts.actAs` permission for the specified service account.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vertexaiparameters_csharp">
+<a href="#vertexaiparameters_csharp" style="color: inherit; text-decoration: inherit;">Vertex<wbr>Ai<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vertexaiparametersresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Notebooks.<wbr>V1.<wbr>Inputs.<wbr>Vertex<wbr>AIParameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters used in Vertex AI JobType executions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -922,13 +998,29 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Container Image URI to a DLVM Example: 'gcr.io/deeplearning-platform-release/base-cu100' More examples can be found at: https://cloud.google.com/ai-platform/deep-learning-containers/docs/choosing-container{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="dataprocparameters_go">
+<a href="#dataprocparameters_go" style="color: inherit; text-decoration: inherit;">Dataproc<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataprocparametersresponse">Dataproc<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters used in Dataproc JobType executions.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="inputnotebookfile_go">
 <a href="#inputnotebookfile_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Notebook<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path to the notebook file to execute. Must be in a Google Cloud Storage bucket. Format: gs://{project_id}/{folder}/{notebook_file_name} Ex: gs://notebook_user/scheduled_notebooks/sentiment_notebook.ipynb{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Path to the notebook file to execute. Must be in a Google Cloud Storage bucket. Format: gs://{bucket_name}/{folder}/{notebook_file_name} Ex: gs://notebook_user/scheduled_notebooks/sentiment_notebook.ipynb{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="jobtype_go">
+<a href="#jobtype_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of Job to be used on this execution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -944,7 +1036,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of virtual machine to use for your training job's master worker. You must specify this field when `scaleTier` is set to `CUSTOM`. You can use certain Compute Engine machine types directly in this field. The following types are supported: - `n1-standard-4` - `n1-standard-8` - `n1-standard-16` - `n1-standard-32` - `n1-standard-64` - `n1-standard-96` - `n1-highmem-2` - `n1-highmem-4` - `n1-highmem-8` - `n1-highmem-16` - `n1-highmem-32` - `n1-highmem-64` - `n1-highmem-96` - `n1-highcpu-16` - `n1-highcpu-32` - `n1-highcpu-64` - `n1-highcpu-96` Alternatively, you can use the following legacy machine types: - `standard` - `large_model` - `complex_model_s` - `complex_model_m` - `complex_model_l` - `standard_gpu` - `complex_model_m_gpu` - `complex_model_l_gpu` - `standard_p100` - `complex_model_m_p100` - `standard_v100` - `large_model_v100` - `complex_model_m_v100` - `complex_model_l_v100` Finally, if you want to use a TPU for training, specify `cloud_tpu` in this field. Learn more about the [special configuration options for training with TPU.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Specifies the type of virtual machine to use for your training job's master worker. You must specify this field when `scaleTier` is set to `CUSTOM`. You can use certain Compute Engine machine types directly in this field. The following types are supported: - `n1-standard-4` - `n1-standard-8` - `n1-standard-16` - `n1-standard-32` - `n1-standard-64` - `n1-standard-96` - `n1-highmem-2` - `n1-highmem-4` - `n1-highmem-8` - `n1-highmem-16` - `n1-highmem-32` - `n1-highmem-64` - `n1-highmem-96` - `n1-highcpu-16` - `n1-highcpu-32` - `n1-highcpu-64` - `n1-highcpu-96` Alternatively, you can use the following legacy machine types: - `standard` - `large_model` - `complex_model_s` - `complex_model_m` - `complex_model_l` - `standard_gpu` - `complex_model_m_gpu` - `complex_model_l_gpu` - `standard_p100` - `complex_model_m_p100` - `standard_v100` - `large_model_v100` - `complex_model_m_v100` - `complex_model_l_v100` Finally, if you want to use a TPU for training, specify `cloud_tpu` in this field. Learn more about the [special configuration options for training with TPU](https://cloud.google.com/ai-platform/training/docs/using-tpus#configuring_a_custom_tpu_machine).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="outputnotebookfolder_go">
 <a href="#outputnotebookfolder_go" style="color: inherit; text-decoration: inherit;">Output<wbr>Notebook<wbr>Folder</a>
@@ -952,7 +1044,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path to the notebook folder to write to. Must be in a Google Cloud Storage bucket path. Format: gs://{project_id}/{folder} Ex: gs://notebook_user/scheduled_notebooks{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Path to the notebook folder to write to. Must be in a Google Cloud Storage bucket path. Format: gs://{bucket_name}/{folder} Ex: gs://notebook_user/scheduled_notebooks{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parameters_go">
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -976,7 +1068,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The email address of a service account to use when running the execution. You must have the `iam.serviceAccounts.actAs` permission for the specified service account.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The email address of a service account to use when running the execution. You must have the `iam.serviceAccounts.actAs` permission for the specified service account.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vertexaiparameters_go">
+<a href="#vertexaiparameters_go" style="color: inherit; text-decoration: inherit;">Vertex<wbr>Ai<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vertexaiparametersresponse">Vertex<wbr>AIParameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters used in Vertex AI JobType executions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -998,13 +1098,29 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Container Image URI to a DLVM Example: 'gcr.io/deeplearning-platform-release/base-cu100' More examples can be found at: https://cloud.google.com/ai-platform/deep-learning-containers/docs/choosing-container{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="dataprocparameters_nodejs">
+<a href="#dataprocparameters_nodejs" style="color: inherit; text-decoration: inherit;">dataproc<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataprocparametersresponse">Dataproc<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters used in Dataproc JobType executions.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="inputnotebookfile_nodejs">
 <a href="#inputnotebookfile_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Notebook<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path to the notebook file to execute. Must be in a Google Cloud Storage bucket. Format: gs://{project_id}/{folder}/{notebook_file_name} Ex: gs://notebook_user/scheduled_notebooks/sentiment_notebook.ipynb{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Path to the notebook file to execute. Must be in a Google Cloud Storage bucket. Format: gs://{bucket_name}/{folder}/{notebook_file_name} Ex: gs://notebook_user/scheduled_notebooks/sentiment_notebook.ipynb{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="jobtype_nodejs">
+<a href="#jobtype_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of Job to be used on this execution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1020,7 +1136,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of virtual machine to use for your training job's master worker. You must specify this field when `scaleTier` is set to `CUSTOM`. You can use certain Compute Engine machine types directly in this field. The following types are supported: - `n1-standard-4` - `n1-standard-8` - `n1-standard-16` - `n1-standard-32` - `n1-standard-64` - `n1-standard-96` - `n1-highmem-2` - `n1-highmem-4` - `n1-highmem-8` - `n1-highmem-16` - `n1-highmem-32` - `n1-highmem-64` - `n1-highmem-96` - `n1-highcpu-16` - `n1-highcpu-32` - `n1-highcpu-64` - `n1-highcpu-96` Alternatively, you can use the following legacy machine types: - `standard` - `large_model` - `complex_model_s` - `complex_model_m` - `complex_model_l` - `standard_gpu` - `complex_model_m_gpu` - `complex_model_l_gpu` - `standard_p100` - `complex_model_m_p100` - `standard_v100` - `large_model_v100` - `complex_model_m_v100` - `complex_model_l_v100` Finally, if you want to use a TPU for training, specify `cloud_tpu` in this field. Learn more about the [special configuration options for training with TPU.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Specifies the type of virtual machine to use for your training job's master worker. You must specify this field when `scaleTier` is set to `CUSTOM`. You can use certain Compute Engine machine types directly in this field. The following types are supported: - `n1-standard-4` - `n1-standard-8` - `n1-standard-16` - `n1-standard-32` - `n1-standard-64` - `n1-standard-96` - `n1-highmem-2` - `n1-highmem-4` - `n1-highmem-8` - `n1-highmem-16` - `n1-highmem-32` - `n1-highmem-64` - `n1-highmem-96` - `n1-highcpu-16` - `n1-highcpu-32` - `n1-highcpu-64` - `n1-highcpu-96` Alternatively, you can use the following legacy machine types: - `standard` - `large_model` - `complex_model_s` - `complex_model_m` - `complex_model_l` - `standard_gpu` - `complex_model_m_gpu` - `complex_model_l_gpu` - `standard_p100` - `complex_model_m_p100` - `standard_v100` - `large_model_v100` - `complex_model_m_v100` - `complex_model_l_v100` Finally, if you want to use a TPU for training, specify `cloud_tpu` in this field. Learn more about the [special configuration options for training with TPU](https://cloud.google.com/ai-platform/training/docs/using-tpus#configuring_a_custom_tpu_machine).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="outputnotebookfolder_nodejs">
 <a href="#outputnotebookfolder_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Notebook<wbr>Folder</a>
@@ -1028,7 +1144,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path to the notebook folder to write to. Must be in a Google Cloud Storage bucket path. Format: gs://{project_id}/{folder} Ex: gs://notebook_user/scheduled_notebooks{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Path to the notebook folder to write to. Must be in a Google Cloud Storage bucket path. Format: gs://{bucket_name}/{folder} Ex: gs://notebook_user/scheduled_notebooks{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parameters_nodejs">
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -1052,7 +1168,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The email address of a service account to use when running the execution. You must have the `iam.serviceAccounts.actAs` permission for the specified service account.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The email address of a service account to use when running the execution. You must have the `iam.serviceAccounts.actAs` permission for the specified service account.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vertexaiparameters_nodejs">
+<a href="#vertexaiparameters_nodejs" style="color: inherit; text-decoration: inherit;">vertex<wbr>Ai<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vertexaiparametersresponse">Vertex<wbr>AIParameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters used in Vertex AI JobType executions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1074,13 +1198,29 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Container Image URI to a DLVM Example: 'gcr.io/deeplearning-platform-release/base-cu100' More examples can be found at: https://cloud.google.com/ai-platform/deep-learning-containers/docs/choosing-container{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="dataproc_parameters_python">
+<a href="#dataproc_parameters_python" style="color: inherit; text-decoration: inherit;">dataproc_<wbr>parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataprocparametersresponse">Dataproc<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters used in Dataproc JobType executions.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="input_notebook_file_python">
 <a href="#input_notebook_file_python" style="color: inherit; text-decoration: inherit;">input_<wbr>notebook_<wbr>file</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Path to the notebook file to execute. Must be in a Google Cloud Storage bucket. Format: gs://{project_id}/{folder}/{notebook_file_name} Ex: gs://notebook_user/scheduled_notebooks/sentiment_notebook.ipynb{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Path to the notebook file to execute. Must be in a Google Cloud Storage bucket. Format: gs://{bucket_name}/{folder}/{notebook_file_name} Ex: gs://notebook_user/scheduled_notebooks/sentiment_notebook.ipynb{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="job_type_python">
+<a href="#job_type_python" style="color: inherit; text-decoration: inherit;">job_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of Job to be used on this execution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1096,7 +1236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of virtual machine to use for your training job's master worker. You must specify this field when `scaleTier` is set to `CUSTOM`. You can use certain Compute Engine machine types directly in this field. The following types are supported: - `n1-standard-4` - `n1-standard-8` - `n1-standard-16` - `n1-standard-32` - `n1-standard-64` - `n1-standard-96` - `n1-highmem-2` - `n1-highmem-4` - `n1-highmem-8` - `n1-highmem-16` - `n1-highmem-32` - `n1-highmem-64` - `n1-highmem-96` - `n1-highcpu-16` - `n1-highcpu-32` - `n1-highcpu-64` - `n1-highcpu-96` Alternatively, you can use the following legacy machine types: - `standard` - `large_model` - `complex_model_s` - `complex_model_m` - `complex_model_l` - `standard_gpu` - `complex_model_m_gpu` - `complex_model_l_gpu` - `standard_p100` - `complex_model_m_p100` - `standard_v100` - `large_model_v100` - `complex_model_m_v100` - `complex_model_l_v100` Finally, if you want to use a TPU for training, specify `cloud_tpu` in this field. Learn more about the [special configuration options for training with TPU.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Specifies the type of virtual machine to use for your training job's master worker. You must specify this field when `scaleTier` is set to `CUSTOM`. You can use certain Compute Engine machine types directly in this field. The following types are supported: - `n1-standard-4` - `n1-standard-8` - `n1-standard-16` - `n1-standard-32` - `n1-standard-64` - `n1-standard-96` - `n1-highmem-2` - `n1-highmem-4` - `n1-highmem-8` - `n1-highmem-16` - `n1-highmem-32` - `n1-highmem-64` - `n1-highmem-96` - `n1-highcpu-16` - `n1-highcpu-32` - `n1-highcpu-64` - `n1-highcpu-96` Alternatively, you can use the following legacy machine types: - `standard` - `large_model` - `complex_model_s` - `complex_model_m` - `complex_model_l` - `standard_gpu` - `complex_model_m_gpu` - `complex_model_l_gpu` - `standard_p100` - `complex_model_m_p100` - `standard_v100` - `large_model_v100` - `complex_model_m_v100` - `complex_model_l_v100` Finally, if you want to use a TPU for training, specify `cloud_tpu` in this field. Learn more about the [special configuration options for training with TPU](https://cloud.google.com/ai-platform/training/docs/using-tpus#configuring_a_custom_tpu_machine).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="output_notebook_folder_python">
 <a href="#output_notebook_folder_python" style="color: inherit; text-decoration: inherit;">output_<wbr>notebook_<wbr>folder</a>
@@ -1104,7 +1244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Path to the notebook folder to write to. Must be in a Google Cloud Storage bucket path. Format: gs://{project_id}/{folder} Ex: gs://notebook_user/scheduled_notebooks{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Path to the notebook folder to write to. Must be in a Google Cloud Storage bucket path. Format: gs://{bucket_name}/{folder} Ex: gs://notebook_user/scheduled_notebooks{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parameters_python">
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -1128,7 +1268,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The email address of a service account to use when running the execution. You must have the `iam.serviceAccounts.actAs` permission for the specified service account.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The email address of a service account to use when running the execution. You must have the `iam.serviceAccounts.actAs` permission for the specified service account.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vertex_ai_parameters_python">
+<a href="#vertex_ai_parameters_python" style="color: inherit; text-decoration: inherit;">vertex_<wbr>ai_<wbr>parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vertexaiparametersresponse">Vertex<wbr>AIParameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters used in Vertex AI JobType executions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="scheduleracceleratorconfigresponse">Scheduler<wbr>Accelerator<wbr>Config<wbr>Response</h4>
@@ -1213,6 +1361,58 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of this accelerator.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="vertexaiparametersresponse">Vertex<wbr>AIParameters<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="network_csharp">
+<a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The full name of the Compute Engine [network](/compute/docs/networks-and-firewalls#networks) to which the Job should be peered. For example, `projects/12345/global/networks/myVPC`. [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/insert) is of the form `projects/{project}/global/networks/{network}`. Where {project} is a project number, as in `12345`, and {network} is a network name. Private services access must already be configured for the network. If left unspecified, the job is not peered with any network.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="network_go">
+<a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The full name of the Compute Engine [network](/compute/docs/networks-and-firewalls#networks) to which the Job should be peered. For example, `projects/12345/global/networks/myVPC`. [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/insert) is of the form `projects/{project}/global/networks/{network}`. Where {project} is a project number, as in `12345`, and {network} is a network name. Private services access must already be configured for the network. If left unspecified, the job is not peered with any network.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="network_nodejs">
+<a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The full name of the Compute Engine [network](/compute/docs/networks-and-firewalls#networks) to which the Job should be peered. For example, `projects/12345/global/networks/myVPC`. [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/insert) is of the form `projects/{project}/global/networks/{network}`. Where {project} is a project number, as in `12345`, and {network} is a network name. Private services access must already be configured for the network. If left unspecified, the job is not peered with any network.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="network_python">
+<a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The full name of the Compute Engine [network](/compute/docs/networks-and-firewalls#networks) to which the Job should be peered. For example, `projects/12345/global/networks/myVPC`. [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/insert) is of the form `projects/{project}/global/networks/{network}`. Where {project} is a project number, as in `12345`, and {network} is a network name. Private services access must already be configured for the network. If left unspecified, the job is not peered with any network.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

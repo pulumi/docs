@@ -1229,7 +1229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Input only. The diagnostic info output for the turn.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Input only. The diagnostic info output for the turn. Required to calculate the testing coverage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="currentpage_csharp">
 <a href="#currentpage_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Page</a>
@@ -1281,7 +1281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Input only. The diagnostic info output for the turn.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Input only. The diagnostic info output for the turn. Required to calculate the testing coverage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="currentpage_go">
 <a href="#currentpage_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Page</a>
@@ -1333,7 +1333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Input only. The diagnostic info output for the turn.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Input only. The diagnostic info output for the turn. Required to calculate the testing coverage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="currentpage_nodejs">
 <a href="#currentpage_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Page</a>
@@ -1385,7 +1385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Input only. The diagnostic info output for the turn.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Input only. The diagnostic info output for the turn. Required to calculate the testing coverage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="current_page_python">
 <a href="#current_page_python" style="color: inherit; text-decoration: inherit;">current_<wbr>page</a>
@@ -1447,7 +1447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Input only. The diagnostic info output for the turn.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Input only. The diagnostic info output for the turn. Required to calculate the testing coverage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="differences_csharp">
 <a href="#differences_csharp" style="color: inherit; text-decoration: inherit;">Differences</a>
@@ -1507,7 +1507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Input only. The diagnostic info output for the turn.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Input only. The diagnostic info output for the turn. Required to calculate the testing coverage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="differences_go">
 <a href="#differences_go" style="color: inherit; text-decoration: inherit;">Differences</a>
@@ -1567,7 +1567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Input only. The diagnostic info output for the turn.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Input only. The diagnostic info output for the turn. Required to calculate the testing coverage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="differences_nodejs">
 <a href="#differences_nodejs" style="color: inherit; text-decoration: inherit;">differences</a>
@@ -1627,7 +1627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Input only. The diagnostic info output for the turn.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Input only. The diagnostic info output for the turn. Required to calculate the testing coverage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="differences_python">
 <a href="#differences_python" style="color: inherit; text-decoration: inherit;">differences</a>
@@ -6399,7 +6399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#intent_go" style="color: inherit; text-decoration: inherit;">Intent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1intentinput">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Intent<wbr>Input</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1intentinput">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Intent<wbr>Input<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The intent to be triggered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

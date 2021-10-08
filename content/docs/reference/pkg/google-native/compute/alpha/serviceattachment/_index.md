@@ -583,14 +583,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}An array of connections for all the consumers connected to this service attachment.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="consumerforwardingrules_csharp">
-<a href="#consumerforwardingrules_csharp" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Forwarding<wbr>Rules</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceattachmentconsumerforwardingruleresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Outputs.<wbr>Service<wbr>Attachment<wbr>Consumer<wbr>Forwarding<wbr>Rule<wbr>Response&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}An array of forwarding rules for all the consumers connected to this service attachment.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="creationtimestamp_csharp">
 <a href="#creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
 </span>
@@ -650,14 +642,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#serviceattachmentconnectedendpointresponse">[]Service<wbr>Attachment<wbr>Connected<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An array of connections for all the consumers connected to this service attachment.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="consumerforwardingrules_go">
-<a href="#consumerforwardingrules_go" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Forwarding<wbr>Rules</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceattachmentconsumerforwardingruleresponse">[]Service<wbr>Attachment<wbr>Consumer<wbr>Forwarding<wbr>Rule<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}An array of forwarding rules for all the consumers connected to this service attachment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creationtimestamp_go">
 <a href="#creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -719,14 +703,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}An array of connections for all the consumers connected to this service attachment.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="consumerforwardingrules_nodejs">
-<a href="#consumerforwardingrules_nodejs" style="color: inherit; text-decoration: inherit;">consumer<wbr>Forwarding<wbr>Rules</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceattachmentconsumerforwardingruleresponse">Service<wbr>Attachment<wbr>Consumer<wbr>Forwarding<wbr>Rule<wbr>Response[]</a></span>
-    </dt>
-    <dd>{{% md %}}An array of forwarding rules for all the consumers connected to this service attachment.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="creationtimestamp_nodejs">
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
 </span>
@@ -786,14 +762,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#serviceattachmentconnectedendpointresponse">Sequence[Service<wbr>Attachment<wbr>Connected<wbr>Endpoint<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}An array of connections for all the consumers connected to this service attachment.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="consumer_forwarding_rules_python">
-<a href="#consumer_forwarding_rules_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>forwarding_<wbr>rules</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceattachmentconsumerforwardingruleresponse">Sequence[Service<wbr>Attachment<wbr>Consumer<wbr>Forwarding<wbr>Rule<wbr>Response]</a></span>
-    </dt>
-    <dd>{{% md %}}An array of forwarding rules for all the consumers connected to this service attachment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creation_timestamp_python">
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
@@ -996,120 +964,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>ACCEPT_AUTOMATIC</dd><dt>ACCEPT_MANUAL</dt>
     <dd>ACCEPT_MANUAL</dd><dt>CONNECTION_PREFERENCE_UNSPECIFIED</dt>
     <dd>CONNECTION_PREFERENCE_UNSPECIFIED</dd></dl>
-{{% /choosable %}}
-
-<h4 id="serviceattachmentconsumerforwardingruleresponse">Service<wbr>Attachment<wbr>Consumer<wbr>Forwarding<wbr>Rule<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="forwardingrule_csharp">
-<a href="#forwardingrule_csharp" style="color: inherit; text-decoration: inherit;">Forwarding<wbr>Rule</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The url of a consumer forwarding rule.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="pscconnectionid_csharp">
-<a href="#pscconnectionid_csharp" style="color: inherit; text-decoration: inherit;">Psc<wbr>Connection<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The PSC connection id of the PSC Forwarding Rule.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="status_csharp">
-<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The status of the forwarding rule.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="forwardingrule_go">
-<a href="#forwardingrule_go" style="color: inherit; text-decoration: inherit;">Forwarding<wbr>Rule</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The url of a consumer forwarding rule.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="pscconnectionid_go">
-<a href="#pscconnectionid_go" style="color: inherit; text-decoration: inherit;">Psc<wbr>Connection<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The PSC connection id of the PSC Forwarding Rule.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="status_go">
-<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The status of the forwarding rule.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="forwardingrule_nodejs">
-<a href="#forwardingrule_nodejs" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Rule</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The url of a consumer forwarding rule.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="pscconnectionid_nodejs">
-<a href="#pscconnectionid_nodejs" style="color: inherit; text-decoration: inherit;">psc<wbr>Connection<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The PSC connection id of the PSC Forwarding Rule.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="status_nodejs">
-<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The status of the forwarding rule.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="forwarding_rule_python">
-<a href="#forwarding_rule_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>rule</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The url of a consumer forwarding rule.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="psc_connection_id_python">
-<a href="#psc_connection_id_python" style="color: inherit; text-decoration: inherit;">psc_<wbr>connection_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The PSC connection id of the PSC Forwarding Rule.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="status_python">
-<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The status of the forwarding rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serviceattachmentconsumerprojectlimit">Service<wbr>Attachment<wbr>Consumer<wbr>Project<wbr>Limit</h4>

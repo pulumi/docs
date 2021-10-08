@@ -27,6 +27,7 @@ Creates a managed instance group using the information that you specify in the r
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">InstanceGroupManager</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                         <span class="nx">all_instances_config</span><span class="p">:</span> <span class="nx">Optional[InstanceGroupManagerAllInstancesConfigArgs]</span> = None<span class="p">,</span>
                          <span class="nx">auto_healing_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceGroupManagerAutoHealingPolicyArgs]]</span> = None<span class="p">,</span>
                          <span class="nx">base_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -39,6 +40,7 @@ Creates a managed instance group using the information that you specify in the r
                          <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">standby_policy</span><span class="p">:</span> <span class="nx">Optional[InstanceGroupManagerStandbyPolicyArgs]</span> = None<span class="p">,</span>
                          <span class="nx">stateful_policy</span><span class="p">:</span> <span class="nx">Optional[StatefulPolicyArgs]</span> = None<span class="p">,</span>
                          <span class="nx">target_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                          <span class="nx">target_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -176,6 +178,14 @@ The InstanceGroupManager resource accepts the following [input]({{< relref "/doc
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="allinstancesconfig_csharp">
+<a href="#allinstancesconfig_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Instances<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancegroupmanagerallinstancesconfig">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Inputs.<wbr>Instance<wbr>Group<wbr>Manager<wbr>All<wbr>Instances<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the instances configs overrides that should be applied for all instances in the MIG.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="autohealingpolicies_csharp">
 <a href="#autohealingpolicies_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Healing<wbr>Policies</a>
 </span>
@@ -198,7 +208,7 @@ The InstanceGroupManager resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}An optional description of this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="distributionpolicy_csharp">
 <a href="#distributionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Distribution<wbr>Policy</a>
@@ -272,6 +282,14 @@ The InstanceGroupManager resource accepts the following [input]({{< relref "/doc
     </dt>
     <dd>{{% md %}}The service account to be used as credentials for all operations performed by the managed instance group on instances. The service accounts needs all permissions required to create and delete instances. By default, the service account {projectNumber}@cloudservices.gserviceaccount.com is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="standbypolicy_csharp">
+<a href="#standbypolicy_csharp" style="color: inherit; text-decoration: inherit;">Standby<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancegroupmanagerstandbypolicy">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Inputs.<wbr>Instance<wbr>Group<wbr>Manager<wbr>Standby<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Standby policy for stopped and suspended instances.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="statefulpolicy_csharp">
 <a href="#statefulpolicy_csharp" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Policy</a>
 </span>
@@ -340,6 +358,14 @@ The InstanceGroupManager resource accepts the following [input]({{< relref "/doc
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="allinstancesconfig_go">
+<a href="#allinstancesconfig_go" style="color: inherit; text-decoration: inherit;">All<wbr>Instances<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancegroupmanagerallinstancesconfig">Instance<wbr>Group<wbr>Manager<wbr>All<wbr>Instances<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the instances configs overrides that should be applied for all instances in the MIG.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="autohealingpolicies_go">
 <a href="#autohealingpolicies_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Healing<wbr>Policies</a>
 </span>
@@ -362,7 +388,7 @@ The InstanceGroupManager resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}An optional description of this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="distributionpolicy_go">
 <a href="#distributionpolicy_go" style="color: inherit; text-decoration: inherit;">Distribution<wbr>Policy</a>
@@ -436,6 +462,14 @@ The InstanceGroupManager resource accepts the following [input]({{< relref "/doc
     </dt>
     <dd>{{% md %}}The service account to be used as credentials for all operations performed by the managed instance group on instances. The service accounts needs all permissions required to create and delete instances. By default, the service account {projectNumber}@cloudservices.gserviceaccount.com is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="standbypolicy_go">
+<a href="#standbypolicy_go" style="color: inherit; text-decoration: inherit;">Standby<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancegroupmanagerstandbypolicy">Instance<wbr>Group<wbr>Manager<wbr>Standby<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Standby policy for stopped and suspended instances.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="statefulpolicy_go">
 <a href="#statefulpolicy_go" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Policy</a>
 </span>
@@ -504,6 +538,14 @@ The InstanceGroupManager resource accepts the following [input]({{< relref "/doc
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="allinstancesconfig_nodejs">
+<a href="#allinstancesconfig_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Instances<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancegroupmanagerallinstancesconfig">Instance<wbr>Group<wbr>Manager<wbr>All<wbr>Instances<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the instances configs overrides that should be applied for all instances in the MIG.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="autohealingpolicies_nodejs">
 <a href="#autohealingpolicies_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Healing<wbr>Policies</a>
 </span>
@@ -526,7 +568,7 @@ The InstanceGroupManager resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}An optional description of this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="distributionpolicy_nodejs">
 <a href="#distributionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">distribution<wbr>Policy</a>
@@ -600,6 +642,14 @@ The InstanceGroupManager resource accepts the following [input]({{< relref "/doc
     </dt>
     <dd>{{% md %}}The service account to be used as credentials for all operations performed by the managed instance group on instances. The service accounts needs all permissions required to create and delete instances. By default, the service account {projectNumber}@cloudservices.gserviceaccount.com is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="standbypolicy_nodejs">
+<a href="#standbypolicy_nodejs" style="color: inherit; text-decoration: inherit;">standby<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancegroupmanagerstandbypolicy">Instance<wbr>Group<wbr>Manager<wbr>Standby<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Standby policy for stopped and suspended instances.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="statefulpolicy_nodejs">
 <a href="#statefulpolicy_nodejs" style="color: inherit; text-decoration: inherit;">stateful<wbr>Policy</a>
 </span>
@@ -668,6 +718,14 @@ The InstanceGroupManager resource accepts the following [input]({{< relref "/doc
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="all_instances_config_python">
+<a href="#all_instances_config_python" style="color: inherit; text-decoration: inherit;">all_<wbr>instances_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancegroupmanagerallinstancesconfig">Instance<wbr>Group<wbr>Manager<wbr>All<wbr>Instances<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the instances configs overrides that should be applied for all instances in the MIG.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="auto_healing_policies_python">
 <a href="#auto_healing_policies_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>healing_<wbr>policies</a>
 </span>
@@ -690,7 +748,7 @@ The InstanceGroupManager resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}An optional description of this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="distribution_policy_python">
 <a href="#distribution_policy_python" style="color: inherit; text-decoration: inherit;">distribution_<wbr>policy</a>
@@ -763,6 +821,14 @@ The InstanceGroupManager resource accepts the following [input]({{< relref "/doc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service account to be used as credentials for all operations performed by the managed instance group on instances. The service accounts needs all permissions required to create and delete instances. By default, the service account {projectNumber}@cloudservices.gserviceaccount.com is used.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="standby_policy_python">
+<a href="#standby_policy_python" style="color: inherit; text-decoration: inherit;">standby_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancegroupmanagerstandbypolicy">Instance<wbr>Group<wbr>Manager<wbr>Standby<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Standby policy for stopped and suspended instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stateful_policy_python">
 <a href="#stateful_policy_python" style="color: inherit; text-decoration: inherit;">stateful_<wbr>policy</a>
@@ -2106,6 +2172,106 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The number of instances in the managed instance group that are being verified. See the managedInstances[].currentAction property in the listManagedInstances method documentation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="instancegroupmanagerallinstancesconfig">Instance<wbr>Group<wbr>Manager<wbr>All<wbr>Instances<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="properties_csharp">
+<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancepropertiespatch">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Inputs.<wbr>Instance<wbr>Properties<wbr>Patch</a></span>
+    </dt>
+    <dd>{{% md %}}Properties for instances that are created using this instances config. You can add or modify properties using the instanceGroupManagers.patch or regionInstanceGroupManagers.patch. After setting instances_config, you must update your instances to use it; for example, you can use the applyUpdatesToInstances method.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="properties_go">
+<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancepropertiespatch">Instance<wbr>Properties<wbr>Patch</a></span>
+    </dt>
+    <dd>{{% md %}}Properties for instances that are created using this instances config. You can add or modify properties using the instanceGroupManagers.patch or regionInstanceGroupManagers.patch. After setting instances_config, you must update your instances to use it; for example, you can use the applyUpdatesToInstances method.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="properties_nodejs">
+<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancepropertiespatch">Instance<wbr>Properties<wbr>Patch</a></span>
+    </dt>
+    <dd>{{% md %}}Properties for instances that are created using this instances config. You can add or modify properties using the instanceGroupManagers.patch or regionInstanceGroupManagers.patch. After setting instances_config, you must update your instances to use it; for example, you can use the applyUpdatesToInstances method.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="properties_python">
+<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancepropertiespatch">Instance<wbr>Properties<wbr>Patch</a></span>
+    </dt>
+    <dd>{{% md %}}Properties for instances that are created using this instances config. You can add or modify properties using the instanceGroupManagers.patch or regionInstanceGroupManagers.patch. After setting instances_config, you must update your instances to use it; for example, you can use the applyUpdatesToInstances method.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instancegroupmanagerallinstancesconfigresponse">Instance<wbr>Group<wbr>Manager<wbr>All<wbr>Instances<wbr>Config<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="properties_csharp">
+<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancepropertiespatchresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Inputs.<wbr>Instance<wbr>Properties<wbr>Patch<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Properties for instances that are created using this instances config. You can add or modify properties using the instanceGroupManagers.patch or regionInstanceGroupManagers.patch. After setting instances_config, you must update your instances to use it; for example, you can use the applyUpdatesToInstances method.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="properties_go">
+<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancepropertiespatchresponse">Instance<wbr>Properties<wbr>Patch<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Properties for instances that are created using this instances config. You can add or modify properties using the instanceGroupManagers.patch or regionInstanceGroupManagers.patch. After setting instances_config, you must update your instances to use it; for example, you can use the applyUpdatesToInstances method.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="properties_nodejs">
+<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancepropertiespatchresponse">Instance<wbr>Properties<wbr>Patch<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Properties for instances that are created using this instances config. You can add or modify properties using the instanceGroupManagers.patch or regionInstanceGroupManagers.patch. After setting instances_config, you must update your instances to use it; for example, you can use the applyUpdatesToInstances method.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="properties_python">
+<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancepropertiespatchresponse">Instance<wbr>Properties<wbr>Patch<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Properties for instances that are created using this instances config. You can add or modify properties using the instanceGroupManagers.patch or regionInstanceGroupManagers.patch. After setting instances_config, you must update your instances to use it; for example, you can use the applyUpdatesToInstances method.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="instancegroupmanagerautohealingpolicy">Instance<wbr>Group<wbr>Manager<wbr>Auto<wbr>Healing<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
@@ -2133,7 +2299,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fixedorpercent">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Inputs.<wbr>Fixed<wbr>Or<wbr>Percent</a></span>
     </dt>
-    <dd>{{% md %}}Maximum number of instances that can be unavailable when autohealing. When 'percent' is used, the value is rounded if necessary. The instance is considered available if all of the following conditions are satisfied: 1. Instance's status is RUNNING. 2. Instance's currentAction is NONE (in particular its liveness health check result was observed to be HEALTHY at least once as it passed VERIFYING). 3. There is no outgoing action on an instance triggered by IGM. By default, number of concurrently autohealed instances is smaller than the managed instance group target size. However, if a zonal managed instance group has only one instance, or a regional managed instance group has only one instance per zone, autohealing will recreate these instances when they become unhealthy.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Maximum number of instances that can be unavailable when autohealing. When 'percent' is used, the value is rounded if necessary. The instance is considered available if all of the following conditions are satisfied: 1. Instance's status is RUNNING. 2. Instance's currentAction is NONE (in particular its liveness health check result was observed to be HEALTHY at least once as it passed VERIFYING). 3. There is no outgoing action on an instance triggered by IGM. By default, number of concurrently autohealed instances is smaller than the managed instance group target size. However, if a zonal managed instance group has only one instance, or a regional managed instance group has only one instance per zone, autohealing will recreate these instances when they become unhealthy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="updateinstances_csharp">
+<a href="#updateinstances_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancegroupmanagerautohealingpolicyupdateinstances">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Instance<wbr>Group<wbr>Manager<wbr>Auto<wbr>Healing<wbr>Policy<wbr>Update<wbr>Instances</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2161,7 +2335,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fixedorpercent">Fixed<wbr>Or<wbr>Percent</a></span>
     </dt>
-    <dd>{{% md %}}Maximum number of instances that can be unavailable when autohealing. When 'percent' is used, the value is rounded if necessary. The instance is considered available if all of the following conditions are satisfied: 1. Instance's status is RUNNING. 2. Instance's currentAction is NONE (in particular its liveness health check result was observed to be HEALTHY at least once as it passed VERIFYING). 3. There is no outgoing action on an instance triggered by IGM. By default, number of concurrently autohealed instances is smaller than the managed instance group target size. However, if a zonal managed instance group has only one instance, or a regional managed instance group has only one instance per zone, autohealing will recreate these instances when they become unhealthy.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Maximum number of instances that can be unavailable when autohealing. When 'percent' is used, the value is rounded if necessary. The instance is considered available if all of the following conditions are satisfied: 1. Instance's status is RUNNING. 2. Instance's currentAction is NONE (in particular its liveness health check result was observed to be HEALTHY at least once as it passed VERIFYING). 3. There is no outgoing action on an instance triggered by IGM. By default, number of concurrently autohealed instances is smaller than the managed instance group target size. However, if a zonal managed instance group has only one instance, or a regional managed instance group has only one instance per zone, autohealing will recreate these instances when they become unhealthy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="updateinstances_go">
+<a href="#updateinstances_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancegroupmanagerautohealingpolicyupdateinstances">Instance<wbr>Group<wbr>Manager<wbr>Auto<wbr>Healing<wbr>Policy<wbr>Update<wbr>Instances</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2189,7 +2371,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fixedorpercent">Fixed<wbr>Or<wbr>Percent</a></span>
     </dt>
-    <dd>{{% md %}}Maximum number of instances that can be unavailable when autohealing. When 'percent' is used, the value is rounded if necessary. The instance is considered available if all of the following conditions are satisfied: 1. Instance's status is RUNNING. 2. Instance's currentAction is NONE (in particular its liveness health check result was observed to be HEALTHY at least once as it passed VERIFYING). 3. There is no outgoing action on an instance triggered by IGM. By default, number of concurrently autohealed instances is smaller than the managed instance group target size. However, if a zonal managed instance group has only one instance, or a regional managed instance group has only one instance per zone, autohealing will recreate these instances when they become unhealthy.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Maximum number of instances that can be unavailable when autohealing. When 'percent' is used, the value is rounded if necessary. The instance is considered available if all of the following conditions are satisfied: 1. Instance's status is RUNNING. 2. Instance's currentAction is NONE (in particular its liveness health check result was observed to be HEALTHY at least once as it passed VERIFYING). 3. There is no outgoing action on an instance triggered by IGM. By default, number of concurrently autohealed instances is smaller than the managed instance group target size. However, if a zonal managed instance group has only one instance, or a regional managed instance group has only one instance per zone, autohealing will recreate these instances when they become unhealthy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="updateinstances_nodejs">
+<a href="#updateinstances_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancegroupmanagerautohealingpolicyupdateinstances">Instance<wbr>Group<wbr>Manager<wbr>Auto<wbr>Healing<wbr>Policy<wbr>Update<wbr>Instances</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2217,7 +2407,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fixedorpercent">Fixed<wbr>Or<wbr>Percent</a></span>
     </dt>
-    <dd>{{% md %}}Maximum number of instances that can be unavailable when autohealing. When 'percent' is used, the value is rounded if necessary. The instance is considered available if all of the following conditions are satisfied: 1. Instance's status is RUNNING. 2. Instance's currentAction is NONE (in particular its liveness health check result was observed to be HEALTHY at least once as it passed VERIFYING). 3. There is no outgoing action on an instance triggered by IGM. By default, number of concurrently autohealed instances is smaller than the managed instance group target size. However, if a zonal managed instance group has only one instance, or a regional managed instance group has only one instance per zone, autohealing will recreate these instances when they become unhealthy.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Maximum number of instances that can be unavailable when autohealing. When 'percent' is used, the value is rounded if necessary. The instance is considered available if all of the following conditions are satisfied: 1. Instance's status is RUNNING. 2. Instance's currentAction is NONE (in particular its liveness health check result was observed to be HEALTHY at least once as it passed VERIFYING). 3. There is no outgoing action on an instance triggered by IGM. By default, number of concurrently autohealed instances is smaller than the managed instance group target size. However, if a zonal managed instance group has only one instance, or a regional managed instance group has only one instance per zone, autohealing will recreate these instances when they become unhealthy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="update_instances_python">
+<a href="#update_instances_python" style="color: inherit; text-decoration: inherit;">update_<wbr>instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancegroupmanagerautohealingpolicyupdateinstances">Instance<wbr>Group<wbr>Manager<wbr>Auto<wbr>Healing<wbr>Policy<wbr>Update<wbr>Instances</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="instancegroupmanagerautohealingpolicyresponse">Instance<wbr>Group<wbr>Manager<wbr>Auto<wbr>Healing<wbr>Policy<wbr>Response</h4>
@@ -2247,7 +2445,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fixedorpercentresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Inputs.<wbr>Fixed<wbr>Or<wbr>Percent<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Maximum number of instances that can be unavailable when autohealing. When 'percent' is used, the value is rounded if necessary. The instance is considered available if all of the following conditions are satisfied: 1. Instance's status is RUNNING. 2. Instance's currentAction is NONE (in particular its liveness health check result was observed to be HEALTHY at least once as it passed VERIFYING). 3. There is no outgoing action on an instance triggered by IGM. By default, number of concurrently autohealed instances is smaller than the managed instance group target size. However, if a zonal managed instance group has only one instance, or a regional managed instance group has only one instance per zone, autohealing will recreate these instances when they become unhealthy.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Maximum number of instances that can be unavailable when autohealing. When 'percent' is used, the value is rounded if necessary. The instance is considered available if all of the following conditions are satisfied: 1. Instance's status is RUNNING. 2. Instance's currentAction is NONE (in particular its liveness health check result was observed to be HEALTHY at least once as it passed VERIFYING). 3. There is no outgoing action on an instance triggered by IGM. By default, number of concurrently autohealed instances is smaller than the managed instance group target size. However, if a zonal managed instance group has only one instance, or a regional managed instance group has only one instance per zone, autohealing will recreate these instances when they become unhealthy.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="updateinstances_csharp">
+<a href="#updateinstances_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2275,7 +2481,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fixedorpercentresponse">Fixed<wbr>Or<wbr>Percent<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Maximum number of instances that can be unavailable when autohealing. When 'percent' is used, the value is rounded if necessary. The instance is considered available if all of the following conditions are satisfied: 1. Instance's status is RUNNING. 2. Instance's currentAction is NONE (in particular its liveness health check result was observed to be HEALTHY at least once as it passed VERIFYING). 3. There is no outgoing action on an instance triggered by IGM. By default, number of concurrently autohealed instances is smaller than the managed instance group target size. However, if a zonal managed instance group has only one instance, or a regional managed instance group has only one instance per zone, autohealing will recreate these instances when they become unhealthy.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Maximum number of instances that can be unavailable when autohealing. When 'percent' is used, the value is rounded if necessary. The instance is considered available if all of the following conditions are satisfied: 1. Instance's status is RUNNING. 2. Instance's currentAction is NONE (in particular its liveness health check result was observed to be HEALTHY at least once as it passed VERIFYING). 3. There is no outgoing action on an instance triggered by IGM. By default, number of concurrently autohealed instances is smaller than the managed instance group target size. However, if a zonal managed instance group has only one instance, or a regional managed instance group has only one instance per zone, autohealing will recreate these instances when they become unhealthy.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="updateinstances_go">
+<a href="#updateinstances_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2303,7 +2517,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fixedorpercentresponse">Fixed<wbr>Or<wbr>Percent<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Maximum number of instances that can be unavailable when autohealing. When 'percent' is used, the value is rounded if necessary. The instance is considered available if all of the following conditions are satisfied: 1. Instance's status is RUNNING. 2. Instance's currentAction is NONE (in particular its liveness health check result was observed to be HEALTHY at least once as it passed VERIFYING). 3. There is no outgoing action on an instance triggered by IGM. By default, number of concurrently autohealed instances is smaller than the managed instance group target size. However, if a zonal managed instance group has only one instance, or a regional managed instance group has only one instance per zone, autohealing will recreate these instances when they become unhealthy.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Maximum number of instances that can be unavailable when autohealing. When 'percent' is used, the value is rounded if necessary. The instance is considered available if all of the following conditions are satisfied: 1. Instance's status is RUNNING. 2. Instance's currentAction is NONE (in particular its liveness health check result was observed to be HEALTHY at least once as it passed VERIFYING). 3. There is no outgoing action on an instance triggered by IGM. By default, number of concurrently autohealed instances is smaller than the managed instance group target size. However, if a zonal managed instance group has only one instance, or a regional managed instance group has only one instance per zone, autohealing will recreate these instances when they become unhealthy.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="updateinstances_nodejs">
+<a href="#updateinstances_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2331,7 +2553,41 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fixedorpercentresponse">Fixed<wbr>Or<wbr>Percent<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Maximum number of instances that can be unavailable when autohealing. When 'percent' is used, the value is rounded if necessary. The instance is considered available if all of the following conditions are satisfied: 1. Instance's status is RUNNING. 2. Instance's currentAction is NONE (in particular its liveness health check result was observed to be HEALTHY at least once as it passed VERIFYING). 3. There is no outgoing action on an instance triggered by IGM. By default, number of concurrently autohealed instances is smaller than the managed instance group target size. However, if a zonal managed instance group has only one instance, or a regional managed instance group has only one instance per zone, autohealing will recreate these instances when they become unhealthy.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Maximum number of instances that can be unavailable when autohealing. When 'percent' is used, the value is rounded if necessary. The instance is considered available if all of the following conditions are satisfied: 1. Instance's status is RUNNING. 2. Instance's currentAction is NONE (in particular its liveness health check result was observed to be HEALTHY at least once as it passed VERIFYING). 3. There is no outgoing action on an instance triggered by IGM. By default, number of concurrently autohealed instances is smaller than the managed instance group target size. However, if a zonal managed instance group has only one instance, or a regional managed instance group has only one instance per zone, autohealing will recreate these instances when they become unhealthy.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="update_instances_python">
+<a href="#update_instances_python" style="color: inherit; text-decoration: inherit;">update_<wbr>instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instancegroupmanagerautohealingpolicyupdateinstances">Instance<wbr>Group<wbr>Manager<wbr>Auto<wbr>Healing<wbr>Policy<wbr>Update<wbr>Instances</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Always</dt>
+    <dd>ALWAYS{{% md %}}Autohealer always updates instances with a new version for both PROACTIVE and OPPORTUNISTIC updates.{{% /md %}}</dd><dt>Follow<wbr>Update<wbr>Policy</dt>
+    <dd>FOLLOW_UPDATE_POLICY{{% md %}}(Default) Autohealer updates instance with new version according to update policy constraints: - OPPORTUNISTIC: autohealing does not perform updates. - PROACTIVE: autohealing performs updates according to maxSurge and maxUnavailable constraints. {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Instance<wbr>Group<wbr>Manager<wbr>Auto<wbr>Healing<wbr>Policy<wbr>Update<wbr>Instances<wbr>Always</dt>
+    <dd>ALWAYS{{% md %}}Autohealer always updates instances with a new version for both PROACTIVE and OPPORTUNISTIC updates.{{% /md %}}</dd><dt>Instance<wbr>Group<wbr>Manager<wbr>Auto<wbr>Healing<wbr>Policy<wbr>Update<wbr>Instances<wbr>Follow<wbr>Update<wbr>Policy</dt>
+    <dd>FOLLOW_UPDATE_POLICY{{% md %}}(Default) Autohealer updates instance with new version according to update policy constraints: - OPPORTUNISTIC: autohealing does not perform updates. - PROACTIVE: autohealing performs updates according to maxSurge and maxUnavailable constraints. {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Always</dt>
+    <dd>ALWAYS{{% md %}}Autohealer always updates instances with a new version for both PROACTIVE and OPPORTUNISTIC updates.{{% /md %}}</dd><dt>Follow<wbr>Update<wbr>Policy</dt>
+    <dd>FOLLOW_UPDATE_POLICY{{% md %}}(Default) Autohealer updates instance with new version according to update policy constraints: - OPPORTUNISTIC: autohealing does not perform updates. - PROACTIVE: autohealing performs updates according to maxSurge and maxUnavailable constraints. {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ALWAYS</dt>
+    <dd>ALWAYS{{% md %}}Autohealer always updates instances with a new version for both PROACTIVE and OPPORTUNISTIC updates.{{% /md %}}</dd><dt>FOLLOW_UPDATE_POLICY</dt>
+    <dd>FOLLOW_UPDATE_POLICY{{% md %}}(Default) Autohealer updates instance with new version according to update policy constraints: - OPPORTUNISTIC: autohealing does not perform updates. - PROACTIVE: autohealing performs updates according to maxSurge and maxUnavailable constraints. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="instancegroupmanagerfailoveraction">Instance<wbr>Group<wbr>Manager<wbr>Failover<wbr>Action</h4>
@@ -2560,10 +2816,200 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The configuration for metadata based readiness signal sent by the instance during initialization when stopping / suspending an instance. The Instance Group Manager will wait for a signal that indicates successful initialization before stopping / suspending an instance. If a successful readiness signal is not sent before timeout, the corresponding instance will not be stopped / suspended. Instead, an error will be visible in the lastAttempt.errors field of the managed instance in the listmanagedinstances method. If metadataBasedReadinessSignal.timeoutSec is unset, the Instance Group Manager will directly proceed to suspend / stop instances, skipping initialization on them.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="instancegroupmanagerstandbypolicy">Instance<wbr>Group<wbr>Manager<wbr>Standby<wbr>Policy</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="initialdelaysec_csharp">
+<a href="#initialdelaysec_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Delay<wbr>Sec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="initialdelaysec_go">
+<a href="#initialdelaysec_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Delay<wbr>Sec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="initialdelaysec_nodejs">
+<a href="#initialdelaysec_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Delay<wbr>Sec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="initial_delay_sec_python">
+<a href="#initial_delay_sec_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>delay_<wbr>sec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instancegroupmanagerstandbypolicyresponse">Instance<wbr>Group<wbr>Manager<wbr>Standby<wbr>Policy<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="initialdelaysec_csharp">
+<a href="#initialdelaysec_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Delay<wbr>Sec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="initialdelaysec_go">
+<a href="#initialdelaysec_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Delay<wbr>Sec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="initialdelaysec_nodejs">
+<a href="#initialdelaysec_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Delay<wbr>Sec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="initial_delay_sec_python">
+<a href="#initial_delay_sec_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>delay_<wbr>sec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instancegroupmanagerstatusallinstancesconfigresponse">Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>All<wbr>Instances<wbr>Config<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="currentrevision_csharp">
+<a href="#currentrevision_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Revision</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Current instances' config revision. This value is in RFC3339 text format.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="effective_csharp">
+<a href="#effective_csharp" style="color: inherit; text-decoration: inherit;">Effective</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A bit indicating whether instances' config has been applied to all managed instances in managed instance group.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="currentrevision_go">
+<a href="#currentrevision_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Revision</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Current instances' config revision. This value is in RFC3339 text format.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="effective_go">
+<a href="#effective_go" style="color: inherit; text-decoration: inherit;">Effective</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A bit indicating whether instances' config has been applied to all managed instances in managed instance group.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="currentrevision_nodejs">
+<a href="#currentrevision_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Revision</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Current instances' config revision. This value is in RFC3339 text format.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="effective_nodejs">
+<a href="#effective_nodejs" style="color: inherit; text-decoration: inherit;">effective</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}A bit indicating whether instances' config has been applied to all managed instances in managed instance group.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="current_revision_python">
+<a href="#current_revision_python" style="color: inherit; text-decoration: inherit;">current_<wbr>revision</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Current instances' config revision. This value is in RFC3339 text format.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="effective_python">
+<a href="#effective_python" style="color: inherit; text-decoration: inherit;">effective</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A bit indicating whether instances' config has been applied to all managed instances in managed instance group.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="instancegroupmanagerstatusresponse">Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Response</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="allinstancesconfig_csharp">
+<a href="#allinstancesconfig_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Instances<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancegroupmanagerstatusallinstancesconfigresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Inputs.<wbr>Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>All<wbr>Instances<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}A status of consistency of Instances' config applied to instances with Instances' config defined in managed instance group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="autoscaler_csharp">
 <a href="#autoscaler_csharp" style="color: inherit; text-decoration: inherit;">Autoscaler</a>
@@ -2601,6 +3047,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="allinstancesconfig_go">
+<a href="#allinstancesconfig_go" style="color: inherit; text-decoration: inherit;">All<wbr>Instances<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancegroupmanagerstatusallinstancesconfigresponse">Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>All<wbr>Instances<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}A status of consistency of Instances' config applied to instances with Instances' config defined in managed instance group.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="autoscaler_go">
 <a href="#autoscaler_go" style="color: inherit; text-decoration: inherit;">Autoscaler</a>
 </span>
@@ -2637,6 +3091,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="allinstancesconfig_nodejs">
+<a href="#allinstancesconfig_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Instances<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancegroupmanagerstatusallinstancesconfigresponse">Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>All<wbr>Instances<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}A status of consistency of Instances' config applied to instances with Instances' config defined in managed instance group.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="autoscaler_nodejs">
 <a href="#autoscaler_nodejs" style="color: inherit; text-decoration: inherit;">autoscaler</a>
 </span>
@@ -2672,6 +3134,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="all_instances_config_python">
+<a href="#all_instances_config_python" style="color: inherit; text-decoration: inherit;">all_<wbr>instances_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancegroupmanagerstatusallinstancesconfigresponse">Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>All<wbr>Instances<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}A status of consistency of Instances' config applied to instances with Instances' config defined in managed instance group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="autoscaler_python">
 <a href="#autoscaler_python" style="color: inherit; text-decoration: inherit;">autoscaler</a>
@@ -3808,6 +4278,170 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#fixedorpercentresponse">Fixed<wbr>Or<wbr>Percent<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the intended number of instances to be created from the instanceTemplate. The final number of instances created from the template will be equal to: - If expressed as a fixed number, the minimum of either targetSize.fixed or instanceGroupManager.targetSize is used. - if expressed as a percent, the targetSize would be (targetSize.percent/100 * InstanceGroupManager.targetSize) If there is a remainder, the number is rounded. If unset, this version will update any remaining instances not updated by another version. Read Starting a canary update for more information.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instancepropertiespatch">Instance<wbr>Properties<wbr>Patch</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="labels_csharp">
+<a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The label key-value pairs that you want to patch onto the instance.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metadata_csharp">
+<a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The metadata key-value pairs that you want to patch onto the instance. For more information, see Project and instance metadata.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="labels_go">
+<a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}The label key-value pairs that you want to patch onto the instance.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metadata_go">
+<a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}The metadata key-value pairs that you want to patch onto the instance. For more information, see Project and instance metadata.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="labels_nodejs">
+<a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}The label key-value pairs that you want to patch onto the instance.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metadata_nodejs">
+<a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}The metadata key-value pairs that you want to patch onto the instance. For more information, see Project and instance metadata.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="labels_python">
+<a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}The label key-value pairs that you want to patch onto the instance.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metadata_python">
+<a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}The metadata key-value pairs that you want to patch onto the instance. For more information, see Project and instance metadata.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instancepropertiespatchresponse">Instance<wbr>Properties<wbr>Patch<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="labels_csharp">
+<a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The label key-value pairs that you want to patch onto the instance.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="metadata_csharp">
+<a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The metadata key-value pairs that you want to patch onto the instance. For more information, see Project and instance metadata.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="labels_go">
+<a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}The label key-value pairs that you want to patch onto the instance.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="metadata_go">
+<a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}The metadata key-value pairs that you want to patch onto the instance. For more information, see Project and instance metadata.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="labels_nodejs">
+<a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}The label key-value pairs that you want to patch onto the instance.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="metadata_nodejs">
+<a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}The metadata key-value pairs that you want to patch onto the instance. For more information, see Project and instance metadata.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="labels_python">
+<a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}The label key-value pairs that you want to patch onto the instance.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="metadata_python">
+<a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}The metadata key-value pairs that you want to patch onto the instance. For more information, see Project and instance metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="namedport">Named<wbr>Port</h4>

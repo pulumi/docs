@@ -299,6 +299,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The bucket's Cross-Origin Resource Sharing (CORS) configuration.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="customplacementconfig_csharp">
+<a href="#customplacementconfig_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Placement<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketcustomplacementconfigresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Outputs.<wbr>Bucket<wbr>Custom<wbr>Placement<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The bucket's custom placement configuration for Custom Dual Regions.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="defaulteventbasedhold_csharp">
 <a href="#defaulteventbasedhold_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Event<wbr>Based<wbr>Hold</a>
 </span>
@@ -427,6 +435,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The bucket's retention policy. The retention policy enforces a minimum retention time for all objects contained in the bucket, based on their creation time. Any attempt to overwrite or delete objects younger than the retention period will result in a PERMISSION_DENIED error. An unlocked retention policy can be modified or removed from the bucket via a storage.buckets.update operation. A locked retention policy cannot be removed or shortened in duration for the lifetime of the bucket. Attempting to remove or decrease period of a locked retention policy will result in a PERMISSION_DENIED error.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="rpo_csharp">
+<a href="#rpo_csharp" style="color: inherit; text-decoration: inherit;">Rpo</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Recovery Point Objective (RPO) of this bucket. Set to ASYNC_TURBO to turn on Turbo Replication on a bucket.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="satisfiespzs_csharp">
 <a href="#satisfiespzs_csharp" style="color: inherit; text-decoration: inherit;">Satisfies<wbr>PZS</a>
 </span>
@@ -481,15 +497,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketwebsiteresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Outputs.<wbr>Bucket<wbr>Website<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The bucket's website configuration, controlling how the service behaves when accessing bucket contents as a web site. See the Static Website Examples for more information.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="zoneaffinity_csharp">
-<a href="#zoneaffinity_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Affinity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}The zone or zones from which the bucket is intended to use zonal quota. Requests for data from outside the specified affinities are still allowed but won't be able to use zonal quota. The zone or zones need to be within the bucket location otherwise the requests will fail with a 400 Bad Request response.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The bucket's website configuration, controlling how the service behaves when accessing bucket contents as a web site. See the Static Website Examples for more information.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -518,6 +526,14 @@ The following output properties are available:
         <span class="property-type"><a href="#bucketcorsitemresponse">[]Bucket<wbr>Cors<wbr>Item<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The bucket's Cross-Origin Resource Sharing (CORS) configuration.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="customplacementconfig_go">
+<a href="#customplacementconfig_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Placement<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketcustomplacementconfigresponse">Bucket<wbr>Custom<wbr>Placement<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The bucket's custom placement configuration for Custom Dual Regions.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaulteventbasedhold_go">
 <a href="#defaulteventbasedhold_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Event<wbr>Based<wbr>Hold</a>
@@ -647,6 +663,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The bucket's retention policy. The retention policy enforces a minimum retention time for all objects contained in the bucket, based on their creation time. Any attempt to overwrite or delete objects younger than the retention period will result in a PERMISSION_DENIED error. An unlocked retention policy can be modified or removed from the bucket via a storage.buckets.update operation. A locked retention policy cannot be removed or shortened in duration for the lifetime of the bucket. Attempting to remove or decrease period of a locked retention policy will result in a PERMISSION_DENIED error.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="rpo_go">
+<a href="#rpo_go" style="color: inherit; text-decoration: inherit;">Rpo</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Recovery Point Objective (RPO) of this bucket. Set to ASYNC_TURBO to turn on Turbo Replication on a bucket.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="satisfiespzs_go">
 <a href="#satisfiespzs_go" style="color: inherit; text-decoration: inherit;">Satisfies<wbr>PZS</a>
 </span>
@@ -701,15 +725,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketwebsiteresponse">Bucket<wbr>Website<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The bucket's website configuration, controlling how the service behaves when accessing bucket contents as a web site. See the Static Website Examples for more information.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="zoneaffinity_go">
-<a href="#zoneaffinity_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Affinity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The zone or zones from which the bucket is intended to use zonal quota. Requests for data from outside the specified affinities are still allowed but won't be able to use zonal quota. The zone or zones need to be within the bucket location otherwise the requests will fail with a 400 Bad Request response.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The bucket's website configuration, controlling how the service behaves when accessing bucket contents as a web site. See the Static Website Examples for more information.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -738,6 +754,14 @@ The following output properties are available:
         <span class="property-type"><a href="#bucketcorsitemresponse">Bucket<wbr>Cors<wbr>Item<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The bucket's Cross-Origin Resource Sharing (CORS) configuration.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="customplacementconfig_nodejs">
+<a href="#customplacementconfig_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Placement<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketcustomplacementconfigresponse">Bucket<wbr>Custom<wbr>Placement<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The bucket's custom placement configuration for Custom Dual Regions.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaulteventbasedhold_nodejs">
 <a href="#defaulteventbasedhold_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Event<wbr>Based<wbr>Hold</a>
@@ -867,6 +891,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The bucket's retention policy. The retention policy enforces a minimum retention time for all objects contained in the bucket, based on their creation time. Any attempt to overwrite or delete objects younger than the retention period will result in a PERMISSION_DENIED error. An unlocked retention policy can be modified or removed from the bucket via a storage.buckets.update operation. A locked retention policy cannot be removed or shortened in duration for the lifetime of the bucket. Attempting to remove or decrease period of a locked retention policy will result in a PERMISSION_DENIED error.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="rpo_nodejs">
+<a href="#rpo_nodejs" style="color: inherit; text-decoration: inherit;">rpo</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Recovery Point Objective (RPO) of this bucket. Set to ASYNC_TURBO to turn on Turbo Replication on a bucket.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="satisfiespzs_nodejs">
 <a href="#satisfiespzs_nodejs" style="color: inherit; text-decoration: inherit;">satisfies<wbr>PZS</a>
 </span>
@@ -921,15 +953,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketwebsiteresponse">Bucket<wbr>Website<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The bucket's website configuration, controlling how the service behaves when accessing bucket contents as a web site. See the Static Website Examples for more information.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="zoneaffinity_nodejs">
-<a href="#zoneaffinity_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Affinity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}The zone or zones from which the bucket is intended to use zonal quota. Requests for data from outside the specified affinities are still allowed but won't be able to use zonal quota. The zone or zones need to be within the bucket location otherwise the requests will fail with a 400 Bad Request response.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The bucket's website configuration, controlling how the service behaves when accessing bucket contents as a web site. See the Static Website Examples for more information.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -958,6 +982,14 @@ The following output properties are available:
         <span class="property-type"><a href="#bucketcorsitemresponse">Sequence[Bucket<wbr>Cors<wbr>Item<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The bucket's Cross-Origin Resource Sharing (CORS) configuration.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="custom_placement_config_python">
+<a href="#custom_placement_config_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>placement_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketcustomplacementconfigresponse">Bucket<wbr>Custom<wbr>Placement<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The bucket's custom placement configuration for Custom Dual Regions.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="default_event_based_hold_python">
 <a href="#default_event_based_hold_python" style="color: inherit; text-decoration: inherit;">default_<wbr>event_<wbr>based_<wbr>hold</a>
@@ -1087,6 +1119,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The bucket's retention policy. The retention policy enforces a minimum retention time for all objects contained in the bucket, based on their creation time. Any attempt to overwrite or delete objects younger than the retention period will result in a PERMISSION_DENIED error. An unlocked retention policy can be modified or removed from the bucket via a storage.buckets.update operation. A locked retention policy cannot be removed or shortened in duration for the lifetime of the bucket. Attempting to remove or decrease period of a locked retention policy will result in a PERMISSION_DENIED error.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="rpo_python">
+<a href="#rpo_python" style="color: inherit; text-decoration: inherit;">rpo</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Recovery Point Objective (RPO) of this bucket. Set to ASYNC_TURBO to turn on Turbo Replication on a bucket.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="satisfies_pzs_python">
 <a href="#satisfies_pzs_python" style="color: inherit; text-decoration: inherit;">satisfies_<wbr>pzs</a>
 </span>
@@ -1141,15 +1181,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketwebsiteresponse">Bucket<wbr>Website<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The bucket's website configuration, controlling how the service behaves when accessing bucket contents as a web site. See the Static Website Examples for more information.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="zone_affinity_python">
-<a href="#zone_affinity_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>affinity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}The zone or zones from which the bucket is intended to use zonal quota. Requests for data from outside the specified affinities are still allowed but won't be able to use zonal quota. The zone or zones need to be within the bucket location otherwise the requests will fail with a 400 Bad Request response.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The bucket's website configuration, controlling how the service behaves when accessing bucket contents as a web site. See the Static Website Examples for more information.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1824,6 +1856,58 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of HTTP headers other than the simple response headers to give permission for the user-agent to share across domains.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketcustomplacementconfigresponse">Bucket<wbr>Custom<wbr>Placement<wbr>Config<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="datalocations_csharp">
+<a href="#datalocations_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Locations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of regional locations in which data is placed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="datalocations_go">
+<a href="#datalocations_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Locations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The list of regional locations in which data is placed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="datalocations_nodejs">
+<a href="#datalocations_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Locations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The list of regional locations in which data is placed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="data_locations_python">
+<a href="#data_locations_python" style="color: inherit; text-decoration: inherit;">data_<wbr>locations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The list of regional locations in which data is placed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="bucketencryptionresponse">Bucket<wbr>Encryption<wbr>Response</h4>

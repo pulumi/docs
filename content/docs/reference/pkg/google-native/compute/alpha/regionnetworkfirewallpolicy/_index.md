@@ -1351,13 +1351,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="destaddressgroups_csharp">
+<a href="#destaddressgroups_csharp" style="color: inherit; text-decoration: inherit;">Dest<wbr>Address<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Address groups which should be matched against the traffic destination. Maximum number of destination address groups is 10.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="destipranges_csharp">
 <a href="#destipranges_csharp" style="color: inherit; text-decoration: inherit;">Dest<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 256.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 5000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="layer4configs_csharp">
 <a href="#layer4configs_csharp" style="color: inherit; text-decoration: inherit;">Layer4Configs</a>
@@ -1367,13 +1375,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Pairs of IP protocols and ports that the rule should match.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="srcaddressgroups_csharp">
+<a href="#srcaddressgroups_csharp" style="color: inherit; text-decoration: inherit;">Src<wbr>Address<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Address groups which should be matched against the traffic source. Maximum number of source address groups is 10.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="srcipranges_csharp">
 <a href="#srcipranges_csharp" style="color: inherit; text-decoration: inherit;">Src<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 256.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 5000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="srcsecuretags_csharp">
 <a href="#srcsecuretags_csharp" style="color: inherit; text-decoration: inherit;">Src<wbr>Secure<wbr>Tags</a>
@@ -1387,13 +1403,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="destaddressgroups_go">
+<a href="#destaddressgroups_go" style="color: inherit; text-decoration: inherit;">Dest<wbr>Address<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Address groups which should be matched against the traffic destination. Maximum number of destination address groups is 10.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="destipranges_go">
 <a href="#destipranges_go" style="color: inherit; text-decoration: inherit;">Dest<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 256.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 5000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="layer4configs_go">
 <a href="#layer4configs_go" style="color: inherit; text-decoration: inherit;">Layer4Configs</a>
@@ -1403,13 +1427,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Pairs of IP protocols and ports that the rule should match.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="srcaddressgroups_go">
+<a href="#srcaddressgroups_go" style="color: inherit; text-decoration: inherit;">Src<wbr>Address<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Address groups which should be matched against the traffic source. Maximum number of source address groups is 10.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="srcipranges_go">
 <a href="#srcipranges_go" style="color: inherit; text-decoration: inherit;">Src<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 256.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 5000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="srcsecuretags_go">
 <a href="#srcsecuretags_go" style="color: inherit; text-decoration: inherit;">Src<wbr>Secure<wbr>Tags</a>
@@ -1423,13 +1455,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="destaddressgroups_nodejs">
+<a href="#destaddressgroups_nodejs" style="color: inherit; text-decoration: inherit;">dest<wbr>Address<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Address groups which should be matched against the traffic destination. Maximum number of destination address groups is 10.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="destipranges_nodejs">
 <a href="#destipranges_nodejs" style="color: inherit; text-decoration: inherit;">dest<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 256.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 5000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="layer4configs_nodejs">
 <a href="#layer4configs_nodejs" style="color: inherit; text-decoration: inherit;">layer4Configs</a>
@@ -1439,13 +1479,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Pairs of IP protocols and ports that the rule should match.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="srcaddressgroups_nodejs">
+<a href="#srcaddressgroups_nodejs" style="color: inherit; text-decoration: inherit;">src<wbr>Address<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Address groups which should be matched against the traffic source. Maximum number of source address groups is 10.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="srcipranges_nodejs">
 <a href="#srcipranges_nodejs" style="color: inherit; text-decoration: inherit;">src<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 256.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 5000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="srcsecuretags_nodejs">
 <a href="#srcsecuretags_nodejs" style="color: inherit; text-decoration: inherit;">src<wbr>Secure<wbr>Tags</a>
@@ -1459,13 +1507,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="dest_address_groups_python">
+<a href="#dest_address_groups_python" style="color: inherit; text-decoration: inherit;">dest_<wbr>address_<wbr>groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Address groups which should be matched against the traffic destination. Maximum number of destination address groups is 10.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="dest_ip_ranges_python">
 <a href="#dest_ip_ranges_python" style="color: inherit; text-decoration: inherit;">dest_<wbr>ip_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 256.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 5000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="layer4_configs_python">
 <a href="#layer4_configs_python" style="color: inherit; text-decoration: inherit;">layer4_<wbr>configs</a>
@@ -1475,13 +1531,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Pairs of IP protocols and ports that the rule should match.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="src_address_groups_python">
+<a href="#src_address_groups_python" style="color: inherit; text-decoration: inherit;">src_<wbr>address_<wbr>groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Address groups which should be matched against the traffic source. Maximum number of source address groups is 10.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="src_ip_ranges_python">
 <a href="#src_ip_ranges_python" style="color: inherit; text-decoration: inherit;">src_<wbr>ip_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 256.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 5000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="src_secure_tags_python">
 <a href="#src_secure_tags_python" style="color: inherit; text-decoration: inherit;">src_<wbr>secure_<wbr>tags</a>
@@ -1661,13 +1725,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="destaddressgroups_csharp">
+<a href="#destaddressgroups_csharp" style="color: inherit; text-decoration: inherit;">Dest<wbr>Address<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Address groups which should be matched against the traffic destination. Maximum number of destination address groups is 10.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="destipranges_csharp">
 <a href="#destipranges_csharp" style="color: inherit; text-decoration: inherit;">Dest<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 256.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 5000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="layer4configs_csharp">
 <a href="#layer4configs_csharp" style="color: inherit; text-decoration: inherit;">Layer4Configs</a>
@@ -1677,13 +1749,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Pairs of IP protocols and ports that the rule should match.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="srcaddressgroups_csharp">
+<a href="#srcaddressgroups_csharp" style="color: inherit; text-decoration: inherit;">Src<wbr>Address<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Address groups which should be matched against the traffic source. Maximum number of source address groups is 10.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="srcipranges_csharp">
 <a href="#srcipranges_csharp" style="color: inherit; text-decoration: inherit;">Src<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 256.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 5000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="srcsecuretags_csharp">
 <a href="#srcsecuretags_csharp" style="color: inherit; text-decoration: inherit;">Src<wbr>Secure<wbr>Tags</a>
@@ -1697,13 +1777,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="destaddressgroups_go">
+<a href="#destaddressgroups_go" style="color: inherit; text-decoration: inherit;">Dest<wbr>Address<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Address groups which should be matched against the traffic destination. Maximum number of destination address groups is 10.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="destipranges_go">
 <a href="#destipranges_go" style="color: inherit; text-decoration: inherit;">Dest<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 256.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 5000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="layer4configs_go">
 <a href="#layer4configs_go" style="color: inherit; text-decoration: inherit;">Layer4Configs</a>
@@ -1713,13 +1801,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Pairs of IP protocols and ports that the rule should match.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="srcaddressgroups_go">
+<a href="#srcaddressgroups_go" style="color: inherit; text-decoration: inherit;">Src<wbr>Address<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Address groups which should be matched against the traffic source. Maximum number of source address groups is 10.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="srcipranges_go">
 <a href="#srcipranges_go" style="color: inherit; text-decoration: inherit;">Src<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 256.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 5000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="srcsecuretags_go">
 <a href="#srcsecuretags_go" style="color: inherit; text-decoration: inherit;">Src<wbr>Secure<wbr>Tags</a>
@@ -1733,13 +1829,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="destaddressgroups_nodejs">
+<a href="#destaddressgroups_nodejs" style="color: inherit; text-decoration: inherit;">dest<wbr>Address<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Address groups which should be matched against the traffic destination. Maximum number of destination address groups is 10.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="destipranges_nodejs">
 <a href="#destipranges_nodejs" style="color: inherit; text-decoration: inherit;">dest<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 256.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 5000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="layer4configs_nodejs">
 <a href="#layer4configs_nodejs" style="color: inherit; text-decoration: inherit;">layer4Configs</a>
@@ -1749,13 +1853,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Pairs of IP protocols and ports that the rule should match.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="srcaddressgroups_nodejs">
+<a href="#srcaddressgroups_nodejs" style="color: inherit; text-decoration: inherit;">src<wbr>Address<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Address groups which should be matched against the traffic source. Maximum number of source address groups is 10.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="srcipranges_nodejs">
 <a href="#srcipranges_nodejs" style="color: inherit; text-decoration: inherit;">src<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 256.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 5000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="srcsecuretags_nodejs">
 <a href="#srcsecuretags_nodejs" style="color: inherit; text-decoration: inherit;">src<wbr>Secure<wbr>Tags</a>
@@ -1769,13 +1881,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="dest_address_groups_python">
+<a href="#dest_address_groups_python" style="color: inherit; text-decoration: inherit;">dest_<wbr>address_<wbr>groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Address groups which should be matched against the traffic destination. Maximum number of destination address groups is 10.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="dest_ip_ranges_python">
 <a href="#dest_ip_ranges_python" style="color: inherit; text-decoration: inherit;">dest_<wbr>ip_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 256.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 5000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="layer4_configs_python">
 <a href="#layer4_configs_python" style="color: inherit; text-decoration: inherit;">layer4_<wbr>configs</a>
@@ -1785,13 +1905,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Pairs of IP protocols and ports that the rule should match.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="src_address_groups_python">
+<a href="#src_address_groups_python" style="color: inherit; text-decoration: inherit;">src_<wbr>address_<wbr>groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Address groups which should be matched against the traffic source. Maximum number of source address groups is 10.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="src_ip_ranges_python">
 <a href="#src_ip_ranges_python" style="color: inherit; text-decoration: inherit;">src_<wbr>ip_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 256.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 5000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="src_secure_tags_python">
 <a href="#src_secure_tags_python" style="color: inherit; text-decoration: inherit;">src_<wbr>secure_<wbr>tags</a>

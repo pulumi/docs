@@ -359,7 +359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name of this taxonomy in URL format. Note: Policy tag manager generates unique taxonomy IDs. {{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Resource name of this taxonomy in URL format. Note: Policy tag manager generates unique taxonomy IDs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policytagcount_csharp">
 <a href="#policytagcount_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Tag<wbr>Count</a>
@@ -395,7 +395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name of this taxonomy in URL format. Note: Policy tag manager generates unique taxonomy IDs. {{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Resource name of this taxonomy in URL format. Note: Policy tag manager generates unique taxonomy IDs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policytagcount_go">
 <a href="#policytagcount_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Tag<wbr>Count</a>
@@ -431,7 +431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name of this taxonomy in URL format. Note: Policy tag manager generates unique taxonomy IDs. {{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Resource name of this taxonomy in URL format. Note: Policy tag manager generates unique taxonomy IDs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policytagcount_nodejs">
 <a href="#policytagcount_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Tag<wbr>Count</a>
@@ -467,7 +467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name of this taxonomy in URL format. Note: Policy tag manager generates unique taxonomy IDs. {{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Resource name of this taxonomy in URL format. Note: Policy tag manager generates unique taxonomy IDs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policy_tag_count_python">
 <a href="#policy_tag_count_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>tag_<wbr>count</a>

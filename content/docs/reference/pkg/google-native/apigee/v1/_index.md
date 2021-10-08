@@ -15,6 +15,7 @@ Explore the resources and functions of the google-native.apigee/v1 module.
     <li><a href="api" title="Api"><span class="symbol resource"></span>Api</a></li>
     <li><a href="apiproduct" title="ApiProduct"><span class="symbol resource"></span>ApiProduct</a></li>
     <li><a href="app" title="App"><span class="symbol resource"></span>App</a></li>
+    <li><a href="archivedeployment" title="ArchiveDeployment"><span class="symbol resource"></span>ArchiveDeployment</a></li>
     <li><a href="canaryevaluation" title="CanaryEvaluation"><span class="symbol resource"></span>CanaryEvaluation</a></li>
     <li><a href="datacollector" title="DataCollector"><span class="symbol resource"></span>DataCollector</a></li>
     <li><a href="datastore" title="Datastore"><span class="symbol resource"></span>Datastore</a></li>
@@ -49,6 +50,7 @@ Explore the resources and functions of the google-native.apigee/v1 module.
     <li><a href="getapiproduct" title="GetApiProduct"><span class="symbol function"></span>GetApiProduct</a></li>
     <li><a href="getapicategory" title="GetApicategory"><span class="symbol function"></span>GetApicategory</a></li>
     <li><a href="getapp" title="GetApp"><span class="symbol function"></span>GetApp</a></li>
+    <li><a href="getarchivedeployment" title="GetArchiveDeployment"><span class="symbol function"></span>GetArchiveDeployment</a></li>
     <li><a href="getcanaryevaluation" title="GetCanaryEvaluation"><span class="symbol function"></span>GetCanaryEvaluation</a></li>
     <li><a href="getdatacollector" title="GetDataCollector"><span class="symbol function"></span>GetDataCollector</a></li>
     <li><a href="getdatastore" title="GetDatastore"><span class="symbol function"></span>GetDatastore</a></li>
@@ -84,6 +86,6 @@ Explore the resources and functions of the google-native.apigee/v1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.0</dd>
+	<dd>0.8.0</dd>
 </dl>
 

@@ -31,6 +31,7 @@ on Google Cloud even though it will be deleted from Pulumi state.
 <span class="k">def </span><span class="nx">Execution</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
               <span class="nx">argument</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">call_log_level</span><span class="p">:</span> <span class="nx">Optional[ExecutionCallLogLevel]</span> = None<span class="p">,</span>
               <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">workflow_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
@@ -179,6 +180,14 @@ The Execution resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}Input parameters of the execution represented as a JSON string. The size limit is 32KB. *Note*: If you are using the REST API directly to run your workflow, you must escape any JSON string value of `argument`. Example: `'{"argument":"{\"firstName\":\"FIRST\",\"lastName\":\"LAST\"}"}'`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="callloglevel_csharp">
+<a href="#callloglevel_csharp" style="color: inherit; text-decoration: inherit;">Call<wbr>Log<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#executioncallloglevel">Pulumi.<wbr>Google<wbr>Native.<wbr>Workflow<wbr>Executions.<wbr>V1Beta.<wbr>Execution<wbr>Call<wbr>Log<wbr>Level</a></span>
+    </dt>
+    <dd>{{% md %}}The call logging level associated to this execution.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -214,6 +223,14 @@ The Execution resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Input parameters of the execution represented as a JSON string. The size limit is 32KB. *Note*: If you are using the REST API directly to run your workflow, you must escape any JSON string value of `argument`. Example: `'{"argument":"{\"firstName\":\"FIRST\",\"lastName\":\"LAST\"}"}'`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="callloglevel_go">
+<a href="#callloglevel_go" style="color: inherit; text-decoration: inherit;">Call<wbr>Log<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#executioncallloglevel">Execution<wbr>Call<wbr>Log<wbr>Level</a></span>
+    </dt>
+    <dd>{{% md %}}The call logging level associated to this execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -251,6 +268,14 @@ The Execution resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}Input parameters of the execution represented as a JSON string. The size limit is 32KB. *Note*: If you are using the REST API directly to run your workflow, you must escape any JSON string value of `argument`. Example: `'{"argument":"{\"firstName\":\"FIRST\",\"lastName\":\"LAST\"}"}'`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="callloglevel_nodejs">
+<a href="#callloglevel_nodejs" style="color: inherit; text-decoration: inherit;">call<wbr>Log<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#executioncallloglevel">Execution<wbr>Call<wbr>Log<wbr>Level</a></span>
+    </dt>
+    <dd>{{% md %}}The call logging level associated to this execution.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -286,6 +311,14 @@ The Execution resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Input parameters of the execution represented as a JSON string. The size limit is 32KB. *Note*: If you are using the REST API directly to run your workflow, you must escape any JSON string value of `argument`. Example: `'{"argument":"{\"firstName\":\"FIRST\",\"lastName\":\"LAST\"}"}'`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="call_log_level_python">
+<a href="#call_log_level_python" style="color: inherit; text-decoration: inherit;">call_<wbr>log_<wbr>level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#executioncallloglevel">Execution<wbr>Call<wbr>Log<wbr>Level</a></span>
+    </dt>
+    <dd>{{% md %}}The call logging level associated to this execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -705,6 +738,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#stacktraceresponse">Stack<wbr>Trace<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Stack trace with detailed information of where error was generated.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="executioncallloglevel">Execution<wbr>Call<wbr>Log<wbr>Level</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Call<wbr>Log<wbr>Level<wbr>Unspecified</dt>
+    <dd>CALL_LOG_LEVEL_UNSPECIFIED{{% md %}}No call logging specified.{{% /md %}}</dd><dt>Log<wbr>All<wbr>Calls</dt>
+    <dd>LOG_ALL_CALLS{{% md %}}Log all call steps within workflows, all call returns, and all exceptions raised.{{% /md %}}</dd><dt>Log<wbr>Errors<wbr>Only</dt>
+    <dd>LOG_ERRORS_ONLY{{% md %}}Log only exceptions that are raised from call steps within workflows.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Execution<wbr>Call<wbr>Log<wbr>Level<wbr>Call<wbr>Log<wbr>Level<wbr>Unspecified</dt>
+    <dd>CALL_LOG_LEVEL_UNSPECIFIED{{% md %}}No call logging specified.{{% /md %}}</dd><dt>Execution<wbr>Call<wbr>Log<wbr>Level<wbr>Log<wbr>All<wbr>Calls</dt>
+    <dd>LOG_ALL_CALLS{{% md %}}Log all call steps within workflows, all call returns, and all exceptions raised.{{% /md %}}</dd><dt>Execution<wbr>Call<wbr>Log<wbr>Level<wbr>Log<wbr>Errors<wbr>Only</dt>
+    <dd>LOG_ERRORS_ONLY{{% md %}}Log only exceptions that are raised from call steps within workflows.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Call<wbr>Log<wbr>Level<wbr>Unspecified</dt>
+    <dd>CALL_LOG_LEVEL_UNSPECIFIED{{% md %}}No call logging specified.{{% /md %}}</dd><dt>Log<wbr>All<wbr>Calls</dt>
+    <dd>LOG_ALL_CALLS{{% md %}}Log all call steps within workflows, all call returns, and all exceptions raised.{{% /md %}}</dd><dt>Log<wbr>Errors<wbr>Only</dt>
+    <dd>LOG_ERRORS_ONLY{{% md %}}Log only exceptions that are raised from call steps within workflows.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CALL_LOG_LEVEL_UNSPECIFIED</dt>
+    <dd>CALL_LOG_LEVEL_UNSPECIFIED{{% md %}}No call logging specified.{{% /md %}}</dd><dt>LOG_ALL_CALLS</dt>
+    <dd>LOG_ALL_CALLS{{% md %}}Log all call steps within workflows, all call returns, and all exceptions raised.{{% /md %}}</dd><dt>LOG_ERRORS_ONLY</dt>
+    <dd>LOG_ERRORS_ONLY{{% md %}}Log only exceptions that are raised from call steps within workflows.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="positionresponse">Position<wbr>Response</h4>

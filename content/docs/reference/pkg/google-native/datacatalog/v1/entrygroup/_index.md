@@ -200,7 +200,7 @@ The EntryGroup resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name of the entry group in URL format. Note: The entry group itself and its child resources might not be stored in the location specified in its name. {{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The resource name of the entry group in URL format. Note: The entry group itself and its child resources might not be stored in the location specified in its name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -252,7 +252,7 @@ The EntryGroup resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name of the entry group in URL format. Note: The entry group itself and its child resources might not be stored in the location specified in its name. {{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The resource name of the entry group in URL format. Note: The entry group itself and its child resources might not be stored in the location specified in its name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -304,7 +304,7 @@ The EntryGroup resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name of the entry group in URL format. Note: The entry group itself and its child resources might not be stored in the location specified in its name. {{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The resource name of the entry group in URL format. Note: The entry group itself and its child resources might not be stored in the location specified in its name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -356,7 +356,7 @@ The EntryGroup resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource name of the entry group in URL format. Note: The entry group itself and its child resources might not be stored in the location specified in its name. {{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The resource name of the entry group in URL format. Note: The entry group itself and its child resources might not be stored in the location specified in its name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>

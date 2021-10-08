@@ -253,7 +253,7 @@ The OrganizationSecurityPolicy resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationsecuritypolicytype">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Organization<wbr>Security<wbr>Policy<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type indicates the intended use of the security policy. CLOUD_ARMOR policies apply to backend services. FIREWALL policies apply to organizations.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The type indicates the intended use of the security policy. CLOUD_ARMOR - Cloud Armor backend security policies can be configured to filter incoming HTTP requests targeting backend services. They filter requests before they hit the origin servers. CLOUD_ARMOR_EDGE - Cloud Armor edge security policies can be configured to filter incoming HTTP requests targeting backend services (including Cloud CDN-enabled) as well as backend buckets (Cloud Storage). They filter requests before the request is served from Google's cache.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -345,7 +345,7 @@ The OrganizationSecurityPolicy resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationsecuritypolicytype">Organization<wbr>Security<wbr>Policy<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type indicates the intended use of the security policy. CLOUD_ARMOR policies apply to backend services. FIREWALL policies apply to organizations.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The type indicates the intended use of the security policy. CLOUD_ARMOR - Cloud Armor backend security policies can be configured to filter incoming HTTP requests targeting backend services. They filter requests before they hit the origin servers. CLOUD_ARMOR_EDGE - Cloud Armor edge security policies can be configured to filter incoming HTTP requests targeting backend services (including Cloud CDN-enabled) as well as backend buckets (Cloud Storage). They filter requests before the request is served from Google's cache.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -437,7 +437,7 @@ The OrganizationSecurityPolicy resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationsecuritypolicytype">Organization<wbr>Security<wbr>Policy<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type indicates the intended use of the security policy. CLOUD_ARMOR policies apply to backend services. FIREWALL policies apply to organizations.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The type indicates the intended use of the security policy. CLOUD_ARMOR - Cloud Armor backend security policies can be configured to filter incoming HTTP requests targeting backend services. They filter requests before they hit the origin servers. CLOUD_ARMOR_EDGE - Cloud Armor edge security policies can be configured to filter incoming HTTP requests targeting backend services (including Cloud CDN-enabled) as well as backend buckets (Cloud Storage). They filter requests before the request is served from Google's cache.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -529,7 +529,7 @@ The OrganizationSecurityPolicy resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationsecuritypolicytype">Organization<wbr>Security<wbr>Policy<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type indicates the intended use of the security policy. CLOUD_ARMOR policies apply to backend services. FIREWALL policies apply to organizations.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The type indicates the intended use of the security policy. CLOUD_ARMOR - Cloud Armor backend security policies can be configured to filter incoming HTTP requests targeting backend services. They filter requests before they hit the origin servers. CLOUD_ARMOR_EDGE - Cloud Armor edge security policies can be configured to filter incoming HTTP requests targeting backend services (including Cloud CDN-enabled) as well as backend buckets (Cloud Storage). They filter requests before the request is served from Google's cache.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -3314,7 +3314,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitypolicyruleratelimitoptionsenforceonkey">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Enforce<wbr>On<wbr>Key</a></span>
     </dt>
-    <dd>{{% md %}}Determines the key to enforce the threshold_rps limit on. If key is "IP", each IP has this limit enforced separately, whereas "ALL_IPs" means a single limit is applied to all requests matching this rule.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Determines the key to enforce the rate_limit_threshold on. Possible values are: "ALL" -- A single rate limit threshold is applied to all the requests matching this rule. This is the default value if this field 'enforce_on_key' is not configured. "ALL_IPS" -- This definition, equivalent to "ALL", has been depprecated. "IP" -- The source IP address of the request is the key. Each IP has this limit enforced separately. "HTTP_HEADER" -- The value of the HTTP header whose name is configured under "enforce_on_key_name". The key value is truncated to the first 128 bytes of the header value. If no such header is present in the request, the key type defaults to "ALL". "XFF_IP" -- The first IP address (i.e. the originating client IP address) specified in the list of IPs under X-Forwarded-For HTTP header. If no such header is present or the value is not a valid IP, the key type defaults to "ALL".{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enforceonkeyname_csharp">
+<a href="#enforceonkeyname_csharp" style="color: inherit; text-decoration: inherit;">Enforce<wbr>On<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Rate limit key name applicable only for the following key types: HTTP_HEADER -- Name of the HTTP header whose value is taken as the key value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exceedaction_csharp">
 <a href="#exceedaction_csharp" style="color: inherit; text-decoration: inherit;">Exceed<wbr>Action</a>
@@ -3366,7 +3374,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitypolicyruleratelimitoptionsenforceonkey">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Enforce<wbr>On<wbr>Key</a></span>
     </dt>
-    <dd>{{% md %}}Determines the key to enforce the threshold_rps limit on. If key is "IP", each IP has this limit enforced separately, whereas "ALL_IPs" means a single limit is applied to all requests matching this rule.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Determines the key to enforce the rate_limit_threshold on. Possible values are: "ALL" -- A single rate limit threshold is applied to all the requests matching this rule. This is the default value if this field 'enforce_on_key' is not configured. "ALL_IPS" -- This definition, equivalent to "ALL", has been depprecated. "IP" -- The source IP address of the request is the key. Each IP has this limit enforced separately. "HTTP_HEADER" -- The value of the HTTP header whose name is configured under "enforce_on_key_name". The key value is truncated to the first 128 bytes of the header value. If no such header is present in the request, the key type defaults to "ALL". "XFF_IP" -- The first IP address (i.e. the originating client IP address) specified in the list of IPs under X-Forwarded-For HTTP header. If no such header is present or the value is not a valid IP, the key type defaults to "ALL".{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enforceonkeyname_go">
+<a href="#enforceonkeyname_go" style="color: inherit; text-decoration: inherit;">Enforce<wbr>On<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Rate limit key name applicable only for the following key types: HTTP_HEADER -- Name of the HTTP header whose value is taken as the key value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exceedaction_go">
 <a href="#exceedaction_go" style="color: inherit; text-decoration: inherit;">Exceed<wbr>Action</a>
@@ -3418,7 +3434,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitypolicyruleratelimitoptionsenforceonkey">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Enforce<wbr>On<wbr>Key</a></span>
     </dt>
-    <dd>{{% md %}}Determines the key to enforce the threshold_rps limit on. If key is "IP", each IP has this limit enforced separately, whereas "ALL_IPs" means a single limit is applied to all requests matching this rule.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Determines the key to enforce the rate_limit_threshold on. Possible values are: "ALL" -- A single rate limit threshold is applied to all the requests matching this rule. This is the default value if this field 'enforce_on_key' is not configured. "ALL_IPS" -- This definition, equivalent to "ALL", has been depprecated. "IP" -- The source IP address of the request is the key. Each IP has this limit enforced separately. "HTTP_HEADER" -- The value of the HTTP header whose name is configured under "enforce_on_key_name". The key value is truncated to the first 128 bytes of the header value. If no such header is present in the request, the key type defaults to "ALL". "XFF_IP" -- The first IP address (i.e. the originating client IP address) specified in the list of IPs under X-Forwarded-For HTTP header. If no such header is present or the value is not a valid IP, the key type defaults to "ALL".{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enforceonkeyname_nodejs">
+<a href="#enforceonkeyname_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>On<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Rate limit key name applicable only for the following key types: HTTP_HEADER -- Name of the HTTP header whose value is taken as the key value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exceedaction_nodejs">
 <a href="#exceedaction_nodejs" style="color: inherit; text-decoration: inherit;">exceed<wbr>Action</a>
@@ -3470,7 +3494,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitypolicyruleratelimitoptionsenforceonkey">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Enforce<wbr>On<wbr>Key</a></span>
     </dt>
-    <dd>{{% md %}}Determines the key to enforce the threshold_rps limit on. If key is "IP", each IP has this limit enforced separately, whereas "ALL_IPs" means a single limit is applied to all requests matching this rule.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Determines the key to enforce the rate_limit_threshold on. Possible values are: "ALL" -- A single rate limit threshold is applied to all the requests matching this rule. This is the default value if this field 'enforce_on_key' is not configured. "ALL_IPS" -- This definition, equivalent to "ALL", has been depprecated. "IP" -- The source IP address of the request is the key. Each IP has this limit enforced separately. "HTTP_HEADER" -- The value of the HTTP header whose name is configured under "enforce_on_key_name". The key value is truncated to the first 128 bytes of the header value. If no such header is present in the request, the key type defaults to "ALL". "XFF_IP" -- The first IP address (i.e. the originating client IP address) specified in the list of IPs under X-Forwarded-For HTTP header. If no such header is present or the value is not a valid IP, the key type defaults to "ALL".{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enforce_on_key_name_python">
+<a href="#enforce_on_key_name_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>on_<wbr>key_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Rate limit key name applicable only for the following key types: HTTP_HEADER -- Name of the HTTP header whose value is taken as the key value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exceed_action_python">
 <a href="#exceed_action_python" style="color: inherit; text-decoration: inherit;">exceed_<wbr>action</a>
@@ -3492,27 +3524,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="securitypolicyruleratelimitoptionsenforceonkey">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Enforce<wbr>On<wbr>Key</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular"><dt>All<wbr>Ips</dt>
-    <dd>ALL_IPS</dd><dt>Ip</dt>
-    <dd>IP</dd></dl>
+<dl class="tabular"><dt>All</dt>
+    <dd>ALL</dd><dt>All<wbr>Ips</dt>
+    <dd>ALL_IPS</dd><dt>Http<wbr>Header</dt>
+    <dd>HTTP_HEADER</dd><dt>Ip</dt>
+    <dd>IP</dd><dt>Xff<wbr>Ip</dt>
+    <dd>XFF_IP</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular"><dt>Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Enforce<wbr>On<wbr>Key<wbr>All<wbr>Ips</dt>
-    <dd>ALL_IPS</dd><dt>Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Enforce<wbr>On<wbr>Key<wbr>Ip</dt>
-    <dd>IP</dd></dl>
+<dl class="tabular"><dt>Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Enforce<wbr>On<wbr>Key<wbr>All</dt>
+    <dd>ALL</dd><dt>Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Enforce<wbr>On<wbr>Key<wbr>All<wbr>Ips</dt>
+    <dd>ALL_IPS</dd><dt>Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Enforce<wbr>On<wbr>Key<wbr>Http<wbr>Header</dt>
+    <dd>HTTP_HEADER</dd><dt>Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Enforce<wbr>On<wbr>Key<wbr>Ip</dt>
+    <dd>IP</dd><dt>Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Enforce<wbr>On<wbr>Key<wbr>Xff<wbr>Ip</dt>
+    <dd>XFF_IP</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular"><dt>All<wbr>Ips</dt>
-    <dd>ALL_IPS</dd><dt>Ip</dt>
-    <dd>IP</dd></dl>
+<dl class="tabular"><dt>All</dt>
+    <dd>ALL</dd><dt>All<wbr>Ips</dt>
+    <dd>ALL_IPS</dd><dt>Http<wbr>Header</dt>
+    <dd>HTTP_HEADER</dd><dt>Ip</dt>
+    <dd>IP</dd><dt>Xff<wbr>Ip</dt>
+    <dd>XFF_IP</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular"><dt>ALL_IPS</dt>
-    <dd>ALL_IPS</dd><dt>IP</dt>
-    <dd>IP</dd></dl>
+<dl class="tabular"><dt>ALL</dt>
+    <dd>ALL</dd><dt>ALL_IPS</dt>
+    <dd>ALL_IPS</dd><dt>HTTP_HEADER</dt>
+    <dd>HTTP_HEADER</dd><dt>IP</dt>
+    <dd>IP</dd><dt>XFF_IP</dt>
+    <dd>XFF_IP</dd></dl>
 {{% /choosable %}}
 
 <h4 id="securitypolicyruleratelimitoptionsresponse">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Response</h4>
@@ -3550,7 +3594,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Determines the key to enforce the threshold_rps limit on. If key is "IP", each IP has this limit enforced separately, whereas "ALL_IPs" means a single limit is applied to all requests matching this rule.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Determines the key to enforce the rate_limit_threshold on. Possible values are: "ALL" -- A single rate limit threshold is applied to all the requests matching this rule. This is the default value if this field 'enforce_on_key' is not configured. "ALL_IPS" -- This definition, equivalent to "ALL", has been depprecated. "IP" -- The source IP address of the request is the key. Each IP has this limit enforced separately. "HTTP_HEADER" -- The value of the HTTP header whose name is configured under "enforce_on_key_name". The key value is truncated to the first 128 bytes of the header value. If no such header is present in the request, the key type defaults to "ALL". "XFF_IP" -- The first IP address (i.e. the originating client IP address) specified in the list of IPs under X-Forwarded-For HTTP header. If no such header is present or the value is not a valid IP, the key type defaults to "ALL".{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enforceonkeyname_csharp">
+<a href="#enforceonkeyname_csharp" style="color: inherit; text-decoration: inherit;">Enforce<wbr>On<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Rate limit key name applicable only for the following key types: HTTP_HEADER -- Name of the HTTP header whose value is taken as the key value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="exceedaction_csharp">
 <a href="#exceedaction_csharp" style="color: inherit; text-decoration: inherit;">Exceed<wbr>Action</a>
@@ -3602,7 +3654,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Determines the key to enforce the threshold_rps limit on. If key is "IP", each IP has this limit enforced separately, whereas "ALL_IPs" means a single limit is applied to all requests matching this rule.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Determines the key to enforce the rate_limit_threshold on. Possible values are: "ALL" -- A single rate limit threshold is applied to all the requests matching this rule. This is the default value if this field 'enforce_on_key' is not configured. "ALL_IPS" -- This definition, equivalent to "ALL", has been depprecated. "IP" -- The source IP address of the request is the key. Each IP has this limit enforced separately. "HTTP_HEADER" -- The value of the HTTP header whose name is configured under "enforce_on_key_name". The key value is truncated to the first 128 bytes of the header value. If no such header is present in the request, the key type defaults to "ALL". "XFF_IP" -- The first IP address (i.e. the originating client IP address) specified in the list of IPs under X-Forwarded-For HTTP header. If no such header is present or the value is not a valid IP, the key type defaults to "ALL".{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enforceonkeyname_go">
+<a href="#enforceonkeyname_go" style="color: inherit; text-decoration: inherit;">Enforce<wbr>On<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Rate limit key name applicable only for the following key types: HTTP_HEADER -- Name of the HTTP header whose value is taken as the key value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="exceedaction_go">
 <a href="#exceedaction_go" style="color: inherit; text-decoration: inherit;">Exceed<wbr>Action</a>
@@ -3654,7 +3714,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Determines the key to enforce the threshold_rps limit on. If key is "IP", each IP has this limit enforced separately, whereas "ALL_IPs" means a single limit is applied to all requests matching this rule.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Determines the key to enforce the rate_limit_threshold on. Possible values are: "ALL" -- A single rate limit threshold is applied to all the requests matching this rule. This is the default value if this field 'enforce_on_key' is not configured. "ALL_IPS" -- This definition, equivalent to "ALL", has been depprecated. "IP" -- The source IP address of the request is the key. Each IP has this limit enforced separately. "HTTP_HEADER" -- The value of the HTTP header whose name is configured under "enforce_on_key_name". The key value is truncated to the first 128 bytes of the header value. If no such header is present in the request, the key type defaults to "ALL". "XFF_IP" -- The first IP address (i.e. the originating client IP address) specified in the list of IPs under X-Forwarded-For HTTP header. If no such header is present or the value is not a valid IP, the key type defaults to "ALL".{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enforceonkeyname_nodejs">
+<a href="#enforceonkeyname_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>On<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Rate limit key name applicable only for the following key types: HTTP_HEADER -- Name of the HTTP header whose value is taken as the key value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="exceedaction_nodejs">
 <a href="#exceedaction_nodejs" style="color: inherit; text-decoration: inherit;">exceed<wbr>Action</a>
@@ -3706,7 +3774,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Determines the key to enforce the threshold_rps limit on. If key is "IP", each IP has this limit enforced separately, whereas "ALL_IPs" means a single limit is applied to all requests matching this rule.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Determines the key to enforce the rate_limit_threshold on. Possible values are: "ALL" -- A single rate limit threshold is applied to all the requests matching this rule. This is the default value if this field 'enforce_on_key' is not configured. "ALL_IPS" -- This definition, equivalent to "ALL", has been depprecated. "IP" -- The source IP address of the request is the key. Each IP has this limit enforced separately. "HTTP_HEADER" -- The value of the HTTP header whose name is configured under "enforce_on_key_name". The key value is truncated to the first 128 bytes of the header value. If no such header is present in the request, the key type defaults to "ALL". "XFF_IP" -- The first IP address (i.e. the originating client IP address) specified in the list of IPs under X-Forwarded-For HTTP header. If no such header is present or the value is not a valid IP, the key type defaults to "ALL".{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enforce_on_key_name_python">
+<a href="#enforce_on_key_name_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>on_<wbr>key_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Rate limit key name applicable only for the following key types: HTTP_HEADER -- Name of the HTTP header whose value is taken as the key value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="exceed_action_python">
 <a href="#exceed_action_python" style="color: inherit; text-decoration: inherit;">exceed_<wbr>action</a>

@@ -216,6 +216,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Labels with user-defined metadata. This field may contain up to 64 entries. Label keys and values may be no longer than 63 characters. Label keys must begin with a lowercase letter and may only contain lowercase letters, numeric characters, underscores, and dashes.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="mavenconfig_csharp">
+<a href="#mavenconfig_csharp" style="color: inherit; text-decoration: inherit;">Maven<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mavenrepositoryconfigresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Artifact<wbr>Registry.<wbr>V1Beta2.<wbr>Outputs.<wbr>Maven<wbr>Repository<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Maven repository config contains repository level configuration for the repositories of maven type.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -275,6 +283,14 @@ The following output properties are available:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Labels with user-defined metadata. This field may contain up to 64 entries. Label keys and values may be no longer than 63 characters. Label keys must begin with a lowercase letter and may only contain lowercase letters, numeric characters, underscores, and dashes.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="mavenconfig_go">
+<a href="#mavenconfig_go" style="color: inherit; text-decoration: inherit;">Maven<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mavenrepositoryconfigresponse">Maven<wbr>Repository<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Maven repository config contains repository level configuration for the repositories of maven type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -336,6 +352,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Labels with user-defined metadata. This field may contain up to 64 entries. Label keys and values may be no longer than 63 characters. Label keys must begin with a lowercase letter and may only contain lowercase letters, numeric characters, underscores, and dashes.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="mavenconfig_nodejs">
+<a href="#mavenconfig_nodejs" style="color: inherit; text-decoration: inherit;">maven<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mavenrepositoryconfigresponse">Maven<wbr>Repository<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Maven repository config contains repository level configuration for the repositories of maven type.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -396,6 +420,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Labels with user-defined metadata. This field may contain up to 64 entries. Label keys and values may be no longer than 63 characters. Label keys must begin with a lowercase letter and may only contain lowercase letters, numeric characters, underscores, and dashes.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="maven_config_python">
+<a href="#maven_config_python" style="color: inherit; text-decoration: inherit;">maven_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mavenrepositoryconfigresponse">Maven<wbr>Repository<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Maven repository config contains repository level configuration for the repositories of maven type.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -411,6 +443,96 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time when the repository was last updated.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+
+
+
+## Supporting Types
+
+
+<h4 id="mavenrepositoryconfigresponse">Maven<wbr>Repository<wbr>Config<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="allowsnapshotoverwrites_csharp">
+<a href="#allowsnapshotoverwrites_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Snapshot<wbr>Overwrites</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The repository with this flag will allow publishing the same snapshot versions.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="versionpolicy_csharp">
+<a href="#versionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Version policy defines the versions that the registry will accept.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="allowsnapshotoverwrites_go">
+<a href="#allowsnapshotoverwrites_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Snapshot<wbr>Overwrites</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The repository with this flag will allow publishing the same snapshot versions.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="versionpolicy_go">
+<a href="#versionpolicy_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Version policy defines the versions that the registry will accept.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="allowsnapshotoverwrites_nodejs">
+<a href="#allowsnapshotoverwrites_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Snapshot<wbr>Overwrites</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}The repository with this flag will allow publishing the same snapshot versions.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="versionpolicy_nodejs">
+<a href="#versionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Version policy defines the versions that the registry will accept.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="allow_snapshot_overwrites_python">
+<a href="#allow_snapshot_overwrites_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>snapshot_<wbr>overwrites</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The repository with this flag will allow publishing the same snapshot versions.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="version_policy_python">
+<a href="#version_policy_python" style="color: inherit; text-decoration: inherit;">version_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Version policy defines the versions that the registry will accept.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

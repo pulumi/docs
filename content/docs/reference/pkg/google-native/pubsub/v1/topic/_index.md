@@ -29,6 +29,7 @@ Creates the given topic with the given name. See the [resource name rules] (http
           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
           <span class="nx">kms_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+          <span class="nx">message_retention_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">message_storage_policy</span><span class="p">:</span> <span class="nx">Optional[MessageStoragePolicyArgs]</span> = None<span class="p">,</span>
           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -188,6 +189,14 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}See [Creating and managing labels] (https://cloud.google.com/pubsub/docs/labels).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="messageretentionduration_csharp">
+<a href="#messageretentionduration_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Retention<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates the minimum duration to retain a message after it is published to the topic. If this field is set, messages published to the topic in the last `message_retention_duration` are always available to subscribers. For instance, it allows any attached subscription to [seek to a timestamp](https://cloud.google.com/pubsub/docs/replay-overview#seek_to_a_time) that is up to `message_retention_duration` in the past. If this field is not set, message retention is controlled by settings on individual subscriptions. Cannot be more than 7 days or less than 10 minutes.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="messagestoragepolicy_csharp">
 <a href="#messagestoragepolicy_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Storage<wbr>Policy</a>
 </span>
@@ -255,6 +264,14 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}See [Creating and managing labels] (https://cloud.google.com/pubsub/docs/labels).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="messageretentionduration_go">
+<a href="#messageretentionduration_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Retention<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates the minimum duration to retain a message after it is published to the topic. If this field is set, messages published to the topic in the last `message_retention_duration` are always available to subscribers. For instance, it allows any attached subscription to [seek to a timestamp](https://cloud.google.com/pubsub/docs/replay-overview#seek_to_a_time) that is up to `message_retention_duration` in the past. If this field is not set, message retention is controlled by settings on individual subscriptions. Cannot be more than 7 days or less than 10 minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagestoragepolicy_go">
 <a href="#messagestoragepolicy_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Storage<wbr>Policy</a>
@@ -324,6 +341,14 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}See [Creating and managing labels] (https://cloud.google.com/pubsub/docs/labels).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="messageretentionduration_nodejs">
+<a href="#messageretentionduration_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Retention<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates the minimum duration to retain a message after it is published to the topic. If this field is set, messages published to the topic in the last `message_retention_duration` are always available to subscribers. For instance, it allows any attached subscription to [seek to a timestamp](https://cloud.google.com/pubsub/docs/replay-overview#seek_to_a_time) that is up to `message_retention_duration` in the past. If this field is not set, message retention is controlled by settings on individual subscriptions. Cannot be more than 7 days or less than 10 minutes.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="messagestoragepolicy_nodejs">
 <a href="#messagestoragepolicy_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Storage<wbr>Policy</a>
 </span>
@@ -391,6 +416,14 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}See [Creating and managing labels] (https://cloud.google.com/pubsub/docs/labels).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="message_retention_duration_python">
+<a href="#message_retention_duration_python" style="color: inherit; text-decoration: inherit;">message_<wbr>retention_<wbr>duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Indicates the minimum duration to retain a message after it is published to the topic. If this field is set, messages published to the topic in the last `message_retention_duration` are always available to subscribers. For instance, it allows any attached subscription to [seek to a timestamp](https://cloud.google.com/pubsub/docs/replay-overview#seek_to_a_time) that is up to `message_retention_duration` in the past. If this field is not set, message retention is controlled by settings on individual subscriptions. Cannot be more than 7 days or less than 10 minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_storage_policy_python">
 <a href="#message_storage_policy_python" style="color: inherit; text-decoration: inherit;">message_<wbr>storage_<wbr>policy</a>

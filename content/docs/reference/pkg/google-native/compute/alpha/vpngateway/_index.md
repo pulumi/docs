@@ -34,6 +34,7 @@ Creates a VPN gateway in the specified project and region using the data include
                <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">stack_type</span><span class="p">:</span> <span class="nx">Optional[VpnGatewayStackType]</span> = None<span class="p">,</span>
                <span class="nx">vpn_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnGatewayVpnGatewayInterfaceArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">VpnGateway</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -220,6 +221,14 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="stacktype_csharp">
+<a href="#stacktype_csharp" style="color: inherit; text-decoration: inherit;">Stack<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpngatewaystacktype">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Vpn<wbr>Gateway<wbr>Stack<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The stack type for this VPN gateway to identify the IP protocols that are enabled. If not specified, IPV4_ONLY will be used.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="vpninterfaces_csharp">
 <a href="#vpninterfaces_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Interfaces</a>
 </span>
@@ -287,6 +296,14 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stacktype_go">
+<a href="#stacktype_go" style="color: inherit; text-decoration: inherit;">Stack<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpngatewaystacktype">Vpn<wbr>Gateway<wbr>Stack<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The stack type for this VPN gateway to identify the IP protocols that are enabled. If not specified, IPV4_ONLY will be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpninterfaces_go">
 <a href="#vpninterfaces_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Interfaces</a>
@@ -356,6 +373,14 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="stacktype_nodejs">
+<a href="#stacktype_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpngatewaystacktype">Vpn<wbr>Gateway<wbr>Stack<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The stack type for this VPN gateway to identify the IP protocols that are enabled. If not specified, IPV4_ONLY will be used.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="vpninterfaces_nodejs">
 <a href="#vpninterfaces_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Interfaces</a>
 </span>
@@ -423,6 +448,14 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stack_type_python">
+<a href="#stack_type_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpngatewaystacktype">Vpn<wbr>Gateway<wbr>Stack<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The stack type for this VPN gateway to identify the IP protocols that are enabled. If not specified, IPV4_ONLY will be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpn_interfaces_python">
 <a href="#vpn_interfaces_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>interfaces</a>
@@ -625,6 +658,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="vpngatewaystacktype">Vpn<wbr>Gateway<wbr>Stack<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Ipv4Ipv6</dt>
+    <dd>IPV4_IPV6{{% md %}}Enable VPN gateway with both IPv4 and IPv6 protocols.{{% /md %}}</dd><dt>Ipv4Only</dt>
+    <dd>IPV4_ONLY{{% md %}}Enable VPN gateway with only IPv4 protocol.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Vpn<wbr>Gateway<wbr>Stack<wbr>Type<wbr>Ipv4Ipv6</dt>
+    <dd>IPV4_IPV6{{% md %}}Enable VPN gateway with both IPv4 and IPv6 protocols.{{% /md %}}</dd><dt>Vpn<wbr>Gateway<wbr>Stack<wbr>Type<wbr>Ipv4Only</dt>
+    <dd>IPV4_ONLY{{% md %}}Enable VPN gateway with only IPv4 protocol.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Ipv4Ipv6</dt>
+    <dd>IPV4_IPV6{{% md %}}Enable VPN gateway with both IPv4 and IPv6 protocols.{{% /md %}}</dd><dt>Ipv4Only</dt>
+    <dd>IPV4_ONLY{{% md %}}Enable VPN gateway with only IPv4 protocol.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>IPV4_IPV6</dt>
+    <dd>IPV4_IPV6{{% md %}}Enable VPN gateway with both IPv4 and IPv6 protocols.{{% /md %}}</dd><dt>IPV4_ONLY</dt>
+    <dd>IPV4_ONLY{{% md %}}Enable VPN gateway with only IPv4 protocol.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="vpngatewayvpngatewayinterface">Vpn<wbr>Gateway<wbr>Vpn<wbr>Gateway<wbr>Interface</h4>
 

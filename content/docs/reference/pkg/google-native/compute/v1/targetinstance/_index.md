@@ -31,6 +31,7 @@ Creates a TargetInstance resource in the specified project and zone using the da
                    <span class="nx">instance</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">nat_policy</span><span class="p">:</span> <span class="nx">Optional[TargetInstanceNatPolicy]</span> = None<span class="p">,</span>
+                   <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
@@ -195,6 +196,14 @@ The TargetInstance resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}NAT option controlling how IPs are NAT'ed to the instance. Currently only NO_NAT (default value) is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="network_csharp">
+<a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL of the network this target instance uses to forward traffic. If not specified, the traffic will be forwarded to the network that the default network interface belongs to.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -254,6 +263,14 @@ The TargetInstance resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#targetinstancenatpolicy">Target<wbr>Instance<wbr>Nat<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}NAT option controlling how IPs are NAT'ed to the instance. Currently only NO_NAT (default value) is supported.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="network_go">
+<a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL of the network this target instance uses to forward traffic. If not specified, the traffic will be forwarded to the network that the default network interface belongs to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -315,6 +332,14 @@ The TargetInstance resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}NAT option controlling how IPs are NAT'ed to the instance. Currently only NO_NAT (default value) is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="network_nodejs">
+<a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL of the network this target instance uses to forward traffic. If not specified, the traffic will be forwarded to the network that the default network interface belongs to.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -374,6 +399,14 @@ The TargetInstance resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#targetinstancenatpolicy">Target<wbr>Instance<wbr>Nat<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}NAT option controlling how IPs are NAT'ed to the instance. Currently only NO_NAT (default value) is supported.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="network_python">
+<a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The URL of the network this target instance uses to forward traffic. If not specified, the traffic will be forwarded to the network that the default network interface belongs to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>

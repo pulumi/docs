@@ -304,7 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The root cause of an import failure. Only present if state is IMPORT_FAILED.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The root cause of the most recent import failure. Only present if state is IMPORT_FAILED.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="importjob_csharp">
 <a href="#importjob_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Job</a>
@@ -312,7 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the ImportJob used to import this CryptoKeyVersion. Only present if the underlying key material was imported.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The name of the ImportJob used in the most recent import of this CryptoKeyVersion. Only present if the underlying key material was imported.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="importtime_csharp">
 <a href="#importtime_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Time</a>
@@ -320,7 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time at which this CryptoKeyVersion's key material was imported.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The time at which this CryptoKeyVersion's key material was most recently imported.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -337,6 +337,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ProtectionLevel describing how crypto operations are performed with this CryptoKeyVersion.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="reimporteligible_csharp">
+<a href="#reimporteligible_csharp" style="color: inherit; text-decoration: inherit;">Reimport<wbr>Eligible</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not this key version is eligible for reimport, by being specified as a target in ImportCryptoKeyVersionRequest.crypto_key_version.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -412,7 +420,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The root cause of an import failure. Only present if state is IMPORT_FAILED.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The root cause of the most recent import failure. Only present if state is IMPORT_FAILED.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="importjob_go">
 <a href="#importjob_go" style="color: inherit; text-decoration: inherit;">Import<wbr>Job</a>
@@ -420,7 +428,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the ImportJob used to import this CryptoKeyVersion. Only present if the underlying key material was imported.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The name of the ImportJob used in the most recent import of this CryptoKeyVersion. Only present if the underlying key material was imported.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="importtime_go">
 <a href="#importtime_go" style="color: inherit; text-decoration: inherit;">Import<wbr>Time</a>
@@ -428,7 +436,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time at which this CryptoKeyVersion's key material was imported.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The time at which this CryptoKeyVersion's key material was most recently imported.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -445,6 +453,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ProtectionLevel describing how crypto operations are performed with this CryptoKeyVersion.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="reimporteligible_go">
+<a href="#reimporteligible_go" style="color: inherit; text-decoration: inherit;">Reimport<wbr>Eligible</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not this key version is eligible for reimport, by being specified as a target in ImportCryptoKeyVersionRequest.crypto_key_version.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -520,7 +536,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The root cause of an import failure. Only present if state is IMPORT_FAILED.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The root cause of the most recent import failure. Only present if state is IMPORT_FAILED.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="importjob_nodejs">
 <a href="#importjob_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Job</a>
@@ -528,7 +544,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the ImportJob used to import this CryptoKeyVersion. Only present if the underlying key material was imported.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The name of the ImportJob used in the most recent import of this CryptoKeyVersion. Only present if the underlying key material was imported.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="importtime_nodejs">
 <a href="#importtime_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Time</a>
@@ -536,7 +552,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time at which this CryptoKeyVersion's key material was imported.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The time at which this CryptoKeyVersion's key material was most recently imported.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -553,6 +569,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ProtectionLevel describing how crypto operations are performed with this CryptoKeyVersion.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="reimporteligible_nodejs">
+<a href="#reimporteligible_nodejs" style="color: inherit; text-decoration: inherit;">reimport<wbr>Eligible</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether or not this key version is eligible for reimport, by being specified as a target in ImportCryptoKeyVersionRequest.crypto_key_version.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -628,7 +652,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The root cause of an import failure. Only present if state is IMPORT_FAILED.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The root cause of the most recent import failure. Only present if state is IMPORT_FAILED.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="import_job_python">
 <a href="#import_job_python" style="color: inherit; text-decoration: inherit;">import_<wbr>job</a>
@@ -636,7 +660,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the ImportJob used to import this CryptoKeyVersion. Only present if the underlying key material was imported.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The name of the ImportJob used in the most recent import of this CryptoKeyVersion. Only present if the underlying key material was imported.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="import_time_python">
 <a href="#import_time_python" style="color: inherit; text-decoration: inherit;">import_<wbr>time</a>
@@ -644,7 +668,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time at which this CryptoKeyVersion's key material was imported.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The time at which this CryptoKeyVersion's key material was most recently imported.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -661,6 +685,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ProtectionLevel describing how crypto operations are performed with this CryptoKeyVersion.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="reimport_eligible_python">
+<a href="#reimport_eligible_python" style="color: inherit; text-decoration: inherit;">reimport_<wbr>eligible</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not this key version is eligible for reimport, by being specified as a target in ImportCryptoKeyVersionRequest.crypto_key_version.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>

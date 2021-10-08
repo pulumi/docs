@@ -1246,6 +1246,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Optional] The description for the destination table. This will only be used if the destination table is newly created. If the table already exists and a value different than the current description is provided, the job will fail.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="expirationtimestampmillis_csharp">
+<a href="#expirationtimestampmillis_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Timestamp<wbr>Millis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Optional] The expiration timestamp for the destination table. If this field is set: For a new table, it will set the table's expiration time (even if there is a dataset level default table expiration time). For an existing table, it will update the table's expiration time. If this field is not set: For a new table, if dataset level default table expiration time is present, that will be applied. For an existing table, no change is made to the table's expiration time. Additionally this field is only applied when data is written to an empty table (WRITE_EMPTY) or data is overwritten to a table (WRITE_TRUNCATE).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="friendlyname_csharp">
 <a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
 </span>
@@ -1273,6 +1281,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] The description for the destination table. This will only be used if the destination table is newly created. If the table already exists and a value different than the current description is provided, the job will fail.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expirationtimestampmillis_go">
+<a href="#expirationtimestampmillis_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Timestamp<wbr>Millis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Optional] The expiration timestamp for the destination table. If this field is set: For a new table, it will set the table's expiration time (even if there is a dataset level default table expiration time). For an existing table, it will update the table's expiration time. If this field is not set: For a new table, if dataset level default table expiration time is present, that will be applied. For an existing table, no change is made to the table's expiration time. Additionally this field is only applied when data is written to an empty table (WRITE_EMPTY) or data is overwritten to a table (WRITE_TRUNCATE).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="friendlyname_go">
 <a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
@@ -1302,6 +1318,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Optional] The description for the destination table. This will only be used if the destination table is newly created. If the table already exists and a value different than the current description is provided, the job will fail.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="expirationtimestampmillis_nodejs">
+<a href="#expirationtimestampmillis_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Timestamp<wbr>Millis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Optional] The expiration timestamp for the destination table. If this field is set: For a new table, it will set the table's expiration time (even if there is a dataset level default table expiration time). For an existing table, it will update the table's expiration time. If this field is not set: For a new table, if dataset level default table expiration time is present, that will be applied. For an existing table, no change is made to the table's expiration time. Additionally this field is only applied when data is written to an empty table (WRITE_EMPTY) or data is overwritten to a table (WRITE_TRUNCATE).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="friendlyname_nodejs">
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
@@ -1329,6 +1353,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] The description for the destination table. This will only be used if the destination table is newly created. If the table already exists and a value different than the current description is provided, the job will fail.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expiration_timestamp_millis_python">
+<a href="#expiration_timestamp_millis_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>timestamp_<wbr>millis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Optional] The expiration timestamp for the destination table. If this field is set: For a new table, it will set the table's expiration time (even if there is a dataset level default table expiration time). For an existing table, it will update the table's expiration time. If this field is not set: For a new table, if dataset level default table expiration time is present, that will be applied. For an existing table, no change is made to the table's expiration time. Additionally this field is only applied when data is written to an empty table (WRITE_EMPTY) or data is overwritten to a table (WRITE_TRUNCATE).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="friendly_name_python">
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
@@ -1360,6 +1392,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Optional] The description for the destination table. This will only be used if the destination table is newly created. If the table already exists and a value different than the current description is provided, the job will fail.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="expirationtimestampmillis_csharp">
+<a href="#expirationtimestampmillis_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Timestamp<wbr>Millis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Optional] The expiration timestamp for the destination table. If this field is set: For a new table, it will set the table's expiration time (even if there is a dataset level default table expiration time). For an existing table, it will update the table's expiration time. If this field is not set: For a new table, if dataset level default table expiration time is present, that will be applied. For an existing table, no change is made to the table's expiration time. Additionally this field is only applied when data is written to an empty table (WRITE_EMPTY) or data is overwritten to a table (WRITE_TRUNCATE).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="friendlyname_csharp">
 <a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
 </span>
@@ -1387,6 +1427,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] The description for the destination table. This will only be used if the destination table is newly created. If the table already exists and a value different than the current description is provided, the job will fail.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="expirationtimestampmillis_go">
+<a href="#expirationtimestampmillis_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Timestamp<wbr>Millis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Optional] The expiration timestamp for the destination table. If this field is set: For a new table, it will set the table's expiration time (even if there is a dataset level default table expiration time). For an existing table, it will update the table's expiration time. If this field is not set: For a new table, if dataset level default table expiration time is present, that will be applied. For an existing table, no change is made to the table's expiration time. Additionally this field is only applied when data is written to an empty table (WRITE_EMPTY) or data is overwritten to a table (WRITE_TRUNCATE).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="friendlyname_go">
 <a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
@@ -1416,6 +1464,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Optional] The description for the destination table. This will only be used if the destination table is newly created. If the table already exists and a value different than the current description is provided, the job will fail.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="expirationtimestampmillis_nodejs">
+<a href="#expirationtimestampmillis_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Timestamp<wbr>Millis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Optional] The expiration timestamp for the destination table. If this field is set: For a new table, it will set the table's expiration time (even if there is a dataset level default table expiration time). For an existing table, it will update the table's expiration time. If this field is not set: For a new table, if dataset level default table expiration time is present, that will be applied. For an existing table, no change is made to the table's expiration time. Additionally this field is only applied when data is written to an empty table (WRITE_EMPTY) or data is overwritten to a table (WRITE_TRUNCATE).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="friendlyname_nodejs">
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
@@ -1443,6 +1499,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] The description for the destination table. This will only be used if the destination table is newly created. If the table already exists and a value different than the current description is provided, the job will fail.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="expiration_timestamp_millis_python">
+<a href="#expiration_timestamp_millis_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>timestamp_<wbr>millis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Optional] The expiration timestamp for the destination table. If this field is set: For a new table, it will set the table's expiration time (even if there is a dataset level default table expiration time). For an existing table, it will update the table's expiration time. If this field is not set: For a new table, if dataset level default table expiration time is present, that will be applied. For an existing table, no change is made to the table's expiration time. Additionally this field is only applied when data is written to an empty table (WRITE_EMPTY) or data is overwritten to a table (WRITE_TRUNCATE).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="friendly_name_python">
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
@@ -4150,7 +4214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}[Optional] If sourceFormat is set to "AVRO", indicates whether to enable interpreting logical types into their corresponding types (ie. TIMESTAMP), instead of only using their raw types (ie. INTEGER).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}[Optional] If sourceFormat is set to "AVRO", indicates whether to interpret logical types as the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for example, INTEGER).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writedisposition_csharp">
 <a href="#writedisposition_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Disposition</a>
@@ -4378,7 +4442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}[Optional] If sourceFormat is set to "AVRO", indicates whether to enable interpreting logical types into their corresponding types (ie. TIMESTAMP), instead of only using their raw types (ie. INTEGER).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}[Optional] If sourceFormat is set to "AVRO", indicates whether to interpret logical types as the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for example, INTEGER).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writedisposition_go">
 <a href="#writedisposition_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Disposition</a>
@@ -4606,7 +4670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}[Optional] If sourceFormat is set to "AVRO", indicates whether to enable interpreting logical types into their corresponding types (ie. TIMESTAMP), instead of only using their raw types (ie. INTEGER).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}[Optional] If sourceFormat is set to "AVRO", indicates whether to interpret logical types as the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for example, INTEGER).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writedisposition_nodejs">
 <a href="#writedisposition_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Disposition</a>
@@ -4834,7 +4898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}[Optional] If sourceFormat is set to "AVRO", indicates whether to enable interpreting logical types into their corresponding types (ie. TIMESTAMP), instead of only using their raw types (ie. INTEGER).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}[Optional] If sourceFormat is set to "AVRO", indicates whether to interpret logical types as the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for example, INTEGER).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="write_disposition_python">
 <a href="#write_disposition_python" style="color: inherit; text-decoration: inherit;">write_<wbr>disposition</a>
@@ -5064,7 +5128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}[Optional] If sourceFormat is set to "AVRO", indicates whether to enable interpreting logical types into their corresponding types (ie. TIMESTAMP), instead of only using their raw types (ie. INTEGER).{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}[Optional] If sourceFormat is set to "AVRO", indicates whether to interpret logical types as the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for example, INTEGER).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="writedisposition_csharp">
 <a href="#writedisposition_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Disposition</a>
@@ -5292,7 +5356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}[Optional] If sourceFormat is set to "AVRO", indicates whether to enable interpreting logical types into their corresponding types (ie. TIMESTAMP), instead of only using their raw types (ie. INTEGER).{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}[Optional] If sourceFormat is set to "AVRO", indicates whether to interpret logical types as the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for example, INTEGER).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="writedisposition_go">
 <a href="#writedisposition_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Disposition</a>
@@ -5520,7 +5584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}[Optional] If sourceFormat is set to "AVRO", indicates whether to enable interpreting logical types into their corresponding types (ie. TIMESTAMP), instead of only using their raw types (ie. INTEGER).{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}[Optional] If sourceFormat is set to "AVRO", indicates whether to interpret logical types as the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for example, INTEGER).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="writedisposition_nodejs">
 <a href="#writedisposition_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Disposition</a>
@@ -5748,7 +5812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}[Optional] If sourceFormat is set to "AVRO", indicates whether to enable interpreting logical types into their corresponding types (ie. TIMESTAMP), instead of only using their raw types (ie. INTEGER).{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}[Optional] If sourceFormat is set to "AVRO", indicates whether to interpret logical types as the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for example, INTEGER).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="write_disposition_python">
 <a href="#write_disposition_python" style="color: inherit; text-decoration: inherit;">write_<wbr>disposition</a>
@@ -11038,14 +11102,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="arraytype_csharp">
-<a href="#arraytype_csharp" style="color: inherit; text-decoration: inherit;">Array<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queryparametertyperesponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Query<wbr>Parameter<wbr>Type<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}[Optional] The type of the array's elements, if this is an array.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="structtypes_csharp">
 <a href="#structtypes_csharp" style="color: inherit; text-decoration: inherit;">Struct<wbr>Types</a>
 </span>
@@ -11060,19 +11116,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}[Required] The top level type of this field.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}[Required] The top level type of this field.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="arraytype_csharp">
+<a href="#arraytype_csharp" style="color: inherit; text-decoration: inherit;">Array<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#queryparametertyperesponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Query<wbr>Parameter<wbr>Type<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}[Optional] The type of the array's elements, if this is an array.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="arraytype_go">
-<a href="#arraytype_go" style="color: inherit; text-decoration: inherit;">Array<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queryparametertyperesponse">Query<wbr>Parameter<wbr>Type<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}[Optional] The type of the array's elements, if this is an array.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="structtypes_go">
 <a href="#structtypes_go" style="color: inherit; text-decoration: inherit;">Struct<wbr>Types</a>
@@ -11088,19 +11144,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}[Required] The top level type of this field.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="arraytype_nodejs">
-<a href="#arraytype_nodejs" style="color: inherit; text-decoration: inherit;">array<wbr>Type</a>
+    <dd>{{% md %}}[Required] The top level type of this field.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="arraytype_go">
+<a href="#arraytype_go" style="color: inherit; text-decoration: inherit;">Array<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queryparametertyperesponse">Query<wbr>Parameter<wbr>Type<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}[Optional] The type of the array's elements, if this is an array.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}[Optional] The type of the array's elements, if this is an array.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="structtypes_nodejs">
 <a href="#structtypes_nodejs" style="color: inherit; text-decoration: inherit;">struct<wbr>Types</a>
@@ -11116,19 +11172,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}[Required] The top level type of this field.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="array_type_python">
-<a href="#array_type_python" style="color: inherit; text-decoration: inherit;">array_<wbr>type</a>
+    <dd>{{% md %}}[Required] The top level type of this field.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="arraytype_nodejs">
+<a href="#arraytype_nodejs" style="color: inherit; text-decoration: inherit;">array<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queryparametertyperesponse">Query<wbr>Parameter<wbr>Type<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}[Optional] The type of the array's elements, if this is an array.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}[Optional] The type of the array's elements, if this is an array.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="struct_types_python">
 <a href="#struct_types_python" style="color: inherit; text-decoration: inherit;">struct_<wbr>types</a>
@@ -11144,7 +11200,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}[Required] The top level type of this field.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}[Required] The top level type of this field.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="array_type_python">
+<a href="#array_type_python" style="color: inherit; text-decoration: inherit;">array_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#queryparametertyperesponse">Query<wbr>Parameter<wbr>Type<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}[Optional] The type of the array's elements, if this is an array.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="queryparametertypestructtypesitem">Query<wbr>Parameter<wbr>Type<wbr>Struct<wbr>Types<wbr>Item</h4>
@@ -12838,6 +12902,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Optional] The categories attached to this field, used for field-level access control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="collationspec_csharp">
+<a href="#collationspec_csharp" style="color: inherit; text-decoration: inherit;">Collation<wbr>Spec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. Collation specification of the field. It only can be set on string type field.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -12921,6 +12993,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#tablefieldschemacategories">Table<wbr>Field<wbr>Schema<wbr>Categories</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The categories attached to this field, used for field-level access control.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="collationspec_go">
+<a href="#collationspec_go" style="color: inherit; text-decoration: inherit;">Collation<wbr>Spec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. Collation specification of the field. It only can be set on string type field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -13006,6 +13086,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Optional] The categories attached to this field, used for field-level access control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="collationspec_nodejs">
+<a href="#collationspec_nodejs" style="color: inherit; text-decoration: inherit;">collation<wbr>Spec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. Collation specification of the field. It only can be set on string type field.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -13089,6 +13177,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#tablefieldschemacategories">Table<wbr>Field<wbr>Schema<wbr>Categories</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The categories attached to this field, used for field-level access control.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="collation_spec_python">
+<a href="#collation_spec_python" style="color: inherit; text-decoration: inherit;">collation_<wbr>spec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Optional. Collation specification of the field. It only can be set on string type field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -13376,6 +13472,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Optional] The categories attached to this field, used for field-level access control.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="collationspec_csharp">
+<a href="#collationspec_csharp" style="color: inherit; text-decoration: inherit;">Collation<wbr>Spec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. Collation specification of the field. It only can be set on string type field.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -13459,6 +13563,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#tablefieldschemacategoriesresponse">Table<wbr>Field<wbr>Schema<wbr>Categories<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The categories attached to this field, used for field-level access control.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="collationspec_go">
+<a href="#collationspec_go" style="color: inherit; text-decoration: inherit;">Collation<wbr>Spec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. Collation specification of the field. It only can be set on string type field.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -13544,6 +13656,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Optional] The categories attached to this field, used for field-level access control.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="collationspec_nodejs">
+<a href="#collationspec_nodejs" style="color: inherit; text-decoration: inherit;">collation<wbr>Spec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. Collation specification of the field. It only can be set on string type field.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -13627,6 +13747,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#tablefieldschemacategoriesresponse">Table<wbr>Field<wbr>Schema<wbr>Categories<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The categories attached to this field, used for field-level access control.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="collation_spec_python">
+<a href="#collation_spec_python" style="color: inherit; text-decoration: inherit;">collation_<wbr>spec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Optional. Collation specification of the field. It only can be set on string type field.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>

@@ -311,7 +311,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name of an entry in URL format. Note: The entry itself and its child resources might not be stored in the location specified in its name. {{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The resource name of an entry in URL format. Note: The entry itself and its child resources might not be stored in the location specified in its name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="routinespec_csharp">
 <a href="#routinespec_csharp" style="color: inherit; text-decoration: inherit;">Routine<wbr>Spec</a>
@@ -475,7 +475,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name of an entry in URL format. Note: The entry itself and its child resources might not be stored in the location specified in its name. {{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The resource name of an entry in URL format. Note: The entry itself and its child resources might not be stored in the location specified in its name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="routinespec_go">
 <a href="#routinespec_go" style="color: inherit; text-decoration: inherit;">Routine<wbr>Spec</a>
@@ -639,7 +639,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name of an entry in URL format. Note: The entry itself and its child resources might not be stored in the location specified in its name. {{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The resource name of an entry in URL format. Note: The entry itself and its child resources might not be stored in the location specified in its name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="routinespec_nodejs">
 <a href="#routinespec_nodejs" style="color: inherit; text-decoration: inherit;">routine<wbr>Spec</a>
@@ -803,7 +803,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource name of an entry in URL format. Note: The entry itself and its child resources might not be stored in the location specified in its name. {{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The resource name of an entry in URL format. Note: The entry itself and its child resources might not be stored in the location specified in its name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="routine_spec_python">
 <a href="#routine_spec_python" style="color: inherit; text-decoration: inherit;">routine_<wbr>spec</a>

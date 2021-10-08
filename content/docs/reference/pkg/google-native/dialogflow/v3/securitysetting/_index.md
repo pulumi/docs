@@ -27,7 +27,9 @@ Create security settings in the specified location.
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">SecuritySetting</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                    <span class="nx">deidentify_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">insights_export_settings</span><span class="p">:</span> <span class="nx">Optional[GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsArgs]</span> = None<span class="p">,</span>
                     <span class="nx">inspect_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -173,13 +175,29 @@ The SecuritySetting resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}The human-readable name of the security settings, unique within the location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deidentifytemplate_csharp">
+<a href="#deidentifytemplate_csharp" style="color: inherit; text-decoration: inherit;">Deidentify<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[DLP](https://cloud.google.com/dlp/docs) deidentify template name. Use this template to define de-identification configuration for the content. If empty, Dialogflow replaces sensitive info with `[redacted]` text. The template name will have one of the following formats: `projects//locations//deidentifyTemplates/` OR `organizations//locations//deidentifyTemplates/` Note: `deidentify_template` must be located in the same region as the `SecuritySettings`.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="insightsexportsettings_csharp">
+<a href="#insightsexportsettings_csharp" style="color: inherit; text-decoration: inherit;">Insights<wbr>Export<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3securitysettingsinsightsexportsettings">Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V3.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Security<wbr>Settings<wbr>Insights<wbr>Export<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Controls conversation exporting settings to Insights after conversation is completed. If retention_strategy is set to REMOVE_AFTER_CONVERSATION, Insights export is disabled no matter what you configure here.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="inspecttemplate_csharp">
 <a href="#inspecttemplate_csharp" style="color: inherit; text-decoration: inherit;">Inspect<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}[DLP](https://cloud.google.com/dlp/docs) inspect template name. Use this template to define inspect base settings. If empty, we use the default DLP inspect config. The template name will have one of the following formats: `projects//inspectTemplates/` OR `projects//locations//inspectTemplates/` OR `organizations//inspectTemplates/`{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}[DLP](https://cloud.google.com/dlp/docs) inspect template name. Use this template to define inspect base settings. If empty, we use the default DLP inspect config. The template name will have one of the following formats: `projects//locations//inspectTemplates/` OR `organizations//locations//inspectTemplates/` Note: `inspect_template` must be located in the same region as the `SecuritySettings`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -195,7 +213,7 @@ The SecuritySetting resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name of the settings. Format: `projects//locations//securitySettings/`.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Resource name of the settings. Required for the SecuritySettingsService.UpdateSecuritySettings method. SecuritySettingsService.CreateSecuritySettings populates the name automatically. Format: `projects//locations//securitySettings/`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -249,13 +267,29 @@ The SecuritySetting resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}The human-readable name of the security settings, unique within the location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deidentifytemplate_go">
+<a href="#deidentifytemplate_go" style="color: inherit; text-decoration: inherit;">Deidentify<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[DLP](https://cloud.google.com/dlp/docs) deidentify template name. Use this template to define de-identification configuration for the content. If empty, Dialogflow replaces sensitive info with `[redacted]` text. The template name will have one of the following formats: `projects//locations//deidentifyTemplates/` OR `organizations//locations//deidentifyTemplates/` Note: `deidentify_template` must be located in the same region as the `SecuritySettings`.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="insightsexportsettings_go">
+<a href="#insightsexportsettings_go" style="color: inherit; text-decoration: inherit;">Insights<wbr>Export<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3securitysettingsinsightsexportsettings">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Security<wbr>Settings<wbr>Insights<wbr>Export<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Controls conversation exporting settings to Insights after conversation is completed. If retention_strategy is set to REMOVE_AFTER_CONVERSATION, Insights export is disabled no matter what you configure here.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="inspecttemplate_go">
 <a href="#inspecttemplate_go" style="color: inherit; text-decoration: inherit;">Inspect<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}[DLP](https://cloud.google.com/dlp/docs) inspect template name. Use this template to define inspect base settings. If empty, we use the default DLP inspect config. The template name will have one of the following formats: `projects//inspectTemplates/` OR `projects//locations//inspectTemplates/` OR `organizations//inspectTemplates/`{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}[DLP](https://cloud.google.com/dlp/docs) inspect template name. Use this template to define inspect base settings. If empty, we use the default DLP inspect config. The template name will have one of the following formats: `projects//locations//inspectTemplates/` OR `organizations//locations//inspectTemplates/` Note: `inspect_template` must be located in the same region as the `SecuritySettings`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -271,7 +305,7 @@ The SecuritySetting resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name of the settings. Format: `projects//locations//securitySettings/`.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Resource name of the settings. Required for the SecuritySettingsService.UpdateSecuritySettings method. SecuritySettingsService.CreateSecuritySettings populates the name automatically. Format: `projects//locations//securitySettings/`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -325,13 +359,29 @@ The SecuritySetting resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}The human-readable name of the security settings, unique within the location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deidentifytemplate_nodejs">
+<a href="#deidentifytemplate_nodejs" style="color: inherit; text-decoration: inherit;">deidentify<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[DLP](https://cloud.google.com/dlp/docs) deidentify template name. Use this template to define de-identification configuration for the content. If empty, Dialogflow replaces sensitive info with `[redacted]` text. The template name will have one of the following formats: `projects//locations//deidentifyTemplates/` OR `organizations//locations//deidentifyTemplates/` Note: `deidentify_template` must be located in the same region as the `SecuritySettings`.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="insightsexportsettings_nodejs">
+<a href="#insightsexportsettings_nodejs" style="color: inherit; text-decoration: inherit;">insights<wbr>Export<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3securitysettingsinsightsexportsettings">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Security<wbr>Settings<wbr>Insights<wbr>Export<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Controls conversation exporting settings to Insights after conversation is completed. If retention_strategy is set to REMOVE_AFTER_CONVERSATION, Insights export is disabled no matter what you configure here.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="inspecttemplate_nodejs">
 <a href="#inspecttemplate_nodejs" style="color: inherit; text-decoration: inherit;">inspect<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}[DLP](https://cloud.google.com/dlp/docs) inspect template name. Use this template to define inspect base settings. If empty, we use the default DLP inspect config. The template name will have one of the following formats: `projects//inspectTemplates/` OR `projects//locations//inspectTemplates/` OR `organizations//inspectTemplates/`{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}[DLP](https://cloud.google.com/dlp/docs) inspect template name. Use this template to define inspect base settings. If empty, we use the default DLP inspect config. The template name will have one of the following formats: `projects//locations//inspectTemplates/` OR `organizations//locations//inspectTemplates/` Note: `inspect_template` must be located in the same region as the `SecuritySettings`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -347,7 +397,7 @@ The SecuritySetting resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name of the settings. Format: `projects//locations//securitySettings/`.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Resource name of the settings. Required for the SecuritySettingsService.UpdateSecuritySettings method. SecuritySettingsService.CreateSecuritySettings populates the name automatically. Format: `projects//locations//securitySettings/`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -401,13 +451,29 @@ The SecuritySetting resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}The human-readable name of the security settings, unique within the location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deidentify_template_python">
+<a href="#deidentify_template_python" style="color: inherit; text-decoration: inherit;">deidentify_<wbr>template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[DLP](https://cloud.google.com/dlp/docs) deidentify template name. Use this template to define de-identification configuration for the content. If empty, Dialogflow replaces sensitive info with `[redacted]` text. The template name will have one of the following formats: `projects//locations//deidentifyTemplates/` OR `organizations//locations//deidentifyTemplates/` Note: `deidentify_template` must be located in the same region as the `SecuritySettings`.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="insights_export_settings_python">
+<a href="#insights_export_settings_python" style="color: inherit; text-decoration: inherit;">insights_<wbr>export_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3securitysettingsinsightsexportsettings">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Security<wbr>Settings<wbr>Insights<wbr>Export<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Controls conversation exporting settings to Insights after conversation is completed. If retention_strategy is set to REMOVE_AFTER_CONVERSATION, Insights export is disabled no matter what you configure here.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="inspect_template_python">
 <a href="#inspect_template_python" style="color: inherit; text-decoration: inherit;">inspect_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}[DLP](https://cloud.google.com/dlp/docs) inspect template name. Use this template to define inspect base settings. If empty, we use the default DLP inspect config. The template name will have one of the following formats: `projects//inspectTemplates/` OR `projects//locations//inspectTemplates/` OR `organizations//inspectTemplates/`{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}[DLP](https://cloud.google.com/dlp/docs) inspect template name. Use this template to define inspect base settings. If empty, we use the default DLP inspect config. The template name will have one of the following formats: `projects//locations//inspectTemplates/` OR `organizations//locations//inspectTemplates/` Note: `inspect_template` must be located in the same region as the `SecuritySettings`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -423,7 +489,7 @@ The SecuritySetting resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name of the settings. Format: `projects//locations//securitySettings/`.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Resource name of the settings. Required for the SecuritySettingsService.UpdateSecuritySettings method. SecuritySettingsService.CreateSecuritySettings populates the name automatically. Format: `projects//locations//securitySettings/`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -530,6 +596,106 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="googleclouddialogflowcxv3securitysettingsinsightsexportsettings">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Security<wbr>Settings<wbr>Insights<wbr>Export<wbr>Settings</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enableinsightsexport_csharp">
+<a href="#enableinsightsexport_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Insights<wbr>Export</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If enabled, we will automatically exports conversations to Insights and Insights runs its analyzers.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enableinsightsexport_go">
+<a href="#enableinsightsexport_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Insights<wbr>Export</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If enabled, we will automatically exports conversations to Insights and Insights runs its analyzers.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enableinsightsexport_nodejs">
+<a href="#enableinsightsexport_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Insights<wbr>Export</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If enabled, we will automatically exports conversations to Insights and Insights runs its analyzers.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enable_insights_export_python">
+<a href="#enable_insights_export_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>insights_<wbr>export</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If enabled, we will automatically exports conversations to Insights and Insights runs its analyzers.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googleclouddialogflowcxv3securitysettingsinsightsexportsettingsresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Security<wbr>Settings<wbr>Insights<wbr>Export<wbr>Settings<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enableinsightsexport_csharp">
+<a href="#enableinsightsexport_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Insights<wbr>Export</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If enabled, we will automatically exports conversations to Insights and Insights runs its analyzers.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enableinsightsexport_go">
+<a href="#enableinsightsexport_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Insights<wbr>Export</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If enabled, we will automatically exports conversations to Insights and Insights runs its analyzers.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enableinsightsexport_nodejs">
+<a href="#enableinsightsexport_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Insights<wbr>Export</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If enabled, we will automatically exports conversations to Insights and Insights runs its analyzers.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enable_insights_export_python">
+<a href="#enable_insights_export_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>insights_<wbr>export</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If enabled, we will automatically exports conversations to Insights and Insights runs its analyzers.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="securitysettingpurgedatatypesitem">Security<wbr>Setting<wbr>Purge<wbr>Data<wbr>Types<wbr>Item</h4>
 

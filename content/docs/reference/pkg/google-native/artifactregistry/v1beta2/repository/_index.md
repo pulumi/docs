@@ -33,6 +33,7 @@ Creates a repository. The returned Operation will finish once the repository has
                <span class="nx">kms_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">maven_config</span><span class="p">:</span> <span class="nx">Optional[MavenRepositoryConfigArgs]</span> = None<span class="p">,</span>
                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">repository_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -214,6 +215,14 @@ The Repository resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="mavenconfig_csharp">
+<a href="#mavenconfig_csharp" style="color: inherit; text-decoration: inherit;">Maven<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mavenrepositoryconfig">Pulumi.<wbr>Google<wbr>Native.<wbr>Artifact<wbr>Registry.<wbr>V1Beta2.<wbr>Inputs.<wbr>Maven<wbr>Repository<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Maven repository config contains repository level configuration for the repositories of maven type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -297,6 +306,14 @@ The Repository resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mavenconfig_go">
+<a href="#mavenconfig_go" style="color: inherit; text-decoration: inherit;">Maven<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mavenrepositoryconfig">Maven<wbr>Repository<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Maven repository config contains repository level configuration for the repositories of maven type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -382,6 +399,14 @@ The Repository resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="mavenconfig_nodejs">
+<a href="#mavenconfig_nodejs" style="color: inherit; text-decoration: inherit;">maven<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mavenrepositoryconfig">Maven<wbr>Repository<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Maven repository config contains repository level configuration for the repositories of maven type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -465,6 +490,14 @@ The Repository resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maven_config_python">
+<a href="#maven_config_python" style="color: inherit; text-decoration: inherit;">maven_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mavenrepositoryconfig">Maven<wbr>Repository<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Maven repository config contains repository level configuration for the repositories of maven type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -564,6 +597,200 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="mavenrepositoryconfig">Maven<wbr>Repository<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="allowsnapshotoverwrites_csharp">
+<a href="#allowsnapshotoverwrites_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Snapshot<wbr>Overwrites</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The repository with this flag will allow publishing the same snapshot versions.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="versionpolicy_csharp">
+<a href="#versionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mavenrepositoryconfigversionpolicy">Pulumi.<wbr>Google<wbr>Native.<wbr>Artifact<wbr>Registry.<wbr>V1Beta2.<wbr>Maven<wbr>Repository<wbr>Config<wbr>Version<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}Version policy defines the versions that the registry will accept.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="allowsnapshotoverwrites_go">
+<a href="#allowsnapshotoverwrites_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Snapshot<wbr>Overwrites</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The repository with this flag will allow publishing the same snapshot versions.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="versionpolicy_go">
+<a href="#versionpolicy_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mavenrepositoryconfigversionpolicy">Maven<wbr>Repository<wbr>Config<wbr>Version<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}Version policy defines the versions that the registry will accept.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="allowsnapshotoverwrites_nodejs">
+<a href="#allowsnapshotoverwrites_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Snapshot<wbr>Overwrites</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}The repository with this flag will allow publishing the same snapshot versions.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="versionpolicy_nodejs">
+<a href="#versionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mavenrepositoryconfigversionpolicy">Maven<wbr>Repository<wbr>Config<wbr>Version<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}Version policy defines the versions that the registry will accept.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="allow_snapshot_overwrites_python">
+<a href="#allow_snapshot_overwrites_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>snapshot_<wbr>overwrites</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The repository with this flag will allow publishing the same snapshot versions.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_policy_python">
+<a href="#version_policy_python" style="color: inherit; text-decoration: inherit;">version_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mavenrepositoryconfigversionpolicy">Maven<wbr>Repository<wbr>Config<wbr>Version<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}Version policy defines the versions that the registry will accept.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="mavenrepositoryconfigresponse">Maven<wbr>Repository<wbr>Config<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="allowsnapshotoverwrites_csharp">
+<a href="#allowsnapshotoverwrites_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Snapshot<wbr>Overwrites</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The repository with this flag will allow publishing the same snapshot versions.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="versionpolicy_csharp">
+<a href="#versionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Version policy defines the versions that the registry will accept.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="allowsnapshotoverwrites_go">
+<a href="#allowsnapshotoverwrites_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Snapshot<wbr>Overwrites</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The repository with this flag will allow publishing the same snapshot versions.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="versionpolicy_go">
+<a href="#versionpolicy_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Version policy defines the versions that the registry will accept.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="allowsnapshotoverwrites_nodejs">
+<a href="#allowsnapshotoverwrites_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Snapshot<wbr>Overwrites</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}The repository with this flag will allow publishing the same snapshot versions.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="versionpolicy_nodejs">
+<a href="#versionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Version policy defines the versions that the registry will accept.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="allow_snapshot_overwrites_python">
+<a href="#allow_snapshot_overwrites_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>snapshot_<wbr>overwrites</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The repository with this flag will allow publishing the same snapshot versions.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="version_policy_python">
+<a href="#version_policy_python" style="color: inherit; text-decoration: inherit;">version_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Version policy defines the versions that the registry will accept.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="mavenrepositoryconfigversionpolicy">Maven<wbr>Repository<wbr>Config<wbr>Version<wbr>Policy</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Version<wbr>Policy<wbr>Unspecified</dt>
+    <dd>VERSION_POLICY_UNSPECIFIED{{% md %}}VERSION_POLICY_UNSPECIFIED - the version policy is not defined. When the version policy is not defined, no validation is performed for the versions.{{% /md %}}</dd><dt>Release</dt>
+    <dd>RELEASE{{% md %}}RELEASE - repository will accept only Release versions.{{% /md %}}</dd><dt>Snapshot</dt>
+    <dd>SNAPSHOT{{% md %}}SNAPSHOT - repository will accept only Snapshot versions.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Maven<wbr>Repository<wbr>Config<wbr>Version<wbr>Policy<wbr>Version<wbr>Policy<wbr>Unspecified</dt>
+    <dd>VERSION_POLICY_UNSPECIFIED{{% md %}}VERSION_POLICY_UNSPECIFIED - the version policy is not defined. When the version policy is not defined, no validation is performed for the versions.{{% /md %}}</dd><dt>Maven<wbr>Repository<wbr>Config<wbr>Version<wbr>Policy<wbr>Release</dt>
+    <dd>RELEASE{{% md %}}RELEASE - repository will accept only Release versions.{{% /md %}}</dd><dt>Maven<wbr>Repository<wbr>Config<wbr>Version<wbr>Policy<wbr>Snapshot</dt>
+    <dd>SNAPSHOT{{% md %}}SNAPSHOT - repository will accept only Snapshot versions.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Version<wbr>Policy<wbr>Unspecified</dt>
+    <dd>VERSION_POLICY_UNSPECIFIED{{% md %}}VERSION_POLICY_UNSPECIFIED - the version policy is not defined. When the version policy is not defined, no validation is performed for the versions.{{% /md %}}</dd><dt>Release</dt>
+    <dd>RELEASE{{% md %}}RELEASE - repository will accept only Release versions.{{% /md %}}</dd><dt>Snapshot</dt>
+    <dd>SNAPSHOT{{% md %}}SNAPSHOT - repository will accept only Snapshot versions.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>VERSION_POLICY_UNSPECIFIED</dt>
+    <dd>VERSION_POLICY_UNSPECIFIED{{% md %}}VERSION_POLICY_UNSPECIFIED - the version policy is not defined. When the version policy is not defined, no validation is performed for the versions.{{% /md %}}</dd><dt>RELEASE</dt>
+    <dd>RELEASE{{% md %}}RELEASE - repository will accept only Release versions.{{% /md %}}</dd><dt>SNAPSHOT</dt>
+    <dd>SNAPSHOT{{% md %}}SNAPSHOT - repository will accept only Snapshot versions.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="repositoryformat">Repository<wbr>Format</h4>
 
 {{% choosable language csharp %}}
@@ -572,7 +799,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>DOCKER{{% md %}}Docker package format.{{% /md %}}</dd><dt>Maven</dt>
     <dd>MAVEN{{% md %}}Maven package format.{{% /md %}}</dd><dt>Npm</dt>
     <dd>NPM{{% md %}}NPM package format.{{% /md %}}</dd><dt>Pypi</dt>
-    <dd>PYPI{{% md %}}PyPI package format.{{% /md %}}</dd><dt>Python</dt>
+    <dd>PYPI{{% md %}}PyPI package format. Deprecated, use PYTHON instead.{{% /md %}}</dd><dt>Apt</dt>
+    <dd>APT{{% md %}}APT package format.{{% /md %}}</dd><dt>Yum</dt>
+    <dd>YUM{{% md %}}YUM package format.{{% /md %}}</dd><dt>Python</dt>
     <dd>PYTHON{{% md %}}Python package format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -582,7 +811,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>DOCKER{{% md %}}Docker package format.{{% /md %}}</dd><dt>Repository<wbr>Format<wbr>Maven</dt>
     <dd>MAVEN{{% md %}}Maven package format.{{% /md %}}</dd><dt>Repository<wbr>Format<wbr>Npm</dt>
     <dd>NPM{{% md %}}NPM package format.{{% /md %}}</dd><dt>Repository<wbr>Format<wbr>Pypi</dt>
-    <dd>PYPI{{% md %}}PyPI package format.{{% /md %}}</dd><dt>Repository<wbr>Format<wbr>Python</dt>
+    <dd>PYPI{{% md %}}PyPI package format. Deprecated, use PYTHON instead.{{% /md %}}</dd><dt>Repository<wbr>Format<wbr>Apt</dt>
+    <dd>APT{{% md %}}APT package format.{{% /md %}}</dd><dt>Repository<wbr>Format<wbr>Yum</dt>
+    <dd>YUM{{% md %}}YUM package format.{{% /md %}}</dd><dt>Repository<wbr>Format<wbr>Python</dt>
     <dd>PYTHON{{% md %}}Python package format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -592,7 +823,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>DOCKER{{% md %}}Docker package format.{{% /md %}}</dd><dt>Maven</dt>
     <dd>MAVEN{{% md %}}Maven package format.{{% /md %}}</dd><dt>Npm</dt>
     <dd>NPM{{% md %}}NPM package format.{{% /md %}}</dd><dt>Pypi</dt>
-    <dd>PYPI{{% md %}}PyPI package format.{{% /md %}}</dd><dt>Python</dt>
+    <dd>PYPI{{% md %}}PyPI package format. Deprecated, use PYTHON instead.{{% /md %}}</dd><dt>Apt</dt>
+    <dd>APT{{% md %}}APT package format.{{% /md %}}</dd><dt>Yum</dt>
+    <dd>YUM{{% md %}}YUM package format.{{% /md %}}</dd><dt>Python</dt>
     <dd>PYTHON{{% md %}}Python package format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -602,7 +835,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>DOCKER{{% md %}}Docker package format.{{% /md %}}</dd><dt>MAVEN</dt>
     <dd>MAVEN{{% md %}}Maven package format.{{% /md %}}</dd><dt>NPM</dt>
     <dd>NPM{{% md %}}NPM package format.{{% /md %}}</dd><dt>PYPI</dt>
-    <dd>PYPI{{% md %}}PyPI package format.{{% /md %}}</dd><dt>PYTHON</dt>
+    <dd>PYPI{{% md %}}PyPI package format. Deprecated, use PYTHON instead.{{% /md %}}</dd><dt>APT</dt>
+    <dd>APT{{% md %}}APT package format.{{% /md %}}</dd><dt>YUM</dt>
+    <dd>YUM{{% md %}}YUM package format.{{% /md %}}</dd><dt>PYTHON</dt>
     <dd>PYTHON{{% md %}}Python package format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 

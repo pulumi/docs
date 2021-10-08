@@ -388,6 +388,682 @@ The following output properties are available:
 ## Supporting Types
 
 
+<h4 id="rrsetroutingpolicygeopolicygeopolicyitemresponse">RRSet<wbr>Routing<wbr>Policy<wbr>Geo<wbr>Policy<wbr>Geo<wbr>Policy<wbr>Item<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="kind_csharp">
+<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The geo-location granularity is a GCP region. This location string should correspond to a GCP region. e.g. "us-east1", "southamerica-east1", "asia-east1", etc.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rrdatas_csharp">
+<a href="#rrdatas_csharp" style="color: inherit; text-decoration: inherit;">Rrdatas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="signaturerrdatas_csharp">
+<a href="#signaturerrdatas_csharp" style="color: inherit; text-decoration: inherit;">Signature<wbr>Rrdatas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}DNSSEC generated signatures for the above geo_rrdata.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="kind_go">
+<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The geo-location granularity is a GCP region. This location string should correspond to a GCP region. e.g. "us-east1", "southamerica-east1", "asia-east1", etc.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rrdatas_go">
+<a href="#rrdatas_go" style="color: inherit; text-decoration: inherit;">Rrdatas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="signaturerrdatas_go">
+<a href="#signaturerrdatas_go" style="color: inherit; text-decoration: inherit;">Signature<wbr>Rrdatas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}DNSSEC generated signatures for the above geo_rrdata.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="kind_nodejs">
+<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The geo-location granularity is a GCP region. This location string should correspond to a GCP region. e.g. "us-east1", "southamerica-east1", "asia-east1", etc.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rrdatas_nodejs">
+<a href="#rrdatas_nodejs" style="color: inherit; text-decoration: inherit;">rrdatas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="signaturerrdatas_nodejs">
+<a href="#signaturerrdatas_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Rrdatas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}DNSSEC generated signatures for the above geo_rrdata.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="kind_python">
+<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The geo-location granularity is a GCP region. This location string should correspond to a GCP region. e.g. "us-east1", "southamerica-east1", "asia-east1", etc.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rrdatas_python">
+<a href="#rrdatas_python" style="color: inherit; text-decoration: inherit;">rrdatas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="signature_rrdatas_python">
+<a href="#signature_rrdatas_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>rrdatas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}DNSSEC generated signatures for the above geo_rrdata.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="rrsetroutingpolicygeopolicyresponse">RRSet<wbr>Routing<wbr>Policy<wbr>Geo<wbr>Policy<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="failovers_csharp">
+<a href="#failovers_csharp" style="color: inherit; text-decoration: inherit;">Failovers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rrsetroutingpolicygeopolicygeopolicyitemresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>DNS.<wbr>V1Beta2.<wbr>Inputs.<wbr>RRSet<wbr>Routing<wbr>Policy<wbr>Geo<wbr>Policy<wbr>Geo<wbr>Policy<wbr>Item<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}If the health check for the primary target for a geo location returns an unhealthy status, the failover target is returned instead. This failover configuration is not mandatory. If a failover is not provided, the primary target won't be healthchecked, and it returns the primarily configured rrdata irrespective of whether it is healthy or not.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="items_csharp">
+<a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rrsetroutingpolicygeopolicygeopolicyitemresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>DNS.<wbr>V1Beta2.<wbr>Inputs.<wbr>RRSet<wbr>Routing<wbr>Policy<wbr>Geo<wbr>Policy<wbr>Geo<wbr>Policy<wbr>Item<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The primary geo routing configuration. If there are multiple items with the same location, an error is returned instead.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="kind_csharp">
+<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="failovers_go">
+<a href="#failovers_go" style="color: inherit; text-decoration: inherit;">Failovers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rrsetroutingpolicygeopolicygeopolicyitemresponse">[]RRSet<wbr>Routing<wbr>Policy<wbr>Geo<wbr>Policy<wbr>Geo<wbr>Policy<wbr>Item<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}If the health check for the primary target for a geo location returns an unhealthy status, the failover target is returned instead. This failover configuration is not mandatory. If a failover is not provided, the primary target won't be healthchecked, and it returns the primarily configured rrdata irrespective of whether it is healthy or not.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="items_go">
+<a href="#items_go" style="color: inherit; text-decoration: inherit;">Items</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rrsetroutingpolicygeopolicygeopolicyitemresponse">[]RRSet<wbr>Routing<wbr>Policy<wbr>Geo<wbr>Policy<wbr>Geo<wbr>Policy<wbr>Item<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The primary geo routing configuration. If there are multiple items with the same location, an error is returned instead.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="kind_go">
+<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="failovers_nodejs">
+<a href="#failovers_nodejs" style="color: inherit; text-decoration: inherit;">failovers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rrsetroutingpolicygeopolicygeopolicyitemresponse">RRSet<wbr>Routing<wbr>Policy<wbr>Geo<wbr>Policy<wbr>Geo<wbr>Policy<wbr>Item<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}If the health check for the primary target for a geo location returns an unhealthy status, the failover target is returned instead. This failover configuration is not mandatory. If a failover is not provided, the primary target won't be healthchecked, and it returns the primarily configured rrdata irrespective of whether it is healthy or not.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="items_nodejs">
+<a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rrsetroutingpolicygeopolicygeopolicyitemresponse">RRSet<wbr>Routing<wbr>Policy<wbr>Geo<wbr>Policy<wbr>Geo<wbr>Policy<wbr>Item<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The primary geo routing configuration. If there are multiple items with the same location, an error is returned instead.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="kind_nodejs">
+<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="failovers_python">
+<a href="#failovers_python" style="color: inherit; text-decoration: inherit;">failovers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rrsetroutingpolicygeopolicygeopolicyitemresponse">Sequence[RRSet<wbr>Routing<wbr>Policy<wbr>Geo<wbr>Policy<wbr>Geo<wbr>Policy<wbr>Item<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}If the health check for the primary target for a geo location returns an unhealthy status, the failover target is returned instead. This failover configuration is not mandatory. If a failover is not provided, the primary target won't be healthchecked, and it returns the primarily configured rrdata irrespective of whether it is healthy or not.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="items_python">
+<a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rrsetroutingpolicygeopolicygeopolicyitemresponse">Sequence[RRSet<wbr>Routing<wbr>Policy<wbr>Geo<wbr>Policy<wbr>Geo<wbr>Policy<wbr>Item<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The primary geo routing configuration. If there are multiple items with the same location, an error is returned instead.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="kind_python">
+<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="rrsetroutingpolicyresponse">RRSet<wbr>Routing<wbr>Policy<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="geo_csharp">
+<a href="#geo_csharp" style="color: inherit; text-decoration: inherit;">Geo</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rrsetroutingpolicygeopolicyresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>DNS.<wbr>V1Beta2.<wbr>Inputs.<wbr>RRSet<wbr>Routing<wbr>Policy<wbr>Geo<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="geopolicy_csharp">
+<a href="#geopolicy_csharp" style="color: inherit; text-decoration: inherit;">Geo<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rrsetroutingpolicygeopolicyresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>DNS.<wbr>V1Beta2.<wbr>Inputs.<wbr>RRSet<wbr>Routing<wbr>Policy<wbr>Geo<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="kind_csharp">
+<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="wrr_csharp">
+<a href="#wrr_csharp" style="color: inherit; text-decoration: inherit;">Wrr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rrsetroutingpolicywrrpolicyresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>DNS.<wbr>V1Beta2.<wbr>Inputs.<wbr>RRSet<wbr>Routing<wbr>Policy<wbr>Wrr<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="wrrpolicy_csharp">
+<a href="#wrrpolicy_csharp" style="color: inherit; text-decoration: inherit;">Wrr<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rrsetroutingpolicywrrpolicyresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>DNS.<wbr>V1Beta2.<wbr>Inputs.<wbr>RRSet<wbr>Routing<wbr>Policy<wbr>Wrr<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="geo_go">
+<a href="#geo_go" style="color: inherit; text-decoration: inherit;">Geo</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rrsetroutingpolicygeopolicyresponse">RRSet<wbr>Routing<wbr>Policy<wbr>Geo<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="geopolicy_go">
+<a href="#geopolicy_go" style="color: inherit; text-decoration: inherit;">Geo<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rrsetroutingpolicygeopolicyresponse">RRSet<wbr>Routing<wbr>Policy<wbr>Geo<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="kind_go">
+<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="wrr_go">
+<a href="#wrr_go" style="color: inherit; text-decoration: inherit;">Wrr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rrsetroutingpolicywrrpolicyresponse">RRSet<wbr>Routing<wbr>Policy<wbr>Wrr<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="wrrpolicy_go">
+<a href="#wrrpolicy_go" style="color: inherit; text-decoration: inherit;">Wrr<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rrsetroutingpolicywrrpolicyresponse">RRSet<wbr>Routing<wbr>Policy<wbr>Wrr<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="geo_nodejs">
+<a href="#geo_nodejs" style="color: inherit; text-decoration: inherit;">geo</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rrsetroutingpolicygeopolicyresponse">RRSet<wbr>Routing<wbr>Policy<wbr>Geo<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="geopolicy_nodejs">
+<a href="#geopolicy_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rrsetroutingpolicygeopolicyresponse">RRSet<wbr>Routing<wbr>Policy<wbr>Geo<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="kind_nodejs">
+<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="wrr_nodejs">
+<a href="#wrr_nodejs" style="color: inherit; text-decoration: inherit;">wrr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rrsetroutingpolicywrrpolicyresponse">RRSet<wbr>Routing<wbr>Policy<wbr>Wrr<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="wrrpolicy_nodejs">
+<a href="#wrrpolicy_nodejs" style="color: inherit; text-decoration: inherit;">wrr<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rrsetroutingpolicywrrpolicyresponse">RRSet<wbr>Routing<wbr>Policy<wbr>Wrr<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="geo_python">
+<a href="#geo_python" style="color: inherit; text-decoration: inherit;">geo</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rrsetroutingpolicygeopolicyresponse">RRSet<wbr>Routing<wbr>Policy<wbr>Geo<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="geo_policy_python">
+<a href="#geo_policy_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rrsetroutingpolicygeopolicyresponse">RRSet<wbr>Routing<wbr>Policy<wbr>Geo<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="kind_python">
+<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="wrr_python">
+<a href="#wrr_python" style="color: inherit; text-decoration: inherit;">wrr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rrsetroutingpolicywrrpolicyresponse">RRSet<wbr>Routing<wbr>Policy<wbr>Wrr<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="wrr_policy_python">
+<a href="#wrr_policy_python" style="color: inherit; text-decoration: inherit;">wrr_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rrsetroutingpolicywrrpolicyresponse">RRSet<wbr>Routing<wbr>Policy<wbr>Wrr<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="rrsetroutingpolicywrrpolicyresponse">RRSet<wbr>Routing<wbr>Policy<wbr>Wrr<wbr>Policy<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="items_csharp">
+<a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rrsetroutingpolicywrrpolicywrrpolicyitemresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>DNS.<wbr>V1Beta2.<wbr>Inputs.<wbr>RRSet<wbr>Routing<wbr>Policy<wbr>Wrr<wbr>Policy<wbr>Wrr<wbr>Policy<wbr>Item<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="kind_csharp">
+<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="items_go">
+<a href="#items_go" style="color: inherit; text-decoration: inherit;">Items</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rrsetroutingpolicywrrpolicywrrpolicyitemresponse">[]RRSet<wbr>Routing<wbr>Policy<wbr>Wrr<wbr>Policy<wbr>Wrr<wbr>Policy<wbr>Item<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="kind_go">
+<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="items_nodejs">
+<a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rrsetroutingpolicywrrpolicywrrpolicyitemresponse">RRSet<wbr>Routing<wbr>Policy<wbr>Wrr<wbr>Policy<wbr>Wrr<wbr>Policy<wbr>Item<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="kind_nodejs">
+<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="items_python">
+<a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rrsetroutingpolicywrrpolicywrrpolicyitemresponse">Sequence[RRSet<wbr>Routing<wbr>Policy<wbr>Wrr<wbr>Policy<wbr>Wrr<wbr>Policy<wbr>Item<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="kind_python">
+<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="rrsetroutingpolicywrrpolicywrrpolicyitemresponse">RRSet<wbr>Routing<wbr>Policy<wbr>Wrr<wbr>Policy<wbr>Wrr<wbr>Policy<wbr>Item<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="kind_csharp">
+<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rrdatas_csharp">
+<a href="#rrdatas_csharp" style="color: inherit; text-decoration: inherit;">Rrdatas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="signaturerrdatas_csharp">
+<a href="#signaturerrdatas_csharp" style="color: inherit; text-decoration: inherit;">Signature<wbr>Rrdatas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}DNSSEC generated signatures for the above wrr_rrdata.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="weight_csharp">
+<a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}The weight corresponding to this subset of rrdata. When multiple WeightedRoundRobinPolicyItems are configured, the probability of returning an rrset is proportional to its weight relative to the sum of weights configured for all items. This weight should be non-negative.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="kind_go">
+<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rrdatas_go">
+<a href="#rrdatas_go" style="color: inherit; text-decoration: inherit;">Rrdatas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="signaturerrdatas_go">
+<a href="#signaturerrdatas_go" style="color: inherit; text-decoration: inherit;">Signature<wbr>Rrdatas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}DNSSEC generated signatures for the above wrr_rrdata.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="weight_go">
+<a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}The weight corresponding to this subset of rrdata. When multiple WeightedRoundRobinPolicyItems are configured, the probability of returning an rrset is proportional to its weight relative to the sum of weights configured for all items. This weight should be non-negative.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="kind_nodejs">
+<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rrdatas_nodejs">
+<a href="#rrdatas_nodejs" style="color: inherit; text-decoration: inherit;">rrdatas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="signaturerrdatas_nodejs">
+<a href="#signaturerrdatas_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Rrdatas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}DNSSEC generated signatures for the above wrr_rrdata.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="weight_nodejs">
+<a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The weight corresponding to this subset of rrdata. When multiple WeightedRoundRobinPolicyItems are configured, the probability of returning an rrset is proportional to its weight relative to the sum of weights configured for all items. This weight should be non-negative.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="kind_python">
+<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rrdatas_python">
+<a href="#rrdatas_python" style="color: inherit; text-decoration: inherit;">rrdatas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="signature_rrdatas_python">
+<a href="#signature_rrdatas_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>rrdatas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}DNSSEC generated signatures for the above wrr_rrdata.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="weight_python">
+<a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The weight corresponding to this subset of rrdata. When multiple WeightedRoundRobinPolicyItems are configured, the probability of returning an rrset is proportional to its weight relative to the sum of weights configured for all items. This weight should be non-negative.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="resourcerecordsetresponse">Resource<wbr>Record<wbr>Set<wbr>Response</h4>
 
 
@@ -410,6 +1086,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For example, www.example.com.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="routingpolicy_csharp">
+<a href="#routingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Routing<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rrsetroutingpolicyresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>DNS.<wbr>V1Beta2.<wbr>Inputs.<wbr>RRSet<wbr>Routing<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Configures dynamic query responses based on geo location of querying user or a weighted round robin based routing policy. A ResourceRecordSet should only have either rrdata (static) or routing_policy (dynamic). An error is returned otherwise.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rrdatas_csharp">
 <a href="#rrdatas_csharp" style="color: inherit; text-decoration: inherit;">Rrdatas</a>
@@ -463,6 +1147,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}For example, www.example.com.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="routingpolicy_go">
+<a href="#routingpolicy_go" style="color: inherit; text-decoration: inherit;">Routing<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rrsetroutingpolicyresponse">RRSet<wbr>Routing<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Configures dynamic query responses based on geo location of querying user or a weighted round robin based routing policy. A ResourceRecordSet should only have either rrdata (static) or routing_policy (dynamic). An error is returned otherwise.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="rrdatas_go">
 <a href="#rrdatas_go" style="color: inherit; text-decoration: inherit;">Rrdatas</a>
 </span>
@@ -515,6 +1207,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}For example, www.example.com.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="routingpolicy_nodejs">
+<a href="#routingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rrsetroutingpolicyresponse">RRSet<wbr>Routing<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Configures dynamic query responses based on geo location of querying user or a weighted round robin based routing policy. A ResourceRecordSet should only have either rrdata (static) or routing_policy (dynamic). An error is returned otherwise.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="rrdatas_nodejs">
 <a href="#rrdatas_nodejs" style="color: inherit; text-decoration: inherit;">rrdatas</a>
 </span>
@@ -566,6 +1266,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For example, www.example.com.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="routing_policy_python">
+<a href="#routing_policy_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rrsetroutingpolicyresponse">RRSet<wbr>Routing<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Configures dynamic query responses based on geo location of querying user or a weighted round robin based routing policy. A ResourceRecordSet should only have either rrdata (static) or routing_policy (dynamic). An error is returned otherwise.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rrdatas_python">
 <a href="#rrdatas_python" style="color: inherit; text-decoration: inherit;">rrdatas</a>

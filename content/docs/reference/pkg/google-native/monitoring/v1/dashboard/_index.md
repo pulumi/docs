@@ -1718,7 +1718,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetplottype">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V1.<wbr>Data<wbr>Set<wbr>Plot<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}How this data should be plotted on the chart.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}How this data should be plotted on the chart.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targetaxis_csharp">
+<a href="#targetaxis_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Axis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasettargetaxis">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V1.<wbr>Data<wbr>Set<wbr>Target<wbr>Axis</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. The target axis to use for plotting the metric.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1754,7 +1762,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetplottype">Data<wbr>Set<wbr>Plot<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}How this data should be plotted on the chart.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}How this data should be plotted on the chart.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targetaxis_go">
+<a href="#targetaxis_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Axis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasettargetaxis">Data<wbr>Set<wbr>Target<wbr>Axis</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. The target axis to use for plotting the metric.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1790,7 +1806,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetplottype">Data<wbr>Set<wbr>Plot<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}How this data should be plotted on the chart.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}How this data should be plotted on the chart.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targetaxis_nodejs">
+<a href="#targetaxis_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Axis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasettargetaxis">Data<wbr>Set<wbr>Target<wbr>Axis</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. The target axis to use for plotting the metric.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1826,7 +1850,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetplottype">Data<wbr>Set<wbr>Plot<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}How this data should be plotted on the chart.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}How this data should be plotted on the chart.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="target_axis_python">
+<a href="#target_axis_python" style="color: inherit; text-decoration: inherit;">target_<wbr>axis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasettargetaxis">Data<wbr>Set<wbr>Target<wbr>Axis</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. The target axis to use for plotting the metric.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="datasetplottype">Data<wbr>Set<wbr>Plot<wbr>Type</h4>
@@ -1896,6 +1928,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}How this data should be plotted on the chart.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="targetaxis_csharp">
+<a href="#targetaxis_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Axis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. The target axis to use for plotting the metric.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="timeseriesquery_csharp">
 <a href="#timeseriesquery_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Series<wbr>Query</a>
 </span>
@@ -1931,6 +1971,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How this data should be plotted on the chart.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="targetaxis_go">
+<a href="#targetaxis_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Axis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. The target axis to use for plotting the metric.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeseriesquery_go">
 <a href="#timeseriesquery_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Series<wbr>Query</a>
@@ -1968,6 +2016,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}How this data should be plotted on the chart.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="targetaxis_nodejs">
+<a href="#targetaxis_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Axis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. The target axis to use for plotting the metric.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="timeseriesquery_nodejs">
 <a href="#timeseriesquery_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Series<wbr>Query</a>
 </span>
@@ -2004,6 +2060,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}How this data should be plotted on the chart.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="target_axis_python">
+<a href="#target_axis_python" style="color: inherit; text-decoration: inherit;">target_<wbr>axis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Optional. The target axis to use for plotting the metric.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="time_series_query_python">
 <a href="#time_series_query_python" style="color: inherit; text-decoration: inherit;">time_<wbr>series_<wbr>query</a>
 </span>
@@ -2011,6 +2075,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#timeseriesqueryresponse">Time<wbr>Series<wbr>Query<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Fields for querying time series data from the Stackdriver metrics API.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="datasettargetaxis">Data<wbr>Set<wbr>Target<wbr>Axis</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Target<wbr>Axis<wbr>Unspecified</dt>
+    <dd>TARGET_AXIS_UNSPECIFIED{{% md %}}The target axis was not specified. Defaults to Y1.{{% /md %}}</dd><dt>Y1</dt>
+    <dd>Y1{{% md %}}The y_axis (the right axis of chart).{{% /md %}}</dd><dt>Y2</dt>
+    <dd>Y2{{% md %}}The y2_axis (the left axis of chart).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Data<wbr>Set<wbr>Target<wbr>Axis<wbr>Target<wbr>Axis<wbr>Unspecified</dt>
+    <dd>TARGET_AXIS_UNSPECIFIED{{% md %}}The target axis was not specified. Defaults to Y1.{{% /md %}}</dd><dt>Data<wbr>Set<wbr>Target<wbr>Axis<wbr>Y1</dt>
+    <dd>Y1{{% md %}}The y_axis (the right axis of chart).{{% /md %}}</dd><dt>Data<wbr>Set<wbr>Target<wbr>Axis<wbr>Y2</dt>
+    <dd>Y2{{% md %}}The y2_axis (the left axis of chart).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Target<wbr>Axis<wbr>Unspecified</dt>
+    <dd>TARGET_AXIS_UNSPECIFIED{{% md %}}The target axis was not specified. Defaults to Y1.{{% /md %}}</dd><dt>Y1</dt>
+    <dd>Y1{{% md %}}The y_axis (the right axis of chart).{{% /md %}}</dd><dt>Y2</dt>
+    <dd>Y2{{% md %}}The y2_axis (the left axis of chart).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>TARGET_AXIS_UNSPECIFIED</dt>
+    <dd>TARGET_AXIS_UNSPECIFIED{{% md %}}The target axis was not specified. Defaults to Y1.{{% /md %}}</dd><dt>Y1</dt>
+    <dd>Y1{{% md %}}The y_axis (the right axis of chart).{{% /md %}}</dd><dt>Y2</dt>
+    <dd>Y2{{% md %}}The y2_axis (the left axis of chart).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="gaugeview">Gauge<wbr>View</h4>
@@ -3719,6 +3813,398 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>SPARK_BAR{{% md %}}The sparkbar will be rendered as a small bar chart.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="tabledataset">Table<wbr>Data<wbr>Set</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="timeseriesquery_csharp">
+<a href="#timeseriesquery_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Series<wbr>Query</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#timeseriesquery">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V1.<wbr>Inputs.<wbr>Time<wbr>Series<wbr>Query</a></span>
+    </dt>
+    <dd>{{% md %}}Fields for querying time series data from the Stackdriver metrics API.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minalignmentperiod_csharp">
+<a href="#minalignmentperiod_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Alignment<wbr>Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. The lower bound on data point frequency for this data set, implemented by specifying the minimum alignment period to use in a time series query For example, if the data is published once every 10 minutes, the min_alignment_period should be at least 10 minutes. It would not make sense to fetch and align data at one minute intervals.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tabledisplayoptions_csharp">
+<a href="#tabledisplayoptions_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Display<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tabledisplayoptions">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V1.<wbr>Inputs.<wbr>Table<wbr>Display<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. Table display options for configuring how the table is rendered.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tabletemplate_csharp">
+<a href="#tabletemplate_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. A template string for naming TimeSeries in the resulting data set. This should be a string with interpolations of the form ${label_name}, which will resolve to the label's value i.e. "${resource.labels.project_id}."{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="timeseriesquery_go">
+<a href="#timeseriesquery_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Series<wbr>Query</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#timeseriesquery">Time<wbr>Series<wbr>Query</a></span>
+    </dt>
+    <dd>{{% md %}}Fields for querying time series data from the Stackdriver metrics API.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minalignmentperiod_go">
+<a href="#minalignmentperiod_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Alignment<wbr>Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. The lower bound on data point frequency for this data set, implemented by specifying the minimum alignment period to use in a time series query For example, if the data is published once every 10 minutes, the min_alignment_period should be at least 10 minutes. It would not make sense to fetch and align data at one minute intervals.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tabledisplayoptions_go">
+<a href="#tabledisplayoptions_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Display<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tabledisplayoptions">Table<wbr>Display<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. Table display options for configuring how the table is rendered.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tabletemplate_go">
+<a href="#tabletemplate_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. A template string for naming TimeSeries in the resulting data set. This should be a string with interpolations of the form ${label_name}, which will resolve to the label's value i.e. "${resource.labels.project_id}."{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="timeseriesquery_nodejs">
+<a href="#timeseriesquery_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Series<wbr>Query</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#timeseriesquery">Time<wbr>Series<wbr>Query</a></span>
+    </dt>
+    <dd>{{% md %}}Fields for querying time series data from the Stackdriver metrics API.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minalignmentperiod_nodejs">
+<a href="#minalignmentperiod_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Alignment<wbr>Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. The lower bound on data point frequency for this data set, implemented by specifying the minimum alignment period to use in a time series query For example, if the data is published once every 10 minutes, the min_alignment_period should be at least 10 minutes. It would not make sense to fetch and align data at one minute intervals.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tabledisplayoptions_nodejs">
+<a href="#tabledisplayoptions_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Display<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tabledisplayoptions">Table<wbr>Display<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. Table display options for configuring how the table is rendered.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tabletemplate_nodejs">
+<a href="#tabletemplate_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. A template string for naming TimeSeries in the resulting data set. This should be a string with interpolations of the form ${label_name}, which will resolve to the label's value i.e. "${resource.labels.project_id}."{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="time_series_query_python">
+<a href="#time_series_query_python" style="color: inherit; text-decoration: inherit;">time_<wbr>series_<wbr>query</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#timeseriesquery">Time<wbr>Series<wbr>Query</a></span>
+    </dt>
+    <dd>{{% md %}}Fields for querying time series data from the Stackdriver metrics API.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_alignment_period_python">
+<a href="#min_alignment_period_python" style="color: inherit; text-decoration: inherit;">min_<wbr>alignment_<wbr>period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Optional. The lower bound on data point frequency for this data set, implemented by specifying the minimum alignment period to use in a time series query For example, if the data is published once every 10 minutes, the min_alignment_period should be at least 10 minutes. It would not make sense to fetch and align data at one minute intervals.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="table_display_options_python">
+<a href="#table_display_options_python" style="color: inherit; text-decoration: inherit;">table_<wbr>display_<wbr>options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tabledisplayoptions">Table<wbr>Display<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. Table display options for configuring how the table is rendered.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="table_template_python">
+<a href="#table_template_python" style="color: inherit; text-decoration: inherit;">table_<wbr>template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Optional. A template string for naming TimeSeries in the resulting data set. This should be a string with interpolations of the form ${label_name}, which will resolve to the label's value i.e. "${resource.labels.project_id}."{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="tabledatasetresponse">Table<wbr>Data<wbr>Set<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="minalignmentperiod_csharp">
+<a href="#minalignmentperiod_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Alignment<wbr>Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. The lower bound on data point frequency for this data set, implemented by specifying the minimum alignment period to use in a time series query For example, if the data is published once every 10 minutes, the min_alignment_period should be at least 10 minutes. It would not make sense to fetch and align data at one minute intervals.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tabledisplayoptions_csharp">
+<a href="#tabledisplayoptions_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Display<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tabledisplayoptionsresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V1.<wbr>Inputs.<wbr>Table<wbr>Display<wbr>Options<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. Table display options for configuring how the table is rendered.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tabletemplate_csharp">
+<a href="#tabletemplate_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. A template string for naming TimeSeries in the resulting data set. This should be a string with interpolations of the form ${label_name}, which will resolve to the label's value i.e. "${resource.labels.project_id}."{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="timeseriesquery_csharp">
+<a href="#timeseriesquery_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Series<wbr>Query</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#timeseriesqueryresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V1.<wbr>Inputs.<wbr>Time<wbr>Series<wbr>Query<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Fields for querying time series data from the Stackdriver metrics API.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="minalignmentperiod_go">
+<a href="#minalignmentperiod_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Alignment<wbr>Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. The lower bound on data point frequency for this data set, implemented by specifying the minimum alignment period to use in a time series query For example, if the data is published once every 10 minutes, the min_alignment_period should be at least 10 minutes. It would not make sense to fetch and align data at one minute intervals.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tabledisplayoptions_go">
+<a href="#tabledisplayoptions_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Display<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tabledisplayoptionsresponse">Table<wbr>Display<wbr>Options<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. Table display options for configuring how the table is rendered.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tabletemplate_go">
+<a href="#tabletemplate_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. A template string for naming TimeSeries in the resulting data set. This should be a string with interpolations of the form ${label_name}, which will resolve to the label's value i.e. "${resource.labels.project_id}."{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="timeseriesquery_go">
+<a href="#timeseriesquery_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Series<wbr>Query</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#timeseriesqueryresponse">Time<wbr>Series<wbr>Query<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Fields for querying time series data from the Stackdriver metrics API.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="minalignmentperiod_nodejs">
+<a href="#minalignmentperiod_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Alignment<wbr>Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. The lower bound on data point frequency for this data set, implemented by specifying the minimum alignment period to use in a time series query For example, if the data is published once every 10 minutes, the min_alignment_period should be at least 10 minutes. It would not make sense to fetch and align data at one minute intervals.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tabledisplayoptions_nodejs">
+<a href="#tabledisplayoptions_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Display<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tabledisplayoptionsresponse">Table<wbr>Display<wbr>Options<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. Table display options for configuring how the table is rendered.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tabletemplate_nodejs">
+<a href="#tabletemplate_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. A template string for naming TimeSeries in the resulting data set. This should be a string with interpolations of the form ${label_name}, which will resolve to the label's value i.e. "${resource.labels.project_id}."{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="timeseriesquery_nodejs">
+<a href="#timeseriesquery_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Series<wbr>Query</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#timeseriesqueryresponse">Time<wbr>Series<wbr>Query<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Fields for querying time series data from the Stackdriver metrics API.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="min_alignment_period_python">
+<a href="#min_alignment_period_python" style="color: inherit; text-decoration: inherit;">min_<wbr>alignment_<wbr>period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Optional. The lower bound on data point frequency for this data set, implemented by specifying the minimum alignment period to use in a time series query For example, if the data is published once every 10 minutes, the min_alignment_period should be at least 10 minutes. It would not make sense to fetch and align data at one minute intervals.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="table_display_options_python">
+<a href="#table_display_options_python" style="color: inherit; text-decoration: inherit;">table_<wbr>display_<wbr>options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tabledisplayoptionsresponse">Table<wbr>Display<wbr>Options<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. Table display options for configuring how the table is rendered.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="table_template_python">
+<a href="#table_template_python" style="color: inherit; text-decoration: inherit;">table_<wbr>template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Optional. A template string for naming TimeSeries in the resulting data set. This should be a string with interpolations of the form ${label_name}, which will resolve to the label's value i.e. "${resource.labels.project_id}."{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="time_series_query_python">
+<a href="#time_series_query_python" style="color: inherit; text-decoration: inherit;">time_<wbr>series_<wbr>query</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#timeseriesqueryresponse">Time<wbr>Series<wbr>Query<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Fields for querying time series data from the Stackdriver metrics API.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="tabledisplayoptions">Table<wbr>Display<wbr>Options</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="showncolumns_csharp">
+<a href="#showncolumns_csharp" style="color: inherit; text-decoration: inherit;">Shown<wbr>Columns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Optional. Columns to display in the table. Leave empty to display all available columns. Note: This field is for future features and is not currently used.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="showncolumns_go">
+<a href="#showncolumns_go" style="color: inherit; text-decoration: inherit;">Shown<wbr>Columns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Optional. Columns to display in the table. Leave empty to display all available columns. Note: This field is for future features and is not currently used.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="showncolumns_nodejs">
+<a href="#showncolumns_nodejs" style="color: inherit; text-decoration: inherit;">shown<wbr>Columns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Optional. Columns to display in the table. Leave empty to display all available columns. Note: This field is for future features and is not currently used.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="shown_columns_python">
+<a href="#shown_columns_python" style="color: inherit; text-decoration: inherit;">shown_<wbr>columns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Optional. Columns to display in the table. Leave empty to display all available columns. Note: This field is for future features and is not currently used.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="tabledisplayoptionsresponse">Table<wbr>Display<wbr>Options<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="showncolumns_csharp">
+<a href="#showncolumns_csharp" style="color: inherit; text-decoration: inherit;">Shown<wbr>Columns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Optional. Columns to display in the table. Leave empty to display all available columns. Note: This field is for future features and is not currently used.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="showncolumns_go">
+<a href="#showncolumns_go" style="color: inherit; text-decoration: inherit;">Shown<wbr>Columns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Optional. Columns to display in the table. Leave empty to display all available columns. Note: This field is for future features and is not currently used.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="showncolumns_nodejs">
+<a href="#showncolumns_nodejs" style="color: inherit; text-decoration: inherit;">shown<wbr>Columns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Optional. Columns to display in the table. Leave empty to display all available columns. Note: This field is for future features and is not currently used.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="shown_columns_python">
+<a href="#shown_columns_python" style="color: inherit; text-decoration: inherit;">shown_<wbr>columns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Optional. Columns to display in the table. Leave empty to display all available columns. Note: This field is for future features and is not currently used.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="text">Text</h4>
 
 {{% choosable language csharp %}}
@@ -3942,6 +4428,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}A label for the threshold.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="targetaxis_csharp">
+<a href="#targetaxis_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Axis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#thresholdtargetaxis">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V1.<wbr>Threshold<wbr>Target<wbr>Axis</a></span>
+    </dt>
+    <dd>{{% md %}}The target axis to use for plotting the threshold. Target axis is not allowed in a Scorecard.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
 </span>
@@ -3977,6 +4471,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A label for the threshold.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targetaxis_go">
+<a href="#targetaxis_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Axis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#thresholdtargetaxis">Threshold<wbr>Target<wbr>Axis</a></span>
+    </dt>
+    <dd>{{% md %}}The target axis to use for plotting the threshold. Target axis is not allowed in a Scorecard.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -4014,6 +4516,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}A label for the threshold.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="targetaxis_nodejs">
+<a href="#targetaxis_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Axis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#thresholdtargetaxis">Threshold<wbr>Target<wbr>Axis</a></span>
+    </dt>
+    <dd>{{% md %}}The target axis to use for plotting the threshold. Target axis is not allowed in a Scorecard.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
@@ -4049,6 +4559,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A label for the threshold.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="target_axis_python">
+<a href="#target_axis_python" style="color: inherit; text-decoration: inherit;">target_<wbr>axis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#thresholdtargetaxis">Threshold<wbr>Target<wbr>Axis</a></span>
+    </dt>
+    <dd>{{% md %}}The target axis to use for plotting the threshold. Target axis is not allowed in a Scorecard.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -4148,6 +4666,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}A label for the threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="targetaxis_csharp">
+<a href="#targetaxis_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Axis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The target axis to use for plotting the threshold. Target axis is not allowed in a Scorecard.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
 </span>
@@ -4183,6 +4709,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A label for the threshold.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="targetaxis_go">
+<a href="#targetaxis_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Axis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The target axis to use for plotting the threshold. Target axis is not allowed in a Scorecard.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -4220,6 +4754,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}A label for the threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="targetaxis_nodejs">
+<a href="#targetaxis_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Axis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The target axis to use for plotting the threshold. Target axis is not allowed in a Scorecard.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
@@ -4256,6 +4798,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}A label for the threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="target_axis_python">
+<a href="#target_axis_python" style="color: inherit; text-decoration: inherit;">target_<wbr>axis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The target axis to use for plotting the threshold. Target axis is not allowed in a Scorecard.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
@@ -4263,6 +4813,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The value of the threshold. The value should be defined in the native scale of the metric.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="thresholdtargetaxis">Threshold<wbr>Target<wbr>Axis</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Target<wbr>Axis<wbr>Unspecified</dt>
+    <dd>TARGET_AXIS_UNSPECIFIED{{% md %}}The target axis was not specified. Defaults to Y1.{{% /md %}}</dd><dt>Y1</dt>
+    <dd>Y1{{% md %}}The y_axis (the right axis of chart).{{% /md %}}</dd><dt>Y2</dt>
+    <dd>Y2{{% md %}}The y2_axis (the left axis of chart).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Threshold<wbr>Target<wbr>Axis<wbr>Target<wbr>Axis<wbr>Unspecified</dt>
+    <dd>TARGET_AXIS_UNSPECIFIED{{% md %}}The target axis was not specified. Defaults to Y1.{{% /md %}}</dd><dt>Threshold<wbr>Target<wbr>Axis<wbr>Y1</dt>
+    <dd>Y1{{% md %}}The y_axis (the right axis of chart).{{% /md %}}</dd><dt>Threshold<wbr>Target<wbr>Axis<wbr>Y2</dt>
+    <dd>Y2{{% md %}}The y2_axis (the left axis of chart).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Target<wbr>Axis<wbr>Unspecified</dt>
+    <dd>TARGET_AXIS_UNSPECIFIED{{% md %}}The target axis was not specified. Defaults to Y1.{{% /md %}}</dd><dt>Y1</dt>
+    <dd>Y1{{% md %}}The y_axis (the right axis of chart).{{% /md %}}</dd><dt>Y2</dt>
+    <dd>Y2{{% md %}}The y2_axis (the left axis of chart).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>TARGET_AXIS_UNSPECIFIED</dt>
+    <dd>TARGET_AXIS_UNSPECIFIED{{% md %}}The target axis was not specified. Defaults to Y1.{{% /md %}}</dd><dt>Y1</dt>
+    <dd>Y1{{% md %}}The y_axis (the right axis of chart).{{% /md %}}</dd><dt>Y2</dt>
+    <dd>Y2{{% md %}}The y2_axis (the left axis of chart).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="tile">Tile</h4>
@@ -5497,6 +6077,106 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The unit of data contained in fetched time series. If non-empty, this unit will override any unit that accompanies fetched data. The format is the same as the unit (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.metricDescriptors) field in MetricDescriptor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="timeseriestable">Time<wbr>Series<wbr>Table</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="datasets_csharp">
+<a href="#datasets_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Sets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tabledataset">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V1.<wbr>Inputs.<wbr>Table<wbr>Data<wbr>Set&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The data displayed in this table.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="datasets_go">
+<a href="#datasets_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Sets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tabledataset">[]Table<wbr>Data<wbr>Set</a></span>
+    </dt>
+    <dd>{{% md %}}The data displayed in this table.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="datasets_nodejs">
+<a href="#datasets_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Sets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tabledataset">Table<wbr>Data<wbr>Set[]</a></span>
+    </dt>
+    <dd>{{% md %}}The data displayed in this table.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="data_sets_python">
+<a href="#data_sets_python" style="color: inherit; text-decoration: inherit;">data_<wbr>sets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tabledataset">Sequence[Table<wbr>Data<wbr>Set]</a></span>
+    </dt>
+    <dd>{{% md %}}The data displayed in this table.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="timeseriestableresponse">Time<wbr>Series<wbr>Table<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="datasets_csharp">
+<a href="#datasets_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Sets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tabledatasetresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V1.<wbr>Inputs.<wbr>Table<wbr>Data<wbr>Set<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The data displayed in this table.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="datasets_go">
+<a href="#datasets_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Sets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tabledatasetresponse">[]Table<wbr>Data<wbr>Set<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The data displayed in this table.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="datasets_nodejs">
+<a href="#datasets_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Sets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tabledatasetresponse">Table<wbr>Data<wbr>Set<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The data displayed in this table.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="data_sets_python">
+<a href="#data_sets_python" style="color: inherit; text-decoration: inherit;">data_<wbr>sets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tabledatasetresponse">Sequence[Table<wbr>Data<wbr>Set<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The data displayed in this table.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="widget">Widget</h4>
 
 {{% choosable language csharp %}}
@@ -5533,6 +6213,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#text">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V1.<wbr>Inputs.<wbr>Text</a></span>
     </dt>
     <dd>{{% md %}}A raw string or markdown displaying textual content.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timeseriestable_csharp">
+<a href="#timeseriestable_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Series<wbr>Table</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#timeseriestable">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V1.<wbr>Inputs.<wbr>Time<wbr>Series<wbr>Table</a></span>
+    </dt>
+    <dd>{{% md %}}A widget that displays time series data in a tabular format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="title_csharp">
 <a href="#title_csharp" style="color: inherit; text-decoration: inherit;">Title</a>
@@ -5586,6 +6274,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}A raw string or markdown displaying textual content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="timeseriestable_go">
+<a href="#timeseriestable_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Series<wbr>Table</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#timeseriestable">Time<wbr>Series<wbr>Table</a></span>
+    </dt>
+    <dd>{{% md %}}A widget that displays time series data in a tabular format.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="title_go">
 <a href="#title_go" style="color: inherit; text-decoration: inherit;">Title</a>
 </span>
@@ -5638,6 +6334,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}A raw string or markdown displaying textual content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="timeseriestable_nodejs">
+<a href="#timeseriestable_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Series<wbr>Table</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#timeseriestable">Time<wbr>Series<wbr>Table</a></span>
+    </dt>
+    <dd>{{% md %}}A widget that displays time series data in a tabular format.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="title_nodejs">
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
@@ -5689,6 +6393,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#text">Text</a></span>
     </dt>
     <dd>{{% md %}}A raw string or markdown displaying textual content.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="time_series_table_python">
+<a href="#time_series_table_python" style="color: inherit; text-decoration: inherit;">time_<wbr>series_<wbr>table</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#timeseriestable">Time<wbr>Series<wbr>Table</a></span>
+    </dt>
+    <dd>{{% md %}}A widget that displays time series data in a tabular format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="title_python">
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
@@ -5744,6 +6456,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}A raw string or markdown displaying textual content.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="timeseriestable_csharp">
+<a href="#timeseriestable_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Series<wbr>Table</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#timeseriestableresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V1.<wbr>Inputs.<wbr>Time<wbr>Series<wbr>Table<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}A widget that displays time series data in a tabular format.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="title_csharp">
 <a href="#title_csharp" style="color: inherit; text-decoration: inherit;">Title</a>
 </span>
@@ -5795,6 +6515,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#textresponse">Text<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A raw string or markdown displaying textual content.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="timeseriestable_go">
+<a href="#timeseriestable_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Series<wbr>Table</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#timeseriestableresponse">Time<wbr>Series<wbr>Table<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}A widget that displays time series data in a tabular format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="title_go">
 <a href="#title_go" style="color: inherit; text-decoration: inherit;">Title</a>
@@ -5848,6 +6576,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}A raw string or markdown displaying textual content.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="timeseriestable_nodejs">
+<a href="#timeseriestable_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Series<wbr>Table</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#timeseriestableresponse">Time<wbr>Series<wbr>Table<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}A widget that displays time series data in a tabular format.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="title_nodejs">
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
@@ -5899,6 +6635,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#textresponse">Text<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A raw string or markdown displaying textual content.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="time_series_table_python">
+<a href="#time_series_table_python" style="color: inherit; text-decoration: inherit;">time_<wbr>series_<wbr>table</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#timeseriestableresponse">Time<wbr>Series<wbr>Table<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}A widget that displays time series data in a tabular format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="title_python">
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
@@ -5962,6 +6706,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The properties applied to the X axis.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="y2axis_csharp">
+<a href="#y2axis_csharp" style="color: inherit; text-decoration: inherit;">Y2Axis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#axis">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V1.<wbr>Inputs.<wbr>Axis</a></span>
+    </dt>
+    <dd>{{% md %}}The properties applied to the Y2 axis.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="yaxis_csharp">
 <a href="#yaxis_csharp" style="color: inherit; text-decoration: inherit;">YAxis</a>
 </span>
@@ -6013,6 +6765,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#axis">Axis</a></span>
     </dt>
     <dd>{{% md %}}The properties applied to the X axis.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="y2axis_go">
+<a href="#y2axis_go" style="color: inherit; text-decoration: inherit;">Y2Axis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#axis">Axis</a></span>
+    </dt>
+    <dd>{{% md %}}The properties applied to the Y2 axis.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="yaxis_go">
 <a href="#yaxis_go" style="color: inherit; text-decoration: inherit;">YAxis</a>
@@ -6066,6 +6826,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The properties applied to the X axis.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="y2axis_nodejs">
+<a href="#y2axis_nodejs" style="color: inherit; text-decoration: inherit;">y2Axis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#axis">Axis</a></span>
+    </dt>
+    <dd>{{% md %}}The properties applied to the Y2 axis.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="yaxis_nodejs">
 <a href="#yaxis_nodejs" style="color: inherit; text-decoration: inherit;">y<wbr>Axis</a>
 </span>
@@ -6117,6 +6885,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#axis">Axis</a></span>
     </dt>
     <dd>{{% md %}}The properties applied to the X axis.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="y2_axis_python">
+<a href="#y2_axis_python" style="color: inherit; text-decoration: inherit;">y2_<wbr>axis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#axis">Axis</a></span>
+    </dt>
+    <dd>{{% md %}}The properties applied to the Y2 axis.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="y_axis_python">
 <a href="#y_axis_python" style="color: inherit; text-decoration: inherit;">y_<wbr>axis</a>
@@ -6172,6 +6948,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The properties applied to the X axis.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="y2axis_csharp">
+<a href="#y2axis_csharp" style="color: inherit; text-decoration: inherit;">Y2Axis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#axisresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V1.<wbr>Inputs.<wbr>Axis<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The properties applied to the Y2 axis.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="yaxis_csharp">
 <a href="#yaxis_csharp" style="color: inherit; text-decoration: inherit;">YAxis</a>
 </span>
@@ -6223,6 +7007,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#axisresponse">Axis<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties applied to the X axis.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="y2axis_go">
+<a href="#y2axis_go" style="color: inherit; text-decoration: inherit;">Y2Axis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#axisresponse">Axis<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The properties applied to the Y2 axis.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="yaxis_go">
 <a href="#yaxis_go" style="color: inherit; text-decoration: inherit;">YAxis</a>
@@ -6276,6 +7068,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The properties applied to the X axis.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="y2axis_nodejs">
+<a href="#y2axis_nodejs" style="color: inherit; text-decoration: inherit;">y2Axis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#axisresponse">Axis<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The properties applied to the Y2 axis.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="yaxis_nodejs">
 <a href="#yaxis_nodejs" style="color: inherit; text-decoration: inherit;">y<wbr>Axis</a>
 </span>
@@ -6327,6 +7127,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#axisresponse">Axis<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties applied to the X axis.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="y2_axis_python">
+<a href="#y2_axis_python" style="color: inherit; text-decoration: inherit;">y2_<wbr>axis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#axisresponse">Axis<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The properties applied to the Y2 axis.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="y_axis_python">
 <a href="#y_axis_python" style="color: inherit; text-decoration: inherit;">y_<wbr>axis</a>

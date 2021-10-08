@@ -673,7 +673,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket (see Dataproc staging bucket (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket (see Dataproc staging and temp buckets (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This field requires a Cloud Storage bucket name, not a gs://... URI to a Cloud Storage bucket.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="encryptionconfig_csharp">
 <a href="#encryptionconfig_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Config</a>
@@ -729,7 +729,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancegroupconfigresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Dataproc.<wbr>V1.<wbr>Inputs.<wbr>Instance<wbr>Group<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional. The Compute Engine config settings for the master instance in a cluster.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. The Compute Engine config settings for the cluster's master instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="metastoreconfig_csharp">
 <a href="#metastoreconfig_csharp" style="color: inherit; text-decoration: inherit;">Metastore<wbr>Config</a>
@@ -745,7 +745,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancegroupconfigresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Dataproc.<wbr>V1.<wbr>Inputs.<wbr>Instance<wbr>Group<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional. The Compute Engine config settings for additional worker instances in a cluster.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. The Compute Engine config settings for a cluster's secondary worker instances{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securityconfig_csharp">
 <a href="#securityconfig_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Config</a>
@@ -761,7 +761,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#softwareconfigresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Dataproc.<wbr>V1.<wbr>Inputs.<wbr>Software<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional. The config settings for software inside the cluster.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. The config settings for cluster software.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tempbucket_csharp">
 <a href="#tempbucket_csharp" style="color: inherit; text-decoration: inherit;">Temp<wbr>Bucket</a>
@@ -769,7 +769,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark and MapReduce history files. If you do not specify a temp bucket, Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's temp bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL (or none) if you specify a bucket. This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark and MapReduce history files. If you do not specify a temp bucket, Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's temp bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL (or none) if you specify a bucket (see Dataproc staging and temp buckets (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This field requires a Cloud Storage bucket name, not a gs://... URI to a Cloud Storage bucket.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workerconfig_csharp">
 <a href="#workerconfig_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Config</a>
@@ -777,7 +777,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancegroupconfigresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Dataproc.<wbr>V1.<wbr>Inputs.<wbr>Instance<wbr>Group<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional. The Compute Engine config settings for worker instances in a cluster.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optional. The Compute Engine config settings for the cluster's worker instances.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -797,7 +797,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket (see Dataproc staging bucket (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket (see Dataproc staging and temp buckets (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This field requires a Cloud Storage bucket name, not a gs://... URI to a Cloud Storage bucket.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="encryptionconfig_go">
 <a href="#encryptionconfig_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Config</a>
@@ -853,7 +853,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancegroupconfigresponse">Instance<wbr>Group<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional. The Compute Engine config settings for the master instance in a cluster.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. The Compute Engine config settings for the cluster's master instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="metastoreconfig_go">
 <a href="#metastoreconfig_go" style="color: inherit; text-decoration: inherit;">Metastore<wbr>Config</a>
@@ -869,7 +869,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancegroupconfigresponse">Instance<wbr>Group<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional. The Compute Engine config settings for additional worker instances in a cluster.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. The Compute Engine config settings for a cluster's secondary worker instances{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securityconfig_go">
 <a href="#securityconfig_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Config</a>
@@ -885,7 +885,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#softwareconfigresponse">Software<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional. The config settings for software inside the cluster.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. The config settings for cluster software.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tempbucket_go">
 <a href="#tempbucket_go" style="color: inherit; text-decoration: inherit;">Temp<wbr>Bucket</a>
@@ -893,7 +893,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark and MapReduce history files. If you do not specify a temp bucket, Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's temp bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL (or none) if you specify a bucket. This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark and MapReduce history files. If you do not specify a temp bucket, Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's temp bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL (or none) if you specify a bucket (see Dataproc staging and temp buckets (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This field requires a Cloud Storage bucket name, not a gs://... URI to a Cloud Storage bucket.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workerconfig_go">
 <a href="#workerconfig_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Config</a>
@@ -901,7 +901,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancegroupconfigresponse">Instance<wbr>Group<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional. The Compute Engine config settings for worker instances in a cluster.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optional. The Compute Engine config settings for the cluster's worker instances.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -921,7 +921,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket (see Dataproc staging bucket (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket (see Dataproc staging and temp buckets (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This field requires a Cloud Storage bucket name, not a gs://... URI to a Cloud Storage bucket.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="encryptionconfig_nodejs">
 <a href="#encryptionconfig_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Config</a>
@@ -977,7 +977,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancegroupconfigresponse">Instance<wbr>Group<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional. The Compute Engine config settings for the master instance in a cluster.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. The Compute Engine config settings for the cluster's master instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="metastoreconfig_nodejs">
 <a href="#metastoreconfig_nodejs" style="color: inherit; text-decoration: inherit;">metastore<wbr>Config</a>
@@ -993,7 +993,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancegroupconfigresponse">Instance<wbr>Group<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional. The Compute Engine config settings for additional worker instances in a cluster.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. The Compute Engine config settings for a cluster's secondary worker instances{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securityconfig_nodejs">
 <a href="#securityconfig_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Config</a>
@@ -1009,7 +1009,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#softwareconfigresponse">Software<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional. The config settings for software inside the cluster.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. The config settings for cluster software.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tempbucket_nodejs">
 <a href="#tempbucket_nodejs" style="color: inherit; text-decoration: inherit;">temp<wbr>Bucket</a>
@@ -1017,7 +1017,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark and MapReduce history files. If you do not specify a temp bucket, Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's temp bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL (or none) if you specify a bucket. This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark and MapReduce history files. If you do not specify a temp bucket, Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's temp bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL (or none) if you specify a bucket (see Dataproc staging and temp buckets (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This field requires a Cloud Storage bucket name, not a gs://... URI to a Cloud Storage bucket.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workerconfig_nodejs">
 <a href="#workerconfig_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Config</a>
@@ -1025,7 +1025,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancegroupconfigresponse">Instance<wbr>Group<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional. The Compute Engine config settings for worker instances in a cluster.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optional. The Compute Engine config settings for the cluster's worker instances.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1045,7 +1045,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket (see Dataproc staging bucket (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket (see Dataproc staging and temp buckets (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This field requires a Cloud Storage bucket name, not a gs://... URI to a Cloud Storage bucket.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="encryption_config_python">
 <a href="#encryption_config_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>config</a>
@@ -1101,7 +1101,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancegroupconfigresponse">Instance<wbr>Group<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional. The Compute Engine config settings for the master instance in a cluster.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. The Compute Engine config settings for the cluster's master instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="metastore_config_python">
 <a href="#metastore_config_python" style="color: inherit; text-decoration: inherit;">metastore_<wbr>config</a>
@@ -1117,7 +1117,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancegroupconfigresponse">Instance<wbr>Group<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional. The Compute Engine config settings for additional worker instances in a cluster.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. The Compute Engine config settings for a cluster's secondary worker instances{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="security_config_python">
 <a href="#security_config_python" style="color: inherit; text-decoration: inherit;">security_<wbr>config</a>
@@ -1133,7 +1133,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#softwareconfigresponse">Software<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional. The config settings for software inside the cluster.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. The config settings for cluster software.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="temp_bucket_python">
 <a href="#temp_bucket_python" style="color: inherit; text-decoration: inherit;">temp_<wbr>bucket</a>
@@ -1141,7 +1141,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark and MapReduce history files. If you do not specify a temp bucket, Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's temp bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL (or none) if you specify a bucket. This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark and MapReduce history files. If you do not specify a temp bucket, Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's temp bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL (or none) if you specify a bucket (see Dataproc staging and temp buckets (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This field requires a Cloud Storage bucket name, not a gs://... URI to a Cloud Storage bucket.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="worker_config_python">
 <a href="#worker_config_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>config</a>
@@ -1149,7 +1149,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancegroupconfigresponse">Instance<wbr>Group<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional. The Compute Engine config settings for worker instances in a cluster.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optional. The Compute Engine config settings for the cluster's worker instances.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="clusterselectorresponse">Cluster<wbr>Selector<wbr>Response</h4>

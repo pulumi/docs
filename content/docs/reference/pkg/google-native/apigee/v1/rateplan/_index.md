@@ -40,7 +40,6 @@ Auto-naming is currently not supported for this resource.
              <span class="nx">fixed_fee_frequency</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
              <span class="nx">fixed_recurring_fee</span><span class="p">:</span> <span class="nx">Optional[GoogleTypeMoneyArgs]</span> = None<span class="p">,</span>
              <span class="nx">organization_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">payment_funding_model</span><span class="p">:</span> <span class="nx">Optional[RatePlanPaymentFundingModel]</span> = None<span class="p">,</span>
              <span class="nx">revenue_share_rates</span><span class="p">:</span> <span class="nx">Optional[Sequence[GoogleCloudApigeeV1RevenueShareRangeArgs]]</span> = None<span class="p">,</span>
              <span class="nx">revenue_share_type</span><span class="p">:</span> <span class="nx">Optional[RatePlanRevenueShareType]</span> = None<span class="p">,</span>
              <span class="nx">setup_fee</span><span class="p">:</span> <span class="nx">Optional[GoogleTypeMoneyArgs]</span> = None<span class="p">,</span>
@@ -271,14 +270,6 @@ The RatePlan resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}Fixed amount that is charged at a defined interval and billed in advance of use of the API product. The fee will be prorated for the first billing period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="paymentfundingmodel_csharp">
-<a href="#paymentfundingmodel_csharp" style="color: inherit; text-decoration: inherit;">Payment<wbr>Funding<wbr>Model</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rateplanpaymentfundingmodel">Pulumi.<wbr>Google<wbr>Native.<wbr>Apigee.<wbr>V1.<wbr>Rate<wbr>Plan<wbr>Payment<wbr>Funding<wbr>Model</a></span>
-    </dt>
-    <dd>{{% md %}}Flag that specifies the billing account type, prepaid or postpaid.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="revenuesharerates_csharp">
 <a href="#revenuesharerates_csharp" style="color: inherit; text-decoration: inherit;">Revenue<wbr>Share<wbr>Rates</a>
 </span>
@@ -418,14 +409,6 @@ The RatePlan resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#googletypemoney">Google<wbr>Type<wbr>Money<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Fixed amount that is charged at a defined interval and billed in advance of use of the API product. The fee will be prorated for the first billing period.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="paymentfundingmodel_go">
-<a href="#paymentfundingmodel_go" style="color: inherit; text-decoration: inherit;">Payment<wbr>Funding<wbr>Model</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rateplanpaymentfundingmodel">Rate<wbr>Plan<wbr>Payment<wbr>Funding<wbr>Model</a></span>
-    </dt>
-    <dd>{{% md %}}Flag that specifies the billing account type, prepaid or postpaid.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revenuesharerates_go">
 <a href="#revenuesharerates_go" style="color: inherit; text-decoration: inherit;">Revenue<wbr>Share<wbr>Rates</a>
@@ -567,14 +550,6 @@ The RatePlan resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}Fixed amount that is charged at a defined interval and billed in advance of use of the API product. The fee will be prorated for the first billing period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="paymentfundingmodel_nodejs">
-<a href="#paymentfundingmodel_nodejs" style="color: inherit; text-decoration: inherit;">payment<wbr>Funding<wbr>Model</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rateplanpaymentfundingmodel">Rate<wbr>Plan<wbr>Payment<wbr>Funding<wbr>Model</a></span>
-    </dt>
-    <dd>{{% md %}}Flag that specifies the billing account type, prepaid or postpaid.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="revenuesharerates_nodejs">
 <a href="#revenuesharerates_nodejs" style="color: inherit; text-decoration: inherit;">revenue<wbr>Share<wbr>Rates</a>
 </span>
@@ -714,14 +689,6 @@ The RatePlan resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#googletypemoney">Google<wbr>Type<wbr>Money<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Fixed amount that is charged at a defined interval and billed in advance of use of the API product. The fee will be prorated for the first billing period.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="payment_funding_model_python">
-<a href="#payment_funding_model_python" style="color: inherit; text-decoration: inherit;">payment_<wbr>funding_<wbr>model</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rateplanpaymentfundingmodel">Rate<wbr>Plan<wbr>Payment<wbr>Funding<wbr>Model</a></span>
-    </dt>
-    <dd>{{% md %}}Flag that specifies the billing account type, prepaid or postpaid.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revenue_share_rates_python">
 <a href="#revenue_share_rates_python" style="color: inherit; text-decoration: inherit;">revenue_<wbr>share_<wbr>rates</a>
@@ -1645,66 +1612,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular"><dt>Consumption<wbr>Pricing<wbr>Type<wbr>Unspecified</dt>
     <dd>CONSUMPTION_PRICING_TYPE_UNSPECIFIED{{% md %}}Pricing model not specified. This is the default.{{% /md %}}</dd><dt>Fixed<wbr>Per<wbr>Unit</dt>
     <dd>FIXED_PER_UNIT{{% md %}}Fixed rate charged for each API call.{{% /md %}}</dd><dt>Banded</dt>
-    <dd>BANDED{{% md %}}Variable rate charged based on the total volume of API calls. Example: * 1-100 calls cost $2 per call * 101-200 calls cost $1.50 per call * 201-300 calls cost $1 per call * Total price for 50 calls: 50 x $2 = $100 * Total price for 150 calls: 150 x $1.5 = $225 * Total price for 250 calls: 250 x $1 = $250. **Note**: Not supported by Apigee at this time.{{% /md %}}</dd><dt>Tiered</dt>
-    <dd>TIERED{{% md %}}Variable rate charged for each API call based on price tiers. Example: * 1-100 calls cost $2 per call * 101-200 calls cost $1.50 per call * 201-300 calls cost $1 per call * Total price for 50 calls: 50 x $2 = $100 * Total price for 150 calls: 100 x $2 + 50 x $1.5 = $275 * Total price for 250 calls: 100 x $2 + 100 x $1.5 + 50 x $1 = $400. **Note**: Not supported by Apigee at this time.{{% /md %}}</dd><dt>Stairstep</dt>
-    <dd>STAIRSTEP{{% md %}}Flat rate charged for a bundle of API calls whether or not the entire bundle is used. Example: * 1-100 calls cost $75 flat fee * 101-200 calls cost $100 flat free * 201-300 calls cost $150 flat fee * Total price for 1 call: $75 * Total price for 50 calls: $75 * Total price for 150 calls: $100 * Total price for 250 calls: $150. **Note**: Not supported by Apigee at this time.{{% /md %}}</dd></dl>
+    <dd>BANDED{{% md %}}Variable rate charged for each API call based on price tiers. Example: * 1-100 calls cost $2 per call * 101-200 calls cost $1.50 per call * 201-300 calls cost $1 per call * Total price for 50 calls: 50 x $2 = $100 * Total price for 150 calls: 100 x $2 + 50 x $1.5 = $275 * Total price for 250 calls: 100 x $2 + 100 x $1.5 + 50 x $1 = $400. **Note**: Not supported by Apigee at this time.{{% /md %}}</dd><dt>Tiered</dt>
+    <dd>TIERED{{% md %}}**Note**: Not supported by Apigee at this time.{{% /md %}}</dd><dt>Stairstep</dt>
+    <dd>STAIRSTEP{{% md %}}**Note**: Not supported by Apigee at this time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="tabular"><dt>Rate<wbr>Plan<wbr>Consumption<wbr>Pricing<wbr>Type<wbr>Consumption<wbr>Pricing<wbr>Type<wbr>Unspecified</dt>
     <dd>CONSUMPTION_PRICING_TYPE_UNSPECIFIED{{% md %}}Pricing model not specified. This is the default.{{% /md %}}</dd><dt>Rate<wbr>Plan<wbr>Consumption<wbr>Pricing<wbr>Type<wbr>Fixed<wbr>Per<wbr>Unit</dt>
     <dd>FIXED_PER_UNIT{{% md %}}Fixed rate charged for each API call.{{% /md %}}</dd><dt>Rate<wbr>Plan<wbr>Consumption<wbr>Pricing<wbr>Type<wbr>Banded</dt>
-    <dd>BANDED{{% md %}}Variable rate charged based on the total volume of API calls. Example: * 1-100 calls cost $2 per call * 101-200 calls cost $1.50 per call * 201-300 calls cost $1 per call * Total price for 50 calls: 50 x $2 = $100 * Total price for 150 calls: 150 x $1.5 = $225 * Total price for 250 calls: 250 x $1 = $250. **Note**: Not supported by Apigee at this time.{{% /md %}}</dd><dt>Rate<wbr>Plan<wbr>Consumption<wbr>Pricing<wbr>Type<wbr>Tiered</dt>
-    <dd>TIERED{{% md %}}Variable rate charged for each API call based on price tiers. Example: * 1-100 calls cost $2 per call * 101-200 calls cost $1.50 per call * 201-300 calls cost $1 per call * Total price for 50 calls: 50 x $2 = $100 * Total price for 150 calls: 100 x $2 + 50 x $1.5 = $275 * Total price for 250 calls: 100 x $2 + 100 x $1.5 + 50 x $1 = $400. **Note**: Not supported by Apigee at this time.{{% /md %}}</dd><dt>Rate<wbr>Plan<wbr>Consumption<wbr>Pricing<wbr>Type<wbr>Stairstep</dt>
-    <dd>STAIRSTEP{{% md %}}Flat rate charged for a bundle of API calls whether or not the entire bundle is used. Example: * 1-100 calls cost $75 flat fee * 101-200 calls cost $100 flat free * 201-300 calls cost $150 flat fee * Total price for 1 call: $75 * Total price for 50 calls: $75 * Total price for 150 calls: $100 * Total price for 250 calls: $150. **Note**: Not supported by Apigee at this time.{{% /md %}}</dd></dl>
+    <dd>BANDED{{% md %}}Variable rate charged for each API call based on price tiers. Example: * 1-100 calls cost $2 per call * 101-200 calls cost $1.50 per call * 201-300 calls cost $1 per call * Total price for 50 calls: 50 x $2 = $100 * Total price for 150 calls: 100 x $2 + 50 x $1.5 = $275 * Total price for 250 calls: 100 x $2 + 100 x $1.5 + 50 x $1 = $400. **Note**: Not supported by Apigee at this time.{{% /md %}}</dd><dt>Rate<wbr>Plan<wbr>Consumption<wbr>Pricing<wbr>Type<wbr>Tiered</dt>
+    <dd>TIERED{{% md %}}**Note**: Not supported by Apigee at this time.{{% /md %}}</dd><dt>Rate<wbr>Plan<wbr>Consumption<wbr>Pricing<wbr>Type<wbr>Stairstep</dt>
+    <dd>STAIRSTEP{{% md %}}**Note**: Not supported by Apigee at this time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="tabular"><dt>Consumption<wbr>Pricing<wbr>Type<wbr>Unspecified</dt>
     <dd>CONSUMPTION_PRICING_TYPE_UNSPECIFIED{{% md %}}Pricing model not specified. This is the default.{{% /md %}}</dd><dt>Fixed<wbr>Per<wbr>Unit</dt>
     <dd>FIXED_PER_UNIT{{% md %}}Fixed rate charged for each API call.{{% /md %}}</dd><dt>Banded</dt>
-    <dd>BANDED{{% md %}}Variable rate charged based on the total volume of API calls. Example: * 1-100 calls cost $2 per call * 101-200 calls cost $1.50 per call * 201-300 calls cost $1 per call * Total price for 50 calls: 50 x $2 = $100 * Total price for 150 calls: 150 x $1.5 = $225 * Total price for 250 calls: 250 x $1 = $250. **Note**: Not supported by Apigee at this time.{{% /md %}}</dd><dt>Tiered</dt>
-    <dd>TIERED{{% md %}}Variable rate charged for each API call based on price tiers. Example: * 1-100 calls cost $2 per call * 101-200 calls cost $1.50 per call * 201-300 calls cost $1 per call * Total price for 50 calls: 50 x $2 = $100 * Total price for 150 calls: 100 x $2 + 50 x $1.5 = $275 * Total price for 250 calls: 100 x $2 + 100 x $1.5 + 50 x $1 = $400. **Note**: Not supported by Apigee at this time.{{% /md %}}</dd><dt>Stairstep</dt>
-    <dd>STAIRSTEP{{% md %}}Flat rate charged for a bundle of API calls whether or not the entire bundle is used. Example: * 1-100 calls cost $75 flat fee * 101-200 calls cost $100 flat free * 201-300 calls cost $150 flat fee * Total price for 1 call: $75 * Total price for 50 calls: $75 * Total price for 150 calls: $100 * Total price for 250 calls: $150. **Note**: Not supported by Apigee at this time.{{% /md %}}</dd></dl>
+    <dd>BANDED{{% md %}}Variable rate charged for each API call based on price tiers. Example: * 1-100 calls cost $2 per call * 101-200 calls cost $1.50 per call * 201-300 calls cost $1 per call * Total price for 50 calls: 50 x $2 = $100 * Total price for 150 calls: 100 x $2 + 50 x $1.5 = $275 * Total price for 250 calls: 100 x $2 + 100 x $1.5 + 50 x $1 = $400. **Note**: Not supported by Apigee at this time.{{% /md %}}</dd><dt>Tiered</dt>
+    <dd>TIERED{{% md %}}**Note**: Not supported by Apigee at this time.{{% /md %}}</dd><dt>Stairstep</dt>
+    <dd>STAIRSTEP{{% md %}}**Note**: Not supported by Apigee at this time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="tabular"><dt>CONSUMPTION_PRICING_TYPE_UNSPECIFIED</dt>
     <dd>CONSUMPTION_PRICING_TYPE_UNSPECIFIED{{% md %}}Pricing model not specified. This is the default.{{% /md %}}</dd><dt>FIXED_PER_UNIT</dt>
     <dd>FIXED_PER_UNIT{{% md %}}Fixed rate charged for each API call.{{% /md %}}</dd><dt>BANDED</dt>
-    <dd>BANDED{{% md %}}Variable rate charged based on the total volume of API calls. Example: * 1-100 calls cost $2 per call * 101-200 calls cost $1.50 per call * 201-300 calls cost $1 per call * Total price for 50 calls: 50 x $2 = $100 * Total price for 150 calls: 150 x $1.5 = $225 * Total price for 250 calls: 250 x $1 = $250. **Note**: Not supported by Apigee at this time.{{% /md %}}</dd><dt>TIERED</dt>
-    <dd>TIERED{{% md %}}Variable rate charged for each API call based on price tiers. Example: * 1-100 calls cost $2 per call * 101-200 calls cost $1.50 per call * 201-300 calls cost $1 per call * Total price for 50 calls: 50 x $2 = $100 * Total price for 150 calls: 100 x $2 + 50 x $1.5 = $275 * Total price for 250 calls: 100 x $2 + 100 x $1.5 + 50 x $1 = $400. **Note**: Not supported by Apigee at this time.{{% /md %}}</dd><dt>STAIRSTEP</dt>
-    <dd>STAIRSTEP{{% md %}}Flat rate charged for a bundle of API calls whether or not the entire bundle is used. Example: * 1-100 calls cost $75 flat fee * 101-200 calls cost $100 flat free * 201-300 calls cost $150 flat fee * Total price for 1 call: $75 * Total price for 50 calls: $75 * Total price for 150 calls: $100 * Total price for 250 calls: $150. **Note**: Not supported by Apigee at this time.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="rateplanpaymentfundingmodel">Rate<wbr>Plan<wbr>Payment<wbr>Funding<wbr>Model</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Payment<wbr>Funding<wbr>Model<wbr>Unspecified</dt>
-    <dd>PAYMENT_FUNDING_MODEL_UNSPECIFIED{{% md %}}Billing account type not specified.{{% /md %}}</dd><dt>Prepaid</dt>
-    <dd>PREPAID{{% md %}}Prepaid billing account type. Developer pays in advance for the use of your API products. Funds are deducted from their prepaid account balance. **Note**: Not supported by Apigee at this time.{{% /md %}}</dd><dt>Postpaid</dt>
-    <dd>POSTPAID{{% md %}}Postpaid billing account type. Developer is billed through an invoice after using your API products.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Rate<wbr>Plan<wbr>Payment<wbr>Funding<wbr>Model<wbr>Payment<wbr>Funding<wbr>Model<wbr>Unspecified</dt>
-    <dd>PAYMENT_FUNDING_MODEL_UNSPECIFIED{{% md %}}Billing account type not specified.{{% /md %}}</dd><dt>Rate<wbr>Plan<wbr>Payment<wbr>Funding<wbr>Model<wbr>Prepaid</dt>
-    <dd>PREPAID{{% md %}}Prepaid billing account type. Developer pays in advance for the use of your API products. Funds are deducted from their prepaid account balance. **Note**: Not supported by Apigee at this time.{{% /md %}}</dd><dt>Rate<wbr>Plan<wbr>Payment<wbr>Funding<wbr>Model<wbr>Postpaid</dt>
-    <dd>POSTPAID{{% md %}}Postpaid billing account type. Developer is billed through an invoice after using your API products.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Payment<wbr>Funding<wbr>Model<wbr>Unspecified</dt>
-    <dd>PAYMENT_FUNDING_MODEL_UNSPECIFIED{{% md %}}Billing account type not specified.{{% /md %}}</dd><dt>Prepaid</dt>
-    <dd>PREPAID{{% md %}}Prepaid billing account type. Developer pays in advance for the use of your API products. Funds are deducted from their prepaid account balance. **Note**: Not supported by Apigee at this time.{{% /md %}}</dd><dt>Postpaid</dt>
-    <dd>POSTPAID{{% md %}}Postpaid billing account type. Developer is billed through an invoice after using your API products.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>PAYMENT_FUNDING_MODEL_UNSPECIFIED</dt>
-    <dd>PAYMENT_FUNDING_MODEL_UNSPECIFIED{{% md %}}Billing account type not specified.{{% /md %}}</dd><dt>PREPAID</dt>
-    <dd>PREPAID{{% md %}}Prepaid billing account type. Developer pays in advance for the use of your API products. Funds are deducted from their prepaid account balance. **Note**: Not supported by Apigee at this time.{{% /md %}}</dd><dt>POSTPAID</dt>
-    <dd>POSTPAID{{% md %}}Postpaid billing account type. Developer is billed through an invoice after using your API products.{{% /md %}}</dd></dl>
+    <dd>BANDED{{% md %}}Variable rate charged for each API call based on price tiers. Example: * 1-100 calls cost $2 per call * 101-200 calls cost $1.50 per call * 201-300 calls cost $1 per call * Total price for 50 calls: 50 x $2 = $100 * Total price for 150 calls: 100 x $2 + 50 x $1.5 = $275 * Total price for 250 calls: 100 x $2 + 100 x $1.5 + 50 x $1 = $400. **Note**: Not supported by Apigee at this time.{{% /md %}}</dd><dt>TIERED</dt>
+    <dd>TIERED{{% md %}}**Note**: Not supported by Apigee at this time.{{% /md %}}</dd><dt>STAIRSTEP</dt>
+    <dd>STAIRSTEP{{% md %}}**Note**: Not supported by Apigee at this time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="rateplanrevenuesharetype">Rate<wbr>Plan<wbr>Revenue<wbr>Share<wbr>Type</h4>

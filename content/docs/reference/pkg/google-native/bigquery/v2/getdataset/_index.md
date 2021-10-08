@@ -167,6 +167,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}[Required] A reference that identifies the dataset.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="defaultcollation_csharp">
+<a href="#defaultcollation_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Collation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default collation of the dataset.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="defaultencryptionconfiguration_csharp">
 <a href="#defaultencryptionconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Encryption<wbr>Configuration</a>
 </span>
@@ -214,6 +222,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] A descriptive name for the dataset.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="iscaseinsensitive_csharp">
+<a href="#iscaseinsensitive_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Case<wbr>Insensitive</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}[Optional] Indicates if table names are case insensitive in the dataset.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -291,6 +307,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}[Required] A reference that identifies the dataset.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="defaultcollation_go">
+<a href="#defaultcollation_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Collation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default collation of the dataset.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="defaultencryptionconfiguration_go">
 <a href="#defaultencryptionconfiguration_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Encryption<wbr>Configuration</a>
 </span>
@@ -338,6 +362,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] A descriptive name for the dataset.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="iscaseinsensitive_go">
+<a href="#iscaseinsensitive_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Case<wbr>Insensitive</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}[Optional] Indicates if table names are case insensitive in the dataset.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -415,6 +447,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}[Required] A reference that identifies the dataset.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="defaultcollation_nodejs">
+<a href="#defaultcollation_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Collation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default collation of the dataset.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="defaultencryptionconfiguration_nodejs">
 <a href="#defaultencryptionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Encryption<wbr>Configuration</a>
 </span>
@@ -462,6 +502,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] A descriptive name for the dataset.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="iscaseinsensitive_nodejs">
+<a href="#iscaseinsensitive_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Case<wbr>Insensitive</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}[Optional] Indicates if table names are case insensitive in the dataset.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -539,6 +587,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}[Required] A reference that identifies the dataset.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="default_collation_python">
+<a href="#default_collation_python" style="color: inherit; text-decoration: inherit;">default_<wbr>collation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The default collation of the dataset.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="default_encryption_configuration_python">
 <a href="#default_encryption_configuration_python" style="color: inherit; text-decoration: inherit;">default_<wbr>encryption_<wbr>configuration</a>
 </span>
@@ -586,6 +642,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] A descriptive name for the dataset.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="is_case_insensitive_python">
+<a href="#is_case_insensitive_python" style="color: inherit; text-decoration: inherit;">is_<wbr>case_<wbr>insensitive</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}[Optional] Indicates if table names are case insensitive in the dataset.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>

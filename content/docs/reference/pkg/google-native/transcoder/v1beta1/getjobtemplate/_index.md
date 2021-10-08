@@ -4736,7 +4736,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The video bitrate in bits per second. Must be between 1 and 1,000,000,000.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The video bitrate in bits per second. The minimum value is 1,000. The maximum value for H264/H265 is 800,000,000. The maximum value for VP9 is 480,000,000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="codec_csharp">
 <a href="#codec_csharp" style="color: inherit; text-decoration: inherit;">Codec</a>
@@ -4908,7 +4908,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The video bitrate in bits per second. Must be between 1 and 1,000,000,000.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The video bitrate in bits per second. The minimum value is 1,000. The maximum value for H264/H265 is 800,000,000. The maximum value for VP9 is 480,000,000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="codec_go">
 <a href="#codec_go" style="color: inherit; text-decoration: inherit;">Codec</a>
@@ -5080,7 +5080,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The video bitrate in bits per second. Must be between 1 and 1,000,000,000.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The video bitrate in bits per second. The minimum value is 1,000. The maximum value for H264/H265 is 800,000,000. The maximum value for VP9 is 480,000,000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="codec_nodejs">
 <a href="#codec_nodejs" style="color: inherit; text-decoration: inherit;">codec</a>
@@ -5252,7 +5252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The video bitrate in bits per second. Must be between 1 and 1,000,000,000.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The video bitrate in bits per second. The minimum value is 1,000. The maximum value for H264/H265 is 800,000,000. The maximum value for VP9 is 480,000,000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="codec_python">
 <a href="#codec_python" style="color: inherit; text-decoration: inherit;">codec</a>

@@ -216,7 +216,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#maintenancewindow">Pulumi.<wbr>Google<wbr>Native.<wbr>Metastore.<wbr>V1Alpha.<wbr>Inputs.<wbr>Maintenance<wbr>Window<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The one hour maintenance window of the metastore service. This specifies when the service can be restarted for maintenance purposes in UTC time.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The one hour maintenance window of the metastore service. This specifies when the service can be restarted for maintenance purposes in UTC time. Maintenance window is not needed for services with the SPANNER database type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadataintegration_csharp">
 <a href="#metadataintegration_csharp" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Integration</a>
@@ -332,7 +332,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#maintenancewindow">Maintenance<wbr>Window<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The one hour maintenance window of the metastore service. This specifies when the service can be restarted for maintenance purposes in UTC time.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The one hour maintenance window of the metastore service. This specifies when the service can be restarted for maintenance purposes in UTC time. Maintenance window is not needed for services with the SPANNER database type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadataintegration_go">
 <a href="#metadataintegration_go" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Integration</a>
@@ -448,7 +448,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#maintenancewindow">Maintenance<wbr>Window<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The one hour maintenance window of the metastore service. This specifies when the service can be restarted for maintenance purposes in UTC time.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The one hour maintenance window of the metastore service. This specifies when the service can be restarted for maintenance purposes in UTC time. Maintenance window is not needed for services with the SPANNER database type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadataintegration_nodejs">
 <a href="#metadataintegration_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Integration</a>
@@ -564,7 +564,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#maintenancewindow">Maintenance<wbr>Window<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The one hour maintenance window of the metastore service. This specifies when the service can be restarted for maintenance purposes in UTC time.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The one hour maintenance window of the metastore service. This specifies when the service can be restarted for maintenance purposes in UTC time. Maintenance window is not needed for services with the SPANNER database type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_integration_python">
 <a href="#metadata_integration_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>integration</a>
@@ -1052,6 +1052,106 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Defines whether the metastore metadata should be synced to Data Catalog. The default value is to disable syncing metastore metadata to Data Catalog.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="dataplexconfig">Dataplex<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="lakeresources_csharp">
+<a href="#lakeresources_csharp" style="color: inherit; text-decoration: inherit;">Lake<wbr>Resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A reference to the Lake resources that this metastore service is attached to. The key is the lake resource name. Example: projects/{project_number}/locations/{location_id}/lakes/{lake_id}.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="lakeresources_go">
+<a href="#lakeresources_go" style="color: inherit; text-decoration: inherit;">Lake<wbr>Resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A reference to the Lake resources that this metastore service is attached to. The key is the lake resource name. Example: projects/{project_number}/locations/{location_id}/lakes/{lake_id}.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="lakeresources_nodejs">
+<a href="#lakeresources_nodejs" style="color: inherit; text-decoration: inherit;">lake<wbr>Resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A reference to the Lake resources that this metastore service is attached to. The key is the lake resource name. Example: projects/{project_number}/locations/{location_id}/lakes/{lake_id}.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="lake_resources_python">
+<a href="#lake_resources_python" style="color: inherit; text-decoration: inherit;">lake_<wbr>resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A reference to the Lake resources that this metastore service is attached to. The key is the lake resource name. Example: projects/{project_number}/locations/{location_id}/lakes/{lake_id}.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="dataplexconfigresponse">Dataplex<wbr>Config<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="lakeresources_csharp">
+<a href="#lakeresources_csharp" style="color: inherit; text-decoration: inherit;">Lake<wbr>Resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A reference to the Lake resources that this metastore service is attached to. The key is the lake resource name. Example: projects/{project_number}/locations/{location_id}/lakes/{lake_id}.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="lakeresources_go">
+<a href="#lakeresources_go" style="color: inherit; text-decoration: inherit;">Lake<wbr>Resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A reference to the Lake resources that this metastore service is attached to. The key is the lake resource name. Example: projects/{project_number}/locations/{location_id}/lakes/{lake_id}.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="lakeresources_nodejs">
+<a href="#lakeresources_nodejs" style="color: inherit; text-decoration: inherit;">lake<wbr>Resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A reference to the Lake resources that this metastore service is attached to. The key is the lake resource name. Example: projects/{project_number}/locations/{location_id}/lakes/{lake_id}.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="lake_resources_python">
+<a href="#lake_resources_python" style="color: inherit; text-decoration: inherit;">lake_<wbr>resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A reference to the Lake resources that this metastore service is attached to. The key is the lake resource name. Example: projects/{project_number}/locations/{location_id}/lakes/{lake_id}.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="encryptionconfig">Encryption<wbr>Config</h4>
 
 {{% choosable language csharp %}}
@@ -1165,6 +1265,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}A mapping of Hive metastore configuration key-value pairs to apply to the Hive metastore (configured in hive-site.xml). The mappings override system defaults (some keys cannot be overridden).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="endpointprotocol_csharp">
+<a href="#endpointprotocol_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hivemetastoreconfigendpointprotocol">Pulumi.<wbr>Google<wbr>Native.<wbr>Metastore.<wbr>V1Alpha.<wbr>Hive<wbr>Metastore<wbr>Config<wbr>Endpoint<wbr>Protocol</a></span>
+    </dt>
+    <dd>{{% md %}}The protocol to use for the metastore service endpoint. If unspecified, defaults to THRIFT.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="kerberosconfig_csharp">
 <a href="#kerberosconfig_csharp" style="color: inherit; text-decoration: inherit;">Kerberos<wbr>Config</a>
 </span>
@@ -1192,6 +1300,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of Hive metastore configuration key-value pairs to apply to the Hive metastore (configured in hive-site.xml). The mappings override system defaults (some keys cannot be overridden).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="endpointprotocol_go">
+<a href="#endpointprotocol_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hivemetastoreconfigendpointprotocol">Hive<wbr>Metastore<wbr>Config<wbr>Endpoint<wbr>Protocol</a></span>
+    </dt>
+    <dd>{{% md %}}The protocol to use for the metastore service endpoint. If unspecified, defaults to THRIFT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kerberosconfig_go">
 <a href="#kerberosconfig_go" style="color: inherit; text-decoration: inherit;">Kerberos<wbr>Config</a>
@@ -1221,6 +1337,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}A mapping of Hive metastore configuration key-value pairs to apply to the Hive metastore (configured in hive-site.xml). The mappings override system defaults (some keys cannot be overridden).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="endpointprotocol_nodejs">
+<a href="#endpointprotocol_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hivemetastoreconfigendpointprotocol">Hive<wbr>Metastore<wbr>Config<wbr>Endpoint<wbr>Protocol</a></span>
+    </dt>
+    <dd>{{% md %}}The protocol to use for the metastore service endpoint. If unspecified, defaults to THRIFT.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="kerberosconfig_nodejs">
 <a href="#kerberosconfig_nodejs" style="color: inherit; text-decoration: inherit;">kerberos<wbr>Config</a>
 </span>
@@ -1249,6 +1373,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}A mapping of Hive metastore configuration key-value pairs to apply to the Hive metastore (configured in hive-site.xml). The mappings override system defaults (some keys cannot be overridden).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="endpoint_protocol_python">
+<a href="#endpoint_protocol_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hivemetastoreconfigendpointprotocol">Hive<wbr>Metastore<wbr>Config<wbr>Endpoint<wbr>Protocol</a></span>
+    </dt>
+    <dd>{{% md %}}The protocol to use for the metastore service endpoint. If unspecified, defaults to THRIFT.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="kerberos_config_python">
 <a href="#kerberos_config_python" style="color: inherit; text-decoration: inherit;">kerberos_<wbr>config</a>
 </span>
@@ -1266,6 +1398,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Immutable. The Hive metastore schema version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="hivemetastoreconfigendpointprotocol">Hive<wbr>Metastore<wbr>Config<wbr>Endpoint<wbr>Protocol</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Endpoint<wbr>Protocol<wbr>Unspecified</dt>
+    <dd>ENDPOINT_PROTOCOL_UNSPECIFIED{{% md %}}The protocol is not set.{{% /md %}}</dd><dt>Thrift</dt>
+    <dd>THRIFT{{% md %}}Use the legacy Apache Thrift protocol for the metastore service endpoint.{{% /md %}}</dd><dt>Grpc</dt>
+    <dd>GRPC{{% md %}}Use the modernized gRPC protocol for the metastore service endpoint.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Hive<wbr>Metastore<wbr>Config<wbr>Endpoint<wbr>Protocol<wbr>Endpoint<wbr>Protocol<wbr>Unspecified</dt>
+    <dd>ENDPOINT_PROTOCOL_UNSPECIFIED{{% md %}}The protocol is not set.{{% /md %}}</dd><dt>Hive<wbr>Metastore<wbr>Config<wbr>Endpoint<wbr>Protocol<wbr>Thrift</dt>
+    <dd>THRIFT{{% md %}}Use the legacy Apache Thrift protocol for the metastore service endpoint.{{% /md %}}</dd><dt>Hive<wbr>Metastore<wbr>Config<wbr>Endpoint<wbr>Protocol<wbr>Grpc</dt>
+    <dd>GRPC{{% md %}}Use the modernized gRPC protocol for the metastore service endpoint.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Endpoint<wbr>Protocol<wbr>Unspecified</dt>
+    <dd>ENDPOINT_PROTOCOL_UNSPECIFIED{{% md %}}The protocol is not set.{{% /md %}}</dd><dt>Thrift</dt>
+    <dd>THRIFT{{% md %}}Use the legacy Apache Thrift protocol for the metastore service endpoint.{{% /md %}}</dd><dt>Grpc</dt>
+    <dd>GRPC{{% md %}}Use the modernized gRPC protocol for the metastore service endpoint.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ENDPOINT_PROTOCOL_UNSPECIFIED</dt>
+    <dd>ENDPOINT_PROTOCOL_UNSPECIFIED{{% md %}}The protocol is not set.{{% /md %}}</dd><dt>THRIFT</dt>
+    <dd>THRIFT{{% md %}}Use the legacy Apache Thrift protocol for the metastore service endpoint.{{% /md %}}</dd><dt>GRPC</dt>
+    <dd>GRPC{{% md %}}Use the modernized gRPC protocol for the metastore service endpoint.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="hivemetastoreconfigresponse">Hive<wbr>Metastore<wbr>Config<wbr>Response</h4>
 
 {{% choosable language csharp %}}
@@ -1278,6 +1440,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of Hive metastore configuration key-value pairs to apply to the Hive metastore (configured in hive-site.xml). The mappings override system defaults (some keys cannot be overridden).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="endpointprotocol_csharp">
+<a href="#endpointprotocol_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocol to use for the metastore service endpoint. If unspecified, defaults to THRIFT.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kerberosconfig_csharp">
 <a href="#kerberosconfig_csharp" style="color: inherit; text-decoration: inherit;">Kerberos<wbr>Config</a>
@@ -1307,6 +1477,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}A mapping of Hive metastore configuration key-value pairs to apply to the Hive metastore (configured in hive-site.xml). The mappings override system defaults (some keys cannot be overridden).{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="endpointprotocol_go">
+<a href="#endpointprotocol_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocol to use for the metastore service endpoint. If unspecified, defaults to THRIFT.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="kerberosconfig_go">
 <a href="#kerberosconfig_go" style="color: inherit; text-decoration: inherit;">Kerberos<wbr>Config</a>
 </span>
@@ -1335,6 +1513,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}A mapping of Hive metastore configuration key-value pairs to apply to the Hive metastore (configured in hive-site.xml). The mappings override system defaults (some keys cannot be overridden).{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="endpointprotocol_nodejs">
+<a href="#endpointprotocol_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocol to use for the metastore service endpoint. If unspecified, defaults to THRIFT.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="kerberosconfig_nodejs">
 <a href="#kerberosconfig_nodejs" style="color: inherit; text-decoration: inherit;">kerberos<wbr>Config</a>
 </span>
@@ -1362,6 +1548,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of Hive metastore configuration key-value pairs to apply to the Hive metastore (configured in hive-site.xml). The mappings override system defaults (some keys cannot be overridden).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="endpoint_protocol_python">
+<a href="#endpoint_protocol_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The protocol to use for the metastore service endpoint. If unspecified, defaults to THRIFT.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kerberos_config_python">
 <a href="#kerberos_config_python" style="color: inherit; text-decoration: inherit;">kerberos_<wbr>config</a>
@@ -2011,7 +2205,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datacatalogconfig">Pulumi.<wbr>Google<wbr>Native.<wbr>Metastore.<wbr>V1Alpha.<wbr>Inputs.<wbr>Data<wbr>Catalog<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The integration config for the Data Catalog service.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The integration config for the Data Catalog service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dataplexconfig_csharp">
+<a href="#dataplexconfig_csharp" style="color: inherit; text-decoration: inherit;">Dataplex<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataplexconfig">Pulumi.<wbr>Google<wbr>Native.<wbr>Metastore.<wbr>V1Alpha.<wbr>Inputs.<wbr>Dataplex<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The integration config for the Dataplex service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2023,7 +2225,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datacatalogconfig">Data<wbr>Catalog<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The integration config for the Data Catalog service.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The integration config for the Data Catalog service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dataplexconfig_go">
+<a href="#dataplexconfig_go" style="color: inherit; text-decoration: inherit;">Dataplex<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataplexconfig">Dataplex<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The integration config for the Dataplex service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2035,7 +2245,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datacatalogconfig">Data<wbr>Catalog<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The integration config for the Data Catalog service.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The integration config for the Data Catalog service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dataplexconfig_nodejs">
+<a href="#dataplexconfig_nodejs" style="color: inherit; text-decoration: inherit;">dataplex<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataplexconfig">Dataplex<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The integration config for the Dataplex service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2047,7 +2265,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datacatalogconfig">Data<wbr>Catalog<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The integration config for the Data Catalog service.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The integration config for the Data Catalog service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dataplex_config_python">
+<a href="#dataplex_config_python" style="color: inherit; text-decoration: inherit;">dataplex_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataplexconfig">Dataplex<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The integration config for the Dataplex service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="metadataintegrationresponse">Metadata<wbr>Integration<wbr>Response</h4>
@@ -2061,7 +2287,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datacatalogconfigresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Metastore.<wbr>V1Alpha.<wbr>Inputs.<wbr>Data<wbr>Catalog<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The integration config for the Data Catalog service.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The integration config for the Data Catalog service.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="dataplexconfig_csharp">
+<a href="#dataplexconfig_csharp" style="color: inherit; text-decoration: inherit;">Dataplex<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataplexconfigresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Metastore.<wbr>V1Alpha.<wbr>Inputs.<wbr>Dataplex<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The integration config for the Dataplex service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2073,7 +2307,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datacatalogconfigresponse">Data<wbr>Catalog<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The integration config for the Data Catalog service.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The integration config for the Data Catalog service.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="dataplexconfig_go">
+<a href="#dataplexconfig_go" style="color: inherit; text-decoration: inherit;">Dataplex<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataplexconfigresponse">Dataplex<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The integration config for the Dataplex service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2085,7 +2327,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datacatalogconfigresponse">Data<wbr>Catalog<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The integration config for the Data Catalog service.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The integration config for the Data Catalog service.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="dataplexconfig_nodejs">
+<a href="#dataplexconfig_nodejs" style="color: inherit; text-decoration: inherit;">dataplex<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataplexconfigresponse">Dataplex<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The integration config for the Dataplex service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2097,7 +2347,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datacatalogconfigresponse">Data<wbr>Catalog<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The integration config for the Data Catalog service.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The integration config for the Data Catalog service.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="dataplex_config_python">
+<a href="#dataplex_config_python" style="color: inherit; text-decoration: inherit;">dataplex_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataplexconfigresponse">Dataplex<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The integration config for the Dataplex service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="metadatamanagementactivityresponse">Metadata<wbr>Management<wbr>Activity<wbr>Response</h4>

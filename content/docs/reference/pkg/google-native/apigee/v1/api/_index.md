@@ -418,6 +418,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="labels_csharp">
+<a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}User labels applied to this API Proxy.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="latestrevisionid_csharp">
 <a href="#latestrevisionid_csharp" style="color: inherit; text-decoration: inherit;">Latest<wbr>Revision<wbr>Id</a>
 </span>
@@ -453,6 +461,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="labels_go">
+<a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}User labels applied to this API Proxy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="latestrevisionid_go">
 <a href="#latestrevisionid_go" style="color: inherit; text-decoration: inherit;">Latest<wbr>Revision<wbr>Id</a>
@@ -490,6 +506,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="labels_nodejs">
+<a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}User labels applied to this API Proxy.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="latestrevisionid_nodejs">
 <a href="#latestrevisionid_nodejs" style="color: inherit; text-decoration: inherit;">latest<wbr>Revision<wbr>Id</a>
 </span>
@@ -525,6 +549,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="labels_python">
+<a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}User labels applied to this API Proxy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="latest_revision_id_python">
 <a href="#latest_revision_id_python" style="color: inherit; text-decoration: inherit;">latest_<wbr>revision_<wbr>id</a>

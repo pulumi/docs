@@ -1751,6 +1751,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="projectmap_csharp">
+<a href="#projectmap_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of project id and project config. Using map format to ease add-to/remove-from the Project list in PATCH command. In future we will deprecate (And later remove) the array one.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="projects_csharp">
 <a href="#projects_csharp" style="color: inherit; text-decoration: inherit;">Projects</a>
 </span>
@@ -1770,6 +1778,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="projectmap_go">
+<a href="#projectmap_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map of project id and project config. Using map format to ease add-to/remove-from the Project list in PATCH command. In future we will deprecate (And later remove) the array one.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projects_go">
 <a href="#projects_go" style="color: inherit; text-decoration: inherit;">Projects</a>
@@ -1791,6 +1807,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="projectmap_nodejs">
+<a href="#projectmap_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map of project id and project config. Using map format to ease add-to/remove-from the Project list in PATCH command. In future we will deprecate (And later remove) the array one.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="projects_nodejs">
 <a href="#projects_nodejs" style="color: inherit; text-decoration: inherit;">projects</a>
 </span>
@@ -1810,6 +1834,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="project_map_python">
+<a href="#project_map_python" style="color: inherit; text-decoration: inherit;">project_<wbr>map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map of project id and project config. Using map format to ease add-to/remove-from the Project list in PATCH command. In future we will deprecate (And later remove) the array one.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projects_python">
 <a href="#projects_python" style="color: inherit; text-decoration: inherit;">projects</a>
@@ -1833,6 +1865,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="projectmap_csharp">
+<a href="#projectmap_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of project id and project config. Using map format to ease add-to/remove-from the Project list in PATCH command. In future we will deprecate (And later remove) the array one.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="projects_csharp">
 <a href="#projects_csharp" style="color: inherit; text-decoration: inherit;">Projects</a>
 </span>
@@ -1852,6 +1892,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="projectmap_go">
+<a href="#projectmap_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map of project id and project config. Using map format to ease add-to/remove-from the Project list in PATCH command. In future we will deprecate (And later remove) the array one.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projects_go">
 <a href="#projects_go" style="color: inherit; text-decoration: inherit;">Projects</a>
@@ -1873,6 +1921,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="projectmap_nodejs">
+<a href="#projectmap_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map of project id and project config. Using map format to ease add-to/remove-from the Project list in PATCH command. In future we will deprecate (And later remove) the array one.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="projects_nodejs">
 <a href="#projects_nodejs" style="color: inherit; text-decoration: inherit;">projects</a>
 </span>
@@ -1892,6 +1948,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="project_map_python">
+<a href="#project_map_python" style="color: inherit; text-decoration: inherit;">project_<wbr>map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map of project id and project config. Using map format to ease add-to/remove-from the Project list in PATCH command. In future we will deprecate (And later remove) the array one.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projects_python">
 <a href="#projects_python" style="color: inherit; text-decoration: inherit;">projects</a>
@@ -1913,25 +1977,29 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="sharesettingssharetype">Share<wbr>Settings<wbr>Share<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular"><dt>Share<wbr>Type<wbr>Unspecified</dt>
+<dl class="tabular"><dt>Local</dt>
+    <dd>LOCAL{{% md %}}Default value.{{% /md %}}</dd><dt>Share<wbr>Type<wbr>Unspecified</dt>
     <dd>SHARE_TYPE_UNSPECIFIED{{% md %}}Default value. This value is unused.{{% /md %}}</dd><dt>Specific<wbr>Projects</dt>
     <dd>SPECIFIC_PROJECTS{{% md %}}Shared-reservation is open to specific projects{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular"><dt>Share<wbr>Settings<wbr>Share<wbr>Type<wbr>Share<wbr>Type<wbr>Unspecified</dt>
+<dl class="tabular"><dt>Share<wbr>Settings<wbr>Share<wbr>Type<wbr>Local</dt>
+    <dd>LOCAL{{% md %}}Default value.{{% /md %}}</dd><dt>Share<wbr>Settings<wbr>Share<wbr>Type<wbr>Share<wbr>Type<wbr>Unspecified</dt>
     <dd>SHARE_TYPE_UNSPECIFIED{{% md %}}Default value. This value is unused.{{% /md %}}</dd><dt>Share<wbr>Settings<wbr>Share<wbr>Type<wbr>Specific<wbr>Projects</dt>
     <dd>SPECIFIC_PROJECTS{{% md %}}Shared-reservation is open to specific projects{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular"><dt>Share<wbr>Type<wbr>Unspecified</dt>
+<dl class="tabular"><dt>Local</dt>
+    <dd>LOCAL{{% md %}}Default value.{{% /md %}}</dd><dt>Share<wbr>Type<wbr>Unspecified</dt>
     <dd>SHARE_TYPE_UNSPECIFIED{{% md %}}Default value. This value is unused.{{% /md %}}</dd><dt>Specific<wbr>Projects</dt>
     <dd>SPECIFIC_PROJECTS{{% md %}}Shared-reservation is open to specific projects{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular"><dt>SHARE_TYPE_UNSPECIFIED</dt>
+<dl class="tabular"><dt>LOCAL</dt>
+    <dd>LOCAL{{% md %}}Default value.{{% /md %}}</dd><dt>SHARE_TYPE_UNSPECIFIED</dt>
     <dd>SHARE_TYPE_UNSPECIFIED{{% md %}}Default value. This value is unused.{{% /md %}}</dd><dt>SPECIFIC_PROJECTS</dt>
     <dd>SPECIFIC_PROJECTS{{% md %}}Shared-reservation is open to specific projects{{% /md %}}</dd></dl>
 {{% /choosable %}}

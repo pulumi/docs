@@ -531,6 +531,106 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="multiclusterroutinguseany">Multi<wbr>Cluster<wbr>Routing<wbr>Use<wbr>Any</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="clusterids_csharp">
+<a href="#clusterids_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The set of clusters to route to. The order is ignored; clusters will be tried in order of distance. If left empty, all clusters are eligible.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="clusterids_go">
+<a href="#clusterids_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The set of clusters to route to. The order is ignored; clusters will be tried in order of distance. If left empty, all clusters are eligible.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="clusterids_nodejs">
+<a href="#clusterids_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The set of clusters to route to. The order is ignored; clusters will be tried in order of distance. If left empty, all clusters are eligible.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="cluster_ids_python">
+<a href="#cluster_ids_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The set of clusters to route to. The order is ignored; clusters will be tried in order of distance. If left empty, all clusters are eligible.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="multiclusterroutinguseanyresponse">Multi<wbr>Cluster<wbr>Routing<wbr>Use<wbr>Any<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="clusterids_csharp">
+<a href="#clusterids_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The set of clusters to route to. The order is ignored; clusters will be tried in order of distance. If left empty, all clusters are eligible.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="clusterids_go">
+<a href="#clusterids_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The set of clusters to route to. The order is ignored; clusters will be tried in order of distance. If left empty, all clusters are eligible.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="clusterids_nodejs">
+<a href="#clusterids_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The set of clusters to route to. The order is ignored; clusters will be tried in order of distance. If left empty, all clusters are eligible.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cluster_ids_python">
+<a href="#cluster_ids_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The set of clusters to route to. The order is ignored; clusters will be tried in order of distance. If left empty, all clusters are eligible.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="singleclusterrouting">Single<wbr>Cluster<wbr>Routing</h4>
 
 {{% choosable language csharp %}}

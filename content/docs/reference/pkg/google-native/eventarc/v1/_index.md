@@ -11,12 +11,14 @@ Explore the resources and functions of the google-native.eventarc/v1 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="channeliampolicy" title="ChannelIamPolicy"><span class="symbol resource"></span>ChannelIamPolicy</a></li>
     <li><a href="trigger" title="Trigger"><span class="symbol resource"></span>Trigger</a></li>
     <li><a href="triggeriampolicy" title="TriggerIamPolicy"><span class="symbol resource"></span>TriggerIamPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getchanneliampolicy" title="GetChannelIamPolicy"><span class="symbol function"></span>GetChannelIamPolicy</a></li>
     <li><a href="gettrigger" title="GetTrigger"><span class="symbol function"></span>GetTrigger</a></li>
     <li><a href="gettriggeriampolicy" title="GetTriggerIamPolicy"><span class="symbol function"></span>GetTriggerIamPolicy</a></li>
 </ul>
@@ -28,6 +30,6 @@ Explore the resources and functions of the google-native.eventarc/v1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.0</dd>
+	<dd>0.8.0</dd>
 </dl>
 

@@ -188,7 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Display name for the Apigee organization. Unused, but reserved for future use.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="environments_csharp">
 <a href="#environments_csharp" style="color: inherit; text-decoration: inherit;">Environments</a>
@@ -352,7 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Display name for the Apigee organization. Unused, but reserved for future use.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="environments_go">
 <a href="#environments_go" style="color: inherit; text-decoration: inherit;">Environments</a>
@@ -516,7 +516,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Display name for the Apigee organization. Unused, but reserved for future use.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="environments_nodejs">
 <a href="#environments_nodejs" style="color: inherit; text-decoration: inherit;">environments</a>
@@ -680,7 +680,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Display name for the Apigee organization. Unused, but reserved for future use.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="environments_python">
 <a href="#environments_python" style="color: inherit; text-decoration: inherit;">environments</a>
@@ -784,6 +784,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Configuration for the Advanced API Ops add-on.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="connectorsplatformconfig_csharp">
+<a href="#connectorsplatformconfig_csharp" style="color: inherit; text-decoration: inherit;">Connectors<wbr>Platform<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudapigeev1connectorsplatformconfigresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Apigee.<wbr>V1.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Apigee<wbr>V1Connectors<wbr>Platform<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for the Connectors Platform add-on.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="integrationconfig_csharp">
 <a href="#integrationconfig_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Config</a>
 </span>
@@ -811,6 +819,14 @@ The following output properties are available:
         <span class="property-type"><a href="#googlecloudapigeev1advancedapiopsconfigresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Advanced<wbr>Api<wbr>Ops<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the Advanced API Ops add-on.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="connectorsplatformconfig_go">
+<a href="#connectorsplatformconfig_go" style="color: inherit; text-decoration: inherit;">Connectors<wbr>Platform<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudapigeev1connectorsplatformconfigresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Connectors<wbr>Platform<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for the Connectors Platform add-on.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="integrationconfig_go">
 <a href="#integrationconfig_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Config</a>
@@ -840,6 +856,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Configuration for the Advanced API Ops add-on.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="connectorsplatformconfig_nodejs">
+<a href="#connectorsplatformconfig_nodejs" style="color: inherit; text-decoration: inherit;">connectors<wbr>Platform<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudapigeev1connectorsplatformconfigresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Connectors<wbr>Platform<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for the Connectors Platform add-on.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="integrationconfig_nodejs">
 <a href="#integrationconfig_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Config</a>
 </span>
@@ -867,6 +891,14 @@ The following output properties are available:
         <span class="property-type"><a href="#googlecloudapigeev1advancedapiopsconfigresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Advanced<wbr>Api<wbr>Ops<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the Advanced API Ops add-on.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="connectors_platform_config_python">
+<a href="#connectors_platform_config_python" style="color: inherit; text-decoration: inherit;">connectors_<wbr>platform_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudapigeev1connectorsplatformconfigresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Connectors<wbr>Platform<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for the Connectors Platform add-on.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="integration_config_python">
 <a href="#integration_config_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>config</a>
@@ -935,6 +967,90 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag that specifies whether the Advanced API Ops add-on is enabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googlecloudapigeev1connectorsplatformconfigresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Connectors<wbr>Platform<wbr>Config<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that specifies whether the Connectors Platform add-on is enabled.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="expiresat_csharp">
+<a href="#expiresat_csharp" style="color: inherit; text-decoration: inherit;">Expires<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time at which the Connectors Platform add-on expires in in milliseconds since epoch. If unspecified, the add-on will never expire.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that specifies whether the Connectors Platform add-on is enabled.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="expiresat_go">
+<a href="#expiresat_go" style="color: inherit; text-decoration: inherit;">Expires<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time at which the Connectors Platform add-on expires in in milliseconds since epoch. If unspecified, the add-on will never expire.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Flag that specifies whether the Connectors Platform add-on is enabled.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="expiresat_nodejs">
+<a href="#expiresat_nodejs" style="color: inherit; text-decoration: inherit;">expires<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time at which the Connectors Platform add-on expires in in milliseconds since epoch. If unspecified, the add-on will never expire.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that specifies whether the Connectors Platform add-on is enabled.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="expires_at_python">
+<a href="#expires_at_python" style="color: inherit; text-decoration: inherit;">expires_<wbr>at</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Time at which the Connectors Platform add-on expires in in milliseconds since epoch. If unspecified, the add-on will never expire.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googlecloudapigeev1integrationconfigresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Integration<wbr>Config<wbr>Response</h4>

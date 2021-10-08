@@ -187,7 +187,7 @@ The Subnetwork resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this subnetwork can conflict with static routes. Setting this to true allows this subnetwork's primary and secondary ranges to conflict with routes that have already been configured on the corresponding network. Static routes will take precedence over the subnetwork route if the route prefix length is at least as large as the subnetwork prefix length. Also, packets destined to IPs within subnetwork may contain private/sensitive data and are prevented from leaving the virtual network. Setting this field to true will disable this feature. The default value is false and applies to all existing subnetworks and automatically created subnetworks. This field cannot be set to true at resource creation time.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Whether this subnetwork's ranges can conflict with existing static routes. Setting this to true allows this subnetwork's primary and secondary ranges to overlap with (and contain) static routes that have already been configured on the corresponding network. For example if a static route has range 10.1.0.0/16, a subnet range 10.0.0.0/8 could only be created if allow_conflicting_routes=true. Overlapping is only allowed on subnetwork operations; routes whose ranges conflict with this subnetwork's ranges won't be allowed unless route.allow_conflicting_subnetworks is set to true. Typically packets destined to IPs within the subnetwork (which may contain private/sensitive data) are prevented from leaving the virtual network. Setting this field to true will disable this feature. The default value is false and applies to all existing subnetworks and automatically created subnetworks. This field cannot be set to true at resource creation time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -243,7 +243,7 @@ The Subnetwork resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL of the network to which this subnetwork belongs, provided by the client when initially creating the subnetwork. Only networks that are in the distributed mode can have subnetworks. This field can be set only at resource creation time.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The URL of the network to which this subnetwork belongs, provided by the client when initially creating the subnetwork. This field can be set only at resource creation time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateipgoogleaccess_csharp">
 <a href="#privateipgoogleaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Google<wbr>Access</a>
@@ -327,7 +327,7 @@ The Subnetwork resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this subnetwork can conflict with static routes. Setting this to true allows this subnetwork's primary and secondary ranges to conflict with routes that have already been configured on the corresponding network. Static routes will take precedence over the subnetwork route if the route prefix length is at least as large as the subnetwork prefix length. Also, packets destined to IPs within subnetwork may contain private/sensitive data and are prevented from leaving the virtual network. Setting this field to true will disable this feature. The default value is false and applies to all existing subnetworks and automatically created subnetworks. This field cannot be set to true at resource creation time.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Whether this subnetwork's ranges can conflict with existing static routes. Setting this to true allows this subnetwork's primary and secondary ranges to overlap with (and contain) static routes that have already been configured on the corresponding network. For example if a static route has range 10.1.0.0/16, a subnet range 10.0.0.0/8 could only be created if allow_conflicting_routes=true. Overlapping is only allowed on subnetwork operations; routes whose ranges conflict with this subnetwork's ranges won't be allowed unless route.allow_conflicting_subnetworks is set to true. Typically packets destined to IPs within the subnetwork (which may contain private/sensitive data) are prevented from leaving the virtual network. Setting this field to true will disable this feature. The default value is false and applies to all existing subnetworks and automatically created subnetworks. This field cannot be set to true at resource creation time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -383,7 +383,7 @@ The Subnetwork resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL of the network to which this subnetwork belongs, provided by the client when initially creating the subnetwork. Only networks that are in the distributed mode can have subnetworks. This field can be set only at resource creation time.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The URL of the network to which this subnetwork belongs, provided by the client when initially creating the subnetwork. This field can be set only at resource creation time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateipgoogleaccess_go">
 <a href="#privateipgoogleaccess_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Google<wbr>Access</a>
@@ -467,7 +467,7 @@ The Subnetwork resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether this subnetwork can conflict with static routes. Setting this to true allows this subnetwork's primary and secondary ranges to conflict with routes that have already been configured on the corresponding network. Static routes will take precedence over the subnetwork route if the route prefix length is at least as large as the subnetwork prefix length. Also, packets destined to IPs within subnetwork may contain private/sensitive data and are prevented from leaving the virtual network. Setting this field to true will disable this feature. The default value is false and applies to all existing subnetworks and automatically created subnetworks. This field cannot be set to true at resource creation time.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Whether this subnetwork's ranges can conflict with existing static routes. Setting this to true allows this subnetwork's primary and secondary ranges to overlap with (and contain) static routes that have already been configured on the corresponding network. For example if a static route has range 10.1.0.0/16, a subnet range 10.0.0.0/8 could only be created if allow_conflicting_routes=true. Overlapping is only allowed on subnetwork operations; routes whose ranges conflict with this subnetwork's ranges won't be allowed unless route.allow_conflicting_subnetworks is set to true. Typically packets destined to IPs within the subnetwork (which may contain private/sensitive data) are prevented from leaving the virtual network. Setting this field to true will disable this feature. The default value is false and applies to all existing subnetworks and automatically created subnetworks. This field cannot be set to true at resource creation time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -523,7 +523,7 @@ The Subnetwork resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL of the network to which this subnetwork belongs, provided by the client when initially creating the subnetwork. Only networks that are in the distributed mode can have subnetworks. This field can be set only at resource creation time.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The URL of the network to which this subnetwork belongs, provided by the client when initially creating the subnetwork. This field can be set only at resource creation time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateipgoogleaccess_nodejs">
 <a href="#privateipgoogleaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Google<wbr>Access</a>
@@ -607,7 +607,7 @@ The Subnetwork resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this subnetwork can conflict with static routes. Setting this to true allows this subnetwork's primary and secondary ranges to conflict with routes that have already been configured on the corresponding network. Static routes will take precedence over the subnetwork route if the route prefix length is at least as large as the subnetwork prefix length. Also, packets destined to IPs within subnetwork may contain private/sensitive data and are prevented from leaving the virtual network. Setting this field to true will disable this feature. The default value is false and applies to all existing subnetworks and automatically created subnetworks. This field cannot be set to true at resource creation time.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Whether this subnetwork's ranges can conflict with existing static routes. Setting this to true allows this subnetwork's primary and secondary ranges to overlap with (and contain) static routes that have already been configured on the corresponding network. For example if a static route has range 10.1.0.0/16, a subnet range 10.0.0.0/8 could only be created if allow_conflicting_routes=true. Overlapping is only allowed on subnetwork operations; routes whose ranges conflict with this subnetwork's ranges won't be allowed unless route.allow_conflicting_subnetworks is set to true. Typically packets destined to IPs within the subnetwork (which may contain private/sensitive data) are prevented from leaving the virtual network. Setting this field to true will disable this feature. The default value is false and applies to all existing subnetworks and automatically created subnetworks. This field cannot be set to true at resource creation time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -663,7 +663,7 @@ The Subnetwork resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URL of the network to which this subnetwork belongs, provided by the client when initially creating the subnetwork. Only networks that are in the distributed mode can have subnetworks. This field can be set only at resource creation time.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The URL of the network to which this subnetwork belongs, provided by the client when initially creating the subnetwork. This field can be set only at resource creation time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_ip_google_access_python">
 <a href="#private_ip_google_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>google_<wbr>access</a>
@@ -1055,25 +1055,25 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>External</dt>
-    <dd>EXTERNAL{{% md %}}VMs in this subnet can have external IPv6.{{% /md %}}</dd><dt>Unspecified<wbr>Ipv6Access<wbr>Type</dt>
+    <dd>EXTERNAL{{% md %}}VMs on this subnet will be assigned IPv6 addresses that are accesible via the Internet, as well as the VPC network.{{% /md %}}</dd><dt>Unspecified<wbr>Ipv6Access<wbr>Type</dt>
     <dd>UNSPECIFIED_IPV6_ACCESS_TYPE{{% md %}}IPv6 access type not set. Means this subnet hasn't been turned on IPv6 yet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="tabular"><dt>Subnetwork<wbr>Ipv6Access<wbr>Type<wbr>External</dt>
-    <dd>EXTERNAL{{% md %}}VMs in this subnet can have external IPv6.{{% /md %}}</dd><dt>Subnetwork<wbr>Ipv6Access<wbr>Type<wbr>Unspecified<wbr>Ipv6Access<wbr>Type</dt>
+    <dd>EXTERNAL{{% md %}}VMs on this subnet will be assigned IPv6 addresses that are accesible via the Internet, as well as the VPC network.{{% /md %}}</dd><dt>Subnetwork<wbr>Ipv6Access<wbr>Type<wbr>Unspecified<wbr>Ipv6Access<wbr>Type</dt>
     <dd>UNSPECIFIED_IPV6_ACCESS_TYPE{{% md %}}IPv6 access type not set. Means this subnet hasn't been turned on IPv6 yet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="tabular"><dt>External</dt>
-    <dd>EXTERNAL{{% md %}}VMs in this subnet can have external IPv6.{{% /md %}}</dd><dt>Unspecified<wbr>Ipv6Access<wbr>Type</dt>
+    <dd>EXTERNAL{{% md %}}VMs on this subnet will be assigned IPv6 addresses that are accesible via the Internet, as well as the VPC network.{{% /md %}}</dd><dt>Unspecified<wbr>Ipv6Access<wbr>Type</dt>
     <dd>UNSPECIFIED_IPV6_ACCESS_TYPE{{% md %}}IPv6 access type not set. Means this subnet hasn't been turned on IPv6 yet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="tabular"><dt>EXTERNAL</dt>
-    <dd>EXTERNAL{{% md %}}VMs in this subnet can have external IPv6.{{% /md %}}</dd><dt>UNSPECIFIED_IPV6_ACCESS_TYPE</dt>
+    <dd>EXTERNAL{{% md %}}VMs on this subnet will be assigned IPv6 addresses that are accesible via the Internet, as well as the VPC network.{{% /md %}}</dd><dt>UNSPECIFIED_IPV6_ACCESS_TYPE</dt>
     <dd>UNSPECIFIED_IPV6_ACCESS_TYPE{{% md %}}IPv6 access type not set. Means this subnet hasn't been turned on IPv6 yet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 

@@ -234,7 +234,7 @@ The Subnetwork resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL of the network to which this subnetwork belongs, provided by the client when initially creating the subnetwork. Only networks that are in the distributed mode can have subnetworks. This field can be set only at resource creation time.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The URL of the network to which this subnetwork belongs, provided by the client when initially creating the subnetwork. This field can be set only at resource creation time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateipgoogleaccess_csharp">
 <a href="#privateipgoogleaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Google<wbr>Access</a>
@@ -366,7 +366,7 @@ The Subnetwork resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL of the network to which this subnetwork belongs, provided by the client when initially creating the subnetwork. Only networks that are in the distributed mode can have subnetworks. This field can be set only at resource creation time.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The URL of the network to which this subnetwork belongs, provided by the client when initially creating the subnetwork. This field can be set only at resource creation time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateipgoogleaccess_go">
 <a href="#privateipgoogleaccess_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Google<wbr>Access</a>
@@ -498,7 +498,7 @@ The Subnetwork resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL of the network to which this subnetwork belongs, provided by the client when initially creating the subnetwork. Only networks that are in the distributed mode can have subnetworks. This field can be set only at resource creation time.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The URL of the network to which this subnetwork belongs, provided by the client when initially creating the subnetwork. This field can be set only at resource creation time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateipgoogleaccess_nodejs">
 <a href="#privateipgoogleaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Google<wbr>Access</a>
@@ -630,7 +630,7 @@ The Subnetwork resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URL of the network to which this subnetwork belongs, provided by the client when initially creating the subnetwork. Only networks that are in the distributed mode can have subnetworks. This field can be set only at resource creation time.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The URL of the network to which this subnetwork belongs, provided by the client when initially creating the subnetwork. This field can be set only at resource creation time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_ip_google_access_python">
 <a href="#private_ip_google_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>google_<wbr>access</a>
@@ -1022,25 +1022,25 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>External</dt>
-    <dd>EXTERNAL{{% md %}}VMs in this subnet can have external IPv6.{{% /md %}}</dd><dt>Unspecified<wbr>Ipv6Access<wbr>Type</dt>
+    <dd>EXTERNAL{{% md %}}VMs on this subnet will be assigned IPv6 addresses that are accesible via the Internet, as well as the VPC network.{{% /md %}}</dd><dt>Unspecified<wbr>Ipv6Access<wbr>Type</dt>
     <dd>UNSPECIFIED_IPV6_ACCESS_TYPE{{% md %}}IPv6 access type not set. Means this subnet hasn't been turned on IPv6 yet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="tabular"><dt>Subnetwork<wbr>Ipv6Access<wbr>Type<wbr>External</dt>
-    <dd>EXTERNAL{{% md %}}VMs in this subnet can have external IPv6.{{% /md %}}</dd><dt>Subnetwork<wbr>Ipv6Access<wbr>Type<wbr>Unspecified<wbr>Ipv6Access<wbr>Type</dt>
+    <dd>EXTERNAL{{% md %}}VMs on this subnet will be assigned IPv6 addresses that are accesible via the Internet, as well as the VPC network.{{% /md %}}</dd><dt>Subnetwork<wbr>Ipv6Access<wbr>Type<wbr>Unspecified<wbr>Ipv6Access<wbr>Type</dt>
     <dd>UNSPECIFIED_IPV6_ACCESS_TYPE{{% md %}}IPv6 access type not set. Means this subnet hasn't been turned on IPv6 yet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="tabular"><dt>External</dt>
-    <dd>EXTERNAL{{% md %}}VMs in this subnet can have external IPv6.{{% /md %}}</dd><dt>Unspecified<wbr>Ipv6Access<wbr>Type</dt>
+    <dd>EXTERNAL{{% md %}}VMs on this subnet will be assigned IPv6 addresses that are accesible via the Internet, as well as the VPC network.{{% /md %}}</dd><dt>Unspecified<wbr>Ipv6Access<wbr>Type</dt>
     <dd>UNSPECIFIED_IPV6_ACCESS_TYPE{{% md %}}IPv6 access type not set. Means this subnet hasn't been turned on IPv6 yet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="tabular"><dt>EXTERNAL</dt>
-    <dd>EXTERNAL{{% md %}}VMs in this subnet can have external IPv6.{{% /md %}}</dd><dt>UNSPECIFIED_IPV6_ACCESS_TYPE</dt>
+    <dd>EXTERNAL{{% md %}}VMs on this subnet will be assigned IPv6 addresses that are accesible via the Internet, as well as the VPC network.{{% /md %}}</dd><dt>UNSPECIFIED_IPV6_ACCESS_TYPE</dt>
     <dd>UNSPECIFIED_IPV6_ACCESS_TYPE{{% md %}}IPv6 access type not set. Means this subnet hasn't been turned on IPv6 yet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 

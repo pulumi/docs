@@ -14,7 +14,6 @@ Explore the resources and functions of the google-native.networkconnectivity/v1a
     <li><a href="hub" title="Hub"><span class="symbol resource"></span>Hub</a></li>
     <li><a href="hubiampolicy" title="HubIamPolicy"><span class="symbol resource"></span>HubIamPolicy</a></li>
     <li><a href="internalrangeiampolicy" title="InternalRangeIamPolicy"><span class="symbol resource"></span>InternalRangeIamPolicy</a></li>
-    <li><a href="policybasedrouteiampolicy" title="PolicyBasedRouteIamPolicy"><span class="symbol resource"></span>PolicyBasedRouteIamPolicy</a></li>
     <li><a href="spoke" title="Spoke"><span class="symbol resource"></span>Spoke</a></li>
     <li><a href="spokeiampolicy" title="SpokeIamPolicy"><span class="symbol resource"></span>SpokeIamPolicy</a></li>
 </ul>
@@ -24,7 +23,6 @@ Explore the resources and functions of the google-native.networkconnectivity/v1a
     <li><a href="gethub" title="GetHub"><span class="symbol function"></span>GetHub</a></li>
     <li><a href="gethubiampolicy" title="GetHubIamPolicy"><span class="symbol function"></span>GetHubIamPolicy</a></li>
     <li><a href="getinternalrangeiampolicy" title="GetInternalRangeIamPolicy"><span class="symbol function"></span>GetInternalRangeIamPolicy</a></li>
-    <li><a href="getpolicybasedrouteiampolicy" title="GetPolicyBasedRouteIamPolicy"><span class="symbol function"></span>GetPolicyBasedRouteIamPolicy</a></li>
     <li><a href="getspoke" title="GetSpoke"><span class="symbol function"></span>GetSpoke</a></li>
     <li><a href="getspokeiampolicy" title="GetSpokeIamPolicy"><span class="symbol function"></span>GetSpokeIamPolicy</a></li>
 </ul>
@@ -36,6 +34,6 @@ Explore the resources and functions of the google-native.networkconnectivity/v1a
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.0</dd>
+	<dd>0.8.0</dd>
 </dl>
 

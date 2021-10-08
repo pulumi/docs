@@ -33,6 +33,7 @@ Creates a new `Note`.
          <span class="nx">compliance</span><span class="p">:</span> <span class="nx">Optional[ComplianceNoteArgs]</span> = None<span class="p">,</span>
          <span class="nx">deployable</span><span class="p">:</span> <span class="nx">Optional[DeployableArgs]</span> = None<span class="p">,</span>
          <span class="nx">discovery</span><span class="p">:</span> <span class="nx">Optional[DiscoveryArgs]</span> = None<span class="p">,</span>
+         <span class="nx">dsse_attestation</span><span class="p">:</span> <span class="nx">Optional[DSSEAttestationNoteArgs]</span> = None<span class="p">,</span>
          <span class="nx">expiration_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">long_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -40,7 +41,11 @@ Creates a new `Note`.
          <span class="nx">package</span><span class="p">:</span> <span class="nx">Optional[PackageArgs]</span> = None<span class="p">,</span>
          <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">related_url</span><span class="p">:</span> <span class="nx">Optional[Sequence[RelatedUrlArgs]]</span> = None<span class="p">,</span>
+         <span class="nx">sbom</span><span class="p">:</span> <span class="nx">Optional[DocumentNoteArgs]</span> = None<span class="p">,</span>
          <span class="nx">short_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">spdx_file</span><span class="p">:</span> <span class="nx">Optional[FileNoteArgs]</span> = None<span class="p">,</span>
+         <span class="nx">spdx_package</span><span class="p">:</span> <span class="nx">Optional[PackageNoteArgs]</span> = None<span class="p">,</span>
+         <span class="nx">spdx_relationship</span><span class="p">:</span> <span class="nx">Optional[RelationshipNoteArgs]</span> = None<span class="p">,</span>
          <span class="nx">upgrade</span><span class="p">:</span> <span class="nx">Optional[UpgradeNoteArgs]</span> = None<span class="p">,</span>
          <span class="nx">vulnerability_type</span><span class="p">:</span> <span class="nx">Optional[VulnerabilityTypeArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -220,6 +225,14 @@ The Note resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}A note describing a provider/analysis type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dsseattestation_csharp">
+<a href="#dsseattestation_csharp" style="color: inherit; text-decoration: inherit;">Dsse<wbr>Attestation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dsseattestationnote">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Inputs.<wbr>DSSEAttestation<wbr>Note<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A note describing a dsse attestation note.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="expirationtime_csharp">
 <a href="#expirationtime_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
 </span>
@@ -276,6 +289,14 @@ The Note resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}URLs associated with this note{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sbom_csharp">
+<a href="#sbom_csharp" style="color: inherit; text-decoration: inherit;">Sbom</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#documentnote">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Document<wbr>Note<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A note describing a software bill of materials.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="shortdescription_csharp">
 <a href="#shortdescription_csharp" style="color: inherit; text-decoration: inherit;">Short<wbr>Description</a>
 </span>
@@ -283,6 +304,30 @@ The Note resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A one sentence description of this `Note`.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="spdxfile_csharp">
+<a href="#spdxfile_csharp" style="color: inherit; text-decoration: inherit;">Spdx<wbr>File</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#filenote">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Inputs.<wbr>File<wbr>Note<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A note describing an SPDX File.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="spdxpackage_csharp">
+<a href="#spdxpackage_csharp" style="color: inherit; text-decoration: inherit;">Spdx<wbr>Package</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#packagenote">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Package<wbr>Note<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A note describing an SPDX Package.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="spdxrelationship_csharp">
+<a href="#spdxrelationship_csharp" style="color: inherit; text-decoration: inherit;">Spdx<wbr>Relationship</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#relationshipnote">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Relationship<wbr>Note<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A note describing a relationship between SPDX elements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="upgrade_csharp">
 <a href="#upgrade_csharp" style="color: inherit; text-decoration: inherit;">Upgrade</a>
@@ -352,6 +397,14 @@ The Note resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}A note describing a provider/analysis type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dsseattestation_go">
+<a href="#dsseattestation_go" style="color: inherit; text-decoration: inherit;">Dsse<wbr>Attestation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dsseattestationnote">DSSEAttestation<wbr>Note<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A note describing a dsse attestation note.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="expirationtime_go">
 <a href="#expirationtime_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
 </span>
@@ -408,6 +461,14 @@ The Note resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}URLs associated with this note{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sbom_go">
+<a href="#sbom_go" style="color: inherit; text-decoration: inherit;">Sbom</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#documentnote">Document<wbr>Note<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A note describing a software bill of materials.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="shortdescription_go">
 <a href="#shortdescription_go" style="color: inherit; text-decoration: inherit;">Short<wbr>Description</a>
 </span>
@@ -415,6 +476,30 @@ The Note resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A one sentence description of this `Note`.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="spdxfile_go">
+<a href="#spdxfile_go" style="color: inherit; text-decoration: inherit;">Spdx<wbr>File</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#filenote">File<wbr>Note<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A note describing an SPDX File.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="spdxpackage_go">
+<a href="#spdxpackage_go" style="color: inherit; text-decoration: inherit;">Spdx<wbr>Package</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#packagenote">Package<wbr>Note<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A note describing an SPDX Package.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="spdxrelationship_go">
+<a href="#spdxrelationship_go" style="color: inherit; text-decoration: inherit;">Spdx<wbr>Relationship</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#relationshipnote">Relationship<wbr>Note<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A note describing a relationship between SPDX elements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="upgrade_go">
 <a href="#upgrade_go" style="color: inherit; text-decoration: inherit;">Upgrade</a>
@@ -484,6 +569,14 @@ The Note resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}A note describing a provider/analysis type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dsseattestation_nodejs">
+<a href="#dsseattestation_nodejs" style="color: inherit; text-decoration: inherit;">dsse<wbr>Attestation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dsseattestationnote">DSSEAttestation<wbr>Note<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A note describing a dsse attestation note.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="expirationtime_nodejs">
 <a href="#expirationtime_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time</a>
 </span>
@@ -540,6 +633,14 @@ The Note resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}URLs associated with this note{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sbom_nodejs">
+<a href="#sbom_nodejs" style="color: inherit; text-decoration: inherit;">sbom</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#documentnote">Document<wbr>Note<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A note describing a software bill of materials.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="shortdescription_nodejs">
 <a href="#shortdescription_nodejs" style="color: inherit; text-decoration: inherit;">short<wbr>Description</a>
 </span>
@@ -547,6 +648,30 @@ The Note resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A one sentence description of this `Note`.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="spdxfile_nodejs">
+<a href="#spdxfile_nodejs" style="color: inherit; text-decoration: inherit;">spdx<wbr>File</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#filenote">File<wbr>Note<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A note describing an SPDX File.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="spdxpackage_nodejs">
+<a href="#spdxpackage_nodejs" style="color: inherit; text-decoration: inherit;">spdx<wbr>Package</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#packagenote">Package<wbr>Note<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A note describing an SPDX Package.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="spdxrelationship_nodejs">
+<a href="#spdxrelationship_nodejs" style="color: inherit; text-decoration: inherit;">spdx<wbr>Relationship</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#relationshipnote">Relationship<wbr>Note<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A note describing a relationship between SPDX elements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="upgrade_nodejs">
 <a href="#upgrade_nodejs" style="color: inherit; text-decoration: inherit;">upgrade</a>
@@ -616,6 +741,14 @@ The Note resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}A note describing a provider/analysis type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dsse_attestation_python">
+<a href="#dsse_attestation_python" style="color: inherit; text-decoration: inherit;">dsse_<wbr>attestation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dsseattestationnote">DSSEAttestation<wbr>Note<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A note describing a dsse attestation note.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="expiration_time_python">
 <a href="#expiration_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time</a>
 </span>
@@ -672,6 +805,14 @@ The Note resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}URLs associated with this note{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sbom_python">
+<a href="#sbom_python" style="color: inherit; text-decoration: inherit;">sbom</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#documentnote">Document<wbr>Note<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A note describing a software bill of materials.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="short_description_python">
 <a href="#short_description_python" style="color: inherit; text-decoration: inherit;">short_<wbr>description</a>
 </span>
@@ -679,6 +820,30 @@ The Note resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A one sentence description of this `Note`.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="spdx_file_python">
+<a href="#spdx_file_python" style="color: inherit; text-decoration: inherit;">spdx_<wbr>file</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#filenote">File<wbr>Note<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A note describing an SPDX File.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="spdx_package_python">
+<a href="#spdx_package_python" style="color: inherit; text-decoration: inherit;">spdx_<wbr>package</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#packagenote">Package<wbr>Note<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A note describing an SPDX Package.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="spdx_relationship_python">
+<a href="#spdx_relationship_python" style="color: inherit; text-decoration: inherit;">spdx_<wbr>relationship</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#relationshipnote">Relationship<wbr>Note<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A note describing a relationship between SPDX elements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="upgrade_python">
 <a href="#upgrade_python" style="color: inherit; text-decoration: inherit;">upgrade</a>
@@ -2562,6 +2727,206 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The version of the benchmark. This is set to the version of the OS-specific CIS document the benchmark is defined in.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="dsseattestationnote">DSSEAttestation<wbr>Note</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="hint_csharp">
+<a href="#hint_csharp" style="color: inherit; text-decoration: inherit;">Hint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dssehint">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Inputs.<wbr>DSSEHint</a></span>
+    </dt>
+    <dd>{{% md %}}DSSEHint hints at the purpose of the attestation authority.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="hint_go">
+<a href="#hint_go" style="color: inherit; text-decoration: inherit;">Hint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dssehint">DSSEHint</a></span>
+    </dt>
+    <dd>{{% md %}}DSSEHint hints at the purpose of the attestation authority.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="hint_nodejs">
+<a href="#hint_nodejs" style="color: inherit; text-decoration: inherit;">hint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dssehint">DSSEHint</a></span>
+    </dt>
+    <dd>{{% md %}}DSSEHint hints at the purpose of the attestation authority.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="hint_python">
+<a href="#hint_python" style="color: inherit; text-decoration: inherit;">hint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dssehint">DSSEHint</a></span>
+    </dt>
+    <dd>{{% md %}}DSSEHint hints at the purpose of the attestation authority.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="dsseattestationnoteresponse">DSSEAttestation<wbr>Note<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="hint_csharp">
+<a href="#hint_csharp" style="color: inherit; text-decoration: inherit;">Hint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dssehintresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Inputs.<wbr>DSSEHint<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}DSSEHint hints at the purpose of the attestation authority.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="hint_go">
+<a href="#hint_go" style="color: inherit; text-decoration: inherit;">Hint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dssehintresponse">DSSEHint<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}DSSEHint hints at the purpose of the attestation authority.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="hint_nodejs">
+<a href="#hint_nodejs" style="color: inherit; text-decoration: inherit;">hint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dssehintresponse">DSSEHint<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}DSSEHint hints at the purpose of the attestation authority.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="hint_python">
+<a href="#hint_python" style="color: inherit; text-decoration: inherit;">hint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dssehintresponse">DSSEHint<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}DSSEHint hints at the purpose of the attestation authority.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="dssehint">DSSEHint</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="humanreadablename_csharp">
+<a href="#humanreadablename_csharp" style="color: inherit; text-decoration: inherit;">Human<wbr>Readable<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The human readable name of this attestation authority, for example "cloudbuild-prod".{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="humanreadablename_go">
+<a href="#humanreadablename_go" style="color: inherit; text-decoration: inherit;">Human<wbr>Readable<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The human readable name of this attestation authority, for example "cloudbuild-prod".{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="humanreadablename_nodejs">
+<a href="#humanreadablename_nodejs" style="color: inherit; text-decoration: inherit;">human<wbr>Readable<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The human readable name of this attestation authority, for example "cloudbuild-prod".{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="human_readable_name_python">
+<a href="#human_readable_name_python" style="color: inherit; text-decoration: inherit;">human_<wbr>readable_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The human readable name of this attestation authority, for example "cloudbuild-prod".{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="dssehintresponse">DSSEHint<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="humanreadablename_csharp">
+<a href="#humanreadablename_csharp" style="color: inherit; text-decoration: inherit;">Human<wbr>Readable<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The human readable name of this attestation authority, for example "cloudbuild-prod".{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="humanreadablename_go">
+<a href="#humanreadablename_go" style="color: inherit; text-decoration: inherit;">Human<wbr>Readable<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The human readable name of this attestation authority, for example "cloudbuild-prod".{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="humanreadablename_nodejs">
+<a href="#humanreadablename_nodejs" style="color: inherit; text-decoration: inherit;">human<wbr>Readable<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The human readable name of this attestation authority, for example "cloudbuild-prod".{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="human_readable_name_python">
+<a href="#human_readable_name_python" style="color: inherit; text-decoration: inherit;">human_<wbr>readable_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The human readable name of this attestation authority, for example "cloudbuild-prod".{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="deployable">Deployable</h4>
 
 {{% choosable language csharp %}}
@@ -3465,7 +3830,12 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>DISCOVERY{{% md %}}The note and occurrence track the initial discovery status of a resource.{{% /md %}}</dd><dt>Attestation<wbr>Authority</dt>
     <dd>ATTESTATION_AUTHORITY{{% md %}}This represents a logical "role" that can attest to artifacts.{{% /md %}}</dd><dt>Upgrade</dt>
     <dd>UPGRADE{{% md %}}This represents an available software upgrade.{{% /md %}}</dd><dt>Compliance</dt>
-    <dd>COMPLIANCE{{% md %}}This represents a compliance check that can be applied to a resource.{{% /md %}}</dd></dl>
+    <dd>COMPLIANCE{{% md %}}This represents a compliance check that can be applied to a resource.{{% /md %}}</dd><dt>Sbom</dt>
+    <dd>SBOM{{% md %}}This represents a software bill of materials.{{% /md %}}</dd><dt>Spdx<wbr>Package</dt>
+    <dd>SPDX_PACKAGE{{% md %}}This represents an SPDX Package.{{% /md %}}</dd><dt>Spdx<wbr>File</dt>
+    <dd>SPDX_FILE{{% md %}}This represents an SPDX File.{{% /md %}}</dd><dt>Spdx<wbr>Relationship</dt>
+    <dd>SPDX_RELATIONSHIP{{% md %}}This represents an SPDX Relationship.{{% /md %}}</dd><dt>Dsse<wbr>Attestation</dt>
+    <dd>DSSE_ATTESTATION{{% md %}}This represents a DSSE attestation Note{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3479,7 +3849,12 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>DISCOVERY{{% md %}}The note and occurrence track the initial discovery status of a resource.{{% /md %}}</dd><dt>Discovery<wbr>Analysis<wbr>Kind<wbr>Attestation<wbr>Authority</dt>
     <dd>ATTESTATION_AUTHORITY{{% md %}}This represents a logical "role" that can attest to artifacts.{{% /md %}}</dd><dt>Discovery<wbr>Analysis<wbr>Kind<wbr>Upgrade</dt>
     <dd>UPGRADE{{% md %}}This represents an available software upgrade.{{% /md %}}</dd><dt>Discovery<wbr>Analysis<wbr>Kind<wbr>Compliance</dt>
-    <dd>COMPLIANCE{{% md %}}This represents a compliance check that can be applied to a resource.{{% /md %}}</dd></dl>
+    <dd>COMPLIANCE{{% md %}}This represents a compliance check that can be applied to a resource.{{% /md %}}</dd><dt>Discovery<wbr>Analysis<wbr>Kind<wbr>Sbom</dt>
+    <dd>SBOM{{% md %}}This represents a software bill of materials.{{% /md %}}</dd><dt>Discovery<wbr>Analysis<wbr>Kind<wbr>Spdx<wbr>Package</dt>
+    <dd>SPDX_PACKAGE{{% md %}}This represents an SPDX Package.{{% /md %}}</dd><dt>Discovery<wbr>Analysis<wbr>Kind<wbr>Spdx<wbr>File</dt>
+    <dd>SPDX_FILE{{% md %}}This represents an SPDX File.{{% /md %}}</dd><dt>Discovery<wbr>Analysis<wbr>Kind<wbr>Spdx<wbr>Relationship</dt>
+    <dd>SPDX_RELATIONSHIP{{% md %}}This represents an SPDX Relationship.{{% /md %}}</dd><dt>Discovery<wbr>Analysis<wbr>Kind<wbr>Dsse<wbr>Attestation</dt>
+    <dd>DSSE_ATTESTATION{{% md %}}This represents a DSSE attestation Note{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3493,7 +3868,12 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>DISCOVERY{{% md %}}The note and occurrence track the initial discovery status of a resource.{{% /md %}}</dd><dt>Attestation<wbr>Authority</dt>
     <dd>ATTESTATION_AUTHORITY{{% md %}}This represents a logical "role" that can attest to artifacts.{{% /md %}}</dd><dt>Upgrade</dt>
     <dd>UPGRADE{{% md %}}This represents an available software upgrade.{{% /md %}}</dd><dt>Compliance</dt>
-    <dd>COMPLIANCE{{% md %}}This represents a compliance check that can be applied to a resource.{{% /md %}}</dd></dl>
+    <dd>COMPLIANCE{{% md %}}This represents a compliance check that can be applied to a resource.{{% /md %}}</dd><dt>Sbom</dt>
+    <dd>SBOM{{% md %}}This represents a software bill of materials.{{% /md %}}</dd><dt>Spdx<wbr>Package</dt>
+    <dd>SPDX_PACKAGE{{% md %}}This represents an SPDX Package.{{% /md %}}</dd><dt>Spdx<wbr>File</dt>
+    <dd>SPDX_FILE{{% md %}}This represents an SPDX File.{{% /md %}}</dd><dt>Spdx<wbr>Relationship</dt>
+    <dd>SPDX_RELATIONSHIP{{% md %}}This represents an SPDX Relationship.{{% /md %}}</dd><dt>Dsse<wbr>Attestation</dt>
+    <dd>DSSE_ATTESTATION{{% md %}}This represents a DSSE attestation Note{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3507,7 +3887,12 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>DISCOVERY{{% md %}}The note and occurrence track the initial discovery status of a resource.{{% /md %}}</dd><dt>ATTESTATION_AUTHORITY</dt>
     <dd>ATTESTATION_AUTHORITY{{% md %}}This represents a logical "role" that can attest to artifacts.{{% /md %}}</dd><dt>UPGRADE</dt>
     <dd>UPGRADE{{% md %}}This represents an available software upgrade.{{% /md %}}</dd><dt>COMPLIANCE</dt>
-    <dd>COMPLIANCE{{% md %}}This represents a compliance check that can be applied to a resource.{{% /md %}}</dd></dl>
+    <dd>COMPLIANCE{{% md %}}This represents a compliance check that can be applied to a resource.{{% /md %}}</dd><dt>SBOM</dt>
+    <dd>SBOM{{% md %}}This represents a software bill of materials.{{% /md %}}</dd><dt>SPDX_PACKAGE</dt>
+    <dd>SPDX_PACKAGE{{% md %}}This represents an SPDX Package.{{% /md %}}</dd><dt>SPDX_FILE</dt>
+    <dd>SPDX_FILE{{% md %}}This represents an SPDX File.{{% /md %}}</dd><dt>SPDX_RELATIONSHIP</dt>
+    <dd>SPDX_RELATIONSHIP{{% md %}}This represents an SPDX Relationship.{{% /md %}}</dd><dt>DSSE_ATTESTATION</dt>
+    <dd>DSSE_ATTESTATION{{% md %}}This represents a DSSE attestation Note{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="discoveryresponse">Discovery<wbr>Response</h4>
@@ -4010,6 +4395,794 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The distribution channel-specific homepage for this package.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="documentnote">Document<wbr>Note</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="datalicence_csharp">
+<a href="#datalicence_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Licence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Compliance with the SPDX specification includes populating the SPDX fields therein with data related to such fields ("SPDX-Metadata"){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="spdxversion_csharp">
+<a href="#spdxversion_csharp" style="color: inherit; text-decoration: inherit;">Spdx<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provide a reference number that can be used to understand how to parse and interpret the rest of the file{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="datalicence_go">
+<a href="#datalicence_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Licence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Compliance with the SPDX specification includes populating the SPDX fields therein with data related to such fields ("SPDX-Metadata"){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="spdxversion_go">
+<a href="#spdxversion_go" style="color: inherit; text-decoration: inherit;">Spdx<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provide a reference number that can be used to understand how to parse and interpret the rest of the file{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="datalicence_nodejs">
+<a href="#datalicence_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Licence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Compliance with the SPDX specification includes populating the SPDX fields therein with data related to such fields ("SPDX-Metadata"){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="spdxversion_nodejs">
+<a href="#spdxversion_nodejs" style="color: inherit; text-decoration: inherit;">spdx<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provide a reference number that can be used to understand how to parse and interpret the rest of the file{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="data_licence_python">
+<a href="#data_licence_python" style="color: inherit; text-decoration: inherit;">data_<wbr>licence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Compliance with the SPDX specification includes populating the SPDX fields therein with data related to such fields ("SPDX-Metadata"){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="spdx_version_python">
+<a href="#spdx_version_python" style="color: inherit; text-decoration: inherit;">spdx_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Provide a reference number that can be used to understand how to parse and interpret the rest of the file{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="documentnoteresponse">Document<wbr>Note<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="datalicence_csharp">
+<a href="#datalicence_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Licence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Compliance with the SPDX specification includes populating the SPDX fields therein with data related to such fields ("SPDX-Metadata"){{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="spdxversion_csharp">
+<a href="#spdxversion_csharp" style="color: inherit; text-decoration: inherit;">Spdx<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provide a reference number that can be used to understand how to parse and interpret the rest of the file{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="datalicence_go">
+<a href="#datalicence_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Licence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Compliance with the SPDX specification includes populating the SPDX fields therein with data related to such fields ("SPDX-Metadata"){{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="spdxversion_go">
+<a href="#spdxversion_go" style="color: inherit; text-decoration: inherit;">Spdx<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provide a reference number that can be used to understand how to parse and interpret the rest of the file{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="datalicence_nodejs">
+<a href="#datalicence_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Licence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Compliance with the SPDX specification includes populating the SPDX fields therein with data related to such fields ("SPDX-Metadata"){{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="spdxversion_nodejs">
+<a href="#spdxversion_nodejs" style="color: inherit; text-decoration: inherit;">spdx<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provide a reference number that can be used to understand how to parse and interpret the rest of the file{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="data_licence_python">
+<a href="#data_licence_python" style="color: inherit; text-decoration: inherit;">data_<wbr>licence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Compliance with the SPDX specification includes populating the SPDX fields therein with data related to such fields ("SPDX-Metadata"){{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="spdx_version_python">
+<a href="#spdx_version_python" style="color: inherit; text-decoration: inherit;">spdx_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Provide a reference number that can be used to understand how to parse and interpret the rest of the file{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="externalref">External<wbr>Ref</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="category_csharp">
+<a href="#category_csharp" style="color: inherit; text-decoration: inherit;">Category</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#externalrefcategory">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>External<wbr>Ref<wbr>Category</a></span>
+    </dt>
+    <dd>{{% md %}}An External Reference allows a Package to reference an external source of additional information, metadata, enumerations, asset identifiers, or downloadable content believed to be relevant to the Package{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="comment_csharp">
+<a href="#comment_csharp" style="color: inherit; text-decoration: inherit;">Comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Human-readable information about the purpose and target of the reference{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="locator_csharp">
+<a href="#locator_csharp" style="color: inherit; text-decoration: inherit;">Locator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unique string with no spaces necessary to access the package-specific information, metadata, or content within the target location{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of category (e.g. 'npm' for the PACKAGE_MANAGER category){{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="category_go">
+<a href="#category_go" style="color: inherit; text-decoration: inherit;">Category</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#externalrefcategory">External<wbr>Ref<wbr>Category</a></span>
+    </dt>
+    <dd>{{% md %}}An External Reference allows a Package to reference an external source of additional information, metadata, enumerations, asset identifiers, or downloadable content believed to be relevant to the Package{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="comment_go">
+<a href="#comment_go" style="color: inherit; text-decoration: inherit;">Comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Human-readable information about the purpose and target of the reference{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="locator_go">
+<a href="#locator_go" style="color: inherit; text-decoration: inherit;">Locator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unique string with no spaces necessary to access the package-specific information, metadata, or content within the target location{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of category (e.g. 'npm' for the PACKAGE_MANAGER category){{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="category_nodejs">
+<a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#externalrefcategory">External<wbr>Ref<wbr>Category</a></span>
+    </dt>
+    <dd>{{% md %}}An External Reference allows a Package to reference an external source of additional information, metadata, enumerations, asset identifiers, or downloadable content believed to be relevant to the Package{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="comment_nodejs">
+<a href="#comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Human-readable information about the purpose and target of the reference{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="locator_nodejs">
+<a href="#locator_nodejs" style="color: inherit; text-decoration: inherit;">locator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unique string with no spaces necessary to access the package-specific information, metadata, or content within the target location{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of category (e.g. 'npm' for the PACKAGE_MANAGER category){{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="category_python">
+<a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#externalrefcategory">External<wbr>Ref<wbr>Category</a></span>
+    </dt>
+    <dd>{{% md %}}An External Reference allows a Package to reference an external source of additional information, metadata, enumerations, asset identifiers, or downloadable content believed to be relevant to the Package{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="comment_python">
+<a href="#comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Human-readable information about the purpose and target of the reference{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="locator_python">
+<a href="#locator_python" style="color: inherit; text-decoration: inherit;">locator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The unique string with no spaces necessary to access the package-specific information, metadata, or content within the target location{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of category (e.g. 'npm' for the PACKAGE_MANAGER category){{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="externalrefcategory">External<wbr>Ref<wbr>Category</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Category<wbr>Unspecified</dt>
+    <dd>CATEGORY_UNSPECIFIED{{% md %}}Unspecified{{% /md %}}</dd><dt>Security</dt>
+    <dd>SECURITY{{% md %}}Security (e.g. cpe22Type, cpe23Type){{% /md %}}</dd><dt>Package<wbr>Manager</dt>
+    <dd>PACKAGE_MANAGER{{% md %}}Package Manager (e.g. maven-central, npm, nuget, bower, purl){{% /md %}}</dd><dt>Persistent<wbr>Id</dt>
+    <dd>PERSISTENT_ID{{% md %}}Persistent-Id (e.g. swh){{% /md %}}</dd><dt>Other</dt>
+    <dd>OTHER{{% md %}}Other{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>External<wbr>Ref<wbr>Category<wbr>Category<wbr>Unspecified</dt>
+    <dd>CATEGORY_UNSPECIFIED{{% md %}}Unspecified{{% /md %}}</dd><dt>External<wbr>Ref<wbr>Category<wbr>Security</dt>
+    <dd>SECURITY{{% md %}}Security (e.g. cpe22Type, cpe23Type){{% /md %}}</dd><dt>External<wbr>Ref<wbr>Category<wbr>Package<wbr>Manager</dt>
+    <dd>PACKAGE_MANAGER{{% md %}}Package Manager (e.g. maven-central, npm, nuget, bower, purl){{% /md %}}</dd><dt>External<wbr>Ref<wbr>Category<wbr>Persistent<wbr>Id</dt>
+    <dd>PERSISTENT_ID{{% md %}}Persistent-Id (e.g. swh){{% /md %}}</dd><dt>External<wbr>Ref<wbr>Category<wbr>Other</dt>
+    <dd>OTHER{{% md %}}Other{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Category<wbr>Unspecified</dt>
+    <dd>CATEGORY_UNSPECIFIED{{% md %}}Unspecified{{% /md %}}</dd><dt>Security</dt>
+    <dd>SECURITY{{% md %}}Security (e.g. cpe22Type, cpe23Type){{% /md %}}</dd><dt>Package<wbr>Manager</dt>
+    <dd>PACKAGE_MANAGER{{% md %}}Package Manager (e.g. maven-central, npm, nuget, bower, purl){{% /md %}}</dd><dt>Persistent<wbr>Id</dt>
+    <dd>PERSISTENT_ID{{% md %}}Persistent-Id (e.g. swh){{% /md %}}</dd><dt>Other</dt>
+    <dd>OTHER{{% md %}}Other{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CATEGORY_UNSPECIFIED</dt>
+    <dd>CATEGORY_UNSPECIFIED{{% md %}}Unspecified{{% /md %}}</dd><dt>SECURITY</dt>
+    <dd>SECURITY{{% md %}}Security (e.g. cpe22Type, cpe23Type){{% /md %}}</dd><dt>PACKAGE_MANAGER</dt>
+    <dd>PACKAGE_MANAGER{{% md %}}Package Manager (e.g. maven-central, npm, nuget, bower, purl){{% /md %}}</dd><dt>PERSISTENT_ID</dt>
+    <dd>PERSISTENT_ID{{% md %}}Persistent-Id (e.g. swh){{% /md %}}</dd><dt>OTHER</dt>
+    <dd>OTHER{{% md %}}Other{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="externalrefresponse">External<wbr>Ref<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="category_csharp">
+<a href="#category_csharp" style="color: inherit; text-decoration: inherit;">Category</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An External Reference allows a Package to reference an external source of additional information, metadata, enumerations, asset identifiers, or downloadable content believed to be relevant to the Package{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="comment_csharp">
+<a href="#comment_csharp" style="color: inherit; text-decoration: inherit;">Comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Human-readable information about the purpose and target of the reference{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="locator_csharp">
+<a href="#locator_csharp" style="color: inherit; text-decoration: inherit;">Locator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unique string with no spaces necessary to access the package-specific information, metadata, or content within the target location{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of category (e.g. 'npm' for the PACKAGE_MANAGER category){{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="category_go">
+<a href="#category_go" style="color: inherit; text-decoration: inherit;">Category</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An External Reference allows a Package to reference an external source of additional information, metadata, enumerations, asset identifiers, or downloadable content believed to be relevant to the Package{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="comment_go">
+<a href="#comment_go" style="color: inherit; text-decoration: inherit;">Comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Human-readable information about the purpose and target of the reference{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="locator_go">
+<a href="#locator_go" style="color: inherit; text-decoration: inherit;">Locator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unique string with no spaces necessary to access the package-specific information, metadata, or content within the target location{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of category (e.g. 'npm' for the PACKAGE_MANAGER category){{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="category_nodejs">
+<a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An External Reference allows a Package to reference an external source of additional information, metadata, enumerations, asset identifiers, or downloadable content believed to be relevant to the Package{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="comment_nodejs">
+<a href="#comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Human-readable information about the purpose and target of the reference{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="locator_nodejs">
+<a href="#locator_nodejs" style="color: inherit; text-decoration: inherit;">locator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unique string with no spaces necessary to access the package-specific information, metadata, or content within the target location{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of category (e.g. 'npm' for the PACKAGE_MANAGER category){{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="category_python">
+<a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An External Reference allows a Package to reference an external source of additional information, metadata, enumerations, asset identifiers, or downloadable content believed to be relevant to the Package{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="comment_python">
+<a href="#comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Human-readable information about the purpose and target of the reference{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="locator_python">
+<a href="#locator_python" style="color: inherit; text-decoration: inherit;">locator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The unique string with no spaces necessary to access the package-specific information, metadata, or content within the target location{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of category (e.g. 'npm' for the PACKAGE_MANAGER category){{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="filenote">File<wbr>Note</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="checksum_csharp">
+<a href="#checksum_csharp" style="color: inherit; text-decoration: inherit;">Checksum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Provide a unique identifier to match analysis information on each specific file in a package{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filetype_csharp">
+<a href="#filetype_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#filenotefiletype">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>File<wbr>Note<wbr>File<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}This field provides information about the type of file identified{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="title_csharp">
+<a href="#title_csharp" style="color: inherit; text-decoration: inherit;">Title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identify the full path and filename that corresponds to the file information in this section{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="checksum_go">
+<a href="#checksum_go" style="color: inherit; text-decoration: inherit;">Checksum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Provide a unique identifier to match analysis information on each specific file in a package{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filetype_go">
+<a href="#filetype_go" style="color: inherit; text-decoration: inherit;">File<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#filenotefiletype">File<wbr>Note<wbr>File<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}This field provides information about the type of file identified{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="title_go">
+<a href="#title_go" style="color: inherit; text-decoration: inherit;">Title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identify the full path and filename that corresponds to the file information in this section{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="checksum_nodejs">
+<a href="#checksum_nodejs" style="color: inherit; text-decoration: inherit;">checksum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Provide a unique identifier to match analysis information on each specific file in a package{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filetype_nodejs">
+<a href="#filetype_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#filenotefiletype">File<wbr>Note<wbr>File<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}This field provides information about the type of file identified{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="title_nodejs">
+<a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identify the full path and filename that corresponds to the file information in this section{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="checksum_python">
+<a href="#checksum_python" style="color: inherit; text-decoration: inherit;">checksum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Provide a unique identifier to match analysis information on each specific file in a package{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="file_type_python">
+<a href="#file_type_python" style="color: inherit; text-decoration: inherit;">file_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#filenotefiletype">File<wbr>Note<wbr>File<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}This field provides information about the type of file identified{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="title_python">
+<a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Identify the full path and filename that corresponds to the file information in this section{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="filenotefiletype">File<wbr>Note<wbr>File<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>File<wbr>Type<wbr>Unspecified</dt>
+    <dd>FILE_TYPE_UNSPECIFIED{{% md %}}Unspecified{{% /md %}}</dd><dt>Source</dt>
+    <dd>SOURCE{{% md %}}The file is human readable source code (.c, .html, etc.){{% /md %}}</dd><dt>Binary</dt>
+    <dd>BINARY{{% md %}}The file is a compiled object, target image or binary executable (.o, .a, etc.){{% /md %}}</dd><dt>Archive</dt>
+    <dd>ARCHIVE{{% md %}}The file represents an archive (.tar, .jar, etc.){{% /md %}}</dd><dt>Application</dt>
+    <dd>APPLICATION{{% md %}}The file is associated with a specific application type (MIME type of application/*){{% /md %}}</dd><dt>Audio</dt>
+    <dd>AUDIO{{% md %}}The file is associated with an audio file (MIME type of audio/* , e.g. .mp3){{% /md %}}</dd><dt>Image</dt>
+    <dd>IMAGE{{% md %}}The file is associated with an picture image file (MIME type of image/*, e.g., .jpg, .gif){{% /md %}}</dd><dt>Text</dt>
+    <dd>TEXT{{% md %}}The file is human readable text file (MIME type of text/*){{% /md %}}</dd><dt>Video</dt>
+    <dd>VIDEO{{% md %}}The file is associated with a video file type (MIME type of video/*){{% /md %}}</dd><dt>Documentation</dt>
+    <dd>DOCUMENTATION{{% md %}}The file serves as documentation{{% /md %}}</dd><dt>Spdx</dt>
+    <dd>SPDX{{% md %}}The file is an SPDX document{{% /md %}}</dd><dt>Other</dt>
+    <dd>OTHER{{% md %}}The file doesn't fit into the above categories (generated artifacts, data files, etc.){{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>File<wbr>Note<wbr>File<wbr>Type<wbr>File<wbr>Type<wbr>Unspecified</dt>
+    <dd>FILE_TYPE_UNSPECIFIED{{% md %}}Unspecified{{% /md %}}</dd><dt>File<wbr>Note<wbr>File<wbr>Type<wbr>Source</dt>
+    <dd>SOURCE{{% md %}}The file is human readable source code (.c, .html, etc.){{% /md %}}</dd><dt>File<wbr>Note<wbr>File<wbr>Type<wbr>Binary</dt>
+    <dd>BINARY{{% md %}}The file is a compiled object, target image or binary executable (.o, .a, etc.){{% /md %}}</dd><dt>File<wbr>Note<wbr>File<wbr>Type<wbr>Archive</dt>
+    <dd>ARCHIVE{{% md %}}The file represents an archive (.tar, .jar, etc.){{% /md %}}</dd><dt>File<wbr>Note<wbr>File<wbr>Type<wbr>Application</dt>
+    <dd>APPLICATION{{% md %}}The file is associated with a specific application type (MIME type of application/*){{% /md %}}</dd><dt>File<wbr>Note<wbr>File<wbr>Type<wbr>Audio</dt>
+    <dd>AUDIO{{% md %}}The file is associated with an audio file (MIME type of audio/* , e.g. .mp3){{% /md %}}</dd><dt>File<wbr>Note<wbr>File<wbr>Type<wbr>Image</dt>
+    <dd>IMAGE{{% md %}}The file is associated with an picture image file (MIME type of image/*, e.g., .jpg, .gif){{% /md %}}</dd><dt>File<wbr>Note<wbr>File<wbr>Type<wbr>Text</dt>
+    <dd>TEXT{{% md %}}The file is human readable text file (MIME type of text/*){{% /md %}}</dd><dt>File<wbr>Note<wbr>File<wbr>Type<wbr>Video</dt>
+    <dd>VIDEO{{% md %}}The file is associated with a video file type (MIME type of video/*){{% /md %}}</dd><dt>File<wbr>Note<wbr>File<wbr>Type<wbr>Documentation</dt>
+    <dd>DOCUMENTATION{{% md %}}The file serves as documentation{{% /md %}}</dd><dt>File<wbr>Note<wbr>File<wbr>Type<wbr>Spdx</dt>
+    <dd>SPDX{{% md %}}The file is an SPDX document{{% /md %}}</dd><dt>File<wbr>Note<wbr>File<wbr>Type<wbr>Other</dt>
+    <dd>OTHER{{% md %}}The file doesn't fit into the above categories (generated artifacts, data files, etc.){{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>File<wbr>Type<wbr>Unspecified</dt>
+    <dd>FILE_TYPE_UNSPECIFIED{{% md %}}Unspecified{{% /md %}}</dd><dt>Source</dt>
+    <dd>SOURCE{{% md %}}The file is human readable source code (.c, .html, etc.){{% /md %}}</dd><dt>Binary</dt>
+    <dd>BINARY{{% md %}}The file is a compiled object, target image or binary executable (.o, .a, etc.){{% /md %}}</dd><dt>Archive</dt>
+    <dd>ARCHIVE{{% md %}}The file represents an archive (.tar, .jar, etc.){{% /md %}}</dd><dt>Application</dt>
+    <dd>APPLICATION{{% md %}}The file is associated with a specific application type (MIME type of application/*){{% /md %}}</dd><dt>Audio</dt>
+    <dd>AUDIO{{% md %}}The file is associated with an audio file (MIME type of audio/* , e.g. .mp3){{% /md %}}</dd><dt>Image</dt>
+    <dd>IMAGE{{% md %}}The file is associated with an picture image file (MIME type of image/*, e.g., .jpg, .gif){{% /md %}}</dd><dt>Text</dt>
+    <dd>TEXT{{% md %}}The file is human readable text file (MIME type of text/*){{% /md %}}</dd><dt>Video</dt>
+    <dd>VIDEO{{% md %}}The file is associated with a video file type (MIME type of video/*){{% /md %}}</dd><dt>Documentation</dt>
+    <dd>DOCUMENTATION{{% md %}}The file serves as documentation{{% /md %}}</dd><dt>Spdx</dt>
+    <dd>SPDX{{% md %}}The file is an SPDX document{{% /md %}}</dd><dt>Other</dt>
+    <dd>OTHER{{% md %}}The file doesn't fit into the above categories (generated artifacts, data files, etc.){{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>FILE_TYPE_UNSPECIFIED</dt>
+    <dd>FILE_TYPE_UNSPECIFIED{{% md %}}Unspecified{{% /md %}}</dd><dt>SOURCE</dt>
+    <dd>SOURCE{{% md %}}The file is human readable source code (.c, .html, etc.){{% /md %}}</dd><dt>BINARY</dt>
+    <dd>BINARY{{% md %}}The file is a compiled object, target image or binary executable (.o, .a, etc.){{% /md %}}</dd><dt>ARCHIVE</dt>
+    <dd>ARCHIVE{{% md %}}The file represents an archive (.tar, .jar, etc.){{% /md %}}</dd><dt>APPLICATION</dt>
+    <dd>APPLICATION{{% md %}}The file is associated with a specific application type (MIME type of application/*){{% /md %}}</dd><dt>AUDIO</dt>
+    <dd>AUDIO{{% md %}}The file is associated with an audio file (MIME type of audio/* , e.g. .mp3){{% /md %}}</dd><dt>IMAGE</dt>
+    <dd>IMAGE{{% md %}}The file is associated with an picture image file (MIME type of image/*, e.g., .jpg, .gif){{% /md %}}</dd><dt>TEXT</dt>
+    <dd>TEXT{{% md %}}The file is human readable text file (MIME type of text/*){{% /md %}}</dd><dt>VIDEO</dt>
+    <dd>VIDEO{{% md %}}The file is associated with a video file type (MIME type of video/*){{% /md %}}</dd><dt>DOCUMENTATION</dt>
+    <dd>DOCUMENTATION{{% md %}}The file serves as documentation{{% /md %}}</dd><dt>SPDX</dt>
+    <dd>SPDX{{% md %}}The file is an SPDX document{{% /md %}}</dd><dt>OTHER</dt>
+    <dd>OTHER{{% md %}}The file doesn't fit into the above categories (generated artifacts, data files, etc.){{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="filenoteresponse">File<wbr>Note<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="checksum_csharp">
+<a href="#checksum_csharp" style="color: inherit; text-decoration: inherit;">Checksum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Provide a unique identifier to match analysis information on each specific file in a package{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="filetype_csharp">
+<a href="#filetype_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This field provides information about the type of file identified{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="title_csharp">
+<a href="#title_csharp" style="color: inherit; text-decoration: inherit;">Title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identify the full path and filename that corresponds to the file information in this section{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="checksum_go">
+<a href="#checksum_go" style="color: inherit; text-decoration: inherit;">Checksum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Provide a unique identifier to match analysis information on each specific file in a package{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="filetype_go">
+<a href="#filetype_go" style="color: inherit; text-decoration: inherit;">File<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This field provides information about the type of file identified{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="title_go">
+<a href="#title_go" style="color: inherit; text-decoration: inherit;">Title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identify the full path and filename that corresponds to the file information in this section{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="checksum_nodejs">
+<a href="#checksum_nodejs" style="color: inherit; text-decoration: inherit;">checksum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Provide a unique identifier to match analysis information on each specific file in a package{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="filetype_nodejs">
+<a href="#filetype_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This field provides information about the type of file identified{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="title_nodejs">
+<a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identify the full path and filename that corresponds to the file information in this section{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="checksum_python">
+<a href="#checksum_python" style="color: inherit; text-decoration: inherit;">checksum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Provide a unique identifier to match analysis information on each specific file in a package{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="file_type_python">
+<a href="#file_type_python" style="color: inherit; text-decoration: inherit;">file_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}This field provides information about the type of file identified{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="title_python">
+<a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Identify the full path and filename that corresponds to the file information in this section{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="fingerprint">Fingerprint</h4>
 
 {{% choosable language csharp %}}
@@ -4286,6 +5459,1066 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the package.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="packagenote">Package<wbr>Note</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="analyzed_csharp">
+<a href="#analyzed_csharp" style="color: inherit; text-decoration: inherit;">Analyzed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the file content of this package has been available for or subjected to analysis when creating the SPDX document{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="attribution_csharp">
+<a href="#attribution_csharp" style="color: inherit; text-decoration: inherit;">Attribution</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A place for the SPDX data creator to record, at the package level, acknowledgements that may be needed to be communicated in some contexts{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="checksum_csharp">
+<a href="#checksum_csharp" style="color: inherit; text-decoration: inherit;">Checksum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provide an independently reproducible mechanism that permits unique identification of a specific package that correlates to the data in this SPDX file{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="copyright_csharp">
+<a href="#copyright_csharp" style="color: inherit; text-decoration: inherit;">Copyright</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identify the copyright holders of the package, as well as any dates present{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="detaileddescription_csharp">
+<a href="#detaileddescription_csharp" style="color: inherit; text-decoration: inherit;">Detailed<wbr>Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A more detailed description of the package{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="downloadlocation_csharp">
+<a href="#downloadlocation_csharp" style="color: inherit; text-decoration: inherit;">Download<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This section identifies the download Universal Resource Locator (URL), or a specific location within a version control system (VCS) for the package at the time that the SPDX file was created{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="externalrefs_csharp">
+<a href="#externalrefs_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Refs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#externalref">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Inputs.<wbr>External<wbr>Ref&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}ExternalRef{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fileslicenseinfo_csharp">
+<a href="#fileslicenseinfo_csharp" style="color: inherit; text-decoration: inherit;">Files<wbr>License<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Contain the license the SPDX file creator has concluded as governing the This field is to contain a list of all licenses found in the package. The relationship between licenses (i.e., conjunctive, disjunctive) is not specified in this field – it is simply a listing of all licenses found{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="homepage_csharp">
+<a href="#homepage_csharp" style="color: inherit; text-decoration: inherit;">Home<wbr>Page</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provide a place for the SPDX file creator to record a web site that serves as the package's home page{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="licensedeclared_csharp">
+<a href="#licensedeclared_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Declared</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}List the licenses that have been declared by the authors of the package{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="originator_csharp">
+<a href="#originator_csharp" style="color: inherit; text-decoration: inherit;">Originator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If the package identified in the SPDX file originated from a different person or organization than identified as Package Supplier, this field identifies from where or whom the package originally came{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="summarydescription_csharp">
+<a href="#summarydescription_csharp" style="color: inherit; text-decoration: inherit;">Summary<wbr>Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A short description of the package{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="supplier_csharp">
+<a href="#supplier_csharp" style="color: inherit; text-decoration: inherit;">Supplier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identify the actual distribution source for the package/directory identified in the SPDX file{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="title_csharp">
+<a href="#title_csharp" style="color: inherit; text-decoration: inherit;">Title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identify the full name of the package as given by the Package Originator{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="verificationcode_csharp">
+<a href="#verificationcode_csharp" style="color: inherit; text-decoration: inherit;">Verification<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This field provides an independently reproducible mechanism identifying specific contents of a package based on the actual files (except the SPDX file itself, if it is included in the package) that make up each package and that correlates to the data in this SPDX file{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identify the version of the package{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="analyzed_go">
+<a href="#analyzed_go" style="color: inherit; text-decoration: inherit;">Analyzed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the file content of this package has been available for or subjected to analysis when creating the SPDX document{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="attribution_go">
+<a href="#attribution_go" style="color: inherit; text-decoration: inherit;">Attribution</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A place for the SPDX data creator to record, at the package level, acknowledgements that may be needed to be communicated in some contexts{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="checksum_go">
+<a href="#checksum_go" style="color: inherit; text-decoration: inherit;">Checksum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provide an independently reproducible mechanism that permits unique identification of a specific package that correlates to the data in this SPDX file{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="copyright_go">
+<a href="#copyright_go" style="color: inherit; text-decoration: inherit;">Copyright</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identify the copyright holders of the package, as well as any dates present{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="detaileddescription_go">
+<a href="#detaileddescription_go" style="color: inherit; text-decoration: inherit;">Detailed<wbr>Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A more detailed description of the package{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="downloadlocation_go">
+<a href="#downloadlocation_go" style="color: inherit; text-decoration: inherit;">Download<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This section identifies the download Universal Resource Locator (URL), or a specific location within a version control system (VCS) for the package at the time that the SPDX file was created{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="externalrefs_go">
+<a href="#externalrefs_go" style="color: inherit; text-decoration: inherit;">External<wbr>Refs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#externalref">[]External<wbr>Ref</a></span>
+    </dt>
+    <dd>{{% md %}}ExternalRef{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fileslicenseinfo_go">
+<a href="#fileslicenseinfo_go" style="color: inherit; text-decoration: inherit;">Files<wbr>License<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Contain the license the SPDX file creator has concluded as governing the This field is to contain a list of all licenses found in the package. The relationship between licenses (i.e., conjunctive, disjunctive) is not specified in this field – it is simply a listing of all licenses found{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="homepage_go">
+<a href="#homepage_go" style="color: inherit; text-decoration: inherit;">Home<wbr>Page</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provide a place for the SPDX file creator to record a web site that serves as the package's home page{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="licensedeclared_go">
+<a href="#licensedeclared_go" style="color: inherit; text-decoration: inherit;">License<wbr>Declared</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}List the licenses that have been declared by the authors of the package{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="originator_go">
+<a href="#originator_go" style="color: inherit; text-decoration: inherit;">Originator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If the package identified in the SPDX file originated from a different person or organization than identified as Package Supplier, this field identifies from where or whom the package originally came{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="summarydescription_go">
+<a href="#summarydescription_go" style="color: inherit; text-decoration: inherit;">Summary<wbr>Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A short description of the package{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="supplier_go">
+<a href="#supplier_go" style="color: inherit; text-decoration: inherit;">Supplier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identify the actual distribution source for the package/directory identified in the SPDX file{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="title_go">
+<a href="#title_go" style="color: inherit; text-decoration: inherit;">Title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identify the full name of the package as given by the Package Originator{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="verificationcode_go">
+<a href="#verificationcode_go" style="color: inherit; text-decoration: inherit;">Verification<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This field provides an independently reproducible mechanism identifying specific contents of a package based on the actual files (except the SPDX file itself, if it is included in the package) that make up each package and that correlates to the data in this SPDX file{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identify the version of the package{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="analyzed_nodejs">
+<a href="#analyzed_nodejs" style="color: inherit; text-decoration: inherit;">analyzed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the file content of this package has been available for or subjected to analysis when creating the SPDX document{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="attribution_nodejs">
+<a href="#attribution_nodejs" style="color: inherit; text-decoration: inherit;">attribution</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A place for the SPDX data creator to record, at the package level, acknowledgements that may be needed to be communicated in some contexts{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="checksum_nodejs">
+<a href="#checksum_nodejs" style="color: inherit; text-decoration: inherit;">checksum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provide an independently reproducible mechanism that permits unique identification of a specific package that correlates to the data in this SPDX file{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="copyright_nodejs">
+<a href="#copyright_nodejs" style="color: inherit; text-decoration: inherit;">copyright</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identify the copyright holders of the package, as well as any dates present{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="detaileddescription_nodejs">
+<a href="#detaileddescription_nodejs" style="color: inherit; text-decoration: inherit;">detailed<wbr>Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A more detailed description of the package{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="downloadlocation_nodejs">
+<a href="#downloadlocation_nodejs" style="color: inherit; text-decoration: inherit;">download<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This section identifies the download Universal Resource Locator (URL), or a specific location within a version control system (VCS) for the package at the time that the SPDX file was created{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="externalrefs_nodejs">
+<a href="#externalrefs_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Refs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#externalref">External<wbr>Ref[]</a></span>
+    </dt>
+    <dd>{{% md %}}ExternalRef{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fileslicenseinfo_nodejs">
+<a href="#fileslicenseinfo_nodejs" style="color: inherit; text-decoration: inherit;">files<wbr>License<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Contain the license the SPDX file creator has concluded as governing the This field is to contain a list of all licenses found in the package. The relationship between licenses (i.e., conjunctive, disjunctive) is not specified in this field – it is simply a listing of all licenses found{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="homepage_nodejs">
+<a href="#homepage_nodejs" style="color: inherit; text-decoration: inherit;">home<wbr>Page</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provide a place for the SPDX file creator to record a web site that serves as the package's home page{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="licensedeclared_nodejs">
+<a href="#licensedeclared_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Declared</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}List the licenses that have been declared by the authors of the package{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="originator_nodejs">
+<a href="#originator_nodejs" style="color: inherit; text-decoration: inherit;">originator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If the package identified in the SPDX file originated from a different person or organization than identified as Package Supplier, this field identifies from where or whom the package originally came{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="summarydescription_nodejs">
+<a href="#summarydescription_nodejs" style="color: inherit; text-decoration: inherit;">summary<wbr>Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A short description of the package{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="supplier_nodejs">
+<a href="#supplier_nodejs" style="color: inherit; text-decoration: inherit;">supplier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identify the actual distribution source for the package/directory identified in the SPDX file{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="title_nodejs">
+<a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identify the full name of the package as given by the Package Originator{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="verificationcode_nodejs">
+<a href="#verificationcode_nodejs" style="color: inherit; text-decoration: inherit;">verification<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This field provides an independently reproducible mechanism identifying specific contents of a package based on the actual files (except the SPDX file itself, if it is included in the package) that make up each package and that correlates to the data in this SPDX file{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identify the version of the package{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="analyzed_python">
+<a href="#analyzed_python" style="color: inherit; text-decoration: inherit;">analyzed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the file content of this package has been available for or subjected to analysis when creating the SPDX document{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="attribution_python">
+<a href="#attribution_python" style="color: inherit; text-decoration: inherit;">attribution</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A place for the SPDX data creator to record, at the package level, acknowledgements that may be needed to be communicated in some contexts{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="checksum_python">
+<a href="#checksum_python" style="color: inherit; text-decoration: inherit;">checksum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Provide an independently reproducible mechanism that permits unique identification of a specific package that correlates to the data in this SPDX file{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="copyright_python">
+<a href="#copyright_python" style="color: inherit; text-decoration: inherit;">copyright</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Identify the copyright holders of the package, as well as any dates present{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="detailed_description_python">
+<a href="#detailed_description_python" style="color: inherit; text-decoration: inherit;">detailed_<wbr>description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A more detailed description of the package{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="download_location_python">
+<a href="#download_location_python" style="color: inherit; text-decoration: inherit;">download_<wbr>location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}This section identifies the download Universal Resource Locator (URL), or a specific location within a version control system (VCS) for the package at the time that the SPDX file was created{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="external_refs_python">
+<a href="#external_refs_python" style="color: inherit; text-decoration: inherit;">external_<wbr>refs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#externalref">Sequence[External<wbr>Ref]</a></span>
+    </dt>
+    <dd>{{% md %}}ExternalRef{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="files_license_info_python">
+<a href="#files_license_info_python" style="color: inherit; text-decoration: inherit;">files_<wbr>license_<wbr>info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Contain the license the SPDX file creator has concluded as governing the This field is to contain a list of all licenses found in the package. The relationship between licenses (i.e., conjunctive, disjunctive) is not specified in this field – it is simply a listing of all licenses found{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="home_page_python">
+<a href="#home_page_python" style="color: inherit; text-decoration: inherit;">home_<wbr>page</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Provide a place for the SPDX file creator to record a web site that serves as the package's home page{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="license_declared_python">
+<a href="#license_declared_python" style="color: inherit; text-decoration: inherit;">license_<wbr>declared</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}List the licenses that have been declared by the authors of the package{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="originator_python">
+<a href="#originator_python" style="color: inherit; text-decoration: inherit;">originator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}If the package identified in the SPDX file originated from a different person or organization than identified as Package Supplier, this field identifies from where or whom the package originally came{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="summary_description_python">
+<a href="#summary_description_python" style="color: inherit; text-decoration: inherit;">summary_<wbr>description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A short description of the package{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="supplier_python">
+<a href="#supplier_python" style="color: inherit; text-decoration: inherit;">supplier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Identify the actual distribution source for the package/directory identified in the SPDX file{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="title_python">
+<a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Identify the full name of the package as given by the Package Originator{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="verification_code_python">
+<a href="#verification_code_python" style="color: inherit; text-decoration: inherit;">verification_<wbr>code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}This field provides an independently reproducible mechanism identifying specific contents of a package based on the actual files (except the SPDX file itself, if it is included in the package) that make up each package and that correlates to the data in this SPDX file{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Identify the version of the package{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="packagenoteresponse">Package<wbr>Note<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="analyzed_csharp">
+<a href="#analyzed_csharp" style="color: inherit; text-decoration: inherit;">Analyzed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the file content of this package has been available for or subjected to analysis when creating the SPDX document{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="attribution_csharp">
+<a href="#attribution_csharp" style="color: inherit; text-decoration: inherit;">Attribution</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A place for the SPDX data creator to record, at the package level, acknowledgements that may be needed to be communicated in some contexts{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="checksum_csharp">
+<a href="#checksum_csharp" style="color: inherit; text-decoration: inherit;">Checksum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provide an independently reproducible mechanism that permits unique identification of a specific package that correlates to the data in this SPDX file{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="copyright_csharp">
+<a href="#copyright_csharp" style="color: inherit; text-decoration: inherit;">Copyright</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identify the copyright holders of the package, as well as any dates present{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="detaileddescription_csharp">
+<a href="#detaileddescription_csharp" style="color: inherit; text-decoration: inherit;">Detailed<wbr>Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A more detailed description of the package{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="downloadlocation_csharp">
+<a href="#downloadlocation_csharp" style="color: inherit; text-decoration: inherit;">Download<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This section identifies the download Universal Resource Locator (URL), or a specific location within a version control system (VCS) for the package at the time that the SPDX file was created{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="externalrefs_csharp">
+<a href="#externalrefs_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Refs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#externalrefresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Inputs.<wbr>External<wbr>Ref<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}ExternalRef{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="fileslicenseinfo_csharp">
+<a href="#fileslicenseinfo_csharp" style="color: inherit; text-decoration: inherit;">Files<wbr>License<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Contain the license the SPDX file creator has concluded as governing the This field is to contain a list of all licenses found in the package. The relationship between licenses (i.e., conjunctive, disjunctive) is not specified in this field – it is simply a listing of all licenses found{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="homepage_csharp">
+<a href="#homepage_csharp" style="color: inherit; text-decoration: inherit;">Home<wbr>Page</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provide a place for the SPDX file creator to record a web site that serves as the package's home page{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="licensedeclared_csharp">
+<a href="#licensedeclared_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Declared</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}List the licenses that have been declared by the authors of the package{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="originator_csharp">
+<a href="#originator_csharp" style="color: inherit; text-decoration: inherit;">Originator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If the package identified in the SPDX file originated from a different person or organization than identified as Package Supplier, this field identifies from where or whom the package originally came{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="summarydescription_csharp">
+<a href="#summarydescription_csharp" style="color: inherit; text-decoration: inherit;">Summary<wbr>Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A short description of the package{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="supplier_csharp">
+<a href="#supplier_csharp" style="color: inherit; text-decoration: inherit;">Supplier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identify the actual distribution source for the package/directory identified in the SPDX file{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="title_csharp">
+<a href="#title_csharp" style="color: inherit; text-decoration: inherit;">Title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identify the full name of the package as given by the Package Originator{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="verificationcode_csharp">
+<a href="#verificationcode_csharp" style="color: inherit; text-decoration: inherit;">Verification<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This field provides an independently reproducible mechanism identifying specific contents of a package based on the actual files (except the SPDX file itself, if it is included in the package) that make up each package and that correlates to the data in this SPDX file{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identify the version of the package{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="analyzed_go">
+<a href="#analyzed_go" style="color: inherit; text-decoration: inherit;">Analyzed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the file content of this package has been available for or subjected to analysis when creating the SPDX document{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="attribution_go">
+<a href="#attribution_go" style="color: inherit; text-decoration: inherit;">Attribution</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A place for the SPDX data creator to record, at the package level, acknowledgements that may be needed to be communicated in some contexts{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="checksum_go">
+<a href="#checksum_go" style="color: inherit; text-decoration: inherit;">Checksum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provide an independently reproducible mechanism that permits unique identification of a specific package that correlates to the data in this SPDX file{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="copyright_go">
+<a href="#copyright_go" style="color: inherit; text-decoration: inherit;">Copyright</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identify the copyright holders of the package, as well as any dates present{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="detaileddescription_go">
+<a href="#detaileddescription_go" style="color: inherit; text-decoration: inherit;">Detailed<wbr>Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A more detailed description of the package{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="downloadlocation_go">
+<a href="#downloadlocation_go" style="color: inherit; text-decoration: inherit;">Download<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This section identifies the download Universal Resource Locator (URL), or a specific location within a version control system (VCS) for the package at the time that the SPDX file was created{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="externalrefs_go">
+<a href="#externalrefs_go" style="color: inherit; text-decoration: inherit;">External<wbr>Refs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#externalrefresponse">[]External<wbr>Ref<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}ExternalRef{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="fileslicenseinfo_go">
+<a href="#fileslicenseinfo_go" style="color: inherit; text-decoration: inherit;">Files<wbr>License<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Contain the license the SPDX file creator has concluded as governing the This field is to contain a list of all licenses found in the package. The relationship between licenses (i.e., conjunctive, disjunctive) is not specified in this field – it is simply a listing of all licenses found{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="homepage_go">
+<a href="#homepage_go" style="color: inherit; text-decoration: inherit;">Home<wbr>Page</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provide a place for the SPDX file creator to record a web site that serves as the package's home page{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="licensedeclared_go">
+<a href="#licensedeclared_go" style="color: inherit; text-decoration: inherit;">License<wbr>Declared</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}List the licenses that have been declared by the authors of the package{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="originator_go">
+<a href="#originator_go" style="color: inherit; text-decoration: inherit;">Originator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If the package identified in the SPDX file originated from a different person or organization than identified as Package Supplier, this field identifies from where or whom the package originally came{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="summarydescription_go">
+<a href="#summarydescription_go" style="color: inherit; text-decoration: inherit;">Summary<wbr>Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A short description of the package{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="supplier_go">
+<a href="#supplier_go" style="color: inherit; text-decoration: inherit;">Supplier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identify the actual distribution source for the package/directory identified in the SPDX file{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="title_go">
+<a href="#title_go" style="color: inherit; text-decoration: inherit;">Title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identify the full name of the package as given by the Package Originator{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="verificationcode_go">
+<a href="#verificationcode_go" style="color: inherit; text-decoration: inherit;">Verification<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This field provides an independently reproducible mechanism identifying specific contents of a package based on the actual files (except the SPDX file itself, if it is included in the package) that make up each package and that correlates to the data in this SPDX file{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identify the version of the package{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="analyzed_nodejs">
+<a href="#analyzed_nodejs" style="color: inherit; text-decoration: inherit;">analyzed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the file content of this package has been available for or subjected to analysis when creating the SPDX document{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="attribution_nodejs">
+<a href="#attribution_nodejs" style="color: inherit; text-decoration: inherit;">attribution</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A place for the SPDX data creator to record, at the package level, acknowledgements that may be needed to be communicated in some contexts{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="checksum_nodejs">
+<a href="#checksum_nodejs" style="color: inherit; text-decoration: inherit;">checksum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provide an independently reproducible mechanism that permits unique identification of a specific package that correlates to the data in this SPDX file{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="copyright_nodejs">
+<a href="#copyright_nodejs" style="color: inherit; text-decoration: inherit;">copyright</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identify the copyright holders of the package, as well as any dates present{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="detaileddescription_nodejs">
+<a href="#detaileddescription_nodejs" style="color: inherit; text-decoration: inherit;">detailed<wbr>Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A more detailed description of the package{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="downloadlocation_nodejs">
+<a href="#downloadlocation_nodejs" style="color: inherit; text-decoration: inherit;">download<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This section identifies the download Universal Resource Locator (URL), or a specific location within a version control system (VCS) for the package at the time that the SPDX file was created{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="externalrefs_nodejs">
+<a href="#externalrefs_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Refs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#externalrefresponse">External<wbr>Ref<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}ExternalRef{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="fileslicenseinfo_nodejs">
+<a href="#fileslicenseinfo_nodejs" style="color: inherit; text-decoration: inherit;">files<wbr>License<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Contain the license the SPDX file creator has concluded as governing the This field is to contain a list of all licenses found in the package. The relationship between licenses (i.e., conjunctive, disjunctive) is not specified in this field – it is simply a listing of all licenses found{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="homepage_nodejs">
+<a href="#homepage_nodejs" style="color: inherit; text-decoration: inherit;">home<wbr>Page</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provide a place for the SPDX file creator to record a web site that serves as the package's home page{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="licensedeclared_nodejs">
+<a href="#licensedeclared_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Declared</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}List the licenses that have been declared by the authors of the package{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="originator_nodejs">
+<a href="#originator_nodejs" style="color: inherit; text-decoration: inherit;">originator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If the package identified in the SPDX file originated from a different person or organization than identified as Package Supplier, this field identifies from where or whom the package originally came{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="summarydescription_nodejs">
+<a href="#summarydescription_nodejs" style="color: inherit; text-decoration: inherit;">summary<wbr>Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A short description of the package{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="supplier_nodejs">
+<a href="#supplier_nodejs" style="color: inherit; text-decoration: inherit;">supplier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identify the actual distribution source for the package/directory identified in the SPDX file{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="title_nodejs">
+<a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identify the full name of the package as given by the Package Originator{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="verificationcode_nodejs">
+<a href="#verificationcode_nodejs" style="color: inherit; text-decoration: inherit;">verification<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This field provides an independently reproducible mechanism identifying specific contents of a package based on the actual files (except the SPDX file itself, if it is included in the package) that make up each package and that correlates to the data in this SPDX file{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identify the version of the package{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="analyzed_python">
+<a href="#analyzed_python" style="color: inherit; text-decoration: inherit;">analyzed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the file content of this package has been available for or subjected to analysis when creating the SPDX document{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="attribution_python">
+<a href="#attribution_python" style="color: inherit; text-decoration: inherit;">attribution</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A place for the SPDX data creator to record, at the package level, acknowledgements that may be needed to be communicated in some contexts{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="checksum_python">
+<a href="#checksum_python" style="color: inherit; text-decoration: inherit;">checksum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Provide an independently reproducible mechanism that permits unique identification of a specific package that correlates to the data in this SPDX file{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="copyright_python">
+<a href="#copyright_python" style="color: inherit; text-decoration: inherit;">copyright</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Identify the copyright holders of the package, as well as any dates present{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="detailed_description_python">
+<a href="#detailed_description_python" style="color: inherit; text-decoration: inherit;">detailed_<wbr>description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A more detailed description of the package{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="download_location_python">
+<a href="#download_location_python" style="color: inherit; text-decoration: inherit;">download_<wbr>location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}This section identifies the download Universal Resource Locator (URL), or a specific location within a version control system (VCS) for the package at the time that the SPDX file was created{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="external_refs_python">
+<a href="#external_refs_python" style="color: inherit; text-decoration: inherit;">external_<wbr>refs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#externalrefresponse">Sequence[External<wbr>Ref<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}ExternalRef{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="files_license_info_python">
+<a href="#files_license_info_python" style="color: inherit; text-decoration: inherit;">files_<wbr>license_<wbr>info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Contain the license the SPDX file creator has concluded as governing the This field is to contain a list of all licenses found in the package. The relationship between licenses (i.e., conjunctive, disjunctive) is not specified in this field – it is simply a listing of all licenses found{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="home_page_python">
+<a href="#home_page_python" style="color: inherit; text-decoration: inherit;">home_<wbr>page</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Provide a place for the SPDX file creator to record a web site that serves as the package's home page{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="license_declared_python">
+<a href="#license_declared_python" style="color: inherit; text-decoration: inherit;">license_<wbr>declared</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}List the licenses that have been declared by the authors of the package{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="originator_python">
+<a href="#originator_python" style="color: inherit; text-decoration: inherit;">originator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}If the package identified in the SPDX file originated from a different person or organization than identified as Package Supplier, this field identifies from where or whom the package originally came{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="summary_description_python">
+<a href="#summary_description_python" style="color: inherit; text-decoration: inherit;">summary_<wbr>description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A short description of the package{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="supplier_python">
+<a href="#supplier_python" style="color: inherit; text-decoration: inherit;">supplier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Identify the actual distribution source for the package/directory identified in the SPDX file{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="title_python">
+<a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Identify the full name of the package as given by the Package Originator{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="verification_code_python">
+<a href="#verification_code_python" style="color: inherit; text-decoration: inherit;">verification_<wbr>code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}This field provides an independently reproducible mechanism identifying specific contents of a package based on the actual files (except the SPDX file itself, if it is included in the package) that make up each package and that correlates to the data in this SPDX file{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Identify the version of the package{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="packageresponse">Package<wbr>Response</h4>

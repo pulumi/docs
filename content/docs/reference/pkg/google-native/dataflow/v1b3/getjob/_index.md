@@ -3189,7 +3189,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bigtableiodetailsresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Dataflow.<wbr>V1b3.<wbr>Inputs.<wbr>Big<wbr>Table<wbr>IODetails<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Identification of a Cloud BigTable source used in the Dataflow job.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Identification of a Cloud Bigtable source used in the Dataflow job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bigquerydetails_csharp">
 <a href="#bigquerydetails_csharp" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Details</a>
@@ -3221,7 +3221,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pubsubiodetailsresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Dataflow.<wbr>V1b3.<wbr>Inputs.<wbr>Pub<wbr>Sub<wbr>IODetails<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Identification of a PubSub source used in the Dataflow job.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Identification of a Pub/Sub source used in the Dataflow job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sdkversion_csharp">
 <a href="#sdkversion_csharp" style="color: inherit; text-decoration: inherit;">Sdk<wbr>Version</a>
@@ -3249,7 +3249,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bigtableiodetailsresponse">[]Big<wbr>Table<wbr>IODetails<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Identification of a Cloud BigTable source used in the Dataflow job.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Identification of a Cloud Bigtable source used in the Dataflow job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bigquerydetails_go">
 <a href="#bigquerydetails_go" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Details</a>
@@ -3281,7 +3281,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pubsubiodetailsresponse">[]Pub<wbr>Sub<wbr>IODetails<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Identification of a PubSub source used in the Dataflow job.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Identification of a Pub/Sub source used in the Dataflow job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sdkversion_go">
 <a href="#sdkversion_go" style="color: inherit; text-decoration: inherit;">Sdk<wbr>Version</a>
@@ -3309,7 +3309,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bigtableiodetailsresponse">Big<wbr>Table<wbr>IODetails<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Identification of a Cloud BigTable source used in the Dataflow job.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Identification of a Cloud Bigtable source used in the Dataflow job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bigquerydetails_nodejs">
 <a href="#bigquerydetails_nodejs" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Details</a>
@@ -3341,7 +3341,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pubsubiodetailsresponse">Pub<wbr>Sub<wbr>IODetails<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Identification of a PubSub source used in the Dataflow job.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Identification of a Pub/Sub source used in the Dataflow job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sdkversion_nodejs">
 <a href="#sdkversion_nodejs" style="color: inherit; text-decoration: inherit;">sdk<wbr>Version</a>
@@ -3369,7 +3369,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bigtableiodetailsresponse">Sequence[Big<wbr>Table<wbr>IODetails<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Identification of a Cloud BigTable source used in the Dataflow job.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Identification of a Cloud Bigtable source used in the Dataflow job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bigquery_details_python">
 <a href="#bigquery_details_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>details</a>
@@ -3401,7 +3401,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pubsubiodetailsresponse">Sequence[Pub<wbr>Sub<wbr>IODetails<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Identification of a PubSub source used in the Dataflow job.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Identification of a Pub/Sub source used in the Dataflow job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sdk_version_python">
 <a href="#sdk_version_python" style="color: inherit; text-decoration: inherit;">sdk_<wbr>version</a>

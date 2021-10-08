@@ -1406,7 +1406,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Byte(s) to use as the segment terminator. If this is unset, '\r' is used as segment terminator, matching the HL7 version 2 specification.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Byte(s) to use as the segment terminator. If this is unset, '\r' is used as segment terminator, matching the HL7 version 2 specification.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#parserconfigversion">Pulumi.<wbr>Google<wbr>Native.<wbr>Healthcare.<wbr>V1.<wbr>Parser<wbr>Config<wbr>Version</a></span>
+    </dt>
+    <dd>{{% md %}}Immutable. Determines the version of the unschematized parser to be used when `schema` is not given. This field is immutable after store creation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1434,7 +1442,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Byte(s) to use as the segment terminator. If this is unset, '\r' is used as segment terminator, matching the HL7 version 2 specification.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Byte(s) to use as the segment terminator. If this is unset, '\r' is used as segment terminator, matching the HL7 version 2 specification.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#parserconfigversion">Parser<wbr>Config<wbr>Version</a></span>
+    </dt>
+    <dd>{{% md %}}Immutable. Determines the version of the unschematized parser to be used when `schema` is not given. This field is immutable after store creation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1462,7 +1478,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Byte(s) to use as the segment terminator. If this is unset, '\r' is used as segment terminator, matching the HL7 version 2 specification.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Byte(s) to use as the segment terminator. If this is unset, '\r' is used as segment terminator, matching the HL7 version 2 specification.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#parserconfigversion">Parser<wbr>Config<wbr>Version</a></span>
+    </dt>
+    <dd>{{% md %}}Immutable. Determines the version of the unschematized parser to be used when `schema` is not given. This field is immutable after store creation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1490,7 +1514,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Byte(s) to use as the segment terminator. If this is unset, '\r' is used as segment terminator, matching the HL7 version 2 specification.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Byte(s) to use as the segment terminator. If this is unset, '\r' is used as segment terminator, matching the HL7 version 2 specification.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#parserconfigversion">Parser<wbr>Config<wbr>Version</a></span>
+    </dt>
+    <dd>{{% md %}}Immutable. Determines the version of the unschematized parser to be used when `schema` is not given. This field is immutable after store creation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="parserconfigresponse">Parser<wbr>Config<wbr>Response</h4>
@@ -1520,7 +1552,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Byte(s) to use as the segment terminator. If this is unset, '\r' is used as segment terminator, matching the HL7 version 2 specification.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Byte(s) to use as the segment terminator. If this is unset, '\r' is used as segment terminator, matching the HL7 version 2 specification.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Immutable. Determines the version of the unschematized parser to be used when `schema` is not given. This field is immutable after store creation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1548,7 +1588,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Byte(s) to use as the segment terminator. If this is unset, '\r' is used as segment terminator, matching the HL7 version 2 specification.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Byte(s) to use as the segment terminator. If this is unset, '\r' is used as segment terminator, matching the HL7 version 2 specification.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Immutable. Determines the version of the unschematized parser to be used when `schema` is not given. This field is immutable after store creation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1576,7 +1624,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Byte(s) to use as the segment terminator. If this is unset, '\r' is used as segment terminator, matching the HL7 version 2 specification.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Byte(s) to use as the segment terminator. If this is unset, '\r' is used as segment terminator, matching the HL7 version 2 specification.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Immutable. Determines the version of the unschematized parser to be used when `schema` is not given. This field is immutable after store creation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1604,7 +1660,45 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Byte(s) to use as the segment terminator. If this is unset, '\r' is used as segment terminator, matching the HL7 version 2 specification.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Byte(s) to use as the segment terminator. If this is unset, '\r' is used as segment terminator, matching the HL7 version 2 specification.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Immutable. Determines the version of the unschematized parser to be used when `schema` is not given. This field is immutable after store creation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="parserconfigversion">Parser<wbr>Config<wbr>Version</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Parser<wbr>Version<wbr>Unspecified</dt>
+    <dd>PARSER_VERSION_UNSPECIFIED{{% md %}}Unspecified parser version, equivalent to V1.{{% /md %}}</dd><dt>V1</dt>
+    <dd>V1{{% md %}}The `parsed_data` includes every given non-empty message field except the Field Separator (MSH-1) field. As a result, the parsed MSH segment starts with the MSH-2 field and the field numbers are off-by-one with respect to the HL7 standard.{{% /md %}}</dd><dt>V2</dt>
+    <dd>V2{{% md %}}The `parsed_data` includes every given non-empty message field.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Parser<wbr>Config<wbr>Version<wbr>Parser<wbr>Version<wbr>Unspecified</dt>
+    <dd>PARSER_VERSION_UNSPECIFIED{{% md %}}Unspecified parser version, equivalent to V1.{{% /md %}}</dd><dt>Parser<wbr>Config<wbr>Version<wbr>V1</dt>
+    <dd>V1{{% md %}}The `parsed_data` includes every given non-empty message field except the Field Separator (MSH-1) field. As a result, the parsed MSH segment starts with the MSH-2 field and the field numbers are off-by-one with respect to the HL7 standard.{{% /md %}}</dd><dt>Parser<wbr>Config<wbr>Version<wbr>V2</dt>
+    <dd>V2{{% md %}}The `parsed_data` includes every given non-empty message field.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Parser<wbr>Version<wbr>Unspecified</dt>
+    <dd>PARSER_VERSION_UNSPECIFIED{{% md %}}Unspecified parser version, equivalent to V1.{{% /md %}}</dd><dt>V1</dt>
+    <dd>V1{{% md %}}The `parsed_data` includes every given non-empty message field except the Field Separator (MSH-1) field. As a result, the parsed MSH segment starts with the MSH-2 field and the field numbers are off-by-one with respect to the HL7 standard.{{% /md %}}</dd><dt>V2</dt>
+    <dd>V2{{% md %}}The `parsed_data` includes every given non-empty message field.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>PARSER_VERSION_UNSPECIFIED</dt>
+    <dd>PARSER_VERSION_UNSPECIFIED{{% md %}}Unspecified parser version, equivalent to V1.{{% /md %}}</dd><dt>V1</dt>
+    <dd>V1{{% md %}}The `parsed_data` includes every given non-empty message field except the Field Separator (MSH-1) field. As a result, the parsed MSH segment starts with the MSH-2 field and the field numbers are off-by-one with respect to the HL7 standard.{{% /md %}}</dd><dt>V2</dt>
+    <dd>V2{{% md %}}The `parsed_data` includes every given non-empty message field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="schemapackage">Schema<wbr>Package</h4>
@@ -1642,7 +1736,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hl7typesconfig">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Healthcare.<wbr>V1.<wbr>Inputs.<wbr>Hl7Types<wbr>Config&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Schema type definitions that are layered based on their VersionSources that match the incoming message. Type definitions present in higher indices override those in lower indices with the same type name if their VersionSources all match an incoming message.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Schema type definitions that are layered based on their VersionSources that match the incoming message. Type definitions present in higher indices override those in lower indices with the same type name if their VersionSources all match an incoming message.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="unexpectedsegmenthandling_csharp">
+<a href="#unexpectedsegmenthandling_csharp" style="color: inherit; text-decoration: inherit;">Unexpected<wbr>Segment<wbr>Handling</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#schemapackageunexpectedsegmenthandling">Pulumi.<wbr>Google<wbr>Native.<wbr>Healthcare.<wbr>V1.<wbr>Schema<wbr>Package<wbr>Unexpected<wbr>Segment<wbr>Handling</a></span>
+    </dt>
+    <dd>{{% md %}}Determines how unexpected segments (segments not matched to the schema) are handled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1678,7 +1780,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hl7typesconfig">[]Hl7Types<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Schema type definitions that are layered based on their VersionSources that match the incoming message. Type definitions present in higher indices override those in lower indices with the same type name if their VersionSources all match an incoming message.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Schema type definitions that are layered based on their VersionSources that match the incoming message. Type definitions present in higher indices override those in lower indices with the same type name if their VersionSources all match an incoming message.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="unexpectedsegmenthandling_go">
+<a href="#unexpectedsegmenthandling_go" style="color: inherit; text-decoration: inherit;">Unexpected<wbr>Segment<wbr>Handling</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#schemapackageunexpectedsegmenthandling">Schema<wbr>Package<wbr>Unexpected<wbr>Segment<wbr>Handling</a></span>
+    </dt>
+    <dd>{{% md %}}Determines how unexpected segments (segments not matched to the schema) are handled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1714,7 +1824,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hl7typesconfig">Hl7Types<wbr>Config[]</a></span>
     </dt>
-    <dd>{{% md %}}Schema type definitions that are layered based on their VersionSources that match the incoming message. Type definitions present in higher indices override those in lower indices with the same type name if their VersionSources all match an incoming message.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Schema type definitions that are layered based on their VersionSources that match the incoming message. Type definitions present in higher indices override those in lower indices with the same type name if their VersionSources all match an incoming message.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="unexpectedsegmenthandling_nodejs">
+<a href="#unexpectedsegmenthandling_nodejs" style="color: inherit; text-decoration: inherit;">unexpected<wbr>Segment<wbr>Handling</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#schemapackageunexpectedsegmenthandling">Schema<wbr>Package<wbr>Unexpected<wbr>Segment<wbr>Handling</a></span>
+    </dt>
+    <dd>{{% md %}}Determines how unexpected segments (segments not matched to the schema) are handled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1750,7 +1868,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hl7typesconfig">Sequence[Hl7Types<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}Schema type definitions that are layered based on their VersionSources that match the incoming message. Type definitions present in higher indices override those in lower indices with the same type name if their VersionSources all match an incoming message.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Schema type definitions that are layered based on their VersionSources that match the incoming message. Type definitions present in higher indices override those in lower indices with the same type name if their VersionSources all match an incoming message.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="unexpected_segment_handling_python">
+<a href="#unexpected_segment_handling_python" style="color: inherit; text-decoration: inherit;">unexpected_<wbr>segment_<wbr>handling</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#schemapackageunexpectedsegmenthandling">Schema<wbr>Package<wbr>Unexpected<wbr>Segment<wbr>Handling</a></span>
+    </dt>
+    <dd>{{% md %}}Determines how unexpected segments (segments not matched to the schema) are handled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="schemapackageresponse">Schema<wbr>Package<wbr>Response</h4>
@@ -1788,7 +1914,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hl7typesconfigresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Healthcare.<wbr>V1.<wbr>Inputs.<wbr>Hl7Types<wbr>Config<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Schema type definitions that are layered based on their VersionSources that match the incoming message. Type definitions present in higher indices override those in lower indices with the same type name if their VersionSources all match an incoming message.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Schema type definitions that are layered based on their VersionSources that match the incoming message. Type definitions present in higher indices override those in lower indices with the same type name if their VersionSources all match an incoming message.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="unexpectedsegmenthandling_csharp">
+<a href="#unexpectedsegmenthandling_csharp" style="color: inherit; text-decoration: inherit;">Unexpected<wbr>Segment<wbr>Handling</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Determines how unexpected segments (segments not matched to the schema) are handled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1824,7 +1958,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hl7typesconfigresponse">[]Hl7Types<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Schema type definitions that are layered based on their VersionSources that match the incoming message. Type definitions present in higher indices override those in lower indices with the same type name if their VersionSources all match an incoming message.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Schema type definitions that are layered based on their VersionSources that match the incoming message. Type definitions present in higher indices override those in lower indices with the same type name if their VersionSources all match an incoming message.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="unexpectedsegmenthandling_go">
+<a href="#unexpectedsegmenthandling_go" style="color: inherit; text-decoration: inherit;">Unexpected<wbr>Segment<wbr>Handling</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Determines how unexpected segments (segments not matched to the schema) are handled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1860,7 +2002,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hl7typesconfigresponse">Hl7Types<wbr>Config<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Schema type definitions that are layered based on their VersionSources that match the incoming message. Type definitions present in higher indices override those in lower indices with the same type name if their VersionSources all match an incoming message.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Schema type definitions that are layered based on their VersionSources that match the incoming message. Type definitions present in higher indices override those in lower indices with the same type name if their VersionSources all match an incoming message.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="unexpectedsegmenthandling_nodejs">
+<a href="#unexpectedsegmenthandling_nodejs" style="color: inherit; text-decoration: inherit;">unexpected<wbr>Segment<wbr>Handling</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Determines how unexpected segments (segments not matched to the schema) are handled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1896,7 +2046,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hl7typesconfigresponse">Sequence[Hl7Types<wbr>Config<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Schema type definitions that are layered based on their VersionSources that match the incoming message. Type definitions present in higher indices override those in lower indices with the same type name if their VersionSources all match an incoming message.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Schema type definitions that are layered based on their VersionSources that match the incoming message. Type definitions present in higher indices override those in lower indices with the same type name if their VersionSources all match an incoming message.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="unexpected_segment_handling_python">
+<a href="#unexpected_segment_handling_python" style="color: inherit; text-decoration: inherit;">unexpected_<wbr>segment_<wbr>handling</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Determines how unexpected segments (segments not matched to the schema) are handled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="schemapackageschematizedparsingtype">Schema<wbr>Package<wbr>Schematized<wbr>Parsing<wbr>Type</h4>
@@ -1927,6 +2085,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>SCHEMATIZED_PARSING_TYPE_UNSPECIFIED{{% md %}}Unspecified schematized parsing type, equivalent to `SOFT_FAIL`.{{% /md %}}</dd><dt>SOFT_FAIL</dt>
     <dd>SOFT_FAIL{{% md %}}Messages that fail to parse are still stored and ACKed but a parser error is stored in place of the schematized data.{{% /md %}}</dd><dt>HARD_FAIL</dt>
     <dd>HARD_FAIL{{% md %}}Messages that fail to parse are rejected from ingestion/insertion and return an error code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="schemapackageunexpectedsegmenthandling">Schema<wbr>Package<wbr>Unexpected<wbr>Segment<wbr>Handling</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Unexpected<wbr>Segment<wbr>Handling<wbr>Mode<wbr>Unspecified</dt>
+    <dd>UNEXPECTED_SEGMENT_HANDLING_MODE_UNSPECIFIED{{% md %}}Unspecified handling mode, equivalent to FAIL.{{% /md %}}</dd><dt>Fail</dt>
+    <dd>FAIL{{% md %}}Unexpected segments fail to parse and return an error.{{% /md %}}</dd><dt>Skip</dt>
+    <dd>SKIP{{% md %}}Unexpected segments do not fail, but are omitted from the output.{{% /md %}}</dd><dt>Parse</dt>
+    <dd>PARSE{{% md %}}Unexpected segments do not fail, but are parsed in place and added to the current group. If a segment has a type definition, it is used, otherwise it is parsed as VARIES.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Schema<wbr>Package<wbr>Unexpected<wbr>Segment<wbr>Handling<wbr>Unexpected<wbr>Segment<wbr>Handling<wbr>Mode<wbr>Unspecified</dt>
+    <dd>UNEXPECTED_SEGMENT_HANDLING_MODE_UNSPECIFIED{{% md %}}Unspecified handling mode, equivalent to FAIL.{{% /md %}}</dd><dt>Schema<wbr>Package<wbr>Unexpected<wbr>Segment<wbr>Handling<wbr>Fail</dt>
+    <dd>FAIL{{% md %}}Unexpected segments fail to parse and return an error.{{% /md %}}</dd><dt>Schema<wbr>Package<wbr>Unexpected<wbr>Segment<wbr>Handling<wbr>Skip</dt>
+    <dd>SKIP{{% md %}}Unexpected segments do not fail, but are omitted from the output.{{% /md %}}</dd><dt>Schema<wbr>Package<wbr>Unexpected<wbr>Segment<wbr>Handling<wbr>Parse</dt>
+    <dd>PARSE{{% md %}}Unexpected segments do not fail, but are parsed in place and added to the current group. If a segment has a type definition, it is used, otherwise it is parsed as VARIES.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Unexpected<wbr>Segment<wbr>Handling<wbr>Mode<wbr>Unspecified</dt>
+    <dd>UNEXPECTED_SEGMENT_HANDLING_MODE_UNSPECIFIED{{% md %}}Unspecified handling mode, equivalent to FAIL.{{% /md %}}</dd><dt>Fail</dt>
+    <dd>FAIL{{% md %}}Unexpected segments fail to parse and return an error.{{% /md %}}</dd><dt>Skip</dt>
+    <dd>SKIP{{% md %}}Unexpected segments do not fail, but are omitted from the output.{{% /md %}}</dd><dt>Parse</dt>
+    <dd>PARSE{{% md %}}Unexpected segments do not fail, but are parsed in place and added to the current group. If a segment has a type definition, it is used, otherwise it is parsed as VARIES.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>UNEXPECTED_SEGMENT_HANDLING_MODE_UNSPECIFIED</dt>
+    <dd>UNEXPECTED_SEGMENT_HANDLING_MODE_UNSPECIFIED{{% md %}}Unspecified handling mode, equivalent to FAIL.{{% /md %}}</dd><dt>FAIL</dt>
+    <dd>FAIL{{% md %}}Unexpected segments fail to parse and return an error.{{% /md %}}</dd><dt>SKIP</dt>
+    <dd>SKIP{{% md %}}Unexpected segments do not fail, but are omitted from the output.{{% /md %}}</dd><dt>PARSE</dt>
+    <dd>PARSE{{% md %}}Unexpected segments do not fail, but are parsed in place and added to the current group. If a segment has a type definition, it is used, otherwise it is parsed as VARIES.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="type">Type</h4>

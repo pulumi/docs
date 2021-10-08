@@ -671,6 +671,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Number of links actually provisioned in this interconnect.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="satisfiespzs_csharp">
+<a href="#satisfiespzs_csharp" style="color: inherit; text-decoration: inherit;">Satisfies<wbr>Pzs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set to true if the resource satisfies the zone separation organization policy constraints and false otherwise. Defaults to false if the field is not present.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
 </span>
@@ -786,6 +794,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of links actually provisioned in this interconnect.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="satisfiespzs_go">
+<a href="#satisfiespzs_go" style="color: inherit; text-decoration: inherit;">Satisfies<wbr>Pzs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set to true if the resource satisfies the zone separation organization policy constraints and false otherwise. Defaults to false if the field is not present.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -903,6 +919,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Number of links actually provisioned in this interconnect.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="satisfiespzs_nodejs">
+<a href="#satisfiespzs_nodejs" style="color: inherit; text-decoration: inherit;">satisfies<wbr>Pzs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Set to true if the resource satisfies the zone separation organization policy constraints and false otherwise. Defaults to false if the field is not present.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
@@ -1018,6 +1042,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of links actually provisioned in this interconnect.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="satisfies_pzs_python">
+<a href="#satisfies_pzs_python" style="color: inherit; text-decoration: inherit;">satisfies_<wbr>pzs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set to true if the resource satisfies the zone separation organization policy constraints and false otherwise. Defaults to false if the field is not present.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>

@@ -38,7 +38,9 @@ Creates a conversation profile in the specified project. ConversationProfile.Cre
                         <span class="nx">new_message_event_notification_config</span><span class="p">:</span> <span class="nx">Optional[GoogleCloudDialogflowV2beta1NotificationConfigArgs]</span> = None<span class="p">,</span>
                         <span class="nx">notification_config</span><span class="p">:</span> <span class="nx">Optional[GoogleCloudDialogflowV2beta1NotificationConfigArgs]</span> = None<span class="p">,</span>
                         <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                        <span class="nx">stt_config</span><span class="p">:</span> <span class="nx">Optional[GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs]</span> = None<span class="p">)</span>
+                        <span class="nx">security_settings</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">stt_config</span><span class="p">:</span> <span class="nx">Optional[GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs]</span> = None<span class="p">,</span>
+                        <span class="nx">time_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ConversationProfile</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConversationProfileArgs</a></span><span class="p">,</span>
@@ -206,7 +208,7 @@ The ConversationProfile resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Language code for the conversation profile. If not specified, the language is en-US. Language at ConversationProfile should be set for all non en-us languages.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Language code for the conversation profile. If not specified, the language is en-US. Language at ConversationProfile should be set for all non en-us languages. This should be a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -256,13 +258,29 @@ The ConversationProfile resource accepts the following [input]({{< relref "/docs
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="securitysettings_csharp">
+<a href="#securitysettings_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the CX SecuritySettings reference for the agent. Format: `projects//locations//securitySettings/`.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sttconfig_csharp">
 <a href="#sttconfig_csharp" style="color: inherit; text-decoration: inherit;">Stt<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#googleclouddialogflowv2beta1speechtotextconfig">Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V2Beta1.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Speech<wbr>To<wbr>Text<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings for speech transcription.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Settings for speech transcription.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timezone_csharp">
+<a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time zone of this conversational profile from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris. Defaults to America/New_York.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -306,7 +324,7 @@ The ConversationProfile resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Language code for the conversation profile. If not specified, the language is en-US. Language at ConversationProfile should be set for all non en-us languages.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Language code for the conversation profile. If not specified, the language is en-US. Language at ConversationProfile should be set for all non en-us languages. This should be a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -356,13 +374,29 @@ The ConversationProfile resource accepts the following [input]({{< relref "/docs
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="securitysettings_go">
+<a href="#securitysettings_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the CX SecuritySettings reference for the agent. Format: `projects//locations//securitySettings/`.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sttconfig_go">
 <a href="#sttconfig_go" style="color: inherit; text-decoration: inherit;">Stt<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#googleclouddialogflowv2beta1speechtotextconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Speech<wbr>To<wbr>Text<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings for speech transcription.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Settings for speech transcription.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timezone_go">
+<a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time zone of this conversational profile from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris. Defaults to America/New_York.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -406,7 +440,7 @@ The ConversationProfile resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Language code for the conversation profile. If not specified, the language is en-US. Language at ConversationProfile should be set for all non en-us languages.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Language code for the conversation profile. If not specified, the language is en-US. Language at ConversationProfile should be set for all non en-us languages. This should be a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -456,13 +490,29 @@ The ConversationProfile resource accepts the following [input]({{< relref "/docs
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="securitysettings_nodejs">
+<a href="#securitysettings_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the CX SecuritySettings reference for the agent. Format: `projects//locations//securitySettings/`.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sttconfig_nodejs">
 <a href="#sttconfig_nodejs" style="color: inherit; text-decoration: inherit;">stt<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#googleclouddialogflowv2beta1speechtotextconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Speech<wbr>To<wbr>Text<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings for speech transcription.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Settings for speech transcription.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timezone_nodejs">
+<a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time zone of this conversational profile from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris. Defaults to America/New_York.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -506,7 +556,7 @@ The ConversationProfile resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Language code for the conversation profile. If not specified, the language is en-US. Language at ConversationProfile should be set for all non en-us languages.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Language code for the conversation profile. If not specified, the language is en-US. Language at ConversationProfile should be set for all non en-us languages. This should be a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -556,13 +606,29 @@ The ConversationProfile resource accepts the following [input]({{< relref "/docs
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="security_settings_python">
+<a href="#security_settings_python" style="color: inherit; text-decoration: inherit;">security_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the CX SecuritySettings reference for the agent. Format: `projects//locations//securitySettings/`.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="stt_config_python">
 <a href="#stt_config_python" style="color: inherit; text-decoration: inherit;">stt_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#googleclouddialogflowv2beta1speechtotextconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Speech<wbr>To<wbr>Text<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings for speech transcription.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Settings for speech transcription.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="time_zone_python">
+<a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The time zone of this conversational profile from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris. Defaults to America/New_York.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

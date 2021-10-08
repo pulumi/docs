@@ -870,7 +870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name of an entry in URL format. Note: The entry itself and its child resources might not be stored in the location specified in its name. {{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The resource name of an entry in URL format. Note: The entry itself and its child resources might not be stored in the location specified in its name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="usagesignal_csharp">
 <a href="#usagesignal_csharp" style="color: inherit; text-decoration: inherit;">Usage<wbr>Signal</a>
@@ -914,7 +914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name of an entry in URL format. Note: The entry itself and its child resources might not be stored in the location specified in its name. {{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The resource name of an entry in URL format. Note: The entry itself and its child resources might not be stored in the location specified in its name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="usagesignal_go">
 <a href="#usagesignal_go" style="color: inherit; text-decoration: inherit;">Usage<wbr>Signal</a>
@@ -958,7 +958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name of an entry in URL format. Note: The entry itself and its child resources might not be stored in the location specified in its name. {{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The resource name of an entry in URL format. Note: The entry itself and its child resources might not be stored in the location specified in its name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="usagesignal_nodejs">
 <a href="#usagesignal_nodejs" style="color: inherit; text-decoration: inherit;">usage<wbr>Signal</a>
@@ -1002,7 +1002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource name of an entry in URL format. Note: The entry itself and its child resources might not be stored in the location specified in its name. {{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The resource name of an entry in URL format. Note: The entry itself and its child resources might not be stored in the location specified in its name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="usage_signal_python">
 <a href="#usage_signal_python" style="color: inherit; text-decoration: inherit;">usage_<wbr>signal</a>

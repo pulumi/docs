@@ -357,7 +357,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#httphealthcheck_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httphealthcheck">HTTPHealth<wbr>Check<wbr>Args</a></span>
+        <span class="property-type"><a href="#httphealthcheck">HTTPHealth<wbr>Check<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -365,7 +365,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#httpshealthcheck_go" style="color: inherit; text-decoration: inherit;">Https<wbr>Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpshealthcheck">HTTPSHealth<wbr>Check<wbr>Args</a></span>
+        <span class="property-type"><a href="#httpshealthcheck">HTTPSHealth<wbr>Check<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -1712,7 +1712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_go" style="color: inherit; text-decoration: inherit;">Inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#audiochannelinput">[]Audio<wbr>Channel<wbr>Input</a></span>
+        <span class="property-type"><a href="#audiochannelinput">[]Audio<wbr>Channel<wbr>Input<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}List of `Job.inputs` for this audio channel.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9190,7 +9190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The video bitrate in bits per second. Must be between 1 and 1,000,000,000.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The video bitrate in bits per second. The minimum value is 1,000. The maximum value for H264/H265 is 800,000,000. The maximum value for VP9 is 480,000,000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="framerate_csharp">
 <a href="#framerate_csharp" style="color: inherit; text-decoration: inherit;">Frame<wbr>Rate</a>
@@ -9362,7 +9362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The video bitrate in bits per second. Must be between 1 and 1,000,000,000.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The video bitrate in bits per second. The minimum value is 1,000. The maximum value for H264/H265 is 800,000,000. The maximum value for VP9 is 480,000,000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="framerate_go">
 <a href="#framerate_go" style="color: inherit; text-decoration: inherit;">Frame<wbr>Rate</a>
@@ -9534,7 +9534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The video bitrate in bits per second. Must be between 1 and 1,000,000,000.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The video bitrate in bits per second. The minimum value is 1,000. The maximum value for H264/H265 is 800,000,000. The maximum value for VP9 is 480,000,000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="framerate_nodejs">
 <a href="#framerate_nodejs" style="color: inherit; text-decoration: inherit;">frame<wbr>Rate</a>
@@ -9706,7 +9706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The video bitrate in bits per second. Must be between 1 and 1,000,000,000.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The video bitrate in bits per second. The minimum value is 1,000. The maximum value for H264/H265 is 800,000,000. The maximum value for VP9 is 480,000,000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="frame_rate_python">
 <a href="#frame_rate_python" style="color: inherit; text-decoration: inherit;">frame_<wbr>rate</a>
@@ -9912,7 +9912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The video bitrate in bits per second. Must be between 1 and 1,000,000,000.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The video bitrate in bits per second. The minimum value is 1,000. The maximum value for H264/H265 is 800,000,000. The maximum value for VP9 is 480,000,000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="codec_csharp">
 <a href="#codec_csharp" style="color: inherit; text-decoration: inherit;">Codec</a>
@@ -10084,7 +10084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The video bitrate in bits per second. Must be between 1 and 1,000,000,000.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The video bitrate in bits per second. The minimum value is 1,000. The maximum value for H264/H265 is 800,000,000. The maximum value for VP9 is 480,000,000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="codec_go">
 <a href="#codec_go" style="color: inherit; text-decoration: inherit;">Codec</a>
@@ -10256,7 +10256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The video bitrate in bits per second. Must be between 1 and 1,000,000,000.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The video bitrate in bits per second. The minimum value is 1,000. The maximum value for H264/H265 is 800,000,000. The maximum value for VP9 is 480,000,000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="codec_nodejs">
 <a href="#codec_nodejs" style="color: inherit; text-decoration: inherit;">codec</a>
@@ -10428,7 +10428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The video bitrate in bits per second. Must be between 1 and 1,000,000,000.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The video bitrate in bits per second. The minimum value is 1,000. The maximum value for H264/H265 is 800,000,000. The maximum value for VP9 is 480,000,000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="codec_python">
 <a href="#codec_python" style="color: inherit; text-decoration: inherit;">codec</a>

@@ -206,6 +206,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Full path to the Application resource in the API. Example: apps/myapp.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="serviceaccount_csharp">
+<a href="#serviceaccount_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The service account associated with the application. This is the app-level default identity. If no identity provided during create version, Admin API will fallback to this one.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="servingstatus_csharp">
 <a href="#servingstatus_csharp" style="color: inherit; text-decoration: inherit;">Serving<wbr>Status</a>
 </span>
@@ -313,6 +321,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full path to the Application resource in the API. Example: apps/myapp.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="serviceaccount_go">
+<a href="#serviceaccount_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The service account associated with the application. This is the app-level default identity. If no identity provided during create version, Admin API will fallback to this one.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servingstatus_go">
 <a href="#servingstatus_go" style="color: inherit; text-decoration: inherit;">Serving<wbr>Status</a>
@@ -422,6 +438,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Full path to the Application resource in the API. Example: apps/myapp.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="serviceaccount_nodejs">
+<a href="#serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The service account associated with the application. This is the app-level default identity. If no identity provided during create version, Admin API will fallback to this one.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="servingstatus_nodejs">
 <a href="#servingstatus_nodejs" style="color: inherit; text-decoration: inherit;">serving<wbr>Status</a>
 </span>
@@ -529,6 +553,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full path to the Application resource in the API. Example: apps/myapp.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="service_account_python">
+<a href="#service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The service account associated with the application. This is the app-level default identity. If no identity provided during create version, Admin API will fallback to this one.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serving_status_python">
 <a href="#serving_status_python" style="color: inherit; text-decoration: inherit;">serving_<wbr>status</a>
