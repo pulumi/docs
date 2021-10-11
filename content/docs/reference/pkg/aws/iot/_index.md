@@ -11,6 +11,7 @@ Explore the resources and functions of the aws.iot module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="authorizer" title="Authorizer"><span class="symbol resource"></span>Authorizer</a></li>
     <li><a href="certificate" title="Certificate"><span class="symbol resource"></span>Certificate</a></li>
     <li><a href="policy" title="Policy"><span class="symbol resource"></span>Policy</a></li>
     <li><a href="policyattachment" title="PolicyAttachment"><span class="symbol resource"></span>PolicyAttachment</a></li>
@@ -35,6 +36,6 @@ Explore the resources and functions of the aws.iot module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.22.1</dd>
+	<dd>4.24.1</dd>
 </dl>
 

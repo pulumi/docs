@@ -390,7 +390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of Domain.
+    <dd>{{% md %}}The ARN of the Domain.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="assetsizebytes_csharp">
@@ -456,7 +456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of Domain.
+    <dd>{{% md %}}The ARN of the Domain.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="assetsizebytes_go">
@@ -522,7 +522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of Domain.
+    <dd>{{% md %}}The ARN of the Domain.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="assetsizebytes_nodejs">
@@ -588,7 +588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN of Domain.
+    <dd>{{% md %}}The ARN of the Domain.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="asset_size_bytes_python">
@@ -788,7 +788,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of Domain.
+    <dd>{{% md %}}The ARN of the Domain.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_assetsizebytes_csharp">
@@ -873,7 +873,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of Domain.
+    <dd>{{% md %}}The ARN of the Domain.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_assetsizebytes_go">
@@ -958,7 +958,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of Domain.
+    <dd>{{% md %}}The ARN of the Domain.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_assetsizebytes_nodejs">
@@ -1043,7 +1043,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN of Domain.
+    <dd>{{% md %}}The ARN of the Domain.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_asset_size_bytes_python">
