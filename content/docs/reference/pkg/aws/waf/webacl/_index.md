@@ -3,6 +3,8 @@
 title: "WebAcl"
 title_tag: "aws.waf.WebAcl"
 meta_desc: "Documentation for the aws.waf.WebAcl resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

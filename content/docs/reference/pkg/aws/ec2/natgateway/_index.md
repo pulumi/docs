@@ -3,6 +3,8 @@
 title: "NatGateway"
 title_tag: "aws.ec2.NatGateway"
 meta_desc: "Documentation for the aws.ec2.NatGateway resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

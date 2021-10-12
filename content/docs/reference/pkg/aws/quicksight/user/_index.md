@@ -3,6 +3,8 @@
 title: "User"
 title_tag: "aws.quicksight.User"
 meta_desc: "Documentation for the aws.quicksight.User resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

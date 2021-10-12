@@ -3,6 +3,8 @@
 title: "MemberAccountAssociation"
 title_tag: "aws.macie.MemberAccountAssociation"
 meta_desc: "Documentation for the aws.macie.MemberAccountAssociation resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

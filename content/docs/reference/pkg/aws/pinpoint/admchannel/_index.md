@@ -3,6 +3,8 @@
 title: "AdmChannel"
 title_tag: "aws.pinpoint.AdmChannel"
 meta_desc: "Documentation for the aws.pinpoint.AdmChannel resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

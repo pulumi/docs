@@ -3,6 +3,8 @@
 title: "Application"
 title_tag: "aws.kinesisanalyticsv2.Application"
 meta_desc: "Documentation for the aws.kinesisanalyticsv2.Application resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

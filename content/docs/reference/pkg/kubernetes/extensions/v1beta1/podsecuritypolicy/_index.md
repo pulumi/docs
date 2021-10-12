@@ -3,6 +3,8 @@
 title: "PodSecurityPolicy"
 title_tag: "kubernetes.extensions/v1beta1.PodSecurityPolicy"
 meta_desc: "Documentation for the kubernetes.extensions/v1beta1.PodSecurityPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

@@ -3,6 +3,8 @@
 title: "Eip"
 title_tag: "aws.ec2.Eip"
 meta_desc: "Documentation for the aws.ec2.Eip resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

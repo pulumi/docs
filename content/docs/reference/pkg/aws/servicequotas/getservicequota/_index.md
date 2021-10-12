@@ -3,6 +3,8 @@
 title: "getServiceQuota"
 title_tag: "aws.servicequotas.getServiceQuota"
 meta_desc: "Documentation for the aws.servicequotas.getServiceQuota function with examples, input properties, output properties, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

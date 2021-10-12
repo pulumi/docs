@@ -3,6 +3,8 @@
 title: "MountTarget"
 title_tag: "aws.efs.MountTarget"
 meta_desc: "Documentation for the aws.efs.MountTarget resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

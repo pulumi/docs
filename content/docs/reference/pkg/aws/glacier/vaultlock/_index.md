@@ -3,6 +3,8 @@
 title: "VaultLock"
 title_tag: "aws.glacier.VaultLock"
 meta_desc: "Documentation for the aws.glacier.VaultLock resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

@@ -3,6 +3,8 @@
 title: "NfsLocation"
 title_tag: "aws.datasync.NfsLocation"
 meta_desc: "Documentation for the aws.datasync.NfsLocation resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

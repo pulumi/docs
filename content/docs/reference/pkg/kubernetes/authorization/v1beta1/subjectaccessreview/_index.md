@@ -3,6 +3,8 @@
 title: "SubjectAccessReview"
 title_tag: "kubernetes.authorization.k8s.io/v1beta1.SubjectAccessReview"
 meta_desc: "Documentation for the kubernetes.authorization.k8s.io/v1beta1.SubjectAccessReview resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

@@ -3,6 +3,8 @@
 title: "getDnsNamespace"
 title_tag: "aws.servicediscovery.getDnsNamespace"
 meta_desc: "Documentation for the aws.servicediscovery.getDnsNamespace function with examples, input properties, output properties, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

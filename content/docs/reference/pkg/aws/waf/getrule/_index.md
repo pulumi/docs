@@ -3,6 +3,8 @@
 title: "getRule"
 title_tag: "aws.waf.getRule"
 meta_desc: "Documentation for the aws.waf.getRule function with examples, input properties, output properties, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

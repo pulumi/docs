@@ -3,6 +3,8 @@
 title: "getLocation"
 title_tag: "aws.directconnect.getLocation"
 meta_desc: "Documentation for the aws.directconnect.getLocation function with examples, input properties, output properties, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

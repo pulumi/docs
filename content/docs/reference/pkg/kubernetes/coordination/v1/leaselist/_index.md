@@ -3,6 +3,8 @@
 title: "LeaseList"
 title_tag: "kubernetes.coordination.k8s.io/v1.LeaseList"
 meta_desc: "Documentation for the kubernetes.coordination.k8s.io/v1.LeaseList resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

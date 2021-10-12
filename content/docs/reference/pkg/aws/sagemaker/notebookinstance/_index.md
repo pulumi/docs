@@ -3,6 +3,8 @@
 title: "NotebookInstance"
 title_tag: "aws.sagemaker.NotebookInstance"
 meta_desc: "Documentation for the aws.sagemaker.NotebookInstance resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

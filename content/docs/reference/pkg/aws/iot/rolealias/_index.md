@@ -3,6 +3,8 @@
 title: "RoleAlias"
 title_tag: "aws.iot.RoleAlias"
 meta_desc: "Documentation for the aws.iot.RoleAlias resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

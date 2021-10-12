@@ -3,6 +3,8 @@
 title: "ApplicationVersion"
 title_tag: "aws.elasticbeanstalk.ApplicationVersion"
 meta_desc: "Documentation for the aws.elasticbeanstalk.ApplicationVersion resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

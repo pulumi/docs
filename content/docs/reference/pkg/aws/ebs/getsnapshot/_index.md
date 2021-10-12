@@ -3,6 +3,8 @@
 title: "getSnapshot"
 title_tag: "aws.ebs.getSnapshot"
 meta_desc: "Documentation for the aws.ebs.getSnapshot function with examples, input properties, output properties, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

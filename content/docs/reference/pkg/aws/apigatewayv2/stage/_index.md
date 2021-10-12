@@ -3,6 +3,8 @@
 title: "Stage"
 title_tag: "aws.apigatewayv2.Stage"
 meta_desc: "Documentation for the aws.apigatewayv2.Stage resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

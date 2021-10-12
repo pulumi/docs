@@ -3,6 +3,8 @@
 title: "getCertificate"
 title_tag: "aws.rds.getCertificate"
 meta_desc: "Documentation for the aws.rds.getCertificate function with examples, input properties, output properties, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

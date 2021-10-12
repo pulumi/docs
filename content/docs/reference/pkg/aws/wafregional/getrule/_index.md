@@ -3,6 +3,8 @@
 title: "getRule"
 title_tag: "aws.wafregional.getRule"
 meta_desc: "Documentation for the aws.wafregional.getRule function with examples, input properties, output properties, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 
