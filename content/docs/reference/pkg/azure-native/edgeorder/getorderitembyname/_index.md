@@ -78,7 +78,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}$expand is supported on device details parameter for order item, which provides details on the devices of the product.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}$expand is supported on device details, forward shipping details and reverse shipping details parameters. Each of these can be provided as a comma separated list. Device Details for order item provides details on the devices of the product, Forward and Reverse Shipping details provide forward and reverse shipping details respectively.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -106,7 +106,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}$expand is supported on device details parameter for order item, which provides details on the devices of the product.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}$expand is supported on device details, forward shipping details and reverse shipping details parameters. Each of these can be provided as a comma separated list. Device Details for order item provides details on the devices of the product, Forward and Reverse Shipping details provide forward and reverse shipping details respectively.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -134,7 +134,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}$expand is supported on device details parameter for order item, which provides details on the devices of the product.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}$expand is supported on device details, forward shipping details and reverse shipping details parameters. Each of these can be provided as a comma separated list. Device Details for order item provides details on the devices of the product, Forward and Reverse Shipping details provide forward and reverse shipping details respectively.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -162,7 +162,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}$expand is supported on device details parameter for order item, which provides details on the devices of the product.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}$expand is supported on device details, forward shipping details and reverse shipping details parameters. Each of these can be provided as a comma separated list. Device Details for order item provides details on the devices of the product, Forward and Reverse Shipping details provide forward and reverse shipping details respectively.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -879,6 +879,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Management Resource Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="managementresourcetenantid_csharp">
+<a href="#managementresourcetenantid_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Resource<wbr>Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Management Resource Tenant ID{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="serialnumber_csharp">
 <a href="#serialnumber_csharp" style="color: inherit; text-decoration: inherit;">Serial<wbr>Number</a>
 </span>
@@ -898,6 +906,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Management Resource Id{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="managementresourcetenantid_go">
+<a href="#managementresourcetenantid_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Resource<wbr>Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Management Resource Tenant ID{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serialnumber_go">
 <a href="#serialnumber_go" style="color: inherit; text-decoration: inherit;">Serial<wbr>Number</a>
@@ -919,6 +935,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Management Resource Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="managementresourcetenantid_nodejs">
+<a href="#managementresourcetenantid_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Resource<wbr>Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Management Resource Tenant ID{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="serialnumber_nodejs">
 <a href="#serialnumber_nodejs" style="color: inherit; text-decoration: inherit;">serial<wbr>Number</a>
 </span>
@@ -938,6 +962,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Management Resource Id{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="management_resource_tenant_id_python">
+<a href="#management_resource_tenant_id_python" style="color: inherit; text-decoration: inherit;">management_<wbr>resource_<wbr>tenant_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Management Resource Tenant ID{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serial_number_python">
 <a href="#serial_number_python" style="color: inherit; text-decoration: inherit;">serial_<wbr>number</a>
@@ -1045,7 +1077,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Defines secondary layer of software-based encryption enablement.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Double encryption status as entered by the customer. It is compulsory to give this parameter if the 'Deny' or 'Disabled' policy is configured.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1057,7 +1089,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Defines secondary layer of software-based encryption enablement.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Double encryption status as entered by the customer. It is compulsory to give this parameter if the 'Deny' or 'Disabled' policy is configured.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1069,7 +1101,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Defines secondary layer of software-based encryption enablement.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Double encryption status as entered by the customer. It is compulsory to give this parameter if the 'Deny' or 'Disabled' policy is configured.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1081,7 +1113,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Defines secondary layer of software-based encryption enablement.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Double encryption status as entered by the customer. It is compulsory to give this parameter if the 'Deny' or 'Disabled' policy is configured.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="erroradditionalinforesponse">Error<wbr>Additional<wbr>Info<wbr>Response</h4>
@@ -1346,6 +1378,154 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The error target.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="forwardshippingdetailsresponse">Forward<wbr>Shipping<wbr>Details<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="carrierdisplayname_csharp">
+<a href="#carrierdisplayname_csharp" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Carrier Name for display purpose. Not to be used for any processing.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="carriername_csharp">
+<a href="#carriername_csharp" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the carrier.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="trackingid_csharp">
+<a href="#trackingid_csharp" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}TrackingId of the package{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="trackingurl_csharp">
+<a href="#trackingurl_csharp" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}TrackingUrl of the package.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="carrierdisplayname_go">
+<a href="#carrierdisplayname_go" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Carrier Name for display purpose. Not to be used for any processing.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="carriername_go">
+<a href="#carriername_go" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the carrier.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="trackingid_go">
+<a href="#trackingid_go" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}TrackingId of the package{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="trackingurl_go">
+<a href="#trackingurl_go" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}TrackingUrl of the package.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="carrierdisplayname_nodejs">
+<a href="#carrierdisplayname_nodejs" style="color: inherit; text-decoration: inherit;">carrier<wbr>Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Carrier Name for display purpose. Not to be used for any processing.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="carriername_nodejs">
+<a href="#carriername_nodejs" style="color: inherit; text-decoration: inherit;">carrier<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the carrier.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="trackingid_nodejs">
+<a href="#trackingid_nodejs" style="color: inherit; text-decoration: inherit;">tracking<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}TrackingId of the package{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="trackingurl_nodejs">
+<a href="#trackingurl_nodejs" style="color: inherit; text-decoration: inherit;">tracking<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}TrackingUrl of the package.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="carrier_display_name_python">
+<a href="#carrier_display_name_python" style="color: inherit; text-decoration: inherit;">carrier_<wbr>display_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Carrier Name for display purpose. Not to be used for any processing.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="carrier_name_python">
+<a href="#carrier_name_python" style="color: inherit; text-decoration: inherit;">carrier_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the carrier.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tracking_id_python">
+<a href="#tracking_id_python" style="color: inherit; text-decoration: inherit;">tracking_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}TrackingId of the package{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tracking_url_python">
+<a href="#tracking_url_python" style="color: inherit; text-decoration: inherit;">tracking_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}TrackingUrl of the package.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="hierarchyinformationresponse">Hierarchy<wbr>Information<wbr>Response</h4>
@@ -1653,7 +1833,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes whether the orderItem is cancellable or not.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Describes whether the order item is cancellable or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="currentstage_csharp">
 <a href="#currentstage_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Stage</a>
@@ -1683,7 +1863,7 @@ The following output properties are available:
 <a href="#forwardshippingdetails_csharp" style="color: inherit; text-decoration: inherit;">Forward<wbr>Shipping<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippingdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Shipping<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#forwardshippingdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Forward<wbr>Shipping<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Forward Package Shipping details{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1691,9 +1871,17 @@ The following output properties are available:
 <a href="#managementrpdetails_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Rp<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">object</span>
+        <span class="property-type"><a href="#resourceproviderdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Resource<wbr>Provider<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}parent RP details{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Parent RP details - this returns only the first or default parent RP from the entire list{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="managementrpdetailslist_csharp">
+<a href="#managementrpdetailslist_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Rp<wbr>Details<wbr>List</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourceproviderdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Resource<wbr>Provider<wbr>Details<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of parent RP details supported for configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="orderitemstagehistory_csharp">
 <a href="#orderitemstagehistory_csharp" style="color: inherit; text-decoration: inherit;">Order<wbr>Item<wbr>Stage<wbr>History</a>
@@ -1733,13 +1921,13 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes whether the orderItem is returnable or not.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Describes whether the order item is returnable or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reverseshippingdetails_csharp">
 <a href="#reverseshippingdetails_csharp" style="color: inherit; text-decoration: inherit;">Reverse<wbr>Shipping<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippingdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Shipping<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#reverseshippingdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Reverse<wbr>Shipping<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reverse Package Shipping details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1777,7 +1965,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes whether the orderItem is cancellable or not.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Describes whether the order item is cancellable or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="currentstage_go">
 <a href="#currentstage_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Stage</a>
@@ -1807,7 +1995,7 @@ The following output properties are available:
 <a href="#forwardshippingdetails_go" style="color: inherit; text-decoration: inherit;">Forward<wbr>Shipping<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippingdetailsresponse">Shipping<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#forwardshippingdetailsresponse">Forward<wbr>Shipping<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Forward Package Shipping details{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1815,9 +2003,17 @@ The following output properties are available:
 <a href="#managementrpdetails_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Rp<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#resourceproviderdetailsresponse">Resource<wbr>Provider<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}parent RP details{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Parent RP details - this returns only the first or default parent RP from the entire list{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="managementrpdetailslist_go">
+<a href="#managementrpdetailslist_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Rp<wbr>Details<wbr>List</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourceproviderdetailsresponse">[]Resource<wbr>Provider<wbr>Details<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}List of parent RP details supported for configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="orderitemstagehistory_go">
 <a href="#orderitemstagehistory_go" style="color: inherit; text-decoration: inherit;">Order<wbr>Item<wbr>Stage<wbr>History</a>
@@ -1857,13 +2053,13 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes whether the orderItem is returnable or not.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Describes whether the order item is returnable or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reverseshippingdetails_go">
 <a href="#reverseshippingdetails_go" style="color: inherit; text-decoration: inherit;">Reverse<wbr>Shipping<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippingdetailsresponse">Shipping<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#reverseshippingdetailsresponse">Reverse<wbr>Shipping<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reverse Package Shipping details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1901,7 +2097,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes whether the orderItem is cancellable or not.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Describes whether the order item is cancellable or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="currentstage_nodejs">
 <a href="#currentstage_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Stage</a>
@@ -1931,7 +2127,7 @@ The following output properties are available:
 <a href="#forwardshippingdetails_nodejs" style="color: inherit; text-decoration: inherit;">forward<wbr>Shipping<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippingdetailsresponse">Shipping<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#forwardshippingdetailsresponse">Forward<wbr>Shipping<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Forward Package Shipping details{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1939,9 +2135,17 @@ The following output properties are available:
 <a href="#managementrpdetails_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Rp<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">any</span>
+        <span class="property-type"><a href="#resourceproviderdetailsresponse">Resource<wbr>Provider<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}parent RP details{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Parent RP details - this returns only the first or default parent RP from the entire list{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="managementrpdetailslist_nodejs">
+<a href="#managementrpdetailslist_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Rp<wbr>Details<wbr>List</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourceproviderdetailsresponse">Resource<wbr>Provider<wbr>Details<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of parent RP details supported for configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="orderitemstagehistory_nodejs">
 <a href="#orderitemstagehistory_nodejs" style="color: inherit; text-decoration: inherit;">order<wbr>Item<wbr>Stage<wbr>History</a>
@@ -1981,13 +2185,13 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes whether the orderItem is returnable or not.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Describes whether the order item is returnable or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reverseshippingdetails_nodejs">
 <a href="#reverseshippingdetails_nodejs" style="color: inherit; text-decoration: inherit;">reverse<wbr>Shipping<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippingdetailsresponse">Shipping<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#reverseshippingdetailsresponse">Reverse<wbr>Shipping<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reverse Package Shipping details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2025,7 +2229,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Describes whether the orderItem is cancellable or not.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Describes whether the order item is cancellable or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="current_stage_python">
 <a href="#current_stage_python" style="color: inherit; text-decoration: inherit;">current_<wbr>stage</a>
@@ -2055,7 +2259,7 @@ The following output properties are available:
 <a href="#forward_shipping_details_python" style="color: inherit; text-decoration: inherit;">forward_<wbr>shipping_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippingdetailsresponse">Shipping<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#forwardshippingdetailsresponse">Forward<wbr>Shipping<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Forward Package Shipping details{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2063,9 +2267,17 @@ The following output properties are available:
 <a href="#management_rp_details_python" style="color: inherit; text-decoration: inherit;">management_<wbr>rp_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#resourceproviderdetailsresponse">Resource<wbr>Provider<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}parent RP details{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Parent RP details - this returns only the first or default parent RP from the entire list{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="management_rp_details_list_python">
+<a href="#management_rp_details_list_python" style="color: inherit; text-decoration: inherit;">management_<wbr>rp_<wbr>details_<wbr>list</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourceproviderdetailsresponse">Sequence[Resource<wbr>Provider<wbr>Details<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}List of parent RP details supported for configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="order_item_stage_history_python">
 <a href="#order_item_stage_history_python" style="color: inherit; text-decoration: inherit;">order_<wbr>item_<wbr>stage_<wbr>history</a>
@@ -2105,13 +2317,13 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Describes whether the orderItem is returnable or not.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Describes whether the order item is returnable or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reverse_shipping_details_python">
 <a href="#reverse_shipping_details_python" style="color: inherit; text-decoration: inherit;">reverse_<wbr>shipping_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippingdetailsresponse">Shipping<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#reverseshippingdetailsresponse">Reverse<wbr>Shipping<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reverse Package Shipping details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2287,6 +2499,14 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="count_csharp">
+<a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Quantity of the product{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="devicedetails_csharp">
 <a href="#devicedetails_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Details</a>
 </span>
@@ -2301,15 +2521,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hierarchyinformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Hierarchy<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Hierarchy of the product which uniquely identifies the product{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="count_csharp">
-<a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
+    <dd>{{% md %}}Hierarchy of the product which uniquely identifies the product{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="productdoubleencryptionstatus_csharp">
+<a href="#productdoubleencryptionstatus_csharp" style="color: inherit; text-decoration: inherit;">Product<wbr>Double<wbr>Encryption<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Quantity of the product{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Double encryption status of the configuration. Read-only field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayinfo_csharp">
 <a href="#displayinfo_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Info</a>
@@ -2322,6 +2542,14 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="count_go">
+<a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Quantity of the product{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="devicedetails_go">
 <a href="#devicedetails_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Details</a>
@@ -2337,15 +2565,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hierarchyinformationresponse">Hierarchy<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Hierarchy of the product which uniquely identifies the product{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="count_go">
-<a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
+    <dd>{{% md %}}Hierarchy of the product which uniquely identifies the product{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="productdoubleencryptionstatus_go">
+<a href="#productdoubleencryptionstatus_go" style="color: inherit; text-decoration: inherit;">Product<wbr>Double<wbr>Encryption<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Quantity of the product{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Double encryption status of the configuration. Read-only field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayinfo_go">
 <a href="#displayinfo_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Info</a>
@@ -2358,6 +2586,14 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="count_nodejs">
+<a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Quantity of the product{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="devicedetails_nodejs">
 <a href="#devicedetails_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Details</a>
@@ -2373,15 +2609,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hierarchyinformationresponse">Hierarchy<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Hierarchy of the product which uniquely identifies the product{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="count_nodejs">
-<a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
+    <dd>{{% md %}}Hierarchy of the product which uniquely identifies the product{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="productdoubleencryptionstatus_nodejs">
+<a href="#productdoubleencryptionstatus_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Double<wbr>Encryption<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Quantity of the product{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Double encryption status of the configuration. Read-only field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayinfo_nodejs">
 <a href="#displayinfo_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Info</a>
@@ -2394,6 +2630,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="count_python">
+<a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Quantity of the product{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="device_details_python">
 <a href="#device_details_python" style="color: inherit; text-decoration: inherit;">device_<wbr>details</a>
@@ -2409,15 +2653,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hierarchyinformationresponse">Hierarchy<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Hierarchy of the product which uniquely identifies the product{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="count_python">
-<a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
+    <dd>{{% md %}}Hierarchy of the product which uniquely identifies the product{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="product_double_encryption_status_python">
+<a href="#product_double_encryption_status_python" style="color: inherit; text-decoration: inherit;">product_<wbr>double_<wbr>encryption_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Quantity of the product{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Double encryption status of the configuration. Read-only field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_info_python">
 <a href="#display_info_python" style="color: inherit; text-decoration: inherit;">display_<wbr>info</a>
@@ -2426,6 +2670,238 @@ The following output properties are available:
         <span class="property-type"><a href="#displayinforesponse">Display<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Display details of the product{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="resourceproviderdetailsresponse">Resource<wbr>Provider<wbr>Details<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="resourceprovidernamespace_csharp">
+<a href="#resourceprovidernamespace_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Provider<wbr>Namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource provider namespace{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="resourceprovidernamespace_go">
+<a href="#resourceprovidernamespace_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Provider<wbr>Namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource provider namespace{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="resourceprovidernamespace_nodejs">
+<a href="#resourceprovidernamespace_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Provider<wbr>Namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource provider namespace{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="resource_provider_namespace_python">
+<a href="#resource_provider_namespace_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>provider_<wbr>namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource provider namespace{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="reverseshippingdetailsresponse">Reverse<wbr>Shipping<wbr>Details<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="carrierdisplayname_csharp">
+<a href="#carrierdisplayname_csharp" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Carrier Name for display purpose. Not to be used for any processing.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="carriername_csharp">
+<a href="#carriername_csharp" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the carrier.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="saskeyforlabel_csharp">
+<a href="#saskeyforlabel_csharp" style="color: inherit; text-decoration: inherit;">Sas<wbr>Key<wbr>For<wbr>Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SAS key to download the reverse shipment label of the package.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="trackingid_csharp">
+<a href="#trackingid_csharp" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}TrackingId of the package{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="trackingurl_csharp">
+<a href="#trackingurl_csharp" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}TrackingUrl of the package.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="carrierdisplayname_go">
+<a href="#carrierdisplayname_go" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Carrier Name for display purpose. Not to be used for any processing.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="carriername_go">
+<a href="#carriername_go" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the carrier.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="saskeyforlabel_go">
+<a href="#saskeyforlabel_go" style="color: inherit; text-decoration: inherit;">Sas<wbr>Key<wbr>For<wbr>Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SAS key to download the reverse shipment label of the package.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="trackingid_go">
+<a href="#trackingid_go" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}TrackingId of the package{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="trackingurl_go">
+<a href="#trackingurl_go" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}TrackingUrl of the package.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="carrierdisplayname_nodejs">
+<a href="#carrierdisplayname_nodejs" style="color: inherit; text-decoration: inherit;">carrier<wbr>Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Carrier Name for display purpose. Not to be used for any processing.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="carriername_nodejs">
+<a href="#carriername_nodejs" style="color: inherit; text-decoration: inherit;">carrier<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the carrier.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="saskeyforlabel_nodejs">
+<a href="#saskeyforlabel_nodejs" style="color: inherit; text-decoration: inherit;">sas<wbr>Key<wbr>For<wbr>Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SAS key to download the reverse shipment label of the package.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="trackingid_nodejs">
+<a href="#trackingid_nodejs" style="color: inherit; text-decoration: inherit;">tracking<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}TrackingId of the package{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="trackingurl_nodejs">
+<a href="#trackingurl_nodejs" style="color: inherit; text-decoration: inherit;">tracking<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}TrackingUrl of the package.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="carrier_display_name_python">
+<a href="#carrier_display_name_python" style="color: inherit; text-decoration: inherit;">carrier_<wbr>display_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Carrier Name for display purpose. Not to be used for any processing.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="carrier_name_python">
+<a href="#carrier_name_python" style="color: inherit; text-decoration: inherit;">carrier_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the carrier.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sas_key_for_label_python">
+<a href="#sas_key_for_label_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>key_<wbr>for_<wbr>label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}SAS key to download the reverse shipment label of the package.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tracking_id_python">
+<a href="#tracking_id_python" style="color: inherit; text-decoration: inherit;">tracking_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}TrackingId of the package{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tracking_url_python">
+<a href="#tracking_url_python" style="color: inherit; text-decoration: inherit;">tracking_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}TrackingUrl of the package.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="shippingaddressresponse">Shipping<wbr>Address<wbr>Response</h4>
@@ -2766,154 +3242,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Extended Zip Code.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="shippingdetailsresponse">Shipping<wbr>Details<wbr>Response</h4>
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="carrierdisplayname_csharp">
-<a href="#carrierdisplayname_csharp" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Display<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Carrier Name for display purpose. Not to be used for any processing.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="carriername_csharp">
-<a href="#carriername_csharp" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the carrier.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="trackingid_csharp">
-<a href="#trackingid_csharp" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}TrackingId of the package{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="trackingurl_csharp">
-<a href="#trackingurl_csharp" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Url</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}TrackingUrl of the package.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="carrierdisplayname_go">
-<a href="#carrierdisplayname_go" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Display<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Carrier Name for display purpose. Not to be used for any processing.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="carriername_go">
-<a href="#carriername_go" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the carrier.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="trackingid_go">
-<a href="#trackingid_go" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}TrackingId of the package{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="trackingurl_go">
-<a href="#trackingurl_go" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Url</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}TrackingUrl of the package.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="carrierdisplayname_nodejs">
-<a href="#carrierdisplayname_nodejs" style="color: inherit; text-decoration: inherit;">carrier<wbr>Display<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Carrier Name for display purpose. Not to be used for any processing.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="carriername_nodejs">
-<a href="#carriername_nodejs" style="color: inherit; text-decoration: inherit;">carrier<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the carrier.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="trackingid_nodejs">
-<a href="#trackingid_nodejs" style="color: inherit; text-decoration: inherit;">tracking<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}TrackingId of the package{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="trackingurl_nodejs">
-<a href="#trackingurl_nodejs" style="color: inherit; text-decoration: inherit;">tracking<wbr>Url</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}TrackingUrl of the package.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="carrier_display_name_python">
-<a href="#carrier_display_name_python" style="color: inherit; text-decoration: inherit;">carrier_<wbr>display_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Carrier Name for display purpose. Not to be used for any processing.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="carrier_name_python">
-<a href="#carrier_name_python" style="color: inherit; text-decoration: inherit;">carrier_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the carrier.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="tracking_id_python">
-<a href="#tracking_id_python" style="color: inherit; text-decoration: inherit;">tracking_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}TrackingId of the package{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="tracking_url_python">
-<a href="#tracking_url_python" style="color: inherit; text-decoration: inherit;">tracking_<wbr>url</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}TrackingUrl of the package.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="stagedetailsresponse">Stage<wbr>Details<wbr>Response</h4>

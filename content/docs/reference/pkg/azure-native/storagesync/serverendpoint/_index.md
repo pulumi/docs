@@ -2673,6 +2673,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Per item error count{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="syncmode_csharp">
+<a href="#syncmode_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Sync mode{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="timestamp_csharp">
 <a href="#timestamp_csharp" style="color: inherit; text-decoration: inherit;">Timestamp</a>
 </span>
@@ -2724,6 +2732,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Per item error count{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="syncmode_go">
+<a href="#syncmode_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Sync mode{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timestamp_go">
 <a href="#timestamp_go" style="color: inherit; text-decoration: inherit;">Timestamp</a>
@@ -2777,6 +2793,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Per item error count{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="syncmode_nodejs">
+<a href="#syncmode_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Sync mode{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="timestamp_nodejs">
 <a href="#timestamp_nodejs" style="color: inherit; text-decoration: inherit;">timestamp</a>
 </span>
@@ -2829,6 +2853,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Per item error count{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="sync_mode_python">
+<a href="#sync_mode_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Sync mode{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="timestamp_python">
 <a href="#timestamp_python" style="color: inherit; text-decoration: inherit;">timestamp</a>
 </span>
@@ -2866,6 +2898,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#serverendpointfilesnotsyncingerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Files<wbr>Not<wbr>Syncing<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of per-item errors coming from the last sync session.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="lastsyncmode_csharp">
+<a href="#lastsyncmode_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Sync<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Sync mode{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastsyncperitemerrorcount_csharp">
 <a href="#lastsyncperitemerrorcount_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Sync<wbr>Per<wbr>Item<wbr>Error<wbr>Count</a>
@@ -2927,6 +2967,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Array of per-item errors coming from the last sync session.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="lastsyncmode_go">
+<a href="#lastsyncmode_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Sync<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Sync mode{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="lastsyncperitemerrorcount_go">
 <a href="#lastsyncperitemerrorcount_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Sync<wbr>Per<wbr>Item<wbr>Error<wbr>Count</a>
 </span>
@@ -2987,6 +3035,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Array of per-item errors coming from the last sync session.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="lastsyncmode_nodejs">
+<a href="#lastsyncmode_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Sync<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Sync mode{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="lastsyncperitemerrorcount_nodejs">
 <a href="#lastsyncperitemerrorcount_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Sync<wbr>Per<wbr>Item<wbr>Error<wbr>Count</a>
 </span>
@@ -3046,6 +3102,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#serverendpointfilesnotsyncingerrorresponse">Sequence[Server<wbr>Endpoint<wbr>Files<wbr>Not<wbr>Syncing<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Array of per-item errors coming from the last sync session.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="last_sync_mode_python">
+<a href="#last_sync_mode_python" style="color: inherit; text-decoration: inherit;">last_<wbr>sync_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Sync mode{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="last_sync_per_item_error_count_python">
 <a href="#last_sync_per_item_error_count_python" style="color: inherit; text-decoration: inherit;">last_<wbr>sync_<wbr>per_<wbr>item_<wbr>error_<wbr>count</a>

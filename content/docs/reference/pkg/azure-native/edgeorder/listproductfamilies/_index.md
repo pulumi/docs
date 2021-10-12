@@ -2274,7 +2274,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#productlineresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Product<wbr>Line<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of product lines supported in the product family{{% /md %}}</dd></dl>
+    <dd>{{% md %}}List of product lines supported in the product family{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resourceproviderdetails_csharp">
+<a href="#resourceproviderdetails_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Provider<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourceproviderdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Resource<wbr>Provider<wbr>Details<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Contains details related to resource provider{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2342,7 +2350,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#productlineresponse">[]Product<wbr>Line<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of product lines supported in the product family{{% /md %}}</dd></dl>
+    <dd>{{% md %}}List of product lines supported in the product family{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resourceproviderdetails_go">
+<a href="#resourceproviderdetails_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Provider<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourceproviderdetailsresponse">[]Resource<wbr>Provider<wbr>Details<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Contains details related to resource provider{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2410,7 +2426,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#productlineresponse">Product<wbr>Line<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of product lines supported in the product family{{% /md %}}</dd></dl>
+    <dd>{{% md %}}List of product lines supported in the product family{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resourceproviderdetails_nodejs">
+<a href="#resourceproviderdetails_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Provider<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourceproviderdetailsresponse">Resource<wbr>Provider<wbr>Details<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Contains details related to resource provider{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2478,7 +2502,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#productlineresponse">Sequence[Product<wbr>Line<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}List of product lines supported in the product family{{% /md %}}</dd></dl>
+    <dd>{{% md %}}List of product lines supported in the product family{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resource_provider_details_python">
+<a href="#resource_provider_details_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>provider_<wbr>details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourceproviderdetailsresponse">Sequence[Resource<wbr>Provider<wbr>Details<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Contains details related to resource provider{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="productlineresponse">Product<wbr>Line<wbr>Response</h4>
@@ -3211,6 +3243,58 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Term Id{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="resourceproviderdetailsresponse">Resource<wbr>Provider<wbr>Details<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="resourceprovidernamespace_csharp">
+<a href="#resourceprovidernamespace_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Provider<wbr>Namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource provider namespace{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="resourceprovidernamespace_go">
+<a href="#resourceprovidernamespace_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Provider<wbr>Namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource provider namespace{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="resourceprovidernamespace_nodejs">
+<a href="#resourceprovidernamespace_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Provider<wbr>Namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource provider namespace{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="resource_provider_namespace_python">
+<a href="#resource_provider_namespace_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>provider_<wbr>namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource provider namespace{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="specificationresponse">Specification<wbr>Response</h4>
