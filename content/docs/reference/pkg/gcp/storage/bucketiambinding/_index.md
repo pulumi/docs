@@ -701,6 +701,9 @@ Each entry can have one of the following values:
 * **serviceAccount:{emailid}**: An email address that represents a service account. For example, my-other-app@appspot.gserviceaccount.com.
 * **group:{emailid}**: An email address that represents a Google group. For example, admins@example.com.
 * **domain:{domain}**: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.
+* **projectOwner:projectid**: Owners of the given project. For example, "projectOwner:my-example-project"
+* **projectEditor:projectid**: Editors of the given project. For example, "projectEditor:my-example-project"
+* **projectViewer:projectid**: Viewers of the given project. For example, "projectViewer:my-example-project"
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_csharp">
@@ -751,6 +754,9 @@ Each entry can have one of the following values:
 * **serviceAccount:{emailid}**: An email address that represents a service account. For example, my-other-app@appspot.gserviceaccount.com.
 * **group:{emailid}**: An email address that represents a Google group. For example, admins@example.com.
 * **domain:{domain}**: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.
+* **projectOwner:projectid**: Owners of the given project. For example, "projectOwner:my-example-project"
+* **projectEditor:projectid**: Editors of the given project. For example, "projectEditor:my-example-project"
+* **projectViewer:projectid**: Viewers of the given project. For example, "projectViewer:my-example-project"
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_go">
@@ -801,6 +807,9 @@ Each entry can have one of the following values:
 * **serviceAccount:{emailid}**: An email address that represents a service account. For example, my-other-app@appspot.gserviceaccount.com.
 * **group:{emailid}**: An email address that represents a Google group. For example, admins@example.com.
 * **domain:{domain}**: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.
+* **projectOwner:projectid**: Owners of the given project. For example, "projectOwner:my-example-project"
+* **projectEditor:projectid**: Editors of the given project. For example, "projectEditor:my-example-project"
+* **projectViewer:projectid**: Viewers of the given project. For example, "projectViewer:my-example-project"
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_nodejs">
@@ -851,6 +860,9 @@ Each entry can have one of the following values:
 * **serviceAccount:{emailid}**: An email address that represents a service account. For example, my-other-app@appspot.gserviceaccount.com.
 * **group:{emailid}**: An email address that represents a Google group. For example, admins@example.com.
 * **domain:{domain}**: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.
+* **projectOwner:projectid**: Owners of the given project. For example, "projectOwner:my-example-project"
+* **projectEditor:projectid**: Editors of the given project. For example, "projectEditor:my-example-project"
+* **projectViewer:projectid**: Viewers of the given project. For example, "projectViewer:my-example-project"
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_python">
@@ -1141,6 +1153,9 @@ Each entry can have one of the following values:
 * **serviceAccount:{emailid}**: An email address that represents a service account. For example, my-other-app@appspot.gserviceaccount.com.
 * **group:{emailid}**: An email address that represents a Google group. For example, admins@example.com.
 * **domain:{domain}**: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.
+* **projectOwner:projectid**: Owners of the given project. For example, "projectOwner:my-example-project"
+* **projectEditor:projectid**: Editors of the given project. For example, "projectEditor:my-example-project"
+* **projectViewer:projectid**: Viewers of the given project. For example, "projectViewer:my-example-project"
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_csharp">
@@ -1200,6 +1215,9 @@ Each entry can have one of the following values:
 * **serviceAccount:{emailid}**: An email address that represents a service account. For example, my-other-app@appspot.gserviceaccount.com.
 * **group:{emailid}**: An email address that represents a Google group. For example, admins@example.com.
 * **domain:{domain}**: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.
+* **projectOwner:projectid**: Owners of the given project. For example, "projectOwner:my-example-project"
+* **projectEditor:projectid**: Editors of the given project. For example, "projectEditor:my-example-project"
+* **projectViewer:projectid**: Viewers of the given project. For example, "projectViewer:my-example-project"
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_go">
@@ -1259,6 +1277,9 @@ Each entry can have one of the following values:
 * **serviceAccount:{emailid}**: An email address that represents a service account. For example, my-other-app@appspot.gserviceaccount.com.
 * **group:{emailid}**: An email address that represents a Google group. For example, admins@example.com.
 * **domain:{domain}**: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.
+* **projectOwner:projectid**: Owners of the given project. For example, "projectOwner:my-example-project"
+* **projectEditor:projectid**: Editors of the given project. For example, "projectEditor:my-example-project"
+* **projectViewer:projectid**: Viewers of the given project. For example, "projectViewer:my-example-project"
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_nodejs">
@@ -1318,6 +1339,9 @@ Each entry can have one of the following values:
 * **serviceAccount:{emailid}**: An email address that represents a service account. For example, my-other-app@appspot.gserviceaccount.com.
 * **group:{emailid}**: An email address that represents a Google group. For example, admins@example.com.
 * **domain:{domain}**: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.
+* **projectOwner:projectid**: Owners of the given project. For example, "projectOwner:my-example-project"
+* **projectEditor:projectid**: Editors of the given project. For example, "projectEditor:my-example-project"
+* **projectViewer:projectid**: Viewers of the given project. For example, "projectViewer:my-example-project"
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_python">
