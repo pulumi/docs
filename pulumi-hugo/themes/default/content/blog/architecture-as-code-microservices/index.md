@@ -32,11 +32,11 @@ Microservices deployed as stacks communicate with each other through the [StackR
 
 ## A Microservices Application Infrastructure
 
-We'll use the [AWS Stack Reference example](https://github.com/pulumi/examples/tree/master/aws-stackreference-architecture) to illustrate how Pulumi uses Architecture as Code to create reusable components and deployment frameworks. We’ve previously [blogged]({{< relref "/blog/architect-aws-application-infra-with-pulumi-stack-references" >}}) about this example and covered the code in some detail.
+We'll use the [AWS Stack Reference example](https://github.com/pulumi/examples/tree/master/aws-ts-stackreference-architecture) to illustrate how Pulumi uses Architecture as Code to create reusable components and deployment frameworks. We’ve previously [blogged]({{< relref "/blog/architect-aws-application-infra-with-pulumi-stack-references" >}}) about this example and covered the code in some detail.
 
-Let's examine how it creates reusable components for building out resources. First up is the [VPC class](https://github.com/pulumi/examples/blob/master/aws-stackreference-architecture/networking/src/vpc.ts) in the [networking stack](https://github.com/pulumi/examples/tree/master/aws-stackreference-architecture/networking).
+Let's examine how it creates reusable components for building out resources. First up is the [VPC class](https://github.com/pulumi/examples/blob/master/aws-ts-stackreference-architecture/networking/src/vpc.ts) in the [networking stack](https://github.com/pulumi/examples/tree/master/aws-ts-stackreference-architecture/networking).
 
-In the networking service, [`vpc.ts`](https://github.com/pulumi/examples/blob/master/aws-stackreference-architecture/networking/src/vpc.ts) creates a TypeScript class that extends Pulumi [ComponentResource]({{< relref "/docs/intro/concepts/resources" >}}). A ComponentResource abstracts one or more children that do not require custom create, read, update, and delete operations for provisioning. We can add the related resources to the correct parent to build out the class.
+In the networking service, [`vpc.ts`](https://github.com/pulumi/examples/blob/master/aws-ts-stackreference-architecture/networking/src/vpc.ts) creates a TypeScript class that extends Pulumi [ComponentResource]({{< relref "/docs/intro/concepts/resources" >}}). A ComponentResource abstracts one or more children that do not require custom create, read, update, and delete operations for provisioning. We can add the related resources to the correct parent to build out the class.
 
 ```ts
 export class Vpc extends ComponentResource {
@@ -82,11 +82,11 @@ public configurePeering(args: PeerToArgs) {
 }
 ```
 
-We can reuse this pattern to build a reusable [database component](https://github.com/pulumi/examples/blob/master/aws-stackreference-architecture/database/src/database.ts) from RDS. Likewise, the [REST application](https://github.com/pulumi/examples/blob/master/aws-stackreference-architecture/application/src/application.ts) creates a service using a container deployed in Fargate and fronted by an ALB. You can replace the container with an updated application without interrupting the service.
+We can reuse this pattern to build a reusable [database component](https://github.com/pulumi/examples/blob/master/aws-ts-stackreference-architecture/database/src/database.ts) from RDS. Likewise, the [REST application](https://github.com/pulumi/examples/blob/master/aws-ts-stackreference-architecture/application/src/application.ts) creates a service using a container deployed in Fargate and fronted by an ALB. You can replace the container with an updated application without interrupting the service.
 
 ## Jumping In
 
-We encourage you to try out deploying microservices with stacks. To download just the stack example from the  [examples repository](https://github.com/pulumi/examples/) we'll use a git sparse checkout to only copy the [aws-stackreference-architecture](https://github.com/pulumi/examples/tree/master/aws-stackreference-architecture) directory.
+We encourage you to try out deploying microservices with stacks. To download just the stack example from the  [examples repository](https://github.com/pulumi/examples/) we'll use a git sparse checkout to only copy the [aws-ts-stackreference-architecture](https://github.com/pulumi/examples/tree/master/aws-ts-stackreference-architecture) directory.
 
 ```bash
 $ mkdir microservices
@@ -95,7 +95,7 @@ $ cd microservices
 $ git init
 $ git remote add origin -f https://github.com/pulumi/examples/
 $ git config core.sparseCheckout true
-$ aws-stackreference-architecture >> .git/info/sparse-checkout
+$ aws-ts-stackreference-architecture >> .git/info/sparse-checkout
 $ git pull origin master
 ```
 

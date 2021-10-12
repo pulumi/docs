@@ -448,7 +448,7 @@ Once the resources have been deleted, then we can follow the interactive prompt 
 
 In this post, we have discussed how we would break our infrastructure into logically grouped projects and how we share
 information between these projects. You can find a runable version of this infrastructure in our
-[examples](https://github.com/pulumi/examples/tree/master/aws-stackreference-architecture) repository.
+[examples](https://github.com/pulumi/examples/tree/master/aws-ts-stackreference-architecture) repository.
 
 This demonstrates the suggested way of architecting Pulumi applications both for operability and collaboration.
 

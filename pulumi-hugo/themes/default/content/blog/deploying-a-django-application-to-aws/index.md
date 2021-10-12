@@ -16,7 +16,7 @@ We will be paying additional attention to security, and will be making use of Pu
 The first step is to create a new directory and initialize a Pulumi project with `pulumi new aws-python`.
 
 ```bash
-$ mkdir aws-django-voting-app && cd aws-django-voting-app
+$ mkdir aws-py-django-voting-app && cd aws-py-django-voting-app
 $ pulumi new aws-python
 ```
 
@@ -28,7 +28,7 @@ $ django-admin startproject mysite
 $ cd mysite
 ```
 
-This tutorial was written for the [aws-django-voting-app example](https://github.com/pulumi/examples/tree/master/aws-django-voting-app) but will work with any other Django application. The most important file is `./mysite/settings.py`, which we will modify to accept secrets and configuration parameters in the form of environment variables. A common mistake that programmers make is to submit files with important data to source code repositories. Even if it is a private repository, it is still not recommended to leave passwords and private keys in your files.
+This tutorial was written for the [aws-py-django-voting-app example](https://github.com/pulumi/examples/tree/master/aws-py-django-voting-app) but will work with any other Django application. The most important file is `./mysite/settings.py`, which we will modify to accept secrets and configuration parameters in the form of environment variables. A common mistake that programmers make is to submit files with important data to source code repositories. Even if it is a private repository, it is still not recommended to leave passwords and private keys in your files.
 
 ```python
 SECRET_KEY = os.environ['SECRET_KEY']
@@ -47,7 +47,7 @@ DATABASES = {
 }
 ```
 
-To perform database migrations as part of the deployment, we will create a `setupDatabase.sh` script inside the `aws-django-voting-app/frontend/mysite` folder. As a bonus, the script will create an admin account that we can use to log into our website. Make sure the file has exec permissions.
+To perform database migrations as part of the deployment, we will create a `setupDatabase.sh` script inside the `aws-py-django-voting-app/frontend/mysite` folder. As a bonus, the script will create an admin account that we can use to log into our website. Make sure the file has exec permissions.
 
 ```bash
 #!/bin/bash
@@ -61,7 +61,7 @@ python3 /mysite/manage.py createsuperuser \
     --email=$DJANGO_NAME@example.com
 ```
 
-The next step is to go back into the `aws-django-voting-app/frontend` folder and containerize our application with Docker. First, we will list the libraries our application uses by creating a `requirements.txt` file with the following lines.
+The next step is to go back into the `aws-py-django-voting-app/frontend` folder and containerize our application with Docker. First, we will list the libraries our application uses by creating a `requirements.txt` file with the following lines.
 
 ```python
 django==3.1
@@ -89,7 +89,7 @@ ADD mysite /mysite
 CMD [ "python3", "/mysite/manage.py", "runserver", "0.0.0.0:80" ]
 ```
 
-Now that our Django application and Dockerfile are ready, we can return to the main `aws-django-voting-app` folder. The Pulumi project requires several configuration variables, which we set using `pulumi config set`. They are used to configure the MySQL admin account, a user account for initializing the table, and the Django website admin account. The private key that Django uses will also be passed in the same way.
+Now that our Django application and Dockerfile are ready, we can return to the main `aws-py-django-voting-app` folder. The Pulumi project requires several configuration variables, which we set using `pulumi config set`. They are used to configure the MySQL admin account, a user account for initializing the table, and the Django website admin account. The private key that Django uses will also be passed in the same way.
 
 ```bash
 $ pulumi config set sql-admin-name <NAME>
@@ -132,7 +132,7 @@ django_admin_password = config.require_secret("django-admin-password")
 django_secret_key = config.require_secret("django-secret-key")
 ```
 
-After setting up the imports and configurations, we create an ECS Cluster, VPC, Subnet, RDS instance, and several other items. All the components are identical to the ones in the [first]({{< relref "/blog/creating-a-python-aws-application-using-flask-and-redis" >}}) and [second]({{< relref "/blog/deploying-mysql-schemas-using-dynamic-providers" >}}) blog posts, and the full code can be seen in this example's [github repository](https://github.com/pulumi/examples/tree/master/aws-django-voting-app).
+After setting up the imports and configurations, we create an ECS Cluster, VPC, Subnet, RDS instance, and several other items. All the components are identical to the ones in the [first]({{< relref "/blog/creating-a-python-aws-application-using-flask-and-redis" >}}) and [second]({{< relref "/blog/deploying-mysql-schemas-using-dynamic-providers" >}}) blog posts, and the full code can be seen in this example's [github repository](https://github.com/pulumi/examples/tree/master/aws-py-django-voting-app).
 
 ```python
 app_cluster = aws.ecs.Cluster(...)
@@ -404,4 +404,4 @@ In this example, I described how to set up a basic Django voting application and
 
 Next week, we'll explore PostgreSQL, Express, React, and Node.js, and use them to create a simple application.
 
-The blog post's full code and an in-depth explanation for each component are on [Github](https://github.com/pulumi/examples/tree/master/aws-django-voting-app).
+The blog post's full code and an in-depth explanation for each component are on [Github](https://github.com/pulumi/examples/tree/master/aws-py-django-voting-app).
