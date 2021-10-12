@@ -2354,15 +2354,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}When set to 'true' the RTSP playback URL will not be published, disabling low latency streaming. This is used, for example, when the topology is used only for archiving content. Default is 'false'.  If set to 'true', then "disableArchive" must be set to 'false'.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="disablevideopreviewimage_csharp">
-<a href="#disablevideopreviewimage_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Video<wbr>Preview<wbr>Image</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}When set to 'true' preview images will not be generated. This is used, for example, when the topology is used only for low latency video streaming. Default is 'false'.  If set to 'false', then "disableArchive" must be set to 'false'.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}When set to 'true' the RTSP playback URL will not be published, disabling low latency streaming. This is used, for example, when the topology is used only for archiving content. Default is 'false'.  If set to 'true', then "disableArchive" must be set to 'false'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2382,15 +2374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}When set to 'true' the RTSP playback URL will not be published, disabling low latency streaming. This is used, for example, when the topology is used only for archiving content. Default is 'false'.  If set to 'true', then "disableArchive" must be set to 'false'.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="disablevideopreviewimage_go">
-<a href="#disablevideopreviewimage_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Video<wbr>Preview<wbr>Image</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}When set to 'true' preview images will not be generated. This is used, for example, when the topology is used only for low latency video streaming. Default is 'false'.  If set to 'false', then "disableArchive" must be set to 'false'.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}When set to 'true' the RTSP playback URL will not be published, disabling low latency streaming. This is used, for example, when the topology is used only for archiving content. Default is 'false'.  If set to 'true', then "disableArchive" must be set to 'false'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2410,15 +2394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}When set to 'true' the RTSP playback URL will not be published, disabling low latency streaming. This is used, for example, when the topology is used only for archiving content. Default is 'false'.  If set to 'true', then "disableArchive" must be set to 'false'.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="disablevideopreviewimage_nodejs">
-<a href="#disablevideopreviewimage_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Video<wbr>Preview<wbr>Image</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}When set to 'true' preview images will not be generated. This is used, for example, when the topology is used only for low latency video streaming. Default is 'false'.  If set to 'false', then "disableArchive" must be set to 'false'.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}When set to 'true' the RTSP playback URL will not be published, disabling low latency streaming. This is used, for example, when the topology is used only for archiving content. Default is 'false'.  If set to 'true', then "disableArchive" must be set to 'false'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2438,15 +2414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}When set to 'true' the RTSP playback URL will not be published, disabling low latency streaming. This is used, for example, when the topology is used only for archiving content. Default is 'false'.  If set to 'true', then "disableArchive" must be set to 'false'.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="disable_video_preview_image_python">
-<a href="#disable_video_preview_image_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>video_<wbr>preview_<wbr>image</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}When set to 'true' preview images will not be generated. This is used, for example, when the topology is used only for low latency video streaming. Default is 'false'.  If set to 'false', then "disableArchive" must be set to 'false'.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}When set to 'true' the RTSP playback URL will not be published, disabling low latency streaming. This is used, for example, when the topology is used only for archiving content. Default is 'false'.  If set to 'true', then "disableArchive" must be set to 'false'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="videoscaleresponse">Video<wbr>Scale<wbr>Response</h4>

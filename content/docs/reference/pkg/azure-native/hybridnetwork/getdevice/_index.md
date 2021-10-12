@@ -208,14 +208,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="azurestackedge_csharp">
-<a href="#azurestackedge_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Stack<wbr>Edge</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The reference to the Azure stack edge device.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -291,14 +283,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="azurestackedge_go">
-<a href="#azurestackedge_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Stack<wbr>Edge</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The reference to the Azure stack edge device.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -376,14 +360,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="azurestackedge_nodejs">
-<a href="#azurestackedge_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Stack<wbr>Edge</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The reference to the Azure stack edge device.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -459,14 +435,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="azure_stack_edge_python">
-<a href="#azure_stack_edge_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>stack_<wbr>edge</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The reference to the Azure stack edge device.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>

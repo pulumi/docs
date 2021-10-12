@@ -35,10 +35,6 @@ class MyStack : Stack
     {
         var device = new AzureNative.HybridNetwork.Device("device", new AzureNative.HybridNetwork.DeviceArgs
         {
-            AzureStackEdge = new AzureNative.HybridNetwork.Inputs.SubResourceArgs
-            {
-                Id = "/subscriptions/subid1/resourcegroups/rg2/providers/Microsoft.DataboxEdge/DataboxEdgeDevices/TestDataboxEdgeDeviceName",
-            },
             DeviceName = "TestDevice",
             DeviceType = "AzureStackEdge",
             Location = "eastus",
@@ -68,9 +64,6 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := hybridnetwork.NewDevice(ctx, "device", &hybridnetwork.DeviceArgs{
-			AzureStackEdge: &hybridnetwork.SubResourceArgs{
-				Id: pulumi.String("/subscriptions/subid1/resourcegroups/rg2/providers/Microsoft.DataboxEdge/DataboxEdgeDevices/TestDataboxEdgeDeviceName"),
-			},
 			DeviceName:        pulumi.String("TestDevice"),
 			DeviceType:        pulumi.String("AzureStackEdge"),
 			Location:          pulumi.String("eastus"),
@@ -97,9 +90,6 @@ import pulumi
 import pulumi_azure_native as azure_native
 
 device = azure_native.hybridnetwork.Device("device",
-    azure_stack_edge=azure_native.hybridnetwork.SubResourceArgs(
-        id="/subscriptions/subid1/resourcegroups/rg2/providers/Microsoft.DataboxEdge/DataboxEdgeDevices/TestDataboxEdgeDeviceName",
-    ),
     device_name="TestDevice",
     device_type="AzureStackEdge",
     location="eastus",
@@ -119,9 +109,6 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure_native from "@pulumi/azure-native";
 
 const device = new azure_native.hybridnetwork.Device("device", {
-    azureStackEdge: {
-        id: "/subscriptions/subid1/resourcegroups/rg2/providers/Microsoft.DataboxEdge/DataboxEdgeDevices/TestDataboxEdgeDeviceName",
-    },
     deviceName: "TestDevice",
     deviceType: "AzureStackEdge",
     location: "eastus",
@@ -154,7 +141,6 @@ const device = new azure_native.hybridnetwork.Device("device", {
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Device</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-           <span class="nx">azure_stack_edge</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">,</span>
            <span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">device_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, DeviceType]]</span> = None<span class="p">,</span>
            <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -305,14 +291,6 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="azurestackedge_csharp">
-<a href="#azurestackedge_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Stack<wbr>Edge</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The reference to the Azure stack edge device.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="devicename_csharp">
 <a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
 </span>
@@ -356,14 +334,6 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="azurestackedge_go">
-<a href="#azurestackedge_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Stack<wbr>Edge</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The reference to the Azure stack edge device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicename_go">
 <a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -409,14 +379,6 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="azurestackedge_nodejs">
-<a href="#azurestackedge_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Stack<wbr>Edge</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The reference to the Azure stack edge device.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="devicename_nodejs">
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
 </span>
@@ -460,14 +422,6 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="azure_stack_edge_python">
-<a href="#azure_stack_edge_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>stack_<wbr>edge</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The reference to the Azure stack edge device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="device_name_python">
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
@@ -743,56 +697,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular"><dt>UNKNOWN</dt>
     <dd>Unknown</dd><dt>AZURE_STACK_EDGE</dt>
     <dd>AzureStackEdge</dd></dl>
-{{% /choosable %}}
-
-<h4 id="subresource">Sub<wbr>Resource</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="subresourceresponse">Sub<wbr>Resource<wbr>Response</h4>

@@ -28,6 +28,6 @@ Explore the resources and functions of the azure-native.agfoodplatform module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.35.0</dd>
+	<dd>1.37.0</dd>
 </dl>
 

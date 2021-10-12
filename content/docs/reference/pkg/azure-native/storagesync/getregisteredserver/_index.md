@@ -177,6 +177,22 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="agentversionexpirationdate_csharp">
+<a href="#agentversionexpirationdate_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Version<wbr>Expiration<wbr>Date</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Registered Server Agent Version Expiration Date{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="agentversionstatus_csharp">
+<a href="#agentversionstatus_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Version<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Registered Server Agent Version Status{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -364,6 +380,22 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="agentversionexpirationdate_go">
+<a href="#agentversionexpirationdate_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Version<wbr>Expiration<wbr>Date</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Registered Server Agent Version Expiration Date{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="agentversionstatus_go">
+<a href="#agentversionstatus_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Version<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Registered Server Agent Version Status{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -553,6 +585,22 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="agentversionexpirationdate_nodejs">
+<a href="#agentversionexpirationdate_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Version<wbr>Expiration<wbr>Date</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Registered Server Agent Version Expiration Date{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="agentversionstatus_nodejs">
+<a href="#agentversionstatus_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Version<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Registered Server Agent Version Status{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -740,6 +788,22 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="agent_version_expiration_date_python">
+<a href="#agent_version_expiration_date_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>version_<wbr>expiration_<wbr>date</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Registered Server Agent Version Expiration Date{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="agent_version_status_python">
+<a href="#agent_version_status_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>version_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Registered Server Agent Version Status{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>

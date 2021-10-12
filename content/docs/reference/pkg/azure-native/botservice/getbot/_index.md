@@ -506,6 +506,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Microsoft App Id for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="apppasswordhint_csharp">
+<a href="#apppasswordhint_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Password<wbr>Hint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The hint (e.g. keyVault secret resourceId) on how to fetch the app secret{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="cmekkeyvaulturl_csharp">
 <a href="#cmekkeyvaulturl_csharp" style="color: inherit; text-decoration: inherit;">Cmek<wbr>Key<wbr>Vault<wbr>Url</a>
 </span>
@@ -586,6 +594,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The LUIS Key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="openwithhint_csharp">
+<a href="#openwithhint_csharp" style="color: inherit; text-decoration: inherit;">Open<wbr>With<wbr>Hint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The hint to browser (e.g. protocol handler) on how to open the bot for authoring{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="schematransformationversion_csharp">
 <a href="#schematransformationversion_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Transformation<wbr>Version</a>
 </span>
@@ -645,6 +661,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Microsoft App Id for the bot{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="apppasswordhint_go">
+<a href="#apppasswordhint_go" style="color: inherit; text-decoration: inherit;">App<wbr>Password<wbr>Hint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The hint (e.g. keyVault secret resourceId) on how to fetch the app secret{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cmekkeyvaulturl_go">
 <a href="#cmekkeyvaulturl_go" style="color: inherit; text-decoration: inherit;">Cmek<wbr>Key<wbr>Vault<wbr>Url</a>
@@ -726,6 +750,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The LUIS Key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="openwithhint_go">
+<a href="#openwithhint_go" style="color: inherit; text-decoration: inherit;">Open<wbr>With<wbr>Hint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The hint to browser (e.g. protocol handler) on how to open the bot for authoring{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="schematransformationversion_go">
 <a href="#schematransformationversion_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Transformation<wbr>Version</a>
 </span>
@@ -785,6 +817,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Microsoft App Id for the bot{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="apppasswordhint_nodejs">
+<a href="#apppasswordhint_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Password<wbr>Hint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The hint (e.g. keyVault secret resourceId) on how to fetch the app secret{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cmekkeyvaulturl_nodejs">
 <a href="#cmekkeyvaulturl_nodejs" style="color: inherit; text-decoration: inherit;">cmek<wbr>Key<wbr>Vault<wbr>Url</a>
@@ -866,6 +906,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The LUIS Key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="openwithhint_nodejs">
+<a href="#openwithhint_nodejs" style="color: inherit; text-decoration: inherit;">open<wbr>With<wbr>Hint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The hint to browser (e.g. protocol handler) on how to open the bot for authoring{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="schematransformationversion_nodejs">
 <a href="#schematransformationversion_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Transformation<wbr>Version</a>
 </span>
@@ -925,6 +973,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Microsoft App Id for the bot{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="app_password_hint_python">
+<a href="#app_password_hint_python" style="color: inherit; text-decoration: inherit;">app_<wbr>password_<wbr>hint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The hint (e.g. keyVault secret resourceId) on how to fetch the app secret{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cmek_key_vault_url_python">
 <a href="#cmek_key_vault_url_python" style="color: inherit; text-decoration: inherit;">cmek_<wbr>key_<wbr>vault_<wbr>url</a>
@@ -1005,6 +1061,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The LUIS Key{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="open_with_hint_python">
+<a href="#open_with_hint_python" style="color: inherit; text-decoration: inherit;">open_<wbr>with_<wbr>hint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The hint to browser (e.g. protocol handler) on how to open the bot for authoring{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schema_transformation_version_python">
 <a href="#schema_transformation_version_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>transformation_<wbr>version</a>
