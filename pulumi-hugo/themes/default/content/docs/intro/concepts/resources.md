@@ -189,7 +189,7 @@ var role = new Aws.Iam.Role("my-role", new Aws.Iam.RoleArgs
 
 {{< /chooser >}}
 
-If the `name` property is not available on a resource, consult the [API Reference]({{< relref "/docs/reference/pkg" >}}) for the specific resource you are creating. Some resources use a different property to override auto-naming. For instance, the `aws.s3.Bucket` type uses the property `bucket` instead of name. Other resources, such as `aws.kms.Key`, do not have physical names and use other auto-generated IDs to uniquely identify them.
+If the `name` property is not available on a resource, consult the [API Reference]({{< relref "/registry" >}}) for the specific resource you are creating. Some resources use a different property to override auto-naming. For instance, the `aws.s3.Bucket` type uses the property `bucket` instead of name. Other resources, such as `aws.kms.Key`, do not have physical names and use other auto-generated IDs to uniquely identify them.
 
 Overriding auto-naming makes your project susceptible to naming collisions. As a result, for resources that may need to be replaced, you should specify `deleteBeforeReplace: true` in the resource’s options. This option ensures that old resources are deleted before new ones are created, which will prevent those collisions.
 
@@ -280,7 +280,7 @@ Resources constructed as children of a component resource should ensure their na
 
 ### Resource Arguments {#args}
 
-A resource’s argument parameters differ by resource type. Each resource has a number of named input properties that control the behavior of the resulting infrastructure. To determine what arguments a resource supports, refer to that resource’s [API documentation]({{< relref "/docs/reference/pkg" >}}).
+A resource’s argument parameters differ by resource type. Each resource has a number of named input properties that control the behavior of the resulting infrastructure. To determine what arguments a resource supports, refer to that resource’s [API documentation]({{< relref "/registry" >}}).
 
 ### Resource Options {#options}
 

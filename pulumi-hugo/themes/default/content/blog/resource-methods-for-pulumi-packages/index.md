@@ -64,7 +64,7 @@ This post will show how you can provide resource methods from your [component pa
 
 ## Authoring Methods
 
-It's always been possible to provide module-level functions from Pulumi Packages. For example, the [`aws`]({{< relref "/docs/reference/pkg/aws" >}}) package provides many module-level functions, such as the [`getAmi`]({{< relref "/docs/reference/pkg/aws/ec2/getami" >}}) function, which can be used to get the ID of an existing Amazon Machine Image (AMI). Functions are declared in the package's [schema]({{< relref "/docs/guides/pulumi-packages/schema" >}}), and their functionality is implemented in the provider through the `Invoke` remote procedure call (RPC).
+It's always been possible to provide module-level functions from Pulumi Packages. For example, the [`aws`]({{< relref "/registry/packages/aws" >}}) package provides many module-level functions, such as the [`getAmi`]({{< relref "/registry/packages/aws/api-docs/ec2/getami" >}}) function, which can be used to get the ID of an existing Amazon Machine Image (AMI). Functions are declared in the package's [schema]({{< relref "/docs/guides/pulumi-packages/schema" >}}), and their functionality is implemented in the provider through the `Invoke` remote procedure call (RPC).
 
 Methods are authored in a similar manner to functions. Methods are declared in the schema and implemented in the provider's `Call` RPC (similar to `Invoke`).
 
