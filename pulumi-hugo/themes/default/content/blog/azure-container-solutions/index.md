@@ -1,7 +1,7 @@
 ---
 title: "Which Azure Container Solution is right for you?"
-date: 2021-10-8T08:00:00-07:00
-draft: true
+date: 2021-10-12T08:00:00-07:00
+draft: false
 meta_desc: "A look at the container solutions available in Azure"
 meta_image: "azure-top-5.png"
 authors:
