@@ -1,0 +1,11 @@
+id = "fraser-waters"
+name = "Fraser Waters"
+title = "Software Engineer"
+weight = 1
+
+status = "active"
+
+[social]
+github = "frassle"
+twitter = "frassle"
+linkedin = "fraser-waters"

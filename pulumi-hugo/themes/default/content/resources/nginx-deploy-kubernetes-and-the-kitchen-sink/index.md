@@ -7,7 +7,7 @@ meta_desc: "In this Live Cast, Elijah Zupancic (NGINX) and Lee Briggs (Pulumi) w
 featured: false
 
 # If the video is pre-recorded or live.
-pre_recorded: false
+pre_recorded: true
 
 # If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
 pulumi_tv: false
@@ -20,7 +20,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: true
+gated: false
 
 # The layout of the landing page.
 type: webinars
@@ -54,9 +54,9 @@ main:
     # Webinar title.
     title: "Deploy Kubernetes and the Kitchen Sink with NGINX and Pulumi"
     # URL for embedding a URL for ungated webinars.
-    youtube_url: ""
+    youtube_url: "https://www.youtube.com/embed/BIbJM9n5XeE"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2021-10-04T10:00:00-07:00
+    sortable_date: 2021-10-08T11:00:00-07:00
     # Duration of the webinar.
     duration: "1 hour"
     # Datetime of the webinar.
