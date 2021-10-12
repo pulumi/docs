@@ -35,11 +35,17 @@ class MyStack : Stack
         var primary = new Gcp.Monitoring.MonitoredProject("primary", new Gcp.Monitoring.MonitoredProjectArgs
         {
             MetricsScope = "my-project-name",
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
         });
         var basic = new Gcp.Organizations.Project("basic", new Gcp.Organizations.ProjectArgs
         {
             ProjectId = "id",
             OrgId = "123456789",
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
         });
     }
 
@@ -65,14 +71,14 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := monitoring.NewMonitoredProject(ctx, "primary", &monitoring.MonitoredProjectArgs{
 			MetricsScope: pulumi.String("my-project-name"),
-		})
+		}, pulumi.Provider(google_beta))
 		if err != nil {
 			return err
 		}
 		_, err = organizations.NewProject(ctx, "basic", &organizations.ProjectArgs{
 			ProjectId: pulumi.String("id"),
 			OrgId:     pulumi.String("123456789"),
-		})
+		}, pulumi.Provider(google_beta))
 		if err != nil {
 			return err
 		}
@@ -91,10 +97,12 @@ func main() {
 import pulumi
 import pulumi_gcp as gcp
 
-primary = gcp.monitoring.MonitoredProject("primary", metrics_scope="my-project-name")
+primary = gcp.monitoring.MonitoredProject("primary", metrics_scope="my-project-name",
+opts=pulumi.ResourceOptions(provider=google_beta))
 basic = gcp.organizations.Project("basic",
     project_id="id",
-    org_id="123456789")
+    org_id="123456789",
+    opts=pulumi.ResourceOptions(provider=google_beta))
 ```
 
 
@@ -107,10 +115,14 @@ basic = gcp.organizations.Project("basic",
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const primary = new gcp.monitoring.MonitoredProject("primary", {metricsScope: "my-project-name"});
+const primary = new gcp.monitoring.MonitoredProject("primary", {metricsScope: "my-project-name"}, {
+    provider: google_beta,
+});
 const basic = new gcp.organizations.Project("basic", {
     projectId: "id",
     orgId: "123456789",
+}, {
+    provider: google_beta,
 });
 ```
 

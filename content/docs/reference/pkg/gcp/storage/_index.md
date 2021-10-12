@@ -29,6 +29,7 @@ Explore the resources and functions of the gcp.storage module.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getbucket" title="GetBucket"><span class="symbol function"></span>GetBucket</a></li>
     <li><a href="getbucketobject" title="GetBucketObject"><span class="symbol function"></span>GetBucketObject</a></li>
     <li><a href="getbucketobjectcontent" title="GetBucketObjectContent"><span class="symbol function"></span>GetBucketObjectContent</a></li>
     <li><a href="getobjectsignedurl" title="GetObjectSignedUrl"><span class="symbol function"></span>GetObjectSignedUrl</a></li>
@@ -45,6 +46,6 @@ Explore the resources and functions of the gcp.storage module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>5.23.0</dd>
+	<dd>5.24.0</dd>
 </dl>
 

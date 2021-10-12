@@ -425,6 +425,119 @@ const network_for_l7lb = new gcp.compute.Subnetwork("network-for-l7lb", {
 
 
 
+### Subnetwork Ipv6
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var custom_test = new Gcp.Compute.Network("custom-test", new Gcp.Compute.NetworkArgs
+        {
+            AutoCreateSubnetworks = false,
+        });
+        var subnetwork_ipv6 = new Gcp.Compute.Subnetwork("subnetwork-ipv6", new Gcp.Compute.SubnetworkArgs
+        {
+            IpCidrRange = "10.0.0.0/22",
+            Region = "us-west2",
+            StackType = "IPV4_IPV6",
+            Ipv6AccessType = "EXTERNAL",
+            Network = custom_test.Id,
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewNetwork(ctx, "custom_test", &compute.NetworkArgs{
+			AutoCreateSubnetworks: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewSubnetwork(ctx, "subnetwork_ipv6", &compute.SubnetworkArgs{
+			IpCidrRange:    pulumi.String("10.0.0.0/22"),
+			Region:         pulumi.String("us-west2"),
+			StackType:      pulumi.String("IPV4_IPV6"),
+			Ipv6AccessType: pulumi.String("EXTERNAL"),
+			Network:        custom_test.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+custom_test = gcp.compute.Network("custom-test", auto_create_subnetworks=False)
+subnetwork_ipv6 = gcp.compute.Subnetwork("subnetwork-ipv6",
+    ip_cidr_range="10.0.0.0/22",
+    region="us-west2",
+    stack_type="IPV4_IPV6",
+    ipv6_access_type="EXTERNAL",
+    network=custom_test.id)
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const custom_test = new gcp.compute.Network("custom-test", {autoCreateSubnetworks: false});
+const subnetwork_ipv6 = new gcp.compute.Subnetwork("subnetwork-ipv6", {
+    ipCidrRange: "10.0.0.0/22",
+    region: "us-west2",
+    stackType: "IPV4_IPV6",
+    ipv6AccessType: "EXTERNAL",
+    network: custom_test.id,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 
@@ -445,6 +558,7 @@ const network_for_l7lb = new gcp.compute.Subnetwork("network-for-l7lb", {
                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">ip_cidr_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">ipv6_access_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[SubnetworkLogConfigArgs]</span> = None<span class="p">,</span>
                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -454,7 +568,8 @@ const network_for_l7lb = new gcp.compute.Subnetwork("network-for-l7lb", {
                <span class="nx">purpose</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">secondary_ip_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[SubnetworkSecondaryIpRangeArgs]]</span> = None<span class="p">)</span>
+               <span class="nx">secondary_ip_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[SubnetworkSecondaryIpRangeArgs]]</span> = None<span class="p">,</span>
+               <span class="nx">stack_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Subnetwork</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SubnetworkArgs</a></span><span class="p">,</span>
@@ -617,6 +732,18 @@ you create the resource. This field can be set only at resource
 creation time.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ipv6accesstype_csharp">
+<a href="#ipv6accesstype_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Access<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The access type of IPv6 address this subnet holds. It's immutable and can only be specified during creation
+or the first time the subnet is updated into IPV4_IPV6 dual stack. If the ipv6_type is EXTERNAL then this subnet
+cannot enable direct path.
+Possible values are `EXTERNAL`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="logconfig_csharp">
 <a href="#logconfig_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
 </span>
@@ -721,6 +848,17 @@ contained in this subnetwork. The primary IP of such VM must belong
 to the primary ipCidrRange of the subnetwork. The alias IPs may belong
 to either primary or secondary ranges.
 Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stacktype_csharp">
+<a href="#stacktype_csharp" style="color: inherit; text-decoration: inherit;">Stack<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The stack type for this subnet to identify whether the IPv6 feature is enabled or not.
+If not specified IPV4_ONLY will be used.
+Possible values are `IPV4_ONLY` and `IPV4_IPV6`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -758,6 +896,18 @@ Only networks that are in the distributed mode can have subnetworks.
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource. This field can be set only at resource
 creation time.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipv6accesstype_go">
+<a href="#ipv6accesstype_go" style="color: inherit; text-decoration: inherit;">Ipv6Access<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The access type of IPv6 address this subnet holds. It's immutable and can only be specified during creation
+or the first time the subnet is updated into IPV4_IPV6 dual stack. If the ipv6_type is EXTERNAL then this subnet
+cannot enable direct path.
+Possible values are `EXTERNAL`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logconfig_go">
@@ -864,6 +1014,17 @@ contained in this subnetwork. The primary IP of such VM must belong
 to the primary ipCidrRange of the subnetwork. The alias IPs may belong
 to either primary or secondary ranges.
 Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stacktype_go">
+<a href="#stacktype_go" style="color: inherit; text-decoration: inherit;">Stack<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The stack type for this subnet to identify whether the IPv6 feature is enabled or not.
+If not specified IPV4_ONLY will be used.
+Possible values are `IPV4_ONLY` and `IPV4_IPV6`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -901,6 +1062,18 @@ Only networks that are in the distributed mode can have subnetworks.
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource. This field can be set only at resource
 creation time.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipv6accesstype_nodejs">
+<a href="#ipv6accesstype_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Access<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The access type of IPv6 address this subnet holds. It's immutable and can only be specified during creation
+or the first time the subnet is updated into IPV4_IPV6 dual stack. If the ipv6_type is EXTERNAL then this subnet
+cannot enable direct path.
+Possible values are `EXTERNAL`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logconfig_nodejs">
@@ -1007,6 +1180,17 @@ contained in this subnetwork. The primary IP of such VM must belong
 to the primary ipCidrRange of the subnetwork. The alias IPs may belong
 to either primary or secondary ranges.
 Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stacktype_nodejs">
+<a href="#stacktype_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The stack type for this subnet to identify whether the IPv6 feature is enabled or not.
+If not specified IPV4_ONLY will be used.
+Possible values are `IPV4_ONLY` and `IPV4_IPV6`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1044,6 +1228,18 @@ Only networks that are in the distributed mode can have subnetworks.
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource. This field can be set only at resource
 creation time.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipv6_access_type_python">
+<a href="#ipv6_access_type_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>access_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The access type of IPv6 address this subnet holds. It's immutable and can only be specified during creation
+or the first time the subnet is updated into IPV4_IPV6 dual stack. If the ipv6_type is EXTERNAL then this subnet
+cannot enable direct path.
+Possible values are `EXTERNAL`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_config_python">
@@ -1150,6 +1346,17 @@ contained in this subnetwork. The primary IP of such VM must belong
 to the primary ipCidrRange of the subnetwork. The alias IPs may belong
 to either primary or secondary ranges.
 Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stack_type_python">
+<a href="#stack_type_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The stack type for this subnet to identify whether the IPv6 feature is enabled or not.
+If not specified IPV4_ONLY will be used.
+Possible values are `IPV4_ONLY` and `IPV4_IPV6`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1170,6 +1377,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="externalipv6prefix_csharp">
+<a href="#externalipv6prefix_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Ipv6Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The range of external IPv6 addresses that are owned by this subnetwork.
 {{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="fingerprint_csharp">
@@ -1198,6 +1414,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="ipv6cidrrange_csharp">
+<a href="#ipv6cidrrange_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Cidr<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The range of internal IPv6 addresses that are owned by this subnetwork.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
 </span>
@@ -1218,6 +1443,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="externalipv6prefix_go">
+<a href="#externalipv6prefix_go" style="color: inherit; text-decoration: inherit;">External<wbr>Ipv6Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The range of external IPv6 addresses that are owned by this subnetwork.
 {{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="fingerprint_go">
@@ -1246,6 +1480,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="ipv6cidrrange_go">
+<a href="#ipv6cidrrange_go" style="color: inherit; text-decoration: inherit;">Ipv6Cidr<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The range of internal IPv6 addresses that are owned by this subnetwork.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
 </span>
@@ -1266,6 +1509,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="externalipv6prefix_nodejs">
+<a href="#externalipv6prefix_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Ipv6Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The range of external IPv6 addresses that are owned by this subnetwork.
 {{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="fingerprint_nodejs">
@@ -1294,6 +1546,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="ipv6cidrrange_nodejs">
+<a href="#ipv6cidrrange_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Cidr<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The range of internal IPv6 addresses that are owned by this subnetwork.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
@@ -1314,6 +1575,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="external_ipv6_prefix_python">
+<a href="#external_ipv6_prefix_python" style="color: inherit; text-decoration: inherit;">external_<wbr>ipv6_<wbr>prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The range of external IPv6 addresses that are owned by this subnetwork.
 {{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="fingerprint_python">
@@ -1341,6 +1611,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="ipv6_cidr_range_python">
+<a href="#ipv6_cidr_range_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>cidr_<wbr>range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The range of internal IPv6 addresses that are owned by this subnetwork.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -1370,9 +1649,12 @@ Get an existing Subnetwork resource's state with the given name, ID, and optiona
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">external_ipv6_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">gateway_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">ip_cidr_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">ipv6_access_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">ipv6_cidr_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[SubnetworkLogConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1383,7 +1665,8 @@ Get an existing Subnetwork resource's state with the given name, ID, and optiona
         <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">secondary_ip_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[SubnetworkSecondaryIpRangeArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Subnetwork</code></pre></div>
+        <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">stack_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Subnetwork</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1514,6 +1797,15 @@ The following state arguments are supported:
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource. This field can be set only at resource
 creation time.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_externalipv6prefix_csharp">
+<a href="#state_externalipv6prefix_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Ipv6Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The range of external IPv6 addresses that are owned by this subnetwork.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_fingerprint_csharp">
@@ -1544,6 +1836,27 @@ creation time.
 range. Provide this property when you create the subnetwork.
 Ranges must be unique and non-overlapping with all primary and
 secondary IP ranges within a network. Only IPv4 is supported.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ipv6accesstype_csharp">
+<a href="#state_ipv6accesstype_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Access<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The access type of IPv6 address this subnet holds. It's immutable and can only be specified during creation
+or the first time the subnet is updated into IPV4_IPV6 dual stack. If the ipv6_type is EXTERNAL then this subnet
+cannot enable direct path.
+Possible values are `EXTERNAL`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ipv6cidrrange_csharp">
+<a href="#state_ipv6cidrrange_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Cidr<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The range of internal IPv6 addresses that are owned by this subnetwork.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logconfig_csharp">
@@ -1669,6 +1982,17 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_stacktype_csharp">
+<a href="#state_stacktype_csharp" style="color: inherit; text-decoration: inherit;">Stack<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The stack type for this subnet to identify whether the IPv6 feature is enabled or not.
+If not specified IPV4_ONLY will be used.
+Possible values are `IPV4_ONLY` and `IPV4_IPV6`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1693,6 +2017,15 @@ Structure is documented below.
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource. This field can be set only at resource
 creation time.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_externalipv6prefix_go">
+<a href="#state_externalipv6prefix_go" style="color: inherit; text-decoration: inherit;">External<wbr>Ipv6Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The range of external IPv6 addresses that are owned by this subnetwork.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_fingerprint_go">
@@ -1723,6 +2056,27 @@ creation time.
 range. Provide this property when you create the subnetwork.
 Ranges must be unique and non-overlapping with all primary and
 secondary IP ranges within a network. Only IPv4 is supported.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ipv6accesstype_go">
+<a href="#state_ipv6accesstype_go" style="color: inherit; text-decoration: inherit;">Ipv6Access<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The access type of IPv6 address this subnet holds. It's immutable and can only be specified during creation
+or the first time the subnet is updated into IPV4_IPV6 dual stack. If the ipv6_type is EXTERNAL then this subnet
+cannot enable direct path.
+Possible values are `EXTERNAL`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ipv6cidrrange_go">
+<a href="#state_ipv6cidrrange_go" style="color: inherit; text-decoration: inherit;">Ipv6Cidr<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The range of internal IPv6 addresses that are owned by this subnetwork.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logconfig_go">
@@ -1848,6 +2202,17 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_stacktype_go">
+<a href="#state_stacktype_go" style="color: inherit; text-decoration: inherit;">Stack<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The stack type for this subnet to identify whether the IPv6 feature is enabled or not.
+If not specified IPV4_ONLY will be used.
+Possible values are `IPV4_ONLY` and `IPV4_IPV6`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1872,6 +2237,15 @@ Structure is documented below.
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource. This field can be set only at resource
 creation time.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_externalipv6prefix_nodejs">
+<a href="#state_externalipv6prefix_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Ipv6Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The range of external IPv6 addresses that are owned by this subnetwork.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_fingerprint_nodejs">
@@ -1902,6 +2276,27 @@ creation time.
 range. Provide this property when you create the subnetwork.
 Ranges must be unique and non-overlapping with all primary and
 secondary IP ranges within a network. Only IPv4 is supported.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ipv6accesstype_nodejs">
+<a href="#state_ipv6accesstype_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Access<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The access type of IPv6 address this subnet holds. It's immutable and can only be specified during creation
+or the first time the subnet is updated into IPV4_IPV6 dual stack. If the ipv6_type is EXTERNAL then this subnet
+cannot enable direct path.
+Possible values are `EXTERNAL`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ipv6cidrrange_nodejs">
+<a href="#state_ipv6cidrrange_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Cidr<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The range of internal IPv6 addresses that are owned by this subnetwork.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logconfig_nodejs">
@@ -2027,6 +2422,17 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_stacktype_nodejs">
+<a href="#state_stacktype_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The stack type for this subnet to identify whether the IPv6 feature is enabled or not.
+If not specified IPV4_ONLY will be used.
+Possible values are `IPV4_ONLY` and `IPV4_IPV6`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2051,6 +2457,15 @@ Structure is documented below.
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource. This field can be set only at resource
 creation time.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_external_ipv6_prefix_python">
+<a href="#state_external_ipv6_prefix_python" style="color: inherit; text-decoration: inherit;">external_<wbr>ipv6_<wbr>prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The range of external IPv6 addresses that are owned by this subnetwork.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_fingerprint_python">
@@ -2081,6 +2496,27 @@ creation time.
 range. Provide this property when you create the subnetwork.
 Ranges must be unique and non-overlapping with all primary and
 secondary IP ranges within a network. Only IPv4 is supported.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ipv6_access_type_python">
+<a href="#state_ipv6_access_type_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>access_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The access type of IPv6 address this subnet holds. It's immutable and can only be specified during creation
+or the first time the subnet is updated into IPV4_IPV6 dual stack. If the ipv6_type is EXTERNAL then this subnet
+cannot enable direct path.
+Possible values are `EXTERNAL`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ipv6_cidr_range_python">
+<a href="#state_ipv6_cidr_range_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>cidr_<wbr>range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The range of internal IPv6 addresses that are owned by this subnetwork.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_log_config_python">
@@ -2206,6 +2642,17 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_stack_type_python">
+<a href="#state_stack_type_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The stack type for this subnet to identify whether the IPv6 feature is enabled or not.
+If not specified IPV4_ONLY will be used.
+Possible values are `IPV4_ONLY` and `IPV4_IPV6`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

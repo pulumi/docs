@@ -29,7 +29,7 @@ To get more information about Environments, see:
   * It can take up to one hour to create or update an environment resource. In addition, GCP may only detect some
     errors in configuration when they are used (e.g. ~40-50 minutes into the creation process), and is prone to limited
     error reporting. If you encounter confusing or uninformative errors, please verify your configuration is valid
-    against GCP Cloud Composer before filing bugs against this provider.
+    against GCP Cloud Composer before filing bugs against this provider provider.
   * **Environments create Google Cloud Storage buckets that do not get cleaned up automatically** on environment
     deletion. [More about Composer's use of Cloud Storage](https://cloud.google.com/composer/docs/concepts/cloud-storage).
   * Please review the [known issues](https://cloud.google.com/composer/docs/known-issues) for Composer if you are having problems.
@@ -1310,7 +1310,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigdatabaseconfig">Environment<wbr>Config<wbr>Database<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The configuration settings for Cloud SQL instance used internally by Apache Airflow software.
+    <dd>{{% md %}}The configuration settings for Cloud SQL instance used internally
+by Apache Airflow software. This field is supported for Cloud
+Composer environments in versions composer-1.*.*-airflow-*.*.*.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionconfig_csharp">
@@ -1319,7 +1321,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigencryptionconfig">Environment<wbr>Config<wbr>Encryption<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The encryption options for the Cloud Composer environment and its dependencies.
+    <dd>{{% md %}}The encryption options for the Cloud Composer environment and its
+dependencies. This field is supported for Cloud Composer environments in
+versions composer-1.*.*-airflow-*.*.*.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gkecluster_csharp">
@@ -1336,7 +1340,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigmaintenancewindow">Environment<wbr>Config<wbr>Maintenance<wbr>Window</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The configuration settings for Cloud Composer maintenance window.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeconfig_csharp">
 <a href="#nodeconfig_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Config</a>
@@ -1354,7 +1359,9 @@ If it is not provided, the provider project is used.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of nodes in the Kubernetes Engine cluster that
-will be used to run this environment.
+will be used to run this environment. This field is
+supported for Cloud Composer environments in versions
+composer-1.*.*-airflow-*.*.*.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateenvironmentconfig_csharp">
@@ -1382,6 +1389,8 @@ will be used to run this environment.
         <span class="property-type"><a href="#environmentconfigwebserverconfig">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings for the Airflow web server App Engine instance.
+This field is supported for Cloud Composer environments in versions
+composer-1.*.*-airflow-*.*.*.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webservernetworkaccesscontrol_csharp">
@@ -1390,7 +1399,17 @@ will be used to run this environment.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigwebservernetworkaccesscontrol">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control</a></span>
     </dt>
-    <dd>{{% md %}}The network-level access control policy for the Airflow web server. If unspecified, no network-level access restrictions will be applied.
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="workloadsconfig_csharp">
+<a href="#workloadsconfig_csharp" style="color: inherit; text-decoration: inherit;">Workloads<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentconfigworkloadsconfig">Environment<wbr>Config<wbr>Workloads<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The Kubernetes workloads configuration for GKE cluster associated with the
+Cloud Composer environment. Supported for Cloud Composer environments in
+versions composer-2.*.*-airflow-*.*.* and newer.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1419,7 +1438,9 @@ will be used to run this environment.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigdatabaseconfig">Environment<wbr>Config<wbr>Database<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The configuration settings for Cloud SQL instance used internally by Apache Airflow software.
+    <dd>{{% md %}}The configuration settings for Cloud SQL instance used internally
+by Apache Airflow software. This field is supported for Cloud
+Composer environments in versions composer-1.*.*-airflow-*.*.*.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionconfig_go">
@@ -1428,7 +1449,9 @@ will be used to run this environment.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigencryptionconfig">Environment<wbr>Config<wbr>Encryption<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The encryption options for the Cloud Composer environment and its dependencies.
+    <dd>{{% md %}}The encryption options for the Cloud Composer environment and its
+dependencies. This field is supported for Cloud Composer environments in
+versions composer-1.*.*-airflow-*.*.*.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gkecluster_go">
@@ -1445,7 +1468,8 @@ will be used to run this environment.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigmaintenancewindow">Environment<wbr>Config<wbr>Maintenance<wbr>Window</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The configuration settings for Cloud Composer maintenance window.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeconfig_go">
 <a href="#nodeconfig_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Config</a>
@@ -1463,7 +1487,9 @@ will be used to run this environment.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of nodes in the Kubernetes Engine cluster that
-will be used to run this environment.
+will be used to run this environment. This field is
+supported for Cloud Composer environments in versions
+composer-1.*.*-airflow-*.*.*.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateenvironmentconfig_go">
@@ -1491,6 +1517,8 @@ will be used to run this environment.
         <span class="property-type"><a href="#environmentconfigwebserverconfig">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings for the Airflow web server App Engine instance.
+This field is supported for Cloud Composer environments in versions
+composer-1.*.*-airflow-*.*.*.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webservernetworkaccesscontrol_go">
@@ -1499,7 +1527,17 @@ will be used to run this environment.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigwebservernetworkaccesscontrol">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control</a></span>
     </dt>
-    <dd>{{% md %}}The network-level access control policy for the Airflow web server. If unspecified, no network-level access restrictions will be applied.
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="workloadsconfig_go">
+<a href="#workloadsconfig_go" style="color: inherit; text-decoration: inherit;">Workloads<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentconfigworkloadsconfig">Environment<wbr>Config<wbr>Workloads<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The Kubernetes workloads configuration for GKE cluster associated with the
+Cloud Composer environment. Supported for Cloud Composer environments in
+versions composer-2.*.*-airflow-*.*.* and newer.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1528,7 +1566,9 @@ will be used to run this environment.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigdatabaseconfig">Environment<wbr>Config<wbr>Database<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The configuration settings for Cloud SQL instance used internally by Apache Airflow software.
+    <dd>{{% md %}}The configuration settings for Cloud SQL instance used internally
+by Apache Airflow software. This field is supported for Cloud
+Composer environments in versions composer-1.*.*-airflow-*.*.*.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionconfig_nodejs">
@@ -1537,7 +1577,9 @@ will be used to run this environment.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigencryptionconfig">Environment<wbr>Config<wbr>Encryption<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The encryption options for the Cloud Composer environment and its dependencies.
+    <dd>{{% md %}}The encryption options for the Cloud Composer environment and its
+dependencies. This field is supported for Cloud Composer environments in
+versions composer-1.*.*-airflow-*.*.*.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gkecluster_nodejs">
@@ -1554,7 +1596,8 @@ will be used to run this environment.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigmaintenancewindow">Environment<wbr>Config<wbr>Maintenance<wbr>Window</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The configuration settings for Cloud Composer maintenance window.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeconfig_nodejs">
 <a href="#nodeconfig_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Config</a>
@@ -1572,7 +1615,9 @@ will be used to run this environment.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of nodes in the Kubernetes Engine cluster that
-will be used to run this environment.
+will be used to run this environment. This field is
+supported for Cloud Composer environments in versions
+composer-1.*.*-airflow-*.*.*.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateenvironmentconfig_nodejs">
@@ -1600,6 +1645,8 @@ will be used to run this environment.
         <span class="property-type"><a href="#environmentconfigwebserverconfig">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings for the Airflow web server App Engine instance.
+This field is supported for Cloud Composer environments in versions
+composer-1.*.*-airflow-*.*.*.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webservernetworkaccesscontrol_nodejs">
@@ -1608,7 +1655,17 @@ will be used to run this environment.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigwebservernetworkaccesscontrol">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control</a></span>
     </dt>
-    <dd>{{% md %}}The network-level access control policy for the Airflow web server. If unspecified, no network-level access restrictions will be applied.
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="workloadsconfig_nodejs">
+<a href="#workloadsconfig_nodejs" style="color: inherit; text-decoration: inherit;">workloads<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentconfigworkloadsconfig">Environment<wbr>Config<wbr>Workloads<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The Kubernetes workloads configuration for GKE cluster associated with the
+Cloud Composer environment. Supported for Cloud Composer environments in
+versions composer-2.*.*-airflow-*.*.* and newer.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1637,7 +1694,9 @@ will be used to run this environment.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigdatabaseconfig">Environment<wbr>Config<wbr>Database<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The configuration settings for Cloud SQL instance used internally by Apache Airflow software.
+    <dd>{{% md %}}The configuration settings for Cloud SQL instance used internally
+by Apache Airflow software. This field is supported for Cloud
+Composer environments in versions composer-1.*.*-airflow-*.*.*.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryption_config_python">
@@ -1646,7 +1705,9 @@ will be used to run this environment.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigencryptionconfig">Environment<wbr>Config<wbr>Encryption<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The encryption options for the Cloud Composer environment and its dependencies.
+    <dd>{{% md %}}The encryption options for the Cloud Composer environment and its
+dependencies. This field is supported for Cloud Composer environments in
+versions composer-1.*.*-airflow-*.*.*.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gke_cluster_python">
@@ -1663,7 +1724,8 @@ will be used to run this environment.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigmaintenancewindow">Environment<wbr>Config<wbr>Maintenance<wbr>Window</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The configuration settings for Cloud Composer maintenance window.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_config_python">
 <a href="#node_config_python" style="color: inherit; text-decoration: inherit;">node_<wbr>config</a>
@@ -1681,7 +1743,9 @@ will be used to run this environment.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of nodes in the Kubernetes Engine cluster that
-will be used to run this environment.
+will be used to run this environment. This field is
+supported for Cloud Composer environments in versions
+composer-1.*.*-airflow-*.*.*.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_environment_config_python">
@@ -1709,6 +1773,8 @@ will be used to run this environment.
         <span class="property-type"><a href="#environmentconfigwebserverconfig">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings for the Airflow web server App Engine instance.
+This field is supported for Cloud Composer environments in versions
+composer-1.*.*-airflow-*.*.*.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="web_server_network_access_control_python">
@@ -1717,7 +1783,17 @@ will be used to run this environment.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigwebservernetworkaccesscontrol">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control</a></span>
     </dt>
-    <dd>{{% md %}}The network-level access control policy for the Airflow web server. If unspecified, no network-level access restrictions will be applied.
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="workloads_config_python">
+<a href="#workloads_config_python" style="color: inherit; text-decoration: inherit;">workloads_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentconfigworkloadsconfig">Environment<wbr>Config<wbr>Workloads<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The Kubernetes workloads configuration for GKE cluster associated with the
+Cloud Composer environment. Supported for Cloud Composer environments in
+versions composer-2.*.*-airflow-*.*.* and newer.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2000,8 +2076,10 @@ Example values: 'FREQ=WEEKLY;BYDAY=TU,WE', 'FREQ=DAILY'.
     </dt>
     <dd>{{% md %}}The Compute Engine zone in which to deploy the VMs running the
 Apache Airflow software, specified as the zone name or
-relative resource name (e.g. "projects/{project}/zones/{zone}"). Must belong to the enclosing environment's project
-and region.
+relative resource name (e.g. "projects/{project}/zones/{zone}"). Must
+belong to the enclosing environment's project and region. This field is
+supported for Cloud Composer environments in versions
+composer-1.*.*-airflow-*.*.*.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksizegb_csharp">
@@ -2011,8 +2089,17 @@ and region.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The disk size in GB used for node VMs. Minimum size is 20GB.
-If unspecified, defaults to 100GB. Cannot be updated.
+If unspecified, defaults to 100GB. Cannot be updated. This field is supported
+for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enableipmasqagent_csharp">
+<a href="#enableipmasqagent_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Ip<wbr>Masq<wbr>Agent</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipallocationpolicy_csharp">
 <a href="#ipallocationpolicy_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Allocation<wbr>Policy</a>
@@ -2043,7 +2130,13 @@ manually changed to a non-standard values.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The maximum pods per node in the GKE cluster allocated during environment
+creation. Lowering this value reduces IP address consumption by the Cloud
+Composer Kubernetes cluster. This value can only be set if the environment is VPC-Native.
+The range of possible values is 8-110, and the default is 32.
+Cannot be updated. This field is supported for Cloud Composer environments
+in versions composer-1.*.*-airflow-*.*.*.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_csharp">
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -2064,7 +2157,9 @@ communications, specified as a self-link, relative resource name
     </dt>
     <dd>{{% md %}}The set of Google API scopes to be made available on all node
 VMs. Cannot be updated. If empty, defaults to
-`["https://www.googleapis.com/auth/cloud-platform"]`
+`["https://www.googleapis.com/auth/cloud-platform"]`. This field is
+supported for Cloud Composer environments in versions
+composer-1.*.*-airflow-*.*.*.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccount_csharp">
@@ -2101,7 +2196,8 @@ network must also be provided and the subnetwork must belong to the enclosing en
     <dd>{{% md %}}The list of instance tags applied to all node VMs. Tags are
 used to identify valid sources or targets for network
 firewalls. Each tag within the list must comply with RFC1035.
-Cannot be updated.
+Cannot be updated. This field is supported for Cloud Composer
+environments in versions composer-1.*.*-airflow-*.*.*.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2116,8 +2212,10 @@ Cannot be updated.
     </dt>
     <dd>{{% md %}}The Compute Engine zone in which to deploy the VMs running the
 Apache Airflow software, specified as the zone name or
-relative resource name (e.g. "projects/{project}/zones/{zone}"). Must belong to the enclosing environment's project
-and region.
+relative resource name (e.g. "projects/{project}/zones/{zone}"). Must
+belong to the enclosing environment's project and region. This field is
+supported for Cloud Composer environments in versions
+composer-1.*.*-airflow-*.*.*.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksizegb_go">
@@ -2127,8 +2225,17 @@ and region.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The disk size in GB used for node VMs. Minimum size is 20GB.
-If unspecified, defaults to 100GB. Cannot be updated.
+If unspecified, defaults to 100GB. Cannot be updated. This field is supported
+for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enableipmasqagent_go">
+<a href="#enableipmasqagent_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Ip<wbr>Masq<wbr>Agent</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipallocationpolicy_go">
 <a href="#ipallocationpolicy_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Allocation<wbr>Policy</a>
@@ -2159,7 +2266,13 @@ manually changed to a non-standard values.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The maximum pods per node in the GKE cluster allocated during environment
+creation. Lowering this value reduces IP address consumption by the Cloud
+Composer Kubernetes cluster. This value can only be set if the environment is VPC-Native.
+The range of possible values is 8-110, and the default is 32.
+Cannot be updated. This field is supported for Cloud Composer environments
+in versions composer-1.*.*-airflow-*.*.*.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_go">
 <a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -2180,7 +2293,9 @@ communications, specified as a self-link, relative resource name
     </dt>
     <dd>{{% md %}}The set of Google API scopes to be made available on all node
 VMs. Cannot be updated. If empty, defaults to
-`["https://www.googleapis.com/auth/cloud-platform"]`
+`["https://www.googleapis.com/auth/cloud-platform"]`. This field is
+supported for Cloud Composer environments in versions
+composer-1.*.*-airflow-*.*.*.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccount_go">
@@ -2217,7 +2332,8 @@ network must also be provided and the subnetwork must belong to the enclosing en
     <dd>{{% md %}}The list of instance tags applied to all node VMs. Tags are
 used to identify valid sources or targets for network
 firewalls. Each tag within the list must comply with RFC1035.
-Cannot be updated.
+Cannot be updated. This field is supported for Cloud Composer
+environments in versions composer-1.*.*-airflow-*.*.*.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2232,8 +2348,10 @@ Cannot be updated.
     </dt>
     <dd>{{% md %}}The Compute Engine zone in which to deploy the VMs running the
 Apache Airflow software, specified as the zone name or
-relative resource name (e.g. "projects/{project}/zones/{zone}"). Must belong to the enclosing environment's project
-and region.
+relative resource name (e.g. "projects/{project}/zones/{zone}"). Must
+belong to the enclosing environment's project and region. This field is
+supported for Cloud Composer environments in versions
+composer-1.*.*-airflow-*.*.*.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksizegb_nodejs">
@@ -2243,8 +2361,17 @@ and region.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The disk size in GB used for node VMs. Minimum size is 20GB.
-If unspecified, defaults to 100GB. Cannot be updated.
+If unspecified, defaults to 100GB. Cannot be updated. This field is supported
+for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enableipmasqagent_nodejs">
+<a href="#enableipmasqagent_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Ip<wbr>Masq<wbr>Agent</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipallocationpolicy_nodejs">
 <a href="#ipallocationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Allocation<wbr>Policy</a>
@@ -2275,7 +2402,13 @@ manually changed to a non-standard values.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The maximum pods per node in the GKE cluster allocated during environment
+creation. Lowering this value reduces IP address consumption by the Cloud
+Composer Kubernetes cluster. This value can only be set if the environment is VPC-Native.
+The range of possible values is 8-110, and the default is 32.
+Cannot be updated. This field is supported for Cloud Composer environments
+in versions composer-1.*.*-airflow-*.*.*.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_nodejs">
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
@@ -2296,7 +2429,9 @@ communications, specified as a self-link, relative resource name
     </dt>
     <dd>{{% md %}}The set of Google API scopes to be made available on all node
 VMs. Cannot be updated. If empty, defaults to
-`["https://www.googleapis.com/auth/cloud-platform"]`
+`["https://www.googleapis.com/auth/cloud-platform"]`. This field is
+supported for Cloud Composer environments in versions
+composer-1.*.*-airflow-*.*.*.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccount_nodejs">
@@ -2333,7 +2468,8 @@ network must also be provided and the subnetwork must belong to the enclosing en
     <dd>{{% md %}}The list of instance tags applied to all node VMs. Tags are
 used to identify valid sources or targets for network
 firewalls. Each tag within the list must comply with RFC1035.
-Cannot be updated.
+Cannot be updated. This field is supported for Cloud Composer
+environments in versions composer-1.*.*-airflow-*.*.*.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2348,8 +2484,10 @@ Cannot be updated.
     </dt>
     <dd>{{% md %}}The Compute Engine zone in which to deploy the VMs running the
 Apache Airflow software, specified as the zone name or
-relative resource name (e.g. "projects/{project}/zones/{zone}"). Must belong to the enclosing environment's project
-and region.
+relative resource name (e.g. "projects/{project}/zones/{zone}"). Must
+belong to the enclosing environment's project and region. This field is
+supported for Cloud Composer environments in versions
+composer-1.*.*-airflow-*.*.*.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disk_size_gb_python">
@@ -2359,8 +2497,17 @@ and region.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The disk size in GB used for node VMs. Minimum size is 20GB.
-If unspecified, defaults to 100GB. Cannot be updated.
+If unspecified, defaults to 100GB. Cannot be updated. This field is supported
+for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enable_ip_masq_agent_python">
+<a href="#enable_ip_masq_agent_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>ip_<wbr>masq_<wbr>agent</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_allocation_policy_python">
 <a href="#ip_allocation_policy_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>allocation_<wbr>policy</a>
@@ -2391,7 +2538,13 @@ manually changed to a non-standard values.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The maximum pods per node in the GKE cluster allocated during environment
+creation. Lowering this value reduces IP address consumption by the Cloud
+Composer Kubernetes cluster. This value can only be set if the environment is VPC-Native.
+The range of possible values is 8-110, and the default is 32.
+Cannot be updated. This field is supported for Cloud Composer environments
+in versions composer-1.*.*-airflow-*.*.*.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_python">
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
@@ -2412,7 +2565,9 @@ communications, specified as a self-link, relative resource name
     </dt>
     <dd>{{% md %}}The set of Google API scopes to be made available on all node
 VMs. Cannot be updated. If empty, defaults to
-`["https://www.googleapis.com/auth/cloud-platform"]`
+`["https://www.googleapis.com/auth/cloud-platform"]`. This field is
+supported for Cloud Composer environments in versions
+composer-1.*.*-airflow-*.*.*.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_account_python">
@@ -2449,7 +2604,8 @@ network must also be provided and the subnetwork must belong to the enclosing en
     <dd>{{% md %}}The list of instance tags applied to all node VMs. Tags are
 used to identify valid sources or targets for network
 firewalls. Each tag within the list must comply with RFC1035.
-Cannot be updated.
+Cannot be updated. This field is supported for Cloud Composer
+environments in versions composer-1.*.*-airflow-*.*.*.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2466,6 +2622,9 @@ Cannot be updated.
     </dt>
     <dd>{{% md %}}Whether or not to enable Alias IPs in the GKE cluster. If true, a VPC-native cluster is created.
 Defaults to true if the `ip_allocation_policy` block is present in config.
+This field is only supported for Cloud Composer environments in versions
+composer-1.*.*-airflow-*.*.*. Environments in newer versions always use
+VPC-native GKE clusters.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusteripv4cidrblock_csharp">
@@ -2475,6 +2634,8 @@ Defaults to true if the `ip_allocation_policy` block is present in config.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address range used to allocate IP addresses to pods in the cluster.
+For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*,
+this field is applicable only when `use_ip_aliases` is true.
 Set to blank to have GKE choose a range with the default size.
 Set to /netmask (e.g. /14) to have GKE choose a range with a specific netmask.
 Set to a CIDR notation (e.g. 10.96.0.0/14) from the RFC-1918 private networks
@@ -2490,7 +2651,8 @@ Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but n
     </dt>
     <dd>{{% md %}}The name of the cluster's secondary range used to allocate IP addresses to pods.
 Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but not both.
-This field is applicable only when `use_ip_aliases` is true.
+For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*,
+this field is applicable only when `use_ip_aliases` is true.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicesipv4cidrblock_csharp">
@@ -2500,6 +2662,8 @@ This field is applicable only when `use_ip_aliases` is true.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address range used to allocate IP addresses in this cluster.
+For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*,
+this field is applicable only when `use_ip_aliases` is true.
 Set to blank to have GKE choose a range with the default size.
 Set to /netmask (e.g. /14) to have GKE choose a range with a specific netmask.
 Set to a CIDR notation (e.g. 10.96.0.0/14) from the RFC-1918 private networks
@@ -2515,7 +2679,8 @@ Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but
     </dt>
     <dd>{{% md %}}The name of the services' secondary range used to allocate IP addresses to the cluster.
 Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but not both.
-This field is applicable only when `use_ip_aliases` is true.
+For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*,
+this field is applicable only when `use_ip_aliases` is true.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2530,6 +2695,9 @@ This field is applicable only when `use_ip_aliases` is true.
     </dt>
     <dd>{{% md %}}Whether or not to enable Alias IPs in the GKE cluster. If true, a VPC-native cluster is created.
 Defaults to true if the `ip_allocation_policy` block is present in config.
+This field is only supported for Cloud Composer environments in versions
+composer-1.*.*-airflow-*.*.*. Environments in newer versions always use
+VPC-native GKE clusters.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusteripv4cidrblock_go">
@@ -2539,6 +2707,8 @@ Defaults to true if the `ip_allocation_policy` block is present in config.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address range used to allocate IP addresses to pods in the cluster.
+For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*,
+this field is applicable only when `use_ip_aliases` is true.
 Set to blank to have GKE choose a range with the default size.
 Set to /netmask (e.g. /14) to have GKE choose a range with a specific netmask.
 Set to a CIDR notation (e.g. 10.96.0.0/14) from the RFC-1918 private networks
@@ -2554,7 +2724,8 @@ Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but n
     </dt>
     <dd>{{% md %}}The name of the cluster's secondary range used to allocate IP addresses to pods.
 Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but not both.
-This field is applicable only when `use_ip_aliases` is true.
+For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*,
+this field is applicable only when `use_ip_aliases` is true.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicesipv4cidrblock_go">
@@ -2564,6 +2735,8 @@ This field is applicable only when `use_ip_aliases` is true.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address range used to allocate IP addresses in this cluster.
+For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*,
+this field is applicable only when `use_ip_aliases` is true.
 Set to blank to have GKE choose a range with the default size.
 Set to /netmask (e.g. /14) to have GKE choose a range with a specific netmask.
 Set to a CIDR notation (e.g. 10.96.0.0/14) from the RFC-1918 private networks
@@ -2579,7 +2752,8 @@ Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but
     </dt>
     <dd>{{% md %}}The name of the services' secondary range used to allocate IP addresses to the cluster.
 Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but not both.
-This field is applicable only when `use_ip_aliases` is true.
+For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*,
+this field is applicable only when `use_ip_aliases` is true.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2594,6 +2768,9 @@ This field is applicable only when `use_ip_aliases` is true.
     </dt>
     <dd>{{% md %}}Whether or not to enable Alias IPs in the GKE cluster. If true, a VPC-native cluster is created.
 Defaults to true if the `ip_allocation_policy` block is present in config.
+This field is only supported for Cloud Composer environments in versions
+composer-1.*.*-airflow-*.*.*. Environments in newer versions always use
+VPC-native GKE clusters.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusteripv4cidrblock_nodejs">
@@ -2603,6 +2780,8 @@ Defaults to true if the `ip_allocation_policy` block is present in config.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address range used to allocate IP addresses to pods in the cluster.
+For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*,
+this field is applicable only when `use_ip_aliases` is true.
 Set to blank to have GKE choose a range with the default size.
 Set to /netmask (e.g. /14) to have GKE choose a range with a specific netmask.
 Set to a CIDR notation (e.g. 10.96.0.0/14) from the RFC-1918 private networks
@@ -2618,7 +2797,8 @@ Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but n
     </dt>
     <dd>{{% md %}}The name of the cluster's secondary range used to allocate IP addresses to pods.
 Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but not both.
-This field is applicable only when `use_ip_aliases` is true.
+For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*,
+this field is applicable only when `use_ip_aliases` is true.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicesipv4cidrblock_nodejs">
@@ -2628,6 +2808,8 @@ This field is applicable only when `use_ip_aliases` is true.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address range used to allocate IP addresses in this cluster.
+For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*,
+this field is applicable only when `use_ip_aliases` is true.
 Set to blank to have GKE choose a range with the default size.
 Set to /netmask (e.g. /14) to have GKE choose a range with a specific netmask.
 Set to a CIDR notation (e.g. 10.96.0.0/14) from the RFC-1918 private networks
@@ -2643,7 +2825,8 @@ Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but
     </dt>
     <dd>{{% md %}}The name of the services' secondary range used to allocate IP addresses to the cluster.
 Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but not both.
-This field is applicable only when `use_ip_aliases` is true.
+For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*,
+this field is applicable only when `use_ip_aliases` is true.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2658,6 +2841,9 @@ This field is applicable only when `use_ip_aliases` is true.
     </dt>
     <dd>{{% md %}}Whether or not to enable Alias IPs in the GKE cluster. If true, a VPC-native cluster is created.
 Defaults to true if the `ip_allocation_policy` block is present in config.
+This field is only supported for Cloud Composer environments in versions
+composer-1.*.*-airflow-*.*.*. Environments in newer versions always use
+VPC-native GKE clusters.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cluster_ipv4_cidr_block_python">
@@ -2667,6 +2853,8 @@ Defaults to true if the `ip_allocation_policy` block is present in config.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address range used to allocate IP addresses to pods in the cluster.
+For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*,
+this field is applicable only when `use_ip_aliases` is true.
 Set to blank to have GKE choose a range with the default size.
 Set to /netmask (e.g. /14) to have GKE choose a range with a specific netmask.
 Set to a CIDR notation (e.g. 10.96.0.0/14) from the RFC-1918 private networks
@@ -2682,7 +2870,8 @@ Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but n
     </dt>
     <dd>{{% md %}}The name of the cluster's secondary range used to allocate IP addresses to pods.
 Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but not both.
-This field is applicable only when `use_ip_aliases` is true.
+For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*,
+this field is applicable only when `use_ip_aliases` is true.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="services_ipv4_cidr_block_python">
@@ -2692,6 +2881,8 @@ This field is applicable only when `use_ip_aliases` is true.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address range used to allocate IP addresses in this cluster.
+For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*,
+this field is applicable only when `use_ip_aliases` is true.
 Set to blank to have GKE choose a range with the default size.
 Set to /netmask (e.g. /14) to have GKE choose a range with a specific netmask.
 Set to a CIDR notation (e.g. 10.96.0.0/14) from the RFC-1918 private networks
@@ -2707,7 +2898,8 @@ Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but
     </dt>
     <dd>{{% md %}}The name of the services' secondary range used to allocate IP addresses to the cluster.
 Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but not both.
-This field is applicable only when `use_ip_aliases` is true.
+For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*,
+this field is applicable only when `use_ip_aliases` is true.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2715,6 +2907,14 @@ This field is applicable only when `use_ip_aliases` is true.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="cloudcomposernetworkipv4cidrblock_csharp">
+<a href="#cloudcomposernetworkipv4cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Composer<wbr>Network<wbr>Ipv4Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudsqlipv4cidrblock_csharp">
 <a href="#cloudsqlipv4cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Sql<wbr>Ipv4Cidr<wbr>Block</a>
@@ -2733,7 +2933,18 @@ This field is applicable only when `use_ip_aliases` is true.
     </dt>
     <dd>{{% md %}}-
 If true, access to the public endpoint of the GKE cluster is denied.
+If this field is set to true, `ip_allocation_policy.use_ip_aliases` must
+be set to true for Cloud Composer environments in versions
+composer-1.*.*-airflow-*.*.*.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enableprivatelyusedpublicips_csharp">
+<a href="#enableprivatelyusedpublicips_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Privately<wbr>Used<wbr>Public<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="masteripv4cidrblock_csharp">
 <a href="#masteripv4cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Ipv4Cidr<wbr>Block</a>
@@ -2754,12 +2965,20 @@ If left blank, the default value of is used. See [documentation](https://cloud.g
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CIDR block from which IP range for web server will be reserved. Needs to be disjoint from `master_ipv4_cidr_block` and `cloud_sql_ipv4_cidr_block`.
+    <dd>{{% md %}}The CIDR block from which IP range for web server will be reserved. Needs to be disjoint from `master_ipv4_cidr_block` and `cloud_sql_ipv4_cidr_block`. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="cloudcomposernetworkipv4cidrblock_go">
+<a href="#cloudcomposernetworkipv4cidrblock_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Composer<wbr>Network<wbr>Ipv4Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudsqlipv4cidrblock_go">
 <a href="#cloudsqlipv4cidrblock_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Sql<wbr>Ipv4Cidr<wbr>Block</a>
@@ -2778,7 +2997,18 @@ If left blank, the default value of is used. See [documentation](https://cloud.g
     </dt>
     <dd>{{% md %}}-
 If true, access to the public endpoint of the GKE cluster is denied.
+If this field is set to true, `ip_allocation_policy.use_ip_aliases` must
+be set to true for Cloud Composer environments in versions
+composer-1.*.*-airflow-*.*.*.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enableprivatelyusedpublicips_go">
+<a href="#enableprivatelyusedpublicips_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Privately<wbr>Used<wbr>Public<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="masteripv4cidrblock_go">
 <a href="#masteripv4cidrblock_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Ipv4Cidr<wbr>Block</a>
@@ -2799,12 +3029,20 @@ If left blank, the default value of is used. See [documentation](https://cloud.g
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CIDR block from which IP range for web server will be reserved. Needs to be disjoint from `master_ipv4_cidr_block` and `cloud_sql_ipv4_cidr_block`.
+    <dd>{{% md %}}The CIDR block from which IP range for web server will be reserved. Needs to be disjoint from `master_ipv4_cidr_block` and `cloud_sql_ipv4_cidr_block`. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="cloudcomposernetworkipv4cidrblock_nodejs">
+<a href="#cloudcomposernetworkipv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Composer<wbr>Network<wbr>Ipv4Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudsqlipv4cidrblock_nodejs">
 <a href="#cloudsqlipv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Sql<wbr>Ipv4Cidr<wbr>Block</a>
@@ -2823,7 +3061,18 @@ If left blank, the default value of is used. See [documentation](https://cloud.g
     </dt>
     <dd>{{% md %}}-
 If true, access to the public endpoint of the GKE cluster is denied.
+If this field is set to true, `ip_allocation_policy.use_ip_aliases` must
+be set to true for Cloud Composer environments in versions
+composer-1.*.*-airflow-*.*.*.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enableprivatelyusedpublicips_nodejs">
+<a href="#enableprivatelyusedpublicips_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Privately<wbr>Used<wbr>Public<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="masteripv4cidrblock_nodejs">
 <a href="#masteripv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Ipv4Cidr<wbr>Block</a>
@@ -2844,12 +3093,20 @@ If left blank, the default value of is used. See [documentation](https://cloud.g
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CIDR block from which IP range for web server will be reserved. Needs to be disjoint from `master_ipv4_cidr_block` and `cloud_sql_ipv4_cidr_block`.
+    <dd>{{% md %}}The CIDR block from which IP range for web server will be reserved. Needs to be disjoint from `master_ipv4_cidr_block` and `cloud_sql_ipv4_cidr_block`. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="cloud_composer_network_ipv4_cidr_block_python">
+<a href="#cloud_composer_network_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>composer_<wbr>network_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloud_sql_ipv4_cidr_block_python">
 <a href="#cloud_sql_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>sql_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
@@ -2868,7 +3125,18 @@ If left blank, the default value of is used. See [documentation](https://cloud.g
     </dt>
     <dd>{{% md %}}-
 If true, access to the public endpoint of the GKE cluster is denied.
+If this field is set to true, `ip_allocation_policy.use_ip_aliases` must
+be set to true for Cloud Composer environments in versions
+composer-1.*.*-airflow-*.*.*.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enable_privately_used_public_ips_python">
+<a href="#enable_privately_used_public_ips_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>privately_<wbr>used_<wbr>public_<wbr>ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="master_ipv4_cidr_block_python">
 <a href="#master_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">master_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
@@ -2889,7 +3157,7 @@ If left blank, the default value of is used. See [documentation](https://cloud.g
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The CIDR block from which IP range for web server will be reserved. Needs to be disjoint from `master_ipv4_cidr_block` and `cloud_sql_ipv4_cidr_block`.
+    <dd>{{% md %}}The CIDR block from which IP range for web server will be reserved. Needs to be disjoint from `master_ipv4_cidr_block` and `cloud_sql_ipv4_cidr_block`. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2987,7 +3255,10 @@ pinning it to a version specifier, use the empty string as the value.
     </dt>
     <dd>{{% md %}}-
 The major version of Python used to run the Apache Airflow scheduler, worker, and webserver processes.
-Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be updated.
+Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be
+updated. This field is supported for Cloud Composer environments in versions
+composer-1.*.*-airflow-*.*.*. Environments in newer versions always use
+Python major version 3.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedulercount_csharp">
@@ -3093,7 +3364,10 @@ pinning it to a version specifier, use the empty string as the value.
     </dt>
     <dd>{{% md %}}-
 The major version of Python used to run the Apache Airflow scheduler, worker, and webserver processes.
-Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be updated.
+Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be
+updated. This field is supported for Cloud Composer environments in versions
+composer-1.*.*-airflow-*.*.*. Environments in newer versions always use
+Python major version 3.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedulercount_go">
@@ -3199,7 +3473,10 @@ pinning it to a version specifier, use the empty string as the value.
     </dt>
     <dd>{{% md %}}-
 The major version of Python used to run the Apache Airflow scheduler, worker, and webserver processes.
-Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be updated.
+Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be
+updated. This field is supported for Cloud Composer environments in versions
+composer-1.*.*-airflow-*.*.*. Environments in newer versions always use
+Python major version 3.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedulercount_nodejs">
@@ -3305,7 +3582,10 @@ pinning it to a version specifier, use the empty string as the value.
     </dt>
     <dd>{{% md %}}-
 The major version of Python used to run the Apache Airflow scheduler, worker, and webserver processes.
-Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be updated.
+Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be
+updated. This field is supported for Cloud Composer environments in versions
+composer-1.*.*-airflow-*.*.*. Environments in newer versions always use
+Python major version 3.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduler_count_python">
@@ -3542,6 +3822,618 @@ IP range prefixes should be properly truncated. For example,
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of this ip range.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="environmentconfigworkloadsconfig">Environment<wbr>Config<wbr>Workloads<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="scheduler_csharp">
+<a href="#scheduler_csharp" style="color: inherit; text-decoration: inherit;">Scheduler</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentconfigworkloadsconfigscheduler">Environment<wbr>Config<wbr>Workloads<wbr>Config<wbr>Scheduler</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for resources used by Airflow schedulers.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="webserver_csharp">
+<a href="#webserver_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Server</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentconfigworkloadsconfigwebserver">Environment<wbr>Config<wbr>Workloads<wbr>Config<wbr>Web<wbr>Server</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for resources used by Airflow web server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="worker_csharp">
+<a href="#worker_csharp" style="color: inherit; text-decoration: inherit;">Worker</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentconfigworkloadsconfigworker">Environment<wbr>Config<wbr>Workloads<wbr>Config<wbr>Worker</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for resources used by Airflow workers.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="scheduler_go">
+<a href="#scheduler_go" style="color: inherit; text-decoration: inherit;">Scheduler</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentconfigworkloadsconfigscheduler">Environment<wbr>Config<wbr>Workloads<wbr>Config<wbr>Scheduler</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for resources used by Airflow schedulers.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="webserver_go">
+<a href="#webserver_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Server</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentconfigworkloadsconfigwebserver">Environment<wbr>Config<wbr>Workloads<wbr>Config<wbr>Web<wbr>Server</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for resources used by Airflow web server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="worker_go">
+<a href="#worker_go" style="color: inherit; text-decoration: inherit;">Worker</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentconfigworkloadsconfigworker">Environment<wbr>Config<wbr>Workloads<wbr>Config<wbr>Worker</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for resources used by Airflow workers.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="scheduler_nodejs">
+<a href="#scheduler_nodejs" style="color: inherit; text-decoration: inherit;">scheduler</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentconfigworkloadsconfigscheduler">Environment<wbr>Config<wbr>Workloads<wbr>Config<wbr>Scheduler</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for resources used by Airflow schedulers.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="webserver_nodejs">
+<a href="#webserver_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Server</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentconfigworkloadsconfigwebserver">Environment<wbr>Config<wbr>Workloads<wbr>Config<wbr>Web<wbr>Server</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for resources used by Airflow web server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="worker_nodejs">
+<a href="#worker_nodejs" style="color: inherit; text-decoration: inherit;">worker</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentconfigworkloadsconfigworker">Environment<wbr>Config<wbr>Workloads<wbr>Config<wbr>Worker</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for resources used by Airflow workers.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="scheduler_python">
+<a href="#scheduler_python" style="color: inherit; text-decoration: inherit;">scheduler</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentconfigworkloadsconfigscheduler">Environment<wbr>Config<wbr>Workloads<wbr>Config<wbr>Scheduler</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for resources used by Airflow schedulers.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="web_server_python">
+<a href="#web_server_python" style="color: inherit; text-decoration: inherit;">web_<wbr>server</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentconfigworkloadsconfigwebserver">Environment<wbr>Config<wbr>Workloads<wbr>Config<wbr>Web<wbr>Server</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for resources used by Airflow web server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="worker_python">
+<a href="#worker_python" style="color: inherit; text-decoration: inherit;">worker</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentconfigworkloadsconfigworker">Environment<wbr>Config<wbr>Workloads<wbr>Config<wbr>Worker</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for resources used by Airflow workers.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="environmentconfigworkloadsconfigscheduler">Environment<wbr>Config<wbr>Workloads<wbr>Config<wbr>Scheduler</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="count_csharp">
+<a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of schedulers.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cpu_csharp">
+<a href="#cpu_csharp" style="color: inherit; text-decoration: inherit;">Cpu</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}CPU request and limit for a single Airflow worker replica.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="memorygb_csharp">
+<a href="#memorygb_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}Memory (GB) request and limit for a single Airflow worker replica.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storagegb_csharp">
+<a href="#storagegb_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}Storage (GB) request and limit for Airflow web server.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="count_go">
+<a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of schedulers.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cpu_go">
+<a href="#cpu_go" style="color: inherit; text-decoration: inherit;">Cpu</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}CPU request and limit for a single Airflow worker replica.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="memorygb_go">
+<a href="#memorygb_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}Memory (GB) request and limit for a single Airflow worker replica.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storagegb_go">
+<a href="#storagegb_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}Storage (GB) request and limit for Airflow web server.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="count_nodejs">
+<a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of schedulers.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cpu_nodejs">
+<a href="#cpu_nodejs" style="color: inherit; text-decoration: inherit;">cpu</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}CPU request and limit for a single Airflow worker replica.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="memorygb_nodejs">
+<a href="#memorygb_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Memory (GB) request and limit for a single Airflow worker replica.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storagegb_nodejs">
+<a href="#storagegb_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Storage (GB) request and limit for Airflow web server.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="count_python">
+<a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of schedulers.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cpu_python">
+<a href="#cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}CPU request and limit for a single Airflow worker replica.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="memory_gb_python">
+<a href="#memory_gb_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}Memory (GB) request and limit for a single Airflow worker replica.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storage_gb_python">
+<a href="#storage_gb_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}Storage (GB) request and limit for Airflow web server.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="environmentconfigworkloadsconfigwebserver">Environment<wbr>Config<wbr>Workloads<wbr>Config<wbr>Web<wbr>Server</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="cpu_csharp">
+<a href="#cpu_csharp" style="color: inherit; text-decoration: inherit;">Cpu</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}CPU request and limit for a single Airflow worker replica.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="memorygb_csharp">
+<a href="#memorygb_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}Memory (GB) request and limit for a single Airflow worker replica.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storagegb_csharp">
+<a href="#storagegb_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}Storage (GB) request and limit for Airflow web server.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="cpu_go">
+<a href="#cpu_go" style="color: inherit; text-decoration: inherit;">Cpu</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}CPU request and limit for a single Airflow worker replica.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="memorygb_go">
+<a href="#memorygb_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}Memory (GB) request and limit for a single Airflow worker replica.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storagegb_go">
+<a href="#storagegb_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}Storage (GB) request and limit for Airflow web server.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="cpu_nodejs">
+<a href="#cpu_nodejs" style="color: inherit; text-decoration: inherit;">cpu</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}CPU request and limit for a single Airflow worker replica.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="memorygb_nodejs">
+<a href="#memorygb_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Memory (GB) request and limit for a single Airflow worker replica.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storagegb_nodejs">
+<a href="#storagegb_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Storage (GB) request and limit for Airflow web server.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="cpu_python">
+<a href="#cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}CPU request and limit for a single Airflow worker replica.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="memory_gb_python">
+<a href="#memory_gb_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}Memory (GB) request and limit for a single Airflow worker replica.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storage_gb_python">
+<a href="#storage_gb_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}Storage (GB) request and limit for Airflow web server.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="environmentconfigworkloadsconfigworker">Environment<wbr>Config<wbr>Workloads<wbr>Config<wbr>Worker</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="cpu_csharp">
+<a href="#cpu_csharp" style="color: inherit; text-decoration: inherit;">Cpu</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}CPU request and limit for a single Airflow worker replica.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxcount_csharp">
+<a href="#maxcount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Maximum number of workers for autoscaling.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="memorygb_csharp">
+<a href="#memorygb_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}Memory (GB) request and limit for a single Airflow worker replica.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mincount_csharp">
+<a href="#mincount_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Minimum number of workers for autoscaling.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storagegb_csharp">
+<a href="#storagegb_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}Storage (GB) request and limit for Airflow web server.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="cpu_go">
+<a href="#cpu_go" style="color: inherit; text-decoration: inherit;">Cpu</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}CPU request and limit for a single Airflow worker replica.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxcount_go">
+<a href="#maxcount_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Maximum number of workers for autoscaling.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="memorygb_go">
+<a href="#memorygb_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}Memory (GB) request and limit for a single Airflow worker replica.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mincount_go">
+<a href="#mincount_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Minimum number of workers for autoscaling.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storagegb_go">
+<a href="#storagegb_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}Storage (GB) request and limit for Airflow web server.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="cpu_nodejs">
+<a href="#cpu_nodejs" style="color: inherit; text-decoration: inherit;">cpu</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}CPU request and limit for a single Airflow worker replica.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxcount_nodejs">
+<a href="#maxcount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Maximum number of workers for autoscaling.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="memorygb_nodejs">
+<a href="#memorygb_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Memory (GB) request and limit for a single Airflow worker replica.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mincount_nodejs">
+<a href="#mincount_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Minimum number of workers for autoscaling.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storagegb_nodejs">
+<a href="#storagegb_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Storage (GB) request and limit for Airflow web server.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="cpu_python">
+<a href="#cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}CPU request and limit for a single Airflow worker replica.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="max_count_python">
+<a href="#max_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Maximum number of workers for autoscaling.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="memory_gb_python">
+<a href="#memory_gb_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}Memory (GB) request and limit for a single Airflow worker replica.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_count_python">
+<a href="#min_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Minimum number of workers for autoscaling.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storage_gb_python">
+<a href="#storage_gb_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}Storage (GB) request and limit for Airflow web server.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import

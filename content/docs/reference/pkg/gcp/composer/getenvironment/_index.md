@@ -512,6 +512,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getenvironmentconfigwebservernetworkaccesscontrol">List&lt;Get<wbr>Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control&gt;</a></span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="workloadsconfigs_csharp">
+<a href="#workloadsconfigs_csharp" style="color: inherit; text-decoration: inherit;">Workloads<wbr>Configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getenvironmentconfigworkloadsconfig">List&lt;Get<wbr>Environment<wbr>Config<wbr>Workloads<wbr>Config&gt;</a></span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -611,6 +619,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getenvironmentconfigwebservernetworkaccesscontrol">[]Get<wbr>Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="workloadsconfigs_go">
+<a href="#workloadsconfigs_go" style="color: inherit; text-decoration: inherit;">Workloads<wbr>Configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getenvironmentconfigworkloadsconfig">[]Get<wbr>Environment<wbr>Config<wbr>Workloads<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -712,6 +728,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getenvironmentconfigwebservernetworkaccesscontrol">Get<wbr>Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control[]</a></span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="workloadsconfigs_nodejs">
+<a href="#workloadsconfigs_nodejs" style="color: inherit; text-decoration: inherit;">workloads<wbr>Configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getenvironmentconfigworkloadsconfig">Get<wbr>Environment<wbr>Config<wbr>Workloads<wbr>Config[]</a></span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -811,6 +835,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getenvironmentconfigwebservernetworkaccesscontrol">Sequence[Get<wbr>Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="workloads_configs_python">
+<a href="#workloads_configs_python" style="color: inherit; text-decoration: inherit;">workloads_<wbr>configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getenvironmentconfigworkloadsconfig">Sequence[Get<wbr>Environment<wbr>Config<wbr>Workloads<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1050,6 +1082,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="enableipmasqagent_csharp">
+<a href="#enableipmasqagent_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Ip<wbr>Masq<wbr>Agent</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="ipallocationpolicies_csharp">
 <a href="#ipallocationpolicies_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Allocation<wbr>Policies</a>
 </span>
@@ -1131,6 +1171,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enableipmasqagent_go">
+<a href="#enableipmasqagent_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Ip<wbr>Masq<wbr>Agent</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1218,6 +1266,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="enableipmasqagent_nodejs">
+<a href="#enableipmasqagent_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Ip<wbr>Masq<wbr>Agent</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="ipallocationpolicies_nodejs">
 <a href="#ipallocationpolicies_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Allocation<wbr>Policies</a>
 </span>
@@ -1299,6 +1355,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enable_ip_masq_agent_python">
+<a href="#enable_ip_masq_agent_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>ip_<wbr>masq_<wbr>agent</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1562,6 +1626,14 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="cloudcomposernetworkipv4cidrblock_csharp">
+<a href="#cloudcomposernetworkipv4cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Composer<wbr>Network<wbr>Ipv4Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="cloudsqlipv4cidrblock_csharp">
 <a href="#cloudsqlipv4cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Sql<wbr>Ipv4Cidr<wbr>Block</a>
 </span>
@@ -1572,6 +1644,14 @@ The following output properties are available:
             title="Required">
         <span id="enableprivateendpoint_csharp">
 <a href="#enableprivateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Private<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enableprivatelyusedpublicips_csharp">
+<a href="#enableprivatelyusedpublicips_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Privately<wbr>Used<wbr>Public<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -1598,6 +1678,14 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="cloudcomposernetworkipv4cidrblock_go">
+<a href="#cloudcomposernetworkipv4cidrblock_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Composer<wbr>Network<wbr>Ipv4Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="cloudsqlipv4cidrblock_go">
 <a href="#cloudsqlipv4cidrblock_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Sql<wbr>Ipv4Cidr<wbr>Block</a>
 </span>
@@ -1608,6 +1696,14 @@ The following output properties are available:
             title="Required">
         <span id="enableprivateendpoint_go">
 <a href="#enableprivateendpoint_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Private<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enableprivatelyusedpublicips_go">
+<a href="#enableprivatelyusedpublicips_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Privately<wbr>Used<wbr>Public<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -1634,6 +1730,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="cloudcomposernetworkipv4cidrblock_nodejs">
+<a href="#cloudcomposernetworkipv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Composer<wbr>Network<wbr>Ipv4Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="cloudsqlipv4cidrblock_nodejs">
 <a href="#cloudsqlipv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Sql<wbr>Ipv4Cidr<wbr>Block</a>
 </span>
@@ -1644,6 +1748,14 @@ The following output properties are available:
             title="Required">
         <span id="enableprivateendpoint_nodejs">
 <a href="#enableprivateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Private<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enableprivatelyusedpublicips_nodejs">
+<a href="#enableprivatelyusedpublicips_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Privately<wbr>Used<wbr>Public<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
@@ -1670,6 +1782,14 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="cloud_composer_network_ipv4_cidr_block_python">
+<a href="#cloud_composer_network_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>composer_<wbr>network_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="cloud_sql_ipv4_cidr_block_python">
 <a href="#cloud_sql_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>sql_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
 </span>
@@ -1680,6 +1800,14 @@ The following output properties are available:
             title="Required">
         <span id="enable_private_endpoint_python">
 <a href="#enable_private_endpoint_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>private_<wbr>endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enable_privately_used_public_ips_python">
+<a href="#enable_privately_used_public_ips_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>privately_<wbr>used_<wbr>public_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -2099,6 +2227,566 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getenvironmentconfigworkloadsconfig">Get<wbr>Environment<wbr>Config<wbr>Workloads<wbr>Config</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="schedulers_csharp">
+<a href="#schedulers_csharp" style="color: inherit; text-decoration: inherit;">Schedulers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getenvironmentconfigworkloadsconfigscheduler">List&lt;Get<wbr>Environment<wbr>Config<wbr>Workloads<wbr>Config<wbr>Scheduler&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="webservers_csharp">
+<a href="#webservers_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Servers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getenvironmentconfigworkloadsconfigwebserver">List&lt;Get<wbr>Environment<wbr>Config<wbr>Workloads<wbr>Config<wbr>Web<wbr>Server&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="workers_csharp">
+<a href="#workers_csharp" style="color: inherit; text-decoration: inherit;">Workers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getenvironmentconfigworkloadsconfigworker">List&lt;Get<wbr>Environment<wbr>Config<wbr>Workloads<wbr>Config<wbr>Worker&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="schedulers_go">
+<a href="#schedulers_go" style="color: inherit; text-decoration: inherit;">Schedulers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getenvironmentconfigworkloadsconfigscheduler">[]Get<wbr>Environment<wbr>Config<wbr>Workloads<wbr>Config<wbr>Scheduler</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="webservers_go">
+<a href="#webservers_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Servers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getenvironmentconfigworkloadsconfigwebserver">[]Get<wbr>Environment<wbr>Config<wbr>Workloads<wbr>Config<wbr>Web<wbr>Server</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="workers_go">
+<a href="#workers_go" style="color: inherit; text-decoration: inherit;">Workers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getenvironmentconfigworkloadsconfigworker">[]Get<wbr>Environment<wbr>Config<wbr>Workloads<wbr>Config<wbr>Worker</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="schedulers_nodejs">
+<a href="#schedulers_nodejs" style="color: inherit; text-decoration: inherit;">schedulers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getenvironmentconfigworkloadsconfigscheduler">Get<wbr>Environment<wbr>Config<wbr>Workloads<wbr>Config<wbr>Scheduler[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="webservers_nodejs">
+<a href="#webservers_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Servers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getenvironmentconfigworkloadsconfigwebserver">Get<wbr>Environment<wbr>Config<wbr>Workloads<wbr>Config<wbr>Web<wbr>Server[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="workers_nodejs">
+<a href="#workers_nodejs" style="color: inherit; text-decoration: inherit;">workers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getenvironmentconfigworkloadsconfigworker">Get<wbr>Environment<wbr>Config<wbr>Workloads<wbr>Config<wbr>Worker[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="schedulers_python">
+<a href="#schedulers_python" style="color: inherit; text-decoration: inherit;">schedulers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getenvironmentconfigworkloadsconfigscheduler">Sequence[Get<wbr>Environment<wbr>Config<wbr>Workloads<wbr>Config<wbr>Scheduler]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="web_servers_python">
+<a href="#web_servers_python" style="color: inherit; text-decoration: inherit;">web_<wbr>servers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getenvironmentconfigworkloadsconfigwebserver">Sequence[Get<wbr>Environment<wbr>Config<wbr>Workloads<wbr>Config<wbr>Web<wbr>Server]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="workers_python">
+<a href="#workers_python" style="color: inherit; text-decoration: inherit;">workers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getenvironmentconfigworkloadsconfigworker">Sequence[Get<wbr>Environment<wbr>Config<wbr>Workloads<wbr>Config<wbr>Worker]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getenvironmentconfigworkloadsconfigscheduler">Get<wbr>Environment<wbr>Config<wbr>Workloads<wbr>Config<wbr>Scheduler</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="count_csharp">
+<a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="cpu_csharp">
+<a href="#cpu_csharp" style="color: inherit; text-decoration: inherit;">Cpu</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="memorygb_csharp">
+<a href="#memorygb_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="storagegb_csharp">
+<a href="#storagegb_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="count_go">
+<a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="cpu_go">
+<a href="#cpu_go" style="color: inherit; text-decoration: inherit;">Cpu</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="memorygb_go">
+<a href="#memorygb_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="storagegb_go">
+<a href="#storagegb_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="count_nodejs">
+<a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="cpu_nodejs">
+<a href="#cpu_nodejs" style="color: inherit; text-decoration: inherit;">cpu</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="memorygb_nodejs">
+<a href="#memorygb_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="storagegb_nodejs">
+<a href="#storagegb_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="count_python">
+<a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="cpu_python">
+<a href="#cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="memory_gb_python">
+<a href="#memory_gb_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="storage_gb_python">
+<a href="#storage_gb_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getenvironmentconfigworkloadsconfigwebserver">Get<wbr>Environment<wbr>Config<wbr>Workloads<wbr>Config<wbr>Web<wbr>Server</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cpu_csharp">
+<a href="#cpu_csharp" style="color: inherit; text-decoration: inherit;">Cpu</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="memorygb_csharp">
+<a href="#memorygb_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="storagegb_csharp">
+<a href="#storagegb_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cpu_go">
+<a href="#cpu_go" style="color: inherit; text-decoration: inherit;">Cpu</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="memorygb_go">
+<a href="#memorygb_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="storagegb_go">
+<a href="#storagegb_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cpu_nodejs">
+<a href="#cpu_nodejs" style="color: inherit; text-decoration: inherit;">cpu</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="memorygb_nodejs">
+<a href="#memorygb_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="storagegb_nodejs">
+<a href="#storagegb_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cpu_python">
+<a href="#cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="memory_gb_python">
+<a href="#memory_gb_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="storage_gb_python">
+<a href="#storage_gb_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getenvironmentconfigworkloadsconfigworker">Get<wbr>Environment<wbr>Config<wbr>Workloads<wbr>Config<wbr>Worker</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cpu_csharp">
+<a href="#cpu_csharp" style="color: inherit; text-decoration: inherit;">Cpu</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="maxcount_csharp">
+<a href="#maxcount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="memorygb_csharp">
+<a href="#memorygb_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="mincount_csharp">
+<a href="#mincount_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="storagegb_csharp">
+<a href="#storagegb_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cpu_go">
+<a href="#cpu_go" style="color: inherit; text-decoration: inherit;">Cpu</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="maxcount_go">
+<a href="#maxcount_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="memorygb_go">
+<a href="#memorygb_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="mincount_go">
+<a href="#mincount_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="storagegb_go">
+<a href="#storagegb_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cpu_nodejs">
+<a href="#cpu_nodejs" style="color: inherit; text-decoration: inherit;">cpu</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="maxcount_nodejs">
+<a href="#maxcount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="memorygb_nodejs">
+<a href="#memorygb_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="mincount_nodejs">
+<a href="#mincount_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="storagegb_nodejs">
+<a href="#storagegb_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cpu_python">
+<a href="#cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="max_count_python">
+<a href="#max_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="memory_gb_python">
+<a href="#memory_gb_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="min_count_python">
+<a href="#min_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="storage_gb_python">
+<a href="#storage_gb_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

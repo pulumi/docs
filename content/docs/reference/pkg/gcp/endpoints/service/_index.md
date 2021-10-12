@@ -12,6 +12,164 @@ meta_desc: "Documentation for the gcp.endpoints.Service resource with examples, 
 
 This resource creates and rolls out a Cloud Endpoints service using OpenAPI or gRPC.  View the relevant docs for [OpenAPI](https://cloud.google.com/endpoints/docs/openapi/) and [gRPC](https://cloud.google.com/endpoints/docs/grpc/).
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using System;
+using System.IO;
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+	private static string ReadFileBase64(string path) {
+		return Convert.ToBase64String(System.Text.UTF8.GetBytes(File.ReadAllText(path)))
+	}
+
+    public MyStack()
+    {
+        var openapiService = new Gcp.Endpoints.Service("openapiService", new Gcp.Endpoints.ServiceArgs
+        {
+            ServiceName = "api-name.endpoints.project-id.cloud.goog",
+            Project = "project-id",
+            OpenapiConfig = File.ReadAllText("openapi_spec.yml"),
+        });
+        var grpcService = new Gcp.Endpoints.Service("grpcService", new Gcp.Endpoints.ServiceArgs
+        {
+            ServiceName = "api-name.endpoints.project-id.cloud.goog",
+            Project = "project-id",
+            GrpcConfig = File.ReadAllText("service_spec.yml"),
+            ProtocOutputBase64 = ReadFileBase64("compiled_descriptor_file.pb"),
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"encoding/base64"
+	"io/ioutil"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/endpoints"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func filebase64OrPanic(path string) pulumi.StringPtrInput {
+	if fileData, err := ioutil.ReadFile(path); err == nil {
+		return pulumi.String(base64.StdEncoding.EncodeToString(fileData[:]))
+	} else {
+		panic(err.Error())
+	}
+}
+
+func readFileOrPanic(path string) pulumi.StringPtrInput {
+	data, err := ioutil.ReadFile(path)
+	if err != nil {
+		panic(err.Error())
+	}
+	return pulumi.String(string(data))
+}
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := endpoints.NewService(ctx, "openapiService", &endpoints.ServiceArgs{
+			ServiceName:   pulumi.String("api-name.endpoints.project-id.cloud.goog"),
+			Project:       pulumi.String("project-id"),
+			OpenapiConfig: readFileOrPanic("openapi_spec.yml"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = endpoints.NewService(ctx, "grpcService", &endpoints.ServiceArgs{
+			ServiceName:        pulumi.String("api-name.endpoints.project-id.cloud.goog"),
+			Project:            pulumi.String("project-id"),
+			GrpcConfig:         readFileOrPanic("service_spec.yml"),
+			ProtocOutputBase64: filebase64OrPanic("compiled_descriptor_file.pb"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import base64
+import pulumi_gcp as gcp
+
+openapi_service = gcp.endpoints.Service("openapiService",
+    service_name="api-name.endpoints.project-id.cloud.goog",
+    project="project-id",
+    openapi_config=(lambda path: open(path).read())("openapi_spec.yml"))
+grpc_service = gcp.endpoints.Service("grpcService",
+    service_name="api-name.endpoints.project-id.cloud.goog",
+    project="project-id",
+    grpc_config=(lambda path: open(path).read())("service_spec.yml"),
+    protoc_output_base64=(lambda path: base64.b64encode(open(path).read().encode()).decode())("compiled_descriptor_file.pb"))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * from "fs";
+
+const openapiService = new gcp.endpoints.Service("openapiService", {
+    serviceName: "api-name.endpoints.project-id.cloud.goog",
+    project: "project-id",
+    openapiConfig: fs.readFileSync("openapi_spec.yml"),
+});
+const grpcService = new gcp.endpoints.Service("grpcService", {
+    serviceName: "api-name.endpoints.project-id.cloud.goog",
+    project: "project-id",
+    grpcConfig: fs.readFileSync("service_spec.yml"),
+    protocOutputBase64: Buffer.from(fs.readFileSync("compiled_descriptor_file.pb"), 'binary').toString('base64'),
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a Service Resource {#create}
