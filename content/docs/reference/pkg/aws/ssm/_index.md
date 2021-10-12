@@ -27,6 +27,7 @@ Explore the resources and functions of the aws.ssm module.
 <ul class="api">
     <li><a href="getdocument" title="GetDocument"><span class="symbol function"></span>GetDocument</a></li>
     <li><a href="getparameter" title="GetParameter"><span class="symbol function"></span>GetParameter</a></li>
+    <li><a href="getparametersbypath" title="GetParametersByPath"><span class="symbol function"></span>GetParametersByPath</a></li>
     <li><a href="getpatchbaseline" title="GetPatchBaseline"><span class="symbol function"></span>GetPatchBaseline</a></li>
 </ul>
 
@@ -39,6 +40,6 @@ Explore the resources and functions of the aws.ssm module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.22.1</dd>
+	<dd>4.24.1</dd>
 </dl>
 

@@ -193,6 +193,7 @@ const ebsAtt = new aws.ec2.VolumeAttachment("ebsAtt", {
                      <span class="nx">force_detach</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                      <span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">skip_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                     <span class="nx">stop_instance_before_detaching</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                      <span class="nx">volume_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">VolumeAttachment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -374,6 +375,16 @@ to detach the volume from the instance to which it is attached at destroy
 time, and instead just remove the attachment from this provider state. This is
 useful when destroying an instance which has volumes created by some other
 means attached.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stopinstancebeforedetaching_csharp">
+<a href="#stopinstancebeforedetaching_csharp" style="color: inherit; text-decoration: inherit;">Stop<wbr>Instance<wbr>Before<wbr>Detaching</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set this to true to ensure that the target instance is stopped
+before trying to detach the volume. Stops the instance, if it is not already stopped.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -431,6 +442,16 @@ to detach the volume from the instance to which it is attached at destroy
 time, and instead just remove the attachment from this provider state. This is
 useful when destroying an instance which has volumes created by some other
 means attached.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stopinstancebeforedetaching_go">
+<a href="#stopinstancebeforedetaching_go" style="color: inherit; text-decoration: inherit;">Stop<wbr>Instance<wbr>Before<wbr>Detaching</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set this to true to ensure that the target instance is stopped
+before trying to detach the volume. Stops the instance, if it is not already stopped.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -488,6 +509,16 @@ to detach the volume from the instance to which it is attached at destroy
 time, and instead just remove the attachment from this provider state. This is
 useful when destroying an instance which has volumes created by some other
 means attached.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stopinstancebeforedetaching_nodejs">
+<a href="#stopinstancebeforedetaching_nodejs" style="color: inherit; text-decoration: inherit;">stop<wbr>Instance<wbr>Before<wbr>Detaching</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Set this to true to ensure that the target instance is stopped
+before trying to detach the volume. Stops the instance, if it is not already stopped.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -545,6 +576,16 @@ to detach the volume from the instance to which it is attached at destroy
 time, and instead just remove the attachment from this provider state. This is
 useful when destroying an instance which has volumes created by some other
 means attached.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stop_instance_before_detaching_python">
+<a href="#stop_instance_before_detaching_python" style="color: inherit; text-decoration: inherit;">stop_<wbr>instance_<wbr>before_<wbr>detaching</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set this to true to ensure that the target instance is stopped
+before trying to detach the volume. Stops the instance, if it is not already stopped.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -623,6 +664,7 @@ Get an existing VolumeAttachment resource's state with the given name, ID, and o
         <span class="nx">force_detach</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">skip_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">stop_instance_before_detaching</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">volume_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> VolumeAttachment</code></pre></div>
 {{% /choosable %}}
 
@@ -780,6 +822,16 @@ useful when destroying an instance which has volumes created by some other
 means attached.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_stopinstancebeforedetaching_csharp">
+<a href="#state_stopinstancebeforedetaching_csharp" style="color: inherit; text-decoration: inherit;">Stop<wbr>Instance<wbr>Before<wbr>Detaching</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set this to true to ensure that the target instance is stopped
+before trying to detach the volume. Stops the instance, if it is not already stopped.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_volumeid_csharp">
 <a href="#state_volumeid_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
 </span>
@@ -835,6 +887,16 @@ to detach the volume from the instance to which it is attached at destroy
 time, and instead just remove the attachment from this provider state. This is
 useful when destroying an instance which has volumes created by some other
 means attached.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_stopinstancebeforedetaching_go">
+<a href="#state_stopinstancebeforedetaching_go" style="color: inherit; text-decoration: inherit;">Stop<wbr>Instance<wbr>Before<wbr>Detaching</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set this to true to ensure that the target instance is stopped
+before trying to detach the volume. Stops the instance, if it is not already stopped.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_volumeid_go">
@@ -894,6 +956,16 @@ useful when destroying an instance which has volumes created by some other
 means attached.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_stopinstancebeforedetaching_nodejs">
+<a href="#state_stopinstancebeforedetaching_nodejs" style="color: inherit; text-decoration: inherit;">stop<wbr>Instance<wbr>Before<wbr>Detaching</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Set this to true to ensure that the target instance is stopped
+before trying to detach the volume. Stops the instance, if it is not already stopped.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_volumeid_nodejs">
 <a href="#state_volumeid_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Id</a>
 </span>
@@ -949,6 +1021,16 @@ to detach the volume from the instance to which it is attached at destroy
 time, and instead just remove the attachment from this provider state. This is
 useful when destroying an instance which has volumes created by some other
 means attached.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_stop_instance_before_detaching_python">
+<a href="#state_stop_instance_before_detaching_python" style="color: inherit; text-decoration: inherit;">stop_<wbr>instance_<wbr>before_<wbr>detaching</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set this to true to ensure that the target instance is stopped
+before trying to detach the volume. Stops the instance, if it is not already stopped.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_volume_id_python">

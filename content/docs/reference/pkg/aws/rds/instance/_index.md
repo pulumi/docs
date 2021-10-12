@@ -306,6 +306,7 @@ const example = new aws.rds.Instance("example", {
              <span class="nx">performance_insights_retention_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
              <span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
              <span class="nx">publicly_accessible</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">replica_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">replicate_source_db</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">restore_to_point_in_time</span><span class="p">:</span> <span class="nx">Optional[InstanceRestoreToPointInTimeArgs]</span> = None<span class="p">,</span>
              <span class="nx">s3_import</span><span class="p">:</span> <span class="nx">Optional[InstanceS3ImportArgs]</span> = None<span class="p">,</span>
@@ -878,6 +879,16 @@ logs, and it will be stored in the state file.
 accessible. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="replicamode_csharp">
+<a href="#replicamode_csharp" style="color: inherit; text-decoration: inherit;">Replica<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the replica is in either `mounted` or `open-read-only` mode. This attribute
+is only supported by Oracle instances. Oracle replicas operate in `open-read-only` mode unless otherwise specified. See [Working with Oracle Read Replicas](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/oracle-read-replicas.html) for more information.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="replicatesourcedb_csharp">
 <a href="#replicatesourcedb_csharp" style="color: inherit; text-decoration: inherit;">Replicate<wbr>Source<wbr>Db</a>
 </span>
@@ -1446,6 +1457,16 @@ logs, and it will be stored in the state file.
     </dt>
     <dd>{{% md %}}Bool to control if instance is publicly
 accessible. Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="replicamode_go">
+<a href="#replicamode_go" style="color: inherit; text-decoration: inherit;">Replica<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the replica is in either `mounted` or `open-read-only` mode. This attribute
+is only supported by Oracle instances. Oracle replicas operate in `open-read-only` mode unless otherwise specified. See [Working with Oracle Read Replicas](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/oracle-read-replicas.html) for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicatesourcedb_go">
@@ -2018,6 +2039,16 @@ logs, and it will be stored in the state file.
 accessible. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="replicamode_nodejs">
+<a href="#replicamode_nodejs" style="color: inherit; text-decoration: inherit;">replica<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the replica is in either `mounted` or `open-read-only` mode. This attribute
+is only supported by Oracle instances. Oracle replicas operate in `open-read-only` mode unless otherwise specified. See [Working with Oracle Read Replicas](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/oracle-read-replicas.html) for more information.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="replicatesourcedb_nodejs">
 <a href="#replicatesourcedb_nodejs" style="color: inherit; text-decoration: inherit;">replicate<wbr>Source<wbr>Db</a>
 </span>
@@ -2586,6 +2617,16 @@ logs, and it will be stored in the state file.
     </dt>
     <dd>{{% md %}}Bool to control if instance is publicly
 accessible. Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="replica_mode_python">
+<a href="#replica_mode_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the replica is in either `mounted` or `open-read-only` mode. This attribute
+is only supported by Oracle instances. Oracle replicas operate in `open-read-only` mode unless otherwise specified. See [Working with Oracle Read Replicas](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/oracle-read-replicas.html) for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicate_source_db_python">
@@ -3203,6 +3244,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
         <span class="nx">performance_insights_retention_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">publicly_accessible</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">replica_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">replicas</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">replicate_source_db</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -3815,6 +3857,16 @@ logs, and it will be stored in the state file.
     </dt>
     <dd>{{% md %}}Bool to control if instance is publicly
 accessible. Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_replicamode_csharp">
+<a href="#state_replicamode_csharp" style="color: inherit; text-decoration: inherit;">Replica<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the replica is in either `mounted` or `open-read-only` mode. This attribute
+is only supported by Oracle instances. Oracle replicas operate in `open-read-only` mode unless otherwise specified. See [Working with Oracle Read Replicas](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/oracle-read-replicas.html) for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicas_csharp">
@@ -4477,6 +4529,16 @@ logs, and it will be stored in the state file.
 accessible. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_replicamode_go">
+<a href="#state_replicamode_go" style="color: inherit; text-decoration: inherit;">Replica<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the replica is in either `mounted` or `open-read-only` mode. This attribute
+is only supported by Oracle instances. Oracle replicas operate in `open-read-only` mode unless otherwise specified. See [Working with Oracle Read Replicas](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/oracle-read-replicas.html) for more information.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_replicas_go">
 <a href="#state_replicas_go" style="color: inherit; text-decoration: inherit;">Replicas</a>
 </span>
@@ -5137,6 +5199,16 @@ logs, and it will be stored in the state file.
 accessible. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_replicamode_nodejs">
+<a href="#state_replicamode_nodejs" style="color: inherit; text-decoration: inherit;">replica<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the replica is in either `mounted` or `open-read-only` mode. This attribute
+is only supported by Oracle instances. Oracle replicas operate in `open-read-only` mode unless otherwise specified. See [Working with Oracle Read Replicas](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/oracle-read-replicas.html) for more information.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_replicas_nodejs">
 <a href="#state_replicas_nodejs" style="color: inherit; text-decoration: inherit;">replicas</a>
 </span>
@@ -5795,6 +5867,16 @@ logs, and it will be stored in the state file.
     </dt>
     <dd>{{% md %}}Bool to control if instance is publicly
 accessible. Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_replica_mode_python">
+<a href="#state_replica_mode_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the replica is in either `mounted` or `open-read-only` mode. This attribute
+is only supported by Oracle instances. Oracle replicas operate in `open-read-only` mode unless otherwise specified. See [Working with Oracle Read Replicas](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/oracle-read-replicas.html) for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicas_python">
