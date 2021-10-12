@@ -23,8 +23,12 @@ out CI/CD and automation systems into your clusters, creating native support to 
 
 To work with the operator, we'll need to follow these steps.
 
+- [Overview](#overview)
 - [Deploy the Pulumi Kubernetes Operator](#deploy-the-pulumi-kubernetes-operator)
 - [Create a Stack CustomResource](#create-a-stack-customresource)
+  - [Stack Settings](#stack-settings)
+  - [Extended Examples](#extended-examples)
+- [Concurrent Updates on the Same Stack](#concurrent-updates-on-the-same-stack)
 
 [k8s-ext-pattern]: https://kubernetes.io/docs/concepts/extend-kubernetes/operator/
 [stack]: {{< relref "/docs/intro/concepts/stack" >}}
@@ -58,7 +62,7 @@ The `Stack` CustomResource (CR) encapsulates a Pulumi project that creates any s
 infrastructure resources such as cloud VMs, object storage, Kubernetes
 clusters, or Kubernetes workloads through API resources.
 
-The Stack uses an existing Git repo, and checks out a specific Git commit SHA of the repo to deploy a `pulumi up`.
+The Stack uses an existing Git repo, and checks out the repo to deploy a `pulumi up`. The Stack configuration can specify a specific commit SHA or a reference to a branch or tag to track. If a commit is specified, the operator will try to reify the desired state of the stack in the commit until it succeeds. If a branch reference is specified, the Pulumi Kubernetes Operator will periodically poll the branch for any new commits and roll out updates as they are found.
 
 In the example below, we're creating a Stack for an existing Pulumi project that provisions
 a simple [NGINX][nginx-stack] Deployment in Kubernetes.
@@ -96,14 +100,22 @@ const accessToken = new kx.Secret("accesstoken", {
 
 // Create an NGINX deployment in-cluster.
 const mystack = new k8s.apiextensions.CustomResource("my-stack", {
-    apiVersion: 'pulumi.com/v1alpha1',
+    apiVersion: 'pulumi.com/v1',
     kind: 'Stack',
     spec: {
-        accessTokenSecret: accessToken.metadata.name,
+        envRefs: {
+            PULUMI_ACCESS_TOKEN: {
+                type: "Secret",
+                secret: {
+                    name: accessToken.metadata.name,
+                    key: "accessToken"
+                },
+            },
+        },
         stack: "<YOUR_ORG>/nginx/dev",
-        initOnCreate: true,
         projectRepo: "https://github.com/metral/pulumi-nginx",
         commit: "2b0889718d3e63feeb6079ccd5e4488d8601e353",
+        // branch: "refs/heads/master", // Alternatively, track master branch.
         destroyOnFinalize: true,
     }
 });
@@ -125,15 +137,23 @@ access_token = core.v1.Secret("accesstoken", string_data={ "access_token": pulum
 
 # Create an NGINX deployment in-cluster.
 my_stack = apiextensions.CustomResource("my-stack",
-    api_version="pulumi.com/v1alpha1",
+    api_version="pulumi.com/v1",
     kind="Stack",
     spec={
-        "access_token_secret": access_token.metadata["name"],
+        "envRefs": {
+            "PULUMI_ACCESS_TOKEN": {
+                "type": "Secret",
+                "secret": {
+                    "name": access_token.metadata.name,
+                    "key": "access_token",
+                }
+            },
+        },
         "stack": "<YOUR_ORG>/nginx/dev",
-        "init_on_create": True,
-        "project_repo": "https://github.com/metral/pulumi-nginx",
+        "projectRepo": "https://github.com/metral/pulumi-nginx",
         "commit": "2b0889718d3e63feeb6079ccd5e4488d8601e353",
-        "destroy_on_finalize": True,
+        # branch: "refs/heads/master", # Alternatively, track master branch.
+        "destroyOnFinalize": True,
     }
 )
 ```
@@ -152,7 +172,7 @@ class StackArgs : CustomResourceArgs
     [Input("spec")]
     public Input<StackSpecArgs>? Spec { get; set; }
 
-    public StackArgs() : base("pulumi.com/v1alpha1", "Stack")
+    public StackArgs() : base("pulumi.com/v1", "Stack")
     {
     }
 }
@@ -164,9 +184,6 @@ class StackSpecArgs : ResourceArgs
 
     [Input("stack")]
     public Input<string>? Stack { get; set; }
-
-    [Input("initOnCreate")]
-    public Input<bool>? InitOnCreate { get; set; }
 
     [Input("projectRepo")]
     public Input<string>? ProjectRepo { get; set; }
@@ -205,6 +222,7 @@ class MyStack : Stack
                 InitOnCreate = true,
                 ProjectRepo = "https://github.com/metral/pulumi-nginx",
                 Commit = "2b0889718d3e63feeb6079ccd5e4488d8601e353",
+                // branch: "refs/heads/master", // Alternatively, track master branch.
                 DestroyOnFinalize = true,
             }
         });
@@ -220,46 +238,54 @@ class MyStack : Stack
 package main
 
 import (
-    "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes"
-    apiextensions "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/apiextensions"
-    corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/core/v1"
-    metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/meta/v1"
-    "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-    "github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
+	"github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes"
+	apiextensions "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/apiextensions"
+	corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/core/v1"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
 )
 
 func main() {
-    pulumi.Run(func(ctx *pulumi.Context) error {
-        // Get the Pulumi API token.
-        c := config.New(ctx, "")
-        pulumiAccessToken := c.Require("pulumiAccessToken")
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		// Get the Pulumi API token.
+		c := config.New(ctx, "")
+		pulumiAccessToken := c.Require("pulumiAccessToken")
 
-        // Create the API token as a Kubernetes Secret.
-        accessToken, err := corev1.NewSecret(ctx, "accesstoken", &corev1.SecretArgs{
-            StringData: pulumi.StringMap{"accessToken": pulumi.String(pulumiAccessToken)},
-        })
-        if err != nil {
-            return err
-        }
+		// Create the API token as a Kubernetes Secret.
+		accessToken, err := corev1.NewSecret(ctx, "accesstoken", &corev1.SecretArgs{
+			StringData: pulumi.StringMap{"accessToken": pulumi.String(pulumiAccessToken)},
+		})
+		if err != nil {
+			return err
+		}
 
-        // Create an NGINX deployment in-cluster.
-        _, err = apiextensions.NewCustomResource(ctx, "my-stack", &apiextensions.CustomResourceArgs{
-            ApiVersion: pulumi.String("pulumi.com/v1alpha1"),
-            Kind:       pulumi.String("Stack"),
-            OtherFields: kubernetes.UntypedArgs{
-                "spec": map[string]interface{}{
-                    "accessTokenSecret": accessToken.Metadata.Name(),
-                    "stack":             "<YOUR_ORG>/nginx/dev",
-                    "initOnCreate":      true,
-                    "projectRepo":       "https://github.com/metral/pulumi-nginx",
-                    "commit":            "2b0889718d3e63feeb6079ccd5e4488d8601e353",
-                    "destroyOnFinalize": true,
-                },
-            },
-        }, pulumi.DependsOn([]pulumi.Resource{accessToken}))
-        return err
-    })
+		// Create an NGINX deployment in-cluster.
+		_, err = apiextensions.NewCustomResource(ctx, "my-stack", &apiextensions.CustomResourceArgs{
+			ApiVersion: pulumi.String("pulumi.com/v1"),
+			Kind:       pulumi.String("Stack"),
+			OtherFields: kubernetes.UntypedArgs{
+				"spec": map[string]interface{}{
+					"envRefs": pulumi.Map{
+						"PULUMI_ACCESS_TOKEN": pulumi.Map{
+							"type": pulumi.String("Secret"),
+							"secret": pulumi.Map{
+								"name": accessToken.Metadata.Name(),
+								"key":  pulumi.String("accessToken"),
+							},
+						},
+					},
+					"stack":             "<YOUR_ORG>/nginx/dev",
+					"projectRepo":       "https://github.com/metral/pulumi-nginx",
+					"commit":            "2b0889718d3e63feeb6079ccd5e4488d8601e353",
+					// "branch":         "refs/heads/master", // Alternatively, track master branch.
+					"destroyOnFinalize": true,
+				},
+			},
+		}, pulumi.DependsOn([]pulumi.Resource{accessToken}))
+		return err
+	})
 }
+
 ```
 
 {{% /choosable %}}
@@ -283,6 +309,9 @@ Stack CustomResources provide the following properties to configure the Stack up
 - Lifecyle control such as creating the stack if it does not exist,
   issuing a refresh before the update, and destroying the Stack's resources
   and stack itself upon deletion of the CR.
+- Switching to an open source backend.
+
+Detailed documentation on Stack CR configuration is available [here](https://github.com/pulumi/pulumi-kubernetes-operator/blob/master/docs/stacks.md).
 
 ### Extended Examples
 
@@ -296,17 +325,14 @@ You can watch a demo below for a complete walkthrough.
 [blue-green-demo]: https://github.com/pulumi/pulumi-kubernetes-operator/tree/master/examples/blue-green
 [aws-s3-demo]: https://github.com/pulumi/pulumi-kubernetes-operator/tree/master/examples/aws-s3
 
-## Concurrency
-
-When using the operator to continuously deploy your Pulumi stacks, you may run into a problem. What
-happens if multiple reconciliation loops run for the same commit in succession?
+## Concurrent Updates on the Same Stack
 
 Operators, by definition, will invoke a reconciliation loop for the creation, update, or deletion of a Stack CR.
 
 To avoid conflicting resource updates or corrupting resource state, Pulumi only
 runs one update at a time per stack. By default, the operator checks for updates
 already in progress, and will not spawn another reconciliation loop if one is already
-running.
+running, blocking that stack. We strongly advice against running external updates on stacks controlled by the operator.
 
 You can optionally choose to retry on update conflicts by using the
 `RetryOnUpdateConflict` field in the Stack.
@@ -314,5 +340,5 @@ You can optionally choose to retry on update conflicts by using the
 > Note: This is only recommended if you are sure that the stack updates are idempotent, and if you are willing to accept retry loops until
 > all spawned retries succeed. This will also create a more populated, and randomized activity timeline for the stack in the Pulumi Service.
 
-Check out [troubleshooting](https://github.com/pulumi/pulumi-kubernetes-operator/blob/master/docs/troubleshooting.md) for more details, or
+Check out [troubleshooting](https://github.com/pulumi/pulumi-kubernetes-operator/blob/master/docs/troubleshooting.md) for more details, look at [known issues](https://github.com/pulumi/pulumi-kubernetes-operator/issues/) or
 open a [new issue](https://github.com/pulumi/pulumi-kubernetes-operator/issues/new) in GitHub.
