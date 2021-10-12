@@ -351,6 +351,8 @@ This section includes detailed troubleshooting information for the [Kubernetes p
 This error is often caused by a misconfigured ingress-controller not updating the `status.loadBalancer`
 field once the Ingress resource is ready to route traffic.
 
+In some cases this may be fixed by running `pulumi refresh`.
+
 ###### *Traefik*
 
 For the Traefik controller, verify that the `kubernetes.ingressEndpoint` config
