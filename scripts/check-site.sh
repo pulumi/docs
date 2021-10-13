@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 
 request_and_format_sitemap() {
     curl https://www.pulumi.com/sitemap.xml > sitemap.xml && xmllint --format sitemap.xml > temp_sitemap.xml && mv temp_sitemap.xml sitemap.xml
