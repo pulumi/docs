@@ -59,7 +59,7 @@ DEFAULT_PKGS=(
 featured_packages=(
     "aws"
     "azure-native"
-    "google-native"
+    "gcp"
     "kubernetes"
 )
 
