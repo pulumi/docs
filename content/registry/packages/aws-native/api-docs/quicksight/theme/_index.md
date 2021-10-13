@@ -31,7 +31,7 @@ Definition of the AWS::QuickSight::Theme Resource Type.
           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
           <span class="nx">aws_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">base_theme_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-          <span class="nx">configuration</span><span class="p">:</span> <span class="nx">Optional[ThemeThemeConfigurationArgs]</span> = None<span class="p">,</span>
+          <span class="nx">configuration</span><span class="p">:</span> <span class="nx">Optional[ThemeConfigurationArgs]</span> = None<span class="p">,</span>
           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">permissions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ThemeResourcePermissionArgs]]</span> = None<span class="p">,</span>
           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[ThemeTagArgs]]</span> = None<span class="p">,</span>
@@ -197,7 +197,7 @@ The Theme resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#themethemeconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Theme<wbr>Theme<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#themeconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Theme<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -273,7 +273,7 @@ The Theme resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#themethemeconfiguration">Theme<wbr>Theme<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#themeconfiguration">Theme<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -349,7 +349,7 @@ The Theme resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#themethemeconfiguration">Theme<wbr>Theme<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#themeconfiguration">Theme<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -425,7 +425,7 @@ The Theme resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#themethemeconfiguration">Theme<wbr>Theme<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#themeconfiguration">Theme<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -513,7 +513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#themethemetype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Theme<wbr>Theme<wbr>Type</a></span>
+        <span class="property-type"><a href="#themetype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Theme<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -521,7 +521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#themethemeversion">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Outputs.<wbr>Theme<wbr>Theme<wbr>Version</a></span>
+        <span class="property-type"><a href="#themeversion">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Outputs.<wbr>Theme<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -565,7 +565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#themethemetype">Theme<wbr>Theme<wbr>Type</a></span>
+        <span class="property-type"><a href="#themetype">Theme<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -573,7 +573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#themethemeversion">Theme<wbr>Theme<wbr>Version</a></span>
+        <span class="property-type"><a href="#themeversion">Theme<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -617,7 +617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#themethemetype">Theme<wbr>Theme<wbr>Type</a></span>
+        <span class="property-type"><a href="#themetype">Theme<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -625,7 +625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#themethemeversion">Theme<wbr>Theme<wbr>Version</a></span>
+        <span class="property-type"><a href="#themeversion">Theme<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -669,7 +669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#themethemetype">Theme<wbr>Theme<wbr>Type</a></span>
+        <span class="property-type"><a href="#themetype">Theme<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -677,7 +677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#themethemeversion">Theme<wbr>Theme<wbr>Version</a></span>
+        <span class="property-type"><a href="#themeversion">Theme<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -740,6 +740,152 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<p>The option to enable display of borders for visuals.</p>{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="themeconfiguration">Theme<wbr>Configuration</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="datacolorpalette_csharp">
+<a href="#datacolorpalette_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Color<wbr>Palette</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#themedatacolorpalette">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Theme<wbr>Data<wbr>Color<wbr>Palette</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sheet_csharp">
+<a href="#sheet_csharp" style="color: inherit; text-decoration: inherit;">Sheet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#themesheetstyle">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Theme<wbr>Sheet<wbr>Style</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="typography_csharp">
+<a href="#typography_csharp" style="color: inherit; text-decoration: inherit;">Typography</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#themetypography">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Theme<wbr>Typography</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="uicolorpalette_csharp">
+<a href="#uicolorpalette_csharp" style="color: inherit; text-decoration: inherit;">UIColor<wbr>Palette</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#themeuicolorpalette">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Theme<wbr>UIColor<wbr>Palette</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="datacolorpalette_go">
+<a href="#datacolorpalette_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Color<wbr>Palette</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#themedatacolorpalette">Theme<wbr>Data<wbr>Color<wbr>Palette</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sheet_go">
+<a href="#sheet_go" style="color: inherit; text-decoration: inherit;">Sheet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#themesheetstyle">Theme<wbr>Sheet<wbr>Style</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="typography_go">
+<a href="#typography_go" style="color: inherit; text-decoration: inherit;">Typography</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#themetypography">Theme<wbr>Typography</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="uicolorpalette_go">
+<a href="#uicolorpalette_go" style="color: inherit; text-decoration: inherit;">UIColor<wbr>Palette</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#themeuicolorpalette">Theme<wbr>UIColor<wbr>Palette</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="datacolorpalette_nodejs">
+<a href="#datacolorpalette_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Color<wbr>Palette</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#themedatacolorpalette">Theme<wbr>Data<wbr>Color<wbr>Palette</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sheet_nodejs">
+<a href="#sheet_nodejs" style="color: inherit; text-decoration: inherit;">sheet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#themesheetstyle">Theme<wbr>Sheet<wbr>Style</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="typography_nodejs">
+<a href="#typography_nodejs" style="color: inherit; text-decoration: inherit;">typography</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#themetypography">Theme<wbr>Typography</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="uicolorpalette_nodejs">
+<a href="#uicolorpalette_nodejs" style="color: inherit; text-decoration: inherit;">u<wbr>IColor<wbr>Palette</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#themeuicolorpalette">Theme<wbr>UIColor<wbr>Palette</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="data_color_palette_python">
+<a href="#data_color_palette_python" style="color: inherit; text-decoration: inherit;">data_<wbr>color_<wbr>palette</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#themedatacolorpalette">Theme<wbr>Data<wbr>Color<wbr>Palette</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sheet_python">
+<a href="#sheet_python" style="color: inherit; text-decoration: inherit;">sheet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#themesheetstyle">Theme<wbr>Sheet<wbr>Style</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="typography_python">
+<a href="#typography_python" style="color: inherit; text-decoration: inherit;">typography</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#themetypography">Theme<wbr>Typography</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="u_i_color_palette_python">
+<a href="#u_i_color_palette_python" style="color: inherit; text-decoration: inherit;">u_<wbr>i_<wbr>color_<wbr>palette</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#themeuicolorpalette">Theme<wbr>UIColor<wbr>Palette</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="themedatacolorpalette">Theme<wbr>Data<wbr>Color<wbr>Palette</h4>
@@ -858,6 +1004,110 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}<p>The minimum and maximum hexadecimal codes that describe a color gradient. </p>{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="themeerror">Theme<wbr>Error</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="message_csharp">
+<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>The error message.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#themeerrortype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Theme<wbr>Error<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="message_go">
+<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>The error message.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#themeerrortype">Theme<wbr>Error<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="message_nodejs">
+<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>The error message.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#themeerrortype">Theme<wbr>Error<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="message_python">
+<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}<p>The error message.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#themeerrortype">Theme<wbr>Error<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="themeerrortype">Theme<wbr>Error<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Internal<wbr>Failure</dt>
+    <dd>INTERNAL_FAILURE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Theme<wbr>Error<wbr>Type<wbr>Internal<wbr>Failure</dt>
+    <dd>INTERNAL_FAILURE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Internal<wbr>Failure</dt>
+    <dd>INTERNAL_FAILURE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>INTERNAL_FAILURE</dt>
+    <dd>INTERNAL_FAILURE</dd></dl>
 {{% /choosable %}}
 
 <h4 id="themefont">Theme<wbr>Font</h4>
@@ -1362,564 +1612,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}<p>Tag value.</p>{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="themethemeconfiguration">Theme<wbr>Theme<wbr>Configuration</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="datacolorpalette_csharp">
-<a href="#datacolorpalette_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Color<wbr>Palette</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#themedatacolorpalette">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Theme<wbr>Data<wbr>Color<wbr>Palette</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sheet_csharp">
-<a href="#sheet_csharp" style="color: inherit; text-decoration: inherit;">Sheet</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#themesheetstyle">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Theme<wbr>Sheet<wbr>Style</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="typography_csharp">
-<a href="#typography_csharp" style="color: inherit; text-decoration: inherit;">Typography</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#themetypography">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Theme<wbr>Typography</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="uicolorpalette_csharp">
-<a href="#uicolorpalette_csharp" style="color: inherit; text-decoration: inherit;">UIColor<wbr>Palette</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#themeuicolorpalette">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Theme<wbr>UIColor<wbr>Palette</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="datacolorpalette_go">
-<a href="#datacolorpalette_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Color<wbr>Palette</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#themedatacolorpalette">Theme<wbr>Data<wbr>Color<wbr>Palette</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sheet_go">
-<a href="#sheet_go" style="color: inherit; text-decoration: inherit;">Sheet</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#themesheetstyle">Theme<wbr>Sheet<wbr>Style</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="typography_go">
-<a href="#typography_go" style="color: inherit; text-decoration: inherit;">Typography</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#themetypography">Theme<wbr>Typography</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="uicolorpalette_go">
-<a href="#uicolorpalette_go" style="color: inherit; text-decoration: inherit;">UIColor<wbr>Palette</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#themeuicolorpalette">Theme<wbr>UIColor<wbr>Palette</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="datacolorpalette_nodejs">
-<a href="#datacolorpalette_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Color<wbr>Palette</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#themedatacolorpalette">Theme<wbr>Data<wbr>Color<wbr>Palette</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sheet_nodejs">
-<a href="#sheet_nodejs" style="color: inherit; text-decoration: inherit;">sheet</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#themesheetstyle">Theme<wbr>Sheet<wbr>Style</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="typography_nodejs">
-<a href="#typography_nodejs" style="color: inherit; text-decoration: inherit;">typography</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#themetypography">Theme<wbr>Typography</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="uicolorpalette_nodejs">
-<a href="#uicolorpalette_nodejs" style="color: inherit; text-decoration: inherit;">u<wbr>IColor<wbr>Palette</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#themeuicolorpalette">Theme<wbr>UIColor<wbr>Palette</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="data_color_palette_python">
-<a href="#data_color_palette_python" style="color: inherit; text-decoration: inherit;">data_<wbr>color_<wbr>palette</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#themedatacolorpalette">Theme<wbr>Data<wbr>Color<wbr>Palette</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sheet_python">
-<a href="#sheet_python" style="color: inherit; text-decoration: inherit;">sheet</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#themesheetstyle">Theme<wbr>Sheet<wbr>Style</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="typography_python">
-<a href="#typography_python" style="color: inherit; text-decoration: inherit;">typography</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#themetypography">Theme<wbr>Typography</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="u_i_color_palette_python">
-<a href="#u_i_color_palette_python" style="color: inherit; text-decoration: inherit;">u_<wbr>i_<wbr>color_<wbr>palette</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#themeuicolorpalette">Theme<wbr>UIColor<wbr>Palette</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="themethemeerror">Theme<wbr>Theme<wbr>Error</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="message_csharp">
-<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>The error message.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#themethemeerrortype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Theme<wbr>Theme<wbr>Error<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="message_go">
-<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>The error message.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#themethemeerrortype">Theme<wbr>Theme<wbr>Error<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="message_nodejs">
-<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>The error message.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#themethemeerrortype">Theme<wbr>Theme<wbr>Error<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="message_python">
-<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}<p>The error message.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#themethemeerrortype">Theme<wbr>Theme<wbr>Error<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="themethemeerrortype">Theme<wbr>Theme<wbr>Error<wbr>Type</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Internal<wbr>Failure</dt>
-    <dd>INTERNAL_FAILURE</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Theme<wbr>Theme<wbr>Error<wbr>Type<wbr>Internal<wbr>Failure</dt>
-    <dd>INTERNAL_FAILURE</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Internal<wbr>Failure</dt>
-    <dd>INTERNAL_FAILURE</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>INTERNAL_FAILURE</dt>
-    <dd>INTERNAL_FAILURE</dd></dl>
-{{% /choosable %}}
-
-<h4 id="themethemetype">Theme<wbr>Theme<wbr>Type</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Quicksight</dt>
-    <dd>QUICKSIGHT</dd><dt>Custom</dt>
-    <dd>CUSTOM</dd><dt>All</dt>
-    <dd>ALL</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Theme<wbr>Theme<wbr>Type<wbr>Quicksight</dt>
-    <dd>QUICKSIGHT</dd><dt>Theme<wbr>Theme<wbr>Type<wbr>Custom</dt>
-    <dd>CUSTOM</dd><dt>Theme<wbr>Theme<wbr>Type<wbr>All</dt>
-    <dd>ALL</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Quicksight</dt>
-    <dd>QUICKSIGHT</dd><dt>Custom</dt>
-    <dd>CUSTOM</dd><dt>All</dt>
-    <dd>ALL</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>QUICKSIGHT</dt>
-    <dd>QUICKSIGHT</dd><dt>CUSTOM</dt>
-    <dd>CUSTOM</dd><dt>ALL</dt>
-    <dd>ALL</dd></dl>
-{{% /choosable %}}
-
-<h4 id="themethemeversion">Theme<wbr>Theme<wbr>Version</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="arn_csharp">
-<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>The Amazon Resource Name (ARN) of the resource.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="basethemeid_csharp">
-<a href="#basethemeid_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Theme<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>The Amazon QuickSight-defined ID of the theme that a custom theme inherits from. All
-            themes initially inherit from a default QuickSight theme.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="configuration_csharp">
-<a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#themethemeconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Theme<wbr>Theme<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="createdtime_csharp">
-<a href="#createdtime_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>The date and time that this theme version was created.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="description_csharp">
-<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>The description of the theme.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="errors_csharp">
-<a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#themethemeerror">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Theme<wbr>Theme<wbr>Error&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}<p>Errors associated with the theme.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="status_csharp">
-<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#themeresourcestatus">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Theme<wbr>Resource<wbr>Status</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="versionnumber_csharp">
-<a href="#versionnumber_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Number</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">double</span>
-    </dt>
-    <dd>{{% md %}}<p>The version number of the theme.</p>{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="arn_go">
-<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>The Amazon Resource Name (ARN) of the resource.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="basethemeid_go">
-<a href="#basethemeid_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Theme<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>The Amazon QuickSight-defined ID of the theme that a custom theme inherits from. All
-            themes initially inherit from a default QuickSight theme.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="configuration_go">
-<a href="#configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#themethemeconfiguration">Theme<wbr>Theme<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="createdtime_go">
-<a href="#createdtime_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>The date and time that this theme version was created.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="description_go">
-<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>The description of the theme.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="errors_go">
-<a href="#errors_go" style="color: inherit; text-decoration: inherit;">Errors</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#themethemeerror">[]Theme<wbr>Theme<wbr>Error</a></span>
-    </dt>
-    <dd>{{% md %}}<p>Errors associated with the theme.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="status_go">
-<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#themeresourcestatus">Theme<wbr>Resource<wbr>Status</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="versionnumber_go">
-<a href="#versionnumber_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Number</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float64</span>
-    </dt>
-    <dd>{{% md %}}<p>The version number of the theme.</p>{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="arn_nodejs">
-<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>The Amazon Resource Name (ARN) of the resource.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="basethemeid_nodejs">
-<a href="#basethemeid_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Theme<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>The Amazon QuickSight-defined ID of the theme that a custom theme inherits from. All
-            themes initially inherit from a default QuickSight theme.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="configuration_nodejs">
-<a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#themethemeconfiguration">Theme<wbr>Theme<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="createdtime_nodejs">
-<a href="#createdtime_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>The date and time that this theme version was created.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="description_nodejs">
-<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>The description of the theme.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="errors_nodejs">
-<a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#themethemeerror">Theme<wbr>Theme<wbr>Error[]</a></span>
-    </dt>
-    <dd>{{% md %}}<p>Errors associated with the theme.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="status_nodejs">
-<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#themeresourcestatus">Theme<wbr>Resource<wbr>Status</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="versionnumber_nodejs">
-<a href="#versionnumber_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Number</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}<p>The version number of the theme.</p>{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="arn_python">
-<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}<p>The Amazon Resource Name (ARN) of the resource.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="base_theme_id_python">
-<a href="#base_theme_id_python" style="color: inherit; text-decoration: inherit;">base_<wbr>theme_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}<p>The Amazon QuickSight-defined ID of the theme that a custom theme inherits from. All
-            themes initially inherit from a default QuickSight theme.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="configuration_python">
-<a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#themethemeconfiguration">Theme<wbr>Theme<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="created_time_python">
-<a href="#created_time_python" style="color: inherit; text-decoration: inherit;">created_<wbr>time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}<p>The date and time that this theme version was created.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="description_python">
-<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}<p>The description of the theme.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="errors_python">
-<a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#themethemeerror">Sequence[Theme<wbr>Theme<wbr>Error]</a></span>
-    </dt>
-    <dd>{{% md %}}<p>Errors associated with the theme.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="status_python">
-<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#themeresourcestatus">Theme<wbr>Resource<wbr>Status</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="version_number_python">
-<a href="#version_number_python" style="color: inherit; text-decoration: inherit;">version_<wbr>number</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}<p>The version number of the theme.</p>{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
 <h4 id="themetilelayoutstyle">Theme<wbr>Tile<wbr>Layout<wbr>Style</h4>
 
 {{% choosable language csharp %}}
@@ -2050,6 +1742,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#themeborderstyle">Theme<wbr>Border<wbr>Style</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="themetype">Theme<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Quicksight</dt>
+    <dd>QUICKSIGHT</dd><dt>Custom</dt>
+    <dd>CUSTOM</dd><dt>All</dt>
+    <dd>ALL</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Theme<wbr>Type<wbr>Quicksight</dt>
+    <dd>QUICKSIGHT</dd><dt>Theme<wbr>Type<wbr>Custom</dt>
+    <dd>CUSTOM</dd><dt>Theme<wbr>Type<wbr>All</dt>
+    <dd>ALL</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Quicksight</dt>
+    <dd>QUICKSIGHT</dd><dt>Custom</dt>
+    <dd>CUSTOM</dd><dt>All</dt>
+    <dd>ALL</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>QUICKSIGHT</dt>
+    <dd>QUICKSIGHT</dd><dt>CUSTOM</dt>
+    <dd>CUSTOM</dd><dt>ALL</dt>
+    <dd>ALL</dd></dl>
 {{% /choosable %}}
 
 <h4 id="themetypography">Theme<wbr>Typography</h4>
@@ -2670,6 +2392,284 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}<p>The foreground color that applies to any text or other elements that appear over the
             warning color.</p>{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="themeversion">Theme<wbr>Version</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>The Amazon Resource Name (ARN) of the resource.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="basethemeid_csharp">
+<a href="#basethemeid_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Theme<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>The Amazon QuickSight-defined ID of the theme that a custom theme inherits from. All
+            themes initially inherit from a default QuickSight theme.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="configuration_csharp">
+<a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#themeconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Theme<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdtime_csharp">
+<a href="#createdtime_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>The date and time that this theme version was created.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>The description of the theme.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="errors_csharp">
+<a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#themeerror">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Theme<wbr>Error&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}<p>Errors associated with the theme.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#themeresourcestatus">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Theme<wbr>Resource<wbr>Status</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="versionnumber_csharp">
+<a href="#versionnumber_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}<p>The version number of the theme.</p>{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>The Amazon Resource Name (ARN) of the resource.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="basethemeid_go">
+<a href="#basethemeid_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Theme<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>The Amazon QuickSight-defined ID of the theme that a custom theme inherits from. All
+            themes initially inherit from a default QuickSight theme.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="configuration_go">
+<a href="#configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#themeconfiguration">Theme<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdtime_go">
+<a href="#createdtime_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>The date and time that this theme version was created.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>The description of the theme.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="errors_go">
+<a href="#errors_go" style="color: inherit; text-decoration: inherit;">Errors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#themeerror">[]Theme<wbr>Error</a></span>
+    </dt>
+    <dd>{{% md %}}<p>Errors associated with the theme.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#themeresourcestatus">Theme<wbr>Resource<wbr>Status</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="versionnumber_go">
+<a href="#versionnumber_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}<p>The version number of the theme.</p>{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>The Amazon Resource Name (ARN) of the resource.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="basethemeid_nodejs">
+<a href="#basethemeid_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Theme<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>The Amazon QuickSight-defined ID of the theme that a custom theme inherits from. All
+            themes initially inherit from a default QuickSight theme.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="configuration_nodejs">
+<a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#themeconfiguration">Theme<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdtime_nodejs">
+<a href="#createdtime_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>The date and time that this theme version was created.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>The description of the theme.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="errors_nodejs">
+<a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#themeerror">Theme<wbr>Error[]</a></span>
+    </dt>
+    <dd>{{% md %}}<p>Errors associated with the theme.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#themeresourcestatus">Theme<wbr>Resource<wbr>Status</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="versionnumber_nodejs">
+<a href="#versionnumber_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}<p>The version number of the theme.</p>{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}<p>The Amazon Resource Name (ARN) of the resource.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="base_theme_id_python">
+<a href="#base_theme_id_python" style="color: inherit; text-decoration: inherit;">base_<wbr>theme_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}<p>The Amazon QuickSight-defined ID of the theme that a custom theme inherits from. All
+            themes initially inherit from a default QuickSight theme.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="configuration_python">
+<a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#themeconfiguration">Theme<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="created_time_python">
+<a href="#created_time_python" style="color: inherit; text-decoration: inherit;">created_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}<p>The date and time that this theme version was created.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}<p>The description of the theme.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="errors_python">
+<a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#themeerror">Sequence[Theme<wbr>Error]</a></span>
+    </dt>
+    <dd>{{% md %}}<p>Errors associated with the theme.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#themeresourcestatus">Theme<wbr>Resource<wbr>Status</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_number_python">
+<a href="#version_number_python" style="color: inherit; text-decoration: inherit;">version_<wbr>number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}<p>The version number of the theme.</p>{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

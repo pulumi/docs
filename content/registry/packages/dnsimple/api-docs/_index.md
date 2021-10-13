@@ -16,9 +16,9 @@ A Pulumi package for creating and managing dnsimple cloud resources.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="emailforward" title="EmailForward"><span class="symbol resource"></span>EmailForward</a></li>
-    <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
-    <li><a href="record" title="Record"><span class="symbol resource"></span>Record</a></li>
+    <li><a href="emailforward" title="EmailForward"><span class="api-symbol api-symbol--resource"></span>EmailForward</a></li>
+    <li><a href="provider" title="Provider"><span class="api-symbol api-symbol--resource"></span>Provider</a></li>
+    <li><a href="record" title="Record"><span class="api-symbol api-symbol--resource"></span>Record</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

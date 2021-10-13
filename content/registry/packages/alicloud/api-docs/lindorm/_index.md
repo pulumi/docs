@@ -13,12 +13,12 @@ Explore the resources and functions of the alicloud.lindorm module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
+    <li><a href="instance" title="Instance"><span class="api-symbol api-symbol--resource"></span>Instance</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getinstances" title="GetInstances"><span class="symbol function"></span>GetInstances</a></li>
+    <li><a href="getinstances" title="GetInstances"><span class="api-symbol api-symbol--function"></span>GetInstances</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

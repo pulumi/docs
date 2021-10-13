@@ -29,7 +29,7 @@ Resource Type definition for AWS::CloudFront::OriginRequestPolicy
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">OriginRequestPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                        <span class="nx">origin_request_policy_config</span><span class="p">:</span> <span class="nx">Optional[OriginRequestPolicyOriginRequestPolicyConfigArgs]</span> = None<span class="p">)</span>
+                        <span class="nx">origin_request_policy_config</span><span class="p">:</span> <span class="nx">Optional[OriginRequestPolicyConfigArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">OriginRequestPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OriginRequestPolicyArgs</a></span><span class="p">,</span>
@@ -163,7 +163,7 @@ The OriginRequestPolicy resource accepts the following [input]({{< relref "/docs
 <a href="#originrequestpolicyconfig_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Request<wbr>Policy<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#originrequestpolicyoriginrequestpolicyconfig">Pulumi.<wbr>Aws<wbr>Native.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Origin<wbr>Request<wbr>Policy<wbr>Origin<wbr>Request<wbr>Policy<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#originrequestpolicyconfig">Pulumi.<wbr>Aws<wbr>Native.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Origin<wbr>Request<wbr>Policy<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -175,7 +175,7 @@ The OriginRequestPolicy resource accepts the following [input]({{< relref "/docs
 <a href="#originrequestpolicyconfig_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Request<wbr>Policy<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#originrequestpolicyoriginrequestpolicyconfig">Origin<wbr>Request<wbr>Policy<wbr>Origin<wbr>Request<wbr>Policy<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#originrequestpolicyconfig">Origin<wbr>Request<wbr>Policy<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -187,7 +187,7 @@ The OriginRequestPolicy resource accepts the following [input]({{< relref "/docs
 <a href="#originrequestpolicyconfig_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Request<wbr>Policy<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#originrequestpolicyoriginrequestpolicyconfig">Origin<wbr>Request<wbr>Policy<wbr>Origin<wbr>Request<wbr>Policy<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#originrequestpolicyconfig">Origin<wbr>Request<wbr>Policy<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -199,7 +199,7 @@ The OriginRequestPolicy resource accepts the following [input]({{< relref "/docs
 <a href="#origin_request_policy_config_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>request_<wbr>policy_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#originrequestpolicyoriginrequestpolicyconfig">Origin<wbr>Request<wbr>Policy<wbr>Origin<wbr>Request<wbr>Policy<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#originrequestpolicyconfig">Origin<wbr>Request<wbr>Policy<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -301,171 +301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="originrequestpolicycookiesconfig">Origin<wbr>Request<wbr>Policy<wbr>Cookies<wbr>Config</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="cookiebehavior_csharp">
-<a href="#cookiebehavior_csharp" style="color: inherit; text-decoration: inherit;">Cookie<wbr>Behavior</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="cookies_csharp">
-<a href="#cookies_csharp" style="color: inherit; text-decoration: inherit;">Cookies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="cookiebehavior_go">
-<a href="#cookiebehavior_go" style="color: inherit; text-decoration: inherit;">Cookie<wbr>Behavior</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="cookies_go">
-<a href="#cookies_go" style="color: inherit; text-decoration: inherit;">Cookies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="cookiebehavior_nodejs">
-<a href="#cookiebehavior_nodejs" style="color: inherit; text-decoration: inherit;">cookie<wbr>Behavior</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="cookies_nodejs">
-<a href="#cookies_nodejs" style="color: inherit; text-decoration: inherit;">cookies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="cookie_behavior_python">
-<a href="#cookie_behavior_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>behavior</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="cookies_python">
-<a href="#cookies_python" style="color: inherit; text-decoration: inherit;">cookies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="originrequestpolicyheadersconfig">Origin<wbr>Request<wbr>Policy<wbr>Headers<wbr>Config</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="headerbehavior_csharp">
-<a href="#headerbehavior_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Behavior</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="headers_csharp">
-<a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="headerbehavior_go">
-<a href="#headerbehavior_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Behavior</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="headers_go">
-<a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="headerbehavior_nodejs">
-<a href="#headerbehavior_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Behavior</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="headers_nodejs">
-<a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="header_behavior_python">
-<a href="#header_behavior_python" style="color: inherit; text-decoration: inherit;">header_<wbr>behavior</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="headers_python">
-<a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="originrequestpolicyoriginrequestpolicyconfig">Origin<wbr>Request<wbr>Policy<wbr>Origin<wbr>Request<wbr>Policy<wbr>Config</h4>
+<h4 id="originrequestpolicyconfig">Origin<wbr>Request<wbr>Policy<wbr>Config</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
@@ -639,6 +475,170 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="originrequestpolicycookiesconfig">Origin<wbr>Request<wbr>Policy<wbr>Cookies<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cookiebehavior_csharp">
+<a href="#cookiebehavior_csharp" style="color: inherit; text-decoration: inherit;">Cookie<wbr>Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cookies_csharp">
+<a href="#cookies_csharp" style="color: inherit; text-decoration: inherit;">Cookies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cookiebehavior_go">
+<a href="#cookiebehavior_go" style="color: inherit; text-decoration: inherit;">Cookie<wbr>Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cookies_go">
+<a href="#cookies_go" style="color: inherit; text-decoration: inherit;">Cookies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cookiebehavior_nodejs">
+<a href="#cookiebehavior_nodejs" style="color: inherit; text-decoration: inherit;">cookie<wbr>Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cookies_nodejs">
+<a href="#cookies_nodejs" style="color: inherit; text-decoration: inherit;">cookies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cookie_behavior_python">
+<a href="#cookie_behavior_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cookies_python">
+<a href="#cookies_python" style="color: inherit; text-decoration: inherit;">cookies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="originrequestpolicyheadersconfig">Origin<wbr>Request<wbr>Policy<wbr>Headers<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="headerbehavior_csharp">
+<a href="#headerbehavior_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="headers_csharp">
+<a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="headerbehavior_go">
+<a href="#headerbehavior_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="headers_go">
+<a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="headerbehavior_nodejs">
+<a href="#headerbehavior_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="headers_nodejs">
+<a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="header_behavior_python">
+<a href="#header_behavior_python" style="color: inherit; text-decoration: inherit;">header_<wbr>behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="headers_python">
+<a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

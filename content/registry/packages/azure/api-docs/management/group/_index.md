@@ -314,7 +314,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A friendly name for this Management Group. If not specified, this'll be the same as the `name`.
+    <dd>{{% md %}}A friendly name for this Management Group. If not specified, this will be the same as the `name`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="groupid_csharp">
@@ -363,7 +363,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A friendly name for this Management Group. If not specified, this'll be the same as the `name`.
+    <dd>{{% md %}}A friendly name for this Management Group. If not specified, this will be the same as the `name`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="groupid_go">
@@ -412,7 +412,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A friendly name for this Management Group. If not specified, this'll be the same as the `name`.
+    <dd>{{% md %}}A friendly name for this Management Group. If not specified, this will be the same as the `name`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="groupid_nodejs">
@@ -461,7 +461,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A friendly name for this Management Group. If not specified, this'll be the same as the `name`.
+    <dd>{{% md %}}A friendly name for this Management Group. If not specified, this will be the same as the `name`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="group_id_python">
@@ -695,7 +695,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A friendly name for this Management Group. If not specified, this'll be the same as the `name`.
+    <dd>{{% md %}}A friendly name for this Management Group. If not specified, this will be the same as the `name`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_groupid_csharp">
@@ -744,7 +744,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A friendly name for this Management Group. If not specified, this'll be the same as the `name`.
+    <dd>{{% md %}}A friendly name for this Management Group. If not specified, this will be the same as the `name`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_groupid_go">
@@ -793,7 +793,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A friendly name for this Management Group. If not specified, this'll be the same as the `name`.
+    <dd>{{% md %}}A friendly name for this Management Group. If not specified, this will be the same as the `name`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_groupid_nodejs">
@@ -842,7 +842,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A friendly name for this Management Group. If not specified, this'll be the same as the `name`.
+    <dd>{{% md %}}A friendly name for this Management Group. If not specified, this will be the same as the `name`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_group_id_python">

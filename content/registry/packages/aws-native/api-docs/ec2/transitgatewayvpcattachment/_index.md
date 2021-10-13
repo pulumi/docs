@@ -30,7 +30,7 @@ Resource Type definition for AWS::EC2::TransitGatewayVpcAttachment
 <span class="k">def </span><span class="nx">TransitGatewayVpcAttachment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                                 <span class="nx">add_subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
-                                <span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">,</span>
+                                <span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[OptionsPropertiesArgs]</span> = None<span class="p">,</span>
                                 <span class="nx">remove_subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                                 <span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                                 <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[TransitGatewayVpcAttachmentTagArgs]]</span> = None<span class="p">,</span>
@@ -177,7 +177,7 @@ The TransitGatewayVpcAttachment resource accepts the following [input]({{< relre
 <a href="#options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">object</span>
+        <span class="property-type"><a href="#optionsproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Inputs.<wbr>Options<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The options for the transit gateway vpc attachment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -237,7 +237,7 @@ The TransitGatewayVpcAttachment resource accepts the following [input]({{< relre
 <a href="#options_go" style="color: inherit; text-decoration: inherit;">Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#optionsproperties">Options<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The options for the transit gateway vpc attachment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -297,7 +297,7 @@ The TransitGatewayVpcAttachment resource accepts the following [input]({{< relre
 <a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">any</span>
+        <span class="property-type"><a href="#optionsproperties">Options<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The options for the transit gateway vpc attachment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -357,7 +357,7 @@ The TransitGatewayVpcAttachment resource accepts the following [input]({{< relre
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#optionsproperties">Options<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The options for the transit gateway vpc attachment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -466,6 +466,120 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="optionsproperties">Options<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="appliancemodesupport_csharp">
+<a href="#appliancemodesupport_csharp" style="color: inherit; text-decoration: inherit;">Appliance<wbr>Mode<wbr>Support</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to enable Ipv6 Support for Vpc Attachment. Valid Values: enable | disable{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnssupport_csharp">
+<a href="#dnssupport_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Support</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to enable DNS Support for Vpc Attachment. Valid Values: enable | disable{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipv6support_csharp">
+<a href="#ipv6support_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Support</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to enable Ipv6 Support for Vpc Attachment. Valid Values: enable | disable{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="appliancemodesupport_go">
+<a href="#appliancemodesupport_go" style="color: inherit; text-decoration: inherit;">Appliance<wbr>Mode<wbr>Support</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to enable Ipv6 Support for Vpc Attachment. Valid Values: enable | disable{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnssupport_go">
+<a href="#dnssupport_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Support</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to enable DNS Support for Vpc Attachment. Valid Values: enable | disable{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipv6support_go">
+<a href="#ipv6support_go" style="color: inherit; text-decoration: inherit;">Ipv6Support</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to enable Ipv6 Support for Vpc Attachment. Valid Values: enable | disable{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="appliancemodesupport_nodejs">
+<a href="#appliancemodesupport_nodejs" style="color: inherit; text-decoration: inherit;">appliance<wbr>Mode<wbr>Support</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to enable Ipv6 Support for Vpc Attachment. Valid Values: enable | disable{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnssupport_nodejs">
+<a href="#dnssupport_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Support</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to enable DNS Support for Vpc Attachment. Valid Values: enable | disable{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipv6support_nodejs">
+<a href="#ipv6support_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Support</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to enable Ipv6 Support for Vpc Attachment. Valid Values: enable | disable{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="appliance_mode_support_python">
+<a href="#appliance_mode_support_python" style="color: inherit; text-decoration: inherit;">appliance_<wbr>mode_<wbr>support</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to enable Ipv6 Support for Vpc Attachment. Valid Values: enable | disable{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dns_support_python">
+<a href="#dns_support_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>support</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to enable DNS Support for Vpc Attachment. Valid Values: enable | disable{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipv6_support_python">
+<a href="#ipv6_support_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>support</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to enable Ipv6 Support for Vpc Attachment. Valid Values: enable | disable{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="transitgatewayvpcattachmenttag">Transit<wbr>Gateway<wbr>Vpc<wbr>Attachment<wbr>Tag</h4>
 

@@ -13,12 +13,12 @@ Explore the resources and functions of the google-native.composer/v1beta1 module
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="environment" title="Environment"><span class="symbol resource"></span>Environment</a></li>
+    <li><a href="environment" title="Environment"><span class="api-symbol api-symbol--resource"></span>Environment</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getenvironment" title="GetEnvironment"><span class="symbol function"></span>GetEnvironment</a></li>
+    <li><a href="getenvironment" title="GetEnvironment"><span class="api-symbol api-symbol--function"></span>GetEnvironment</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -28,6 +28,6 @@ Explore the resources and functions of the google-native.composer/v1beta1 module
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.0</dd>
+	<dd>0.8.0</dd>
 </dl>
 

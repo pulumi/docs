@@ -13,7 +13,7 @@ Explore the resources and functions of the okta.inline module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="hook" title="Hook"><span class="symbol resource"></span>Hook</a></li>
+    <li><a href="hook" title="Hook"><span class="api-symbol api-symbol--resource"></span>Hook</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

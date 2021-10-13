@@ -13,16 +13,16 @@ Explore the resources and functions of the azure-native.solutions module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="application" title="Application"><span class="symbol resource"></span>Application</a></li>
-    <li><a href="applicationdefinition" title="ApplicationDefinition"><span class="symbol resource"></span>ApplicationDefinition</a></li>
-    <li><a href="jitrequest" title="JitRequest"><span class="symbol resource"></span>JitRequest</a></li>
+    <li><a href="application" title="Application"><span class="api-symbol api-symbol--resource"></span>Application</a></li>
+    <li><a href="applicationdefinition" title="ApplicationDefinition"><span class="api-symbol api-symbol--resource"></span>ApplicationDefinition</a></li>
+    <li><a href="jitrequest" title="JitRequest"><span class="api-symbol api-symbol--resource"></span>JitRequest</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getapplication" title="GetApplication"><span class="symbol function"></span>GetApplication</a></li>
-    <li><a href="getapplicationdefinition" title="GetApplicationDefinition"><span class="symbol function"></span>GetApplicationDefinition</a></li>
-    <li><a href="getjitrequest" title="GetJitRequest"><span class="symbol function"></span>GetJitRequest</a></li>
+    <li><a href="getapplication" title="GetApplication"><span class="api-symbol api-symbol--function"></span>GetApplication</a></li>
+    <li><a href="getapplicationdefinition" title="GetApplicationDefinition"><span class="api-symbol api-symbol--function"></span>GetApplicationDefinition</a></li>
+    <li><a href="getjitrequest" title="GetJitRequest"><span class="api-symbol api-symbol--function"></span>GetJitRequest</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -32,6 +32,6 @@ Explore the resources and functions of the azure-native.solutions module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.36.0</dd>
+	<dd>1.37.0</dd>
 </dl>
 

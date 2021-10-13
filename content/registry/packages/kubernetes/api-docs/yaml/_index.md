@@ -13,8 +13,8 @@ Explore the resources and functions of the kubernetes.yaml module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="configfile" title="ConfigFile"><span class="symbol resource"></span>ConfigFile</a></li>
-    <li><a href="configgroup" title="ConfigGroup"><span class="symbol resource"></span>ConfigGroup</a></li>
+    <li><a href="configfile" title="ConfigFile"><span class="api-symbol api-symbol--resource"></span>ConfigFile</a></li>
+    <li><a href="configgroup" title="ConfigGroup"><span class="api-symbol api-symbol--resource"></span>ConfigGroup</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -24,6 +24,6 @@ Explore the resources and functions of the kubernetes.yaml module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>3.8.0</dd>
+	<dd>3.8.1</dd>
 </dl>
 

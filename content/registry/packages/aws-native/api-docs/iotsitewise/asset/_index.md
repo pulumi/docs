@@ -29,10 +29,10 @@ Resource schema for AWS::IoTSiteWise::Asset
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Asset</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-          <span class="nx">asset_hierarchies</span><span class="p">:</span> <span class="nx">Optional[Sequence[AssetAssetHierarchyArgs]]</span> = None<span class="p">,</span>
+          <span class="nx">asset_hierarchies</span><span class="p">:</span> <span class="nx">Optional[Sequence[AssetHierarchyArgs]]</span> = None<span class="p">,</span>
           <span class="nx">asset_model_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">asset_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-          <span class="nx">asset_properties</span><span class="p">:</span> <span class="nx">Optional[Sequence[AssetAssetPropertyArgs]]</span> = None<span class="p">,</span>
+          <span class="nx">asset_properties</span><span class="p">:</span> <span class="nx">Optional[Sequence[AssetPropertyArgs]]</span> = None<span class="p">,</span>
           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[AssetTagArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Asset</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -183,7 +183,7 @@ The Asset resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#assethierarchies_csharp" style="color: inherit; text-decoration: inherit;">Asset<wbr>Hierarchies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetassethierarchy">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TSite<wbr>Wise.<wbr>Inputs.<wbr>Asset<wbr>Asset<wbr>Hierarchy<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#assethierarchy">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TSite<wbr>Wise.<wbr>Inputs.<wbr>Asset<wbr>Hierarchy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -191,7 +191,7 @@ The Asset resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#assetproperties_csharp" style="color: inherit; text-decoration: inherit;">Asset<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetassetproperty">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TSite<wbr>Wise.<wbr>Inputs.<wbr>Asset<wbr>Asset<wbr>Property<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#assetproperty">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TSite<wbr>Wise.<wbr>Inputs.<wbr>Asset<wbr>Property<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -227,7 +227,7 @@ The Asset resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#assethierarchies_go" style="color: inherit; text-decoration: inherit;">Asset<wbr>Hierarchies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetassethierarchy">[]Asset<wbr>Asset<wbr>Hierarchy<wbr>Args</a></span>
+        <span class="property-type"><a href="#assethierarchy">[]Asset<wbr>Hierarchy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -235,7 +235,7 @@ The Asset resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#assetproperties_go" style="color: inherit; text-decoration: inherit;">Asset<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetassetproperty">[]Asset<wbr>Asset<wbr>Property<wbr>Args</a></span>
+        <span class="property-type"><a href="#assetproperty">[]Asset<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -271,7 +271,7 @@ The Asset resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#assethierarchies_nodejs" style="color: inherit; text-decoration: inherit;">asset<wbr>Hierarchies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetassethierarchy">Asset<wbr>Asset<wbr>Hierarchy<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#assethierarchy">Asset<wbr>Hierarchy<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -279,7 +279,7 @@ The Asset resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#assetproperties_nodejs" style="color: inherit; text-decoration: inherit;">asset<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetassetproperty">Asset<wbr>Asset<wbr>Property<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#assetproperty">Asset<wbr>Property<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -315,7 +315,7 @@ The Asset resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#asset_hierarchies_python" style="color: inherit; text-decoration: inherit;">asset_<wbr>hierarchies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetassethierarchy">Sequence[Asset<wbr>Asset<wbr>Hierarchy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#assethierarchy">Sequence[Asset<wbr>Hierarchy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -323,7 +323,7 @@ The Asset resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#asset_properties_python" style="color: inherit; text-decoration: inherit;">asset_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetassetproperty">Sequence[Asset<wbr>Asset<wbr>Property<wbr>Args]</a></span>
+        <span class="property-type"><a href="#assetproperty">Sequence[Asset<wbr>Property<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -465,7 +465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="assetassethierarchy">Asset<wbr>Asset<wbr>Hierarchy</h4>
+<h4 id="assethierarchy">Asset<wbr>Hierarchy</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
@@ -547,7 +547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The LogicalID of a hierarchy in the parent asset's model.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="assetassetproperty">Asset<wbr>Asset<wbr>Property</h4>
+<h4 id="assetproperty">Asset<wbr>Property</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
@@ -572,7 +572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notificationstate_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetassetpropertynotificationstate">Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TSite<wbr>Wise.<wbr>Asset<wbr>Asset<wbr>Property<wbr>Notification<wbr>State</a></span>
+        <span class="property-type"><a href="#assetpropertynotificationstate">Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TSite<wbr>Wise.<wbr>Asset<wbr>Property<wbr>Notification<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The MQTT notification state (ENABLED or DISABLED) for this asset property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -600,7 +600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notificationstate_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetassetpropertynotificationstate">Asset<wbr>Asset<wbr>Property<wbr>Notification<wbr>State</a></span>
+        <span class="property-type"><a href="#assetpropertynotificationstate">Asset<wbr>Property<wbr>Notification<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The MQTT notification state (ENABLED or DISABLED) for this asset property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -628,7 +628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notificationstate_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetassetpropertynotificationstate">Asset<wbr>Asset<wbr>Property<wbr>Notification<wbr>State</a></span>
+        <span class="property-type"><a href="#assetpropertynotificationstate">Asset<wbr>Property<wbr>Notification<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The MQTT notification state (ENABLED or DISABLED) for this asset property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -656,12 +656,12 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notification_state_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetassetpropertynotificationstate">Asset<wbr>Asset<wbr>Property<wbr>Notification<wbr>State</a></span>
+        <span class="property-type"><a href="#assetpropertynotificationstate">Asset<wbr>Property<wbr>Notification<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The MQTT notification state (ENABLED or DISABLED) for this asset property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="assetassetpropertynotificationstate">Asset<wbr>Asset<wbr>Property<wbr>Notification<wbr>State</h4>
+<h4 id="assetpropertynotificationstate">Asset<wbr>Property<wbr>Notification<wbr>State</h4>
 
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>Enabled</dt>
@@ -670,8 +670,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular"><dt>Asset<wbr>Asset<wbr>Property<wbr>Notification<wbr>State<wbr>Enabled</dt>
-    <dd>ENABLED</dd><dt>Asset<wbr>Asset<wbr>Property<wbr>Notification<wbr>State<wbr>Disabled</dt>
+<dl class="tabular"><dt>Asset<wbr>Property<wbr>Notification<wbr>State<wbr>Enabled</dt>
+    <dd>ENABLED</dd><dt>Asset<wbr>Property<wbr>Notification<wbr>State<wbr>Disabled</dt>
     <dd>DISABLED</dd></dl>
 {{% /choosable %}}
 

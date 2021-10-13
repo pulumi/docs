@@ -13,8 +13,8 @@ Explore the resources and functions of the aws-native.fms module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="notificationchannel" title="NotificationChannel"><span class="symbol resource"></span>NotificationChannel</a></li>
-    <li><a href="policy" title="Policy"><span class="symbol resource"></span>Policy</a></li>
+    <li><a href="notificationchannel" title="NotificationChannel"><span class="api-symbol api-symbol--resource"></span>NotificationChannel</a></li>
+    <li><a href="policy" title="Policy"><span class="api-symbol api-symbol--resource"></span>Policy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -24,6 +24,6 @@ Explore the resources and functions of the aws-native.fms module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.0</dd>
 </dl>
 

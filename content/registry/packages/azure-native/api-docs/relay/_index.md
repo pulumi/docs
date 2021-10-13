@@ -13,27 +13,27 @@ Explore the resources and functions of the azure-native.relay module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="hybridconnection" title="HybridConnection"><span class="symbol resource"></span>HybridConnection</a></li>
-    <li><a href="hybridconnectionauthorizationrule" title="HybridConnectionAuthorizationRule"><span class="symbol resource"></span>HybridConnectionAuthorizationRule</a></li>
-    <li><a href="namespace" title="Namespace"><span class="symbol resource"></span>Namespace</a></li>
-    <li><a href="namespaceauthorizationrule" title="NamespaceAuthorizationRule"><span class="symbol resource"></span>NamespaceAuthorizationRule</a></li>
-    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
-    <li><a href="wcfrelay" title="WCFRelay"><span class="symbol resource"></span>WCFRelay</a></li>
-    <li><a href="wcfrelayauthorizationrule" title="WCFRelayAuthorizationRule"><span class="symbol resource"></span>WCFRelayAuthorizationRule</a></li>
+    <li><a href="hybridconnection" title="HybridConnection"><span class="api-symbol api-symbol--resource"></span>HybridConnection</a></li>
+    <li><a href="hybridconnectionauthorizationrule" title="HybridConnectionAuthorizationRule"><span class="api-symbol api-symbol--resource"></span>HybridConnectionAuthorizationRule</a></li>
+    <li><a href="namespace" title="Namespace"><span class="api-symbol api-symbol--resource"></span>Namespace</a></li>
+    <li><a href="namespaceauthorizationrule" title="NamespaceAuthorizationRule"><span class="api-symbol api-symbol--resource"></span>NamespaceAuthorizationRule</a></li>
+    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="api-symbol api-symbol--resource"></span>PrivateEndpointConnection</a></li>
+    <li><a href="wcfrelay" title="WCFRelay"><span class="api-symbol api-symbol--resource"></span>WCFRelay</a></li>
+    <li><a href="wcfrelayauthorizationrule" title="WCFRelayAuthorizationRule"><span class="api-symbol api-symbol--resource"></span>WCFRelayAuthorizationRule</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="gethybridconnection" title="GetHybridConnection"><span class="symbol function"></span>GetHybridConnection</a></li>
-    <li><a href="gethybridconnectionauthorizationrule" title="GetHybridConnectionAuthorizationRule"><span class="symbol function"></span>GetHybridConnectionAuthorizationRule</a></li>
-    <li><a href="getnamespace" title="GetNamespace"><span class="symbol function"></span>GetNamespace</a></li>
-    <li><a href="getnamespaceauthorizationrule" title="GetNamespaceAuthorizationRule"><span class="symbol function"></span>GetNamespaceAuthorizationRule</a></li>
-    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
-    <li><a href="getwcfrelay" title="GetWCFRelay"><span class="symbol function"></span>GetWCFRelay</a></li>
-    <li><a href="getwcfrelayauthorizationrule" title="GetWCFRelayAuthorizationRule"><span class="symbol function"></span>GetWCFRelayAuthorizationRule</a></li>
-    <li><a href="listhybridconnectionkeys" title="ListHybridConnectionKeys"><span class="symbol function"></span>ListHybridConnectionKeys</a></li>
-    <li><a href="listnamespacekeys" title="ListNamespaceKeys"><span class="symbol function"></span>ListNamespaceKeys</a></li>
-    <li><a href="listwcfrelaykeys" title="ListWCFRelayKeys"><span class="symbol function"></span>ListWCFRelayKeys</a></li>
+    <li><a href="gethybridconnection" title="GetHybridConnection"><span class="api-symbol api-symbol--function"></span>GetHybridConnection</a></li>
+    <li><a href="gethybridconnectionauthorizationrule" title="GetHybridConnectionAuthorizationRule"><span class="api-symbol api-symbol--function"></span>GetHybridConnectionAuthorizationRule</a></li>
+    <li><a href="getnamespace" title="GetNamespace"><span class="api-symbol api-symbol--function"></span>GetNamespace</a></li>
+    <li><a href="getnamespaceauthorizationrule" title="GetNamespaceAuthorizationRule"><span class="api-symbol api-symbol--function"></span>GetNamespaceAuthorizationRule</a></li>
+    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="api-symbol api-symbol--function"></span>GetPrivateEndpointConnection</a></li>
+    <li><a href="getwcfrelay" title="GetWCFRelay"><span class="api-symbol api-symbol--function"></span>GetWCFRelay</a></li>
+    <li><a href="getwcfrelayauthorizationrule" title="GetWCFRelayAuthorizationRule"><span class="api-symbol api-symbol--function"></span>GetWCFRelayAuthorizationRule</a></li>
+    <li><a href="listhybridconnectionkeys" title="ListHybridConnectionKeys"><span class="api-symbol api-symbol--function"></span>ListHybridConnectionKeys</a></li>
+    <li><a href="listnamespacekeys" title="ListNamespaceKeys"><span class="api-symbol api-symbol--function"></span>ListNamespaceKeys</a></li>
+    <li><a href="listwcfrelaykeys" title="ListWCFRelayKeys"><span class="api-symbol api-symbol--function"></span>ListWCFRelayKeys</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -43,6 +43,6 @@ Explore the resources and functions of the azure-native.relay module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.36.0</dd>
+	<dd>1.37.0</dd>
 </dl>
 

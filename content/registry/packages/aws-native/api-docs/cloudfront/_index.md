@@ -13,14 +13,14 @@ Explore the resources and functions of the aws-native.cloudfront module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="cachepolicy" title="CachePolicy"><span class="symbol resource"></span>CachePolicy</a></li>
-    <li><a href="cloudfrontoriginaccessidentity" title="CloudFrontOriginAccessIdentity"><span class="symbol resource"></span>CloudFrontOriginAccessIdentity</a></li>
-    <li><a href="distribution" title="Distribution"><span class="symbol resource"></span>Distribution</a></li>
-    <li><a href="function" title="Function"><span class="symbol resource"></span>Function</a></li>
-    <li><a href="keygroup" title="KeyGroup"><span class="symbol resource"></span>KeyGroup</a></li>
-    <li><a href="originrequestpolicy" title="OriginRequestPolicy"><span class="symbol resource"></span>OriginRequestPolicy</a></li>
-    <li><a href="publickey" title="PublicKey"><span class="symbol resource"></span>PublicKey</a></li>
-    <li><a href="realtimelogconfig" title="RealtimeLogConfig"><span class="symbol resource"></span>RealtimeLogConfig</a></li>
+    <li><a href="cachepolicy" title="CachePolicy"><span class="api-symbol api-symbol--resource"></span>CachePolicy</a></li>
+    <li><a href="cloudfrontoriginaccessidentity" title="CloudFrontOriginAccessIdentity"><span class="api-symbol api-symbol--resource"></span>CloudFrontOriginAccessIdentity</a></li>
+    <li><a href="distribution" title="Distribution"><span class="api-symbol api-symbol--resource"></span>Distribution</a></li>
+    <li><a href="function" title="Function"><span class="api-symbol api-symbol--resource"></span>Function</a></li>
+    <li><a href="keygroup" title="KeyGroup"><span class="api-symbol api-symbol--resource"></span>KeyGroup</a></li>
+    <li><a href="originrequestpolicy" title="OriginRequestPolicy"><span class="api-symbol api-symbol--resource"></span>OriginRequestPolicy</a></li>
+    <li><a href="publickey" title="PublicKey"><span class="api-symbol api-symbol--resource"></span>PublicKey</a></li>
+    <li><a href="realtimelogconfig" title="RealtimeLogConfig"><span class="api-symbol api-symbol--resource"></span>RealtimeLogConfig</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -30,6 +30,6 @@ Explore the resources and functions of the aws-native.cloudfront module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.0</dd>
 </dl>
 

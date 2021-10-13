@@ -13,32 +13,32 @@ Explore the resources and functions of the azure.automation module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="account" title="Account"><span class="symbol resource"></span>Account</a></li>
-    <li><a href="boolvariable" title="BoolVariable"><span class="symbol resource"></span>BoolVariable</a></li>
-    <li><a href="certificate" title="Certificate"><span class="symbol resource"></span>Certificate</a></li>
-    <li><a href="connection" title="Connection"><span class="symbol resource"></span>Connection</a></li>
-    <li><a href="connectioncertificate" title="ConnectionCertificate"><span class="symbol resource"></span>ConnectionCertificate</a></li>
-    <li><a href="connectionclassiccertificate" title="ConnectionClassicCertificate"><span class="symbol resource"></span>ConnectionClassicCertificate</a></li>
-    <li><a href="connectionserviceprincipal" title="ConnectionServicePrincipal"><span class="symbol resource"></span>ConnectionServicePrincipal</a></li>
-    <li><a href="credential" title="Credential"><span class="symbol resource"></span>Credential</a></li>
-    <li><a href="datetimevariable" title="DateTimeVariable"><span class="symbol resource"></span>DateTimeVariable</a></li>
-    <li><a href="dscconfiguration" title="DscConfiguration"><span class="symbol resource"></span>DscConfiguration</a></li>
-    <li><a href="dscnodeconfiguration" title="DscNodeConfiguration"><span class="symbol resource"></span>DscNodeConfiguration</a></li>
-    <li><a href="intvariable" title="IntVariable"><span class="symbol resource"></span>IntVariable</a></li>
-    <li><a href="jobschedule" title="JobSchedule"><span class="symbol resource"></span>JobSchedule</a></li>
-    <li><a href="module" title="Module"><span class="symbol resource"></span>Module</a></li>
-    <li><a href="runbook" title="RunBook"><span class="symbol resource"></span>RunBook</a></li>
-    <li><a href="schedule" title="Schedule"><span class="symbol resource"></span>Schedule</a></li>
-    <li><a href="stringvariable" title="StringVariable"><span class="symbol resource"></span>StringVariable</a></li>
+    <li><a href="account" title="Account"><span class="api-symbol api-symbol--resource"></span>Account</a></li>
+    <li><a href="boolvariable" title="BoolVariable"><span class="api-symbol api-symbol--resource"></span>BoolVariable</a></li>
+    <li><a href="certificate" title="Certificate"><span class="api-symbol api-symbol--resource"></span>Certificate</a></li>
+    <li><a href="connection" title="Connection"><span class="api-symbol api-symbol--resource"></span>Connection</a></li>
+    <li><a href="connectioncertificate" title="ConnectionCertificate"><span class="api-symbol api-symbol--resource"></span>ConnectionCertificate</a></li>
+    <li><a href="connectionclassiccertificate" title="ConnectionClassicCertificate"><span class="api-symbol api-symbol--resource"></span>ConnectionClassicCertificate</a></li>
+    <li><a href="connectionserviceprincipal" title="ConnectionServicePrincipal"><span class="api-symbol api-symbol--resource"></span>ConnectionServicePrincipal</a></li>
+    <li><a href="credential" title="Credential"><span class="api-symbol api-symbol--resource"></span>Credential</a></li>
+    <li><a href="datetimevariable" title="DateTimeVariable"><span class="api-symbol api-symbol--resource"></span>DateTimeVariable</a></li>
+    <li><a href="dscconfiguration" title="DscConfiguration"><span class="api-symbol api-symbol--resource"></span>DscConfiguration</a></li>
+    <li><a href="dscnodeconfiguration" title="DscNodeConfiguration"><span class="api-symbol api-symbol--resource"></span>DscNodeConfiguration</a></li>
+    <li><a href="intvariable" title="IntVariable"><span class="api-symbol api-symbol--resource"></span>IntVariable</a></li>
+    <li><a href="jobschedule" title="JobSchedule"><span class="api-symbol api-symbol--resource"></span>JobSchedule</a></li>
+    <li><a href="module" title="Module"><span class="api-symbol api-symbol--resource"></span>Module</a></li>
+    <li><a href="runbook" title="RunBook"><span class="api-symbol api-symbol--resource"></span>RunBook</a></li>
+    <li><a href="schedule" title="Schedule"><span class="api-symbol api-symbol--resource"></span>Schedule</a></li>
+    <li><a href="stringvariable" title="StringVariable"><span class="api-symbol api-symbol--resource"></span>StringVariable</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getaccount" title="GetAccount"><span class="symbol function"></span>GetAccount</a></li>
-    <li><a href="getboolvariable" title="GetBoolVariable"><span class="symbol function"></span>GetBoolVariable</a></li>
-    <li><a href="getdatetimevariable" title="GetDateTimeVariable"><span class="symbol function"></span>GetDateTimeVariable</a></li>
-    <li><a href="getintvariable" title="GetIntVariable"><span class="symbol function"></span>GetIntVariable</a></li>
-    <li><a href="getstringvariable" title="GetStringVariable"><span class="symbol function"></span>GetStringVariable</a></li>
+    <li><a href="getaccount" title="GetAccount"><span class="api-symbol api-symbol--function"></span>GetAccount</a></li>
+    <li><a href="getboolvariable" title="GetBoolVariable"><span class="api-symbol api-symbol--function"></span>GetBoolVariable</a></li>
+    <li><a href="getdatetimevariable" title="GetDateTimeVariable"><span class="api-symbol api-symbol--function"></span>GetDateTimeVariable</a></li>
+    <li><a href="getintvariable" title="GetIntVariable"><span class="api-symbol api-symbol--function"></span>GetIntVariable</a></li>
+    <li><a href="getstringvariable" title="GetStringVariable"><span class="api-symbol api-symbol--function"></span>GetStringVariable</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -50,6 +50,6 @@ Explore the resources and functions of the azure.automation module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.21.0</dd>
+	<dd>4.22.0</dd>
 </dl>
 

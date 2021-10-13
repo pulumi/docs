@@ -13,20 +13,20 @@ Explore the resources and functions of the azure-native.hybridcompute module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="machine" title="Machine"><span class="symbol resource"></span>Machine</a></li>
-    <li><a href="machineextension" title="MachineExtension"><span class="symbol resource"></span>MachineExtension</a></li>
-    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
-    <li><a href="privatelinkscope" title="PrivateLinkScope"><span class="symbol resource"></span>PrivateLinkScope</a></li>
-    <li><a href="privatelinkscopedresource" title="PrivateLinkScopedResource"><span class="symbol resource"></span>PrivateLinkScopedResource</a></li>
+    <li><a href="machine" title="Machine"><span class="api-symbol api-symbol--resource"></span>Machine</a></li>
+    <li><a href="machineextension" title="MachineExtension"><span class="api-symbol api-symbol--resource"></span>MachineExtension</a></li>
+    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="api-symbol api-symbol--resource"></span>PrivateEndpointConnection</a></li>
+    <li><a href="privatelinkscope" title="PrivateLinkScope"><span class="api-symbol api-symbol--resource"></span>PrivateLinkScope</a></li>
+    <li><a href="privatelinkscopedresource" title="PrivateLinkScopedResource"><span class="api-symbol api-symbol--resource"></span>PrivateLinkScopedResource</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getmachine" title="GetMachine"><span class="symbol function"></span>GetMachine</a></li>
-    <li><a href="getmachineextension" title="GetMachineExtension"><span class="symbol function"></span>GetMachineExtension</a></li>
-    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
-    <li><a href="getprivatelinkscope" title="GetPrivateLinkScope"><span class="symbol function"></span>GetPrivateLinkScope</a></li>
-    <li><a href="getprivatelinkscopedresource" title="GetPrivateLinkScopedResource"><span class="symbol function"></span>GetPrivateLinkScopedResource</a></li>
+    <li><a href="getmachine" title="GetMachine"><span class="api-symbol api-symbol--function"></span>GetMachine</a></li>
+    <li><a href="getmachineextension" title="GetMachineExtension"><span class="api-symbol api-symbol--function"></span>GetMachineExtension</a></li>
+    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="api-symbol api-symbol--function"></span>GetPrivateEndpointConnection</a></li>
+    <li><a href="getprivatelinkscope" title="GetPrivateLinkScope"><span class="api-symbol api-symbol--function"></span>GetPrivateLinkScope</a></li>
+    <li><a href="getprivatelinkscopedresource" title="GetPrivateLinkScopedResource"><span class="api-symbol api-symbol--function"></span>GetPrivateLinkScopedResource</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -36,6 +36,6 @@ Explore the resources and functions of the azure-native.hybridcompute module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.36.0</dd>
+	<dd>1.37.0</dd>
 </dl>
 

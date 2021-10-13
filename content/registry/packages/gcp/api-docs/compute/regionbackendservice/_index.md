@@ -1589,7 +1589,7 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}Type of session affinity to use. The default is NONE. Session affinity is
 not applicable if the protocol is UDP.
-Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, and `HTTP_COOKIE`.
+Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, `HTTP_COOKIE`, and `CLIENT_IP_NO_DESTINATION`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutsec_csharp">
@@ -1869,7 +1869,7 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}Type of session affinity to use. The default is NONE. Session affinity is
 not applicable if the protocol is UDP.
-Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, and `HTTP_COOKIE`.
+Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, `HTTP_COOKIE`, and `CLIENT_IP_NO_DESTINATION`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutsec_go">
@@ -2149,7 +2149,7 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}Type of session affinity to use. The default is NONE. Session affinity is
 not applicable if the protocol is UDP.
-Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, and `HTTP_COOKIE`.
+Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, `HTTP_COOKIE`, and `CLIENT_IP_NO_DESTINATION`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutsec_nodejs">
@@ -2429,7 +2429,7 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}Type of session affinity to use. The default is NONE. Session affinity is
 not applicable if the protocol is UDP.
-Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, and `HTTP_COOKIE`.
+Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, `HTTP_COOKIE`, and `CLIENT_IP_NO_DESTINATION`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_sec_python">
@@ -3050,7 +3050,7 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}Type of session affinity to use. The default is NONE. Session affinity is
 not applicable if the protocol is UDP.
-Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, and `HTTP_COOKIE`.
+Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, `HTTP_COOKIE`, and `CLIENT_IP_NO_DESTINATION`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeoutsec_csharp">
@@ -3357,7 +3357,7 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}Type of session affinity to use. The default is NONE. Session affinity is
 not applicable if the protocol is UDP.
-Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, and `HTTP_COOKIE`.
+Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, `HTTP_COOKIE`, and `CLIENT_IP_NO_DESTINATION`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeoutsec_go">
@@ -3664,7 +3664,7 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}Type of session affinity to use. The default is NONE. Session affinity is
 not applicable if the protocol is UDP.
-Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, and `HTTP_COOKIE`.
+Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, `HTTP_COOKIE`, and `CLIENT_IP_NO_DESTINATION`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeoutsec_nodejs">
@@ -3971,7 +3971,7 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}Type of session affinity to use. The default is NONE. Session affinity is
 not applicable if the protocol is UDP.
-Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, and `HTTP_COOKIE`.
+Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, `HTTP_COOKIE`, and `CLIENT_IP_NO_DESTINATION`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeout_sec_python">

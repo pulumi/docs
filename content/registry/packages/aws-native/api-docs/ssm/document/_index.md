@@ -926,10 +926,10 @@ END:VCALENDAR\\r
              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
              <span class="nx">attachments</span><span class="p">:</span> <span class="nx">Optional[Sequence[DocumentAttachmentsSourceArgs]]</span> = None<span class="p">,</span>
              <span class="nx">content</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">,</span>
-             <span class="nx">document_format</span><span class="p">:</span> <span class="nx">Optional[DocumentDocumentFormat]</span> = None<span class="p">,</span>
-             <span class="nx">document_type</span><span class="p">:</span> <span class="nx">Optional[DocumentDocumentType]</span> = None<span class="p">,</span>
+             <span class="nx">document_format</span><span class="p">:</span> <span class="nx">Optional[DocumentFormat]</span> = None<span class="p">,</span>
+             <span class="nx">document_type</span><span class="p">:</span> <span class="nx">Optional[DocumentType]</span> = None<span class="p">,</span>
              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">requires</span><span class="p">:</span> <span class="nx">Optional[Sequence[DocumentDocumentRequiresArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">requires</span><span class="p">:</span> <span class="nx">Optional[Sequence[DocumentRequiresArgs]]</span> = None<span class="p">,</span>
              <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[DocumentTagArgs]]</span> = None<span class="p">,</span>
              <span class="nx">target_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">version_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
@@ -1082,7 +1082,7 @@ The Document resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#documentformat_csharp" style="color: inherit; text-decoration: inherit;">Document<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentdocumentformat">Pulumi.<wbr>Aws<wbr>Native.<wbr>SSM.<wbr>Document<wbr>Document<wbr>Format</a></span>
+        <span class="property-type"><a href="#documentformat">Pulumi.<wbr>Aws<wbr>Native.<wbr>SSM.<wbr>Document<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Specify the document format for the request. The document format can be either JSON or YAML. JSON is the default format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1090,7 +1090,7 @@ The Document resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#documenttype_csharp" style="color: inherit; text-decoration: inherit;">Document<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentdocumenttype">Pulumi.<wbr>Aws<wbr>Native.<wbr>SSM.<wbr>Document<wbr>Document<wbr>Type</a></span>
+        <span class="property-type"><a href="#documenttype">Pulumi.<wbr>Aws<wbr>Native.<wbr>SSM.<wbr>Document<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of document to create.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1106,7 +1106,7 @@ The Document resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#requires_csharp" style="color: inherit; text-decoration: inherit;">Requires</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentdocumentrequires">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>SSM.<wbr>Inputs.<wbr>Document<wbr>Document<wbr>Requires<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#documentrequires">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>SSM.<wbr>Inputs.<wbr>Document<wbr>Requires<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of SSM documents required by a document. For example, an ApplicationConfiguration document requires an ApplicationConfigurationSchema document.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1158,7 +1158,7 @@ The Document resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#documentformat_go" style="color: inherit; text-decoration: inherit;">Document<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentdocumentformat">Document<wbr>Document<wbr>Format</a></span>
+        <span class="property-type"><a href="#documentformat">Document<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Specify the document format for the request. The document format can be either JSON or YAML. JSON is the default format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1166,7 +1166,7 @@ The Document resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#documenttype_go" style="color: inherit; text-decoration: inherit;">Document<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentdocumenttype">Document<wbr>Document<wbr>Type</a></span>
+        <span class="property-type"><a href="#documenttype">Document<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of document to create.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1182,7 +1182,7 @@ The Document resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#requires_go" style="color: inherit; text-decoration: inherit;">Requires</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentdocumentrequires">[]Document<wbr>Document<wbr>Requires<wbr>Args</a></span>
+        <span class="property-type"><a href="#documentrequires">[]Document<wbr>Requires<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of SSM documents required by a document. For example, an ApplicationConfiguration document requires an ApplicationConfigurationSchema document.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1234,7 +1234,7 @@ The Document resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#documentformat_nodejs" style="color: inherit; text-decoration: inherit;">document<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentdocumentformat">Document<wbr>Document<wbr>Format</a></span>
+        <span class="property-type"><a href="#documentformat">Document<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Specify the document format for the request. The document format can be either JSON or YAML. JSON is the default format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1242,7 +1242,7 @@ The Document resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#documenttype_nodejs" style="color: inherit; text-decoration: inherit;">document<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentdocumenttype">Document<wbr>Document<wbr>Type</a></span>
+        <span class="property-type"><a href="#documenttype">Document<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of document to create.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1258,7 +1258,7 @@ The Document resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#requires_nodejs" style="color: inherit; text-decoration: inherit;">requires</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentdocumentrequires">Document<wbr>Document<wbr>Requires<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#documentrequires">Document<wbr>Requires<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of SSM documents required by a document. For example, an ApplicationConfiguration document requires an ApplicationConfigurationSchema document.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1310,7 +1310,7 @@ The Document resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#document_format_python" style="color: inherit; text-decoration: inherit;">document_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentdocumentformat">Document<wbr>Document<wbr>Format</a></span>
+        <span class="property-type"><a href="#documentformat">Document<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Specify the document format for the request. The document format can be either JSON or YAML. JSON is the default format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1318,7 +1318,7 @@ The Document resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#document_type_python" style="color: inherit; text-decoration: inherit;">document_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentdocumenttype">Document<wbr>Document<wbr>Type</a></span>
+        <span class="property-type"><a href="#documenttype">Document<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of document to create.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1334,7 +1334,7 @@ The Document resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#requires_python" style="color: inherit; text-decoration: inherit;">requires</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentdocumentrequires">Sequence[Document<wbr>Document<wbr>Requires<wbr>Args]</a></span>
+        <span class="property-type"><a href="#documentrequires">Sequence[Document<wbr>Requires<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of SSM documents required by a document. For example, an ApplicationConfiguration document requires an ApplicationConfigurationSchema document.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1572,7 +1572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>AttachmentReference</dd></dl>
 {{% /choosable %}}
 
-<h4 id="documentdocumentformat">Document<wbr>Document<wbr>Format</h4>
+<h4 id="documentformat">Document<wbr>Format</h4>
 
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>Yaml</dt>
@@ -1582,9 +1582,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular"><dt>Document<wbr>Document<wbr>Format<wbr>Yaml</dt>
-    <dd>YAML</dd><dt>Document<wbr>Document<wbr>Format<wbr>Json</dt>
-    <dd>JSON</dd><dt>Document<wbr>Document<wbr>Format<wbr>Text</dt>
+<dl class="tabular"><dt>Document<wbr>Format<wbr>Yaml</dt>
+    <dd>YAML</dd><dt>Document<wbr>Format<wbr>Json</dt>
+    <dd>JSON</dd><dt>Document<wbr>Format<wbr>Text</dt>
     <dd>TEXT</dd></dl>
 {{% /choosable %}}
 
@@ -1602,7 +1602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>TEXT</dd></dl>
 {{% /choosable %}}
 
-<h4 id="documentdocumentrequires">Document<wbr>Document<wbr>Requires</h4>
+<h4 id="documentrequires">Document<wbr>Requires</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
@@ -1682,76 +1682,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The document version required by the current document.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="documentdocumenttype">Document<wbr>Document<wbr>Type</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Application<wbr>Configuration</dt>
-    <dd>ApplicationConfiguration</dd><dt>Application<wbr>Configuration<wbr>Schema</dt>
-    <dd>ApplicationConfigurationSchema</dd><dt>Automation</dt>
-    <dd>Automation</dd><dt>Automation<wbr>Change<wbr>Template</dt>
-    <dd>Automation.ChangeTemplate</dd><dt>Change<wbr>Calendar</dt>
-    <dd>ChangeCalendar</dd><dt>Cloud<wbr>Formation</dt>
-    <dd>CloudFormation</dd><dt>Command</dt>
-    <dd>Command</dd><dt>Deployment<wbr>Strategy</dt>
-    <dd>DeploymentStrategy</dd><dt>Package</dt>
-    <dd>Package</dd><dt>Policy</dt>
-    <dd>Policy</dd><dt>Problem<wbr>Analysis</dt>
-    <dd>ProblemAnalysis</dd><dt>Problem<wbr>Analysis<wbr>Template</dt>
-    <dd>ProblemAnalysisTemplate</dd><dt>Session</dt>
-    <dd>Session</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Document<wbr>Document<wbr>Type<wbr>Application<wbr>Configuration</dt>
-    <dd>ApplicationConfiguration</dd><dt>Document<wbr>Document<wbr>Type<wbr>Application<wbr>Configuration<wbr>Schema</dt>
-    <dd>ApplicationConfigurationSchema</dd><dt>Document<wbr>Document<wbr>Type<wbr>Automation</dt>
-    <dd>Automation</dd><dt>Document<wbr>Document<wbr>Type<wbr>Automation<wbr>Change<wbr>Template</dt>
-    <dd>Automation.ChangeTemplate</dd><dt>Document<wbr>Document<wbr>Type<wbr>Change<wbr>Calendar</dt>
-    <dd>ChangeCalendar</dd><dt>Document<wbr>Document<wbr>Type<wbr>Cloud<wbr>Formation</dt>
-    <dd>CloudFormation</dd><dt>Document<wbr>Document<wbr>Type<wbr>Command</dt>
-    <dd>Command</dd><dt>Document<wbr>Document<wbr>Type<wbr>Deployment<wbr>Strategy</dt>
-    <dd>DeploymentStrategy</dd><dt>Document<wbr>Document<wbr>Type<wbr>Package</dt>
-    <dd>Package</dd><dt>Document<wbr>Document<wbr>Type<wbr>Policy</dt>
-    <dd>Policy</dd><dt>Document<wbr>Document<wbr>Type<wbr>Problem<wbr>Analysis</dt>
-    <dd>ProblemAnalysis</dd><dt>Document<wbr>Document<wbr>Type<wbr>Problem<wbr>Analysis<wbr>Template</dt>
-    <dd>ProblemAnalysisTemplate</dd><dt>Document<wbr>Document<wbr>Type<wbr>Session</dt>
-    <dd>Session</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Application<wbr>Configuration</dt>
-    <dd>ApplicationConfiguration</dd><dt>Application<wbr>Configuration<wbr>Schema</dt>
-    <dd>ApplicationConfigurationSchema</dd><dt>Automation</dt>
-    <dd>Automation</dd><dt>Automation<wbr>Change<wbr>Template</dt>
-    <dd>Automation.ChangeTemplate</dd><dt>Change<wbr>Calendar</dt>
-    <dd>ChangeCalendar</dd><dt>Cloud<wbr>Formation</dt>
-    <dd>CloudFormation</dd><dt>Command</dt>
-    <dd>Command</dd><dt>Deployment<wbr>Strategy</dt>
-    <dd>DeploymentStrategy</dd><dt>Package</dt>
-    <dd>Package</dd><dt>Policy</dt>
-    <dd>Policy</dd><dt>Problem<wbr>Analysis</dt>
-    <dd>ProblemAnalysis</dd><dt>Problem<wbr>Analysis<wbr>Template</dt>
-    <dd>ProblemAnalysisTemplate</dd><dt>Session</dt>
-    <dd>Session</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>APPLICATION_CONFIGURATION</dt>
-    <dd>ApplicationConfiguration</dd><dt>APPLICATION_CONFIGURATION_SCHEMA</dt>
-    <dd>ApplicationConfigurationSchema</dd><dt>AUTOMATION</dt>
-    <dd>Automation</dd><dt>AUTOMATION_CHANGE_TEMPLATE</dt>
-    <dd>Automation.ChangeTemplate</dd><dt>CHANGE_CALENDAR</dt>
-    <dd>ChangeCalendar</dd><dt>CLOUD_FORMATION</dt>
-    <dd>CloudFormation</dd><dt>COMMAND</dt>
-    <dd>Command</dd><dt>DEPLOYMENT_STRATEGY</dt>
-    <dd>DeploymentStrategy</dd><dt>PACKAGE</dt>
-    <dd>Package</dd><dt>POLICY</dt>
-    <dd>Policy</dd><dt>PROBLEM_ANALYSIS</dt>
-    <dd>ProblemAnalysis</dd><dt>PROBLEM_ANALYSIS_TEMPLATE</dt>
-    <dd>ProblemAnalysisTemplate</dd><dt>SESSION</dt>
-    <dd>Session</dd></dl>
 {{% /choosable %}}
 
 <h4 id="documenttag">Document<wbr>Tag</h4>
@@ -1834,6 +1764,76 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the tag.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="documenttype">Document<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Application<wbr>Configuration</dt>
+    <dd>ApplicationConfiguration</dd><dt>Application<wbr>Configuration<wbr>Schema</dt>
+    <dd>ApplicationConfigurationSchema</dd><dt>Automation</dt>
+    <dd>Automation</dd><dt>Automation<wbr>Change<wbr>Template</dt>
+    <dd>Automation.ChangeTemplate</dd><dt>Change<wbr>Calendar</dt>
+    <dd>ChangeCalendar</dd><dt>Cloud<wbr>Formation</dt>
+    <dd>CloudFormation</dd><dt>Command</dt>
+    <dd>Command</dd><dt>Deployment<wbr>Strategy</dt>
+    <dd>DeploymentStrategy</dd><dt>Package</dt>
+    <dd>Package</dd><dt>Policy</dt>
+    <dd>Policy</dd><dt>Problem<wbr>Analysis</dt>
+    <dd>ProblemAnalysis</dd><dt>Problem<wbr>Analysis<wbr>Template</dt>
+    <dd>ProblemAnalysisTemplate</dd><dt>Session</dt>
+    <dd>Session</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Document<wbr>Type<wbr>Application<wbr>Configuration</dt>
+    <dd>ApplicationConfiguration</dd><dt>Document<wbr>Type<wbr>Application<wbr>Configuration<wbr>Schema</dt>
+    <dd>ApplicationConfigurationSchema</dd><dt>Document<wbr>Type<wbr>Automation</dt>
+    <dd>Automation</dd><dt>Document<wbr>Type<wbr>Automation<wbr>Change<wbr>Template</dt>
+    <dd>Automation.ChangeTemplate</dd><dt>Document<wbr>Type<wbr>Change<wbr>Calendar</dt>
+    <dd>ChangeCalendar</dd><dt>Document<wbr>Type<wbr>Cloud<wbr>Formation</dt>
+    <dd>CloudFormation</dd><dt>Document<wbr>Type<wbr>Command</dt>
+    <dd>Command</dd><dt>Document<wbr>Type<wbr>Deployment<wbr>Strategy</dt>
+    <dd>DeploymentStrategy</dd><dt>Document<wbr>Type<wbr>Package</dt>
+    <dd>Package</dd><dt>Document<wbr>Type<wbr>Policy</dt>
+    <dd>Policy</dd><dt>Document<wbr>Type<wbr>Problem<wbr>Analysis</dt>
+    <dd>ProblemAnalysis</dd><dt>Document<wbr>Type<wbr>Problem<wbr>Analysis<wbr>Template</dt>
+    <dd>ProblemAnalysisTemplate</dd><dt>Document<wbr>Type<wbr>Session</dt>
+    <dd>Session</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Application<wbr>Configuration</dt>
+    <dd>ApplicationConfiguration</dd><dt>Application<wbr>Configuration<wbr>Schema</dt>
+    <dd>ApplicationConfigurationSchema</dd><dt>Automation</dt>
+    <dd>Automation</dd><dt>Automation<wbr>Change<wbr>Template</dt>
+    <dd>Automation.ChangeTemplate</dd><dt>Change<wbr>Calendar</dt>
+    <dd>ChangeCalendar</dd><dt>Cloud<wbr>Formation</dt>
+    <dd>CloudFormation</dd><dt>Command</dt>
+    <dd>Command</dd><dt>Deployment<wbr>Strategy</dt>
+    <dd>DeploymentStrategy</dd><dt>Package</dt>
+    <dd>Package</dd><dt>Policy</dt>
+    <dd>Policy</dd><dt>Problem<wbr>Analysis</dt>
+    <dd>ProblemAnalysis</dd><dt>Problem<wbr>Analysis<wbr>Template</dt>
+    <dd>ProblemAnalysisTemplate</dd><dt>Session</dt>
+    <dd>Session</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>APPLICATION_CONFIGURATION</dt>
+    <dd>ApplicationConfiguration</dd><dt>APPLICATION_CONFIGURATION_SCHEMA</dt>
+    <dd>ApplicationConfigurationSchema</dd><dt>AUTOMATION</dt>
+    <dd>Automation</dd><dt>AUTOMATION_CHANGE_TEMPLATE</dt>
+    <dd>Automation.ChangeTemplate</dd><dt>CHANGE_CALENDAR</dt>
+    <dd>ChangeCalendar</dd><dt>CLOUD_FORMATION</dt>
+    <dd>CloudFormation</dd><dt>COMMAND</dt>
+    <dd>Command</dd><dt>DEPLOYMENT_STRATEGY</dt>
+    <dd>DeploymentStrategy</dd><dt>PACKAGE</dt>
+    <dd>Package</dd><dt>POLICY</dt>
+    <dd>Policy</dd><dt>PROBLEM_ANALYSIS</dt>
+    <dd>ProblemAnalysis</dd><dt>PROBLEM_ANALYSIS_TEMPLATE</dt>
+    <dd>ProblemAnalysisTemplate</dd><dt>SESSION</dt>
+    <dd>Session</dd></dl>
 {{% /choosable %}}
 
 

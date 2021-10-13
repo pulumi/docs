@@ -13,8 +13,8 @@ Explore the resources and functions of the kubernetes.autoscaling/v1 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="horizontalpodautoscaler" title="HorizontalPodAutoscaler"><span class="symbol resource"></span>HorizontalPodAutoscaler</a></li>
-    <li><a href="horizontalpodautoscalerlist" title="HorizontalPodAutoscalerList"><span class="symbol resource"></span>HorizontalPodAutoscalerList</a></li>
+    <li><a href="horizontalpodautoscaler" title="HorizontalPodAutoscaler"><span class="api-symbol api-symbol--resource"></span>HorizontalPodAutoscaler</a></li>
+    <li><a href="horizontalpodautoscalerlist" title="HorizontalPodAutoscalerList"><span class="api-symbol api-symbol--resource"></span>HorizontalPodAutoscalerList</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -24,6 +24,6 @@ Explore the resources and functions of the kubernetes.autoscaling/v1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>3.8.0</dd>
+	<dd>3.8.1</dd>
 </dl>
 

@@ -13,18 +13,18 @@ Explore the resources and functions of the google-native.datamigration/v1beta1 m
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="connectionprofile" title="ConnectionProfile"><span class="symbol resource"></span>ConnectionProfile</a></li>
-    <li><a href="connectionprofileiampolicy" title="ConnectionProfileIamPolicy"><span class="symbol resource"></span>ConnectionProfileIamPolicy</a></li>
-    <li><a href="migrationjob" title="MigrationJob"><span class="symbol resource"></span>MigrationJob</a></li>
-    <li><a href="migrationjobiampolicy" title="MigrationJobIamPolicy"><span class="symbol resource"></span>MigrationJobIamPolicy</a></li>
+    <li><a href="connectionprofile" title="ConnectionProfile"><span class="api-symbol api-symbol--resource"></span>ConnectionProfile</a></li>
+    <li><a href="connectionprofileiampolicy" title="ConnectionProfileIamPolicy"><span class="api-symbol api-symbol--resource"></span>ConnectionProfileIamPolicy</a></li>
+    <li><a href="migrationjob" title="MigrationJob"><span class="api-symbol api-symbol--resource"></span>MigrationJob</a></li>
+    <li><a href="migrationjobiampolicy" title="MigrationJobIamPolicy"><span class="api-symbol api-symbol--resource"></span>MigrationJobIamPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getconnectionprofile" title="GetConnectionProfile"><span class="symbol function"></span>GetConnectionProfile</a></li>
-    <li><a href="getconnectionprofileiampolicy" title="GetConnectionProfileIamPolicy"><span class="symbol function"></span>GetConnectionProfileIamPolicy</a></li>
-    <li><a href="getmigrationjob" title="GetMigrationJob"><span class="symbol function"></span>GetMigrationJob</a></li>
-    <li><a href="getmigrationjobiampolicy" title="GetMigrationJobIamPolicy"><span class="symbol function"></span>GetMigrationJobIamPolicy</a></li>
+    <li><a href="getconnectionprofile" title="GetConnectionProfile"><span class="api-symbol api-symbol--function"></span>GetConnectionProfile</a></li>
+    <li><a href="getconnectionprofileiampolicy" title="GetConnectionProfileIamPolicy"><span class="api-symbol api-symbol--function"></span>GetConnectionProfileIamPolicy</a></li>
+    <li><a href="getmigrationjob" title="GetMigrationJob"><span class="api-symbol api-symbol--function"></span>GetMigrationJob</a></li>
+    <li><a href="getmigrationjobiampolicy" title="GetMigrationJobIamPolicy"><span class="api-symbol api-symbol--function"></span>GetMigrationJobIamPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -34,6 +34,6 @@ Explore the resources and functions of the google-native.datamigration/v1beta1 m
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.0</dd>
+	<dd>0.8.0</dd>
 </dl>
 

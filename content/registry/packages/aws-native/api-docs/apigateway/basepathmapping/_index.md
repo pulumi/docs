@@ -168,7 +168,7 @@ The BasePathMapping resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The DomainName of an AWS::ApiGateway::DomainName resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="basepath_csharp">
 <a href="#basepath_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Path</a>
@@ -176,7 +176,7 @@ The BasePathMapping resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The base path name that callers of the API must provide in the URL after the domain name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restapiid_csharp">
 <a href="#restapiid_csharp" style="color: inherit; text-decoration: inherit;">Rest<wbr>Api<wbr>Id</a>
@@ -184,7 +184,7 @@ The BasePathMapping resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the API.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stage_csharp">
 <a href="#stage_csharp" style="color: inherit; text-decoration: inherit;">Stage</a>
@@ -192,7 +192,7 @@ The BasePathMapping resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the API's stage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -204,7 +204,7 @@ The BasePathMapping resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The DomainName of an AWS::ApiGateway::DomainName resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="basepath_go">
 <a href="#basepath_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Path</a>
@@ -212,7 +212,7 @@ The BasePathMapping resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The base path name that callers of the API must provide in the URL after the domain name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restapiid_go">
 <a href="#restapiid_go" style="color: inherit; text-decoration: inherit;">Rest<wbr>Api<wbr>Id</a>
@@ -220,7 +220,7 @@ The BasePathMapping resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the API.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stage_go">
 <a href="#stage_go" style="color: inherit; text-decoration: inherit;">Stage</a>
@@ -228,7 +228,7 @@ The BasePathMapping resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the API's stage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -240,7 +240,7 @@ The BasePathMapping resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The DomainName of an AWS::ApiGateway::DomainName resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="basepath_nodejs">
 <a href="#basepath_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Path</a>
@@ -248,7 +248,7 @@ The BasePathMapping resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The base path name that callers of the API must provide in the URL after the domain name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restapiid_nodejs">
 <a href="#restapiid_nodejs" style="color: inherit; text-decoration: inherit;">rest<wbr>Api<wbr>Id</a>
@@ -256,7 +256,7 @@ The BasePathMapping resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the API.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stage_nodejs">
 <a href="#stage_nodejs" style="color: inherit; text-decoration: inherit;">stage</a>
@@ -264,7 +264,7 @@ The BasePathMapping resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the API's stage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -276,7 +276,7 @@ The BasePathMapping resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The DomainName of an AWS::ApiGateway::DomainName resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="base_path_python">
 <a href="#base_path_python" style="color: inherit; text-decoration: inherit;">base_<wbr>path</a>
@@ -284,7 +284,7 @@ The BasePathMapping resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The base path name that callers of the API must provide in the URL after the domain name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rest_api_id_python">
 <a href="#rest_api_id_python" style="color: inherit; text-decoration: inherit;">rest_<wbr>api_<wbr>id</a>
@@ -292,7 +292,7 @@ The BasePathMapping resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the API.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stage_python">
 <a href="#stage_python" style="color: inherit; text-decoration: inherit;">stage</a>
@@ -300,7 +300,7 @@ The BasePathMapping resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the API's stage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -13,17 +13,17 @@ Explore the resources and functions of the azure.redis module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="cache" title="Cache"><span class="symbol resource"></span>Cache</a></li>
-    <li><a href="enterprisecluster" title="EnterpriseCluster"><span class="symbol resource"></span>EnterpriseCluster</a></li>
-    <li><a href="enterprisedatabase" title="EnterpriseDatabase"><span class="symbol resource"></span>EnterpriseDatabase</a></li>
-    <li><a href="firewallrule" title="FirewallRule"><span class="symbol resource"></span>FirewallRule</a></li>
-    <li><a href="linkedserver" title="LinkedServer"><span class="symbol resource"></span>LinkedServer</a></li>
+    <li><a href="cache" title="Cache"><span class="api-symbol api-symbol--resource"></span>Cache</a></li>
+    <li><a href="enterprisecluster" title="EnterpriseCluster"><span class="api-symbol api-symbol--resource"></span>EnterpriseCluster</a></li>
+    <li><a href="enterprisedatabase" title="EnterpriseDatabase"><span class="api-symbol api-symbol--resource"></span>EnterpriseDatabase</a></li>
+    <li><a href="firewallrule" title="FirewallRule"><span class="api-symbol api-symbol--resource"></span>FirewallRule</a></li>
+    <li><a href="linkedserver" title="LinkedServer"><span class="api-symbol api-symbol--resource"></span>LinkedServer</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getcache" title="GetCache"><span class="symbol function"></span>GetCache</a></li>
-    <li><a href="getenterprisedatabase" title="GetEnterpriseDatabase"><span class="symbol function"></span>GetEnterpriseDatabase</a></li>
+    <li><a href="getcache" title="GetCache"><span class="api-symbol api-symbol--function"></span>GetCache</a></li>
+    <li><a href="getenterprisedatabase" title="GetEnterpriseDatabase"><span class="api-symbol api-symbol--function"></span>GetEnterpriseDatabase</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -35,6 +35,6 @@ Explore the resources and functions of the azure.redis module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.21.0</dd>
+	<dd>4.22.0</dd>
 </dl>
 

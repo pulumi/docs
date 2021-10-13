@@ -31,7 +31,7 @@ Resource Type definition for AWS::IoT::TopicRule
               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
               <span class="nx">rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[TopicRuleTagArgs]]</span> = None<span class="p">,</span>
-              <span class="nx">topic_rule_payload</span><span class="p">:</span> <span class="nx">Optional[TopicRuleTopicRulePayloadArgs]</span> = None<span class="p">)</span>
+              <span class="nx">topic_rule_payload</span><span class="p">:</span> <span class="nx">Optional[TopicRulePayloadArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">TopicRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TopicRuleArgs</a></span><span class="p">,</span>
@@ -165,7 +165,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#topicrulepayload_csharp" style="color: inherit; text-decoration: inherit;">Topic<wbr>Rule<wbr>Payload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruletopicrulepayload">Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>T.<wbr>Inputs.<wbr>Topic<wbr>Rule<wbr>Topic<wbr>Rule<wbr>Payload<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicrulepayload">Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>T.<wbr>Inputs.<wbr>Topic<wbr>Rule<wbr>Payload<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -193,7 +193,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#topicrulepayload_go" style="color: inherit; text-decoration: inherit;">Topic<wbr>Rule<wbr>Payload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruletopicrulepayload">Topic<wbr>Rule<wbr>Topic<wbr>Rule<wbr>Payload<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicrulepayload">Topic<wbr>Rule<wbr>Payload<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -221,7 +221,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#topicrulepayload_nodejs" style="color: inherit; text-decoration: inherit;">topic<wbr>Rule<wbr>Payload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruletopicrulepayload">Topic<wbr>Rule<wbr>Topic<wbr>Rule<wbr>Payload<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicrulepayload">Topic<wbr>Rule<wbr>Payload<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -249,7 +249,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#topic_rule_payload_python" style="color: inherit; text-decoration: inherit;">topic_<wbr>rule_<wbr>payload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruletopicrulepayload">Topic<wbr>Rule<wbr>Topic<wbr>Rule<wbr>Payload<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicrulepayload">Topic<wbr>Rule<wbr>Payload<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3739,6 +3739,216 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="topicrulepayload">Topic<wbr>Rule<wbr>Payload</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="actions_csharp">
+<a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleaction">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>T.<wbr>Inputs.<wbr>Topic<wbr>Rule<wbr>Action&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sql_csharp">
+<a href="#sql_csharp" style="color: inherit; text-decoration: inherit;">Sql</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="awsiotsqlversion_csharp">
+<a href="#awsiotsqlversion_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Iot<wbr>Sql<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="erroraction_csharp">
+<a href="#erroraction_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleaction">Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>T.<wbr>Inputs.<wbr>Topic<wbr>Rule<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ruledisabled_csharp">
+<a href="#ruledisabled_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="actions_go">
+<a href="#actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleaction">[]Topic<wbr>Rule<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sql_go">
+<a href="#sql_go" style="color: inherit; text-decoration: inherit;">Sql</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="awsiotsqlversion_go">
+<a href="#awsiotsqlversion_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Iot<wbr>Sql<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="erroraction_go">
+<a href="#erroraction_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleaction">Topic<wbr>Rule<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ruledisabled_go">
+<a href="#ruledisabled_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="actions_nodejs">
+<a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleaction">Topic<wbr>Rule<wbr>Action[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sql_nodejs">
+<a href="#sql_nodejs" style="color: inherit; text-decoration: inherit;">sql</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="awsiotsqlversion_nodejs">
+<a href="#awsiotsqlversion_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Iot<wbr>Sql<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="erroraction_nodejs">
+<a href="#erroraction_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleaction">Topic<wbr>Rule<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ruledisabled_nodejs">
+<a href="#ruledisabled_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="actions_python">
+<a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleaction">Sequence[Topic<wbr>Rule<wbr>Action]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sql_python">
+<a href="#sql_python" style="color: inherit; text-decoration: inherit;">sql</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="aws_iot_sql_version_python">
+<a href="#aws_iot_sql_version_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>iot_<wbr>sql_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="error_action_python">
+<a href="#error_action_python" style="color: inherit; text-decoration: inherit;">error_<wbr>action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleaction">Topic<wbr>Rule<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rule_disabled_python">
+<a href="#rule_disabled_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="topicruleputassetpropertyvalueentry">Topic<wbr>Rule<wbr>Put<wbr>Asset<wbr>Property<wbr>Value<wbr>Entry</h4>
 
 {{% choosable language csharp %}}
@@ -5135,216 +5345,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="topicruletopicrulepayload">Topic<wbr>Rule<wbr>Topic<wbr>Rule<wbr>Payload</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="actions_csharp">
-<a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleaction">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>T.<wbr>Inputs.<wbr>Topic<wbr>Rule<wbr>Action&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="sql_csharp">
-<a href="#sql_csharp" style="color: inherit; text-decoration: inherit;">Sql</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="awsiotsqlversion_csharp">
-<a href="#awsiotsqlversion_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Iot<wbr>Sql<wbr>Version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="description_csharp">
-<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="erroraction_csharp">
-<a href="#erroraction_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Action</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleaction">Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>T.<wbr>Inputs.<wbr>Topic<wbr>Rule<wbr>Action</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="ruledisabled_csharp">
-<a href="#ruledisabled_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Disabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="actions_go">
-<a href="#actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleaction">[]Topic<wbr>Rule<wbr>Action</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="sql_go">
-<a href="#sql_go" style="color: inherit; text-decoration: inherit;">Sql</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="awsiotsqlversion_go">
-<a href="#awsiotsqlversion_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Iot<wbr>Sql<wbr>Version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="description_go">
-<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="erroraction_go">
-<a href="#erroraction_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Action</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleaction">Topic<wbr>Rule<wbr>Action</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="ruledisabled_go">
-<a href="#ruledisabled_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Disabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="actions_nodejs">
-<a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleaction">Topic<wbr>Rule<wbr>Action[]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="sql_nodejs">
-<a href="#sql_nodejs" style="color: inherit; text-decoration: inherit;">sql</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="awsiotsqlversion_nodejs">
-<a href="#awsiotsqlversion_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Iot<wbr>Sql<wbr>Version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="description_nodejs">
-<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="erroraction_nodejs">
-<a href="#erroraction_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Action</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleaction">Topic<wbr>Rule<wbr>Action</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="ruledisabled_nodejs">
-<a href="#ruledisabled_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Disabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="actions_python">
-<a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleaction">Sequence[Topic<wbr>Rule<wbr>Action]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="sql_python">
-<a href="#sql_python" style="color: inherit; text-decoration: inherit;">sql</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="aws_iot_sql_version_python">
-<a href="#aws_iot_sql_version_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>iot_<wbr>sql_<wbr>version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="description_python">
-<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="error_action_python">
-<a href="#error_action_python" style="color: inherit; text-decoration: inherit;">error_<wbr>action</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleaction">Topic<wbr>Rule<wbr>Action</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="rule_disabled_python">
-<a href="#rule_disabled_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>disabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

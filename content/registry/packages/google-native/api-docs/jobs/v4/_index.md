@@ -13,16 +13,16 @@ Explore the resources and functions of the google-native.jobs/v4 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="company" title="Company"><span class="symbol resource"></span>Company</a></li>
-    <li><a href="job" title="Job"><span class="symbol resource"></span>Job</a></li>
-    <li><a href="tenant" title="Tenant"><span class="symbol resource"></span>Tenant</a></li>
+    <li><a href="company" title="Company"><span class="api-symbol api-symbol--resource"></span>Company</a></li>
+    <li><a href="job" title="Job"><span class="api-symbol api-symbol--resource"></span>Job</a></li>
+    <li><a href="tenant" title="Tenant"><span class="api-symbol api-symbol--resource"></span>Tenant</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getcompany" title="GetCompany"><span class="symbol function"></span>GetCompany</a></li>
-    <li><a href="getjob" title="GetJob"><span class="symbol function"></span>GetJob</a></li>
-    <li><a href="gettenant" title="GetTenant"><span class="symbol function"></span>GetTenant</a></li>
+    <li><a href="getcompany" title="GetCompany"><span class="api-symbol api-symbol--function"></span>GetCompany</a></li>
+    <li><a href="getjob" title="GetJob"><span class="api-symbol api-symbol--function"></span>GetJob</a></li>
+    <li><a href="gettenant" title="GetTenant"><span class="api-symbol api-symbol--function"></span>GetTenant</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -32,6 +32,6 @@ Explore the resources and functions of the google-native.jobs/v4 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.0</dd>
+	<dd>0.8.0</dd>
 </dl>
 

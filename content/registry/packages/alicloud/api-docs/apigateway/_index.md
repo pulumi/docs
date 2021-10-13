@@ -13,19 +13,19 @@ Explore the resources and functions of the alicloud.apigateway module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="api" title="Api"><span class="symbol resource"></span>Api</a></li>
-    <li><a href="app" title="App"><span class="symbol resource"></span>App</a></li>
-    <li><a href="appattachment" title="AppAttachment"><span class="symbol resource"></span>AppAttachment</a></li>
-    <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
-    <li><a href="vpcaccess" title="VpcAccess"><span class="symbol resource"></span>VpcAccess</a></li>
+    <li><a href="api" title="Api"><span class="api-symbol api-symbol--resource"></span>Api</a></li>
+    <li><a href="app" title="App"><span class="api-symbol api-symbol--resource"></span>App</a></li>
+    <li><a href="appattachment" title="AppAttachment"><span class="api-symbol api-symbol--resource"></span>AppAttachment</a></li>
+    <li><a href="group" title="Group"><span class="api-symbol api-symbol--resource"></span>Group</a></li>
+    <li><a href="vpcaccess" title="VpcAccess"><span class="api-symbol api-symbol--resource"></span>VpcAccess</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getapis" title="GetApis"><span class="symbol function"></span>GetApis</a></li>
-    <li><a href="getapps" title="GetApps"><span class="symbol function"></span>GetApps</a></li>
-    <li><a href="getgroups" title="GetGroups"><span class="symbol function"></span>GetGroups</a></li>
-    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
+    <li><a href="getapis" title="GetApis"><span class="api-symbol api-symbol--function"></span>GetApis</a></li>
+    <li><a href="getapps" title="GetApps"><span class="api-symbol api-symbol--function"></span>GetApps</a></li>
+    <li><a href="getgroups" title="GetGroups"><span class="api-symbol api-symbol--function"></span>GetGroups</a></li>
+    <li><a href="getservice" title="GetService"><span class="api-symbol api-symbol--function"></span>GetService</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

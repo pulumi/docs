@@ -482,88 +482,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The number of minutes to wait to retry sending engagement in the case the engagement initially fails.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="contactcontacttargetinfo">Contact<wbr>Contact<wbr>Target<wbr>Info</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="contactid_csharp">
-<a href="#contactid_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the contact.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="isessential_csharp">
-<a href="#isessential_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Essential</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}A Boolean value determining if the contact's acknowledgement stops the progress of stages in the plan.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="contactid_go">
-<a href="#contactid_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the contact.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="isessential_go">
-<a href="#isessential_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Essential</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}A Boolean value determining if the contact's acknowledgement stops the progress of stages in the plan.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="contactid_nodejs">
-<a href="#contactid_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the contact.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="isessential_nodejs">
-<a href="#isessential_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Essential</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}A Boolean value determining if the contact's acknowledgement stops the progress of stages in the plan.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="contact_id_python">
-<a href="#contact_id_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the contact.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="is_essential_python">
-<a href="#is_essential_python" style="color: inherit; text-decoration: inherit;">is_<wbr>essential</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}A Boolean value determining if the contact's acknowledgement stops the progress of stages in the plan.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
 <h4 id="contactstage">Contact<wbr>Stage</h4>
 
 {{% choosable language csharp %}}
@@ -646,6 +564,88 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The contacts or contact methods that the escalation plan or engagement plan is engaging.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="contacttargetinfo">Contact<wbr>Target<wbr>Info</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="contactid_csharp">
+<a href="#contactid_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the contact.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="isessential_csharp">
+<a href="#isessential_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Essential</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A Boolean value determining if the contact's acknowledgement stops the progress of stages in the plan.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="contactid_go">
+<a href="#contactid_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the contact.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="isessential_go">
+<a href="#isessential_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Essential</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A Boolean value determining if the contact's acknowledgement stops the progress of stages in the plan.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="contactid_nodejs">
+<a href="#contactid_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the contact.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="isessential_nodejs">
+<a href="#isessential_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Essential</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}A Boolean value determining if the contact's acknowledgement stops the progress of stages in the plan.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="contact_id_python">
+<a href="#contact_id_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the contact.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="is_essential_python">
+<a href="#is_essential_python" style="color: inherit; text-decoration: inherit;">is_<wbr>essential</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A Boolean value determining if the contact's acknowledgement stops the progress of stages in the plan.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="contacttargets">Contact<wbr>Targets</h4>
 
 {{% choosable language csharp %}}
@@ -663,7 +663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contacttargetinfo_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Target<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactcontacttargetinfo">Pulumi.<wbr>Aws<wbr>Native.<wbr>SSMContacts.<wbr>Inputs.<wbr>Contact<wbr>Contact<wbr>Target<wbr>Info</a></span>
+        <span class="property-type"><a href="#contacttargetinfo">Pulumi.<wbr>Aws<wbr>Native.<wbr>SSMContacts.<wbr>Inputs.<wbr>Contact<wbr>Target<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -683,7 +683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contacttargetinfo_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Target<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactcontacttargetinfo">Contact<wbr>Contact<wbr>Target<wbr>Info</a></span>
+        <span class="property-type"><a href="#contacttargetinfo">Contact<wbr>Target<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -703,7 +703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contacttargetinfo_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Target<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactcontacttargetinfo">Contact<wbr>Contact<wbr>Target<wbr>Info</a></span>
+        <span class="property-type"><a href="#contacttargetinfo">Contact<wbr>Target<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -723,7 +723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contact_target_info_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>target_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactcontacttargetinfo">Contact<wbr>Contact<wbr>Target<wbr>Info</a></span>
+        <span class="property-type"><a href="#contacttargetinfo">Contact<wbr>Target<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

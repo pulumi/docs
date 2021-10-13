@@ -1164,6 +1164,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="autoclose_csharp">
+<a href="#autoclose_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Close</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If an alert policy that was active has no data for this long, any open incidents will close{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="notificationratelimit_csharp">
 <a href="#notificationratelimit_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Rate<wbr>Limit</a>
 </span>
@@ -1175,6 +1183,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="autoclose_go">
+<a href="#autoclose_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Close</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If an alert policy that was active has no data for this long, any open incidents will close{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationratelimit_go">
 <a href="#notificationratelimit_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Rate<wbr>Limit</a>
@@ -1188,6 +1204,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="autoclose_nodejs">
+<a href="#autoclose_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Close</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If an alert policy that was active has no data for this long, any open incidents will close{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="notificationratelimit_nodejs">
 <a href="#notificationratelimit_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Rate<wbr>Limit</a>
 </span>
@@ -1199,6 +1223,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="auto_close_python">
+<a href="#auto_close_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>close</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}If an alert policy that was active has no data for this long, any open incidents will close{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notification_rate_limit_python">
 <a href="#notification_rate_limit_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>rate_<wbr>limit</a>
@@ -1214,6 +1246,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="autoclose_csharp">
+<a href="#autoclose_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Close</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If an alert policy that was active has no data for this long, any open incidents will close{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="notificationratelimit_csharp">
 <a href="#notificationratelimit_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Rate<wbr>Limit</a>
 </span>
@@ -1225,6 +1265,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="autoclose_go">
+<a href="#autoclose_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Close</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If an alert policy that was active has no data for this long, any open incidents will close{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="notificationratelimit_go">
 <a href="#notificationratelimit_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Rate<wbr>Limit</a>
@@ -1238,6 +1286,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="autoclose_nodejs">
+<a href="#autoclose_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Close</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If an alert policy that was active has no data for this long, any open incidents will close{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="notificationratelimit_nodejs">
 <a href="#notificationratelimit_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Rate<wbr>Limit</a>
 </span>
@@ -1249,6 +1305,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="auto_close_python">
+<a href="#auto_close_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>close</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}If an alert policy that was active has no data for this long, any open incidents will close{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="notification_rate_limit_python">
 <a href="#notification_rate_limit_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>rate_<wbr>limit</a>
@@ -1854,7 +1918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A logs-based filter. See Advanced Logs Queries for how this filter should be constructed.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A logs-based filter. See Advanced Logs Queries (https://cloud.google.com/logging/docs/view/advanced-queries) for how this filter should be constructed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labelextractors_csharp">
 <a href="#labelextractors_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Extractors</a>
@@ -1862,7 +1926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Optional. A map from a label key to an extractor expression, which is used to extract the value for this label key. Each entry in this map is a specification for how data should be extracted from log entries that match filter. Each combination of extracted values is treated as a separate rule for the purposes of triggering notifications. Label keys and corresponding values can be used in notifications generated by this condition.Please see the documentation on logs-based metric valueExtractors for syntax and examples.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optional. A map from a label key to an extractor expression, which is used to extract the value for this label key. Each entry in this map is a specification for how data should be extracted from log entries that match filter. Each combination of extracted values is treated as a separate rule for the purposes of triggering notifications. Label keys and corresponding values can be used in notifications generated by this condition.Please see the documentation on logs-based metric valueExtractors (https://cloud.google.com/logging/docs/reference/v2/rest/v2/projects.metrics#LogMetric.FIELDS.value_extractor) for syntax and examples.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1874,7 +1938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A logs-based filter. See Advanced Logs Queries for how this filter should be constructed.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A logs-based filter. See Advanced Logs Queries (https://cloud.google.com/logging/docs/view/advanced-queries) for how this filter should be constructed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labelextractors_go">
 <a href="#labelextractors_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Extractors</a>
@@ -1882,7 +1946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Optional. A map from a label key to an extractor expression, which is used to extract the value for this label key. Each entry in this map is a specification for how data should be extracted from log entries that match filter. Each combination of extracted values is treated as a separate rule for the purposes of triggering notifications. Label keys and corresponding values can be used in notifications generated by this condition.Please see the documentation on logs-based metric valueExtractors for syntax and examples.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optional. A map from a label key to an extractor expression, which is used to extract the value for this label key. Each entry in this map is a specification for how data should be extracted from log entries that match filter. Each combination of extracted values is treated as a separate rule for the purposes of triggering notifications. Label keys and corresponding values can be used in notifications generated by this condition.Please see the documentation on logs-based metric valueExtractors (https://cloud.google.com/logging/docs/reference/v2/rest/v2/projects.metrics#LogMetric.FIELDS.value_extractor) for syntax and examples.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1894,7 +1958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A logs-based filter. See Advanced Logs Queries for how this filter should be constructed.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A logs-based filter. See Advanced Logs Queries (https://cloud.google.com/logging/docs/view/advanced-queries) for how this filter should be constructed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labelextractors_nodejs">
 <a href="#labelextractors_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Extractors</a>
@@ -1902,7 +1966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Optional. A map from a label key to an extractor expression, which is used to extract the value for this label key. Each entry in this map is a specification for how data should be extracted from log entries that match filter. Each combination of extracted values is treated as a separate rule for the purposes of triggering notifications. Label keys and corresponding values can be used in notifications generated by this condition.Please see the documentation on logs-based metric valueExtractors for syntax and examples.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optional. A map from a label key to an extractor expression, which is used to extract the value for this label key. Each entry in this map is a specification for how data should be extracted from log entries that match filter. Each combination of extracted values is treated as a separate rule for the purposes of triggering notifications. Label keys and corresponding values can be used in notifications generated by this condition.Please see the documentation on logs-based metric valueExtractors (https://cloud.google.com/logging/docs/reference/v2/rest/v2/projects.metrics#LogMetric.FIELDS.value_extractor) for syntax and examples.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1914,7 +1978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A logs-based filter. See Advanced Logs Queries for how this filter should be constructed.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A logs-based filter. See Advanced Logs Queries (https://cloud.google.com/logging/docs/view/advanced-queries) for how this filter should be constructed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_extractors_python">
 <a href="#label_extractors_python" style="color: inherit; text-decoration: inherit;">label_<wbr>extractors</a>
@@ -1922,7 +1986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Optional. A map from a label key to an extractor expression, which is used to extract the value for this label key. Each entry in this map is a specification for how data should be extracted from log entries that match filter. Each combination of extracted values is treated as a separate rule for the purposes of triggering notifications. Label keys and corresponding values can be used in notifications generated by this condition.Please see the documentation on logs-based metric valueExtractors for syntax and examples.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optional. A map from a label key to an extractor expression, which is used to extract the value for this label key. Each entry in this map is a specification for how data should be extracted from log entries that match filter. Each combination of extracted values is treated as a separate rule for the purposes of triggering notifications. Label keys and corresponding values can be used in notifications generated by this condition.Please see the documentation on logs-based metric valueExtractors (https://cloud.google.com/logging/docs/reference/v2/rest/v2/projects.metrics#LogMetric.FIELDS.value_extractor) for syntax and examples.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="logmatchresponse">Log<wbr>Match<wbr>Response</h4>
@@ -1936,7 +2000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A logs-based filter. See Advanced Logs Queries for how this filter should be constructed.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}A logs-based filter. See Advanced Logs Queries (https://cloud.google.com/logging/docs/view/advanced-queries) for how this filter should be constructed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="labelextractors_csharp">
 <a href="#labelextractors_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Extractors</a>
@@ -1944,7 +2008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Optional. A map from a label key to an extractor expression, which is used to extract the value for this label key. Each entry in this map is a specification for how data should be extracted from log entries that match filter. Each combination of extracted values is treated as a separate rule for the purposes of triggering notifications. Label keys and corresponding values can be used in notifications generated by this condition.Please see the documentation on logs-based metric valueExtractors for syntax and examples.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optional. A map from a label key to an extractor expression, which is used to extract the value for this label key. Each entry in this map is a specification for how data should be extracted from log entries that match filter. Each combination of extracted values is treated as a separate rule for the purposes of triggering notifications. Label keys and corresponding values can be used in notifications generated by this condition.Please see the documentation on logs-based metric valueExtractors (https://cloud.google.com/logging/docs/reference/v2/rest/v2/projects.metrics#LogMetric.FIELDS.value_extractor) for syntax and examples.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1956,7 +2020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A logs-based filter. See Advanced Logs Queries for how this filter should be constructed.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}A logs-based filter. See Advanced Logs Queries (https://cloud.google.com/logging/docs/view/advanced-queries) for how this filter should be constructed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="labelextractors_go">
 <a href="#labelextractors_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Extractors</a>
@@ -1964,7 +2028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Optional. A map from a label key to an extractor expression, which is used to extract the value for this label key. Each entry in this map is a specification for how data should be extracted from log entries that match filter. Each combination of extracted values is treated as a separate rule for the purposes of triggering notifications. Label keys and corresponding values can be used in notifications generated by this condition.Please see the documentation on logs-based metric valueExtractors for syntax and examples.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optional. A map from a label key to an extractor expression, which is used to extract the value for this label key. Each entry in this map is a specification for how data should be extracted from log entries that match filter. Each combination of extracted values is treated as a separate rule for the purposes of triggering notifications. Label keys and corresponding values can be used in notifications generated by this condition.Please see the documentation on logs-based metric valueExtractors (https://cloud.google.com/logging/docs/reference/v2/rest/v2/projects.metrics#LogMetric.FIELDS.value_extractor) for syntax and examples.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1976,7 +2040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A logs-based filter. See Advanced Logs Queries for how this filter should be constructed.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}A logs-based filter. See Advanced Logs Queries (https://cloud.google.com/logging/docs/view/advanced-queries) for how this filter should be constructed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="labelextractors_nodejs">
 <a href="#labelextractors_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Extractors</a>
@@ -1984,7 +2048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Optional. A map from a label key to an extractor expression, which is used to extract the value for this label key. Each entry in this map is a specification for how data should be extracted from log entries that match filter. Each combination of extracted values is treated as a separate rule for the purposes of triggering notifications. Label keys and corresponding values can be used in notifications generated by this condition.Please see the documentation on logs-based metric valueExtractors for syntax and examples.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optional. A map from a label key to an extractor expression, which is used to extract the value for this label key. Each entry in this map is a specification for how data should be extracted from log entries that match filter. Each combination of extracted values is treated as a separate rule for the purposes of triggering notifications. Label keys and corresponding values can be used in notifications generated by this condition.Please see the documentation on logs-based metric valueExtractors (https://cloud.google.com/logging/docs/reference/v2/rest/v2/projects.metrics#LogMetric.FIELDS.value_extractor) for syntax and examples.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1996,7 +2060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A logs-based filter. See Advanced Logs Queries for how this filter should be constructed.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}A logs-based filter. See Advanced Logs Queries (https://cloud.google.com/logging/docs/view/advanced-queries) for how this filter should be constructed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="label_extractors_python">
 <a href="#label_extractors_python" style="color: inherit; text-decoration: inherit;">label_<wbr>extractors</a>
@@ -2004,7 +2068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Optional. A map from a label key to an extractor expression, which is used to extract the value for this label key. Each entry in this map is a specification for how data should be extracted from log entries that match filter. Each combination of extracted values is treated as a separate rule for the purposes of triggering notifications. Label keys and corresponding values can be used in notifications generated by this condition.Please see the documentation on logs-based metric valueExtractors for syntax and examples.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optional. A map from a label key to an extractor expression, which is used to extract the value for this label key. Each entry in this map is a specification for how data should be extracted from log entries that match filter. Each combination of extracted values is treated as a separate rule for the purposes of triggering notifications. Label keys and corresponding values can be used in notifications generated by this condition.Please see the documentation on logs-based metric valueExtractors (https://cloud.google.com/logging/docs/reference/v2/rest/v2/projects.metrics#LogMetric.FIELDS.value_extractor) for syntax and examples.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="metricabsence">Metric<wbr>Absence</h4>

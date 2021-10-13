@@ -1880,6 +1880,14 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="projectmap_csharp">
+<a href="#projectmap_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of project id and project config. Using map format to ease add-to/remove-from the Project list in PATCH command. In future we will deprecate (And later remove) the array one.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="projects_csharp">
 <a href="#projects_csharp" style="color: inherit; text-decoration: inherit;">Projects</a>
 </span>
@@ -1899,6 +1907,14 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="projectmap_go">
+<a href="#projectmap_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map of project id and project config. Using map format to ease add-to/remove-from the Project list in PATCH command. In future we will deprecate (And later remove) the array one.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projects_go">
 <a href="#projects_go" style="color: inherit; text-decoration: inherit;">Projects</a>
@@ -1920,6 +1936,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="projectmap_nodejs">
+<a href="#projectmap_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map of project id and project config. Using map format to ease add-to/remove-from the Project list in PATCH command. In future we will deprecate (And later remove) the array one.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="projects_nodejs">
 <a href="#projects_nodejs" style="color: inherit; text-decoration: inherit;">projects</a>
 </span>
@@ -1939,6 +1963,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="project_map_python">
+<a href="#project_map_python" style="color: inherit; text-decoration: inherit;">project_<wbr>map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map of project id and project config. Using map format to ease add-to/remove-from the Project list in PATCH command. In future we will deprecate (And later remove) the array one.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projects_python">
 <a href="#projects_python" style="color: inherit; text-decoration: inherit;">projects</a>

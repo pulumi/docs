@@ -13,12 +13,12 @@ Explore the resources and functions of the google-native.translate/v3 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="glossary" title="Glossary"><span class="symbol resource"></span>Glossary</a></li>
+    <li><a href="glossary" title="Glossary"><span class="api-symbol api-symbol--resource"></span>Glossary</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getglossary" title="GetGlossary"><span class="symbol function"></span>GetGlossary</a></li>
+    <li><a href="getglossary" title="GetGlossary"><span class="api-symbol api-symbol--function"></span>GetGlossary</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -28,6 +28,6 @@ Explore the resources and functions of the google-native.translate/v3 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.0</dd>
+	<dd>0.8.0</dd>
 </dl>
 

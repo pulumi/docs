@@ -47,7 +47,7 @@ class MyStack : Stack
             ApiName = exampleApi.Apply(exampleApi => exampleApi.Name),
             ApiManagementName = exampleApi.Apply(exampleApi => exampleApi.ApiManagementName),
             ResourceGroupName = exampleApi.Apply(exampleApi => exampleApi.ResourceGroupName),
-            SchemaId = "example-sche,a",
+            SchemaId = "example-schema",
             ContentType = "application/vnd.ms-azure-apim.xsd+xml",
             Value = File.ReadAllText("api_management_api_schema.xml"),
         });
@@ -95,7 +95,7 @@ func main() {
 			ApiName:           pulumi.String(exampleApi.Name),
 			ApiManagementName: pulumi.String(exampleApi.ApiManagementName),
 			ResourceGroupName: pulumi.String(exampleApi.ResourceGroupName),
-			SchemaId:          pulumi.String("example-sche,a"),
+			SchemaId:          pulumi.String("example-schema"),
 			ContentType:       pulumi.String("application/vnd.ms-azure-apim.xsd+xml"),
 			Value:             readFileOrPanic("api_management_api_schema.xml"),
 		})
@@ -125,7 +125,7 @@ example_api_schema = azure.apimanagement.ApiSchema("exampleApiSchema",
     api_name=example_api.name,
     api_management_name=example_api.api_management_name,
     resource_group_name=example_api.resource_group_name,
-    schema_id="example-sche,a",
+    schema_id="example-schema",
     content_type="application/vnd.ms-azure-apim.xsd+xml",
     value=(lambda path: open(path).read())("api_management_api_schema.xml"))
 ```
@@ -152,7 +152,7 @@ const exampleApiSchema = new azure.apimanagement.ApiSchema("exampleApiSchema", {
     apiName: exampleApi.then(exampleApi => exampleApi.name),
     apiManagementName: exampleApi.then(exampleApi => exampleApi.apiManagementName),
     resourceGroupName: exampleApi.then(exampleApi => exampleApi.resourceGroupName),
-    schemaId: "example-sche,a",
+    schemaId: "example-schema",
     contentType: "application/vnd.ms-azure-apim.xsd+xml",
     value: fs.readFileSync("api_management_api_schema.xml"),
 });

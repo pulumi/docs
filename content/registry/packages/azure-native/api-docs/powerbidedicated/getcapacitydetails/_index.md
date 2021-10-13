@@ -216,7 +216,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The capacity mode.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Specifies the generation of the Power BI Embedded capacity. If no value is specified, the default value 'Gen2' is used. [Learn More](https://docs.microsoft.com/power-bi/developer/embedded/power-bi-embedded-generation-2){{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_csharp">
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -308,7 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The capacity mode.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Specifies the generation of the Power BI Embedded capacity. If no value is specified, the default value 'Gen2' is used. [Learn More](https://docs.microsoft.com/power-bi/developer/embedded/power-bi-embedded-generation-2){{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_go">
 <a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -400,7 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The capacity mode.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Specifies the generation of the Power BI Embedded capacity. If no value is specified, the default value 'Gen2' is used. [Learn More](https://docs.microsoft.com/power-bi/developer/embedded/power-bi-embedded-generation-2){{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_nodejs">
 <a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
@@ -492,7 +492,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The capacity mode.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Specifies the generation of the Power BI Embedded capacity. If no value is specified, the default value 'Gen2' is used. [Learn More](https://docs.microsoft.com/power-bi/developer/embedded/power-bi-embedded-generation-2){{% /md %}}</dd><dt class="property-"
             title="">
         <span id="system_data_python">
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>

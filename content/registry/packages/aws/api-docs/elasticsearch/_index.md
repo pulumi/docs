@@ -13,14 +13,14 @@ Explore the resources and functions of the aws.elasticsearch module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="domain" title="Domain"><span class="symbol resource"></span>Domain</a></li>
-    <li><a href="domainpolicy" title="DomainPolicy"><span class="symbol resource"></span>DomainPolicy</a></li>
-    <li><a href="domainsamloptions" title="DomainSamlOptions"><span class="symbol resource"></span>DomainSamlOptions</a></li>
+    <li><a href="domain" title="Domain"><span class="api-symbol api-symbol--resource"></span>Domain</a></li>
+    <li><a href="domainpolicy" title="DomainPolicy"><span class="api-symbol api-symbol--resource"></span>DomainPolicy</a></li>
+    <li><a href="domainsamloptions" title="DomainSamlOptions"><span class="api-symbol api-symbol--resource"></span>DomainSamlOptions</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getdomain" title="GetDomain"><span class="symbol function"></span>GetDomain</a></li>
+    <li><a href="getdomain" title="GetDomain"><span class="api-symbol api-symbol--function"></span>GetDomain</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -32,6 +32,6 @@ Explore the resources and functions of the aws.elasticsearch module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.23.0</dd>
+	<dd>4.24.1</dd>
 </dl>
 

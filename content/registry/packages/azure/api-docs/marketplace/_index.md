@@ -13,7 +13,7 @@ Explore the resources and functions of the azure.marketplace module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="agreement" title="Agreement"><span class="symbol resource"></span>Agreement</a></li>
+    <li><a href="agreement" title="Agreement"><span class="api-symbol api-symbol--resource"></span>Agreement</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -25,6 +25,6 @@ Explore the resources and functions of the azure.marketplace module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.21.0</dd>
+	<dd>4.22.0</dd>
 </dl>
 

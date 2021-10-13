@@ -2459,6 +2459,22 @@ array of alias IP ranges for this network interface. Can only be specified for n
 interfaces on subnet-mode networks. Structure documented below.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="ipv6accessconfigs_csharp">
+<a href="#ipv6accessconfigs_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Access<wbr>Configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancetemplatenetworkinterfaceipv6accessconfig">List&lt;Get<wbr>Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Ipv6Access<wbr>Config&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ipv6accesstype_csharp">
+<a href="#ipv6accesstype_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Access<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -2491,6 +2507,14 @@ empty, the address will be automatically assigned.
             title="Required">
         <span id="nictype_csharp">
 <a href="#nictype_csharp" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="stacktype_csharp">
+<a href="#stacktype_csharp" style="color: inherit; text-decoration: inherit;">Stack<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2547,6 +2571,22 @@ array of alias IP ranges for this network interface. Can only be specified for n
 interfaces on subnet-mode networks. Structure documented below.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="ipv6accessconfigs_go">
+<a href="#ipv6accessconfigs_go" style="color: inherit; text-decoration: inherit;">Ipv6Access<wbr>Configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancetemplatenetworkinterfaceipv6accessconfig">[]Get<wbr>Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Ipv6Access<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ipv6accesstype_go">
+<a href="#ipv6accesstype_go" style="color: inherit; text-decoration: inherit;">Ipv6Access<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -2579,6 +2619,14 @@ empty, the address will be automatically assigned.
             title="Required">
         <span id="nictype_go">
 <a href="#nictype_go" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="stacktype_go">
+<a href="#stacktype_go" style="color: inherit; text-decoration: inherit;">Stack<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2635,6 +2683,22 @@ array of alias IP ranges for this network interface. Can only be specified for n
 interfaces on subnet-mode networks. Structure documented below.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="ipv6accessconfigs_nodejs">
+<a href="#ipv6accessconfigs_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Access<wbr>Configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancetemplatenetworkinterfaceipv6accessconfig">Get<wbr>Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Ipv6Access<wbr>Config[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ipv6accesstype_nodejs">
+<a href="#ipv6accesstype_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Access<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -2667,6 +2731,14 @@ empty, the address will be automatically assigned.
             title="Required">
         <span id="nictype_nodejs">
 <a href="#nictype_nodejs" style="color: inherit; text-decoration: inherit;">nic<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="stacktype_nodejs">
+<a href="#stacktype_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2723,6 +2795,22 @@ array of alias IP ranges for this network interface. Can only be specified for n
 interfaces on subnet-mode networks. Structure documented below.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="ipv6_access_configs_python">
+<a href="#ipv6_access_configs_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>access_<wbr>configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancetemplatenetworkinterfaceipv6accessconfig">Sequence[Get<wbr>Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Ipv6Access<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ipv6_access_type_python">
+<a href="#ipv6_access_type_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>access_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -2755,6 +2843,14 @@ empty, the address will be automatically assigned.
             title="Required">
         <span id="nic_type_python">
 <a href="#nic_type_python" style="color: inherit; text-decoration: inherit;">nic_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="stack_type_python">
+<a href="#stack_type_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -3033,6 +3129,166 @@ error.
 the secondary range from which to allocate the IP CIDR range for this alias IP
 range. If left unspecified, the primary range of the subnetwork will be used.
 {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getinstancetemplatenetworkinterfaceipv6accessconfig">Get<wbr>Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Ipv6Access<wbr>Config</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="externalipv6_csharp">
+<a href="#externalipv6_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Ipv6</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="externalipv6prefixlength_csharp">
+<a href="#externalipv6prefixlength_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Ipv6Prefix<wbr>Length</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="networktier_csharp">
+<a href="#networktier_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The [networking tier][network-tier] used for configuring
+this instance template. This field can take the following values: PREMIUM or
+STANDARD. If this field is not specified, it is assumed to be PREMIUM.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="publicptrdomainname_csharp">
+<a href="#publicptrdomainname_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ptr<wbr>Domain<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="externalipv6_go">
+<a href="#externalipv6_go" style="color: inherit; text-decoration: inherit;">External<wbr>Ipv6</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="externalipv6prefixlength_go">
+<a href="#externalipv6prefixlength_go" style="color: inherit; text-decoration: inherit;">External<wbr>Ipv6Prefix<wbr>Length</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="networktier_go">
+<a href="#networktier_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The [networking tier][network-tier] used for configuring
+this instance template. This field can take the following values: PREMIUM or
+STANDARD. If this field is not specified, it is assumed to be PREMIUM.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="publicptrdomainname_go">
+<a href="#publicptrdomainname_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ptr<wbr>Domain<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="externalipv6_nodejs">
+<a href="#externalipv6_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Ipv6</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="externalipv6prefixlength_nodejs">
+<a href="#externalipv6prefixlength_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Ipv6Prefix<wbr>Length</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="networktier_nodejs">
+<a href="#networktier_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The [networking tier][network-tier] used for configuring
+this instance template. This field can take the following values: PREMIUM or
+STANDARD. If this field is not specified, it is assumed to be PREMIUM.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="publicptrdomainname_nodejs">
+<a href="#publicptrdomainname_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ptr<wbr>Domain<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="external_ipv6_python">
+<a href="#external_ipv6_python" style="color: inherit; text-decoration: inherit;">external_<wbr>ipv6</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="external_ipv6_prefix_length_python">
+<a href="#external_ipv6_prefix_length_python" style="color: inherit; text-decoration: inherit;">external_<wbr>ipv6_<wbr>prefix_<wbr>length</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="network_tier_python">
+<a href="#network_tier_python" style="color: inherit; text-decoration: inherit;">network_<wbr>tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The [networking tier][network-tier] used for configuring
+this instance template. This field can take the following values: PREMIUM or
+STANDARD. If this field is not specified, it is assumed to be PREMIUM.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="public_ptr_domain_name_python">
+<a href="#public_ptr_domain_name_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ptr_<wbr>domain_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getinstancetemplatenetworkperformanceconfig">Get<wbr>Instance<wbr>Template<wbr>Network<wbr>Performance<wbr>Config</h4>

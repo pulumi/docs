@@ -643,6 +643,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="aspaths_csharp">
+<a href="#aspaths_csharp" style="color: inherit; text-decoration: inherit;">As<wbr>Paths</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routeaspathresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Outputs.<wbr>Route<wbr>As<wbr>Path<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}AS path.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="creationtimestamp_csharp">
 <a href="#creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
 </span>
@@ -683,6 +691,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The network peering name that should handle matching packets, which should conform to RFC1035.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="routetype_csharp">
+<a href="#routetype_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of this route, which can be one of the following values: - 'TRANSIT' for a transit route that this router learned from another Cloud Router and will readvertise to one of its BGP peers - 'SUBNET' for a route from a subnet of the VPC - 'BGP' for a route learned from a BGP peer of this router - 'STATIC' for a static route{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
 </span>
@@ -702,6 +718,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="aspaths_go">
+<a href="#aspaths_go" style="color: inherit; text-decoration: inherit;">As<wbr>Paths</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routeaspathresponse">[]Route<wbr>As<wbr>Path<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}AS path.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creationtimestamp_go">
 <a href="#creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -743,6 +767,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The network peering name that should handle matching packets, which should conform to RFC1035.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="routetype_go">
+<a href="#routetype_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of this route, which can be one of the following values: - 'TRANSIT' for a transit route that this router learned from another Cloud Router and will readvertise to one of its BGP peers - 'SUBNET' for a route from a subnet of the VPC - 'BGP' for a route learned from a BGP peer of this router - 'STATIC' for a static route{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
 </span>
@@ -762,6 +794,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="aspaths_nodejs">
+<a href="#aspaths_nodejs" style="color: inherit; text-decoration: inherit;">as<wbr>Paths</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routeaspathresponse">Route<wbr>As<wbr>Path<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}AS path.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creationtimestamp_nodejs">
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
@@ -803,6 +843,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The network peering name that should handle matching packets, which should conform to RFC1035.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="routetype_nodejs">
+<a href="#routetype_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of this route, which can be one of the following values: - 'TRANSIT' for a transit route that this router learned from another Cloud Router and will readvertise to one of its BGP peers - 'SUBNET' for a route from a subnet of the VPC - 'BGP' for a route learned from a BGP peer of this router - 'STATIC' for a static route{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
@@ -822,6 +870,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="as_paths_python">
+<a href="#as_paths_python" style="color: inherit; text-decoration: inherit;">as_<wbr>paths</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routeaspathresponse">Sequence[Route<wbr>As<wbr>Path<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}AS path.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creation_timestamp_python">
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
@@ -863,6 +919,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The network peering name that should handle matching packets, which should conform to RFC1035.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="route_type_python">
+<a href="#route_type_python" style="color: inherit; text-decoration: inherit;">route_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of this route, which can be one of the following values: - 'TRANSIT' for a transit route that this router learned from another Cloud Router and will readvertise to one of its BGP peers - 'SUBNET' for a route from a subnet of the VPC - 'BGP' for a route learned from a BGP peer of this router - 'STATIC' for a static route{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
@@ -889,6 +953,88 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="routeaspathresponse">Route<wbr>As<wbr>Path<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="aslists_csharp">
+<a href="#aslists_csharp" style="color: inherit; text-decoration: inherit;">As<wbr>Lists</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;int&gt;</span>
+    </dt>
+    <dd>{{% md %}}The AS numbers of the AS Path.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="pathsegmenttype_csharp">
+<a href="#pathsegmenttype_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Segment<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the AS Path, which can be one of the following values: - 'AS_SET': unordered set of autonomous systems that the route in has traversed - 'AS_SEQUENCE': ordered set of autonomous systems that the route has traversed - 'AS_CONFED_SEQUENCE': ordered set of Member Autonomous Systems in the local confederation that the route has traversed - 'AS_CONFED_SET': unordered set of Member Autonomous Systems in the local confederation that the route has traversed {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="aslists_go">
+<a href="#aslists_go" style="color: inherit; text-decoration: inherit;">As<wbr>Lists</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]int</span>
+    </dt>
+    <dd>{{% md %}}The AS numbers of the AS Path.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="pathsegmenttype_go">
+<a href="#pathsegmenttype_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Segment<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the AS Path, which can be one of the following values: - 'AS_SET': unordered set of autonomous systems that the route in has traversed - 'AS_SEQUENCE': ordered set of autonomous systems that the route has traversed - 'AS_CONFED_SEQUENCE': ordered set of Member Autonomous Systems in the local confederation that the route has traversed - 'AS_CONFED_SET': unordered set of Member Autonomous Systems in the local confederation that the route has traversed {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="aslists_nodejs">
+<a href="#aslists_nodejs" style="color: inherit; text-decoration: inherit;">as<wbr>Lists</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number[]</span>
+    </dt>
+    <dd>{{% md %}}The AS numbers of the AS Path.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="pathsegmenttype_nodejs">
+<a href="#pathsegmenttype_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Segment<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the AS Path, which can be one of the following values: - 'AS_SET': unordered set of autonomous systems that the route in has traversed - 'AS_SEQUENCE': ordered set of autonomous systems that the route has traversed - 'AS_CONFED_SEQUENCE': ordered set of Member Autonomous Systems in the local confederation that the route has traversed - 'AS_CONFED_SET': unordered set of Member Autonomous Systems in the local confederation that the route has traversed {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="as_lists_python">
+<a href="#as_lists_python" style="color: inherit; text-decoration: inherit;">as_<wbr>lists</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[int]</span>
+    </dt>
+    <dd>{{% md %}}The AS numbers of the AS Path.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="path_segment_type_python">
+<a href="#path_segment_type_python" style="color: inherit; text-decoration: inherit;">path_<wbr>segment_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of the AS Path, which can be one of the following values: - 'AS_SET': unordered set of autonomous systems that the route in has traversed - 'AS_SEQUENCE': ordered set of autonomous systems that the route has traversed - 'AS_CONFED_SEQUENCE': ordered set of Member Autonomous Systems in the local confederation that the route has traversed - 'AS_CONFED_SET': unordered set of Member Autonomous Systems in the local confederation that the route has traversed {{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="routewarningsitemdataitemresponse">Route<wbr>Warnings<wbr>Item<wbr>Data<wbr>Item<wbr>Response</h4>
 

@@ -13,16 +13,16 @@ Explore the resources and functions of the azure.machinelearning module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="computecluster" title="ComputeCluster"><span class="symbol resource"></span>ComputeCluster</a></li>
-    <li><a href="computeinstance" title="ComputeInstance"><span class="symbol resource"></span>ComputeInstance</a></li>
-    <li><a href="inferencecluster" title="InferenceCluster"><span class="symbol resource"></span>InferenceCluster</a></li>
-    <li><a href="synapsespark" title="SynapseSpark"><span class="symbol resource"></span>SynapseSpark</a></li>
-    <li><a href="workspace" title="Workspace"><span class="symbol resource"></span>Workspace</a></li>
+    <li><a href="computecluster" title="ComputeCluster"><span class="api-symbol api-symbol--resource"></span>ComputeCluster</a></li>
+    <li><a href="computeinstance" title="ComputeInstance"><span class="api-symbol api-symbol--resource"></span>ComputeInstance</a></li>
+    <li><a href="inferencecluster" title="InferenceCluster"><span class="api-symbol api-symbol--resource"></span>InferenceCluster</a></li>
+    <li><a href="synapsespark" title="SynapseSpark"><span class="api-symbol api-symbol--resource"></span>SynapseSpark</a></li>
+    <li><a href="workspace" title="Workspace"><span class="api-symbol api-symbol--resource"></span>Workspace</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getworkspace" title="GetWorkspace"><span class="symbol function"></span>GetWorkspace</a></li>
+    <li><a href="getworkspace" title="GetWorkspace"><span class="api-symbol api-symbol--function"></span>GetWorkspace</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -34,6 +34,6 @@ Explore the resources and functions of the azure.machinelearning module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.21.0</dd>
+	<dd>4.22.0</dd>
 </dl>
 

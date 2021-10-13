@@ -13,18 +13,18 @@ Explore the resources and functions of the openstack.sharedfilesystem module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="securityservice" title="SecurityService"><span class="symbol resource"></span>SecurityService</a></li>
-    <li><a href="share" title="Share"><span class="symbol resource"></span>Share</a></li>
-    <li><a href="shareaccess" title="ShareAccess"><span class="symbol resource"></span>ShareAccess</a></li>
-    <li><a href="sharenetwork" title="ShareNetwork"><span class="symbol resource"></span>ShareNetwork</a></li>
+    <li><a href="securityservice" title="SecurityService"><span class="api-symbol api-symbol--resource"></span>SecurityService</a></li>
+    <li><a href="share" title="Share"><span class="api-symbol api-symbol--resource"></span>Share</a></li>
+    <li><a href="shareaccess" title="ShareAccess"><span class="api-symbol api-symbol--resource"></span>ShareAccess</a></li>
+    <li><a href="sharenetwork" title="ShareNetwork"><span class="api-symbol api-symbol--resource"></span>ShareNetwork</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getavailbilityzones" title="GetAvailbilityZones"><span class="symbol function"></span>GetAvailbilityZones</a></li>
-    <li><a href="getshare" title="GetShare"><span class="symbol function"></span>GetShare</a></li>
-    <li><a href="getsharenetwork" title="GetShareNetwork"><span class="symbol function"></span>GetShareNetwork</a></li>
-    <li><a href="getsnapshot" title="GetSnapshot"><span class="symbol function"></span>GetSnapshot</a></li>
+    <li><a href="getavailbilityzones" title="GetAvailbilityZones"><span class="api-symbol api-symbol--function"></span>GetAvailbilityZones</a></li>
+    <li><a href="getshare" title="GetShare"><span class="api-symbol api-symbol--function"></span>GetShare</a></li>
+    <li><a href="getsharenetwork" title="GetShareNetwork"><span class="api-symbol api-symbol--function"></span>GetShareNetwork</a></li>
+    <li><a href="getsnapshot" title="GetSnapshot"><span class="api-symbol api-symbol--function"></span>GetSnapshot</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

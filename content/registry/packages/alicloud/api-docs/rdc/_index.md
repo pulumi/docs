@@ -13,12 +13,12 @@ Explore the resources and functions of the alicloud.rdc module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="organization" title="Organization"><span class="symbol resource"></span>Organization</a></li>
+    <li><a href="organization" title="Organization"><span class="api-symbol api-symbol--resource"></span>Organization</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getorganizations" title="GetOrganizations"><span class="symbol function"></span>GetOrganizations</a></li>
+    <li><a href="getorganizations" title="GetOrganizations"><span class="api-symbol api-symbol--function"></span>GetOrganizations</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

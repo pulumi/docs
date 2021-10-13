@@ -53,7 +53,7 @@ class MyStack : Stack
                     Value = "value2",
                 },
             },
-            WorkGroupConfiguration = new AwsNative.Athena.Inputs.WorkGroupWorkGroupConfigurationArgs
+            WorkGroupConfiguration = new AwsNative.Athena.Inputs.WorkGroupConfigurationArgs
             {
                 BytesScannedCutoffPerQuery = 200000000,
                 EnforceWorkGroupConfiguration = false,
@@ -102,7 +102,7 @@ func main() {
 					Value: pulumi.String("value2"),
 				},
 			},
-			WorkGroupConfiguration: &athena.WorkGroupWorkGroupConfigurationArgs{
+			WorkGroupConfiguration: &athena.WorkGroupConfigurationArgs{
 				BytesScannedCutoffPerQuery:      pulumi.Int(200000000),
 				EnforceWorkGroupConfiguration:   pulumi.Bool(false),
 				PublishCloudWatchMetricsEnabled: pulumi.Bool(false),
@@ -146,7 +146,7 @@ my_athena_work_group = aws_native.athena.WorkGroup("myAthenaWorkGroup",
             value="value2",
         ),
     ],
-    work_group_configuration=aws_native.athena.WorkGroupWorkGroupConfigurationArgs(
+    work_group_configuration=aws_native.athena.WorkGroupConfigurationArgs(
         bytes_scanned_cutoff_per_query=200000000,
         enforce_work_group_configuration=False,
         publish_cloud_watch_metrics_enabled=False,
@@ -233,7 +233,7 @@ class MyStack : Stack
                     Value = "value2",
                 },
             },
-            WorkGroupConfiguration = new AwsNative.Athena.Inputs.WorkGroupWorkGroupConfigurationArgs
+            WorkGroupConfiguration = new AwsNative.Athena.Inputs.WorkGroupConfigurationArgs
             {
                 BytesScannedCutoffPerQuery = 200000000,
                 EnforceWorkGroupConfiguration = false,
@@ -282,7 +282,7 @@ func main() {
 					Value: pulumi.String("value2"),
 				},
 			},
-			WorkGroupConfiguration: &athena.WorkGroupWorkGroupConfigurationArgs{
+			WorkGroupConfiguration: &athena.WorkGroupConfigurationArgs{
 				BytesScannedCutoffPerQuery:      pulumi.Int(200000000),
 				EnforceWorkGroupConfiguration:   pulumi.Bool(false),
 				PublishCloudWatchMetricsEnabled: pulumi.Bool(false),
@@ -326,7 +326,7 @@ my_athena_work_group = aws_native.athena.WorkGroup("myAthenaWorkGroup",
             value="value2",
         ),
     ],
-    work_group_configuration=aws_native.athena.WorkGroupWorkGroupConfigurationArgs(
+    work_group_configuration=aws_native.athena.WorkGroupConfigurationArgs(
         bytes_scanned_cutoff_per_query=200000000,
         enforce_work_group_configuration=False,
         publish_cloud_watch_metrics_enabled=False,
@@ -413,7 +413,7 @@ class MyStack : Stack
                     Value = "value2",
                 },
             },
-            WorkGroupConfigurationUpdates = new AwsNative.Athena.Inputs.WorkGroupWorkGroupConfigurationUpdatesArgs
+            WorkGroupConfigurationUpdates = new AwsNative.Athena.Inputs.WorkGroupConfigurationUpdatesArgs
             {
                 BytesScannedCutoffPerQuery = 10000000,
                 EnforceWorkGroupConfiguration = true,
@@ -466,7 +466,7 @@ func main() {
 					Value: pulumi.String("value2"),
 				},
 			},
-			WorkGroupConfigurationUpdates: &athena.WorkGroupWorkGroupConfigurationUpdatesArgs{
+			WorkGroupConfigurationUpdates: &athena.WorkGroupConfigurationUpdatesArgs{
 				BytesScannedCutoffPerQuery:      pulumi.Int(10000000),
 				EnforceWorkGroupConfiguration:   pulumi.Bool(true),
 				PublishCloudWatchMetricsEnabled: pulumi.Bool(true),
@@ -513,7 +513,7 @@ my_athena_work_group = aws_native.athena.WorkGroup("myAthenaWorkGroup",
             value="value2",
         ),
     ],
-    work_group_configuration_updates=aws_native.athena.WorkGroupWorkGroupConfigurationUpdatesArgs(
+    work_group_configuration_updates=aws_native.athena.WorkGroupConfigurationUpdatesArgs(
         bytes_scanned_cutoff_per_query=10000000,
         enforce_work_group_configuration=True,
         publish_cloud_watch_metrics_enabled=True,
@@ -606,7 +606,7 @@ class MyStack : Stack
                     Value = "value2",
                 },
             },
-            WorkGroupConfigurationUpdates = new AwsNative.Athena.Inputs.WorkGroupWorkGroupConfigurationUpdatesArgs
+            WorkGroupConfigurationUpdates = new AwsNative.Athena.Inputs.WorkGroupConfigurationUpdatesArgs
             {
                 BytesScannedCutoffPerQuery = 10000000,
                 EnforceWorkGroupConfiguration = true,
@@ -659,7 +659,7 @@ func main() {
 					Value: pulumi.String("value2"),
 				},
 			},
-			WorkGroupConfigurationUpdates: &athena.WorkGroupWorkGroupConfigurationUpdatesArgs{
+			WorkGroupConfigurationUpdates: &athena.WorkGroupConfigurationUpdatesArgs{
 				BytesScannedCutoffPerQuery:      pulumi.Int(10000000),
 				EnforceWorkGroupConfiguration:   pulumi.Bool(true),
 				PublishCloudWatchMetricsEnabled: pulumi.Bool(true),
@@ -706,7 +706,7 @@ my_athena_work_group = aws_native.athena.WorkGroup("myAthenaWorkGroup",
             value="value2",
         ),
     ],
-    work_group_configuration_updates=aws_native.athena.WorkGroupWorkGroupConfigurationUpdatesArgs(
+    work_group_configuration_updates=aws_native.athena.WorkGroupConfigurationUpdatesArgs(
         bytes_scanned_cutoff_per_query=10000000,
         enforce_work_group_configuration=True,
         publish_cloud_watch_metrics_enabled=True,
@@ -791,8 +791,8 @@ const myAthenaWorkGroup = new aws_native.athena.WorkGroup("myAthenaWorkGroup", {
               <span class="nx">recursive_delete_option</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
               <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[WorkGroupState]</span> = None<span class="p">,</span>
               <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[WorkGroupTagArgs]]</span> = None<span class="p">,</span>
-              <span class="nx">work_group_configuration</span><span class="p">:</span> <span class="nx">Optional[WorkGroupWorkGroupConfigurationArgs]</span> = None<span class="p">,</span>
-              <span class="nx">work_group_configuration_updates</span><span class="p">:</span> <span class="nx">Optional[WorkGroupWorkGroupConfigurationUpdatesArgs]</span> = None<span class="p">)</span>
+              <span class="nx">work_group_configuration</span><span class="p">:</span> <span class="nx">Optional[WorkGroupConfigurationArgs]</span> = None<span class="p">,</span>
+              <span class="nx">work_group_configuration_updates</span><span class="p">:</span> <span class="nx">Optional[WorkGroupConfigurationUpdatesArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">WorkGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WorkGroupArgs</a></span><span class="p">,</span>
@@ -966,7 +966,7 @@ The WorkGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#workgroupconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Work<wbr>Group<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupworkgroupconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Athena.<wbr>Inputs.<wbr>Work<wbr>Group<wbr>Work<wbr>Group<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#workgroupconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Athena.<wbr>Inputs.<wbr>Work<wbr>Group<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The workgroup configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -974,7 +974,7 @@ The WorkGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#workgroupconfigurationupdates_csharp" style="color: inherit; text-decoration: inherit;">Work<wbr>Group<wbr>Configuration<wbr>Updates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupworkgroupconfigurationupdates">Pulumi.<wbr>Aws<wbr>Native.<wbr>Athena.<wbr>Inputs.<wbr>Work<wbr>Group<wbr>Work<wbr>Group<wbr>Configuration<wbr>Updates<wbr>Args</a></span>
+        <span class="property-type"><a href="#workgroupconfigurationupdates">Pulumi.<wbr>Aws<wbr>Native.<wbr>Athena.<wbr>Inputs.<wbr>Work<wbr>Group<wbr>Configuration<wbr>Updates<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The workgroup configuration update object{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1026,7 +1026,7 @@ The WorkGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#workgroupconfiguration_go" style="color: inherit; text-decoration: inherit;">Work<wbr>Group<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupworkgroupconfiguration">Work<wbr>Group<wbr>Work<wbr>Group<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#workgroupconfiguration">Work<wbr>Group<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The workgroup configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1034,7 +1034,7 @@ The WorkGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#workgroupconfigurationupdates_go" style="color: inherit; text-decoration: inherit;">Work<wbr>Group<wbr>Configuration<wbr>Updates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupworkgroupconfigurationupdates">Work<wbr>Group<wbr>Work<wbr>Group<wbr>Configuration<wbr>Updates<wbr>Args</a></span>
+        <span class="property-type"><a href="#workgroupconfigurationupdates">Work<wbr>Group<wbr>Configuration<wbr>Updates<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The workgroup configuration update object{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1086,7 +1086,7 @@ The WorkGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#workgroupconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">work<wbr>Group<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupworkgroupconfiguration">Work<wbr>Group<wbr>Work<wbr>Group<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#workgroupconfiguration">Work<wbr>Group<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The workgroup configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1094,7 +1094,7 @@ The WorkGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#workgroupconfigurationupdates_nodejs" style="color: inherit; text-decoration: inherit;">work<wbr>Group<wbr>Configuration<wbr>Updates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupworkgroupconfigurationupdates">Work<wbr>Group<wbr>Work<wbr>Group<wbr>Configuration<wbr>Updates<wbr>Args</a></span>
+        <span class="property-type"><a href="#workgroupconfigurationupdates">Work<wbr>Group<wbr>Configuration<wbr>Updates<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The workgroup configuration update object{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1146,7 +1146,7 @@ The WorkGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#work_group_configuration_python" style="color: inherit; text-decoration: inherit;">work_<wbr>group_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupworkgroupconfiguration">Work<wbr>Group<wbr>Work<wbr>Group<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#workgroupconfiguration">Work<wbr>Group<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The workgroup configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1154,7 +1154,7 @@ The WorkGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#work_group_configuration_updates_python" style="color: inherit; text-decoration: inherit;">work_<wbr>group_<wbr>configuration_<wbr>updates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupworkgroupconfigurationupdates">Work<wbr>Group<wbr>Work<wbr>Group<wbr>Configuration<wbr>Updates<wbr>Args</a></span>
+        <span class="property-type"><a href="#workgroupconfigurationupdates">Work<wbr>Group<wbr>Configuration<wbr>Updates<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The workgroup configuration update object{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1255,6 +1255,458 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="workgroupconfiguration">Work<wbr>Group<wbr>Configuration</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="bytesscannedcutoffperquery_csharp">
+<a href="#bytesscannedcutoffperquery_csharp" style="color: inherit; text-decoration: inherit;">Bytes<wbr>Scanned<wbr>Cutoff<wbr>Per<wbr>Query</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enforceworkgroupconfiguration_csharp">
+<a href="#enforceworkgroupconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Work<wbr>Group<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="engineversion_csharp">
+<a href="#engineversion_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workgroupengineversion">Pulumi.<wbr>Aws<wbr>Native.<wbr>Athena.<wbr>Inputs.<wbr>Work<wbr>Group<wbr>Engine<wbr>Version</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publishcloudwatchmetricsenabled_csharp">
+<a href="#publishcloudwatchmetricsenabled_csharp" style="color: inherit; text-decoration: inherit;">Publish<wbr>Cloud<wbr>Watch<wbr>Metrics<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requesterpaysenabled_csharp">
+<a href="#requesterpaysenabled_csharp" style="color: inherit; text-decoration: inherit;">Requester<wbr>Pays<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resultconfiguration_csharp">
+<a href="#resultconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Result<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workgroupresultconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Athena.<wbr>Inputs.<wbr>Work<wbr>Group<wbr>Result<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="bytesscannedcutoffperquery_go">
+<a href="#bytesscannedcutoffperquery_go" style="color: inherit; text-decoration: inherit;">Bytes<wbr>Scanned<wbr>Cutoff<wbr>Per<wbr>Query</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enforceworkgroupconfiguration_go">
+<a href="#enforceworkgroupconfiguration_go" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Work<wbr>Group<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="engineversion_go">
+<a href="#engineversion_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workgroupengineversion">Work<wbr>Group<wbr>Engine<wbr>Version</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publishcloudwatchmetricsenabled_go">
+<a href="#publishcloudwatchmetricsenabled_go" style="color: inherit; text-decoration: inherit;">Publish<wbr>Cloud<wbr>Watch<wbr>Metrics<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requesterpaysenabled_go">
+<a href="#requesterpaysenabled_go" style="color: inherit; text-decoration: inherit;">Requester<wbr>Pays<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resultconfiguration_go">
+<a href="#resultconfiguration_go" style="color: inherit; text-decoration: inherit;">Result<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workgroupresultconfiguration">Work<wbr>Group<wbr>Result<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="bytesscannedcutoffperquery_nodejs">
+<a href="#bytesscannedcutoffperquery_nodejs" style="color: inherit; text-decoration: inherit;">bytes<wbr>Scanned<wbr>Cutoff<wbr>Per<wbr>Query</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enforceworkgroupconfiguration_nodejs">
+<a href="#enforceworkgroupconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>Work<wbr>Group<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="engineversion_nodejs">
+<a href="#engineversion_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workgroupengineversion">Work<wbr>Group<wbr>Engine<wbr>Version</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publishcloudwatchmetricsenabled_nodejs">
+<a href="#publishcloudwatchmetricsenabled_nodejs" style="color: inherit; text-decoration: inherit;">publish<wbr>Cloud<wbr>Watch<wbr>Metrics<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requesterpaysenabled_nodejs">
+<a href="#requesterpaysenabled_nodejs" style="color: inherit; text-decoration: inherit;">requester<wbr>Pays<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resultconfiguration_nodejs">
+<a href="#resultconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">result<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workgroupresultconfiguration">Work<wbr>Group<wbr>Result<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="bytes_scanned_cutoff_per_query_python">
+<a href="#bytes_scanned_cutoff_per_query_python" style="color: inherit; text-decoration: inherit;">bytes_<wbr>scanned_<wbr>cutoff_<wbr>per_<wbr>query</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enforce_work_group_configuration_python">
+<a href="#enforce_work_group_configuration_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>work_<wbr>group_<wbr>configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="engine_version_python">
+<a href="#engine_version_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workgroupengineversion">Work<wbr>Group<wbr>Engine<wbr>Version</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publish_cloud_watch_metrics_enabled_python">
+<a href="#publish_cloud_watch_metrics_enabled_python" style="color: inherit; text-decoration: inherit;">publish_<wbr>cloud_<wbr>watch_<wbr>metrics_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requester_pays_enabled_python">
+<a href="#requester_pays_enabled_python" style="color: inherit; text-decoration: inherit;">requester_<wbr>pays_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="result_configuration_python">
+<a href="#result_configuration_python" style="color: inherit; text-decoration: inherit;">result_<wbr>configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workgroupresultconfiguration">Work<wbr>Group<wbr>Result<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="workgroupconfigurationupdates">Work<wbr>Group<wbr>Configuration<wbr>Updates</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="bytesscannedcutoffperquery_csharp">
+<a href="#bytesscannedcutoffperquery_csharp" style="color: inherit; text-decoration: inherit;">Bytes<wbr>Scanned<wbr>Cutoff<wbr>Per<wbr>Query</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enforceworkgroupconfiguration_csharp">
+<a href="#enforceworkgroupconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Work<wbr>Group<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="engineversion_csharp">
+<a href="#engineversion_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workgroupengineversion">Pulumi.<wbr>Aws<wbr>Native.<wbr>Athena.<wbr>Inputs.<wbr>Work<wbr>Group<wbr>Engine<wbr>Version</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publishcloudwatchmetricsenabled_csharp">
+<a href="#publishcloudwatchmetricsenabled_csharp" style="color: inherit; text-decoration: inherit;">Publish<wbr>Cloud<wbr>Watch<wbr>Metrics<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="removebytesscannedcutoffperquery_csharp">
+<a href="#removebytesscannedcutoffperquery_csharp" style="color: inherit; text-decoration: inherit;">Remove<wbr>Bytes<wbr>Scanned<wbr>Cutoff<wbr>Per<wbr>Query</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requesterpaysenabled_csharp">
+<a href="#requesterpaysenabled_csharp" style="color: inherit; text-decoration: inherit;">Requester<wbr>Pays<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resultconfigurationupdates_csharp">
+<a href="#resultconfigurationupdates_csharp" style="color: inherit; text-decoration: inherit;">Result<wbr>Configuration<wbr>Updates</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workgroupresultconfigurationupdates">Pulumi.<wbr>Aws<wbr>Native.<wbr>Athena.<wbr>Inputs.<wbr>Work<wbr>Group<wbr>Result<wbr>Configuration<wbr>Updates</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="bytesscannedcutoffperquery_go">
+<a href="#bytesscannedcutoffperquery_go" style="color: inherit; text-decoration: inherit;">Bytes<wbr>Scanned<wbr>Cutoff<wbr>Per<wbr>Query</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enforceworkgroupconfiguration_go">
+<a href="#enforceworkgroupconfiguration_go" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Work<wbr>Group<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="engineversion_go">
+<a href="#engineversion_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workgroupengineversion">Work<wbr>Group<wbr>Engine<wbr>Version</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publishcloudwatchmetricsenabled_go">
+<a href="#publishcloudwatchmetricsenabled_go" style="color: inherit; text-decoration: inherit;">Publish<wbr>Cloud<wbr>Watch<wbr>Metrics<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="removebytesscannedcutoffperquery_go">
+<a href="#removebytesscannedcutoffperquery_go" style="color: inherit; text-decoration: inherit;">Remove<wbr>Bytes<wbr>Scanned<wbr>Cutoff<wbr>Per<wbr>Query</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requesterpaysenabled_go">
+<a href="#requesterpaysenabled_go" style="color: inherit; text-decoration: inherit;">Requester<wbr>Pays<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resultconfigurationupdates_go">
+<a href="#resultconfigurationupdates_go" style="color: inherit; text-decoration: inherit;">Result<wbr>Configuration<wbr>Updates</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workgroupresultconfigurationupdates">Work<wbr>Group<wbr>Result<wbr>Configuration<wbr>Updates</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="bytesscannedcutoffperquery_nodejs">
+<a href="#bytesscannedcutoffperquery_nodejs" style="color: inherit; text-decoration: inherit;">bytes<wbr>Scanned<wbr>Cutoff<wbr>Per<wbr>Query</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enforceworkgroupconfiguration_nodejs">
+<a href="#enforceworkgroupconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>Work<wbr>Group<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="engineversion_nodejs">
+<a href="#engineversion_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workgroupengineversion">Work<wbr>Group<wbr>Engine<wbr>Version</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publishcloudwatchmetricsenabled_nodejs">
+<a href="#publishcloudwatchmetricsenabled_nodejs" style="color: inherit; text-decoration: inherit;">publish<wbr>Cloud<wbr>Watch<wbr>Metrics<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="removebytesscannedcutoffperquery_nodejs">
+<a href="#removebytesscannedcutoffperquery_nodejs" style="color: inherit; text-decoration: inherit;">remove<wbr>Bytes<wbr>Scanned<wbr>Cutoff<wbr>Per<wbr>Query</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requesterpaysenabled_nodejs">
+<a href="#requesterpaysenabled_nodejs" style="color: inherit; text-decoration: inherit;">requester<wbr>Pays<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resultconfigurationupdates_nodejs">
+<a href="#resultconfigurationupdates_nodejs" style="color: inherit; text-decoration: inherit;">result<wbr>Configuration<wbr>Updates</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workgroupresultconfigurationupdates">Work<wbr>Group<wbr>Result<wbr>Configuration<wbr>Updates</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="bytes_scanned_cutoff_per_query_python">
+<a href="#bytes_scanned_cutoff_per_query_python" style="color: inherit; text-decoration: inherit;">bytes_<wbr>scanned_<wbr>cutoff_<wbr>per_<wbr>query</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enforce_work_group_configuration_python">
+<a href="#enforce_work_group_configuration_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>work_<wbr>group_<wbr>configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="engine_version_python">
+<a href="#engine_version_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workgroupengineversion">Work<wbr>Group<wbr>Engine<wbr>Version</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publish_cloud_watch_metrics_enabled_python">
+<a href="#publish_cloud_watch_metrics_enabled_python" style="color: inherit; text-decoration: inherit;">publish_<wbr>cloud_<wbr>watch_<wbr>metrics_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="remove_bytes_scanned_cutoff_per_query_python">
+<a href="#remove_bytes_scanned_cutoff_per_query_python" style="color: inherit; text-decoration: inherit;">remove_<wbr>bytes_<wbr>scanned_<wbr>cutoff_<wbr>per_<wbr>query</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requester_pays_enabled_python">
+<a href="#requester_pays_enabled_python" style="color: inherit; text-decoration: inherit;">requester_<wbr>pays_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="result_configuration_updates_python">
+<a href="#result_configuration_updates_python" style="color: inherit; text-decoration: inherit;">result_<wbr>configuration_<wbr>updates</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workgroupresultconfigurationupdates">Work<wbr>Group<wbr>Result<wbr>Configuration<wbr>Updates</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="workgroupencryptionconfiguration">Work<wbr>Group<wbr>Encryption<wbr>Configuration</h4>
 
@@ -1782,458 +2234,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="workgroupworkgroupconfiguration">Work<wbr>Group<wbr>Work<wbr>Group<wbr>Configuration</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="bytesscannedcutoffperquery_csharp">
-<a href="#bytesscannedcutoffperquery_csharp" style="color: inherit; text-decoration: inherit;">Bytes<wbr>Scanned<wbr>Cutoff<wbr>Per<wbr>Query</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="enforceworkgroupconfiguration_csharp">
-<a href="#enforceworkgroupconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Work<wbr>Group<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="engineversion_csharp">
-<a href="#engineversion_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupengineversion">Pulumi.<wbr>Aws<wbr>Native.<wbr>Athena.<wbr>Inputs.<wbr>Work<wbr>Group<wbr>Engine<wbr>Version</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="publishcloudwatchmetricsenabled_csharp">
-<a href="#publishcloudwatchmetricsenabled_csharp" style="color: inherit; text-decoration: inherit;">Publish<wbr>Cloud<wbr>Watch<wbr>Metrics<wbr>Enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="requesterpaysenabled_csharp">
-<a href="#requesterpaysenabled_csharp" style="color: inherit; text-decoration: inherit;">Requester<wbr>Pays<wbr>Enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="resultconfiguration_csharp">
-<a href="#resultconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Result<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupresultconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Athena.<wbr>Inputs.<wbr>Work<wbr>Group<wbr>Result<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="bytesscannedcutoffperquery_go">
-<a href="#bytesscannedcutoffperquery_go" style="color: inherit; text-decoration: inherit;">Bytes<wbr>Scanned<wbr>Cutoff<wbr>Per<wbr>Query</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="enforceworkgroupconfiguration_go">
-<a href="#enforceworkgroupconfiguration_go" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Work<wbr>Group<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="engineversion_go">
-<a href="#engineversion_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupengineversion">Work<wbr>Group<wbr>Engine<wbr>Version</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="publishcloudwatchmetricsenabled_go">
-<a href="#publishcloudwatchmetricsenabled_go" style="color: inherit; text-decoration: inherit;">Publish<wbr>Cloud<wbr>Watch<wbr>Metrics<wbr>Enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="requesterpaysenabled_go">
-<a href="#requesterpaysenabled_go" style="color: inherit; text-decoration: inherit;">Requester<wbr>Pays<wbr>Enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="resultconfiguration_go">
-<a href="#resultconfiguration_go" style="color: inherit; text-decoration: inherit;">Result<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupresultconfiguration">Work<wbr>Group<wbr>Result<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="bytesscannedcutoffperquery_nodejs">
-<a href="#bytesscannedcutoffperquery_nodejs" style="color: inherit; text-decoration: inherit;">bytes<wbr>Scanned<wbr>Cutoff<wbr>Per<wbr>Query</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="enforceworkgroupconfiguration_nodejs">
-<a href="#enforceworkgroupconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>Work<wbr>Group<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="engineversion_nodejs">
-<a href="#engineversion_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupengineversion">Work<wbr>Group<wbr>Engine<wbr>Version</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="publishcloudwatchmetricsenabled_nodejs">
-<a href="#publishcloudwatchmetricsenabled_nodejs" style="color: inherit; text-decoration: inherit;">publish<wbr>Cloud<wbr>Watch<wbr>Metrics<wbr>Enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="requesterpaysenabled_nodejs">
-<a href="#requesterpaysenabled_nodejs" style="color: inherit; text-decoration: inherit;">requester<wbr>Pays<wbr>Enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="resultconfiguration_nodejs">
-<a href="#resultconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">result<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupresultconfiguration">Work<wbr>Group<wbr>Result<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="bytes_scanned_cutoff_per_query_python">
-<a href="#bytes_scanned_cutoff_per_query_python" style="color: inherit; text-decoration: inherit;">bytes_<wbr>scanned_<wbr>cutoff_<wbr>per_<wbr>query</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="enforce_work_group_configuration_python">
-<a href="#enforce_work_group_configuration_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>work_<wbr>group_<wbr>configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="engine_version_python">
-<a href="#engine_version_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupengineversion">Work<wbr>Group<wbr>Engine<wbr>Version</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="publish_cloud_watch_metrics_enabled_python">
-<a href="#publish_cloud_watch_metrics_enabled_python" style="color: inherit; text-decoration: inherit;">publish_<wbr>cloud_<wbr>watch_<wbr>metrics_<wbr>enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="requester_pays_enabled_python">
-<a href="#requester_pays_enabled_python" style="color: inherit; text-decoration: inherit;">requester_<wbr>pays_<wbr>enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="result_configuration_python">
-<a href="#result_configuration_python" style="color: inherit; text-decoration: inherit;">result_<wbr>configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupresultconfiguration">Work<wbr>Group<wbr>Result<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="workgroupworkgroupconfigurationupdates">Work<wbr>Group<wbr>Work<wbr>Group<wbr>Configuration<wbr>Updates</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="bytesscannedcutoffperquery_csharp">
-<a href="#bytesscannedcutoffperquery_csharp" style="color: inherit; text-decoration: inherit;">Bytes<wbr>Scanned<wbr>Cutoff<wbr>Per<wbr>Query</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="enforceworkgroupconfiguration_csharp">
-<a href="#enforceworkgroupconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Work<wbr>Group<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="engineversion_csharp">
-<a href="#engineversion_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupengineversion">Pulumi.<wbr>Aws<wbr>Native.<wbr>Athena.<wbr>Inputs.<wbr>Work<wbr>Group<wbr>Engine<wbr>Version</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="publishcloudwatchmetricsenabled_csharp">
-<a href="#publishcloudwatchmetricsenabled_csharp" style="color: inherit; text-decoration: inherit;">Publish<wbr>Cloud<wbr>Watch<wbr>Metrics<wbr>Enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="removebytesscannedcutoffperquery_csharp">
-<a href="#removebytesscannedcutoffperquery_csharp" style="color: inherit; text-decoration: inherit;">Remove<wbr>Bytes<wbr>Scanned<wbr>Cutoff<wbr>Per<wbr>Query</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="requesterpaysenabled_csharp">
-<a href="#requesterpaysenabled_csharp" style="color: inherit; text-decoration: inherit;">Requester<wbr>Pays<wbr>Enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="resultconfigurationupdates_csharp">
-<a href="#resultconfigurationupdates_csharp" style="color: inherit; text-decoration: inherit;">Result<wbr>Configuration<wbr>Updates</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupresultconfigurationupdates">Pulumi.<wbr>Aws<wbr>Native.<wbr>Athena.<wbr>Inputs.<wbr>Work<wbr>Group<wbr>Result<wbr>Configuration<wbr>Updates</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="bytesscannedcutoffperquery_go">
-<a href="#bytesscannedcutoffperquery_go" style="color: inherit; text-decoration: inherit;">Bytes<wbr>Scanned<wbr>Cutoff<wbr>Per<wbr>Query</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="enforceworkgroupconfiguration_go">
-<a href="#enforceworkgroupconfiguration_go" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Work<wbr>Group<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="engineversion_go">
-<a href="#engineversion_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupengineversion">Work<wbr>Group<wbr>Engine<wbr>Version</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="publishcloudwatchmetricsenabled_go">
-<a href="#publishcloudwatchmetricsenabled_go" style="color: inherit; text-decoration: inherit;">Publish<wbr>Cloud<wbr>Watch<wbr>Metrics<wbr>Enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="removebytesscannedcutoffperquery_go">
-<a href="#removebytesscannedcutoffperquery_go" style="color: inherit; text-decoration: inherit;">Remove<wbr>Bytes<wbr>Scanned<wbr>Cutoff<wbr>Per<wbr>Query</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="requesterpaysenabled_go">
-<a href="#requesterpaysenabled_go" style="color: inherit; text-decoration: inherit;">Requester<wbr>Pays<wbr>Enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="resultconfigurationupdates_go">
-<a href="#resultconfigurationupdates_go" style="color: inherit; text-decoration: inherit;">Result<wbr>Configuration<wbr>Updates</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupresultconfigurationupdates">Work<wbr>Group<wbr>Result<wbr>Configuration<wbr>Updates</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="bytesscannedcutoffperquery_nodejs">
-<a href="#bytesscannedcutoffperquery_nodejs" style="color: inherit; text-decoration: inherit;">bytes<wbr>Scanned<wbr>Cutoff<wbr>Per<wbr>Query</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="enforceworkgroupconfiguration_nodejs">
-<a href="#enforceworkgroupconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>Work<wbr>Group<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="engineversion_nodejs">
-<a href="#engineversion_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupengineversion">Work<wbr>Group<wbr>Engine<wbr>Version</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="publishcloudwatchmetricsenabled_nodejs">
-<a href="#publishcloudwatchmetricsenabled_nodejs" style="color: inherit; text-decoration: inherit;">publish<wbr>Cloud<wbr>Watch<wbr>Metrics<wbr>Enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="removebytesscannedcutoffperquery_nodejs">
-<a href="#removebytesscannedcutoffperquery_nodejs" style="color: inherit; text-decoration: inherit;">remove<wbr>Bytes<wbr>Scanned<wbr>Cutoff<wbr>Per<wbr>Query</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="requesterpaysenabled_nodejs">
-<a href="#requesterpaysenabled_nodejs" style="color: inherit; text-decoration: inherit;">requester<wbr>Pays<wbr>Enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="resultconfigurationupdates_nodejs">
-<a href="#resultconfigurationupdates_nodejs" style="color: inherit; text-decoration: inherit;">result<wbr>Configuration<wbr>Updates</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupresultconfigurationupdates">Work<wbr>Group<wbr>Result<wbr>Configuration<wbr>Updates</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="bytes_scanned_cutoff_per_query_python">
-<a href="#bytes_scanned_cutoff_per_query_python" style="color: inherit; text-decoration: inherit;">bytes_<wbr>scanned_<wbr>cutoff_<wbr>per_<wbr>query</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="enforce_work_group_configuration_python">
-<a href="#enforce_work_group_configuration_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>work_<wbr>group_<wbr>configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="engine_version_python">
-<a href="#engine_version_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupengineversion">Work<wbr>Group<wbr>Engine<wbr>Version</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="publish_cloud_watch_metrics_enabled_python">
-<a href="#publish_cloud_watch_metrics_enabled_python" style="color: inherit; text-decoration: inherit;">publish_<wbr>cloud_<wbr>watch_<wbr>metrics_<wbr>enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="remove_bytes_scanned_cutoff_per_query_python">
-<a href="#remove_bytes_scanned_cutoff_per_query_python" style="color: inherit; text-decoration: inherit;">remove_<wbr>bytes_<wbr>scanned_<wbr>cutoff_<wbr>per_<wbr>query</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="requester_pays_enabled_python">
-<a href="#requester_pays_enabled_python" style="color: inherit; text-decoration: inherit;">requester_<wbr>pays_<wbr>enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="result_configuration_updates_python">
-<a href="#result_configuration_updates_python" style="color: inherit; text-decoration: inherit;">result_<wbr>configuration_<wbr>updates</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupresultconfigurationupdates">Work<wbr>Group<wbr>Result<wbr>Configuration<wbr>Updates</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

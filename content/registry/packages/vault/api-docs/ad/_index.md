@@ -13,14 +13,14 @@ Explore the resources and functions of the vault.ad module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="secretbackend" title="SecretBackend"><span class="symbol resource"></span>SecretBackend</a></li>
-    <li><a href="secretlibrary" title="SecretLibrary"><span class="symbol resource"></span>SecretLibrary</a></li>
-    <li><a href="secretrole" title="SecretRole"><span class="symbol resource"></span>SecretRole</a></li>
+    <li><a href="secretbackend" title="SecretBackend"><span class="api-symbol api-symbol--resource"></span>SecretBackend</a></li>
+    <li><a href="secretlibrary" title="SecretLibrary"><span class="api-symbol api-symbol--resource"></span>SecretLibrary</a></li>
+    <li><a href="secretrole" title="SecretRole"><span class="api-symbol api-symbol--resource"></span>SecretRole</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getaccesscredentials" title="GetAccessCredentials"><span class="symbol function"></span>GetAccessCredentials</a></li>
+    <li><a href="getaccesscredentials" title="GetAccessCredentials"><span class="api-symbol api-symbol--function"></span>GetAccessCredentials</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

@@ -866,7 +866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular"><dt>State<wbr>Unspecified</dt>
     <dd>STATE_UNSPECIFIED{{% md %}}No state specified. Treated as ACTIVE only at the time of resource creation.{{% /md %}}</dd><dt>Active</dt>
     <dd>ACTIVE{{% md %}}The Consent is active and is considered when evaluating a user's consent on resources.{{% /md %}}</dd><dt>Archived</dt>
-    <dd>ARCHIVED{{% md %}}When a Consent is updated, the current version is archived and a new one is created with its state set to the updated Consent's previous state.{{% /md %}}</dd><dt>Revoked</dt>
+    <dd>ARCHIVED{{% md %}}The archived state is currently not being used.{{% /md %}}</dd><dt>Revoked</dt>
     <dd>REVOKED{{% md %}}A revoked Consent is not considered when evaluating a user's consent on resources.{{% /md %}}</dd><dt>Draft</dt>
     <dd>DRAFT{{% md %}}A draft Consent is not considered when evaluating a user's consent on resources unless explicitly specified.{{% /md %}}</dd><dt>Rejected</dt>
     <dd>REJECTED{{% md %}}When a draft Consent is rejected by a user, it is set to a rejected state. A rejected Consent is not considered when evaluating a user's consent on resources.{{% /md %}}</dd></dl>
@@ -876,7 +876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular"><dt>Consent<wbr>State<wbr>State<wbr>Unspecified</dt>
     <dd>STATE_UNSPECIFIED{{% md %}}No state specified. Treated as ACTIVE only at the time of resource creation.{{% /md %}}</dd><dt>Consent<wbr>State<wbr>Active</dt>
     <dd>ACTIVE{{% md %}}The Consent is active and is considered when evaluating a user's consent on resources.{{% /md %}}</dd><dt>Consent<wbr>State<wbr>Archived</dt>
-    <dd>ARCHIVED{{% md %}}When a Consent is updated, the current version is archived and a new one is created with its state set to the updated Consent's previous state.{{% /md %}}</dd><dt>Consent<wbr>State<wbr>Revoked</dt>
+    <dd>ARCHIVED{{% md %}}The archived state is currently not being used.{{% /md %}}</dd><dt>Consent<wbr>State<wbr>Revoked</dt>
     <dd>REVOKED{{% md %}}A revoked Consent is not considered when evaluating a user's consent on resources.{{% /md %}}</dd><dt>Consent<wbr>State<wbr>Draft</dt>
     <dd>DRAFT{{% md %}}A draft Consent is not considered when evaluating a user's consent on resources unless explicitly specified.{{% /md %}}</dd><dt>Consent<wbr>State<wbr>Rejected</dt>
     <dd>REJECTED{{% md %}}When a draft Consent is rejected by a user, it is set to a rejected state. A rejected Consent is not considered when evaluating a user's consent on resources.{{% /md %}}</dd></dl>
@@ -886,7 +886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular"><dt>State<wbr>Unspecified</dt>
     <dd>STATE_UNSPECIFIED{{% md %}}No state specified. Treated as ACTIVE only at the time of resource creation.{{% /md %}}</dd><dt>Active</dt>
     <dd>ACTIVE{{% md %}}The Consent is active and is considered when evaluating a user's consent on resources.{{% /md %}}</dd><dt>Archived</dt>
-    <dd>ARCHIVED{{% md %}}When a Consent is updated, the current version is archived and a new one is created with its state set to the updated Consent's previous state.{{% /md %}}</dd><dt>Revoked</dt>
+    <dd>ARCHIVED{{% md %}}The archived state is currently not being used.{{% /md %}}</dd><dt>Revoked</dt>
     <dd>REVOKED{{% md %}}A revoked Consent is not considered when evaluating a user's consent on resources.{{% /md %}}</dd><dt>Draft</dt>
     <dd>DRAFT{{% md %}}A draft Consent is not considered when evaluating a user's consent on resources unless explicitly specified.{{% /md %}}</dd><dt>Rejected</dt>
     <dd>REJECTED{{% md %}}When a draft Consent is rejected by a user, it is set to a rejected state. A rejected Consent is not considered when evaluating a user's consent on resources.{{% /md %}}</dd></dl>
@@ -896,7 +896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular"><dt>STATE_UNSPECIFIED</dt>
     <dd>STATE_UNSPECIFIED{{% md %}}No state specified. Treated as ACTIVE only at the time of resource creation.{{% /md %}}</dd><dt>ACTIVE</dt>
     <dd>ACTIVE{{% md %}}The Consent is active and is considered when evaluating a user's consent on resources.{{% /md %}}</dd><dt>ARCHIVED</dt>
-    <dd>ARCHIVED{{% md %}}When a Consent is updated, the current version is archived and a new one is created with its state set to the updated Consent's previous state.{{% /md %}}</dd><dt>REVOKED</dt>
+    <dd>ARCHIVED{{% md %}}The archived state is currently not being used.{{% /md %}}</dd><dt>REVOKED</dt>
     <dd>REVOKED{{% md %}}A revoked Consent is not considered when evaluating a user's consent on resources.{{% /md %}}</dd><dt>DRAFT</dt>
     <dd>DRAFT{{% md %}}A draft Consent is not considered when evaluating a user's consent on resources unless explicitly specified.{{% /md %}}</dd><dt>REJECTED</dt>
     <dd>REJECTED{{% md %}}When a draft Consent is rejected by a user, it is set to a rejected state. A rejected Consent is not considered when evaluating a user's consent on resources.{{% /md %}}</dd></dl>

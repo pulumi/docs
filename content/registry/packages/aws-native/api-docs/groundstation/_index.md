@@ -13,9 +13,9 @@ Explore the resources and functions of the aws-native.groundstation module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="config" title="Config"><span class="symbol resource"></span>Config</a></li>
-    <li><a href="dataflowendpointgroup" title="DataflowEndpointGroup"><span class="symbol resource"></span>DataflowEndpointGroup</a></li>
-    <li><a href="missionprofile" title="MissionProfile"><span class="symbol resource"></span>MissionProfile</a></li>
+    <li><a href="config" title="Config"><span class="api-symbol api-symbol--resource"></span>Config</a></li>
+    <li><a href="dataflowendpointgroup" title="DataflowEndpointGroup"><span class="api-symbol api-symbol--resource"></span>DataflowEndpointGroup</a></li>
+    <li><a href="missionprofile" title="MissionProfile"><span class="api-symbol api-symbol--resource"></span>MissionProfile</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -25,6 +25,6 @@ Explore the resources and functions of the aws-native.groundstation module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.0</dd>
 </dl>
 

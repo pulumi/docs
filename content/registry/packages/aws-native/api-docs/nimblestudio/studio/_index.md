@@ -31,7 +31,7 @@ Resource schema for AWS::NimbleStudio::Studio.
            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
            <span class="nx">admin_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-           <span class="nx">studio_encryption_configuration</span><span class="p">:</span> <span class="nx">Optional[StudioStudioEncryptionConfigurationArgs]</span> = None<span class="p">,</span>
+           <span class="nx">studio_encryption_configuration</span><span class="p">:</span> <span class="nx">Optional[StudioEncryptionConfigurationArgs]</span> = None<span class="p">,</span>
            <span class="nx">studio_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">,</span>
            <span class="nx">user_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
@@ -200,7 +200,7 @@ The Studio resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#studioencryptionconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Studio<wbr>Encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#studiostudioencryptionconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Nimble<wbr>Studio.<wbr>Inputs.<wbr>Studio<wbr>Studio<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#studioencryptionconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Nimble<wbr>Studio.<wbr>Inputs.<wbr>Studio<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -252,7 +252,7 @@ The Studio resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#studioencryptionconfiguration_go" style="color: inherit; text-decoration: inherit;">Studio<wbr>Encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#studiostudioencryptionconfiguration">Studio<wbr>Studio<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#studioencryptionconfiguration">Studio<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -304,7 +304,7 @@ The Studio resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#studioencryptionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">studio<wbr>Encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#studiostudioencryptionconfiguration">Studio<wbr>Studio<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#studioencryptionconfiguration">Studio<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -356,7 +356,7 @@ The Studio resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#studio_encryption_configuration_python" style="color: inherit; text-decoration: inherit;">studio_<wbr>encryption_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#studiostudioencryptionconfiguration">Studio<wbr>Studio<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#studioencryptionconfiguration">Studio<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -562,7 +562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="studiostudioencryptionconfiguration">Studio<wbr>Studio<wbr>Encryption<wbr>Configuration</h4>
+<h4 id="studioencryptionconfiguration">Studio<wbr>Encryption<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"

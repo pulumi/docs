@@ -711,7 +711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_csharp" style="color: inherit; text-decoration: inherit;">Created</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">object</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}date time the resource was created{{% /md %}}</dd><dt class="property-"
             title="">
@@ -803,7 +803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_go" style="color: inherit; text-decoration: inherit;">Created</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}date time the resource was created{{% /md %}}</dd><dt class="property-"
             title="">
@@ -895,7 +895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">any</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}date time the resource was created{{% /md %}}</dd><dt class="property-"
             title="">
@@ -987,7 +987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_python" style="color: inherit; text-decoration: inherit;">created</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}date time the resource was created{{% /md %}}</dd><dt class="property-"
             title="">

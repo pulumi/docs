@@ -13,10 +13,10 @@ Explore the resources and functions of the aws-native.s3outposts module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="accesspoint" title="AccessPoint"><span class="symbol resource"></span>AccessPoint</a></li>
-    <li><a href="bucket" title="Bucket"><span class="symbol resource"></span>Bucket</a></li>
-    <li><a href="bucketpolicy" title="BucketPolicy"><span class="symbol resource"></span>BucketPolicy</a></li>
-    <li><a href="endpoint" title="Endpoint"><span class="symbol resource"></span>Endpoint</a></li>
+    <li><a href="accesspoint" title="AccessPoint"><span class="api-symbol api-symbol--resource"></span>AccessPoint</a></li>
+    <li><a href="bucket" title="Bucket"><span class="api-symbol api-symbol--resource"></span>Bucket</a></li>
+    <li><a href="bucketpolicy" title="BucketPolicy"><span class="api-symbol api-symbol--resource"></span>BucketPolicy</a></li>
+    <li><a href="endpoint" title="Endpoint"><span class="api-symbol api-symbol--resource"></span>Endpoint</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -26,6 +26,6 @@ Explore the resources and functions of the aws-native.s3outposts module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.0</dd>
 </dl>
 

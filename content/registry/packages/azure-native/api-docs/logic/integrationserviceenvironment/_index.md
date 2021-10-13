@@ -287,6 +287,7 @@ const integrationServiceEnvironment = new azure_native.logic.IntegrationServiceE
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">IntegrationServiceEnvironment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                                  <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedServiceIdentityArgs]</span> = None<span class="p">,</span>
                                   <span class="nx">integration_service_environment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                   <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                   <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[IntegrationServiceEnvironmentPropertiesArgs]</span> = None<span class="p">,</span>
@@ -295,7 +296,7 @@ const integrationServiceEnvironment = new azure_native.logic.IntegrationServiceE
                                   <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">IntegrationServiceEnvironment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IntegrationServiceEnvironmentInitArgs</a></span><span class="p">,</span>
+                                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IntegrationServiceEnvironmentArgs</a></span><span class="p">,</span>
                                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
@@ -343,7 +344,7 @@ const integrationServiceEnvironment = new azure_native.logic.IntegrationServiceE
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">IntegrationServiceEnvironmentInitArgs</a></span>
+        <span class="property-type"><a href="#inputs">IntegrationServiceEnvironmentArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
@@ -430,6 +431,14 @@ The IntegrationServiceEnvironment resource accepts the following [input]({{< rel
     </dt>
     <dd>{{% md %}}The resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="identity_csharp">
+<a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedserviceidentity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Managed service identity properties.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="integrationserviceenvironmentname_csharp">
 <a href="#integrationserviceenvironmentname_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Service<wbr>Environment<wbr>Name</a>
 </span>
@@ -481,6 +490,14 @@ The IntegrationServiceEnvironment resource accepts the following [input]({{< rel
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_go">
+<a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Managed service identity properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationserviceenvironmentname_go">
 <a href="#integrationserviceenvironmentname_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Service<wbr>Environment<wbr>Name</a>
@@ -534,6 +551,14 @@ The IntegrationServiceEnvironment resource accepts the following [input]({{< rel
     </dt>
     <dd>{{% md %}}The resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="identity_nodejs">
+<a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Managed service identity properties.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="integrationserviceenvironmentname_nodejs">
 <a href="#integrationserviceenvironmentname_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Service<wbr>Environment<wbr>Name</a>
 </span>
@@ -585,6 +610,14 @@ The IntegrationServiceEnvironment resource accepts the following [input]({{< rel
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_python">
+<a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Managed service identity properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integration_service_environment_name_python">
 <a href="#integration_service_environment_name_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>service_<wbr>environment_<wbr>name</a>
@@ -2256,6 +2289,264 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="managedserviceidentity">Managed<wbr>Service<wbr>Identity</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#managedserviceidentitytype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Type of managed service identity. The type 'SystemAssigned' includes an implicitly created identity. The type 'None' will remove any identities from the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_csharp">
+<a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#managedserviceidentitytype">Managed<wbr>Service<wbr>Identity<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Type of managed service identity. The type 'SystemAssigned' includes an implicitly created identity. The type 'None' will remove any identities from the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_go">
+<a href="#userassignedidentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#managedserviceidentitytype">Managed<wbr>Service<wbr>Identity<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Type of managed service identity. The type 'SystemAssigned' includes an implicitly created identity. The type 'None' will remove any identities from the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_nodejs">
+<a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#managedserviceidentitytype">Managed<wbr>Service<wbr>Identity<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Type of managed service identity. The type 'SystemAssigned' includes an implicitly created identity. The type 'None' will remove any identities from the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="user_assigned_identities_python">
+<a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="managedserviceidentityresponse">Managed<wbr>Service<wbr>Identity<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="principalid_csharp">
+<a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Principal Id of managed service identity.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Tenant of managed service identity.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of managed service identity. The type 'SystemAssigned' includes an implicitly created identity. The type 'None' will remove any identities from the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_csharp">
+<a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="principalid_go">
+<a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Principal Id of managed service identity.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Tenant of managed service identity.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of managed service identity. The type 'SystemAssigned' includes an implicitly created identity. The type 'None' will remove any identities from the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_go">
+<a href="#userassignedidentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]User<wbr>Assigned<wbr>Identity<wbr>Response</span>
+    </dt>
+    <dd>{{% md %}}The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="principalid_nodejs">
+<a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Principal Id of managed service identity.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Tenant of managed service identity.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of managed service identity. The type 'SystemAssigned' includes an implicitly created identity. The type 'None' will remove any identities from the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_nodejs">
+<a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Response}</span>
+    </dt>
+    <dd>{{% md %}}The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="principal_id_python">
+<a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Principal Id of managed service identity.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Tenant of managed service identity.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of managed service identity. The type 'SystemAssigned' includes an implicitly created identity. The type 'None' will remove any identities from the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="user_assigned_identities_python">
+<a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response]</span>
+    </dt>
+    <dd>{{% md %}}The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="managedserviceidentitytype">Managed<wbr>Service<wbr>Identity<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>System<wbr>Assigned</dt>
+    <dd>SystemAssigned</dd><dt>User<wbr>Assigned</dt>
+    <dd>UserAssigned</dd><dt>None</dt>
+    <dd>None</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Managed<wbr>Service<wbr>Identity<wbr>Type<wbr>System<wbr>Assigned</dt>
+    <dd>SystemAssigned</dd><dt>Managed<wbr>Service<wbr>Identity<wbr>Type<wbr>User<wbr>Assigned</dt>
+    <dd>UserAssigned</dd><dt>Managed<wbr>Service<wbr>Identity<wbr>Type<wbr>None</dt>
+    <dd>None</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>System<wbr>Assigned</dt>
+    <dd>SystemAssigned</dd><dt>User<wbr>Assigned</dt>
+    <dd>UserAssigned</dd><dt>None</dt>
+    <dd>None</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SYSTEM_ASSIGNED</dt>
+    <dd>SystemAssigned</dd><dt>USER_ASSIGNED</dt>
+    <dd>UserAssigned</dd><dt>NONE</dt>
+    <dd>None</dd></dl>
+{{% /choosable %}}
+
 <h4 id="networkconfiguration">Network<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
@@ -2646,6 +2937,88 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource id.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="userassignedidentityresponse">User<wbr>Assigned<wbr>Identity<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="clientid_csharp">
+<a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Client Id of user assigned identity{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="principalid_csharp">
+<a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Principal Id of user assigned identity{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="clientid_go">
+<a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Client Id of user assigned identity{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="principalid_go">
+<a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Principal Id of user assigned identity{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="clientid_nodejs">
+<a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Client Id of user assigned identity{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="principalid_nodejs">
+<a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Principal Id of user assigned identity{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="client_id_python">
+<a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Client Id of user assigned identity{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="principal_id_python">
+<a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Principal Id of user assigned identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="workflowprovisioningstate">Workflow<wbr>Provisioning<wbr>State</h4>

@@ -13,17 +13,17 @@ Explore the resources and functions of the aws.elasticbeanstalk module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="application" title="Application"><span class="symbol resource"></span>Application</a></li>
-    <li><a href="applicationversion" title="ApplicationVersion"><span class="symbol resource"></span>ApplicationVersion</a></li>
-    <li><a href="configurationtemplate" title="ConfigurationTemplate"><span class="symbol resource"></span>ConfigurationTemplate</a></li>
-    <li><a href="environment" title="Environment"><span class="symbol resource"></span>Environment</a></li>
+    <li><a href="application" title="Application"><span class="api-symbol api-symbol--resource"></span>Application</a></li>
+    <li><a href="applicationversion" title="ApplicationVersion"><span class="api-symbol api-symbol--resource"></span>ApplicationVersion</a></li>
+    <li><a href="configurationtemplate" title="ConfigurationTemplate"><span class="api-symbol api-symbol--resource"></span>ConfigurationTemplate</a></li>
+    <li><a href="environment" title="Environment"><span class="api-symbol api-symbol--resource"></span>Environment</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getapplication" title="GetApplication"><span class="symbol function"></span>GetApplication</a></li>
-    <li><a href="gethostedzone" title="GetHostedZone"><span class="symbol function"></span>GetHostedZone</a></li>
-    <li><a href="getsolutionstack" title="GetSolutionStack"><span class="symbol function"></span>GetSolutionStack</a></li>
+    <li><a href="getapplication" title="GetApplication"><span class="api-symbol api-symbol--function"></span>GetApplication</a></li>
+    <li><a href="gethostedzone" title="GetHostedZone"><span class="api-symbol api-symbol--function"></span>GetHostedZone</a></li>
+    <li><a href="getsolutionstack" title="GetSolutionStack"><span class="api-symbol api-symbol--function"></span>GetSolutionStack</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -35,6 +35,6 @@ Explore the resources and functions of the aws.elasticbeanstalk module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.23.0</dd>
+	<dd>4.24.1</dd>
 </dl>
 

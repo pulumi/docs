@@ -37,7 +37,7 @@ class MyStack : Stack
     {
         var myReplicationConfig = new AwsNative.ECR.ReplicationConfiguration("myReplicationConfig", new AwsNative.ECR.ReplicationConfigurationArgs
         {
-            ReplicationConfiguration = new AwsNative.ECR.Inputs.ReplicationConfigurationReplicationConfigurationArgs
+            ReplicationConfiguration = new AwsNative.ECR.Inputs.ReplicationConfigurationArgs
             {
                 Rules = 
                 {
@@ -84,7 +84,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := ecr.NewReplicationConfiguration(ctx, "myReplicationConfig", &ecr.ReplicationConfigurationArgs{
-			ReplicationConfiguration: &ecr.ReplicationConfigurationReplicationConfigurationArgs{
+			ReplicationConfiguration: &ecr.ReplicationConfigurationArgs{
 				Rules: ecr.ReplicationConfigurationReplicationRuleArray{
 					&ecr.ReplicationConfigurationReplicationRuleArgs{
 						Destinations: ecr.ReplicationConfigurationReplicationDestinationArray{
@@ -121,7 +121,7 @@ func main() {
 import pulumi
 import pulumi_aws_native as aws_native
 
-my_replication_config = aws_native.ecr.ReplicationConfiguration("myReplicationConfig", replication_configuration=aws_native.ecr.ReplicationConfigurationReplicationConfigurationArgs(
+my_replication_config = aws_native.ecr.ReplicationConfiguration("myReplicationConfig", replication_configuration=aws_native.ecr.ReplicationConfigurationArgs(
     rules=[aws_native.ecr.ReplicationConfigurationReplicationRuleArgs(
         destinations=[
             aws_native.ecr.ReplicationConfigurationReplicationDestinationArgs(
@@ -190,10 +190,10 @@ const myReplicationConfig = new aws_native.ecr.ReplicationConfiguration("myRepli
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ReplicationConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                             <span class="nx">replication_configuration</span><span class="p">:</span> <span class="nx">Optional[ReplicationConfigurationReplicationConfigurationArgs]</span> = None<span class="p">)</span>
+                             <span class="nx">replication_configuration</span><span class="p">:</span> <span class="nx">Optional[ReplicationConfigurationArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ReplicationConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReplicationConfigurationArgs</a></span><span class="p">,</span>
+                             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReplicationConfigurationInitArgs</a></span><span class="p">,</span>
                              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
@@ -241,7 +241,7 @@ const myReplicationConfig = new aws_native.ecr.ReplicationConfiguration("myRepli
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ReplicationConfigurationArgs</a></span>
+        <span class="property-type"><a href="#inputs">ReplicationConfigurationInitArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
@@ -324,7 +324,7 @@ The ReplicationConfiguration resource accepts the following [input]({{< relref "
 <a href="#replicationconfigurationvalue_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Configuration<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationconfigurationreplicationconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>ECR.<wbr>Inputs.<wbr>Replication<wbr>Configuration<wbr>Replication<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#replicationconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>ECR.<wbr>Inputs.<wbr>Replication<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -336,7 +336,7 @@ The ReplicationConfiguration resource accepts the following [input]({{< relref "
 <a href="#replicationconfiguration_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationconfigurationreplicationconfiguration">Replication<wbr>Configuration<wbr>Replication<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#replicationconfiguration">Replication<wbr>Configuration<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -348,7 +348,7 @@ The ReplicationConfiguration resource accepts the following [input]({{< relref "
 <a href="#replicationconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationconfigurationreplicationconfiguration">Replication<wbr>Configuration<wbr>Replication<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#replicationconfiguration">Replication<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -360,7 +360,7 @@ The ReplicationConfiguration resource accepts the following [input]({{< relref "
 <a href="#replication_configuration_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationconfigurationreplicationconfiguration">Replication<wbr>Configuration<wbr>Replication<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#replicationconfiguration">Replication<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -462,6 +462,56 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="replicationconfiguration">Replication<wbr>Configuration</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="rules_csharp">
+<a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#replicationconfigurationreplicationrule">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>ECR.<wbr>Inputs.<wbr>Replication<wbr>Configuration<wbr>Replication<wbr>Rule&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An array of objects representing the replication rules for a replication configuration. A replication configuration may contain a maximum of 10 rules.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="rules_go">
+<a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#replicationconfigurationreplicationrule">[]Replication<wbr>Configuration<wbr>Replication<wbr>Rule</a></span>
+    </dt>
+    <dd>{{% md %}}An array of objects representing the replication rules for a replication configuration. A replication configuration may contain a maximum of 10 rules.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="rules_nodejs">
+<a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#replicationconfigurationreplicationrule">Replication<wbr>Configuration<wbr>Replication<wbr>Rule[]</a></span>
+    </dt>
+    <dd>{{% md %}}An array of objects representing the replication rules for a replication configuration. A replication configuration may contain a maximum of 10 rules.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="rules_python">
+<a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#replicationconfigurationreplicationrule">Sequence[Replication<wbr>Configuration<wbr>Replication<wbr>Rule]</a></span>
+    </dt>
+    <dd>{{% md %}}An array of objects representing the replication rules for a replication configuration. A replication configuration may contain a maximum of 10 rules.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="replicationconfigurationfiltertype">Replication<wbr>Configuration<wbr>Filter<wbr>Type</h4>
 
 {{% choosable language csharp %}}
@@ -482,56 +532,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="tabular"><dt>PREFIX_MATCH</dt>
     <dd>PREFIX_MATCH</dd></dl>
-{{% /choosable %}}
-
-<h4 id="replicationconfigurationreplicationconfiguration">Replication<wbr>Configuration<wbr>Replication<wbr>Configuration</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="rules_csharp">
-<a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationconfigurationreplicationrule">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>ECR.<wbr>Inputs.<wbr>Replication<wbr>Configuration<wbr>Replication<wbr>Rule&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}An array of objects representing the replication rules for a replication configuration. A replication configuration may contain only one replication rule but the rule may contain one or more replication destinations.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="rules_go">
-<a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationconfigurationreplicationrule">[]Replication<wbr>Configuration<wbr>Replication<wbr>Rule</a></span>
-    </dt>
-    <dd>{{% md %}}An array of objects representing the replication rules for a replication configuration. A replication configuration may contain only one replication rule but the rule may contain one or more replication destinations.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="rules_nodejs">
-<a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationconfigurationreplicationrule">Replication<wbr>Configuration<wbr>Replication<wbr>Rule[]</a></span>
-    </dt>
-    <dd>{{% md %}}An array of objects representing the replication rules for a replication configuration. A replication configuration may contain only one replication rule but the rule may contain one or more replication destinations.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="rules_python">
-<a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationconfigurationreplicationrule">Sequence[Replication<wbr>Configuration<wbr>Replication<wbr>Rule]</a></span>
-    </dt>
-    <dd>{{% md %}}An array of objects representing the replication rules for a replication configuration. A replication configuration may contain only one replication rule but the rule may contain one or more replication destinations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="replicationconfigurationreplicationdestination">Replication<wbr>Configuration<wbr>Replication<wbr>Destination</h4>

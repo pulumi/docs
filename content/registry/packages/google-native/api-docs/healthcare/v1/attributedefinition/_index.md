@@ -175,7 +175,7 @@ The AttributeDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Possible values for the attribute. The number of allowed values must not exceed 100. An empty list is invalid. The list can only be expanded after creation.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Possible values for the attribute. The number of allowed values must not exceed 500. An empty list is invalid. The list can only be expanded after creation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="attributedefinitionid_csharp">
 <a href="#attributedefinitionid_csharp" style="color: inherit; text-decoration: inherit;">Attribute<wbr>Definition<wbr>Id</a>
@@ -267,7 +267,7 @@ The AttributeDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Possible values for the attribute. The number of allowed values must not exceed 100. An empty list is invalid. The list can only be expanded after creation.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Possible values for the attribute. The number of allowed values must not exceed 500. An empty list is invalid. The list can only be expanded after creation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="attributedefinitionid_go">
 <a href="#attributedefinitionid_go" style="color: inherit; text-decoration: inherit;">Attribute<wbr>Definition<wbr>Id</a>
@@ -359,7 +359,7 @@ The AttributeDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Possible values for the attribute. The number of allowed values must not exceed 100. An empty list is invalid. The list can only be expanded after creation.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Possible values for the attribute. The number of allowed values must not exceed 500. An empty list is invalid. The list can only be expanded after creation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="attributedefinitionid_nodejs">
 <a href="#attributedefinitionid_nodejs" style="color: inherit; text-decoration: inherit;">attribute<wbr>Definition<wbr>Id</a>
@@ -451,7 +451,7 @@ The AttributeDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Possible values for the attribute. The number of allowed values must not exceed 100. An empty list is invalid. The list can only be expanded after creation.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Possible values for the attribute. The number of allowed values must not exceed 500. An empty list is invalid. The list can only be expanded after creation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="attribute_definition_id_python">
 <a href="#attribute_definition_id_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>definition_<wbr>id</a>

@@ -13,14 +13,14 @@ Explore the resources and functions of the google-native.cloudfunctions/v1 modul
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="function" title="Function"><span class="symbol resource"></span>Function</a></li>
-    <li><a href="functioniampolicy" title="FunctionIamPolicy"><span class="symbol resource"></span>FunctionIamPolicy</a></li>
+    <li><a href="function" title="Function"><span class="api-symbol api-symbol--resource"></span>Function</a></li>
+    <li><a href="functioniampolicy" title="FunctionIamPolicy"><span class="api-symbol api-symbol--resource"></span>FunctionIamPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getfunction" title="GetFunction"><span class="symbol function"></span>GetFunction</a></li>
-    <li><a href="getfunctioniampolicy" title="GetFunctionIamPolicy"><span class="symbol function"></span>GetFunctionIamPolicy</a></li>
+    <li><a href="getfunction" title="GetFunction"><span class="api-symbol api-symbol--function"></span>GetFunction</a></li>
+    <li><a href="getfunctioniampolicy" title="GetFunctionIamPolicy"><span class="api-symbol api-symbol--function"></span>GetFunctionIamPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -30,6 +30,6 @@ Explore the resources and functions of the google-native.cloudfunctions/v1 modul
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.0</dd>
+	<dd>0.8.0</dd>
 </dl>
 

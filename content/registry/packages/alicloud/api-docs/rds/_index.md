@@ -13,26 +13,26 @@ Explore the resources and functions of the alicloud.rds module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="account" title="Account"><span class="symbol resource"></span>Account</a></li>
-    <li><a href="accountprivilege" title="AccountPrivilege"><span class="symbol resource"></span>AccountPrivilege</a></li>
-    <li><a href="backuppolicy" title="BackupPolicy"><span class="symbol resource"></span>BackupPolicy</a></li>
-    <li><a href="connection" title="Connection"><span class="symbol resource"></span>Connection</a></li>
-    <li><a href="database" title="Database"><span class="symbol resource"></span>Database</a></li>
-    <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
-    <li><a href="rdsaccount" title="RdsAccount"><span class="symbol resource"></span>RdsAccount</a></li>
-    <li><a href="rdsparametergroup" title="RdsParameterGroup"><span class="symbol resource"></span>RdsParameterGroup</a></li>
-    <li><a href="readonlyinstance" title="ReadOnlyInstance"><span class="symbol resource"></span>ReadOnlyInstance</a></li>
-    <li><a href="readwritesplittingconnection" title="ReadWriteSplittingConnection"><span class="symbol resource"></span>ReadWriteSplittingConnection</a></li>
+    <li><a href="account" title="Account"><span class="api-symbol api-symbol--resource"></span>Account</a></li>
+    <li><a href="accountprivilege" title="AccountPrivilege"><span class="api-symbol api-symbol--resource"></span>AccountPrivilege</a></li>
+    <li><a href="backuppolicy" title="BackupPolicy"><span class="api-symbol api-symbol--resource"></span>BackupPolicy</a></li>
+    <li><a href="connection" title="Connection"><span class="api-symbol api-symbol--resource"></span>Connection</a></li>
+    <li><a href="database" title="Database"><span class="api-symbol api-symbol--resource"></span>Database</a></li>
+    <li><a href="instance" title="Instance"><span class="api-symbol api-symbol--resource"></span>Instance</a></li>
+    <li><a href="rdsaccount" title="RdsAccount"><span class="api-symbol api-symbol--resource"></span>RdsAccount</a></li>
+    <li><a href="rdsparametergroup" title="RdsParameterGroup"><span class="api-symbol api-symbol--resource"></span>RdsParameterGroup</a></li>
+    <li><a href="readonlyinstance" title="ReadOnlyInstance"><span class="api-symbol api-symbol--resource"></span>ReadOnlyInstance</a></li>
+    <li><a href="readwritesplittingconnection" title="ReadWriteSplittingConnection"><span class="api-symbol api-symbol--resource"></span>ReadWriteSplittingConnection</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getaccounts" title="GetAccounts"><span class="symbol function"></span>GetAccounts</a></li>
-    <li><a href="getinstanceclasses" title="GetInstanceClasses"><span class="symbol function"></span>GetInstanceClasses</a></li>
-    <li><a href="getinstanceengines" title="GetInstanceEngines"><span class="symbol function"></span>GetInstanceEngines</a></li>
-    <li><a href="getinstances" title="GetInstances"><span class="symbol function"></span>GetInstances</a></li>
-    <li><a href="getrdsparametergroups" title="GetRdsParameterGroups"><span class="symbol function"></span>GetRdsParameterGroups</a></li>
-    <li><a href="getzones" title="GetZones"><span class="symbol function"></span>GetZones</a></li>
+    <li><a href="getaccounts" title="GetAccounts"><span class="api-symbol api-symbol--function"></span>GetAccounts</a></li>
+    <li><a href="getinstanceclasses" title="GetInstanceClasses"><span class="api-symbol api-symbol--function"></span>GetInstanceClasses</a></li>
+    <li><a href="getinstanceengines" title="GetInstanceEngines"><span class="api-symbol api-symbol--function"></span>GetInstanceEngines</a></li>
+    <li><a href="getinstances" title="GetInstances"><span class="api-symbol api-symbol--function"></span>GetInstances</a></li>
+    <li><a href="getrdsparametergroups" title="GetRdsParameterGroups"><span class="api-symbol api-symbol--function"></span>GetRdsParameterGroups</a></li>
+    <li><a href="getzones" title="GetZones"><span class="api-symbol api-symbol--function"></span>GetZones</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

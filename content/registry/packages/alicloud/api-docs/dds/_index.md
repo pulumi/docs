@@ -13,7 +13,7 @@ Explore the resources and functions of the alicloud.dds module.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getmongoinstances" title="GetMongoInstances"><span class="symbol function"></span>GetMongoInstances</a></li>
+    <li><a href="getmongoinstances" title="GetMongoInstances"><span class="api-symbol api-symbol--function"></span>GetMongoInstances</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

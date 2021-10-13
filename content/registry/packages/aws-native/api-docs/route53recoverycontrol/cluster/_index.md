@@ -226,7 +226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clusterendpoints_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterendpoint">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Route53Recovery<wbr>Control.<wbr>Outputs.<wbr>Cluster<wbr>Cluster<wbr>Endpoint&gt;</a></span>
+        <span class="property-type"><a href="#clusterendpoint">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Route53Recovery<wbr>Control.<wbr>Outputs.<wbr>Cluster<wbr>Endpoint&gt;</a></span>
     </dt>
     <dd>{{% md %}}Endpoints for the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
@@ -262,7 +262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clusterendpoints_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterendpoint">[]Cluster<wbr>Cluster<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#clusterendpoint">[]Cluster<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}Endpoints for the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
@@ -298,7 +298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clusterendpoints_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterendpoint">Cluster<wbr>Cluster<wbr>Endpoint[]</a></span>
+        <span class="property-type"><a href="#clusterendpoint">Cluster<wbr>Endpoint[]</a></span>
     </dt>
     <dd>{{% md %}}Endpoints for the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
@@ -334,7 +334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_endpoints_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterendpoint">Sequence[Cluster<wbr>Cluster<wbr>Endpoint]</a></span>
+        <span class="property-type"><a href="#clusterendpoint">Sequence[Cluster<wbr>Endpoint]</a></span>
     </dt>
     <dd>{{% md %}}Endpoints for the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
@@ -365,7 +365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="clusterclusterendpoint">Cluster<wbr>Cluster<wbr>Endpoint</h4>
+<h4 id="clusterendpoint">Cluster<wbr>Endpoint</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"

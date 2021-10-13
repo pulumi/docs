@@ -574,7 +574,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>DOCKER{{% md %}}Docker package format.{{% /md %}}</dd><dt>Maven</dt>
     <dd>MAVEN{{% md %}}Maven package format.{{% /md %}}</dd><dt>Npm</dt>
     <dd>NPM{{% md %}}NPM package format.{{% /md %}}</dd><dt>Pypi</dt>
-    <dd>PYPI{{% md %}}PyPI package format.{{% /md %}}</dd><dt>Python</dt>
+    <dd>PYPI{{% md %}}PyPI package format. Deprecated, use PYTHON instead.{{% /md %}}</dd><dt>Apt</dt>
+    <dd>APT{{% md %}}APT package format.{{% /md %}}</dd><dt>Yum</dt>
+    <dd>YUM{{% md %}}YUM package format.{{% /md %}}</dd><dt>Python</dt>
     <dd>PYTHON{{% md %}}Python package format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -584,7 +586,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>DOCKER{{% md %}}Docker package format.{{% /md %}}</dd><dt>Repository<wbr>Format<wbr>Maven</dt>
     <dd>MAVEN{{% md %}}Maven package format.{{% /md %}}</dd><dt>Repository<wbr>Format<wbr>Npm</dt>
     <dd>NPM{{% md %}}NPM package format.{{% /md %}}</dd><dt>Repository<wbr>Format<wbr>Pypi</dt>
-    <dd>PYPI{{% md %}}PyPI package format.{{% /md %}}</dd><dt>Repository<wbr>Format<wbr>Python</dt>
+    <dd>PYPI{{% md %}}PyPI package format. Deprecated, use PYTHON instead.{{% /md %}}</dd><dt>Repository<wbr>Format<wbr>Apt</dt>
+    <dd>APT{{% md %}}APT package format.{{% /md %}}</dd><dt>Repository<wbr>Format<wbr>Yum</dt>
+    <dd>YUM{{% md %}}YUM package format.{{% /md %}}</dd><dt>Repository<wbr>Format<wbr>Python</dt>
     <dd>PYTHON{{% md %}}Python package format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -594,7 +598,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>DOCKER{{% md %}}Docker package format.{{% /md %}}</dd><dt>Maven</dt>
     <dd>MAVEN{{% md %}}Maven package format.{{% /md %}}</dd><dt>Npm</dt>
     <dd>NPM{{% md %}}NPM package format.{{% /md %}}</dd><dt>Pypi</dt>
-    <dd>PYPI{{% md %}}PyPI package format.{{% /md %}}</dd><dt>Python</dt>
+    <dd>PYPI{{% md %}}PyPI package format. Deprecated, use PYTHON instead.{{% /md %}}</dd><dt>Apt</dt>
+    <dd>APT{{% md %}}APT package format.{{% /md %}}</dd><dt>Yum</dt>
+    <dd>YUM{{% md %}}YUM package format.{{% /md %}}</dd><dt>Python</dt>
     <dd>PYTHON{{% md %}}Python package format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -604,7 +610,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>DOCKER{{% md %}}Docker package format.{{% /md %}}</dd><dt>MAVEN</dt>
     <dd>MAVEN{{% md %}}Maven package format.{{% /md %}}</dd><dt>NPM</dt>
     <dd>NPM{{% md %}}NPM package format.{{% /md %}}</dd><dt>PYPI</dt>
-    <dd>PYPI{{% md %}}PyPI package format.{{% /md %}}</dd><dt>PYTHON</dt>
+    <dd>PYPI{{% md %}}PyPI package format. Deprecated, use PYTHON instead.{{% /md %}}</dd><dt>APT</dt>
+    <dd>APT{{% md %}}APT package format.{{% /md %}}</dd><dt>YUM</dt>
+    <dd>YUM{{% md %}}YUM package format.{{% /md %}}</dd><dt>PYTHON</dt>
     <dd>PYTHON{{% md %}}Python package format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 

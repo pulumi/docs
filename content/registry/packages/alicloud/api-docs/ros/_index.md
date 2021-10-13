@@ -13,18 +13,18 @@ Explore the resources and functions of the alicloud.ros module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="changeset" title="ChangeSet"><span class="symbol resource"></span>ChangeSet</a></li>
-    <li><a href="stack" title="Stack"><span class="symbol resource"></span>Stack</a></li>
-    <li><a href="stackgroup" title="StackGroup"><span class="symbol resource"></span>StackGroup</a></li>
-    <li><a href="template" title="Template"><span class="symbol resource"></span>Template</a></li>
+    <li><a href="changeset" title="ChangeSet"><span class="api-symbol api-symbol--resource"></span>ChangeSet</a></li>
+    <li><a href="stack" title="Stack"><span class="api-symbol api-symbol--resource"></span>Stack</a></li>
+    <li><a href="stackgroup" title="StackGroup"><span class="api-symbol api-symbol--resource"></span>StackGroup</a></li>
+    <li><a href="template" title="Template"><span class="api-symbol api-symbol--resource"></span>Template</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getchangesets" title="GetChangeSets"><span class="symbol function"></span>GetChangeSets</a></li>
-    <li><a href="getstackgroups" title="GetStackGroups"><span class="symbol function"></span>GetStackGroups</a></li>
-    <li><a href="getstacks" title="GetStacks"><span class="symbol function"></span>GetStacks</a></li>
-    <li><a href="gettemplates" title="GetTemplates"><span class="symbol function"></span>GetTemplates</a></li>
+    <li><a href="getchangesets" title="GetChangeSets"><span class="api-symbol api-symbol--function"></span>GetChangeSets</a></li>
+    <li><a href="getstackgroups" title="GetStackGroups"><span class="api-symbol api-symbol--function"></span>GetStackGroups</a></li>
+    <li><a href="getstacks" title="GetStacks"><span class="api-symbol api-symbol--function"></span>GetStacks</a></li>
+    <li><a href="gettemplates" title="GetTemplates"><span class="api-symbol api-symbol--function"></span>GetTemplates</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

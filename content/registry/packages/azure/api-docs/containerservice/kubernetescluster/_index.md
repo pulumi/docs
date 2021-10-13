@@ -415,7 +415,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `patch`, `rapid`, `node-image` and `stable`.
+    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `patch`, `rapid`, `node-image` and `stable`. Omitting this field sets this value to `none`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionsetid_csharp">
@@ -678,7 +678,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `patch`, `rapid`, `node-image` and `stable`.
+    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `patch`, `rapid`, `node-image` and `stable`. Omitting this field sets this value to `none`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionsetid_go">
@@ -941,7 +941,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `patch`, `rapid`, `node-image` and `stable`.
+    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `patch`, `rapid`, `node-image` and `stable`. Omitting this field sets this value to `none`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionsetid_nodejs">
@@ -1204,7 +1204,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `patch`, `rapid`, `node-image` and `stable`.
+    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `patch`, `rapid`, `node-image` and `stable`. Omitting this field sets this value to `none`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disk_encryption_set_id_python">
@@ -1880,7 +1880,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `patch`, `rapid`, `node-image` and `stable`.
+    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `patch`, `rapid`, `node-image` and `stable`. Omitting this field sets this value to `none`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultnodepool_csharp">
@@ -2197,7 +2197,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `patch`, `rapid`, `node-image` and `stable`.
+    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `patch`, `rapid`, `node-image` and `stable`. Omitting this field sets this value to `none`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultnodepool_go">
@@ -2514,7 +2514,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `patch`, `rapid`, `node-image` and `stable`.
+    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `patch`, `rapid`, `node-image` and `stable`. Omitting this field sets this value to `none`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultnodepool_nodejs">
@@ -2831,7 +2831,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `patch`, `rapid`, `node-image` and `stable`.
+    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `patch`, `rapid`, `node-image` and `stable`. Omitting this field sets this value to `none`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_node_pool_python">

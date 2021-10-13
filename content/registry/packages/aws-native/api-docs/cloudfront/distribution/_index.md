@@ -37,7 +37,7 @@ class MyStack : Stack
     {
         var cloudfrontdistribution = new AwsNative.CloudFront.Distribution("cloudfrontdistribution", new AwsNative.CloudFront.DistributionArgs
         {
-            DistributionConfig = new AwsNative.CloudFront.Inputs.DistributionDistributionConfigArgs
+            DistributionConfig = new AwsNative.CloudFront.Inputs.DistributionConfigArgs
             {
                 CacheBehaviors = 
                 {
@@ -110,7 +110,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := cloudfront.NewDistribution(ctx, "cloudfrontdistribution", &cloudfront.DistributionArgs{
-			DistributionConfig: &cloudfront.DistributionDistributionConfigArgs{
+			DistributionConfig: &cloudfront.DistributionConfigArgs{
 				CacheBehaviors: cloudfront.DistributionCacheBehaviorArray{
 					&cloudfront.DistributionCacheBehaviorArgs{
 						LambdaFunctionAssociations: cloudfront.DistributionLambdaFunctionAssociationArray{
@@ -167,7 +167,7 @@ import pulumi
 import pulumi_aws_native as aws_native
 
 cloudfrontdistribution = aws_native.cloudfront.Distribution("cloudfrontdistribution",
-    distribution_config=aws_native.cloudfront.DistributionDistributionConfigArgs(
+    distribution_config=aws_native.cloudfront.DistributionConfigArgs(
         cache_behaviors=[aws_native.cloudfront.DistributionCacheBehaviorArgs(
             lambda_function_associations=[aws_native.cloudfront.DistributionLambdaFunctionAssociationArgs(
                 event_type="string-value",
@@ -257,7 +257,7 @@ class MyStack : Stack
     {
         var cloudfrontdistribution = new AwsNative.CloudFront.Distribution("cloudfrontdistribution", new AwsNative.CloudFront.DistributionArgs
         {
-            DistributionConfig = new AwsNative.CloudFront.Inputs.DistributionDistributionConfigArgs
+            DistributionConfig = new AwsNative.CloudFront.Inputs.DistributionConfigArgs
             {
                 CacheBehaviors = 
                 {
@@ -330,7 +330,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := cloudfront.NewDistribution(ctx, "cloudfrontdistribution", &cloudfront.DistributionArgs{
-			DistributionConfig: &cloudfront.DistributionDistributionConfigArgs{
+			DistributionConfig: &cloudfront.DistributionConfigArgs{
 				CacheBehaviors: cloudfront.DistributionCacheBehaviorArray{
 					&cloudfront.DistributionCacheBehaviorArgs{
 						LambdaFunctionAssociations: cloudfront.DistributionLambdaFunctionAssociationArray{
@@ -387,7 +387,7 @@ import pulumi
 import pulumi_aws_native as aws_native
 
 cloudfrontdistribution = aws_native.cloudfront.Distribution("cloudfrontdistribution",
-    distribution_config=aws_native.cloudfront.DistributionDistributionConfigArgs(
+    distribution_config=aws_native.cloudfront.DistributionConfigArgs(
         cache_behaviors=[aws_native.cloudfront.DistributionCacheBehaviorArgs(
             lambda_function_associations=[aws_native.cloudfront.DistributionLambdaFunctionAssociationArgs(
                 event_type="string-value",
@@ -480,7 +480,7 @@ const cloudfrontdistribution = new aws_native.cloudfront.Distribution("cloudfron
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Distribution</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                 <span class="nx">distribution_config</span><span class="p">:</span> <span class="nx">Optional[DistributionDistributionConfigArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">distribution_config</span><span class="p">:</span> <span class="nx">Optional[DistributionConfigArgs]</span> = None<span class="p">,</span>
                  <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionTagArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Distribution</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -615,7 +615,7 @@ The Distribution resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#distributionconfig_csharp" style="color: inherit; text-decoration: inherit;">Distribution<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondistributionconfig">Pulumi.<wbr>Aws<wbr>Native.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Distribution<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributionconfig">Pulumi.<wbr>Aws<wbr>Native.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -635,7 +635,7 @@ The Distribution resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#distributionconfig_go" style="color: inherit; text-decoration: inherit;">Distribution<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondistributionconfig">Distribution<wbr>Distribution<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributionconfig">Distribution<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -655,7 +655,7 @@ The Distribution resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#distributionconfig_nodejs" style="color: inherit; text-decoration: inherit;">distribution<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondistributionconfig">Distribution<wbr>Distribution<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributionconfig">Distribution<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -675,7 +675,7 @@ The Distribution resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#distribution_config_python" style="color: inherit; text-decoration: inherit;">distribution_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondistributionconfig">Distribution<wbr>Distribution<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributionconfig">Distribution<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1407,6 +1407,632 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="distributionconfig">Distribution<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="aliases_csharp">
+<a href="#aliases_csharp" style="color: inherit; text-decoration: inherit;">Aliases</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cnames_csharp">
+<a href="#cnames_csharp" style="color: inherit; text-decoration: inherit;">CNAMEs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cachebehaviors_csharp">
+<a href="#cachebehaviors_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Behaviors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributioncachebehavior">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Cache<wbr>Behavior&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="comment_csharp">
+<a href="#comment_csharp" style="color: inherit; text-decoration: inherit;">Comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customerrorresponses_csharp">
+<a href="#customerrorresponses_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Error<wbr>Responses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributioncustomerrorresponse">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Custom<wbr>Error<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customorigin_csharp">
+<a href="#customorigin_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Origin</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionlegacycustomorigin">Pulumi.<wbr>Aws<wbr>Native.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Legacy<wbr>Custom<wbr>Origin</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="defaultcachebehavior_csharp">
+<a href="#defaultcachebehavior_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Cache<wbr>Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehavior">Pulumi.<wbr>Aws<wbr>Native.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Default<wbr>Cache<wbr>Behavior</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="defaultrootobject_csharp">
+<a href="#defaultrootobject_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Root<wbr>Object</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpversion_csharp">
+<a href="#httpversion_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipv6enabled_csharp">
+<a href="#ipv6enabled_csharp" style="color: inherit; text-decoration: inherit;">IPV6Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="logging_csharp">
+<a href="#logging_csharp" style="color: inherit; text-decoration: inherit;">Logging</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionlogging">Pulumi.<wbr>Aws<wbr>Native.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Logging</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="origingroups_csharp">
+<a href="#origingroups_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionorigingroups">Pulumi.<wbr>Aws<wbr>Native.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Origin<wbr>Groups</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="origins_csharp">
+<a href="#origins_csharp" style="color: inherit; text-decoration: inherit;">Origins</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionorigin">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Origin&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="priceclass_csharp">
+<a href="#priceclass_csharp" style="color: inherit; text-decoration: inherit;">Price<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="restrictions_csharp">
+<a href="#restrictions_csharp" style="color: inherit; text-decoration: inherit;">Restrictions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionrestrictions">Pulumi.<wbr>Aws<wbr>Native.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Restrictions</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="s3origin_csharp">
+<a href="#s3origin_csharp" style="color: inherit; text-decoration: inherit;">S3Origin</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionlegacys3origin">Pulumi.<wbr>Aws<wbr>Native.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Legacy<wbr>S3Origin</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="viewercertificate_csharp">
+<a href="#viewercertificate_csharp" style="color: inherit; text-decoration: inherit;">Viewer<wbr>Certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionviewercertificate">Pulumi.<wbr>Aws<wbr>Native.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Viewer<wbr>Certificate</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="webaclid_csharp">
+<a href="#webaclid_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>ACLId</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="aliases_go">
+<a href="#aliases_go" style="color: inherit; text-decoration: inherit;">Aliases</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cnames_go">
+<a href="#cnames_go" style="color: inherit; text-decoration: inherit;">CNAMEs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cachebehaviors_go">
+<a href="#cachebehaviors_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Behaviors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributioncachebehavior">[]Distribution<wbr>Cache<wbr>Behavior</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="comment_go">
+<a href="#comment_go" style="color: inherit; text-decoration: inherit;">Comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customerrorresponses_go">
+<a href="#customerrorresponses_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Error<wbr>Responses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributioncustomerrorresponse">[]Distribution<wbr>Custom<wbr>Error<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customorigin_go">
+<a href="#customorigin_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Origin</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionlegacycustomorigin">Distribution<wbr>Legacy<wbr>Custom<wbr>Origin</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="defaultcachebehavior_go">
+<a href="#defaultcachebehavior_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Cache<wbr>Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehavior">Distribution<wbr>Default<wbr>Cache<wbr>Behavior</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="defaultrootobject_go">
+<a href="#defaultrootobject_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Root<wbr>Object</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpversion_go">
+<a href="#httpversion_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipv6enabled_go">
+<a href="#ipv6enabled_go" style="color: inherit; text-decoration: inherit;">IPV6Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="logging_go">
+<a href="#logging_go" style="color: inherit; text-decoration: inherit;">Logging</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionlogging">Distribution<wbr>Logging</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="origingroups_go">
+<a href="#origingroups_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionorigingroups">Distribution<wbr>Origin<wbr>Groups</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="origins_go">
+<a href="#origins_go" style="color: inherit; text-decoration: inherit;">Origins</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionorigin">[]Distribution<wbr>Origin</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="priceclass_go">
+<a href="#priceclass_go" style="color: inherit; text-decoration: inherit;">Price<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="restrictions_go">
+<a href="#restrictions_go" style="color: inherit; text-decoration: inherit;">Restrictions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionrestrictions">Distribution<wbr>Restrictions</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="s3origin_go">
+<a href="#s3origin_go" style="color: inherit; text-decoration: inherit;">S3Origin</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionlegacys3origin">Distribution<wbr>Legacy<wbr>S3Origin</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="viewercertificate_go">
+<a href="#viewercertificate_go" style="color: inherit; text-decoration: inherit;">Viewer<wbr>Certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionviewercertificate">Distribution<wbr>Viewer<wbr>Certificate</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="webaclid_go">
+<a href="#webaclid_go" style="color: inherit; text-decoration: inherit;">Web<wbr>ACLId</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="aliases_nodejs">
+<a href="#aliases_nodejs" style="color: inherit; text-decoration: inherit;">aliases</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cnames_nodejs">
+<a href="#cnames_nodejs" style="color: inherit; text-decoration: inherit;">c<wbr>NAMEs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cachebehaviors_nodejs">
+<a href="#cachebehaviors_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Behaviors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributioncachebehavior">Distribution<wbr>Cache<wbr>Behavior[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="comment_nodejs">
+<a href="#comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customerrorresponses_nodejs">
+<a href="#customerrorresponses_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Error<wbr>Responses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributioncustomerrorresponse">Distribution<wbr>Custom<wbr>Error<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customorigin_nodejs">
+<a href="#customorigin_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Origin</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionlegacycustomorigin">Distribution<wbr>Legacy<wbr>Custom<wbr>Origin</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="defaultcachebehavior_nodejs">
+<a href="#defaultcachebehavior_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Cache<wbr>Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehavior">Distribution<wbr>Default<wbr>Cache<wbr>Behavior</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="defaultrootobject_nodejs">
+<a href="#defaultrootobject_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Root<wbr>Object</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpversion_nodejs">
+<a href="#httpversion_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipv6enabled_nodejs">
+<a href="#ipv6enabled_nodejs" style="color: inherit; text-decoration: inherit;">i<wbr>PV6Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="logging_nodejs">
+<a href="#logging_nodejs" style="color: inherit; text-decoration: inherit;">logging</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionlogging">Distribution<wbr>Logging</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="origingroups_nodejs">
+<a href="#origingroups_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionorigingroups">Distribution<wbr>Origin<wbr>Groups</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="origins_nodejs">
+<a href="#origins_nodejs" style="color: inherit; text-decoration: inherit;">origins</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionorigin">Distribution<wbr>Origin[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="priceclass_nodejs">
+<a href="#priceclass_nodejs" style="color: inherit; text-decoration: inherit;">price<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="restrictions_nodejs">
+<a href="#restrictions_nodejs" style="color: inherit; text-decoration: inherit;">restrictions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionrestrictions">Distribution<wbr>Restrictions</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="s3origin_nodejs">
+<a href="#s3origin_nodejs" style="color: inherit; text-decoration: inherit;">s3Origin</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionlegacys3origin">Distribution<wbr>Legacy<wbr>S3Origin</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="viewercertificate_nodejs">
+<a href="#viewercertificate_nodejs" style="color: inherit; text-decoration: inherit;">viewer<wbr>Certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionviewercertificate">Distribution<wbr>Viewer<wbr>Certificate</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="webaclid_nodejs">
+<a href="#webaclid_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>ACLId</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="aliases_python">
+<a href="#aliases_python" style="color: inherit; text-decoration: inherit;">aliases</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="c_names_python">
+<a href="#c_names_python" style="color: inherit; text-decoration: inherit;">c_<wbr>names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cache_behaviors_python">
+<a href="#cache_behaviors_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>behaviors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributioncachebehavior">Sequence[Distribution<wbr>Cache<wbr>Behavior]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="comment_python">
+<a href="#comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="custom_error_responses_python">
+<a href="#custom_error_responses_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>error_<wbr>responses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributioncustomerrorresponse">Sequence[Distribution<wbr>Custom<wbr>Error<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="custom_origin_python">
+<a href="#custom_origin_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>origin</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionlegacycustomorigin">Distribution<wbr>Legacy<wbr>Custom<wbr>Origin</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="default_cache_behavior_python">
+<a href="#default_cache_behavior_python" style="color: inherit; text-decoration: inherit;">default_<wbr>cache_<wbr>behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehavior">Distribution<wbr>Default<wbr>Cache<wbr>Behavior</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="default_root_object_python">
+<a href="#default_root_object_python" style="color: inherit; text-decoration: inherit;">default_<wbr>root_<wbr>object</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="http_version_python">
+<a href="#http_version_python" style="color: inherit; text-decoration: inherit;">http_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="i_pv6_enabled_python">
+<a href="#i_pv6_enabled_python" style="color: inherit; text-decoration: inherit;">i_<wbr>pv6_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="logging_python">
+<a href="#logging_python" style="color: inherit; text-decoration: inherit;">logging</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionlogging">Distribution<wbr>Logging</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="origin_groups_python">
+<a href="#origin_groups_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionorigingroups">Distribution<wbr>Origin<wbr>Groups</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="origins_python">
+<a href="#origins_python" style="color: inherit; text-decoration: inherit;">origins</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionorigin">Sequence[Distribution<wbr>Origin]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="price_class_python">
+<a href="#price_class_python" style="color: inherit; text-decoration: inherit;">price_<wbr>class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="restrictions_python">
+<a href="#restrictions_python" style="color: inherit; text-decoration: inherit;">restrictions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionrestrictions">Distribution<wbr>Restrictions</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="s3_origin_python">
+<a href="#s3_origin_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>origin</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionlegacys3origin">Distribution<wbr>Legacy<wbr>S3Origin</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="viewer_certificate_python">
+<a href="#viewer_certificate_python" style="color: inherit; text-decoration: inherit;">viewer_<wbr>certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributionviewercertificate">Distribution<wbr>Viewer<wbr>Certificate</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="web_acl_id_python">
+<a href="#web_acl_id_python" style="color: inherit; text-decoration: inherit;">web_<wbr>acl_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2439,632 +3065,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="distributiondistributionconfig">Distribution<wbr>Distribution<wbr>Config</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="enabled_csharp">
-<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="aliases_csharp">
-<a href="#aliases_csharp" style="color: inherit; text-decoration: inherit;">Aliases</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="cnames_csharp">
-<a href="#cnames_csharp" style="color: inherit; text-decoration: inherit;">CNAMEs</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="cachebehaviors_csharp">
-<a href="#cachebehaviors_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Behaviors</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributioncachebehavior">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Cache<wbr>Behavior&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="comment_csharp">
-<a href="#comment_csharp" style="color: inherit; text-decoration: inherit;">Comment</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="customerrorresponses_csharp">
-<a href="#customerrorresponses_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Error<wbr>Responses</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributioncustomerrorresponse">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Custom<wbr>Error<wbr>Response&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="customorigin_csharp">
-<a href="#customorigin_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Origin</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionlegacycustomorigin">Pulumi.<wbr>Aws<wbr>Native.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Legacy<wbr>Custom<wbr>Origin</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="defaultcachebehavior_csharp">
-<a href="#defaultcachebehavior_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Cache<wbr>Behavior</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehavior">Pulumi.<wbr>Aws<wbr>Native.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Default<wbr>Cache<wbr>Behavior</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="defaultrootobject_csharp">
-<a href="#defaultrootobject_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Root<wbr>Object</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="httpversion_csharp">
-<a href="#httpversion_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="ipv6enabled_csharp">
-<a href="#ipv6enabled_csharp" style="color: inherit; text-decoration: inherit;">IPV6Enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="logging_csharp">
-<a href="#logging_csharp" style="color: inherit; text-decoration: inherit;">Logging</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionlogging">Pulumi.<wbr>Aws<wbr>Native.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Logging</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="origingroups_csharp">
-<a href="#origingroups_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Groups</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigingroups">Pulumi.<wbr>Aws<wbr>Native.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Origin<wbr>Groups</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="origins_csharp">
-<a href="#origins_csharp" style="color: inherit; text-decoration: inherit;">Origins</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigin">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Origin&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="priceclass_csharp">
-<a href="#priceclass_csharp" style="color: inherit; text-decoration: inherit;">Price<wbr>Class</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="restrictions_csharp">
-<a href="#restrictions_csharp" style="color: inherit; text-decoration: inherit;">Restrictions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionrestrictions">Pulumi.<wbr>Aws<wbr>Native.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Restrictions</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="s3origin_csharp">
-<a href="#s3origin_csharp" style="color: inherit; text-decoration: inherit;">S3Origin</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionlegacys3origin">Pulumi.<wbr>Aws<wbr>Native.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Legacy<wbr>S3Origin</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="viewercertificate_csharp">
-<a href="#viewercertificate_csharp" style="color: inherit; text-decoration: inherit;">Viewer<wbr>Certificate</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionviewercertificate">Pulumi.<wbr>Aws<wbr>Native.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Viewer<wbr>Certificate</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="webaclid_csharp">
-<a href="#webaclid_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>ACLId</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="enabled_go">
-<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="aliases_go">
-<a href="#aliases_go" style="color: inherit; text-decoration: inherit;">Aliases</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="cnames_go">
-<a href="#cnames_go" style="color: inherit; text-decoration: inherit;">CNAMEs</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="cachebehaviors_go">
-<a href="#cachebehaviors_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Behaviors</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributioncachebehavior">[]Distribution<wbr>Cache<wbr>Behavior</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="comment_go">
-<a href="#comment_go" style="color: inherit; text-decoration: inherit;">Comment</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="customerrorresponses_go">
-<a href="#customerrorresponses_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Error<wbr>Responses</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributioncustomerrorresponse">[]Distribution<wbr>Custom<wbr>Error<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="customorigin_go">
-<a href="#customorigin_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Origin</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionlegacycustomorigin">Distribution<wbr>Legacy<wbr>Custom<wbr>Origin</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="defaultcachebehavior_go">
-<a href="#defaultcachebehavior_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Cache<wbr>Behavior</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehavior">Distribution<wbr>Default<wbr>Cache<wbr>Behavior</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="defaultrootobject_go">
-<a href="#defaultrootobject_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Root<wbr>Object</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="httpversion_go">
-<a href="#httpversion_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="ipv6enabled_go">
-<a href="#ipv6enabled_go" style="color: inherit; text-decoration: inherit;">IPV6Enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="logging_go">
-<a href="#logging_go" style="color: inherit; text-decoration: inherit;">Logging</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionlogging">Distribution<wbr>Logging</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="origingroups_go">
-<a href="#origingroups_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Groups</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigingroups">Distribution<wbr>Origin<wbr>Groups</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="origins_go">
-<a href="#origins_go" style="color: inherit; text-decoration: inherit;">Origins</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigin">[]Distribution<wbr>Origin</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="priceclass_go">
-<a href="#priceclass_go" style="color: inherit; text-decoration: inherit;">Price<wbr>Class</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="restrictions_go">
-<a href="#restrictions_go" style="color: inherit; text-decoration: inherit;">Restrictions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionrestrictions">Distribution<wbr>Restrictions</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="s3origin_go">
-<a href="#s3origin_go" style="color: inherit; text-decoration: inherit;">S3Origin</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionlegacys3origin">Distribution<wbr>Legacy<wbr>S3Origin</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="viewercertificate_go">
-<a href="#viewercertificate_go" style="color: inherit; text-decoration: inherit;">Viewer<wbr>Certificate</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionviewercertificate">Distribution<wbr>Viewer<wbr>Certificate</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="webaclid_go">
-<a href="#webaclid_go" style="color: inherit; text-decoration: inherit;">Web<wbr>ACLId</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="enabled_nodejs">
-<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="aliases_nodejs">
-<a href="#aliases_nodejs" style="color: inherit; text-decoration: inherit;">aliases</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="cnames_nodejs">
-<a href="#cnames_nodejs" style="color: inherit; text-decoration: inherit;">c<wbr>NAMEs</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="cachebehaviors_nodejs">
-<a href="#cachebehaviors_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Behaviors</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributioncachebehavior">Distribution<wbr>Cache<wbr>Behavior[]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="comment_nodejs">
-<a href="#comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="customerrorresponses_nodejs">
-<a href="#customerrorresponses_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Error<wbr>Responses</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributioncustomerrorresponse">Distribution<wbr>Custom<wbr>Error<wbr>Response[]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="customorigin_nodejs">
-<a href="#customorigin_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Origin</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionlegacycustomorigin">Distribution<wbr>Legacy<wbr>Custom<wbr>Origin</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="defaultcachebehavior_nodejs">
-<a href="#defaultcachebehavior_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Cache<wbr>Behavior</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehavior">Distribution<wbr>Default<wbr>Cache<wbr>Behavior</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="defaultrootobject_nodejs">
-<a href="#defaultrootobject_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Root<wbr>Object</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="httpversion_nodejs">
-<a href="#httpversion_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="ipv6enabled_nodejs">
-<a href="#ipv6enabled_nodejs" style="color: inherit; text-decoration: inherit;">i<wbr>PV6Enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="logging_nodejs">
-<a href="#logging_nodejs" style="color: inherit; text-decoration: inherit;">logging</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionlogging">Distribution<wbr>Logging</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="origingroups_nodejs">
-<a href="#origingroups_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Groups</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigingroups">Distribution<wbr>Origin<wbr>Groups</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="origins_nodejs">
-<a href="#origins_nodejs" style="color: inherit; text-decoration: inherit;">origins</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigin">Distribution<wbr>Origin[]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="priceclass_nodejs">
-<a href="#priceclass_nodejs" style="color: inherit; text-decoration: inherit;">price<wbr>Class</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="restrictions_nodejs">
-<a href="#restrictions_nodejs" style="color: inherit; text-decoration: inherit;">restrictions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionrestrictions">Distribution<wbr>Restrictions</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="s3origin_nodejs">
-<a href="#s3origin_nodejs" style="color: inherit; text-decoration: inherit;">s3Origin</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionlegacys3origin">Distribution<wbr>Legacy<wbr>S3Origin</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="viewercertificate_nodejs">
-<a href="#viewercertificate_nodejs" style="color: inherit; text-decoration: inherit;">viewer<wbr>Certificate</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionviewercertificate">Distribution<wbr>Viewer<wbr>Certificate</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="webaclid_nodejs">
-<a href="#webaclid_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>ACLId</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="enabled_python">
-<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="aliases_python">
-<a href="#aliases_python" style="color: inherit; text-decoration: inherit;">aliases</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="c_names_python">
-<a href="#c_names_python" style="color: inherit; text-decoration: inherit;">c_<wbr>names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="cache_behaviors_python">
-<a href="#cache_behaviors_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>behaviors</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributioncachebehavior">Sequence[Distribution<wbr>Cache<wbr>Behavior]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="comment_python">
-<a href="#comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="custom_error_responses_python">
-<a href="#custom_error_responses_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>error_<wbr>responses</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributioncustomerrorresponse">Sequence[Distribution<wbr>Custom<wbr>Error<wbr>Response]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="custom_origin_python">
-<a href="#custom_origin_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>origin</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionlegacycustomorigin">Distribution<wbr>Legacy<wbr>Custom<wbr>Origin</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="default_cache_behavior_python">
-<a href="#default_cache_behavior_python" style="color: inherit; text-decoration: inherit;">default_<wbr>cache_<wbr>behavior</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehavior">Distribution<wbr>Default<wbr>Cache<wbr>Behavior</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="default_root_object_python">
-<a href="#default_root_object_python" style="color: inherit; text-decoration: inherit;">default_<wbr>root_<wbr>object</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="http_version_python">
-<a href="#http_version_python" style="color: inherit; text-decoration: inherit;">http_<wbr>version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="i_pv6_enabled_python">
-<a href="#i_pv6_enabled_python" style="color: inherit; text-decoration: inherit;">i_<wbr>pv6_<wbr>enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="logging_python">
-<a href="#logging_python" style="color: inherit; text-decoration: inherit;">logging</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionlogging">Distribution<wbr>Logging</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="origin_groups_python">
-<a href="#origin_groups_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>groups</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigingroups">Distribution<wbr>Origin<wbr>Groups</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="origins_python">
-<a href="#origins_python" style="color: inherit; text-decoration: inherit;">origins</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigin">Sequence[Distribution<wbr>Origin]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="price_class_python">
-<a href="#price_class_python" style="color: inherit; text-decoration: inherit;">price_<wbr>class</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="restrictions_python">
-<a href="#restrictions_python" style="color: inherit; text-decoration: inherit;">restrictions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionrestrictions">Distribution<wbr>Restrictions</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="s3_origin_python">
-<a href="#s3_origin_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>origin</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionlegacys3origin">Distribution<wbr>Legacy<wbr>S3Origin</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="viewer_certificate_python">
-<a href="#viewer_certificate_python" style="color: inherit; text-decoration: inherit;">viewer_<wbr>certificate</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionviewercertificate">Distribution<wbr>Viewer<wbr>Certificate</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="web_acl_id_python">
-<a href="#web_acl_id_python" style="color: inherit; text-decoration: inherit;">web_<wbr>acl_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

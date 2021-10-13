@@ -15,6 +15,215 @@ no_edit_this_page: true
 A conformance pack is a collection of AWS Config rules and remediation actions that can be easily deployed as a single entity in an account and a region or across an entire AWS Organization.
 
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+### Example
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AwsNative = Pulumi.AwsNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var conformancePack = new AwsNative.Configuration.ConformancePack("conformancePack", new AwsNative.Configuration.ConformancePackArgs
+        {
+            ConformancePackName = "ConformancePackName",
+            DeliveryS3Bucket = "DeliveryS3Bucket",
+            TemplateS3Uri = "s3://bucketname/prefix",
+        });
+    }
+
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/configuration"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := configuration.NewConformancePack(ctx, "conformancePack", &configuration.ConformancePackArgs{
+			ConformancePackName: pulumi.String("ConformancePackName"),
+			DeliveryS3Bucket:    pulumi.String("DeliveryS3Bucket"),
+			TemplateS3Uri:       pulumi.String("s3://bucketname/prefix"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_aws_native as aws_native
+
+conformance_pack = aws_native.configuration.ConformancePack("conformancePack",
+    conformance_pack_name="ConformancePackName",
+    delivery_s3_bucket="DeliveryS3Bucket",
+    template_s3_uri="s3://bucketname/prefix")
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws_native from "@pulumi/aws-native";
+
+const conformancePack = new aws_native.configuration.ConformancePack("conformancePack", {
+    conformancePackName: "ConformancePackName",
+    deliveryS3Bucket: "DeliveryS3Bucket",
+    templateS3Uri: "s3://bucketname/prefix",
+});
+
+```
+
+
+{{< /example >}}
+
+
+
+
+### Example
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AwsNative = Pulumi.AwsNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var cloudFormationCanaryPack = new AwsNative.Configuration.ConformancePack("cloudFormationCanaryPack", new AwsNative.Configuration.ConformancePackArgs
+        {
+            ConformancePackName = "ConformancePackName",
+            DeliveryS3Bucket = "DeliveryS3Bucket",
+            TemplateS3Uri = "s3://bucketname/prefix",
+        });
+    }
+
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/configuration"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := configuration.NewConformancePack(ctx, "cloudFormationCanaryPack", &configuration.ConformancePackArgs{
+			ConformancePackName: pulumi.String("ConformancePackName"),
+			DeliveryS3Bucket:    pulumi.String("DeliveryS3Bucket"),
+			TemplateS3Uri:       pulumi.String("s3://bucketname/prefix"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_aws_native as aws_native
+
+cloud_formation_canary_pack = aws_native.configuration.ConformancePack("cloudFormationCanaryPack",
+    conformance_pack_name="ConformancePackName",
+    delivery_s3_bucket="DeliveryS3Bucket",
+    template_s3_uri="s3://bucketname/prefix")
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws_native from "@pulumi/aws-native";
+
+const cloudFormationCanaryPack = new aws_native.configuration.ConformancePack("cloudFormationCanaryPack", {
+    conformancePackName: "ConformancePackName",
+    deliveryS3Bucket: "DeliveryS3Bucket",
+    templateS3Uri: "s3://bucketname/prefix",
+});
+
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a ConformancePack Resource {#create}
@@ -29,7 +238,7 @@ A conformance pack is a collection of AWS Config rules and remediation actions t
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ConformancePack</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                    <span class="nx">conformance_pack_input_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[ConformancePackConformancePackInputParameterArgs]]</span> = None<span class="p">,</span>
+                    <span class="nx">conformance_pack_input_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[ConformancePackInputParameterArgs]]</span> = None<span class="p">,</span>
                     <span class="nx">conformance_pack_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">delivery_s3_bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">delivery_s3_key_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -176,7 +385,7 @@ The ConformancePack resource accepts the following [input]({{< relref "/docs/int
 <a href="#conformancepackinputparameters_csharp" style="color: inherit; text-decoration: inherit;">Conformance<wbr>Pack<wbr>Input<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conformancepackconformancepackinputparameter">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Configuration.<wbr>Inputs.<wbr>Conformance<wbr>Pack<wbr>Conformance<wbr>Pack<wbr>Input<wbr>Parameter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#conformancepackinputparameter">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Configuration.<wbr>Inputs.<wbr>Conformance<wbr>Pack<wbr>Input<wbr>Parameter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of ConformancePackInputParameter objects.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -228,7 +437,7 @@ The ConformancePack resource accepts the following [input]({{< relref "/docs/int
 <a href="#conformancepackinputparameters_go" style="color: inherit; text-decoration: inherit;">Conformance<wbr>Pack<wbr>Input<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conformancepackconformancepackinputparameter">[]Conformance<wbr>Pack<wbr>Conformance<wbr>Pack<wbr>Input<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#conformancepackinputparameter">[]Conformance<wbr>Pack<wbr>Input<wbr>Parameter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of ConformancePackInputParameter objects.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -280,7 +489,7 @@ The ConformancePack resource accepts the following [input]({{< relref "/docs/int
 <a href="#conformancepackinputparameters_nodejs" style="color: inherit; text-decoration: inherit;">conformance<wbr>Pack<wbr>Input<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conformancepackconformancepackinputparameter">Conformance<wbr>Pack<wbr>Conformance<wbr>Pack<wbr>Input<wbr>Parameter<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#conformancepackinputparameter">Conformance<wbr>Pack<wbr>Input<wbr>Parameter<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of ConformancePackInputParameter objects.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -332,7 +541,7 @@ The ConformancePack resource accepts the following [input]({{< relref "/docs/int
 <a href="#conformance_pack_input_parameters_python" style="color: inherit; text-decoration: inherit;">conformance_<wbr>pack_<wbr>input_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conformancepackconformancepackinputparameter">Sequence[Conformance<wbr>Pack<wbr>Conformance<wbr>Pack<wbr>Input<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#conformancepackinputparameter">Sequence[Conformance<wbr>Pack<wbr>Input<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of ConformancePackInputParameter objects.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -434,7 +643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="conformancepackconformancepackinputparameter">Conformance<wbr>Pack<wbr>Conformance<wbr>Pack<wbr>Input<wbr>Parameter</h4>
+<h4 id="conformancepackinputparameter">Conformance<wbr>Pack<wbr>Input<wbr>Parameter</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"

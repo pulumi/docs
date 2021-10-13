@@ -34,7 +34,7 @@ Definition of the AWS::QuickSight::DataSet Resource Type.
             <span class="nx">column_level_permission_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[DataSetColumnLevelPermissionRuleArgs]]</span> = None<span class="p">,</span>
             <span class="nx">data_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">field_folders</span><span class="p">:</span> <span class="nx">Optional[DataSetFieldFolderMapArgs]</span> = None<span class="p">,</span>
-            <span class="nx">import_mode</span><span class="p">:</span> <span class="nx">Optional[DataSetDataSetImportMode]</span> = None<span class="p">,</span>
+            <span class="nx">import_mode</span><span class="p">:</span> <span class="nx">Optional[DataSetImportMode]</span> = None<span class="p">,</span>
             <span class="nx">ingestion_wait_policy</span><span class="p">:</span> <span class="nx">Optional[DataSetIngestionWaitPolicyArgs]</span> = None<span class="p">,</span>
             <span class="nx">logical_table_map</span><span class="p">:</span> <span class="nx">Optional[DataSetLogicalTableMapArgs]</span> = None<span class="p">,</span>
             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -215,7 +215,7 @@ The DataSet resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#importmode_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetdatasetimportmode">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Data<wbr>Set<wbr>Data<wbr>Set<wbr>Import<wbr>Mode</a></span>
+        <span class="property-type"><a href="#datasetimportmode">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Data<wbr>Set<wbr>Import<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -323,7 +323,7 @@ The DataSet resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#importmode_go" style="color: inherit; text-decoration: inherit;">Import<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetdatasetimportmode">Data<wbr>Set<wbr>Data<wbr>Set<wbr>Import<wbr>Mode</a></span>
+        <span class="property-type"><a href="#datasetimportmode">Data<wbr>Set<wbr>Import<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -431,7 +431,7 @@ The DataSet resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#importmode_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetdatasetimportmode">Data<wbr>Set<wbr>Data<wbr>Set<wbr>Import<wbr>Mode</a></span>
+        <span class="property-type"><a href="#datasetimportmode">Data<wbr>Set<wbr>Import<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -539,7 +539,7 @@ The DataSet resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#import_mode_python" style="color: inherit; text-decoration: inherit;">import_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetdatasetimportmode">Data<wbr>Set<wbr>Data<wbr>Set<wbr>Import<wbr>Mode</a></span>
+        <span class="property-type"><a href="#datasetimportmode">Data<wbr>Set<wbr>Import<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -999,32 +999,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="datasetdatasetimportmode">Data<wbr>Set<wbr>Data<wbr>Set<wbr>Import<wbr>Mode</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Spice</dt>
-    <dd>SPICE</dd><dt>Direct<wbr>Query</dt>
-    <dd>DIRECT_QUERY</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Data<wbr>Set<wbr>Data<wbr>Set<wbr>Import<wbr>Mode<wbr>Spice</dt>
-    <dd>SPICE</dd><dt>Data<wbr>Set<wbr>Data<wbr>Set<wbr>Import<wbr>Mode<wbr>Direct<wbr>Query</dt>
-    <dd>DIRECT_QUERY</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Spice</dt>
-    <dd>SPICE</dd><dt>Direct<wbr>Query</dt>
-    <dd>DIRECT_QUERY</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>SPICE</dt>
-    <dd>SPICE</dd><dt>DIRECT_QUERY</dt>
-    <dd>DIRECT_QUERY</dd></dl>
-{{% /choosable %}}
-
 <h4 id="datasetgeospatialcolumngroup">Data<wbr>Set<wbr>Geo<wbr>Spatial<wbr>Column<wbr>Group</h4>
 
 {{% choosable language csharp %}}
@@ -1159,6 +1133,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="tabular"><dt>US</dt>
     <dd>US</dd></dl>
+{{% /choosable %}}
+
+<h4 id="datasetimportmode">Data<wbr>Set<wbr>Import<wbr>Mode</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Spice</dt>
+    <dd>SPICE</dd><dt>Direct<wbr>Query</dt>
+    <dd>DIRECT_QUERY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Data<wbr>Set<wbr>Import<wbr>Mode<wbr>Spice</dt>
+    <dd>SPICE</dd><dt>Data<wbr>Set<wbr>Import<wbr>Mode<wbr>Direct<wbr>Query</dt>
+    <dd>DIRECT_QUERY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Spice</dt>
+    <dd>SPICE</dd><dt>Direct<wbr>Query</dt>
+    <dd>DIRECT_QUERY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SPICE</dt>
+    <dd>SPICE</dd><dt>DIRECT_QUERY</dt>
+    <dd>DIRECT_QUERY</dd></dl>
 {{% /choosable %}}
 
 <h4 id="datasetingestionwaitpolicy">Data<wbr>Set<wbr>Ingestion<wbr>Wait<wbr>Policy</h4>

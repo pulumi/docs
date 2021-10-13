@@ -13,24 +13,24 @@ Explore the resources and functions of the azure-native.peering module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="connectionmonitortest" title="ConnectionMonitorTest"><span class="symbol resource"></span>ConnectionMonitorTest</a></li>
-    <li><a href="peerasn" title="PeerAsn"><span class="symbol resource"></span>PeerAsn</a></li>
-    <li><a href="peering" title="Peering"><span class="symbol resource"></span>Peering</a></li>
-    <li><a href="peeringservice" title="PeeringService"><span class="symbol resource"></span>PeeringService</a></li>
-    <li><a href="prefix" title="Prefix"><span class="symbol resource"></span>Prefix</a></li>
-    <li><a href="registeredasn" title="RegisteredAsn"><span class="symbol resource"></span>RegisteredAsn</a></li>
-    <li><a href="registeredprefix" title="RegisteredPrefix"><span class="symbol resource"></span>RegisteredPrefix</a></li>
+    <li><a href="connectionmonitortest" title="ConnectionMonitorTest"><span class="api-symbol api-symbol--resource"></span>ConnectionMonitorTest</a></li>
+    <li><a href="peerasn" title="PeerAsn"><span class="api-symbol api-symbol--resource"></span>PeerAsn</a></li>
+    <li><a href="peering" title="Peering"><span class="api-symbol api-symbol--resource"></span>Peering</a></li>
+    <li><a href="peeringservice" title="PeeringService"><span class="api-symbol api-symbol--resource"></span>PeeringService</a></li>
+    <li><a href="prefix" title="Prefix"><span class="api-symbol api-symbol--resource"></span>Prefix</a></li>
+    <li><a href="registeredasn" title="RegisteredAsn"><span class="api-symbol api-symbol--resource"></span>RegisteredAsn</a></li>
+    <li><a href="registeredprefix" title="RegisteredPrefix"><span class="api-symbol api-symbol--resource"></span>RegisteredPrefix</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getconnectionmonitortest" title="GetConnectionMonitorTest"><span class="symbol function"></span>GetConnectionMonitorTest</a></li>
-    <li><a href="getpeerasn" title="GetPeerAsn"><span class="symbol function"></span>GetPeerAsn</a></li>
-    <li><a href="getpeering" title="GetPeering"><span class="symbol function"></span>GetPeering</a></li>
-    <li><a href="getpeeringservice" title="GetPeeringService"><span class="symbol function"></span>GetPeeringService</a></li>
-    <li><a href="getprefix" title="GetPrefix"><span class="symbol function"></span>GetPrefix</a></li>
-    <li><a href="getregisteredasn" title="GetRegisteredAsn"><span class="symbol function"></span>GetRegisteredAsn</a></li>
-    <li><a href="getregisteredprefix" title="GetRegisteredPrefix"><span class="symbol function"></span>GetRegisteredPrefix</a></li>
+    <li><a href="getconnectionmonitortest" title="GetConnectionMonitorTest"><span class="api-symbol api-symbol--function"></span>GetConnectionMonitorTest</a></li>
+    <li><a href="getpeerasn" title="GetPeerAsn"><span class="api-symbol api-symbol--function"></span>GetPeerAsn</a></li>
+    <li><a href="getpeering" title="GetPeering"><span class="api-symbol api-symbol--function"></span>GetPeering</a></li>
+    <li><a href="getpeeringservice" title="GetPeeringService"><span class="api-symbol api-symbol--function"></span>GetPeeringService</a></li>
+    <li><a href="getprefix" title="GetPrefix"><span class="api-symbol api-symbol--function"></span>GetPrefix</a></li>
+    <li><a href="getregisteredasn" title="GetRegisteredAsn"><span class="api-symbol api-symbol--function"></span>GetRegisteredAsn</a></li>
+    <li><a href="getregisteredprefix" title="GetRegisteredPrefix"><span class="api-symbol api-symbol--function"></span>GetRegisteredPrefix</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -40,6 +40,6 @@ Explore the resources and functions of the azure-native.peering module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.36.0</dd>
+	<dd>1.37.0</dd>
 </dl>
 

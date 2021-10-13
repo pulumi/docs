@@ -16,13 +16,13 @@ Pulumi Amazon Web Services (AWS) EKS Components.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
-    <li><a href="clustercreationroleprovider" title="ClusterCreationRoleProvider"><span class="symbol resource"></span>ClusterCreationRoleProvider</a></li>
-    <li><a href="managednodegroup" title="ManagedNodeGroup"><span class="symbol resource"></span>ManagedNodeGroup</a></li>
-    <li><a href="nodegroup" title="NodeGroup"><span class="symbol resource"></span>NodeGroup</a></li>
-    <li><a href="nodegroupsecuritygroup" title="NodeGroupSecurityGroup"><span class="symbol resource"></span>NodeGroupSecurityGroup</a></li>
-    <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
-    <li><a href="vpccni" title="VpcCni"><span class="symbol resource"></span>VpcCni</a></li>
+    <li><a href="cluster" title="Cluster"><span class="api-symbol api-symbol--resource"></span>Cluster</a></li>
+    <li><a href="clustercreationroleprovider" title="ClusterCreationRoleProvider"><span class="api-symbol api-symbol--resource"></span>ClusterCreationRoleProvider</a></li>
+    <li><a href="managednodegroup" title="ManagedNodeGroup"><span class="api-symbol api-symbol--resource"></span>ManagedNodeGroup</a></li>
+    <li><a href="nodegroup" title="NodeGroup"><span class="api-symbol api-symbol--resource"></span>NodeGroup</a></li>
+    <li><a href="nodegroupsecuritygroup" title="NodeGroupSecurityGroup"><span class="api-symbol api-symbol--resource"></span>NodeGroupSecurityGroup</a></li>
+    <li><a href="provider" title="Provider"><span class="api-symbol api-symbol--resource"></span>Provider</a></li>
+    <li><a href="vpccni" title="VpcCni"><span class="api-symbol api-symbol--resource"></span>VpcCni</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

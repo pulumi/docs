@@ -13,17 +13,17 @@ Explore the resources and functions of the aws.pinpoint module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="admchannel" title="AdmChannel"><span class="symbol resource"></span>AdmChannel</a></li>
-    <li><a href="apnschannel" title="ApnsChannel"><span class="symbol resource"></span>ApnsChannel</a></li>
-    <li><a href="apnssandboxchannel" title="ApnsSandboxChannel"><span class="symbol resource"></span>ApnsSandboxChannel</a></li>
-    <li><a href="apnsvoipchannel" title="ApnsVoipChannel"><span class="symbol resource"></span>ApnsVoipChannel</a></li>
-    <li><a href="apnsvoipsandboxchannel" title="ApnsVoipSandboxChannel"><span class="symbol resource"></span>ApnsVoipSandboxChannel</a></li>
-    <li><a href="app" title="App"><span class="symbol resource"></span>App</a></li>
-    <li><a href="baiduchannel" title="BaiduChannel"><span class="symbol resource"></span>BaiduChannel</a></li>
-    <li><a href="emailchannel" title="EmailChannel"><span class="symbol resource"></span>EmailChannel</a></li>
-    <li><a href="eventstream" title="EventStream"><span class="symbol resource"></span>EventStream</a></li>
-    <li><a href="gcmchannel" title="GcmChannel"><span class="symbol resource"></span>GcmChannel</a></li>
-    <li><a href="smschannel" title="SmsChannel"><span class="symbol resource"></span>SmsChannel</a></li>
+    <li><a href="admchannel" title="AdmChannel"><span class="api-symbol api-symbol--resource"></span>AdmChannel</a></li>
+    <li><a href="apnschannel" title="ApnsChannel"><span class="api-symbol api-symbol--resource"></span>ApnsChannel</a></li>
+    <li><a href="apnssandboxchannel" title="ApnsSandboxChannel"><span class="api-symbol api-symbol--resource"></span>ApnsSandboxChannel</a></li>
+    <li><a href="apnsvoipchannel" title="ApnsVoipChannel"><span class="api-symbol api-symbol--resource"></span>ApnsVoipChannel</a></li>
+    <li><a href="apnsvoipsandboxchannel" title="ApnsVoipSandboxChannel"><span class="api-symbol api-symbol--resource"></span>ApnsVoipSandboxChannel</a></li>
+    <li><a href="app" title="App"><span class="api-symbol api-symbol--resource"></span>App</a></li>
+    <li><a href="baiduchannel" title="BaiduChannel"><span class="api-symbol api-symbol--resource"></span>BaiduChannel</a></li>
+    <li><a href="emailchannel" title="EmailChannel"><span class="api-symbol api-symbol--resource"></span>EmailChannel</a></li>
+    <li><a href="eventstream" title="EventStream"><span class="api-symbol api-symbol--resource"></span>EventStream</a></li>
+    <li><a href="gcmchannel" title="GcmChannel"><span class="api-symbol api-symbol--resource"></span>GcmChannel</a></li>
+    <li><a href="smschannel" title="SmsChannel"><span class="api-symbol api-symbol--resource"></span>SmsChannel</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -35,6 +35,6 @@ Explore the resources and functions of the aws.pinpoint module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.23.0</dd>
+	<dd>4.24.1</dd>
 </dl>
 

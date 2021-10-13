@@ -29,7 +29,7 @@ The AWS::IoTEvents::DetectorModel resource creates a detector model. You create 
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">DetectorModel</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                  <span class="nx">detector_model_definition</span><span class="p">:</span> <span class="nx">Optional[DetectorModelDetectorModelDefinitionArgs]</span> = None<span class="p">,</span>
+                  <span class="nx">detector_model_definition</span><span class="p">:</span> <span class="nx">Optional[DetectorModelDefinitionArgs]</span> = None<span class="p">,</span>
                   <span class="nx">detector_model_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">detector_model_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">evaluation_method</span><span class="p">:</span> <span class="nx">Optional[DetectorModelEvaluationMethod]</span> = None<span class="p">,</span>
@@ -169,7 +169,7 @@ The DetectorModel resource accepts the following [input]({{< relref "/docs/intro
 <a href="#detectormodeldefinition_csharp" style="color: inherit; text-decoration: inherit;">Detector<wbr>Model<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#detectormodeldetectormodeldefinition">Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TEvents.<wbr>Inputs.<wbr>Detector<wbr>Model<wbr>Detector<wbr>Model<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#detectormodeldefinition">Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TEvents.<wbr>Inputs.<wbr>Detector<wbr>Model<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -233,7 +233,7 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 <a href="#detectormodeldefinition_go" style="color: inherit; text-decoration: inherit;">Detector<wbr>Model<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#detectormodeldetectormodeldefinition">Detector<wbr>Model<wbr>Detector<wbr>Model<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#detectormodeldefinition">Detector<wbr>Model<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -297,7 +297,7 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 <a href="#detectormodeldefinition_nodejs" style="color: inherit; text-decoration: inherit;">detector<wbr>Model<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#detectormodeldetectormodeldefinition">Detector<wbr>Model<wbr>Detector<wbr>Model<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#detectormodeldefinition">Detector<wbr>Model<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -361,7 +361,7 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 <a href="#detector_model_definition_python" style="color: inherit; text-decoration: inherit;">detector_<wbr>model_<wbr>definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#detectormodeldetectormodeldefinition">Detector<wbr>Model<wbr>Detector<wbr>Model<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#detectormodeldefinition">Detector<wbr>Model<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1309,7 +1309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="detectormodeldetectormodeldefinition">Detector<wbr>Model<wbr>Detector<wbr>Model<wbr>Definition</h4>
+<h4 id="detectormodeldefinition">Detector<wbr>Model<wbr>Definition</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"

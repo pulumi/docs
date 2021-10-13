@@ -13,13 +13,13 @@ Explore the resources and functions of the azure-native.analysisservices module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="serverdetails" title="ServerDetails"><span class="symbol resource"></span>ServerDetails</a></li>
+    <li><a href="serverdetails" title="ServerDetails"><span class="api-symbol api-symbol--resource"></span>ServerDetails</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getserverdetails" title="GetServerDetails"><span class="symbol function"></span>GetServerDetails</a></li>
-    <li><a href="listservergatewaystatus" title="ListServerGatewayStatus"><span class="symbol function"></span>ListServerGatewayStatus</a></li>
+    <li><a href="getserverdetails" title="GetServerDetails"><span class="api-symbol api-symbol--function"></span>GetServerDetails</a></li>
+    <li><a href="listservergatewaystatus" title="ListServerGatewayStatus"><span class="api-symbol api-symbol--function"></span>ListServerGatewayStatus</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -29,6 +29,6 @@ Explore the resources and functions of the azure-native.analysisservices module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.36.0</dd>
+	<dd>1.37.0</dd>
 </dl>
 

@@ -13,19 +13,19 @@ Explore the resources and functions of the okta.auth module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="server" title="Server"><span class="symbol resource"></span>Server</a></li>
-    <li><a href="serverclaim" title="ServerClaim"><span class="symbol resource"></span>ServerClaim</a></li>
-    <li><a href="serverpolicy" title="ServerPolicy"><span class="symbol resource"></span>ServerPolicy</a></li>
-    <li><a href="serverpolicyclaim" title="ServerPolicyClaim"><span class="symbol resource"></span>ServerPolicyClaim</a></li>
-    <li><a href="serverpolicyrule" title="ServerPolicyRule"><span class="symbol resource"></span>ServerPolicyRule</a></li>
-    <li><a href="serverscope" title="ServerScope"><span class="symbol resource"></span>ServerScope</a></li>
+    <li><a href="server" title="Server"><span class="api-symbol api-symbol--resource"></span>Server</a></li>
+    <li><a href="serverclaim" title="ServerClaim"><span class="api-symbol api-symbol--resource"></span>ServerClaim</a></li>
+    <li><a href="serverpolicy" title="ServerPolicy"><span class="api-symbol api-symbol--resource"></span>ServerPolicy</a></li>
+    <li><a href="serverpolicyclaim" title="ServerPolicyClaim"><span class="api-symbol api-symbol--resource"></span>ServerPolicyClaim</a></li>
+    <li><a href="serverpolicyrule" title="ServerPolicyRule"><span class="api-symbol api-symbol--resource"></span>ServerPolicyRule</a></li>
+    <li><a href="serverscope" title="ServerScope"><span class="api-symbol api-symbol--resource"></span>ServerScope</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getserver" title="GetServer"><span class="symbol function"></span>GetServer</a></li>
-    <li><a href="getserverpolicy" title="GetServerPolicy"><span class="symbol function"></span>GetServerPolicy</a></li>
-    <li><a href="getserverscopes" title="GetServerScopes"><span class="symbol function"></span>GetServerScopes</a></li>
+    <li><a href="getserver" title="GetServer"><span class="api-symbol api-symbol--function"></span>GetServer</a></li>
+    <li><a href="getserverpolicy" title="GetServerPolicy"><span class="api-symbol api-symbol--function"></span>GetServerPolicy</a></li>
+    <li><a href="getserverscopes" title="GetServerScopes"><span class="api-symbol api-symbol--function"></span>GetServerScopes</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

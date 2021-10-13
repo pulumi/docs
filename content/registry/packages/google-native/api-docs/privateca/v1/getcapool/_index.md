@@ -2006,7 +2006,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. The maximum allowed RSA modulus size, in bits. If this is not set, or if set to zero, the service will not enforce an explicit upper bound on RSA modulus sizes.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. The maximum allowed RSA modulus size (inclusive), in bits. If this is not set, or if set to zero, the service will not enforce an explicit upper bound on RSA modulus sizes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minmodulussize_csharp">
 <a href="#minmodulussize_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Modulus<wbr>Size</a>
@@ -2014,7 +2014,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. The minimum allowed RSA modulus size, in bits. If this is not set, or if set to zero, the service-level min RSA modulus size will continue to apply.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optional. The minimum allowed RSA modulus size (inclusive), in bits. If this is not set, or if set to zero, the service-level min RSA modulus size will continue to apply.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2026,7 +2026,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. The maximum allowed RSA modulus size, in bits. If this is not set, or if set to zero, the service will not enforce an explicit upper bound on RSA modulus sizes.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. The maximum allowed RSA modulus size (inclusive), in bits. If this is not set, or if set to zero, the service will not enforce an explicit upper bound on RSA modulus sizes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minmodulussize_go">
 <a href="#minmodulussize_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Modulus<wbr>Size</a>
@@ -2034,7 +2034,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. The minimum allowed RSA modulus size, in bits. If this is not set, or if set to zero, the service-level min RSA modulus size will continue to apply.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optional. The minimum allowed RSA modulus size (inclusive), in bits. If this is not set, or if set to zero, the service-level min RSA modulus size will continue to apply.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2046,7 +2046,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. The maximum allowed RSA modulus size, in bits. If this is not set, or if set to zero, the service will not enforce an explicit upper bound on RSA modulus sizes.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. The maximum allowed RSA modulus size (inclusive), in bits. If this is not set, or if set to zero, the service will not enforce an explicit upper bound on RSA modulus sizes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minmodulussize_nodejs">
 <a href="#minmodulussize_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Modulus<wbr>Size</a>
@@ -2054,7 +2054,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. The minimum allowed RSA modulus size, in bits. If this is not set, or if set to zero, the service-level min RSA modulus size will continue to apply.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optional. The minimum allowed RSA modulus size (inclusive), in bits. If this is not set, or if set to zero, the service-level min RSA modulus size will continue to apply.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2066,7 +2066,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Optional. The maximum allowed RSA modulus size, in bits. If this is not set, or if set to zero, the service will not enforce an explicit upper bound on RSA modulus sizes.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. The maximum allowed RSA modulus size (inclusive), in bits. If this is not set, or if set to zero, the service will not enforce an explicit upper bound on RSA modulus sizes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="min_modulus_size_python">
 <a href="#min_modulus_size_python" style="color: inherit; text-decoration: inherit;">min_<wbr>modulus_<wbr>size</a>
@@ -2074,7 +2074,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Optional. The minimum allowed RSA modulus size, in bits. If this is not set, or if set to zero, the service-level min RSA modulus size will continue to apply.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optional. The minimum allowed RSA modulus size (inclusive), in bits. If this is not set, or if set to zero, the service-level min RSA modulus size will continue to apply.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="x509extensionresponse">X509Extension<wbr>Response</h4>

@@ -13,21 +13,21 @@ Explore the resources and functions of the aws.kms module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="alias" title="Alias"><span class="symbol resource"></span>Alias</a></li>
-    <li><a href="ciphertext" title="Ciphertext"><span class="symbol resource"></span>Ciphertext</a></li>
-    <li><a href="externalkey" title="ExternalKey"><span class="symbol resource"></span>ExternalKey</a></li>
-    <li><a href="grant" title="Grant"><span class="symbol resource"></span>Grant</a></li>
-    <li><a href="key" title="Key"><span class="symbol resource"></span>Key</a></li>
+    <li><a href="alias" title="Alias"><span class="api-symbol api-symbol--resource"></span>Alias</a></li>
+    <li><a href="ciphertext" title="Ciphertext"><span class="api-symbol api-symbol--resource"></span>Ciphertext</a></li>
+    <li><a href="externalkey" title="ExternalKey"><span class="api-symbol api-symbol--resource"></span>ExternalKey</a></li>
+    <li><a href="grant" title="Grant"><span class="api-symbol api-symbol--resource"></span>Grant</a></li>
+    <li><a href="key" title="Key"><span class="api-symbol api-symbol--resource"></span>Key</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getalias" title="GetAlias"><span class="symbol function"></span>GetAlias</a></li>
-    <li><a href="getciphertext" title="GetCipherText"><span class="symbol function"></span>GetCipherText</a></li>
-    <li><a href="getkey" title="GetKey"><span class="symbol function"></span>GetKey</a></li>
-    <li><a href="getpublickey" title="GetPublicKey"><span class="symbol function"></span>GetPublicKey</a></li>
-    <li><a href="getsecret" title="GetSecret"><span class="symbol function"></span>GetSecret</a></li>
-    <li><a href="getsecrets" title="GetSecrets"><span class="symbol function"></span>GetSecrets</a></li>
+    <li><a href="getalias" title="GetAlias"><span class="api-symbol api-symbol--function"></span>GetAlias</a></li>
+    <li><a href="getciphertext" title="GetCipherText"><span class="api-symbol api-symbol--function"></span>GetCipherText</a></li>
+    <li><a href="getkey" title="GetKey"><span class="api-symbol api-symbol--function"></span>GetKey</a></li>
+    <li><a href="getpublickey" title="GetPublicKey"><span class="api-symbol api-symbol--function"></span>GetPublicKey</a></li>
+    <li><a href="getsecret" title="GetSecret"><span class="api-symbol api-symbol--function"></span>GetSecret</a></li>
+    <li><a href="getsecrets" title="GetSecrets"><span class="api-symbol api-symbol--function"></span>GetSecrets</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -39,6 +39,6 @@ Explore the resources and functions of the aws.kms module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.23.0</dd>
+	<dd>4.24.1</dd>
 </dl>
 

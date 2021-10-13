@@ -29,7 +29,7 @@ The AWS::EC2::TransitGatewayConnect type
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">TransitGatewayConnect</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                          <span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[TransitGatewayConnectTransitGatewayConnectOptionsArgs]</span> = None<span class="p">,</span>
+                          <span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[TransitGatewayConnectOptionsArgs]</span> = None<span class="p">,</span>
                           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[TransitGatewayConnectTagArgs]]</span> = None<span class="p">,</span>
                           <span class="nx">transport_transit_gateway_attachment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -165,7 +165,7 @@ The TransitGatewayConnect resource accepts the following [input]({{< relref "/do
 <a href="#options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transitgatewayconnecttransitgatewayconnectoptions">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Inputs.<wbr>Transit<wbr>Gateway<wbr>Connect<wbr>Transit<wbr>Gateway<wbr>Connect<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#transitgatewayconnectoptions">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Inputs.<wbr>Transit<wbr>Gateway<wbr>Connect<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Connect attachment options.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -193,7 +193,7 @@ The TransitGatewayConnect resource accepts the following [input]({{< relref "/do
 <a href="#options_go" style="color: inherit; text-decoration: inherit;">Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transitgatewayconnecttransitgatewayconnectoptions">Transit<wbr>Gateway<wbr>Connect<wbr>Transit<wbr>Gateway<wbr>Connect<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#transitgatewayconnectoptions">Transit<wbr>Gateway<wbr>Connect<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Connect attachment options.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -221,7 +221,7 @@ The TransitGatewayConnect resource accepts the following [input]({{< relref "/do
 <a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transitgatewayconnecttransitgatewayconnectoptions">Transit<wbr>Gateway<wbr>Connect<wbr>Transit<wbr>Gateway<wbr>Connect<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#transitgatewayconnectoptions">Transit<wbr>Gateway<wbr>Connect<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Connect attachment options.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -249,7 +249,7 @@ The TransitGatewayConnect resource accepts the following [input]({{< relref "/do
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transitgatewayconnecttransitgatewayconnectoptions">Transit<wbr>Gateway<wbr>Connect<wbr>Transit<wbr>Gateway<wbr>Connect<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#transitgatewayconnectoptions">Transit<wbr>Gateway<wbr>Connect<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Connect attachment options.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -463,6 +463,56 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="transitgatewayconnectoptions">Transit<wbr>Gateway<wbr>Connect<wbr>Options</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="protocol_csharp">
+<a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tunnel protocol.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="protocol_go">
+<a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tunnel protocol.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="protocol_nodejs">
+<a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tunnel protocol.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="protocol_python">
+<a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The tunnel protocol.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="transitgatewayconnecttag">Transit<wbr>Gateway<wbr>Connect<wbr>Tag</h4>
 
 {{% choosable language csharp %}}
@@ -543,56 +593,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the tag. Constraints: Tag values are case-sensitive and accept a maximum of 255 Unicode characters.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="transitgatewayconnecttransitgatewayconnectoptions">Transit<wbr>Gateway<wbr>Connect<wbr>Transit<wbr>Gateway<wbr>Connect<wbr>Options</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="protocol_csharp">
-<a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The tunnel protocol.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="protocol_go">
-<a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The tunnel protocol.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="protocol_nodejs">
-<a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The tunnel protocol.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="protocol_python">
-<a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The tunnel protocol.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -13,15 +13,15 @@ Explore the resources and functions of the azure.maintenance module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="assignmentdedicatedhost" title="AssignmentDedicatedHost"><span class="symbol resource"></span>AssignmentDedicatedHost</a></li>
-    <li><a href="assignmentvirtualmachine" title="AssignmentVirtualMachine"><span class="symbol resource"></span>AssignmentVirtualMachine</a></li>
-    <li><a href="assignmentvirtualmachinescaleset" title="AssignmentVirtualMachineScaleSet"><span class="symbol resource"></span>AssignmentVirtualMachineScaleSet</a></li>
-    <li><a href="configuration" title="Configuration"><span class="symbol resource"></span>Configuration</a></li>
+    <li><a href="assignmentdedicatedhost" title="AssignmentDedicatedHost"><span class="api-symbol api-symbol--resource"></span>AssignmentDedicatedHost</a></li>
+    <li><a href="assignmentvirtualmachine" title="AssignmentVirtualMachine"><span class="api-symbol api-symbol--resource"></span>AssignmentVirtualMachine</a></li>
+    <li><a href="assignmentvirtualmachinescaleset" title="AssignmentVirtualMachineScaleSet"><span class="api-symbol api-symbol--resource"></span>AssignmentVirtualMachineScaleSet</a></li>
+    <li><a href="configuration" title="Configuration"><span class="api-symbol api-symbol--resource"></span>Configuration</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getconfiguration" title="GetConfiguration"><span class="symbol function"></span>GetConfiguration</a></li>
+    <li><a href="getconfiguration" title="GetConfiguration"><span class="api-symbol api-symbol--function"></span>GetConfiguration</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -33,6 +33,6 @@ Explore the resources and functions of the azure.maintenance module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.21.0</dd>
+	<dd>4.22.0</dd>
 </dl>
 

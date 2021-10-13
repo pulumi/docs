@@ -13,22 +13,22 @@ Explore the resources and functions of the aws.redshift module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
-    <li><a href="eventsubscription" title="EventSubscription"><span class="symbol resource"></span>EventSubscription</a></li>
-    <li><a href="parametergroup" title="ParameterGroup"><span class="symbol resource"></span>ParameterGroup</a></li>
-    <li><a href="scheduledaction" title="ScheduledAction"><span class="symbol resource"></span>ScheduledAction</a></li>
-    <li><a href="securitygroup" title="SecurityGroup"><span class="symbol resource"></span>SecurityGroup</a></li>
-    <li><a href="snapshotcopygrant" title="SnapshotCopyGrant"><span class="symbol resource"></span>SnapshotCopyGrant</a></li>
-    <li><a href="snapshotschedule" title="SnapshotSchedule"><span class="symbol resource"></span>SnapshotSchedule</a></li>
-    <li><a href="snapshotscheduleassociation" title="SnapshotScheduleAssociation"><span class="symbol resource"></span>SnapshotScheduleAssociation</a></li>
-    <li><a href="subnetgroup" title="SubnetGroup"><span class="symbol resource"></span>SubnetGroup</a></li>
+    <li><a href="cluster" title="Cluster"><span class="api-symbol api-symbol--resource"></span>Cluster</a></li>
+    <li><a href="eventsubscription" title="EventSubscription"><span class="api-symbol api-symbol--resource"></span>EventSubscription</a></li>
+    <li><a href="parametergroup" title="ParameterGroup"><span class="api-symbol api-symbol--resource"></span>ParameterGroup</a></li>
+    <li><a href="scheduledaction" title="ScheduledAction"><span class="api-symbol api-symbol--resource"></span>ScheduledAction</a></li>
+    <li><a href="securitygroup" title="SecurityGroup"><span class="api-symbol api-symbol--resource"></span>SecurityGroup</a></li>
+    <li><a href="snapshotcopygrant" title="SnapshotCopyGrant"><span class="api-symbol api-symbol--resource"></span>SnapshotCopyGrant</a></li>
+    <li><a href="snapshotschedule" title="SnapshotSchedule"><span class="api-symbol api-symbol--resource"></span>SnapshotSchedule</a></li>
+    <li><a href="snapshotscheduleassociation" title="SnapshotScheduleAssociation"><span class="api-symbol api-symbol--resource"></span>SnapshotScheduleAssociation</a></li>
+    <li><a href="subnetgroup" title="SubnetGroup"><span class="api-symbol api-symbol--resource"></span>SubnetGroup</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getcluster" title="GetCluster"><span class="symbol function"></span>GetCluster</a></li>
-    <li><a href="getorderablecluster" title="GetOrderableCluster"><span class="symbol function"></span>GetOrderableCluster</a></li>
-    <li><a href="getserviceaccount" title="GetServiceAccount"><span class="symbol function"></span>GetServiceAccount</a></li>
+    <li><a href="getcluster" title="GetCluster"><span class="api-symbol api-symbol--function"></span>GetCluster</a></li>
+    <li><a href="getorderablecluster" title="GetOrderableCluster"><span class="api-symbol api-symbol--function"></span>GetOrderableCluster</a></li>
+    <li><a href="getserviceaccount" title="GetServiceAccount"><span class="api-symbol api-symbol--function"></span>GetServiceAccount</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -40,6 +40,6 @@ Explore the resources and functions of the aws.redshift module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.23.0</dd>
+	<dd>4.24.1</dd>
 </dl>
 

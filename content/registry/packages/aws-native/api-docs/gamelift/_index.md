@@ -13,9 +13,9 @@ Explore the resources and functions of the aws-native.gamelift module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="alias" title="Alias"><span class="symbol resource"></span>Alias</a></li>
-    <li><a href="fleet" title="Fleet"><span class="symbol resource"></span>Fleet</a></li>
-    <li><a href="gameservergroup" title="GameServerGroup"><span class="symbol resource"></span>GameServerGroup</a></li>
+    <li><a href="alias" title="Alias"><span class="api-symbol api-symbol--resource"></span>Alias</a></li>
+    <li><a href="fleet" title="Fleet"><span class="api-symbol api-symbol--resource"></span>Fleet</a></li>
+    <li><a href="gameservergroup" title="GameServerGroup"><span class="api-symbol api-symbol--resource"></span>GameServerGroup</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -25,6 +25,6 @@ Explore the resources and functions of the aws-native.gamelift module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.0</dd>
 </dl>
 

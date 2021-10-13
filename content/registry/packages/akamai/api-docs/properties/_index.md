@@ -13,18 +13,18 @@ Explore the resources and functions of the akamai.properties module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="cpcode" title="CpCode"><span class="symbol resource"></span>CpCode</a></li>
-    <li><a href="edgehostname" title="EdgeHostName"><span class="symbol resource"></span>EdgeHostName</a></li>
-    <li><a href="property" title="Property"><span class="symbol resource"></span>Property</a></li>
-    <li><a href="propertyactivation" title="PropertyActivation"><span class="symbol resource"></span>PropertyActivation</a></li>
-    <li><a href="propertyvariables" title="PropertyVariables"><span class="symbol resource"></span>PropertyVariables</a></li>
+    <li><a href="cpcode" title="CpCode"><span class="api-symbol api-symbol--resource"></span>CpCode</a></li>
+    <li><a href="edgehostname" title="EdgeHostName"><span class="api-symbol api-symbol--resource"></span>EdgeHostName</a></li>
+    <li><a href="property" title="Property"><span class="api-symbol api-symbol--resource"></span>Property</a></li>
+    <li><a href="propertyactivation" title="PropertyActivation"><span class="api-symbol api-symbol--resource"></span>PropertyActivation</a></li>
+    <li><a href="propertyvariables" title="PropertyVariables"><span class="api-symbol api-symbol--resource"></span>PropertyVariables</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getcpcode" title="GetCpCode"><span class="symbol function"></span>GetCpCode</a></li>
-    <li><a href="getproperty" title="GetProperty"><span class="symbol function"></span>GetProperty</a></li>
-    <li><a href="getpropertyrules" title="GetPropertyRules"><span class="symbol function"></span>GetPropertyRules</a></li>
+    <li><a href="getcpcode" title="GetCpCode"><span class="api-symbol api-symbol--function"></span>GetCpCode</a></li>
+    <li><a href="getproperty" title="GetProperty"><span class="api-symbol api-symbol--function"></span>GetProperty</a></li>
+    <li><a href="getpropertyrules" title="GetPropertyRules"><span class="api-symbol api-symbol--function"></span>GetPropertyRules</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

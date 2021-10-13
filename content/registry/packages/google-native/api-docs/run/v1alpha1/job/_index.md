@@ -3319,6 +3319,234 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}(Optional) Command is the command line to execute inside the container, the working directory for the command is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="googlerpcstatus">Google<wbr>Rpc<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="code_csharp">
+<a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The status code, which should be an enum value of google.rpc.Code.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="details_csharp">
+<a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, string&gt;&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of messages that carry the error details. There is a common set of message types for APIs to use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="message_csharp">
+<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="code_go">
+<a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The status code, which should be an enum value of google.rpc.Code.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="details_go">
+<a href="#details_go" style="color: inherit; text-decoration: inherit;">Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A list of messages that carry the error details. There is a common set of message types for APIs to use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="message_go">
+<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="code_nodejs">
+<a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The status code, which should be an enum value of google.rpc.Code.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="details_nodejs">
+<a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}[]</span>
+    </dt>
+    <dd>{{% md %}}A list of messages that carry the error details. There is a common set of message types for APIs to use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="message_nodejs">
+<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="code_python">
+<a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The status code, which should be an enum value of google.rpc.Code.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="details_python">
+<a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[Mapping[str, str]]</span>
+    </dt>
+    <dd>{{% md %}}A list of messages that carry the error details. There is a common set of message types for APIs to use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="message_python">
+<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googlerpcstatusresponse">Google<wbr>Rpc<wbr>Status<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="code_csharp">
+<a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The status code, which should be an enum value of google.rpc.Code.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="details_csharp">
+<a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, string&gt;&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of messages that carry the error details. There is a common set of message types for APIs to use.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="message_csharp">
+<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="code_go">
+<a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The status code, which should be an enum value of google.rpc.Code.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="details_go">
+<a href="#details_go" style="color: inherit; text-decoration: inherit;">Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A list of messages that carry the error details. There is a common set of message types for APIs to use.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="message_go">
+<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="code_nodejs">
+<a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The status code, which should be an enum value of google.rpc.Code.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="details_nodejs">
+<a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}[]</span>
+    </dt>
+    <dd>{{% md %}}A list of messages that carry the error details. There is a common set of message types for APIs to use.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="message_nodejs">
+<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="code_python">
+<a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The status code, which should be an enum value of google.rpc.Code.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="details_python">
+<a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[Mapping[str, str]]</span>
+    </dt>
+    <dd>{{% md %}}A list of messages that carry the error details. There is a common set of message types for APIs to use.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="message_python">
+<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="httpgetaction">HTTPGet<wbr>Action</h4>
 
 {{% choosable language csharp %}}
@@ -3775,6 +4003,170 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The header field value{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="instanceattemptresult">Instance<wbr>Attempt<wbr>Result</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="exitcode_csharp">
+<a href="#exitcode_csharp" style="color: inherit; text-decoration: inherit;">Exit<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Optional. The exit code of this attempt. This may be unset if the container was unable to exit cleanly with a code due to some other failure. See status field for possible failure details.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlerpcstatus">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Google<wbr>Rpc<wbr>Status</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. The status of this attempt. If the status code is OK, then the attempt succeeded.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="exitcode_go">
+<a href="#exitcode_go" style="color: inherit; text-decoration: inherit;">Exit<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Optional. The exit code of this attempt. This may be unset if the container was unable to exit cleanly with a code due to some other failure. See status field for possible failure details.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlerpcstatus">Google<wbr>Rpc<wbr>Status</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. The status of this attempt. If the status code is OK, then the attempt succeeded.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="exitcode_nodejs">
+<a href="#exitcode_nodejs" style="color: inherit; text-decoration: inherit;">exit<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Optional. The exit code of this attempt. This may be unset if the container was unable to exit cleanly with a code due to some other failure. See status field for possible failure details.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlerpcstatus">Google<wbr>Rpc<wbr>Status</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. The status of this attempt. If the status code is OK, then the attempt succeeded.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="exit_code_python">
+<a href="#exit_code_python" style="color: inherit; text-decoration: inherit;">exit_<wbr>code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Optional. The exit code of this attempt. This may be unset if the container was unable to exit cleanly with a code due to some other failure. See status field for possible failure details.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlerpcstatus">Google<wbr>Rpc<wbr>Status</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. The status of this attempt. If the status code is OK, then the attempt succeeded.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instanceattemptresultresponse">Instance<wbr>Attempt<wbr>Result<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="exitcode_csharp">
+<a href="#exitcode_csharp" style="color: inherit; text-decoration: inherit;">Exit<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Optional. The exit code of this attempt. This may be unset if the container was unable to exit cleanly with a code due to some other failure. See status field for possible failure details.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlerpcstatusresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Google<wbr>Rpc<wbr>Status<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. The status of this attempt. If the status code is OK, then the attempt succeeded.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="exitcode_go">
+<a href="#exitcode_go" style="color: inherit; text-decoration: inherit;">Exit<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Optional. The exit code of this attempt. This may be unset if the container was unable to exit cleanly with a code due to some other failure. See status field for possible failure details.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlerpcstatusresponse">Google<wbr>Rpc<wbr>Status<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. The status of this attempt. If the status code is OK, then the attempt succeeded.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="exitcode_nodejs">
+<a href="#exitcode_nodejs" style="color: inherit; text-decoration: inherit;">exit<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Optional. The exit code of this attempt. This may be unset if the container was unable to exit cleanly with a code due to some other failure. See status field for possible failure details.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlerpcstatusresponse">Google<wbr>Rpc<wbr>Status<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. The status of this attempt. If the status code is OK, then the attempt succeeded.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="exit_code_python">
+<a href="#exit_code_python" style="color: inherit; text-decoration: inherit;">exit_<wbr>code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Optional. The exit code of this attempt. This may be unset if the container was unable to exit cleanly with a code due to some other failure. See status field for possible failure details.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlerpcstatusresponse">Google<wbr>Rpc<wbr>Status<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. The status of this attempt. If the status code is OK, then the attempt succeeded.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="instancespec">Instance<wbr>Spec</h4>
 
 {{% choosable language csharp %}}
@@ -4224,6 +4616,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Optional. The number of times this instance exited with code > 0; +optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="lastattemptresult_csharp">
+<a href="#lastattemptresult_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Attempt<wbr>Result</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceattemptresult">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Instance<wbr>Attempt<wbr>Result</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. Result of the last attempt of this instance. +optional{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="lastexitcode_csharp">
 <a href="#lastexitcode_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Exit<wbr>Code</a>
 </span>
@@ -4283,6 +4683,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. The number of times this instance exited with code > 0; +optional{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastattemptresult_go">
+<a href="#lastattemptresult_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Attempt<wbr>Result</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceattemptresult">Instance<wbr>Attempt<wbr>Result</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. Result of the last attempt of this instance. +optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastexitcode_go">
 <a href="#lastexitcode_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Exit<wbr>Code</a>
@@ -4344,6 +4752,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Optional. The number of times this instance exited with code > 0; +optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="lastattemptresult_nodejs">
+<a href="#lastattemptresult_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Attempt<wbr>Result</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceattemptresult">Instance<wbr>Attempt<wbr>Result</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. Result of the last attempt of this instance. +optional{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="lastexitcode_nodejs">
 <a href="#lastexitcode_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Exit<wbr>Code</a>
 </span>
@@ -4403,6 +4819,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. The number of times this instance exited with code > 0; +optional{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="last_attempt_result_python">
+<a href="#last_attempt_result_python" style="color: inherit; text-decoration: inherit;">last_<wbr>attempt_<wbr>result</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceattemptresult">Instance<wbr>Attempt<wbr>Result</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. Result of the last attempt of this instance. +optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_exit_code_python">
 <a href="#last_exit_code_python" style="color: inherit; text-decoration: inherit;">last_<wbr>exit_<wbr>code</a>
@@ -4466,6 +4890,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Index of the instance, unique per Job, and beginning at 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="lastattemptresult_csharp">
+<a href="#lastattemptresult_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Attempt<wbr>Result</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceattemptresultresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Instance<wbr>Attempt<wbr>Result<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. Result of the last attempt of this instance. +optional{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="lastexitcode_csharp">
 <a href="#lastexitcode_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Exit<wbr>Code</a>
 </span>
@@ -4525,6 +4957,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Index of the instance, unique per Job, and beginning at 0.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="lastattemptresult_go">
+<a href="#lastattemptresult_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Attempt<wbr>Result</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceattemptresultresponse">Instance<wbr>Attempt<wbr>Result<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. Result of the last attempt of this instance. +optional{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastexitcode_go">
 <a href="#lastexitcode_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Exit<wbr>Code</a>
@@ -4586,6 +5026,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Index of the instance, unique per Job, and beginning at 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="lastattemptresult_nodejs">
+<a href="#lastattemptresult_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Attempt<wbr>Result</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceattemptresultresponse">Instance<wbr>Attempt<wbr>Result<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. Result of the last attempt of this instance. +optional{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="lastexitcode_nodejs">
 <a href="#lastexitcode_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Exit<wbr>Code</a>
 </span>
@@ -4645,6 +5093,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Index of the instance, unique per Job, and beginning at 0.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="last_attempt_result_python">
+<a href="#last_attempt_result_python" style="color: inherit; text-decoration: inherit;">last_<wbr>attempt_<wbr>result</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceattemptresultresponse">Instance<wbr>Attempt<wbr>Result<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. Result of the last attempt of this instance. +optional{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="last_exit_code_python">
 <a href="#last_exit_code_python" style="color: inherit; text-decoration: inherit;">last_<wbr>exit_<wbr>code</a>
@@ -4798,7 +5254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/master/docs/spec/errors.md#error-conditions-and-reporting Types include: * "Completed": True when the Job has successfully completed. * "Started": True when the Job has successfully started running. * "ResourcesAvailable": True when underlying resources have been provisioned.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types include: * "Completed": True when the Job has successfully completed. * "Started": True when the Job has successfully started running. * "ResourcesAvailable": True when underlying resources have been provisioned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lasttransitiontime_csharp">
 <a href="#lasttransitiontime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Transition<wbr>Time</a>
@@ -4850,7 +5306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/master/docs/spec/errors.md#error-conditions-and-reporting Types include: * "Completed": True when the Job has successfully completed. * "Started": True when the Job has successfully started running. * "ResourcesAvailable": True when underlying resources have been provisioned.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types include: * "Completed": True when the Job has successfully completed. * "Started": True when the Job has successfully started running. * "ResourcesAvailable": True when underlying resources have been provisioned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lasttransitiontime_go">
 <a href="#lasttransitiontime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Transition<wbr>Time</a>
@@ -4902,7 +5358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/master/docs/spec/errors.md#error-conditions-and-reporting Types include: * "Completed": True when the Job has successfully completed. * "Started": True when the Job has successfully started running. * "ResourcesAvailable": True when underlying resources have been provisioned.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types include: * "Completed": True when the Job has successfully completed. * "Started": True when the Job has successfully started running. * "ResourcesAvailable": True when underlying resources have been provisioned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lasttransitiontime_nodejs">
 <a href="#lasttransitiontime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Transition<wbr>Time</a>
@@ -4954,7 +5410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/master/docs/spec/errors.md#error-conditions-and-reporting Types include: * "Completed": True when the Job has successfully completed. * "Started": True when the Job has successfully started running. * "ResourcesAvailable": True when underlying resources have been provisioned.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types include: * "Completed": True when the Job has successfully completed. * "Started": True when the Job has successfully started running. * "ResourcesAvailable": True when underlying resources have been provisioned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_transition_time_python">
 <a href="#last_transition_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>transition_<wbr>time</a>
@@ -5040,7 +5496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/master/docs/spec/errors.md#error-conditions-and-reporting Types include: * "Completed": True when the Job has successfully completed. * "Started": True when the Job has successfully started running. * "ResourcesAvailable": True when underlying resources have been provisioned.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types include: * "Completed": True when the Job has successfully completed. * "Started": True when the Job has successfully started running. * "ResourcesAvailable": True when underlying resources have been provisioned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -5092,7 +5548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/master/docs/spec/errors.md#error-conditions-and-reporting Types include: * "Completed": True when the Job has successfully completed. * "Started": True when the Job has successfully started running. * "ResourcesAvailable": True when underlying resources have been provisioned.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types include: * "Completed": True when the Job has successfully completed. * "Started": True when the Job has successfully started running. * "ResourcesAvailable": True when underlying resources have been provisioned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -5144,7 +5600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/master/docs/spec/errors.md#error-conditions-and-reporting Types include: * "Completed": True when the Job has successfully completed. * "Started": True when the Job has successfully started running. * "ResourcesAvailable": True when underlying resources have been provisioned.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types include: * "Completed": True when the Job has successfully completed. * "Started": True when the Job has successfully started running. * "ResourcesAvailable": True when underlying resources have been provisioned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -5196,7 +5652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/master/docs/spec/errors.md#error-conditions-and-reporting Types include: * "Completed": True when the Job has successfully completed. * "Started": True when the Job has successfully started running. * "ResourcesAvailable": True when underlying resources have been provisioned.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types include: * "Completed": True when the Job has successfully completed. * "Started": True when the Job has successfully started running. * "ResourcesAvailable": True when underlying resources have been provisioned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobspec">Job<wbr>Spec</h4>
@@ -9782,7 +10238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Volume's name.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Volume's name. In Cloud Run Fully Managed, the name 'cloudsql' is reserved.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secret_csharp">
 <a href="#secret_csharp" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -9810,7 +10266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Volume's name.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Volume's name. In Cloud Run Fully Managed, the name 'cloudsql' is reserved.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secret_go">
 <a href="#secret_go" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -9838,7 +10294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Volume's name.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Volume's name. In Cloud Run Fully Managed, the name 'cloudsql' is reserved.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secret_nodejs">
 <a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
@@ -9866,7 +10322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Volume's name.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Volume's name. In Cloud Run Fully Managed, the name 'cloudsql' is reserved.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secret_python">
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
@@ -9896,7 +10352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This must match the Name of a Volume.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the volume. There must be a corresponding Volume with the same name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="readonly_csharp">
 <a href="#readonly_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Only</a>
@@ -9932,7 +10388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This must match the Name of a Volume.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the volume. There must be a corresponding Volume with the same name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="readonly_go">
 <a href="#readonly_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Only</a>
@@ -9968,7 +10424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This must match the Name of a Volume.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the volume. There must be a corresponding Volume with the same name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="readonly_nodejs">
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
@@ -10004,7 +10460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This must match the Name of a Volume.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the volume. There must be a corresponding Volume with the same name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="read_only_python">
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
@@ -10042,7 +10498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This must match the Name of a Volume.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the volume. There must be a corresponding Volume with the same name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="readonly_csharp">
 <a href="#readonly_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Only</a>
@@ -10078,7 +10534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This must match the Name of a Volume.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the volume. There must be a corresponding Volume with the same name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="readonly_go">
 <a href="#readonly_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Only</a>
@@ -10114,7 +10570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This must match the Name of a Volume.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the volume. There must be a corresponding Volume with the same name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="readonly_nodejs">
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
@@ -10150,7 +10606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This must match the Name of a Volume.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the volume. There must be a corresponding Volume with the same name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="read_only_python">
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
@@ -10188,7 +10644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Volume's name.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Volume's name. In Cloud Run Fully Managed, the name 'cloudsql' is reserved.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_csharp">
 <a href="#secret_csharp" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -10216,7 +10672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Volume's name.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Volume's name. In Cloud Run Fully Managed, the name 'cloudsql' is reserved.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_go">
 <a href="#secret_go" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -10244,7 +10700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Volume's name.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Volume's name. In Cloud Run Fully Managed, the name 'cloudsql' is reserved.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_nodejs">
 <a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
@@ -10272,7 +10728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Volume's name.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Volume's name. In Cloud Run Fully Managed, the name 'cloudsql' is reserved.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_python">
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>

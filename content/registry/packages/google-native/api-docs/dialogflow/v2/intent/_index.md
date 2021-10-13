@@ -35,7 +35,6 @@ Auto-naming is currently not supported for this resource.
            <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">end_interaction</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
            <span class="nx">events</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
-           <span class="nx">followup_intent_info</span><span class="p">:</span> <span class="nx">Optional[Sequence[GoogleCloudDialogflowV2IntentFollowupIntentInfoArgs]]</span> = None<span class="p">,</span>
            <span class="nx">input_context_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
            <span class="nx">intent_view</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">is_fallback</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -51,7 +50,6 @@ Auto-naming is currently not supported for this resource.
            <span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
            <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">reset_contexts</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-           <span class="nx">root_followup_intent_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">training_phrases</span><span class="p">:</span> <span class="nx">Optional[Sequence[GoogleCloudDialogflowV2IntentTrainingPhraseArgs]]</span> = None<span class="p">,</span>
            <span class="nx">webhook_state</span><span class="p">:</span> <span class="nx">Optional[IntentWebhookState]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -223,14 +221,6 @@ The Intent resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}Optional. The collection of event names that trigger the intent. If the collection of input contexts is not empty, all of the contexts must be present in the active user session for an event to trigger this intent. Event names are limited to 150 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="followupintentinfo_csharp">
-<a href="#followupintentinfo_csharp" style="color: inherit; text-decoration: inherit;">Followup<wbr>Intent<wbr>Info</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2intentfollowupintentinfo">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V2.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Intent<wbr>Followup<wbr>Intent<wbr>Info<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Read-only. Information about all followup intents that have this intent as a direct or indirect parent. We populate this field only in the output.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="inputcontextnames_csharp">
 <a href="#inputcontextnames_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Context<wbr>Names</a>
 </span>
@@ -351,14 +341,6 @@ The Intent resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}Optional. Indicates whether to delete all contexts in the current session when this intent is matched.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="rootfollowupintentname_csharp">
-<a href="#rootfollowupintentname_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Followup<wbr>Intent<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Read-only. The unique identifier of the root intent in the chain of followup intents. It identifies the correct followup intents chain for this intent. We populate this field only in the output. Format: `projects//agent/intents/`.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="trainingphrases_csharp">
 <a href="#trainingphrases_csharp" style="color: inherit; text-decoration: inherit;">Training<wbr>Phrases</a>
 </span>
@@ -418,14 +400,6 @@ The Intent resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Optional. The collection of event names that trigger the intent. If the collection of input contexts is not empty, all of the contexts must be present in the active user session for an event to trigger this intent. Event names are limited to 150 characters.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="followupintentinfo_go">
-<a href="#followupintentinfo_go" style="color: inherit; text-decoration: inherit;">Followup<wbr>Intent<wbr>Info</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2intentfollowupintentinfo">[]Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Intent<wbr>Followup<wbr>Intent<wbr>Info<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Read-only. Information about all followup intents that have this intent as a direct or indirect parent. We populate this field only in the output.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputcontextnames_go">
 <a href="#inputcontextnames_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Context<wbr>Names</a>
@@ -547,14 +521,6 @@ The Intent resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}Optional. Indicates whether to delete all contexts in the current session when this intent is matched.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="rootfollowupintentname_go">
-<a href="#rootfollowupintentname_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Followup<wbr>Intent<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Read-only. The unique identifier of the root intent in the chain of followup intents. It identifies the correct followup intents chain for this intent. We populate this field only in the output. Format: `projects//agent/intents/`.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="trainingphrases_go">
 <a href="#trainingphrases_go" style="color: inherit; text-decoration: inherit;">Training<wbr>Phrases</a>
 </span>
@@ -614,14 +580,6 @@ The Intent resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. The collection of event names that trigger the intent. If the collection of input contexts is not empty, all of the contexts must be present in the active user session for an event to trigger this intent. Event names are limited to 150 characters.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="followupintentinfo_nodejs">
-<a href="#followupintentinfo_nodejs" style="color: inherit; text-decoration: inherit;">followup<wbr>Intent<wbr>Info</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2intentfollowupintentinfo">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Intent<wbr>Followup<wbr>Intent<wbr>Info<wbr>Args[]</a></span>
-    </dt>
-    <dd>{{% md %}}Read-only. Information about all followup intents that have this intent as a direct or indirect parent. We populate this field only in the output.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputcontextnames_nodejs">
 <a href="#inputcontextnames_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Context<wbr>Names</a>
@@ -743,14 +701,6 @@ The Intent resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}Optional. Indicates whether to delete all contexts in the current session when this intent is matched.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="rootfollowupintentname_nodejs">
-<a href="#rootfollowupintentname_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Followup<wbr>Intent<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Read-only. The unique identifier of the root intent in the chain of followup intents. It identifies the correct followup intents chain for this intent. We populate this field only in the output. Format: `projects//agent/intents/`.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="trainingphrases_nodejs">
 <a href="#trainingphrases_nodejs" style="color: inherit; text-decoration: inherit;">training<wbr>Phrases</a>
 </span>
@@ -810,14 +760,6 @@ The Intent resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. The collection of event names that trigger the intent. If the collection of input contexts is not empty, all of the contexts must be present in the active user session for an event to trigger this intent. Event names are limited to 150 characters.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="followup_intent_info_python">
-<a href="#followup_intent_info_python" style="color: inherit; text-decoration: inherit;">followup_<wbr>intent_<wbr>info</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2intentfollowupintentinfo">Sequence[Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Intent<wbr>Followup<wbr>Intent<wbr>Info<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}Read-only. Information about all followup intents that have this intent as a direct or indirect parent. We populate this field only in the output.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="input_context_names_python">
 <a href="#input_context_names_python" style="color: inherit; text-decoration: inherit;">input_<wbr>context_<wbr>names</a>
@@ -939,14 +881,6 @@ The Intent resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}Optional. Indicates whether to delete all contexts in the current session when this intent is matched.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="root_followup_intent_name_python">
-<a href="#root_followup_intent_name_python" style="color: inherit; text-decoration: inherit;">root_<wbr>followup_<wbr>intent_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Read-only. The unique identifier of the root intent in the chain of followup intents. It identifies the correct followup intents chain for this intent. We populate this field only in the output. Format: `projects//agent/intents/`.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="training_phrases_python">
 <a href="#training_phrases_python" style="color: inherit; text-decoration: inherit;">training_<wbr>phrases</a>
 </span>
@@ -974,17 +908,41 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="followupintentinfo_csharp">
+<a href="#followupintentinfo_csharp" style="color: inherit; text-decoration: inherit;">Followup<wbr>Intent<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2intentfollowupintentinforesponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V2.<wbr>Outputs.<wbr>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Intent<wbr>Followup<wbr>Intent<wbr>Info<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Read-only. Information about all followup intents that have this intent as a direct or indirect parent. We populate this field only in the output.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="rootfollowupintentname_csharp">
+<a href="#rootfollowupintentname_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Followup<wbr>Intent<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Read-only. The unique identifier of the root intent in the chain of followup intents. It identifies the correct followup intents chain for this intent. We populate this field only in the output. Format: `projects//agent/intents/`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="followupintentinfo_go">
+<a href="#followupintentinfo_go" style="color: inherit; text-decoration: inherit;">Followup<wbr>Intent<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2intentfollowupintentinforesponse">[]Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Intent<wbr>Followup<wbr>Intent<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Read-only. Information about all followup intents that have this intent as a direct or indirect parent. We populate this field only in the output.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -992,11 +950,27 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="rootfollowupintentname_go">
+<a href="#rootfollowupintentname_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Followup<wbr>Intent<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Read-only. The unique identifier of the root intent in the chain of followup intents. It identifies the correct followup intents chain for this intent. We populate this field only in the output. Format: `projects//agent/intents/`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="followupintentinfo_nodejs">
+<a href="#followupintentinfo_nodejs" style="color: inherit; text-decoration: inherit;">followup<wbr>Intent<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2intentfollowupintentinforesponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Intent<wbr>Followup<wbr>Intent<wbr>Info<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Read-only. Information about all followup intents that have this intent as a direct or indirect parent. We populate this field only in the output.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1004,11 +978,27 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="rootfollowupintentname_nodejs">
+<a href="#rootfollowupintentname_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Followup<wbr>Intent<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Read-only. The unique identifier of the root intent in the chain of followup intents. It identifies the correct followup intents chain for this intent. We populate this field only in the output. Format: `projects//agent/intents/`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="followup_intent_info_python">
+<a href="#followup_intent_info_python" style="color: inherit; text-decoration: inherit;">followup_<wbr>intent_<wbr>info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2intentfollowupintentinforesponse">Sequence[Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Intent<wbr>Followup<wbr>Intent<wbr>Info<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Read-only. Information about all followup intents that have this intent as a direct or indirect parent. We populate this field only in the output.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1016,7 +1006,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="root_followup_intent_name_python">
+<a href="#root_followup_intent_name_python" style="color: inherit; text-decoration: inherit;">root_<wbr>followup_<wbr>intent_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Read-only. The unique identifier of the root intent in the chain of followup intents. It identifies the correct followup intents chain for this intent. We populate this field only in the output. Format: `projects//agent/intents/`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1255,88 +1253,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. The collection of parameters associated with this context. Depending on your protocol or client library language, this is a map, associative array, symbol table, dictionary, or JSON object composed of a collection of (MapKey, MapValue) pairs: - MapKey type: string - MapKey value: parameter name - MapValue type: - If parameter's entity type is a composite entity: map - Else: depending on parameter value type, could be one of string, number, boolean, null, list or map - MapValue value: - If parameter's entity type is a composite entity: map from composite entity property names to property values - Else: parameter value{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="googleclouddialogflowv2intentfollowupintentinfo">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Intent<wbr>Followup<wbr>Intent<wbr>Info</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="followupintentname_csharp">
-<a href="#followupintentname_csharp" style="color: inherit; text-decoration: inherit;">Followup<wbr>Intent<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The unique identifier of the followup intent. Format: `projects//agent/intents/`.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="parentfollowupintentname_csharp">
-<a href="#parentfollowupintentname_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Followup<wbr>Intent<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The unique identifier of the followup intent's parent. Format: `projects//agent/intents/`.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="followupintentname_go">
-<a href="#followupintentname_go" style="color: inherit; text-decoration: inherit;">Followup<wbr>Intent<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The unique identifier of the followup intent. Format: `projects//agent/intents/`.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="parentfollowupintentname_go">
-<a href="#parentfollowupintentname_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Followup<wbr>Intent<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The unique identifier of the followup intent's parent. Format: `projects//agent/intents/`.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="followupintentname_nodejs">
-<a href="#followupintentname_nodejs" style="color: inherit; text-decoration: inherit;">followup<wbr>Intent<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The unique identifier of the followup intent. Format: `projects//agent/intents/`.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="parentfollowupintentname_nodejs">
-<a href="#parentfollowupintentname_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Followup<wbr>Intent<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The unique identifier of the followup intent's parent. Format: `projects//agent/intents/`.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="followup_intent_name_python">
-<a href="#followup_intent_name_python" style="color: inherit; text-decoration: inherit;">followup_<wbr>intent_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The unique identifier of the followup intent. Format: `projects//agent/intents/`.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="parent_followup_intent_name_python">
-<a href="#parent_followup_intent_name_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>followup_<wbr>intent_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The unique identifier of the followup intent's parent. Format: `projects//agent/intents/`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googleclouddialogflowv2intentfollowupintentinforesponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Intent<wbr>Followup<wbr>Intent<wbr>Info<wbr>Response</h4>

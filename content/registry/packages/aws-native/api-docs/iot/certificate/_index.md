@@ -30,7 +30,7 @@ Use the AWS::IoT::Certificate resource to declare an AWS IoT X.509 certificate.
 <span class="k">def </span><span class="nx">Certificate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                 <span class="nx">c_a_certificate_pem</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                <span class="nx">certificate_mode</span><span class="p">:</span> <span class="nx">Optional[CertificateCertificateMode]</span> = None<span class="p">,</span>
+                <span class="nx">certificate_mode</span><span class="p">:</span> <span class="nx">Optional[CertificateMode]</span> = None<span class="p">,</span>
                 <span class="nx">certificate_pem</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">certificate_signing_request</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[CertificateStatus]</span> = None<span class="p">)</span>
@@ -183,7 +183,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#certificatemode_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatemode">Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>T.<wbr>Certificate<wbr>Certificate<wbr>Mode</a></span>
+        <span class="property-type"><a href="#certificatemode">Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>T.<wbr>Certificate<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -227,7 +227,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#certificatemode_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatemode">Certificate<wbr>Certificate<wbr>Mode</a></span>
+        <span class="property-type"><a href="#certificatemode">Certificate<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -271,7 +271,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#certificatemode_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatemode">Certificate<wbr>Certificate<wbr>Mode</a></span>
+        <span class="property-type"><a href="#certificatemode">Certificate<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -315,7 +315,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#certificate_mode_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatemode">Certificate<wbr>Certificate<wbr>Mode</a></span>
+        <span class="property-type"><a href="#certificatemode">Certificate<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -433,7 +433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="certificatecertificatemode">Certificate<wbr>Certificate<wbr>Mode</h4>
+<h4 id="certificatemode">Certificate<wbr>Mode</h4>
 
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>Default</dt>
@@ -442,8 +442,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular"><dt>Certificate<wbr>Certificate<wbr>Mode<wbr>Default</dt>
-    <dd>DEFAULT</dd><dt>Certificate<wbr>Certificate<wbr>Mode<wbr>Sni<wbr>Only</dt>
+<dl class="tabular"><dt>Certificate<wbr>Mode<wbr>Default</dt>
+    <dd>DEFAULT</dd><dt>Certificate<wbr>Mode<wbr>Sni<wbr>Only</dt>
     <dd>SNI_ONLY</dd></dl>
 {{% /choosable %}}
 

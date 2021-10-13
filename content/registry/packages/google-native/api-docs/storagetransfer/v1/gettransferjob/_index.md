@@ -185,13 +185,21 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The name of the most recently started TransferOperation of this JobConfig. Present if a TransferOperation has been created for this JobConfig.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="loggingconfig_csharp">
+<a href="#loggingconfig_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage<wbr>Transfer.<wbr>V1.<wbr>Outputs.<wbr>Logging<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Logging configuration.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique name (within the transfer project) assigned when the job is created. If this field is empty in a CreateTransferJobRequest, Storage Transfer Service assigns a unique name. Otherwise, the specified name is used as the unique name for this job. If the specified name is in use by a job, the creation request fails with an ALREADY_EXISTS error. This name must start with `"transferJobs/"` prefix and end with a letter or a number, and should be no more than 128 characters. For transfers involving PosixFilesystem, this name must start with 'transferJobs/OPI' specifically. For all other transfer types, this name must not start with 'transferJobs/OPI'. 'transferJobs/OPI' is a reserved prefix for PosixFilesystem transfers. Non-PosixFilesystem example: `"transferJobs/^(?!OPI)[A-Za-z0-9-._~]*[A-Za-z0-9]$"` PosixFilesystem example: `"transferJobs/OPI^[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Applications must not rely on the enforcement of naming requirements involving OPI. Invalid job names fail with an INVALID_ARGUMENT error.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A unique name (within the transfer project) assigned when the job is created. If this field is empty in a CreateTransferJobRequest, Storage Transfer Service assigns a unique name. Otherwise, the specified name is used as the unique name for this job. If the specified name is in use by a job, the creation request fails with an ALREADY_EXISTS error. This name must start with `"transferJobs/"` prefix and end with a letter or a number, and should be no more than 128 characters. For transfers involving PosixFilesystem, this name must start with `transferJobs/OPI` specifically. For all other transfer types, this name must not start with `transferJobs/OPI`. Non-PosixFilesystem example: `"transferJobs/^(?!OPI)[A-Za-z0-9-._~]*[A-Za-z0-9]$"` PosixFilesystem example: `"transferJobs/OPI^[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Applications must not rely on the enforcement of naming requirements involving OPI. Invalid job names fail with an INVALID_ARGUMENT error.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notificationconfig_csharp">
 <a href="#notificationconfig_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Config</a>
@@ -277,13 +285,21 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The name of the most recently started TransferOperation of this JobConfig. Present if a TransferOperation has been created for this JobConfig.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="loggingconfig_go">
+<a href="#loggingconfig_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigresponse">Logging<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Logging configuration.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique name (within the transfer project) assigned when the job is created. If this field is empty in a CreateTransferJobRequest, Storage Transfer Service assigns a unique name. Otherwise, the specified name is used as the unique name for this job. If the specified name is in use by a job, the creation request fails with an ALREADY_EXISTS error. This name must start with `"transferJobs/"` prefix and end with a letter or a number, and should be no more than 128 characters. For transfers involving PosixFilesystem, this name must start with 'transferJobs/OPI' specifically. For all other transfer types, this name must not start with 'transferJobs/OPI'. 'transferJobs/OPI' is a reserved prefix for PosixFilesystem transfers. Non-PosixFilesystem example: `"transferJobs/^(?!OPI)[A-Za-z0-9-._~]*[A-Za-z0-9]$"` PosixFilesystem example: `"transferJobs/OPI^[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Applications must not rely on the enforcement of naming requirements involving OPI. Invalid job names fail with an INVALID_ARGUMENT error.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A unique name (within the transfer project) assigned when the job is created. If this field is empty in a CreateTransferJobRequest, Storage Transfer Service assigns a unique name. Otherwise, the specified name is used as the unique name for this job. If the specified name is in use by a job, the creation request fails with an ALREADY_EXISTS error. This name must start with `"transferJobs/"` prefix and end with a letter or a number, and should be no more than 128 characters. For transfers involving PosixFilesystem, this name must start with `transferJobs/OPI` specifically. For all other transfer types, this name must not start with `transferJobs/OPI`. Non-PosixFilesystem example: `"transferJobs/^(?!OPI)[A-Za-z0-9-._~]*[A-Za-z0-9]$"` PosixFilesystem example: `"transferJobs/OPI^[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Applications must not rely on the enforcement of naming requirements involving OPI. Invalid job names fail with an INVALID_ARGUMENT error.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notificationconfig_go">
 <a href="#notificationconfig_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Config</a>
@@ -369,13 +385,21 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The name of the most recently started TransferOperation of this JobConfig. Present if a TransferOperation has been created for this JobConfig.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="loggingconfig_nodejs">
+<a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigresponse">Logging<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Logging configuration.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique name (within the transfer project) assigned when the job is created. If this field is empty in a CreateTransferJobRequest, Storage Transfer Service assigns a unique name. Otherwise, the specified name is used as the unique name for this job. If the specified name is in use by a job, the creation request fails with an ALREADY_EXISTS error. This name must start with `"transferJobs/"` prefix and end with a letter or a number, and should be no more than 128 characters. For transfers involving PosixFilesystem, this name must start with 'transferJobs/OPI' specifically. For all other transfer types, this name must not start with 'transferJobs/OPI'. 'transferJobs/OPI' is a reserved prefix for PosixFilesystem transfers. Non-PosixFilesystem example: `"transferJobs/^(?!OPI)[A-Za-z0-9-._~]*[A-Za-z0-9]$"` PosixFilesystem example: `"transferJobs/OPI^[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Applications must not rely on the enforcement of naming requirements involving OPI. Invalid job names fail with an INVALID_ARGUMENT error.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A unique name (within the transfer project) assigned when the job is created. If this field is empty in a CreateTransferJobRequest, Storage Transfer Service assigns a unique name. Otherwise, the specified name is used as the unique name for this job. If the specified name is in use by a job, the creation request fails with an ALREADY_EXISTS error. This name must start with `"transferJobs/"` prefix and end with a letter or a number, and should be no more than 128 characters. For transfers involving PosixFilesystem, this name must start with `transferJobs/OPI` specifically. For all other transfer types, this name must not start with `transferJobs/OPI`. Non-PosixFilesystem example: `"transferJobs/^(?!OPI)[A-Za-z0-9-._~]*[A-Za-z0-9]$"` PosixFilesystem example: `"transferJobs/OPI^[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Applications must not rely on the enforcement of naming requirements involving OPI. Invalid job names fail with an INVALID_ARGUMENT error.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notificationconfig_nodejs">
 <a href="#notificationconfig_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Config</a>
@@ -461,13 +485,21 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The name of the most recently started TransferOperation of this JobConfig. Present if a TransferOperation has been created for this JobConfig.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="logging_config_python">
+<a href="#logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigresponse">Logging<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Logging configuration.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A unique name (within the transfer project) assigned when the job is created. If this field is empty in a CreateTransferJobRequest, Storage Transfer Service assigns a unique name. Otherwise, the specified name is used as the unique name for this job. If the specified name is in use by a job, the creation request fails with an ALREADY_EXISTS error. This name must start with `"transferJobs/"` prefix and end with a letter or a number, and should be no more than 128 characters. For transfers involving PosixFilesystem, this name must start with 'transferJobs/OPI' specifically. For all other transfer types, this name must not start with 'transferJobs/OPI'. 'transferJobs/OPI' is a reserved prefix for PosixFilesystem transfers. Non-PosixFilesystem example: `"transferJobs/^(?!OPI)[A-Za-z0-9-._~]*[A-Za-z0-9]$"` PosixFilesystem example: `"transferJobs/OPI^[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Applications must not rely on the enforcement of naming requirements involving OPI. Invalid job names fail with an INVALID_ARGUMENT error.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A unique name (within the transfer project) assigned when the job is created. If this field is empty in a CreateTransferJobRequest, Storage Transfer Service assigns a unique name. Otherwise, the specified name is used as the unique name for this job. If the specified name is in use by a job, the creation request fails with an ALREADY_EXISTS error. This name must start with `"transferJobs/"` prefix and end with a letter or a number, and should be no more than 128 characters. For transfers involving PosixFilesystem, this name must start with `transferJobs/OPI` specifically. For all other transfer types, this name must not start with `transferJobs/OPI`. Non-PosixFilesystem example: `"transferJobs/^(?!OPI)[A-Za-z0-9-._~]*[A-Za-z0-9]$"` PosixFilesystem example: `"transferJobs/OPI^[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Applications must not rely on the enforcement of naming requirements involving OPI. Invalid job names fail with an INVALID_ARGUMENT error.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notification_config_python">
 <a href="#notification_config_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>config</a>
@@ -637,7 +669,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Input only. The Amazon Resource Name (ARN) of the role to support temporary credentials via `AssumeRoleWithWebIdentity`. For more information about ARNs, see [IAM ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-arns). When a role ARN is provided, Transfer Service fetches temporary credentials for the session using a `AssumeRoleWithWebIdentity` call for the provided role using the GoogleServiceAccount for this project.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the role to support temporary credentials via `AssumeRoleWithWebIdentity`. For more information about ARNs, see [IAM ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-arns). When a role ARN is provided, Transfer Service fetches temporary credentials for the session using a `AssumeRoleWithWebIdentity` call for the provided role using the GoogleServiceAccount for this project.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -673,7 +705,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Input only. The Amazon Resource Name (ARN) of the role to support temporary credentials via `AssumeRoleWithWebIdentity`. For more information about ARNs, see [IAM ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-arns). When a role ARN is provided, Transfer Service fetches temporary credentials for the session using a `AssumeRoleWithWebIdentity` call for the provided role using the GoogleServiceAccount for this project.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the role to support temporary credentials via `AssumeRoleWithWebIdentity`. For more information about ARNs, see [IAM ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-arns). When a role ARN is provided, Transfer Service fetches temporary credentials for the session using a `AssumeRoleWithWebIdentity` call for the provided role using the GoogleServiceAccount for this project.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -709,7 +741,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Input only. The Amazon Resource Name (ARN) of the role to support temporary credentials via `AssumeRoleWithWebIdentity`. For more information about ARNs, see [IAM ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-arns). When a role ARN is provided, Transfer Service fetches temporary credentials for the session using a `AssumeRoleWithWebIdentity` call for the provided role using the GoogleServiceAccount for this project.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the role to support temporary credentials via `AssumeRoleWithWebIdentity`. For more information about ARNs, see [IAM ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-arns). When a role ARN is provided, Transfer Service fetches temporary credentials for the session using a `AssumeRoleWithWebIdentity` call for the provided role using the GoogleServiceAccount for this project.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -745,7 +777,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Input only. The Amazon Resource Name (ARN) of the role to support temporary credentials via `AssumeRoleWithWebIdentity`. For more information about ARNs, see [IAM ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-arns). When a role ARN is provided, Transfer Service fetches temporary credentials for the session using a `AssumeRoleWithWebIdentity` call for the provided role using the GoogleServiceAccount for this project.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the role to support temporary credentials via `AssumeRoleWithWebIdentity`. For more information about ARNs, see [IAM ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-arns). When a role ARN is provided, Transfer Service fetches temporary credentials for the session using a `AssumeRoleWithWebIdentity` call for the provided role using the GoogleServiceAccount for this project.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="azureblobstoragedataresponse">Azure<wbr>Blob<wbr>Storage<wbr>Data<wbr>Response</h4>
@@ -1200,6 +1232,58 @@ The following output properties are available:
     <dd>{{% md %}}The URL that points to the file that stores the object list entries. This file must allow public access. Currently, only URLs with HTTP and HTTPS schemes are supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="loggingconfigresponse">Logging<wbr>Config<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enableonpremgcstransferlogs_csharp">
+<a href="#enableonpremgcstransferlogs_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Onprem<wbr>Gcs<wbr>Transfer<wbr>Logs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables the Cloud Storage transfer logs for this transfer. This is only supported for transfer jobs with PosixFilesystem sources. The default is that logs are not generated for this transfer.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enableonpremgcstransferlogs_go">
+<a href="#enableonpremgcstransferlogs_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Onprem<wbr>Gcs<wbr>Transfer<wbr>Logs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables the Cloud Storage transfer logs for this transfer. This is only supported for transfer jobs with PosixFilesystem sources. The default is that logs are not generated for this transfer.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enableonpremgcstransferlogs_nodejs">
+<a href="#enableonpremgcstransferlogs_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Onprem<wbr>Gcs<wbr>Transfer<wbr>Logs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enables the Cloud Storage transfer logs for this transfer. This is only supported for transfer jobs with PosixFilesystem sources. The default is that logs are not generated for this transfer.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enable_onprem_gcs_transfer_logs_python">
+<a href="#enable_onprem_gcs_transfer_logs_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>onprem_<wbr>gcs_<wbr>transfer_<wbr>logs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables the Cloud Storage transfer logs for this transfer. This is only supported for transfer jobs with PosixFilesystem sources. The default is that logs are not generated for this transfer.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="notificationconfigresponse">Notification<wbr>Config<wbr>Response</h4>
 
 
@@ -1526,6 +1610,58 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If specified, only objects with a "last modification time" before `NOW` - `min_time_elapsed_since_last_modification` and objects that don't have a "last modification time" are transferred. For each TransferOperation started by this TransferJob, `NOW` refers to the start_time of the `TransferOperation`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="posixfilesystemresponse">Posix<wbr>Filesystem<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="rootdirectory_csharp">
+<a href="#rootdirectory_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Directory</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Root directory path to the filesystem.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="rootdirectory_go">
+<a href="#rootdirectory_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Directory</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Root directory path to the filesystem.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="rootdirectory_nodejs">
+<a href="#rootdirectory_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Directory</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Root directory path to the filesystem.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="root_directory_python">
+<a href="#root_directory_python" style="color: inherit; text-decoration: inherit;">root_<wbr>directory</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Root directory path to the filesystem.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="scheduleresponse">Schedule<wbr>Response</h4>
@@ -2027,6 +2163,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects' "last modification time" do not exclude objects in a data sink.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="posixdatasource_csharp">
+<a href="#posixdatasource_csharp" style="color: inherit; text-decoration: inherit;">Posix<wbr>Data<wbr>Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#posixfilesystemresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage<wbr>Transfer.<wbr>V1.<wbr>Inputs.<wbr>Posix<wbr>Filesystem<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}A POSIX Filesystem data source.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="transferoptions_csharp">
 <a href="#transferoptions_csharp" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Options</a>
 </span>
@@ -2086,6 +2230,14 @@ The following output properties are available:
         <span class="property-type"><a href="#objectconditionsresponse">Object<wbr>Conditions<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects' "last modification time" do not exclude objects in a data sink.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="posixdatasource_go">
+<a href="#posixdatasource_go" style="color: inherit; text-decoration: inherit;">Posix<wbr>Data<wbr>Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#posixfilesystemresponse">Posix<wbr>Filesystem<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}A POSIX Filesystem data source.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transferoptions_go">
 <a href="#transferoptions_go" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Options</a>
@@ -2147,6 +2299,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects' "last modification time" do not exclude objects in a data sink.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="posixdatasource_nodejs">
+<a href="#posixdatasource_nodejs" style="color: inherit; text-decoration: inherit;">posix<wbr>Data<wbr>Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#posixfilesystemresponse">Posix<wbr>Filesystem<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}A POSIX Filesystem data source.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="transferoptions_nodejs">
 <a href="#transferoptions_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>Options</a>
 </span>
@@ -2206,6 +2366,14 @@ The following output properties are available:
         <span class="property-type"><a href="#objectconditionsresponse">Object<wbr>Conditions<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects' "last modification time" do not exclude objects in a data sink.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="posix_data_source_python">
+<a href="#posix_data_source_python" style="color: inherit; text-decoration: inherit;">posix_<wbr>data_<wbr>source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#posixfilesystemresponse">Posix<wbr>Filesystem<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}A POSIX Filesystem data source.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transfer_options_python">
 <a href="#transfer_options_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>options</a>

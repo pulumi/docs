@@ -41,7 +41,7 @@ class MyStack : Stack
             Description = "This is the recipe description.",
             Steps = 
             {
-                new AwsNative.DataBrew.Inputs.RecipeRecipeStepArgs
+                new AwsNative.DataBrew.Inputs.RecipeStepArgs
                 {
                     Action = new AwsNative.DataBrew.Inputs.RecipeActionArgs
                     {
@@ -99,8 +99,8 @@ func main() {
 		_, err := databrew.NewRecipe(ctx, "testDataBrewRecipe", &databrew.RecipeArgs{
 			Name:        pulumi.String("recipe-name"),
 			Description: pulumi.String("This is the recipe description."),
-			Steps: databrew.RecipeRecipeStepArray{
-				&databrew.RecipeRecipeStepArgs{
+			Steps: databrew.RecipeStepArray{
+				&databrew.RecipeStepArgs{
 					Action: &databrew.RecipeActionArgs{
 						Operation: pulumi.String("EXTRACT_PATTERN"),
 						Parameters: pulumi.Any{
@@ -148,7 +148,7 @@ import pulumi_aws_native as aws_native
 test_data_brew_recipe = aws_native.databrew.Recipe("testDataBrewRecipe",
     name="recipe-name",
     description="This is the recipe description.",
-    steps=[aws_native.databrew.RecipeRecipeStepArgs(
+    steps=[aws_native.databrew.RecipeStepArgs(
         action=aws_native.databrew.RecipeActionArgs(
             operation="EXTRACT_PATTERN",
             parameters={
@@ -232,7 +232,7 @@ class MyStack : Stack
             Description = "This is the recipe description.",
             Steps = 
             {
-                new AwsNative.DataBrew.Inputs.RecipeRecipeStepArgs
+                new AwsNative.DataBrew.Inputs.RecipeStepArgs
                 {
                     Action = new AwsNative.DataBrew.Inputs.RecipeActionArgs
                     {
@@ -296,8 +296,8 @@ func main() {
 		_, err := databrew.NewRecipe(ctx, "myDataBrewRecipe", &databrew.RecipeArgs{
 			Name:        pulumi.String("na-recipe-cf-test"),
 			Description: pulumi.String("This is the recipe description."),
-			Steps: databrew.RecipeRecipeStepArray{
-				&databrew.RecipeRecipeStepArgs{
+			Steps: databrew.RecipeStepArray{
+				&databrew.RecipeStepArgs{
 					Action: &databrew.RecipeActionArgs{
 						Operation: pulumi.String("EXTRACT_PATTERN"),
 						Parameters: pulumi.Any{
@@ -350,7 +350,7 @@ import pulumi_aws_native as aws_native
 my_data_brew_recipe = aws_native.databrew.Recipe("myDataBrewRecipe",
     name="na-recipe-cf-test",
     description="This is the recipe description.",
-    steps=[aws_native.databrew.RecipeRecipeStepArgs(
+    steps=[aws_native.databrew.RecipeStepArgs(
         action=aws_native.databrew.RecipeActionArgs(
             operation="EXTRACT_PATTERN",
             parameters={
@@ -449,7 +449,7 @@ const myDataBrewRecipe = new aws_native.databrew.Recipe("myDataBrewRecipe", {
            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
            <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-           <span class="nx">steps</span><span class="p">:</span> <span class="nx">Optional[Sequence[RecipeRecipeStepArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">steps</span><span class="p">:</span> <span class="nx">Optional[Sequence[RecipeStepArgs]]</span> = None<span class="p">,</span>
            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[RecipeTagArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Recipe</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -592,7 +592,7 @@ The Recipe resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#steps_csharp" style="color: inherit; text-decoration: inherit;">Steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reciperecipestep">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Data<wbr>Brew.<wbr>Inputs.<wbr>Recipe<wbr>Recipe<wbr>Step<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#recipestep">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Data<wbr>Brew.<wbr>Inputs.<wbr>Recipe<wbr>Step<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -628,7 +628,7 @@ The Recipe resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#steps_go" style="color: inherit; text-decoration: inherit;">Steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reciperecipestep">[]Recipe<wbr>Recipe<wbr>Step<wbr>Args</a></span>
+        <span class="property-type"><a href="#recipestep">[]Recipe<wbr>Step<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -664,7 +664,7 @@ The Recipe resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#steps_nodejs" style="color: inherit; text-decoration: inherit;">steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reciperecipestep">Recipe<wbr>Recipe<wbr>Step<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#recipestep">Recipe<wbr>Step<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -700,7 +700,7 @@ The Recipe resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#steps_python" style="color: inherit; text-decoration: inherit;">steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reciperecipestep">Sequence[Recipe<wbr>Recipe<wbr>Step<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recipestep">Sequence[Recipe<wbr>Step<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -803,7 +803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reciperecipeparameters">Pulumi.<wbr>Aws<wbr>Native.<wbr>Data<wbr>Brew.<wbr>Inputs.<wbr>Recipe<wbr>Recipe<wbr>Parameters</a> | <a href="#recipeparametermap">Pulumi.<wbr>Aws<wbr>Native.<wbr>Data<wbr>Brew.<wbr>Inputs.<wbr>Recipe<wbr>Parameter<wbr>Map</a></span>
+        <span class="property-type"><a href="#recipeparameters">Pulumi.<wbr>Aws<wbr>Native.<wbr>Data<wbr>Brew.<wbr>Inputs.<wbr>Recipe<wbr>Parameters</a> | <a href="#recipeparametermap">Pulumi.<wbr>Aws<wbr>Native.<wbr>Data<wbr>Brew.<wbr>Inputs.<wbr>Recipe<wbr>Parameter<wbr>Map</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -823,7 +823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reciperecipeparameters">Recipe<wbr>Recipe<wbr>Parameters</a> | <a href="#recipeparametermap">Recipe<wbr>Parameter<wbr>Map</a></span>
+        <span class="property-type"><a href="#recipeparameters">Recipe<wbr>Parameters</a> | <a href="#recipeparametermap">Recipe<wbr>Parameter<wbr>Map</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -843,7 +843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reciperecipeparameters">Recipe<wbr>Recipe<wbr>Parameters</a> | <a href="#recipeparametermap">Recipe<wbr>Parameter<wbr>Map</a></span>
+        <span class="property-type"><a href="#recipeparameters">Recipe<wbr>Parameters</a> | <a href="#recipeparametermap">Recipe<wbr>Parameter<wbr>Map</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -863,7 +863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reciperecipeparameters">Recipe<wbr>Recipe<wbr>Parameters</a> | <a href="#recipeparametermap">Recipe<wbr>Parameter<wbr>Map</a></span>
+        <span class="property-type"><a href="#recipeparameters">Recipe<wbr>Parameters</a> | <a href="#recipeparametermap">Recipe<wbr>Parameter<wbr>Map</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1128,7 +1128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="reciperecipeparameters">Recipe<wbr>Recipe<wbr>Parameters</h4>
+<h4 id="recipeparameters">Recipe<wbr>Parameters</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
@@ -1369,7 +1369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">object</span>
+        <span class="property-type"><a href="#recipeparametersinputproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>Data<wbr>Brew.<wbr>Inputs.<wbr>Recipe<wbr>Parameters<wbr>Input<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Input{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2181,7 +2181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_go" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#recipeparametersinputproperties">Recipe<wbr>Parameters<wbr>Input<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Input{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2993,7 +2993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">any</span>
+        <span class="property-type"><a href="#recipeparametersinputproperties">Recipe<wbr>Parameters<wbr>Input<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Input{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3805,7 +3805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#recipeparametersinputproperties">Recipe<wbr>Parameters<wbr>Input<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Input{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4378,86 +4378,86 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="reciperecipestep">Recipe<wbr>Recipe<wbr>Step</h4>
+<h4 id="recipeparametersinputproperties">Recipe<wbr>Parameters<wbr>Input<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="action_csharp">
-<a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="datacataloginputdefinition_csharp">
+<a href="#datacataloginputdefinition_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Catalog<wbr>Input<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recipeaction">Pulumi.<wbr>Aws<wbr>Native.<wbr>Data<wbr>Brew.<wbr>Inputs.<wbr>Recipe<wbr>Action</a></span>
+        <span class="property-type"><a href="#recipedatacataloginputdefinition">Pulumi.<wbr>Aws<wbr>Native.<wbr>Data<wbr>Brew.<wbr>Inputs.<wbr>Recipe<wbr>Data<wbr>Catalog<wbr>Input<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="conditionexpressions_csharp">
-<a href="#conditionexpressions_csharp" style="color: inherit; text-decoration: inherit;">Condition<wbr>Expressions</a>
+        <span id="s3inputdefinition_csharp">
+<a href="#s3inputdefinition_csharp" style="color: inherit; text-decoration: inherit;">S3Input<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recipeconditionexpression">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Data<wbr>Brew.<wbr>Inputs.<wbr>Recipe<wbr>Condition<wbr>Expression&gt;</a></span>
+        <span class="property-type"><a href="#recipes3location">Pulumi.<wbr>Aws<wbr>Native.<wbr>Data<wbr>Brew.<wbr>Inputs.<wbr>Recipe<wbr>S3Location</a></span>
     </dt>
-    <dd>{{% md %}}Condition expressions applied to the step action{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="action_go">
-<a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="datacataloginputdefinition_go">
+<a href="#datacataloginputdefinition_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Catalog<wbr>Input<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recipeaction">Recipe<wbr>Action</a></span>
+        <span class="property-type"><a href="#recipedatacataloginputdefinition">Recipe<wbr>Data<wbr>Catalog<wbr>Input<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="conditionexpressions_go">
-<a href="#conditionexpressions_go" style="color: inherit; text-decoration: inherit;">Condition<wbr>Expressions</a>
+        <span id="s3inputdefinition_go">
+<a href="#s3inputdefinition_go" style="color: inherit; text-decoration: inherit;">S3Input<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recipeconditionexpression">[]Recipe<wbr>Condition<wbr>Expression</a></span>
+        <span class="property-type"><a href="#recipes3location">Recipe<wbr>S3Location</a></span>
     </dt>
-    <dd>{{% md %}}Condition expressions applied to the step action{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="action_nodejs">
-<a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="datacataloginputdefinition_nodejs">
+<a href="#datacataloginputdefinition_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Catalog<wbr>Input<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recipeaction">Recipe<wbr>Action</a></span>
+        <span class="property-type"><a href="#recipedatacataloginputdefinition">Recipe<wbr>Data<wbr>Catalog<wbr>Input<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="conditionexpressions_nodejs">
-<a href="#conditionexpressions_nodejs" style="color: inherit; text-decoration: inherit;">condition<wbr>Expressions</a>
+        <span id="s3inputdefinition_nodejs">
+<a href="#s3inputdefinition_nodejs" style="color: inherit; text-decoration: inherit;">s3Input<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recipeconditionexpression">Recipe<wbr>Condition<wbr>Expression[]</a></span>
+        <span class="property-type"><a href="#recipes3location">Recipe<wbr>S3Location</a></span>
     </dt>
-    <dd>{{% md %}}Condition expressions applied to the step action{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="action_python">
-<a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="data_catalog_input_definition_python">
+<a href="#data_catalog_input_definition_python" style="color: inherit; text-decoration: inherit;">data_<wbr>catalog_<wbr>input_<wbr>definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recipeaction">Recipe<wbr>Action</a></span>
+        <span class="property-type"><a href="#recipedatacataloginputdefinition">Recipe<wbr>Data<wbr>Catalog<wbr>Input<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="condition_expressions_python">
-<a href="#condition_expressions_python" style="color: inherit; text-decoration: inherit;">condition_<wbr>expressions</a>
+        <span id="s3_input_definition_python">
+<a href="#s3_input_definition_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>input_<wbr>definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recipeconditionexpression">Sequence[Recipe<wbr>Condition<wbr>Expression]</a></span>
+        <span class="property-type"><a href="#recipes3location">Recipe<wbr>S3Location</a></span>
     </dt>
-    <dd>{{% md %}}Condition expressions applied to the step action{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="recipes3location">Recipe<wbr>S3Location</h4>
@@ -4622,6 +4622,88 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#recipes3location">Recipe<wbr>S3Location</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="recipestep">Recipe<wbr>Step</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="action_csharp">
+<a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#recipeaction">Pulumi.<wbr>Aws<wbr>Native.<wbr>Data<wbr>Brew.<wbr>Inputs.<wbr>Recipe<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="conditionexpressions_csharp">
+<a href="#conditionexpressions_csharp" style="color: inherit; text-decoration: inherit;">Condition<wbr>Expressions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#recipeconditionexpression">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Data<wbr>Brew.<wbr>Inputs.<wbr>Recipe<wbr>Condition<wbr>Expression&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Condition expressions applied to the step action{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="action_go">
+<a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#recipeaction">Recipe<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="conditionexpressions_go">
+<a href="#conditionexpressions_go" style="color: inherit; text-decoration: inherit;">Condition<wbr>Expressions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#recipeconditionexpression">[]Recipe<wbr>Condition<wbr>Expression</a></span>
+    </dt>
+    <dd>{{% md %}}Condition expressions applied to the step action{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="action_nodejs">
+<a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#recipeaction">Recipe<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="conditionexpressions_nodejs">
+<a href="#conditionexpressions_nodejs" style="color: inherit; text-decoration: inherit;">condition<wbr>Expressions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#recipeconditionexpression">Recipe<wbr>Condition<wbr>Expression[]</a></span>
+    </dt>
+    <dd>{{% md %}}Condition expressions applied to the step action{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="action_python">
+<a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#recipeaction">Recipe<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="condition_expressions_python">
+<a href="#condition_expressions_python" style="color: inherit; text-decoration: inherit;">condition_<wbr>expressions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#recipeconditionexpression">Sequence[Recipe<wbr>Condition<wbr>Expression]</a></span>
+    </dt>
+    <dd>{{% md %}}Condition expressions applied to the step action{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="recipetag">Recipe<wbr>Tag</h4>

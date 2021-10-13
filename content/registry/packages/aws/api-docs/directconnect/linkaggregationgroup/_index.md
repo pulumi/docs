@@ -14,7 +14,7 @@ no_edit_this_page: true
 
 Provides a Direct Connect LAG. Connections can be added to the LAG via the `aws.directconnect.Connection` and `aws.directconnect.ConnectionAssociation` resources.
 
-> *NOTE:* When creating a LAG, Direct Connect requires creating a Connection. This provider will remove this unmanaged connection during resource creation.
+> *NOTE:* When creating a LAG, if no existing connection is specified, Direct Connect will create a connection and this provider will remove this unmanaged connection during resource creation.
 
 {{% examples %}}
 
@@ -134,6 +134,7 @@ const hoge = new aws.directconnect.LinkAggregationGroup("hoge", {
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">LinkAggregationGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                         <span class="nx">connection_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">connections_bandwidth</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                          <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -288,6 +289,15 @@ The LinkAggregationGroup resource accepts the following [input]({{< relref "/doc
     <dd>{{% md %}}The AWS Direct Connect location in which the LAG should be allocated. See [DescribeLocations](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLocations.html) for the list of AWS Direct Connect locations. Use `locationCode`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="connectionid_csharp">
+<a href="#connectionid_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of an existing dedicated connection to migrate to the LAG.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="forcedestroy_csharp">
 <a href="#forcedestroy_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
 </span>
@@ -353,6 +363,15 @@ The LinkAggregationGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS Direct Connect location in which the LAG should be allocated. See [DescribeLocations](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLocations.html) for the list of AWS Direct Connect locations. Use `locationCode`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connectionid_go">
+<a href="#connectionid_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of an existing dedicated connection to migrate to the LAG.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcedestroy_go">
@@ -422,6 +441,15 @@ The LinkAggregationGroup resource accepts the following [input]({{< relref "/doc
     <dd>{{% md %}}The AWS Direct Connect location in which the LAG should be allocated. See [DescribeLocations](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLocations.html) for the list of AWS Direct Connect locations. Use `locationCode`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="connectionid_nodejs">
+<a href="#connectionid_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of an existing dedicated connection to migrate to the LAG.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="forcedestroy_nodejs">
 <a href="#forcedestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Destroy</a>
 </span>
@@ -487,6 +515,15 @@ The LinkAggregationGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS Direct Connect location in which the LAG should be allocated. See [DescribeLocations](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLocations.html) for the list of AWS Direct Connect locations. Use `locationCode`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connection_id_python">
+<a href="#connection_id_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of an existing dedicated connection to migrate to the LAG.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_destroy_python">
@@ -747,6 +784,7 @@ Get an existing LinkAggregationGroup resource's state with the given name, ID, a
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">connection_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">connections_bandwidth</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">has_logical_redundancy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -878,6 +916,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The ARN of the LAG.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_connectionid_csharp">
+<a href="#state_connectionid_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of an existing dedicated connection to migrate to the LAG.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_connectionsbandwidth_csharp">
 <a href="#state_connectionsbandwidth_csharp" style="color: inherit; text-decoration: inherit;">Connections<wbr>Bandwidth</a>
 </span>
@@ -978,6 +1025,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the LAG.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_connectionid_go">
+<a href="#state_connectionid_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of an existing dedicated connection to migrate to the LAG.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionsbandwidth_go">
@@ -1082,6 +1138,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The ARN of the LAG.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_connectionid_nodejs">
+<a href="#state_connectionid_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of an existing dedicated connection to migrate to the LAG.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_connectionsbandwidth_nodejs">
 <a href="#state_connectionsbandwidth_nodejs" style="color: inherit; text-decoration: inherit;">connections<wbr>Bandwidth</a>
 </span>
@@ -1182,6 +1247,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the LAG.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_connection_id_python">
+<a href="#state_connection_id_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of an existing dedicated connection to migrate to the LAG.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connections_bandwidth_python">

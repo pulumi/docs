@@ -244,6 +244,14 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="approval_csharp">
+<a href="#approval_csharp" style="color: inherit; text-decoration: inherit;">Approval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#buildapprovalresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Build.<wbr>V1.<wbr>Outputs.<wbr>Build<wbr>Approval<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Describes this build's approval configuration, status, and result.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="artifacts_csharp">
 <a href="#artifacts_csharp" style="color: inherit; text-decoration: inherit;">Artifacts</a>
 </span>
@@ -450,7 +458,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Stores timing information for phases of the build. Valid keys are: * BUILD: time to execute all build steps * PUSH: time to push all specified images. * FETCHSOURCE: time to fetch source. If the build does not specify source or images, these keys will not be included.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Stores timing information for phases of the build. Valid keys are: * BUILD: time to execute all build steps. * PUSH: time to push all specified images. * FETCHSOURCE: time to fetch source. * SETUPBUILD: time to set up build. If the build does not specify source or images, these keys will not be included.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="warnings_csharp">
 <a href="#warnings_csharp" style="color: inherit; text-decoration: inherit;">Warnings</a>
@@ -463,6 +471,14 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="approval_go">
+<a href="#approval_go" style="color: inherit; text-decoration: inherit;">Approval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#buildapprovalresponse">Build<wbr>Approval<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Describes this build's approval configuration, status, and result.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="artifacts_go">
 <a href="#artifacts_go" style="color: inherit; text-decoration: inherit;">Artifacts</a>
@@ -670,7 +686,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Stores timing information for phases of the build. Valid keys are: * BUILD: time to execute all build steps * PUSH: time to push all specified images. * FETCHSOURCE: time to fetch source. If the build does not specify source or images, these keys will not be included.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Stores timing information for phases of the build. Valid keys are: * BUILD: time to execute all build steps. * PUSH: time to push all specified images. * FETCHSOURCE: time to fetch source. * SETUPBUILD: time to set up build. If the build does not specify source or images, these keys will not be included.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="warnings_go">
 <a href="#warnings_go" style="color: inherit; text-decoration: inherit;">Warnings</a>
@@ -683,6 +699,14 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="approval_nodejs">
+<a href="#approval_nodejs" style="color: inherit; text-decoration: inherit;">approval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#buildapprovalresponse">Build<wbr>Approval<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Describes this build's approval configuration, status, and result.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="artifacts_nodejs">
 <a href="#artifacts_nodejs" style="color: inherit; text-decoration: inherit;">artifacts</a>
@@ -890,7 +914,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Stores timing information for phases of the build. Valid keys are: * BUILD: time to execute all build steps * PUSH: time to push all specified images. * FETCHSOURCE: time to fetch source. If the build does not specify source or images, these keys will not be included.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Stores timing information for phases of the build. Valid keys are: * BUILD: time to execute all build steps. * PUSH: time to push all specified images. * FETCHSOURCE: time to fetch source. * SETUPBUILD: time to set up build. If the build does not specify source or images, these keys will not be included.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="warnings_nodejs">
 <a href="#warnings_nodejs" style="color: inherit; text-decoration: inherit;">warnings</a>
@@ -903,6 +927,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="approval_python">
+<a href="#approval_python" style="color: inherit; text-decoration: inherit;">approval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#buildapprovalresponse">Build<wbr>Approval<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Describes this build's approval configuration, status, and result.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="artifacts_python">
 <a href="#artifacts_python" style="color: inherit; text-decoration: inherit;">artifacts</a>
@@ -1110,7 +1142,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Stores timing information for phases of the build. Valid keys are: * BUILD: time to execute all build steps * PUSH: time to push all specified images. * FETCHSOURCE: time to fetch source. If the build does not specify source or images, these keys will not be included.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Stores timing information for phases of the build. Valid keys are: * BUILD: time to execute all build steps. * PUSH: time to push all specified images. * FETCHSOURCE: time to fetch source. * SETUPBUILD: time to set up build. If the build does not specify source or images, these keys will not be included.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="warnings_python">
 <a href="#warnings_python" style="color: inherit; text-decoration: inherit;">warnings</a>
@@ -1126,6 +1158,238 @@ The following output properties are available:
 
 ## Supporting Types
 
+
+<h4 id="approvalconfigresponse">Approval<wbr>Config<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="approvalrequired_csharp">
+<a href="#approvalrequired_csharp" style="color: inherit; text-decoration: inherit;">Approval<wbr>Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not approval is needed. If this is set on a build, it will become pending when created, and will need to be explicitly approved to start.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="approvalrequired_go">
+<a href="#approvalrequired_go" style="color: inherit; text-decoration: inherit;">Approval<wbr>Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not approval is needed. If this is set on a build, it will become pending when created, and will need to be explicitly approved to start.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="approvalrequired_nodejs">
+<a href="#approvalrequired_nodejs" style="color: inherit; text-decoration: inherit;">approval<wbr>Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether or not approval is needed. If this is set on a build, it will become pending when created, and will need to be explicitly approved to start.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="approval_required_python">
+<a href="#approval_required_python" style="color: inherit; text-decoration: inherit;">approval_<wbr>required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not approval is needed. If this is set on a build, it will become pending when created, and will need to be explicitly approved to start.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="approvalresultresponse">Approval<wbr>Result<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="approvaltime_csharp">
+<a href="#approvaltime_csharp" style="color: inherit; text-decoration: inherit;">Approval<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time when the approval decision was made.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="approveraccount_csharp">
+<a href="#approveraccount_csharp" style="color: inherit; text-decoration: inherit;">Approver<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Email of the user that called the ApproveBuild API to approve or reject a build at the time that the API was called.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="comment_csharp">
+<a href="#comment_csharp" style="color: inherit; text-decoration: inherit;">Comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. An optional comment for this manual approval result.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="decision_csharp">
+<a href="#decision_csharp" style="color: inherit; text-decoration: inherit;">Decision</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The decision of this manual approval.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="url_csharp">
+<a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. An optional URL tied to this manual approval result. This field is essentially the same as comment, except that it will be rendered by the UI differently. An example use case is a link to an external job that approved this Build.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="approvaltime_go">
+<a href="#approvaltime_go" style="color: inherit; text-decoration: inherit;">Approval<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time when the approval decision was made.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="approveraccount_go">
+<a href="#approveraccount_go" style="color: inherit; text-decoration: inherit;">Approver<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Email of the user that called the ApproveBuild API to approve or reject a build at the time that the API was called.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="comment_go">
+<a href="#comment_go" style="color: inherit; text-decoration: inherit;">Comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. An optional comment for this manual approval result.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="decision_go">
+<a href="#decision_go" style="color: inherit; text-decoration: inherit;">Decision</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The decision of this manual approval.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="url_go">
+<a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. An optional URL tied to this manual approval result. This field is essentially the same as comment, except that it will be rendered by the UI differently. An example use case is a link to an external job that approved this Build.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="approvaltime_nodejs">
+<a href="#approvaltime_nodejs" style="color: inherit; text-decoration: inherit;">approval<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time when the approval decision was made.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="approveraccount_nodejs">
+<a href="#approveraccount_nodejs" style="color: inherit; text-decoration: inherit;">approver<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Email of the user that called the ApproveBuild API to approve or reject a build at the time that the API was called.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="comment_nodejs">
+<a href="#comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. An optional comment for this manual approval result.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="decision_nodejs">
+<a href="#decision_nodejs" style="color: inherit; text-decoration: inherit;">decision</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The decision of this manual approval.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="url_nodejs">
+<a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. An optional URL tied to this manual approval result. This field is essentially the same as comment, except that it will be rendered by the UI differently. An example use case is a link to an external job that approved this Build.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="approval_time_python">
+<a href="#approval_time_python" style="color: inherit; text-decoration: inherit;">approval_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The time when the approval decision was made.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="approver_account_python">
+<a href="#approver_account_python" style="color: inherit; text-decoration: inherit;">approver_<wbr>account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Email of the user that called the ApproveBuild API to approve or reject a build at the time that the API was called.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="comment_python">
+<a href="#comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Optional. An optional comment for this manual approval result.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="decision_python">
+<a href="#decision_python" style="color: inherit; text-decoration: inherit;">decision</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The decision of this manual approval.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="url_python">
+<a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Optional. An optional URL tied to this manual approval result. This field is essentially the same as comment, except that it will be rendered by the UI differently. An example use case is a link to an external job that approved this Build.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="artifactobjectsresponse">Artifact<wbr>Objects<wbr>Response</h4>
 
@@ -1325,6 +1589,122 @@ The following output properties are available:
         <span class="property-type"><a href="#artifactobjectsresponse">Artifact<wbr>Objects<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A list of objects to be uploaded to Cloud Storage upon successful completion of all build steps. Files in the workspace matching specified paths globs will be uploaded to the specified Cloud Storage location using the builder service account's credentials. The location and generation of the uploaded objects will be stored in the Build resource's results field. If any objects fail to be pushed, the build is marked FAILURE.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="buildapprovalresponse">Build<wbr>Approval<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="config_csharp">
+<a href="#config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#approvalconfigresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Build.<wbr>V1.<wbr>Inputs.<wbr>Approval<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for manual approval of this build.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="result_csharp">
+<a href="#result_csharp" style="color: inherit; text-decoration: inherit;">Result</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#approvalresultresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Build.<wbr>V1.<wbr>Inputs.<wbr>Approval<wbr>Result<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Result of manual approval for this Build.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="state_csharp">
+<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The state of this build's approval.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="config_go">
+<a href="#config_go" style="color: inherit; text-decoration: inherit;">Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#approvalconfigresponse">Approval<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for manual approval of this build.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="result_go">
+<a href="#result_go" style="color: inherit; text-decoration: inherit;">Result</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#approvalresultresponse">Approval<wbr>Result<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Result of manual approval for this Build.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="state_go">
+<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The state of this build's approval.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="config_nodejs">
+<a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#approvalconfigresponse">Approval<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for manual approval of this build.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="result_nodejs">
+<a href="#result_nodejs" style="color: inherit; text-decoration: inherit;">result</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#approvalresultresponse">Approval<wbr>Result<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Result of manual approval for this Build.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="state_nodejs">
+<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The state of this build's approval.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="config_python">
+<a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#approvalconfigresponse">Approval<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for manual approval of this build.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="result_python">
+<a href="#result_python" style="color: inherit; text-decoration: inherit;">result</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#approvalresultresponse">Approval<wbr>Result<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Result of manual approval for this Build.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="state_python">
+<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The state of this build's approval.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="buildoptionsresponse">Build<wbr>Options<wbr>Response</h4>
@@ -1818,6 +2198,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Stores timing information for pulling this build step's builder image only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="script_csharp">
+<a href="#script_csharp" style="color: inherit; text-decoration: inherit;">Script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A shell script to be executed in the step. When script is provided, the user cannot specify the entrypoint or args.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="secretenv_csharp">
 <a href="#secretenv_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Env</a>
 </span>
@@ -1917,6 +2305,14 @@ The following output properties are available:
         <span class="property-type"><a href="#timespanresponse">Time<wbr>Span<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Stores timing information for pulling this build step's builder image only.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="script_go">
+<a href="#script_go" style="color: inherit; text-decoration: inherit;">Script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A shell script to be executed in the step. When script is provided, the user cannot specify the entrypoint or args.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretenv_go">
 <a href="#secretenv_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Env</a>
@@ -2018,6 +2414,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Stores timing information for pulling this build step's builder image only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="script_nodejs">
+<a href="#script_nodejs" style="color: inherit; text-decoration: inherit;">script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A shell script to be executed in the step. When script is provided, the user cannot specify the entrypoint or args.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="secretenv_nodejs">
 <a href="#secretenv_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Env</a>
 </span>
@@ -2117,6 +2521,14 @@ The following output properties are available:
         <span class="property-type"><a href="#timespanresponse">Time<wbr>Span<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Stores timing information for pulling this build step's builder image only.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="script_python">
+<a href="#script_python" style="color: inherit; text-decoration: inherit;">script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A shell script to be executed in the step. When script is provided, the user cannot specify the entrypoint or args.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_env_python">
 <a href="#secret_env_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>env</a>

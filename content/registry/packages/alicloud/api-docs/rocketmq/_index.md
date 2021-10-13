@@ -13,25 +13,25 @@ Explore the resources and functions of the alicloud.rocketmq module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="acl" title="Acl"><span class="symbol resource"></span>Acl</a></li>
-    <li><a href="aclrule" title="AclRule"><span class="symbol resource"></span>AclRule</a></li>
-    <li><a href="clientuser" title="ClientUser"><span class="symbol resource"></span>ClientUser</a></li>
-    <li><a href="dnatentry" title="DnatEntry"><span class="symbol resource"></span>DnatEntry</a></li>
-    <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
-    <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
-    <li><a href="qos" title="Qos"><span class="symbol resource"></span>Qos</a></li>
-    <li><a href="qoscar" title="QosCar"><span class="symbol resource"></span>QosCar</a></li>
-    <li><a href="qospolicy" title="QosPolicy"><span class="symbol resource"></span>QosPolicy</a></li>
-    <li><a href="snatentry" title="SnatEntry"><span class="symbol resource"></span>SnatEntry</a></li>
-    <li><a href="topic" title="Topic"><span class="symbol resource"></span>Topic</a></li>
+    <li><a href="acl" title="Acl"><span class="api-symbol api-symbol--resource"></span>Acl</a></li>
+    <li><a href="aclrule" title="AclRule"><span class="api-symbol api-symbol--resource"></span>AclRule</a></li>
+    <li><a href="clientuser" title="ClientUser"><span class="api-symbol api-symbol--resource"></span>ClientUser</a></li>
+    <li><a href="dnatentry" title="DnatEntry"><span class="api-symbol api-symbol--resource"></span>DnatEntry</a></li>
+    <li><a href="group" title="Group"><span class="api-symbol api-symbol--resource"></span>Group</a></li>
+    <li><a href="instance" title="Instance"><span class="api-symbol api-symbol--resource"></span>Instance</a></li>
+    <li><a href="qos" title="Qos"><span class="api-symbol api-symbol--resource"></span>Qos</a></li>
+    <li><a href="qoscar" title="QosCar"><span class="api-symbol api-symbol--resource"></span>QosCar</a></li>
+    <li><a href="qospolicy" title="QosPolicy"><span class="api-symbol api-symbol--resource"></span>QosPolicy</a></li>
+    <li><a href="snatentry" title="SnatEntry"><span class="api-symbol api-symbol--resource"></span>SnatEntry</a></li>
+    <li><a href="topic" title="Topic"><span class="api-symbol api-symbol--resource"></span>Topic</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getgroups" title="GetGroups"><span class="symbol function"></span>GetGroups</a></li>
-    <li><a href="getinstances" title="GetInstances"><span class="symbol function"></span>GetInstances</a></li>
-    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
-    <li><a href="gettopics" title="GetTopics"><span class="symbol function"></span>GetTopics</a></li>
+    <li><a href="getgroups" title="GetGroups"><span class="api-symbol api-symbol--function"></span>GetGroups</a></li>
+    <li><a href="getinstances" title="GetInstances"><span class="api-symbol api-symbol--function"></span>GetInstances</a></li>
+    <li><a href="getservice" title="GetService"><span class="api-symbol api-symbol--function"></span>GetService</a></li>
+    <li><a href="gettopics" title="GetTopics"><span class="api-symbol api-symbol--function"></span>GetTopics</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

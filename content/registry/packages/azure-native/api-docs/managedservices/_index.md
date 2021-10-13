@@ -13,14 +13,14 @@ Explore the resources and functions of the azure-native.managedservices module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="registrationassignment" title="RegistrationAssignment"><span class="symbol resource"></span>RegistrationAssignment</a></li>
-    <li><a href="registrationdefinition" title="RegistrationDefinition"><span class="symbol resource"></span>RegistrationDefinition</a></li>
+    <li><a href="registrationassignment" title="RegistrationAssignment"><span class="api-symbol api-symbol--resource"></span>RegistrationAssignment</a></li>
+    <li><a href="registrationdefinition" title="RegistrationDefinition"><span class="api-symbol api-symbol--resource"></span>RegistrationDefinition</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getregistrationassignment" title="GetRegistrationAssignment"><span class="symbol function"></span>GetRegistrationAssignment</a></li>
-    <li><a href="getregistrationdefinition" title="GetRegistrationDefinition"><span class="symbol function"></span>GetRegistrationDefinition</a></li>
+    <li><a href="getregistrationassignment" title="GetRegistrationAssignment"><span class="api-symbol api-symbol--function"></span>GetRegistrationAssignment</a></li>
+    <li><a href="getregistrationdefinition" title="GetRegistrationDefinition"><span class="api-symbol api-symbol--function"></span>GetRegistrationDefinition</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -30,6 +30,6 @@ Explore the resources and functions of the azure-native.managedservices module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.36.0</dd>
+	<dd>1.37.0</dd>
 </dl>
 

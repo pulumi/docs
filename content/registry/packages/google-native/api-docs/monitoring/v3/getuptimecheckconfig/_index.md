@@ -191,7 +191,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitoredresourceresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V3.<wbr>Outputs.<wbr>Monitored<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are valid for this field: uptime_url, gce_instance, gae_app, aws_ec2_instance, aws_elb_load_balancer{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are valid for this field: uptime_url, gce_instance, gae_app, aws_ec2_instance, aws_elb_load_balancer k8s_service{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -291,7 +291,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitoredresourceresponse">Monitored<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are valid for this field: uptime_url, gce_instance, gae_app, aws_ec2_instance, aws_elb_load_balancer{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are valid for this field: uptime_url, gce_instance, gae_app, aws_ec2_instance, aws_elb_load_balancer k8s_service{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -391,7 +391,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitoredresourceresponse">Monitored<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are valid for this field: uptime_url, gce_instance, gae_app, aws_ec2_instance, aws_elb_load_balancer{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are valid for this field: uptime_url, gce_instance, gae_app, aws_ec2_instance, aws_elb_load_balancer k8s_service{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -491,7 +491,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitoredresourceresponse">Monitored<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are valid for this field: uptime_url, gce_instance, gae_app, aws_ec2_instance, aws_elb_load_balancer{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are valid for this field: uptime_url, gce_instance, gae_app, aws_ec2_instance, aws_elb_load_balancer k8s_service{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>

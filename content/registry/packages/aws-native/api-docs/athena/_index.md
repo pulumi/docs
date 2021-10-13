@@ -13,10 +13,10 @@ Explore the resources and functions of the aws-native.athena module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="datacatalog" title="DataCatalog"><span class="symbol resource"></span>DataCatalog</a></li>
-    <li><a href="namedquery" title="NamedQuery"><span class="symbol resource"></span>NamedQuery</a></li>
-    <li><a href="preparedstatement" title="PreparedStatement"><span class="symbol resource"></span>PreparedStatement</a></li>
-    <li><a href="workgroup" title="WorkGroup"><span class="symbol resource"></span>WorkGroup</a></li>
+    <li><a href="datacatalog" title="DataCatalog"><span class="api-symbol api-symbol--resource"></span>DataCatalog</a></li>
+    <li><a href="namedquery" title="NamedQuery"><span class="api-symbol api-symbol--resource"></span>NamedQuery</a></li>
+    <li><a href="preparedstatement" title="PreparedStatement"><span class="api-symbol api-symbol--resource"></span>PreparedStatement</a></li>
+    <li><a href="workgroup" title="WorkGroup"><span class="api-symbol api-symbol--resource"></span>WorkGroup</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -26,6 +26,6 @@ Explore the resources and functions of the aws-native.athena module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.0</dd>
 </dl>
 

@@ -13,18 +13,18 @@ Explore the resources and functions of the azure-native.azurearcdata module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="datacontroller" title="DataController"><span class="symbol resource"></span>DataController</a></li>
-    <li><a href="postgresinstance" title="PostgresInstance"><span class="symbol resource"></span>PostgresInstance</a></li>
-    <li><a href="sqlmanagedinstance" title="SqlManagedInstance"><span class="symbol resource"></span>SqlManagedInstance</a></li>
-    <li><a href="sqlserverinstance" title="SqlServerInstance"><span class="symbol resource"></span>SqlServerInstance</a></li>
+    <li><a href="datacontroller" title="DataController"><span class="api-symbol api-symbol--resource"></span>DataController</a></li>
+    <li><a href="postgresinstance" title="PostgresInstance"><span class="api-symbol api-symbol--resource"></span>PostgresInstance</a></li>
+    <li><a href="sqlmanagedinstance" title="SqlManagedInstance"><span class="api-symbol api-symbol--resource"></span>SqlManagedInstance</a></li>
+    <li><a href="sqlserverinstance" title="SqlServerInstance"><span class="api-symbol api-symbol--resource"></span>SqlServerInstance</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getdatacontroller" title="GetDataController"><span class="symbol function"></span>GetDataController</a></li>
-    <li><a href="getpostgresinstance" title="GetPostgresInstance"><span class="symbol function"></span>GetPostgresInstance</a></li>
-    <li><a href="getsqlmanagedinstance" title="GetSqlManagedInstance"><span class="symbol function"></span>GetSqlManagedInstance</a></li>
-    <li><a href="getsqlserverinstance" title="GetSqlServerInstance"><span class="symbol function"></span>GetSqlServerInstance</a></li>
+    <li><a href="getdatacontroller" title="GetDataController"><span class="api-symbol api-symbol--function"></span>GetDataController</a></li>
+    <li><a href="getpostgresinstance" title="GetPostgresInstance"><span class="api-symbol api-symbol--function"></span>GetPostgresInstance</a></li>
+    <li><a href="getsqlmanagedinstance" title="GetSqlManagedInstance"><span class="api-symbol api-symbol--function"></span>GetSqlManagedInstance</a></li>
+    <li><a href="getsqlserverinstance" title="GetSqlServerInstance"><span class="api-symbol api-symbol--function"></span>GetSqlServerInstance</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -34,6 +34,6 @@ Explore the resources and functions of the azure-native.azurearcdata module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.36.0</dd>
+	<dd>1.37.0</dd>
 </dl>
 

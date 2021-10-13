@@ -13,18 +13,18 @@ Explore the resources and functions of the azure-native.dataprotection module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="backupinstance" title="BackupInstance"><span class="symbol resource"></span>BackupInstance</a></li>
-    <li><a href="backuppolicy" title="BackupPolicy"><span class="symbol resource"></span>BackupPolicy</a></li>
-    <li><a href="backupvault" title="BackupVault"><span class="symbol resource"></span>BackupVault</a></li>
-    <li><a href="resourceguard" title="ResourceGuard"><span class="symbol resource"></span>ResourceGuard</a></li>
+    <li><a href="backupinstance" title="BackupInstance"><span class="api-symbol api-symbol--resource"></span>BackupInstance</a></li>
+    <li><a href="backuppolicy" title="BackupPolicy"><span class="api-symbol api-symbol--resource"></span>BackupPolicy</a></li>
+    <li><a href="backupvault" title="BackupVault"><span class="api-symbol api-symbol--resource"></span>BackupVault</a></li>
+    <li><a href="resourceguard" title="ResourceGuard"><span class="api-symbol api-symbol--resource"></span>ResourceGuard</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getbackupinstance" title="GetBackupInstance"><span class="symbol function"></span>GetBackupInstance</a></li>
-    <li><a href="getbackuppolicy" title="GetBackupPolicy"><span class="symbol function"></span>GetBackupPolicy</a></li>
-    <li><a href="getbackupvault" title="GetBackupVault"><span class="symbol function"></span>GetBackupVault</a></li>
-    <li><a href="getresourceguard" title="GetResourceGuard"><span class="symbol function"></span>GetResourceGuard</a></li>
+    <li><a href="getbackupinstance" title="GetBackupInstance"><span class="api-symbol api-symbol--function"></span>GetBackupInstance</a></li>
+    <li><a href="getbackuppolicy" title="GetBackupPolicy"><span class="api-symbol api-symbol--function"></span>GetBackupPolicy</a></li>
+    <li><a href="getbackupvault" title="GetBackupVault"><span class="api-symbol api-symbol--function"></span>GetBackupVault</a></li>
+    <li><a href="getresourceguard" title="GetResourceGuard"><span class="api-symbol api-symbol--function"></span>GetResourceGuard</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -34,6 +34,6 @@ Explore the resources and functions of the azure-native.dataprotection module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.36.0</dd>
+	<dd>1.37.0</dd>
 </dl>
 

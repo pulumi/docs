@@ -212,10 +212,12 @@ const exampleCluster = new azure.servicefabric.Cluster("exampleCluster", {
             <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">reverse_proxy_certificate</span><span class="p">:</span> <span class="nx">Optional[ClusterReverseProxyCertificateArgs]</span> = None<span class="p">,</span>
             <span class="nx">reverse_proxy_certificate_common_names</span><span class="p">:</span> <span class="nx">Optional[ClusterReverseProxyCertificateCommonNamesArgs]</span> = None<span class="p">,</span>
+            <span class="nx">service_fabric_zonal_upgrade_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
             <span class="nx">upgrade_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">upgrade_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterUpgradePolicyArgs]</span> = None<span class="p">,</span>
-            <span class="nx">vm_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+            <span class="nx">vm_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">vmss_zonal_upgrade_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span>
@@ -516,6 +518,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}A `reverse_proxy_certificate_common_names` block as defined below. Conflicts with `reverse_proxy_certificate`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="servicefabriczonalupgrademode_csharp">
+<a href="#servicefabriczonalupgrademode_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Fabric<wbr>Zonal<wbr>Upgrade<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the logical grouping of VMs in upgrade domains. Possible values are `Hierarchical` or `Parallel`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -532,6 +543,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#clusterupgradepolicy">Cluster<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `upgrade_policy` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vmsszonalupgrademode_csharp">
+<a href="#vmsszonalupgrademode_csharp" style="color: inherit; text-decoration: inherit;">Vmss<wbr>Zonal<wbr>Upgrade<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the upgrade mode for the virtual machine scale set updates that happen in all availability zones at once. Possible values are `Hierarchical` or `Parallel`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -709,6 +729,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}A `reverse_proxy_certificate_common_names` block as defined below. Conflicts with `reverse_proxy_certificate`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="servicefabriczonalupgrademode_go">
+<a href="#servicefabriczonalupgrademode_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Fabric<wbr>Zonal<wbr>Upgrade<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the logical grouping of VMs in upgrade domains. Possible values are `Hierarchical` or `Parallel`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -725,6 +754,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#clusterupgradepolicy">Cluster<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `upgrade_policy` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vmsszonalupgrademode_go">
+<a href="#vmsszonalupgrademode_go" style="color: inherit; text-decoration: inherit;">Vmss<wbr>Zonal<wbr>Upgrade<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the upgrade mode for the virtual machine scale set updates that happen in all availability zones at once. Possible values are `Hierarchical` or `Parallel`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -902,6 +940,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}A `reverse_proxy_certificate_common_names` block as defined below. Conflicts with `reverse_proxy_certificate`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="servicefabriczonalupgrademode_nodejs">
+<a href="#servicefabriczonalupgrademode_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Fabric<wbr>Zonal<wbr>Upgrade<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the logical grouping of VMs in upgrade domains. Possible values are `Hierarchical` or `Parallel`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -918,6 +965,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#clusterupgradepolicy">Cluster<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `upgrade_policy` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vmsszonalupgrademode_nodejs">
+<a href="#vmsszonalupgrademode_nodejs" style="color: inherit; text-decoration: inherit;">vmss<wbr>Zonal<wbr>Upgrade<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the upgrade mode for the virtual machine scale set updates that happen in all availability zones at once. Possible values are `Hierarchical` or `Parallel`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1095,6 +1151,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}A `reverse_proxy_certificate_common_names` block as defined below. Conflicts with `reverse_proxy_certificate`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="service_fabric_zonal_upgrade_mode_python">
+<a href="#service_fabric_zonal_upgrade_mode_python" style="color: inherit; text-decoration: inherit;">service_<wbr>fabric_<wbr>zonal_<wbr>upgrade_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the logical grouping of VMs in upgrade domains. Possible values are `Hierarchical` or `Parallel`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -1111,6 +1176,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#clusterupgradepolicy">Cluster<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `upgrade_policy` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vmss_zonal_upgrade_mode_python">
+<a href="#vmss_zonal_upgrade_mode_python" style="color: inherit; text-decoration: inherit;">vmss_<wbr>zonal_<wbr>upgrade_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the upgrade mode for the virtual machine scale set updates that happen in all availability zones at once. Possible values are `Hierarchical` or `Parallel`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1239,10 +1313,12 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">reverse_proxy_certificate</span><span class="p">:</span> <span class="nx">Optional[ClusterReverseProxyCertificateArgs]</span> = None<span class="p">,</span>
         <span class="nx">reverse_proxy_certificate_common_names</span><span class="p">:</span> <span class="nx">Optional[ClusterReverseProxyCertificateCommonNamesArgs]</span> = None<span class="p">,</span>
+        <span class="nx">service_fabric_zonal_upgrade_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">upgrade_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">upgrade_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterUpgradePolicyArgs]</span> = None<span class="p">,</span>
-        <span class="nx">vm_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
+        <span class="nx">vm_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">vmss_zonal_upgrade_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1517,6 +1593,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A `reverse_proxy_certificate_common_names` block as defined below. Conflicts with `reverse_proxy_certificate`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_servicefabriczonalupgrademode_csharp">
+<a href="#state_servicefabriczonalupgrademode_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Fabric<wbr>Zonal<wbr>Upgrade<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the logical grouping of VMs in upgrade domains. Possible values are `Hierarchical` or `Parallel`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -1551,6 +1636,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Image expected for the Service Fabric Cluster, such as `Windows`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_vmsszonalupgrademode_csharp">
+<a href="#state_vmsszonalupgrademode_csharp" style="color: inherit; text-decoration: inherit;">Vmss<wbr>Zonal<wbr>Upgrade<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the upgrade mode for the virtual machine scale set updates that happen in all availability zones at once. Possible values are `Hierarchical` or `Parallel`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1719,6 +1813,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A `reverse_proxy_certificate_common_names` block as defined below. Conflicts with `reverse_proxy_certificate`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_servicefabriczonalupgrademode_go">
+<a href="#state_servicefabriczonalupgrademode_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Fabric<wbr>Zonal<wbr>Upgrade<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the logical grouping of VMs in upgrade domains. Possible values are `Hierarchical` or `Parallel`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -1753,6 +1856,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Image expected for the Service Fabric Cluster, such as `Windows`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_vmsszonalupgrademode_go">
+<a href="#state_vmsszonalupgrademode_go" style="color: inherit; text-decoration: inherit;">Vmss<wbr>Zonal<wbr>Upgrade<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the upgrade mode for the virtual machine scale set updates that happen in all availability zones at once. Possible values are `Hierarchical` or `Parallel`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1921,6 +2033,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A `reverse_proxy_certificate_common_names` block as defined below. Conflicts with `reverse_proxy_certificate`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_servicefabriczonalupgrademode_nodejs">
+<a href="#state_servicefabriczonalupgrademode_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Fabric<wbr>Zonal<wbr>Upgrade<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the logical grouping of VMs in upgrade domains. Possible values are `Hierarchical` or `Parallel`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -1955,6 +2076,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Image expected for the Service Fabric Cluster, such as `Windows`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_vmsszonalupgrademode_nodejs">
+<a href="#state_vmsszonalupgrademode_nodejs" style="color: inherit; text-decoration: inherit;">vmss<wbr>Zonal<wbr>Upgrade<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the upgrade mode for the virtual machine scale set updates that happen in all availability zones at once. Possible values are `Hierarchical` or `Parallel`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2123,6 +2253,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A `reverse_proxy_certificate_common_names` block as defined below. Conflicts with `reverse_proxy_certificate`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_service_fabric_zonal_upgrade_mode_python">
+<a href="#state_service_fabric_zonal_upgrade_mode_python" style="color: inherit; text-decoration: inherit;">service_<wbr>fabric_<wbr>zonal_<wbr>upgrade_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the logical grouping of VMs in upgrade domains. Possible values are `Hierarchical` or `Parallel`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -2157,6 +2296,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Image expected for the Service Fabric Cluster, such as `Windows`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_vmss_zonal_upgrade_mode_python">
+<a href="#state_vmss_zonal_upgrade_mode_python" style="color: inherit; text-decoration: inherit;">vmss_<wbr>zonal_<wbr>upgrade_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the upgrade mode for the virtual machine scale set updates that happen in all availability zones at once. Possible values are `Hierarchical` or `Parallel`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3187,6 +3335,24 @@ The following state arguments are supported:
     <dd>{{% md %}}A `ephemeral_ports` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="isstateless_csharp">
+<a href="#isstateless_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Stateless</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should this node type run only stateless services?
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="multipleavailabilityzones_csharp">
+<a href="#multipleavailabilityzones_csharp" style="color: inherit; text-decoration: inherit;">Multiple<wbr>Availability<wbr>Zones</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Does this node type span availability zones?
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="placementproperties_csharp">
 <a href="#placementproperties_csharp" style="color: inherit; text-decoration: inherit;">Placement<wbr>Properties</a>
 </span>
@@ -3288,6 +3454,24 @@ The following state arguments are supported:
         <span class="property-type"><a href="#clusternodetypeephemeralports">Cluster<wbr>Node<wbr>Type<wbr>Ephemeral<wbr>Ports</a></span>
     </dt>
     <dd>{{% md %}}A `ephemeral_ports` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="isstateless_go">
+<a href="#isstateless_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Stateless</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should this node type run only stateless services?
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="multipleavailabilityzones_go">
+<a href="#multipleavailabilityzones_go" style="color: inherit; text-decoration: inherit;">Multiple<wbr>Availability<wbr>Zones</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Does this node type span availability zones?
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="placementproperties_go">
@@ -3393,6 +3577,24 @@ The following state arguments are supported:
     <dd>{{% md %}}A `ephemeral_ports` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="isstateless_nodejs">
+<a href="#isstateless_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Stateless</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Should this node type run only stateless services?
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="multipleavailabilityzones_nodejs">
+<a href="#multipleavailabilityzones_nodejs" style="color: inherit; text-decoration: inherit;">multiple<wbr>Availability<wbr>Zones</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Does this node type span availability zones?
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="placementproperties_nodejs">
 <a href="#placementproperties_nodejs" style="color: inherit; text-decoration: inherit;">placement<wbr>Properties</a>
 </span>
@@ -3494,6 +3696,24 @@ The following state arguments are supported:
         <span class="property-type"><a href="#clusternodetypeephemeralports">Cluster<wbr>Node<wbr>Type<wbr>Ephemeral<wbr>Ports</a></span>
     </dt>
     <dd>{{% md %}}A `ephemeral_ports` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="is_stateless_python">
+<a href="#is_stateless_python" style="color: inherit; text-decoration: inherit;">is_<wbr>stateless</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should this node type run only stateless services?
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="multiple_availability_zones_python">
+<a href="#multiple_availability_zones_python" style="color: inherit; text-decoration: inherit;">multiple_<wbr>availability_<wbr>zones</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Does this node type span availability zones?
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="placement_properties_python">

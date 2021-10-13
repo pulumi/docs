@@ -13,14 +13,14 @@ Explore the resources and functions of the google-native.eventarc/v1beta1 module
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="trigger" title="Trigger"><span class="symbol resource"></span>Trigger</a></li>
-    <li><a href="triggeriampolicy" title="TriggerIamPolicy"><span class="symbol resource"></span>TriggerIamPolicy</a></li>
+    <li><a href="trigger" title="Trigger"><span class="api-symbol api-symbol--resource"></span>Trigger</a></li>
+    <li><a href="triggeriampolicy" title="TriggerIamPolicy"><span class="api-symbol api-symbol--resource"></span>TriggerIamPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="gettrigger" title="GetTrigger"><span class="symbol function"></span>GetTrigger</a></li>
-    <li><a href="gettriggeriampolicy" title="GetTriggerIamPolicy"><span class="symbol function"></span>GetTriggerIamPolicy</a></li>
+    <li><a href="gettrigger" title="GetTrigger"><span class="api-symbol api-symbol--function"></span>GetTrigger</a></li>
+    <li><a href="gettriggeriampolicy" title="GetTriggerIamPolicy"><span class="api-symbol api-symbol--function"></span>GetTriggerIamPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -30,6 +30,6 @@ Explore the resources and functions of the google-native.eventarc/v1beta1 module
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.0</dd>
+	<dd>0.8.0</dd>
 </dl>
 

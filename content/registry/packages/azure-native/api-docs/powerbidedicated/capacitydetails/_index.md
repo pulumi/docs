@@ -378,7 +378,7 @@ The CapacityDetails resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#mode">Pulumi.<wbr>Azure<wbr>Native.<wbr>Power<wbr>BIDedicated.<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}The capacity mode.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the generation of the Power BI Embedded capacity. If no value is specified, the default value 'Gen2' is used. [Learn More](https://docs.microsoft.com/power-bi/developer/embedded/power-bi-embedded-generation-2){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="systemdata_csharp">
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -446,7 +446,7 @@ The CapacityDetails resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#mode">Mode</a></span>
     </dt>
-    <dd>{{% md %}}The capacity mode.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the generation of the Power BI Embedded capacity. If no value is specified, the default value 'Gen2' is used. [Learn More](https://docs.microsoft.com/power-bi/developer/embedded/power-bi-embedded-generation-2){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="systemdata_go">
 <a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -514,7 +514,7 @@ The CapacityDetails resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#mode">Mode</a></span>
     </dt>
-    <dd>{{% md %}}The capacity mode.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the generation of the Power BI Embedded capacity. If no value is specified, the default value 'Gen2' is used. [Learn More](https://docs.microsoft.com/power-bi/developer/embedded/power-bi-embedded-generation-2){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="systemdata_nodejs">
 <a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
@@ -582,7 +582,7 @@ The CapacityDetails resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#mode">Mode</a></span>
     </dt>
-    <dd>{{% md %}}The capacity mode.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the generation of the Power BI Embedded capacity. If no value is specified, the default value 'Gen2' is used. [Learn More](https://docs.microsoft.com/power-bi/developer/embedded/power-bi-embedded-generation-2){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="system_data_python">
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>

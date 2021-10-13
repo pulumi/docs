@@ -250,7 +250,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Highly encouraged. Extra product attributes to be included. For example, for products, this could include the store name, vendor, style, color, etc. These are very strong signals for recommendation model, thus we highly recommend providing the attributes here. Features that can take on one of a limited number of possible values. Two types of features can be set are: Textual features. some examples would be the brand/maker of a product, or country of a customer. Numerical features. Some examples would be the height/weight of a product, or age of a customer. For example: `{ "vendor": {"text": ["vendor123", "vendor456"]}, "lengths_cm": {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]} }`. This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 200 by default; 100 for Type.VARIANT. * The key must be a UTF-8 encoded string with a length limit of 128 characters.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Highly encouraged. Extra product attributes to be included. For example, for products, this could include the store name, vendor, style, color, etc. These are very strong signals for recommendation model, thus we highly recommend providing the attributes here. Features that can take on one of a limited number of possible values. Two types of features can be set are: Textual features. some examples would be the brand/maker of a product, or country of a customer. Numerical features. Some examples would be the height/weight of a product, or age of a customer. For example: `{ "vendor": {"text": ["vendor123", "vendor456"]}, "lengths_cm": {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]} }`. This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 200. * The key must be a UTF-8 encoded string with a length limit of 128 characters. * For indexable attribute, the key must match the pattern: a-zA-Z0-9*. For example, key0LikeThis or KEY_1_LIKE_THIS.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="audience_csharp">
+<a href="#audience_csharp" style="color: inherit; text-decoration: inherit;">Audience</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2audienceresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Retail.<wbr>V2.<wbr>Outputs.<wbr>Google<wbr>Cloud<wbr>Retail<wbr>V2Audience<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The target group associated with a given audience (e.g. male, veterans, car owners, musicians, etc.) of the product.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="availability_csharp">
 <a href="#availability_csharp" style="color: inherit; text-decoration: inherit;">Availability</a>
@@ -274,7 +282,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp when this Product becomes available for recommendation.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The timestamp when this Product becomes available for SearchService.Search.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="brands_csharp">
+<a href="#brands_csharp" style="color: inherit; text-decoration: inherit;">Brands</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The brands of the product. A maximum of 30 brands are allowed. Each brand must be a UTF-8 encoded string with a length limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [brand](https://support.google.com/merchants/answer/6324351). Schema.org property [Product.brand](https://schema.org/brand).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="categories_csharp">
 <a href="#categories_csharp" style="color: inherit; text-decoration: inherit;">Categories</a>
@@ -284,6 +300,30 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Product categories. This field is repeated for supporting one product belonging to several parallel categories. Strongly recommended using the full path for better search / recommendation quality. To represent full path of category, use '>' sign to separate different hierarchies. If '>' is part of the category name, please replace it with other character(s). For example, if a shoes product belongs to both ["Shoes & Accessories" -> "Shoes"] and ["Sports & Fitness" -> "Athletic Clothing" -> "Shoes"], it could be represented as: "categories": [ "Shoes & Accessories > Shoes", "Sports & Fitness > Athletic Clothing > Shoes" ] Must be set for Type.PRIMARY Product otherwise an INVALID_ARGUMENT error is returned. At most 250 values are allowed per Product. Empty values are not allowed. Each value must be a UTF-8 encoded string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property google_product_category. Schema.org property [Product.category] (https://schema.org/category). [mc_google_product_category]: https://support.google.com/merchants/answer/6324436{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="collectionmemberids_csharp">
+<a href="#collectionmemberids_csharp" style="color: inherit; text-decoration: inherit;">Collection<wbr>Member<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The id of the collection members when type is Type.COLLECTION. Should not set it for other types. A maximum of 1000 values are allowed. Otherwise, an INVALID_ARGUMENT error is return.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="colorinfo_csharp">
+<a href="#colorinfo_csharp" style="color: inherit; text-decoration: inherit;">Color<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2colorinforesponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Retail.<wbr>V2.<wbr>Outputs.<wbr>Google<wbr>Cloud<wbr>Retail<wbr>V2Color<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The color of the product. Google Merchant Center property [color](https://support.google.com/merchants/answer/6324487). Schema.org property [Product.color](https://schema.org/color).{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="conditions_csharp">
+<a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The condition of the product. Strongly encouraged to use the standard values: "new", "refurbished", "used". A maximum of 5 values are allowed per Product. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [condition](https://support.google.com/merchants/answer/6324469). Schema.org property [Offer.itemCondition](https://schema.org/itemCondition).{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -291,6 +331,30 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Product description. This field must be a UTF-8 encoded string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [description](https://support.google.com/merchants/answer/6324468). schema.org property [Product.description](https://schema.org/description).{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="expiretime_csharp">
+<a href="#expiretime_csharp" style="color: inherit; text-decoration: inherit;">Expire<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp when this product becomes unavailable for SearchService.Search. If it is set, the Product is not available for SearchService.Search after expire_time. However, the product can still be retrieved by ProductService.GetProduct and ProductService.ListProducts. expire_time must be later than available_time and publish_time, otherwise an INVALID_ARGUMENT error is thrown. Google Merchant Center property [expiration_date](https://support.google.com/merchants/answer/6324499).{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="fulfillmentinfo_csharp">
+<a href="#fulfillmentinfo_csharp" style="color: inherit; text-decoration: inherit;">Fulfillment<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2fulfillmentinforesponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Retail.<wbr>V2.<wbr>Outputs.<wbr>Google<wbr>Cloud<wbr>Retail<wbr>V2Fulfillment<wbr>Info<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Fulfillment information, such as the store IDs for in-store pickup or region IDs for different shipping methods. All the elements must have distinct FulfillmentInfo.type. Otherwise, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="gtin_csharp">
+<a href="#gtin_csharp" style="color: inherit; text-decoration: inherit;">Gtin</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Global Trade Item Number (GTIN) of the product. This field must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. This field must be a Unigram. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [gtin](https://support.google.com/merchants/answer/6324461). Schema.org property [Product.isbn](https://schema.org/isbn) or [Product.gtin8](https://schema.org/gtin8) or [Product.gtin12](https://schema.org/gtin12) or [Product.gtin13](https://schema.org/gtin13) or [Product.gtin14](https://schema.org/gtin14). If the value is not a valid GTIN, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="images_csharp">
 <a href="#images_csharp" style="color: inherit; text-decoration: inherit;">Images</a>
@@ -300,13 +364,37 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Product images for the product.Highly recommended to put the main image to the first. A maximum of 300 images are allowed. Google Merchant Center property [image_link](https://support.google.com/merchants/answer/6324350). Schema.org property [Product.image](https://schema.org/image).{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="languagecode_csharp">
+<a href="#languagecode_csharp" style="color: inherit; text-decoration: inherit;">Language<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Language of the title/description and other string attributes. Use language tags defined by BCP 47. For product prediction, this field is ignored and the model automatically detects the text language. The Product can include text in different languages, but duplicating Products to provide text in multiple languages can result in degraded model performance. For product search this field is in use. It defaults to "en-US" if unset.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="materials_csharp">
+<a href="#materials_csharp" style="color: inherit; text-decoration: inherit;">Materials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The material of the product. For example, "leather", "wooden". A maximum of 20 values are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [material](https://support.google.com/merchants/answer/6324410). Schema.org property [Product.material](https://schema.org/material).{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Immutable. Full resource name of the product, such as `projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/product_id`. The branch ID must be "default_branch".{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Immutable. Full resource name of the product, such as `projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/product_id`.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="patterns_csharp">
+<a href="#patterns_csharp" style="color: inherit; text-decoration: inherit;">Patterns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The pattern or graphic print of the product. For example, "striped", "polka dot", "paisley". A maximum of 20 values are allowed per Product. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [pattern](https://support.google.com/merchants/answer/6324483). Schema.org property [Product.pattern](https://schema.org/pattern).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="priceinfo_csharp">
 <a href="#priceinfo_csharp" style="color: inherit; text-decoration: inherit;">Price<wbr>Info</a>
@@ -324,6 +412,46 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Variant group identifier. Must be an id, with the same parent branch with this product. Otherwise, an error is thrown. For Type.PRIMARY Products, this field can only be empty or set to the same value as id. For VARIANT Products, this field cannot be empty. A maximum of 2,000 products are allowed to share the same Type.PRIMARY Product. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center Property [item_group_id](https://support.google.com/merchants/answer/6324507). Schema.org Property [Product.inProductGroupWithID](https://schema.org/inProductGroupWithID). This field must be enabled before it can be used. [Learn more](/recommendations-ai/docs/catalog#item-group-id).{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="promotions_csharp">
+<a href="#promotions_csharp" style="color: inherit; text-decoration: inherit;">Promotions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2promotionresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Retail.<wbr>V2.<wbr>Outputs.<wbr>Google<wbr>Cloud<wbr>Retail<wbr>V2Promotion<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The promotions applied to the product. A maximum of 10 values are allowed per Product.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="publishtime_csharp">
+<a href="#publishtime_csharp" style="color: inherit; text-decoration: inherit;">Publish<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp when the product is published by the retailer for the first time, which indicates the freshness of the products. Note that this field is different from available_time, given it purely describes product freshness regardless of when it is available on search and recommendation.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="rating_csharp">
+<a href="#rating_csharp" style="color: inherit; text-decoration: inherit;">Rating</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2ratingresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Retail.<wbr>V2.<wbr>Outputs.<wbr>Google<wbr>Cloud<wbr>Retail<wbr>V2Rating<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The rating of this product.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="retrievablefields_csharp">
+<a href="#retrievablefields_csharp" style="color: inherit; text-decoration: inherit;">Retrievable<wbr>Fields</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates which fields in the Products are returned in SearchResponse. Supported fields for all types: * audience * availability * brands * color_info * conditions * gtin * materials * name * patterns * price_info * rating * sizes * title * uri Supported fields only for Type.PRIMARY and Type.COLLECTION: * categories * description * images Supported fields only for Type.VARIANT: * Only the first image in images To mark attributes as retrievable, include paths of the form "attributes.key" where "key" is the key of a custom attribute, as specified in attributes. For Type.PRIMARY and Type.COLLECTION, the following fields are always returned in SearchResponse by default: * name For Type.VARIANT, the following fields are always returned in by default: * name * color_info Maximum number of paths is 30. Otherwise, an INVALID_ARGUMENT error is returned. Note: Returning more fields in SearchResponse may increase response payload size and serving latency.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="sizes_csharp">
+<a href="#sizes_csharp" style="color: inherit; text-decoration: inherit;">Sizes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The size of the product. To represent different size systems or size types, consider using this format: [[[size_system:]size_type:]size_value]. For example, in "US:MENS:M", "US" represents size system; "MENS" represents size type; "M" represents size value. In "GIRLS:27", size system is empty; "GIRLS" represents size type; "27" represents size value. In "32 inches", both size system and size type are empty, while size value is "32 inches". A maximum of 20 values are allowed per Product. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [size](https://support.google.com/merchants/answer/6324492), [size_type](https://support.google.com/merchants/answer/6324497) and [size_system](https://support.google.com/merchants/answer/6324502). Schema.org property [Product.size](https://schema.org/size).{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -340,6 +468,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Product title. This field must be a UTF-8 encoded string with a length limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [title](https://support.google.com/merchants/answer/6324415). Schema.org property [Product.name](https://schema.org/name).{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="ttl_csharp">
+<a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Input only. The TTL (time to live) of the product. If it is set, expire_time is set as current timestamp plus ttl. The derived expire_time is returned in the output and ttl is left blank when retrieving the Product. If it is set, the product is not available for SearchService.Search after current timestamp plus ttl. However, the product can still be retrieved by ProductService.GetProduct and ProductService.ListProducts.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -354,7 +490,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Canonical URL directly linking to the product detail page. It is strongly recommended to provide a valid uri for the product, otherwise the service performance could be significantly degraded. This field must be a UTF-8 encoded string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [link](https://support.google.com/merchants/answer/6324416). Schema.org property [Offer.url](https://schema.org/url).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Canonical URL directly linking to the product detail page. It is strongly recommended to provide a valid uri for the product, otherwise the service performance could be significantly degraded. This field must be a UTF-8 encoded string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [link](https://support.google.com/merchants/answer/6324416). Schema.org property [Offer.url](https://schema.org/url).{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="variants_csharp">
+<a href="#variants_csharp" style="color: inherit; text-decoration: inherit;">Variants</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2productresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Retail.<wbr>V2.<wbr>Outputs.<wbr>Google<wbr>Cloud<wbr>Retail<wbr>V2Product<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Product variants grouped together on primary product which share similar product attributes. It's automatically grouped by primary_product_id for all the product variants. Only populated for Type.PRIMARY Products. Note: This field is OUTPUT_ONLY for ProductService.GetProduct. Do not set this field in API requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -366,7 +510,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Highly encouraged. Extra product attributes to be included. For example, for products, this could include the store name, vendor, style, color, etc. These are very strong signals for recommendation model, thus we highly recommend providing the attributes here. Features that can take on one of a limited number of possible values. Two types of features can be set are: Textual features. some examples would be the brand/maker of a product, or country of a customer. Numerical features. Some examples would be the height/weight of a product, or age of a customer. For example: `{ "vendor": {"text": ["vendor123", "vendor456"]}, "lengths_cm": {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]} }`. This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 200 by default; 100 for Type.VARIANT. * The key must be a UTF-8 encoded string with a length limit of 128 characters.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Highly encouraged. Extra product attributes to be included. For example, for products, this could include the store name, vendor, style, color, etc. These are very strong signals for recommendation model, thus we highly recommend providing the attributes here. Features that can take on one of a limited number of possible values. Two types of features can be set are: Textual features. some examples would be the brand/maker of a product, or country of a customer. Numerical features. Some examples would be the height/weight of a product, or age of a customer. For example: `{ "vendor": {"text": ["vendor123", "vendor456"]}, "lengths_cm": {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]} }`. This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 200. * The key must be a UTF-8 encoded string with a length limit of 128 characters. * For indexable attribute, the key must match the pattern: a-zA-Z0-9*. For example, key0LikeThis or KEY_1_LIKE_THIS.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="audience_go">
+<a href="#audience_go" style="color: inherit; text-decoration: inherit;">Audience</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2audienceresponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Audience<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The target group associated with a given audience (e.g. male, veterans, car owners, musicians, etc.) of the product.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="availability_go">
 <a href="#availability_go" style="color: inherit; text-decoration: inherit;">Availability</a>
@@ -390,7 +542,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp when this Product becomes available for recommendation.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The timestamp when this Product becomes available for SearchService.Search.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="brands_go">
+<a href="#brands_go" style="color: inherit; text-decoration: inherit;">Brands</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The brands of the product. A maximum of 30 brands are allowed. Each brand must be a UTF-8 encoded string with a length limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [brand](https://support.google.com/merchants/answer/6324351). Schema.org property [Product.brand](https://schema.org/brand).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="categories_go">
 <a href="#categories_go" style="color: inherit; text-decoration: inherit;">Categories</a>
@@ -400,6 +560,30 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Product categories. This field is repeated for supporting one product belonging to several parallel categories. Strongly recommended using the full path for better search / recommendation quality. To represent full path of category, use '>' sign to separate different hierarchies. If '>' is part of the category name, please replace it with other character(s). For example, if a shoes product belongs to both ["Shoes & Accessories" -> "Shoes"] and ["Sports & Fitness" -> "Athletic Clothing" -> "Shoes"], it could be represented as: "categories": [ "Shoes & Accessories > Shoes", "Sports & Fitness > Athletic Clothing > Shoes" ] Must be set for Type.PRIMARY Product otherwise an INVALID_ARGUMENT error is returned. At most 250 values are allowed per Product. Empty values are not allowed. Each value must be a UTF-8 encoded string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property google_product_category. Schema.org property [Product.category] (https://schema.org/category). [mc_google_product_category]: https://support.google.com/merchants/answer/6324436{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="collectionmemberids_go">
+<a href="#collectionmemberids_go" style="color: inherit; text-decoration: inherit;">Collection<wbr>Member<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The id of the collection members when type is Type.COLLECTION. Should not set it for other types. A maximum of 1000 values are allowed. Otherwise, an INVALID_ARGUMENT error is return.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="colorinfo_go">
+<a href="#colorinfo_go" style="color: inherit; text-decoration: inherit;">Color<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2colorinforesponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Color<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The color of the product. Google Merchant Center property [color](https://support.google.com/merchants/answer/6324487). Schema.org property [Product.color](https://schema.org/color).{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="conditions_go">
+<a href="#conditions_go" style="color: inherit; text-decoration: inherit;">Conditions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The condition of the product. Strongly encouraged to use the standard values: "new", "refurbished", "used". A maximum of 5 values are allowed per Product. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [condition](https://support.google.com/merchants/answer/6324469). Schema.org property [Offer.itemCondition](https://schema.org/itemCondition).{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -407,6 +591,30 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Product description. This field must be a UTF-8 encoded string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [description](https://support.google.com/merchants/answer/6324468). schema.org property [Product.description](https://schema.org/description).{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="expiretime_go">
+<a href="#expiretime_go" style="color: inherit; text-decoration: inherit;">Expire<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp when this product becomes unavailable for SearchService.Search. If it is set, the Product is not available for SearchService.Search after expire_time. However, the product can still be retrieved by ProductService.GetProduct and ProductService.ListProducts. expire_time must be later than available_time and publish_time, otherwise an INVALID_ARGUMENT error is thrown. Google Merchant Center property [expiration_date](https://support.google.com/merchants/answer/6324499).{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="fulfillmentinfo_go">
+<a href="#fulfillmentinfo_go" style="color: inherit; text-decoration: inherit;">Fulfillment<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2fulfillmentinforesponse">[]Google<wbr>Cloud<wbr>Retail<wbr>V2Fulfillment<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Fulfillment information, such as the store IDs for in-store pickup or region IDs for different shipping methods. All the elements must have distinct FulfillmentInfo.type. Otherwise, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="gtin_go">
+<a href="#gtin_go" style="color: inherit; text-decoration: inherit;">Gtin</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Global Trade Item Number (GTIN) of the product. This field must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. This field must be a Unigram. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [gtin](https://support.google.com/merchants/answer/6324461). Schema.org property [Product.isbn](https://schema.org/isbn) or [Product.gtin8](https://schema.org/gtin8) or [Product.gtin12](https://schema.org/gtin12) or [Product.gtin13](https://schema.org/gtin13) or [Product.gtin14](https://schema.org/gtin14). If the value is not a valid GTIN, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="images_go">
 <a href="#images_go" style="color: inherit; text-decoration: inherit;">Images</a>
@@ -416,13 +624,37 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Product images for the product.Highly recommended to put the main image to the first. A maximum of 300 images are allowed. Google Merchant Center property [image_link](https://support.google.com/merchants/answer/6324350). Schema.org property [Product.image](https://schema.org/image).{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="languagecode_go">
+<a href="#languagecode_go" style="color: inherit; text-decoration: inherit;">Language<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Language of the title/description and other string attributes. Use language tags defined by BCP 47. For product prediction, this field is ignored and the model automatically detects the text language. The Product can include text in different languages, but duplicating Products to provide text in multiple languages can result in degraded model performance. For product search this field is in use. It defaults to "en-US" if unset.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="materials_go">
+<a href="#materials_go" style="color: inherit; text-decoration: inherit;">Materials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The material of the product. For example, "leather", "wooden". A maximum of 20 values are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [material](https://support.google.com/merchants/answer/6324410). Schema.org property [Product.material](https://schema.org/material).{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Immutable. Full resource name of the product, such as `projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/product_id`. The branch ID must be "default_branch".{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Immutable. Full resource name of the product, such as `projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/product_id`.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="patterns_go">
+<a href="#patterns_go" style="color: inherit; text-decoration: inherit;">Patterns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The pattern or graphic print of the product. For example, "striped", "polka dot", "paisley". A maximum of 20 values are allowed per Product. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [pattern](https://support.google.com/merchants/answer/6324483). Schema.org property [Product.pattern](https://schema.org/pattern).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="priceinfo_go">
 <a href="#priceinfo_go" style="color: inherit; text-decoration: inherit;">Price<wbr>Info</a>
@@ -440,6 +672,46 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Variant group identifier. Must be an id, with the same parent branch with this product. Otherwise, an error is thrown. For Type.PRIMARY Products, this field can only be empty or set to the same value as id. For VARIANT Products, this field cannot be empty. A maximum of 2,000 products are allowed to share the same Type.PRIMARY Product. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center Property [item_group_id](https://support.google.com/merchants/answer/6324507). Schema.org Property [Product.inProductGroupWithID](https://schema.org/inProductGroupWithID). This field must be enabled before it can be used. [Learn more](/recommendations-ai/docs/catalog#item-group-id).{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="promotions_go">
+<a href="#promotions_go" style="color: inherit; text-decoration: inherit;">Promotions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2promotionresponse">[]Google<wbr>Cloud<wbr>Retail<wbr>V2Promotion<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The promotions applied to the product. A maximum of 10 values are allowed per Product.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="publishtime_go">
+<a href="#publishtime_go" style="color: inherit; text-decoration: inherit;">Publish<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp when the product is published by the retailer for the first time, which indicates the freshness of the products. Note that this field is different from available_time, given it purely describes product freshness regardless of when it is available on search and recommendation.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="rating_go">
+<a href="#rating_go" style="color: inherit; text-decoration: inherit;">Rating</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2ratingresponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Rating<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The rating of this product.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="retrievablefields_go">
+<a href="#retrievablefields_go" style="color: inherit; text-decoration: inherit;">Retrievable<wbr>Fields</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates which fields in the Products are returned in SearchResponse. Supported fields for all types: * audience * availability * brands * color_info * conditions * gtin * materials * name * patterns * price_info * rating * sizes * title * uri Supported fields only for Type.PRIMARY and Type.COLLECTION: * categories * description * images Supported fields only for Type.VARIANT: * Only the first image in images To mark attributes as retrievable, include paths of the form "attributes.key" where "key" is the key of a custom attribute, as specified in attributes. For Type.PRIMARY and Type.COLLECTION, the following fields are always returned in SearchResponse by default: * name For Type.VARIANT, the following fields are always returned in by default: * name * color_info Maximum number of paths is 30. Otherwise, an INVALID_ARGUMENT error is returned. Note: Returning more fields in SearchResponse may increase response payload size and serving latency.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="sizes_go">
+<a href="#sizes_go" style="color: inherit; text-decoration: inherit;">Sizes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The size of the product. To represent different size systems or size types, consider using this format: [[[size_system:]size_type:]size_value]. For example, in "US:MENS:M", "US" represents size system; "MENS" represents size type; "M" represents size value. In "GIRLS:27", size system is empty; "GIRLS" represents size type; "27" represents size value. In "32 inches", both size system and size type are empty, while size value is "32 inches". A maximum of 20 values are allowed per Product. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [size](https://support.google.com/merchants/answer/6324492), [size_type](https://support.google.com/merchants/answer/6324497) and [size_system](https://support.google.com/merchants/answer/6324502). Schema.org property [Product.size](https://schema.org/size).{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -456,6 +728,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Product title. This field must be a UTF-8 encoded string with a length limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [title](https://support.google.com/merchants/answer/6324415). Schema.org property [Product.name](https://schema.org/name).{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="ttl_go">
+<a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Input only. The TTL (time to live) of the product. If it is set, expire_time is set as current timestamp plus ttl. The derived expire_time is returned in the output and ttl is left blank when retrieving the Product. If it is set, the product is not available for SearchService.Search after current timestamp plus ttl. However, the product can still be retrieved by ProductService.GetProduct and ProductService.ListProducts.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -470,7 +750,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Canonical URL directly linking to the product detail page. It is strongly recommended to provide a valid uri for the product, otherwise the service performance could be significantly degraded. This field must be a UTF-8 encoded string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [link](https://support.google.com/merchants/answer/6324416). Schema.org property [Offer.url](https://schema.org/url).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Canonical URL directly linking to the product detail page. It is strongly recommended to provide a valid uri for the product, otherwise the service performance could be significantly degraded. This field must be a UTF-8 encoded string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [link](https://support.google.com/merchants/answer/6324416). Schema.org property [Offer.url](https://schema.org/url).{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="variants_go">
+<a href="#variants_go" style="color: inherit; text-decoration: inherit;">Variants</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2productresponse">[]Google<wbr>Cloud<wbr>Retail<wbr>V2Product<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Product variants grouped together on primary product which share similar product attributes. It's automatically grouped by primary_product_id for all the product variants. Only populated for Type.PRIMARY Products. Note: This field is OUTPUT_ONLY for ProductService.GetProduct. Do not set this field in API requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -482,7 +770,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Highly encouraged. Extra product attributes to be included. For example, for products, this could include the store name, vendor, style, color, etc. These are very strong signals for recommendation model, thus we highly recommend providing the attributes here. Features that can take on one of a limited number of possible values. Two types of features can be set are: Textual features. some examples would be the brand/maker of a product, or country of a customer. Numerical features. Some examples would be the height/weight of a product, or age of a customer. For example: `{ "vendor": {"text": ["vendor123", "vendor456"]}, "lengths_cm": {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]} }`. This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 200 by default; 100 for Type.VARIANT. * The key must be a UTF-8 encoded string with a length limit of 128 characters.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Highly encouraged. Extra product attributes to be included. For example, for products, this could include the store name, vendor, style, color, etc. These are very strong signals for recommendation model, thus we highly recommend providing the attributes here. Features that can take on one of a limited number of possible values. Two types of features can be set are: Textual features. some examples would be the brand/maker of a product, or country of a customer. Numerical features. Some examples would be the height/weight of a product, or age of a customer. For example: `{ "vendor": {"text": ["vendor123", "vendor456"]}, "lengths_cm": {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]} }`. This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 200. * The key must be a UTF-8 encoded string with a length limit of 128 characters. * For indexable attribute, the key must match the pattern: a-zA-Z0-9*. For example, key0LikeThis or KEY_1_LIKE_THIS.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="audience_nodejs">
+<a href="#audience_nodejs" style="color: inherit; text-decoration: inherit;">audience</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2audienceresponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Audience<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The target group associated with a given audience (e.g. male, veterans, car owners, musicians, etc.) of the product.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="availability_nodejs">
 <a href="#availability_nodejs" style="color: inherit; text-decoration: inherit;">availability</a>
@@ -506,7 +802,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp when this Product becomes available for recommendation.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The timestamp when this Product becomes available for SearchService.Search.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="brands_nodejs">
+<a href="#brands_nodejs" style="color: inherit; text-decoration: inherit;">brands</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The brands of the product. A maximum of 30 brands are allowed. Each brand must be a UTF-8 encoded string with a length limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [brand](https://support.google.com/merchants/answer/6324351). Schema.org property [Product.brand](https://schema.org/brand).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="categories_nodejs">
 <a href="#categories_nodejs" style="color: inherit; text-decoration: inherit;">categories</a>
@@ -516,6 +820,30 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Product categories. This field is repeated for supporting one product belonging to several parallel categories. Strongly recommended using the full path for better search / recommendation quality. To represent full path of category, use '>' sign to separate different hierarchies. If '>' is part of the category name, please replace it with other character(s). For example, if a shoes product belongs to both ["Shoes & Accessories" -> "Shoes"] and ["Sports & Fitness" -> "Athletic Clothing" -> "Shoes"], it could be represented as: "categories": [ "Shoes & Accessories > Shoes", "Sports & Fitness > Athletic Clothing > Shoes" ] Must be set for Type.PRIMARY Product otherwise an INVALID_ARGUMENT error is returned. At most 250 values are allowed per Product. Empty values are not allowed. Each value must be a UTF-8 encoded string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property google_product_category. Schema.org property [Product.category] (https://schema.org/category). [mc_google_product_category]: https://support.google.com/merchants/answer/6324436{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="collectionmemberids_nodejs">
+<a href="#collectionmemberids_nodejs" style="color: inherit; text-decoration: inherit;">collection<wbr>Member<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The id of the collection members when type is Type.COLLECTION. Should not set it for other types. A maximum of 1000 values are allowed. Otherwise, an INVALID_ARGUMENT error is return.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="colorinfo_nodejs">
+<a href="#colorinfo_nodejs" style="color: inherit; text-decoration: inherit;">color<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2colorinforesponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Color<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The color of the product. Google Merchant Center property [color](https://support.google.com/merchants/answer/6324487). Schema.org property [Product.color](https://schema.org/color).{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="conditions_nodejs">
+<a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The condition of the product. Strongly encouraged to use the standard values: "new", "refurbished", "used". A maximum of 5 values are allowed per Product. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [condition](https://support.google.com/merchants/answer/6324469). Schema.org property [Offer.itemCondition](https://schema.org/itemCondition).{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -523,6 +851,30 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Product description. This field must be a UTF-8 encoded string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [description](https://support.google.com/merchants/answer/6324468). schema.org property [Product.description](https://schema.org/description).{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="expiretime_nodejs">
+<a href="#expiretime_nodejs" style="color: inherit; text-decoration: inherit;">expire<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp when this product becomes unavailable for SearchService.Search. If it is set, the Product is not available for SearchService.Search after expire_time. However, the product can still be retrieved by ProductService.GetProduct and ProductService.ListProducts. expire_time must be later than available_time and publish_time, otherwise an INVALID_ARGUMENT error is thrown. Google Merchant Center property [expiration_date](https://support.google.com/merchants/answer/6324499).{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="fulfillmentinfo_nodejs">
+<a href="#fulfillmentinfo_nodejs" style="color: inherit; text-decoration: inherit;">fulfillment<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2fulfillmentinforesponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Fulfillment<wbr>Info<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Fulfillment information, such as the store IDs for in-store pickup or region IDs for different shipping methods. All the elements must have distinct FulfillmentInfo.type. Otherwise, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="gtin_nodejs">
+<a href="#gtin_nodejs" style="color: inherit; text-decoration: inherit;">gtin</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Global Trade Item Number (GTIN) of the product. This field must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. This field must be a Unigram. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [gtin](https://support.google.com/merchants/answer/6324461). Schema.org property [Product.isbn](https://schema.org/isbn) or [Product.gtin8](https://schema.org/gtin8) or [Product.gtin12](https://schema.org/gtin12) or [Product.gtin13](https://schema.org/gtin13) or [Product.gtin14](https://schema.org/gtin14). If the value is not a valid GTIN, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="images_nodejs">
 <a href="#images_nodejs" style="color: inherit; text-decoration: inherit;">images</a>
@@ -532,13 +884,37 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Product images for the product.Highly recommended to put the main image to the first. A maximum of 300 images are allowed. Google Merchant Center property [image_link](https://support.google.com/merchants/answer/6324350). Schema.org property [Product.image](https://schema.org/image).{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="languagecode_nodejs">
+<a href="#languagecode_nodejs" style="color: inherit; text-decoration: inherit;">language<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Language of the title/description and other string attributes. Use language tags defined by BCP 47. For product prediction, this field is ignored and the model automatically detects the text language. The Product can include text in different languages, but duplicating Products to provide text in multiple languages can result in degraded model performance. For product search this field is in use. It defaults to "en-US" if unset.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="materials_nodejs">
+<a href="#materials_nodejs" style="color: inherit; text-decoration: inherit;">materials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The material of the product. For example, "leather", "wooden". A maximum of 20 values are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [material](https://support.google.com/merchants/answer/6324410). Schema.org property [Product.material](https://schema.org/material).{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Immutable. Full resource name of the product, such as `projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/product_id`. The branch ID must be "default_branch".{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Immutable. Full resource name of the product, such as `projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/product_id`.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="patterns_nodejs">
+<a href="#patterns_nodejs" style="color: inherit; text-decoration: inherit;">patterns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The pattern or graphic print of the product. For example, "striped", "polka dot", "paisley". A maximum of 20 values are allowed per Product. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [pattern](https://support.google.com/merchants/answer/6324483). Schema.org property [Product.pattern](https://schema.org/pattern).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="priceinfo_nodejs">
 <a href="#priceinfo_nodejs" style="color: inherit; text-decoration: inherit;">price<wbr>Info</a>
@@ -556,6 +932,46 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Variant group identifier. Must be an id, with the same parent branch with this product. Otherwise, an error is thrown. For Type.PRIMARY Products, this field can only be empty or set to the same value as id. For VARIANT Products, this field cannot be empty. A maximum of 2,000 products are allowed to share the same Type.PRIMARY Product. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center Property [item_group_id](https://support.google.com/merchants/answer/6324507). Schema.org Property [Product.inProductGroupWithID](https://schema.org/inProductGroupWithID). This field must be enabled before it can be used. [Learn more](/recommendations-ai/docs/catalog#item-group-id).{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="promotions_nodejs">
+<a href="#promotions_nodejs" style="color: inherit; text-decoration: inherit;">promotions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2promotionresponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Promotion<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The promotions applied to the product. A maximum of 10 values are allowed per Product.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="publishtime_nodejs">
+<a href="#publishtime_nodejs" style="color: inherit; text-decoration: inherit;">publish<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp when the product is published by the retailer for the first time, which indicates the freshness of the products. Note that this field is different from available_time, given it purely describes product freshness regardless of when it is available on search and recommendation.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="rating_nodejs">
+<a href="#rating_nodejs" style="color: inherit; text-decoration: inherit;">rating</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2ratingresponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Rating<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The rating of this product.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="retrievablefields_nodejs">
+<a href="#retrievablefields_nodejs" style="color: inherit; text-decoration: inherit;">retrievable<wbr>Fields</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates which fields in the Products are returned in SearchResponse. Supported fields for all types: * audience * availability * brands * color_info * conditions * gtin * materials * name * patterns * price_info * rating * sizes * title * uri Supported fields only for Type.PRIMARY and Type.COLLECTION: * categories * description * images Supported fields only for Type.VARIANT: * Only the first image in images To mark attributes as retrievable, include paths of the form "attributes.key" where "key" is the key of a custom attribute, as specified in attributes. For Type.PRIMARY and Type.COLLECTION, the following fields are always returned in SearchResponse by default: * name For Type.VARIANT, the following fields are always returned in by default: * name * color_info Maximum number of paths is 30. Otherwise, an INVALID_ARGUMENT error is returned. Note: Returning more fields in SearchResponse may increase response payload size and serving latency.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="sizes_nodejs">
+<a href="#sizes_nodejs" style="color: inherit; text-decoration: inherit;">sizes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The size of the product. To represent different size systems or size types, consider using this format: [[[size_system:]size_type:]size_value]. For example, in "US:MENS:M", "US" represents size system; "MENS" represents size type; "M" represents size value. In "GIRLS:27", size system is empty; "GIRLS" represents size type; "27" represents size value. In "32 inches", both size system and size type are empty, while size value is "32 inches". A maximum of 20 values are allowed per Product. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [size](https://support.google.com/merchants/answer/6324492), [size_type](https://support.google.com/merchants/answer/6324497) and [size_system](https://support.google.com/merchants/answer/6324502). Schema.org property [Product.size](https://schema.org/size).{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -572,6 +988,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Product title. This field must be a UTF-8 encoded string with a length limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [title](https://support.google.com/merchants/answer/6324415). Schema.org property [Product.name](https://schema.org/name).{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="ttl_nodejs">
+<a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Input only. The TTL (time to live) of the product. If it is set, expire_time is set as current timestamp plus ttl. The derived expire_time is returned in the output and ttl is left blank when retrieving the Product. If it is set, the product is not available for SearchService.Search after current timestamp plus ttl. However, the product can still be retrieved by ProductService.GetProduct and ProductService.ListProducts.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -586,7 +1010,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Canonical URL directly linking to the product detail page. It is strongly recommended to provide a valid uri for the product, otherwise the service performance could be significantly degraded. This field must be a UTF-8 encoded string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [link](https://support.google.com/merchants/answer/6324416). Schema.org property [Offer.url](https://schema.org/url).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Canonical URL directly linking to the product detail page. It is strongly recommended to provide a valid uri for the product, otherwise the service performance could be significantly degraded. This field must be a UTF-8 encoded string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [link](https://support.google.com/merchants/answer/6324416). Schema.org property [Offer.url](https://schema.org/url).{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="variants_nodejs">
+<a href="#variants_nodejs" style="color: inherit; text-decoration: inherit;">variants</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2productresponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Product<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Product variants grouped together on primary product which share similar product attributes. It's automatically grouped by primary_product_id for all the product variants. Only populated for Type.PRIMARY Products. Note: This field is OUTPUT_ONLY for ProductService.GetProduct. Do not set this field in API requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -598,7 +1030,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Highly encouraged. Extra product attributes to be included. For example, for products, this could include the store name, vendor, style, color, etc. These are very strong signals for recommendation model, thus we highly recommend providing the attributes here. Features that can take on one of a limited number of possible values. Two types of features can be set are: Textual features. some examples would be the brand/maker of a product, or country of a customer. Numerical features. Some examples would be the height/weight of a product, or age of a customer. For example: `{ "vendor": {"text": ["vendor123", "vendor456"]}, "lengths_cm": {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]} }`. This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 200 by default; 100 for Type.VARIANT. * The key must be a UTF-8 encoded string with a length limit of 128 characters.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Highly encouraged. Extra product attributes to be included. For example, for products, this could include the store name, vendor, style, color, etc. These are very strong signals for recommendation model, thus we highly recommend providing the attributes here. Features that can take on one of a limited number of possible values. Two types of features can be set are: Textual features. some examples would be the brand/maker of a product, or country of a customer. Numerical features. Some examples would be the height/weight of a product, or age of a customer. For example: `{ "vendor": {"text": ["vendor123", "vendor456"]}, "lengths_cm": {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]} }`. This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 200. * The key must be a UTF-8 encoded string with a length limit of 128 characters. * For indexable attribute, the key must match the pattern: a-zA-Z0-9*. For example, key0LikeThis or KEY_1_LIKE_THIS.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="audience_python">
+<a href="#audience_python" style="color: inherit; text-decoration: inherit;">audience</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2audienceresponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Audience<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The target group associated with a given audience (e.g. male, veterans, car owners, musicians, etc.) of the product.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="availability_python">
 <a href="#availability_python" style="color: inherit; text-decoration: inherit;">availability</a>
@@ -622,7 +1062,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp when this Product becomes available for recommendation.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The timestamp when this Product becomes available for SearchService.Search.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="brands_python">
+<a href="#brands_python" style="color: inherit; text-decoration: inherit;">brands</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The brands of the product. A maximum of 30 brands are allowed. Each brand must be a UTF-8 encoded string with a length limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [brand](https://support.google.com/merchants/answer/6324351). Schema.org property [Product.brand](https://schema.org/brand).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="categories_python">
 <a href="#categories_python" style="color: inherit; text-decoration: inherit;">categories</a>
@@ -632,6 +1080,30 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Product categories. This field is repeated for supporting one product belonging to several parallel categories. Strongly recommended using the full path for better search / recommendation quality. To represent full path of category, use '>' sign to separate different hierarchies. If '>' is part of the category name, please replace it with other character(s). For example, if a shoes product belongs to both ["Shoes & Accessories" -> "Shoes"] and ["Sports & Fitness" -> "Athletic Clothing" -> "Shoes"], it could be represented as: "categories": [ "Shoes & Accessories > Shoes", "Sports & Fitness > Athletic Clothing > Shoes" ] Must be set for Type.PRIMARY Product otherwise an INVALID_ARGUMENT error is returned. At most 250 values are allowed per Product. Empty values are not allowed. Each value must be a UTF-8 encoded string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property google_product_category. Schema.org property [Product.category] (https://schema.org/category). [mc_google_product_category]: https://support.google.com/merchants/answer/6324436{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="collection_member_ids_python">
+<a href="#collection_member_ids_python" style="color: inherit; text-decoration: inherit;">collection_<wbr>member_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The id of the collection members when type is Type.COLLECTION. Should not set it for other types. A maximum of 1000 values are allowed. Otherwise, an INVALID_ARGUMENT error is return.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="color_info_python">
+<a href="#color_info_python" style="color: inherit; text-decoration: inherit;">color_<wbr>info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2colorinforesponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Color<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The color of the product. Google Merchant Center property [color](https://support.google.com/merchants/answer/6324487). Schema.org property [Product.color](https://schema.org/color).{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="conditions_python">
+<a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The condition of the product. Strongly encouraged to use the standard values: "new", "refurbished", "used". A maximum of 5 values are allowed per Product. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [condition](https://support.google.com/merchants/answer/6324469). Schema.org property [Offer.itemCondition](https://schema.org/itemCondition).{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -639,6 +1111,30 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Product description. This field must be a UTF-8 encoded string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [description](https://support.google.com/merchants/answer/6324468). schema.org property [Product.description](https://schema.org/description).{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="expire_time_python">
+<a href="#expire_time_python" style="color: inherit; text-decoration: inherit;">expire_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The timestamp when this product becomes unavailable for SearchService.Search. If it is set, the Product is not available for SearchService.Search after expire_time. However, the product can still be retrieved by ProductService.GetProduct and ProductService.ListProducts. expire_time must be later than available_time and publish_time, otherwise an INVALID_ARGUMENT error is thrown. Google Merchant Center property [expiration_date](https://support.google.com/merchants/answer/6324499).{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="fulfillment_info_python">
+<a href="#fulfillment_info_python" style="color: inherit; text-decoration: inherit;">fulfillment_<wbr>info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2fulfillmentinforesponse">Sequence[Google<wbr>Cloud<wbr>Retail<wbr>V2Fulfillment<wbr>Info<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Fulfillment information, such as the store IDs for in-store pickup or region IDs for different shipping methods. All the elements must have distinct FulfillmentInfo.type. Otherwise, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="gtin_python">
+<a href="#gtin_python" style="color: inherit; text-decoration: inherit;">gtin</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Global Trade Item Number (GTIN) of the product. This field must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. This field must be a Unigram. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [gtin](https://support.google.com/merchants/answer/6324461). Schema.org property [Product.isbn](https://schema.org/isbn) or [Product.gtin8](https://schema.org/gtin8) or [Product.gtin12](https://schema.org/gtin12) or [Product.gtin13](https://schema.org/gtin13) or [Product.gtin14](https://schema.org/gtin14). If the value is not a valid GTIN, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="images_python">
 <a href="#images_python" style="color: inherit; text-decoration: inherit;">images</a>
@@ -648,13 +1144,37 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Product images for the product.Highly recommended to put the main image to the first. A maximum of 300 images are allowed. Google Merchant Center property [image_link](https://support.google.com/merchants/answer/6324350). Schema.org property [Product.image](https://schema.org/image).{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="language_code_python">
+<a href="#language_code_python" style="color: inherit; text-decoration: inherit;">language_<wbr>code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Language of the title/description and other string attributes. Use language tags defined by BCP 47. For product prediction, this field is ignored and the model automatically detects the text language. The Product can include text in different languages, but duplicating Products to provide text in multiple languages can result in degraded model performance. For product search this field is in use. It defaults to "en-US" if unset.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="materials_python">
+<a href="#materials_python" style="color: inherit; text-decoration: inherit;">materials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The material of the product. For example, "leather", "wooden". A maximum of 20 values are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [material](https://support.google.com/merchants/answer/6324410). Schema.org property [Product.material](https://schema.org/material).{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Immutable. Full resource name of the product, such as `projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/product_id`. The branch ID must be "default_branch".{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Immutable. Full resource name of the product, such as `projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/product_id`.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="patterns_python">
+<a href="#patterns_python" style="color: inherit; text-decoration: inherit;">patterns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The pattern or graphic print of the product. For example, "striped", "polka dot", "paisley". A maximum of 20 values are allowed per Product. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [pattern](https://support.google.com/merchants/answer/6324483). Schema.org property [Product.pattern](https://schema.org/pattern).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="price_info_python">
 <a href="#price_info_python" style="color: inherit; text-decoration: inherit;">price_<wbr>info</a>
@@ -672,6 +1192,46 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Variant group identifier. Must be an id, with the same parent branch with this product. Otherwise, an error is thrown. For Type.PRIMARY Products, this field can only be empty or set to the same value as id. For VARIANT Products, this field cannot be empty. A maximum of 2,000 products are allowed to share the same Type.PRIMARY Product. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center Property [item_group_id](https://support.google.com/merchants/answer/6324507). Schema.org Property [Product.inProductGroupWithID](https://schema.org/inProductGroupWithID). This field must be enabled before it can be used. [Learn more](/recommendations-ai/docs/catalog#item-group-id).{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="promotions_python">
+<a href="#promotions_python" style="color: inherit; text-decoration: inherit;">promotions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2promotionresponse">Sequence[Google<wbr>Cloud<wbr>Retail<wbr>V2Promotion<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The promotions applied to the product. A maximum of 10 values are allowed per Product.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="publish_time_python">
+<a href="#publish_time_python" style="color: inherit; text-decoration: inherit;">publish_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The timestamp when the product is published by the retailer for the first time, which indicates the freshness of the products. Note that this field is different from available_time, given it purely describes product freshness regardless of when it is available on search and recommendation.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="rating_python">
+<a href="#rating_python" style="color: inherit; text-decoration: inherit;">rating</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2ratingresponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Rating<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The rating of this product.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="retrievable_fields_python">
+<a href="#retrievable_fields_python" style="color: inherit; text-decoration: inherit;">retrievable_<wbr>fields</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Indicates which fields in the Products are returned in SearchResponse. Supported fields for all types: * audience * availability * brands * color_info * conditions * gtin * materials * name * patterns * price_info * rating * sizes * title * uri Supported fields only for Type.PRIMARY and Type.COLLECTION: * categories * description * images Supported fields only for Type.VARIANT: * Only the first image in images To mark attributes as retrievable, include paths of the form "attributes.key" where "key" is the key of a custom attribute, as specified in attributes. For Type.PRIMARY and Type.COLLECTION, the following fields are always returned in SearchResponse by default: * name For Type.VARIANT, the following fields are always returned in by default: * name * color_info Maximum number of paths is 30. Otherwise, an INVALID_ARGUMENT error is returned. Note: Returning more fields in SearchResponse may increase response payload size and serving latency.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="sizes_python">
+<a href="#sizes_python" style="color: inherit; text-decoration: inherit;">sizes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The size of the product. To represent different size systems or size types, consider using this format: [[[size_system:]size_type:]size_value]. For example, in "US:MENS:M", "US" represents size system; "MENS" represents size type; "M" represents size value. In "GIRLS:27", size system is empty; "GIRLS" represents size type; "27" represents size value. In "32 inches", both size system and size type are empty, while size value is "32 inches". A maximum of 20 values are allowed per Product. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [size](https://support.google.com/merchants/answer/6324492), [size_type](https://support.google.com/merchants/answer/6324497) and [size_system](https://support.google.com/merchants/answer/6324502). Schema.org property [Product.size](https://schema.org/size).{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -688,6 +1248,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Product title. This field must be a UTF-8 encoded string with a length limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [title](https://support.google.com/merchants/answer/6324415). Schema.org property [Product.name](https://schema.org/name).{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="ttl_python">
+<a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Input only. The TTL (time to live) of the product. If it is set, expire_time is set as current timestamp plus ttl. The derived expire_time is returned in the output and ttl is left blank when retrieving the Product. If it is set, the product is not available for SearchService.Search after current timestamp plus ttl. However, the product can still be retrieved by ProductService.GetProduct and ProductService.ListProducts.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -702,7 +1270,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Canonical URL directly linking to the product detail page. It is strongly recommended to provide a valid uri for the product, otherwise the service performance could be significantly degraded. This field must be a UTF-8 encoded string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [link](https://support.google.com/merchants/answer/6324416). Schema.org property [Offer.url](https://schema.org/url).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Canonical URL directly linking to the product detail page. It is strongly recommended to provide a valid uri for the product, otherwise the service performance could be significantly degraded. This field must be a UTF-8 encoded string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [link](https://support.google.com/merchants/answer/6324416). Schema.org property [Offer.url](https://schema.org/url).{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="variants_python">
+<a href="#variants_python" style="color: inherit; text-decoration: inherit;">variants</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2productresponse">Sequence[Google<wbr>Cloud<wbr>Retail<wbr>V2Product<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Product variants grouped together on primary product which share similar product attributes. It's automatically grouped by primary_product_id for all the product variants. Only populated for Type.PRIMARY Products. Note: This field is OUTPUT_ONLY for ProductService.GetProduct. Do not set this field in API requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -710,6 +1286,258 @@ The following output properties are available:
 
 ## Supporting Types
 
+
+<h4 id="googlecloudretailv2audienceresponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Audience<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="agegroups_csharp">
+<a href="#agegroups_csharp" style="color: inherit; text-decoration: inherit;">Age<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The age groups of the audience. Strongly encouraged to use the standard values: "newborn" (up to 3 months old), "infant" (3–12 months old), "toddler" (1–5 years old), "kids" (5–13 years old), "adult" (typically teens or older). At most 5 values are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [age_group](https://support.google.com/merchants/answer/6324463). Schema.org property [Product.audience.suggestedMinAge](https://schema.org/suggestedMinAge) and [Product.audience.suggestedMaxAge](https://schema.org/suggestedMaxAge).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="genders_csharp">
+<a href="#genders_csharp" style="color: inherit; text-decoration: inherit;">Genders</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The genders of the audience. Strongly encouraged to use the standard values: "male", "female", "unisex". At most 5 values are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [gender](https://support.google.com/merchants/answer/6324479). Schema.org property [Product.audience.suggestedGender](https://schema.org/suggestedGender).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="agegroups_go">
+<a href="#agegroups_go" style="color: inherit; text-decoration: inherit;">Age<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The age groups of the audience. Strongly encouraged to use the standard values: "newborn" (up to 3 months old), "infant" (3–12 months old), "toddler" (1–5 years old), "kids" (5–13 years old), "adult" (typically teens or older). At most 5 values are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [age_group](https://support.google.com/merchants/answer/6324463). Schema.org property [Product.audience.suggestedMinAge](https://schema.org/suggestedMinAge) and [Product.audience.suggestedMaxAge](https://schema.org/suggestedMaxAge).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="genders_go">
+<a href="#genders_go" style="color: inherit; text-decoration: inherit;">Genders</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The genders of the audience. Strongly encouraged to use the standard values: "male", "female", "unisex". At most 5 values are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [gender](https://support.google.com/merchants/answer/6324479). Schema.org property [Product.audience.suggestedGender](https://schema.org/suggestedGender).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="agegroups_nodejs">
+<a href="#agegroups_nodejs" style="color: inherit; text-decoration: inherit;">age<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The age groups of the audience. Strongly encouraged to use the standard values: "newborn" (up to 3 months old), "infant" (3–12 months old), "toddler" (1–5 years old), "kids" (5–13 years old), "adult" (typically teens or older). At most 5 values are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [age_group](https://support.google.com/merchants/answer/6324463). Schema.org property [Product.audience.suggestedMinAge](https://schema.org/suggestedMinAge) and [Product.audience.suggestedMaxAge](https://schema.org/suggestedMaxAge).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="genders_nodejs">
+<a href="#genders_nodejs" style="color: inherit; text-decoration: inherit;">genders</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The genders of the audience. Strongly encouraged to use the standard values: "male", "female", "unisex". At most 5 values are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [gender](https://support.google.com/merchants/answer/6324479). Schema.org property [Product.audience.suggestedGender](https://schema.org/suggestedGender).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="age_groups_python">
+<a href="#age_groups_python" style="color: inherit; text-decoration: inherit;">age_<wbr>groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The age groups of the audience. Strongly encouraged to use the standard values: "newborn" (up to 3 months old), "infant" (3–12 months old), "toddler" (1–5 years old), "kids" (5–13 years old), "adult" (typically teens or older). At most 5 values are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [age_group](https://support.google.com/merchants/answer/6324463). Schema.org property [Product.audience.suggestedMinAge](https://schema.org/suggestedMinAge) and [Product.audience.suggestedMaxAge](https://schema.org/suggestedMaxAge).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="genders_python">
+<a href="#genders_python" style="color: inherit; text-decoration: inherit;">genders</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The genders of the audience. Strongly encouraged to use the standard values: "male", "female", "unisex". At most 5 values are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [gender](https://support.google.com/merchants/answer/6324479). Schema.org property [Product.audience.suggestedGender](https://schema.org/suggestedGender).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googlecloudretailv2colorinforesponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Color<wbr>Info<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="colorfamilies_csharp">
+<a href="#colorfamilies_csharp" style="color: inherit; text-decoration: inherit;">Color<wbr>Families</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The standard color families. Strongly recommended to use the following standard color groups: "Red", "Pink", "Orange", "Yellow", "Purple", "Green", "Cyan", "Blue", "Brown", "White", "Gray", "Black" and "Mixed". Normally it is expected to have only 1 color family. May consider using single "Mixed" instead of multiple values. A maximum of 5 values are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [color](https://support.google.com/merchants/answer/6324487). Schema.org property [Product.color](https://schema.org/color).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="colors_csharp">
+<a href="#colors_csharp" style="color: inherit; text-decoration: inherit;">Colors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The color display names, which may be different from standard color family names, such as the color aliases used in the website frontend. Normally it is expected to have only 1 color. May consider using single "Mixed" instead of multiple values. A maximum of 25 colors are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [color](https://support.google.com/merchants/answer/6324487). Schema.org property [Product.color](https://schema.org/color).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="colorfamilies_go">
+<a href="#colorfamilies_go" style="color: inherit; text-decoration: inherit;">Color<wbr>Families</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The standard color families. Strongly recommended to use the following standard color groups: "Red", "Pink", "Orange", "Yellow", "Purple", "Green", "Cyan", "Blue", "Brown", "White", "Gray", "Black" and "Mixed". Normally it is expected to have only 1 color family. May consider using single "Mixed" instead of multiple values. A maximum of 5 values are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [color](https://support.google.com/merchants/answer/6324487). Schema.org property [Product.color](https://schema.org/color).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="colors_go">
+<a href="#colors_go" style="color: inherit; text-decoration: inherit;">Colors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The color display names, which may be different from standard color family names, such as the color aliases used in the website frontend. Normally it is expected to have only 1 color. May consider using single "Mixed" instead of multiple values. A maximum of 25 colors are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [color](https://support.google.com/merchants/answer/6324487). Schema.org property [Product.color](https://schema.org/color).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="colorfamilies_nodejs">
+<a href="#colorfamilies_nodejs" style="color: inherit; text-decoration: inherit;">color<wbr>Families</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The standard color families. Strongly recommended to use the following standard color groups: "Red", "Pink", "Orange", "Yellow", "Purple", "Green", "Cyan", "Blue", "Brown", "White", "Gray", "Black" and "Mixed". Normally it is expected to have only 1 color family. May consider using single "Mixed" instead of multiple values. A maximum of 5 values are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [color](https://support.google.com/merchants/answer/6324487). Schema.org property [Product.color](https://schema.org/color).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="colors_nodejs">
+<a href="#colors_nodejs" style="color: inherit; text-decoration: inherit;">colors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The color display names, which may be different from standard color family names, such as the color aliases used in the website frontend. Normally it is expected to have only 1 color. May consider using single "Mixed" instead of multiple values. A maximum of 25 colors are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [color](https://support.google.com/merchants/answer/6324487). Schema.org property [Product.color](https://schema.org/color).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="color_families_python">
+<a href="#color_families_python" style="color: inherit; text-decoration: inherit;">color_<wbr>families</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The standard color families. Strongly recommended to use the following standard color groups: "Red", "Pink", "Orange", "Yellow", "Purple", "Green", "Cyan", "Blue", "Brown", "White", "Gray", "Black" and "Mixed". Normally it is expected to have only 1 color family. May consider using single "Mixed" instead of multiple values. A maximum of 5 values are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [color](https://support.google.com/merchants/answer/6324487). Schema.org property [Product.color](https://schema.org/color).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="colors_python">
+<a href="#colors_python" style="color: inherit; text-decoration: inherit;">colors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The color display names, which may be different from standard color family names, such as the color aliases used in the website frontend. Normally it is expected to have only 1 color. May consider using single "Mixed" instead of multiple values. A maximum of 25 colors are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [color](https://support.google.com/merchants/answer/6324487). Schema.org property [Product.color](https://schema.org/color).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googlecloudretailv2fulfillmentinforesponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Fulfillment<wbr>Info<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="placeids_csharp">
+<a href="#placeids_csharp" style="color: inherit; text-decoration: inherit;">Place<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The IDs for this type, such as the store IDs for FulfillmentInfo.type.pickup-in-store or the region IDs for FulfillmentInfo.type.same-day-delivery. A maximum of 3000 values are allowed. Each value must be a string with a length limit of 30 characters, matching the pattern [a-zA-Z0-9_-]+, such as "store1" or "REGION-2". Otherwise, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The fulfillment type, including commonly used types (such as pickup in store and same day delivery), and custom types. Customers have to map custom types to their display names before rendering UI. Supported values: * "pickup-in-store" * "ship-to-store" * "same-day-delivery" * "next-day-delivery" * "custom-type-1" * "custom-type-2" * "custom-type-3" * "custom-type-4" * "custom-type-5" If this field is set to an invalid value other than these, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="placeids_go">
+<a href="#placeids_go" style="color: inherit; text-decoration: inherit;">Place<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The IDs for this type, such as the store IDs for FulfillmentInfo.type.pickup-in-store or the region IDs for FulfillmentInfo.type.same-day-delivery. A maximum of 3000 values are allowed. Each value must be a string with a length limit of 30 characters, matching the pattern [a-zA-Z0-9_-]+, such as "store1" or "REGION-2". Otherwise, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The fulfillment type, including commonly used types (such as pickup in store and same day delivery), and custom types. Customers have to map custom types to their display names before rendering UI. Supported values: * "pickup-in-store" * "ship-to-store" * "same-day-delivery" * "next-day-delivery" * "custom-type-1" * "custom-type-2" * "custom-type-3" * "custom-type-4" * "custom-type-5" If this field is set to an invalid value other than these, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="placeids_nodejs">
+<a href="#placeids_nodejs" style="color: inherit; text-decoration: inherit;">place<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The IDs for this type, such as the store IDs for FulfillmentInfo.type.pickup-in-store or the region IDs for FulfillmentInfo.type.same-day-delivery. A maximum of 3000 values are allowed. Each value must be a string with a length limit of 30 characters, matching the pattern [a-zA-Z0-9_-]+, such as "store1" or "REGION-2". Otherwise, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The fulfillment type, including commonly used types (such as pickup in store and same day delivery), and custom types. Customers have to map custom types to their display names before rendering UI. Supported values: * "pickup-in-store" * "ship-to-store" * "same-day-delivery" * "next-day-delivery" * "custom-type-1" * "custom-type-2" * "custom-type-3" * "custom-type-4" * "custom-type-5" If this field is set to an invalid value other than these, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="place_ids_python">
+<a href="#place_ids_python" style="color: inherit; text-decoration: inherit;">place_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The IDs for this type, such as the store IDs for FulfillmentInfo.type.pickup-in-store or the region IDs for FulfillmentInfo.type.same-day-delivery. A maximum of 3000 values are allowed. Each value must be a string with a length limit of 30 characters, matching the pattern [a-zA-Z0-9_-]+, such as "store1" or "REGION-2". Otherwise, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The fulfillment type, including commonly used types (such as pickup in store and same day delivery), and custom types. Customers have to map custom types to their display names before rendering UI. Supported values: * "pickup-in-store" * "ship-to-store" * "same-day-delivery" * "next-day-delivery" * "custom-type-1" * "custom-type-2" * "custom-type-3" * "custom-type-4" * "custom-type-5" If this field is set to an invalid value other than these, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="googlecloudretailv2imageresponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Image<wbr>Response</h4>
 
@@ -827,6 +1655,238 @@ The following output properties are available:
     <dd>{{% md %}}Width of the image in number of pixels. This field must be nonnegative. Otherwise, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="googlecloudretailv2intervalresponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Interval<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="exclusivemaximum_csharp">
+<a href="#exclusivemaximum_csharp" style="color: inherit; text-decoration: inherit;">Exclusive<wbr>Maximum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}Exclusive upper bound.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="exclusiveminimum_csharp">
+<a href="#exclusiveminimum_csharp" style="color: inherit; text-decoration: inherit;">Exclusive<wbr>Minimum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}Exclusive lower bound.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="maximum_csharp">
+<a href="#maximum_csharp" style="color: inherit; text-decoration: inherit;">Maximum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}Inclusive upper bound.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="minimum_csharp">
+<a href="#minimum_csharp" style="color: inherit; text-decoration: inherit;">Minimum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}Inclusive lower bound.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="exclusivemaximum_go">
+<a href="#exclusivemaximum_go" style="color: inherit; text-decoration: inherit;">Exclusive<wbr>Maximum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}Exclusive upper bound.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="exclusiveminimum_go">
+<a href="#exclusiveminimum_go" style="color: inherit; text-decoration: inherit;">Exclusive<wbr>Minimum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}Exclusive lower bound.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="maximum_go">
+<a href="#maximum_go" style="color: inherit; text-decoration: inherit;">Maximum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}Inclusive upper bound.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="minimum_go">
+<a href="#minimum_go" style="color: inherit; text-decoration: inherit;">Minimum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}Inclusive lower bound.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="exclusivemaximum_nodejs">
+<a href="#exclusivemaximum_nodejs" style="color: inherit; text-decoration: inherit;">exclusive<wbr>Maximum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Exclusive upper bound.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="exclusiveminimum_nodejs">
+<a href="#exclusiveminimum_nodejs" style="color: inherit; text-decoration: inherit;">exclusive<wbr>Minimum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Exclusive lower bound.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="maximum_nodejs">
+<a href="#maximum_nodejs" style="color: inherit; text-decoration: inherit;">maximum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Inclusive upper bound.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="minimum_nodejs">
+<a href="#minimum_nodejs" style="color: inherit; text-decoration: inherit;">minimum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Inclusive lower bound.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="exclusive_maximum_python">
+<a href="#exclusive_maximum_python" style="color: inherit; text-decoration: inherit;">exclusive_<wbr>maximum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}Exclusive upper bound.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="exclusive_minimum_python">
+<a href="#exclusive_minimum_python" style="color: inherit; text-decoration: inherit;">exclusive_<wbr>minimum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}Exclusive lower bound.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="maximum_python">
+<a href="#maximum_python" style="color: inherit; text-decoration: inherit;">maximum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}Inclusive upper bound.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="minimum_python">
+<a href="#minimum_python" style="color: inherit; text-decoration: inherit;">minimum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}Inclusive lower bound.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googlecloudretailv2priceinfopricerangeresponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Price<wbr>Info<wbr>Price<wbr>Range<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="originalprice_csharp">
+<a href="#originalprice_csharp" style="color: inherit; text-decoration: inherit;">Original<wbr>Price</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2intervalresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Retail.<wbr>V2.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Retail<wbr>V2Interval<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The inclusive Product.pricing_info.original_price internal of all variant Product having the same Product.primary_product_id.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="price_csharp">
+<a href="#price_csharp" style="color: inherit; text-decoration: inherit;">Price</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2intervalresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Retail.<wbr>V2.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Retail<wbr>V2Interval<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The inclusive Product.pricing_info.price interval of all variant Product having the same Product.primary_product_id.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="originalprice_go">
+<a href="#originalprice_go" style="color: inherit; text-decoration: inherit;">Original<wbr>Price</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2intervalresponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Interval<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The inclusive Product.pricing_info.original_price internal of all variant Product having the same Product.primary_product_id.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="price_go">
+<a href="#price_go" style="color: inherit; text-decoration: inherit;">Price</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2intervalresponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Interval<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The inclusive Product.pricing_info.price interval of all variant Product having the same Product.primary_product_id.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="originalprice_nodejs">
+<a href="#originalprice_nodejs" style="color: inherit; text-decoration: inherit;">original<wbr>Price</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2intervalresponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Interval<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The inclusive Product.pricing_info.original_price internal of all variant Product having the same Product.primary_product_id.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="price_nodejs">
+<a href="#price_nodejs" style="color: inherit; text-decoration: inherit;">price</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2intervalresponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Interval<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The inclusive Product.pricing_info.price interval of all variant Product having the same Product.primary_product_id.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="original_price_python">
+<a href="#original_price_python" style="color: inherit; text-decoration: inherit;">original_<wbr>price</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2intervalresponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Interval<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The inclusive Product.pricing_info.original_price internal of all variant Product having the same Product.primary_product_id.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="price_python">
+<a href="#price_python" style="color: inherit; text-decoration: inherit;">price</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2intervalresponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Interval<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The inclusive Product.pricing_info.price interval of all variant Product having the same Product.primary_product_id.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="googlecloudretailv2priceinforesponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Price<wbr>Info<wbr>Response</h4>
 
 
@@ -848,7 +1908,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The 3-letter currency code defined in [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html). If this field is an unrecognizable currency code, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The 3-letter currency code defined in [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html). If this field is an unrecognizable currency code, an INVALID_ARGUMENT error is returned. The Product.Type.VARIANT Products with the same Product.primary_product_id must share the same currency_code. Otherwise, a FAILED_PRECONDITION error is returned.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="originalprice_csharp">
 <a href="#originalprice_csharp" style="color: inherit; text-decoration: inherit;">Original<wbr>Price</a>
@@ -864,7 +1924,31 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Price of the product. Google Merchant Center property [price](https://support.google.com/merchants/answer/6324371). Schema.org property [Offer.priceSpecification](https://schema.org/priceSpecification).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Price of the product. Google Merchant Center property [price](https://support.google.com/merchants/answer/6324371). Schema.org property [Offer.priceSpecification](https://schema.org/priceSpecification).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="priceeffectivetime_csharp">
+<a href="#priceeffectivetime_csharp" style="color: inherit; text-decoration: inherit;">Price<wbr>Effective<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp when the price starts to be effective. This can be set as a future timestamp, and the price is only used for search after price_effective_time. If so, the original_price must be set and original_price is used before price_effective_time. Do not set if price is always effective because it will cause additional latency during search.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="priceexpiretime_csharp">
+<a href="#priceexpiretime_csharp" style="color: inherit; text-decoration: inherit;">Price<wbr>Expire<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp when the price stops to be effective. The price is used for search before price_expire_time. If this field is set, the original_price must be set and original_price is used after price_expire_time. Do not set if price is always effective because it will cause additional latency during search.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="pricerange_csharp">
+<a href="#pricerange_csharp" style="color: inherit; text-decoration: inherit;">Price<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2priceinfopricerangeresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Retail.<wbr>V2.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Retail<wbr>V2Price<wbr>Info<wbr>Price<wbr>Range<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The price range of all the child Product.Type.VARIANT Products grouped together on the Product.Type.PRIMARY Product. Only populated for Product.Type.PRIMARY Products. Note: This field is OUTPUT_ONLY for ProductService.GetProduct. Do not set this field in API requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -884,7 +1968,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The 3-letter currency code defined in [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html). If this field is an unrecognizable currency code, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The 3-letter currency code defined in [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html). If this field is an unrecognizable currency code, an INVALID_ARGUMENT error is returned. The Product.Type.VARIANT Products with the same Product.primary_product_id must share the same currency_code. Otherwise, a FAILED_PRECONDITION error is returned.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="originalprice_go">
 <a href="#originalprice_go" style="color: inherit; text-decoration: inherit;">Original<wbr>Price</a>
@@ -900,7 +1984,31 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Price of the product. Google Merchant Center property [price](https://support.google.com/merchants/answer/6324371). Schema.org property [Offer.priceSpecification](https://schema.org/priceSpecification).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Price of the product. Google Merchant Center property [price](https://support.google.com/merchants/answer/6324371). Schema.org property [Offer.priceSpecification](https://schema.org/priceSpecification).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="priceeffectivetime_go">
+<a href="#priceeffectivetime_go" style="color: inherit; text-decoration: inherit;">Price<wbr>Effective<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp when the price starts to be effective. This can be set as a future timestamp, and the price is only used for search after price_effective_time. If so, the original_price must be set and original_price is used before price_effective_time. Do not set if price is always effective because it will cause additional latency during search.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="priceexpiretime_go">
+<a href="#priceexpiretime_go" style="color: inherit; text-decoration: inherit;">Price<wbr>Expire<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp when the price stops to be effective. The price is used for search before price_expire_time. If this field is set, the original_price must be set and original_price is used after price_expire_time. Do not set if price is always effective because it will cause additional latency during search.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="pricerange_go">
+<a href="#pricerange_go" style="color: inherit; text-decoration: inherit;">Price<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2priceinfopricerangeresponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Price<wbr>Info<wbr>Price<wbr>Range<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The price range of all the child Product.Type.VARIANT Products grouped together on the Product.Type.PRIMARY Product. Only populated for Product.Type.PRIMARY Products. Note: This field is OUTPUT_ONLY for ProductService.GetProduct. Do not set this field in API requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -920,7 +2028,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The 3-letter currency code defined in [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html). If this field is an unrecognizable currency code, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The 3-letter currency code defined in [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html). If this field is an unrecognizable currency code, an INVALID_ARGUMENT error is returned. The Product.Type.VARIANT Products with the same Product.primary_product_id must share the same currency_code. Otherwise, a FAILED_PRECONDITION error is returned.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="originalprice_nodejs">
 <a href="#originalprice_nodejs" style="color: inherit; text-decoration: inherit;">original<wbr>Price</a>
@@ -936,7 +2044,31 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Price of the product. Google Merchant Center property [price](https://support.google.com/merchants/answer/6324371). Schema.org property [Offer.priceSpecification](https://schema.org/priceSpecification).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Price of the product. Google Merchant Center property [price](https://support.google.com/merchants/answer/6324371). Schema.org property [Offer.priceSpecification](https://schema.org/priceSpecification).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="priceeffectivetime_nodejs">
+<a href="#priceeffectivetime_nodejs" style="color: inherit; text-decoration: inherit;">price<wbr>Effective<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp when the price starts to be effective. This can be set as a future timestamp, and the price is only used for search after price_effective_time. If so, the original_price must be set and original_price is used before price_effective_time. Do not set if price is always effective because it will cause additional latency during search.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="priceexpiretime_nodejs">
+<a href="#priceexpiretime_nodejs" style="color: inherit; text-decoration: inherit;">price<wbr>Expire<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp when the price stops to be effective. The price is used for search before price_expire_time. If this field is set, the original_price must be set and original_price is used after price_expire_time. Do not set if price is always effective because it will cause additional latency during search.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="pricerange_nodejs">
+<a href="#pricerange_nodejs" style="color: inherit; text-decoration: inherit;">price<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2priceinfopricerangeresponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Price<wbr>Info<wbr>Price<wbr>Range<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The price range of all the child Product.Type.VARIANT Products grouped together on the Product.Type.PRIMARY Product. Only populated for Product.Type.PRIMARY Products. Note: This field is OUTPUT_ONLY for ProductService.GetProduct. Do not set this field in API requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -956,7 +2088,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The 3-letter currency code defined in [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html). If this field is an unrecognizable currency code, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The 3-letter currency code defined in [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html). If this field is an unrecognizable currency code, an INVALID_ARGUMENT error is returned. The Product.Type.VARIANT Products with the same Product.primary_product_id must share the same currency_code. Otherwise, a FAILED_PRECONDITION error is returned.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="original_price_python">
 <a href="#original_price_python" style="color: inherit; text-decoration: inherit;">original_<wbr>price</a>
@@ -972,7 +2104,1243 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Price of the product. Google Merchant Center property [price](https://support.google.com/merchants/answer/6324371). Schema.org property [Offer.priceSpecification](https://schema.org/priceSpecification).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Price of the product. Google Merchant Center property [price](https://support.google.com/merchants/answer/6324371). Schema.org property [Offer.priceSpecification](https://schema.org/priceSpecification).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="price_effective_time_python">
+<a href="#price_effective_time_python" style="color: inherit; text-decoration: inherit;">price_<wbr>effective_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The timestamp when the price starts to be effective. This can be set as a future timestamp, and the price is only used for search after price_effective_time. If so, the original_price must be set and original_price is used before price_effective_time. Do not set if price is always effective because it will cause additional latency during search.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="price_expire_time_python">
+<a href="#price_expire_time_python" style="color: inherit; text-decoration: inherit;">price_<wbr>expire_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The timestamp when the price stops to be effective. The price is used for search before price_expire_time. If this field is set, the original_price must be set and original_price is used after price_expire_time. Do not set if price is always effective because it will cause additional latency during search.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="price_range_python">
+<a href="#price_range_python" style="color: inherit; text-decoration: inherit;">price_<wbr>range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2priceinfopricerangeresponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Price<wbr>Info<wbr>Price<wbr>Range<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The price range of all the child Product.Type.VARIANT Products grouped together on the Product.Type.PRIMARY Product. Only populated for Product.Type.PRIMARY Products. Note: This field is OUTPUT_ONLY for ProductService.GetProduct. Do not set this field in API requests.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googlecloudretailv2productresponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Product<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="attributes_csharp">
+<a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Highly encouraged. Extra product attributes to be included. For example, for products, this could include the store name, vendor, style, color, etc. These are very strong signals for recommendation model, thus we highly recommend providing the attributes here. Features that can take on one of a limited number of possible values. Two types of features can be set are: Textual features. some examples would be the brand/maker of a product, or country of a customer. Numerical features. Some examples would be the height/weight of a product, or age of a customer. For example: `{ "vendor": {"text": ["vendor123", "vendor456"]}, "lengths_cm": {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]} }`. This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 200. * The key must be a UTF-8 encoded string with a length limit of 128 characters. * For indexable attribute, the key must match the pattern: a-zA-Z0-9*. For example, key0LikeThis or KEY_1_LIKE_THIS.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="audience_csharp">
+<a href="#audience_csharp" style="color: inherit; text-decoration: inherit;">Audience</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2audienceresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Retail.<wbr>V2.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Retail<wbr>V2Audience<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The target group associated with a given audience (e.g. male, veterans, car owners, musicians, etc.) of the product.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="availability_csharp">
+<a href="#availability_csharp" style="color: inherit; text-decoration: inherit;">Availability</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The online availability of the Product. Default to Availability.IN_STOCK. Google Merchant Center Property [availability](https://support.google.com/merchants/answer/6324448). Schema.org Property [Offer.availability](https://schema.org/availability).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="availablequantity_csharp">
+<a href="#availablequantity_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Quantity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The available quantity of the item.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="availabletime_csharp">
+<a href="#availabletime_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp when this Product becomes available for SearchService.Search.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="brands_csharp">
+<a href="#brands_csharp" style="color: inherit; text-decoration: inherit;">Brands</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The brands of the product. A maximum of 30 brands are allowed. Each brand must be a UTF-8 encoded string with a length limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [brand](https://support.google.com/merchants/answer/6324351). Schema.org property [Product.brand](https://schema.org/brand).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="categories_csharp">
+<a href="#categories_csharp" style="color: inherit; text-decoration: inherit;">Categories</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Product categories. This field is repeated for supporting one product belonging to several parallel categories. Strongly recommended using the full path for better search / recommendation quality. To represent full path of category, use '>' sign to separate different hierarchies. If '>' is part of the category name, please replace it with other character(s). For example, if a shoes product belongs to both ["Shoes & Accessories" -> "Shoes"] and ["Sports & Fitness" -> "Athletic Clothing" -> "Shoes"], it could be represented as: "categories": [ "Shoes & Accessories > Shoes", "Sports & Fitness > Athletic Clothing > Shoes" ] Must be set for Type.PRIMARY Product otherwise an INVALID_ARGUMENT error is returned. At most 250 values are allowed per Product. Empty values are not allowed. Each value must be a UTF-8 encoded string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property google_product_category. Schema.org property [Product.category] (https://schema.org/category). [mc_google_product_category]: https://support.google.com/merchants/answer/6324436{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="collectionmemberids_csharp">
+<a href="#collectionmemberids_csharp" style="color: inherit; text-decoration: inherit;">Collection<wbr>Member<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The id of the collection members when type is Type.COLLECTION. Should not set it for other types. A maximum of 1000 values are allowed. Otherwise, an INVALID_ARGUMENT error is return.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="colorinfo_csharp">
+<a href="#colorinfo_csharp" style="color: inherit; text-decoration: inherit;">Color<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2colorinforesponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Retail.<wbr>V2.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Retail<wbr>V2Color<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The color of the product. Google Merchant Center property [color](https://support.google.com/merchants/answer/6324487). Schema.org property [Product.color](https://schema.org/color).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="conditions_csharp">
+<a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The condition of the product. Strongly encouraged to use the standard values: "new", "refurbished", "used". A maximum of 5 values are allowed per Product. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [condition](https://support.google.com/merchants/answer/6324469). Schema.org property [Offer.itemCondition](https://schema.org/itemCondition).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Product description. This field must be a UTF-8 encoded string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [description](https://support.google.com/merchants/answer/6324468). schema.org property [Product.description](https://schema.org/description).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="expiretime_csharp">
+<a href="#expiretime_csharp" style="color: inherit; text-decoration: inherit;">Expire<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp when this product becomes unavailable for SearchService.Search. If it is set, the Product is not available for SearchService.Search after expire_time. However, the product can still be retrieved by ProductService.GetProduct and ProductService.ListProducts. expire_time must be later than available_time and publish_time, otherwise an INVALID_ARGUMENT error is thrown. Google Merchant Center property [expiration_date](https://support.google.com/merchants/answer/6324499).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="fulfillmentinfo_csharp">
+<a href="#fulfillmentinfo_csharp" style="color: inherit; text-decoration: inherit;">Fulfillment<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2fulfillmentinforesponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Retail.<wbr>V2.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Retail<wbr>V2Fulfillment<wbr>Info<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Fulfillment information, such as the store IDs for in-store pickup or region IDs for different shipping methods. All the elements must have distinct FulfillmentInfo.type. Otherwise, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="gtin_csharp">
+<a href="#gtin_csharp" style="color: inherit; text-decoration: inherit;">Gtin</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Global Trade Item Number (GTIN) of the product. This field must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. This field must be a Unigram. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [gtin](https://support.google.com/merchants/answer/6324461). Schema.org property [Product.isbn](https://schema.org/isbn) or [Product.gtin8](https://schema.org/gtin8) or [Product.gtin12](https://schema.org/gtin12) or [Product.gtin13](https://schema.org/gtin13) or [Product.gtin14](https://schema.org/gtin14). If the value is not a valid GTIN, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="images_csharp">
+<a href="#images_csharp" style="color: inherit; text-decoration: inherit;">Images</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2imageresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Retail.<wbr>V2.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Retail<wbr>V2Image<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Product images for the product.Highly recommended to put the main image to the first. A maximum of 300 images are allowed. Google Merchant Center property [image_link](https://support.google.com/merchants/answer/6324350). Schema.org property [Product.image](https://schema.org/image).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="languagecode_csharp">
+<a href="#languagecode_csharp" style="color: inherit; text-decoration: inherit;">Language<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Language of the title/description and other string attributes. Use language tags defined by BCP 47. For product prediction, this field is ignored and the model automatically detects the text language. The Product can include text in different languages, but duplicating Products to provide text in multiple languages can result in degraded model performance. For product search this field is in use. It defaults to "en-US" if unset.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="materials_csharp">
+<a href="#materials_csharp" style="color: inherit; text-decoration: inherit;">Materials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The material of the product. For example, "leather", "wooden". A maximum of 20 values are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [material](https://support.google.com/merchants/answer/6324410). Schema.org property [Product.material](https://schema.org/material).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Immutable. Full resource name of the product, such as `projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/product_id`.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="patterns_csharp">
+<a href="#patterns_csharp" style="color: inherit; text-decoration: inherit;">Patterns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The pattern or graphic print of the product. For example, "striped", "polka dot", "paisley". A maximum of 20 values are allowed per Product. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [pattern](https://support.google.com/merchants/answer/6324483). Schema.org property [Product.pattern](https://schema.org/pattern).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="priceinfo_csharp">
+<a href="#priceinfo_csharp" style="color: inherit; text-decoration: inherit;">Price<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2priceinforesponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Retail.<wbr>V2.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Retail<wbr>V2Price<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Product price and cost information. Google Merchant Center property [price](https://support.google.com/merchants/answer/6324371).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="primaryproductid_csharp">
+<a href="#primaryproductid_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Product<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Variant group identifier. Must be an id, with the same parent branch with this product. Otherwise, an error is thrown. For Type.PRIMARY Products, this field can only be empty or set to the same value as id. For VARIANT Products, this field cannot be empty. A maximum of 2,000 products are allowed to share the same Type.PRIMARY Product. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center Property [item_group_id](https://support.google.com/merchants/answer/6324507). Schema.org Property [Product.inProductGroupWithID](https://schema.org/inProductGroupWithID). This field must be enabled before it can be used. [Learn more](/recommendations-ai/docs/catalog#item-group-id).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="promotions_csharp">
+<a href="#promotions_csharp" style="color: inherit; text-decoration: inherit;">Promotions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2promotionresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Retail.<wbr>V2.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Retail<wbr>V2Promotion<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The promotions applied to the product. A maximum of 10 values are allowed per Product.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="publishtime_csharp">
+<a href="#publishtime_csharp" style="color: inherit; text-decoration: inherit;">Publish<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp when the product is published by the retailer for the first time, which indicates the freshness of the products. Note that this field is different from available_time, given it purely describes product freshness regardless of when it is available on search and recommendation.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rating_csharp">
+<a href="#rating_csharp" style="color: inherit; text-decoration: inherit;">Rating</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2ratingresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Retail.<wbr>V2.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Retail<wbr>V2Rating<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The rating of this product.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="retrievablefields_csharp">
+<a href="#retrievablefields_csharp" style="color: inherit; text-decoration: inherit;">Retrievable<wbr>Fields</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates which fields in the Products are returned in SearchResponse. Supported fields for all types: * audience * availability * brands * color_info * conditions * gtin * materials * name * patterns * price_info * rating * sizes * title * uri Supported fields only for Type.PRIMARY and Type.COLLECTION: * categories * description * images Supported fields only for Type.VARIANT: * Only the first image in images To mark attributes as retrievable, include paths of the form "attributes.key" where "key" is the key of a custom attribute, as specified in attributes. For Type.PRIMARY and Type.COLLECTION, the following fields are always returned in SearchResponse by default: * name For Type.VARIANT, the following fields are always returned in by default: * name * color_info Maximum number of paths is 30. Otherwise, an INVALID_ARGUMENT error is returned. Note: Returning more fields in SearchResponse may increase response payload size and serving latency.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sizes_csharp">
+<a href="#sizes_csharp" style="color: inherit; text-decoration: inherit;">Sizes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The size of the product. To represent different size systems or size types, consider using this format: [[[size_system:]size_type:]size_value]. For example, in "US:MENS:M", "US" represents size system; "MENS" represents size type; "M" represents size value. In "GIRLS:27", size system is empty; "GIRLS" represents size type; "27" represents size value. In "32 inches", both size system and size type are empty, while size value is "32 inches". A maximum of 20 values are allowed per Product. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [size](https://support.google.com/merchants/answer/6324492), [size_type](https://support.google.com/merchants/answer/6324497) and [size_system](https://support.google.com/merchants/answer/6324502). Schema.org property [Product.size](https://schema.org/size).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Custom tags associated with the product. At most 250 values are allowed per Product. This value must be a UTF-8 encoded string with a length limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. This tag can be used for filtering recommendation results by passing the tag as part of the PredictRequest.filter. Google Merchant Center property [custom_label_0–4](https://support.google.com/merchants/answer/6324473).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="title_csharp">
+<a href="#title_csharp" style="color: inherit; text-decoration: inherit;">Title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Product title. This field must be a UTF-8 encoded string with a length limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [title](https://support.google.com/merchants/answer/6324415). Schema.org property [Product.name](https://schema.org/name).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ttl_csharp">
+<a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Input only. The TTL (time to live) of the product. If it is set, expire_time is set as current timestamp plus ttl. The derived expire_time is returned in the output and ttl is left blank when retrieving the Product. If it is set, the product is not available for SearchService.Search after current timestamp plus ttl. However, the product can still be retrieved by ProductService.GetProduct and ProductService.ListProducts.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Immutable. The type of the product. Default to Catalog.product_level_config.ingestion_product_type if unset.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="uri_csharp">
+<a href="#uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Canonical URL directly linking to the product detail page. It is strongly recommended to provide a valid uri for the product, otherwise the service performance could be significantly degraded. This field must be a UTF-8 encoded string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [link](https://support.google.com/merchants/answer/6324416). Schema.org property [Offer.url](https://schema.org/url).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="variants_csharp">
+<a href="#variants_csharp" style="color: inherit; text-decoration: inherit;">Variants</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2productresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Retail.<wbr>V2.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Retail<wbr>V2Product<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Product variants grouped together on primary product which share similar product attributes. It's automatically grouped by primary_product_id for all the product variants. Only populated for Type.PRIMARY Products. Note: This field is OUTPUT_ONLY for ProductService.GetProduct. Do not set this field in API requests.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="attributes_go">
+<a href="#attributes_go" style="color: inherit; text-decoration: inherit;">Attributes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Highly encouraged. Extra product attributes to be included. For example, for products, this could include the store name, vendor, style, color, etc. These are very strong signals for recommendation model, thus we highly recommend providing the attributes here. Features that can take on one of a limited number of possible values. Two types of features can be set are: Textual features. some examples would be the brand/maker of a product, or country of a customer. Numerical features. Some examples would be the height/weight of a product, or age of a customer. For example: `{ "vendor": {"text": ["vendor123", "vendor456"]}, "lengths_cm": {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]} }`. This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 200. * The key must be a UTF-8 encoded string with a length limit of 128 characters. * For indexable attribute, the key must match the pattern: a-zA-Z0-9*. For example, key0LikeThis or KEY_1_LIKE_THIS.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="audience_go">
+<a href="#audience_go" style="color: inherit; text-decoration: inherit;">Audience</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2audienceresponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Audience<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The target group associated with a given audience (e.g. male, veterans, car owners, musicians, etc.) of the product.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="availability_go">
+<a href="#availability_go" style="color: inherit; text-decoration: inherit;">Availability</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The online availability of the Product. Default to Availability.IN_STOCK. Google Merchant Center Property [availability](https://support.google.com/merchants/answer/6324448). Schema.org Property [Offer.availability](https://schema.org/availability).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="availablequantity_go">
+<a href="#availablequantity_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Quantity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The available quantity of the item.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="availabletime_go">
+<a href="#availabletime_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp when this Product becomes available for SearchService.Search.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="brands_go">
+<a href="#brands_go" style="color: inherit; text-decoration: inherit;">Brands</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The brands of the product. A maximum of 30 brands are allowed. Each brand must be a UTF-8 encoded string with a length limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [brand](https://support.google.com/merchants/answer/6324351). Schema.org property [Product.brand](https://schema.org/brand).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="categories_go">
+<a href="#categories_go" style="color: inherit; text-decoration: inherit;">Categories</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Product categories. This field is repeated for supporting one product belonging to several parallel categories. Strongly recommended using the full path for better search / recommendation quality. To represent full path of category, use '>' sign to separate different hierarchies. If '>' is part of the category name, please replace it with other character(s). For example, if a shoes product belongs to both ["Shoes & Accessories" -> "Shoes"] and ["Sports & Fitness" -> "Athletic Clothing" -> "Shoes"], it could be represented as: "categories": [ "Shoes & Accessories > Shoes", "Sports & Fitness > Athletic Clothing > Shoes" ] Must be set for Type.PRIMARY Product otherwise an INVALID_ARGUMENT error is returned. At most 250 values are allowed per Product. Empty values are not allowed. Each value must be a UTF-8 encoded string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property google_product_category. Schema.org property [Product.category] (https://schema.org/category). [mc_google_product_category]: https://support.google.com/merchants/answer/6324436{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="collectionmemberids_go">
+<a href="#collectionmemberids_go" style="color: inherit; text-decoration: inherit;">Collection<wbr>Member<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The id of the collection members when type is Type.COLLECTION. Should not set it for other types. A maximum of 1000 values are allowed. Otherwise, an INVALID_ARGUMENT error is return.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="colorinfo_go">
+<a href="#colorinfo_go" style="color: inherit; text-decoration: inherit;">Color<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2colorinforesponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Color<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The color of the product. Google Merchant Center property [color](https://support.google.com/merchants/answer/6324487). Schema.org property [Product.color](https://schema.org/color).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="conditions_go">
+<a href="#conditions_go" style="color: inherit; text-decoration: inherit;">Conditions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The condition of the product. Strongly encouraged to use the standard values: "new", "refurbished", "used". A maximum of 5 values are allowed per Product. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [condition](https://support.google.com/merchants/answer/6324469). Schema.org property [Offer.itemCondition](https://schema.org/itemCondition).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Product description. This field must be a UTF-8 encoded string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [description](https://support.google.com/merchants/answer/6324468). schema.org property [Product.description](https://schema.org/description).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="expiretime_go">
+<a href="#expiretime_go" style="color: inherit; text-decoration: inherit;">Expire<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp when this product becomes unavailable for SearchService.Search. If it is set, the Product is not available for SearchService.Search after expire_time. However, the product can still be retrieved by ProductService.GetProduct and ProductService.ListProducts. expire_time must be later than available_time and publish_time, otherwise an INVALID_ARGUMENT error is thrown. Google Merchant Center property [expiration_date](https://support.google.com/merchants/answer/6324499).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="fulfillmentinfo_go">
+<a href="#fulfillmentinfo_go" style="color: inherit; text-decoration: inherit;">Fulfillment<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2fulfillmentinforesponse">[]Google<wbr>Cloud<wbr>Retail<wbr>V2Fulfillment<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Fulfillment information, such as the store IDs for in-store pickup or region IDs for different shipping methods. All the elements must have distinct FulfillmentInfo.type. Otherwise, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="gtin_go">
+<a href="#gtin_go" style="color: inherit; text-decoration: inherit;">Gtin</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Global Trade Item Number (GTIN) of the product. This field must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. This field must be a Unigram. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [gtin](https://support.google.com/merchants/answer/6324461). Schema.org property [Product.isbn](https://schema.org/isbn) or [Product.gtin8](https://schema.org/gtin8) or [Product.gtin12](https://schema.org/gtin12) or [Product.gtin13](https://schema.org/gtin13) or [Product.gtin14](https://schema.org/gtin14). If the value is not a valid GTIN, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="images_go">
+<a href="#images_go" style="color: inherit; text-decoration: inherit;">Images</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2imageresponse">[]Google<wbr>Cloud<wbr>Retail<wbr>V2Image<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Product images for the product.Highly recommended to put the main image to the first. A maximum of 300 images are allowed. Google Merchant Center property [image_link](https://support.google.com/merchants/answer/6324350). Schema.org property [Product.image](https://schema.org/image).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="languagecode_go">
+<a href="#languagecode_go" style="color: inherit; text-decoration: inherit;">Language<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Language of the title/description and other string attributes. Use language tags defined by BCP 47. For product prediction, this field is ignored and the model automatically detects the text language. The Product can include text in different languages, but duplicating Products to provide text in multiple languages can result in degraded model performance. For product search this field is in use. It defaults to "en-US" if unset.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="materials_go">
+<a href="#materials_go" style="color: inherit; text-decoration: inherit;">Materials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The material of the product. For example, "leather", "wooden". A maximum of 20 values are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [material](https://support.google.com/merchants/answer/6324410). Schema.org property [Product.material](https://schema.org/material).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Immutable. Full resource name of the product, such as `projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/product_id`.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="patterns_go">
+<a href="#patterns_go" style="color: inherit; text-decoration: inherit;">Patterns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The pattern or graphic print of the product. For example, "striped", "polka dot", "paisley". A maximum of 20 values are allowed per Product. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [pattern](https://support.google.com/merchants/answer/6324483). Schema.org property [Product.pattern](https://schema.org/pattern).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="priceinfo_go">
+<a href="#priceinfo_go" style="color: inherit; text-decoration: inherit;">Price<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2priceinforesponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Price<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Product price and cost information. Google Merchant Center property [price](https://support.google.com/merchants/answer/6324371).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="primaryproductid_go">
+<a href="#primaryproductid_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Product<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Variant group identifier. Must be an id, with the same parent branch with this product. Otherwise, an error is thrown. For Type.PRIMARY Products, this field can only be empty or set to the same value as id. For VARIANT Products, this field cannot be empty. A maximum of 2,000 products are allowed to share the same Type.PRIMARY Product. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center Property [item_group_id](https://support.google.com/merchants/answer/6324507). Schema.org Property [Product.inProductGroupWithID](https://schema.org/inProductGroupWithID). This field must be enabled before it can be used. [Learn more](/recommendations-ai/docs/catalog#item-group-id).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="promotions_go">
+<a href="#promotions_go" style="color: inherit; text-decoration: inherit;">Promotions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2promotionresponse">[]Google<wbr>Cloud<wbr>Retail<wbr>V2Promotion<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The promotions applied to the product. A maximum of 10 values are allowed per Product.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="publishtime_go">
+<a href="#publishtime_go" style="color: inherit; text-decoration: inherit;">Publish<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp when the product is published by the retailer for the first time, which indicates the freshness of the products. Note that this field is different from available_time, given it purely describes product freshness regardless of when it is available on search and recommendation.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rating_go">
+<a href="#rating_go" style="color: inherit; text-decoration: inherit;">Rating</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2ratingresponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Rating<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The rating of this product.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="retrievablefields_go">
+<a href="#retrievablefields_go" style="color: inherit; text-decoration: inherit;">Retrievable<wbr>Fields</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates which fields in the Products are returned in SearchResponse. Supported fields for all types: * audience * availability * brands * color_info * conditions * gtin * materials * name * patterns * price_info * rating * sizes * title * uri Supported fields only for Type.PRIMARY and Type.COLLECTION: * categories * description * images Supported fields only for Type.VARIANT: * Only the first image in images To mark attributes as retrievable, include paths of the form "attributes.key" where "key" is the key of a custom attribute, as specified in attributes. For Type.PRIMARY and Type.COLLECTION, the following fields are always returned in SearchResponse by default: * name For Type.VARIANT, the following fields are always returned in by default: * name * color_info Maximum number of paths is 30. Otherwise, an INVALID_ARGUMENT error is returned. Note: Returning more fields in SearchResponse may increase response payload size and serving latency.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sizes_go">
+<a href="#sizes_go" style="color: inherit; text-decoration: inherit;">Sizes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The size of the product. To represent different size systems or size types, consider using this format: [[[size_system:]size_type:]size_value]. For example, in "US:MENS:M", "US" represents size system; "MENS" represents size type; "M" represents size value. In "GIRLS:27", size system is empty; "GIRLS" represents size type; "27" represents size value. In "32 inches", both size system and size type are empty, while size value is "32 inches". A maximum of 20 values are allowed per Product. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [size](https://support.google.com/merchants/answer/6324492), [size_type](https://support.google.com/merchants/answer/6324497) and [size_system](https://support.google.com/merchants/answer/6324502). Schema.org property [Product.size](https://schema.org/size).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Custom tags associated with the product. At most 250 values are allowed per Product. This value must be a UTF-8 encoded string with a length limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. This tag can be used for filtering recommendation results by passing the tag as part of the PredictRequest.filter. Google Merchant Center property [custom_label_0–4](https://support.google.com/merchants/answer/6324473).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="title_go">
+<a href="#title_go" style="color: inherit; text-decoration: inherit;">Title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Product title. This field must be a UTF-8 encoded string with a length limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [title](https://support.google.com/merchants/answer/6324415). Schema.org property [Product.name](https://schema.org/name).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ttl_go">
+<a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Input only. The TTL (time to live) of the product. If it is set, expire_time is set as current timestamp plus ttl. The derived expire_time is returned in the output and ttl is left blank when retrieving the Product. If it is set, the product is not available for SearchService.Search after current timestamp plus ttl. However, the product can still be retrieved by ProductService.GetProduct and ProductService.ListProducts.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Immutable. The type of the product. Default to Catalog.product_level_config.ingestion_product_type if unset.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="uri_go">
+<a href="#uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Canonical URL directly linking to the product detail page. It is strongly recommended to provide a valid uri for the product, otherwise the service performance could be significantly degraded. This field must be a UTF-8 encoded string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [link](https://support.google.com/merchants/answer/6324416). Schema.org property [Offer.url](https://schema.org/url).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="variants_go">
+<a href="#variants_go" style="color: inherit; text-decoration: inherit;">Variants</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2productresponse">[]Google<wbr>Cloud<wbr>Retail<wbr>V2Product<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Product variants grouped together on primary product which share similar product attributes. It's automatically grouped by primary_product_id for all the product variants. Only populated for Type.PRIMARY Products. Note: This field is OUTPUT_ONLY for ProductService.GetProduct. Do not set this field in API requests.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="attributes_nodejs">
+<a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Highly encouraged. Extra product attributes to be included. For example, for products, this could include the store name, vendor, style, color, etc. These are very strong signals for recommendation model, thus we highly recommend providing the attributes here. Features that can take on one of a limited number of possible values. Two types of features can be set are: Textual features. some examples would be the brand/maker of a product, or country of a customer. Numerical features. Some examples would be the height/weight of a product, or age of a customer. For example: `{ "vendor": {"text": ["vendor123", "vendor456"]}, "lengths_cm": {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]} }`. This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 200. * The key must be a UTF-8 encoded string with a length limit of 128 characters. * For indexable attribute, the key must match the pattern: a-zA-Z0-9*. For example, key0LikeThis or KEY_1_LIKE_THIS.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="audience_nodejs">
+<a href="#audience_nodejs" style="color: inherit; text-decoration: inherit;">audience</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2audienceresponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Audience<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The target group associated with a given audience (e.g. male, veterans, car owners, musicians, etc.) of the product.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="availability_nodejs">
+<a href="#availability_nodejs" style="color: inherit; text-decoration: inherit;">availability</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The online availability of the Product. Default to Availability.IN_STOCK. Google Merchant Center Property [availability](https://support.google.com/merchants/answer/6324448). Schema.org Property [Offer.availability](https://schema.org/availability).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="availablequantity_nodejs">
+<a href="#availablequantity_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Quantity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The available quantity of the item.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="availabletime_nodejs">
+<a href="#availabletime_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp when this Product becomes available for SearchService.Search.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="brands_nodejs">
+<a href="#brands_nodejs" style="color: inherit; text-decoration: inherit;">brands</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The brands of the product. A maximum of 30 brands are allowed. Each brand must be a UTF-8 encoded string with a length limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [brand](https://support.google.com/merchants/answer/6324351). Schema.org property [Product.brand](https://schema.org/brand).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="categories_nodejs">
+<a href="#categories_nodejs" style="color: inherit; text-decoration: inherit;">categories</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Product categories. This field is repeated for supporting one product belonging to several parallel categories. Strongly recommended using the full path for better search / recommendation quality. To represent full path of category, use '>' sign to separate different hierarchies. If '>' is part of the category name, please replace it with other character(s). For example, if a shoes product belongs to both ["Shoes & Accessories" -> "Shoes"] and ["Sports & Fitness" -> "Athletic Clothing" -> "Shoes"], it could be represented as: "categories": [ "Shoes & Accessories > Shoes", "Sports & Fitness > Athletic Clothing > Shoes" ] Must be set for Type.PRIMARY Product otherwise an INVALID_ARGUMENT error is returned. At most 250 values are allowed per Product. Empty values are not allowed. Each value must be a UTF-8 encoded string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property google_product_category. Schema.org property [Product.category] (https://schema.org/category). [mc_google_product_category]: https://support.google.com/merchants/answer/6324436{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="collectionmemberids_nodejs">
+<a href="#collectionmemberids_nodejs" style="color: inherit; text-decoration: inherit;">collection<wbr>Member<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The id of the collection members when type is Type.COLLECTION. Should not set it for other types. A maximum of 1000 values are allowed. Otherwise, an INVALID_ARGUMENT error is return.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="colorinfo_nodejs">
+<a href="#colorinfo_nodejs" style="color: inherit; text-decoration: inherit;">color<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2colorinforesponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Color<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The color of the product. Google Merchant Center property [color](https://support.google.com/merchants/answer/6324487). Schema.org property [Product.color](https://schema.org/color).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="conditions_nodejs">
+<a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The condition of the product. Strongly encouraged to use the standard values: "new", "refurbished", "used". A maximum of 5 values are allowed per Product. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [condition](https://support.google.com/merchants/answer/6324469). Schema.org property [Offer.itemCondition](https://schema.org/itemCondition).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Product description. This field must be a UTF-8 encoded string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [description](https://support.google.com/merchants/answer/6324468). schema.org property [Product.description](https://schema.org/description).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="expiretime_nodejs">
+<a href="#expiretime_nodejs" style="color: inherit; text-decoration: inherit;">expire<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp when this product becomes unavailable for SearchService.Search. If it is set, the Product is not available for SearchService.Search after expire_time. However, the product can still be retrieved by ProductService.GetProduct and ProductService.ListProducts. expire_time must be later than available_time and publish_time, otherwise an INVALID_ARGUMENT error is thrown. Google Merchant Center property [expiration_date](https://support.google.com/merchants/answer/6324499).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="fulfillmentinfo_nodejs">
+<a href="#fulfillmentinfo_nodejs" style="color: inherit; text-decoration: inherit;">fulfillment<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2fulfillmentinforesponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Fulfillment<wbr>Info<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Fulfillment information, such as the store IDs for in-store pickup or region IDs for different shipping methods. All the elements must have distinct FulfillmentInfo.type. Otherwise, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="gtin_nodejs">
+<a href="#gtin_nodejs" style="color: inherit; text-decoration: inherit;">gtin</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Global Trade Item Number (GTIN) of the product. This field must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. This field must be a Unigram. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [gtin](https://support.google.com/merchants/answer/6324461). Schema.org property [Product.isbn](https://schema.org/isbn) or [Product.gtin8](https://schema.org/gtin8) or [Product.gtin12](https://schema.org/gtin12) or [Product.gtin13](https://schema.org/gtin13) or [Product.gtin14](https://schema.org/gtin14). If the value is not a valid GTIN, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="images_nodejs">
+<a href="#images_nodejs" style="color: inherit; text-decoration: inherit;">images</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2imageresponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Image<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Product images for the product.Highly recommended to put the main image to the first. A maximum of 300 images are allowed. Google Merchant Center property [image_link](https://support.google.com/merchants/answer/6324350). Schema.org property [Product.image](https://schema.org/image).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="languagecode_nodejs">
+<a href="#languagecode_nodejs" style="color: inherit; text-decoration: inherit;">language<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Language of the title/description and other string attributes. Use language tags defined by BCP 47. For product prediction, this field is ignored and the model automatically detects the text language. The Product can include text in different languages, but duplicating Products to provide text in multiple languages can result in degraded model performance. For product search this field is in use. It defaults to "en-US" if unset.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="materials_nodejs">
+<a href="#materials_nodejs" style="color: inherit; text-decoration: inherit;">materials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The material of the product. For example, "leather", "wooden". A maximum of 20 values are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [material](https://support.google.com/merchants/answer/6324410). Schema.org property [Product.material](https://schema.org/material).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Immutable. Full resource name of the product, such as `projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/product_id`.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="patterns_nodejs">
+<a href="#patterns_nodejs" style="color: inherit; text-decoration: inherit;">patterns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The pattern or graphic print of the product. For example, "striped", "polka dot", "paisley". A maximum of 20 values are allowed per Product. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [pattern](https://support.google.com/merchants/answer/6324483). Schema.org property [Product.pattern](https://schema.org/pattern).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="priceinfo_nodejs">
+<a href="#priceinfo_nodejs" style="color: inherit; text-decoration: inherit;">price<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2priceinforesponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Price<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Product price and cost information. Google Merchant Center property [price](https://support.google.com/merchants/answer/6324371).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="primaryproductid_nodejs">
+<a href="#primaryproductid_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Product<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Variant group identifier. Must be an id, with the same parent branch with this product. Otherwise, an error is thrown. For Type.PRIMARY Products, this field can only be empty or set to the same value as id. For VARIANT Products, this field cannot be empty. A maximum of 2,000 products are allowed to share the same Type.PRIMARY Product. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center Property [item_group_id](https://support.google.com/merchants/answer/6324507). Schema.org Property [Product.inProductGroupWithID](https://schema.org/inProductGroupWithID). This field must be enabled before it can be used. [Learn more](/recommendations-ai/docs/catalog#item-group-id).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="promotions_nodejs">
+<a href="#promotions_nodejs" style="color: inherit; text-decoration: inherit;">promotions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2promotionresponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Promotion<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The promotions applied to the product. A maximum of 10 values are allowed per Product.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="publishtime_nodejs">
+<a href="#publishtime_nodejs" style="color: inherit; text-decoration: inherit;">publish<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp when the product is published by the retailer for the first time, which indicates the freshness of the products. Note that this field is different from available_time, given it purely describes product freshness regardless of when it is available on search and recommendation.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rating_nodejs">
+<a href="#rating_nodejs" style="color: inherit; text-decoration: inherit;">rating</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2ratingresponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Rating<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The rating of this product.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="retrievablefields_nodejs">
+<a href="#retrievablefields_nodejs" style="color: inherit; text-decoration: inherit;">retrievable<wbr>Fields</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates which fields in the Products are returned in SearchResponse. Supported fields for all types: * audience * availability * brands * color_info * conditions * gtin * materials * name * patterns * price_info * rating * sizes * title * uri Supported fields only for Type.PRIMARY and Type.COLLECTION: * categories * description * images Supported fields only for Type.VARIANT: * Only the first image in images To mark attributes as retrievable, include paths of the form "attributes.key" where "key" is the key of a custom attribute, as specified in attributes. For Type.PRIMARY and Type.COLLECTION, the following fields are always returned in SearchResponse by default: * name For Type.VARIANT, the following fields are always returned in by default: * name * color_info Maximum number of paths is 30. Otherwise, an INVALID_ARGUMENT error is returned. Note: Returning more fields in SearchResponse may increase response payload size and serving latency.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sizes_nodejs">
+<a href="#sizes_nodejs" style="color: inherit; text-decoration: inherit;">sizes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The size of the product. To represent different size systems or size types, consider using this format: [[[size_system:]size_type:]size_value]. For example, in "US:MENS:M", "US" represents size system; "MENS" represents size type; "M" represents size value. In "GIRLS:27", size system is empty; "GIRLS" represents size type; "27" represents size value. In "32 inches", both size system and size type are empty, while size value is "32 inches". A maximum of 20 values are allowed per Product. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [size](https://support.google.com/merchants/answer/6324492), [size_type](https://support.google.com/merchants/answer/6324497) and [size_system](https://support.google.com/merchants/answer/6324502). Schema.org property [Product.size](https://schema.org/size).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Custom tags associated with the product. At most 250 values are allowed per Product. This value must be a UTF-8 encoded string with a length limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. This tag can be used for filtering recommendation results by passing the tag as part of the PredictRequest.filter. Google Merchant Center property [custom_label_0–4](https://support.google.com/merchants/answer/6324473).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="title_nodejs">
+<a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Product title. This field must be a UTF-8 encoded string with a length limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [title](https://support.google.com/merchants/answer/6324415). Schema.org property [Product.name](https://schema.org/name).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ttl_nodejs">
+<a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Input only. The TTL (time to live) of the product. If it is set, expire_time is set as current timestamp plus ttl. The derived expire_time is returned in the output and ttl is left blank when retrieving the Product. If it is set, the product is not available for SearchService.Search after current timestamp plus ttl. However, the product can still be retrieved by ProductService.GetProduct and ProductService.ListProducts.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Immutable. The type of the product. Default to Catalog.product_level_config.ingestion_product_type if unset.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="uri_nodejs">
+<a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Canonical URL directly linking to the product detail page. It is strongly recommended to provide a valid uri for the product, otherwise the service performance could be significantly degraded. This field must be a UTF-8 encoded string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [link](https://support.google.com/merchants/answer/6324416). Schema.org property [Offer.url](https://schema.org/url).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="variants_nodejs">
+<a href="#variants_nodejs" style="color: inherit; text-decoration: inherit;">variants</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2productresponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Product<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Product variants grouped together on primary product which share similar product attributes. It's automatically grouped by primary_product_id for all the product variants. Only populated for Type.PRIMARY Products. Note: This field is OUTPUT_ONLY for ProductService.GetProduct. Do not set this field in API requests.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="attributes_python">
+<a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Highly encouraged. Extra product attributes to be included. For example, for products, this could include the store name, vendor, style, color, etc. These are very strong signals for recommendation model, thus we highly recommend providing the attributes here. Features that can take on one of a limited number of possible values. Two types of features can be set are: Textual features. some examples would be the brand/maker of a product, or country of a customer. Numerical features. Some examples would be the height/weight of a product, or age of a customer. For example: `{ "vendor": {"text": ["vendor123", "vendor456"]}, "lengths_cm": {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]} }`. This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 200. * The key must be a UTF-8 encoded string with a length limit of 128 characters. * For indexable attribute, the key must match the pattern: a-zA-Z0-9*. For example, key0LikeThis or KEY_1_LIKE_THIS.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="audience_python">
+<a href="#audience_python" style="color: inherit; text-decoration: inherit;">audience</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2audienceresponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Audience<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The target group associated with a given audience (e.g. male, veterans, car owners, musicians, etc.) of the product.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="availability_python">
+<a href="#availability_python" style="color: inherit; text-decoration: inherit;">availability</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The online availability of the Product. Default to Availability.IN_STOCK. Google Merchant Center Property [availability](https://support.google.com/merchants/answer/6324448). Schema.org Property [Offer.availability](https://schema.org/availability).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="available_quantity_python">
+<a href="#available_quantity_python" style="color: inherit; text-decoration: inherit;">available_<wbr>quantity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The available quantity of the item.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="available_time_python">
+<a href="#available_time_python" style="color: inherit; text-decoration: inherit;">available_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The timestamp when this Product becomes available for SearchService.Search.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="brands_python">
+<a href="#brands_python" style="color: inherit; text-decoration: inherit;">brands</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The brands of the product. A maximum of 30 brands are allowed. Each brand must be a UTF-8 encoded string with a length limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [brand](https://support.google.com/merchants/answer/6324351). Schema.org property [Product.brand](https://schema.org/brand).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="categories_python">
+<a href="#categories_python" style="color: inherit; text-decoration: inherit;">categories</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Product categories. This field is repeated for supporting one product belonging to several parallel categories. Strongly recommended using the full path for better search / recommendation quality. To represent full path of category, use '>' sign to separate different hierarchies. If '>' is part of the category name, please replace it with other character(s). For example, if a shoes product belongs to both ["Shoes & Accessories" -> "Shoes"] and ["Sports & Fitness" -> "Athletic Clothing" -> "Shoes"], it could be represented as: "categories": [ "Shoes & Accessories > Shoes", "Sports & Fitness > Athletic Clothing > Shoes" ] Must be set for Type.PRIMARY Product otherwise an INVALID_ARGUMENT error is returned. At most 250 values are allowed per Product. Empty values are not allowed. Each value must be a UTF-8 encoded string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property google_product_category. Schema.org property [Product.category] (https://schema.org/category). [mc_google_product_category]: https://support.google.com/merchants/answer/6324436{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="collection_member_ids_python">
+<a href="#collection_member_ids_python" style="color: inherit; text-decoration: inherit;">collection_<wbr>member_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The id of the collection members when type is Type.COLLECTION. Should not set it for other types. A maximum of 1000 values are allowed. Otherwise, an INVALID_ARGUMENT error is return.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="color_info_python">
+<a href="#color_info_python" style="color: inherit; text-decoration: inherit;">color_<wbr>info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2colorinforesponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Color<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The color of the product. Google Merchant Center property [color](https://support.google.com/merchants/answer/6324487). Schema.org property [Product.color](https://schema.org/color).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="conditions_python">
+<a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The condition of the product. Strongly encouraged to use the standard values: "new", "refurbished", "used". A maximum of 5 values are allowed per Product. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [condition](https://support.google.com/merchants/answer/6324469). Schema.org property [Offer.itemCondition](https://schema.org/itemCondition).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Product description. This field must be a UTF-8 encoded string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [description](https://support.google.com/merchants/answer/6324468). schema.org property [Product.description](https://schema.org/description).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="expire_time_python">
+<a href="#expire_time_python" style="color: inherit; text-decoration: inherit;">expire_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The timestamp when this product becomes unavailable for SearchService.Search. If it is set, the Product is not available for SearchService.Search after expire_time. However, the product can still be retrieved by ProductService.GetProduct and ProductService.ListProducts. expire_time must be later than available_time and publish_time, otherwise an INVALID_ARGUMENT error is thrown. Google Merchant Center property [expiration_date](https://support.google.com/merchants/answer/6324499).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="fulfillment_info_python">
+<a href="#fulfillment_info_python" style="color: inherit; text-decoration: inherit;">fulfillment_<wbr>info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2fulfillmentinforesponse">Sequence[Google<wbr>Cloud<wbr>Retail<wbr>V2Fulfillment<wbr>Info<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Fulfillment information, such as the store IDs for in-store pickup or region IDs for different shipping methods. All the elements must have distinct FulfillmentInfo.type. Otherwise, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="gtin_python">
+<a href="#gtin_python" style="color: inherit; text-decoration: inherit;">gtin</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Global Trade Item Number (GTIN) of the product. This field must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. This field must be a Unigram. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [gtin](https://support.google.com/merchants/answer/6324461). Schema.org property [Product.isbn](https://schema.org/isbn) or [Product.gtin8](https://schema.org/gtin8) or [Product.gtin12](https://schema.org/gtin12) or [Product.gtin13](https://schema.org/gtin13) or [Product.gtin14](https://schema.org/gtin14). If the value is not a valid GTIN, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="images_python">
+<a href="#images_python" style="color: inherit; text-decoration: inherit;">images</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2imageresponse">Sequence[Google<wbr>Cloud<wbr>Retail<wbr>V2Image<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Product images for the product.Highly recommended to put the main image to the first. A maximum of 300 images are allowed. Google Merchant Center property [image_link](https://support.google.com/merchants/answer/6324350). Schema.org property [Product.image](https://schema.org/image).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="language_code_python">
+<a href="#language_code_python" style="color: inherit; text-decoration: inherit;">language_<wbr>code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Language of the title/description and other string attributes. Use language tags defined by BCP 47. For product prediction, this field is ignored and the model automatically detects the text language. The Product can include text in different languages, but duplicating Products to provide text in multiple languages can result in degraded model performance. For product search this field is in use. It defaults to "en-US" if unset.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="materials_python">
+<a href="#materials_python" style="color: inherit; text-decoration: inherit;">materials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The material of the product. For example, "leather", "wooden". A maximum of 20 values are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [material](https://support.google.com/merchants/answer/6324410). Schema.org property [Product.material](https://schema.org/material).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Immutable. Full resource name of the product, such as `projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/product_id`.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="patterns_python">
+<a href="#patterns_python" style="color: inherit; text-decoration: inherit;">patterns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The pattern or graphic print of the product. For example, "striped", "polka dot", "paisley". A maximum of 20 values are allowed per Product. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [pattern](https://support.google.com/merchants/answer/6324483). Schema.org property [Product.pattern](https://schema.org/pattern).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="price_info_python">
+<a href="#price_info_python" style="color: inherit; text-decoration: inherit;">price_<wbr>info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2priceinforesponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Price<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Product price and cost information. Google Merchant Center property [price](https://support.google.com/merchants/answer/6324371).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="primary_product_id_python">
+<a href="#primary_product_id_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>product_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Variant group identifier. Must be an id, with the same parent branch with this product. Otherwise, an error is thrown. For Type.PRIMARY Products, this field can only be empty or set to the same value as id. For VARIANT Products, this field cannot be empty. A maximum of 2,000 products are allowed to share the same Type.PRIMARY Product. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center Property [item_group_id](https://support.google.com/merchants/answer/6324507). Schema.org Property [Product.inProductGroupWithID](https://schema.org/inProductGroupWithID). This field must be enabled before it can be used. [Learn more](/recommendations-ai/docs/catalog#item-group-id).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="promotions_python">
+<a href="#promotions_python" style="color: inherit; text-decoration: inherit;">promotions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2promotionresponse">Sequence[Google<wbr>Cloud<wbr>Retail<wbr>V2Promotion<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The promotions applied to the product. A maximum of 10 values are allowed per Product.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="publish_time_python">
+<a href="#publish_time_python" style="color: inherit; text-decoration: inherit;">publish_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The timestamp when the product is published by the retailer for the first time, which indicates the freshness of the products. Note that this field is different from available_time, given it purely describes product freshness regardless of when it is available on search and recommendation.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rating_python">
+<a href="#rating_python" style="color: inherit; text-decoration: inherit;">rating</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2ratingresponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Rating<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The rating of this product.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="retrievable_fields_python">
+<a href="#retrievable_fields_python" style="color: inherit; text-decoration: inherit;">retrievable_<wbr>fields</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Indicates which fields in the Products are returned in SearchResponse. Supported fields for all types: * audience * availability * brands * color_info * conditions * gtin * materials * name * patterns * price_info * rating * sizes * title * uri Supported fields only for Type.PRIMARY and Type.COLLECTION: * categories * description * images Supported fields only for Type.VARIANT: * Only the first image in images To mark attributes as retrievable, include paths of the form "attributes.key" where "key" is the key of a custom attribute, as specified in attributes. For Type.PRIMARY and Type.COLLECTION, the following fields are always returned in SearchResponse by default: * name For Type.VARIANT, the following fields are always returned in by default: * name * color_info Maximum number of paths is 30. Otherwise, an INVALID_ARGUMENT error is returned. Note: Returning more fields in SearchResponse may increase response payload size and serving latency.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sizes_python">
+<a href="#sizes_python" style="color: inherit; text-decoration: inherit;">sizes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The size of the product. To represent different size systems or size types, consider using this format: [[[size_system:]size_type:]size_value]. For example, in "US:MENS:M", "US" represents size system; "MENS" represents size type; "M" represents size value. In "GIRLS:27", size system is empty; "GIRLS" represents size type; "27" represents size value. In "32 inches", both size system and size type are empty, while size value is "32 inches". A maximum of 20 values are allowed per Product. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [size](https://support.google.com/merchants/answer/6324492), [size_type](https://support.google.com/merchants/answer/6324497) and [size_system](https://support.google.com/merchants/answer/6324502). Schema.org property [Product.size](https://schema.org/size).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Custom tags associated with the product. At most 250 values are allowed per Product. This value must be a UTF-8 encoded string with a length limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. This tag can be used for filtering recommendation results by passing the tag as part of the PredictRequest.filter. Google Merchant Center property [custom_label_0–4](https://support.google.com/merchants/answer/6324473).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="title_python">
+<a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Product title. This field must be a UTF-8 encoded string with a length limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [title](https://support.google.com/merchants/answer/6324415). Schema.org property [Product.name](https://schema.org/name).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ttl_python">
+<a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Input only. The TTL (time to live) of the product. If it is set, expire_time is set as current timestamp plus ttl. The derived expire_time is returned in the output and ttl is left blank when retrieving the Product. If it is set, the product is not available for SearchService.Search after current timestamp plus ttl. However, the product can still be retrieved by ProductService.GetProduct and ProductService.ListProducts.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Immutable. The type of the product. Default to Catalog.product_level_config.ingestion_product_type if unset.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="uri_python">
+<a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Canonical URL directly linking to the product detail page. It is strongly recommended to provide a valid uri for the product, otherwise the service performance could be significantly degraded. This field must be a UTF-8 encoded string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [link](https://support.google.com/merchants/answer/6324416). Schema.org property [Offer.url](https://schema.org/url).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="variants_python">
+<a href="#variants_python" style="color: inherit; text-decoration: inherit;">variants</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudretailv2productresponse">Sequence[Google<wbr>Cloud<wbr>Retail<wbr>V2Product<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Product variants grouped together on primary product which share similar product attributes. It's automatically grouped by primary_product_id for all the product variants. Only populated for Type.PRIMARY Products. Note: This field is OUTPUT_ONLY for ProductService.GetProduct. Do not set this field in API requests.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googlecloudretailv2promotionresponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Promotion<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="promotionid_csharp">
+<a href="#promotionid_csharp" style="color: inherit; text-decoration: inherit;">Promotion<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the promotion. For example, "free gift". The value value must be a UTF-8 encoded string with a length limit of 128 characters, and match the pattern: a-zA-Z*. For example, id0LikeThis or ID_1_LIKE_THIS. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [promotion](https://support.google.com/merchants/answer/7050148).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="promotionid_go">
+<a href="#promotionid_go" style="color: inherit; text-decoration: inherit;">Promotion<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the promotion. For example, "free gift". The value value must be a UTF-8 encoded string with a length limit of 128 characters, and match the pattern: a-zA-Z*. For example, id0LikeThis or ID_1_LIKE_THIS. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [promotion](https://support.google.com/merchants/answer/7050148).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="promotionid_nodejs">
+<a href="#promotionid_nodejs" style="color: inherit; text-decoration: inherit;">promotion<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the promotion. For example, "free gift". The value value must be a UTF-8 encoded string with a length limit of 128 characters, and match the pattern: a-zA-Z*. For example, id0LikeThis or ID_1_LIKE_THIS. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [promotion](https://support.google.com/merchants/answer/7050148).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="promotion_id_python">
+<a href="#promotion_id_python" style="color: inherit; text-decoration: inherit;">promotion_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ID of the promotion. For example, "free gift". The value value must be a UTF-8 encoded string with a length limit of 128 characters, and match the pattern: a-zA-Z*. For example, id0LikeThis or ID_1_LIKE_THIS. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [promotion](https://support.google.com/merchants/answer/7050148).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googlecloudretailv2ratingresponse">Google<wbr>Cloud<wbr>Retail<wbr>V2Rating<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="averagerating_csharp">
+<a href="#averagerating_csharp" style="color: inherit; text-decoration: inherit;">Average<wbr>Rating</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}The average rating of the Product. The rating is scaled at 1-5. Otherwise, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ratingcount_csharp">
+<a href="#ratingcount_csharp" style="color: inherit; text-decoration: inherit;">Rating<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The total number of ratings. This value is independent of the value of rating_histogram. This value must be nonnegative. Otherwise, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ratinghistogram_csharp">
+<a href="#ratinghistogram_csharp" style="color: inherit; text-decoration: inherit;">Rating<wbr>Histogram</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;int&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of rating counts per rating value (index = rating - 1). The list is empty if there is no rating. If the list is non-empty, its size is always 5. Otherwise, an INVALID_ARGUMENT error is returned. For example, [41, 14, 13, 47, 303]. It means that the Product got 41 ratings with 1 star, 14 ratings with 2 star, and so on.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="averagerating_go">
+<a href="#averagerating_go" style="color: inherit; text-decoration: inherit;">Average<wbr>Rating</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}The average rating of the Product. The rating is scaled at 1-5. Otherwise, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ratingcount_go">
+<a href="#ratingcount_go" style="color: inherit; text-decoration: inherit;">Rating<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The total number of ratings. This value is independent of the value of rating_histogram. This value must be nonnegative. Otherwise, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ratinghistogram_go">
+<a href="#ratinghistogram_go" style="color: inherit; text-decoration: inherit;">Rating<wbr>Histogram</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]int</span>
+    </dt>
+    <dd>{{% md %}}List of rating counts per rating value (index = rating - 1). The list is empty if there is no rating. If the list is non-empty, its size is always 5. Otherwise, an INVALID_ARGUMENT error is returned. For example, [41, 14, 13, 47, 303]. It means that the Product got 41 ratings with 1 star, 14 ratings with 2 star, and so on.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="averagerating_nodejs">
+<a href="#averagerating_nodejs" style="color: inherit; text-decoration: inherit;">average<wbr>Rating</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The average rating of the Product. The rating is scaled at 1-5. Otherwise, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ratingcount_nodejs">
+<a href="#ratingcount_nodejs" style="color: inherit; text-decoration: inherit;">rating<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The total number of ratings. This value is independent of the value of rating_histogram. This value must be nonnegative. Otherwise, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ratinghistogram_nodejs">
+<a href="#ratinghistogram_nodejs" style="color: inherit; text-decoration: inherit;">rating<wbr>Histogram</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number[]</span>
+    </dt>
+    <dd>{{% md %}}List of rating counts per rating value (index = rating - 1). The list is empty if there is no rating. If the list is non-empty, its size is always 5. Otherwise, an INVALID_ARGUMENT error is returned. For example, [41, 14, 13, 47, 303]. It means that the Product got 41 ratings with 1 star, 14 ratings with 2 star, and so on.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="average_rating_python">
+<a href="#average_rating_python" style="color: inherit; text-decoration: inherit;">average_<wbr>rating</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The average rating of the Product. The rating is scaled at 1-5. Otherwise, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rating_count_python">
+<a href="#rating_count_python" style="color: inherit; text-decoration: inherit;">rating_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The total number of ratings. This value is independent of the value of rating_histogram. This value must be nonnegative. Otherwise, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rating_histogram_python">
+<a href="#rating_histogram_python" style="color: inherit; text-decoration: inherit;">rating_<wbr>histogram</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[int]</span>
+    </dt>
+    <dd>{{% md %}}List of rating counts per rating value (index = rating - 1). The list is empty if there is no rating. If the list is non-empty, its size is always 5. Otherwise, an INVALID_ARGUMENT error is returned. For example, [41, 14, 13, 47, 303]. It means that the Product got 41 ratings with 1 star, 14 ratings with 2 star, and so on.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -13,26 +13,26 @@ Explore the resources and functions of the azure-native.desktopvirtualization mo
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="application" title="Application"><span class="symbol resource"></span>Application</a></li>
-    <li><a href="applicationgroup" title="ApplicationGroup"><span class="symbol resource"></span>ApplicationGroup</a></li>
-    <li><a href="hostpool" title="HostPool"><span class="symbol resource"></span>HostPool</a></li>
-    <li><a href="msixpackage" title="MSIXPackage"><span class="symbol resource"></span>MSIXPackage</a></li>
-    <li><a href="privateendpointconnectionbyhostpool" title="PrivateEndpointConnectionByHostPool"><span class="symbol resource"></span>PrivateEndpointConnectionByHostPool</a></li>
-    <li><a href="privateendpointconnectionbyworkspace" title="PrivateEndpointConnectionByWorkspace"><span class="symbol resource"></span>PrivateEndpointConnectionByWorkspace</a></li>
-    <li><a href="scalingplan" title="ScalingPlan"><span class="symbol resource"></span>ScalingPlan</a></li>
-    <li><a href="workspace" title="Workspace"><span class="symbol resource"></span>Workspace</a></li>
+    <li><a href="application" title="Application"><span class="api-symbol api-symbol--resource"></span>Application</a></li>
+    <li><a href="applicationgroup" title="ApplicationGroup"><span class="api-symbol api-symbol--resource"></span>ApplicationGroup</a></li>
+    <li><a href="hostpool" title="HostPool"><span class="api-symbol api-symbol--resource"></span>HostPool</a></li>
+    <li><a href="msixpackage" title="MSIXPackage"><span class="api-symbol api-symbol--resource"></span>MSIXPackage</a></li>
+    <li><a href="privateendpointconnectionbyhostpool" title="PrivateEndpointConnectionByHostPool"><span class="api-symbol api-symbol--resource"></span>PrivateEndpointConnectionByHostPool</a></li>
+    <li><a href="privateendpointconnectionbyworkspace" title="PrivateEndpointConnectionByWorkspace"><span class="api-symbol api-symbol--resource"></span>PrivateEndpointConnectionByWorkspace</a></li>
+    <li><a href="scalingplan" title="ScalingPlan"><span class="api-symbol api-symbol--resource"></span>ScalingPlan</a></li>
+    <li><a href="workspace" title="Workspace"><span class="api-symbol api-symbol--resource"></span>Workspace</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getapplication" title="GetApplication"><span class="symbol function"></span>GetApplication</a></li>
-    <li><a href="getapplicationgroup" title="GetApplicationGroup"><span class="symbol function"></span>GetApplicationGroup</a></li>
-    <li><a href="gethostpool" title="GetHostPool"><span class="symbol function"></span>GetHostPool</a></li>
-    <li><a href="getmsixpackage" title="GetMSIXPackage"><span class="symbol function"></span>GetMSIXPackage</a></li>
-    <li><a href="getprivateendpointconnectionbyhostpool" title="GetPrivateEndpointConnectionByHostPool"><span class="symbol function"></span>GetPrivateEndpointConnectionByHostPool</a></li>
-    <li><a href="getprivateendpointconnectionbyworkspace" title="GetPrivateEndpointConnectionByWorkspace"><span class="symbol function"></span>GetPrivateEndpointConnectionByWorkspace</a></li>
-    <li><a href="getscalingplan" title="GetScalingPlan"><span class="symbol function"></span>GetScalingPlan</a></li>
-    <li><a href="getworkspace" title="GetWorkspace"><span class="symbol function"></span>GetWorkspace</a></li>
+    <li><a href="getapplication" title="GetApplication"><span class="api-symbol api-symbol--function"></span>GetApplication</a></li>
+    <li><a href="getapplicationgroup" title="GetApplicationGroup"><span class="api-symbol api-symbol--function"></span>GetApplicationGroup</a></li>
+    <li><a href="gethostpool" title="GetHostPool"><span class="api-symbol api-symbol--function"></span>GetHostPool</a></li>
+    <li><a href="getmsixpackage" title="GetMSIXPackage"><span class="api-symbol api-symbol--function"></span>GetMSIXPackage</a></li>
+    <li><a href="getprivateendpointconnectionbyhostpool" title="GetPrivateEndpointConnectionByHostPool"><span class="api-symbol api-symbol--function"></span>GetPrivateEndpointConnectionByHostPool</a></li>
+    <li><a href="getprivateendpointconnectionbyworkspace" title="GetPrivateEndpointConnectionByWorkspace"><span class="api-symbol api-symbol--function"></span>GetPrivateEndpointConnectionByWorkspace</a></li>
+    <li><a href="getscalingplan" title="GetScalingPlan"><span class="api-symbol api-symbol--function"></span>GetScalingPlan</a></li>
+    <li><a href="getworkspace" title="GetWorkspace"><span class="api-symbol api-symbol--function"></span>GetWorkspace</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -42,6 +42,6 @@ Explore the resources and functions of the azure-native.desktopvirtualization mo
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.36.0</dd>
+	<dd>1.37.0</dd>
 </dl>
 

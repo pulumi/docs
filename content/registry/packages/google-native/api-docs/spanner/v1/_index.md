@@ -13,24 +13,24 @@ Explore the resources and functions of the google-native.spanner/v1 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="backup" title="Backup"><span class="symbol resource"></span>Backup</a></li>
-    <li><a href="database" title="Database"><span class="symbol resource"></span>Database</a></li>
-    <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
-    <li><a href="instancebackupiampolicy" title="InstanceBackupIamPolicy"><span class="symbol resource"></span>InstanceBackupIamPolicy</a></li>
-    <li><a href="instancedatabaseiampolicy" title="InstanceDatabaseIamPolicy"><span class="symbol resource"></span>InstanceDatabaseIamPolicy</a></li>
-    <li><a href="instanceiampolicy" title="InstanceIamPolicy"><span class="symbol resource"></span>InstanceIamPolicy</a></li>
-    <li><a href="session" title="Session"><span class="symbol resource"></span>Session</a></li>
+    <li><a href="backup" title="Backup"><span class="api-symbol api-symbol--resource"></span>Backup</a></li>
+    <li><a href="database" title="Database"><span class="api-symbol api-symbol--resource"></span>Database</a></li>
+    <li><a href="instance" title="Instance"><span class="api-symbol api-symbol--resource"></span>Instance</a></li>
+    <li><a href="instancebackupiampolicy" title="InstanceBackupIamPolicy"><span class="api-symbol api-symbol--resource"></span>InstanceBackupIamPolicy</a></li>
+    <li><a href="instancedatabaseiampolicy" title="InstanceDatabaseIamPolicy"><span class="api-symbol api-symbol--resource"></span>InstanceDatabaseIamPolicy</a></li>
+    <li><a href="instanceiampolicy" title="InstanceIamPolicy"><span class="api-symbol api-symbol--resource"></span>InstanceIamPolicy</a></li>
+    <li><a href="session" title="Session"><span class="api-symbol api-symbol--resource"></span>Session</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getbackup" title="GetBackup"><span class="symbol function"></span>GetBackup</a></li>
-    <li><a href="getdatabase" title="GetDatabase"><span class="symbol function"></span>GetDatabase</a></li>
-    <li><a href="getinstance" title="GetInstance"><span class="symbol function"></span>GetInstance</a></li>
-    <li><a href="getinstancebackupiampolicy" title="GetInstanceBackupIamPolicy"><span class="symbol function"></span>GetInstanceBackupIamPolicy</a></li>
-    <li><a href="getinstancedatabaseiampolicy" title="GetInstanceDatabaseIamPolicy"><span class="symbol function"></span>GetInstanceDatabaseIamPolicy</a></li>
-    <li><a href="getinstanceiampolicy" title="GetInstanceIamPolicy"><span class="symbol function"></span>GetInstanceIamPolicy</a></li>
-    <li><a href="getsession" title="GetSession"><span class="symbol function"></span>GetSession</a></li>
+    <li><a href="getbackup" title="GetBackup"><span class="api-symbol api-symbol--function"></span>GetBackup</a></li>
+    <li><a href="getdatabase" title="GetDatabase"><span class="api-symbol api-symbol--function"></span>GetDatabase</a></li>
+    <li><a href="getinstance" title="GetInstance"><span class="api-symbol api-symbol--function"></span>GetInstance</a></li>
+    <li><a href="getinstancebackupiampolicy" title="GetInstanceBackupIamPolicy"><span class="api-symbol api-symbol--function"></span>GetInstanceBackupIamPolicy</a></li>
+    <li><a href="getinstancedatabaseiampolicy" title="GetInstanceDatabaseIamPolicy"><span class="api-symbol api-symbol--function"></span>GetInstanceDatabaseIamPolicy</a></li>
+    <li><a href="getinstanceiampolicy" title="GetInstanceIamPolicy"><span class="api-symbol api-symbol--function"></span>GetInstanceIamPolicy</a></li>
+    <li><a href="getsession" title="GetSession"><span class="api-symbol api-symbol--function"></span>GetSession</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -40,6 +40,6 @@ Explore the resources and functions of the google-native.spanner/v1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.0</dd>
+	<dd>0.8.0</dd>
 </dl>
 

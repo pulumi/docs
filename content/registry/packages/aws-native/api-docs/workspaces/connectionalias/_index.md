@@ -259,7 +259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#associations_csharp" style="color: inherit; text-decoration: inherit;">Associations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionaliasconnectionaliasassociation">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Work<wbr>Spaces.<wbr>Outputs.<wbr>Connection<wbr>Alias<wbr>Connection<wbr>Alias<wbr>Association&gt;</a></span>
+        <span class="property-type"><a href="#connectionaliasassociation">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Work<wbr>Spaces.<wbr>Outputs.<wbr>Connection<wbr>Alias<wbr>Association&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -267,7 +267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectionaliasstate_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Alias<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionaliasconnectionaliasstate">Pulumi.<wbr>Aws<wbr>Native.<wbr>Work<wbr>Spaces.<wbr>Connection<wbr>Alias<wbr>Connection<wbr>Alias<wbr>State</a></span>
+        <span class="property-type"><a href="#connectionaliasstate">Pulumi.<wbr>Aws<wbr>Native.<wbr>Work<wbr>Spaces.<wbr>Connection<wbr>Alias<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -295,7 +295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#associations_go" style="color: inherit; text-decoration: inherit;">Associations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionaliasconnectionaliasassociation">[]Connection<wbr>Alias<wbr>Connection<wbr>Alias<wbr>Association</a></span>
+        <span class="property-type"><a href="#connectionaliasassociation">[]Connection<wbr>Alias<wbr>Association</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -303,7 +303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectionaliasstate_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Alias<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionaliasconnectionaliasstate">Connection<wbr>Alias<wbr>Connection<wbr>Alias<wbr>State</a></span>
+        <span class="property-type"><a href="#connectionaliasstate">Connection<wbr>Alias<wbr>State<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -331,7 +331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#associations_nodejs" style="color: inherit; text-decoration: inherit;">associations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionaliasconnectionaliasassociation">Connection<wbr>Alias<wbr>Connection<wbr>Alias<wbr>Association[]</a></span>
+        <span class="property-type"><a href="#connectionaliasassociation">Connection<wbr>Alias<wbr>Association[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -339,7 +339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectionaliasstate_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Alias<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionaliasconnectionaliasstate">Connection<wbr>Alias<wbr>Connection<wbr>Alias<wbr>State</a></span>
+        <span class="property-type"><a href="#connectionaliasstate">Connection<wbr>Alias<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -367,7 +367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#associations_python" style="color: inherit; text-decoration: inherit;">associations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionaliasconnectionaliasassociation">Sequence[Connection<wbr>Alias<wbr>Connection<wbr>Alias<wbr>Association]</a></span>
+        <span class="property-type"><a href="#connectionaliasassociation">Sequence[Connection<wbr>Alias<wbr>Association]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -375,7 +375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connection_alias_state_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>alias_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionaliasconnectionaliasstate">Connection<wbr>Alias<wbr>Connection<wbr>Alias<wbr>State</a></span>
+        <span class="property-type"><a href="#connectionaliasstate">Connection<wbr>Alias<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -398,7 +398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="connectionaliasconnectionaliasassociation">Connection<wbr>Alias<wbr>Connection<wbr>Alias<wbr>Association</h4>
+<h4 id="connectionaliasassociation">Connection<wbr>Alias<wbr>Association</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
@@ -415,7 +415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#associationstatus_csharp" style="color: inherit; text-decoration: inherit;">Association<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionaliasconnectionaliasassociationassociationstatus">Pulumi.<wbr>Aws<wbr>Native.<wbr>Work<wbr>Spaces.<wbr>Connection<wbr>Alias<wbr>Connection<wbr>Alias<wbr>Association<wbr>Association<wbr>Status</a></span>
+        <span class="property-type"><a href="#connectionaliasassociationassociationstatus">Pulumi.<wbr>Aws<wbr>Native.<wbr>Work<wbr>Spaces.<wbr>Connection<wbr>Alias<wbr>Association<wbr>Association<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -451,7 +451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#associationstatus_go" style="color: inherit; text-decoration: inherit;">Association<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionaliasconnectionaliasassociationassociationstatus">Connection<wbr>Alias<wbr>Connection<wbr>Alias<wbr>Association<wbr>Association<wbr>Status</a></span>
+        <span class="property-type"><a href="#connectionaliasassociationassociationstatus">Connection<wbr>Alias<wbr>Association<wbr>Association<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -487,7 +487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#associationstatus_nodejs" style="color: inherit; text-decoration: inherit;">association<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionaliasconnectionaliasassociationassociationstatus">Connection<wbr>Alias<wbr>Connection<wbr>Alias<wbr>Association<wbr>Association<wbr>Status</a></span>
+        <span class="property-type"><a href="#connectionaliasassociationassociationstatus">Connection<wbr>Alias<wbr>Association<wbr>Association<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -523,7 +523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#association_status_python" style="color: inherit; text-decoration: inherit;">association_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionaliasconnectionaliasassociationassociationstatus">Connection<wbr>Alias<wbr>Connection<wbr>Alias<wbr>Association<wbr>Association<wbr>Status</a></span>
+        <span class="property-type"><a href="#connectionaliasassociationassociationstatus">Connection<wbr>Alias<wbr>Association<wbr>Association<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -544,7 +544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="connectionaliasconnectionaliasassociationassociationstatus">Connection<wbr>Alias<wbr>Connection<wbr>Alias<wbr>Association<wbr>Association<wbr>Status</h4>
+<h4 id="connectionaliasassociationassociationstatus">Connection<wbr>Alias<wbr>Association<wbr>Association<wbr>Status</h4>
 
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>Not<wbr>Associated</dt>
@@ -556,11 +556,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular"><dt>Connection<wbr>Alias<wbr>Connection<wbr>Alias<wbr>Association<wbr>Association<wbr>Status<wbr>Not<wbr>Associated</dt>
-    <dd>NOT_ASSOCIATED</dd><dt>Connection<wbr>Alias<wbr>Connection<wbr>Alias<wbr>Association<wbr>Association<wbr>Status<wbr>Pending<wbr>Association</dt>
-    <dd>PENDING_ASSOCIATION</dd><dt>Connection<wbr>Alias<wbr>Connection<wbr>Alias<wbr>Association<wbr>Association<wbr>Status<wbr>Associated<wbr>With<wbr>Owner<wbr>Account</dt>
-    <dd>ASSOCIATED_WITH_OWNER_ACCOUNT</dd><dt>Connection<wbr>Alias<wbr>Connection<wbr>Alias<wbr>Association<wbr>Association<wbr>Status<wbr>Associated<wbr>With<wbr>Shared<wbr>Account</dt>
-    <dd>ASSOCIATED_WITH_SHARED_ACCOUNT</dd><dt>Connection<wbr>Alias<wbr>Connection<wbr>Alias<wbr>Association<wbr>Association<wbr>Status<wbr>Pending<wbr>Disassociation</dt>
+<dl class="tabular"><dt>Connection<wbr>Alias<wbr>Association<wbr>Association<wbr>Status<wbr>Not<wbr>Associated</dt>
+    <dd>NOT_ASSOCIATED</dd><dt>Connection<wbr>Alias<wbr>Association<wbr>Association<wbr>Status<wbr>Pending<wbr>Association</dt>
+    <dd>PENDING_ASSOCIATION</dd><dt>Connection<wbr>Alias<wbr>Association<wbr>Association<wbr>Status<wbr>Associated<wbr>With<wbr>Owner<wbr>Account</dt>
+    <dd>ASSOCIATED_WITH_OWNER_ACCOUNT</dd><dt>Connection<wbr>Alias<wbr>Association<wbr>Association<wbr>Status<wbr>Associated<wbr>With<wbr>Shared<wbr>Account</dt>
+    <dd>ASSOCIATED_WITH_SHARED_ACCOUNT</dd><dt>Connection<wbr>Alias<wbr>Association<wbr>Association<wbr>Status<wbr>Pending<wbr>Disassociation</dt>
     <dd>PENDING_DISASSOCIATION</dd></dl>
 {{% /choosable %}}
 
@@ -582,7 +582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>PENDING_DISASSOCIATION</dd></dl>
 {{% /choosable %}}
 
-<h4 id="connectionaliasconnectionaliasstate">Connection<wbr>Alias<wbr>Connection<wbr>Alias<wbr>State</h4>
+<h4 id="connectionaliasstate">Connection<wbr>Alias<wbr>State</h4>
 
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>Creating</dt>
@@ -592,9 +592,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular"><dt>Connection<wbr>Alias<wbr>Connection<wbr>Alias<wbr>State<wbr>Creating</dt>
-    <dd>CREATING</dd><dt>Connection<wbr>Alias<wbr>Connection<wbr>Alias<wbr>State<wbr>Created</dt>
-    <dd>CREATED</dd><dt>Connection<wbr>Alias<wbr>Connection<wbr>Alias<wbr>State<wbr>Deleting</dt>
+<dl class="tabular"><dt>Connection<wbr>Alias<wbr>State<wbr>Creating</dt>
+    <dd>CREATING</dd><dt>Connection<wbr>Alias<wbr>State<wbr>Created</dt>
+    <dd>CREATED</dd><dt>Connection<wbr>Alias<wbr>State<wbr>Deleting</dt>
     <dd>DELETING</dd></dl>
 {{% /choosable %}}
 

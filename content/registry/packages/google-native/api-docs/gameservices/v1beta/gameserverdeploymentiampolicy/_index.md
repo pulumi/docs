@@ -3249,7 +3249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logconfig">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Game<wbr>Services.<wbr>V1Beta.<wbr>Inputs.<wbr>Log<wbr>Config&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The config returned to callers of tech.iam.IAM.CheckPolicy for any entries that match the LOG action.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The config returned to callers of CheckPolicy for any entries that match the LOG action.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notin_csharp">
 <a href="#notin_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>In</a>
@@ -3309,7 +3309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logconfig">[]Log<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The config returned to callers of tech.iam.IAM.CheckPolicy for any entries that match the LOG action.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The config returned to callers of CheckPolicy for any entries that match the LOG action.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notin_go">
 <a href="#notin_go" style="color: inherit; text-decoration: inherit;">Not<wbr>In</a>
@@ -3369,7 +3369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logconfig">Log<wbr>Config[]</a></span>
     </dt>
-    <dd>{{% md %}}The config returned to callers of tech.iam.IAM.CheckPolicy for any entries that match the LOG action.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The config returned to callers of CheckPolicy for any entries that match the LOG action.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notin_nodejs">
 <a href="#notin_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>In</a>
@@ -3429,7 +3429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logconfig">Sequence[Log<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}The config returned to callers of tech.iam.IAM.CheckPolicy for any entries that match the LOG action.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The config returned to callers of CheckPolicy for any entries that match the LOG action.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="not_in_python">
 <a href="#not_in_python" style="color: inherit; text-decoration: inherit;">not_<wbr>in</a>
@@ -3533,7 +3533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logconfigresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Game<wbr>Services.<wbr>V1Beta.<wbr>Inputs.<wbr>Log<wbr>Config<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The config returned to callers of tech.iam.IAM.CheckPolicy for any entries that match the LOG action.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The config returned to callers of CheckPolicy for any entries that match the LOG action.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="notin_csharp">
 <a href="#notin_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>In</a>
@@ -3593,7 +3593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logconfigresponse">[]Log<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The config returned to callers of tech.iam.IAM.CheckPolicy for any entries that match the LOG action.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The config returned to callers of CheckPolicy for any entries that match the LOG action.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="notin_go">
 <a href="#notin_go" style="color: inherit; text-decoration: inherit;">Not<wbr>In</a>
@@ -3653,7 +3653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logconfigresponse">Log<wbr>Config<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The config returned to callers of tech.iam.IAM.CheckPolicy for any entries that match the LOG action.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The config returned to callers of CheckPolicy for any entries that match the LOG action.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="notin_nodejs">
 <a href="#notin_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>In</a>
@@ -3713,7 +3713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logconfigresponse">Sequence[Log<wbr>Config<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The config returned to callers of tech.iam.IAM.CheckPolicy for any entries that match the LOG action.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The config returned to callers of CheckPolicy for any entries that match the LOG action.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="not_in_python">
 <a href="#not_in_python" style="color: inherit; text-decoration: inherit;">not_<wbr>in</a>

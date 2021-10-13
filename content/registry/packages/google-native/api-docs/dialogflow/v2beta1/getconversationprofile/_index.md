@@ -224,7 +224,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Language code for the conversation profile. If not specified, the language is en-US. Language at ConversationProfile should be set for all non en-us languages.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Language code for the conversation profile. If not specified, the language is en-US. Language at ConversationProfile should be set for all non en-us languages. This should be a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US".{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="loggingconfig_csharp">
 <a href="#loggingconfig_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
@@ -258,6 +258,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Configuration for publishing conversation lifecycle events.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="securitysettings_csharp">
+<a href="#securitysettings_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the CX SecuritySettings reference for the agent. Format: `projects//locations//securitySettings/`.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="sttconfig_csharp">
 <a href="#sttconfig_csharp" style="color: inherit; text-decoration: inherit;">Stt<wbr>Config</a>
 </span>
@@ -265,6 +273,14 @@ The following output properties are available:
         <span class="property-type"><a href="#googleclouddialogflowv2beta1speechtotextconfigresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V2Beta1.<wbr>Outputs.<wbr>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Speech<wbr>To<wbr>Text<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Settings for speech transcription.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="timezone_csharp">
+<a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time zone of this conversational profile from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris. Defaults to America/New_York.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatetime_csharp">
 <a href="#updatetime_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -324,7 +340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Language code for the conversation profile. If not specified, the language is en-US. Language at ConversationProfile should be set for all non en-us languages.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Language code for the conversation profile. If not specified, the language is en-US. Language at ConversationProfile should be set for all non en-us languages. This should be a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US".{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="loggingconfig_go">
 <a href="#loggingconfig_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
@@ -358,6 +374,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Configuration for publishing conversation lifecycle events.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="securitysettings_go">
+<a href="#securitysettings_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the CX SecuritySettings reference for the agent. Format: `projects//locations//securitySettings/`.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="sttconfig_go">
 <a href="#sttconfig_go" style="color: inherit; text-decoration: inherit;">Stt<wbr>Config</a>
 </span>
@@ -365,6 +389,14 @@ The following output properties are available:
         <span class="property-type"><a href="#googleclouddialogflowv2beta1speechtotextconfigresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Speech<wbr>To<wbr>Text<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Settings for speech transcription.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="timezone_go">
+<a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time zone of this conversational profile from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris. Defaults to America/New_York.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatetime_go">
 <a href="#updatetime_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -424,7 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Language code for the conversation profile. If not specified, the language is en-US. Language at ConversationProfile should be set for all non en-us languages.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Language code for the conversation profile. If not specified, the language is en-US. Language at ConversationProfile should be set for all non en-us languages. This should be a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US".{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="loggingconfig_nodejs">
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
@@ -458,6 +490,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Configuration for publishing conversation lifecycle events.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="securitysettings_nodejs">
+<a href="#securitysettings_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the CX SecuritySettings reference for the agent. Format: `projects//locations//securitySettings/`.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="sttconfig_nodejs">
 <a href="#sttconfig_nodejs" style="color: inherit; text-decoration: inherit;">stt<wbr>Config</a>
 </span>
@@ -465,6 +505,14 @@ The following output properties are available:
         <span class="property-type"><a href="#googleclouddialogflowv2beta1speechtotextconfigresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Speech<wbr>To<wbr>Text<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Settings for speech transcription.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="timezone_nodejs">
+<a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time zone of this conversational profile from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris. Defaults to America/New_York.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatetime_nodejs">
 <a href="#updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
@@ -524,7 +572,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Language code for the conversation profile. If not specified, the language is en-US. Language at ConversationProfile should be set for all non en-us languages.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Language code for the conversation profile. If not specified, the language is en-US. Language at ConversationProfile should be set for all non en-us languages. This should be a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US".{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="logging_config_python">
 <a href="#logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
@@ -558,6 +606,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Configuration for publishing conversation lifecycle events.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="security_settings_python">
+<a href="#security_settings_python" style="color: inherit; text-decoration: inherit;">security_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the CX SecuritySettings reference for the agent. Format: `projects//locations//securitySettings/`.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="stt_config_python">
 <a href="#stt_config_python" style="color: inherit; text-decoration: inherit;">stt_<wbr>config</a>
 </span>
@@ -565,6 +621,14 @@ The following output properties are available:
         <span class="property-type"><a href="#googleclouddialogflowv2beta1speechtotextconfigresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Speech<wbr>To<wbr>Text<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Settings for speech transcription.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="time_zone_python">
+<a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The time zone of this conversational profile from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris. Defaults to America/New_York.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="update_time_python">
 <a href="#update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>

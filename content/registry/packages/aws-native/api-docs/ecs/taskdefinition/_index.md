@@ -656,7 +656,7 @@ const taskdefinition = new aws_native.ecs.TaskDefinition("taskdefinition", {
                    <span class="nx">memory</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">network_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">pid_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                   <span class="nx">placement_constraints</span><span class="p">:</span> <span class="nx">Optional[Sequence[TaskDefinitionTaskDefinitionPlacementConstraintArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">placement_constraints</span><span class="p">:</span> <span class="nx">Optional[Sequence[TaskDefinitionPlacementConstraintArgs]]</span> = None<span class="p">,</span>
                    <span class="nx">proxy_configuration</span><span class="p">:</span> <span class="nx">Optional[TaskDefinitionProxyConfigurationArgs]</span> = None<span class="p">,</span>
                    <span class="nx">requires_compatibilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                    <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[TaskDefinitionTagArgs]]</span> = None<span class="p">,</span>
@@ -875,7 +875,7 @@ The TaskDefinition resource accepts the following [input]({{< relref "/docs/intr
 <a href="#placementconstraints_csharp" style="color: inherit; text-decoration: inherit;">Placement<wbr>Constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitiontaskdefinitionplacementconstraint">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>ECS.<wbr>Inputs.<wbr>Task<wbr>Definition<wbr>Task<wbr>Definition<wbr>Placement<wbr>Constraint<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#taskdefinitionplacementconstraint">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>ECS.<wbr>Inputs.<wbr>Task<wbr>Definition<wbr>Placement<wbr>Constraint<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1007,7 +1007,7 @@ The TaskDefinition resource accepts the following [input]({{< relref "/docs/intr
 <a href="#placementconstraints_go" style="color: inherit; text-decoration: inherit;">Placement<wbr>Constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitiontaskdefinitionplacementconstraint">[]Task<wbr>Definition<wbr>Task<wbr>Definition<wbr>Placement<wbr>Constraint<wbr>Args</a></span>
+        <span class="property-type"><a href="#taskdefinitionplacementconstraint">[]Task<wbr>Definition<wbr>Placement<wbr>Constraint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1139,7 +1139,7 @@ The TaskDefinition resource accepts the following [input]({{< relref "/docs/intr
 <a href="#placementconstraints_nodejs" style="color: inherit; text-decoration: inherit;">placement<wbr>Constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitiontaskdefinitionplacementconstraint">Task<wbr>Definition<wbr>Task<wbr>Definition<wbr>Placement<wbr>Constraint<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#taskdefinitionplacementconstraint">Task<wbr>Definition<wbr>Placement<wbr>Constraint<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1271,7 +1271,7 @@ The TaskDefinition resource accepts the following [input]({{< relref "/docs/intr
 <a href="#placement_constraints_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitiontaskdefinitionplacementconstraint">Sequence[Task<wbr>Definition<wbr>Task<wbr>Definition<wbr>Placement<wbr>Constraint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#taskdefinitionplacementconstraint">Sequence[Task<wbr>Definition<wbr>Placement<wbr>Constraint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4605,6 +4605,88 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="taskdefinitionplacementconstraint">Task<wbr>Definition<wbr>Placement<wbr>Constraint</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expression_csharp">
+<a href="#expression_csharp" style="color: inherit; text-decoration: inherit;">Expression</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expression_go">
+<a href="#expression_go" style="color: inherit; text-decoration: inherit;">Expression</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expression_nodejs">
+<a href="#expression_nodejs" style="color: inherit; text-decoration: inherit;">expression</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expression_python">
+<a href="#expression_python" style="color: inherit; text-decoration: inherit;">expression</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="taskdefinitionportmapping">Task<wbr>Definition<wbr>Port<wbr>Mapping</h4>
 
 {{% choosable language csharp %}}
@@ -5204,88 +5286,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="taskdefinitiontaskdefinitionplacementconstraint">Task<wbr>Definition<wbr>Task<wbr>Definition<wbr>Placement<wbr>Constraint</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="expression_csharp">
-<a href="#expression_csharp" style="color: inherit; text-decoration: inherit;">Expression</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="expression_go">
-<a href="#expression_go" style="color: inherit; text-decoration: inherit;">Expression</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="expression_nodejs">
-<a href="#expression_nodejs" style="color: inherit; text-decoration: inherit;">expression</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="expression_python">
-<a href="#expression_python" style="color: inherit; text-decoration: inherit;">expression</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

@@ -13,8 +13,8 @@ Explore the resources and functions of the kubernetes.scheduling/v1 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="priorityclass" title="PriorityClass"><span class="symbol resource"></span>PriorityClass</a></li>
-    <li><a href="priorityclasslist" title="PriorityClassList"><span class="symbol resource"></span>PriorityClassList</a></li>
+    <li><a href="priorityclass" title="PriorityClass"><span class="api-symbol api-symbol--resource"></span>PriorityClass</a></li>
+    <li><a href="priorityclasslist" title="PriorityClassList"><span class="api-symbol api-symbol--resource"></span>PriorityClassList</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -24,6 +24,6 @@ Explore the resources and functions of the kubernetes.scheduling/v1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>3.8.0</dd>
+	<dd>3.8.1</dd>
 </dl>
 

@@ -13,32 +13,32 @@ Explore the resources and functions of the google-native.dataproc/v1beta2 module
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="autoscalingpolicy" title="AutoscalingPolicy"><span class="symbol resource"></span>AutoscalingPolicy</a></li>
-    <li><a href="autoscalingpolicyiampolicy" title="AutoscalingPolicyIamPolicy"><span class="symbol resource"></span>AutoscalingPolicyIamPolicy</a></li>
-    <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
-    <li><a href="job" title="Job"><span class="symbol resource"></span>Job</a></li>
-    <li><a href="regionautoscalingpolicyiampolicy" title="RegionAutoscalingPolicyIamPolicy"><span class="symbol resource"></span>RegionAutoscalingPolicyIamPolicy</a></li>
-    <li><a href="regionclusteriampolicy" title="RegionClusterIamPolicy"><span class="symbol resource"></span>RegionClusterIamPolicy</a></li>
-    <li><a href="regionjobiampolicy" title="RegionJobIamPolicy"><span class="symbol resource"></span>RegionJobIamPolicy</a></li>
-    <li><a href="regionoperationiampolicy" title="RegionOperationIamPolicy"><span class="symbol resource"></span>RegionOperationIamPolicy</a></li>
-    <li><a href="regionworkflowtemplateiampolicy" title="RegionWorkflowTemplateIamPolicy"><span class="symbol resource"></span>RegionWorkflowTemplateIamPolicy</a></li>
-    <li><a href="workflowtemplate" title="WorkflowTemplate"><span class="symbol resource"></span>WorkflowTemplate</a></li>
-    <li><a href="workflowtemplateiampolicy" title="WorkflowTemplateIamPolicy"><span class="symbol resource"></span>WorkflowTemplateIamPolicy</a></li>
+    <li><a href="autoscalingpolicy" title="AutoscalingPolicy"><span class="api-symbol api-symbol--resource"></span>AutoscalingPolicy</a></li>
+    <li><a href="autoscalingpolicyiampolicy" title="AutoscalingPolicyIamPolicy"><span class="api-symbol api-symbol--resource"></span>AutoscalingPolicyIamPolicy</a></li>
+    <li><a href="cluster" title="Cluster"><span class="api-symbol api-symbol--resource"></span>Cluster</a></li>
+    <li><a href="job" title="Job"><span class="api-symbol api-symbol--resource"></span>Job</a></li>
+    <li><a href="regionautoscalingpolicyiampolicy" title="RegionAutoscalingPolicyIamPolicy"><span class="api-symbol api-symbol--resource"></span>RegionAutoscalingPolicyIamPolicy</a></li>
+    <li><a href="regionclusteriampolicy" title="RegionClusterIamPolicy"><span class="api-symbol api-symbol--resource"></span>RegionClusterIamPolicy</a></li>
+    <li><a href="regionjobiampolicy" title="RegionJobIamPolicy"><span class="api-symbol api-symbol--resource"></span>RegionJobIamPolicy</a></li>
+    <li><a href="regionoperationiampolicy" title="RegionOperationIamPolicy"><span class="api-symbol api-symbol--resource"></span>RegionOperationIamPolicy</a></li>
+    <li><a href="regionworkflowtemplateiampolicy" title="RegionWorkflowTemplateIamPolicy"><span class="api-symbol api-symbol--resource"></span>RegionWorkflowTemplateIamPolicy</a></li>
+    <li><a href="workflowtemplate" title="WorkflowTemplate"><span class="api-symbol api-symbol--resource"></span>WorkflowTemplate</a></li>
+    <li><a href="workflowtemplateiampolicy" title="WorkflowTemplateIamPolicy"><span class="api-symbol api-symbol--resource"></span>WorkflowTemplateIamPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getautoscalingpolicy" title="GetAutoscalingPolicy"><span class="symbol function"></span>GetAutoscalingPolicy</a></li>
-    <li><a href="getautoscalingpolicyiampolicy" title="GetAutoscalingPolicyIamPolicy"><span class="symbol function"></span>GetAutoscalingPolicyIamPolicy</a></li>
-    <li><a href="getcluster" title="GetCluster"><span class="symbol function"></span>GetCluster</a></li>
-    <li><a href="getjob" title="GetJob"><span class="symbol function"></span>GetJob</a></li>
-    <li><a href="getregionautoscalingpolicyiampolicy" title="GetRegionAutoscalingPolicyIamPolicy"><span class="symbol function"></span>GetRegionAutoscalingPolicyIamPolicy</a></li>
-    <li><a href="getregionclusteriampolicy" title="GetRegionClusterIamPolicy"><span class="symbol function"></span>GetRegionClusterIamPolicy</a></li>
-    <li><a href="getregionjobiampolicy" title="GetRegionJobIamPolicy"><span class="symbol function"></span>GetRegionJobIamPolicy</a></li>
-    <li><a href="getregionoperationiampolicy" title="GetRegionOperationIamPolicy"><span class="symbol function"></span>GetRegionOperationIamPolicy</a></li>
-    <li><a href="getregionworkflowtemplateiampolicy" title="GetRegionWorkflowTemplateIamPolicy"><span class="symbol function"></span>GetRegionWorkflowTemplateIamPolicy</a></li>
-    <li><a href="getworkflowtemplate" title="GetWorkflowTemplate"><span class="symbol function"></span>GetWorkflowTemplate</a></li>
-    <li><a href="getworkflowtemplateiampolicy" title="GetWorkflowTemplateIamPolicy"><span class="symbol function"></span>GetWorkflowTemplateIamPolicy</a></li>
+    <li><a href="getautoscalingpolicy" title="GetAutoscalingPolicy"><span class="api-symbol api-symbol--function"></span>GetAutoscalingPolicy</a></li>
+    <li><a href="getautoscalingpolicyiampolicy" title="GetAutoscalingPolicyIamPolicy"><span class="api-symbol api-symbol--function"></span>GetAutoscalingPolicyIamPolicy</a></li>
+    <li><a href="getcluster" title="GetCluster"><span class="api-symbol api-symbol--function"></span>GetCluster</a></li>
+    <li><a href="getjob" title="GetJob"><span class="api-symbol api-symbol--function"></span>GetJob</a></li>
+    <li><a href="getregionautoscalingpolicyiampolicy" title="GetRegionAutoscalingPolicyIamPolicy"><span class="api-symbol api-symbol--function"></span>GetRegionAutoscalingPolicyIamPolicy</a></li>
+    <li><a href="getregionclusteriampolicy" title="GetRegionClusterIamPolicy"><span class="api-symbol api-symbol--function"></span>GetRegionClusterIamPolicy</a></li>
+    <li><a href="getregionjobiampolicy" title="GetRegionJobIamPolicy"><span class="api-symbol api-symbol--function"></span>GetRegionJobIamPolicy</a></li>
+    <li><a href="getregionoperationiampolicy" title="GetRegionOperationIamPolicy"><span class="api-symbol api-symbol--function"></span>GetRegionOperationIamPolicy</a></li>
+    <li><a href="getregionworkflowtemplateiampolicy" title="GetRegionWorkflowTemplateIamPolicy"><span class="api-symbol api-symbol--function"></span>GetRegionWorkflowTemplateIamPolicy</a></li>
+    <li><a href="getworkflowtemplate" title="GetWorkflowTemplate"><span class="api-symbol api-symbol--function"></span>GetWorkflowTemplate</a></li>
+    <li><a href="getworkflowtemplateiampolicy" title="GetWorkflowTemplateIamPolicy"><span class="api-symbol api-symbol--function"></span>GetWorkflowTemplateIamPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -48,6 +48,6 @@ Explore the resources and functions of the google-native.dataproc/v1beta2 module
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.0</dd>
+	<dd>0.8.0</dd>
 </dl>
 

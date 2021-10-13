@@ -1168,7 +1168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routerbgppeerbfd">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Inputs.<wbr>Router<wbr>Bgp<wbr>Peer<wbr>Bfd</a></span>
     </dt>
-    <dd>{{% md %}}BFD configuration for the BGP peering. Not currently available publicly.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}BFD configuration for the BGP peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_csharp">
 <a href="#enable_csharp" style="color: inherit; text-decoration: inherit;">Enable</a>
@@ -1292,7 +1292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routerbgppeerbfd">Router<wbr>Bgp<wbr>Peer<wbr>Bfd</a></span>
     </dt>
-    <dd>{{% md %}}BFD configuration for the BGP peering. Not currently available publicly.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}BFD configuration for the BGP peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_go">
 <a href="#enable_go" style="color: inherit; text-decoration: inherit;">Enable</a>
@@ -1416,7 +1416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routerbgppeerbfd">Router<wbr>Bgp<wbr>Peer<wbr>Bfd</a></span>
     </dt>
-    <dd>{{% md %}}BFD configuration for the BGP peering. Not currently available publicly.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}BFD configuration for the BGP peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_nodejs">
 <a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
@@ -1540,7 +1540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routerbgppeerbfd">Router<wbr>Bgp<wbr>Peer<wbr>Bfd</a></span>
     </dt>
-    <dd>{{% md %}}BFD configuration for the BGP peering. Not currently available publicly.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}BFD configuration for the BGP peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_python">
 <a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
@@ -1690,7 +1690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum interval, in milliseconds, between BFD control packets received from the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the transmit interval of the other router. Not currently available publicly. If set, this value must be between 100 and 30000. The default is 300.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The minimum interval, in milliseconds, between BFD control packets received from the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the transmit interval of the other router. If set, this value must be between 1000 and 30000. The default is 1000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mintransmitinterval_csharp">
 <a href="#mintransmitinterval_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Transmit<wbr>Interval</a>
@@ -1698,7 +1698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum interval, in milliseconds, between BFD control packets transmitted to the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the corresponding receive interval of the other router. Not currently available publicly. If set, this value must be between 100 and 30000. The default is 300.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The minimum interval, in milliseconds, between BFD control packets transmitted to the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the corresponding receive interval of the other router. If set, this value must be between 1000 and 30000. The default is 1000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_csharp">
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -1714,7 +1714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of consecutive BFD packets that must be missed before BFD declares that a peer is unavailable. Not currently available publicly. If set, the value must be a value between 2 and 16. The default is 3.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The number of consecutive BFD packets that must be missed before BFD declares that a peer is unavailable. If set, the value must be a value between 5 and 16. The default is 5.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="packetmode_csharp">
 <a href="#packetmode_csharp" style="color: inherit; text-decoration: inherit;">Packet<wbr>Mode</a>
@@ -1730,7 +1730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routerbgppeerbfdsessioninitializationmode">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Router<wbr>Bgp<wbr>Peer<wbr>Bfd<wbr>Session<wbr>Initialization<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}The BFD session initialization mode for this BGP peer. Not currently available publicly. If set to ACTIVE, the Cloud Router will initiate the BFD session for this BGP peer. If set to PASSIVE, the Cloud Router will wait for the peer router to initiate the BFD session for this BGP peer. If set to DISABLED, BFD is disabled for this BGP peer. The default is PASSIVE.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The BFD session initialization mode for this BGP peer. If set to ACTIVE, the Cloud Router will initiate the BFD session for this BGP peer. If set to PASSIVE, the Cloud Router will wait for the peer router to initiate the BFD session for this BGP peer. If set to DISABLED, BFD is disabled for this BGP peer. The default is PASSIVE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="slowtimerinterval_csharp">
 <a href="#slowtimerinterval_csharp" style="color: inherit; text-decoration: inherit;">Slow<wbr>Timer<wbr>Interval</a>
@@ -1750,7 +1750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum interval, in milliseconds, between BFD control packets received from the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the transmit interval of the other router. Not currently available publicly. If set, this value must be between 100 and 30000. The default is 300.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The minimum interval, in milliseconds, between BFD control packets received from the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the transmit interval of the other router. If set, this value must be between 1000 and 30000. The default is 1000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mintransmitinterval_go">
 <a href="#mintransmitinterval_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Transmit<wbr>Interval</a>
@@ -1758,7 +1758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum interval, in milliseconds, between BFD control packets transmitted to the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the corresponding receive interval of the other router. Not currently available publicly. If set, this value must be between 100 and 30000. The default is 300.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The minimum interval, in milliseconds, between BFD control packets transmitted to the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the corresponding receive interval of the other router. If set, this value must be between 1000 and 30000. The default is 1000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_go">
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -1774,7 +1774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of consecutive BFD packets that must be missed before BFD declares that a peer is unavailable. Not currently available publicly. If set, the value must be a value between 2 and 16. The default is 3.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The number of consecutive BFD packets that must be missed before BFD declares that a peer is unavailable. If set, the value must be a value between 5 and 16. The default is 5.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="packetmode_go">
 <a href="#packetmode_go" style="color: inherit; text-decoration: inherit;">Packet<wbr>Mode</a>
@@ -1790,7 +1790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routerbgppeerbfdsessioninitializationmode">Router<wbr>Bgp<wbr>Peer<wbr>Bfd<wbr>Session<wbr>Initialization<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}The BFD session initialization mode for this BGP peer. Not currently available publicly. If set to ACTIVE, the Cloud Router will initiate the BFD session for this BGP peer. If set to PASSIVE, the Cloud Router will wait for the peer router to initiate the BFD session for this BGP peer. If set to DISABLED, BFD is disabled for this BGP peer. The default is PASSIVE.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The BFD session initialization mode for this BGP peer. If set to ACTIVE, the Cloud Router will initiate the BFD session for this BGP peer. If set to PASSIVE, the Cloud Router will wait for the peer router to initiate the BFD session for this BGP peer. If set to DISABLED, BFD is disabled for this BGP peer. The default is PASSIVE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="slowtimerinterval_go">
 <a href="#slowtimerinterval_go" style="color: inherit; text-decoration: inherit;">Slow<wbr>Timer<wbr>Interval</a>
@@ -1810,7 +1810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The minimum interval, in milliseconds, between BFD control packets received from the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the transmit interval of the other router. Not currently available publicly. If set, this value must be between 100 and 30000. The default is 300.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The minimum interval, in milliseconds, between BFD control packets received from the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the transmit interval of the other router. If set, this value must be between 1000 and 30000. The default is 1000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mintransmitinterval_nodejs">
 <a href="#mintransmitinterval_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Transmit<wbr>Interval</a>
@@ -1818,7 +1818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The minimum interval, in milliseconds, between BFD control packets transmitted to the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the corresponding receive interval of the other router. Not currently available publicly. If set, this value must be between 100 and 30000. The default is 300.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The minimum interval, in milliseconds, between BFD control packets transmitted to the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the corresponding receive interval of the other router. If set, this value must be between 1000 and 30000. The default is 1000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_nodejs">
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -1834,7 +1834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of consecutive BFD packets that must be missed before BFD declares that a peer is unavailable. Not currently available publicly. If set, the value must be a value between 2 and 16. The default is 3.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The number of consecutive BFD packets that must be missed before BFD declares that a peer is unavailable. If set, the value must be a value between 5 and 16. The default is 5.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="packetmode_nodejs">
 <a href="#packetmode_nodejs" style="color: inherit; text-decoration: inherit;">packet<wbr>Mode</a>
@@ -1850,7 +1850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routerbgppeerbfdsessioninitializationmode">Router<wbr>Bgp<wbr>Peer<wbr>Bfd<wbr>Session<wbr>Initialization<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}The BFD session initialization mode for this BGP peer. Not currently available publicly. If set to ACTIVE, the Cloud Router will initiate the BFD session for this BGP peer. If set to PASSIVE, the Cloud Router will wait for the peer router to initiate the BFD session for this BGP peer. If set to DISABLED, BFD is disabled for this BGP peer. The default is PASSIVE.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The BFD session initialization mode for this BGP peer. If set to ACTIVE, the Cloud Router will initiate the BFD session for this BGP peer. If set to PASSIVE, the Cloud Router will wait for the peer router to initiate the BFD session for this BGP peer. If set to DISABLED, BFD is disabled for this BGP peer. The default is PASSIVE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="slowtimerinterval_nodejs">
 <a href="#slowtimerinterval_nodejs" style="color: inherit; text-decoration: inherit;">slow<wbr>Timer<wbr>Interval</a>
@@ -1870,7 +1870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum interval, in milliseconds, between BFD control packets received from the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the transmit interval of the other router. Not currently available publicly. If set, this value must be between 100 and 30000. The default is 300.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The minimum interval, in milliseconds, between BFD control packets received from the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the transmit interval of the other router. If set, this value must be between 1000 and 30000. The default is 1000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_transmit_interval_python">
 <a href="#min_transmit_interval_python" style="color: inherit; text-decoration: inherit;">min_<wbr>transmit_<wbr>interval</a>
@@ -1878,7 +1878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum interval, in milliseconds, between BFD control packets transmitted to the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the corresponding receive interval of the other router. Not currently available publicly. If set, this value must be between 100 and 30000. The default is 300.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The minimum interval, in milliseconds, between BFD control packets transmitted to the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the corresponding receive interval of the other router. If set, this value must be between 1000 and 30000. The default is 1000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_python">
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -1894,7 +1894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of consecutive BFD packets that must be missed before BFD declares that a peer is unavailable. Not currently available publicly. If set, the value must be a value between 2 and 16. The default is 3.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The number of consecutive BFD packets that must be missed before BFD declares that a peer is unavailable. If set, the value must be a value between 5 and 16. The default is 5.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="packet_mode_python">
 <a href="#packet_mode_python" style="color: inherit; text-decoration: inherit;">packet_<wbr>mode</a>
@@ -1910,7 +1910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routerbgppeerbfdsessioninitializationmode">Router<wbr>Bgp<wbr>Peer<wbr>Bfd<wbr>Session<wbr>Initialization<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}The BFD session initialization mode for this BGP peer. Not currently available publicly. If set to ACTIVE, the Cloud Router will initiate the BFD session for this BGP peer. If set to PASSIVE, the Cloud Router will wait for the peer router to initiate the BFD session for this BGP peer. If set to DISABLED, BFD is disabled for this BGP peer. The default is PASSIVE.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The BFD session initialization mode for this BGP peer. If set to ACTIVE, the Cloud Router will initiate the BFD session for this BGP peer. If set to PASSIVE, the Cloud Router will wait for the peer router to initiate the BFD session for this BGP peer. If set to DISABLED, BFD is disabled for this BGP peer. The default is PASSIVE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="slow_timer_interval_python">
 <a href="#slow_timer_interval_python" style="color: inherit; text-decoration: inherit;">slow_<wbr>timer_<wbr>interval</a>
@@ -1988,7 +1988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum interval, in milliseconds, between BFD control packets received from the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the transmit interval of the other router. Not currently available publicly. If set, this value must be between 100 and 30000. The default is 300.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The minimum interval, in milliseconds, between BFD control packets received from the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the transmit interval of the other router. If set, this value must be between 1000 and 30000. The default is 1000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mintransmitinterval_csharp">
 <a href="#mintransmitinterval_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Transmit<wbr>Interval</a>
@@ -1996,7 +1996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum interval, in milliseconds, between BFD control packets transmitted to the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the corresponding receive interval of the other router. Not currently available publicly. If set, this value must be between 100 and 30000. The default is 300.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The minimum interval, in milliseconds, between BFD control packets transmitted to the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the corresponding receive interval of the other router. If set, this value must be between 1000 and 30000. The default is 1000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_csharp">
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -2012,7 +2012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of consecutive BFD packets that must be missed before BFD declares that a peer is unavailable. Not currently available publicly. If set, the value must be a value between 2 and 16. The default is 3.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The number of consecutive BFD packets that must be missed before BFD declares that a peer is unavailable. If set, the value must be a value between 5 and 16. The default is 5.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="packetmode_csharp">
 <a href="#packetmode_csharp" style="color: inherit; text-decoration: inherit;">Packet<wbr>Mode</a>
@@ -2028,7 +2028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The BFD session initialization mode for this BGP peer. Not currently available publicly. If set to ACTIVE, the Cloud Router will initiate the BFD session for this BGP peer. If set to PASSIVE, the Cloud Router will wait for the peer router to initiate the BFD session for this BGP peer. If set to DISABLED, BFD is disabled for this BGP peer. The default is PASSIVE.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The BFD session initialization mode for this BGP peer. If set to ACTIVE, the Cloud Router will initiate the BFD session for this BGP peer. If set to PASSIVE, the Cloud Router will wait for the peer router to initiate the BFD session for this BGP peer. If set to DISABLED, BFD is disabled for this BGP peer. The default is PASSIVE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="slowtimerinterval_csharp">
 <a href="#slowtimerinterval_csharp" style="color: inherit; text-decoration: inherit;">Slow<wbr>Timer<wbr>Interval</a>
@@ -2048,7 +2048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum interval, in milliseconds, between BFD control packets received from the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the transmit interval of the other router. Not currently available publicly. If set, this value must be between 100 and 30000. The default is 300.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The minimum interval, in milliseconds, between BFD control packets received from the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the transmit interval of the other router. If set, this value must be between 1000 and 30000. The default is 1000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mintransmitinterval_go">
 <a href="#mintransmitinterval_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Transmit<wbr>Interval</a>
@@ -2056,7 +2056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum interval, in milliseconds, between BFD control packets transmitted to the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the corresponding receive interval of the other router. Not currently available publicly. If set, this value must be between 100 and 30000. The default is 300.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The minimum interval, in milliseconds, between BFD control packets transmitted to the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the corresponding receive interval of the other router. If set, this value must be between 1000 and 30000. The default is 1000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_go">
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -2072,7 +2072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of consecutive BFD packets that must be missed before BFD declares that a peer is unavailable. Not currently available publicly. If set, the value must be a value between 2 and 16. The default is 3.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The number of consecutive BFD packets that must be missed before BFD declares that a peer is unavailable. If set, the value must be a value between 5 and 16. The default is 5.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="packetmode_go">
 <a href="#packetmode_go" style="color: inherit; text-decoration: inherit;">Packet<wbr>Mode</a>
@@ -2088,7 +2088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The BFD session initialization mode for this BGP peer. Not currently available publicly. If set to ACTIVE, the Cloud Router will initiate the BFD session for this BGP peer. If set to PASSIVE, the Cloud Router will wait for the peer router to initiate the BFD session for this BGP peer. If set to DISABLED, BFD is disabled for this BGP peer. The default is PASSIVE.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The BFD session initialization mode for this BGP peer. If set to ACTIVE, the Cloud Router will initiate the BFD session for this BGP peer. If set to PASSIVE, the Cloud Router will wait for the peer router to initiate the BFD session for this BGP peer. If set to DISABLED, BFD is disabled for this BGP peer. The default is PASSIVE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="slowtimerinterval_go">
 <a href="#slowtimerinterval_go" style="color: inherit; text-decoration: inherit;">Slow<wbr>Timer<wbr>Interval</a>
@@ -2108,7 +2108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The minimum interval, in milliseconds, between BFD control packets received from the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the transmit interval of the other router. Not currently available publicly. If set, this value must be between 100 and 30000. The default is 300.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The minimum interval, in milliseconds, between BFD control packets received from the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the transmit interval of the other router. If set, this value must be between 1000 and 30000. The default is 1000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mintransmitinterval_nodejs">
 <a href="#mintransmitinterval_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Transmit<wbr>Interval</a>
@@ -2116,7 +2116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The minimum interval, in milliseconds, between BFD control packets transmitted to the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the corresponding receive interval of the other router. Not currently available publicly. If set, this value must be between 100 and 30000. The default is 300.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The minimum interval, in milliseconds, between BFD control packets transmitted to the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the corresponding receive interval of the other router. If set, this value must be between 1000 and 30000. The default is 1000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_nodejs">
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -2132,7 +2132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of consecutive BFD packets that must be missed before BFD declares that a peer is unavailable. Not currently available publicly. If set, the value must be a value between 2 and 16. The default is 3.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The number of consecutive BFD packets that must be missed before BFD declares that a peer is unavailable. If set, the value must be a value between 5 and 16. The default is 5.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="packetmode_nodejs">
 <a href="#packetmode_nodejs" style="color: inherit; text-decoration: inherit;">packet<wbr>Mode</a>
@@ -2148,7 +2148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The BFD session initialization mode for this BGP peer. Not currently available publicly. If set to ACTIVE, the Cloud Router will initiate the BFD session for this BGP peer. If set to PASSIVE, the Cloud Router will wait for the peer router to initiate the BFD session for this BGP peer. If set to DISABLED, BFD is disabled for this BGP peer. The default is PASSIVE.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The BFD session initialization mode for this BGP peer. If set to ACTIVE, the Cloud Router will initiate the BFD session for this BGP peer. If set to PASSIVE, the Cloud Router will wait for the peer router to initiate the BFD session for this BGP peer. If set to DISABLED, BFD is disabled for this BGP peer. The default is PASSIVE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="slowtimerinterval_nodejs">
 <a href="#slowtimerinterval_nodejs" style="color: inherit; text-decoration: inherit;">slow<wbr>Timer<wbr>Interval</a>
@@ -2168,7 +2168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum interval, in milliseconds, between BFD control packets received from the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the transmit interval of the other router. Not currently available publicly. If set, this value must be between 100 and 30000. The default is 300.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The minimum interval, in milliseconds, between BFD control packets received from the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the transmit interval of the other router. If set, this value must be between 1000 and 30000. The default is 1000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="min_transmit_interval_python">
 <a href="#min_transmit_interval_python" style="color: inherit; text-decoration: inherit;">min_<wbr>transmit_<wbr>interval</a>
@@ -2176,7 +2176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum interval, in milliseconds, between BFD control packets transmitted to the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the corresponding receive interval of the other router. Not currently available publicly. If set, this value must be between 100 and 30000. The default is 300.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The minimum interval, in milliseconds, between BFD control packets transmitted to the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the corresponding receive interval of the other router. If set, this value must be between 1000 and 30000. The default is 1000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_python">
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -2192,7 +2192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of consecutive BFD packets that must be missed before BFD declares that a peer is unavailable. Not currently available publicly. If set, the value must be a value between 2 and 16. The default is 3.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The number of consecutive BFD packets that must be missed before BFD declares that a peer is unavailable. If set, the value must be a value between 5 and 16. The default is 5.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="packet_mode_python">
 <a href="#packet_mode_python" style="color: inherit; text-decoration: inherit;">packet_<wbr>mode</a>
@@ -2208,7 +2208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The BFD session initialization mode for this BGP peer. Not currently available publicly. If set to ACTIVE, the Cloud Router will initiate the BFD session for this BGP peer. If set to PASSIVE, the Cloud Router will wait for the peer router to initiate the BFD session for this BGP peer. If set to DISABLED, BFD is disabled for this BGP peer. The default is PASSIVE.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The BFD session initialization mode for this BGP peer. If set to ACTIVE, the Cloud Router will initiate the BFD session for this BGP peer. If set to PASSIVE, the Cloud Router will wait for the peer router to initiate the BFD session for this BGP peer. If set to DISABLED, BFD is disabled for this BGP peer. The default is PASSIVE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="slow_timer_interval_python">
 <a href="#slow_timer_interval_python" style="color: inherit; text-decoration: inherit;">slow_<wbr>timer_<wbr>interval</a>
@@ -2318,7 +2318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routerbgppeerbfdresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Inputs.<wbr>Router<wbr>Bgp<wbr>Peer<wbr>Bfd<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}BFD configuration for the BGP peering. Not currently available publicly.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}BFD configuration for the BGP peering.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enable_csharp">
 <a href="#enable_csharp" style="color: inherit; text-decoration: inherit;">Enable</a>
@@ -2450,7 +2450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routerbgppeerbfdresponse">Router<wbr>Bgp<wbr>Peer<wbr>Bfd<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}BFD configuration for the BGP peering. Not currently available publicly.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}BFD configuration for the BGP peering.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enable_go">
 <a href="#enable_go" style="color: inherit; text-decoration: inherit;">Enable</a>
@@ -2582,7 +2582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routerbgppeerbfdresponse">Router<wbr>Bgp<wbr>Peer<wbr>Bfd<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}BFD configuration for the BGP peering. Not currently available publicly.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}BFD configuration for the BGP peering.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enable_nodejs">
 <a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
@@ -2714,7 +2714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routerbgppeerbfdresponse">Router<wbr>Bgp<wbr>Peer<wbr>Bfd<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}BFD configuration for the BGP peering. Not currently available publicly.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}BFD configuration for the BGP peering.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enable_python">
 <a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
@@ -4870,7 +4870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CEL expression that specifies the match condition that egress traffic from a VM is evaluated against. If it evaluates to true, the corresponding `action` is enforced. The following examples are valid match expressions: "inIpRange(destination.ip, '1.1.0.0/16') || inIpRange(destination.ip, '2.2.0.0/16')" "destination.ip == '1.1.0.1' || destination.ip == '8.8.8.8'"{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}CEL expression that specifies the match condition that egress traffic from a VM is evaluated against. If it evaluates to true, the corresponding `action` is enforced. The following examples are valid match expressions for public NAT: "inIpRange(destination.ip, '1.1.0.0/16') || inIpRange(destination.ip, '2.2.0.0/16')" "destination.ip == '1.1.0.1' || destination.ip == '8.8.8.8'" The following example is a valid match expression for private NAT: "nexthop.hub == '/projects/my-project/global/hub/hub-1'"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rulenumber_csharp">
 <a href="#rulenumber_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Number</a>
@@ -4906,7 +4906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CEL expression that specifies the match condition that egress traffic from a VM is evaluated against. If it evaluates to true, the corresponding `action` is enforced. The following examples are valid match expressions: "inIpRange(destination.ip, '1.1.0.0/16') || inIpRange(destination.ip, '2.2.0.0/16')" "destination.ip == '1.1.0.1' || destination.ip == '8.8.8.8'"{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}CEL expression that specifies the match condition that egress traffic from a VM is evaluated against. If it evaluates to true, the corresponding `action` is enforced. The following examples are valid match expressions for public NAT: "inIpRange(destination.ip, '1.1.0.0/16') || inIpRange(destination.ip, '2.2.0.0/16')" "destination.ip == '1.1.0.1' || destination.ip == '8.8.8.8'" The following example is a valid match expression for private NAT: "nexthop.hub == '/projects/my-project/global/hub/hub-1'"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rulenumber_go">
 <a href="#rulenumber_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Number</a>
@@ -4942,7 +4942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CEL expression that specifies the match condition that egress traffic from a VM is evaluated against. If it evaluates to true, the corresponding `action` is enforced. The following examples are valid match expressions: "inIpRange(destination.ip, '1.1.0.0/16') || inIpRange(destination.ip, '2.2.0.0/16')" "destination.ip == '1.1.0.1' || destination.ip == '8.8.8.8'"{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}CEL expression that specifies the match condition that egress traffic from a VM is evaluated against. If it evaluates to true, the corresponding `action` is enforced. The following examples are valid match expressions for public NAT: "inIpRange(destination.ip, '1.1.0.0/16') || inIpRange(destination.ip, '2.2.0.0/16')" "destination.ip == '1.1.0.1' || destination.ip == '8.8.8.8'" The following example is a valid match expression for private NAT: "nexthop.hub == '/projects/my-project/global/hub/hub-1'"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rulenumber_nodejs">
 <a href="#rulenumber_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Number</a>
@@ -4978,7 +4978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}CEL expression that specifies the match condition that egress traffic from a VM is evaluated against. If it evaluates to true, the corresponding `action` is enforced. The following examples are valid match expressions: "inIpRange(destination.ip, '1.1.0.0/16') || inIpRange(destination.ip, '2.2.0.0/16')" "destination.ip == '1.1.0.1' || destination.ip == '8.8.8.8'"{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}CEL expression that specifies the match condition that egress traffic from a VM is evaluated against. If it evaluates to true, the corresponding `action` is enforced. The following examples are valid match expressions for public NAT: "inIpRange(destination.ip, '1.1.0.0/16') || inIpRange(destination.ip, '2.2.0.0/16')" "destination.ip == '1.1.0.1' || destination.ip == '8.8.8.8'" The following example is a valid match expression for private NAT: "nexthop.hub == '/projects/my-project/global/hub/hub-1'"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rule_number_python">
 <a href="#rule_number_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>number</a>
@@ -5000,7 +5000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of URLs of the IP resources used for this NAT rule. These IP addresses must be valid static external IP addresses assigned to the project.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A list of URLs of the IP resources used for this NAT rule. These IP addresses must be valid static external IP addresses assigned to the project. This field is used for public NAT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcenatdrainips_csharp">
 <a href="#sourcenatdrainips_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Nat<wbr>Drain<wbr>Ips</a>
@@ -5008,7 +5008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT rule only.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT rule only. This field is used for public NAT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -5020,7 +5020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of URLs of the IP resources used for this NAT rule. These IP addresses must be valid static external IP addresses assigned to the project.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A list of URLs of the IP resources used for this NAT rule. These IP addresses must be valid static external IP addresses assigned to the project. This field is used for public NAT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcenatdrainips_go">
 <a href="#sourcenatdrainips_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Nat<wbr>Drain<wbr>Ips</a>
@@ -5028,7 +5028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT rule only.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT rule only. This field is used for public NAT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -5040,7 +5040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of URLs of the IP resources used for this NAT rule. These IP addresses must be valid static external IP addresses assigned to the project.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A list of URLs of the IP resources used for this NAT rule. These IP addresses must be valid static external IP addresses assigned to the project. This field is used for public NAT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcenatdrainips_nodejs">
 <a href="#sourcenatdrainips_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Nat<wbr>Drain<wbr>Ips</a>
@@ -5048,7 +5048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT rule only.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT rule only. This field is used for public NAT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -5060,7 +5060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of URLs of the IP resources used for this NAT rule. These IP addresses must be valid static external IP addresses assigned to the project.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A list of URLs of the IP resources used for this NAT rule. These IP addresses must be valid static external IP addresses assigned to the project. This field is used for public NAT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_nat_drain_ips_python">
 <a href="#source_nat_drain_ips_python" style="color: inherit; text-decoration: inherit;">source_<wbr>nat_<wbr>drain_<wbr>ips</a>
@@ -5068,7 +5068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT rule only.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT rule only. This field is used for public NAT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="routernatruleactionresponse">Router<wbr>Nat<wbr>Rule<wbr>Action<wbr>Response</h4>
@@ -5082,7 +5082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of URLs of the IP resources used for this NAT rule. These IP addresses must be valid static external IP addresses assigned to the project.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}A list of URLs of the IP resources used for this NAT rule. These IP addresses must be valid static external IP addresses assigned to the project. This field is used for public NAT.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcenatdrainips_csharp">
 <a href="#sourcenatdrainips_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Nat<wbr>Drain<wbr>Ips</a>
@@ -5090,7 +5090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT rule only.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT rule only. This field is used for public NAT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -5102,7 +5102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of URLs of the IP resources used for this NAT rule. These IP addresses must be valid static external IP addresses assigned to the project.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}A list of URLs of the IP resources used for this NAT rule. These IP addresses must be valid static external IP addresses assigned to the project. This field is used for public NAT.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcenatdrainips_go">
 <a href="#sourcenatdrainips_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Nat<wbr>Drain<wbr>Ips</a>
@@ -5110,7 +5110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT rule only.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT rule only. This field is used for public NAT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -5122,7 +5122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of URLs of the IP resources used for this NAT rule. These IP addresses must be valid static external IP addresses assigned to the project.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}A list of URLs of the IP resources used for this NAT rule. These IP addresses must be valid static external IP addresses assigned to the project. This field is used for public NAT.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcenatdrainips_nodejs">
 <a href="#sourcenatdrainips_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Nat<wbr>Drain<wbr>Ips</a>
@@ -5130,7 +5130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT rule only.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT rule only. This field is used for public NAT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -5142,7 +5142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of URLs of the IP resources used for this NAT rule. These IP addresses must be valid static external IP addresses assigned to the project.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}A list of URLs of the IP resources used for this NAT rule. These IP addresses must be valid static external IP addresses assigned to the project. This field is used for public NAT.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_nat_drain_ips_python">
 <a href="#source_nat_drain_ips_python" style="color: inherit; text-decoration: inherit;">source_<wbr>nat_<wbr>drain_<wbr>ips</a>
@@ -5150,7 +5150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT rule only.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT rule only. This field is used for public NAT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="routernatruleresponse">Router<wbr>Nat<wbr>Rule<wbr>Response</h4>
@@ -5180,7 +5180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CEL expression that specifies the match condition that egress traffic from a VM is evaluated against. If it evaluates to true, the corresponding `action` is enforced. The following examples are valid match expressions: "inIpRange(destination.ip, '1.1.0.0/16') || inIpRange(destination.ip, '2.2.0.0/16')" "destination.ip == '1.1.0.1' || destination.ip == '8.8.8.8'"{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}CEL expression that specifies the match condition that egress traffic from a VM is evaluated against. If it evaluates to true, the corresponding `action` is enforced. The following examples are valid match expressions for public NAT: "inIpRange(destination.ip, '1.1.0.0/16') || inIpRange(destination.ip, '2.2.0.0/16')" "destination.ip == '1.1.0.1' || destination.ip == '8.8.8.8'" The following example is a valid match expression for private NAT: "nexthop.hub == '/projects/my-project/global/hub/hub-1'"{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rulenumber_csharp">
 <a href="#rulenumber_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Number</a>
@@ -5216,7 +5216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CEL expression that specifies the match condition that egress traffic from a VM is evaluated against. If it evaluates to true, the corresponding `action` is enforced. The following examples are valid match expressions: "inIpRange(destination.ip, '1.1.0.0/16') || inIpRange(destination.ip, '2.2.0.0/16')" "destination.ip == '1.1.0.1' || destination.ip == '8.8.8.8'"{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}CEL expression that specifies the match condition that egress traffic from a VM is evaluated against. If it evaluates to true, the corresponding `action` is enforced. The following examples are valid match expressions for public NAT: "inIpRange(destination.ip, '1.1.0.0/16') || inIpRange(destination.ip, '2.2.0.0/16')" "destination.ip == '1.1.0.1' || destination.ip == '8.8.8.8'" The following example is a valid match expression for private NAT: "nexthop.hub == '/projects/my-project/global/hub/hub-1'"{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rulenumber_go">
 <a href="#rulenumber_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Number</a>
@@ -5252,7 +5252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CEL expression that specifies the match condition that egress traffic from a VM is evaluated against. If it evaluates to true, the corresponding `action` is enforced. The following examples are valid match expressions: "inIpRange(destination.ip, '1.1.0.0/16') || inIpRange(destination.ip, '2.2.0.0/16')" "destination.ip == '1.1.0.1' || destination.ip == '8.8.8.8'"{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}CEL expression that specifies the match condition that egress traffic from a VM is evaluated against. If it evaluates to true, the corresponding `action` is enforced. The following examples are valid match expressions for public NAT: "inIpRange(destination.ip, '1.1.0.0/16') || inIpRange(destination.ip, '2.2.0.0/16')" "destination.ip == '1.1.0.1' || destination.ip == '8.8.8.8'" The following example is a valid match expression for private NAT: "nexthop.hub == '/projects/my-project/global/hub/hub-1'"{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rulenumber_nodejs">
 <a href="#rulenumber_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Number</a>
@@ -5288,7 +5288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}CEL expression that specifies the match condition that egress traffic from a VM is evaluated against. If it evaluates to true, the corresponding `action` is enforced. The following examples are valid match expressions: "inIpRange(destination.ip, '1.1.0.0/16') || inIpRange(destination.ip, '2.2.0.0/16')" "destination.ip == '1.1.0.1' || destination.ip == '8.8.8.8'"{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}CEL expression that specifies the match condition that egress traffic from a VM is evaluated against. If it evaluates to true, the corresponding `action` is enforced. The following examples are valid match expressions for public NAT: "inIpRange(destination.ip, '1.1.0.0/16') || inIpRange(destination.ip, '2.2.0.0/16')" "destination.ip == '1.1.0.1' || destination.ip == '8.8.8.8'" The following example is a valid match expression for private NAT: "nexthop.hub == '/projects/my-project/global/hub/hub-1'"{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rule_number_python">
 <a href="#rule_number_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>number</a>

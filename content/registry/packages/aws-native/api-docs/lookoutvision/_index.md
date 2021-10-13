@@ -13,7 +13,7 @@ Explore the resources and functions of the aws-native.lookoutvision module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="project" title="Project"><span class="symbol resource"></span>Project</a></li>
+    <li><a href="project" title="Project"><span class="api-symbol api-symbol--resource"></span>Project</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -23,6 +23,6 @@ Explore the resources and functions of the aws-native.lookoutvision module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.0</dd>
 </dl>
 

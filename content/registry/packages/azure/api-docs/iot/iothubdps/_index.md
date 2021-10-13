@@ -340,7 +340,7 @@ The IotHubDps resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the supported Azure location where the resource has to be createc. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies the supported Azure location where the resource has to be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -407,7 +407,7 @@ The IotHubDps resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the supported Azure location where the resource has to be createc. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies the supported Azure location where the resource has to be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -474,7 +474,7 @@ The IotHubDps resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the supported Azure location where the resource has to be createc. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies the supported Azure location where the resource has to be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -541,7 +541,7 @@ The IotHubDps resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the supported Azure location where the resource has to be createc. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies the supported Azure location where the resource has to be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -906,7 +906,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the supported Azure location where the resource has to be createc. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies the supported Azure location where the resource has to be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
@@ -1000,7 +1000,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the supported Azure location where the resource has to be createc. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies the supported Azure location where the resource has to be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -1094,7 +1094,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the supported Azure location where the resource has to be createc. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies the supported Azure location where the resource has to be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
@@ -1188,7 +1188,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the supported Azure location where the resource has to be createc. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies the supported Azure location where the resource has to be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">

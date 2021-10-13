@@ -13,8 +13,8 @@ no_edit_this_page: true
 
 <h2 id="modules">Modules</h2>
 <ul class="api">
-    <li><a href="v3/" title="v3"><span class="symbol module"></span>v3</a></li>
-    <li><a href="v4/" title="v4"><span class="symbol module"></span>v4</a></li>
+    <li><a href="v3/" title="v3"><span class="api-symbol api-symbol--module"></span>v3</a></li>
+    <li><a href="v4/" title="v4"><span class="api-symbol api-symbol--module"></span>v4</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -24,6 +24,6 @@ no_edit_this_page: true
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.0</dd>
+	<dd>0.8.0</dd>
 </dl>
 

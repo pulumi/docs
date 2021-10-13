@@ -35,7 +35,7 @@ The permissions mapping supports the following:
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
-
+### Create an ssm document in JSON format
 
 
 {{< example csharp >}}
@@ -169,6 +169,130 @@ const foo = new aws.ssm.Document("foo", {
     }
   }
 `,
+    documentType: "Command",
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+### Create an ssm document in YAML format
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foo = new Aws.Ssm.Document("foo", new Aws.Ssm.DocumentArgs
+        {
+            Content = @"schemaVersion: '1.2'
+description: Check ip configuration of a Linux instance.
+parameters: {}
+runtimeConfig:
+  'aws:runShellScript':
+    properties:
+      - id: '0.aws:runShellScript'
+        runCommand:
+          - ifconfig
+
+",
+            DocumentFormat = "YAML",
+            DocumentType = "Command",
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ssm"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ssm.NewDocument(ctx, "foo", &ssm.DocumentArgs{
+			Content:        pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v", "schemaVersion: '1.2'\n", "description: Check ip configuration of a Linux instance.\n", "parameters: {}\n", "runtimeConfig:\n", "  'aws:runShellScript':\n", "    properties:\n", "      - id: '0.aws:runShellScript'\n", "        runCommand:\n", "          - ifconfig\n", "\n")),
+			DocumentFormat: pulumi.String("YAML"),
+			DocumentType:   pulumi.String("Command"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+foo = aws.ssm.Document("foo",
+    content="""schemaVersion: '1.2'
+description: Check ip configuration of a Linux instance.
+parameters: {}
+runtimeConfig:
+  'aws:runShellScript':
+    properties:
+      - id: '0.aws:runShellScript'
+        runCommand:
+          - ifconfig
+
+""",
+    document_format="YAML",
+    document_type="Command")
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const foo = new aws.ssm.Document("foo", {
+    content: `schemaVersion: '1.2'
+description: Check ip configuration of a Linux instance.
+parameters: {}
+runtimeConfig:
+  'aws:runShellScript':
+    properties:
+      - id: '0.aws:runShellScript'
+        runCommand:
+          - ifconfig
+`,
+    documentFormat: "YAML",
     documentType: "Command",
 });
 ```

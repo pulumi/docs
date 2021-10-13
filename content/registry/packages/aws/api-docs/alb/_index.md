@@ -13,19 +13,19 @@ Explore the resources and functions of the aws.alb module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="listener" title="Listener"><span class="symbol resource"></span>Listener</a></li>
-    <li><a href="listenercertificate" title="ListenerCertificate"><span class="symbol resource"></span>ListenerCertificate</a></li>
-    <li><a href="listenerrule" title="ListenerRule"><span class="symbol resource"></span>ListenerRule</a></li>
-    <li><a href="loadbalancer" title="LoadBalancer"><span class="symbol resource"></span>LoadBalancer</a></li>
-    <li><a href="targetgroup" title="TargetGroup"><span class="symbol resource"></span>TargetGroup</a></li>
-    <li><a href="targetgroupattachment" title="TargetGroupAttachment"><span class="symbol resource"></span>TargetGroupAttachment</a></li>
+    <li><a href="listener" title="Listener"><span class="api-symbol api-symbol--resource"></span>Listener</a></li>
+    <li><a href="listenercertificate" title="ListenerCertificate"><span class="api-symbol api-symbol--resource"></span>ListenerCertificate</a></li>
+    <li><a href="listenerrule" title="ListenerRule"><span class="api-symbol api-symbol--resource"></span>ListenerRule</a></li>
+    <li><a href="loadbalancer" title="LoadBalancer"><span class="api-symbol api-symbol--resource"></span>LoadBalancer</a></li>
+    <li><a href="targetgroup" title="TargetGroup"><span class="api-symbol api-symbol--resource"></span>TargetGroup</a></li>
+    <li><a href="targetgroupattachment" title="TargetGroupAttachment"><span class="api-symbol api-symbol--resource"></span>TargetGroupAttachment</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getlistener" title="GetListener"><span class="symbol function"></span>GetListener</a></li>
-    <li><a href="getloadbalancer" title="GetLoadBalancer"><span class="symbol function"></span>GetLoadBalancer</a></li>
-    <li><a href="gettargetgroup" title="GetTargetGroup"><span class="symbol function"></span>GetTargetGroup</a></li>
+    <li><a href="getlistener" title="GetListener"><span class="api-symbol api-symbol--function"></span>GetListener</a></li>
+    <li><a href="getloadbalancer" title="GetLoadBalancer"><span class="api-symbol api-symbol--function"></span>GetLoadBalancer</a></li>
+    <li><a href="gettargetgroup" title="GetTargetGroup"><span class="api-symbol api-symbol--function"></span>GetTargetGroup</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -37,6 +37,6 @@ Explore the resources and functions of the aws.alb module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.23.0</dd>
+	<dd>4.24.1</dd>
 </dl>
 

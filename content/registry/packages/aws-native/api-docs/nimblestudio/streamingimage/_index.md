@@ -350,7 +350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingimagestreamingimageencryptionconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Nimble<wbr>Studio.<wbr>Outputs.<wbr>Streaming<wbr>Image<wbr>Streaming<wbr>Image<wbr>Encryption<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#streamingimageencryptionconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Nimble<wbr>Studio.<wbr>Outputs.<wbr>Streaming<wbr>Image<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -402,7 +402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionconfiguration_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingimagestreamingimageencryptionconfiguration">Streaming<wbr>Image<wbr>Streaming<wbr>Image<wbr>Encryption<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#streamingimageencryptionconfiguration">Streaming<wbr>Image<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -454,7 +454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingimagestreamingimageencryptionconfiguration">Streaming<wbr>Image<wbr>Streaming<wbr>Image<wbr>Encryption<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#streamingimageencryptionconfiguration">Streaming<wbr>Image<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -506,7 +506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_configuration_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingimagestreamingimageencryptionconfiguration">Streaming<wbr>Image<wbr>Streaming<wbr>Image<wbr>Encryption<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#streamingimageencryptionconfiguration">Streaming<wbr>Image<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -561,7 +561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="streamingimagestreamingimageencryptionconfiguration">Streaming<wbr>Image<wbr>Streaming<wbr>Image<wbr>Encryption<wbr>Configuration</h4>
+<h4 id="streamingimageencryptionconfiguration">Streaming<wbr>Image<wbr>Encryption<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"

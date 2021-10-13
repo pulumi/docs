@@ -13,16 +13,16 @@ Explore the resources and functions of the google-native.essentialcontacts/v1 mo
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="contact" title="Contact"><span class="symbol resource"></span>Contact</a></li>
-    <li><a href="foldercontact" title="FolderContact"><span class="symbol resource"></span>FolderContact</a></li>
-    <li><a href="organizationcontact" title="OrganizationContact"><span class="symbol resource"></span>OrganizationContact</a></li>
+    <li><a href="contact" title="Contact"><span class="api-symbol api-symbol--resource"></span>Contact</a></li>
+    <li><a href="foldercontact" title="FolderContact"><span class="api-symbol api-symbol--resource"></span>FolderContact</a></li>
+    <li><a href="organizationcontact" title="OrganizationContact"><span class="api-symbol api-symbol--resource"></span>OrganizationContact</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getcontact" title="GetContact"><span class="symbol function"></span>GetContact</a></li>
-    <li><a href="getfoldercontact" title="GetFolderContact"><span class="symbol function"></span>GetFolderContact</a></li>
-    <li><a href="getorganizationcontact" title="GetOrganizationContact"><span class="symbol function"></span>GetOrganizationContact</a></li>
+    <li><a href="getcontact" title="GetContact"><span class="api-symbol api-symbol--function"></span>GetContact</a></li>
+    <li><a href="getfoldercontact" title="GetFolderContact"><span class="api-symbol api-symbol--function"></span>GetFolderContact</a></li>
+    <li><a href="getorganizationcontact" title="GetOrganizationContact"><span class="api-symbol api-symbol--function"></span>GetOrganizationContact</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -32,6 +32,6 @@ Explore the resources and functions of the google-native.essentialcontacts/v1 mo
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.0</dd>
+	<dd>0.8.0</dd>
 </dl>
 

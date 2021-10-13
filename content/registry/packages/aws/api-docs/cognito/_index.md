@@ -13,20 +13,20 @@ Explore the resources and functions of the aws.cognito module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="identitypool" title="IdentityPool"><span class="symbol resource"></span>IdentityPool</a></li>
-    <li><a href="identitypoolroleattachment" title="IdentityPoolRoleAttachment"><span class="symbol resource"></span>IdentityPoolRoleAttachment</a></li>
-    <li><a href="identityprovider" title="IdentityProvider"><span class="symbol resource"></span>IdentityProvider</a></li>
-    <li><a href="resourceserver" title="ResourceServer"><span class="symbol resource"></span>ResourceServer</a></li>
-    <li><a href="usergroup" title="UserGroup"><span class="symbol resource"></span>UserGroup</a></li>
-    <li><a href="userpool" title="UserPool"><span class="symbol resource"></span>UserPool</a></li>
-    <li><a href="userpoolclient" title="UserPoolClient"><span class="symbol resource"></span>UserPoolClient</a></li>
-    <li><a href="userpooldomain" title="UserPoolDomain"><span class="symbol resource"></span>UserPoolDomain</a></li>
-    <li><a href="userpooluicustomization" title="UserPoolUICustomization"><span class="symbol resource"></span>UserPoolUICustomization</a></li>
+    <li><a href="identitypool" title="IdentityPool"><span class="api-symbol api-symbol--resource"></span>IdentityPool</a></li>
+    <li><a href="identitypoolroleattachment" title="IdentityPoolRoleAttachment"><span class="api-symbol api-symbol--resource"></span>IdentityPoolRoleAttachment</a></li>
+    <li><a href="identityprovider" title="IdentityProvider"><span class="api-symbol api-symbol--resource"></span>IdentityProvider</a></li>
+    <li><a href="resourceserver" title="ResourceServer"><span class="api-symbol api-symbol--resource"></span>ResourceServer</a></li>
+    <li><a href="usergroup" title="UserGroup"><span class="api-symbol api-symbol--resource"></span>UserGroup</a></li>
+    <li><a href="userpool" title="UserPool"><span class="api-symbol api-symbol--resource"></span>UserPool</a></li>
+    <li><a href="userpoolclient" title="UserPoolClient"><span class="api-symbol api-symbol--resource"></span>UserPoolClient</a></li>
+    <li><a href="userpooldomain" title="UserPoolDomain"><span class="api-symbol api-symbol--resource"></span>UserPoolDomain</a></li>
+    <li><a href="userpooluicustomization" title="UserPoolUICustomization"><span class="api-symbol api-symbol--resource"></span>UserPoolUICustomization</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getuserpools" title="GetUserPools"><span class="symbol function"></span>GetUserPools</a></li>
+    <li><a href="getuserpools" title="GetUserPools"><span class="api-symbol api-symbol--function"></span>GetUserPools</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -38,6 +38,6 @@ Explore the resources and functions of the aws.cognito module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.23.0</dd>
+	<dd>4.24.1</dd>
 </dl>
 

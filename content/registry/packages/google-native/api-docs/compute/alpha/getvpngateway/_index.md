@@ -250,6 +250,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="stacktype_csharp">
+<a href="#stacktype_csharp" style="color: inherit; text-decoration: inherit;">Stack<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The stack type for this VPN gateway to identify the IP protocols that are enabled. If not specified, IPV4_ONLY will be used.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="vpninterfaces_csharp">
 <a href="#vpninterfaces_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Interfaces</a>
 </span>
@@ -333,6 +341,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="stacktype_go">
+<a href="#stacktype_go" style="color: inherit; text-decoration: inherit;">Stack<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The stack type for this VPN gateway to identify the IP protocols that are enabled. If not specified, IPV4_ONLY will be used.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpninterfaces_go">
 <a href="#vpninterfaces_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Interfaces</a>
@@ -418,6 +434,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="stacktype_nodejs">
+<a href="#stacktype_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The stack type for this VPN gateway to identify the IP protocols that are enabled. If not specified, IPV4_ONLY will be used.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="vpninterfaces_nodejs">
 <a href="#vpninterfaces_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Interfaces</a>
 </span>
@@ -501,6 +525,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="stack_type_python">
+<a href="#stack_type_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The stack type for this VPN gateway to identify the IP protocols that are enabled. If not specified, IPV4_ONLY will be used.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpn_interfaces_python">
 <a href="#vpn_interfaces_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>interfaces</a>

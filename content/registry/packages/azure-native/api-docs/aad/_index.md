@@ -13,14 +13,14 @@ Explore the resources and functions of the azure-native.aad module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="domainservice" title="DomainService"><span class="symbol resource"></span>DomainService</a></li>
-    <li><a href="oucontainer" title="OuContainer"><span class="symbol resource"></span>OuContainer</a></li>
+    <li><a href="domainservice" title="DomainService"><span class="api-symbol api-symbol--resource"></span>DomainService</a></li>
+    <li><a href="oucontainer" title="OuContainer"><span class="api-symbol api-symbol--resource"></span>OuContainer</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getdomainservice" title="GetDomainService"><span class="symbol function"></span>GetDomainService</a></li>
-    <li><a href="getoucontainer" title="GetOuContainer"><span class="symbol function"></span>GetOuContainer</a></li>
+    <li><a href="getdomainservice" title="GetDomainService"><span class="api-symbol api-symbol--function"></span>GetDomainService</a></li>
+    <li><a href="getoucontainer" title="GetOuContainer"><span class="api-symbol api-symbol--function"></span>GetOuContainer</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -30,6 +30,6 @@ Explore the resources and functions of the azure-native.aad module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.36.0</dd>
+	<dd>1.37.0</dd>
 </dl>
 

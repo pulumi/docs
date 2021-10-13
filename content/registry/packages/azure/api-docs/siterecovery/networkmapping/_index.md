@@ -66,7 +66,7 @@ class MyStack : Stack
                 primaryFabric,
             },
         });
-        // Avoids issues with crearing fabrics simultainusly
+        // Avoids issues with creating fabrics simultaneously
         var primaryVirtualNetwork = new Azure.Network.VirtualNetwork("primaryVirtualNetwork", new Azure.Network.VirtualNetworkArgs
         {
             ResourceGroupName = primaryResourceGroup.Name,
@@ -217,7 +217,7 @@ secondary_fabric = azure.siterecovery.Fabric("secondaryFabric",
     recovery_vault_name=vault.name,
     location=secondary_resource_group.location,
     opts=pulumi.ResourceOptions(depends_on=[primary_fabric]))
-# Avoids issues with crearing fabrics simultainusly
+# Avoids issues with creating fabrics simultaneously
 primary_virtual_network = azure.network.VirtualNetwork("primaryVirtualNetwork",
     resource_group_name=primary_resource_group.name,
     address_spaces=["192.168.1.0/24"],
@@ -265,7 +265,7 @@ const secondaryFabric = new azure.siterecovery.Fabric("secondaryFabric", {
 }, {
     dependsOn: [primaryFabric],
 });
-// Avoids issues with crearing fabrics simultainusly
+// Avoids issues with creating fabrics simultaneously
 const primaryVirtualNetwork = new azure.network.VirtualNetwork("primaryVirtualNetwork", {
     resourceGroupName: primaryResourceGroup.name,
     addressSpaces: ["192.168.1.0/24"],

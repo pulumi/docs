@@ -13,24 +13,24 @@ Explore the resources and functions of the google-native.cloudkms/v1 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="cryptokey" title="CryptoKey"><span class="symbol resource"></span>CryptoKey</a></li>
-    <li><a href="cryptokeyversion" title="CryptoKeyVersion"><span class="symbol resource"></span>CryptoKeyVersion</a></li>
-    <li><a href="importjob" title="ImportJob"><span class="symbol resource"></span>ImportJob</a></li>
-    <li><a href="keyring" title="KeyRing"><span class="symbol resource"></span>KeyRing</a></li>
-    <li><a href="keyringcryptokeyiampolicy" title="KeyRingCryptoKeyIamPolicy"><span class="symbol resource"></span>KeyRingCryptoKeyIamPolicy</a></li>
-    <li><a href="keyringiampolicy" title="KeyRingIamPolicy"><span class="symbol resource"></span>KeyRingIamPolicy</a></li>
-    <li><a href="keyringimportjobiampolicy" title="KeyRingImportJobIamPolicy"><span class="symbol resource"></span>KeyRingImportJobIamPolicy</a></li>
+    <li><a href="cryptokey" title="CryptoKey"><span class="api-symbol api-symbol--resource"></span>CryptoKey</a></li>
+    <li><a href="cryptokeyversion" title="CryptoKeyVersion"><span class="api-symbol api-symbol--resource"></span>CryptoKeyVersion</a></li>
+    <li><a href="importjob" title="ImportJob"><span class="api-symbol api-symbol--resource"></span>ImportJob</a></li>
+    <li><a href="keyring" title="KeyRing"><span class="api-symbol api-symbol--resource"></span>KeyRing</a></li>
+    <li><a href="keyringcryptokeyiampolicy" title="KeyRingCryptoKeyIamPolicy"><span class="api-symbol api-symbol--resource"></span>KeyRingCryptoKeyIamPolicy</a></li>
+    <li><a href="keyringiampolicy" title="KeyRingIamPolicy"><span class="api-symbol api-symbol--resource"></span>KeyRingIamPolicy</a></li>
+    <li><a href="keyringimportjobiampolicy" title="KeyRingImportJobIamPolicy"><span class="api-symbol api-symbol--resource"></span>KeyRingImportJobIamPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getcryptokey" title="GetCryptoKey"><span class="symbol function"></span>GetCryptoKey</a></li>
-    <li><a href="getcryptokeyversion" title="GetCryptoKeyVersion"><span class="symbol function"></span>GetCryptoKeyVersion</a></li>
-    <li><a href="getimportjob" title="GetImportJob"><span class="symbol function"></span>GetImportJob</a></li>
-    <li><a href="getkeyring" title="GetKeyRing"><span class="symbol function"></span>GetKeyRing</a></li>
-    <li><a href="getkeyringcryptokeyiampolicy" title="GetKeyRingCryptoKeyIamPolicy"><span class="symbol function"></span>GetKeyRingCryptoKeyIamPolicy</a></li>
-    <li><a href="getkeyringiampolicy" title="GetKeyRingIamPolicy"><span class="symbol function"></span>GetKeyRingIamPolicy</a></li>
-    <li><a href="getkeyringimportjobiampolicy" title="GetKeyRingImportJobIamPolicy"><span class="symbol function"></span>GetKeyRingImportJobIamPolicy</a></li>
+    <li><a href="getcryptokey" title="GetCryptoKey"><span class="api-symbol api-symbol--function"></span>GetCryptoKey</a></li>
+    <li><a href="getcryptokeyversion" title="GetCryptoKeyVersion"><span class="api-symbol api-symbol--function"></span>GetCryptoKeyVersion</a></li>
+    <li><a href="getimportjob" title="GetImportJob"><span class="api-symbol api-symbol--function"></span>GetImportJob</a></li>
+    <li><a href="getkeyring" title="GetKeyRing"><span class="api-symbol api-symbol--function"></span>GetKeyRing</a></li>
+    <li><a href="getkeyringcryptokeyiampolicy" title="GetKeyRingCryptoKeyIamPolicy"><span class="api-symbol api-symbol--function"></span>GetKeyRingCryptoKeyIamPolicy</a></li>
+    <li><a href="getkeyringiampolicy" title="GetKeyRingIamPolicy"><span class="api-symbol api-symbol--function"></span>GetKeyRingIamPolicy</a></li>
+    <li><a href="getkeyringimportjobiampolicy" title="GetKeyRingImportJobIamPolicy"><span class="api-symbol api-symbol--function"></span>GetKeyRingImportJobIamPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -40,6 +40,6 @@ Explore the resources and functions of the google-native.cloudkms/v1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.0</dd>
+	<dd>0.8.0</dd>
 </dl>
 

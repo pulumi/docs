@@ -792,7 +792,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 256.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 5000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="layer4configs_csharp">
 <a href="#layer4configs_csharp" style="color: inherit; text-decoration: inherit;">Layer4Configs</a>
@@ -808,7 +808,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 256.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 5000.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -820,7 +820,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 256.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 5000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="layer4configs_go">
 <a href="#layer4configs_go" style="color: inherit; text-decoration: inherit;">Layer4Configs</a>
@@ -836,7 +836,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 256.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 5000.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -848,7 +848,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 256.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 5000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="layer4configs_nodejs">
 <a href="#layer4configs_nodejs" style="color: inherit; text-decoration: inherit;">layer4Configs</a>
@@ -864,7 +864,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 256.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 5000.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -876,7 +876,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 256.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 5000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="layer4_configs_python">
 <a href="#layer4_configs_python" style="color: inherit; text-decoration: inherit;">layer4_<wbr>configs</a>
@@ -892,7 +892,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 256.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 5000.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="firewallpolicyruleresponse">Firewall<wbr>Policy<wbr>Rule<wbr>Response</h4>

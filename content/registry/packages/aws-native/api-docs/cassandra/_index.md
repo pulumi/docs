@@ -13,8 +13,8 @@ Explore the resources and functions of the aws-native.cassandra module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="keyspace" title="Keyspace"><span class="symbol resource"></span>Keyspace</a></li>
-    <li><a href="table" title="Table"><span class="symbol resource"></span>Table</a></li>
+    <li><a href="keyspace" title="Keyspace"><span class="api-symbol api-symbol--resource"></span>Keyspace</a></li>
+    <li><a href="table" title="Table"><span class="api-symbol api-symbol--resource"></span>Table</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -24,6 +24,6 @@ Explore the resources and functions of the aws-native.cassandra module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.0</dd>
 </dl>
 

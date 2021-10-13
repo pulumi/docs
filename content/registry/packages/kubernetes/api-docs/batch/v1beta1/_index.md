@@ -13,8 +13,8 @@ Explore the resources and functions of the kubernetes.batch/v1beta1 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="cronjob" title="CronJob"><span class="symbol resource"></span>CronJob</a></li>
-    <li><a href="cronjoblist" title="CronJobList"><span class="symbol resource"></span>CronJobList</a></li>
+    <li><a href="cronjob" title="CronJob"><span class="api-symbol api-symbol--resource"></span>CronJob</a></li>
+    <li><a href="cronjoblist" title="CronJobList"><span class="api-symbol api-symbol--resource"></span>CronJobList</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -24,6 +24,6 @@ Explore the resources and functions of the kubernetes.batch/v1beta1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>3.8.0</dd>
+	<dd>3.8.1</dd>
 </dl>
 

@@ -13,13 +13,13 @@ Explore the resources and functions of the azure-native.notebooks module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="notebookproxy" title="NotebookProxy"><span class="symbol resource"></span>NotebookProxy</a></li>
+    <li><a href="notebookproxy" title="NotebookProxy"><span class="api-symbol api-symbol--resource"></span>NotebookProxy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getnotebookproxy" title="GetNotebookProxy"><span class="symbol function"></span>GetNotebookProxy</a></li>
-    <li><a href="listnotebookproxycredentials" title="ListNotebookProxyCredentials"><span class="symbol function"></span>ListNotebookProxyCredentials</a></li>
+    <li><a href="getnotebookproxy" title="GetNotebookProxy"><span class="api-symbol api-symbol--function"></span>GetNotebookProxy</a></li>
+    <li><a href="listnotebookproxycredentials" title="ListNotebookProxyCredentials"><span class="api-symbol api-symbol--function"></span>ListNotebookProxyCredentials</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -29,6 +29,6 @@ Explore the resources and functions of the azure-native.notebooks module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.36.0</dd>
+	<dd>1.37.0</dd>
 </dl>
 

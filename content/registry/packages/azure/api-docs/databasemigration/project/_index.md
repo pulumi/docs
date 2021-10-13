@@ -74,7 +74,7 @@ const exampleService = new azure.databasemigration.Service("exampleService", {
 const exampleProject = new azure.databasemigration.Project("exampleProject", {
     serviceName: exampleService.name,
     resourceGroupName: exampleResourceGroup.name,
-    location: zurerm_resource_group.example.location,
+    location: exampleResourceGroup.location,
     sourcePlatform: "SQL",
     targetPlatform: "SQLDB",
 });

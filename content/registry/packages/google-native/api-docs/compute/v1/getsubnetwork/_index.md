@@ -280,7 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL of the network to which this subnetwork belongs, provided by the client when initially creating the subnetwork. Only networks that are in the distributed mode can have subnetworks. This field can be set only at resource creation time.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The URL of the network to which this subnetwork belongs, provided by the client when initially creating the subnetwork. This field can be set only at resource creation time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateipgoogleaccess_csharp">
 <a href="#privateipgoogleaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Google<wbr>Access</a>
@@ -460,7 +460,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL of the network to which this subnetwork belongs, provided by the client when initially creating the subnetwork. Only networks that are in the distributed mode can have subnetworks. This field can be set only at resource creation time.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The URL of the network to which this subnetwork belongs, provided by the client when initially creating the subnetwork. This field can be set only at resource creation time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateipgoogleaccess_go">
 <a href="#privateipgoogleaccess_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Google<wbr>Access</a>
@@ -640,7 +640,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL of the network to which this subnetwork belongs, provided by the client when initially creating the subnetwork. Only networks that are in the distributed mode can have subnetworks. This field can be set only at resource creation time.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The URL of the network to which this subnetwork belongs, provided by the client when initially creating the subnetwork. This field can be set only at resource creation time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateipgoogleaccess_nodejs">
 <a href="#privateipgoogleaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Google<wbr>Access</a>
@@ -820,7 +820,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URL of the network to which this subnetwork belongs, provided by the client when initially creating the subnetwork. Only networks that are in the distributed mode can have subnetworks. This field can be set only at resource creation time.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The URL of the network to which this subnetwork belongs, provided by the client when initially creating the subnetwork. This field can be set only at resource creation time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="private_ip_google_access_python">
 <a href="#private_ip_google_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>google_<wbr>access</a>

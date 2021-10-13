@@ -13,9 +13,9 @@ Explore the resources and functions of the aws-native.globalaccelerator module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="accelerator" title="Accelerator"><span class="symbol resource"></span>Accelerator</a></li>
-    <li><a href="endpointgroup" title="EndpointGroup"><span class="symbol resource"></span>EndpointGroup</a></li>
-    <li><a href="listener" title="Listener"><span class="symbol resource"></span>Listener</a></li>
+    <li><a href="accelerator" title="Accelerator"><span class="api-symbol api-symbol--resource"></span>Accelerator</a></li>
+    <li><a href="endpointgroup" title="EndpointGroup"><span class="api-symbol api-symbol--resource"></span>EndpointGroup</a></li>
+    <li><a href="listener" title="Listener"><span class="api-symbol api-symbol--resource"></span>Listener</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -25,6 +25,6 @@ Explore the resources and functions of the aws-native.globalaccelerator module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.0</dd>
 </dl>
 

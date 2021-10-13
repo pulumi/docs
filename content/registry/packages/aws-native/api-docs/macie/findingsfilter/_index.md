@@ -358,7 +358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#findingsfilterlistitems_csharp" style="color: inherit; text-decoration: inherit;">Findings<wbr>Filter<wbr>List<wbr>Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#findingsfilterfindingsfilterlistitem">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Macie.<wbr>Outputs.<wbr>Findings<wbr>Filter<wbr>Findings<wbr>Filter<wbr>List<wbr>Item&gt;</a></span>
+        <span class="property-type"><a href="#findingsfilterlistitem">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Macie.<wbr>Outputs.<wbr>Findings<wbr>Filter<wbr>List<wbr>Item&gt;</a></span>
     </dt>
     <dd>{{% md %}}Findings filters list.{{% /md %}}</dd><dt class="property-"
             title="">
@@ -386,7 +386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#findingsfilterlistitems_go" style="color: inherit; text-decoration: inherit;">Findings<wbr>Filter<wbr>List<wbr>Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#findingsfilterfindingsfilterlistitem">[]Findings<wbr>Filter<wbr>Findings<wbr>Filter<wbr>List<wbr>Item</a></span>
+        <span class="property-type"><a href="#findingsfilterlistitem">[]Findings<wbr>Filter<wbr>List<wbr>Item</a></span>
     </dt>
     <dd>{{% md %}}Findings filters list.{{% /md %}}</dd><dt class="property-"
             title="">
@@ -414,7 +414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#findingsfilterlistitems_nodejs" style="color: inherit; text-decoration: inherit;">findings<wbr>Filter<wbr>List<wbr>Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#findingsfilterfindingsfilterlistitem">Findings<wbr>Filter<wbr>Findings<wbr>Filter<wbr>List<wbr>Item[]</a></span>
+        <span class="property-type"><a href="#findingsfilterlistitem">Findings<wbr>Filter<wbr>List<wbr>Item[]</a></span>
     </dt>
     <dd>{{% md %}}Findings filters list.{{% /md %}}</dd><dt class="property-"
             title="">
@@ -442,7 +442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#findings_filter_list_items_python" style="color: inherit; text-decoration: inherit;">findings_<wbr>filter_<wbr>list_<wbr>items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#findingsfilterfindingsfilterlistitem">Sequence[Findings<wbr>Filter<wbr>Findings<wbr>Filter<wbr>List<wbr>Item]</a></span>
+        <span class="property-type"><a href="#findingsfilterlistitem">Sequence[Findings<wbr>Filter<wbr>List<wbr>Item]</a></span>
     </dt>
     <dd>{{% md %}}Findings filters list.{{% /md %}}</dd><dt class="property-"
             title="">
@@ -541,7 +541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>NOOP</dd></dl>
 {{% /choosable %}}
 
-<h4 id="findingsfilterfindingsfilterlistitem">Findings<wbr>Filter<wbr>Findings<wbr>Filter<wbr>List<wbr>Item</h4>
+<h4 id="findingsfilterlistitem">Findings<wbr>Filter<wbr>List<wbr>Item</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"

@@ -30,12 +30,12 @@ Resource type definition for AWS::NetworkFirewall::FirewallPolicy
 <span class="k">def </span><span class="nx">FirewallPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                    <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                   <span class="nx">firewall_policy</span><span class="p">:</span> <span class="nx">Optional[FirewallPolicyFirewallPolicyArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">firewall_policy</span><span class="p">:</span> <span class="nx">Optional[FirewallPolicyArgs]</span> = None<span class="p">,</span>
                    <span class="nx">firewall_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallPolicyTagArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">FirewallPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FirewallPolicyArgs</a></span><span class="p">,</span>
+                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FirewallPolicyInitArgs</a></span><span class="p">,</span>
                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
@@ -83,7 +83,7 @@ Resource type definition for AWS::NetworkFirewall::FirewallPolicy
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">FirewallPolicyArgs</a></span>
+        <span class="property-type"><a href="#inputs">FirewallPolicyInitArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
@@ -174,7 +174,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#firewallpolicyvalue_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyfirewallpolicy">Pulumi.<wbr>Aws<wbr>Native.<wbr>Network<wbr>Firewall.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicy">Pulumi.<wbr>Aws<wbr>Native.<wbr>Network<wbr>Firewall.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -202,7 +202,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#firewallpolicy_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyfirewallpolicy">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicy">Firewall<wbr>Policy<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -238,7 +238,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#firewallpolicy_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyfirewallpolicy">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicy">Firewall<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -274,7 +274,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#firewall_policy_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyfirewallpolicy">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicy">Firewall<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -431,6 +431,184 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="firewallpolicy">Firewall<wbr>Policy</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="statelessdefaultactions_csharp">
+<a href="#statelessdefaultactions_csharp" style="color: inherit; text-decoration: inherit;">Stateless<wbr>Default<wbr>Actions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="statelessfragmentdefaultactions_csharp">
+<a href="#statelessfragmentdefaultactions_csharp" style="color: inherit; text-decoration: inherit;">Stateless<wbr>Fragment<wbr>Default<wbr>Actions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="statefulrulegroupreferences_csharp">
+<a href="#statefulrulegroupreferences_csharp" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Rule<wbr>Group<wbr>References</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicystatefulrulegroupreference">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Network<wbr>Firewall.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Stateful<wbr>Rule<wbr>Group<wbr>Reference&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="statelesscustomactions_csharp">
+<a href="#statelesscustomactions_csharp" style="color: inherit; text-decoration: inherit;">Stateless<wbr>Custom<wbr>Actions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicycustomaction">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Network<wbr>Firewall.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Custom<wbr>Action&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="statelessrulegroupreferences_csharp">
+<a href="#statelessrulegroupreferences_csharp" style="color: inherit; text-decoration: inherit;">Stateless<wbr>Rule<wbr>Group<wbr>References</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicystatelessrulegroupreference">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Network<wbr>Firewall.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Rule<wbr>Group<wbr>Reference&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="statelessdefaultactions_go">
+<a href="#statelessdefaultactions_go" style="color: inherit; text-decoration: inherit;">Stateless<wbr>Default<wbr>Actions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="statelessfragmentdefaultactions_go">
+<a href="#statelessfragmentdefaultactions_go" style="color: inherit; text-decoration: inherit;">Stateless<wbr>Fragment<wbr>Default<wbr>Actions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="statefulrulegroupreferences_go">
+<a href="#statefulrulegroupreferences_go" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Rule<wbr>Group<wbr>References</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicystatefulrulegroupreference">[]Firewall<wbr>Policy<wbr>Stateful<wbr>Rule<wbr>Group<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="statelesscustomactions_go">
+<a href="#statelesscustomactions_go" style="color: inherit; text-decoration: inherit;">Stateless<wbr>Custom<wbr>Actions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicycustomaction">[]Firewall<wbr>Policy<wbr>Custom<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="statelessrulegroupreferences_go">
+<a href="#statelessrulegroupreferences_go" style="color: inherit; text-decoration: inherit;">Stateless<wbr>Rule<wbr>Group<wbr>References</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicystatelessrulegroupreference">[]Firewall<wbr>Policy<wbr>Stateless<wbr>Rule<wbr>Group<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="statelessdefaultactions_nodejs">
+<a href="#statelessdefaultactions_nodejs" style="color: inherit; text-decoration: inherit;">stateless<wbr>Default<wbr>Actions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="statelessfragmentdefaultactions_nodejs">
+<a href="#statelessfragmentdefaultactions_nodejs" style="color: inherit; text-decoration: inherit;">stateless<wbr>Fragment<wbr>Default<wbr>Actions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="statefulrulegroupreferences_nodejs">
+<a href="#statefulrulegroupreferences_nodejs" style="color: inherit; text-decoration: inherit;">stateful<wbr>Rule<wbr>Group<wbr>References</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicystatefulrulegroupreference">Firewall<wbr>Policy<wbr>Stateful<wbr>Rule<wbr>Group<wbr>Reference[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="statelesscustomactions_nodejs">
+<a href="#statelesscustomactions_nodejs" style="color: inherit; text-decoration: inherit;">stateless<wbr>Custom<wbr>Actions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicycustomaction">Firewall<wbr>Policy<wbr>Custom<wbr>Action[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="statelessrulegroupreferences_nodejs">
+<a href="#statelessrulegroupreferences_nodejs" style="color: inherit; text-decoration: inherit;">stateless<wbr>Rule<wbr>Group<wbr>References</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicystatelessrulegroupreference">Firewall<wbr>Policy<wbr>Stateless<wbr>Rule<wbr>Group<wbr>Reference[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="stateless_default_actions_python">
+<a href="#stateless_default_actions_python" style="color: inherit; text-decoration: inherit;">stateless_<wbr>default_<wbr>actions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="stateless_fragment_default_actions_python">
+<a href="#stateless_fragment_default_actions_python" style="color: inherit; text-decoration: inherit;">stateless_<wbr>fragment_<wbr>default_<wbr>actions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stateful_rule_group_references_python">
+<a href="#stateful_rule_group_references_python" style="color: inherit; text-decoration: inherit;">stateful_<wbr>rule_<wbr>group_<wbr>references</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicystatefulrulegroupreference">Sequence[Firewall<wbr>Policy<wbr>Stateful<wbr>Rule<wbr>Group<wbr>Reference]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stateless_custom_actions_python">
+<a href="#stateless_custom_actions_python" style="color: inherit; text-decoration: inherit;">stateless_<wbr>custom_<wbr>actions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicycustomaction">Sequence[Firewall<wbr>Policy<wbr>Custom<wbr>Action]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stateless_rule_group_references_python">
+<a href="#stateless_rule_group_references_python" style="color: inherit; text-decoration: inherit;">stateless_<wbr>rule_<wbr>group_<wbr>references</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicystatelessrulegroupreference">Sequence[Firewall<wbr>Policy<wbr>Stateless<wbr>Rule<wbr>Group<wbr>Reference]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="firewallpolicyactiondefinition">Firewall<wbr>Policy<wbr>Action<wbr>Definition</h4>
 
@@ -610,184 +788,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="firewallpolicyfirewallpolicy">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="statelessdefaultactions_csharp">
-<a href="#statelessdefaultactions_csharp" style="color: inherit; text-decoration: inherit;">Stateless<wbr>Default<wbr>Actions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="statelessfragmentdefaultactions_csharp">
-<a href="#statelessfragmentdefaultactions_csharp" style="color: inherit; text-decoration: inherit;">Stateless<wbr>Fragment<wbr>Default<wbr>Actions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="statefulrulegroupreferences_csharp">
-<a href="#statefulrulegroupreferences_csharp" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Rule<wbr>Group<wbr>References</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicystatefulrulegroupreference">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Network<wbr>Firewall.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Stateful<wbr>Rule<wbr>Group<wbr>Reference&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="statelesscustomactions_csharp">
-<a href="#statelesscustomactions_csharp" style="color: inherit; text-decoration: inherit;">Stateless<wbr>Custom<wbr>Actions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicycustomaction">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Network<wbr>Firewall.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Custom<wbr>Action&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="statelessrulegroupreferences_csharp">
-<a href="#statelessrulegroupreferences_csharp" style="color: inherit; text-decoration: inherit;">Stateless<wbr>Rule<wbr>Group<wbr>References</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicystatelessrulegroupreference">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Network<wbr>Firewall.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Rule<wbr>Group<wbr>Reference&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="statelessdefaultactions_go">
-<a href="#statelessdefaultactions_go" style="color: inherit; text-decoration: inherit;">Stateless<wbr>Default<wbr>Actions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="statelessfragmentdefaultactions_go">
-<a href="#statelessfragmentdefaultactions_go" style="color: inherit; text-decoration: inherit;">Stateless<wbr>Fragment<wbr>Default<wbr>Actions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="statefulrulegroupreferences_go">
-<a href="#statefulrulegroupreferences_go" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Rule<wbr>Group<wbr>References</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicystatefulrulegroupreference">[]Firewall<wbr>Policy<wbr>Stateful<wbr>Rule<wbr>Group<wbr>Reference</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="statelesscustomactions_go">
-<a href="#statelesscustomactions_go" style="color: inherit; text-decoration: inherit;">Stateless<wbr>Custom<wbr>Actions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicycustomaction">[]Firewall<wbr>Policy<wbr>Custom<wbr>Action</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="statelessrulegroupreferences_go">
-<a href="#statelessrulegroupreferences_go" style="color: inherit; text-decoration: inherit;">Stateless<wbr>Rule<wbr>Group<wbr>References</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicystatelessrulegroupreference">[]Firewall<wbr>Policy<wbr>Stateless<wbr>Rule<wbr>Group<wbr>Reference</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="statelessdefaultactions_nodejs">
-<a href="#statelessdefaultactions_nodejs" style="color: inherit; text-decoration: inherit;">stateless<wbr>Default<wbr>Actions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="statelessfragmentdefaultactions_nodejs">
-<a href="#statelessfragmentdefaultactions_nodejs" style="color: inherit; text-decoration: inherit;">stateless<wbr>Fragment<wbr>Default<wbr>Actions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="statefulrulegroupreferences_nodejs">
-<a href="#statefulrulegroupreferences_nodejs" style="color: inherit; text-decoration: inherit;">stateful<wbr>Rule<wbr>Group<wbr>References</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicystatefulrulegroupreference">Firewall<wbr>Policy<wbr>Stateful<wbr>Rule<wbr>Group<wbr>Reference[]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="statelesscustomactions_nodejs">
-<a href="#statelesscustomactions_nodejs" style="color: inherit; text-decoration: inherit;">stateless<wbr>Custom<wbr>Actions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicycustomaction">Firewall<wbr>Policy<wbr>Custom<wbr>Action[]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="statelessrulegroupreferences_nodejs">
-<a href="#statelessrulegroupreferences_nodejs" style="color: inherit; text-decoration: inherit;">stateless<wbr>Rule<wbr>Group<wbr>References</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicystatelessrulegroupreference">Firewall<wbr>Policy<wbr>Stateless<wbr>Rule<wbr>Group<wbr>Reference[]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="stateless_default_actions_python">
-<a href="#stateless_default_actions_python" style="color: inherit; text-decoration: inherit;">stateless_<wbr>default_<wbr>actions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="stateless_fragment_default_actions_python">
-<a href="#stateless_fragment_default_actions_python" style="color: inherit; text-decoration: inherit;">stateless_<wbr>fragment_<wbr>default_<wbr>actions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="stateful_rule_group_references_python">
-<a href="#stateful_rule_group_references_python" style="color: inherit; text-decoration: inherit;">stateful_<wbr>rule_<wbr>group_<wbr>references</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicystatefulrulegroupreference">Sequence[Firewall<wbr>Policy<wbr>Stateful<wbr>Rule<wbr>Group<wbr>Reference]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="stateless_custom_actions_python">
-<a href="#stateless_custom_actions_python" style="color: inherit; text-decoration: inherit;">stateless_<wbr>custom_<wbr>actions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicycustomaction">Sequence[Firewall<wbr>Policy<wbr>Custom<wbr>Action]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="stateless_rule_group_references_python">
-<a href="#stateless_rule_group_references_python" style="color: inherit; text-decoration: inherit;">stateless_<wbr>rule_<wbr>group_<wbr>references</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicystatelessrulegroupreference">Sequence[Firewall<wbr>Policy<wbr>Stateless<wbr>Rule<wbr>Group<wbr>Reference]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

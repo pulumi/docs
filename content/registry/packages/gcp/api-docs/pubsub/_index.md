@@ -13,22 +13,23 @@ Explore the resources and functions of the gcp.pubsub module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="litesubscription" title="LiteSubscription"><span class="symbol resource"></span>LiteSubscription</a></li>
-    <li><a href="litetopic" title="LiteTopic"><span class="symbol resource"></span>LiteTopic</a></li>
-    <li><a href="schema" title="Schema"><span class="symbol resource"></span>Schema</a></li>
-    <li><a href="subscription" title="Subscription"><span class="symbol resource"></span>Subscription</a></li>
-    <li><a href="subscriptioniambinding" title="SubscriptionIAMBinding"><span class="symbol resource"></span>SubscriptionIAMBinding</a></li>
-    <li><a href="subscriptioniammember" title="SubscriptionIAMMember"><span class="symbol resource"></span>SubscriptionIAMMember</a></li>
-    <li><a href="subscriptioniampolicy" title="SubscriptionIAMPolicy"><span class="symbol resource"></span>SubscriptionIAMPolicy</a></li>
-    <li><a href="topic" title="Topic"><span class="symbol resource"></span>Topic</a></li>
-    <li><a href="topiciambinding" title="TopicIAMBinding"><span class="symbol resource"></span>TopicIAMBinding</a></li>
-    <li><a href="topiciammember" title="TopicIAMMember"><span class="symbol resource"></span>TopicIAMMember</a></li>
-    <li><a href="topiciampolicy" title="TopicIAMPolicy"><span class="symbol resource"></span>TopicIAMPolicy</a></li>
+    <li><a href="litereservation" title="LiteReservation"><span class="api-symbol api-symbol--resource"></span>LiteReservation</a></li>
+    <li><a href="litesubscription" title="LiteSubscription"><span class="api-symbol api-symbol--resource"></span>LiteSubscription</a></li>
+    <li><a href="litetopic" title="LiteTopic"><span class="api-symbol api-symbol--resource"></span>LiteTopic</a></li>
+    <li><a href="schema" title="Schema"><span class="api-symbol api-symbol--resource"></span>Schema</a></li>
+    <li><a href="subscription" title="Subscription"><span class="api-symbol api-symbol--resource"></span>Subscription</a></li>
+    <li><a href="subscriptioniambinding" title="SubscriptionIAMBinding"><span class="api-symbol api-symbol--resource"></span>SubscriptionIAMBinding</a></li>
+    <li><a href="subscriptioniammember" title="SubscriptionIAMMember"><span class="api-symbol api-symbol--resource"></span>SubscriptionIAMMember</a></li>
+    <li><a href="subscriptioniampolicy" title="SubscriptionIAMPolicy"><span class="api-symbol api-symbol--resource"></span>SubscriptionIAMPolicy</a></li>
+    <li><a href="topic" title="Topic"><span class="api-symbol api-symbol--resource"></span>Topic</a></li>
+    <li><a href="topiciambinding" title="TopicIAMBinding"><span class="api-symbol api-symbol--resource"></span>TopicIAMBinding</a></li>
+    <li><a href="topiciammember" title="TopicIAMMember"><span class="api-symbol api-symbol--resource"></span>TopicIAMMember</a></li>
+    <li><a href="topiciampolicy" title="TopicIAMPolicy"><span class="api-symbol api-symbol--resource"></span>TopicIAMPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="gettopic" title="GetTopic"><span class="symbol function"></span>GetTopic</a></li>
+    <li><a href="gettopic" title="GetTopic"><span class="api-symbol api-symbol--function"></span>GetTopic</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -40,6 +41,6 @@ Explore the resources and functions of the gcp.pubsub module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>5.22.0</dd>
+	<dd>5.24.0</dd>
 </dl>
 

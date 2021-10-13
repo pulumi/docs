@@ -13,16 +13,16 @@ Explore the resources and functions of the aws.sns module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="platformapplication" title="PlatformApplication"><span class="symbol resource"></span>PlatformApplication</a></li>
-    <li><a href="smspreferences" title="SmsPreferences"><span class="symbol resource"></span>SmsPreferences</a></li>
-    <li><a href="topic" title="Topic"><span class="symbol resource"></span>Topic</a></li>
-    <li><a href="topicpolicy" title="TopicPolicy"><span class="symbol resource"></span>TopicPolicy</a></li>
-    <li><a href="topicsubscription" title="TopicSubscription"><span class="symbol resource"></span>TopicSubscription</a></li>
+    <li><a href="platformapplication" title="PlatformApplication"><span class="api-symbol api-symbol--resource"></span>PlatformApplication</a></li>
+    <li><a href="smspreferences" title="SmsPreferences"><span class="api-symbol api-symbol--resource"></span>SmsPreferences</a></li>
+    <li><a href="topic" title="Topic"><span class="api-symbol api-symbol--resource"></span>Topic</a></li>
+    <li><a href="topicpolicy" title="TopicPolicy"><span class="api-symbol api-symbol--resource"></span>TopicPolicy</a></li>
+    <li><a href="topicsubscription" title="TopicSubscription"><span class="api-symbol api-symbol--resource"></span>TopicSubscription</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="gettopic" title="GetTopic"><span class="symbol function"></span>GetTopic</a></li>
+    <li><a href="gettopic" title="GetTopic"><span class="api-symbol api-symbol--function"></span>GetTopic</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -34,6 +34,6 @@ Explore the resources and functions of the aws.sns module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.23.0</dd>
+	<dd>4.24.1</dd>
 </dl>
 

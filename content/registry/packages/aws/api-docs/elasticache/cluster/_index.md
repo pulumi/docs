@@ -597,7 +597,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The initial number of cache nodes that the cache cluster will have. For Redis, this value must be 1. For Memcached, this value must be between 1 and 20. If this number is reduced on subsequent runs, the highest numbered nodes will be removed.
+    <dd>{{% md %}}The initial number of cache nodes that the cache cluster will have. For Redis, this value must be 1. For Memcached, this value must be between 1 and 40. If this number is reduced on subsequent runs, the highest numbered nodes will be removed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parametergroupname_csharp">
@@ -811,7 +811,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The initial number of cache nodes that the cache cluster will have. For Redis, this value must be 1. For Memcached, this value must be between 1 and 20. If this number is reduced on subsequent runs, the highest numbered nodes will be removed.
+    <dd>{{% md %}}The initial number of cache nodes that the cache cluster will have. For Redis, this value must be 1. For Memcached, this value must be between 1 and 40. If this number is reduced on subsequent runs, the highest numbered nodes will be removed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parametergroupname_go">
@@ -1025,7 +1025,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The initial number of cache nodes that the cache cluster will have. For Redis, this value must be 1. For Memcached, this value must be between 1 and 20. If this number is reduced on subsequent runs, the highest numbered nodes will be removed.
+    <dd>{{% md %}}The initial number of cache nodes that the cache cluster will have. For Redis, this value must be 1. For Memcached, this value must be between 1 and 40. If this number is reduced on subsequent runs, the highest numbered nodes will be removed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parametergroupname_nodejs">
@@ -1239,7 +1239,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The initial number of cache nodes that the cache cluster will have. For Redis, this value must be 1. For Memcached, this value must be between 1 and 20. If this number is reduced on subsequent runs, the highest numbered nodes will be removed.
+    <dd>{{% md %}}The initial number of cache nodes that the cache cluster will have. For Redis, this value must be 1. For Memcached, this value must be between 1 and 40. If this number is reduced on subsequent runs, the highest numbered nodes will be removed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameter_group_name_python">
@@ -1919,7 +1919,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The initial number of cache nodes that the cache cluster will have. For Redis, this value must be 1. For Memcached, this value must be between 1 and 20. If this number is reduced on subsequent runs, the highest numbered nodes will be removed.
+    <dd>{{% md %}}The initial number of cache nodes that the cache cluster will have. For Redis, this value must be 1. For Memcached, this value must be between 1 and 40. If this number is reduced on subsequent runs, the highest numbered nodes will be removed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parametergroupname_csharp">
@@ -2186,7 +2186,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The initial number of cache nodes that the cache cluster will have. For Redis, this value must be 1. For Memcached, this value must be between 1 and 20. If this number is reduced on subsequent runs, the highest numbered nodes will be removed.
+    <dd>{{% md %}}The initial number of cache nodes that the cache cluster will have. For Redis, this value must be 1. For Memcached, this value must be between 1 and 40. If this number is reduced on subsequent runs, the highest numbered nodes will be removed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parametergroupname_go">
@@ -2453,7 +2453,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The initial number of cache nodes that the cache cluster will have. For Redis, this value must be 1. For Memcached, this value must be between 1 and 20. If this number is reduced on subsequent runs, the highest numbered nodes will be removed.
+    <dd>{{% md %}}The initial number of cache nodes that the cache cluster will have. For Redis, this value must be 1. For Memcached, this value must be between 1 and 40. If this number is reduced on subsequent runs, the highest numbered nodes will be removed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parametergroupname_nodejs">
@@ -2720,7 +2720,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The initial number of cache nodes that the cache cluster will have. For Redis, this value must be 1. For Memcached, this value must be between 1 and 20. If this number is reduced on subsequent runs, the highest numbered nodes will be removed.
+    <dd>{{% md %}}The initial number of cache nodes that the cache cluster will have. For Redis, this value must be 1. For Memcached, this value must be between 1 and 40. If this number is reduced on subsequent runs, the highest numbered nodes will be removed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameter_group_name_python">

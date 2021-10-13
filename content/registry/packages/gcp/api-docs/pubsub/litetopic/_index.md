@@ -16,9 +16,9 @@ A named resource to which messages are sent by publishers.
 
 To get more information about Topic, see:
 
-* [API documentation](https://cloud.google.com/pubsub/docs/reference/rest/v1/projects.topics)
+* [API documentation](https://cloud.google.com/pubsub/lite/docs/reference/rest/v1/admin.projects.locations.topics)
 * How-to Guides
-    * [Managing Topics](https://cloud.google.com/pubsub/docs/admin#managing_topics)
+    * [Managing Topics](https://cloud.google.com/pubsub/lite/docs/topics)
 
 {{% examples %}}
 
@@ -41,7 +41,12 @@ class MyStack : Stack
     public MyStack()
     {
         var project = Output.Create(Gcp.Organizations.GetProject.InvokeAsync());
-        var example = new Gcp.PubSub.LiteTopic("example", new Gcp.PubSub.LiteTopicArgs
+        var exampleLiteReservation = new Gcp.PubSub.LiteReservation("exampleLiteReservation", new Gcp.PubSub.LiteReservationArgs
+        {
+            Project = project.Apply(project => project.Number),
+            ThroughputCapacity = 2,
+        });
+        var exampleLiteTopic = new Gcp.PubSub.LiteTopic("exampleLiteTopic", new Gcp.PubSub.LiteTopicArgs
         {
             Project = project.Apply(project => project.Number),
             PartitionConfig = new Gcp.PubSub.Inputs.LiteTopicPartitionConfigArgs
@@ -56,6 +61,10 @@ class MyStack : Stack
             RetentionConfig = new Gcp.PubSub.Inputs.LiteTopicRetentionConfigArgs
             {
                 PerPartitionBytes = "32212254720",
+            },
+            ReservationConfig = new Gcp.PubSub.Inputs.LiteTopicReservationConfigArgs
+            {
+                ThroughputReservation = exampleLiteReservation.Name,
             },
         });
     }
@@ -84,7 +93,14 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = pubsub.NewLiteTopic(ctx, "example", &pubsub.LiteTopicArgs{
+		exampleLiteReservation, err := pubsub.NewLiteReservation(ctx, "exampleLiteReservation", &pubsub.LiteReservationArgs{
+			Project:            pulumi.String(project.Number),
+			ThroughputCapacity: pulumi.Int(2),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = pubsub.NewLiteTopic(ctx, "exampleLiteTopic", &pubsub.LiteTopicArgs{
 			Project: pulumi.String(project.Number),
 			PartitionConfig: &pubsub.LiteTopicPartitionConfigArgs{
 				Count: pulumi.Int(1),
@@ -95,6 +111,9 @@ func main() {
 			},
 			RetentionConfig: &pubsub.LiteTopicRetentionConfigArgs{
 				PerPartitionBytes: pulumi.String("32212254720"),
+			},
+			ReservationConfig: &pubsub.LiteTopicReservationConfigArgs{
+				ThroughputReservation: exampleLiteReservation.Name,
 			},
 		})
 		if err != nil {
@@ -116,7 +135,10 @@ import pulumi
 import pulumi_gcp as gcp
 
 project = gcp.organizations.get_project()
-example = gcp.pubsub.LiteTopic("example",
+example_lite_reservation = gcp.pubsub.LiteReservation("exampleLiteReservation",
+    project=project.number,
+    throughput_capacity=2)
+example_lite_topic = gcp.pubsub.LiteTopic("exampleLiteTopic",
     project=project.number,
     partition_config=gcp.pubsub.LiteTopicPartitionConfigArgs(
         count=1,
@@ -127,6 +149,9 @@ example = gcp.pubsub.LiteTopic("example",
     ),
     retention_config=gcp.pubsub.LiteTopicRetentionConfigArgs(
         per_partition_bytes="32212254720",
+    ),
+    reservation_config=gcp.pubsub.LiteTopicReservationConfigArgs(
+        throughput_reservation=example_lite_reservation.name,
     ))
 ```
 
@@ -142,7 +167,11 @@ import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
 const project = gcp.organizations.getProject({});
-const example = new gcp.pubsub.LiteTopic("example", {
+const exampleLiteReservation = new gcp.pubsub.LiteReservation("exampleLiteReservation", {
+    project: project.then(project => project.number),
+    throughputCapacity: 2,
+});
+const exampleLiteTopic = new gcp.pubsub.LiteTopic("exampleLiteTopic", {
     project: project.then(project => project.number),
     partitionConfig: {
         count: 1,
@@ -153,6 +182,9 @@ const example = new gcp.pubsub.LiteTopic("example", {
     },
     retentionConfig: {
         perPartitionBytes: 32212254720,
+    },
+    reservationConfig: {
+        throughputReservation: exampleLiteReservation.name,
     },
 });
 ```
@@ -185,6 +217,7 @@ const example = new gcp.pubsub.LiteTopic("example", {
               <span class="nx">partition_config</span><span class="p">:</span> <span class="nx">Optional[LiteTopicPartitionConfigArgs]</span> = None<span class="p">,</span>
               <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">reservation_config</span><span class="p">:</span> <span class="nx">Optional[LiteTopicReservationConfigArgs]</span> = None<span class="p">,</span>
               <span class="nx">retention_config</span><span class="p">:</span> <span class="nx">Optional[LiteTopicRetentionConfigArgs]</span> = None<span class="p">,</span>
               <span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -354,6 +387,16 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The region of the pubsub lite topic.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="reservationconfig_csharp">
+<a href="#reservationconfig_csharp" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#litetopicreservationconfig">Lite<wbr>Topic<wbr>Reservation<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The settings for this topic's Reservation usage.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="retentionconfig_csharp">
 <a href="#retentionconfig_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Config</a>
 </span>
@@ -413,6 +456,16 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region of the pubsub lite topic.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="reservationconfig_go">
+<a href="#reservationconfig_go" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#litetopicreservationconfig">Lite<wbr>Topic<wbr>Reservation<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The settings for this topic's Reservation usage.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionconfig_go">
@@ -476,6 +529,16 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The region of the pubsub lite topic.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="reservationconfig_nodejs">
+<a href="#reservationconfig_nodejs" style="color: inherit; text-decoration: inherit;">reservation<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#litetopicreservationconfig">Lite<wbr>Topic<wbr>Reservation<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The settings for this topic's Reservation usage.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="retentionconfig_nodejs">
 <a href="#retentionconfig_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Config</a>
 </span>
@@ -535,6 +598,16 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region of the pubsub lite topic.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="reservation_config_python">
+<a href="#reservation_config_python" style="color: inherit; text-decoration: inherit;">reservation_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#litetopicreservationconfig">Lite<wbr>Topic<wbr>Reservation<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The settings for this topic's Reservation usage.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retention_config_python">
@@ -632,6 +705,7 @@ Get an existing LiteTopic resource's state with the given name, ID, and optional
         <span class="nx">partition_config</span><span class="p">:</span> <span class="nx">Optional[LiteTopicPartitionConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">reservation_config</span><span class="p">:</span> <span class="nx">Optional[LiteTopicReservationConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">retention_config</span><span class="p">:</span> <span class="nx">Optional[LiteTopicRetentionConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> LiteTopic</code></pre></div>
 {{% /choosable %}}
@@ -784,6 +858,16 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The region of the pubsub lite topic.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_reservationconfig_csharp">
+<a href="#state_reservationconfig_csharp" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#litetopicreservationconfig">Lite<wbr>Topic<wbr>Reservation<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The settings for this topic's Reservation usage.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_retentionconfig_csharp">
 <a href="#state_retentionconfig_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Config</a>
 </span>
@@ -843,6 +927,16 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region of the pubsub lite topic.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_reservationconfig_go">
+<a href="#state_reservationconfig_go" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#litetopicreservationconfig">Lite<wbr>Topic<wbr>Reservation<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The settings for this topic's Reservation usage.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retentionconfig_go">
@@ -906,6 +1000,16 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The region of the pubsub lite topic.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_reservationconfig_nodejs">
+<a href="#state_reservationconfig_nodejs" style="color: inherit; text-decoration: inherit;">reservation<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#litetopicreservationconfig">Lite<wbr>Topic<wbr>Reservation<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The settings for this topic's Reservation usage.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_retentionconfig_nodejs">
 <a href="#state_retentionconfig_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Config</a>
 </span>
@@ -965,6 +1069,16 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region of the pubsub lite topic.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_reservation_config_python">
+<a href="#state_reservation_config_python" style="color: inherit; text-decoration: inherit;">reservation_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#litetopicreservationconfig">Lite<wbr>Topic<wbr>Reservation<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The settings for this topic's Reservation usage.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retention_config_python">
@@ -1177,6 +1291,60 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Publish throughput capacity per partition in MiB/s. Must be >= 4 and <= 16.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="litetopicreservationconfig">Lite<wbr>Topic<wbr>Reservation<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="throughputreservation_csharp">
+<a href="#throughputreservation_csharp" style="color: inherit; text-decoration: inherit;">Throughput<wbr>Reservation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Reservation to use for this topic's throughput capacity.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="throughputreservation_go">
+<a href="#throughputreservation_go" style="color: inherit; text-decoration: inherit;">Throughput<wbr>Reservation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Reservation to use for this topic's throughput capacity.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="throughputreservation_nodejs">
+<a href="#throughputreservation_nodejs" style="color: inherit; text-decoration: inherit;">throughput<wbr>Reservation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Reservation to use for this topic's throughput capacity.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="throughput_reservation_python">
+<a href="#throughput_reservation_python" style="color: inherit; text-decoration: inherit;">throughput_<wbr>reservation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Reservation to use for this topic's throughput capacity.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

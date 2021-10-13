@@ -13,19 +13,19 @@ Explore the resources and functions of the aws.autoscaling module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="attachment" title="Attachment"><span class="symbol resource"></span>Attachment</a></li>
-    <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
-    <li><a href="lifecyclehook" title="LifecycleHook"><span class="symbol resource"></span>LifecycleHook</a></li>
-    <li><a href="notification" title="Notification"><span class="symbol resource"></span>Notification</a></li>
-    <li><a href="policy" title="Policy"><span class="symbol resource"></span>Policy</a></li>
-    <li><a href="schedule" title="Schedule"><span class="symbol resource"></span>Schedule</a></li>
-    <li><a href="tag" title="Tag"><span class="symbol resource"></span>Tag</a></li>
+    <li><a href="attachment" title="Attachment"><span class="api-symbol api-symbol--resource"></span>Attachment</a></li>
+    <li><a href="group" title="Group"><span class="api-symbol api-symbol--resource"></span>Group</a></li>
+    <li><a href="lifecyclehook" title="LifecycleHook"><span class="api-symbol api-symbol--resource"></span>LifecycleHook</a></li>
+    <li><a href="notification" title="Notification"><span class="api-symbol api-symbol--resource"></span>Notification</a></li>
+    <li><a href="policy" title="Policy"><span class="api-symbol api-symbol--resource"></span>Policy</a></li>
+    <li><a href="schedule" title="Schedule"><span class="api-symbol api-symbol--resource"></span>Schedule</a></li>
+    <li><a href="tag" title="Tag"><span class="api-symbol api-symbol--resource"></span>Tag</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getamiids" title="GetAmiIds"><span class="symbol function"></span>GetAmiIds</a></li>
-    <li><a href="getgroup" title="GetGroup"><span class="symbol function"></span>GetGroup</a></li>
+    <li><a href="getamiids" title="GetAmiIds"><span class="api-symbol api-symbol--function"></span>GetAmiIds</a></li>
+    <li><a href="getgroup" title="GetGroup"><span class="api-symbol api-symbol--function"></span>GetGroup</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -37,6 +37,6 @@ Explore the resources and functions of the aws.autoscaling module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.23.0</dd>
+	<dd>4.24.1</dd>
 </dl>
 

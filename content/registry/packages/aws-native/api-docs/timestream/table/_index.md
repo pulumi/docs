@@ -30,7 +30,7 @@ The AWS::Timestream::Table resource creates a Timestream Table.
 <span class="k">def </span><span class="nx">Table</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
           <span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-          <span class="nx">retention_properties</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">,</span>
+          <span class="nx">retention_properties</span><span class="p">:</span> <span class="nx">Optional[RetentionPropertiesPropertiesArgs]</span> = None<span class="p">,</span>
           <span class="nx">table_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[TableTagArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -174,7 +174,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#retentionproperties_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">object</span>
+        <span class="property-type"><a href="#retentionpropertiesproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>Timestream.<wbr>Inputs.<wbr>Retention<wbr>Properties<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The retention duration of the memory store and the magnetic store.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -210,7 +210,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#retentionproperties_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#retentionpropertiesproperties">Retention<wbr>Properties<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The retention duration of the memory store and the magnetic store.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -246,7 +246,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#retentionproperties_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">any</span>
+        <span class="property-type"><a href="#retentionpropertiesproperties">Retention<wbr>Properties<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The retention duration of the memory store and the magnetic store.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -282,7 +282,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#retention_properties_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#retentionpropertiesproperties">Retention<wbr>Properties<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The retention duration of the memory store and the magnetic store.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -431,6 +431,88 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="retentionpropertiesproperties">Retention<wbr>Properties<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="magneticstoreretentionperiodindays_csharp">
+<a href="#magneticstoreretentionperiodindays_csharp" style="color: inherit; text-decoration: inherit;">Magnetic<wbr>Store<wbr>Retention<wbr>Period<wbr>In<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The duration for which data must be stored in the magnetic store.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="memorystoreretentionperiodinhours_csharp">
+<a href="#memorystoreretentionperiodinhours_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Store<wbr>Retention<wbr>Period<wbr>In<wbr>Hours</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The duration for which data must be stored in the memory store.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="magneticstoreretentionperiodindays_go">
+<a href="#magneticstoreretentionperiodindays_go" style="color: inherit; text-decoration: inherit;">Magnetic<wbr>Store<wbr>Retention<wbr>Period<wbr>In<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The duration for which data must be stored in the magnetic store.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="memorystoreretentionperiodinhours_go">
+<a href="#memorystoreretentionperiodinhours_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Store<wbr>Retention<wbr>Period<wbr>In<wbr>Hours</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The duration for which data must be stored in the memory store.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="magneticstoreretentionperiodindays_nodejs">
+<a href="#magneticstoreretentionperiodindays_nodejs" style="color: inherit; text-decoration: inherit;">magnetic<wbr>Store<wbr>Retention<wbr>Period<wbr>In<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The duration for which data must be stored in the magnetic store.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="memorystoreretentionperiodinhours_nodejs">
+<a href="#memorystoreretentionperiodinhours_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Store<wbr>Retention<wbr>Period<wbr>In<wbr>Hours</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The duration for which data must be stored in the memory store.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="magnetic_store_retention_period_in_days_python">
+<a href="#magnetic_store_retention_period_in_days_python" style="color: inherit; text-decoration: inherit;">magnetic_<wbr>store_<wbr>retention_<wbr>period_<wbr>in_<wbr>days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The duration for which data must be stored in the magnetic store.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="memory_store_retention_period_in_hours_python">
+<a href="#memory_store_retention_period_in_hours_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>store_<wbr>retention_<wbr>period_<wbr>in_<wbr>hours</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The duration for which data must be stored in the memory store.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="tabletag">Table<wbr>Tag</h4>
 

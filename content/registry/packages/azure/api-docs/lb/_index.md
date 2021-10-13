@@ -13,21 +13,21 @@ Explore the resources and functions of the azure.lb module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="backendaddresspool" title="BackendAddressPool"><span class="symbol resource"></span>BackendAddressPool</a></li>
-    <li><a href="backendaddresspooladdress" title="BackendAddressPoolAddress"><span class="symbol resource"></span>BackendAddressPoolAddress</a></li>
-    <li><a href="loadbalancer" title="LoadBalancer"><span class="symbol resource"></span>LoadBalancer</a></li>
-    <li><a href="natpool" title="NatPool"><span class="symbol resource"></span>NatPool</a></li>
-    <li><a href="natrule" title="NatRule"><span class="symbol resource"></span>NatRule</a></li>
-    <li><a href="outboundrule" title="OutboundRule"><span class="symbol resource"></span>OutboundRule</a></li>
-    <li><a href="probe" title="Probe"><span class="symbol resource"></span>Probe</a></li>
-    <li><a href="rule" title="Rule"><span class="symbol resource"></span>Rule</a></li>
+    <li><a href="backendaddresspool" title="BackendAddressPool"><span class="api-symbol api-symbol--resource"></span>BackendAddressPool</a></li>
+    <li><a href="backendaddresspooladdress" title="BackendAddressPoolAddress"><span class="api-symbol api-symbol--resource"></span>BackendAddressPoolAddress</a></li>
+    <li><a href="loadbalancer" title="LoadBalancer"><span class="api-symbol api-symbol--resource"></span>LoadBalancer</a></li>
+    <li><a href="natpool" title="NatPool"><span class="api-symbol api-symbol--resource"></span>NatPool</a></li>
+    <li><a href="natrule" title="NatRule"><span class="api-symbol api-symbol--resource"></span>NatRule</a></li>
+    <li><a href="outboundrule" title="OutboundRule"><span class="api-symbol api-symbol--resource"></span>OutboundRule</a></li>
+    <li><a href="probe" title="Probe"><span class="api-symbol api-symbol--resource"></span>Probe</a></li>
+    <li><a href="rule" title="Rule"><span class="api-symbol api-symbol--resource"></span>Rule</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getbackendaddresspool" title="GetBackendAddressPool"><span class="symbol function"></span>GetBackendAddressPool</a></li>
-    <li><a href="getlb" title="GetLB"><span class="symbol function"></span>GetLB</a></li>
-    <li><a href="getlbrule" title="GetLBRule"><span class="symbol function"></span>GetLBRule</a></li>
+    <li><a href="getbackendaddresspool" title="GetBackendAddressPool"><span class="api-symbol api-symbol--function"></span>GetBackendAddressPool</a></li>
+    <li><a href="getlb" title="GetLB"><span class="api-symbol api-symbol--function"></span>GetLB</a></li>
+    <li><a href="getlbrule" title="GetLBRule"><span class="api-symbol api-symbol--function"></span>GetLBRule</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -39,6 +39,6 @@ Explore the resources and functions of the azure.lb module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.21.0</dd>
+	<dd>4.22.0</dd>
 </dl>
 

@@ -2259,6 +2259,150 @@ The following state arguments are supported:
     <dd>{{% md %}}Kafka broker location. Specify in the form broker-hostname-or-ip:port.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="includecontroldetails_csharp">
+<a href="#includecontroldetails_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Control<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Shows detailed control information for table definition, column definition, and table and column changes in the Kafka message output. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="includenullandempty_csharp">
+<a href="#includenullandempty_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Null<wbr>And<wbr>Empty</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Include NULL and empty columns for records migrated to the endpoint. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="includepartitionvalue_csharp">
+<a href="#includepartitionvalue_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Partition<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Shows the partition value within the Kafka message output unless the partition type is `schema-table-type`. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="includetablealteroperations_csharp">
+<a href="#includetablealteroperations_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Table<wbr>Alter<wbr>Operations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Includes any data definition language (DDL) operations that change the table in the control data, such as `rename-table`, `drop-table`, `add-column`, `drop-column`, and `rename-column`. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="includetransactiondetails_csharp">
+<a href="#includetransactiondetails_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Transaction<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Provides detailed transaction information from the source database. This information includes a commit timestamp, a log position, and values for `transaction_id`, previous `transaction_id`, and `transaction_record_id` (the record offset within a transaction). The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="messageformat_csharp">
+<a href="#messageformat_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Format</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The output format for the records created on the endpoint. The message format is `JSON` (default) or `JSON_UNFORMATTED` (a single line with no tab).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="messagemaxbytes_csharp">
+<a href="#messagemaxbytes_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Max<wbr>Bytes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum size in bytes for records created on the endpoint The default is `1,000,000`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nohexprefix_csharp">
+<a href="#nohexprefix_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Hex<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set this optional parameter to true to avoid adding a '0x' prefix to raw data in hexadecimal format. For example, by default, AWS DMS adds a '0x' prefix to the LOB column type in hexadecimal format moving from an Oracle source to a Kafka target. Use the `no_hex_prefix` endpoint setting to enable migration of RAW data type columns without adding the `'0x'` prefix.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="partitionincludeschematable_csharp">
+<a href="#partitionincludeschematable_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Include<wbr>Schema<wbr>Table</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Prefixes schema and table names to partition values, when the partition type is `primary-key-type`. Doing this increases data distribution among Kafka partitions. For example, suppose that a SysBench schema has thousands of tables and each table has only limited range for a primary key. In this case, the same primary key is sent from thousands of tables to the same partition, which causes throttling. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="saslpassword_csharp">
+<a href="#saslpassword_csharp" style="color: inherit; text-decoration: inherit;">Sasl<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The secure password you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="saslusername_csharp">
+<a href="#saslusername_csharp" style="color: inherit; text-decoration: inherit;">Sasl<wbr>Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The secure user name you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="securityprotocol_csharp">
+<a href="#securityprotocol_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Set secure connection to a Kafka target endpoint using Transport Layer Security (TLS). Options include `ssl-encryption`, `ssl-authentication`, and `sasl-ssl`. `sasl-ssl` requires `sasl_username` and `sasl_password`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sslcacertificatearn_csharp">
+<a href="#sslcacertificatearn_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Ca<wbr>Certificate<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) for the private certificate authority (CA) cert that AWS DMS uses to securely connect to your Kafka target endpoint.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sslclientcertificatearn_csharp">
+<a href="#sslclientcertificatearn_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Client<wbr>Certificate<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the client certificate used to securely connect to a Kafka target endpoint.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sslclientkeyarn_csharp">
+<a href="#sslclientkeyarn_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Client<wbr>Key<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) for the client private key used to securely connect to a Kafka target endpoint.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sslclientkeypassword_csharp">
+<a href="#sslclientkeypassword_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Client<wbr>Key<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The password for the client private key used to securely connect to a Kafka target endpoint.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="topic_csharp">
 <a href="#topic_csharp" style="color: inherit; text-decoration: inherit;">Topic</a>
 </span>
@@ -2279,6 +2423,150 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka broker location. Specify in the form broker-hostname-or-ip:port.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="includecontroldetails_go">
+<a href="#includecontroldetails_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Control<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Shows detailed control information for table definition, column definition, and table and column changes in the Kafka message output. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="includenullandempty_go">
+<a href="#includenullandempty_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Null<wbr>And<wbr>Empty</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Include NULL and empty columns for records migrated to the endpoint. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="includepartitionvalue_go">
+<a href="#includepartitionvalue_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Partition<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Shows the partition value within the Kafka message output unless the partition type is `schema-table-type`. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="includetablealteroperations_go">
+<a href="#includetablealteroperations_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Table<wbr>Alter<wbr>Operations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Includes any data definition language (DDL) operations that change the table in the control data, such as `rename-table`, `drop-table`, `add-column`, `drop-column`, and `rename-column`. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="includetransactiondetails_go">
+<a href="#includetransactiondetails_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Transaction<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Provides detailed transaction information from the source database. This information includes a commit timestamp, a log position, and values for `transaction_id`, previous `transaction_id`, and `transaction_record_id` (the record offset within a transaction). The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="messageformat_go">
+<a href="#messageformat_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Format</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The output format for the records created on the endpoint. The message format is `JSON` (default) or `JSON_UNFORMATTED` (a single line with no tab).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="messagemaxbytes_go">
+<a href="#messagemaxbytes_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Max<wbr>Bytes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum size in bytes for records created on the endpoint The default is `1,000,000`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nohexprefix_go">
+<a href="#nohexprefix_go" style="color: inherit; text-decoration: inherit;">No<wbr>Hex<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set this optional parameter to true to avoid adding a '0x' prefix to raw data in hexadecimal format. For example, by default, AWS DMS adds a '0x' prefix to the LOB column type in hexadecimal format moving from an Oracle source to a Kafka target. Use the `no_hex_prefix` endpoint setting to enable migration of RAW data type columns without adding the `'0x'` prefix.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="partitionincludeschematable_go">
+<a href="#partitionincludeschematable_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Include<wbr>Schema<wbr>Table</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Prefixes schema and table names to partition values, when the partition type is `primary-key-type`. Doing this increases data distribution among Kafka partitions. For example, suppose that a SysBench schema has thousands of tables and each table has only limited range for a primary key. In this case, the same primary key is sent from thousands of tables to the same partition, which causes throttling. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="saslpassword_go">
+<a href="#saslpassword_go" style="color: inherit; text-decoration: inherit;">Sasl<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The secure password you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="saslusername_go">
+<a href="#saslusername_go" style="color: inherit; text-decoration: inherit;">Sasl<wbr>Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The secure user name you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="securityprotocol_go">
+<a href="#securityprotocol_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Set secure connection to a Kafka target endpoint using Transport Layer Security (TLS). Options include `ssl-encryption`, `ssl-authentication`, and `sasl-ssl`. `sasl-ssl` requires `sasl_username` and `sasl_password`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sslcacertificatearn_go">
+<a href="#sslcacertificatearn_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Ca<wbr>Certificate<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) for the private certificate authority (CA) cert that AWS DMS uses to securely connect to your Kafka target endpoint.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sslclientcertificatearn_go">
+<a href="#sslclientcertificatearn_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Client<wbr>Certificate<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the client certificate used to securely connect to a Kafka target endpoint.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sslclientkeyarn_go">
+<a href="#sslclientkeyarn_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Client<wbr>Key<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) for the client private key used to securely connect to a Kafka target endpoint.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sslclientkeypassword_go">
+<a href="#sslclientkeypassword_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Client<wbr>Key<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The password for the client private key used to securely connect to a Kafka target endpoint.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="topic_go">
@@ -2303,6 +2591,150 @@ The following state arguments are supported:
     <dd>{{% md %}}Kafka broker location. Specify in the form broker-hostname-or-ip:port.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="includecontroldetails_nodejs">
+<a href="#includecontroldetails_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Control<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Shows detailed control information for table definition, column definition, and table and column changes in the Kafka message output. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="includenullandempty_nodejs">
+<a href="#includenullandempty_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Null<wbr>And<wbr>Empty</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Include NULL and empty columns for records migrated to the endpoint. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="includepartitionvalue_nodejs">
+<a href="#includepartitionvalue_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Partition<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Shows the partition value within the Kafka message output unless the partition type is `schema-table-type`. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="includetablealteroperations_nodejs">
+<a href="#includetablealteroperations_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Table<wbr>Alter<wbr>Operations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Includes any data definition language (DDL) operations that change the table in the control data, such as `rename-table`, `drop-table`, `add-column`, `drop-column`, and `rename-column`. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="includetransactiondetails_nodejs">
+<a href="#includetransactiondetails_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Transaction<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Provides detailed transaction information from the source database. This information includes a commit timestamp, a log position, and values for `transaction_id`, previous `transaction_id`, and `transaction_record_id` (the record offset within a transaction). The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="messageformat_nodejs">
+<a href="#messageformat_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Format</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The output format for the records created on the endpoint. The message format is `JSON` (default) or `JSON_UNFORMATTED` (a single line with no tab).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="messagemaxbytes_nodejs">
+<a href="#messagemaxbytes_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Max<wbr>Bytes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The maximum size in bytes for records created on the endpoint The default is `1,000,000`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nohexprefix_nodejs">
+<a href="#nohexprefix_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Hex<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Set this optional parameter to true to avoid adding a '0x' prefix to raw data in hexadecimal format. For example, by default, AWS DMS adds a '0x' prefix to the LOB column type in hexadecimal format moving from an Oracle source to a Kafka target. Use the `no_hex_prefix` endpoint setting to enable migration of RAW data type columns without adding the `'0x'` prefix.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="partitionincludeschematable_nodejs">
+<a href="#partitionincludeschematable_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Include<wbr>Schema<wbr>Table</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Prefixes schema and table names to partition values, when the partition type is `primary-key-type`. Doing this increases data distribution among Kafka partitions. For example, suppose that a SysBench schema has thousands of tables and each table has only limited range for a primary key. In this case, the same primary key is sent from thousands of tables to the same partition, which causes throttling. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="saslpassword_nodejs">
+<a href="#saslpassword_nodejs" style="color: inherit; text-decoration: inherit;">sasl<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The secure password you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="saslusername_nodejs">
+<a href="#saslusername_nodejs" style="color: inherit; text-decoration: inherit;">sasl<wbr>Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The secure user name you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="securityprotocol_nodejs">
+<a href="#securityprotocol_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Set secure connection to a Kafka target endpoint using Transport Layer Security (TLS). Options include `ssl-encryption`, `ssl-authentication`, and `sasl-ssl`. `sasl-ssl` requires `sasl_username` and `sasl_password`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sslcacertificatearn_nodejs">
+<a href="#sslcacertificatearn_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Ca<wbr>Certificate<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) for the private certificate authority (CA) cert that AWS DMS uses to securely connect to your Kafka target endpoint.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sslclientcertificatearn_nodejs">
+<a href="#sslclientcertificatearn_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Client<wbr>Certificate<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the client certificate used to securely connect to a Kafka target endpoint.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sslclientkeyarn_nodejs">
+<a href="#sslclientkeyarn_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Client<wbr>Key<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) for the client private key used to securely connect to a Kafka target endpoint.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sslclientkeypassword_nodejs">
+<a href="#sslclientkeypassword_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Client<wbr>Key<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The password for the client private key used to securely connect to a Kafka target endpoint.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="topic_nodejs">
 <a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
@@ -2323,6 +2755,150 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Kafka broker location. Specify in the form broker-hostname-or-ip:port.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="include_control_details_python">
+<a href="#include_control_details_python" style="color: inherit; text-decoration: inherit;">include_<wbr>control_<wbr>details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Shows detailed control information for table definition, column definition, and table and column changes in the Kafka message output. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="include_null_and_empty_python">
+<a href="#include_null_and_empty_python" style="color: inherit; text-decoration: inherit;">include_<wbr>null_<wbr>and_<wbr>empty</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Include NULL and empty columns for records migrated to the endpoint. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="include_partition_value_python">
+<a href="#include_partition_value_python" style="color: inherit; text-decoration: inherit;">include_<wbr>partition_<wbr>value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Shows the partition value within the Kafka message output unless the partition type is `schema-table-type`. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="include_table_alter_operations_python">
+<a href="#include_table_alter_operations_python" style="color: inherit; text-decoration: inherit;">include_<wbr>table_<wbr>alter_<wbr>operations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Includes any data definition language (DDL) operations that change the table in the control data, such as `rename-table`, `drop-table`, `add-column`, `drop-column`, and `rename-column`. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="include_transaction_details_python">
+<a href="#include_transaction_details_python" style="color: inherit; text-decoration: inherit;">include_<wbr>transaction_<wbr>details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Provides detailed transaction information from the source database. This information includes a commit timestamp, a log position, and values for `transaction_id`, previous `transaction_id`, and `transaction_record_id` (the record offset within a transaction). The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="message_format_python">
+<a href="#message_format_python" style="color: inherit; text-decoration: inherit;">message_<wbr>format</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The output format for the records created on the endpoint. The message format is `JSON` (default) or `JSON_UNFORMATTED` (a single line with no tab).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="message_max_bytes_python">
+<a href="#message_max_bytes_python" style="color: inherit; text-decoration: inherit;">message_<wbr>max_<wbr>bytes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum size in bytes for records created on the endpoint The default is `1,000,000`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="no_hex_prefix_python">
+<a href="#no_hex_prefix_python" style="color: inherit; text-decoration: inherit;">no_<wbr>hex_<wbr>prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set this optional parameter to true to avoid adding a '0x' prefix to raw data in hexadecimal format. For example, by default, AWS DMS adds a '0x' prefix to the LOB column type in hexadecimal format moving from an Oracle source to a Kafka target. Use the `no_hex_prefix` endpoint setting to enable migration of RAW data type columns without adding the `'0x'` prefix.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="partition_include_schema_table_python">
+<a href="#partition_include_schema_table_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>include_<wbr>schema_<wbr>table</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Prefixes schema and table names to partition values, when the partition type is `primary-key-type`. Doing this increases data distribution among Kafka partitions. For example, suppose that a SysBench schema has thousands of tables and each table has only limited range for a primary key. In this case, the same primary key is sent from thousands of tables to the same partition, which causes throttling. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sasl_password_python">
+<a href="#sasl_password_python" style="color: inherit; text-decoration: inherit;">sasl_<wbr>password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The secure password you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sasl_username_python">
+<a href="#sasl_username_python" style="color: inherit; text-decoration: inherit;">sasl_<wbr>username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The secure user name you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="security_protocol_python">
+<a href="#security_protocol_python" style="color: inherit; text-decoration: inherit;">security_<wbr>protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Set secure connection to a Kafka target endpoint using Transport Layer Security (TLS). Options include `ssl-encryption`, `ssl-authentication`, and `sasl-ssl`. `sasl-ssl` requires `sasl_username` and `sasl_password`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ssl_ca_certificate_arn_python">
+<a href="#ssl_ca_certificate_arn_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>ca_<wbr>certificate_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) for the private certificate authority (CA) cert that AWS DMS uses to securely connect to your Kafka target endpoint.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ssl_client_certificate_arn_python">
+<a href="#ssl_client_certificate_arn_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>client_<wbr>certificate_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the client certificate used to securely connect to a Kafka target endpoint.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ssl_client_key_arn_python">
+<a href="#ssl_client_key_arn_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>client_<wbr>key_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) for the client private key used to securely connect to a Kafka target endpoint.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ssl_client_key_password_python">
+<a href="#ssl_client_key_password_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>client_<wbr>key_<wbr>password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The password for the client private key used to securely connect to a Kafka target endpoint.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="topic_python">

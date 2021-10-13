@@ -406,6 +406,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="resourcestates_csharp">
+<a href="#resourcestates_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>States</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#featureresourcestate">List&lt;Feature<wbr>Resource<wbr>State&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}State of the Feature resource itself.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="states_csharp">
+<a href="#states_csharp" style="color: inherit; text-decoration: inherit;">States</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#featurestate">List&lt;Feature<wbr>State&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Output only. The Hub-wide Feature state
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="updatetime_csharp">
 <a href="#updatetime_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
 </span>
@@ -444,6 +462,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="resourcestates_go">
+<a href="#resourcestates_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>States</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#featureresourcestate">[]Feature<wbr>Resource<wbr>State</a></span>
+    </dt>
+    <dd>{{% md %}}State of the Feature resource itself.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="states_go">
+<a href="#states_go" style="color: inherit; text-decoration: inherit;">States</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#featurestate">[]Feature<wbr>State<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Output only. The Hub-wide Feature state
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatetime_go">
 <a href="#updatetime_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -484,6 +520,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="resourcestates_nodejs">
+<a href="#resourcestates_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>States</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#featureresourcestate">Feature<wbr>Resource<wbr>State[]</a></span>
+    </dt>
+    <dd>{{% md %}}State of the Feature resource itself.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="states_nodejs">
+<a href="#states_nodejs" style="color: inherit; text-decoration: inherit;">states</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#featurestate">Feature<wbr>State[]</a></span>
+    </dt>
+    <dd>{{% md %}}Output only. The Hub-wide Feature state
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="updatetime_nodejs">
 <a href="#updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
 </span>
@@ -523,6 +577,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="resource_states_python">
+<a href="#resource_states_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>states</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#featureresourcestate">Sequence[Feature<wbr>Resource<wbr>State]</a></span>
+    </dt>
+    <dd>{{% md %}}State of the Feature resource itself.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="states_python">
+<a href="#states_python" style="color: inherit; text-decoration: inherit;">states</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#featurestate">Sequence[Feature<wbr>State]</a></span>
+    </dt>
+    <dd>{{% md %}}Output only. The Hub-wide Feature state
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="update_time_python">
 <a href="#update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
 </span>
@@ -555,7 +627,9 @@ Get an existing Feature resource's state with the given name, ID, and optional e
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">resource_states</span><span class="p">:</span> <span class="nx">Optional[Sequence[FeatureResourceStateArgs]]</span> = None<span class="p">,</span>
         <span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[FeatureSpecArgs]</span> = None<span class="p">,</span>
+        <span class="nx">states</span><span class="p">:</span> <span class="nx">Optional[Sequence[FeatureStateArgs]]</span> = None<span class="p">,</span>
         <span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Feature</code></pre></div>
 {{% /choosable %}}
 
@@ -723,6 +797,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The project for the resource
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_resourcestates_csharp">
+<a href="#state_resourcestates_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>States</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#featureresourcestate">List&lt;Feature<wbr>Resource<wbr>State<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}State of the Feature resource itself.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_spec_csharp">
 <a href="#state_spec_csharp" style="color: inherit; text-decoration: inherit;">Spec</a>
 </span>
@@ -730,6 +813,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#featurespec">Feature<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide configuration, this field may be unused.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_states_csharp">
+<a href="#state_states_csharp" style="color: inherit; text-decoration: inherit;">States</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#featurestate">List&lt;Feature<wbr>State<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Output only. The Hub-wide Feature state
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_csharp">
@@ -799,6 +891,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The project for the resource
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_resourcestates_go">
+<a href="#state_resourcestates_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>States</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#featureresourcestate">[]Feature<wbr>Resource<wbr>State<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}State of the Feature resource itself.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_spec_go">
 <a href="#state_spec_go" style="color: inherit; text-decoration: inherit;">Spec</a>
 </span>
@@ -806,6 +907,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#featurespec">Feature<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide configuration, this field may be unused.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_states_go">
+<a href="#state_states_go" style="color: inherit; text-decoration: inherit;">States</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#featurestate">[]Feature<wbr>State<wbr>Type<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Output only. The Hub-wide Feature state
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_go">
@@ -875,6 +985,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The project for the resource
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_resourcestates_nodejs">
+<a href="#state_resourcestates_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>States</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#featureresourcestate">Feature<wbr>Resource<wbr>State<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}State of the Feature resource itself.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_spec_nodejs">
 <a href="#state_spec_nodejs" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
@@ -882,6 +1001,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#featurespec">Feature<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide configuration, this field may be unused.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_states_nodejs">
+<a href="#state_states_nodejs" style="color: inherit; text-decoration: inherit;">states</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#featurestate">Feature<wbr>State<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}Output only. The Hub-wide Feature state
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_nodejs">
@@ -951,6 +1079,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The project for the resource
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_resource_states_python">
+<a href="#state_resource_states_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>states</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#featureresourcestate">Sequence[Feature<wbr>Resource<wbr>State<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}State of the Feature resource itself.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_spec_python">
 <a href="#state_spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
@@ -958,6 +1095,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#featurespec">Feature<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide configuration, this field may be unused.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_states_python">
+<a href="#state_states_python" style="color: inherit; text-decoration: inherit;">states</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#featurestate">Sequence[Feature<wbr>State<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Output only. The Hub-wide Feature state
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_update_time_python">
@@ -978,6 +1124,88 @@ The following state arguments are supported:
 ## Supporting Types
 
 
+
+<h4 id="featureresourcestate">Feature<wbr>Resource<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="hasresources_csharp">
+<a href="#hasresources_csharp" style="color: inherit; text-decoration: inherit;">Has<wbr>Resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_csharp">
+<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="hasresources_go">
+<a href="#hasresources_go" style="color: inherit; text-decoration: inherit;">Has<wbr>Resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_go">
+<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="hasresources_nodejs">
+<a href="#hasresources_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_nodejs">
+<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="has_resources_python">
+<a href="#has_resources_python" style="color: inherit; text-decoration: inherit;">has_<wbr>resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_python">
+<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="featurespec">Feature<wbr>Spec</h4>
 
@@ -1040,8 +1268,8 @@ The `multiclusteringress` block supports:
 <h4 id="featurespecmulticlusteringress">Feature<wbr>Spec<wbr>Multiclusteringress</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
         <span id="configmembership_csharp">
 <a href="#configmembership_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Membership</a>
 </span>
@@ -1053,8 +1281,8 @@ The `multiclusteringress` block supports:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
         <span id="configmembership_go">
 <a href="#configmembership_go" style="color: inherit; text-decoration: inherit;">Config<wbr>Membership</a>
 </span>
@@ -1066,8 +1294,8 @@ The `multiclusteringress` block supports:
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
         <span id="configmembership_nodejs">
 <a href="#configmembership_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Membership</a>
 </span>
@@ -1079,8 +1307,8 @@ The `multiclusteringress` block supports:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
         <span id="config_membership_python">
 <a href="#config_membership_python" style="color: inherit; text-decoration: inherit;">config_<wbr>membership</a>
 </span>
@@ -1089,6 +1317,170 @@ The `multiclusteringress` block supports:
     </dt>
     <dd>{{% md %}}Fully-qualified Membership name which hosts the MultiClusterIngress CRD. Example: `projects/foo-proj/locations/global/memberships/bar`
 {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="featurestate">Feature<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="states_csharp">
+<a href="#states_csharp" style="color: inherit; text-decoration: inherit;">States</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#featurestatestate">List&lt;Feature<wbr>State<wbr>State&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="states_go">
+<a href="#states_go" style="color: inherit; text-decoration: inherit;">States</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#featurestatestate">[]Feature<wbr>State<wbr>State</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="states_nodejs">
+<a href="#states_nodejs" style="color: inherit; text-decoration: inherit;">states</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#featurestatestate">Feature<wbr>State<wbr>State[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="states_python">
+<a href="#states_python" style="color: inherit; text-decoration: inherit;">states</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#featurestatestate">Sequence[Feature<wbr>State<wbr>State]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="featurestatestate">Feature<wbr>State<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="code_csharp">
+<a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="updatetime_csharp">
+<a href="#updatetime_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="code_go">
+<a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="updatetime_go">
+<a href="#updatetime_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="code_nodejs">
+<a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="updatetime_nodejs">
+<a href="#updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="code_python">
+<a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="update_time_python">
+<a href="#update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

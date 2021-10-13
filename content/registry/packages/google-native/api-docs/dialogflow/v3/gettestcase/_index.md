@@ -823,7 +823,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Input only. The diagnostic info output for the turn.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Input only. The diagnostic info output for the turn. Required to calculate the testing coverage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="differences_csharp">
 <a href="#differences_csharp" style="color: inherit; text-decoration: inherit;">Differences</a>
@@ -883,7 +883,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Input only. The diagnostic info output for the turn.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Input only. The diagnostic info output for the turn. Required to calculate the testing coverage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="differences_go">
 <a href="#differences_go" style="color: inherit; text-decoration: inherit;">Differences</a>
@@ -943,7 +943,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Input only. The diagnostic info output for the turn.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Input only. The diagnostic info output for the turn. Required to calculate the testing coverage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="differences_nodejs">
 <a href="#differences_nodejs" style="color: inherit; text-decoration: inherit;">differences</a>
@@ -1003,7 +1003,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Input only. The diagnostic info output for the turn.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Input only. The diagnostic info output for the turn. Required to calculate the testing coverage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="differences_python">
 <a href="#differences_python" style="color: inherit; text-decoration: inherit;">differences</a>

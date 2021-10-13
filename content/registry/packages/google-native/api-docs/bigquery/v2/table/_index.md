@@ -751,6 +751,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The time when this table was created, in milliseconds since the epoch.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="defaultcollation_csharp">
+<a href="#defaultcollation_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Collation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default collation of the table.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
 </span>
@@ -866,6 +874,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when this table was created, in milliseconds since the epoch.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="defaultcollation_go">
+<a href="#defaultcollation_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Collation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default collation of the table.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -983,6 +999,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The time when this table was created, in milliseconds since the epoch.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="defaultcollation_nodejs">
+<a href="#defaultcollation_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Collation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default collation of the table.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
@@ -1099,6 +1123,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The time when this table was created, in milliseconds since the epoch.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="default_collation_python">
+<a href="#default_collation_python" style="color: inherit; text-decoration: inherit;">default_<wbr>collation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The default collation of the table.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
@@ -1213,6 +1245,106 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="avrooptions">Avro<wbr>Options</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="useavrologicaltypes_csharp">
+<a href="#useavrologicaltypes_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Avro<wbr>Logical<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}[Optional] If sourceFormat is set to "AVRO", indicates whether to interpret logical types as the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for example, INTEGER).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="useavrologicaltypes_go">
+<a href="#useavrologicaltypes_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Avro<wbr>Logical<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}[Optional] If sourceFormat is set to "AVRO", indicates whether to interpret logical types as the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for example, INTEGER).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="useavrologicaltypes_nodejs">
+<a href="#useavrologicaltypes_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Avro<wbr>Logical<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}[Optional] If sourceFormat is set to "AVRO", indicates whether to interpret logical types as the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for example, INTEGER).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="use_avro_logical_types_python">
+<a href="#use_avro_logical_types_python" style="color: inherit; text-decoration: inherit;">use_<wbr>avro_<wbr>logical_<wbr>types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}[Optional] If sourceFormat is set to "AVRO", indicates whether to interpret logical types as the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for example, INTEGER).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="avrooptionsresponse">Avro<wbr>Options<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="useavrologicaltypes_csharp">
+<a href="#useavrologicaltypes_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Avro<wbr>Logical<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}[Optional] If sourceFormat is set to "AVRO", indicates whether to interpret logical types as the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for example, INTEGER).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="useavrologicaltypes_go">
+<a href="#useavrologicaltypes_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Avro<wbr>Logical<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}[Optional] If sourceFormat is set to "AVRO", indicates whether to interpret logical types as the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for example, INTEGER).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="useavrologicaltypes_nodejs">
+<a href="#useavrologicaltypes_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Avro<wbr>Logical<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}[Optional] If sourceFormat is set to "AVRO", indicates whether to interpret logical types as the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for example, INTEGER).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="use_avro_logical_types_python">
+<a href="#use_avro_logical_types_python" style="color: inherit; text-decoration: inherit;">use_<wbr>avro_<wbr>logical_<wbr>types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}[Optional] If sourceFormat is set to "AVRO", indicates whether to interpret logical types as the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for example, INTEGER).{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="bigtablecolumn">Bigtable<wbr>Column</h4>
 
@@ -3615,6 +3747,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Optional] The separator for fields in a CSV file. BigQuery converts the string to ISO-8859-1 encoding, and then uses the first byte of the encoded string to split the data in its raw, binary state. BigQuery also supports the escape sequence "\t" to specify a tab separator. The default value is a comma (',').{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="nullmarker_csharp">
+<a href="#nullmarker_csharp" style="color: inherit; text-decoration: inherit;">Null<wbr>Marker</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Optional] An custom string that will represent a NULL value in CSV import data.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="quote_csharp">
 <a href="#quote_csharp" style="color: inherit; text-decoration: inherit;">Quote</a>
 </span>
@@ -3666,6 +3806,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] The separator for fields in a CSV file. BigQuery converts the string to ISO-8859-1 encoding, and then uses the first byte of the encoded string to split the data in its raw, binary state. BigQuery also supports the escape sequence "\t" to specify a tab separator. The default value is a comma (',').{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nullmarker_go">
+<a href="#nullmarker_go" style="color: inherit; text-decoration: inherit;">Null<wbr>Marker</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Optional] An custom string that will represent a NULL value in CSV import data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quote_go">
 <a href="#quote_go" style="color: inherit; text-decoration: inherit;">Quote</a>
@@ -3719,6 +3867,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Optional] The separator for fields in a CSV file. BigQuery converts the string to ISO-8859-1 encoding, and then uses the first byte of the encoded string to split the data in its raw, binary state. BigQuery also supports the escape sequence "\t" to specify a tab separator. The default value is a comma (',').{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="nullmarker_nodejs">
+<a href="#nullmarker_nodejs" style="color: inherit; text-decoration: inherit;">null<wbr>Marker</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Optional] An custom string that will represent a NULL value in CSV import data.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="quote_nodejs">
 <a href="#quote_nodejs" style="color: inherit; text-decoration: inherit;">quote</a>
 </span>
@@ -3770,6 +3926,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] The separator for fields in a CSV file. BigQuery converts the string to ISO-8859-1 encoding, and then uses the first byte of the encoded string to split the data in its raw, binary state. BigQuery also supports the escape sequence "\t" to specify a tab separator. The default value is a comma (',').{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="null_marker_python">
+<a href="#null_marker_python" style="color: inherit; text-decoration: inherit;">null_<wbr>marker</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Optional] An custom string that will represent a NULL value in CSV import data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quote_python">
 <a href="#quote_python" style="color: inherit; text-decoration: inherit;">quote</a>
@@ -3825,6 +3989,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Optional] The separator for fields in a CSV file. BigQuery converts the string to ISO-8859-1 encoding, and then uses the first byte of the encoded string to split the data in its raw, binary state. BigQuery also supports the escape sequence "\t" to specify a tab separator. The default value is a comma (',').{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="nullmarker_csharp">
+<a href="#nullmarker_csharp" style="color: inherit; text-decoration: inherit;">Null<wbr>Marker</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Optional] An custom string that will represent a NULL value in CSV import data.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="quote_csharp">
 <a href="#quote_csharp" style="color: inherit; text-decoration: inherit;">Quote</a>
 </span>
@@ -3876,6 +4048,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] The separator for fields in a CSV file. BigQuery converts the string to ISO-8859-1 encoding, and then uses the first byte of the encoded string to split the data in its raw, binary state. BigQuery also supports the escape sequence "\t" to specify a tab separator. The default value is a comma (',').{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="nullmarker_go">
+<a href="#nullmarker_go" style="color: inherit; text-decoration: inherit;">Null<wbr>Marker</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Optional] An custom string that will represent a NULL value in CSV import data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="quote_go">
 <a href="#quote_go" style="color: inherit; text-decoration: inherit;">Quote</a>
@@ -3929,6 +4109,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Optional] The separator for fields in a CSV file. BigQuery converts the string to ISO-8859-1 encoding, and then uses the first byte of the encoded string to split the data in its raw, binary state. BigQuery also supports the escape sequence "\t" to specify a tab separator. The default value is a comma (',').{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="nullmarker_nodejs">
+<a href="#nullmarker_nodejs" style="color: inherit; text-decoration: inherit;">null<wbr>Marker</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Optional] An custom string that will represent a NULL value in CSV import data.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="quote_nodejs">
 <a href="#quote_nodejs" style="color: inherit; text-decoration: inherit;">quote</a>
 </span>
@@ -3980,6 +4168,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] The separator for fields in a CSV file. BigQuery converts the string to ISO-8859-1 encoding, and then uses the first byte of the encoded string to split the data in its raw, binary state. BigQuery also supports the escape sequence "\t" to specify a tab separator. The default value is a comma (',').{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="null_marker_python">
+<a href="#null_marker_python" style="color: inherit; text-decoration: inherit;">null_<wbr>marker</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Optional] An custom string that will represent a NULL value in CSV import data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="quote_python">
 <a href="#quote_python" style="color: inherit; text-decoration: inherit;">quote</a>
@@ -4111,6 +4307,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Try to detect schema and format options automatically. Any option specified explicitly will be honored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="avrooptions_csharp">
+<a href="#avrooptions_csharp" style="color: inherit; text-decoration: inherit;">Avro<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#avrooptions">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Avro<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Additional properties to set if sourceFormat is set to Avro.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="bigtableoptions_csharp">
 <a href="#bigtableoptions_csharp" style="color: inherit; text-decoration: inherit;">Bigtable<wbr>Options</a>
 </span>
@@ -4226,6 +4430,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Try to detect schema and format options automatically. Any option specified explicitly will be honored.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="avrooptions_go">
+<a href="#avrooptions_go" style="color: inherit; text-decoration: inherit;">Avro<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#avrooptions">Avro<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Additional properties to set if sourceFormat is set to Avro.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bigtableoptions_go">
 <a href="#bigtableoptions_go" style="color: inherit; text-decoration: inherit;">Bigtable<wbr>Options</a>
@@ -4343,6 +4555,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Try to detect schema and format options automatically. Any option specified explicitly will be honored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="avrooptions_nodejs">
+<a href="#avrooptions_nodejs" style="color: inherit; text-decoration: inherit;">avro<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#avrooptions">Avro<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Additional properties to set if sourceFormat is set to Avro.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="bigtableoptions_nodejs">
 <a href="#bigtableoptions_nodejs" style="color: inherit; text-decoration: inherit;">bigtable<wbr>Options</a>
 </span>
@@ -4458,6 +4678,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Try to detect schema and format options automatically. Any option specified explicitly will be honored.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="avro_options_python">
+<a href="#avro_options_python" style="color: inherit; text-decoration: inherit;">avro_<wbr>options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#avrooptions">Avro<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Additional properties to set if sourceFormat is set to Avro.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bigtable_options_python">
 <a href="#bigtable_options_python" style="color: inherit; text-decoration: inherit;">bigtable_<wbr>options</a>
@@ -4577,6 +4805,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Try to detect schema and format options automatically. Any option specified explicitly will be honored.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="avrooptions_csharp">
+<a href="#avrooptions_csharp" style="color: inherit; text-decoration: inherit;">Avro<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#avrooptionsresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Avro<wbr>Options<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Additional properties to set if sourceFormat is set to Avro.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="bigtableoptions_csharp">
 <a href="#bigtableoptions_csharp" style="color: inherit; text-decoration: inherit;">Bigtable<wbr>Options</a>
 </span>
@@ -4692,6 +4928,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Try to detect schema and format options automatically. Any option specified explicitly will be honored.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="avrooptions_go">
+<a href="#avrooptions_go" style="color: inherit; text-decoration: inherit;">Avro<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#avrooptionsresponse">Avro<wbr>Options<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Additional properties to set if sourceFormat is set to Avro.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bigtableoptions_go">
 <a href="#bigtableoptions_go" style="color: inherit; text-decoration: inherit;">Bigtable<wbr>Options</a>
@@ -4809,6 +5053,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Try to detect schema and format options automatically. Any option specified explicitly will be honored.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="avrooptions_nodejs">
+<a href="#avrooptions_nodejs" style="color: inherit; text-decoration: inherit;">avro<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#avrooptionsresponse">Avro<wbr>Options<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Additional properties to set if sourceFormat is set to Avro.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="bigtableoptions_nodejs">
 <a href="#bigtableoptions_nodejs" style="color: inherit; text-decoration: inherit;">bigtable<wbr>Options</a>
 </span>
@@ -4924,6 +5176,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Try to detect schema and format options automatically. Any option specified explicitly will be honored.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="avro_options_python">
+<a href="#avro_options_python" style="color: inherit; text-decoration: inherit;">avro_<wbr>options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#avrooptionsresponse">Avro<wbr>Options<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Additional properties to set if sourceFormat is set to Avro.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bigtable_options_python">
 <a href="#bigtable_options_python" style="color: inherit; text-decoration: inherit;">bigtable_<wbr>options</a>
@@ -6839,6 +7099,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Optional] The categories attached to this field, used for field-level access control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="collationspec_csharp">
+<a href="#collationspec_csharp" style="color: inherit; text-decoration: inherit;">Collation<wbr>Spec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. Collation specification of the field. It only can be set on string type field.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -6922,6 +7190,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#tablefieldschemacategories">Table<wbr>Field<wbr>Schema<wbr>Categories</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The categories attached to this field, used for field-level access control.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="collationspec_go">
+<a href="#collationspec_go" style="color: inherit; text-decoration: inherit;">Collation<wbr>Spec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. Collation specification of the field. It only can be set on string type field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -7007,6 +7283,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Optional] The categories attached to this field, used for field-level access control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="collationspec_nodejs">
+<a href="#collationspec_nodejs" style="color: inherit; text-decoration: inherit;">collation<wbr>Spec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. Collation specification of the field. It only can be set on string type field.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -7090,6 +7374,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#tablefieldschemacategories">Table<wbr>Field<wbr>Schema<wbr>Categories</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The categories attached to this field, used for field-level access control.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="collation_spec_python">
+<a href="#collation_spec_python" style="color: inherit; text-decoration: inherit;">collation_<wbr>spec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Optional. Collation specification of the field. It only can be set on string type field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -7377,6 +7669,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Optional] The categories attached to this field, used for field-level access control.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="collationspec_csharp">
+<a href="#collationspec_csharp" style="color: inherit; text-decoration: inherit;">Collation<wbr>Spec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. Collation specification of the field. It only can be set on string type field.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -7460,6 +7760,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#tablefieldschemacategoriesresponse">Table<wbr>Field<wbr>Schema<wbr>Categories<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The categories attached to this field, used for field-level access control.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="collationspec_go">
+<a href="#collationspec_go" style="color: inherit; text-decoration: inherit;">Collation<wbr>Spec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. Collation specification of the field. It only can be set on string type field.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -7545,6 +7853,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Optional] The categories attached to this field, used for field-level access control.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="collationspec_nodejs">
+<a href="#collationspec_nodejs" style="color: inherit; text-decoration: inherit;">collation<wbr>Spec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. Collation specification of the field. It only can be set on string type field.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -7628,6 +7944,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#tablefieldschemacategoriesresponse">Table<wbr>Field<wbr>Schema<wbr>Categories<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The categories attached to this field, used for field-level access control.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="collation_spec_python">
+<a href="#collation_spec_python" style="color: inherit; text-decoration: inherit;">collation_<wbr>spec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Optional. Collation specification of the field. It only can be set on string type field.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>

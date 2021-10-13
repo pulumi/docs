@@ -13,8 +13,8 @@ Explore the resources and functions of the azure.consumption module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="budgetresourcegroup" title="BudgetResourceGroup"><span class="symbol resource"></span>BudgetResourceGroup</a></li>
-    <li><a href="budgetsubscription" title="BudgetSubscription"><span class="symbol resource"></span>BudgetSubscription</a></li>
+    <li><a href="budgetresourcegroup" title="BudgetResourceGroup"><span class="api-symbol api-symbol--resource"></span>BudgetResourceGroup</a></li>
+    <li><a href="budgetsubscription" title="BudgetSubscription"><span class="api-symbol api-symbol--resource"></span>BudgetSubscription</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -26,6 +26,6 @@ Explore the resources and functions of the azure.consumption module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.21.0</dd>
+	<dd>4.22.0</dd>
 </dl>
 

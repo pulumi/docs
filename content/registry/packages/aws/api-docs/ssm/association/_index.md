@@ -21,7 +21,7 @@ Associates an SSM Document to an instance or EC2 tag.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
-
+### Create an association for a specific instance
 
 
 {{< example csharp >}}
@@ -118,6 +118,220 @@ const example = new aws.ssm.Association("example", {targets: [{
     key: "InstanceIds",
     values: [aws_instance.example.id],
 }]});
+```
+
+
+{{< /example >}}
+
+
+
+
+### Create an association for all managed instances in an AWS account
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Ssm.Association("example", new Aws.Ssm.AssociationArgs
+        {
+            Targets = 
+            {
+                new Aws.Ssm.Inputs.AssociationTargetArgs
+                {
+                    Key = "InstanceIds",
+                    Values = 
+                    {
+                        "*",
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ssm"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ssm.NewAssociation(ctx, "example", &ssm.AssociationArgs{
+			Targets: ssm.AssociationTargetArray{
+				&ssm.AssociationTargetArgs{
+					Key: pulumi.String("InstanceIds"),
+					Values: pulumi.StringArray{
+						pulumi.String("*"),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.ssm.Association("example", targets=[aws.ssm.AssociationTargetArgs(
+    key="InstanceIds",
+    values=["*"],
+)])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.ssm.Association("example", {
+    targets: [{
+        key: "InstanceIds",
+        values: ["*"],
+    }],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+### Create an association for a specific tag
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Ssm.Association("example", new Aws.Ssm.AssociationArgs
+        {
+            Targets = 
+            {
+                new Aws.Ssm.Inputs.AssociationTargetArgs
+                {
+                    Key = "tag:Environment",
+                    Values = 
+                    {
+                        "Development",
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ssm"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ssm.NewAssociation(ctx, "example", &ssm.AssociationArgs{
+			Targets: ssm.AssociationTargetArray{
+				&ssm.AssociationTargetArgs{
+					Key: pulumi.String("tag:Environment"),
+					Values: pulumi.StringArray{
+						pulumi.String("Development"),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.ssm.Association("example", targets=[aws.ssm.AssociationTargetArgs(
+    key="tag:Environment",
+    values=["Development"],
+)])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.ssm.Association("example", {
+    targets: [{
+        key: "tag:Environment",
+        values: ["Development"],
+    }],
+});
 ```
 
 

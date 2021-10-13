@@ -13,27 +13,27 @@ Explore the resources and functions of the azure-native.providerhub module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="defaultrollout" title="DefaultRollout"><span class="symbol resource"></span>DefaultRollout</a></li>
-    <li><a href="notificationregistration" title="NotificationRegistration"><span class="symbol resource"></span>NotificationRegistration</a></li>
-    <li><a href="operationbyproviderregistration" title="OperationByProviderRegistration"><span class="symbol resource"></span>OperationByProviderRegistration</a></li>
-    <li><a href="providerregistration" title="ProviderRegistration"><span class="symbol resource"></span>ProviderRegistration</a></li>
-    <li><a href="resourcetyperegistration" title="ResourceTypeRegistration"><span class="symbol resource"></span>ResourceTypeRegistration</a></li>
-    <li><a href="skus" title="Skus"><span class="symbol resource"></span>Skus</a></li>
-    <li><a href="skusnestedresourcetypefirst" title="SkusNestedResourceTypeFirst"><span class="symbol resource"></span>SkusNestedResourceTypeFirst</a></li>
-    <li><a href="skusnestedresourcetypesecond" title="SkusNestedResourceTypeSecond"><span class="symbol resource"></span>SkusNestedResourceTypeSecond</a></li>
-    <li><a href="skusnestedresourcetypethird" title="SkusNestedResourceTypeThird"><span class="symbol resource"></span>SkusNestedResourceTypeThird</a></li>
+    <li><a href="defaultrollout" title="DefaultRollout"><span class="api-symbol api-symbol--resource"></span>DefaultRollout</a></li>
+    <li><a href="notificationregistration" title="NotificationRegistration"><span class="api-symbol api-symbol--resource"></span>NotificationRegistration</a></li>
+    <li><a href="operationbyproviderregistration" title="OperationByProviderRegistration"><span class="api-symbol api-symbol--resource"></span>OperationByProviderRegistration</a></li>
+    <li><a href="providerregistration" title="ProviderRegistration"><span class="api-symbol api-symbol--resource"></span>ProviderRegistration</a></li>
+    <li><a href="resourcetyperegistration" title="ResourceTypeRegistration"><span class="api-symbol api-symbol--resource"></span>ResourceTypeRegistration</a></li>
+    <li><a href="skus" title="Skus"><span class="api-symbol api-symbol--resource"></span>Skus</a></li>
+    <li><a href="skusnestedresourcetypefirst" title="SkusNestedResourceTypeFirst"><span class="api-symbol api-symbol--resource"></span>SkusNestedResourceTypeFirst</a></li>
+    <li><a href="skusnestedresourcetypesecond" title="SkusNestedResourceTypeSecond"><span class="api-symbol api-symbol--resource"></span>SkusNestedResourceTypeSecond</a></li>
+    <li><a href="skusnestedresourcetypethird" title="SkusNestedResourceTypeThird"><span class="api-symbol api-symbol--resource"></span>SkusNestedResourceTypeThird</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getdefaultrollout" title="GetDefaultRollout"><span class="symbol function"></span>GetDefaultRollout</a></li>
-    <li><a href="getnotificationregistration" title="GetNotificationRegistration"><span class="symbol function"></span>GetNotificationRegistration</a></li>
-    <li><a href="getproviderregistration" title="GetProviderRegistration"><span class="symbol function"></span>GetProviderRegistration</a></li>
-    <li><a href="getresourcetyperegistration" title="GetResourceTypeRegistration"><span class="symbol function"></span>GetResourceTypeRegistration</a></li>
-    <li><a href="getskus" title="GetSkus"><span class="symbol function"></span>GetSkus</a></li>
-    <li><a href="getskusnestedresourcetypefirst" title="GetSkusNestedResourceTypeFirst"><span class="symbol function"></span>GetSkusNestedResourceTypeFirst</a></li>
-    <li><a href="getskusnestedresourcetypesecond" title="GetSkusNestedResourceTypeSecond"><span class="symbol function"></span>GetSkusNestedResourceTypeSecond</a></li>
-    <li><a href="getskusnestedresourcetypethird" title="GetSkusNestedResourceTypeThird"><span class="symbol function"></span>GetSkusNestedResourceTypeThird</a></li>
+    <li><a href="getdefaultrollout" title="GetDefaultRollout"><span class="api-symbol api-symbol--function"></span>GetDefaultRollout</a></li>
+    <li><a href="getnotificationregistration" title="GetNotificationRegistration"><span class="api-symbol api-symbol--function"></span>GetNotificationRegistration</a></li>
+    <li><a href="getproviderregistration" title="GetProviderRegistration"><span class="api-symbol api-symbol--function"></span>GetProviderRegistration</a></li>
+    <li><a href="getresourcetyperegistration" title="GetResourceTypeRegistration"><span class="api-symbol api-symbol--function"></span>GetResourceTypeRegistration</a></li>
+    <li><a href="getskus" title="GetSkus"><span class="api-symbol api-symbol--function"></span>GetSkus</a></li>
+    <li><a href="getskusnestedresourcetypefirst" title="GetSkusNestedResourceTypeFirst"><span class="api-symbol api-symbol--function"></span>GetSkusNestedResourceTypeFirst</a></li>
+    <li><a href="getskusnestedresourcetypesecond" title="GetSkusNestedResourceTypeSecond"><span class="api-symbol api-symbol--function"></span>GetSkusNestedResourceTypeSecond</a></li>
+    <li><a href="getskusnestedresourcetypethird" title="GetSkusNestedResourceTypeThird"><span class="api-symbol api-symbol--function"></span>GetSkusNestedResourceTypeThird</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -43,6 +43,6 @@ Explore the resources and functions of the azure-native.providerhub module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.36.0</dd>
+	<dd>1.37.0</dd>
 </dl>
 

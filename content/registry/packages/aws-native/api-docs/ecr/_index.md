@@ -13,9 +13,9 @@ Explore the resources and functions of the aws-native.ecr module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="registrypolicy" title="RegistryPolicy"><span class="symbol resource"></span>RegistryPolicy</a></li>
-    <li><a href="replicationconfiguration" title="ReplicationConfiguration"><span class="symbol resource"></span>ReplicationConfiguration</a></li>
-    <li><a href="repository" title="Repository"><span class="symbol resource"></span>Repository</a></li>
+    <li><a href="registrypolicy" title="RegistryPolicy"><span class="api-symbol api-symbol--resource"></span>RegistryPolicy</a></li>
+    <li><a href="replicationconfiguration" title="ReplicationConfiguration"><span class="api-symbol api-symbol--resource"></span>ReplicationConfiguration</a></li>
+    <li><a href="repository" title="Repository"><span class="api-symbol api-symbol--resource"></span>Repository</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -25,6 +25,6 @@ Explore the resources and functions of the aws-native.ecr module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.0</dd>
 </dl>
 

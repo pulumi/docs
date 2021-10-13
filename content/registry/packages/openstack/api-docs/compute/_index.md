@@ -13,28 +13,28 @@ Explore the resources and functions of the openstack.compute module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="aggregatev2" title="AggregateV2"><span class="symbol resource"></span>AggregateV2</a></li>
-    <li><a href="flavor" title="Flavor"><span class="symbol resource"></span>Flavor</a></li>
-    <li><a href="flavoraccess" title="FlavorAccess"><span class="symbol resource"></span>FlavorAccess</a></li>
-    <li><a href="floatingip" title="FloatingIp"><span class="symbol resource"></span>FloatingIp</a></li>
-    <li><a href="floatingipassociate" title="FloatingIpAssociate"><span class="symbol resource"></span>FloatingIpAssociate</a></li>
-    <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
-    <li><a href="interfaceattach" title="InterfaceAttach"><span class="symbol resource"></span>InterfaceAttach</a></li>
-    <li><a href="keypair" title="Keypair"><span class="symbol resource"></span>Keypair</a></li>
-    <li><a href="quotasetv2" title="QuotaSetV2"><span class="symbol resource"></span>QuotaSetV2</a></li>
-    <li><a href="secgroup" title="SecGroup"><span class="symbol resource"></span>SecGroup</a></li>
-    <li><a href="servergroup" title="ServerGroup"><span class="symbol resource"></span>ServerGroup</a></li>
-    <li><a href="volumeattach" title="VolumeAttach"><span class="symbol resource"></span>VolumeAttach</a></li>
+    <li><a href="aggregatev2" title="AggregateV2"><span class="api-symbol api-symbol--resource"></span>AggregateV2</a></li>
+    <li><a href="flavor" title="Flavor"><span class="api-symbol api-symbol--resource"></span>Flavor</a></li>
+    <li><a href="flavoraccess" title="FlavorAccess"><span class="api-symbol api-symbol--resource"></span>FlavorAccess</a></li>
+    <li><a href="floatingip" title="FloatingIp"><span class="api-symbol api-symbol--resource"></span>FloatingIp</a></li>
+    <li><a href="floatingipassociate" title="FloatingIpAssociate"><span class="api-symbol api-symbol--resource"></span>FloatingIpAssociate</a></li>
+    <li><a href="instance" title="Instance"><span class="api-symbol api-symbol--resource"></span>Instance</a></li>
+    <li><a href="interfaceattach" title="InterfaceAttach"><span class="api-symbol api-symbol--resource"></span>InterfaceAttach</a></li>
+    <li><a href="keypair" title="Keypair"><span class="api-symbol api-symbol--resource"></span>Keypair</a></li>
+    <li><a href="quotasetv2" title="QuotaSetV2"><span class="api-symbol api-symbol--resource"></span>QuotaSetV2</a></li>
+    <li><a href="secgroup" title="SecGroup"><span class="api-symbol api-symbol--resource"></span>SecGroup</a></li>
+    <li><a href="servergroup" title="ServerGroup"><span class="api-symbol api-symbol--resource"></span>ServerGroup</a></li>
+    <li><a href="volumeattach" title="VolumeAttach"><span class="api-symbol api-symbol--resource"></span>VolumeAttach</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getaggregatev2" title="GetAggregateV2"><span class="symbol function"></span>GetAggregateV2</a></li>
-    <li><a href="getavailabilityzones" title="GetAvailabilityZones"><span class="symbol function"></span>GetAvailabilityZones</a></li>
-    <li><a href="getflavor" title="GetFlavor"><span class="symbol function"></span>GetFlavor</a></li>
-    <li><a href="gethypervisorv2" title="GetHypervisorV2"><span class="symbol function"></span>GetHypervisorV2</a></li>
-    <li><a href="getinstancev2" title="GetInstanceV2"><span class="symbol function"></span>GetInstanceV2</a></li>
-    <li><a href="getkeypair" title="GetKeypair"><span class="symbol function"></span>GetKeypair</a></li>
+    <li><a href="getaggregatev2" title="GetAggregateV2"><span class="api-symbol api-symbol--function"></span>GetAggregateV2</a></li>
+    <li><a href="getavailabilityzones" title="GetAvailabilityZones"><span class="api-symbol api-symbol--function"></span>GetAvailabilityZones</a></li>
+    <li><a href="getflavor" title="GetFlavor"><span class="api-symbol api-symbol--function"></span>GetFlavor</a></li>
+    <li><a href="gethypervisorv2" title="GetHypervisorV2"><span class="api-symbol api-symbol--function"></span>GetHypervisorV2</a></li>
+    <li><a href="getinstancev2" title="GetInstanceV2"><span class="api-symbol api-symbol--function"></span>GetInstanceV2</a></li>
+    <li><a href="getkeypair" title="GetKeypair"><span class="api-symbol api-symbol--function"></span>GetKeypair</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

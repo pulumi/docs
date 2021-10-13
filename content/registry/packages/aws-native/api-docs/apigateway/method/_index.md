@@ -31,11 +31,11 @@ Resource Type definition for AWS::ApiGateway::Method
            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
            <span class="nx">api_key_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
            <span class="nx">authorization_scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
-           <span class="nx">authorization_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">authorization_type</span><span class="p">:</span> <span class="nx">Optional[MethodAuthorizationType]</span> = None<span class="p">,</span>
            <span class="nx">authorizer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">http_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">integration</span><span class="p">:</span> <span class="nx">Optional[MethodIntegrationArgs]</span> = None<span class="p">,</span>
-           <span class="nx">method_responses</span><span class="p">:</span> <span class="nx">Optional[Sequence[MethodMethodResponseArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">method_responses</span><span class="p">:</span> <span class="nx">Optional[Sequence[MethodResponseArgs]]</span> = None<span class="p">,</span>
            <span class="nx">operation_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">request_models</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">,</span>
            <span class="nx">request_parameters</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">,</span>
@@ -177,7 +177,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The backend system that the method calls when it receives a request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -185,7 +185,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The ID of an API Gateway resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="restapiid_csharp">
 <a href="#restapiid_csharp" style="color: inherit; text-decoration: inherit;">Rest<wbr>Api<wbr>Id</a>
@@ -193,7 +193,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the RestApi resource in which API Gateway creates the method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apikeyrequired_csharp">
 <a href="#apikeyrequired_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Key<wbr>Required</a>
@@ -201,7 +201,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Indicates whether the method requires clients to submit a valid API key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizationscopes_csharp">
 <a href="#authorizationscopes_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Scopes</a>
@@ -209,15 +209,15 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A list of authorization scopes configured on the method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizationtype_csharp">
 <a href="#authorizationtype_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#methodauthorizationtype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Api<wbr>Gateway.<wbr>Method<wbr>Authorization<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The method's authorization type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizerid_csharp">
 <a href="#authorizerid_csharp" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Id</a>
@@ -225,7 +225,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The identifier of the authorizer to use on this method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integration_csharp">
 <a href="#integration_csharp" style="color: inherit; text-decoration: inherit;">Integration</a>
@@ -233,15 +233,15 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#methodintegration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Api<wbr>Gateway.<wbr>Inputs.<wbr>Method<wbr>Integration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The backend system that the method calls when it receives a request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="methodresponses_csharp">
 <a href="#methodresponses_csharp" style="color: inherit; text-decoration: inherit;">Method<wbr>Responses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#methodmethodresponse">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Api<wbr>Gateway.<wbr>Inputs.<wbr>Method<wbr>Method<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#methodresponse">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Api<wbr>Gateway.<wbr>Inputs.<wbr>Method<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The responses that can be sent to the client who calls the method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operationname_csharp">
 <a href="#operationname_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>Name</a>
@@ -249,7 +249,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A friendly operation name for the method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmodels_csharp">
 <a href="#requestmodels_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Models</a>
@@ -257,7 +257,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The resources that are used for the request's content type. Specify request models as key-value pairs (string-to-string mapping), with a content type as the key and a Model resource name as the value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestparameters_csharp">
 <a href="#requestparameters_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Parameters</a>
@@ -265,7 +265,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The request parameters that API Gateway accepts. Specify request parameters as key-value pairs (string-to-Boolean mapping), with a source as the key and a Boolean as the value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestvalidatorid_csharp">
 <a href="#requestvalidatorid_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Validator<wbr>Id</a>
@@ -273,7 +273,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The ID of the associated request validator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -285,7 +285,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The backend system that the method calls when it receives a request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -293,7 +293,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The ID of an API Gateway resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="restapiid_go">
 <a href="#restapiid_go" style="color: inherit; text-decoration: inherit;">Rest<wbr>Api<wbr>Id</a>
@@ -301,7 +301,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the RestApi resource in which API Gateway creates the method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apikeyrequired_go">
 <a href="#apikeyrequired_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Key<wbr>Required</a>
@@ -309,7 +309,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Indicates whether the method requires clients to submit a valid API key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizationscopes_go">
 <a href="#authorizationscopes_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Scopes</a>
@@ -317,15 +317,15 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A list of authorization scopes configured on the method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizationtype_go">
 <a href="#authorizationtype_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#methodauthorizationtype">Method<wbr>Authorization<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The method's authorization type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizerid_go">
 <a href="#authorizerid_go" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Id</a>
@@ -333,7 +333,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The identifier of the authorizer to use on this method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integration_go">
 <a href="#integration_go" style="color: inherit; text-decoration: inherit;">Integration</a>
@@ -341,15 +341,15 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#methodintegration">Method<wbr>Integration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The backend system that the method calls when it receives a request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="methodresponses_go">
 <a href="#methodresponses_go" style="color: inherit; text-decoration: inherit;">Method<wbr>Responses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#methodmethodresponse">[]Method<wbr>Method<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#methodresponse">[]Method<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The responses that can be sent to the client who calls the method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operationname_go">
 <a href="#operationname_go" style="color: inherit; text-decoration: inherit;">Operation<wbr>Name</a>
@@ -357,7 +357,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A friendly operation name for the method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmodels_go">
 <a href="#requestmodels_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Models</a>
@@ -365,7 +365,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The resources that are used for the request's content type. Specify request models as key-value pairs (string-to-string mapping), with a content type as the key and a Model resource name as the value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestparameters_go">
 <a href="#requestparameters_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Parameters</a>
@@ -373,7 +373,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The request parameters that API Gateway accepts. Specify request parameters as key-value pairs (string-to-Boolean mapping), with a source as the key and a Boolean as the value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestvalidatorid_go">
 <a href="#requestvalidatorid_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Validator<wbr>Id</a>
@@ -381,7 +381,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The ID of the associated request validator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -393,7 +393,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The backend system that the method calls when it receives a request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -401,7 +401,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The ID of an API Gateway resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="restapiid_nodejs">
 <a href="#restapiid_nodejs" style="color: inherit; text-decoration: inherit;">rest<wbr>Api<wbr>Id</a>
@@ -409,7 +409,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the RestApi resource in which API Gateway creates the method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apikeyrequired_nodejs">
 <a href="#apikeyrequired_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Key<wbr>Required</a>
@@ -417,7 +417,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Indicates whether the method requires clients to submit a valid API key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizationscopes_nodejs">
 <a href="#authorizationscopes_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Scopes</a>
@@ -425,15 +425,15 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A list of authorization scopes configured on the method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizationtype_nodejs">
 <a href="#authorizationtype_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#methodauthorizationtype">Method<wbr>Authorization<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The method's authorization type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizerid_nodejs">
 <a href="#authorizerid_nodejs" style="color: inherit; text-decoration: inherit;">authorizer<wbr>Id</a>
@@ -441,7 +441,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The identifier of the authorizer to use on this method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integration_nodejs">
 <a href="#integration_nodejs" style="color: inherit; text-decoration: inherit;">integration</a>
@@ -449,15 +449,15 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#methodintegration">Method<wbr>Integration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The backend system that the method calls when it receives a request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="methodresponses_nodejs">
 <a href="#methodresponses_nodejs" style="color: inherit; text-decoration: inherit;">method<wbr>Responses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#methodmethodresponse">Method<wbr>Method<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#methodresponse">Method<wbr>Response<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The responses that can be sent to the client who calls the method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operationname_nodejs">
 <a href="#operationname_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Name</a>
@@ -465,7 +465,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A friendly operation name for the method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmodels_nodejs">
 <a href="#requestmodels_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Models</a>
@@ -473,7 +473,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The resources that are used for the request's content type. Specify request models as key-value pairs (string-to-string mapping), with a content type as the key and a Model resource name as the value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestparameters_nodejs">
 <a href="#requestparameters_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Parameters</a>
@@ -481,7 +481,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The request parameters that API Gateway accepts. Specify request parameters as key-value pairs (string-to-Boolean mapping), with a source as the key and a Boolean as the value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestvalidatorid_nodejs">
 <a href="#requestvalidatorid_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Validator<wbr>Id</a>
@@ -489,7 +489,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The ID of the associated request validator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -501,7 +501,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The backend system that the method calls when it receives a request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -509,7 +509,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The ID of an API Gateway resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rest_api_id_python">
 <a href="#rest_api_id_python" style="color: inherit; text-decoration: inherit;">rest_<wbr>api_<wbr>id</a>
@@ -517,7 +517,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the RestApi resource in which API Gateway creates the method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="api_key_required_python">
 <a href="#api_key_required_python" style="color: inherit; text-decoration: inherit;">api_<wbr>key_<wbr>required</a>
@@ -525,7 +525,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Indicates whether the method requires clients to submit a valid API key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorization_scopes_python">
 <a href="#authorization_scopes_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>scopes</a>
@@ -533,15 +533,15 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A list of authorization scopes configured on the method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorization_type_python">
 <a href="#authorization_type_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#methodauthorizationtype">Method<wbr>Authorization<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The method's authorization type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizer_id_python">
 <a href="#authorizer_id_python" style="color: inherit; text-decoration: inherit;">authorizer_<wbr>id</a>
@@ -549,7 +549,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The identifier of the authorizer to use on this method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integration_python">
 <a href="#integration_python" style="color: inherit; text-decoration: inherit;">integration</a>
@@ -557,15 +557,15 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#methodintegration">Method<wbr>Integration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The backend system that the method calls when it receives a request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_responses_python">
 <a href="#method_responses_python" style="color: inherit; text-decoration: inherit;">method_<wbr>responses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#methodmethodresponse">Sequence[Method<wbr>Method<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#methodresponse">Sequence[Method<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The responses that can be sent to the client who calls the method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operation_name_python">
 <a href="#operation_name_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>name</a>
@@ -573,7 +573,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A friendly operation name for the method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_models_python">
 <a href="#request_models_python" style="color: inherit; text-decoration: inherit;">request_<wbr>models</a>
@@ -581,7 +581,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The resources that are used for the request's content type. Specify request models as key-value pairs (string-to-string mapping), with a content type as the key and a Model resource name as the value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_parameters_python">
 <a href="#request_parameters_python" style="color: inherit; text-decoration: inherit;">request_<wbr>parameters</a>
@@ -589,7 +589,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The request parameters that API Gateway accepts. Specify request parameters as key-value pairs (string-to-Boolean mapping), with a source as the key and a Boolean as the value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_validator_id_python">
 <a href="#request_validator_id_python" style="color: inherit; text-decoration: inherit;">request_<wbr>validator_<wbr>id</a>
@@ -597,7 +597,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The ID of the associated request validator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -665,10 +665,52 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="methodauthorizationtype">Method<wbr>Authorization<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>None</dt>
+    <dd>NONE</dd><dt>Aws<wbr>Iam</dt>
+    <dd>AWS_IAM</dd><dt>Custom</dt>
+    <dd>CUSTOM</dd><dt>Cognito<wbr>User<wbr>Pools</dt>
+    <dd>COGNITO_USER_POOLS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Method<wbr>Authorization<wbr>Type<wbr>None</dt>
+    <dd>NONE</dd><dt>Method<wbr>Authorization<wbr>Type<wbr>Aws<wbr>Iam</dt>
+    <dd>AWS_IAM</dd><dt>Method<wbr>Authorization<wbr>Type<wbr>Custom</dt>
+    <dd>CUSTOM</dd><dt>Method<wbr>Authorization<wbr>Type<wbr>Cognito<wbr>User<wbr>Pools</dt>
+    <dd>COGNITO_USER_POOLS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>None</dt>
+    <dd>NONE</dd><dt>Aws<wbr>Iam</dt>
+    <dd>AWS_IAM</dd><dt>Custom</dt>
+    <dd>CUSTOM</dd><dt>Cognito<wbr>User<wbr>Pools</dt>
+    <dd>COGNITO_USER_POOLS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>NONE</dt>
+    <dd>NONE</dd><dt>AWS_IAM</dt>
+    <dd>AWS_IAM</dd><dt>CUSTOM</dt>
+    <dd>CUSTOM</dd><dt>COGNITO_USER_POOLS</dt>
+    <dd>COGNITO_USER_POOLS</dd></dl>
+{{% /choosable %}}
+
 <h4 id="methodintegration">Method<wbr>Integration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#methodintegrationtype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Api<wbr>Gateway.<wbr>Method<wbr>Integration<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The type of backend that your method is running.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachekeyparameters_csharp">
 <a href="#cachekeyparameters_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Key<wbr>Parameters</a>
@@ -676,7 +718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A list of request parameters whose values API Gateway caches.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachenamespace_csharp">
 <a href="#cachenamespace_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Namespace</a>
@@ -684,7 +726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}An API-specific tag group of related cached parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionid_csharp">
 <a href="#connectionid_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Id</a>
@@ -692,23 +734,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the VpcLink used for the integration when connectionType=VPC_LINK, otherwise undefined.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectiontype_csharp">
 <a href="#connectiontype_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#methodintegrationconnectiontype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Api<wbr>Gateway.<wbr>Method<wbr>Integration<wbr>Connection<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The type of the network connection to the integration endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenthandling_csharp">
 <a href="#contenthandling_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Handling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#methodintegrationcontenthandling">Pulumi.<wbr>Aws<wbr>Native.<wbr>Api<wbr>Gateway.<wbr>Method<wbr>Integration<wbr>Content<wbr>Handling</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies how to handle request payload content type conversions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credentials_csharp">
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
@@ -716,7 +758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The credentials that are required for the integration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationhttpmethod_csharp">
 <a href="#integrationhttpmethod_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Http<wbr>Method</a>
@@ -724,7 +766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The integration's HTTP method type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationresponses_csharp">
 <a href="#integrationresponses_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Responses</a>
@@ -732,15 +774,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#methodintegrationresponse">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Api<wbr>Gateway.<wbr>Inputs.<wbr>Method<wbr>Integration<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The response that API Gateway provides after a method's backend completes processing a request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passthroughbehavior_csharp">
 <a href="#passthroughbehavior_csharp" style="color: inherit; text-decoration: inherit;">Passthrough<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#methodintegrationpassthroughbehavior">Pulumi.<wbr>Aws<wbr>Native.<wbr>Api<wbr>Gateway.<wbr>Method<wbr>Integration<wbr>Passthrough<wbr>Behavior</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Indicates when API Gateway passes requests to the targeted backend.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestparameters_csharp">
 <a href="#requestparameters_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Parameters</a>
@@ -748,7 +790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The request parameters that API Gateway sends with the backend request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requesttemplates_csharp">
 <a href="#requesttemplates_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Templates</a>
@@ -756,7 +798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A map of Apache Velocity templates that are applied on the request payload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutinmillis_csharp">
 <a href="#timeoutinmillis_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>In<wbr>Millis</a>
@@ -764,15 +806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Custom timeout between 50 and 29,000 milliseconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_csharp">
 <a href="#uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -780,11 +814,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The Uniform Resource Identifier (URI) for the integration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#methodintegrationtype">Method<wbr>Integration<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The type of backend that your method is running.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachekeyparameters_go">
 <a href="#cachekeyparameters_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Key<wbr>Parameters</a>
@@ -792,7 +834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A list of request parameters whose values API Gateway caches.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachenamespace_go">
 <a href="#cachenamespace_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Namespace</a>
@@ -800,7 +842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}An API-specific tag group of related cached parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionid_go">
 <a href="#connectionid_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Id</a>
@@ -808,23 +850,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the VpcLink used for the integration when connectionType=VPC_LINK, otherwise undefined.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectiontype_go">
 <a href="#connectiontype_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#methodintegrationconnectiontype">Method<wbr>Integration<wbr>Connection<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The type of the network connection to the integration endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenthandling_go">
 <a href="#contenthandling_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Handling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#methodintegrationcontenthandling">Method<wbr>Integration<wbr>Content<wbr>Handling</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies how to handle request payload content type conversions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credentials_go">
 <a href="#credentials_go" style="color: inherit; text-decoration: inherit;">Credentials</a>
@@ -832,7 +874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The credentials that are required for the integration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationhttpmethod_go">
 <a href="#integrationhttpmethod_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Http<wbr>Method</a>
@@ -840,7 +882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The integration's HTTP method type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationresponses_go">
 <a href="#integrationresponses_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Responses</a>
@@ -848,15 +890,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#methodintegrationresponse">[]Method<wbr>Integration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The response that API Gateway provides after a method's backend completes processing a request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passthroughbehavior_go">
 <a href="#passthroughbehavior_go" style="color: inherit; text-decoration: inherit;">Passthrough<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#methodintegrationpassthroughbehavior">Method<wbr>Integration<wbr>Passthrough<wbr>Behavior</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Indicates when API Gateway passes requests to the targeted backend.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestparameters_go">
 <a href="#requestparameters_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Parameters</a>
@@ -864,7 +906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The request parameters that API Gateway sends with the backend request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requesttemplates_go">
 <a href="#requesttemplates_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Templates</a>
@@ -872,7 +914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A map of Apache Velocity templates that are applied on the request payload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutinmillis_go">
 <a href="#timeoutinmillis_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>In<wbr>Millis</a>
@@ -880,15 +922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Custom timeout between 50 and 29,000 milliseconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_go">
 <a href="#uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -896,11 +930,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The Uniform Resource Identifier (URI) for the integration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#methodintegrationtype">Method<wbr>Integration<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The type of backend that your method is running.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachekeyparameters_nodejs">
 <a href="#cachekeyparameters_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Key<wbr>Parameters</a>
@@ -908,7 +950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A list of request parameters whose values API Gateway caches.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachenamespace_nodejs">
 <a href="#cachenamespace_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Namespace</a>
@@ -916,7 +958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}An API-specific tag group of related cached parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionid_nodejs">
 <a href="#connectionid_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Id</a>
@@ -924,23 +966,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the VpcLink used for the integration when connectionType=VPC_LINK, otherwise undefined.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectiontype_nodejs">
 <a href="#connectiontype_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#methodintegrationconnectiontype">Method<wbr>Integration<wbr>Connection<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The type of the network connection to the integration endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenthandling_nodejs">
 <a href="#contenthandling_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Handling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#methodintegrationcontenthandling">Method<wbr>Integration<wbr>Content<wbr>Handling</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies how to handle request payload content type conversions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credentials_nodejs">
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
@@ -948,7 +990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The credentials that are required for the integration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationhttpmethod_nodejs">
 <a href="#integrationhttpmethod_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Http<wbr>Method</a>
@@ -956,7 +998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The integration's HTTP method type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationresponses_nodejs">
 <a href="#integrationresponses_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Responses</a>
@@ -964,15 +1006,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#methodintegrationresponse">Method<wbr>Integration<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The response that API Gateway provides after a method's backend completes processing a request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passthroughbehavior_nodejs">
 <a href="#passthroughbehavior_nodejs" style="color: inherit; text-decoration: inherit;">passthrough<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#methodintegrationpassthroughbehavior">Method<wbr>Integration<wbr>Passthrough<wbr>Behavior</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Indicates when API Gateway passes requests to the targeted backend.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestparameters_nodejs">
 <a href="#requestparameters_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Parameters</a>
@@ -980,7 +1022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The request parameters that API Gateway sends with the backend request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requesttemplates_nodejs">
 <a href="#requesttemplates_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Templates</a>
@@ -988,7 +1030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A map of Apache Velocity templates that are applied on the request payload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutinmillis_nodejs">
 <a href="#timeoutinmillis_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>In<wbr>Millis</a>
@@ -996,15 +1038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Custom timeout between 50 and 29,000 milliseconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_nodejs">
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -1012,11 +1046,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The Uniform Resource Identifier (URI) for the integration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#methodintegrationtype">Method<wbr>Integration<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The type of backend that your method is running.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cache_key_parameters_python">
 <a href="#cache_key_parameters_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>key_<wbr>parameters</a>
@@ -1024,7 +1066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A list of request parameters whose values API Gateway caches.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cache_namespace_python">
 <a href="#cache_namespace_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>namespace</a>
@@ -1032,7 +1074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}An API-specific tag group of related cached parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connection_id_python">
 <a href="#connection_id_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>id</a>
@@ -1040,23 +1082,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the VpcLink used for the integration when connectionType=VPC_LINK, otherwise undefined.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connection_type_python">
 <a href="#connection_type_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#methodintegrationconnectiontype">Method<wbr>Integration<wbr>Connection<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The type of the network connection to the integration endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_handling_python">
 <a href="#content_handling_python" style="color: inherit; text-decoration: inherit;">content_<wbr>handling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#methodintegrationcontenthandling">Method<wbr>Integration<wbr>Content<wbr>Handling</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies how to handle request payload content type conversions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credentials_python">
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
@@ -1064,7 +1106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The credentials that are required for the integration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integration_http_method_python">
 <a href="#integration_http_method_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>http_<wbr>method</a>
@@ -1072,7 +1114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The integration's HTTP method type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integration_responses_python">
 <a href="#integration_responses_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>responses</a>
@@ -1080,15 +1122,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#methodintegrationresponse">Sequence[Method<wbr>Integration<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The response that API Gateway provides after a method's backend completes processing a request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passthrough_behavior_python">
 <a href="#passthrough_behavior_python" style="color: inherit; text-decoration: inherit;">passthrough_<wbr>behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#methodintegrationpassthroughbehavior">Method<wbr>Integration<wbr>Passthrough<wbr>Behavior</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Indicates when API Gateway passes requests to the targeted backend.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_parameters_python">
 <a href="#request_parameters_python" style="color: inherit; text-decoration: inherit;">request_<wbr>parameters</a>
@@ -1096,7 +1138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The request parameters that API Gateway sends with the backend request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_templates_python">
 <a href="#request_templates_python" style="color: inherit; text-decoration: inherit;">request_<wbr>templates</a>
@@ -1104,7 +1146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A map of Apache Velocity templates that are applied on the request payload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_in_millis_python">
 <a href="#timeout_in_millis_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>in_<wbr>millis</a>
@@ -1112,15 +1154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Custom timeout between 50 and 29,000 milliseconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_python">
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -1128,7 +1162,89 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The Uniform Resource Identifier (URI) for the integration.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="methodintegrationconnectiontype">Method<wbr>Integration<wbr>Connection<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Internet</dt>
+    <dd>INTERNET</dd><dt>Vpc<wbr>Link</dt>
+    <dd>VPC_LINK</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Method<wbr>Integration<wbr>Connection<wbr>Type<wbr>Internet</dt>
+    <dd>INTERNET</dd><dt>Method<wbr>Integration<wbr>Connection<wbr>Type<wbr>Vpc<wbr>Link</dt>
+    <dd>VPC_LINK</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Internet</dt>
+    <dd>INTERNET</dd><dt>Vpc<wbr>Link</dt>
+    <dd>VPC_LINK</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>INTERNET</dt>
+    <dd>INTERNET</dd><dt>VPC_LINK</dt>
+    <dd>VPC_LINK</dd></dl>
+{{% /choosable %}}
+
+<h4 id="methodintegrationcontenthandling">Method<wbr>Integration<wbr>Content<wbr>Handling</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Convert<wbr>To<wbr>Binary</dt>
+    <dd>CONVERT_TO_BINARY</dd><dt>Convert<wbr>To<wbr>Text</dt>
+    <dd>CONVERT_TO_TEXT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Method<wbr>Integration<wbr>Content<wbr>Handling<wbr>Convert<wbr>To<wbr>Binary</dt>
+    <dd>CONVERT_TO_BINARY</dd><dt>Method<wbr>Integration<wbr>Content<wbr>Handling<wbr>Convert<wbr>To<wbr>Text</dt>
+    <dd>CONVERT_TO_TEXT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Convert<wbr>To<wbr>Binary</dt>
+    <dd>CONVERT_TO_BINARY</dd><dt>Convert<wbr>To<wbr>Text</dt>
+    <dd>CONVERT_TO_TEXT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CONVERT_TO_BINARY</dt>
+    <dd>CONVERT_TO_BINARY</dd><dt>CONVERT_TO_TEXT</dt>
+    <dd>CONVERT_TO_TEXT</dd></dl>
+{{% /choosable %}}
+
+<h4 id="methodintegrationpassthroughbehavior">Method<wbr>Integration<wbr>Passthrough<wbr>Behavior</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>When<wbr>No<wbr>Match</dt>
+    <dd>WHEN_NO_MATCH</dd><dt>When<wbr>No<wbr>Templates</dt>
+    <dd>WHEN_NO_TEMPLATES</dd><dt>Never</dt>
+    <dd>NEVER</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Method<wbr>Integration<wbr>Passthrough<wbr>Behavior<wbr>When<wbr>No<wbr>Match</dt>
+    <dd>WHEN_NO_MATCH</dd><dt>Method<wbr>Integration<wbr>Passthrough<wbr>Behavior<wbr>When<wbr>No<wbr>Templates</dt>
+    <dd>WHEN_NO_TEMPLATES</dd><dt>Method<wbr>Integration<wbr>Passthrough<wbr>Behavior<wbr>Never</dt>
+    <dd>NEVER</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>When<wbr>No<wbr>Match</dt>
+    <dd>WHEN_NO_MATCH</dd><dt>When<wbr>No<wbr>Templates</dt>
+    <dd>WHEN_NO_TEMPLATES</dd><dt>Never</dt>
+    <dd>NEVER</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>WHEN_NO_MATCH</dt>
+    <dd>WHEN_NO_MATCH</dd><dt>WHEN_NO_TEMPLATES</dt>
+    <dd>WHEN_NO_TEMPLATES</dd><dt>NEVER</dt>
+    <dd>NEVER</dd></dl>
 {{% /choosable %}}
 
 <h4 id="methodintegrationresponse">Method<wbr>Integration<wbr>Response</h4>
@@ -1142,15 +1258,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The status code that API Gateway uses to map the integration response to a MethodResponse status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenthandling_csharp">
 <a href="#contenthandling_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Handling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#methodintegrationresponsecontenthandling">Pulumi.<wbr>Aws<wbr>Native.<wbr>Api<wbr>Gateway.<wbr>Method<wbr>Integration<wbr>Response<wbr>Content<wbr>Handling</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies how to handle request payload content type conversions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseparameters_csharp">
 <a href="#responseparameters_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Parameters</a>
@@ -1158,7 +1274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The response parameters from the backend response that API Gateway sends to the method response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsetemplates_csharp">
 <a href="#responsetemplates_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Templates</a>
@@ -1166,7 +1282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The templates that are used to transform the integration response body. Specify templates as key-value pairs (string-to-string mappings), with a content type as the key and a template as the value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selectionpattern_csharp">
 <a href="#selectionpattern_csharp" style="color: inherit; text-decoration: inherit;">Selection<wbr>Pattern</a>
@@ -1174,7 +1290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A regular expression that specifies which error strings or status codes from the backend map to the integration response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1186,15 +1302,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The status code that API Gateway uses to map the integration response to a MethodResponse status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenthandling_go">
 <a href="#contenthandling_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Handling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#methodintegrationresponsecontenthandling">Method<wbr>Integration<wbr>Response<wbr>Content<wbr>Handling</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies how to handle request payload content type conversions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseparameters_go">
 <a href="#responseparameters_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Parameters</a>
@@ -1202,7 +1318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The response parameters from the backend response that API Gateway sends to the method response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsetemplates_go">
 <a href="#responsetemplates_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Templates</a>
@@ -1210,7 +1326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The templates that are used to transform the integration response body. Specify templates as key-value pairs (string-to-string mappings), with a content type as the key and a template as the value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selectionpattern_go">
 <a href="#selectionpattern_go" style="color: inherit; text-decoration: inherit;">Selection<wbr>Pattern</a>
@@ -1218,7 +1334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A regular expression that specifies which error strings or status codes from the backend map to the integration response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1230,15 +1346,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The status code that API Gateway uses to map the integration response to a MethodResponse status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenthandling_nodejs">
 <a href="#contenthandling_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Handling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#methodintegrationresponsecontenthandling">Method<wbr>Integration<wbr>Response<wbr>Content<wbr>Handling</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies how to handle request payload content type conversions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseparameters_nodejs">
 <a href="#responseparameters_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Parameters</a>
@@ -1246,7 +1362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The response parameters from the backend response that API Gateway sends to the method response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsetemplates_nodejs">
 <a href="#responsetemplates_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Templates</a>
@@ -1254,7 +1370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The templates that are used to transform the integration response body. Specify templates as key-value pairs (string-to-string mappings), with a content type as the key and a template as the value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selectionpattern_nodejs">
 <a href="#selectionpattern_nodejs" style="color: inherit; text-decoration: inherit;">selection<wbr>Pattern</a>
@@ -1262,7 +1378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A regular expression that specifies which error strings or status codes from the backend map to the integration response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1274,15 +1390,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The status code that API Gateway uses to map the integration response to a MethodResponse status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_handling_python">
 <a href="#content_handling_python" style="color: inherit; text-decoration: inherit;">content_<wbr>handling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#methodintegrationresponsecontenthandling">Method<wbr>Integration<wbr>Response<wbr>Content<wbr>Handling</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies how to handle request payload content type conversions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_parameters_python">
 <a href="#response_parameters_python" style="color: inherit; text-decoration: inherit;">response_<wbr>parameters</a>
@@ -1290,7 +1406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The response parameters from the backend response that API Gateway sends to the method response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_templates_python">
 <a href="#response_templates_python" style="color: inherit; text-decoration: inherit;">response_<wbr>templates</a>
@@ -1298,7 +1414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The templates that are used to transform the integration response body. Specify templates as key-value pairs (string-to-string mappings), with a content type as the key and a template as the value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selection_pattern_python">
 <a href="#selection_pattern_python" style="color: inherit; text-decoration: inherit;">selection_<wbr>pattern</a>
@@ -1306,10 +1422,74 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A regular expression that specifies which error strings or status codes from the backend map to the integration response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="methodmethodresponse">Method<wbr>Method<wbr>Response</h4>
+<h4 id="methodintegrationresponsecontenthandling">Method<wbr>Integration<wbr>Response<wbr>Content<wbr>Handling</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Convert<wbr>To<wbr>Binary</dt>
+    <dd>CONVERT_TO_BINARY</dd><dt>Convert<wbr>To<wbr>Text</dt>
+    <dd>CONVERT_TO_TEXT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Method<wbr>Integration<wbr>Response<wbr>Content<wbr>Handling<wbr>Convert<wbr>To<wbr>Binary</dt>
+    <dd>CONVERT_TO_BINARY</dd><dt>Method<wbr>Integration<wbr>Response<wbr>Content<wbr>Handling<wbr>Convert<wbr>To<wbr>Text</dt>
+    <dd>CONVERT_TO_TEXT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Convert<wbr>To<wbr>Binary</dt>
+    <dd>CONVERT_TO_BINARY</dd><dt>Convert<wbr>To<wbr>Text</dt>
+    <dd>CONVERT_TO_TEXT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CONVERT_TO_BINARY</dt>
+    <dd>CONVERT_TO_BINARY</dd><dt>CONVERT_TO_TEXT</dt>
+    <dd>CONVERT_TO_TEXT</dd></dl>
+{{% /choosable %}}
+
+<h4 id="methodintegrationtype">Method<wbr>Integration<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Aws</dt>
+    <dd>AWS</dd><dt>Aws<wbr>Proxy</dt>
+    <dd>AWS_PROXY</dd><dt>Http</dt>
+    <dd>HTTP</dd><dt>Http<wbr>Proxy</dt>
+    <dd>HTTP_PROXY</dd><dt>Mock</dt>
+    <dd>MOCK</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Method<wbr>Integration<wbr>Type<wbr>Aws</dt>
+    <dd>AWS</dd><dt>Method<wbr>Integration<wbr>Type<wbr>Aws<wbr>Proxy</dt>
+    <dd>AWS_PROXY</dd><dt>Method<wbr>Integration<wbr>Type<wbr>Http</dt>
+    <dd>HTTP</dd><dt>Method<wbr>Integration<wbr>Type<wbr>Http<wbr>Proxy</dt>
+    <dd>HTTP_PROXY</dd><dt>Method<wbr>Integration<wbr>Type<wbr>Mock</dt>
+    <dd>MOCK</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Aws</dt>
+    <dd>AWS</dd><dt>Aws<wbr>Proxy</dt>
+    <dd>AWS_PROXY</dd><dt>Http</dt>
+    <dd>HTTP</dd><dt>Http<wbr>Proxy</dt>
+    <dd>HTTP_PROXY</dd><dt>Mock</dt>
+    <dd>MOCK</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>AWS</dt>
+    <dd>AWS</dd><dt>AWS_PROXY</dt>
+    <dd>AWS_PROXY</dd><dt>HTTP</dt>
+    <dd>HTTP</dd><dt>HTTP_PROXY</dt>
+    <dd>HTTP_PROXY</dd><dt>MOCK</dt>
+    <dd>MOCK</dd></dl>
+{{% /choosable %}}
+
+<h4 id="methodresponse">Method<wbr>Response</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
@@ -1320,7 +1500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The method response's status code, which you map to an IntegrationResponse.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsemodels_csharp">
 <a href="#responsemodels_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Models</a>
@@ -1328,7 +1508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The resources used for the response's content type. Specify response models as key-value pairs (string-to-string maps), with a content type as the key and a Model resource name as the value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseparameters_csharp">
 <a href="#responseparameters_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Parameters</a>
@@ -1336,7 +1516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Response parameters that API Gateway sends to the client that called a method. Specify response parameters as key-value pairs (string-to-Boolean maps), with a destination as the key and a Boolean as the value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1348,7 +1528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The method response's status code, which you map to an IntegrationResponse.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsemodels_go">
 <a href="#responsemodels_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Models</a>
@@ -1356,7 +1536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The resources used for the response's content type. Specify response models as key-value pairs (string-to-string maps), with a content type as the key and a Model resource name as the value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseparameters_go">
 <a href="#responseparameters_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Parameters</a>
@@ -1364,7 +1544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Response parameters that API Gateway sends to the client that called a method. Specify response parameters as key-value pairs (string-to-Boolean maps), with a destination as the key and a Boolean as the value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1376,7 +1556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The method response's status code, which you map to an IntegrationResponse.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsemodels_nodejs">
 <a href="#responsemodels_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Models</a>
@@ -1384,7 +1564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The resources used for the response's content type. Specify response models as key-value pairs (string-to-string maps), with a content type as the key and a Model resource name as the value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseparameters_nodejs">
 <a href="#responseparameters_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Parameters</a>
@@ -1392,7 +1572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Response parameters that API Gateway sends to the client that called a method. Specify response parameters as key-value pairs (string-to-Boolean maps), with a destination as the key and a Boolean as the value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1404,7 +1584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The method response's status code, which you map to an IntegrationResponse.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_models_python">
 <a href="#response_models_python" style="color: inherit; text-decoration: inherit;">response_<wbr>models</a>
@@ -1412,7 +1592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The resources used for the response's content type. Specify response models as key-value pairs (string-to-string maps), with a content type as the key and a Model resource name as the value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_parameters_python">
 <a href="#response_parameters_python" style="color: inherit; text-decoration: inherit;">response_<wbr>parameters</a>
@@ -1420,7 +1600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Response parameters that API Gateway sends to the client that called a method. Specify response parameters as key-value pairs (string-to-Boolean maps), with a destination as the key and a Boolean as the value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

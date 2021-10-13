@@ -1984,7 +1984,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>Algorithm<wbr>Unspecified</dt>
-    <dd>ALGORITHM_UNSPECIFIED{{% md %}}The algorithm is unspecified.{{% /md %}}</dd><dt>Dsa</dt>
+    <dd>ALGORITHM_UNSPECIFIED{{% md %}}The algorithm is unspecified.{{% /md %}}</dd><dt>Rsamd5</dt>
+    <dd>RSAMD5{{% md %}}RSA/MD5. Cannot be used for new deployments.{{% /md %}}</dd><dt>Dh</dt>
+    <dd>DH{{% md %}}Diffie-Hellman. Cannot be used for new deployments.{{% /md %}}</dd><dt>Dsa</dt>
     <dd>DSA{{% md %}}DSA/SHA1. Not recommended for new deployments.{{% /md %}}</dd><dt>Ecc</dt>
     <dd>ECC{{% md %}}ECC. Not recommended for new deployments.{{% /md %}}</dd><dt>Rsasha1</dt>
     <dd>RSASHA1{{% md %}}RSA/SHA-1. Not recommended for new deployments.{{% /md %}}</dd><dt>Dsansec3sha1</dt>
@@ -1996,12 +1998,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>ECDSAP256SHA256{{% md %}}ECDSA Curve P-256 with SHA-256.{{% /md %}}</dd><dt>Ecdsap384sha384</dt>
     <dd>ECDSAP384SHA384{{% md %}}ECDSA Curve P-384 with SHA-384.{{% /md %}}</dd><dt>Ed25519</dt>
     <dd>ED25519{{% md %}}Ed25519.{{% /md %}}</dd><dt>Ed448</dt>
-    <dd>ED448{{% md %}}Ed448.{{% /md %}}</dd></dl>
+    <dd>ED448{{% md %}}Ed448.{{% /md %}}</dd><dt>Indirect</dt>
+    <dd>INDIRECT{{% md %}}Reserved for Indirect Keys. Cannot be used for new deployments.{{% /md %}}</dd><dt>Privatedns</dt>
+    <dd>PRIVATEDNS{{% md %}}Private algorithm. Cannot be used for new deployments.{{% /md %}}</dd><dt>Privateoid</dt>
+    <dd>PRIVATEOID{{% md %}}Private algorithm OID. Cannot be used for new deployments.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="tabular"><dt>Ds<wbr>Record<wbr>Algorithm<wbr>Algorithm<wbr>Unspecified</dt>
-    <dd>ALGORITHM_UNSPECIFIED{{% md %}}The algorithm is unspecified.{{% /md %}}</dd><dt>Ds<wbr>Record<wbr>Algorithm<wbr>Dsa</dt>
+    <dd>ALGORITHM_UNSPECIFIED{{% md %}}The algorithm is unspecified.{{% /md %}}</dd><dt>Ds<wbr>Record<wbr>Algorithm<wbr>Rsamd5</dt>
+    <dd>RSAMD5{{% md %}}RSA/MD5. Cannot be used for new deployments.{{% /md %}}</dd><dt>Ds<wbr>Record<wbr>Algorithm<wbr>Dh</dt>
+    <dd>DH{{% md %}}Diffie-Hellman. Cannot be used for new deployments.{{% /md %}}</dd><dt>Ds<wbr>Record<wbr>Algorithm<wbr>Dsa</dt>
     <dd>DSA{{% md %}}DSA/SHA1. Not recommended for new deployments.{{% /md %}}</dd><dt>Ds<wbr>Record<wbr>Algorithm<wbr>Ecc</dt>
     <dd>ECC{{% md %}}ECC. Not recommended for new deployments.{{% /md %}}</dd><dt>Ds<wbr>Record<wbr>Algorithm<wbr>Rsasha1</dt>
     <dd>RSASHA1{{% md %}}RSA/SHA-1. Not recommended for new deployments.{{% /md %}}</dd><dt>Ds<wbr>Record<wbr>Algorithm<wbr>Dsansec3sha1</dt>
@@ -2013,12 +2020,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>ECDSAP256SHA256{{% md %}}ECDSA Curve P-256 with SHA-256.{{% /md %}}</dd><dt>Ds<wbr>Record<wbr>Algorithm<wbr>Ecdsap384sha384</dt>
     <dd>ECDSAP384SHA384{{% md %}}ECDSA Curve P-384 with SHA-384.{{% /md %}}</dd><dt>Ds<wbr>Record<wbr>Algorithm<wbr>Ed25519</dt>
     <dd>ED25519{{% md %}}Ed25519.{{% /md %}}</dd><dt>Ds<wbr>Record<wbr>Algorithm<wbr>Ed448</dt>
-    <dd>ED448{{% md %}}Ed448.{{% /md %}}</dd></dl>
+    <dd>ED448{{% md %}}Ed448.{{% /md %}}</dd><dt>Ds<wbr>Record<wbr>Algorithm<wbr>Indirect</dt>
+    <dd>INDIRECT{{% md %}}Reserved for Indirect Keys. Cannot be used for new deployments.{{% /md %}}</dd><dt>Ds<wbr>Record<wbr>Algorithm<wbr>Privatedns</dt>
+    <dd>PRIVATEDNS{{% md %}}Private algorithm. Cannot be used for new deployments.{{% /md %}}</dd><dt>Ds<wbr>Record<wbr>Algorithm<wbr>Privateoid</dt>
+    <dd>PRIVATEOID{{% md %}}Private algorithm OID. Cannot be used for new deployments.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="tabular"><dt>Algorithm<wbr>Unspecified</dt>
-    <dd>ALGORITHM_UNSPECIFIED{{% md %}}The algorithm is unspecified.{{% /md %}}</dd><dt>Dsa</dt>
+    <dd>ALGORITHM_UNSPECIFIED{{% md %}}The algorithm is unspecified.{{% /md %}}</dd><dt>Rsamd5</dt>
+    <dd>RSAMD5{{% md %}}RSA/MD5. Cannot be used for new deployments.{{% /md %}}</dd><dt>Dh</dt>
+    <dd>DH{{% md %}}Diffie-Hellman. Cannot be used for new deployments.{{% /md %}}</dd><dt>Dsa</dt>
     <dd>DSA{{% md %}}DSA/SHA1. Not recommended for new deployments.{{% /md %}}</dd><dt>Ecc</dt>
     <dd>ECC{{% md %}}ECC. Not recommended for new deployments.{{% /md %}}</dd><dt>Rsasha1</dt>
     <dd>RSASHA1{{% md %}}RSA/SHA-1. Not recommended for new deployments.{{% /md %}}</dd><dt>Dsansec3sha1</dt>
@@ -2030,12 +2042,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>ECDSAP256SHA256{{% md %}}ECDSA Curve P-256 with SHA-256.{{% /md %}}</dd><dt>Ecdsap384sha384</dt>
     <dd>ECDSAP384SHA384{{% md %}}ECDSA Curve P-384 with SHA-384.{{% /md %}}</dd><dt>Ed25519</dt>
     <dd>ED25519{{% md %}}Ed25519.{{% /md %}}</dd><dt>Ed448</dt>
-    <dd>ED448{{% md %}}Ed448.{{% /md %}}</dd></dl>
+    <dd>ED448{{% md %}}Ed448.{{% /md %}}</dd><dt>Indirect</dt>
+    <dd>INDIRECT{{% md %}}Reserved for Indirect Keys. Cannot be used for new deployments.{{% /md %}}</dd><dt>Privatedns</dt>
+    <dd>PRIVATEDNS{{% md %}}Private algorithm. Cannot be used for new deployments.{{% /md %}}</dd><dt>Privateoid</dt>
+    <dd>PRIVATEOID{{% md %}}Private algorithm OID. Cannot be used for new deployments.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="tabular"><dt>ALGORITHM_UNSPECIFIED</dt>
-    <dd>ALGORITHM_UNSPECIFIED{{% md %}}The algorithm is unspecified.{{% /md %}}</dd><dt>DSA</dt>
+    <dd>ALGORITHM_UNSPECIFIED{{% md %}}The algorithm is unspecified.{{% /md %}}</dd><dt>RSAMD5</dt>
+    <dd>RSAMD5{{% md %}}RSA/MD5. Cannot be used for new deployments.{{% /md %}}</dd><dt>DH</dt>
+    <dd>DH{{% md %}}Diffie-Hellman. Cannot be used for new deployments.{{% /md %}}</dd><dt>DSA</dt>
     <dd>DSA{{% md %}}DSA/SHA1. Not recommended for new deployments.{{% /md %}}</dd><dt>ECC</dt>
     <dd>ECC{{% md %}}ECC. Not recommended for new deployments.{{% /md %}}</dd><dt>RSASHA1</dt>
     <dd>RSASHA1{{% md %}}RSA/SHA-1. Not recommended for new deployments.{{% /md %}}</dd><dt>DSANSEC3SHA1</dt>
@@ -2047,7 +2064,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>ECDSAP256SHA256{{% md %}}ECDSA Curve P-256 with SHA-256.{{% /md %}}</dd><dt>ECDSAP384SHA384</dt>
     <dd>ECDSAP384SHA384{{% md %}}ECDSA Curve P-384 with SHA-384.{{% /md %}}</dd><dt>ED25519</dt>
     <dd>ED25519{{% md %}}Ed25519.{{% /md %}}</dd><dt>ED448</dt>
-    <dd>ED448{{% md %}}Ed448.{{% /md %}}</dd></dl>
+    <dd>ED448{{% md %}}Ed448.{{% /md %}}</dd><dt>INDIRECT</dt>
+    <dd>INDIRECT{{% md %}}Reserved for Indirect Keys. Cannot be used for new deployments.{{% /md %}}</dd><dt>PRIVATEDNS</dt>
+    <dd>PRIVATEDNS{{% md %}}Private algorithm. Cannot be used for new deployments.{{% /md %}}</dd><dt>PRIVATEOID</dt>
+    <dd>PRIVATEOID{{% md %}}Private algorithm OID. Cannot be used for new deployments.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dsrecorddigesttype">Ds<wbr>Record<wbr>Digest<wbr>Type</h4>

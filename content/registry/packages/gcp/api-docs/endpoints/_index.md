@@ -13,10 +13,10 @@ Explore the resources and functions of the gcp.endpoints module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="service" title="Service"><span class="symbol resource"></span>Service</a></li>
-    <li><a href="serviceiambinding" title="ServiceIamBinding"><span class="symbol resource"></span>ServiceIamBinding</a></li>
-    <li><a href="serviceiammember" title="ServiceIamMember"><span class="symbol resource"></span>ServiceIamMember</a></li>
-    <li><a href="serviceiampolicy" title="ServiceIamPolicy"><span class="symbol resource"></span>ServiceIamPolicy</a></li>
+    <li><a href="service" title="Service"><span class="api-symbol api-symbol--resource"></span>Service</a></li>
+    <li><a href="serviceiambinding" title="ServiceIamBinding"><span class="api-symbol api-symbol--resource"></span>ServiceIamBinding</a></li>
+    <li><a href="serviceiammember" title="ServiceIamMember"><span class="api-symbol api-symbol--resource"></span>ServiceIamMember</a></li>
+    <li><a href="serviceiampolicy" title="ServiceIamPolicy"><span class="api-symbol api-symbol--resource"></span>ServiceIamPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -28,6 +28,6 @@ Explore the resources and functions of the gcp.endpoints module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>5.22.0</dd>
+	<dd>5.24.0</dd>
 </dl>
 

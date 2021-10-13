@@ -470,7 +470,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggermatchingcriteria">List&lt;Trigger<wbr>Matching<wbr>Criteria<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Required. The criteria by which events are filtered. Only events that match with this criteria will be sent to the destination.
+    <dd>{{% md %}}Required. null The list of filters that applies to event attributes. Only events that match all the provided filters will be sent to the destination.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
@@ -546,7 +546,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggermatchingcriteria">[]Trigger<wbr>Matching<wbr>Criteria<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Required. The criteria by which events are filtered. Only events that match with this criteria will be sent to the destination.
+    <dd>{{% md %}}Required. null The list of filters that applies to event attributes. Only events that match all the provided filters will be sent to the destination.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
@@ -622,7 +622,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggermatchingcriteria">Trigger<wbr>Matching<wbr>Criteria<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}Required. The criteria by which events are filtered. Only events that match with this criteria will be sent to the destination.
+    <dd>{{% md %}}Required. null The list of filters that applies to event attributes. Only events that match all the provided filters will be sent to the destination.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
@@ -698,7 +698,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggermatchingcriteria">Sequence[Trigger<wbr>Matching<wbr>Criteria<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Required. The criteria by which events are filtered. Only events that match with this criteria will be sent to the destination.
+    <dd>{{% md %}}Required. null The list of filters that applies to event attributes. Only events that match all the provided filters will be sent to the destination.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
@@ -784,6 +784,16 @@ requests to ensure the client has an up-to-date value before proceeding.
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="uid_csharp">
+<a href="#uid_csharp" style="color: inherit; text-decoration: inherit;">Uid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Output only. Server assigned unique identifier for the trigger. The value is a UUID4 string and guaranteed to remain
+unchanged until the resource is deleted.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="updatetime_csharp">
 <a href="#updatetime_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
 </span>
@@ -823,6 +833,16 @@ requests to ensure the client has an up-to-date value before proceeding.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="uid_go">
+<a href="#uid_go" style="color: inherit; text-decoration: inherit;">Uid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Output only. Server assigned unique identifier for the trigger. The value is a UUID4 string and guaranteed to remain
+unchanged until the resource is deleted.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatetime_go">
 <a href="#updatetime_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -864,6 +884,16 @@ requests to ensure the client has an up-to-date value before proceeding.
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="uid_nodejs">
+<a href="#uid_nodejs" style="color: inherit; text-decoration: inherit;">uid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Output only. Server assigned unique identifier for the trigger. The value is a UUID4 string and guaranteed to remain
+unchanged until the resource is deleted.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="updatetime_nodejs">
 <a href="#updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
 </span>
@@ -904,6 +934,16 @@ requests to ensure the client has an up-to-date value before proceeding.
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="uid_python">
+<a href="#uid_python" style="color: inherit; text-decoration: inherit;">uid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Output only. Server assigned unique identifier for the trigger. The value is a UUID4 string and guaranteed to remain
+unchanged until the resource is deleted.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="update_time_python">
 <a href="#update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
 </span>
@@ -940,6 +980,7 @@ Get an existing Trigger resource's state with the given name, ID, and optional e
         <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">transports</span><span class="p">:</span> <span class="nx">Optional[Sequence[TriggerTransportArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">uid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Trigger</code></pre></div>
 {{% /choosable %}}
 
@@ -1105,7 +1146,7 @@ requests to ensure the client has an up-to-date value before proceeding.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggermatchingcriteria">List&lt;Trigger<wbr>Matching<wbr>Criteria<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Required. The criteria by which events are filtered. Only events that match with this criteria will be sent to the destination.
+    <dd>{{% md %}}Required. null The list of filters that applies to event attributes. Only events that match all the provided filters will be sent to the destination.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
@@ -1142,6 +1183,16 @@ requests to ensure the client has an up-to-date value before proceeding.
         <span class="property-type"><a href="#triggertransport">List&lt;Trigger<wbr>Transport<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Optional. In order to deliver messages, Eventarc may use other GCP products as transport intermediary. This field contains a reference to that transport intermediary. This information can be used for debugging purposes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_uid_csharp">
+<a href="#state_uid_csharp" style="color: inherit; text-decoration: inherit;">Uid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Output only. Server assigned unique identifier for the trigger. The value is a UUID4 string and guaranteed to remain
+unchanged until the resource is deleted.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_csharp">
@@ -1209,7 +1260,7 @@ requests to ensure the client has an up-to-date value before proceeding.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggermatchingcriteria">[]Trigger<wbr>Matching<wbr>Criteria<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Required. The criteria by which events are filtered. Only events that match with this criteria will be sent to the destination.
+    <dd>{{% md %}}Required. null The list of filters that applies to event attributes. Only events that match all the provided filters will be sent to the destination.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -1246,6 +1297,16 @@ requests to ensure the client has an up-to-date value before proceeding.
         <span class="property-type"><a href="#triggertransport">[]Trigger<wbr>Transport<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. In order to deliver messages, Eventarc may use other GCP products as transport intermediary. This field contains a reference to that transport intermediary. This information can be used for debugging purposes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_uid_go">
+<a href="#state_uid_go" style="color: inherit; text-decoration: inherit;">Uid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Output only. Server assigned unique identifier for the trigger. The value is a UUID4 string and guaranteed to remain
+unchanged until the resource is deleted.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_go">
@@ -1313,7 +1374,7 @@ requests to ensure the client has an up-to-date value before proceeding.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggermatchingcriteria">Trigger<wbr>Matching<wbr>Criteria<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}Required. The criteria by which events are filtered. Only events that match with this criteria will be sent to the destination.
+    <dd>{{% md %}}Required. null The list of filters that applies to event attributes. Only events that match all the provided filters will be sent to the destination.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
@@ -1350,6 +1411,16 @@ requests to ensure the client has an up-to-date value before proceeding.
         <span class="property-type"><a href="#triggertransport">Trigger<wbr>Transport<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. In order to deliver messages, Eventarc may use other GCP products as transport intermediary. This field contains a reference to that transport intermediary. This information can be used for debugging purposes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_uid_nodejs">
+<a href="#state_uid_nodejs" style="color: inherit; text-decoration: inherit;">uid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Output only. Server assigned unique identifier for the trigger. The value is a UUID4 string and guaranteed to remain
+unchanged until the resource is deleted.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_nodejs">
@@ -1417,7 +1488,7 @@ requests to ensure the client has an up-to-date value before proceeding.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggermatchingcriteria">Sequence[Trigger<wbr>Matching<wbr>Criteria<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Required. The criteria by which events are filtered. Only events that match with this criteria will be sent to the destination.
+    <dd>{{% md %}}Required. null The list of filters that applies to event attributes. Only events that match all the provided filters will be sent to the destination.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
@@ -1456,6 +1527,16 @@ requests to ensure the client has an up-to-date value before proceeding.
     <dd>{{% md %}}Optional. In order to deliver messages, Eventarc may use other GCP products as transport intermediary. This field contains a reference to that transport intermediary. This information can be used for debugging purposes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_uid_python">
+<a href="#state_uid_python" style="color: inherit; text-decoration: inherit;">uid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Output only. Server assigned unique identifier for the trigger. The value is a UUID4 string and guaranteed to remain
+unchanged until the resource is deleted.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_update_time_python">
 <a href="#state_update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
 </span>
@@ -1480,18 +1561,36 @@ requests to ensure the client has an up-to-date value before proceeding.
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="cloudfunction_csharp">
+<a href="#cloudfunction_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Function</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Cloud Function resource name. Only Cloud Functions V2 is supported. Format: projects/{project}/locations/{location}/functions/{function}
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="cloudrunservice_csharp">
 <a href="#cloudrunservice_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Run<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerdestinationcloudrunservice">Trigger<wbr>Destination<wbr>Cloud<wbr>Run<wbr>Service</a></span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully-managed service that receives the events. The service should be running in the same project as the trigger.
+    <dd>{{% md %}}Cloud Run fully-managed service that receives the events. The service should be running in the same project of the trigger.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="cloudfunction_go">
+<a href="#cloudfunction_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Function</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Cloud Function resource name. Only Cloud Functions V2 is supported. Format: projects/{project}/locations/{location}/functions/{function}
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudrunservice_go">
 <a href="#cloudrunservice_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Run<wbr>Service</a>
@@ -1499,12 +1598,21 @@ requests to ensure the client has an up-to-date value before proceeding.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerdestinationcloudrunservice">Trigger<wbr>Destination<wbr>Cloud<wbr>Run<wbr>Service</a></span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully-managed service that receives the events. The service should be running in the same project as the trigger.
+    <dd>{{% md %}}Cloud Run fully-managed service that receives the events. The service should be running in the same project of the trigger.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="cloudfunction_nodejs">
+<a href="#cloudfunction_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Function</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Cloud Function resource name. Only Cloud Functions V2 is supported. Format: projects/{project}/locations/{location}/functions/{function}
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudrunservice_nodejs">
 <a href="#cloudrunservice_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Run<wbr>Service</a>
@@ -1512,12 +1620,21 @@ requests to ensure the client has an up-to-date value before proceeding.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerdestinationcloudrunservice">Trigger<wbr>Destination<wbr>Cloud<wbr>Run<wbr>Service</a></span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully-managed service that receives the events. The service should be running in the same project as the trigger.
+    <dd>{{% md %}}Cloud Run fully-managed service that receives the events. The service should be running in the same project of the trigger.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="cloud_function_python">
+<a href="#cloud_function_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>function</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Cloud Function resource name. Only Cloud Functions V2 is supported. Format: projects/{project}/locations/{location}/functions/{function}
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloud_run_service_python">
 <a href="#cloud_run_service_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>run_<wbr>service</a>
@@ -1525,7 +1642,7 @@ requests to ensure the client has an up-to-date value before proceeding.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerdestinationcloudrunservice">Trigger<wbr>Destination<wbr>Cloud<wbr>Run<wbr>Service</a></span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully-managed service that receives the events. The service should be running in the same project as the trigger.
+    <dd>{{% md %}}Cloud Run fully-managed service that receives the events. The service should be running in the same project of the trigger.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1540,7 +1657,7 @@ requests to ensure the client has an up-to-date value before proceeding.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Required. The name of the Cloud run service being addressed (see https://cloud.google.com/run/docs/reference/rest/v1/namespaces.services). Only services located in the same project of the trigger object can be addressed.
+    <dd>{{% md %}}Required. The name of the Cloud Run service being addressed. See https://cloud.google.com/run/docs/reference/rest/v1/namespaces.services. Only services located in the same project of the trigger object can be addressed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
@@ -1571,7 +1688,7 @@ requests to ensure the client has an up-to-date value before proceeding.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Required. The name of the Cloud run service being addressed (see https://cloud.google.com/run/docs/reference/rest/v1/namespaces.services). Only services located in the same project of the trigger object can be addressed.
+    <dd>{{% md %}}Required. The name of the Cloud Run service being addressed. See https://cloud.google.com/run/docs/reference/rest/v1/namespaces.services. Only services located in the same project of the trigger object can be addressed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_go">
@@ -1602,7 +1719,7 @@ requests to ensure the client has an up-to-date value before proceeding.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Required. The name of the Cloud run service being addressed (see https://cloud.google.com/run/docs/reference/rest/v1/namespaces.services). Only services located in the same project of the trigger object can be addressed.
+    <dd>{{% md %}}Required. The name of the Cloud Run service being addressed. See https://cloud.google.com/run/docs/reference/rest/v1/namespaces.services. Only services located in the same project of the trigger object can be addressed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
@@ -1633,7 +1750,7 @@ requests to ensure the client has an up-to-date value before proceeding.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Required. The name of the Cloud run service being addressed (see https://cloud.google.com/run/docs/reference/rest/v1/namespaces.services). Only services located in the same project of the trigger object can be addressed.
+    <dd>{{% md %}}Required. The name of the Cloud Run service being addressed. See https://cloud.google.com/run/docs/reference/rest/v1/namespaces.services. Only services located in the same project of the trigger object can be addressed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_python">
@@ -1666,7 +1783,7 @@ requests to ensure the client has an up-to-date value before proceeding.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Required. The name of a CloudEvents attribute. Currently, only a subset of attributes can be specified. All triggers MUST provide a matching criteria for the 'type' attribute.
+    <dd>{{% md %}}Required. The name of a CloudEvents attribute. Currently, only a subset of attributes are supported for filtering. All triggers MUST provide a filter for the 'type' attribute.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
@@ -1688,7 +1805,7 @@ requests to ensure the client has an up-to-date value before proceeding.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Required. The name of a CloudEvents attribute. Currently, only a subset of attributes can be specified. All triggers MUST provide a matching criteria for the 'type' attribute.
+    <dd>{{% md %}}Required. The name of a CloudEvents attribute. Currently, only a subset of attributes are supported for filtering. All triggers MUST provide a filter for the 'type' attribute.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
@@ -1710,7 +1827,7 @@ requests to ensure the client has an up-to-date value before proceeding.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Required. The name of a CloudEvents attribute. Currently, only a subset of attributes can be specified. All triggers MUST provide a matching criteria for the 'type' attribute.
+    <dd>{{% md %}}Required. The name of a CloudEvents attribute. Currently, only a subset of attributes are supported for filtering. All triggers MUST provide a filter for the 'type' attribute.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
@@ -1732,7 +1849,7 @@ requests to ensure the client has an up-to-date value before proceeding.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Required. The name of a CloudEvents attribute. Currently, only a subset of attributes can be specified. All triggers MUST provide a matching criteria for the 'type' attribute.
+    <dd>{{% md %}}Required. The name of a CloudEvents attribute. Currently, only a subset of attributes are supported for filtering. All triggers MUST provide a filter for the 'type' attribute.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
@@ -1820,7 +1937,7 @@ Output only. The name of the Pub/Sub subscription created and managed by Eventar
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. The name of the Pub/Sub topic created and managed by Eventarc system as a transport for the event delivery. Format: `projects/{PROJECT_ID}/topics/{TOPIC_NAME}`. You may set an existing topic for triggers of the type `google.cloud.pubsub.topic.v1.messagePublished` only. The topic you provide here will not be deleted by Eventarc at trigger deletion.
+    <dd>{{% md %}}Optional. The name of the Pub/Sub topic created and managed by Eventarc system as a transport for the event delivery. Format: `projects/{PROJECT_ID}/topics/{TOPIC_NAME You may set an existing topic for triggers of the type google.cloud.pubsub.topic.v1.messagePublished` only. The topic you provide here will not be deleted by Eventarc at trigger deletion.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1843,7 +1960,7 @@ Output only. The name of the Pub/Sub subscription created and managed by Eventar
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. The name of the Pub/Sub topic created and managed by Eventarc system as a transport for the event delivery. Format: `projects/{PROJECT_ID}/topics/{TOPIC_NAME}`. You may set an existing topic for triggers of the type `google.cloud.pubsub.topic.v1.messagePublished` only. The topic you provide here will not be deleted by Eventarc at trigger deletion.
+    <dd>{{% md %}}Optional. The name of the Pub/Sub topic created and managed by Eventarc system as a transport for the event delivery. Format: `projects/{PROJECT_ID}/topics/{TOPIC_NAME You may set an existing topic for triggers of the type google.cloud.pubsub.topic.v1.messagePublished` only. The topic you provide here will not be deleted by Eventarc at trigger deletion.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1866,7 +1983,7 @@ Output only. The name of the Pub/Sub subscription created and managed by Eventar
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. The name of the Pub/Sub topic created and managed by Eventarc system as a transport for the event delivery. Format: `projects/{PROJECT_ID}/topics/{TOPIC_NAME}`. You may set an existing topic for triggers of the type `google.cloud.pubsub.topic.v1.messagePublished` only. The topic you provide here will not be deleted by Eventarc at trigger deletion.
+    <dd>{{% md %}}Optional. The name of the Pub/Sub topic created and managed by Eventarc system as a transport for the event delivery. Format: `projects/{PROJECT_ID}/topics/{TOPIC_NAME You may set an existing topic for triggers of the type google.cloud.pubsub.topic.v1.messagePublished` only. The topic you provide here will not be deleted by Eventarc at trigger deletion.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1889,7 +2006,7 @@ Output only. The name of the Pub/Sub subscription created and managed by Eventar
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Optional. The name of the Pub/Sub topic created and managed by Eventarc system as a transport for the event delivery. Format: `projects/{PROJECT_ID}/topics/{TOPIC_NAME}`. You may set an existing topic for triggers of the type `google.cloud.pubsub.topic.v1.messagePublished` only. The topic you provide here will not be deleted by Eventarc at trigger deletion.
+    <dd>{{% md %}}Optional. The name of the Pub/Sub topic created and managed by Eventarc system as a transport for the event delivery. Format: `projects/{PROJECT_ID}/topics/{TOPIC_NAME You may set an existing topic for triggers of the type google.cloud.pubsub.topic.v1.messagePublished` only. The topic you provide here will not be deleted by Eventarc at trigger deletion.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

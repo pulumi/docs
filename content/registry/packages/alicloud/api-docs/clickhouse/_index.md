@@ -13,15 +13,15 @@ Explore the resources and functions of the alicloud.clickhouse module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="account" title="Account"><span class="symbol resource"></span>Account</a></li>
-    <li><a href="dbcluster" title="DbCluster"><span class="symbol resource"></span>DbCluster</a></li>
+    <li><a href="account" title="Account"><span class="api-symbol api-symbol--resource"></span>Account</a></li>
+    <li><a href="dbcluster" title="DbCluster"><span class="api-symbol api-symbol--resource"></span>DbCluster</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getaccounts" title="GetAccounts"><span class="symbol function"></span>GetAccounts</a></li>
-    <li><a href="getdbclusters" title="GetDbClusters"><span class="symbol function"></span>GetDbClusters</a></li>
-    <li><a href="getregions" title="GetRegions"><span class="symbol function"></span>GetRegions</a></li>
+    <li><a href="getaccounts" title="GetAccounts"><span class="api-symbol api-symbol--function"></span>GetAccounts</a></li>
+    <li><a href="getdbclusters" title="GetDbClusters"><span class="api-symbol api-symbol--function"></span>GetDbClusters</a></li>
+    <li><a href="getregions" title="GetRegions"><span class="api-symbol api-symbol--function"></span>GetRegions</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

@@ -16,35 +16,35 @@ A Pulumi package for creating and managing wavefront cloud resources.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="alert" title="Alert"><span class="symbol resource"></span>Alert</a></li>
-    <li><a href="alerttarget" title="AlertTarget"><span class="symbol resource"></span>AlertTarget</a></li>
-    <li><a href="cloudintegrationappdynamics" title="CloudIntegrationAppDynamics"><span class="symbol resource"></span>CloudIntegrationAppDynamics</a></li>
-    <li><a href="cloudintegrationawsexternalid" title="CloudIntegrationAwsExternalId"><span class="symbol resource"></span>CloudIntegrationAwsExternalId</a></li>
-    <li><a href="cloudintegrationazure" title="CloudIntegrationAzure"><span class="symbol resource"></span>CloudIntegrationAzure</a></li>
-    <li><a href="cloudintegrationazureactivitylog" title="CloudIntegrationAzureActivityLog"><span class="symbol resource"></span>CloudIntegrationAzureActivityLog</a></li>
-    <li><a href="cloudintegrationcloudtrail" title="CloudIntegrationCloudTrail"><span class="symbol resource"></span>CloudIntegrationCloudTrail</a></li>
-    <li><a href="cloudintegrationcloudwatch" title="CloudIntegrationCloudWatch"><span class="symbol resource"></span>CloudIntegrationCloudWatch</a></li>
-    <li><a href="cloudintegrationec2" title="CloudIntegrationEc2"><span class="symbol resource"></span>CloudIntegrationEc2</a></li>
-    <li><a href="cloudintegrationgcp" title="CloudIntegrationGcp"><span class="symbol resource"></span>CloudIntegrationGcp</a></li>
-    <li><a href="cloudintegrationgcpbilling" title="CloudIntegrationGcpBilling"><span class="symbol resource"></span>CloudIntegrationGcpBilling</a></li>
-    <li><a href="cloudintegrationnewrelic" title="CloudIntegrationNewRelic"><span class="symbol resource"></span>CloudIntegrationNewRelic</a></li>
-    <li><a href="cloudintegrationtesla" title="CloudIntegrationTesla"><span class="symbol resource"></span>CloudIntegrationTesla</a></li>
-    <li><a href="dashboard" title="Dashboard"><span class="symbol resource"></span>Dashboard</a></li>
-    <li><a href="dashboardjson" title="DashboardJson"><span class="symbol resource"></span>DashboardJson</a></li>
-    <li><a href="derivedmetric" title="DerivedMetric"><span class="symbol resource"></span>DerivedMetric</a></li>
-    <li><a href="externallink" title="ExternalLink"><span class="symbol resource"></span>ExternalLink</a></li>
-    <li><a href="ingestionpolicy" title="IngestionPolicy"><span class="symbol resource"></span>IngestionPolicy</a></li>
-    <li><a href="maintenancewindow" title="MaintenanceWindow"><span class="symbol resource"></span>MaintenanceWindow</a></li>
-    <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
-    <li><a href="role" title="Role"><span class="symbol resource"></span>Role</a></li>
-    <li><a href="serviceaccount" title="ServiceAccount"><span class="symbol resource"></span>ServiceAccount</a></li>
-    <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
-    <li><a href="usergroup" title="UserGroup"><span class="symbol resource"></span>UserGroup</a></li>
+    <li><a href="alert" title="Alert"><span class="api-symbol api-symbol--resource"></span>Alert</a></li>
+    <li><a href="alerttarget" title="AlertTarget"><span class="api-symbol api-symbol--resource"></span>AlertTarget</a></li>
+    <li><a href="cloudintegrationappdynamics" title="CloudIntegrationAppDynamics"><span class="api-symbol api-symbol--resource"></span>CloudIntegrationAppDynamics</a></li>
+    <li><a href="cloudintegrationawsexternalid" title="CloudIntegrationAwsExternalId"><span class="api-symbol api-symbol--resource"></span>CloudIntegrationAwsExternalId</a></li>
+    <li><a href="cloudintegrationazure" title="CloudIntegrationAzure"><span class="api-symbol api-symbol--resource"></span>CloudIntegrationAzure</a></li>
+    <li><a href="cloudintegrationazureactivitylog" title="CloudIntegrationAzureActivityLog"><span class="api-symbol api-symbol--resource"></span>CloudIntegrationAzureActivityLog</a></li>
+    <li><a href="cloudintegrationcloudtrail" title="CloudIntegrationCloudTrail"><span class="api-symbol api-symbol--resource"></span>CloudIntegrationCloudTrail</a></li>
+    <li><a href="cloudintegrationcloudwatch" title="CloudIntegrationCloudWatch"><span class="api-symbol api-symbol--resource"></span>CloudIntegrationCloudWatch</a></li>
+    <li><a href="cloudintegrationec2" title="CloudIntegrationEc2"><span class="api-symbol api-symbol--resource"></span>CloudIntegrationEc2</a></li>
+    <li><a href="cloudintegrationgcp" title="CloudIntegrationGcp"><span class="api-symbol api-symbol--resource"></span>CloudIntegrationGcp</a></li>
+    <li><a href="cloudintegrationgcpbilling" title="CloudIntegrationGcpBilling"><span class="api-symbol api-symbol--resource"></span>CloudIntegrationGcpBilling</a></li>
+    <li><a href="cloudintegrationnewrelic" title="CloudIntegrationNewRelic"><span class="api-symbol api-symbol--resource"></span>CloudIntegrationNewRelic</a></li>
+    <li><a href="cloudintegrationtesla" title="CloudIntegrationTesla"><span class="api-symbol api-symbol--resource"></span>CloudIntegrationTesla</a></li>
+    <li><a href="dashboard" title="Dashboard"><span class="api-symbol api-symbol--resource"></span>Dashboard</a></li>
+    <li><a href="dashboardjson" title="DashboardJson"><span class="api-symbol api-symbol--resource"></span>DashboardJson</a></li>
+    <li><a href="derivedmetric" title="DerivedMetric"><span class="api-symbol api-symbol--resource"></span>DerivedMetric</a></li>
+    <li><a href="externallink" title="ExternalLink"><span class="api-symbol api-symbol--resource"></span>ExternalLink</a></li>
+    <li><a href="ingestionpolicy" title="IngestionPolicy"><span class="api-symbol api-symbol--resource"></span>IngestionPolicy</a></li>
+    <li><a href="maintenancewindow" title="MaintenanceWindow"><span class="api-symbol api-symbol--resource"></span>MaintenanceWindow</a></li>
+    <li><a href="provider" title="Provider"><span class="api-symbol api-symbol--resource"></span>Provider</a></li>
+    <li><a href="role" title="Role"><span class="api-symbol api-symbol--resource"></span>Role</a></li>
+    <li><a href="serviceaccount" title="ServiceAccount"><span class="api-symbol api-symbol--resource"></span>ServiceAccount</a></li>
+    <li><a href="user" title="User"><span class="api-symbol api-symbol--resource"></span>User</a></li>
+    <li><a href="usergroup" title="UserGroup"><span class="api-symbol api-symbol--resource"></span>UserGroup</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getdefaultusergroup" title="GetDefaultUserGroup"><span class="symbol function"></span>GetDefaultUserGroup</a></li>
+    <li><a href="getdefaultusergroup" title="GetDefaultUserGroup"><span class="api-symbol api-symbol--function"></span>GetDefaultUserGroup</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

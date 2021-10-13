@@ -37,7 +37,7 @@ class MyStack : Stack
     {
         var samplingRule = new AwsNative.XRay.SamplingRule("samplingRule", new AwsNative.XRay.SamplingRuleArgs
         {
-            SamplingRule = new AwsNative.XRay.Inputs.SamplingRuleSamplingRuleArgs
+            SamplingRule = new AwsNative.XRay.Inputs.SamplingRuleArgs
             {
                 RuleName = "MySamplingRule",
                 ResourceARN = "*",
@@ -76,7 +76,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := xray.NewSamplingRule(ctx, "samplingRule", &xray.SamplingRuleArgs{
-			SamplingRule: &xray.SamplingRuleSamplingRuleArgs{
+			SamplingRule: &xray.SamplingRuleArgs{
 				RuleName:      pulumi.String("MySamplingRule"),
 				ResourceARN:   pulumi.String("*"),
 				Priority:      pulumi.Int(2),
@@ -110,7 +110,7 @@ func main() {
 import pulumi
 import pulumi_aws_native as aws_native
 
-sampling_rule = aws_native.xray.SamplingRule("samplingRule", sampling_rule=aws_native.xray.SamplingRuleSamplingRuleArgs(
+sampling_rule = aws_native.xray.SamplingRule("samplingRule", sampling_rule=aws_native.xray.SamplingRuleArgs(
     rule_name="MySamplingRule",
     resource_arn="*",
     priority=2,
@@ -174,7 +174,7 @@ class MyStack : Stack
     {
         var samplingRule = new AwsNative.XRay.SamplingRule("samplingRule", new AwsNative.XRay.SamplingRuleArgs
         {
-            SamplingRule = new AwsNative.XRay.Inputs.SamplingRuleSamplingRuleArgs
+            SamplingRule = new AwsNative.XRay.Inputs.SamplingRuleArgs
             {
                 RuleName = "MySamplingRule",
                 ResourceARN = "*",
@@ -213,7 +213,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := xray.NewSamplingRule(ctx, "samplingRule", &xray.SamplingRuleArgs{
-			SamplingRule: &xray.SamplingRuleSamplingRuleArgs{
+			SamplingRule: &xray.SamplingRuleArgs{
 				RuleName:      pulumi.String("MySamplingRule"),
 				ResourceARN:   pulumi.String("*"),
 				Priority:      pulumi.Int(2),
@@ -247,7 +247,7 @@ func main() {
 import pulumi
 import pulumi_aws_native as aws_native
 
-sampling_rule = aws_native.xray.SamplingRule("samplingRule", sampling_rule=aws_native.xray.SamplingRuleSamplingRuleArgs(
+sampling_rule = aws_native.xray.SamplingRule("samplingRule", sampling_rule=aws_native.xray.SamplingRuleArgs(
     rule_name="MySamplingRule",
     resource_arn="*",
     priority=2,
@@ -311,7 +311,7 @@ class MyStack : Stack
     {
         var samplingRule = new AwsNative.XRay.SamplingRule("samplingRule", new AwsNative.XRay.SamplingRuleArgs
         {
-            SamplingRuleUpdate = new AwsNative.XRay.Inputs.SamplingRuleSamplingRuleUpdateArgs
+            SamplingRuleUpdate = new AwsNative.XRay.Inputs.SamplingRuleUpdateArgs
             {
                 RuleName = "MySamplingRule",
                 ResourceARN = "*",
@@ -349,7 +349,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := xray.NewSamplingRule(ctx, "samplingRule", &xray.SamplingRuleArgs{
-			SamplingRuleUpdate: &xray.SamplingRuleSamplingRuleUpdateArgs{
+			SamplingRuleUpdate: &xray.SamplingRuleUpdateArgs{
 				RuleName:      pulumi.String("MySamplingRule"),
 				ResourceARN:   pulumi.String("*"),
 				Priority:      pulumi.Int(1),
@@ -382,7 +382,7 @@ func main() {
 import pulumi
 import pulumi_aws_native as aws_native
 
-sampling_rule = aws_native.xray.SamplingRule("samplingRule", sampling_rule_update=aws_native.xray.SamplingRuleSamplingRuleUpdateArgs(
+sampling_rule = aws_native.xray.SamplingRule("samplingRule", sampling_rule_update=aws_native.xray.SamplingRuleUpdateArgs(
     rule_name="MySamplingRule",
     resource_arn="*",
     priority=1,
@@ -444,7 +444,7 @@ class MyStack : Stack
     {
         var samplingRule = new AwsNative.XRay.SamplingRule("samplingRule", new AwsNative.XRay.SamplingRuleArgs
         {
-            SamplingRuleUpdate = new AwsNative.XRay.Inputs.SamplingRuleSamplingRuleUpdateArgs
+            SamplingRuleUpdate = new AwsNative.XRay.Inputs.SamplingRuleUpdateArgs
             {
                 RuleName = "MySamplingRule",
                 ResourceARN = "*",
@@ -482,7 +482,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := xray.NewSamplingRule(ctx, "samplingRule", &xray.SamplingRuleArgs{
-			SamplingRuleUpdate: &xray.SamplingRuleSamplingRuleUpdateArgs{
+			SamplingRuleUpdate: &xray.SamplingRuleUpdateArgs{
 				RuleName:      pulumi.String("MySamplingRule"),
 				ResourceARN:   pulumi.String("*"),
 				Priority:      pulumi.Int(1),
@@ -515,7 +515,7 @@ func main() {
 import pulumi
 import pulumi_aws_native as aws_native
 
-sampling_rule = aws_native.xray.SamplingRule("samplingRule", sampling_rule_update=aws_native.xray.SamplingRuleSamplingRuleUpdateArgs(
+sampling_rule = aws_native.xray.SamplingRule("samplingRule", sampling_rule_update=aws_native.xray.SamplingRuleUpdateArgs(
     rule_name="MySamplingRule",
     resource_arn="*",
     priority=1,
@@ -581,13 +581,13 @@ const samplingRule = new aws_native.xray.SamplingRule("samplingRule", {samplingR
 <span class="k">def </span><span class="nx">SamplingRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                  <span class="nx">rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                 <span class="nx">sampling_rule</span><span class="p">:</span> <span class="nx">Optional[SamplingRuleSamplingRuleArgs]</span> = None<span class="p">,</span>
-                 <span class="nx">sampling_rule_record</span><span class="p">:</span> <span class="nx">Optional[SamplingRuleSamplingRuleRecordArgs]</span> = None<span class="p">,</span>
-                 <span class="nx">sampling_rule_update</span><span class="p">:</span> <span class="nx">Optional[SamplingRuleSamplingRuleUpdateArgs]</span> = None<span class="p">,</span>
-                 <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[Any]]</span> = None<span class="p">)</span>
+                 <span class="nx">sampling_rule</span><span class="p">:</span> <span class="nx">Optional[SamplingRuleArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">sampling_rule_record</span><span class="p">:</span> <span class="nx">Optional[SamplingRuleRecordArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">sampling_rule_update</span><span class="p">:</span> <span class="nx">Optional[SamplingRuleUpdateArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[TagsItemPropertiesArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">SamplingRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[SamplingRuleArgs]</a></span> = None<span class="p">,</span>
+                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[SamplingRuleInitArgs]</a></span> = None<span class="p">,</span>
                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
@@ -635,7 +635,7 @@ const samplingRule = new aws_native.xray.SamplingRule("samplingRule", {samplingR
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">SamplingRuleArgs</a></span>
+        <span class="property-type"><a href="#inputs">SamplingRuleInitArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
@@ -726,7 +726,7 @@ The SamplingRule resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#samplingrulerecord_csharp" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Rule<wbr>Record</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#samplingrulesamplingrulerecord">Pulumi.<wbr>Aws<wbr>Native.<wbr>XRay.<wbr>Inputs.<wbr>Sampling<wbr>Rule<wbr>Sampling<wbr>Rule<wbr>Record<wbr>Args</a></span>
+        <span class="property-type"><a href="#samplingrulerecord">Pulumi.<wbr>Aws<wbr>Native.<wbr>XRay.<wbr>Inputs.<wbr>Sampling<wbr>Rule<wbr>Record<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -734,7 +734,7 @@ The SamplingRule resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#samplingruleupdate_csharp" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Rule<wbr>Update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#samplingrulesamplingruleupdate">Pulumi.<wbr>Aws<wbr>Native.<wbr>XRay.<wbr>Inputs.<wbr>Sampling<wbr>Rule<wbr>Sampling<wbr>Rule<wbr>Update<wbr>Args</a></span>
+        <span class="property-type"><a href="#samplingruleupdate">Pulumi.<wbr>Aws<wbr>Native.<wbr>XRay.<wbr>Inputs.<wbr>Sampling<wbr>Rule<wbr>Update<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -742,7 +742,7 @@ The SamplingRule resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#samplingrulevalue_csharp" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Rule<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#samplingrulesamplingrule">Pulumi.<wbr>Aws<wbr>Native.<wbr>XRay.<wbr>Inputs.<wbr>Sampling<wbr>Rule<wbr>Sampling<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#samplingrule">Pulumi.<wbr>Aws<wbr>Native.<wbr>XRay.<wbr>Inputs.<wbr>Sampling<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -750,7 +750,7 @@ The SamplingRule resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;object&gt;</span>
+        <span class="property-type"><a href="#tagsitemproperties">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>XRay.<wbr>Inputs.<wbr>Tags<wbr>Item<wbr>Properties<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -770,7 +770,7 @@ The SamplingRule resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#samplingrule_go" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#samplingrulesamplingrule">Sampling<wbr>Rule<wbr>Sampling<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#samplingrule">Sampling<wbr>Rule<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -778,7 +778,7 @@ The SamplingRule resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#samplingrulerecord_go" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Rule<wbr>Record</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#samplingrulesamplingrulerecord">Sampling<wbr>Rule<wbr>Sampling<wbr>Rule<wbr>Record<wbr>Args</a></span>
+        <span class="property-type"><a href="#samplingrulerecord">Sampling<wbr>Rule<wbr>Record<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -786,7 +786,7 @@ The SamplingRule resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#samplingruleupdate_go" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Rule<wbr>Update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#samplingrulesamplingruleupdate">Sampling<wbr>Rule<wbr>Sampling<wbr>Rule<wbr>Update<wbr>Args</a></span>
+        <span class="property-type"><a href="#samplingruleupdate">Sampling<wbr>Rule<wbr>Update<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -794,7 +794,7 @@ The SamplingRule resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]interface{}</span>
+        <span class="property-type"><a href="#tagsitemproperties">[]Tags<wbr>Item<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -814,7 +814,7 @@ The SamplingRule resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#samplingrule_nodejs" style="color: inherit; text-decoration: inherit;">sampling<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#samplingrulesamplingrule">Sampling<wbr>Rule<wbr>Sampling<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#samplingrule">Sampling<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -822,7 +822,7 @@ The SamplingRule resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#samplingrulerecord_nodejs" style="color: inherit; text-decoration: inherit;">sampling<wbr>Rule<wbr>Record</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#samplingrulesamplingrulerecord">Sampling<wbr>Rule<wbr>Sampling<wbr>Rule<wbr>Record<wbr>Args</a></span>
+        <span class="property-type"><a href="#samplingrulerecord">Sampling<wbr>Rule<wbr>Record<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -830,7 +830,7 @@ The SamplingRule resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#samplingruleupdate_nodejs" style="color: inherit; text-decoration: inherit;">sampling<wbr>Rule<wbr>Update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#samplingrulesamplingruleupdate">Sampling<wbr>Rule<wbr>Sampling<wbr>Rule<wbr>Update<wbr>Args</a></span>
+        <span class="property-type"><a href="#samplingruleupdate">Sampling<wbr>Rule<wbr>Update<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -838,7 +838,7 @@ The SamplingRule resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">any[]</span>
+        <span class="property-type"><a href="#tagsitemproperties">Tags<wbr>Item<wbr>Properties<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -858,7 +858,7 @@ The SamplingRule resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#sampling_rule_python" style="color: inherit; text-decoration: inherit;">sampling_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#samplingrulesamplingrule">Sampling<wbr>Rule<wbr>Sampling<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#samplingrule">Sampling<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -866,7 +866,7 @@ The SamplingRule resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#sampling_rule_record_python" style="color: inherit; text-decoration: inherit;">sampling_<wbr>rule_<wbr>record</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#samplingrulesamplingrulerecord">Sampling<wbr>Rule<wbr>Sampling<wbr>Rule<wbr>Record<wbr>Args</a></span>
+        <span class="property-type"><a href="#samplingrulerecord">Sampling<wbr>Rule<wbr>Record<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -874,7 +874,7 @@ The SamplingRule resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#sampling_rule_update_python" style="color: inherit; text-decoration: inherit;">sampling_<wbr>rule_<wbr>update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#samplingrulesamplingruleupdate">Sampling<wbr>Rule<wbr>Sampling<wbr>Rule<wbr>Update<wbr>Args</a></span>
+        <span class="property-type"><a href="#samplingruleupdate">Sampling<wbr>Rule<wbr>Update<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -882,7 +882,7 @@ The SamplingRule resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Any]</span>
+        <span class="property-type"><a href="#tagsitemproperties">Sequence[Tags<wbr>Item<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -984,7 +984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="samplingrulesamplingrule">Sampling<wbr>Rule<wbr>Sampling<wbr>Rule</h4>
+<h4 id="samplingrule">Sampling<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
@@ -1418,7 +1418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The version of the sampling rule format (1){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="samplingrulesamplingrulerecord">Sampling<wbr>Rule<wbr>Sampling<wbr>Rule<wbr>Record</h4>
+<h4 id="samplingrulerecord">Sampling<wbr>Rule<wbr>Record</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
@@ -1443,7 +1443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#samplingrule_csharp" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#samplingrulesamplingrule">Pulumi.<wbr>Aws<wbr>Native.<wbr>XRay.<wbr>Inputs.<wbr>Sampling<wbr>Rule<wbr>Sampling<wbr>Rule</a></span>
+        <span class="property-type"><a href="#samplingrule">Pulumi.<wbr>Aws<wbr>Native.<wbr>XRay.<wbr>Inputs.<wbr>Sampling<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1471,7 +1471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#samplingrule_go" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#samplingrulesamplingrule">Sampling<wbr>Rule<wbr>Sampling<wbr>Rule</a></span>
+        <span class="property-type"><a href="#samplingrule">Sampling<wbr>Rule<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1499,7 +1499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#samplingrule_nodejs" style="color: inherit; text-decoration: inherit;">sampling<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#samplingrulesamplingrule">Sampling<wbr>Rule<wbr>Sampling<wbr>Rule</a></span>
+        <span class="property-type"><a href="#samplingrule">Sampling<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1527,12 +1527,12 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sampling_rule_python" style="color: inherit; text-decoration: inherit;">sampling_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#samplingrulesamplingrule">Sampling<wbr>Rule<wbr>Sampling<wbr>Rule</a></span>
+        <span class="property-type"><a href="#samplingrule">Sampling<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="samplingrulesamplingruleupdate">Sampling<wbr>Rule<wbr>Sampling<wbr>Rule<wbr>Update</h4>
+<h4 id="samplingruleupdate">Sampling<wbr>Rule<wbr>Update</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
@@ -1932,6 +1932,88 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Matches the path from a request URL.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="tagsitemproperties">Tags<wbr>Item<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

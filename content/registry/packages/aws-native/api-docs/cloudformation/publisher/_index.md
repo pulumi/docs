@@ -283,7 +283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisherstatus_csharp" style="color: inherit; text-decoration: inherit;">Publisher<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publisherpublisherstatus">Pulumi.<wbr>Aws<wbr>Native.<wbr>Cloud<wbr>Formation.<wbr>Publisher<wbr>Publisher<wbr>Status</a></span>
+        <span class="property-type"><a href="#publisherstatus">Pulumi.<wbr>Aws<wbr>Native.<wbr>Cloud<wbr>Formation.<wbr>Publisher<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Whether the publisher is verified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -327,7 +327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisherstatus_go" style="color: inherit; text-decoration: inherit;">Publisher<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publisherpublisherstatus">Publisher<wbr>Publisher<wbr>Status</a></span>
+        <span class="property-type"><a href="#publisherstatus">Publisher<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Whether the publisher is verified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -371,7 +371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisherstatus_nodejs" style="color: inherit; text-decoration: inherit;">publisher<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publisherpublisherstatus">Publisher<wbr>Publisher<wbr>Status</a></span>
+        <span class="property-type"><a href="#publisherstatus">Publisher<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Whether the publisher is verified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -415,7 +415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_status_python" style="color: inherit; text-decoration: inherit;">publisher_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publisherpublisherstatus">Publisher<wbr>Publisher<wbr>Status</a></span>
+        <span class="property-type"><a href="#publisherstatus">Publisher<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Whether the publisher is verified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -460,7 +460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Bitbucket</dd></dl>
 {{% /choosable %}}
 
-<h4 id="publisherpublisherstatus">Publisher<wbr>Publisher<wbr>Status</h4>
+<h4 id="publisherstatus">Publisher<wbr>Status</h4>
 
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>Verified</dt>
@@ -469,8 +469,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular"><dt>Publisher<wbr>Publisher<wbr>Status<wbr>Verified</dt>
-    <dd>VERIFIED</dd><dt>Publisher<wbr>Publisher<wbr>Status<wbr>Unverified</dt>
+<dl class="tabular"><dt>Publisher<wbr>Status<wbr>Verified</dt>
+    <dd>VERIFIED</dd><dt>Publisher<wbr>Status<wbr>Unverified</dt>
     <dd>UNVERIFIED</dd></dl>
 {{% /choosable %}}
 

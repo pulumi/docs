@@ -235,6 +235,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The name of the environment. Format: `projects//locations//agents//environments/`.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="testcasesconfig_csharp">
+<a href="#testcasesconfig_csharp" style="color: inherit; text-decoration: inherit;">Test<wbr>Cases<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3environmenttestcasesconfigresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V3.<wbr>Outputs.<wbr>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Environment<wbr>Test<wbr>Cases<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The test cases config for continuous tests of this environment.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="updatetime_csharp">
 <a href="#updatetime_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
 </span>
@@ -278,6 +286,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the environment. Format: `projects//locations//agents//environments/`.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="testcasesconfig_go">
+<a href="#testcasesconfig_go" style="color: inherit; text-decoration: inherit;">Test<wbr>Cases<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3environmenttestcasesconfigresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Environment<wbr>Test<wbr>Cases<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The test cases config for continuous tests of this environment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatetime_go">
 <a href="#updatetime_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -323,6 +339,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The name of the environment. Format: `projects//locations//agents//environments/`.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="testcasesconfig_nodejs">
+<a href="#testcasesconfig_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Cases<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3environmenttestcasesconfigresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Environment<wbr>Test<wbr>Cases<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The test cases config for continuous tests of this environment.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="updatetime_nodejs">
 <a href="#updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
 </span>
@@ -367,6 +391,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The name of the environment. Format: `projects//locations//agents//environments/`.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="test_cases_config_python">
+<a href="#test_cases_config_python" style="color: inherit; text-decoration: inherit;">test_<wbr>cases_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3environmenttestcasesconfigresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Environment<wbr>Test<wbr>Cases<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The test cases config for continuous tests of this environment.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="update_time_python">
 <a href="#update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
 </span>
@@ -389,6 +421,122 @@ The following output properties are available:
 
 ## Supporting Types
 
+
+<h4 id="googleclouddialogflowcxv3environmenttestcasesconfigresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Environment<wbr>Test<wbr>Cases<wbr>Config<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enablecontinuousrun_csharp">
+<a href="#enablecontinuousrun_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Continuous<wbr>Run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to run test cases in TestCasesConfig.test_cases periodically. Default false. If set to ture, run once a day.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enablepredeploymentrun_csharp">
+<a href="#enablepredeploymentrun_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Predeployment<wbr>Run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to run test cases in TestCasesConfig.test_cases before deploying a flow version to the environment. Default false.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="testcases_csharp">
+<a href="#testcases_csharp" style="color: inherit; text-decoration: inherit;">Test<wbr>Cases</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of test case names to run. They should be under the same agent. Format of each test case name: `projects//locations/ /agents//testCases/`{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enablecontinuousrun_go">
+<a href="#enablecontinuousrun_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Continuous<wbr>Run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to run test cases in TestCasesConfig.test_cases periodically. Default false. If set to ture, run once a day.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enablepredeploymentrun_go">
+<a href="#enablepredeploymentrun_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Predeployment<wbr>Run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to run test cases in TestCasesConfig.test_cases before deploying a flow version to the environment. Default false.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="testcases_go">
+<a href="#testcases_go" style="color: inherit; text-decoration: inherit;">Test<wbr>Cases</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of test case names to run. They should be under the same agent. Format of each test case name: `projects//locations/ /agents//testCases/`{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enablecontinuousrun_nodejs">
+<a href="#enablecontinuousrun_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Continuous<wbr>Run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to run test cases in TestCasesConfig.test_cases periodically. Default false. If set to ture, run once a day.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enablepredeploymentrun_nodejs">
+<a href="#enablepredeploymentrun_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Predeployment<wbr>Run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to run test cases in TestCasesConfig.test_cases before deploying a flow version to the environment. Default false.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="testcases_nodejs">
+<a href="#testcases_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Cases</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of test case names to run. They should be under the same agent. Format of each test case name: `projects//locations/ /agents//testCases/`{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enable_continuous_run_python">
+<a href="#enable_continuous_run_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>continuous_<wbr>run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to run test cases in TestCasesConfig.test_cases periodically. Default false. If set to ture, run once a day.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enable_predeployment_run_python">
+<a href="#enable_predeployment_run_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>predeployment_<wbr>run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to run test cases in TestCasesConfig.test_cases before deploying a flow version to the environment. Default false.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="test_cases_python">
+<a href="#test_cases_python" style="color: inherit; text-decoration: inherit;">test_<wbr>cases</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of test case names to run. They should be under the same agent. Format of each test case name: `projects//locations/ /agents//testCases/`{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="googleclouddialogflowcxv3environmentversionconfigresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Environment<wbr>Version<wbr>Config<wbr>Response</h4>
 

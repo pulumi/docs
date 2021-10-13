@@ -31,7 +31,7 @@ The AWS::S3::AccessPoint resource is an Amazon S3 resource type that you can use
                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                 <span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">,</span>
-                <span class="nx">policy_status</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">,</span>
+                <span class="nx">policy_status</span><span class="p">:</span> <span class="nx">Optional[PolicyStatusPropertiesArgs]</span> = None<span class="p">,</span>
                 <span class="nx">public_access_block_configuration</span><span class="p">:</span> <span class="nx">Optional[AccessPointPublicAccessBlockConfigurationArgs]</span> = None<span class="p">,</span>
                 <span class="nx">vpc_configuration</span><span class="p">:</span> <span class="nx">Optional[AccessPointVpcConfigurationArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -183,7 +183,7 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#policystatus_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">object</span>
+        <span class="property-type"><a href="#policystatusproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Inputs.<wbr>Policy<wbr>Status<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -227,7 +227,7 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#policystatus_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#policystatusproperties">Policy<wbr>Status<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -271,7 +271,7 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#policystatus_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">any</span>
+        <span class="property-type"><a href="#policystatusproperties">Policy<wbr>Status<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -315,7 +315,7 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#policy_status_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#policystatusproperties">Policy<wbr>Status<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -769,6 +769,82 @@ Enabling this setting doesn't affect previously stored bucket policies, except t
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If this field is specified, this access point will only allow connections from the specified VPC ID.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="multiregionaccesspointpolicypolicystatuspropertiesispublic">Multi<wbr>Region<wbr>Access<wbr>Point<wbr>Policy<wbr>Policy<wbr>Status<wbr>Properties<wbr>Is<wbr>Public</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>True</dt>
+    <dd>true</dd><dt>False</dt>
+    <dd>false</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Multi<wbr>Region<wbr>Access<wbr>Point<wbr>Policy<wbr>Policy<wbr>Status<wbr>Properties<wbr>Is<wbr>Public<wbr>True</dt>
+    <dd>true</dd><dt>Multi<wbr>Region<wbr>Access<wbr>Point<wbr>Policy<wbr>Policy<wbr>Status<wbr>Properties<wbr>Is<wbr>Public<wbr>False</dt>
+    <dd>false</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>True</dt>
+    <dd>true</dd><dt>False</dt>
+    <dd>false</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>TRUE</dt>
+    <dd>true</dd><dt>FALSE</dt>
+    <dd>false</dd></dl>
+{{% /choosable %}}
+
+<h4 id="policystatusproperties">Policy<wbr>Status<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="ispublic_csharp">
+<a href="#ispublic_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Public</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#multiregionaccesspointpolicypolicystatuspropertiesispublic">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3.<wbr>Multi<wbr>Region<wbr>Access<wbr>Point<wbr>Policy<wbr>Policy<wbr>Status<wbr>Properties<wbr>Is<wbr>Public</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the policy is public or not.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="ispublic_go">
+<a href="#ispublic_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Public</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#multiregionaccesspointpolicypolicystatuspropertiesispublic">Multi<wbr>Region<wbr>Access<wbr>Point<wbr>Policy<wbr>Policy<wbr>Status<wbr>Properties<wbr>Is<wbr>Public</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the policy is public or not.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="ispublic_nodejs">
+<a href="#ispublic_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Public</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#multiregionaccesspointpolicypolicystatuspropertiesispublic">Multi<wbr>Region<wbr>Access<wbr>Point<wbr>Policy<wbr>Policy<wbr>Status<wbr>Properties<wbr>Is<wbr>Public</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the policy is public or not.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="is_public_python">
+<a href="#is_public_python" style="color: inherit; text-decoration: inherit;">is_<wbr>public</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#multiregionaccesspointpolicypolicystatuspropertiesispublic">Multi<wbr>Region<wbr>Access<wbr>Point<wbr>Policy<wbr>Policy<wbr>Status<wbr>Properties<wbr>Is<wbr>Public</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the policy is public or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

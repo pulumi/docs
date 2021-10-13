@@ -37,6 +37,7 @@ Auto-naming is currently not supported for this resource.
             <span class="nx">default_table_expiration_ms</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">is_case_insensitive</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
             <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
@@ -225,6 +226,14 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}[Optional] A descriptive name for the dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="iscaseinsensitive_csharp">
+<a href="#iscaseinsensitive_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Case<wbr>Insensitive</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}[Optional] Indicates if table names are case insensitive in the dataset.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span>
@@ -308,6 +317,14 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] A descriptive name for the dataset.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="iscaseinsensitive_go">
+<a href="#iscaseinsensitive_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Case<wbr>Insensitive</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}[Optional] Indicates if table names are case insensitive in the dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -393,6 +410,14 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}[Optional] A descriptive name for the dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="iscaseinsensitive_nodejs">
+<a href="#iscaseinsensitive_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Case<wbr>Insensitive</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}[Optional] Indicates if table names are case insensitive in the dataset.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
@@ -477,6 +502,14 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}[Optional] A descriptive name for the dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="is_case_insensitive_python">
+<a href="#is_case_insensitive_python" style="color: inherit; text-decoration: inherit;">is_<wbr>case_<wbr>insensitive</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}[Optional] Indicates if table names are case insensitive in the dataset.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
@@ -519,6 +552,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when this dataset was created, in milliseconds since the epoch.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="defaultcollation_csharp">
+<a href="#defaultcollation_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Collation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default collation of the dataset.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -580,6 +621,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The time when this dataset was created, in milliseconds since the epoch.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="defaultcollation_go">
+<a href="#defaultcollation_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Collation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default collation of the dataset.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
 </span>
@@ -640,6 +689,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The time when this dataset was created, in milliseconds since the epoch.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="defaultcollation_nodejs">
+<a href="#defaultcollation_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Collation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default collation of the dataset.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
@@ -699,6 +756,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time when this dataset was created, in milliseconds since the epoch.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="default_collation_python">
+<a href="#default_collation_python" style="color: inherit; text-decoration: inherit;">default_<wbr>collation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The default collation of the dataset.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>

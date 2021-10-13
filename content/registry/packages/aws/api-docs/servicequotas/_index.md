@@ -13,13 +13,13 @@ Explore the resources and functions of the aws.servicequotas module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="servicequota" title="ServiceQuota"><span class="symbol resource"></span>ServiceQuota</a></li>
+    <li><a href="servicequota" title="ServiceQuota"><span class="api-symbol api-symbol--resource"></span>ServiceQuota</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
-    <li><a href="getservicequota" title="GetServiceQuota"><span class="symbol function"></span>GetServiceQuota</a></li>
+    <li><a href="getservice" title="GetService"><span class="api-symbol api-symbol--function"></span>GetService</a></li>
+    <li><a href="getservicequota" title="GetServiceQuota"><span class="api-symbol api-symbol--function"></span>GetServiceQuota</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -31,6 +31,6 @@ Explore the resources and functions of the aws.servicequotas module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.23.0</dd>
+	<dd>4.24.1</dd>
 </dl>
 

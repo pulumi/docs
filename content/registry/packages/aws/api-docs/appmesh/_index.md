@@ -13,19 +13,19 @@ Explore the resources and functions of the aws.appmesh module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="gatewayroute" title="GatewayRoute"><span class="symbol resource"></span>GatewayRoute</a></li>
-    <li><a href="mesh" title="Mesh"><span class="symbol resource"></span>Mesh</a></li>
-    <li><a href="route" title="Route"><span class="symbol resource"></span>Route</a></li>
-    <li><a href="virtualgateway" title="VirtualGateway"><span class="symbol resource"></span>VirtualGateway</a></li>
-    <li><a href="virtualnode" title="VirtualNode"><span class="symbol resource"></span>VirtualNode</a></li>
-    <li><a href="virtualrouter" title="VirtualRouter"><span class="symbol resource"></span>VirtualRouter</a></li>
-    <li><a href="virtualservice" title="VirtualService"><span class="symbol resource"></span>VirtualService</a></li>
+    <li><a href="gatewayroute" title="GatewayRoute"><span class="api-symbol api-symbol--resource"></span>GatewayRoute</a></li>
+    <li><a href="mesh" title="Mesh"><span class="api-symbol api-symbol--resource"></span>Mesh</a></li>
+    <li><a href="route" title="Route"><span class="api-symbol api-symbol--resource"></span>Route</a></li>
+    <li><a href="virtualgateway" title="VirtualGateway"><span class="api-symbol api-symbol--resource"></span>VirtualGateway</a></li>
+    <li><a href="virtualnode" title="VirtualNode"><span class="api-symbol api-symbol--resource"></span>VirtualNode</a></li>
+    <li><a href="virtualrouter" title="VirtualRouter"><span class="api-symbol api-symbol--resource"></span>VirtualRouter</a></li>
+    <li><a href="virtualservice" title="VirtualService"><span class="api-symbol api-symbol--resource"></span>VirtualService</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getmesh" title="GetMesh"><span class="symbol function"></span>GetMesh</a></li>
-    <li><a href="getvirtualservice" title="GetVirtualService"><span class="symbol function"></span>GetVirtualService</a></li>
+    <li><a href="getmesh" title="GetMesh"><span class="api-symbol api-symbol--function"></span>GetMesh</a></li>
+    <li><a href="getvirtualservice" title="GetVirtualService"><span class="api-symbol api-symbol--function"></span>GetVirtualService</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -37,6 +37,6 @@ Explore the resources and functions of the aws.appmesh module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.23.0</dd>
+	<dd>4.24.1</dd>
 </dl>
 
