@@ -315,11 +315,14 @@ import * as pulumi from "@pulumi/pulumi";
 // Get the GCP project registry repository.
 const registry = gcp.container.getRegistryRepository();
 
+// Get the repository URL
+const repositoryUrl = registry.then(_r => _r.repositoryUrl);
+
 // Build a Docker image from a local Dockerfile context in the
 // './node-app' directory, and push it to the registry.
 const customImage = "node-app";
 const appImage = new docker.Image(customImage, {
-    imageName: pulumi.interpolate`${registry.repositoryUrl}/${customImage}:v1.0.0`,
+    imageName: pulumi.interpolate`${repositoryUrl}/${customImage}:v1.0.0`,
     build: {
         context: `./${customImage}`,
     },
@@ -365,11 +368,14 @@ import * as pulumi from "@pulumi/pulumi";
 // Get the GCP project registry repository.
 const registry = gcp.container.getRegistryRepository();
 
+// Get the repository URL
+const repositoryUrl = registry.then(_r => _r.repositoryUrl);
+
 // Build a Docker image from a local Dockerfile context in the
 // './node-app' directory, and push it to the registry.
 const customImage = "node-app";
 const appImage = new docker.Image(customImage, {
-    imageName: pulumi.interpolate`${registry.repositoryUrl}/${customImage}:v1.0.0`,
+    imageName: pulumi.interpolate`${repositoryUrl}/${customImage}:v1.0.0`,
     build: {
         context: `./${customImage}`,
     },
