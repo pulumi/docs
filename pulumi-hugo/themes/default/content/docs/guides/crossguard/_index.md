@@ -16,14 +16,14 @@ Using CrossGuard, organization administrators can apply these rules to particula
 
 Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be applied to Pulumi stacks written in any language.
 
-|                                                        | Language                                                                | Status                                                            |
-| ------------------------------------------------------ | ----------------------------------------------------------------------- | ----------------------------------------------------------------- |
-| <img src="/logos/tech/logo-ts.png" class="h-10" />     | [TypeScript]({{< relref "/docs/reference/pkg/nodejs/pulumi/policy" >}}) | Stable                                                            |
-| <img src="/logos/tech/logo-js.png" class="h-10" />     | [JavaScript]({{< relref "/docs/reference/pkg/nodejs/pulumi/policy" >}}) | Stable                                                            |
-| <img src="/logos/tech/logo-python.png" class="h-10" /> | [Python]({{< relref "/docs/reference/pkg/python/pulumi_policy" >}})     | Stable                                                             |
-| <img src="/logos/tech/logo-opa.png" class="h-10" /> | [Open Policy Agent (OPA)]({{< relref "/blog/opa-support-for-crossguard" >}})     | Preview                                                             |
-| <img src="/logos/tech/dotnet.png" class="h-10" />      | .NET                                                                    | [Coming Soon](https://github.com/pulumi/pulumi-policy/issues/229) |
-| <img src="/logos/tech/logo-golang.png" class="h-10" /> | Go                                                                      | [Coming Soon](https://github.com/pulumi/pulumi-policy/issues/230) |
+|                                                        | Language                                                                     | Status                                                                                                                                        |
+|--------------------------------------------------------|------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
+| <img src="/logos/tech/logo-ts.png" class="h-10" />     | [TypeScript]({{< relref "/docs/reference/pkg/nodejs/pulumi/policy" >}})      | Stable                                                                                                                                        |
+| <img src="/logos/tech/logo-js.png" class="h-10" />     | [JavaScript]({{< relref "/docs/reference/pkg/nodejs/pulumi/policy" >}})      | Stable                                                                                                                                        |
+| <img src="/logos/tech/logo-python.png" class="h-10" /> | [Python]({{< relref "/docs/reference/pkg/python/pulumi_policy" >}})          | Stable                                                                                                                                        |
+| <img src="/logos/tech/logo-opa.png" class="h-10" />    | [Open Policy Agent (OPA)]({{< relref "/blog/opa-support-for-crossguard" >}}) | Preview                                                                                                                                       |
+| <img src="/logos/tech/dotnet.png" class="h-10" />      | .NET                                                                         | On the backlog; please add a 👍 reaction to this [GitHub issue](https://github.com/pulumi/pulumi-policy/issues/229) to register your interest |
+| <img src="/logos/tech/logo-golang.png" class="h-10" /> | Go                                                                           | On the backlog; please add a 👍 reaction to this [GitHub issue](https://github.com/pulumi/pulumi-policy/issues/230) to register your interest |
 
 ## Getting Started
 

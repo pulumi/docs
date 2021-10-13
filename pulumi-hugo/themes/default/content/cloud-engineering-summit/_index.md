@@ -13,14 +13,6 @@ sessionize_id: wbl7wd7l
 workshops:
   title: Workshops
   items:
-    - title: How to Author and Publish Pulumi Packages
-      icon: puzzle
-      icon_color: violet
-      link: /resources/build-reusable-infrastructure-as-code-patterns
-      times: [ "2021-10-21T12:00:00-07:00" ]
-      description: |
-        In this workshop, we’ll guide you through an example of building a reusable Pulumi component for a hypothetical “production ready application” in Python.
-
     - title: How to Build a Self-Service Cloud with Python
       icon: cloud-with-nodes
       icon_color: salmon

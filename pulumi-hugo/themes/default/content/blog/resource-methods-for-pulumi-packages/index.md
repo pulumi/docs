@@ -16,7 +16,7 @@ It's now possible to provide resource methods from Pulumi Packages. Resource met
 
 When authoring component resources, it's often useful to provide additional functionality through methods on the component. For example, the `Cluster` component in the [`eks`]({{< relref "/docs/reference/pkg/eks" >}}) package has a [`getKubeconfig`](https://github.com/pulumi/pulumi-eks/blob/700d73e961976e58762cb9c723ad2fa838052f46/nodejs/eks/cluster.ts#L1482) method that can be used to generate a kubeconfig for authentication with the cluster that does not use the default AWS credential provider chain, but is instead scoped based on the passed-in arguments. Until now, that method has only been available from JavaScript/TypeScript (the language the `Cluster` component was written in). With the new support for resource methods for Pulumi Packages, we can make this method available to all the Pulumi languages, which is exactly what we've done in pulumi-eks [v0.34.0](https://github.com/pulumi/pulumi-eks/releases/tag/v0.34.0).
 
-{{< chooser language "typescript,python,go" >}}
+{{< chooser language "typescript,python,csharp,go" >}}
 
 {{% choosable language typescript %}}
 
@@ -209,7 +209,7 @@ We can implement the component and make it available to any Pulumi language. We'
 
 Here's the implementation of the `Message` component:
 
-{{< chooser language "typescript,python,go" >}}
+{{< chooser language "typescript,python,csharp,go" >}}
 
 {{% choosable language typescript %}}
 
@@ -274,6 +274,11 @@ class Message(pulumi.ComponentResource):
 ```
 
 {{% /choosable %}}
+{{% choosable language csharp %}}
+
+[Authoring multi-language components in .NET](https://github.com/pulumi/pulumi/issues/5488) is not yet supported.
+
+{{% /choosable %}}
 {{% choosable language go %}}
 
 ```go
@@ -330,7 +335,7 @@ func (c *Message) GetMessage(args *GetMessageArgs) StringOutput {
 
 Next, wire up the provider RPCs with the component implementation:
 
-{{< chooser language "typescript,python,go" >}}
+{{< chooser language "typescript,python,csharp,go" >}}
 
 {{% choosable language typescript %}}
 
@@ -448,6 +453,11 @@ if __name__ == "__main__":
 ```
 
 {{% /choosable %}}
+{{% choosable language csharp %}}
+
+[Authoring multi-language components in .NET](https://github.com/pulumi/pulumi/issues/5488) is not yet supported.
+
+{{% /choosable %}}
 {{% choosable language go %}}
 
 ```go
@@ -545,7 +555,7 @@ The `Construct` RPC is called when creating an instance of the component. The `C
 
 Now we can build and try out using the component and its method from any Pulumi language:
 
-{{< chooser language "typescript,python,go" >}}
+{{< chooser language "typescript,python,csharp,go" >}}
 
 {{% choosable language typescript %}}
 

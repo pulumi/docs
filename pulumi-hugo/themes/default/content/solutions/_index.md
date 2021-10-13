@@ -36,7 +36,7 @@ use_cases:
           description: |
             Automate your infrastructure provisioning and management through a CI/CD pipeline. Run all infrastructure updates through a standard set of unit and integration tests, allowing reduced errors, greater security, and increased delivery velocity.
 
-            [Learn more about CI/CD](/solutions/infrastructure-ci-cd/)
+            [Learn more about Infrastructure CI/CD](/solutions/infrastructure-ci-cd/)
 
         - name: Terraform Migration
           case_studies:

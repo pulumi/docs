@@ -532,12 +532,13 @@ export const vpcId = vpc.id;
 {{% choosable language python %}}
 
 ```python
+import pulumi
 import pulumi_aws as aws
 
 vpc = aws.ec2.Vpc('myVpc',
     cidr_block='10.0.0.0/16',
     tags={ 'Name': 'Primary_CF_VPC' },
-    opts=ResourceOptions(import_='vpc-0e1a74859af1da17f')
+    opts=pulumi.ResourceOptions(import_='vpc-0e1a74859af1da17f')
 )
 
 pulumi.export('vpc_id', vpc.id)
