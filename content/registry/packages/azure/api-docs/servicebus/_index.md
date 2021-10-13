@@ -13,28 +13,28 @@ Explore the resources and functions of the azure.servicebus module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="namespace" title="Namespace"><span class="symbol resource"></span>Namespace</a></li>
-    <li><a href="namespaceauthorizationrule" title="NamespaceAuthorizationRule"><span class="symbol resource"></span>NamespaceAuthorizationRule</a></li>
-    <li><a href="namespacedisasterrecoveryconfig" title="NamespaceDisasterRecoveryConfig"><span class="symbol resource"></span>NamespaceDisasterRecoveryConfig</a></li>
-    <li><a href="namespacenetworkruleset" title="NamespaceNetworkRuleSet"><span class="symbol resource"></span>NamespaceNetworkRuleSet</a></li>
-    <li><a href="queue" title="Queue"><span class="symbol resource"></span>Queue</a></li>
-    <li><a href="queueauthorizationrule" title="QueueAuthorizationRule"><span class="symbol resource"></span>QueueAuthorizationRule</a></li>
-    <li><a href="subscription" title="Subscription"><span class="symbol resource"></span>Subscription</a></li>
-    <li><a href="subscriptionrule" title="SubscriptionRule"><span class="symbol resource"></span>SubscriptionRule</a></li>
-    <li><a href="topic" title="Topic"><span class="symbol resource"></span>Topic</a></li>
-    <li><a href="topicauthorizationrule" title="TopicAuthorizationRule"><span class="symbol resource"></span>TopicAuthorizationRule</a></li>
+    <li><a href="namespace" title="Namespace"><span class="api-symbol api-symbol--resource"></span>Namespace</a></li>
+    <li><a href="namespaceauthorizationrule" title="NamespaceAuthorizationRule"><span class="api-symbol api-symbol--resource"></span>NamespaceAuthorizationRule</a></li>
+    <li><a href="namespacedisasterrecoveryconfig" title="NamespaceDisasterRecoveryConfig"><span class="api-symbol api-symbol--resource"></span>NamespaceDisasterRecoveryConfig</a></li>
+    <li><a href="namespacenetworkruleset" title="NamespaceNetworkRuleSet"><span class="api-symbol api-symbol--resource"></span>NamespaceNetworkRuleSet</a></li>
+    <li><a href="queue" title="Queue"><span class="api-symbol api-symbol--resource"></span>Queue</a></li>
+    <li><a href="queueauthorizationrule" title="QueueAuthorizationRule"><span class="api-symbol api-symbol--resource"></span>QueueAuthorizationRule</a></li>
+    <li><a href="subscription" title="Subscription"><span class="api-symbol api-symbol--resource"></span>Subscription</a></li>
+    <li><a href="subscriptionrule" title="SubscriptionRule"><span class="api-symbol api-symbol--resource"></span>SubscriptionRule</a></li>
+    <li><a href="topic" title="Topic"><span class="api-symbol api-symbol--resource"></span>Topic</a></li>
+    <li><a href="topicauthorizationrule" title="TopicAuthorizationRule"><span class="api-symbol api-symbol--resource"></span>TopicAuthorizationRule</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getnamespace" title="GetNamespace"><span class="symbol function"></span>GetNamespace</a></li>
-    <li><a href="getnamespaceauthorizationrule" title="GetNamespaceAuthorizationRule"><span class="symbol function"></span>GetNamespaceAuthorizationRule</a></li>
-    <li><a href="getnamespacedisasterrecoveryconfig" title="GetNamespaceDisasterRecoveryConfig"><span class="symbol function"></span>GetNamespaceDisasterRecoveryConfig</a></li>
-    <li><a href="getqueue" title="GetQueue"><span class="symbol function"></span>GetQueue</a></li>
-    <li><a href="getqueueauthorizationrule" title="GetQueueAuthorizationRule"><span class="symbol function"></span>GetQueueAuthorizationRule</a></li>
-    <li><a href="getsubscription" title="GetSubscription"><span class="symbol function"></span>GetSubscription</a></li>
-    <li><a href="gettopic" title="GetTopic"><span class="symbol function"></span>GetTopic</a></li>
-    <li><a href="gettopicauthorizationrule" title="GetTopicAuthorizationRule"><span class="symbol function"></span>GetTopicAuthorizationRule</a></li>
+    <li><a href="getnamespace" title="GetNamespace"><span class="api-symbol api-symbol--function"></span>GetNamespace</a></li>
+    <li><a href="getnamespaceauthorizationrule" title="GetNamespaceAuthorizationRule"><span class="api-symbol api-symbol--function"></span>GetNamespaceAuthorizationRule</a></li>
+    <li><a href="getnamespacedisasterrecoveryconfig" title="GetNamespaceDisasterRecoveryConfig"><span class="api-symbol api-symbol--function"></span>GetNamespaceDisasterRecoveryConfig</a></li>
+    <li><a href="getqueue" title="GetQueue"><span class="api-symbol api-symbol--function"></span>GetQueue</a></li>
+    <li><a href="getqueueauthorizationrule" title="GetQueueAuthorizationRule"><span class="api-symbol api-symbol--function"></span>GetQueueAuthorizationRule</a></li>
+    <li><a href="getsubscription" title="GetSubscription"><span class="api-symbol api-symbol--function"></span>GetSubscription</a></li>
+    <li><a href="gettopic" title="GetTopic"><span class="api-symbol api-symbol--function"></span>GetTopic</a></li>
+    <li><a href="gettopicauthorizationrule" title="GetTopicAuthorizationRule"><span class="api-symbol api-symbol--function"></span>GetTopicAuthorizationRule</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -46,6 +46,6 @@ Explore the resources and functions of the azure.servicebus module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.21.0</dd>
+	<dd>4.22.0</dd>
 </dl>
 

@@ -13,12 +13,12 @@ Explore the resources and functions of the google-native.assuredworkloads/v1 mod
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="workload" title="Workload"><span class="symbol resource"></span>Workload</a></li>
+    <li><a href="workload" title="Workload"><span class="api-symbol api-symbol--resource"></span>Workload</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getworkload" title="GetWorkload"><span class="symbol function"></span>GetWorkload</a></li>
+    <li><a href="getworkload" title="GetWorkload"><span class="api-symbol api-symbol--function"></span>GetWorkload</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -28,6 +28,6 @@ Explore the resources and functions of the google-native.assuredworkloads/v1 mod
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.0</dd>
+	<dd>0.8.0</dd>
 </dl>
 

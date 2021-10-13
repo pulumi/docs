@@ -818,7 +818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Additional experiment flags for the job.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Additional experiment flags for the job, specified with the `--experiments` option.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additionaluserlabels_csharp">
 <a href="#additionaluserlabels_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>User<wbr>Labels</a>
@@ -950,7 +950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Additional experiment flags for the job.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Additional experiment flags for the job, specified with the `--experiments` option.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additionaluserlabels_go">
 <a href="#additionaluserlabels_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>User<wbr>Labels</a>
@@ -1082,7 +1082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Additional experiment flags for the job.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Additional experiment flags for the job, specified with the `--experiments` option.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additionaluserlabels_nodejs">
 <a href="#additionaluserlabels_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>User<wbr>Labels</a>
@@ -1214,7 +1214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Additional experiment flags for the job.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Additional experiment flags for the job, specified with the `--experiments` option.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additional_user_labels_python">
 <a href="#additional_user_labels_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>user_<wbr>labels</a>

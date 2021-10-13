@@ -13,23 +13,23 @@ Explore the resources and functions of the alicloud.kms module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="alias" title="Alias"><span class="symbol resource"></span>Alias</a></li>
-    <li><a href="ciphertext" title="Ciphertext"><span class="symbol resource"></span>Ciphertext</a></li>
-    <li><a href="key" title="Key"><span class="symbol resource"></span>Key</a></li>
-    <li><a href="keyversion" title="KeyVersion"><span class="symbol resource"></span>KeyVersion</a></li>
-    <li><a href="secret" title="Secret"><span class="symbol resource"></span>Secret</a></li>
+    <li><a href="alias" title="Alias"><span class="api-symbol api-symbol--resource"></span>Alias</a></li>
+    <li><a href="ciphertext" title="Ciphertext"><span class="api-symbol api-symbol--resource"></span>Ciphertext</a></li>
+    <li><a href="key" title="Key"><span class="api-symbol api-symbol--resource"></span>Key</a></li>
+    <li><a href="keyversion" title="KeyVersion"><span class="api-symbol api-symbol--resource"></span>KeyVersion</a></li>
+    <li><a href="secret" title="Secret"><span class="api-symbol api-symbol--resource"></span>Secret</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getaliases" title="GetAliases"><span class="symbol function"></span>GetAliases</a></li>
-    <li><a href="getciphertext" title="GetCiphertext"><span class="symbol function"></span>GetCiphertext</a></li>
-    <li><a href="getkeyversions" title="GetKeyVersions"><span class="symbol function"></span>GetKeyVersions</a></li>
-    <li><a href="getkeys" title="GetKeys"><span class="symbol function"></span>GetKeys</a></li>
-    <li><a href="getplaintext" title="GetPlaintext"><span class="symbol function"></span>GetPlaintext</a></li>
-    <li><a href="getsecretversions" title="GetSecretVersions"><span class="symbol function"></span>GetSecretVersions</a></li>
-    <li><a href="getsecrets" title="GetSecrets"><span class="symbol function"></span>GetSecrets</a></li>
-    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
+    <li><a href="getaliases" title="GetAliases"><span class="api-symbol api-symbol--function"></span>GetAliases</a></li>
+    <li><a href="getciphertext" title="GetCiphertext"><span class="api-symbol api-symbol--function"></span>GetCiphertext</a></li>
+    <li><a href="getkeyversions" title="GetKeyVersions"><span class="api-symbol api-symbol--function"></span>GetKeyVersions</a></li>
+    <li><a href="getkeys" title="GetKeys"><span class="api-symbol api-symbol--function"></span>GetKeys</a></li>
+    <li><a href="getplaintext" title="GetPlaintext"><span class="api-symbol api-symbol--function"></span>GetPlaintext</a></li>
+    <li><a href="getsecretversions" title="GetSecretVersions"><span class="api-symbol api-symbol--function"></span>GetSecretVersions</a></li>
+    <li><a href="getsecrets" title="GetSecrets"><span class="api-symbol api-symbol--function"></span>GetSecrets</a></li>
+    <li><a href="getservice" title="GetService"><span class="api-symbol api-symbol--function"></span>GetService</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

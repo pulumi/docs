@@ -923,6 +923,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether to enable nested virtualization or not (default is false).{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="enableuefinetworking_csharp">
+<a href="#enableuefinetworking_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Uefi<wbr>Networking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable UEFI networking for instance creation.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="numanodecount_csharp">
 <a href="#numanodecount_csharp" style="color: inherit; text-decoration: inherit;">Numa<wbr>Node<wbr>Count</a>
 </span>
@@ -958,6 +966,14 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable nested virtualization or not (default is false).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enableuefinetworking_go">
+<a href="#enableuefinetworking_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Uefi<wbr>Networking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable UEFI networking for instance creation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="numanodecount_go">
 <a href="#numanodecount_go" style="color: inherit; text-decoration: inherit;">Numa<wbr>Node<wbr>Count</a>
@@ -995,6 +1011,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether to enable nested virtualization or not (default is false).{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="enableuefinetworking_nodejs">
+<a href="#enableuefinetworking_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Uefi<wbr>Networking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable UEFI networking for instance creation.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="numanodecount_nodejs">
 <a href="#numanodecount_nodejs" style="color: inherit; text-decoration: inherit;">numa<wbr>Node<wbr>Count</a>
 </span>
@@ -1030,6 +1054,14 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable nested virtualization or not (default is false).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enable_uefi_networking_python">
+<a href="#enable_uefi_networking_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>uefi_<wbr>networking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable UEFI networking for instance creation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="numa_node_count_python">
 <a href="#numa_node_count_python" style="color: inherit; text-decoration: inherit;">numa_<wbr>node_<wbr>count</a>
@@ -1187,14 +1219,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A list of features to enable on the guest operating system. Applicable only for bootable images. Read Enabling guest operating system features to see a list of available options. Guest OS features are applied by merging initializeParams.guestOsFeatures and disks.guestOsFeatures{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="interface_csharp">
-<a href="#interface_csharp" style="color: inherit; text-decoration: inherit;">Interface</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span>
@@ -1202,6 +1226,22 @@ The following output properties are available:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this disk. These can be later modified by the disks.setLabels method. This field is only applicable for persistent disks.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="licensecodes_csharp">
+<a href="#licensecodes_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Codes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Integer license codes indicating which licenses are attached to this disk.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="licenses_csharp">
+<a href="#licenses_csharp" style="color: inherit; text-decoration: inherit;">Licenses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of publicly visible licenses. Reserved for Google's use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="multiwriter_csharp">
 <a href="#multiwriter_csharp" style="color: inherit; text-decoration: inherit;">Multi<wbr>Writer</a>
@@ -1319,14 +1359,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A list of features to enable on the guest operating system. Applicable only for bootable images. Read Enabling guest operating system features to see a list of available options. Guest OS features are applied by merging initializeParams.guestOsFeatures and disks.guestOsFeatures{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="interface_go">
-<a href="#interface_go" style="color: inherit; text-decoration: inherit;">Interface</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span>
@@ -1334,6 +1366,22 @@ The following output properties are available:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this disk. These can be later modified by the disks.setLabels method. This field is only applicable for persistent disks.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="licensecodes_go">
+<a href="#licensecodes_go" style="color: inherit; text-decoration: inherit;">License<wbr>Codes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Integer license codes indicating which licenses are attached to this disk.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="licenses_go">
+<a href="#licenses_go" style="color: inherit; text-decoration: inherit;">Licenses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of publicly visible licenses. Reserved for Google's use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="multiwriter_go">
 <a href="#multiwriter_go" style="color: inherit; text-decoration: inherit;">Multi<wbr>Writer</a>
@@ -1451,14 +1499,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A list of features to enable on the guest operating system. Applicable only for bootable images. Read Enabling guest operating system features to see a list of available options. Guest OS features are applied by merging initializeParams.guestOsFeatures and disks.guestOsFeatures{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="interface_nodejs">
-<a href="#interface_nodejs" style="color: inherit; text-decoration: inherit;">interface</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
@@ -1466,6 +1506,22 @@ The following output properties are available:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this disk. These can be later modified by the disks.setLabels method. This field is only applicable for persistent disks.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="licensecodes_nodejs">
+<a href="#licensecodes_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Codes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Integer license codes indicating which licenses are attached to this disk.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="licenses_nodejs">
+<a href="#licenses_nodejs" style="color: inherit; text-decoration: inherit;">licenses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of publicly visible licenses. Reserved for Google's use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="multiwriter_nodejs">
 <a href="#multiwriter_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Writer</a>
@@ -1583,14 +1639,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A list of features to enable on the guest operating system. Applicable only for bootable images. Read Enabling guest operating system features to see a list of available options. Guest OS features are applied by merging initializeParams.guestOsFeatures and disks.guestOsFeatures{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="interface_python">
-<a href="#interface_python" style="color: inherit; text-decoration: inherit;">interface</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
@@ -1598,6 +1646,22 @@ The following output properties are available:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this disk. These can be later modified by the disks.setLabels method. This field is only applicable for persistent disks.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="license_codes_python">
+<a href="#license_codes_python" style="color: inherit; text-decoration: inherit;">license_<wbr>codes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Integer license codes indicating which licenses are attached to this disk.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="licenses_python">
+<a href="#licenses_python" style="color: inherit; text-decoration: inherit;">licenses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of publicly visible licenses. Reserved for Google's use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="multi_writer_python">
 <a href="#multi_writer_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>writer</a>
@@ -1775,6 +1839,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Any valid publicly visible licenses.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="locked_csharp">
+<a href="#locked_csharp" style="color: inherit; text-decoration: inherit;">Locked</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to indicate the attached disk is locked. The locked disk is not allowed to be detached from the instance, or to be used as the source of the snapshot creation, and the image creation. The instance with at least one locked attached disk is not allow to be used as source of machine image creation, instant snapshot creation, and not allowed to be deleted with --keep-disk parameter set to true for locked disks.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="mode_csharp">
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span>
@@ -1922,6 +1994,14 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Any valid publicly visible licenses.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="locked_go">
+<a href="#locked_go" style="color: inherit; text-decoration: inherit;">Locked</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to indicate the attached disk is locked. The locked disk is not allowed to be detached from the instance, or to be used as the source of the snapshot creation, and the image creation. The instance with at least one locked attached disk is not allow to be used as source of machine image creation, instant snapshot creation, and not allowed to be deleted with --keep-disk parameter set to true for locked disks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_go">
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -2071,6 +2151,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Any valid publicly visible licenses.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="locked_nodejs">
+<a href="#locked_nodejs" style="color: inherit; text-decoration: inherit;">locked</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to indicate the attached disk is locked. The locked disk is not allowed to be detached from the instance, or to be used as the source of the snapshot creation, and the image creation. The instance with at least one locked attached disk is not allow to be used as source of machine image creation, instant snapshot creation, and not allowed to be deleted with --keep-disk parameter set to true for locked disks.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="mode_nodejs">
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
@@ -2219,6 +2307,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Any valid publicly visible licenses.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="locked_python">
+<a href="#locked_python" style="color: inherit; text-decoration: inherit;">locked</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to indicate the attached disk is locked. The locked disk is not allowed to be detached from the instance, or to be used as the source of the snapshot creation, and the image creation. The instance with at least one locked attached disk is not allow to be used as source of machine image creation, instant snapshot creation, and not allowed to be deleted with --keep-disk parameter set to true for locked disks.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="mode_python">
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
@@ -2333,7 +2429,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the encryption key that is stored in Google Cloud KMS.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the encryption key that is stored in Google Cloud KMS. For example: "kmsKeyName": "projects/kms_project_id/locations/region/keyRings/ key_region/cryptoKeys/key {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kmskeyserviceaccount_csharp">
 <a href="#kmskeyserviceaccount_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Service<wbr>Account</a>
@@ -2341,7 +2437,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used. For example: "kmsKeyServiceAccount": "name@project_id.iam.gserviceaccount.com/ {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rawkey_csharp">
 <a href="#rawkey_csharp" style="color: inherit; text-decoration: inherit;">Raw<wbr>Key</a>
@@ -2349,7 +2445,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey. For example: "rawKey": "SGVsbG8gZnJvbSBHb29nbGUgQ2xvdWQgUGxhdGZvcm0=" {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rsaencryptedkey_csharp">
 <a href="#rsaencryptedkey_csharp" style="color: inherit; text-decoration: inherit;">Rsa<wbr>Encrypted<wbr>Key</a>
@@ -2357,7 +2453,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource. The key must meet the following requirements before you can provide it to Compute Engine: 1. The key is wrapped using a RSA public key certificate provided by Google. 2. After being wrapped, the key must be encoded in RFC 4648 base64 encoding. Gets the RSA public key certificate provided by Google at: https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem {{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey. For example: "rsaEncryptedKey": "ieCx/NcW06PcT7Ep1X6LUTc/hLvUDYyzSZPPVCVPTVEohpeHASqC8uw5TzyO9U+Fka9JFH z0mBibXUInrC/jEk014kCK/NPjYgEMOyssZ4ZINPKxlUh2zn1bV+MCaTICrdmuSBTWlUUiFoD D6PYznLwh8ZNdaheCeZ8ewEXgFQ8V+sDroLaN3Xs3MDTXQEMMoNUXMCZEIpg9Vtp9x2oe==" The key must meet the following requirements before you can provide it to Compute Engine: 1. The key is wrapped using a RSA public key certificate provided by Google. 2. After being wrapped, the key must be encoded in RFC 4648 base64 encoding. Gets the RSA public key certificate provided by Google at: https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sha256_csharp">
 <a href="#sha256_csharp" style="color: inherit; text-decoration: inherit;">Sha256</a>
@@ -2377,7 +2473,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the encryption key that is stored in Google Cloud KMS.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the encryption key that is stored in Google Cloud KMS. For example: "kmsKeyName": "projects/kms_project_id/locations/region/keyRings/ key_region/cryptoKeys/key {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kmskeyserviceaccount_go">
 <a href="#kmskeyserviceaccount_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Service<wbr>Account</a>
@@ -2385,7 +2481,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used. For example: "kmsKeyServiceAccount": "name@project_id.iam.gserviceaccount.com/ {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rawkey_go">
 <a href="#rawkey_go" style="color: inherit; text-decoration: inherit;">Raw<wbr>Key</a>
@@ -2393,7 +2489,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey. For example: "rawKey": "SGVsbG8gZnJvbSBHb29nbGUgQ2xvdWQgUGxhdGZvcm0=" {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rsaencryptedkey_go">
 <a href="#rsaencryptedkey_go" style="color: inherit; text-decoration: inherit;">Rsa<wbr>Encrypted<wbr>Key</a>
@@ -2401,7 +2497,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource. The key must meet the following requirements before you can provide it to Compute Engine: 1. The key is wrapped using a RSA public key certificate provided by Google. 2. After being wrapped, the key must be encoded in RFC 4648 base64 encoding. Gets the RSA public key certificate provided by Google at: https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem {{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey. For example: "rsaEncryptedKey": "ieCx/NcW06PcT7Ep1X6LUTc/hLvUDYyzSZPPVCVPTVEohpeHASqC8uw5TzyO9U+Fka9JFH z0mBibXUInrC/jEk014kCK/NPjYgEMOyssZ4ZINPKxlUh2zn1bV+MCaTICrdmuSBTWlUUiFoD D6PYznLwh8ZNdaheCeZ8ewEXgFQ8V+sDroLaN3Xs3MDTXQEMMoNUXMCZEIpg9Vtp9x2oe==" The key must meet the following requirements before you can provide it to Compute Engine: 1. The key is wrapped using a RSA public key certificate provided by Google. 2. After being wrapped, the key must be encoded in RFC 4648 base64 encoding. Gets the RSA public key certificate provided by Google at: https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sha256_go">
 <a href="#sha256_go" style="color: inherit; text-decoration: inherit;">Sha256</a>
@@ -2421,7 +2517,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the encryption key that is stored in Google Cloud KMS.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the encryption key that is stored in Google Cloud KMS. For example: "kmsKeyName": "projects/kms_project_id/locations/region/keyRings/ key_region/cryptoKeys/key {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kmskeyserviceaccount_nodejs">
 <a href="#kmskeyserviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Service<wbr>Account</a>
@@ -2429,7 +2525,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used. For example: "kmsKeyServiceAccount": "name@project_id.iam.gserviceaccount.com/ {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rawkey_nodejs">
 <a href="#rawkey_nodejs" style="color: inherit; text-decoration: inherit;">raw<wbr>Key</a>
@@ -2437,7 +2533,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey. For example: "rawKey": "SGVsbG8gZnJvbSBHb29nbGUgQ2xvdWQgUGxhdGZvcm0=" {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rsaencryptedkey_nodejs">
 <a href="#rsaencryptedkey_nodejs" style="color: inherit; text-decoration: inherit;">rsa<wbr>Encrypted<wbr>Key</a>
@@ -2445,7 +2541,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource. The key must meet the following requirements before you can provide it to Compute Engine: 1. The key is wrapped using a RSA public key certificate provided by Google. 2. After being wrapped, the key must be encoded in RFC 4648 base64 encoding. Gets the RSA public key certificate provided by Google at: https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem {{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey. For example: "rsaEncryptedKey": "ieCx/NcW06PcT7Ep1X6LUTc/hLvUDYyzSZPPVCVPTVEohpeHASqC8uw5TzyO9U+Fka9JFH z0mBibXUInrC/jEk014kCK/NPjYgEMOyssZ4ZINPKxlUh2zn1bV+MCaTICrdmuSBTWlUUiFoD D6PYznLwh8ZNdaheCeZ8ewEXgFQ8V+sDroLaN3Xs3MDTXQEMMoNUXMCZEIpg9Vtp9x2oe==" The key must meet the following requirements before you can provide it to Compute Engine: 1. The key is wrapped using a RSA public key certificate provided by Google. 2. After being wrapped, the key must be encoded in RFC 4648 base64 encoding. Gets the RSA public key certificate provided by Google at: https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sha256_nodejs">
 <a href="#sha256_nodejs" style="color: inherit; text-decoration: inherit;">sha256</a>
@@ -2465,7 +2561,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the encryption key that is stored in Google Cloud KMS.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the encryption key that is stored in Google Cloud KMS. For example: "kmsKeyName": "projects/kms_project_id/locations/region/keyRings/ key_region/cryptoKeys/key {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kms_key_service_account_python">
 <a href="#kms_key_service_account_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>service_<wbr>account</a>
@@ -2473,7 +2569,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used. For example: "kmsKeyServiceAccount": "name@project_id.iam.gserviceaccount.com/ {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="raw_key_python">
 <a href="#raw_key_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>key</a>
@@ -2481,7 +2577,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey. For example: "rawKey": "SGVsbG8gZnJvbSBHb29nbGUgQ2xvdWQgUGxhdGZvcm0=" {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rsa_encrypted_key_python">
 <a href="#rsa_encrypted_key_python" style="color: inherit; text-decoration: inherit;">rsa_<wbr>encrypted_<wbr>key</a>
@@ -2489,7 +2585,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource. The key must meet the following requirements before you can provide it to Compute Engine: 1. The key is wrapped using a RSA public key certificate provided by Google. 2. After being wrapped, the key must be encoded in RFC 4648 base64 encoding. Gets the RSA public key certificate provided by Google at: https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem {{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey. For example: "rsaEncryptedKey": "ieCx/NcW06PcT7Ep1X6LUTc/hLvUDYyzSZPPVCVPTVEohpeHASqC8uw5TzyO9U+Fka9JFH z0mBibXUInrC/jEk014kCK/NPjYgEMOyssZ4ZINPKxlUh2zn1bV+MCaTICrdmuSBTWlUUiFoD D6PYznLwh8ZNdaheCeZ8ewEXgFQ8V+sDroLaN3Xs3MDTXQEMMoNUXMCZEIpg9Vtp9x2oe==" The key must meet the following requirements before you can provide it to Compute Engine: 1. The key is wrapped using a RSA public key certificate provided by Google. 2. After being wrapped, the key must be encoded in RFC 4648 base64 encoding. Gets the RSA public key certificate provided by Google at: https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sha256_python">
 <a href="#sha256_python" style="color: inherit; text-decoration: inherit;">sha256</a>
@@ -3101,7 +3197,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}PostKeyRevocationActionType of the instance.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}PostKeyRevocationActionType of the instance.(will be deprecated soon){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privateipv6googleaccess_csharp">
 <a href="#privateipv6googleaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ipv6Google<wbr>Access</a>
@@ -3289,7 +3385,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}PostKeyRevocationActionType of the instance.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}PostKeyRevocationActionType of the instance.(will be deprecated soon){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privateipv6googleaccess_go">
 <a href="#privateipv6googleaccess_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ipv6Google<wbr>Access</a>
@@ -3477,7 +3573,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}PostKeyRevocationActionType of the instance.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}PostKeyRevocationActionType of the instance.(will be deprecated soon){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privateipv6googleaccess_nodejs">
 <a href="#privateipv6googleaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ipv6Google<wbr>Access</a>
@@ -3665,7 +3761,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}PostKeyRevocationActionType of the instance.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}PostKeyRevocationActionType of the instance.(will be deprecated soon){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="private_ipv6_google_access_python">
 <a href="#private_ipv6_google_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ipv6_<wbr>google_<wbr>access</a>
@@ -4983,6 +5079,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specify the time in seconds for host error detection, the value must be within the range of [90, 330] with the increment of 30, if unset, the default behavior of host error recovery will be used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="instanceterminationaction_csharp">
+<a href="#instanceterminationaction_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Termination<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the termination action for the instance.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="latencytolerant_csharp">
 <a href="#latencytolerant_csharp" style="color: inherit; text-decoration: inherit;">Latency<wbr>Tolerant</a>
 </span>
@@ -5098,6 +5202,14 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify the time in seconds for host error detection, the value must be within the range of [90, 330] with the increment of 30, if unset, the default behavior of host error recovery will be used.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="instanceterminationaction_go">
+<a href="#instanceterminationaction_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Termination<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the termination action for the instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="latencytolerant_go">
 <a href="#latencytolerant_go" style="color: inherit; text-decoration: inherit;">Latency<wbr>Tolerant</a>
@@ -5215,6 +5327,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specify the time in seconds for host error detection, the value must be within the range of [90, 330] with the increment of 30, if unset, the default behavior of host error recovery will be used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="instanceterminationaction_nodejs">
+<a href="#instanceterminationaction_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Termination<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the termination action for the instance.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="latencytolerant_nodejs">
 <a href="#latencytolerant_nodejs" style="color: inherit; text-decoration: inherit;">latency<wbr>Tolerant</a>
 </span>
@@ -5330,6 +5450,14 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify the time in seconds for host error detection, the value must be within the range of [90, 330] with the increment of 30, if unset, the default behavior of host error recovery will be used.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="instance_termination_action_python">
+<a href="#instance_termination_action_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>termination_<wbr>action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the termination action for the instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="latency_tolerant_python">
 <a href="#latency_tolerant_python" style="color: inherit; text-decoration: inherit;">latency_<wbr>tolerant</a>

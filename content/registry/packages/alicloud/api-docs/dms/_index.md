@@ -13,14 +13,14 @@ Explore the resources and functions of the alicloud.dms module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="enterpriseinstance" title="EnterpriseInstance"><span class="symbol resource"></span>EnterpriseInstance</a></li>
-    <li><a href="enterpriseuser" title="EnterpriseUser"><span class="symbol resource"></span>EnterpriseUser</a></li>
+    <li><a href="enterpriseinstance" title="EnterpriseInstance"><span class="api-symbol api-symbol--resource"></span>EnterpriseInstance</a></li>
+    <li><a href="enterpriseuser" title="EnterpriseUser"><span class="api-symbol api-symbol--resource"></span>EnterpriseUser</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getenterpriseinstances" title="GetEnterpriseInstances"><span class="symbol function"></span>GetEnterpriseInstances</a></li>
-    <li><a href="getenterpriseusers" title="GetEnterpriseUsers"><span class="symbol function"></span>GetEnterpriseUsers</a></li>
+    <li><a href="getenterpriseinstances" title="GetEnterpriseInstances"><span class="api-symbol api-symbol--function"></span>GetEnterpriseInstances</a></li>
+    <li><a href="getenterpriseusers" title="GetEnterpriseUsers"><span class="api-symbol api-symbol--function"></span>GetEnterpriseUsers</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

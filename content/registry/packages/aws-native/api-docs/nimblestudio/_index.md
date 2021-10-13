@@ -13,10 +13,10 @@ Explore the resources and functions of the aws-native.nimblestudio module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="launchprofile" title="LaunchProfile"><span class="symbol resource"></span>LaunchProfile</a></li>
-    <li><a href="streamingimage" title="StreamingImage"><span class="symbol resource"></span>StreamingImage</a></li>
-    <li><a href="studio" title="Studio"><span class="symbol resource"></span>Studio</a></li>
-    <li><a href="studiocomponent" title="StudioComponent"><span class="symbol resource"></span>StudioComponent</a></li>
+    <li><a href="launchprofile" title="LaunchProfile"><span class="api-symbol api-symbol--resource"></span>LaunchProfile</a></li>
+    <li><a href="streamingimage" title="StreamingImage"><span class="api-symbol api-symbol--resource"></span>StreamingImage</a></li>
+    <li><a href="studio" title="Studio"><span class="api-symbol api-symbol--resource"></span>Studio</a></li>
+    <li><a href="studiocomponent" title="StudioComponent"><span class="api-symbol api-symbol--resource"></span>StudioComponent</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -26,6 +26,6 @@ Explore the resources and functions of the aws-native.nimblestudio module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.0</dd>
 </dl>
 

@@ -13,13 +13,13 @@ Explore the resources and functions of the aws-native.imagebuilder module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="component" title="Component"><span class="symbol resource"></span>Component</a></li>
-    <li><a href="containerrecipe" title="ContainerRecipe"><span class="symbol resource"></span>ContainerRecipe</a></li>
-    <li><a href="distributionconfiguration" title="DistributionConfiguration"><span class="symbol resource"></span>DistributionConfiguration</a></li>
-    <li><a href="image" title="Image"><span class="symbol resource"></span>Image</a></li>
-    <li><a href="imagepipeline" title="ImagePipeline"><span class="symbol resource"></span>ImagePipeline</a></li>
-    <li><a href="imagerecipe" title="ImageRecipe"><span class="symbol resource"></span>ImageRecipe</a></li>
-    <li><a href="infrastructureconfiguration" title="InfrastructureConfiguration"><span class="symbol resource"></span>InfrastructureConfiguration</a></li>
+    <li><a href="component" title="Component"><span class="api-symbol api-symbol--resource"></span>Component</a></li>
+    <li><a href="containerrecipe" title="ContainerRecipe"><span class="api-symbol api-symbol--resource"></span>ContainerRecipe</a></li>
+    <li><a href="distributionconfiguration" title="DistributionConfiguration"><span class="api-symbol api-symbol--resource"></span>DistributionConfiguration</a></li>
+    <li><a href="image" title="Image"><span class="api-symbol api-symbol--resource"></span>Image</a></li>
+    <li><a href="imagepipeline" title="ImagePipeline"><span class="api-symbol api-symbol--resource"></span>ImagePipeline</a></li>
+    <li><a href="imagerecipe" title="ImageRecipe"><span class="api-symbol api-symbol--resource"></span>ImageRecipe</a></li>
+    <li><a href="infrastructureconfiguration" title="InfrastructureConfiguration"><span class="api-symbol api-symbol--resource"></span>InfrastructureConfiguration</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -29,6 +29,6 @@ Explore the resources and functions of the aws-native.imagebuilder module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.0</dd>
 </dl>
 

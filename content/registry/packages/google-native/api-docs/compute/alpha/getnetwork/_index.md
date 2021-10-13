@@ -169,6 +169,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this field when you create the resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="enableulainternalipv6_csharp">
+<a href="#enableulainternalipv6_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Ula<wbr>Internal<wbr>Ipv6</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable ULA internal ipv6 on this network. Enabling this feature will assign a /48 from google defined ULA prefix fd20::/20. .{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="firewallpolicy_csharp">
 <a href="#firewallpolicy_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy</a>
 </span>
@@ -185,6 +193,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The gateway address for default routing out of the network, selected by GCP.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="internalipv6range_csharp">
+<a href="#internalipv6range_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>Ipv6Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}When enabling ula internal ipv6, caller optionally can specify the /48 range they want from the google defined ULA prefix fd20::/20. The input must be a valid /48 ULA IPv6 address and must be within the fd20::/20. Operation will fail if the speficied /48 is already in used by another resource. If the field is not speficied, then a /48 range will be randomly allocated from fd20::/20 and returned via this field. .{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
@@ -199,7 +215,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum Transmission Unit in bytes. The minimum value for this field is 1460 and the maximum value is 1500 bytes.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Maximum Transmission Unit in bytes. The minimum value for this field is 1460 and the maximum value is 1500 bytes. If unspecified, defaults to 1460.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -208,6 +224,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a lowercase letter, and all following characters (except for the last character) must be a dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="networkfirewallpolicyenforcementorder_csharp">
+<a href="#networkfirewallpolicyenforcementorder_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Firewall<wbr>Policy<wbr>Enforcement<wbr>Order</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peerings_csharp">
 <a href="#peerings_csharp" style="color: inherit; text-decoration: inherit;">Peerings</a>
@@ -277,6 +301,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this field when you create the resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="enableulainternalipv6_go">
+<a href="#enableulainternalipv6_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Ula<wbr>Internal<wbr>Ipv6</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable ULA internal ipv6 on this network. Enabling this feature will assign a /48 from google defined ULA prefix fd20::/20. .{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="firewallpolicy_go">
 <a href="#firewallpolicy_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy</a>
 </span>
@@ -293,6 +325,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The gateway address for default routing out of the network, selected by GCP.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="internalipv6range_go">
+<a href="#internalipv6range_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>Ipv6Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}When enabling ula internal ipv6, caller optionally can specify the /48 range they want from the google defined ULA prefix fd20::/20. The input must be a valid /48 ULA IPv6 address and must be within the fd20::/20. Operation will fail if the speficied /48 is already in used by another resource. If the field is not speficied, then a /48 range will be randomly allocated from fd20::/20 and returned via this field. .{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
@@ -307,7 +347,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum Transmission Unit in bytes. The minimum value for this field is 1460 and the maximum value is 1500 bytes.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Maximum Transmission Unit in bytes. The minimum value for this field is 1460 and the maximum value is 1500 bytes. If unspecified, defaults to 1460.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -316,6 +356,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a lowercase letter, and all following characters (except for the last character) must be a dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="networkfirewallpolicyenforcementorder_go">
+<a href="#networkfirewallpolicyenforcementorder_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Firewall<wbr>Policy<wbr>Enforcement<wbr>Order</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peerings_go">
 <a href="#peerings_go" style="color: inherit; text-decoration: inherit;">Peerings</a>
@@ -385,6 +433,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this field when you create the resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="enableulainternalipv6_nodejs">
+<a href="#enableulainternalipv6_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Ula<wbr>Internal<wbr>Ipv6</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable ULA internal ipv6 on this network. Enabling this feature will assign a /48 from google defined ULA prefix fd20::/20. .{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="firewallpolicy_nodejs">
 <a href="#firewallpolicy_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Policy</a>
 </span>
@@ -401,6 +457,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The gateway address for default routing out of the network, selected by GCP.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="internalipv6range_nodejs">
+<a href="#internalipv6range_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Ipv6Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}When enabling ula internal ipv6, caller optionally can specify the /48 range they want from the google defined ULA prefix fd20::/20. The input must be a valid /48 ULA IPv6 address and must be within the fd20::/20. Operation will fail if the speficied /48 is already in used by another resource. If the field is not speficied, then a /48 range will be randomly allocated from fd20::/20 and returned via this field. .{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
@@ -415,7 +479,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Maximum Transmission Unit in bytes. The minimum value for this field is 1460 and the maximum value is 1500 bytes.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Maximum Transmission Unit in bytes. The minimum value for this field is 1460 and the maximum value is 1500 bytes. If unspecified, defaults to 1460.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -424,6 +488,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a lowercase letter, and all following characters (except for the last character) must be a dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="networkfirewallpolicyenforcementorder_nodejs">
+<a href="#networkfirewallpolicyenforcementorder_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Firewall<wbr>Policy<wbr>Enforcement<wbr>Order</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peerings_nodejs">
 <a href="#peerings_nodejs" style="color: inherit; text-decoration: inherit;">peerings</a>
@@ -493,6 +565,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this field when you create the resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="enable_ula_internal_ipv6_python">
+<a href="#enable_ula_internal_ipv6_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>ula_<wbr>internal_<wbr>ipv6</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable ULA internal ipv6 on this network. Enabling this feature will assign a /48 from google defined ULA prefix fd20::/20. .{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="firewall_policy_python">
 <a href="#firewall_policy_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>policy</a>
 </span>
@@ -509,6 +589,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The gateway address for default routing out of the network, selected by GCP.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="internal_ipv6_range_python">
+<a href="#internal_ipv6_range_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>ipv6_<wbr>range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}When enabling ula internal ipv6, caller optionally can specify the /48 range they want from the google defined ULA prefix fd20::/20. The input must be a valid /48 ULA IPv6 address and must be within the fd20::/20. Operation will fail if the speficied /48 is already in used by another resource. If the field is not speficied, then a /48 range will be randomly allocated from fd20::/20 and returned via this field. .{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
@@ -523,7 +611,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum Transmission Unit in bytes. The minimum value for this field is 1460 and the maximum value is 1500 bytes.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Maximum Transmission Unit in bytes. The minimum value for this field is 1460 and the maximum value is 1500 bytes. If unspecified, defaults to 1460.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -532,6 +620,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a lowercase letter, and all following characters (except for the last character) must be a dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="network_firewall_policy_enforcement_order_python">
+<a href="#network_firewall_policy_enforcement_order_python" style="color: inherit; text-decoration: inherit;">network_<wbr>firewall_<wbr>policy_<wbr>enforcement_<wbr>order</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peerings_python">
 <a href="#peerings_python" style="color: inherit; text-decoration: inherit;">peerings</a>
@@ -625,7 +721,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always exported to peers and are not controlled by this field.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. IPv4 special-use ranges are always exported to peers and are not controlled by this field.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="importcustomroutes_csharp">
 <a href="#importcustomroutes_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Custom<wbr>Routes</a>
@@ -641,7 +737,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether subnet routes with public IP range are imported. The default value is false. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always imported from peers and are not controlled by this field.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Whether subnet routes with public IP range are imported. The default value is false. IPv4 special-use ranges are always imported from peers and are not controlled by this field.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -725,7 +821,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always exported to peers and are not controlled by this field.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. IPv4 special-use ranges are always exported to peers and are not controlled by this field.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="importcustomroutes_go">
 <a href="#importcustomroutes_go" style="color: inherit; text-decoration: inherit;">Import<wbr>Custom<wbr>Routes</a>
@@ -741,7 +837,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether subnet routes with public IP range are imported. The default value is false. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always imported from peers and are not controlled by this field.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Whether subnet routes with public IP range are imported. The default value is false. IPv4 special-use ranges are always imported from peers and are not controlled by this field.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -825,7 +921,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always exported to peers and are not controlled by this field.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. IPv4 special-use ranges are always exported to peers and are not controlled by this field.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="importcustomroutes_nodejs">
 <a href="#importcustomroutes_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Custom<wbr>Routes</a>
@@ -841,7 +937,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether subnet routes with public IP range are imported. The default value is false. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always imported from peers and are not controlled by this field.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Whether subnet routes with public IP range are imported. The default value is false. IPv4 special-use ranges are always imported from peers and are not controlled by this field.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -925,7 +1021,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always exported to peers and are not controlled by this field.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. IPv4 special-use ranges are always exported to peers and are not controlled by this field.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="import_custom_routes_python">
 <a href="#import_custom_routes_python" style="color: inherit; text-decoration: inherit;">import_<wbr>custom_<wbr>routes</a>
@@ -941,7 +1037,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether subnet routes with public IP range are imported. The default value is false. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always imported from peers and are not controlled by this field.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Whether subnet routes with public IP range are imported. The default value is false. IPv4 special-use ranges are always imported from peers and are not controlled by this field.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>

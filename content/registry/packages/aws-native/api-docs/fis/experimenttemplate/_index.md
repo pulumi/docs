@@ -29,12 +29,12 @@ Resource schema for AWS::FIS::ExperimentTemplate
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ExperimentTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                       <span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[ExperimentTemplateExperimentTemplateActionMapArgs]</span> = None<span class="p">,</span>
+                       <span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[ExperimentTemplateActionMapArgs]</span> = None<span class="p">,</span>
                        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                        <span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                       <span class="nx">stop_conditions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ExperimentTemplateExperimentTemplateStopConditionArgs]]</span> = None<span class="p">,</span>
+                       <span class="nx">stop_conditions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ExperimentTemplateStopConditionArgs]]</span> = None<span class="p">,</span>
                        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">,</span>
-                       <span class="nx">targets</span><span class="p">:</span> <span class="nx">Optional[ExperimentTemplateExperimentTemplateTargetMapArgs]</span> = None<span class="p">)</span>
+                       <span class="nx">targets</span><span class="p">:</span> <span class="nx">Optional[ExperimentTemplateTargetMapArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ExperimentTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ExperimentTemplateArgs</a></span><span class="p">,</span>
@@ -184,7 +184,7 @@ The ExperimentTemplate resource accepts the following [input]({{< relref "/docs/
 <a href="#stopconditions_csharp" style="color: inherit; text-decoration: inherit;">Stop<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#experimenttemplateexperimenttemplatestopcondition">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>FIS.<wbr>Inputs.<wbr>Experiment<wbr>Template<wbr>Experiment<wbr>Template<wbr>Stop<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#experimenttemplatestopcondition">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>FIS.<wbr>Inputs.<wbr>Experiment<wbr>Template<wbr>Stop<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -200,7 +200,7 @@ The ExperimentTemplate resource accepts the following [input]({{< relref "/docs/
 <a href="#targets_csharp" style="color: inherit; text-decoration: inherit;">Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#experimenttemplateexperimenttemplatetargetmap">Pulumi.<wbr>Aws<wbr>Native.<wbr>FIS.<wbr>Inputs.<wbr>Experiment<wbr>Template<wbr>Experiment<wbr>Template<wbr>Target<wbr>Map<wbr>Args</a></span>
+        <span class="property-type"><a href="#experimenttemplatetargetmap">Pulumi.<wbr>Aws<wbr>Native.<wbr>FIS.<wbr>Inputs.<wbr>Experiment<wbr>Template<wbr>Target<wbr>Map<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -208,7 +208,7 @@ The ExperimentTemplate resource accepts the following [input]({{< relref "/docs/
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#experimenttemplateexperimenttemplateactionmap">Pulumi.<wbr>Aws<wbr>Native.<wbr>FIS.<wbr>Inputs.<wbr>Experiment<wbr>Template<wbr>Experiment<wbr>Template<wbr>Action<wbr>Map<wbr>Args</a></span>
+        <span class="property-type"><a href="#experimenttemplateactionmap">Pulumi.<wbr>Aws<wbr>Native.<wbr>FIS.<wbr>Inputs.<wbr>Experiment<wbr>Template<wbr>Action<wbr>Map<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -236,7 +236,7 @@ The ExperimentTemplate resource accepts the following [input]({{< relref "/docs/
 <a href="#stopconditions_go" style="color: inherit; text-decoration: inherit;">Stop<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#experimenttemplateexperimenttemplatestopcondition">[]Experiment<wbr>Template<wbr>Experiment<wbr>Template<wbr>Stop<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#experimenttemplatestopcondition">[]Experiment<wbr>Template<wbr>Stop<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -252,7 +252,7 @@ The ExperimentTemplate resource accepts the following [input]({{< relref "/docs/
 <a href="#targets_go" style="color: inherit; text-decoration: inherit;">Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#experimenttemplateexperimenttemplatetargetmap">Experiment<wbr>Template<wbr>Experiment<wbr>Template<wbr>Target<wbr>Map<wbr>Args</a></span>
+        <span class="property-type"><a href="#experimenttemplatetargetmap">Experiment<wbr>Template<wbr>Target<wbr>Map<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -260,7 +260,7 @@ The ExperimentTemplate resource accepts the following [input]({{< relref "/docs/
 <a href="#actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#experimenttemplateexperimenttemplateactionmap">Experiment<wbr>Template<wbr>Experiment<wbr>Template<wbr>Action<wbr>Map<wbr>Args</a></span>
+        <span class="property-type"><a href="#experimenttemplateactionmap">Experiment<wbr>Template<wbr>Action<wbr>Map<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -288,7 +288,7 @@ The ExperimentTemplate resource accepts the following [input]({{< relref "/docs/
 <a href="#stopconditions_nodejs" style="color: inherit; text-decoration: inherit;">stop<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#experimenttemplateexperimenttemplatestopcondition">Experiment<wbr>Template<wbr>Experiment<wbr>Template<wbr>Stop<wbr>Condition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#experimenttemplatestopcondition">Experiment<wbr>Template<wbr>Stop<wbr>Condition<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -304,7 +304,7 @@ The ExperimentTemplate resource accepts the following [input]({{< relref "/docs/
 <a href="#targets_nodejs" style="color: inherit; text-decoration: inherit;">targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#experimenttemplateexperimenttemplatetargetmap">Experiment<wbr>Template<wbr>Experiment<wbr>Template<wbr>Target<wbr>Map<wbr>Args</a></span>
+        <span class="property-type"><a href="#experimenttemplatetargetmap">Experiment<wbr>Template<wbr>Target<wbr>Map<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -312,7 +312,7 @@ The ExperimentTemplate resource accepts the following [input]({{< relref "/docs/
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#experimenttemplateexperimenttemplateactionmap">Experiment<wbr>Template<wbr>Experiment<wbr>Template<wbr>Action<wbr>Map<wbr>Args</a></span>
+        <span class="property-type"><a href="#experimenttemplateactionmap">Experiment<wbr>Template<wbr>Action<wbr>Map<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -340,7 +340,7 @@ The ExperimentTemplate resource accepts the following [input]({{< relref "/docs/
 <a href="#stop_conditions_python" style="color: inherit; text-decoration: inherit;">stop_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#experimenttemplateexperimenttemplatestopcondition">Sequence[Experiment<wbr>Template<wbr>Experiment<wbr>Template<wbr>Stop<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#experimenttemplatestopcondition">Sequence[Experiment<wbr>Template<wbr>Stop<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -356,7 +356,7 @@ The ExperimentTemplate resource accepts the following [input]({{< relref "/docs/
 <a href="#targets_python" style="color: inherit; text-decoration: inherit;">targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#experimenttemplateexperimenttemplatetargetmap">Experiment<wbr>Template<wbr>Experiment<wbr>Template<wbr>Target<wbr>Map<wbr>Args</a></span>
+        <span class="property-type"><a href="#experimenttemplatetargetmap">Experiment<wbr>Template<wbr>Target<wbr>Map<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -364,7 +364,7 @@ The ExperimentTemplate resource accepts the following [input]({{< relref "/docs/
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#experimenttemplateexperimenttemplateactionmap">Experiment<wbr>Template<wbr>Experiment<wbr>Template<wbr>Action<wbr>Map<wbr>Args</a></span>
+        <span class="property-type"><a href="#experimenttemplateactionmap">Experiment<wbr>Template<wbr>Action<wbr>Map<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -434,7 +434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="experimenttemplateexperimenttemplatestopcondition">Experiment<wbr>Template<wbr>Experiment<wbr>Template<wbr>Stop<wbr>Condition</h4>
+<h4 id="experimenttemplatestopcondition">Experiment<wbr>Template<wbr>Stop<wbr>Condition</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"

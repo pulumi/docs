@@ -189,7 +189,7 @@ const sqlPool = new azure_native.synapse.SqlPool("sqlPool", {
 <span class="k">def </span><span class="nx">SqlPool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
             <span class="nx">collation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-            <span class="nx">create_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">create_mode</span><span class="p">:</span> <span class="nx">Optional[Union[str, CreateMode]]</span> = None<span class="p">,</span>
             <span class="nx">creation_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">max_size_bytes</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">,</span>
@@ -361,9 +361,17 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#createmode">Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Create<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}What is this?{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the mode of sql pool creation.
+
+Default: regular sql pool creation.
+
+PointInTimeRestore: Creates a sql pool by restoring a point in time backup of an existing sql pool. sourceDatabaseId must be specified as the resource ID of the existing sql pool, and restorePointInTime must be specified.
+
+Recovery: Creates a sql pool by a geo-replicated backup. sourceDatabaseId  must be specified as the recoverableDatabaseId to restore.
+
+Restore: Creates a sql pool by restoring a backup of a deleted sql  pool. SourceDatabaseId should be the sql pool's original resource ID. SourceDatabaseId and sourceDatabaseDeletionDate must be specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationdate_csharp">
 <a href="#creationdate_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
@@ -493,9 +501,17 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#createmode_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#createmode">Create<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}What is this?{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the mode of sql pool creation.
+
+Default: regular sql pool creation.
+
+PointInTimeRestore: Creates a sql pool by restoring a point in time backup of an existing sql pool. sourceDatabaseId must be specified as the resource ID of the existing sql pool, and restorePointInTime must be specified.
+
+Recovery: Creates a sql pool by a geo-replicated backup. sourceDatabaseId  must be specified as the recoverableDatabaseId to restore.
+
+Restore: Creates a sql pool by restoring a backup of a deleted sql  pool. SourceDatabaseId should be the sql pool's original resource ID. SourceDatabaseId and sourceDatabaseDeletionDate must be specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationdate_go">
 <a href="#creationdate_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
@@ -625,9 +641,17 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#createmode">Create<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}What is this?{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the mode of sql pool creation.
+
+Default: regular sql pool creation.
+
+PointInTimeRestore: Creates a sql pool by restoring a point in time backup of an existing sql pool. sourceDatabaseId must be specified as the resource ID of the existing sql pool, and restorePointInTime must be specified.
+
+Recovery: Creates a sql pool by a geo-replicated backup. sourceDatabaseId  must be specified as the recoverableDatabaseId to restore.
+
+Restore: Creates a sql pool by restoring a backup of a deleted sql  pool. SourceDatabaseId should be the sql pool's original resource ID. SourceDatabaseId and sourceDatabaseDeletionDate must be specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationdate_nodejs">
 <a href="#creationdate_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Date</a>
@@ -757,9 +781,17 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">str | <a href="#createmode">Create<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}What is this?{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the mode of sql pool creation.
+
+Default: regular sql pool creation.
+
+PointInTimeRestore: Creates a sql pool by restoring a point in time backup of an existing sql pool. sourceDatabaseId must be specified as the resource ID of the existing sql pool, and restorePointInTime must be specified.
+
+Recovery: Creates a sql pool by a geo-replicated backup. sourceDatabaseId  must be specified as the recoverableDatabaseId to restore.
+
+Restore: Creates a sql pool by restoring a backup of a deleted sql  pool. SourceDatabaseId should be the sql pool's original resource ID. SourceDatabaseId and sourceDatabaseDeletionDate must be specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creation_date_python">
 <a href="#creation_date_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>date</a>
@@ -986,6 +1018,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="createmode">Create<wbr>Mode</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Default</dt>
+    <dd>Default</dd><dt>Point<wbr>In<wbr>Time<wbr>Restore</dt>
+    <dd>PointInTimeRestore</dd><dt>Recovery</dt>
+    <dd>Recovery</dd><dt>Restore</dt>
+    <dd>Restore</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Create<wbr>Mode<wbr>Default</dt>
+    <dd>Default</dd><dt>Create<wbr>Mode<wbr>Point<wbr>In<wbr>Time<wbr>Restore</dt>
+    <dd>PointInTimeRestore</dd><dt>Create<wbr>Mode<wbr>Recovery</dt>
+    <dd>Recovery</dd><dt>Create<wbr>Mode<wbr>Restore</dt>
+    <dd>Restore</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Default</dt>
+    <dd>Default</dd><dt>Point<wbr>In<wbr>Time<wbr>Restore</dt>
+    <dd>PointInTimeRestore</dd><dt>Recovery</dt>
+    <dd>Recovery</dd><dt>Restore</dt>
+    <dd>Restore</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DEFAULT</dt>
+    <dd>Default</dd><dt>POINT_IN_TIME_RESTORE</dt>
+    <dd>PointInTimeRestore</dd><dt>RECOVERY</dt>
+    <dd>Recovery</dd><dt>RESTORE</dt>
+    <dd>Restore</dd></dl>
+{{% /choosable %}}
 
 <h4 id="sku">Sku</h4>
 

@@ -29,6 +29,7 @@ Creates an agent in the specified location. Note: You should always train a flow
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Agent</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+          <span class="nx">advanced_settings</span><span class="p">:</span> <span class="nx">Optional[GoogleCloudDialogflowCxV3beta1AdvancedSettingsArgs]</span> = None<span class="p">,</span>
           <span class="nx">avatar_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">default_language_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -196,6 +197,14 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}The time zone of the agent from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="advancedsettings_csharp">
+<a href="#advancedsettings_csharp" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1advancedsettings">Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V3Beta1.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Advanced<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Hierarchical advanced settings for this agent. The settings exposed at the lower level overrides the settings exposed at the higher level.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="avataruri_csharp">
 <a href="#avataruri_csharp" style="color: inherit; text-decoration: inherit;">Avatar<wbr>Uri</a>
 </span>
@@ -226,7 +235,7 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates if stackdriver logging is enabled for the agent.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Indicates if stackdriver logging is enabled for the agent. Please use agent.advanced_settings instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -312,6 +321,14 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}The time zone of the agent from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="advancedsettings_go">
+<a href="#advancedsettings_go" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1advancedsettings">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Advanced<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Hierarchical advanced settings for this agent. The settings exposed at the lower level overrides the settings exposed at the higher level.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="avataruri_go">
 <a href="#avataruri_go" style="color: inherit; text-decoration: inherit;">Avatar<wbr>Uri</a>
 </span>
@@ -342,7 +359,7 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates if stackdriver logging is enabled for the agent.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Indicates if stackdriver logging is enabled for the agent. Please use agent.advanced_settings instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -428,6 +445,14 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}The time zone of the agent from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="advancedsettings_nodejs">
+<a href="#advancedsettings_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1advancedsettings">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Advanced<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Hierarchical advanced settings for this agent. The settings exposed at the lower level overrides the settings exposed at the higher level.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="avataruri_nodejs">
 <a href="#avataruri_nodejs" style="color: inherit; text-decoration: inherit;">avatar<wbr>Uri</a>
 </span>
@@ -458,7 +483,7 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates if stackdriver logging is enabled for the agent.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Indicates if stackdriver logging is enabled for the agent. Please use agent.advanced_settings instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -544,6 +569,14 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}The time zone of the agent from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="advanced_settings_python">
+<a href="#advanced_settings_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1advancedsettings">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Advanced<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Hierarchical advanced settings for this agent. The settings exposed at the lower level overrides the settings exposed at the higher level.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="avatar_uri_python">
 <a href="#avatar_uri_python" style="color: inherit; text-decoration: inherit;">avatar_<wbr>uri</a>
 </span>
@@ -574,7 +607,7 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates if stackdriver logging is enabled for the agent.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Indicates if stackdriver logging is enabled for the agent. Please use agent.advanced_settings instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -697,6 +730,270 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="googleclouddialogflowcxv3beta1advancedsettings">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Advanced<wbr>Settings</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="loggingsettings_csharp">
+<a href="#loggingsettings_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1advancedsettingsloggingsettings">Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V3Beta1.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Advanced<wbr>Settings<wbr>Logging<wbr>Settings</a></span>
+    </dt>
+    <dd>{{% md %}}Settings for logging. Settings for Dialogflow History, Contact Center messages, StackDriver logs, and speech logging. Exposed at the following levels: - Agent level.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="loggingsettings_go">
+<a href="#loggingsettings_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1advancedsettingsloggingsettings">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Advanced<wbr>Settings<wbr>Logging<wbr>Settings</a></span>
+    </dt>
+    <dd>{{% md %}}Settings for logging. Settings for Dialogflow History, Contact Center messages, StackDriver logs, and speech logging. Exposed at the following levels: - Agent level.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="loggingsettings_nodejs">
+<a href="#loggingsettings_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1advancedsettingsloggingsettings">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Advanced<wbr>Settings<wbr>Logging<wbr>Settings</a></span>
+    </dt>
+    <dd>{{% md %}}Settings for logging. Settings for Dialogflow History, Contact Center messages, StackDriver logs, and speech logging. Exposed at the following levels: - Agent level.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="logging_settings_python">
+<a href="#logging_settings_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1advancedsettingsloggingsettings">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Advanced<wbr>Settings<wbr>Logging<wbr>Settings</a></span>
+    </dt>
+    <dd>{{% md %}}Settings for logging. Settings for Dialogflow History, Contact Center messages, StackDriver logs, and speech logging. Exposed at the following levels: - Agent level.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googleclouddialogflowcxv3beta1advancedsettingsloggingsettings">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Advanced<wbr>Settings<wbr>Logging<wbr>Settings</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enableinteractionlogging_csharp">
+<a href="#enableinteractionlogging_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Interaction<wbr>Logging</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, DF Interaction logging is currently enabled.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enablestackdriverlogging_csharp">
+<a href="#enablestackdriverlogging_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Stackdriver<wbr>Logging</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, StackDriver logging is currently enabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enableinteractionlogging_go">
+<a href="#enableinteractionlogging_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Interaction<wbr>Logging</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, DF Interaction logging is currently enabled.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enablestackdriverlogging_go">
+<a href="#enablestackdriverlogging_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Stackdriver<wbr>Logging</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, StackDriver logging is currently enabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enableinteractionlogging_nodejs">
+<a href="#enableinteractionlogging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Interaction<wbr>Logging</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If true, DF Interaction logging is currently enabled.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enablestackdriverlogging_nodejs">
+<a href="#enablestackdriverlogging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Stackdriver<wbr>Logging</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If true, StackDriver logging is currently enabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enable_interaction_logging_python">
+<a href="#enable_interaction_logging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>interaction_<wbr>logging</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, DF Interaction logging is currently enabled.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enable_stackdriver_logging_python">
+<a href="#enable_stackdriver_logging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>stackdriver_<wbr>logging</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, StackDriver logging is currently enabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googleclouddialogflowcxv3beta1advancedsettingsloggingsettingsresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Advanced<wbr>Settings<wbr>Logging<wbr>Settings<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enableinteractionlogging_csharp">
+<a href="#enableinteractionlogging_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Interaction<wbr>Logging</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, DF Interaction logging is currently enabled.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enablestackdriverlogging_csharp">
+<a href="#enablestackdriverlogging_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Stackdriver<wbr>Logging</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, StackDriver logging is currently enabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enableinteractionlogging_go">
+<a href="#enableinteractionlogging_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Interaction<wbr>Logging</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, DF Interaction logging is currently enabled.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enablestackdriverlogging_go">
+<a href="#enablestackdriverlogging_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Stackdriver<wbr>Logging</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, StackDriver logging is currently enabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enableinteractionlogging_nodejs">
+<a href="#enableinteractionlogging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Interaction<wbr>Logging</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If true, DF Interaction logging is currently enabled.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enablestackdriverlogging_nodejs">
+<a href="#enablestackdriverlogging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Stackdriver<wbr>Logging</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If true, StackDriver logging is currently enabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enable_interaction_logging_python">
+<a href="#enable_interaction_logging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>interaction_<wbr>logging</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, DF Interaction logging is currently enabled.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enable_stackdriver_logging_python">
+<a href="#enable_stackdriver_logging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>stackdriver_<wbr>logging</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, StackDriver logging is currently enabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googleclouddialogflowcxv3beta1advancedsettingsresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Advanced<wbr>Settings<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="loggingsettings_csharp">
+<a href="#loggingsettings_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1advancedsettingsloggingsettingsresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V3Beta1.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Advanced<wbr>Settings<wbr>Logging<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Settings for logging. Settings for Dialogflow History, Contact Center messages, StackDriver logs, and speech logging. Exposed at the following levels: - Agent level.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="loggingsettings_go">
+<a href="#loggingsettings_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1advancedsettingsloggingsettingsresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Advanced<wbr>Settings<wbr>Logging<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Settings for logging. Settings for Dialogflow History, Contact Center messages, StackDriver logs, and speech logging. Exposed at the following levels: - Agent level.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="loggingsettings_nodejs">
+<a href="#loggingsettings_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1advancedsettingsloggingsettingsresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Advanced<wbr>Settings<wbr>Logging<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Settings for logging. Settings for Dialogflow History, Contact Center messages, StackDriver logs, and speech logging. Exposed at the following levels: - Agent level.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="logging_settings_python">
+<a href="#logging_settings_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1advancedsettingsloggingsettingsresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Advanced<wbr>Settings<wbr>Logging<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Settings for logging. Settings for Dialogflow History, Contact Center messages, StackDriver logs, and speech logging. Exposed at the following levels: - Agent level.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="googleclouddialogflowcxv3beta1speechtotextsettings">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Speech<wbr>To<wbr>Text<wbr>Settings</h4>
 

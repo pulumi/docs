@@ -13,13 +13,13 @@ Explore the resources and functions of the azure-native.communication module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="communicationservice" title="CommunicationService"><span class="symbol resource"></span>CommunicationService</a></li>
+    <li><a href="communicationservice" title="CommunicationService"><span class="api-symbol api-symbol--resource"></span>CommunicationService</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getcommunicationservice" title="GetCommunicationService"><span class="symbol function"></span>GetCommunicationService</a></li>
-    <li><a href="listcommunicationservicekeys" title="ListCommunicationServiceKeys"><span class="symbol function"></span>ListCommunicationServiceKeys</a></li>
+    <li><a href="getcommunicationservice" title="GetCommunicationService"><span class="api-symbol api-symbol--function"></span>GetCommunicationService</a></li>
+    <li><a href="listcommunicationservicekeys" title="ListCommunicationServiceKeys"><span class="api-symbol api-symbol--function"></span>ListCommunicationServiceKeys</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -29,6 +29,6 @@ Explore the resources and functions of the azure-native.communication module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.36.0</dd>
+	<dd>1.37.0</dd>
 </dl>
 

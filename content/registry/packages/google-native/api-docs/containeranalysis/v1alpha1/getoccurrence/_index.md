@@ -201,6 +201,22 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Describes the initial scan status for this resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="dsseattestation_csharp">
+<a href="#dsseattestation_csharp" style="color: inherit; text-decoration: inherit;">Dsse<wbr>Attestation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dsseattestationoccurrenceresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Outputs.<wbr>DSSEAttestation<wbr>Occurrence<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}This represents a DSSE attestation occurrence{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="envelope_csharp">
+<a href="#envelope_csharp" style="color: inherit; text-decoration: inherit;">Envelope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#enveloperesponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Outputs.<wbr>Envelope<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}https://github.com/secure-systems-lab/dsse{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="installation_csharp">
 <a href="#installation_csharp" style="color: inherit; text-decoration: inherit;">Installation</a>
 </span>
@@ -256,6 +272,38 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique URL of the image or the container for which the `Occurrence` applies. For example, https://gcr.io/project/image@sha256:foo This field can be used as a filter in list requests.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="sbom_csharp">
+<a href="#sbom_csharp" style="color: inherit; text-decoration: inherit;">Sbom</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#documentoccurrenceresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Outputs.<wbr>Document<wbr>Occurrence<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Describes a specific software bill of materials document.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="spdxfile_csharp">
+<a href="#spdxfile_csharp" style="color: inherit; text-decoration: inherit;">Spdx<wbr>File</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#fileoccurrenceresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Outputs.<wbr>File<wbr>Occurrence<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Describes a specific SPDX File.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="spdxpackage_csharp">
+<a href="#spdxpackage_csharp" style="color: inherit; text-decoration: inherit;">Spdx<wbr>Package</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#packageoccurrenceresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Outputs.<wbr>Package<wbr>Occurrence<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Describes a specific SPDX Package.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="spdxrelationship_csharp">
+<a href="#spdxrelationship_csharp" style="color: inherit; text-decoration: inherit;">Spdx<wbr>Relationship</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#relationshipoccurrenceresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Outputs.<wbr>Relationship<wbr>Occurrence<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Describes a specific relationship between SPDX elements.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatetime_csharp">
 <a href="#updatetime_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -341,6 +389,22 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Describes the initial scan status for this resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="dsseattestation_go">
+<a href="#dsseattestation_go" style="color: inherit; text-decoration: inherit;">Dsse<wbr>Attestation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dsseattestationoccurrenceresponse">DSSEAttestation<wbr>Occurrence<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}This represents a DSSE attestation occurrence{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="envelope_go">
+<a href="#envelope_go" style="color: inherit; text-decoration: inherit;">Envelope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#enveloperesponse">Envelope<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}https://github.com/secure-systems-lab/dsse{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="installation_go">
 <a href="#installation_go" style="color: inherit; text-decoration: inherit;">Installation</a>
 </span>
@@ -396,6 +460,38 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique URL of the image or the container for which the `Occurrence` applies. For example, https://gcr.io/project/image@sha256:foo This field can be used as a filter in list requests.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="sbom_go">
+<a href="#sbom_go" style="color: inherit; text-decoration: inherit;">Sbom</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#documentoccurrenceresponse">Document<wbr>Occurrence<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Describes a specific software bill of materials document.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="spdxfile_go">
+<a href="#spdxfile_go" style="color: inherit; text-decoration: inherit;">Spdx<wbr>File</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#fileoccurrenceresponse">File<wbr>Occurrence<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Describes a specific SPDX File.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="spdxpackage_go">
+<a href="#spdxpackage_go" style="color: inherit; text-decoration: inherit;">Spdx<wbr>Package</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#packageoccurrenceresponse">Package<wbr>Occurrence<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Describes a specific SPDX Package.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="spdxrelationship_go">
+<a href="#spdxrelationship_go" style="color: inherit; text-decoration: inherit;">Spdx<wbr>Relationship</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#relationshipoccurrenceresponse">Relationship<wbr>Occurrence<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Describes a specific relationship between SPDX elements.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatetime_go">
 <a href="#updatetime_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -481,6 +577,22 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Describes the initial scan status for this resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="dsseattestation_nodejs">
+<a href="#dsseattestation_nodejs" style="color: inherit; text-decoration: inherit;">dsse<wbr>Attestation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dsseattestationoccurrenceresponse">DSSEAttestation<wbr>Occurrence<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}This represents a DSSE attestation occurrence{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="envelope_nodejs">
+<a href="#envelope_nodejs" style="color: inherit; text-decoration: inherit;">envelope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#enveloperesponse">Envelope<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}https://github.com/secure-systems-lab/dsse{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="installation_nodejs">
 <a href="#installation_nodejs" style="color: inherit; text-decoration: inherit;">installation</a>
 </span>
@@ -536,6 +648,38 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique URL of the image or the container for which the `Occurrence` applies. For example, https://gcr.io/project/image@sha256:foo This field can be used as a filter in list requests.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="sbom_nodejs">
+<a href="#sbom_nodejs" style="color: inherit; text-decoration: inherit;">sbom</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#documentoccurrenceresponse">Document<wbr>Occurrence<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Describes a specific software bill of materials document.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="spdxfile_nodejs">
+<a href="#spdxfile_nodejs" style="color: inherit; text-decoration: inherit;">spdx<wbr>File</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#fileoccurrenceresponse">File<wbr>Occurrence<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Describes a specific SPDX File.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="spdxpackage_nodejs">
+<a href="#spdxpackage_nodejs" style="color: inherit; text-decoration: inherit;">spdx<wbr>Package</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#packageoccurrenceresponse">Package<wbr>Occurrence<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Describes a specific SPDX Package.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="spdxrelationship_nodejs">
+<a href="#spdxrelationship_nodejs" style="color: inherit; text-decoration: inherit;">spdx<wbr>Relationship</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#relationshipoccurrenceresponse">Relationship<wbr>Occurrence<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Describes a specific relationship between SPDX elements.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatetime_nodejs">
 <a href="#updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
@@ -621,6 +765,22 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Describes the initial scan status for this resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="dsse_attestation_python">
+<a href="#dsse_attestation_python" style="color: inherit; text-decoration: inherit;">dsse_<wbr>attestation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dsseattestationoccurrenceresponse">DSSEAttestation<wbr>Occurrence<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}This represents a DSSE attestation occurrence{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="envelope_python">
+<a href="#envelope_python" style="color: inherit; text-decoration: inherit;">envelope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#enveloperesponse">Envelope<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}https://github.com/secure-systems-lab/dsse{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="installation_python">
 <a href="#installation_python" style="color: inherit; text-decoration: inherit;">installation</a>
 </span>
@@ -676,6 +836,38 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique URL of the image or the container for which the `Occurrence` applies. For example, https://gcr.io/project/image@sha256:foo This field can be used as a filter in list requests.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="sbom_python">
+<a href="#sbom_python" style="color: inherit; text-decoration: inherit;">sbom</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#documentoccurrenceresponse">Document<wbr>Occurrence<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Describes a specific software bill of materials document.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="spdx_file_python">
+<a href="#spdx_file_python" style="color: inherit; text-decoration: inherit;">spdx_<wbr>file</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#fileoccurrenceresponse">File<wbr>Occurrence<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Describes a specific SPDX File.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="spdx_package_python">
+<a href="#spdx_package_python" style="color: inherit; text-decoration: inherit;">spdx_<wbr>package</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#packageoccurrenceresponse">Package<wbr>Occurrence<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Describes a specific SPDX Package.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="spdx_relationship_python">
+<a href="#spdx_relationship_python" style="color: inherit; text-decoration: inherit;">spdx_<wbr>relationship</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#relationshipoccurrenceresponse">Relationship<wbr>Occurrence<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Describes a specific relationship between SPDX elements.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="update_time_python">
 <a href="#update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
@@ -851,6 +1043,14 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="intotoprovenance_csharp">
+<a href="#intotoprovenance_csharp" style="color: inherit; text-decoration: inherit;">Intoto<wbr>Provenance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#intotoprovenanceresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Inputs.<wbr>In<wbr>Toto<wbr>Provenance<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}In-toto Provenance representation as defined in spec.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="provenance_csharp">
 <a href="#provenance_csharp" style="color: inherit; text-decoration: inherit;">Provenance</a>
 </span>
@@ -870,6 +1070,14 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="intotoprovenance_go">
+<a href="#intotoprovenance_go" style="color: inherit; text-decoration: inherit;">Intoto<wbr>Provenance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#intotoprovenanceresponse">In<wbr>Toto<wbr>Provenance<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}In-toto Provenance representation as defined in spec.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provenance_go">
 <a href="#provenance_go" style="color: inherit; text-decoration: inherit;">Provenance</a>
@@ -891,6 +1099,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="intotoprovenance_nodejs">
+<a href="#intotoprovenance_nodejs" style="color: inherit; text-decoration: inherit;">intoto<wbr>Provenance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#intotoprovenanceresponse">In<wbr>Toto<wbr>Provenance<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}In-toto Provenance representation as defined in spec.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="provenance_nodejs">
 <a href="#provenance_nodejs" style="color: inherit; text-decoration: inherit;">provenance</a>
 </span>
@@ -910,6 +1126,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="intoto_provenance_python">
+<a href="#intoto_provenance_python" style="color: inherit; text-decoration: inherit;">intoto_<wbr>provenance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#intotoprovenanceresponse">In<wbr>Toto<wbr>Provenance<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}In-toto Provenance representation as defined in spec.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provenance_python">
 <a href="#provenance_python" style="color: inherit; text-decoration: inherit;">provenance</a>
@@ -1512,6 +1736,122 @@ The following output properties are available:
     <dd>{{% md %}}The ID(s) of the Command(s) that this Command depends on.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="completenessresponse">Completeness<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="arguments_csharp">
+<a href="#arguments_csharp" style="color: inherit; text-decoration: inherit;">Arguments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, the builder claims that recipe.arguments is complete, meaning that all external inputs are properly captured in the recipe.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="environment_csharp">
+<a href="#environment_csharp" style="color: inherit; text-decoration: inherit;">Environment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, the builder claims that recipe.environment is claimed to be complete.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="materials_csharp">
+<a href="#materials_csharp" style="color: inherit; text-decoration: inherit;">Materials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, the builder claims that materials are complete, usually through some controls to prevent network access. Sometimes called "hermetic".{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="arguments_go">
+<a href="#arguments_go" style="color: inherit; text-decoration: inherit;">Arguments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, the builder claims that recipe.arguments is complete, meaning that all external inputs are properly captured in the recipe.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="environment_go">
+<a href="#environment_go" style="color: inherit; text-decoration: inherit;">Environment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, the builder claims that recipe.environment is claimed to be complete.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="materials_go">
+<a href="#materials_go" style="color: inherit; text-decoration: inherit;">Materials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, the builder claims that materials are complete, usually through some controls to prevent network access. Sometimes called "hermetic".{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="arguments_nodejs">
+<a href="#arguments_nodejs" style="color: inherit; text-decoration: inherit;">arguments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If true, the builder claims that recipe.arguments is complete, meaning that all external inputs are properly captured in the recipe.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="environment_nodejs">
+<a href="#environment_nodejs" style="color: inherit; text-decoration: inherit;">environment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If true, the builder claims that recipe.environment is claimed to be complete.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="materials_nodejs">
+<a href="#materials_nodejs" style="color: inherit; text-decoration: inherit;">materials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If true, the builder claims that materials are complete, usually through some controls to prevent network access. Sometimes called "hermetic".{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="arguments_python">
+<a href="#arguments_python" style="color: inherit; text-decoration: inherit;">arguments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, the builder claims that recipe.arguments is complete, meaning that all external inputs are properly captured in the recipe.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="environment_python">
+<a href="#environment_python" style="color: inherit; text-decoration: inherit;">environment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, the builder claims that recipe.environment is claimed to be complete.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="materials_python">
+<a href="#materials_python" style="color: inherit; text-decoration: inherit;">materials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, the builder claims that materials are complete, usually through some controls to prevent network access. Sometimes called "hermetic".{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="complianceoccurrenceresponse">Compliance<wbr>Occurrence<wbr>Response</h4>
 
 
@@ -1594,6 +1934,90 @@ The following output properties are available:
         <span class="property-type"><a href="#noncompliantfileresponse">Sequence[Non<wbr>Compliant<wbr>File<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of files which are violating compliance checks.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="dsseattestationoccurrenceresponse">DSSEAttestation<wbr>Occurrence<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="envelope_csharp">
+<a href="#envelope_csharp" style="color: inherit; text-decoration: inherit;">Envelope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#enveloperesponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Envelope<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}If doing something security critical, make sure to verify the signatures in this metadata.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="statement_csharp">
+<a href="#statement_csharp" style="color: inherit; text-decoration: inherit;">Statement</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#intotostatementresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Inputs.<wbr>In<wbr>Toto<wbr>Statement<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="envelope_go">
+<a href="#envelope_go" style="color: inherit; text-decoration: inherit;">Envelope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#enveloperesponse">Envelope<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}If doing something security critical, make sure to verify the signatures in this metadata.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="statement_go">
+<a href="#statement_go" style="color: inherit; text-decoration: inherit;">Statement</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#intotostatementresponse">In<wbr>Toto<wbr>Statement<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="envelope_nodejs">
+<a href="#envelope_nodejs" style="color: inherit; text-decoration: inherit;">envelope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#enveloperesponse">Envelope<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}If doing something security critical, make sure to verify the signatures in this metadata.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="statement_nodejs">
+<a href="#statement_nodejs" style="color: inherit; text-decoration: inherit;">statement</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#intotostatementresponse">In<wbr>Toto<wbr>Statement<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="envelope_python">
+<a href="#envelope_python" style="color: inherit; text-decoration: inherit;">envelope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#enveloperesponse">Envelope<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}If doing something security critical, make sure to verify the signatures in this metadata.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="statement_python">
+<a href="#statement_python" style="color: inherit; text-decoration: inherit;">statement</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#intotostatementresponse">In<wbr>Toto<wbr>Statement<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="deploymentresponse">Deployment<wbr>Response</h4>
@@ -2134,6 +2558,758 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CPE of the resource being scanned.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="documentoccurrenceresponse">Document<wbr>Occurrence<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="createtime_csharp">
+<a href="#createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identify when the SPDX file was originally created. The date is to be specified according to combined date and time in UTC format as specified in ISO 8601 standard{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="creatorcomment_csharp">
+<a href="#creatorcomment_csharp" style="color: inherit; text-decoration: inherit;">Creator<wbr>Comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A field for creators of the SPDX file to provide general comments about the creation of the SPDX file or any other relevant comment not included in the other fields{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="creators_csharp">
+<a href="#creators_csharp" style="color: inherit; text-decoration: inherit;">Creators</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Identify who (or what, in the case of a tool) created the SPDX file. If the SPDX file was created by an individual, indicate the person's name{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="documentcomment_csharp">
+<a href="#documentcomment_csharp" style="color: inherit; text-decoration: inherit;">Document<wbr>Comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A field for creators of the SPDX file content to provide comments to the consumers of the SPDX document{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="externaldocumentrefs_csharp">
+<a href="#externaldocumentrefs_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Document<wbr>Refs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Identify any external SPDX documents referenced within this SPDX document{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="licenselistversion_csharp">
+<a href="#licenselistversion_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>List<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A field for creators of the SPDX file to provide the version of the SPDX License List used when the SPDX file was created{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="namespace_csharp">
+<a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provide an SPDX document specific namespace as a unique absolute Uniform Resource Identifier (URI) as specified in RFC-3986, with the exception of the ‘#’ delimiter{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="title_csharp">
+<a href="#title_csharp" style="color: inherit; text-decoration: inherit;">Title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identify name of this document as designated by creator{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="createtime_go">
+<a href="#createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identify when the SPDX file was originally created. The date is to be specified according to combined date and time in UTC format as specified in ISO 8601 standard{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="creatorcomment_go">
+<a href="#creatorcomment_go" style="color: inherit; text-decoration: inherit;">Creator<wbr>Comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A field for creators of the SPDX file to provide general comments about the creation of the SPDX file or any other relevant comment not included in the other fields{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="creators_go">
+<a href="#creators_go" style="color: inherit; text-decoration: inherit;">Creators</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Identify who (or what, in the case of a tool) created the SPDX file. If the SPDX file was created by an individual, indicate the person's name{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="documentcomment_go">
+<a href="#documentcomment_go" style="color: inherit; text-decoration: inherit;">Document<wbr>Comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A field for creators of the SPDX file content to provide comments to the consumers of the SPDX document{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="externaldocumentrefs_go">
+<a href="#externaldocumentrefs_go" style="color: inherit; text-decoration: inherit;">External<wbr>Document<wbr>Refs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Identify any external SPDX documents referenced within this SPDX document{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="licenselistversion_go">
+<a href="#licenselistversion_go" style="color: inherit; text-decoration: inherit;">License<wbr>List<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A field for creators of the SPDX file to provide the version of the SPDX License List used when the SPDX file was created{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="namespace_go">
+<a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provide an SPDX document specific namespace as a unique absolute Uniform Resource Identifier (URI) as specified in RFC-3986, with the exception of the ‘#’ delimiter{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="title_go">
+<a href="#title_go" style="color: inherit; text-decoration: inherit;">Title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identify name of this document as designated by creator{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="createtime_nodejs">
+<a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identify when the SPDX file was originally created. The date is to be specified according to combined date and time in UTC format as specified in ISO 8601 standard{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="creatorcomment_nodejs">
+<a href="#creatorcomment_nodejs" style="color: inherit; text-decoration: inherit;">creator<wbr>Comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A field for creators of the SPDX file to provide general comments about the creation of the SPDX file or any other relevant comment not included in the other fields{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="creators_nodejs">
+<a href="#creators_nodejs" style="color: inherit; text-decoration: inherit;">creators</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Identify who (or what, in the case of a tool) created the SPDX file. If the SPDX file was created by an individual, indicate the person's name{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="documentcomment_nodejs">
+<a href="#documentcomment_nodejs" style="color: inherit; text-decoration: inherit;">document<wbr>Comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A field for creators of the SPDX file content to provide comments to the consumers of the SPDX document{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="externaldocumentrefs_nodejs">
+<a href="#externaldocumentrefs_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Document<wbr>Refs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Identify any external SPDX documents referenced within this SPDX document{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="licenselistversion_nodejs">
+<a href="#licenselistversion_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>List<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A field for creators of the SPDX file to provide the version of the SPDX License List used when the SPDX file was created{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="namespace_nodejs">
+<a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provide an SPDX document specific namespace as a unique absolute Uniform Resource Identifier (URI) as specified in RFC-3986, with the exception of the ‘#’ delimiter{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="title_nodejs">
+<a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identify name of this document as designated by creator{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="create_time_python">
+<a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Identify when the SPDX file was originally created. The date is to be specified according to combined date and time in UTC format as specified in ISO 8601 standard{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="creator_comment_python">
+<a href="#creator_comment_python" style="color: inherit; text-decoration: inherit;">creator_<wbr>comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A field for creators of the SPDX file to provide general comments about the creation of the SPDX file or any other relevant comment not included in the other fields{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="creators_python">
+<a href="#creators_python" style="color: inherit; text-decoration: inherit;">creators</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Identify who (or what, in the case of a tool) created the SPDX file. If the SPDX file was created by an individual, indicate the person's name{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="document_comment_python">
+<a href="#document_comment_python" style="color: inherit; text-decoration: inherit;">document_<wbr>comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A field for creators of the SPDX file content to provide comments to the consumers of the SPDX document{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="external_document_refs_python">
+<a href="#external_document_refs_python" style="color: inherit; text-decoration: inherit;">external_<wbr>document_<wbr>refs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Identify any external SPDX documents referenced within this SPDX document{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="license_list_version_python">
+<a href="#license_list_version_python" style="color: inherit; text-decoration: inherit;">license_<wbr>list_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A field for creators of the SPDX file to provide the version of the SPDX License List used when the SPDX file was created{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="namespace_python">
+<a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Provide an SPDX document specific namespace as a unique absolute Uniform Resource Identifier (URI) as specified in RFC-3986, with the exception of the ‘#’ delimiter{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="title_python">
+<a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Identify name of this document as designated by creator{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="enveloperesponse">Envelope<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="payload_csharp">
+<a href="#payload_csharp" style="color: inherit; text-decoration: inherit;">Payload</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The bytes being signed{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="payloadtype_csharp">
+<a href="#payloadtype_csharp" style="color: inherit; text-decoration: inherit;">Payload<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of payload being signed{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="signatures_csharp">
+<a href="#signatures_csharp" style="color: inherit; text-decoration: inherit;">Signatures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#envelopesignatureresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Envelope<wbr>Signature<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The signatures over the payload{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="payload_go">
+<a href="#payload_go" style="color: inherit; text-decoration: inherit;">Payload</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The bytes being signed{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="payloadtype_go">
+<a href="#payloadtype_go" style="color: inherit; text-decoration: inherit;">Payload<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of payload being signed{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="signatures_go">
+<a href="#signatures_go" style="color: inherit; text-decoration: inherit;">Signatures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#envelopesignatureresponse">[]Envelope<wbr>Signature<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The signatures over the payload{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="payload_nodejs">
+<a href="#payload_nodejs" style="color: inherit; text-decoration: inherit;">payload</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The bytes being signed{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="payloadtype_nodejs">
+<a href="#payloadtype_nodejs" style="color: inherit; text-decoration: inherit;">payload<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of payload being signed{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="signatures_nodejs">
+<a href="#signatures_nodejs" style="color: inherit; text-decoration: inherit;">signatures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#envelopesignatureresponse">Envelope<wbr>Signature<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The signatures over the payload{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="payload_python">
+<a href="#payload_python" style="color: inherit; text-decoration: inherit;">payload</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The bytes being signed{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="payload_type_python">
+<a href="#payload_type_python" style="color: inherit; text-decoration: inherit;">payload_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of payload being signed{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="signatures_python">
+<a href="#signatures_python" style="color: inherit; text-decoration: inherit;">signatures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#envelopesignatureresponse">Sequence[Envelope<wbr>Signature<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The signatures over the payload{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="envelopesignatureresponse">Envelope<wbr>Signature<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="keyid_csharp">
+<a href="#keyid_csharp" style="color: inherit; text-decoration: inherit;">Keyid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A reference id to the key being used for signing{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sig_csharp">
+<a href="#sig_csharp" style="color: inherit; text-decoration: inherit;">Sig</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The signature itself{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="keyid_go">
+<a href="#keyid_go" style="color: inherit; text-decoration: inherit;">Keyid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A reference id to the key being used for signing{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sig_go">
+<a href="#sig_go" style="color: inherit; text-decoration: inherit;">Sig</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The signature itself{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="keyid_nodejs">
+<a href="#keyid_nodejs" style="color: inherit; text-decoration: inherit;">keyid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A reference id to the key being used for signing{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sig_nodejs">
+<a href="#sig_nodejs" style="color: inherit; text-decoration: inherit;">sig</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The signature itself{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="keyid_python">
+<a href="#keyid_python" style="color: inherit; text-decoration: inherit;">keyid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A reference id to the key being used for signing{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sig_python">
+<a href="#sig_python" style="color: inherit; text-decoration: inherit;">sig</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The signature itself{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="fileoccurrenceresponse">File<wbr>Occurrence<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="attributions_csharp">
+<a href="#attributions_csharp" style="color: inherit; text-decoration: inherit;">Attributions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}This field provides a place for the SPDX data creator to record, at the file level, acknowledgements that may be needed to be communicated in some contexts{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="comment_csharp">
+<a href="#comment_csharp" style="color: inherit; text-decoration: inherit;">Comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This field provides a place for the SPDX file creator to record any general comments about the file{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="contributors_csharp">
+<a href="#contributors_csharp" style="color: inherit; text-decoration: inherit;">Contributors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}This field provides a place for the SPDX file creator to record file contributors{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="copyright_csharp">
+<a href="#copyright_csharp" style="color: inherit; text-decoration: inherit;">Copyright</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identify the copyright holder of the file, as well as any dates present{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="fileslicenseinfo_csharp">
+<a href="#fileslicenseinfo_csharp" style="color: inherit; text-decoration: inherit;">Files<wbr>License<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}This field contains the license information actually found in the file, if any{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="licensecomments_csharp">
+<a href="#licensecomments_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Comments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This field provides a place for the SPDX file creator to record any relevant background references or analysis that went in to arriving at the Concluded License for a file{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="licenseconcluded_csharp">
+<a href="#licenseconcluded_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Concluded</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This field contains the license the SPDX file creator has concluded as governing the file or alternative values if the governing license cannot be determined{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="notice_csharp">
+<a href="#notice_csharp" style="color: inherit; text-decoration: inherit;">Notice</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This field provides a place for the SPDX file creator to record license notices or other such related notices found in the file{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="attributions_go">
+<a href="#attributions_go" style="color: inherit; text-decoration: inherit;">Attributions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}This field provides a place for the SPDX data creator to record, at the file level, acknowledgements that may be needed to be communicated in some contexts{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="comment_go">
+<a href="#comment_go" style="color: inherit; text-decoration: inherit;">Comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This field provides a place for the SPDX file creator to record any general comments about the file{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="contributors_go">
+<a href="#contributors_go" style="color: inherit; text-decoration: inherit;">Contributors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}This field provides a place for the SPDX file creator to record file contributors{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="copyright_go">
+<a href="#copyright_go" style="color: inherit; text-decoration: inherit;">Copyright</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identify the copyright holder of the file, as well as any dates present{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="fileslicenseinfo_go">
+<a href="#fileslicenseinfo_go" style="color: inherit; text-decoration: inherit;">Files<wbr>License<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}This field contains the license information actually found in the file, if any{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="licensecomments_go">
+<a href="#licensecomments_go" style="color: inherit; text-decoration: inherit;">License<wbr>Comments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This field provides a place for the SPDX file creator to record any relevant background references or analysis that went in to arriving at the Concluded License for a file{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="licenseconcluded_go">
+<a href="#licenseconcluded_go" style="color: inherit; text-decoration: inherit;">License<wbr>Concluded</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This field contains the license the SPDX file creator has concluded as governing the file or alternative values if the governing license cannot be determined{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="notice_go">
+<a href="#notice_go" style="color: inherit; text-decoration: inherit;">Notice</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This field provides a place for the SPDX file creator to record license notices or other such related notices found in the file{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="attributions_nodejs">
+<a href="#attributions_nodejs" style="color: inherit; text-decoration: inherit;">attributions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}This field provides a place for the SPDX data creator to record, at the file level, acknowledgements that may be needed to be communicated in some contexts{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="comment_nodejs">
+<a href="#comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This field provides a place for the SPDX file creator to record any general comments about the file{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="contributors_nodejs">
+<a href="#contributors_nodejs" style="color: inherit; text-decoration: inherit;">contributors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}This field provides a place for the SPDX file creator to record file contributors{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="copyright_nodejs">
+<a href="#copyright_nodejs" style="color: inherit; text-decoration: inherit;">copyright</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identify the copyright holder of the file, as well as any dates present{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="fileslicenseinfo_nodejs">
+<a href="#fileslicenseinfo_nodejs" style="color: inherit; text-decoration: inherit;">files<wbr>License<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}This field contains the license information actually found in the file, if any{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="licensecomments_nodejs">
+<a href="#licensecomments_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Comments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This field provides a place for the SPDX file creator to record any relevant background references or analysis that went in to arriving at the Concluded License for a file{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="licenseconcluded_nodejs">
+<a href="#licenseconcluded_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Concluded</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This field contains the license the SPDX file creator has concluded as governing the file or alternative values if the governing license cannot be determined{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="notice_nodejs">
+<a href="#notice_nodejs" style="color: inherit; text-decoration: inherit;">notice</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This field provides a place for the SPDX file creator to record license notices or other such related notices found in the file{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="attributions_python">
+<a href="#attributions_python" style="color: inherit; text-decoration: inherit;">attributions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}This field provides a place for the SPDX data creator to record, at the file level, acknowledgements that may be needed to be communicated in some contexts{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="comment_python">
+<a href="#comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}This field provides a place for the SPDX file creator to record any general comments about the file{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="contributors_python">
+<a href="#contributors_python" style="color: inherit; text-decoration: inherit;">contributors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}This field provides a place for the SPDX file creator to record file contributors{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="copyright_python">
+<a href="#copyright_python" style="color: inherit; text-decoration: inherit;">copyright</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Identify the copyright holder of the file, as well as any dates present{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="files_license_info_python">
+<a href="#files_license_info_python" style="color: inherit; text-decoration: inherit;">files_<wbr>license_<wbr>info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}This field contains the license information actually found in the file, if any{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="license_comments_python">
+<a href="#license_comments_python" style="color: inherit; text-decoration: inherit;">license_<wbr>comments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}This field provides a place for the SPDX file creator to record any relevant background references or analysis that went in to arriving at the Concluded License for a file{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="license_concluded_python">
+<a href="#license_concluded_python" style="color: inherit; text-decoration: inherit;">license_<wbr>concluded</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}This field contains the license the SPDX file creator has concluded as governing the file or alternative values if the governing license cannot be determined{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="notice_python">
+<a href="#notice_python" style="color: inherit; text-decoration: inherit;">notice</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}This field provides a place for the SPDX file creator to record license notices or other such related notices found in the file{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="fingerprintresponse">Fingerprint<wbr>Response</h4>
@@ -3084,6 +4260,302 @@ The following output properties are available:
     <dd>{{% md %}}The hash value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="intotoprovenanceresponse">In<wbr>Toto<wbr>Provenance<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="builderconfig_csharp">
+<a href="#builderconfig_csharp" style="color: inherit; text-decoration: inherit;">Builder<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#builderconfigresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Builder<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}required{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="materials_csharp">
+<a href="#materials_csharp" style="color: inherit; text-decoration: inherit;">Materials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The collection of artifacts that influenced the build including sources, dependencies, build tools, base images, and so on. This is considered to be incomplete unless metadata.completeness.materials is true. Unset or null is equivalent to empty.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="metadata_csharp">
+<a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metadataresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Metadata<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="recipe_csharp">
+<a href="#recipe_csharp" style="color: inherit; text-decoration: inherit;">Recipe</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#reciperesponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Recipe<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Identifies the configuration used for the build. When combined with materials, this SHOULD fully describe the build, such that re-running this recipe results in bit-for-bit identical output (if the build is reproducible). required{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="builderconfig_go">
+<a href="#builderconfig_go" style="color: inherit; text-decoration: inherit;">Builder<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#builderconfigresponse">Builder<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}required{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="materials_go">
+<a href="#materials_go" style="color: inherit; text-decoration: inherit;">Materials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The collection of artifacts that influenced the build including sources, dependencies, build tools, base images, and so on. This is considered to be incomplete unless metadata.completeness.materials is true. Unset or null is equivalent to empty.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="metadata_go">
+<a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metadataresponse">Metadata<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="recipe_go">
+<a href="#recipe_go" style="color: inherit; text-decoration: inherit;">Recipe</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#reciperesponse">Recipe<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Identifies the configuration used for the build. When combined with materials, this SHOULD fully describe the build, such that re-running this recipe results in bit-for-bit identical output (if the build is reproducible). required{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="builderconfig_nodejs">
+<a href="#builderconfig_nodejs" style="color: inherit; text-decoration: inherit;">builder<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#builderconfigresponse">Builder<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}required{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="materials_nodejs">
+<a href="#materials_nodejs" style="color: inherit; text-decoration: inherit;">materials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The collection of artifacts that influenced the build including sources, dependencies, build tools, base images, and so on. This is considered to be incomplete unless metadata.completeness.materials is true. Unset or null is equivalent to empty.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="metadata_nodejs">
+<a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metadataresponse">Metadata<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="recipe_nodejs">
+<a href="#recipe_nodejs" style="color: inherit; text-decoration: inherit;">recipe</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#reciperesponse">Recipe<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Identifies the configuration used for the build. When combined with materials, this SHOULD fully describe the build, such that re-running this recipe results in bit-for-bit identical output (if the build is reproducible). required{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="builder_config_python">
+<a href="#builder_config_python" style="color: inherit; text-decoration: inherit;">builder_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#builderconfigresponse">Builder<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}required{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="materials_python">
+<a href="#materials_python" style="color: inherit; text-decoration: inherit;">materials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The collection of artifacts that influenced the build including sources, dependencies, build tools, base images, and so on. This is considered to be incomplete unless metadata.completeness.materials is true. Unset or null is equivalent to empty.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="metadata_python">
+<a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metadataresponse">Metadata<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="recipe_python">
+<a href="#recipe_python" style="color: inherit; text-decoration: inherit;">recipe</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#reciperesponse">Recipe<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Identifies the configuration used for the build. When combined with materials, this SHOULD fully describe the build, such that re-running this recipe results in bit-for-bit identical output (if the build is reproducible). required{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="intotostatementresponse">In<wbr>Toto<wbr>Statement<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="predicatetype_csharp">
+<a href="#predicatetype_csharp" style="color: inherit; text-decoration: inherit;">Predicate<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}"https://in-toto.io/Provenance/v0.1" for InTotoProvenance.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="provenance_csharp">
+<a href="#provenance_csharp" style="color: inherit; text-decoration: inherit;">Provenance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#intotoprovenanceresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Inputs.<wbr>In<wbr>Toto<wbr>Provenance<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subject_csharp">
+<a href="#subject_csharp" style="color: inherit; text-decoration: inherit;">Subject</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subjectresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Subject<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Always "https://in-toto.io/Statement/v0.1".{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="predicatetype_go">
+<a href="#predicatetype_go" style="color: inherit; text-decoration: inherit;">Predicate<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}"https://in-toto.io/Provenance/v0.1" for InTotoProvenance.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="provenance_go">
+<a href="#provenance_go" style="color: inherit; text-decoration: inherit;">Provenance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#intotoprovenanceresponse">In<wbr>Toto<wbr>Provenance<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subject_go">
+<a href="#subject_go" style="color: inherit; text-decoration: inherit;">Subject</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subjectresponse">[]Subject<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Always "https://in-toto.io/Statement/v0.1".{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="predicatetype_nodejs">
+<a href="#predicatetype_nodejs" style="color: inherit; text-decoration: inherit;">predicate<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}"https://in-toto.io/Provenance/v0.1" for InTotoProvenance.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="provenance_nodejs">
+<a href="#provenance_nodejs" style="color: inherit; text-decoration: inherit;">provenance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#intotoprovenanceresponse">In<wbr>Toto<wbr>Provenance<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subject_nodejs">
+<a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subjectresponse">Subject<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Always "https://in-toto.io/Statement/v0.1".{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="predicate_type_python">
+<a href="#predicate_type_python" style="color: inherit; text-decoration: inherit;">predicate_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}"https://in-toto.io/Provenance/v0.1" for InTotoProvenance.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="provenance_python">
+<a href="#provenance_python" style="color: inherit; text-decoration: inherit;">provenance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#intotoprovenanceresponse">In<wbr>Toto<wbr>Provenance<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subject_python">
+<a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subjectresponse">Sequence[Subject<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Always "https://in-toto.io/Statement/v0.1".{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="installationresponse">Installation<wbr>Response</h4>
 
 
@@ -3368,6 +4840,186 @@ The following output properties are available:
     <dd>{{% md %}}The version installed at this location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="metadataresponse">Metadata<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="buildfinishedon_csharp">
+<a href="#buildfinishedon_csharp" style="color: inherit; text-decoration: inherit;">Build<wbr>Finished<wbr>On</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of when the build completed.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="buildinvocationid_csharp">
+<a href="#buildinvocationid_csharp" style="color: inherit; text-decoration: inherit;">Build<wbr>Invocation<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identifies the particular build invocation, which can be useful for finding associated logs or other ad-hoc analysis. The value SHOULD be globally unique, per in-toto Provenance spec.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="buildstartedon_csharp">
+<a href="#buildstartedon_csharp" style="color: inherit; text-decoration: inherit;">Build<wbr>Started<wbr>On</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of when the build started.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="completeness_csharp">
+<a href="#completeness_csharp" style="color: inherit; text-decoration: inherit;">Completeness</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#completenessresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Completeness<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates that the builder claims certain fields in this message to be complete.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="reproducible_csharp">
+<a href="#reproducible_csharp" style="color: inherit; text-decoration: inherit;">Reproducible</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, the builder claims that running the recipe on materials will produce bit-for-bit identical output.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="buildfinishedon_go">
+<a href="#buildfinishedon_go" style="color: inherit; text-decoration: inherit;">Build<wbr>Finished<wbr>On</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of when the build completed.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="buildinvocationid_go">
+<a href="#buildinvocationid_go" style="color: inherit; text-decoration: inherit;">Build<wbr>Invocation<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identifies the particular build invocation, which can be useful for finding associated logs or other ad-hoc analysis. The value SHOULD be globally unique, per in-toto Provenance spec.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="buildstartedon_go">
+<a href="#buildstartedon_go" style="color: inherit; text-decoration: inherit;">Build<wbr>Started<wbr>On</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of when the build started.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="completeness_go">
+<a href="#completeness_go" style="color: inherit; text-decoration: inherit;">Completeness</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#completenessresponse">Completeness<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates that the builder claims certain fields in this message to be complete.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="reproducible_go">
+<a href="#reproducible_go" style="color: inherit; text-decoration: inherit;">Reproducible</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, the builder claims that running the recipe on materials will produce bit-for-bit identical output.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="buildfinishedon_nodejs">
+<a href="#buildfinishedon_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Finished<wbr>On</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of when the build completed.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="buildinvocationid_nodejs">
+<a href="#buildinvocationid_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Invocation<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identifies the particular build invocation, which can be useful for finding associated logs or other ad-hoc analysis. The value SHOULD be globally unique, per in-toto Provenance spec.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="buildstartedon_nodejs">
+<a href="#buildstartedon_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Started<wbr>On</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of when the build started.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="completeness_nodejs">
+<a href="#completeness_nodejs" style="color: inherit; text-decoration: inherit;">completeness</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#completenessresponse">Completeness<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates that the builder claims certain fields in this message to be complete.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="reproducible_nodejs">
+<a href="#reproducible_nodejs" style="color: inherit; text-decoration: inherit;">reproducible</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If true, the builder claims that running the recipe on materials will produce bit-for-bit identical output.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="build_finished_on_python">
+<a href="#build_finished_on_python" style="color: inherit; text-decoration: inherit;">build_<wbr>finished_<wbr>on</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of when the build completed.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="build_invocation_id_python">
+<a href="#build_invocation_id_python" style="color: inherit; text-decoration: inherit;">build_<wbr>invocation_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Identifies the particular build invocation, which can be useful for finding associated logs or other ad-hoc analysis. The value SHOULD be globally unique, per in-toto Provenance spec.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="build_started_on_python">
+<a href="#build_started_on_python" style="color: inherit; text-decoration: inherit;">build_<wbr>started_<wbr>on</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of when the build started.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="completeness_python">
+<a href="#completeness_python" style="color: inherit; text-decoration: inherit;">completeness</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#completenessresponse">Completeness<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates that the builder claims certain fields in this message to be complete.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="reproducible_python">
+<a href="#reproducible_python" style="color: inherit; text-decoration: inherit;">reproducible</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, the builder claims that running the recipe on materials will produce bit-for-bit identical output.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="noncompliantfileresponse">Non<wbr>Compliant<wbr>File<wbr>Response</h4>
 
 
@@ -3499,6 +5151,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The location of the vulnerability.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="effectiveseverity_csharp">
+<a href="#effectiveseverity_csharp" style="color: inherit; text-decoration: inherit;">Effective<wbr>Severity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The distro or language system assigned severity for this vulnerability when that is available and note provider assigned severity when distro or language system has not yet assigned a severity for this vulnerability.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="fixedlocation_csharp">
 <a href="#fixedlocation_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Location</a>
 </span>
@@ -3506,6 +5166,14 @@ The following output properties are available:
         <span class="property-type"><a href="#vulnerabilitylocationresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Vulnerability<wbr>Location<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The location of the available fix for vulnerability.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="packagetype_csharp">
+<a href="#packagetype_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of package (e.g. OS, MAVEN, GO).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="severityname_csharp">
 <a href="#severityname_csharp" style="color: inherit; text-decoration: inherit;">Severity<wbr>Name</a>
@@ -3527,6 +5195,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The location of the vulnerability.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="effectiveseverity_go">
+<a href="#effectiveseverity_go" style="color: inherit; text-decoration: inherit;">Effective<wbr>Severity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The distro or language system assigned severity for this vulnerability when that is available and note provider assigned severity when distro or language system has not yet assigned a severity for this vulnerability.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="fixedlocation_go">
 <a href="#fixedlocation_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Location</a>
 </span>
@@ -3534,6 +5210,14 @@ The following output properties are available:
         <span class="property-type"><a href="#vulnerabilitylocationresponse">Vulnerability<wbr>Location<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The location of the available fix for vulnerability.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="packagetype_go">
+<a href="#packagetype_go" style="color: inherit; text-decoration: inherit;">Package<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of package (e.g. OS, MAVEN, GO).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="severityname_go">
 <a href="#severityname_go" style="color: inherit; text-decoration: inherit;">Severity<wbr>Name</a>
@@ -3555,6 +5239,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The location of the vulnerability.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="effectiveseverity_nodejs">
+<a href="#effectiveseverity_nodejs" style="color: inherit; text-decoration: inherit;">effective<wbr>Severity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The distro or language system assigned severity for this vulnerability when that is available and note provider assigned severity when distro or language system has not yet assigned a severity for this vulnerability.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="fixedlocation_nodejs">
 <a href="#fixedlocation_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Location</a>
 </span>
@@ -3562,6 +5254,14 @@ The following output properties are available:
         <span class="property-type"><a href="#vulnerabilitylocationresponse">Vulnerability<wbr>Location<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The location of the available fix for vulnerability.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="packagetype_nodejs">
+<a href="#packagetype_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of package (e.g. OS, MAVEN, GO).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="severityname_nodejs">
 <a href="#severityname_nodejs" style="color: inherit; text-decoration: inherit;">severity<wbr>Name</a>
@@ -3583,6 +5283,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The location of the vulnerability.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="effective_severity_python">
+<a href="#effective_severity_python" style="color: inherit; text-decoration: inherit;">effective_<wbr>severity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The distro or language system assigned severity for this vulnerability when that is available and note provider assigned severity when distro or language system has not yet assigned a severity for this vulnerability.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="fixed_location_python">
 <a href="#fixed_location_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>location</a>
 </span>
@@ -3591,6 +5299,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The location of the available fix for vulnerability.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="package_type_python">
+<a href="#package_type_python" style="color: inherit; text-decoration: inherit;">package_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of package (e.g. OS, MAVEN, GO).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="severity_name_python">
 <a href="#severity_name_python" style="color: inherit; text-decoration: inherit;">severity_<wbr>name</a>
 </span>
@@ -3598,6 +5314,186 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="packageoccurrenceresponse">Package<wbr>Occurrence<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="comment_csharp">
+<a href="#comment_csharp" style="color: inherit; text-decoration: inherit;">Comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A place for the SPDX file creator to record any general comments about the package being described{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="filename_csharp">
+<a href="#filename_csharp" style="color: inherit; text-decoration: inherit;">Filename</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provide the actual file name of the package, or path of the directory being treated as a package{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="licensecomments_csharp">
+<a href="#licensecomments_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Comments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This field provides a place for the SPDX file creator to record any relevant background information or analysis that went in to arriving at the Concluded License for a package{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="licenseconcluded_csharp">
+<a href="#licenseconcluded_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Concluded</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}package or alternative values, if the governing license cannot be determined{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sourceinfo_csharp">
+<a href="#sourceinfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provide a place for the SPDX file creator to record any relevant background information or additional comments about the origin of the package{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="comment_go">
+<a href="#comment_go" style="color: inherit; text-decoration: inherit;">Comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A place for the SPDX file creator to record any general comments about the package being described{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="filename_go">
+<a href="#filename_go" style="color: inherit; text-decoration: inherit;">Filename</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provide the actual file name of the package, or path of the directory being treated as a package{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="licensecomments_go">
+<a href="#licensecomments_go" style="color: inherit; text-decoration: inherit;">License<wbr>Comments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This field provides a place for the SPDX file creator to record any relevant background information or analysis that went in to arriving at the Concluded License for a package{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="licenseconcluded_go">
+<a href="#licenseconcluded_go" style="color: inherit; text-decoration: inherit;">License<wbr>Concluded</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}package or alternative values, if the governing license cannot be determined{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sourceinfo_go">
+<a href="#sourceinfo_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provide a place for the SPDX file creator to record any relevant background information or additional comments about the origin of the package{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="comment_nodejs">
+<a href="#comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A place for the SPDX file creator to record any general comments about the package being described{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="filename_nodejs">
+<a href="#filename_nodejs" style="color: inherit; text-decoration: inherit;">filename</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provide the actual file name of the package, or path of the directory being treated as a package{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="licensecomments_nodejs">
+<a href="#licensecomments_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Comments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This field provides a place for the SPDX file creator to record any relevant background information or analysis that went in to arriving at the Concluded License for a package{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="licenseconcluded_nodejs">
+<a href="#licenseconcluded_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Concluded</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}package or alternative values, if the governing license cannot be determined{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sourceinfo_nodejs">
+<a href="#sourceinfo_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provide a place for the SPDX file creator to record any relevant background information or additional comments about the origin of the package{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="comment_python">
+<a href="#comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A place for the SPDX file creator to record any general comments about the package being described{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="filename_python">
+<a href="#filename_python" style="color: inherit; text-decoration: inherit;">filename</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Provide the actual file name of the package, or path of the directory being treated as a package{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="license_comments_python">
+<a href="#license_comments_python" style="color: inherit; text-decoration: inherit;">license_<wbr>comments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}This field provides a place for the SPDX file creator to record any relevant background information or analysis that went in to arriving at the Concluded License for a package{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="license_concluded_python">
+<a href="#license_concluded_python" style="color: inherit; text-decoration: inherit;">license_<wbr>concluded</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}package or alternative values, if the governing license cannot be determined{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="source_info_python">
+<a href="#source_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Provide a place for the SPDX file creator to record any relevant background information or additional comments about the origin of the package{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="pgpsignedattestationresponse">Pgp<wbr>Signed<wbr>Attestation<wbr>Response</h4>
@@ -3714,6 +5610,334 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The raw content of the signature, as output by GNU Privacy Guard (GPG) or equivalent. Since this message only supports attached signatures, the payload that was signed must be attached. While the signature format supported is dependent on the verification implementation, currently only ASCII-armored (`--armor` to gpg), non-clearsigned (`--sign` rather than `--clearsign` to gpg) are supported. Concretely, `gpg --sign --armor --output=signature.gpg payload.json` will create the signature content expected in this field in `signature.gpg` for the `payload.json` attestation payload.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="reciperesponse">Recipe<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="arguments_csharp">
+<a href="#arguments_csharp" style="color: inherit; text-decoration: inherit;">Arguments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, string&gt;&gt;</span>
+    </dt>
+    <dd>{{% md %}}Collection of all external inputs that influenced the build on top of recipe.definedInMaterial and recipe.entryPoint. For example, if the recipe type were "make", then this might be the flags passed to make aside from the target, which is captured in recipe.entryPoint.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="definedinmaterial_csharp">
+<a href="#definedinmaterial_csharp" style="color: inherit; text-decoration: inherit;">Defined<wbr>In<wbr>Material</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Index in materials containing the recipe steps that are not implied by recipe.type. For example, if the recipe type were "make", then this would point to the source containing the Makefile, not the make program itself. Set to -1 if the recipe doesn't come from a material, as zero is default unset value for int64.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="entrypoint_csharp">
+<a href="#entrypoint_csharp" style="color: inherit; text-decoration: inherit;">Entry<wbr>Point</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}String identifying the entry point into the build. This is often a path to a configuration file and/or a target label within that file. The syntax and meaning are defined by recipe.type. For example, if the recipe type were "make", then this would reference the directory in which to run make as well as which target to use.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="environment_csharp">
+<a href="#environment_csharp" style="color: inherit; text-decoration: inherit;">Environment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, string&gt;&gt;</span>
+    </dt>
+    <dd>{{% md %}}Any other builder-controlled inputs necessary for correctly evaluating the recipe. Usually only needed for reproducing the build but not evaluated as part of policy.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URI indicating what type of recipe was performed. It determines the meaning of recipe.entryPoint, recipe.arguments, recipe.environment, and materials.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="arguments_go">
+<a href="#arguments_go" style="color: inherit; text-decoration: inherit;">Arguments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Collection of all external inputs that influenced the build on top of recipe.definedInMaterial and recipe.entryPoint. For example, if the recipe type were "make", then this might be the flags passed to make aside from the target, which is captured in recipe.entryPoint.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="definedinmaterial_go">
+<a href="#definedinmaterial_go" style="color: inherit; text-decoration: inherit;">Defined<wbr>In<wbr>Material</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Index in materials containing the recipe steps that are not implied by recipe.type. For example, if the recipe type were "make", then this would point to the source containing the Makefile, not the make program itself. Set to -1 if the recipe doesn't come from a material, as zero is default unset value for int64.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="entrypoint_go">
+<a href="#entrypoint_go" style="color: inherit; text-decoration: inherit;">Entry<wbr>Point</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}String identifying the entry point into the build. This is often a path to a configuration file and/or a target label within that file. The syntax and meaning are defined by recipe.type. For example, if the recipe type were "make", then this would reference the directory in which to run make as well as which target to use.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="environment_go">
+<a href="#environment_go" style="color: inherit; text-decoration: inherit;">Environment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Any other builder-controlled inputs necessary for correctly evaluating the recipe. Usually only needed for reproducing the build but not evaluated as part of policy.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URI indicating what type of recipe was performed. It determines the meaning of recipe.entryPoint, recipe.arguments, recipe.environment, and materials.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="arguments_nodejs">
+<a href="#arguments_nodejs" style="color: inherit; text-decoration: inherit;">arguments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}[]</span>
+    </dt>
+    <dd>{{% md %}}Collection of all external inputs that influenced the build on top of recipe.definedInMaterial and recipe.entryPoint. For example, if the recipe type were "make", then this might be the flags passed to make aside from the target, which is captured in recipe.entryPoint.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="definedinmaterial_nodejs">
+<a href="#definedinmaterial_nodejs" style="color: inherit; text-decoration: inherit;">defined<wbr>In<wbr>Material</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Index in materials containing the recipe steps that are not implied by recipe.type. For example, if the recipe type were "make", then this would point to the source containing the Makefile, not the make program itself. Set to -1 if the recipe doesn't come from a material, as zero is default unset value for int64.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="entrypoint_nodejs">
+<a href="#entrypoint_nodejs" style="color: inherit; text-decoration: inherit;">entry<wbr>Point</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}String identifying the entry point into the build. This is often a path to a configuration file and/or a target label within that file. The syntax and meaning are defined by recipe.type. For example, if the recipe type were "make", then this would reference the directory in which to run make as well as which target to use.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="environment_nodejs">
+<a href="#environment_nodejs" style="color: inherit; text-decoration: inherit;">environment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}[]</span>
+    </dt>
+    <dd>{{% md %}}Any other builder-controlled inputs necessary for correctly evaluating the recipe. Usually only needed for reproducing the build but not evaluated as part of policy.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URI indicating what type of recipe was performed. It determines the meaning of recipe.entryPoint, recipe.arguments, recipe.environment, and materials.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="arguments_python">
+<a href="#arguments_python" style="color: inherit; text-decoration: inherit;">arguments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[Mapping[str, str]]</span>
+    </dt>
+    <dd>{{% md %}}Collection of all external inputs that influenced the build on top of recipe.definedInMaterial and recipe.entryPoint. For example, if the recipe type were "make", then this might be the flags passed to make aside from the target, which is captured in recipe.entryPoint.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="defined_in_material_python">
+<a href="#defined_in_material_python" style="color: inherit; text-decoration: inherit;">defined_<wbr>in_<wbr>material</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Index in materials containing the recipe steps that are not implied by recipe.type. For example, if the recipe type were "make", then this would point to the source containing the Makefile, not the make program itself. Set to -1 if the recipe doesn't come from a material, as zero is default unset value for int64.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="entry_point_python">
+<a href="#entry_point_python" style="color: inherit; text-decoration: inherit;">entry_<wbr>point</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}String identifying the entry point into the build. This is often a path to a configuration file and/or a target label within that file. The syntax and meaning are defined by recipe.type. For example, if the recipe type were "make", then this would reference the directory in which to run make as well as which target to use.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="environment_python">
+<a href="#environment_python" style="color: inherit; text-decoration: inherit;">environment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[Mapping[str, str]]</span>
+    </dt>
+    <dd>{{% md %}}Any other builder-controlled inputs necessary for correctly evaluating the recipe. Usually only needed for reproducing the build but not evaluated as part of policy.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}URI indicating what type of recipe was performed. It determines the meaning of recipe.entryPoint, recipe.arguments, recipe.environment, and materials.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="relationshipoccurrenceresponse">Relationship<wbr>Occurrence<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="comment_csharp">
+<a href="#comment_csharp" style="color: inherit; text-decoration: inherit;">Comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A place for the SPDX file creator to record any general comments about the relationship{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="source_csharp">
+<a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Also referred to as SPDXRef-A The source SPDX element (file, package, etc){{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="target_csharp">
+<a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Also referred to as SPDXRef-B The target SPDC element (file, package, etc) In cases where there are "known unknowns", the use of the keyword NOASSERTION can be used The keywords NONE can be used to indicate that an SPDX element (package/file/snippet) has no other elements connected by some relationship to it{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of relationship between the source and target SPDX elements{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="comment_go">
+<a href="#comment_go" style="color: inherit; text-decoration: inherit;">Comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A place for the SPDX file creator to record any general comments about the relationship{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="source_go">
+<a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Also referred to as SPDXRef-A The source SPDX element (file, package, etc){{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="target_go">
+<a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Also referred to as SPDXRef-B The target SPDC element (file, package, etc) In cases where there are "known unknowns", the use of the keyword NOASSERTION can be used The keywords NONE can be used to indicate that an SPDX element (package/file/snippet) has no other elements connected by some relationship to it{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of relationship between the source and target SPDX elements{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="comment_nodejs">
+<a href="#comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A place for the SPDX file creator to record any general comments about the relationship{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="source_nodejs">
+<a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Also referred to as SPDXRef-A The source SPDX element (file, package, etc){{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="target_nodejs">
+<a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Also referred to as SPDXRef-B The target SPDC element (file, package, etc) In cases where there are "known unknowns", the use of the keyword NOASSERTION can be used The keywords NONE can be used to indicate that an SPDX element (package/file/snippet) has no other elements connected by some relationship to it{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of relationship between the source and target SPDX elements{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="comment_python">
+<a href="#comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A place for the SPDX file creator to record any general comments about the relationship{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="source_python">
+<a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Also referred to as SPDXRef-A The source SPDX element (file, package, etc){{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="target_python">
+<a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Also referred to as SPDXRef-B The target SPDC element (file, package, etc) In cases where there are "known unknowns", the use of the keyword NOASSERTION can be used The keywords NONE can be used to indicate that an SPDX element (package/file/snippet) has no other elements connected by some relationship to it{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of relationship between the source and target SPDX elements{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="reposourceresponse">Repo<wbr>Source<wbr>Response</h4>
@@ -4456,6 +6680,90 @@ The following output properties are available:
     <dd>{{% md %}}Google Cloud Storage object containing source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="subjectresponse">Subject<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="digest_csharp">
+<a href="#digest_csharp" style="color: inherit; text-decoration: inherit;">Digest</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}"": ""{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="digest_go">
+<a href="#digest_go" style="color: inherit; text-decoration: inherit;">Digest</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}"": ""{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="digest_nodejs">
+<a href="#digest_nodejs" style="color: inherit; text-decoration: inherit;">digest</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}"": ""{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="digest_python">
+<a href="#digest_python" style="color: inherit; text-decoration: inherit;">digest</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}"": ""{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="upgradedistributionresponse">Upgrade<wbr>Distribution<wbr>Response</h4>
 
 
@@ -4921,7 +7229,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The distro assigned severity for this vulnerability when that is available and note provider assigned severity when distro has not yet assigned a severity for this vulnerability.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The distro assigned severity for this vulnerability when that is available and note provider assigned severity when distro has not yet assigned a severity for this vulnerability. When there are multiple package issues for this vulnerability, they can have different effective severities because some might come from the distro and some might come from installed language packs (e.g. Maven JARs or Go binaries). For this reason, it is advised to use the effective severity on the PackageIssue level, as this field may eventually be deprecated. In the case where multiple PackageIssues have different effective severities, the one set here will be the highest severity of any of the PackageIssues.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="packageissue_csharp">
 <a href="#packageissue_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Issue</a>
@@ -4945,7 +7253,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of package; whether native or non native(ruby gems, node.js packages etc){{% /md %}}</dd></dl>
+    <dd>{{% md %}}The type of package; whether native or non native(ruby gems, node.js packages etc). This may be deprecated in the future because we can have multiple PackageIssues with different package types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4965,7 +7273,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The distro assigned severity for this vulnerability when that is available and note provider assigned severity when distro has not yet assigned a severity for this vulnerability.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The distro assigned severity for this vulnerability when that is available and note provider assigned severity when distro has not yet assigned a severity for this vulnerability. When there are multiple package issues for this vulnerability, they can have different effective severities because some might come from the distro and some might come from installed language packs (e.g. Maven JARs or Go binaries). For this reason, it is advised to use the effective severity on the PackageIssue level, as this field may eventually be deprecated. In the case where multiple PackageIssues have different effective severities, the one set here will be the highest severity of any of the PackageIssues.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="packageissue_go">
 <a href="#packageissue_go" style="color: inherit; text-decoration: inherit;">Package<wbr>Issue</a>
@@ -4989,7 +7297,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of package; whether native or non native(ruby gems, node.js packages etc){{% /md %}}</dd></dl>
+    <dd>{{% md %}}The type of package; whether native or non native(ruby gems, node.js packages etc). This may be deprecated in the future because we can have multiple PackageIssues with different package types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -5009,7 +7317,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The distro assigned severity for this vulnerability when that is available and note provider assigned severity when distro has not yet assigned a severity for this vulnerability.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The distro assigned severity for this vulnerability when that is available and note provider assigned severity when distro has not yet assigned a severity for this vulnerability. When there are multiple package issues for this vulnerability, they can have different effective severities because some might come from the distro and some might come from installed language packs (e.g. Maven JARs or Go binaries). For this reason, it is advised to use the effective severity on the PackageIssue level, as this field may eventually be deprecated. In the case where multiple PackageIssues have different effective severities, the one set here will be the highest severity of any of the PackageIssues.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="packageissue_nodejs">
 <a href="#packageissue_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Issue</a>
@@ -5033,7 +7341,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of package; whether native or non native(ruby gems, node.js packages etc){{% /md %}}</dd></dl>
+    <dd>{{% md %}}The type of package; whether native or non native(ruby gems, node.js packages etc). This may be deprecated in the future because we can have multiple PackageIssues with different package types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -5053,7 +7361,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The distro assigned severity for this vulnerability when that is available and note provider assigned severity when distro has not yet assigned a severity for this vulnerability.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The distro assigned severity for this vulnerability when that is available and note provider assigned severity when distro has not yet assigned a severity for this vulnerability. When there are multiple package issues for this vulnerability, they can have different effective severities because some might come from the distro and some might come from installed language packs (e.g. Maven JARs or Go binaries). For this reason, it is advised to use the effective severity on the PackageIssue level, as this field may eventually be deprecated. In the case where multiple PackageIssues have different effective severities, the one set here will be the highest severity of any of the PackageIssues.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="package_issue_python">
 <a href="#package_issue_python" style="color: inherit; text-decoration: inherit;">package_<wbr>issue</a>
@@ -5077,7 +7385,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of package; whether native or non native(ruby gems, node.js packages etc){{% /md %}}</dd></dl>
+    <dd>{{% md %}}The type of package; whether native or non native(ruby gems, node.js packages etc). This may be deprecated in the future because we can have multiple PackageIssues with different package types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="vulnerabilitylocationresponse">Vulnerability<wbr>Location<wbr>Response</h4>

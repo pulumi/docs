@@ -13,14 +13,14 @@ Explore the resources and functions of the google-native.file/v1 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="backup" title="Backup"><span class="symbol resource"></span>Backup</a></li>
-    <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
+    <li><a href="backup" title="Backup"><span class="api-symbol api-symbol--resource"></span>Backup</a></li>
+    <li><a href="instance" title="Instance"><span class="api-symbol api-symbol--resource"></span>Instance</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getbackup" title="GetBackup"><span class="symbol function"></span>GetBackup</a></li>
-    <li><a href="getinstance" title="GetInstance"><span class="symbol function"></span>GetInstance</a></li>
+    <li><a href="getbackup" title="GetBackup"><span class="api-symbol api-symbol--function"></span>GetBackup</a></li>
+    <li><a href="getinstance" title="GetInstance"><span class="api-symbol api-symbol--function"></span>GetInstance</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -30,6 +30,6 @@ Explore the resources and functions of the google-native.file/v1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.0</dd>
+	<dd>0.8.0</dd>
 </dl>
 

@@ -130,6 +130,7 @@ const example = pulumi.output(azure.network.getPublicIPs({
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_public_i_ps(</span><span class="nx">allocation_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">attached</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                    <span class="nx">attachment_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPublicIPsResult</code></pre></div>
@@ -174,15 +175,23 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Allocation Type for the Public IP Address. Possible values include `Static` or `Dynamic`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="attached_csharp">
 <a href="#attached_csharp" style="color: inherit; text-decoration: inherit;">Attached</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Filter to include IP Addresses which are attached to a device, such as a VM/LB (`true`) or unattached (`false`).
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been deprecated in favour of `attachment_status` to improve filtering{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="attachmentstatus_csharp">
+<a href="#attachmentstatus_csharp" style="color: inherit; text-decoration: inherit;">Attachment<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Filter to include IP Addresses which are attached to a device, such as a VM/LB (`Attached`) or unattached (`Unattached`). To allow for both, use `All`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameprefix_csharp">
@@ -214,15 +223,23 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Allocation Type for the Public IP Address. Possible values include `Static` or `Dynamic`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="attached_go">
 <a href="#attached_go" style="color: inherit; text-decoration: inherit;">Attached</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Filter to include IP Addresses which are attached to a device, such as a VM/LB (`true`) or unattached (`false`).
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been deprecated in favour of `attachment_status` to improve filtering{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="attachmentstatus_go">
+<a href="#attachmentstatus_go" style="color: inherit; text-decoration: inherit;">Attachment<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Filter to include IP Addresses which are attached to a device, such as a VM/LB (`Attached`) or unattached (`Unattached`). To allow for both, use `All`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameprefix_go">
@@ -254,15 +271,23 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Allocation Type for the Public IP Address. Possible values include `Static` or `Dynamic`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="attached_nodejs">
 <a href="#attached_nodejs" style="color: inherit; text-decoration: inherit;">attached</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Filter to include IP Addresses which are attached to a device, such as a VM/LB (`true`) or unattached (`false`).
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been deprecated in favour of `attachment_status` to improve filtering{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="attachmentstatus_nodejs">
+<a href="#attachmentstatus_nodejs" style="color: inherit; text-decoration: inherit;">attachment<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Filter to include IP Addresses which are attached to a device, such as a VM/LB (`Attached`) or unattached (`Unattached`). To allow for both, use `All`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameprefix_nodejs">
@@ -294,15 +319,23 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Allocation Type for the Public IP Address. Possible values include `Static` or `Dynamic`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="attached_python">
 <a href="#attached_python" style="color: inherit; text-decoration: inherit;">attached</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Filter to include IP Addresses which are attached to a device, such as a VM/LB (`true`) or unattached (`false`).
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been deprecated in favour of `attachment_status` to improve filtering{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="attachment_status_python">
+<a href="#attachment_status_python" style="color: inherit; text-decoration: inherit;">attachment_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Filter to include IP Addresses which are attached to a device, such as a VM/LB (`Attached`) or unattached (`Unattached`). To allow for both, use `All`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_prefix_python">
@@ -359,13 +392,21 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="attached_csharp">
 <a href="#attached_csharp" style="color: inherit; text-decoration: inherit;">Attached</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been deprecated in favour of `attachment_status` to improve filtering{{% /md %}}</p></dd><dt class="property-"
+            title="">
+        <span id="attachmentstatus_csharp">
+<a href="#attachmentstatus_csharp" style="color: inherit; text-decoration: inherit;">Attachment<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -413,13 +454,21 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="attached_go">
 <a href="#attached_go" style="color: inherit; text-decoration: inherit;">Attached</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been deprecated in favour of `attachment_status` to improve filtering{{% /md %}}</p></dd><dt class="property-"
+            title="">
+        <span id="attachmentstatus_go">
+<a href="#attachmentstatus_go" style="color: inherit; text-decoration: inherit;">Attachment<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -467,13 +516,21 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="attached_nodejs">
 <a href="#attached_nodejs" style="color: inherit; text-decoration: inherit;">attached</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been deprecated in favour of `attachment_status` to improve filtering{{% /md %}}</p></dd><dt class="property-"
+            title="">
+        <span id="attachmentstatus_nodejs">
+<a href="#attachmentstatus_nodejs" style="color: inherit; text-decoration: inherit;">attachment<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -521,13 +578,21 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="attached_python">
 <a href="#attached_python" style="color: inherit; text-decoration: inherit;">attached</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been deprecated in favour of `attachment_status` to improve filtering{{% /md %}}</p></dd><dt class="property-"
+            title="">
+        <span id="attachment_status_python">
+<a href="#attachment_status_python" style="color: inherit; text-decoration: inherit;">attachment_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">

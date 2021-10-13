@@ -1078,7 +1078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-native:network:UserRuleCollection myTestSecurityConfig /subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/networkManager/testNetworkManager/securityUserConfigurations/myTestSecurityConfig 
+$ pulumi import azure-native:network:UserRuleCollection myTestSecurityConfig /subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/networkManager/testNetworkManager/securityUserConfigurations/myTestSecurityConfig/ruleCollections/testRuleCollection 
 ```
 
 

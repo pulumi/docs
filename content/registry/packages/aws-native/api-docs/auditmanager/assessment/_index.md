@@ -29,14 +29,14 @@ An entity that defines the scope of audit evidence collected by AWS Audit Manage
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Assessment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-               <span class="nx">assessment_reports_destination</span><span class="p">:</span> <span class="nx">Optional[AssessmentAssessmentReportsDestinationArgs]</span> = None<span class="p">,</span>
+               <span class="nx">assessment_reports_destination</span><span class="p">:</span> <span class="nx">Optional[AssessmentReportsDestinationArgs]</span> = None<span class="p">,</span>
                <span class="nx">aws_account</span><span class="p">:</span> <span class="nx">Optional[AssessmentAWSAccountArgs]</span> = None<span class="p">,</span>
                <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">framework_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[AssessmentRoleArgs]]</span> = None<span class="p">,</span>
                <span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[AssessmentScopeArgs]</span> = None<span class="p">,</span>
-               <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[AssessmentAssessmentStatus]</span> = None<span class="p">,</span>
+               <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[AssessmentStatus]</span> = None<span class="p">,</span>
                <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[AssessmentTagArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Assessment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -171,7 +171,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#assessmentreportsdestination_csharp" style="color: inherit; text-decoration: inherit;">Assessment<wbr>Reports<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assessmentassessmentreportsdestination">Pulumi.<wbr>Aws<wbr>Native.<wbr>Audit<wbr>Manager.<wbr>Inputs.<wbr>Assessment<wbr>Assessment<wbr>Reports<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#assessmentreportsdestination">Pulumi.<wbr>Aws<wbr>Native.<wbr>Audit<wbr>Manager.<wbr>Inputs.<wbr>Assessment<wbr>Reports<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -227,7 +227,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assessmentassessmentstatus">Pulumi.<wbr>Aws<wbr>Native.<wbr>Audit<wbr>Manager.<wbr>Assessment<wbr>Assessment<wbr>Status</a></span>
+        <span class="property-type"><a href="#assessmentstatus">Pulumi.<wbr>Aws<wbr>Native.<wbr>Audit<wbr>Manager.<wbr>Assessment<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -247,7 +247,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#assessmentreportsdestination_go" style="color: inherit; text-decoration: inherit;">Assessment<wbr>Reports<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assessmentassessmentreportsdestination">Assessment<wbr>Assessment<wbr>Reports<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#assessmentreportsdestination">Assessment<wbr>Reports<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -303,7 +303,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assessmentassessmentstatus">Assessment<wbr>Assessment<wbr>Status</a></span>
+        <span class="property-type"><a href="#assessmentstatus">Assessment<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -323,7 +323,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#assessmentreportsdestination_nodejs" style="color: inherit; text-decoration: inherit;">assessment<wbr>Reports<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assessmentassessmentreportsdestination">Assessment<wbr>Assessment<wbr>Reports<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#assessmentreportsdestination">Assessment<wbr>Reports<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -379,7 +379,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assessmentassessmentstatus">Assessment<wbr>Assessment<wbr>Status</a></span>
+        <span class="property-type"><a href="#assessmentstatus">Assessment<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -399,7 +399,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#assessment_reports_destination_python" style="color: inherit; text-decoration: inherit;">assessment_<wbr>reports_<wbr>destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assessmentassessmentreportsdestination">Assessment<wbr>Assessment<wbr>Reports<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#assessmentreportsdestination">Assessment<wbr>Reports<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -455,7 +455,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assessmentassessmentstatus">Assessment<wbr>Assessment<wbr>Status</a></span>
+        <span class="property-type"><a href="#assessmentstatus">Assessment<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -823,136 +823,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="assessmentassessmentreportdestinationtype">Assessment<wbr>Assessment<wbr>Report<wbr>Destination<wbr>Type</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>S3</dt>
-    <dd>S3</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Assessment<wbr>Assessment<wbr>Report<wbr>Destination<wbr>Type<wbr>S3</dt>
-    <dd>S3</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>S3</dt>
-    <dd>S3</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>S3</dt>
-    <dd>S3</dd></dl>
-{{% /choosable %}}
-
-<h4 id="assessmentassessmentreportsdestination">Assessment<wbr>Assessment<wbr>Reports<wbr>Destination</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="destination_csharp">
-<a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="destinationtype_csharp">
-<a href="#destinationtype_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assessmentassessmentreportdestinationtype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Audit<wbr>Manager.<wbr>Assessment<wbr>Assessment<wbr>Report<wbr>Destination<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="destination_go">
-<a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="destinationtype_go">
-<a href="#destinationtype_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assessmentassessmentreportdestinationtype">Assessment<wbr>Assessment<wbr>Report<wbr>Destination<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="destination_nodejs">
-<a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="destinationtype_nodejs">
-<a href="#destinationtype_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assessmentassessmentreportdestinationtype">Assessment<wbr>Assessment<wbr>Report<wbr>Destination<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="destination_python">
-<a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="destination_type_python">
-<a href="#destination_type_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assessmentassessmentreportdestinationtype">Assessment<wbr>Assessment<wbr>Report<wbr>Destination<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="assessmentassessmentstatus">Assessment<wbr>Assessment<wbr>Status</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Active</dt>
-    <dd>ACTIVE</dd><dt>Inactive</dt>
-    <dd>INACTIVE</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Assessment<wbr>Assessment<wbr>Status<wbr>Active</dt>
-    <dd>ACTIVE</dd><dt>Assessment<wbr>Assessment<wbr>Status<wbr>Inactive</dt>
-    <dd>INACTIVE</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Active</dt>
-    <dd>ACTIVE</dd><dt>Inactive</dt>
-    <dd>INACTIVE</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>ACTIVE</dt>
-    <dd>ACTIVE</dd><dt>INACTIVE</dt>
-    <dd>INACTIVE</dd></dl>
 {{% /choosable %}}
 
 <h4 id="assessmentdelegation">Assessment<wbr>Delegation</h4>
@@ -1355,6 +1225,110 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>COMPLETE</dd></dl>
 {{% /choosable %}}
 
+<h4 id="assessmentreportdestinationtype">Assessment<wbr>Report<wbr>Destination<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>S3</dt>
+    <dd>S3</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Assessment<wbr>Report<wbr>Destination<wbr>Type<wbr>S3</dt>
+    <dd>S3</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>S3</dt>
+    <dd>S3</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>S3</dt>
+    <dd>S3</dd></dl>
+{{% /choosable %}}
+
+<h4 id="assessmentreportsdestination">Assessment<wbr>Reports<wbr>Destination</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="destination_csharp">
+<a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destinationtype_csharp">
+<a href="#destinationtype_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#assessmentreportdestinationtype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Audit<wbr>Manager.<wbr>Assessment<wbr>Report<wbr>Destination<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="destination_go">
+<a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destinationtype_go">
+<a href="#destinationtype_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#assessmentreportdestinationtype">Assessment<wbr>Report<wbr>Destination<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="destination_nodejs">
+<a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destinationtype_nodejs">
+<a href="#destinationtype_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#assessmentreportdestinationtype">Assessment<wbr>Report<wbr>Destination<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="destination_python">
+<a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destination_type_python">
+<a href="#destination_type_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#assessmentreportdestinationtype">Assessment<wbr>Report<wbr>Destination<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="assessmentrole">Assessment<wbr>Role</h4>
 
 {{% choosable language csharp %}}
@@ -1543,6 +1517,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#assessmentawsservice">Sequence[Assessment<wbr>AWSService]</a></span>
     </dt>
     <dd>{{% md %}}The AWS services included in scope.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="assessmentstatus">Assessment<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Active</dt>
+    <dd>ACTIVE</dd><dt>Inactive</dt>
+    <dd>INACTIVE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Assessment<wbr>Status<wbr>Active</dt>
+    <dd>ACTIVE</dd><dt>Assessment<wbr>Status<wbr>Inactive</dt>
+    <dd>INACTIVE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Active</dt>
+    <dd>ACTIVE</dd><dt>Inactive</dt>
+    <dd>INACTIVE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ACTIVE</dt>
+    <dd>ACTIVE</dd><dt>INACTIVE</dt>
+    <dd>INACTIVE</dd></dl>
 {{% /choosable %}}
 
 <h4 id="assessmenttag">Assessment<wbr>Tag</h4>

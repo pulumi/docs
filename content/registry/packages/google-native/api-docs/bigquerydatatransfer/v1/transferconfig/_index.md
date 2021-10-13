@@ -252,7 +252,7 @@ The TransferConfig resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Pub/Sub topic where notifications will be sent after transfer runs associated with this transfer config finish.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Pub/Sub topic where notifications will be sent after transfer runs associated with this transfer config finish. The format for specifying a pubsub topic is: `projects/{project}/topics/{topic}`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="params_csharp">
 <a href="#params_csharp" style="color: inherit; text-decoration: inherit;">Params</a>
@@ -384,7 +384,7 @@ The TransferConfig resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Pub/Sub topic where notifications will be sent after transfer runs associated with this transfer config finish.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Pub/Sub topic where notifications will be sent after transfer runs associated with this transfer config finish. The format for specifying a pubsub topic is: `projects/{project}/topics/{topic}`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="params_go">
 <a href="#params_go" style="color: inherit; text-decoration: inherit;">Params</a>
@@ -516,7 +516,7 @@ The TransferConfig resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Pub/Sub topic where notifications will be sent after transfer runs associated with this transfer config finish.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Pub/Sub topic where notifications will be sent after transfer runs associated with this transfer config finish. The format for specifying a pubsub topic is: `projects/{project}/topics/{topic}`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="params_nodejs">
 <a href="#params_nodejs" style="color: inherit; text-decoration: inherit;">params</a>
@@ -648,7 +648,7 @@ The TransferConfig resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Pub/Sub topic where notifications will be sent after transfer runs associated with this transfer config finish.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Pub/Sub topic where notifications will be sent after transfer runs associated with this transfer config finish. The format for specifying a pubsub topic is: `projects/{project}/topics/{topic}`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="params_python">
 <a href="#params_python" style="color: inherit; text-decoration: inherit;">params</a>
@@ -733,6 +733,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Next time when data transfer will run.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="ownerinfo_csharp">
+<a href="#ownerinfo_csharp" style="color: inherit; text-decoration: inherit;">Owner<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userinforesponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query<wbr>Data<wbr>Transfer.<wbr>V1.<wbr>Outputs.<wbr>User<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Information about the user whose credentials are used to transfer data. Populated only for `transferConfigs.get` requests. In case the user information is not available, this field will not be populated.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
@@ -776,6 +784,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Next time when data transfer will run.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="ownerinfo_go">
+<a href="#ownerinfo_go" style="color: inherit; text-decoration: inherit;">Owner<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Information about the user whose credentials are used to transfer data. Populated only for `transferConfigs.get` requests. In case the user information is not available, this field will not be populated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -821,6 +837,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Next time when data transfer will run.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="ownerinfo_nodejs">
+<a href="#ownerinfo_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Information about the user whose credentials are used to transfer data. Populated only for `transferConfigs.get` requests. In case the user information is not available, this field will not be populated.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
@@ -864,6 +888,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Next time when data transfer will run.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="owner_info_python">
+<a href="#owner_info_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Information about the user whose credentials are used to transfer data. Populated only for `transferConfigs.get` requests. In case the user information is not available, this field will not be populated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1218,6 +1250,56 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies time to start scheduling transfer runs. The first run will be scheduled at or after the start time according to a recurrence pattern defined in the schedule string. The start time can be changed at any moment. The time when a data transfer can be trigerred manually is not limited by this option.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="userinforesponse">User<wbr>Info<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="email_csharp">
+<a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}E-mail address of the user.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="email_go">
+<a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}E-mail address of the user.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="email_nodejs">
+<a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}E-mail address of the user.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="email_python">
+<a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}E-mail address of the user.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

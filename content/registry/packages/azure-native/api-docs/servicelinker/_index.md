@@ -13,13 +13,13 @@ Explore the resources and functions of the azure-native.servicelinker module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="linker" title="Linker"><span class="symbol resource"></span>Linker</a></li>
+    <li><a href="linker" title="Linker"><span class="api-symbol api-symbol--resource"></span>Linker</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getlinker" title="GetLinker"><span class="symbol function"></span>GetLinker</a></li>
-    <li><a href="listlinkerconfigurations" title="ListLinkerConfigurations"><span class="symbol function"></span>ListLinkerConfigurations</a></li>
+    <li><a href="getlinker" title="GetLinker"><span class="api-symbol api-symbol--function"></span>GetLinker</a></li>
+    <li><a href="listlinkerconfigurations" title="ListLinkerConfigurations"><span class="api-symbol api-symbol--function"></span>ListLinkerConfigurations</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -29,6 +29,6 @@ Explore the resources and functions of the azure-native.servicelinker module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.36.0</dd>
+	<dd>1.37.0</dd>
 </dl>
 

@@ -13,12 +13,12 @@ Explore the resources and functions of the aws-native.frauddetector module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="detector" title="Detector"><span class="symbol resource"></span>Detector</a></li>
-    <li><a href="entitytype" title="EntityType"><span class="symbol resource"></span>EntityType</a></li>
-    <li><a href="eventtype" title="EventType"><span class="symbol resource"></span>EventType</a></li>
-    <li><a href="label" title="Label"><span class="symbol resource"></span>Label</a></li>
-    <li><a href="outcome" title="Outcome"><span class="symbol resource"></span>Outcome</a></li>
-    <li><a href="variable" title="Variable"><span class="symbol resource"></span>Variable</a></li>
+    <li><a href="detector" title="Detector"><span class="api-symbol api-symbol--resource"></span>Detector</a></li>
+    <li><a href="entitytype" title="EntityType"><span class="api-symbol api-symbol--resource"></span>EntityType</a></li>
+    <li><a href="eventtype" title="EventType"><span class="api-symbol api-symbol--resource"></span>EventType</a></li>
+    <li><a href="label" title="Label"><span class="api-symbol api-symbol--resource"></span>Label</a></li>
+    <li><a href="outcome" title="Outcome"><span class="api-symbol api-symbol--resource"></span>Outcome</a></li>
+    <li><a href="variable" title="Variable"><span class="api-symbol api-symbol--resource"></span>Variable</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -28,6 +28,6 @@ Explore the resources and functions of the aws-native.frauddetector module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.0</dd>
 </dl>
 

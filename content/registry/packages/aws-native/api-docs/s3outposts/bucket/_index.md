@@ -450,6 +450,88 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies the number of days after which Amazon S3Outposts aborts an incomplete multipart upload.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="bucketfiltertag">Bucket<wbr>Filter<wbr>Tag</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="bucketlifecycleconfiguration">Bucket<wbr>Lifecycle<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
@@ -533,7 +615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">object</span>
+        <span class="property-type"><a href="#bucketrulefilterproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3Outposts.<wbr>Inputs.<wbr>Bucket<wbr>Rule<wbr>Filter<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The container for the filter of the lifecycle rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -585,7 +667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#bucketrulefilterproperties">Bucket<wbr>Rule<wbr>Filter<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The container for the filter of the lifecycle rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -637,7 +719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">any</span>
+        <span class="property-type"><a href="#bucketrulefilterproperties">Bucket<wbr>Rule<wbr>Filter<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The container for the filter of the lifecycle rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -689,7 +771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#bucketrulefilterproperties">Bucket<wbr>Rule<wbr>Filter<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The container for the filter of the lifecycle rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -708,6 +790,120 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#bucketrulestatus">Bucket<wbr>Rule<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketrulefilterproperties">Bucket<wbr>Rule<wbr>Filter<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="andoperator_csharp">
+<a href="#andoperator_csharp" style="color: inherit; text-decoration: inherit;">And<wbr>Operator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketfilterandoperator">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3Outposts.<wbr>Inputs.<wbr>Bucket<wbr>Filter<wbr>And<wbr>Operator</a></span>
+    </dt>
+    <dd>{{% md %}}The container for the AND condition for the lifecycle rule. A combination of Prefix and 1 or more Tags OR a minimum of 2 or more tags.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prefix_csharp">
+<a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Object key prefix that identifies one or more objects to which this rule applies.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tag_csharp">
+<a href="#tag_csharp" style="color: inherit; text-decoration: inherit;">Tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketfiltertag">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3Outposts.<wbr>Inputs.<wbr>Bucket<wbr>Filter<wbr>Tag</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a tag used to identify a subset of objects for an Amazon S3Outposts bucket.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="andoperator_go">
+<a href="#andoperator_go" style="color: inherit; text-decoration: inherit;">And<wbr>Operator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketfilterandoperator">Bucket<wbr>Filter<wbr>And<wbr>Operator</a></span>
+    </dt>
+    <dd>{{% md %}}The container for the AND condition for the lifecycle rule. A combination of Prefix and 1 or more Tags OR a minimum of 2 or more tags.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prefix_go">
+<a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Object key prefix that identifies one or more objects to which this rule applies.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tag_go">
+<a href="#tag_go" style="color: inherit; text-decoration: inherit;">Tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketfiltertag">Bucket<wbr>Filter<wbr>Tag</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a tag used to identify a subset of objects for an Amazon S3Outposts bucket.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="andoperator_nodejs">
+<a href="#andoperator_nodejs" style="color: inherit; text-decoration: inherit;">and<wbr>Operator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketfilterandoperator">Bucket<wbr>Filter<wbr>And<wbr>Operator</a></span>
+    </dt>
+    <dd>{{% md %}}The container for the AND condition for the lifecycle rule. A combination of Prefix and 1 or more Tags OR a minimum of 2 or more tags.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prefix_nodejs">
+<a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Object key prefix that identifies one or more objects to which this rule applies.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tag_nodejs">
+<a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketfiltertag">Bucket<wbr>Filter<wbr>Tag</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a tag used to identify a subset of objects for an Amazon S3Outposts bucket.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="and_operator_python">
+<a href="#and_operator_python" style="color: inherit; text-decoration: inherit;">and_<wbr>operator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketfilterandoperator">Bucket<wbr>Filter<wbr>And<wbr>Operator</a></span>
+    </dt>
+    <dd>{{% md %}}The container for the AND condition for the lifecycle rule. A combination of Prefix and 1 or more Tags OR a minimum of 2 or more tags.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prefix_python">
+<a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Object key prefix that identifies one or more objects to which this rule applies.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tag_python">
+<a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketfiltertag">Bucket<wbr>Filter<wbr>Tag</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a tag used to identify a subset of objects for an Amazon S3Outposts bucket.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="bucketrulestatus">Bucket<wbr>Rule<wbr>Status</h4>

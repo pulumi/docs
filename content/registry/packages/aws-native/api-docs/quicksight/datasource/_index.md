@@ -29,17 +29,17 @@ Definition of the AWS::QuickSight::DataSource Resource Type.
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">DataSource</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-               <span class="nx">alternate_data_source_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[DataSourceDataSourceParametersArgs]]</span> = None<span class="p">,</span>
+               <span class="nx">alternate_data_source_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[DataSourceParametersArgs]]</span> = None<span class="p">,</span>
                <span class="nx">aws_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[DataSourceDataSourceCredentialsArgs]</span> = None<span class="p">,</span>
+               <span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[DataSourceCredentialsArgs]</span> = None<span class="p">,</span>
                <span class="nx">data_source_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">data_source_parameters</span><span class="p">:</span> <span class="nx">Optional[DataSourceDataSourceParametersArgs]</span> = None<span class="p">,</span>
-               <span class="nx">error_info</span><span class="p">:</span> <span class="nx">Optional[DataSourceDataSourceErrorInfoArgs]</span> = None<span class="p">,</span>
+               <span class="nx">data_source_parameters</span><span class="p">:</span> <span class="nx">Optional[DataSourceParametersArgs]</span> = None<span class="p">,</span>
+               <span class="nx">error_info</span><span class="p">:</span> <span class="nx">Optional[DataSourceErrorInfoArgs]</span> = None<span class="p">,</span>
                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">permissions</span><span class="p">:</span> <span class="nx">Optional[Sequence[DataSourceResourcePermissionArgs]]</span> = None<span class="p">,</span>
                <span class="nx">ssl_properties</span><span class="p">:</span> <span class="nx">Optional[DataSourceSslPropertiesArgs]</span> = None<span class="p">,</span>
                <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[DataSourceTagArgs]]</span> = None<span class="p">,</span>
-               <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[DataSourceDataSourceType]</span> = None<span class="p">,</span>
+               <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[DataSourceType]</span> = None<span class="p">,</span>
                <span class="nx">vpc_connection_properties</span><span class="p">:</span> <span class="nx">Optional[DataSourceVpcConnectionPropertiesArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">DataSource</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -174,7 +174,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#alternatedatasourceparameters_csharp" style="color: inherit; text-decoration: inherit;">Alternate<wbr>Data<wbr>Source<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourceparameters">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Data<wbr>Source<wbr>Parameters<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datasourceparameters">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Parameters<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}<p>A set of alternate data source parameters that you want to share for the credentials
             stored with this data source. The credentials are applied in tandem with the data source
@@ -198,7 +198,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcecredentials">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Data<wbr>Source<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasourcecredentials">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -214,7 +214,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#datasourceparameters_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourceparameters">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Data<wbr>Source<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasourceparameters">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -222,7 +222,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#errorinfo_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourceerrorinfo">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Data<wbr>Source<wbr>Error<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasourceerrorinfo">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Error<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -262,7 +262,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Data<wbr>Source<wbr>Data<wbr>Source<wbr>Type</a></span>
+        <span class="property-type"><a href="#datasourcetype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Data<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -282,7 +282,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#alternatedatasourceparameters_go" style="color: inherit; text-decoration: inherit;">Alternate<wbr>Data<wbr>Source<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourceparameters">[]Data<wbr>Source<wbr>Data<wbr>Source<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasourceparameters">[]Data<wbr>Source<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}<p>A set of alternate data source parameters that you want to share for the credentials
             stored with this data source. The credentials are applied in tandem with the data source
@@ -306,7 +306,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#credentials_go" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcecredentials">Data<wbr>Source<wbr>Data<wbr>Source<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasourcecredentials">Data<wbr>Source<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -322,7 +322,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#datasourceparameters_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourceparameters">Data<wbr>Source<wbr>Data<wbr>Source<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasourceparameters">Data<wbr>Source<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -330,7 +330,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#errorinfo_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourceerrorinfo">Data<wbr>Source<wbr>Data<wbr>Source<wbr>Error<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasourceerrorinfo">Data<wbr>Source<wbr>Error<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -370,7 +370,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetype">Data<wbr>Source<wbr>Data<wbr>Source<wbr>Type</a></span>
+        <span class="property-type"><a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -390,7 +390,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#alternatedatasourceparameters_nodejs" style="color: inherit; text-decoration: inherit;">alternate<wbr>Data<wbr>Source<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourceparameters">Data<wbr>Source<wbr>Data<wbr>Source<wbr>Parameters<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#datasourceparameters">Data<wbr>Source<wbr>Parameters<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}<p>A set of alternate data source parameters that you want to share for the credentials
             stored with this data source. The credentials are applied in tandem with the data source
@@ -414,7 +414,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcecredentials">Data<wbr>Source<wbr>Data<wbr>Source<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasourcecredentials">Data<wbr>Source<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -430,7 +430,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#datasourceparameters_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourceparameters">Data<wbr>Source<wbr>Data<wbr>Source<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasourceparameters">Data<wbr>Source<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -438,7 +438,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#errorinfo_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourceerrorinfo">Data<wbr>Source<wbr>Data<wbr>Source<wbr>Error<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasourceerrorinfo">Data<wbr>Source<wbr>Error<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -478,7 +478,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetype">Data<wbr>Source<wbr>Data<wbr>Source<wbr>Type</a></span>
+        <span class="property-type"><a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -498,7 +498,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#alternate_data_source_parameters_python" style="color: inherit; text-decoration: inherit;">alternate_<wbr>data_<wbr>source_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourceparameters">Sequence[Data<wbr>Source<wbr>Data<wbr>Source<wbr>Parameters<wbr>Args]</a></span>
+        <span class="property-type"><a href="#datasourceparameters">Sequence[Data<wbr>Source<wbr>Parameters<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}<p>A set of alternate data source parameters that you want to share for the credentials
             stored with this data source. The credentials are applied in tandem with the data source
@@ -522,7 +522,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcecredentials">Data<wbr>Source<wbr>Data<wbr>Source<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasourcecredentials">Data<wbr>Source<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -538,7 +538,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#data_source_parameters_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourceparameters">Data<wbr>Source<wbr>Data<wbr>Source<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasourceparameters">Data<wbr>Source<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -546,7 +546,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#error_info_python" style="color: inherit; text-decoration: inherit;">error_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourceerrorinfo">Data<wbr>Source<wbr>Data<wbr>Source<wbr>Error<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasourceerrorinfo">Data<wbr>Source<wbr>Error<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -586,7 +586,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetype">Data<wbr>Source<wbr>Data<wbr>Source<wbr>Type</a></span>
+        <span class="property-type"><a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1145,7 +1145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alternatedatasourceparameters_csharp" style="color: inherit; text-decoration: inherit;">Alternate<wbr>Data<wbr>Source<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourceparameters">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Data<wbr>Source<wbr>Parameters&gt;</a></span>
+        <span class="property-type"><a href="#datasourceparameters">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Parameters&gt;</a></span>
     </dt>
     <dd>{{% md %}}<p>A set of alternate data source parameters that you want to share for these
             credentials. The credentials are applied in tandem with the data source parameters when
@@ -1181,7 +1181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alternatedatasourceparameters_go" style="color: inherit; text-decoration: inherit;">Alternate<wbr>Data<wbr>Source<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourceparameters">[]Data<wbr>Source<wbr>Data<wbr>Source<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#datasourceparameters">[]Data<wbr>Source<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}<p>A set of alternate data source parameters that you want to share for these
             credentials. The credentials are applied in tandem with the data source parameters when
@@ -1217,7 +1217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alternatedatasourceparameters_nodejs" style="color: inherit; text-decoration: inherit;">alternate<wbr>Data<wbr>Source<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourceparameters">Data<wbr>Source<wbr>Data<wbr>Source<wbr>Parameters[]</a></span>
+        <span class="property-type"><a href="#datasourceparameters">Data<wbr>Source<wbr>Parameters[]</a></span>
     </dt>
     <dd>{{% md %}}<p>A set of alternate data source parameters that you want to share for these
             credentials. The credentials are applied in tandem with the data source parameters when
@@ -1253,7 +1253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alternate_data_source_parameters_python" style="color: inherit; text-decoration: inherit;">alternate_<wbr>data_<wbr>source_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourceparameters">Sequence[Data<wbr>Source<wbr>Data<wbr>Source<wbr>Parameters]</a></span>
+        <span class="property-type"><a href="#datasourceparameters">Sequence[Data<wbr>Source<wbr>Parameters]</a></span>
     </dt>
     <dd>{{% md %}}<p>A set of alternate data source parameters that you want to share for these
             credentials. The credentials are applied in tandem with the data source parameters when
@@ -1266,7 +1266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
                 <code>Credentials</code> is automatically allowed.</p>{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="datasourcedatasourcecredentials">Data<wbr>Source<wbr>Data<wbr>Source<wbr>Credentials</h4>
+<h4 id="datasourcecredentials">Data<wbr>Source<wbr>Credentials</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
@@ -1360,7 +1360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="datasourcedatasourceerrorinfo">Data<wbr>Source<wbr>Data<wbr>Source<wbr>Error<wbr>Info</h4>
+<h4 id="datasourceerrorinfo">Data<wbr>Source<wbr>Error<wbr>Info</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
@@ -1377,7 +1377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourceerrorinfotype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Data<wbr>Source<wbr>Data<wbr>Source<wbr>Error<wbr>Info<wbr>Type</a></span>
+        <span class="property-type"><a href="#datasourceerrorinfotype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Data<wbr>Source<wbr>Error<wbr>Info<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1397,7 +1397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourceerrorinfotype">Data<wbr>Source<wbr>Data<wbr>Source<wbr>Error<wbr>Info<wbr>Type</a></span>
+        <span class="property-type"><a href="#datasourceerrorinfotype">Data<wbr>Source<wbr>Error<wbr>Info<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1417,7 +1417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourceerrorinfotype">Data<wbr>Source<wbr>Data<wbr>Source<wbr>Error<wbr>Info<wbr>Type</a></span>
+        <span class="property-type"><a href="#datasourceerrorinfotype">Data<wbr>Source<wbr>Error<wbr>Info<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1437,12 +1437,12 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourceerrorinfotype">Data<wbr>Source<wbr>Data<wbr>Source<wbr>Error<wbr>Info<wbr>Type</a></span>
+        <span class="property-type"><a href="#datasourceerrorinfotype">Data<wbr>Source<wbr>Error<wbr>Info<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="datasourcedatasourceerrorinfotype">Data<wbr>Source<wbr>Data<wbr>Source<wbr>Error<wbr>Info<wbr>Type</h4>
+<h4 id="datasourceerrorinfotype">Data<wbr>Source<wbr>Error<wbr>Info<wbr>Type</h4>
 
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>Access<wbr>Denied</dt>
@@ -1457,14 +1457,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular"><dt>Data<wbr>Source<wbr>Data<wbr>Source<wbr>Error<wbr>Info<wbr>Type<wbr>Access<wbr>Denied</dt>
-    <dd>ACCESS_DENIED</dd><dt>Data<wbr>Source<wbr>Data<wbr>Source<wbr>Error<wbr>Info<wbr>Type<wbr>Copy<wbr>Source<wbr>Not<wbr>Found</dt>
-    <dd>COPY_SOURCE_NOT_FOUND</dd><dt>Data<wbr>Source<wbr>Data<wbr>Source<wbr>Error<wbr>Info<wbr>Type<wbr>Timeout</dt>
-    <dd>TIMEOUT</dd><dt>Data<wbr>Source<wbr>Data<wbr>Source<wbr>Error<wbr>Info<wbr>Type<wbr>Engine<wbr>Version<wbr>Not<wbr>Supported</dt>
-    <dd>ENGINE_VERSION_NOT_SUPPORTED</dd><dt>Data<wbr>Source<wbr>Data<wbr>Source<wbr>Error<wbr>Info<wbr>Type<wbr>Unknown<wbr>Host</dt>
-    <dd>UNKNOWN_HOST</dd><dt>Data<wbr>Source<wbr>Data<wbr>Source<wbr>Error<wbr>Info<wbr>Type<wbr>Generic<wbr>Sql<wbr>Failure</dt>
-    <dd>GENERIC_SQL_FAILURE</dd><dt>Data<wbr>Source<wbr>Data<wbr>Source<wbr>Error<wbr>Info<wbr>Type<wbr>Conflict</dt>
-    <dd>CONFLICT</dd><dt>Data<wbr>Source<wbr>Data<wbr>Source<wbr>Error<wbr>Info<wbr>Type<wbr>Unknown</dt>
+<dl class="tabular"><dt>Data<wbr>Source<wbr>Error<wbr>Info<wbr>Type<wbr>Access<wbr>Denied</dt>
+    <dd>ACCESS_DENIED</dd><dt>Data<wbr>Source<wbr>Error<wbr>Info<wbr>Type<wbr>Copy<wbr>Source<wbr>Not<wbr>Found</dt>
+    <dd>COPY_SOURCE_NOT_FOUND</dd><dt>Data<wbr>Source<wbr>Error<wbr>Info<wbr>Type<wbr>Timeout</dt>
+    <dd>TIMEOUT</dd><dt>Data<wbr>Source<wbr>Error<wbr>Info<wbr>Type<wbr>Engine<wbr>Version<wbr>Not<wbr>Supported</dt>
+    <dd>ENGINE_VERSION_NOT_SUPPORTED</dd><dt>Data<wbr>Source<wbr>Error<wbr>Info<wbr>Type<wbr>Unknown<wbr>Host</dt>
+    <dd>UNKNOWN_HOST</dd><dt>Data<wbr>Source<wbr>Error<wbr>Info<wbr>Type<wbr>Generic<wbr>Sql<wbr>Failure</dt>
+    <dd>GENERIC_SQL_FAILURE</dd><dt>Data<wbr>Source<wbr>Error<wbr>Info<wbr>Type<wbr>Conflict</dt>
+    <dd>CONFLICT</dd><dt>Data<wbr>Source<wbr>Error<wbr>Info<wbr>Type<wbr>Unknown</dt>
     <dd>UNKNOWN</dd></dl>
 {{% /choosable %}}
 
@@ -1492,7 +1492,431 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>UNKNOWN</dd></dl>
 {{% /choosable %}}
 
-<h4 id="datasourcedatasourceparameters">Data<wbr>Source<wbr>Data<wbr>Source<wbr>Parameters</h4>
+<h4 id="datasourcemanifestfilelocation">Data<wbr>Source<wbr>Manifest<wbr>File<wbr>Location</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="bucket_csharp">
+<a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>Amazon S3 bucket.</p>{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>Amazon S3 key that identifies an object.</p>{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="bucket_go">
+<a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>Amazon S3 bucket.</p>{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>Amazon S3 key that identifies an object.</p>{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="bucket_nodejs">
+<a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>Amazon S3 bucket.</p>{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>Amazon S3 key that identifies an object.</p>{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="bucket_python">
+<a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}<p>Amazon S3 bucket.</p>{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}<p>Amazon S3 key that identifies an object.</p>{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="datasourcemariadbparameters">Data<wbr>Source<wbr>Maria<wbr>Db<wbr>Parameters</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="database_csharp">
+<a href="#database_csharp" style="color: inherit; text-decoration: inherit;">Database</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>Database.</p>{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="host_csharp">
+<a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>Host.</p>{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="port_csharp">
+<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}<p>Port.</p>{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="database_go">
+<a href="#database_go" style="color: inherit; text-decoration: inherit;">Database</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>Database.</p>{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="host_go">
+<a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>Host.</p>{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="port_go">
+<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}<p>Port.</p>{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="database_nodejs">
+<a href="#database_nodejs" style="color: inherit; text-decoration: inherit;">database</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>Database.</p>{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="host_nodejs">
+<a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>Host.</p>{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="port_nodejs">
+<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}<p>Port.</p>{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="database_python">
+<a href="#database_python" style="color: inherit; text-decoration: inherit;">database</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}<p>Database.</p>{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="host_python">
+<a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}<p>Host.</p>{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="port_python">
+<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}<p>Port.</p>{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="datasourcemysqlparameters">Data<wbr>Source<wbr>My<wbr>Sql<wbr>Parameters</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="database_csharp">
+<a href="#database_csharp" style="color: inherit; text-decoration: inherit;">Database</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>Database.</p>{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="host_csharp">
+<a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>Host.</p>{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="port_csharp">
+<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}<p>Port.</p>{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="database_go">
+<a href="#database_go" style="color: inherit; text-decoration: inherit;">Database</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>Database.</p>{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="host_go">
+<a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>Host.</p>{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="port_go">
+<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}<p>Port.</p>{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="database_nodejs">
+<a href="#database_nodejs" style="color: inherit; text-decoration: inherit;">database</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>Database.</p>{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="host_nodejs">
+<a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>Host.</p>{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="port_nodejs">
+<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}<p>Port.</p>{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="database_python">
+<a href="#database_python" style="color: inherit; text-decoration: inherit;">database</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}<p>Database.</p>{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="host_python">
+<a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}<p>Host.</p>{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="port_python">
+<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}<p>Port.</p>{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="datasourceoracleparameters">Data<wbr>Source<wbr>Oracle<wbr>Parameters</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="database_csharp">
+<a href="#database_csharp" style="color: inherit; text-decoration: inherit;">Database</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="host_csharp">
+<a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="port_csharp">
+<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="database_go">
+<a href="#database_go" style="color: inherit; text-decoration: inherit;">Database</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="host_go">
+<a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="port_go">
+<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="database_nodejs">
+<a href="#database_nodejs" style="color: inherit; text-decoration: inherit;">database</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="host_nodejs">
+<a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="port_nodejs">
+<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="database_python">
+<a href="#database_python" style="color: inherit; text-decoration: inherit;">database</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="host_python">
+<a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="port_python">
+<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="datasourceparameters">Data<wbr>Source<wbr>Parameters</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
@@ -2018,540 +2442,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasourceteradataparameters">Data<wbr>Source<wbr>Teradata<wbr>Parameters</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="datasourcedatasourcetype">Data<wbr>Source<wbr>Data<wbr>Source<wbr>Type</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Adobe<wbr>Analytics</dt>
-    <dd>ADOBE_ANALYTICS</dd><dt>Amazon<wbr>Elasticsearch</dt>
-    <dd>AMAZON_ELASTICSEARCH</dd><dt>Athena</dt>
-    <dd>ATHENA</dd><dt>Aurora</dt>
-    <dd>AURORA</dd><dt>Aurora<wbr>Postgresql</dt>
-    <dd>AURORA_POSTGRESQL</dd><dt>Aws<wbr>Iot<wbr>Analytics</dt>
-    <dd>AWS_IOT_ANALYTICS</dd><dt>Github</dt>
-    <dd>GITHUB</dd><dt>Jira</dt>
-    <dd>JIRA</dd><dt>Mariadb</dt>
-    <dd>MARIADB</dd><dt>Mysql</dt>
-    <dd>MYSQL</dd><dt>Oracle</dt>
-    <dd>ORACLE</dd><dt>Postgresql</dt>
-    <dd>POSTGRESQL</dd><dt>Presto</dt>
-    <dd>PRESTO</dd><dt>Redshift</dt>
-    <dd>REDSHIFT</dd><dt>S3</dt>
-    <dd>S3</dd><dt>Salesforce</dt>
-    <dd>SALESFORCE</dd><dt>Servicenow</dt>
-    <dd>SERVICENOW</dd><dt>Snowflake</dt>
-    <dd>SNOWFLAKE</dd><dt>Spark</dt>
-    <dd>SPARK</dd><dt>Sqlserver</dt>
-    <dd>SQLSERVER</dd><dt>Teradata</dt>
-    <dd>TERADATA</dd><dt>Twitter</dt>
-    <dd>TWITTER</dd><dt>Timestream</dt>
-    <dd>TIMESTREAM</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Data<wbr>Source<wbr>Data<wbr>Source<wbr>Type<wbr>Adobe<wbr>Analytics</dt>
-    <dd>ADOBE_ANALYTICS</dd><dt>Data<wbr>Source<wbr>Data<wbr>Source<wbr>Type<wbr>Amazon<wbr>Elasticsearch</dt>
-    <dd>AMAZON_ELASTICSEARCH</dd><dt>Data<wbr>Source<wbr>Data<wbr>Source<wbr>Type<wbr>Athena</dt>
-    <dd>ATHENA</dd><dt>Data<wbr>Source<wbr>Data<wbr>Source<wbr>Type<wbr>Aurora</dt>
-    <dd>AURORA</dd><dt>Data<wbr>Source<wbr>Data<wbr>Source<wbr>Type<wbr>Aurora<wbr>Postgresql</dt>
-    <dd>AURORA_POSTGRESQL</dd><dt>Data<wbr>Source<wbr>Data<wbr>Source<wbr>Type<wbr>Aws<wbr>Iot<wbr>Analytics</dt>
-    <dd>AWS_IOT_ANALYTICS</dd><dt>Data<wbr>Source<wbr>Data<wbr>Source<wbr>Type<wbr>Github</dt>
-    <dd>GITHUB</dd><dt>Data<wbr>Source<wbr>Data<wbr>Source<wbr>Type<wbr>Jira</dt>
-    <dd>JIRA</dd><dt>Data<wbr>Source<wbr>Data<wbr>Source<wbr>Type<wbr>Mariadb</dt>
-    <dd>MARIADB</dd><dt>Data<wbr>Source<wbr>Data<wbr>Source<wbr>Type<wbr>Mysql</dt>
-    <dd>MYSQL</dd><dt>Data<wbr>Source<wbr>Data<wbr>Source<wbr>Type<wbr>Oracle</dt>
-    <dd>ORACLE</dd><dt>Data<wbr>Source<wbr>Data<wbr>Source<wbr>Type<wbr>Postgresql</dt>
-    <dd>POSTGRESQL</dd><dt>Data<wbr>Source<wbr>Data<wbr>Source<wbr>Type<wbr>Presto</dt>
-    <dd>PRESTO</dd><dt>Data<wbr>Source<wbr>Data<wbr>Source<wbr>Type<wbr>Redshift</dt>
-    <dd>REDSHIFT</dd><dt>Data<wbr>Source<wbr>Data<wbr>Source<wbr>Type<wbr>S3</dt>
-    <dd>S3</dd><dt>Data<wbr>Source<wbr>Data<wbr>Source<wbr>Type<wbr>Salesforce</dt>
-    <dd>SALESFORCE</dd><dt>Data<wbr>Source<wbr>Data<wbr>Source<wbr>Type<wbr>Servicenow</dt>
-    <dd>SERVICENOW</dd><dt>Data<wbr>Source<wbr>Data<wbr>Source<wbr>Type<wbr>Snowflake</dt>
-    <dd>SNOWFLAKE</dd><dt>Data<wbr>Source<wbr>Data<wbr>Source<wbr>Type<wbr>Spark</dt>
-    <dd>SPARK</dd><dt>Data<wbr>Source<wbr>Data<wbr>Source<wbr>Type<wbr>Sqlserver</dt>
-    <dd>SQLSERVER</dd><dt>Data<wbr>Source<wbr>Data<wbr>Source<wbr>Type<wbr>Teradata</dt>
-    <dd>TERADATA</dd><dt>Data<wbr>Source<wbr>Data<wbr>Source<wbr>Type<wbr>Twitter</dt>
-    <dd>TWITTER</dd><dt>Data<wbr>Source<wbr>Data<wbr>Source<wbr>Type<wbr>Timestream</dt>
-    <dd>TIMESTREAM</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Adobe<wbr>Analytics</dt>
-    <dd>ADOBE_ANALYTICS</dd><dt>Amazon<wbr>Elasticsearch</dt>
-    <dd>AMAZON_ELASTICSEARCH</dd><dt>Athena</dt>
-    <dd>ATHENA</dd><dt>Aurora</dt>
-    <dd>AURORA</dd><dt>Aurora<wbr>Postgresql</dt>
-    <dd>AURORA_POSTGRESQL</dd><dt>Aws<wbr>Iot<wbr>Analytics</dt>
-    <dd>AWS_IOT_ANALYTICS</dd><dt>Github</dt>
-    <dd>GITHUB</dd><dt>Jira</dt>
-    <dd>JIRA</dd><dt>Mariadb</dt>
-    <dd>MARIADB</dd><dt>Mysql</dt>
-    <dd>MYSQL</dd><dt>Oracle</dt>
-    <dd>ORACLE</dd><dt>Postgresql</dt>
-    <dd>POSTGRESQL</dd><dt>Presto</dt>
-    <dd>PRESTO</dd><dt>Redshift</dt>
-    <dd>REDSHIFT</dd><dt>S3</dt>
-    <dd>S3</dd><dt>Salesforce</dt>
-    <dd>SALESFORCE</dd><dt>Servicenow</dt>
-    <dd>SERVICENOW</dd><dt>Snowflake</dt>
-    <dd>SNOWFLAKE</dd><dt>Spark</dt>
-    <dd>SPARK</dd><dt>Sqlserver</dt>
-    <dd>SQLSERVER</dd><dt>Teradata</dt>
-    <dd>TERADATA</dd><dt>Twitter</dt>
-    <dd>TWITTER</dd><dt>Timestream</dt>
-    <dd>TIMESTREAM</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>ADOBE_ANALYTICS</dt>
-    <dd>ADOBE_ANALYTICS</dd><dt>AMAZON_ELASTICSEARCH</dt>
-    <dd>AMAZON_ELASTICSEARCH</dd><dt>ATHENA</dt>
-    <dd>ATHENA</dd><dt>AURORA</dt>
-    <dd>AURORA</dd><dt>AURORA_POSTGRESQL</dt>
-    <dd>AURORA_POSTGRESQL</dd><dt>AWS_IOT_ANALYTICS</dt>
-    <dd>AWS_IOT_ANALYTICS</dd><dt>GITHUB</dt>
-    <dd>GITHUB</dd><dt>JIRA</dt>
-    <dd>JIRA</dd><dt>MARIADB</dt>
-    <dd>MARIADB</dd><dt>MYSQL</dt>
-    <dd>MYSQL</dd><dt>ORACLE</dt>
-    <dd>ORACLE</dd><dt>POSTGRESQL</dt>
-    <dd>POSTGRESQL</dd><dt>PRESTO</dt>
-    <dd>PRESTO</dd><dt>REDSHIFT</dt>
-    <dd>REDSHIFT</dd><dt>S3</dt>
-    <dd>S3</dd><dt>SALESFORCE</dt>
-    <dd>SALESFORCE</dd><dt>SERVICENOW</dt>
-    <dd>SERVICENOW</dd><dt>SNOWFLAKE</dt>
-    <dd>SNOWFLAKE</dd><dt>SPARK</dt>
-    <dd>SPARK</dd><dt>SQLSERVER</dt>
-    <dd>SQLSERVER</dd><dt>TERADATA</dt>
-    <dd>TERADATA</dd><dt>TWITTER</dt>
-    <dd>TWITTER</dd><dt>TIMESTREAM</dt>
-    <dd>TIMESTREAM</dd></dl>
-{{% /choosable %}}
-
-<h4 id="datasourcemanifestfilelocation">Data<wbr>Source<wbr>Manifest<wbr>File<wbr>Location</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="bucket_csharp">
-<a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>Amazon S3 bucket.</p>{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="key_csharp">
-<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>Amazon S3 key that identifies an object.</p>{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="bucket_go">
-<a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>Amazon S3 bucket.</p>{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="key_go">
-<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>Amazon S3 key that identifies an object.</p>{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="bucket_nodejs">
-<a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>Amazon S3 bucket.</p>{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="key_nodejs">
-<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>Amazon S3 key that identifies an object.</p>{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="bucket_python">
-<a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}<p>Amazon S3 bucket.</p>{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="key_python">
-<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}<p>Amazon S3 key that identifies an object.</p>{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="datasourcemariadbparameters">Data<wbr>Source<wbr>Maria<wbr>Db<wbr>Parameters</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="database_csharp">
-<a href="#database_csharp" style="color: inherit; text-decoration: inherit;">Database</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>Database.</p>{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="host_csharp">
-<a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>Host.</p>{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="port_csharp">
-<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">double</span>
-    </dt>
-    <dd>{{% md %}}<p>Port.</p>{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="database_go">
-<a href="#database_go" style="color: inherit; text-decoration: inherit;">Database</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>Database.</p>{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="host_go">
-<a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>Host.</p>{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="port_go">
-<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float64</span>
-    </dt>
-    <dd>{{% md %}}<p>Port.</p>{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="database_nodejs">
-<a href="#database_nodejs" style="color: inherit; text-decoration: inherit;">database</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>Database.</p>{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="host_nodejs">
-<a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>Host.</p>{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="port_nodejs">
-<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}<p>Port.</p>{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="database_python">
-<a href="#database_python" style="color: inherit; text-decoration: inherit;">database</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}<p>Database.</p>{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="host_python">
-<a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}<p>Host.</p>{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="port_python">
-<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}<p>Port.</p>{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="datasourcemysqlparameters">Data<wbr>Source<wbr>My<wbr>Sql<wbr>Parameters</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="database_csharp">
-<a href="#database_csharp" style="color: inherit; text-decoration: inherit;">Database</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>Database.</p>{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="host_csharp">
-<a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>Host.</p>{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="port_csharp">
-<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">double</span>
-    </dt>
-    <dd>{{% md %}}<p>Port.</p>{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="database_go">
-<a href="#database_go" style="color: inherit; text-decoration: inherit;">Database</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>Database.</p>{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="host_go">
-<a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>Host.</p>{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="port_go">
-<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float64</span>
-    </dt>
-    <dd>{{% md %}}<p>Port.</p>{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="database_nodejs">
-<a href="#database_nodejs" style="color: inherit; text-decoration: inherit;">database</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>Database.</p>{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="host_nodejs">
-<a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>Host.</p>{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="port_nodejs">
-<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}<p>Port.</p>{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="database_python">
-<a href="#database_python" style="color: inherit; text-decoration: inherit;">database</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}<p>Database.</p>{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="host_python">
-<a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}<p>Host.</p>{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="port_python">
-<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}<p>Port.</p>{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="datasourceoracleparameters">Data<wbr>Source<wbr>Oracle<wbr>Parameters</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="database_csharp">
-<a href="#database_csharp" style="color: inherit; text-decoration: inherit;">Database</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="host_csharp">
-<a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="port_csharp">
-<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">double</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="database_go">
-<a href="#database_go" style="color: inherit; text-decoration: inherit;">Database</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="host_go">
-<a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="port_go">
-<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float64</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="database_nodejs">
-<a href="#database_nodejs" style="color: inherit; text-decoration: inherit;">database</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="host_nodejs">
-<a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="port_nodejs">
-<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="database_python">
-<a href="#database_python" style="color: inherit; text-decoration: inherit;">database</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="host_python">
-<a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="port_python">
-<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3804,6 +3694,116 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}<p>Port.</p>{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="datasourcetype">Data<wbr>Source<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Adobe<wbr>Analytics</dt>
+    <dd>ADOBE_ANALYTICS</dd><dt>Amazon<wbr>Elasticsearch</dt>
+    <dd>AMAZON_ELASTICSEARCH</dd><dt>Athena</dt>
+    <dd>ATHENA</dd><dt>Aurora</dt>
+    <dd>AURORA</dd><dt>Aurora<wbr>Postgresql</dt>
+    <dd>AURORA_POSTGRESQL</dd><dt>Aws<wbr>Iot<wbr>Analytics</dt>
+    <dd>AWS_IOT_ANALYTICS</dd><dt>Github</dt>
+    <dd>GITHUB</dd><dt>Jira</dt>
+    <dd>JIRA</dd><dt>Mariadb</dt>
+    <dd>MARIADB</dd><dt>Mysql</dt>
+    <dd>MYSQL</dd><dt>Oracle</dt>
+    <dd>ORACLE</dd><dt>Postgresql</dt>
+    <dd>POSTGRESQL</dd><dt>Presto</dt>
+    <dd>PRESTO</dd><dt>Redshift</dt>
+    <dd>REDSHIFT</dd><dt>S3</dt>
+    <dd>S3</dd><dt>Salesforce</dt>
+    <dd>SALESFORCE</dd><dt>Servicenow</dt>
+    <dd>SERVICENOW</dd><dt>Snowflake</dt>
+    <dd>SNOWFLAKE</dd><dt>Spark</dt>
+    <dd>SPARK</dd><dt>Sqlserver</dt>
+    <dd>SQLSERVER</dd><dt>Teradata</dt>
+    <dd>TERADATA</dd><dt>Twitter</dt>
+    <dd>TWITTER</dd><dt>Timestream</dt>
+    <dd>TIMESTREAM</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Data<wbr>Source<wbr>Type<wbr>Adobe<wbr>Analytics</dt>
+    <dd>ADOBE_ANALYTICS</dd><dt>Data<wbr>Source<wbr>Type<wbr>Amazon<wbr>Elasticsearch</dt>
+    <dd>AMAZON_ELASTICSEARCH</dd><dt>Data<wbr>Source<wbr>Type<wbr>Athena</dt>
+    <dd>ATHENA</dd><dt>Data<wbr>Source<wbr>Type<wbr>Aurora</dt>
+    <dd>AURORA</dd><dt>Data<wbr>Source<wbr>Type<wbr>Aurora<wbr>Postgresql</dt>
+    <dd>AURORA_POSTGRESQL</dd><dt>Data<wbr>Source<wbr>Type<wbr>Aws<wbr>Iot<wbr>Analytics</dt>
+    <dd>AWS_IOT_ANALYTICS</dd><dt>Data<wbr>Source<wbr>Type<wbr>Github</dt>
+    <dd>GITHUB</dd><dt>Data<wbr>Source<wbr>Type<wbr>Jira</dt>
+    <dd>JIRA</dd><dt>Data<wbr>Source<wbr>Type<wbr>Mariadb</dt>
+    <dd>MARIADB</dd><dt>Data<wbr>Source<wbr>Type<wbr>Mysql</dt>
+    <dd>MYSQL</dd><dt>Data<wbr>Source<wbr>Type<wbr>Oracle</dt>
+    <dd>ORACLE</dd><dt>Data<wbr>Source<wbr>Type<wbr>Postgresql</dt>
+    <dd>POSTGRESQL</dd><dt>Data<wbr>Source<wbr>Type<wbr>Presto</dt>
+    <dd>PRESTO</dd><dt>Data<wbr>Source<wbr>Type<wbr>Redshift</dt>
+    <dd>REDSHIFT</dd><dt>Data<wbr>Source<wbr>Type<wbr>S3</dt>
+    <dd>S3</dd><dt>Data<wbr>Source<wbr>Type<wbr>Salesforce</dt>
+    <dd>SALESFORCE</dd><dt>Data<wbr>Source<wbr>Type<wbr>Servicenow</dt>
+    <dd>SERVICENOW</dd><dt>Data<wbr>Source<wbr>Type<wbr>Snowflake</dt>
+    <dd>SNOWFLAKE</dd><dt>Data<wbr>Source<wbr>Type<wbr>Spark</dt>
+    <dd>SPARK</dd><dt>Data<wbr>Source<wbr>Type<wbr>Sqlserver</dt>
+    <dd>SQLSERVER</dd><dt>Data<wbr>Source<wbr>Type<wbr>Teradata</dt>
+    <dd>TERADATA</dd><dt>Data<wbr>Source<wbr>Type<wbr>Twitter</dt>
+    <dd>TWITTER</dd><dt>Data<wbr>Source<wbr>Type<wbr>Timestream</dt>
+    <dd>TIMESTREAM</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Adobe<wbr>Analytics</dt>
+    <dd>ADOBE_ANALYTICS</dd><dt>Amazon<wbr>Elasticsearch</dt>
+    <dd>AMAZON_ELASTICSEARCH</dd><dt>Athena</dt>
+    <dd>ATHENA</dd><dt>Aurora</dt>
+    <dd>AURORA</dd><dt>Aurora<wbr>Postgresql</dt>
+    <dd>AURORA_POSTGRESQL</dd><dt>Aws<wbr>Iot<wbr>Analytics</dt>
+    <dd>AWS_IOT_ANALYTICS</dd><dt>Github</dt>
+    <dd>GITHUB</dd><dt>Jira</dt>
+    <dd>JIRA</dd><dt>Mariadb</dt>
+    <dd>MARIADB</dd><dt>Mysql</dt>
+    <dd>MYSQL</dd><dt>Oracle</dt>
+    <dd>ORACLE</dd><dt>Postgresql</dt>
+    <dd>POSTGRESQL</dd><dt>Presto</dt>
+    <dd>PRESTO</dd><dt>Redshift</dt>
+    <dd>REDSHIFT</dd><dt>S3</dt>
+    <dd>S3</dd><dt>Salesforce</dt>
+    <dd>SALESFORCE</dd><dt>Servicenow</dt>
+    <dd>SERVICENOW</dd><dt>Snowflake</dt>
+    <dd>SNOWFLAKE</dd><dt>Spark</dt>
+    <dd>SPARK</dd><dt>Sqlserver</dt>
+    <dd>SQLSERVER</dd><dt>Teradata</dt>
+    <dd>TERADATA</dd><dt>Twitter</dt>
+    <dd>TWITTER</dd><dt>Timestream</dt>
+    <dd>TIMESTREAM</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ADOBE_ANALYTICS</dt>
+    <dd>ADOBE_ANALYTICS</dd><dt>AMAZON_ELASTICSEARCH</dt>
+    <dd>AMAZON_ELASTICSEARCH</dd><dt>ATHENA</dt>
+    <dd>ATHENA</dd><dt>AURORA</dt>
+    <dd>AURORA</dd><dt>AURORA_POSTGRESQL</dt>
+    <dd>AURORA_POSTGRESQL</dd><dt>AWS_IOT_ANALYTICS</dt>
+    <dd>AWS_IOT_ANALYTICS</dd><dt>GITHUB</dt>
+    <dd>GITHUB</dd><dt>JIRA</dt>
+    <dd>JIRA</dd><dt>MARIADB</dt>
+    <dd>MARIADB</dd><dt>MYSQL</dt>
+    <dd>MYSQL</dd><dt>ORACLE</dt>
+    <dd>ORACLE</dd><dt>POSTGRESQL</dt>
+    <dd>POSTGRESQL</dd><dt>PRESTO</dt>
+    <dd>PRESTO</dd><dt>REDSHIFT</dt>
+    <dd>REDSHIFT</dd><dt>S3</dt>
+    <dd>S3</dd><dt>SALESFORCE</dt>
+    <dd>SALESFORCE</dd><dt>SERVICENOW</dt>
+    <dd>SERVICENOW</dd><dt>SNOWFLAKE</dt>
+    <dd>SNOWFLAKE</dd><dt>SPARK</dt>
+    <dd>SPARK</dd><dt>SQLSERVER</dt>
+    <dd>SQLSERVER</dd><dt>TERADATA</dt>
+    <dd>TERADATA</dd><dt>TWITTER</dt>
+    <dd>TWITTER</dd><dt>TIMESTREAM</dt>
+    <dd>TIMESTREAM</dd></dl>
 {{% /choosable %}}
 
 <h4 id="datasourcevpcconnectionproperties">Data<wbr>Source<wbr>Vpc<wbr>Connection<wbr>Properties</h4>

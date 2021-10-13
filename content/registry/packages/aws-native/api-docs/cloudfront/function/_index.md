@@ -31,8 +31,8 @@ Resource Type definition for AWS::CloudFront::Function
              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
              <span class="nx">auto_publish</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">function_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">function_config</span><span class="p">:</span> <span class="nx">Optional[FunctionFunctionConfigArgs]</span> = None<span class="p">,</span>
-             <span class="nx">function_metadata</span><span class="p">:</span> <span class="nx">Optional[FunctionFunctionMetadataArgs]</span> = None<span class="p">,</span>
+             <span class="nx">function_config</span><span class="p">:</span> <span class="nx">Optional[FunctionConfigArgs]</span> = None<span class="p">,</span>
+             <span class="nx">function_metadata</span><span class="p">:</span> <span class="nx">Optional[FunctionMetadataArgs]</span> = None<span class="p">,</span>
              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Function</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -191,7 +191,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#functionconfig_csharp" style="color: inherit; text-decoration: inherit;">Function<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionfunctionconfig">Pulumi.<wbr>Aws<wbr>Native.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Function<wbr>Function<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionconfig">Pulumi.<wbr>Aws<wbr>Native.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Function<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -199,7 +199,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#functionmetadata_csharp" style="color: inherit; text-decoration: inherit;">Function<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionfunctionmetadata">Pulumi.<wbr>Aws<wbr>Native.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Function<wbr>Function<wbr>Metadata<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionmetadata">Pulumi.<wbr>Aws<wbr>Native.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Function<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -235,7 +235,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#functionconfig_go" style="color: inherit; text-decoration: inherit;">Function<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionfunctionconfig">Function<wbr>Function<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionconfig">Function<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -243,7 +243,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#functionmetadata_go" style="color: inherit; text-decoration: inherit;">Function<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionfunctionmetadata">Function<wbr>Function<wbr>Metadata<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionmetadata">Function<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -279,7 +279,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#functionconfig_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionfunctionconfig">Function<wbr>Function<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionconfig">Function<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -287,7 +287,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#functionmetadata_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionfunctionmetadata">Function<wbr>Function<wbr>Metadata<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionmetadata">Function<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -323,7 +323,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#function_config_python" style="color: inherit; text-decoration: inherit;">function_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionfunctionconfig">Function<wbr>Function<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionconfig">Function<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -331,7 +331,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#function_metadata_python" style="color: inherit; text-decoration: inherit;">function_<wbr>metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionfunctionmetadata">Function<wbr>Function<wbr>Metadata<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionmetadata">Function<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -465,7 +465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="functionfunctionconfig">Function<wbr>Function<wbr>Config</h4>
+<h4 id="functionconfig">Function<wbr>Config</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
@@ -547,7 +547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="functionfunctionmetadata">Function<wbr>Function<wbr>Metadata</h4>
+<h4 id="functionmetadata">Function<wbr>Metadata</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"

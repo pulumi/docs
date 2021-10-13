@@ -13,12 +13,12 @@ Explore the resources and functions of the azure.recoveryservices module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="vault" title="Vault"><span class="symbol resource"></span>Vault</a></li>
+    <li><a href="vault" title="Vault"><span class="api-symbol api-symbol--resource"></span>Vault</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getvault" title="GetVault"><span class="symbol function"></span>GetVault</a></li>
+    <li><a href="getvault" title="GetVault"><span class="api-symbol api-symbol--function"></span>GetVault</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -30,6 +30,6 @@ Explore the resources and functions of the azure.recoveryservices module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.21.0</dd>
+	<dd>4.22.0</dd>
 </dl>
 

@@ -13,16 +13,16 @@ Explore the resources and functions of the aws.dynamodb module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="globaltable" title="GlobalTable"><span class="symbol resource"></span>GlobalTable</a></li>
-    <li><a href="kinesisstreamingdestination" title="KinesisStreamingDestination"><span class="symbol resource"></span>KinesisStreamingDestination</a></li>
-    <li><a href="table" title="Table"><span class="symbol resource"></span>Table</a></li>
-    <li><a href="tableitem" title="TableItem"><span class="symbol resource"></span>TableItem</a></li>
-    <li><a href="tag" title="Tag"><span class="symbol resource"></span>Tag</a></li>
+    <li><a href="globaltable" title="GlobalTable"><span class="api-symbol api-symbol--resource"></span>GlobalTable</a></li>
+    <li><a href="kinesisstreamingdestination" title="KinesisStreamingDestination"><span class="api-symbol api-symbol--resource"></span>KinesisStreamingDestination</a></li>
+    <li><a href="table" title="Table"><span class="api-symbol api-symbol--resource"></span>Table</a></li>
+    <li><a href="tableitem" title="TableItem"><span class="api-symbol api-symbol--resource"></span>TableItem</a></li>
+    <li><a href="tag" title="Tag"><span class="api-symbol api-symbol--resource"></span>Tag</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="gettable" title="GetTable"><span class="symbol function"></span>GetTable</a></li>
+    <li><a href="gettable" title="GetTable"><span class="api-symbol api-symbol--function"></span>GetTable</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -34,6 +34,6 @@ Explore the resources and functions of the aws.dynamodb module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.23.0</dd>
+	<dd>4.24.1</dd>
 </dl>
 

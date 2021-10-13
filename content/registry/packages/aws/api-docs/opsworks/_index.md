@@ -13,22 +13,22 @@ Explore the resources and functions of the aws.opsworks module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="application" title="Application"><span class="symbol resource"></span>Application</a></li>
-    <li><a href="customlayer" title="CustomLayer"><span class="symbol resource"></span>CustomLayer</a></li>
-    <li><a href="ganglialayer" title="GangliaLayer"><span class="symbol resource"></span>GangliaLayer</a></li>
-    <li><a href="haproxylayer" title="HaproxyLayer"><span class="symbol resource"></span>HaproxyLayer</a></li>
-    <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
-    <li><a href="javaapplayer" title="JavaAppLayer"><span class="symbol resource"></span>JavaAppLayer</a></li>
-    <li><a href="memcachedlayer" title="MemcachedLayer"><span class="symbol resource"></span>MemcachedLayer</a></li>
-    <li><a href="mysqllayer" title="MysqlLayer"><span class="symbol resource"></span>MysqlLayer</a></li>
-    <li><a href="nodejsapplayer" title="NodejsAppLayer"><span class="symbol resource"></span>NodejsAppLayer</a></li>
-    <li><a href="permission" title="Permission"><span class="symbol resource"></span>Permission</a></li>
-    <li><a href="phpapplayer" title="PhpAppLayer"><span class="symbol resource"></span>PhpAppLayer</a></li>
-    <li><a href="railsapplayer" title="RailsAppLayer"><span class="symbol resource"></span>RailsAppLayer</a></li>
-    <li><a href="rdsdbinstance" title="RdsDbInstance"><span class="symbol resource"></span>RdsDbInstance</a></li>
-    <li><a href="stack" title="Stack"><span class="symbol resource"></span>Stack</a></li>
-    <li><a href="staticweblayer" title="StaticWebLayer"><span class="symbol resource"></span>StaticWebLayer</a></li>
-    <li><a href="userprofile" title="UserProfile"><span class="symbol resource"></span>UserProfile</a></li>
+    <li><a href="application" title="Application"><span class="api-symbol api-symbol--resource"></span>Application</a></li>
+    <li><a href="customlayer" title="CustomLayer"><span class="api-symbol api-symbol--resource"></span>CustomLayer</a></li>
+    <li><a href="ganglialayer" title="GangliaLayer"><span class="api-symbol api-symbol--resource"></span>GangliaLayer</a></li>
+    <li><a href="haproxylayer" title="HaproxyLayer"><span class="api-symbol api-symbol--resource"></span>HaproxyLayer</a></li>
+    <li><a href="instance" title="Instance"><span class="api-symbol api-symbol--resource"></span>Instance</a></li>
+    <li><a href="javaapplayer" title="JavaAppLayer"><span class="api-symbol api-symbol--resource"></span>JavaAppLayer</a></li>
+    <li><a href="memcachedlayer" title="MemcachedLayer"><span class="api-symbol api-symbol--resource"></span>MemcachedLayer</a></li>
+    <li><a href="mysqllayer" title="MysqlLayer"><span class="api-symbol api-symbol--resource"></span>MysqlLayer</a></li>
+    <li><a href="nodejsapplayer" title="NodejsAppLayer"><span class="api-symbol api-symbol--resource"></span>NodejsAppLayer</a></li>
+    <li><a href="permission" title="Permission"><span class="api-symbol api-symbol--resource"></span>Permission</a></li>
+    <li><a href="phpapplayer" title="PhpAppLayer"><span class="api-symbol api-symbol--resource"></span>PhpAppLayer</a></li>
+    <li><a href="railsapplayer" title="RailsAppLayer"><span class="api-symbol api-symbol--resource"></span>RailsAppLayer</a></li>
+    <li><a href="rdsdbinstance" title="RdsDbInstance"><span class="api-symbol api-symbol--resource"></span>RdsDbInstance</a></li>
+    <li><a href="stack" title="Stack"><span class="api-symbol api-symbol--resource"></span>Stack</a></li>
+    <li><a href="staticweblayer" title="StaticWebLayer"><span class="api-symbol api-symbol--resource"></span>StaticWebLayer</a></li>
+    <li><a href="userprofile" title="UserProfile"><span class="api-symbol api-symbol--resource"></span>UserProfile</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -40,6 +40,6 @@ Explore the resources and functions of the aws.opsworks module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.23.0</dd>
+	<dd>4.24.1</dd>
 </dl>
 

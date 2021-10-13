@@ -10827,46 +10827,72 @@ Accepted values are:
 <h4 id="clusternodeconfigworkloadmetadataconfig">Cluster<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="mode_csharp">
+<a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}How to expose the node metadata to the workload running on the node.
+Accepted values are:
+* UNSPECIFIED: Not Set
+* GCE_METADATA: Expose all Compute Engine metadata to pods.
+* GKE_METADATA: Run the GKE Metadata Server on this node. The GKE Metadata Server exposes a metadata API to workloads that is compatible with the V1 Compute Metadata APIs exposed by the Compute Engine and App Engine Metadata Servers. This feature can only be enabled if [workload identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity) is enabled at the cluster level.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="nodemetadata_csharp">
 <a href="#nodemetadata_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}How to expose the node metadata to the workload running on the node.
+    <dd>{{% md %}}How to expose the node metadata to the workload running on the node. This is deprecated in favor of `mode`
 Accepted values are:
 * UNSPECIFIED: Not Set
 * SECURE: Prevent workloads not in hostNetwork from accessing certain VM metadata, specifically kube-env, which contains Kubelet credentials, and the instance identity token. See [Metadata Concealment](https://cloud.google.com/kubernetes-engine/docs/how-to/metadata-proxy) documentation.
 * EXPOSE: Expose all VM metadata to pods.
 * GKE_METADATA_SERVER: Enables [workload identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity) on the node.
-{{% /md %}}</dd></dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of mode.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="mode_go">
+<a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}How to expose the node metadata to the workload running on the node.
+Accepted values are:
+* UNSPECIFIED: Not Set
+* GCE_METADATA: Expose all Compute Engine metadata to pods.
+* GKE_METADATA: Run the GKE Metadata Server on this node. The GKE Metadata Server exposes a metadata API to workloads that is compatible with the V1 Compute Metadata APIs exposed by the Compute Engine and App Engine Metadata Servers. This feature can only be enabled if [workload identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity) is enabled at the cluster level.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="nodemetadata_go">
 <a href="#nodemetadata_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}How to expose the node metadata to the workload running on the node.
+    <dd>{{% md %}}How to expose the node metadata to the workload running on the node. This is deprecated in favor of `mode`
 Accepted values are:
 * UNSPECIFIED: Not Set
 * SECURE: Prevent workloads not in hostNetwork from accessing certain VM metadata, specifically kube-env, which contains Kubelet credentials, and the instance identity token. See [Metadata Concealment](https://cloud.google.com/kubernetes-engine/docs/how-to/metadata-proxy) documentation.
 * EXPOSE: Expose all VM metadata to pods.
 * GKE_METADATA_SERVER: Enables [workload identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity) on the node.
-{{% /md %}}</dd></dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of mode.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="nodemetadata_nodejs">
-<a href="#nodemetadata_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Metadata</a>
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="mode_nodejs">
+<a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -10874,17 +10900,30 @@ Accepted values are:
     <dd>{{% md %}}How to expose the node metadata to the workload running on the node.
 Accepted values are:
 * UNSPECIFIED: Not Set
+* GCE_METADATA: Expose all Compute Engine metadata to pods.
+* GKE_METADATA: Run the GKE Metadata Server on this node. The GKE Metadata Server exposes a metadata API to workloads that is compatible with the V1 Compute Metadata APIs exposed by the Compute Engine and App Engine Metadata Servers. This feature can only be enabled if [workload identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity) is enabled at the cluster level.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="nodemetadata_nodejs">
+<a href="#nodemetadata_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Metadata</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}How to expose the node metadata to the workload running on the node. This is deprecated in favor of `mode`
+Accepted values are:
+* UNSPECIFIED: Not Set
 * SECURE: Prevent workloads not in hostNetwork from accessing certain VM metadata, specifically kube-env, which contains Kubelet credentials, and the instance identity token. See [Metadata Concealment](https://cloud.google.com/kubernetes-engine/docs/how-to/metadata-proxy) documentation.
 * EXPOSE: Expose all VM metadata to pods.
 * GKE_METADATA_SERVER: Enables [workload identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity) on the node.
-{{% /md %}}</dd></dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of mode.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="node_metadata_python">
-<a href="#node_metadata_python" style="color: inherit; text-decoration: inherit;">node_<wbr>metadata</a>
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="mode_python">
+<a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -10892,10 +10931,23 @@ Accepted values are:
     <dd>{{% md %}}How to expose the node metadata to the workload running on the node.
 Accepted values are:
 * UNSPECIFIED: Not Set
+* GCE_METADATA: Expose all Compute Engine metadata to pods.
+* GKE_METADATA: Run the GKE Metadata Server on this node. The GKE Metadata Server exposes a metadata API to workloads that is compatible with the V1 Compute Metadata APIs exposed by the Compute Engine and App Engine Metadata Servers. This feature can only be enabled if [workload identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity) is enabled at the cluster level.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="node_metadata_python">
+<a href="#node_metadata_python" style="color: inherit; text-decoration: inherit;">node_<wbr>metadata</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}How to expose the node metadata to the workload running on the node. This is deprecated in favor of `mode`
+Accepted values are:
+* UNSPECIFIED: Not Set
 * SECURE: Prevent workloads not in hostNetwork from accessing certain VM metadata, specifically kube-env, which contains Kubelet credentials, and the instance identity token. See [Metadata Concealment](https://cloud.google.com/kubernetes-engine/docs/how-to/metadata-proxy) documentation.
 * EXPOSE: Expose all VM metadata to pods.
 * GKE_METADATA_SERVER: Enables [workload identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity) on the node.
-{{% /md %}}</dd></dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of mode.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 <h4 id="clusternodepool">Cluster<wbr>Node<wbr>Pool</h4>
@@ -13245,46 +13297,72 @@ Accepted values are:
 <h4 id="clusternodepoolnodeconfigworkloadmetadataconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="mode_csharp">
+<a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}How to expose the node metadata to the workload running on the node.
+Accepted values are:
+* UNSPECIFIED: Not Set
+* GCE_METADATA: Expose all Compute Engine metadata to pods.
+* GKE_METADATA: Run the GKE Metadata Server on this node. The GKE Metadata Server exposes a metadata API to workloads that is compatible with the V1 Compute Metadata APIs exposed by the Compute Engine and App Engine Metadata Servers. This feature can only be enabled if [workload identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity) is enabled at the cluster level.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="nodemetadata_csharp">
 <a href="#nodemetadata_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}How to expose the node metadata to the workload running on the node.
+    <dd>{{% md %}}How to expose the node metadata to the workload running on the node. This is deprecated in favor of `mode`
 Accepted values are:
 * UNSPECIFIED: Not Set
 * SECURE: Prevent workloads not in hostNetwork from accessing certain VM metadata, specifically kube-env, which contains Kubelet credentials, and the instance identity token. See [Metadata Concealment](https://cloud.google.com/kubernetes-engine/docs/how-to/metadata-proxy) documentation.
 * EXPOSE: Expose all VM metadata to pods.
 * GKE_METADATA_SERVER: Enables [workload identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity) on the node.
-{{% /md %}}</dd></dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of mode.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="mode_go">
+<a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}How to expose the node metadata to the workload running on the node.
+Accepted values are:
+* UNSPECIFIED: Not Set
+* GCE_METADATA: Expose all Compute Engine metadata to pods.
+* GKE_METADATA: Run the GKE Metadata Server on this node. The GKE Metadata Server exposes a metadata API to workloads that is compatible with the V1 Compute Metadata APIs exposed by the Compute Engine and App Engine Metadata Servers. This feature can only be enabled if [workload identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity) is enabled at the cluster level.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="nodemetadata_go">
 <a href="#nodemetadata_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}How to expose the node metadata to the workload running on the node.
+    <dd>{{% md %}}How to expose the node metadata to the workload running on the node. This is deprecated in favor of `mode`
 Accepted values are:
 * UNSPECIFIED: Not Set
 * SECURE: Prevent workloads not in hostNetwork from accessing certain VM metadata, specifically kube-env, which contains Kubelet credentials, and the instance identity token. See [Metadata Concealment](https://cloud.google.com/kubernetes-engine/docs/how-to/metadata-proxy) documentation.
 * EXPOSE: Expose all VM metadata to pods.
 * GKE_METADATA_SERVER: Enables [workload identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity) on the node.
-{{% /md %}}</dd></dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of mode.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="nodemetadata_nodejs">
-<a href="#nodemetadata_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Metadata</a>
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="mode_nodejs">
+<a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -13292,17 +13370,30 @@ Accepted values are:
     <dd>{{% md %}}How to expose the node metadata to the workload running on the node.
 Accepted values are:
 * UNSPECIFIED: Not Set
+* GCE_METADATA: Expose all Compute Engine metadata to pods.
+* GKE_METADATA: Run the GKE Metadata Server on this node. The GKE Metadata Server exposes a metadata API to workloads that is compatible with the V1 Compute Metadata APIs exposed by the Compute Engine and App Engine Metadata Servers. This feature can only be enabled if [workload identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity) is enabled at the cluster level.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="nodemetadata_nodejs">
+<a href="#nodemetadata_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Metadata</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}How to expose the node metadata to the workload running on the node. This is deprecated in favor of `mode`
+Accepted values are:
+* UNSPECIFIED: Not Set
 * SECURE: Prevent workloads not in hostNetwork from accessing certain VM metadata, specifically kube-env, which contains Kubelet credentials, and the instance identity token. See [Metadata Concealment](https://cloud.google.com/kubernetes-engine/docs/how-to/metadata-proxy) documentation.
 * EXPOSE: Expose all VM metadata to pods.
 * GKE_METADATA_SERVER: Enables [workload identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity) on the node.
-{{% /md %}}</dd></dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of mode.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="node_metadata_python">
-<a href="#node_metadata_python" style="color: inherit; text-decoration: inherit;">node_<wbr>metadata</a>
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="mode_python">
+<a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -13310,10 +13401,23 @@ Accepted values are:
     <dd>{{% md %}}How to expose the node metadata to the workload running on the node.
 Accepted values are:
 * UNSPECIFIED: Not Set
+* GCE_METADATA: Expose all Compute Engine metadata to pods.
+* GKE_METADATA: Run the GKE Metadata Server on this node. The GKE Metadata Server exposes a metadata API to workloads that is compatible with the V1 Compute Metadata APIs exposed by the Compute Engine and App Engine Metadata Servers. This feature can only be enabled if [workload identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity) is enabled at the cluster level.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="node_metadata_python">
+<a href="#node_metadata_python" style="color: inherit; text-decoration: inherit;">node_<wbr>metadata</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}How to expose the node metadata to the workload running on the node. This is deprecated in favor of `mode`
+Accepted values are:
+* UNSPECIFIED: Not Set
 * SECURE: Prevent workloads not in hostNetwork from accessing certain VM metadata, specifically kube-env, which contains Kubelet credentials, and the instance identity token. See [Metadata Concealment](https://cloud.google.com/kubernetes-engine/docs/how-to/metadata-proxy) documentation.
 * EXPOSE: Expose all VM metadata to pods.
 * GKE_METADATA_SERVER: Enables [workload identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity) on the node.
-{{% /md %}}</dd></dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of mode.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 <h4 id="clusternodepoolupgradesettings">Cluster<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Settings</h4>

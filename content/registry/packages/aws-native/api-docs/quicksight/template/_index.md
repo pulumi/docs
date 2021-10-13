@@ -32,7 +32,7 @@ Definition of the AWS::QuickSight::Template Resource Type.
              <span class="nx">aws_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">permissions</span><span class="p">:</span> <span class="nx">Optional[Sequence[TemplateResourcePermissionArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">source_entity</span><span class="p">:</span> <span class="nx">Optional[TemplateTemplateSourceEntityArgs]</span> = None<span class="p">,</span>
+             <span class="nx">source_entity</span><span class="p">:</span> <span class="nx">Optional[TemplateSourceEntityArgs]</span> = None<span class="p">,</span>
              <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[TemplateTagArgs]]</span> = None<span class="p">,</span>
              <span class="nx">template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">version_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
@@ -201,7 +201,7 @@ The Template resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sourceentity_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Entity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#templatetemplatesourceentity">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Template<wbr>Template<wbr>Source<wbr>Entity<wbr>Args</a></span>
+        <span class="property-type"><a href="#templatesourceentity">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Template<wbr>Source<wbr>Entity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -264,7 +264,7 @@ The Template resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sourceentity_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Entity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#templatetemplatesourceentity">Template<wbr>Template<wbr>Source<wbr>Entity<wbr>Args</a></span>
+        <span class="property-type"><a href="#templatesourceentity">Template<wbr>Source<wbr>Entity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -327,7 +327,7 @@ The Template resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sourceentity_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Entity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#templatetemplatesourceentity">Template<wbr>Template<wbr>Source<wbr>Entity<wbr>Args</a></span>
+        <span class="property-type"><a href="#templatesourceentity">Template<wbr>Source<wbr>Entity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -390,7 +390,7 @@ The Template resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#source_entity_python" style="color: inherit; text-decoration: inherit;">source_<wbr>entity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#templatetemplatesourceentity">Template<wbr>Template<wbr>Source<wbr>Entity<wbr>Args</a></span>
+        <span class="property-type"><a href="#templatesourceentity">Template<wbr>Source<wbr>Entity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -460,7 +460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#templatetemplateversion">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Outputs.<wbr>Template<wbr>Template<wbr>Version</a></span>
+        <span class="property-type"><a href="#templateversion">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Outputs.<wbr>Template<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -504,7 +504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#templatetemplateversion">Template<wbr>Template<wbr>Version</a></span>
+        <span class="property-type"><a href="#templateversion">Template<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -548,7 +548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#templatetemplateversion">Template<wbr>Template<wbr>Version</a></span>
+        <span class="property-type"><a href="#templateversion">Template<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -592,7 +592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#templatetemplateversion">Template<wbr>Template<wbr>Version</a></span>
+        <span class="property-type"><a href="#templateversion">Template<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1099,6 +1099,122 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}<p>A structure containing the list of column schemas.</p>{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="templateerror">Template<wbr>Error</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="message_csharp">
+<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>Description of the error type.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#templateerrortype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Template<wbr>Error<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="message_go">
+<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>Description of the error type.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#templateerrortype">Template<wbr>Error<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="message_nodejs">
+<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>Description of the error type.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#templateerrortype">Template<wbr>Error<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="message_python">
+<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}<p>Description of the error type.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#templateerrortype">Template<wbr>Error<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="templateerrortype">Template<wbr>Error<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Source<wbr>Not<wbr>Found</dt>
+    <dd>SOURCE_NOT_FOUND</dd><dt>Data<wbr>Set<wbr>Not<wbr>Found</dt>
+    <dd>DATA_SET_NOT_FOUND</dd><dt>Internal<wbr>Failure</dt>
+    <dd>INTERNAL_FAILURE</dd><dt>Access<wbr>Denied</dt>
+    <dd>ACCESS_DENIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Template<wbr>Error<wbr>Type<wbr>Source<wbr>Not<wbr>Found</dt>
+    <dd>SOURCE_NOT_FOUND</dd><dt>Template<wbr>Error<wbr>Type<wbr>Data<wbr>Set<wbr>Not<wbr>Found</dt>
+    <dd>DATA_SET_NOT_FOUND</dd><dt>Template<wbr>Error<wbr>Type<wbr>Internal<wbr>Failure</dt>
+    <dd>INTERNAL_FAILURE</dd><dt>Template<wbr>Error<wbr>Type<wbr>Access<wbr>Denied</dt>
+    <dd>ACCESS_DENIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Source<wbr>Not<wbr>Found</dt>
+    <dd>SOURCE_NOT_FOUND</dd><dt>Data<wbr>Set<wbr>Not<wbr>Found</dt>
+    <dd>DATA_SET_NOT_FOUND</dd><dt>Internal<wbr>Failure</dt>
+    <dd>INTERNAL_FAILURE</dd><dt>Access<wbr>Denied</dt>
+    <dd>ACCESS_DENIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SOURCE_NOT_FOUND</dt>
+    <dd>SOURCE_NOT_FOUND</dd><dt>DATA_SET_NOT_FOUND</dt>
+    <dd>DATA_SET_NOT_FOUND</dd><dt>INTERNAL_FAILURE</dt>
+    <dd>INTERNAL_FAILURE</dd><dt>ACCESS_DENIED</dt>
+    <dd>ACCESS_DENIED</dd></dl>
+{{% /choosable %}}
+
 <h4 id="templateresourcepermission">Template<wbr>Resource<wbr>Permission</h4>
 
 {{% choosable language csharp %}}
@@ -1369,205 +1485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}<p>The unique identifier associated with a sheet.</p>{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="templatetag">Template<wbr>Tag</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="key_csharp">
-<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>Tag key.</p>{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="value_csharp">
-<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>Tag value.</p>{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="key_go">
-<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>Tag key.</p>{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="value_go">
-<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>Tag value.</p>{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="key_nodejs">
-<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>Tag key.</p>{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="value_nodejs">
-<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>Tag value.</p>{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="key_python">
-<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}<p>Tag key.</p>{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="value_python">
-<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}<p>Tag value.</p>{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="templatetemplateerror">Template<wbr>Template<wbr>Error</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="message_csharp">
-<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>Description of the error type.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#templatetemplateerrortype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Template<wbr>Template<wbr>Error<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="message_go">
-<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>Description of the error type.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#templatetemplateerrortype">Template<wbr>Template<wbr>Error<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="message_nodejs">
-<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>Description of the error type.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#templatetemplateerrortype">Template<wbr>Template<wbr>Error<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="message_python">
-<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}<p>Description of the error type.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#templatetemplateerrortype">Template<wbr>Template<wbr>Error<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="templatetemplateerrortype">Template<wbr>Template<wbr>Error<wbr>Type</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Source<wbr>Not<wbr>Found</dt>
-    <dd>SOURCE_NOT_FOUND</dd><dt>Data<wbr>Set<wbr>Not<wbr>Found</dt>
-    <dd>DATA_SET_NOT_FOUND</dd><dt>Internal<wbr>Failure</dt>
-    <dd>INTERNAL_FAILURE</dd><dt>Access<wbr>Denied</dt>
-    <dd>ACCESS_DENIED</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Template<wbr>Template<wbr>Error<wbr>Type<wbr>Source<wbr>Not<wbr>Found</dt>
-    <dd>SOURCE_NOT_FOUND</dd><dt>Template<wbr>Template<wbr>Error<wbr>Type<wbr>Data<wbr>Set<wbr>Not<wbr>Found</dt>
-    <dd>DATA_SET_NOT_FOUND</dd><dt>Template<wbr>Template<wbr>Error<wbr>Type<wbr>Internal<wbr>Failure</dt>
-    <dd>INTERNAL_FAILURE</dd><dt>Template<wbr>Template<wbr>Error<wbr>Type<wbr>Access<wbr>Denied</dt>
-    <dd>ACCESS_DENIED</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Source<wbr>Not<wbr>Found</dt>
-    <dd>SOURCE_NOT_FOUND</dd><dt>Data<wbr>Set<wbr>Not<wbr>Found</dt>
-    <dd>DATA_SET_NOT_FOUND</dd><dt>Internal<wbr>Failure</dt>
-    <dd>INTERNAL_FAILURE</dd><dt>Access<wbr>Denied</dt>
-    <dd>ACCESS_DENIED</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>SOURCE_NOT_FOUND</dt>
-    <dd>SOURCE_NOT_FOUND</dd><dt>DATA_SET_NOT_FOUND</dt>
-    <dd>DATA_SET_NOT_FOUND</dd><dt>INTERNAL_FAILURE</dt>
-    <dd>INTERNAL_FAILURE</dd><dt>ACCESS_DENIED</dt>
-    <dd>ACCESS_DENIED</dd></dl>
-{{% /choosable %}}
-
-<h4 id="templatetemplatesourceanalysis">Template<wbr>Template<wbr>Source<wbr>Analysis</h4>
+<h4 id="templatesourceanalysis">Template<wbr>Source<wbr>Analysis</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
@@ -1653,7 +1571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
             in the template.</p>{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="templatetemplatesourceentity">Template<wbr>Template<wbr>Source<wbr>Entity</h4>
+<h4 id="templatesourceentity">Template<wbr>Source<wbr>Entity</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
@@ -1662,7 +1580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceanalysis_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Analysis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#templatetemplatesourceanalysis">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Template<wbr>Template<wbr>Source<wbr>Analysis</a></span>
+        <span class="property-type"><a href="#templatesourceanalysis">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Template<wbr>Source<wbr>Analysis</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1670,7 +1588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcetemplate_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#templatetemplatesourcetemplate">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Template<wbr>Template<wbr>Source<wbr>Template</a></span>
+        <span class="property-type"><a href="#templatesourcetemplate">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Template<wbr>Source<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1682,7 +1600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceanalysis_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Analysis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#templatetemplatesourceanalysis">Template<wbr>Template<wbr>Source<wbr>Analysis</a></span>
+        <span class="property-type"><a href="#templatesourceanalysis">Template<wbr>Source<wbr>Analysis</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1690,7 +1608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcetemplate_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#templatetemplatesourcetemplate">Template<wbr>Template<wbr>Source<wbr>Template</a></span>
+        <span class="property-type"><a href="#templatesourcetemplate">Template<wbr>Source<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1702,7 +1620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceanalysis_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Analysis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#templatetemplatesourceanalysis">Template<wbr>Template<wbr>Source<wbr>Analysis</a></span>
+        <span class="property-type"><a href="#templatesourceanalysis">Template<wbr>Source<wbr>Analysis</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1710,7 +1628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcetemplate_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#templatetemplatesourcetemplate">Template<wbr>Template<wbr>Source<wbr>Template</a></span>
+        <span class="property-type"><a href="#templatesourcetemplate">Template<wbr>Source<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1722,7 +1640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_analysis_python" style="color: inherit; text-decoration: inherit;">source_<wbr>analysis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#templatetemplatesourceanalysis">Template<wbr>Template<wbr>Source<wbr>Analysis</a></span>
+        <span class="property-type"><a href="#templatesourceanalysis">Template<wbr>Source<wbr>Analysis</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1730,12 +1648,12 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_template_python" style="color: inherit; text-decoration: inherit;">source_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#templatetemplatesourcetemplate">Template<wbr>Template<wbr>Source<wbr>Template</a></span>
+        <span class="property-type"><a href="#templatesourcetemplate">Template<wbr>Source<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="templatetemplatesourcetemplate">Template<wbr>Template<wbr>Source<wbr>Template</h4>
+<h4 id="templatesourcetemplate">Template<wbr>Source<wbr>Template</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
@@ -1785,7 +1703,89 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}<p>The Amazon Resource Name (ARN) of the resource.</p>{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="templatetemplateversion">Template<wbr>Template<wbr>Version</h4>
+<h4 id="templatetag">Template<wbr>Tag</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>Tag key.</p>{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>Tag value.</p>{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>Tag key.</p>{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>Tag value.</p>{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>Tag key.</p>{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>Tag value.</p>{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}<p>Tag key.</p>{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}<p>Tag value.</p>{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="templateversion">Template<wbr>Version</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
@@ -1820,7 +1820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#templatetemplateerror">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Template<wbr>Template<wbr>Error&gt;</a></span>
+        <span class="property-type"><a href="#templateerror">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Template<wbr>Error&gt;</a></span>
     </dt>
     <dd>{{% md %}}<p>Errors associated with this template version.</p>{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1899,7 +1899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_go" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#templatetemplateerror">[]Template<wbr>Template<wbr>Error</a></span>
+        <span class="property-type"><a href="#templateerror">[]Template<wbr>Error</a></span>
     </dt>
     <dd>{{% md %}}<p>Errors associated with this template version.</p>{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1978,7 +1978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#templatetemplateerror">Template<wbr>Template<wbr>Error[]</a></span>
+        <span class="property-type"><a href="#templateerror">Template<wbr>Error[]</a></span>
     </dt>
     <dd>{{% md %}}<p>Errors associated with this template version.</p>{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2057,7 +2057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#templatetemplateerror">Sequence[Template<wbr>Template<wbr>Error]</a></span>
+        <span class="property-type"><a href="#templateerror">Sequence[Template<wbr>Error]</a></span>
     </dt>
     <dd>{{% md %}}<p>Errors associated with this template version.</p>{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

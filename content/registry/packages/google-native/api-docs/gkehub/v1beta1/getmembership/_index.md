@@ -1218,7 +1218,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gkeclusterresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>GKEHub.<wbr>V1Beta1.<wbr>Inputs.<wbr>Gke<wbr>Cluster<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional. GKE-specific information. Only present if this Membership is a GKE cluster.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. Specific information for a GKE-on-GCP cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kubernetesmetadata_csharp">
 <a href="#kubernetesmetadata_csharp" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Metadata</a>
@@ -1234,7 +1234,23 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesresourceresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>GKEHub.<wbr>V1Beta1.<wbr>Inputs.<wbr>Kubernetes<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional. The in-cluster Kubernetes Resources that should be applied for a correctly registered cluster, in the steady state. These resources: * Ensure that the cluster is exclusively registered to one and only one Hub Membership. * Propagate Workload Pool Information available in the Membership Authority field. * Ensure proper initial configuration of default Hub Features.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optional. The in-cluster Kubernetes Resources that should be applied for a correctly registered cluster, in the steady state. These resources: * Ensure that the cluster is exclusively registered to one and only one Hub Membership. * Propagate Workload Pool Information available in the Membership Authority field. * Ensure proper initial configuration of default Hub Features.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="multicloudcluster_csharp">
+<a href="#multicloudcluster_csharp" style="color: inherit; text-decoration: inherit;">Multi<wbr>Cloud<wbr>Cluster</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#multicloudclusterresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>GKEHub.<wbr>V1Beta1.<wbr>Inputs.<wbr>Multi<wbr>Cloud<wbr>Cluster<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. Specific information for a GKE Multi-Cloud cluster.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="onpremcluster_csharp">
+<a href="#onpremcluster_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Prem<wbr>Cluster</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#onpremclusterresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>GKEHub.<wbr>V1Beta1.<wbr>Inputs.<wbr>On<wbr>Prem<wbr>Cluster<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. Specific information for a GKE On-Prem cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1246,7 +1262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gkeclusterresponse">Gke<wbr>Cluster<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional. GKE-specific information. Only present if this Membership is a GKE cluster.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. Specific information for a GKE-on-GCP cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kubernetesmetadata_go">
 <a href="#kubernetesmetadata_go" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Metadata</a>
@@ -1262,7 +1278,23 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesresourceresponse">Kubernetes<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional. The in-cluster Kubernetes Resources that should be applied for a correctly registered cluster, in the steady state. These resources: * Ensure that the cluster is exclusively registered to one and only one Hub Membership. * Propagate Workload Pool Information available in the Membership Authority field. * Ensure proper initial configuration of default Hub Features.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optional. The in-cluster Kubernetes Resources that should be applied for a correctly registered cluster, in the steady state. These resources: * Ensure that the cluster is exclusively registered to one and only one Hub Membership. * Propagate Workload Pool Information available in the Membership Authority field. * Ensure proper initial configuration of default Hub Features.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="multicloudcluster_go">
+<a href="#multicloudcluster_go" style="color: inherit; text-decoration: inherit;">Multi<wbr>Cloud<wbr>Cluster</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#multicloudclusterresponse">Multi<wbr>Cloud<wbr>Cluster<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. Specific information for a GKE Multi-Cloud cluster.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="onpremcluster_go">
+<a href="#onpremcluster_go" style="color: inherit; text-decoration: inherit;">On<wbr>Prem<wbr>Cluster</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#onpremclusterresponse">On<wbr>Prem<wbr>Cluster<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. Specific information for a GKE On-Prem cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1274,7 +1306,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gkeclusterresponse">Gke<wbr>Cluster<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional. GKE-specific information. Only present if this Membership is a GKE cluster.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. Specific information for a GKE-on-GCP cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kubernetesmetadata_nodejs">
 <a href="#kubernetesmetadata_nodejs" style="color: inherit; text-decoration: inherit;">kubernetes<wbr>Metadata</a>
@@ -1290,7 +1322,23 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesresourceresponse">Kubernetes<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional. The in-cluster Kubernetes Resources that should be applied for a correctly registered cluster, in the steady state. These resources: * Ensure that the cluster is exclusively registered to one and only one Hub Membership. * Propagate Workload Pool Information available in the Membership Authority field. * Ensure proper initial configuration of default Hub Features.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optional. The in-cluster Kubernetes Resources that should be applied for a correctly registered cluster, in the steady state. These resources: * Ensure that the cluster is exclusively registered to one and only one Hub Membership. * Propagate Workload Pool Information available in the Membership Authority field. * Ensure proper initial configuration of default Hub Features.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="multicloudcluster_nodejs">
+<a href="#multicloudcluster_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Cloud<wbr>Cluster</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#multicloudclusterresponse">Multi<wbr>Cloud<wbr>Cluster<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. Specific information for a GKE Multi-Cloud cluster.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="onpremcluster_nodejs">
+<a href="#onpremcluster_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Prem<wbr>Cluster</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#onpremclusterresponse">On<wbr>Prem<wbr>Cluster<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. Specific information for a GKE On-Prem cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1302,7 +1350,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gkeclusterresponse">Gke<wbr>Cluster<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional. GKE-specific information. Only present if this Membership is a GKE cluster.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. Specific information for a GKE-on-GCP cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kubernetes_metadata_python">
 <a href="#kubernetes_metadata_python" style="color: inherit; text-decoration: inherit;">kubernetes_<wbr>metadata</a>
@@ -1318,7 +1366,23 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesresourceresponse">Kubernetes<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional. The in-cluster Kubernetes Resources that should be applied for a correctly registered cluster, in the steady state. These resources: * Ensure that the cluster is exclusively registered to one and only one Hub Membership. * Propagate Workload Pool Information available in the Membership Authority field. * Ensure proper initial configuration of default Hub Features.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optional. The in-cluster Kubernetes Resources that should be applied for a correctly registered cluster, in the steady state. These resources: * Ensure that the cluster is exclusively registered to one and only one Hub Membership. * Propagate Workload Pool Information available in the Membership Authority field. * Ensure proper initial configuration of default Hub Features.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="multi_cloud_cluster_python">
+<a href="#multi_cloud_cluster_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>cloud_<wbr>cluster</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#multicloudclusterresponse">Multi<wbr>Cloud<wbr>Cluster<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. Specific information for a GKE Multi-Cloud cluster.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="on_prem_cluster_python">
+<a href="#on_prem_cluster_python" style="color: inherit; text-decoration: inherit;">on_<wbr>prem_<wbr>cluster</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#onpremclusterresponse">On<wbr>Prem<wbr>Cluster<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. Specific information for a GKE On-Prem cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="membershipstateresponse">Membership<wbr>State<wbr>Response</h4>
@@ -1435,6 +1499,206 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This field is never set by the Hub Service.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="multicloudclusterresponse">Multi<wbr>Cloud<wbr>Cluster<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="clustermissing_csharp">
+<a href="#clustermissing_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Missing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If cluster_missing is set then it denotes that API(gkemulticloud.googleapis.com) resource for this GKE Multi-Cloud cluster no longer exists.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resourcelink_csharp">
+<a href="#resourcelink_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Link</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Immutable. Self-link of the GCP resource for the GKE Multi-Cloud cluster. For example: //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/awsClusters/my-cluster //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/azureClusters/my-cluster{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="clustermissing_go">
+<a href="#clustermissing_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Missing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If cluster_missing is set then it denotes that API(gkemulticloud.googleapis.com) resource for this GKE Multi-Cloud cluster no longer exists.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resourcelink_go">
+<a href="#resourcelink_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Link</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Immutable. Self-link of the GCP resource for the GKE Multi-Cloud cluster. For example: //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/awsClusters/my-cluster //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/azureClusters/my-cluster{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="clustermissing_nodejs">
+<a href="#clustermissing_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Missing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If cluster_missing is set then it denotes that API(gkemulticloud.googleapis.com) resource for this GKE Multi-Cloud cluster no longer exists.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resourcelink_nodejs">
+<a href="#resourcelink_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Link</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Immutable. Self-link of the GCP resource for the GKE Multi-Cloud cluster. For example: //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/awsClusters/my-cluster //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/azureClusters/my-cluster{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cluster_missing_python">
+<a href="#cluster_missing_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>missing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If cluster_missing is set then it denotes that API(gkemulticloud.googleapis.com) resource for this GKE Multi-Cloud cluster no longer exists.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resource_link_python">
+<a href="#resource_link_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>link</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Immutable. Self-link of the GCP resource for the GKE Multi-Cloud cluster. For example: //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/awsClusters/my-cluster //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/azureClusters/my-cluster{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="onpremclusterresponse">On<wbr>Prem<wbr>Cluster<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="admincluster_csharp">
+<a href="#admincluster_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Cluster</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Immutable. Whether the cluster is an admin cluster.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="clustermissing_csharp">
+<a href="#clustermissing_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Missing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If cluster_missing is set then it denotes that API(gkeonprem.googleapis.com) resource for this GKE On-Prem cluster no longer exists.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resourcelink_csharp">
+<a href="#resourcelink_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Link</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Immutable. Self-link of the GCP resource for the GKE On-Prem cluster. For example: //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/vmwareClusters/my-cluster //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/bareMetalClusters/my-cluster{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="admincluster_go">
+<a href="#admincluster_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Cluster</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Immutable. Whether the cluster is an admin cluster.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="clustermissing_go">
+<a href="#clustermissing_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Missing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If cluster_missing is set then it denotes that API(gkeonprem.googleapis.com) resource for this GKE On-Prem cluster no longer exists.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resourcelink_go">
+<a href="#resourcelink_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Link</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Immutable. Self-link of the GCP resource for the GKE On-Prem cluster. For example: //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/vmwareClusters/my-cluster //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/bareMetalClusters/my-cluster{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="admincluster_nodejs">
+<a href="#admincluster_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Cluster</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Immutable. Whether the cluster is an admin cluster.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="clustermissing_nodejs">
+<a href="#clustermissing_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Missing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If cluster_missing is set then it denotes that API(gkeonprem.googleapis.com) resource for this GKE On-Prem cluster no longer exists.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resourcelink_nodejs">
+<a href="#resourcelink_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Link</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Immutable. Self-link of the GCP resource for the GKE On-Prem cluster. For example: //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/vmwareClusters/my-cluster //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/bareMetalClusters/my-cluster{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="admin_cluster_python">
+<a href="#admin_cluster_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>cluster</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Immutable. Whether the cluster is an admin cluster.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="cluster_missing_python">
+<a href="#cluster_missing_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>missing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If cluster_missing is set then it denotes that API(gkeonprem.googleapis.com) resource for this GKE On-Prem cluster no longer exists.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resource_link_python">
+<a href="#resource_link_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>link</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Immutable. Self-link of the GCP resource for the GKE On-Prem cluster. For example: //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/vmwareClusters/my-cluster //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/bareMetalClusters/my-cluster{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourcemanifestresponse">Resource<wbr>Manifest<wbr>Response</h4>

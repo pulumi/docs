@@ -35,7 +35,7 @@ The AWS::GameLift::Fleet resource creates an Amazon GameLift (GameLift) fleet to
           <span class="nx">desired_ec2_instances</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
           <span class="nx">e_c2_inbound_permissions</span><span class="p">:</span> <span class="nx">Optional[Sequence[FleetIpPermissionArgs]]</span> = None<span class="p">,</span>
           <span class="nx">e_c2_instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-          <span class="nx">fleet_type</span><span class="p">:</span> <span class="nx">Optional[FleetFleetType]</span> = None<span class="p">,</span>
+          <span class="nx">fleet_type</span><span class="p">:</span> <span class="nx">Optional[FleetType]</span> = None<span class="p">,</span>
           <span class="nx">instance_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[FleetLocationConfigurationArgs]]</span> = None<span class="p">,</span>
           <span class="nx">log_paths</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -232,7 +232,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#fleettype_csharp" style="color: inherit; text-decoration: inherit;">Fleet<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetfleettype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Game<wbr>Lift.<wbr>Fleet<wbr>Fleet<wbr>Type</a></span>
+        <span class="property-type"><a href="#fleettype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Game<wbr>Lift.<wbr>Fleet<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether to use On-Demand instances or Spot instances for this fleet. If empty, the default is ON_DEMAND. Both categories of instances use identical hardware and configurations based on the instance type selected for this fleet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -416,7 +416,7 @@ Note: It is not currently possible to use the !Ref command to reference a script
 <a href="#fleettype_go" style="color: inherit; text-decoration: inherit;">Fleet<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetfleettype">Fleet<wbr>Fleet<wbr>Type</a></span>
+        <span class="property-type"><a href="#fleettype">Fleet<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether to use On-Demand instances or Spot instances for this fleet. If empty, the default is ON_DEMAND. Both categories of instances use identical hardware and configurations based on the instance type selected for this fleet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -600,7 +600,7 @@ Note: It is not currently possible to use the !Ref command to reference a script
 <a href="#fleettype_nodejs" style="color: inherit; text-decoration: inherit;">fleet<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetfleettype">Fleet<wbr>Fleet<wbr>Type</a></span>
+        <span class="property-type"><a href="#fleettype">Fleet<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether to use On-Demand instances or Spot instances for this fleet. If empty, the default is ON_DEMAND. Both categories of instances use identical hardware and configurations based on the instance type selected for this fleet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -784,7 +784,7 @@ Note: It is not currently possible to use the !Ref command to reference a script
 <a href="#fleet_type_python" style="color: inherit; text-decoration: inherit;">fleet_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetfleettype">Fleet<wbr>Fleet<wbr>Type</a></span>
+        <span class="property-type"><a href="#fleettype">Fleet<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether to use On-Demand instances or Spot instances for this fleet. If empty, the default is ON_DEMAND. Both categories of instances use identical hardware and configurations based on the instance type selected for this fleet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1084,32 +1084,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular"><dt>DISABLED</dt>
     <dd>DISABLED</dd><dt>GENERATED</dt>
     <dd>GENERATED</dd></dl>
-{{% /choosable %}}
-
-<h4 id="fleetfleettype">Fleet<wbr>Fleet<wbr>Type</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>On<wbr>Demand</dt>
-    <dd>ON_DEMAND</dd><dt>Spot</dt>
-    <dd>SPOT</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Fleet<wbr>Fleet<wbr>Type<wbr>On<wbr>Demand</dt>
-    <dd>ON_DEMAND</dd><dt>Fleet<wbr>Fleet<wbr>Type<wbr>Spot</dt>
-    <dd>SPOT</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>On<wbr>Demand</dt>
-    <dd>ON_DEMAND</dd><dt>Spot</dt>
-    <dd>SPOT</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>ON_DEMAND</dt>
-    <dd>ON_DEMAND</dd><dt>SPOT</dt>
-    <dd>SPOT</dd></dl>
 {{% /choosable %}}
 
 <h4 id="fleetippermission">Fleet<wbr>Ip<wbr>Permission</h4>
@@ -1830,6 +1804,32 @@ Linux: /local/game. Examples: "/local/game/MyGame/server.exe" or "/local/game/My
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional list of parameters to pass to the server executable or Realtime script on launch.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="fleettype">Fleet<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>On<wbr>Demand</dt>
+    <dd>ON_DEMAND</dd><dt>Spot</dt>
+    <dd>SPOT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Fleet<wbr>Type<wbr>On<wbr>Demand</dt>
+    <dd>ON_DEMAND</dd><dt>Fleet<wbr>Type<wbr>Spot</dt>
+    <dd>SPOT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>On<wbr>Demand</dt>
+    <dd>ON_DEMAND</dd><dt>Spot</dt>
+    <dd>SPOT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ON_DEMAND</dt>
+    <dd>ON_DEMAND</dd><dt>SPOT</dt>
+    <dd>SPOT</dd></dl>
 {{% /choosable %}}
 
 

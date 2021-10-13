@@ -16,40 +16,40 @@ A Pulumi package for creating and managing SignalFx resources.
 
 <h2 id="modules">Modules</h2>
 <ul class="api">
-    <li><a href="aws/" title="aws"><span class="symbol module"></span>aws</a></li>
-    <li><a href="azure/" title="azure"><span class="symbol module"></span>azure</a></li>
-    <li><a href="gcp/" title="gcp"><span class="symbol module"></span>gcp</a></li>
-    <li><a href="jira/" title="jira"><span class="symbol module"></span>jira</a></li>
-    <li><a href="opsgenie/" title="opsgenie"><span class="symbol module"></span>opsgenie</a></li>
-    <li><a href="pagerduty/" title="pagerduty"><span class="symbol module"></span>pagerduty</a></li>
-    <li><a href="slack/" title="slack"><span class="symbol module"></span>slack</a></li>
-    <li><a href="victorops/" title="victorops"><span class="symbol module"></span>victorops</a></li>
+    <li><a href="aws/" title="aws"><span class="api-symbol api-symbol--module"></span>aws</a></li>
+    <li><a href="azure/" title="azure"><span class="api-symbol api-symbol--module"></span>azure</a></li>
+    <li><a href="gcp/" title="gcp"><span class="api-symbol api-symbol--module"></span>gcp</a></li>
+    <li><a href="jira/" title="jira"><span class="api-symbol api-symbol--module"></span>jira</a></li>
+    <li><a href="opsgenie/" title="opsgenie"><span class="api-symbol api-symbol--module"></span>opsgenie</a></li>
+    <li><a href="pagerduty/" title="pagerduty"><span class="api-symbol api-symbol--module"></span>pagerduty</a></li>
+    <li><a href="slack/" title="slack"><span class="api-symbol api-symbol--module"></span>slack</a></li>
+    <li><a href="victorops/" title="victorops"><span class="api-symbol api-symbol--module"></span>victorops</a></li>
 </ul>
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="alertmutingrule" title="AlertMutingRule"><span class="symbol resource"></span>AlertMutingRule</a></li>
-    <li><a href="dashboard" title="Dashboard"><span class="symbol resource"></span>Dashboard</a></li>
-    <li><a href="dashboardgroup" title="DashboardGroup"><span class="symbol resource"></span>DashboardGroup</a></li>
-    <li><a href="datalink" title="DataLink"><span class="symbol resource"></span>DataLink</a></li>
-    <li><a href="detector" title="Detector"><span class="symbol resource"></span>Detector</a></li>
-    <li><a href="eventfeedchart" title="EventFeedChart"><span class="symbol resource"></span>EventFeedChart</a></li>
-    <li><a href="heatmapchart" title="HeatmapChart"><span class="symbol resource"></span>HeatmapChart</a></li>
-    <li><a href="listchart" title="ListChart"><span class="symbol resource"></span>ListChart</a></li>
-    <li><a href="orgtoken" title="OrgToken"><span class="symbol resource"></span>OrgToken</a></li>
-    <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
-    <li><a href="singlevaluechart" title="SingleValueChart"><span class="symbol resource"></span>SingleValueChart</a></li>
-    <li><a href="team" title="Team"><span class="symbol resource"></span>Team</a></li>
-    <li><a href="textchart" title="TextChart"><span class="symbol resource"></span>TextChart</a></li>
-    <li><a href="timechart" title="TimeChart"><span class="symbol resource"></span>TimeChart</a></li>
-    <li><a href="webhookintegration" title="WebhookIntegration"><span class="symbol resource"></span>WebhookIntegration</a></li>
+    <li><a href="alertmutingrule" title="AlertMutingRule"><span class="api-symbol api-symbol--resource"></span>AlertMutingRule</a></li>
+    <li><a href="dashboard" title="Dashboard"><span class="api-symbol api-symbol--resource"></span>Dashboard</a></li>
+    <li><a href="dashboardgroup" title="DashboardGroup"><span class="api-symbol api-symbol--resource"></span>DashboardGroup</a></li>
+    <li><a href="datalink" title="DataLink"><span class="api-symbol api-symbol--resource"></span>DataLink</a></li>
+    <li><a href="detector" title="Detector"><span class="api-symbol api-symbol--resource"></span>Detector</a></li>
+    <li><a href="eventfeedchart" title="EventFeedChart"><span class="api-symbol api-symbol--resource"></span>EventFeedChart</a></li>
+    <li><a href="heatmapchart" title="HeatmapChart"><span class="api-symbol api-symbol--resource"></span>HeatmapChart</a></li>
+    <li><a href="listchart" title="ListChart"><span class="api-symbol api-symbol--resource"></span>ListChart</a></li>
+    <li><a href="orgtoken" title="OrgToken"><span class="api-symbol api-symbol--resource"></span>OrgToken</a></li>
+    <li><a href="provider" title="Provider"><span class="api-symbol api-symbol--resource"></span>Provider</a></li>
+    <li><a href="singlevaluechart" title="SingleValueChart"><span class="api-symbol api-symbol--resource"></span>SingleValueChart</a></li>
+    <li><a href="team" title="Team"><span class="api-symbol api-symbol--resource"></span>Team</a></li>
+    <li><a href="textchart" title="TextChart"><span class="api-symbol api-symbol--resource"></span>TextChart</a></li>
+    <li><a href="timechart" title="TimeChart"><span class="api-symbol api-symbol--resource"></span>TimeChart</a></li>
+    <li><a href="webhookintegration" title="WebhookIntegration"><span class="api-symbol api-symbol--resource"></span>WebhookIntegration</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getawsservices" title="GetAwsServices"><span class="symbol function"></span>GetAwsServices</a></li>
-    <li><a href="getazureservices" title="GetAzureServices"><span class="symbol function"></span>GetAzureServices</a></li>
-    <li><a href="getdimensionvalues" title="GetDimensionValues"><span class="symbol function"></span>GetDimensionValues</a></li>
+    <li><a href="getawsservices" title="GetAwsServices"><span class="api-symbol api-symbol--function"></span>GetAwsServices</a></li>
+    <li><a href="getazureservices" title="GetAzureServices"><span class="api-symbol api-symbol--function"></span>GetAzureServices</a></li>
+    <li><a href="getdimensionvalues" title="GetDimensionValues"><span class="api-symbol api-symbol--function"></span>GetDimensionValues</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

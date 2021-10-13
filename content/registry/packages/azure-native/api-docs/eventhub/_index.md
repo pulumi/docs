@@ -13,35 +13,35 @@ Explore the resources and functions of the azure-native.eventhub module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
-    <li><a href="consumergroup" title="ConsumerGroup"><span class="symbol resource"></span>ConsumerGroup</a></li>
-    <li><a href="disasterrecoveryconfig" title="DisasterRecoveryConfig"><span class="symbol resource"></span>DisasterRecoveryConfig</a></li>
-    <li><a href="eventhub" title="EventHub"><span class="symbol resource"></span>EventHub</a></li>
-    <li><a href="eventhubauthorizationrule" title="EventHubAuthorizationRule"><span class="symbol resource"></span>EventHubAuthorizationRule</a></li>
-    <li><a href="namespace" title="Namespace"><span class="symbol resource"></span>Namespace</a></li>
-    <li><a href="namespaceauthorizationrule" title="NamespaceAuthorizationRule"><span class="symbol resource"></span>NamespaceAuthorizationRule</a></li>
-    <li><a href="namespaceipfilterrule" title="NamespaceIpFilterRule"><span class="symbol resource"></span>NamespaceIpFilterRule</a></li>
-    <li><a href="namespacenetworkruleset" title="NamespaceNetworkRuleSet"><span class="symbol resource"></span>NamespaceNetworkRuleSet</a></li>
-    <li><a href="namespacevirtualnetworkrule" title="NamespaceVirtualNetworkRule"><span class="symbol resource"></span>NamespaceVirtualNetworkRule</a></li>
-    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
+    <li><a href="cluster" title="Cluster"><span class="api-symbol api-symbol--resource"></span>Cluster</a></li>
+    <li><a href="consumergroup" title="ConsumerGroup"><span class="api-symbol api-symbol--resource"></span>ConsumerGroup</a></li>
+    <li><a href="disasterrecoveryconfig" title="DisasterRecoveryConfig"><span class="api-symbol api-symbol--resource"></span>DisasterRecoveryConfig</a></li>
+    <li><a href="eventhub" title="EventHub"><span class="api-symbol api-symbol--resource"></span>EventHub</a></li>
+    <li><a href="eventhubauthorizationrule" title="EventHubAuthorizationRule"><span class="api-symbol api-symbol--resource"></span>EventHubAuthorizationRule</a></li>
+    <li><a href="namespace" title="Namespace"><span class="api-symbol api-symbol--resource"></span>Namespace</a></li>
+    <li><a href="namespaceauthorizationrule" title="NamespaceAuthorizationRule"><span class="api-symbol api-symbol--resource"></span>NamespaceAuthorizationRule</a></li>
+    <li><a href="namespaceipfilterrule" title="NamespaceIpFilterRule"><span class="api-symbol api-symbol--resource"></span>NamespaceIpFilterRule</a></li>
+    <li><a href="namespacenetworkruleset" title="NamespaceNetworkRuleSet"><span class="api-symbol api-symbol--resource"></span>NamespaceNetworkRuleSet</a></li>
+    <li><a href="namespacevirtualnetworkrule" title="NamespaceVirtualNetworkRule"><span class="api-symbol api-symbol--resource"></span>NamespaceVirtualNetworkRule</a></li>
+    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="api-symbol api-symbol--resource"></span>PrivateEndpointConnection</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getcluster" title="GetCluster"><span class="symbol function"></span>GetCluster</a></li>
-    <li><a href="getconsumergroup" title="GetConsumerGroup"><span class="symbol function"></span>GetConsumerGroup</a></li>
-    <li><a href="getdisasterrecoveryconfig" title="GetDisasterRecoveryConfig"><span class="symbol function"></span>GetDisasterRecoveryConfig</a></li>
-    <li><a href="geteventhub" title="GetEventHub"><span class="symbol function"></span>GetEventHub</a></li>
-    <li><a href="geteventhubauthorizationrule" title="GetEventHubAuthorizationRule"><span class="symbol function"></span>GetEventHubAuthorizationRule</a></li>
-    <li><a href="getnamespace" title="GetNamespace"><span class="symbol function"></span>GetNamespace</a></li>
-    <li><a href="getnamespaceauthorizationrule" title="GetNamespaceAuthorizationRule"><span class="symbol function"></span>GetNamespaceAuthorizationRule</a></li>
-    <li><a href="getnamespaceipfilterrule" title="GetNamespaceIpFilterRule"><span class="symbol function"></span>GetNamespaceIpFilterRule</a></li>
-    <li><a href="getnamespacenetworkruleset" title="GetNamespaceNetworkRuleSet"><span class="symbol function"></span>GetNamespaceNetworkRuleSet</a></li>
-    <li><a href="getnamespacevirtualnetworkrule" title="GetNamespaceVirtualNetworkRule"><span class="symbol function"></span>GetNamespaceVirtualNetworkRule</a></li>
-    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
-    <li><a href="listdisasterrecoveryconfigkeys" title="ListDisasterRecoveryConfigKeys"><span class="symbol function"></span>ListDisasterRecoveryConfigKeys</a></li>
-    <li><a href="listeventhubkeys" title="ListEventHubKeys"><span class="symbol function"></span>ListEventHubKeys</a></li>
-    <li><a href="listnamespacekeys" title="ListNamespaceKeys"><span class="symbol function"></span>ListNamespaceKeys</a></li>
+    <li><a href="getcluster" title="GetCluster"><span class="api-symbol api-symbol--function"></span>GetCluster</a></li>
+    <li><a href="getconsumergroup" title="GetConsumerGroup"><span class="api-symbol api-symbol--function"></span>GetConsumerGroup</a></li>
+    <li><a href="getdisasterrecoveryconfig" title="GetDisasterRecoveryConfig"><span class="api-symbol api-symbol--function"></span>GetDisasterRecoveryConfig</a></li>
+    <li><a href="geteventhub" title="GetEventHub"><span class="api-symbol api-symbol--function"></span>GetEventHub</a></li>
+    <li><a href="geteventhubauthorizationrule" title="GetEventHubAuthorizationRule"><span class="api-symbol api-symbol--function"></span>GetEventHubAuthorizationRule</a></li>
+    <li><a href="getnamespace" title="GetNamespace"><span class="api-symbol api-symbol--function"></span>GetNamespace</a></li>
+    <li><a href="getnamespaceauthorizationrule" title="GetNamespaceAuthorizationRule"><span class="api-symbol api-symbol--function"></span>GetNamespaceAuthorizationRule</a></li>
+    <li><a href="getnamespaceipfilterrule" title="GetNamespaceIpFilterRule"><span class="api-symbol api-symbol--function"></span>GetNamespaceIpFilterRule</a></li>
+    <li><a href="getnamespacenetworkruleset" title="GetNamespaceNetworkRuleSet"><span class="api-symbol api-symbol--function"></span>GetNamespaceNetworkRuleSet</a></li>
+    <li><a href="getnamespacevirtualnetworkrule" title="GetNamespaceVirtualNetworkRule"><span class="api-symbol api-symbol--function"></span>GetNamespaceVirtualNetworkRule</a></li>
+    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="api-symbol api-symbol--function"></span>GetPrivateEndpointConnection</a></li>
+    <li><a href="listdisasterrecoveryconfigkeys" title="ListDisasterRecoveryConfigKeys"><span class="api-symbol api-symbol--function"></span>ListDisasterRecoveryConfigKeys</a></li>
+    <li><a href="listeventhubkeys" title="ListEventHubKeys"><span class="api-symbol api-symbol--function"></span>ListEventHubKeys</a></li>
+    <li><a href="listnamespacekeys" title="ListNamespaceKeys"><span class="api-symbol api-symbol--function"></span>ListNamespaceKeys</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -51,6 +51,6 @@ Explore the resources and functions of the azure-native.eventhub module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.36.0</dd>
+	<dd>1.37.0</dd>
 </dl>
 

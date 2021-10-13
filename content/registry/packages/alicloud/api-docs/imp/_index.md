@@ -13,12 +13,12 @@ Explore the resources and functions of the alicloud.imp module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="apptemplate" title="AppTemplate"><span class="symbol resource"></span>AppTemplate</a></li>
+    <li><a href="apptemplate" title="AppTemplate"><span class="api-symbol api-symbol--resource"></span>AppTemplate</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getapptemplates" title="GetAppTemplates"><span class="symbol function"></span>GetAppTemplates</a></li>
+    <li><a href="getapptemplates" title="GetAppTemplates"><span class="api-symbol api-symbol--function"></span>GetAppTemplates</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

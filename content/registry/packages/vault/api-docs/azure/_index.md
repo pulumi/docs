@@ -13,15 +13,15 @@ Explore the resources and functions of the vault.azure module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="authbackendconfig" title="AuthBackendConfig"><span class="symbol resource"></span>AuthBackendConfig</a></li>
-    <li><a href="authbackendrole" title="AuthBackendRole"><span class="symbol resource"></span>AuthBackendRole</a></li>
-    <li><a href="backend" title="Backend"><span class="symbol resource"></span>Backend</a></li>
-    <li><a href="backendrole" title="BackendRole"><span class="symbol resource"></span>BackendRole</a></li>
+    <li><a href="authbackendconfig" title="AuthBackendConfig"><span class="api-symbol api-symbol--resource"></span>AuthBackendConfig</a></li>
+    <li><a href="authbackendrole" title="AuthBackendRole"><span class="api-symbol api-symbol--resource"></span>AuthBackendRole</a></li>
+    <li><a href="backend" title="Backend"><span class="api-symbol api-symbol--resource"></span>Backend</a></li>
+    <li><a href="backendrole" title="BackendRole"><span class="api-symbol api-symbol--resource"></span>BackendRole</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getaccesscredentials" title="GetAccessCredentials"><span class="symbol function"></span>GetAccessCredentials</a></li>
+    <li><a href="getaccesscredentials" title="GetAccessCredentials"><span class="api-symbol api-symbol--function"></span>GetAccessCredentials</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

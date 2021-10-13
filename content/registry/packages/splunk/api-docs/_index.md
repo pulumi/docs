@@ -16,29 +16,29 @@ A Pulumi package for creating and managing splunk cloud resources.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="adminsamlgroups" title="AdminSamlGroups"><span class="symbol resource"></span>AdminSamlGroups</a></li>
-    <li><a href="appslocal" title="AppsLocal"><span class="symbol resource"></span>AppsLocal</a></li>
-    <li><a href="authenticationusers" title="AuthenticationUsers"><span class="symbol resource"></span>AuthenticationUsers</a></li>
-    <li><a href="authorizationroles" title="AuthorizationRoles"><span class="symbol resource"></span>AuthorizationRoles</a></li>
-    <li><a href="configsconf" title="ConfigsConf"><span class="symbol resource"></span>ConfigsConf</a></li>
-    <li><a href="datauiviews" title="DataUiViews"><span class="symbol resource"></span>DataUiViews</a></li>
-    <li><a href="globalhttpeventcollector" title="GlobalHttpEventCollector"><span class="symbol resource"></span>GlobalHttpEventCollector</a></li>
-    <li><a href="indexes" title="Indexes"><span class="symbol resource"></span>Indexes</a></li>
-    <li><a href="inputshttpeventcollector" title="InputsHttpEventCollector"><span class="symbol resource"></span>InputsHttpEventCollector</a></li>
-    <li><a href="inputsmonitor" title="InputsMonitor"><span class="symbol resource"></span>InputsMonitor</a></li>
-    <li><a href="inputsscript" title="InputsScript"><span class="symbol resource"></span>InputsScript</a></li>
-    <li><a href="inputstcpcooked" title="InputsTcpCooked"><span class="symbol resource"></span>InputsTcpCooked</a></li>
-    <li><a href="inputstcpraw" title="InputsTcpRaw"><span class="symbol resource"></span>InputsTcpRaw</a></li>
-    <li><a href="inputstcpsplunktcptoken" title="InputsTcpSplunkTcpToken"><span class="symbol resource"></span>InputsTcpSplunkTcpToken</a></li>
-    <li><a href="inputstcpssl" title="InputsTcpSsl"><span class="symbol resource"></span>InputsTcpSsl</a></li>
-    <li><a href="inputsudp" title="InputsUdp"><span class="symbol resource"></span>InputsUdp</a></li>
-    <li><a href="outputstcpdefault" title="OutputsTcpDefault"><span class="symbol resource"></span>OutputsTcpDefault</a></li>
-    <li><a href="outputstcpgroup" title="OutputsTcpGroup"><span class="symbol resource"></span>OutputsTcpGroup</a></li>
-    <li><a href="outputstcpserver" title="OutputsTcpServer"><span class="symbol resource"></span>OutputsTcpServer</a></li>
-    <li><a href="outputstcpsyslog" title="OutputsTcpSyslog"><span class="symbol resource"></span>OutputsTcpSyslog</a></li>
-    <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
-    <li><a href="savedsearches" title="SavedSearches"><span class="symbol resource"></span>SavedSearches</a></li>
-    <li><a href="shindexesmanager" title="ShIndexesManager"><span class="symbol resource"></span>ShIndexesManager</a></li>
+    <li><a href="adminsamlgroups" title="AdminSamlGroups"><span class="api-symbol api-symbol--resource"></span>AdminSamlGroups</a></li>
+    <li><a href="appslocal" title="AppsLocal"><span class="api-symbol api-symbol--resource"></span>AppsLocal</a></li>
+    <li><a href="authenticationusers" title="AuthenticationUsers"><span class="api-symbol api-symbol--resource"></span>AuthenticationUsers</a></li>
+    <li><a href="authorizationroles" title="AuthorizationRoles"><span class="api-symbol api-symbol--resource"></span>AuthorizationRoles</a></li>
+    <li><a href="configsconf" title="ConfigsConf"><span class="api-symbol api-symbol--resource"></span>ConfigsConf</a></li>
+    <li><a href="datauiviews" title="DataUiViews"><span class="api-symbol api-symbol--resource"></span>DataUiViews</a></li>
+    <li><a href="globalhttpeventcollector" title="GlobalHttpEventCollector"><span class="api-symbol api-symbol--resource"></span>GlobalHttpEventCollector</a></li>
+    <li><a href="indexes" title="Indexes"><span class="api-symbol api-symbol--resource"></span>Indexes</a></li>
+    <li><a href="inputshttpeventcollector" title="InputsHttpEventCollector"><span class="api-symbol api-symbol--resource"></span>InputsHttpEventCollector</a></li>
+    <li><a href="inputsmonitor" title="InputsMonitor"><span class="api-symbol api-symbol--resource"></span>InputsMonitor</a></li>
+    <li><a href="inputsscript" title="InputsScript"><span class="api-symbol api-symbol--resource"></span>InputsScript</a></li>
+    <li><a href="inputstcpcooked" title="InputsTcpCooked"><span class="api-symbol api-symbol--resource"></span>InputsTcpCooked</a></li>
+    <li><a href="inputstcpraw" title="InputsTcpRaw"><span class="api-symbol api-symbol--resource"></span>InputsTcpRaw</a></li>
+    <li><a href="inputstcpsplunktcptoken" title="InputsTcpSplunkTcpToken"><span class="api-symbol api-symbol--resource"></span>InputsTcpSplunkTcpToken</a></li>
+    <li><a href="inputstcpssl" title="InputsTcpSsl"><span class="api-symbol api-symbol--resource"></span>InputsTcpSsl</a></li>
+    <li><a href="inputsudp" title="InputsUdp"><span class="api-symbol api-symbol--resource"></span>InputsUdp</a></li>
+    <li><a href="outputstcpdefault" title="OutputsTcpDefault"><span class="api-symbol api-symbol--resource"></span>OutputsTcpDefault</a></li>
+    <li><a href="outputstcpgroup" title="OutputsTcpGroup"><span class="api-symbol api-symbol--resource"></span>OutputsTcpGroup</a></li>
+    <li><a href="outputstcpserver" title="OutputsTcpServer"><span class="api-symbol api-symbol--resource"></span>OutputsTcpServer</a></li>
+    <li><a href="outputstcpsyslog" title="OutputsTcpSyslog"><span class="api-symbol api-symbol--resource"></span>OutputsTcpSyslog</a></li>
+    <li><a href="provider" title="Provider"><span class="api-symbol api-symbol--resource"></span>Provider</a></li>
+    <li><a href="savedsearches" title="SavedSearches"><span class="api-symbol api-symbol--resource"></span>SavedSearches</a></li>
+    <li><a href="shindexesmanager" title="ShIndexesManager"><span class="api-symbol api-symbol--resource"></span>ShIndexesManager</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

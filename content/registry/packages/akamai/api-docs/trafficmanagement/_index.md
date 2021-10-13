@@ -13,18 +13,18 @@ Explore the resources and functions of the akamai.trafficmanagement module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="gtmasmap" title="GtmASmap"><span class="symbol resource"></span>GtmASmap</a></li>
-    <li><a href="gtmcidrmap" title="GtmCidrmap"><span class="symbol resource"></span>GtmCidrmap</a></li>
-    <li><a href="gtmdatacenter" title="GtmDatacenter"><span class="symbol resource"></span>GtmDatacenter</a></li>
-    <li><a href="gtmdomain" title="GtmDomain"><span class="symbol resource"></span>GtmDomain</a></li>
-    <li><a href="gtmgeomap" title="GtmGeomap"><span class="symbol resource"></span>GtmGeomap</a></li>
-    <li><a href="gtmproperty" title="GtmProperty"><span class="symbol resource"></span>GtmProperty</a></li>
-    <li><a href="gtmresource" title="GtmResource"><span class="symbol resource"></span>GtmResource</a></li>
+    <li><a href="gtmasmap" title="GtmASmap"><span class="api-symbol api-symbol--resource"></span>GtmASmap</a></li>
+    <li><a href="gtmcidrmap" title="GtmCidrmap"><span class="api-symbol api-symbol--resource"></span>GtmCidrmap</a></li>
+    <li><a href="gtmdatacenter" title="GtmDatacenter"><span class="api-symbol api-symbol--resource"></span>GtmDatacenter</a></li>
+    <li><a href="gtmdomain" title="GtmDomain"><span class="api-symbol api-symbol--resource"></span>GtmDomain</a></li>
+    <li><a href="gtmgeomap" title="GtmGeomap"><span class="api-symbol api-symbol--resource"></span>GtmGeomap</a></li>
+    <li><a href="gtmproperty" title="GtmProperty"><span class="api-symbol api-symbol--resource"></span>GtmProperty</a></li>
+    <li><a href="gtmresource" title="GtmResource"><span class="api-symbol api-symbol--resource"></span>GtmResource</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getgtmdefaultdatacenter" title="GetGtmDefaultDatacenter"><span class="symbol function"></span>GetGtmDefaultDatacenter</a></li>
+    <li><a href="getgtmdefaultdatacenter" title="GetGtmDefaultDatacenter"><span class="api-symbol api-symbol--function"></span>GetGtmDefaultDatacenter</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

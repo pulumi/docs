@@ -13,8 +13,8 @@ Explore the resources and functions of the aws-native.appflow module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="connectorprofile" title="ConnectorProfile"><span class="symbol resource"></span>ConnectorProfile</a></li>
-    <li><a href="flow" title="Flow"><span class="symbol resource"></span>Flow</a></li>
+    <li><a href="connectorprofile" title="ConnectorProfile"><span class="api-symbol api-symbol--resource"></span>ConnectorProfile</a></li>
+    <li><a href="flow" title="Flow"><span class="api-symbol api-symbol--resource"></span>Flow</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -24,6 +24,6 @@ Explore the resources and functions of the aws-native.appflow module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.0</dd>
 </dl>
 

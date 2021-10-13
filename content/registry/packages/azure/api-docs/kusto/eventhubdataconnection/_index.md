@@ -320,6 +320,7 @@ const eventhubConnection = new azure.kusto.EventhubDataConnection("eventhubConne
                            <span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">event_system_properties</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                            <span class="nx">eventhub_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">identity_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">mapping_rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -526,6 +527,15 @@ The EventhubDataConnection resource accepts the following [input]({{< relref "/d
     <dd>{{% md %}}Specifies a list of system properties for the Event Hub.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="identityid_csharp">
+<a href="#identityid_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource ID of a managed identity (system or user assigned) to be used to authenticate with event hub.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -636,6 +646,15 @@ The EventhubDataConnection resource accepts the following [input]({{< relref "/d
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies a list of system properties for the Event Hub.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identityid_go">
+<a href="#identityid_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource ID of a managed identity (system or user assigned) to be used to authenticate with event hub.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
@@ -750,6 +769,15 @@ The EventhubDataConnection resource accepts the following [input]({{< relref "/d
     <dd>{{% md %}}Specifies a list of system properties for the Event Hub.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="identityid_nodejs">
+<a href="#identityid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource ID of a managed identity (system or user assigned) to be used to authenticate with event hub.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -860,6 +888,15 @@ The EventhubDataConnection resource accepts the following [input]({{< relref "/d
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of system properties for the Event Hub.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_id_python">
+<a href="#identity_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource ID of a managed identity (system or user assigned) to be used to authenticate with event hub.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
@@ -977,6 +1014,7 @@ Get an existing EventhubDataConnection resource's state with the given name, ID,
         <span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">event_system_properties</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">eventhub_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">identity_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">mapping_rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1157,6 +1195,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the resource id of the EventHub this data connection will use for ingestion. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_identityid_csharp">
+<a href="#state_identityid_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource ID of a managed identity (system or user assigned) to be used to authenticate with event hub.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -1267,6 +1314,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the resource id of the EventHub this data connection will use for ingestion. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_identityid_go">
+<a href="#state_identityid_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource ID of a managed identity (system or user assigned) to be used to authenticate with event hub.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
@@ -1381,6 +1437,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the resource id of the EventHub this data connection will use for ingestion. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_identityid_nodejs">
+<a href="#state_identityid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource ID of a managed identity (system or user assigned) to be used to authenticate with event hub.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -1491,6 +1556,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the resource id of the EventHub this data connection will use for ingestion. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_identity_id_python">
+<a href="#state_identity_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource ID of a managed identity (system or user assigned) to be used to authenticate with event hub.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">

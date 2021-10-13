@@ -13,7 +13,7 @@ Explore the resources and functions of the aws-native.emrcontainers module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="virtualcluster" title="VirtualCluster"><span class="symbol resource"></span>VirtualCluster</a></li>
+    <li><a href="virtualcluster" title="VirtualCluster"><span class="api-symbol api-symbol--resource"></span>VirtualCluster</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -23,6 +23,6 @@ Explore the resources and functions of the aws-native.emrcontainers module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.0</dd>
 </dl>
 

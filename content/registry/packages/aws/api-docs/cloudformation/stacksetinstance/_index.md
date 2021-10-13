@@ -275,6 +275,113 @@ const aWSCloudFormationStackSetExecutionRoleMinimumExecutionPolicyRolePolicy = n
 
 
 
+### Example Deployment across Organizations account
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.CloudFormation.StackSetInstance("example", new Aws.CloudFormation.StackSetInstanceArgs
+        {
+            DeploymentTargets = new Aws.CloudFormation.Inputs.StackSetInstanceDeploymentTargetsArgs
+            {
+                OrganizationalUnitIds = 
+                {
+                    aws_organizations_organization.Example.Roots[0].Id,
+                },
+            },
+            Region = "us-east-1",
+            StackSetName = aws_cloudformation_stack_set.Example.Name,
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudformation"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := cloudformation.NewStackSetInstance(ctx, "example", &cloudformation.StackSetInstanceArgs{
+			DeploymentTargets: &cloudformation.StackSetInstanceDeploymentTargetsArgs{
+				OrganizationalUnitIds: pulumi.StringArray{
+					pulumi.Any(aws_organizations_organization.Example.Roots[0].Id),
+				},
+			},
+			Region:       pulumi.String("us-east-1"),
+			StackSetName: pulumi.Any(aws_cloudformation_stack_set.Example.Name),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.cloudformation.StackSetInstance("example",
+    deployment_targets=aws.cloudformation.StackSetInstanceDeploymentTargetsArgs(
+        organizational_unit_ids=[aws_organizations_organization["example"]["roots"][0]["id"]],
+    ),
+    region="us-east-1",
+    stack_set_name=aws_cloudformation_stack_set["example"]["name"])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.cloudformation.StackSetInstance("example", {
+    deploymentTargets: {
+        organizationalUnitIds: [aws_organizations_organization.example.roots[0].id],
+    },
+    region: "us-east-1",
+    stackSetName: aws_cloudformation_stack_set.example.name,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 
@@ -294,6 +401,7 @@ const aWSCloudFormationStackSetExecutionRoleMinimumExecutionPolicyRolePolicy = n
 <span class="k">def </span><span class="nx">StackSetInstance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                      <span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">deployment_targets</span><span class="p">:</span> <span class="nx">Optional[StackSetInstanceDeploymentTargetsArgs]</span> = None<span class="p">,</span>
                      <span class="nx">parameter_overrides</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                      <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">retain_stack</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -445,6 +553,15 @@ The StackSetInstance resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}Target AWS Account ID to create a Stack based on the StackSet. Defaults to current account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deploymenttargets_csharp">
+<a href="#deploymenttargets_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Targets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#stacksetinstancedeploymenttargets">Stack<wbr>Set<wbr>Instance<wbr>Deployment<wbr>Targets<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The AWS Organizations accounts to which StackSets deploys. StackSets doesn't deploy stack instances to the organization management account, even if the organization management account is in your organization or in an OU in your organization. Drift detection is not possible for this argument. See deployment_targets below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="parameteroverrides_csharp">
 <a href="#parameteroverrides_csharp" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Overrides</a>
 </span>
@@ -492,6 +609,15 @@ The StackSetInstance resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Target AWS Account ID to create a Stack based on the StackSet. Defaults to current account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deploymenttargets_go">
+<a href="#deploymenttargets_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Targets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#stacksetinstancedeploymenttargets">Stack<wbr>Set<wbr>Instance<wbr>Deployment<wbr>Targets<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The AWS Organizations accounts to which StackSets deploys. StackSets doesn't deploy stack instances to the organization management account, even if the organization management account is in your organization or in an OU in your organization. Drift detection is not possible for this argument. See deployment_targets below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameteroverrides_go">
@@ -543,6 +669,15 @@ The StackSetInstance resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}Target AWS Account ID to create a Stack based on the StackSet. Defaults to current account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deploymenttargets_nodejs">
+<a href="#deploymenttargets_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Targets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#stacksetinstancedeploymenttargets">Stack<wbr>Set<wbr>Instance<wbr>Deployment<wbr>Targets<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The AWS Organizations accounts to which StackSets deploys. StackSets doesn't deploy stack instances to the organization management account, even if the organization management account is in your organization or in an OU in your organization. Drift detection is not possible for this argument. See deployment_targets below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="parameteroverrides_nodejs">
 <a href="#parameteroverrides_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Overrides</a>
 </span>
@@ -592,6 +727,15 @@ The StackSetInstance resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}Target AWS Account ID to create a Stack based on the StackSet. Defaults to current account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deployment_targets_python">
+<a href="#deployment_targets_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>targets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#stacksetinstancedeploymenttargets">Stack<wbr>Set<wbr>Instance<wbr>Deployment<wbr>Targets<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The AWS Organizations accounts to which StackSets deploys. StackSets doesn't deploy stack instances to the organization management account, even if the organization management account is in your organization or in an OU in your organization. Drift detection is not possible for this argument. See deployment_targets below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="parameter_overrides_python">
 <a href="#parameter_overrides_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>overrides</a>
 </span>
@@ -638,6 +782,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="organizationalunitid_csharp">
+<a href="#organizationalunitid_csharp" style="color: inherit; text-decoration: inherit;">Organizational<wbr>Unit<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The organization root ID or organizational unit (OU) IDs specified for `deployment_targets`.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="stackid_csharp">
 <a href="#stackid_csharp" style="color: inherit; text-decoration: inherit;">Stack<wbr>Id</a>
 </span>
@@ -658,6 +811,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="organizationalunitid_go">
+<a href="#organizationalunitid_go" style="color: inherit; text-decoration: inherit;">Organizational<wbr>Unit<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The organization root ID or organizational unit (OU) IDs specified for `deployment_targets`.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="stackid_go">
 <a href="#stackid_go" style="color: inherit; text-decoration: inherit;">Stack<wbr>Id</a>
@@ -680,6 +842,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="organizationalunitid_nodejs">
+<a href="#organizationalunitid_nodejs" style="color: inherit; text-decoration: inherit;">organizational<wbr>Unit<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The organization root ID or organizational unit (OU) IDs specified for `deployment_targets`.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="stackid_nodejs">
 <a href="#stackid_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Id</a>
 </span>
@@ -700,6 +871,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="organizational_unit_id_python">
+<a href="#organizational_unit_id_python" style="color: inherit; text-decoration: inherit;">organizational_<wbr>unit_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The organization root ID or organizational unit (OU) IDs specified for `deployment_targets`.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="stack_id_python">
 <a href="#stack_id_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>id</a>
@@ -728,6 +908,8 @@ Get an existing StackSetInstance resource's state with the given name, ID, and o
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">deployment_targets</span><span class="p">:</span> <span class="nx">Optional[StackSetInstanceDeploymentTargetsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">organizational_unit_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">parameter_overrides</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">retain_stack</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -854,6 +1036,24 @@ The following state arguments are supported:
     <dd>{{% md %}}Target AWS Account ID to create a Stack based on the StackSet. Defaults to current account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_deploymenttargets_csharp">
+<a href="#state_deploymenttargets_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Targets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#stacksetinstancedeploymenttargets">Stack<wbr>Set<wbr>Instance<wbr>Deployment<wbr>Targets<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The AWS Organizations accounts to which StackSets deploys. StackSets doesn't deploy stack instances to the organization management account, even if the organization management account is in your organization or in an OU in your organization. Drift detection is not possible for this argument. See deployment_targets below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_organizationalunitid_csharp">
+<a href="#state_organizationalunitid_csharp" style="color: inherit; text-decoration: inherit;">Organizational<wbr>Unit<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The organization root ID or organizational unit (OU) IDs specified for `deployment_targets`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_parameteroverrides_csharp">
 <a href="#state_parameteroverrides_csharp" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Overrides</a>
 </span>
@@ -910,6 +1110,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Target AWS Account ID to create a Stack based on the StackSet. Defaults to current account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_deploymenttargets_go">
+<a href="#state_deploymenttargets_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Targets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#stacksetinstancedeploymenttargets">Stack<wbr>Set<wbr>Instance<wbr>Deployment<wbr>Targets<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The AWS Organizations accounts to which StackSets deploys. StackSets doesn't deploy stack instances to the organization management account, even if the organization management account is in your organization or in an OU in your organization. Drift detection is not possible for this argument. See deployment_targets below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_organizationalunitid_go">
+<a href="#state_organizationalunitid_go" style="color: inherit; text-decoration: inherit;">Organizational<wbr>Unit<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The organization root ID or organizational unit (OU) IDs specified for `deployment_targets`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameteroverrides_go">
@@ -970,6 +1188,24 @@ The following state arguments are supported:
     <dd>{{% md %}}Target AWS Account ID to create a Stack based on the StackSet. Defaults to current account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_deploymenttargets_nodejs">
+<a href="#state_deploymenttargets_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Targets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#stacksetinstancedeploymenttargets">Stack<wbr>Set<wbr>Instance<wbr>Deployment<wbr>Targets<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The AWS Organizations accounts to which StackSets deploys. StackSets doesn't deploy stack instances to the organization management account, even if the organization management account is in your organization or in an OU in your organization. Drift detection is not possible for this argument. See deployment_targets below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_organizationalunitid_nodejs">
+<a href="#state_organizationalunitid_nodejs" style="color: inherit; text-decoration: inherit;">organizational<wbr>Unit<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The organization root ID or organizational unit (OU) IDs specified for `deployment_targets`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_parameteroverrides_nodejs">
 <a href="#state_parameteroverrides_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Overrides</a>
 </span>
@@ -1028,6 +1264,24 @@ The following state arguments are supported:
     <dd>{{% md %}}Target AWS Account ID to create a Stack based on the StackSet. Defaults to current account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_deployment_targets_python">
+<a href="#state_deployment_targets_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>targets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#stacksetinstancedeploymenttargets">Stack<wbr>Set<wbr>Instance<wbr>Deployment<wbr>Targets<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The AWS Organizations accounts to which StackSets deploys. StackSets doesn't deploy stack instances to the organization management account, even if the organization management account is in your organization or in an OU in your organization. Drift detection is not possible for this argument. See deployment_targets below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_organizational_unit_id_python">
+<a href="#state_organizational_unit_id_python" style="color: inherit; text-decoration: inherit;">organizational_<wbr>unit_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The organization root ID or organizational unit (OU) IDs specified for `deployment_targets`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_parameter_overrides_python">
 <a href="#state_parameter_overrides_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>overrides</a>
 </span>
@@ -1078,6 +1332,60 @@ The following state arguments are supported:
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="stacksetinstancedeploymenttargets">Stack<wbr>Set<wbr>Instance<wbr>Deployment<wbr>Targets</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="organizationalunitids_csharp">
+<a href="#organizationalunitids_csharp" style="color: inherit; text-decoration: inherit;">Organizational<wbr>Unit<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="organizationalunitids_go">
+<a href="#organizationalunitids_go" style="color: inherit; text-decoration: inherit;">Organizational<wbr>Unit<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="organizationalunitids_nodejs">
+<a href="#organizationalunitids_nodejs" style="color: inherit; text-decoration: inherit;">organizational<wbr>Unit<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="organizational_unit_ids_python">
+<a href="#organizational_unit_ids_python" style="color: inherit; text-decoration: inherit;">organizational_<wbr>unit_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
 ## Import
 
 

@@ -513,7 +513,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the `MembershipRole`. Must be one of `OWNER`, `MANAGER`, `MEMBER`.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the `MembershipRole`. Must be one of `OWNER`, `MANAGER`, `MEMBER`.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="restrictionevaluations_csharp">
+<a href="#restrictionevaluations_csharp" style="color: inherit; text-decoration: inherit;">Restriction<wbr>Evaluations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#restrictionevaluationsresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Identity.<wbr>V1Beta1.<wbr>Inputs.<wbr>Restriction<wbr>Evaluations<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Evaluations of restrictions applied to parent group on this membership.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -533,7 +541,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the `MembershipRole`. Must be one of `OWNER`, `MANAGER`, `MEMBER`.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the `MembershipRole`. Must be one of `OWNER`, `MANAGER`, `MEMBER`.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="restrictionevaluations_go">
+<a href="#restrictionevaluations_go" style="color: inherit; text-decoration: inherit;">Restriction<wbr>Evaluations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#restrictionevaluationsresponse">Restriction<wbr>Evaluations<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Evaluations of restrictions applied to parent group on this membership.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -553,7 +569,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the `MembershipRole`. Must be one of `OWNER`, `MANAGER`, `MEMBER`.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the `MembershipRole`. Must be one of `OWNER`, `MANAGER`, `MEMBER`.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="restrictionevaluations_nodejs">
+<a href="#restrictionevaluations_nodejs" style="color: inherit; text-decoration: inherit;">restriction<wbr>Evaluations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#restrictionevaluationsresponse">Restriction<wbr>Evaluations<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Evaluations of restrictions applied to parent group on this membership.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -573,7 +597,119 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the `MembershipRole`. Must be one of `OWNER`, `MANAGER`, `MEMBER`.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the `MembershipRole`. Must be one of `OWNER`, `MANAGER`, `MEMBER`.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="restriction_evaluations_python">
+<a href="#restriction_evaluations_python" style="color: inherit; text-decoration: inherit;">restriction_<wbr>evaluations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#restrictionevaluationsresponse">Restriction<wbr>Evaluations<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Evaluations of restrictions applied to parent group on this membership.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="membershiprolerestrictionevaluationresponse">Membership<wbr>Role<wbr>Restriction<wbr>Evaluation<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="state_csharp">
+<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The current state of the restriction{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="state_go">
+<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The current state of the restriction{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="state_nodejs">
+<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The current state of the restriction{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="state_python">
+<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The current state of the restriction{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="restrictionevaluationsresponse">Restriction<wbr>Evaluations<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="memberrestrictionevaluation_csharp">
+<a href="#memberrestrictionevaluation_csharp" style="color: inherit; text-decoration: inherit;">Member<wbr>Restriction<wbr>Evaluation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#membershiprolerestrictionevaluationresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Identity.<wbr>V1Beta1.<wbr>Inputs.<wbr>Membership<wbr>Role<wbr>Restriction<wbr>Evaluation<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Evaluation of the member restriction applied to this membership. Empty if the user lacks permission to view the restriction evaluation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="memberrestrictionevaluation_go">
+<a href="#memberrestrictionevaluation_go" style="color: inherit; text-decoration: inherit;">Member<wbr>Restriction<wbr>Evaluation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#membershiprolerestrictionevaluationresponse">Membership<wbr>Role<wbr>Restriction<wbr>Evaluation<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Evaluation of the member restriction applied to this membership. Empty if the user lacks permission to view the restriction evaluation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="memberrestrictionevaluation_nodejs">
+<a href="#memberrestrictionevaluation_nodejs" style="color: inherit; text-decoration: inherit;">member<wbr>Restriction<wbr>Evaluation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#membershiprolerestrictionevaluationresponse">Membership<wbr>Role<wbr>Restriction<wbr>Evaluation<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Evaluation of the member restriction applied to this membership. Empty if the user lacks permission to view the restriction evaluation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="member_restriction_evaluation_python">
+<a href="#member_restriction_evaluation_python" style="color: inherit; text-decoration: inherit;">member_<wbr>restriction_<wbr>evaluation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#membershiprolerestrictionevaluationresponse">Membership<wbr>Role<wbr>Restriction<wbr>Evaluation<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Evaluation of the member restriction applied to this membership. Empty if the user lacks permission to view the restriction evaluation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

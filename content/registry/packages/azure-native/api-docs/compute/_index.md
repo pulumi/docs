@@ -13,70 +13,70 @@ Explore the resources and functions of the azure-native.compute module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="availabilityset" title="AvailabilitySet"><span class="symbol resource"></span>AvailabilitySet</a></li>
-    <li><a href="capacityreservation" title="CapacityReservation"><span class="symbol resource"></span>CapacityReservation</a></li>
-    <li><a href="capacityreservationgroup" title="CapacityReservationGroup"><span class="symbol resource"></span>CapacityReservationGroup</a></li>
-    <li><a href="cloudservice" title="CloudService"><span class="symbol resource"></span>CloudService</a></li>
-    <li><a href="dedicatedhost" title="DedicatedHost"><span class="symbol resource"></span>DedicatedHost</a></li>
-    <li><a href="dedicatedhostgroup" title="DedicatedHostGroup"><span class="symbol resource"></span>DedicatedHostGroup</a></li>
-    <li><a href="disk" title="Disk"><span class="symbol resource"></span>Disk</a></li>
-    <li><a href="diskaccess" title="DiskAccess"><span class="symbol resource"></span>DiskAccess</a></li>
-    <li><a href="diskaccessaprivateendpointconnection" title="DiskAccessAPrivateEndpointConnection"><span class="symbol resource"></span>DiskAccessAPrivateEndpointConnection</a></li>
-    <li><a href="diskencryptionset" title="DiskEncryptionSet"><span class="symbol resource"></span>DiskEncryptionSet</a></li>
-    <li><a href="gallery" title="Gallery"><span class="symbol resource"></span>Gallery</a></li>
-    <li><a href="galleryapplication" title="GalleryApplication"><span class="symbol resource"></span>GalleryApplication</a></li>
-    <li><a href="galleryapplicationversion" title="GalleryApplicationVersion"><span class="symbol resource"></span>GalleryApplicationVersion</a></li>
-    <li><a href="galleryimage" title="GalleryImage"><span class="symbol resource"></span>GalleryImage</a></li>
-    <li><a href="galleryimageversion" title="GalleryImageVersion"><span class="symbol resource"></span>GalleryImageVersion</a></li>
-    <li><a href="image" title="Image"><span class="symbol resource"></span>Image</a></li>
-    <li><a href="proximityplacementgroup" title="ProximityPlacementGroup"><span class="symbol resource"></span>ProximityPlacementGroup</a></li>
-    <li><a href="restorepoint" title="RestorePoint"><span class="symbol resource"></span>RestorePoint</a></li>
-    <li><a href="restorepointcollection" title="RestorePointCollection"><span class="symbol resource"></span>RestorePointCollection</a></li>
-    <li><a href="snapshot" title="Snapshot"><span class="symbol resource"></span>Snapshot</a></li>
-    <li><a href="sshpublickey" title="SshPublicKey"><span class="symbol resource"></span>SshPublicKey</a></li>
-    <li><a href="virtualmachine" title="VirtualMachine"><span class="symbol resource"></span>VirtualMachine</a></li>
-    <li><a href="virtualmachineextension" title="VirtualMachineExtension"><span class="symbol resource"></span>VirtualMachineExtension</a></li>
-    <li><a href="virtualmachineruncommandbyvirtualmachine" title="VirtualMachineRunCommandByVirtualMachine"><span class="symbol resource"></span>VirtualMachineRunCommandByVirtualMachine</a></li>
-    <li><a href="virtualmachinescaleset" title="VirtualMachineScaleSet"><span class="symbol resource"></span>VirtualMachineScaleSet</a></li>
-    <li><a href="virtualmachinescalesetextension" title="VirtualMachineScaleSetExtension"><span class="symbol resource"></span>VirtualMachineScaleSetExtension</a></li>
-    <li><a href="virtualmachinescalesetvm" title="VirtualMachineScaleSetVM"><span class="symbol resource"></span>VirtualMachineScaleSetVM</a></li>
-    <li><a href="virtualmachinescalesetvmextension" title="VirtualMachineScaleSetVMExtension"><span class="symbol resource"></span>VirtualMachineScaleSetVMExtension</a></li>
-    <li><a href="virtualmachinescalesetvmruncommand" title="VirtualMachineScaleSetVMRunCommand"><span class="symbol resource"></span>VirtualMachineScaleSetVMRunCommand</a></li>
+    <li><a href="availabilityset" title="AvailabilitySet"><span class="api-symbol api-symbol--resource"></span>AvailabilitySet</a></li>
+    <li><a href="capacityreservation" title="CapacityReservation"><span class="api-symbol api-symbol--resource"></span>CapacityReservation</a></li>
+    <li><a href="capacityreservationgroup" title="CapacityReservationGroup"><span class="api-symbol api-symbol--resource"></span>CapacityReservationGroup</a></li>
+    <li><a href="cloudservice" title="CloudService"><span class="api-symbol api-symbol--resource"></span>CloudService</a></li>
+    <li><a href="dedicatedhost" title="DedicatedHost"><span class="api-symbol api-symbol--resource"></span>DedicatedHost</a></li>
+    <li><a href="dedicatedhostgroup" title="DedicatedHostGroup"><span class="api-symbol api-symbol--resource"></span>DedicatedHostGroup</a></li>
+    <li><a href="disk" title="Disk"><span class="api-symbol api-symbol--resource"></span>Disk</a></li>
+    <li><a href="diskaccess" title="DiskAccess"><span class="api-symbol api-symbol--resource"></span>DiskAccess</a></li>
+    <li><a href="diskaccessaprivateendpointconnection" title="DiskAccessAPrivateEndpointConnection"><span class="api-symbol api-symbol--resource"></span>DiskAccessAPrivateEndpointConnection</a></li>
+    <li><a href="diskencryptionset" title="DiskEncryptionSet"><span class="api-symbol api-symbol--resource"></span>DiskEncryptionSet</a></li>
+    <li><a href="gallery" title="Gallery"><span class="api-symbol api-symbol--resource"></span>Gallery</a></li>
+    <li><a href="galleryapplication" title="GalleryApplication"><span class="api-symbol api-symbol--resource"></span>GalleryApplication</a></li>
+    <li><a href="galleryapplicationversion" title="GalleryApplicationVersion"><span class="api-symbol api-symbol--resource"></span>GalleryApplicationVersion</a></li>
+    <li><a href="galleryimage" title="GalleryImage"><span class="api-symbol api-symbol--resource"></span>GalleryImage</a></li>
+    <li><a href="galleryimageversion" title="GalleryImageVersion"><span class="api-symbol api-symbol--resource"></span>GalleryImageVersion</a></li>
+    <li><a href="image" title="Image"><span class="api-symbol api-symbol--resource"></span>Image</a></li>
+    <li><a href="proximityplacementgroup" title="ProximityPlacementGroup"><span class="api-symbol api-symbol--resource"></span>ProximityPlacementGroup</a></li>
+    <li><a href="restorepoint" title="RestorePoint"><span class="api-symbol api-symbol--resource"></span>RestorePoint</a></li>
+    <li><a href="restorepointcollection" title="RestorePointCollection"><span class="api-symbol api-symbol--resource"></span>RestorePointCollection</a></li>
+    <li><a href="snapshot" title="Snapshot"><span class="api-symbol api-symbol--resource"></span>Snapshot</a></li>
+    <li><a href="sshpublickey" title="SshPublicKey"><span class="api-symbol api-symbol--resource"></span>SshPublicKey</a></li>
+    <li><a href="virtualmachine" title="VirtualMachine"><span class="api-symbol api-symbol--resource"></span>VirtualMachine</a></li>
+    <li><a href="virtualmachineextension" title="VirtualMachineExtension"><span class="api-symbol api-symbol--resource"></span>VirtualMachineExtension</a></li>
+    <li><a href="virtualmachineruncommandbyvirtualmachine" title="VirtualMachineRunCommandByVirtualMachine"><span class="api-symbol api-symbol--resource"></span>VirtualMachineRunCommandByVirtualMachine</a></li>
+    <li><a href="virtualmachinescaleset" title="VirtualMachineScaleSet"><span class="api-symbol api-symbol--resource"></span>VirtualMachineScaleSet</a></li>
+    <li><a href="virtualmachinescalesetextension" title="VirtualMachineScaleSetExtension"><span class="api-symbol api-symbol--resource"></span>VirtualMachineScaleSetExtension</a></li>
+    <li><a href="virtualmachinescalesetvm" title="VirtualMachineScaleSetVM"><span class="api-symbol api-symbol--resource"></span>VirtualMachineScaleSetVM</a></li>
+    <li><a href="virtualmachinescalesetvmextension" title="VirtualMachineScaleSetVMExtension"><span class="api-symbol api-symbol--resource"></span>VirtualMachineScaleSetVMExtension</a></li>
+    <li><a href="virtualmachinescalesetvmruncommand" title="VirtualMachineScaleSetVMRunCommand"><span class="api-symbol api-symbol--resource"></span>VirtualMachineScaleSetVMRunCommand</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getavailabilityset" title="GetAvailabilitySet"><span class="symbol function"></span>GetAvailabilitySet</a></li>
-    <li><a href="getcapacityreservation" title="GetCapacityReservation"><span class="symbol function"></span>GetCapacityReservation</a></li>
-    <li><a href="getcapacityreservationgroup" title="GetCapacityReservationGroup"><span class="symbol function"></span>GetCapacityReservationGroup</a></li>
-    <li><a href="getcloudservice" title="GetCloudService"><span class="symbol function"></span>GetCloudService</a></li>
-    <li><a href="getdedicatedhost" title="GetDedicatedHost"><span class="symbol function"></span>GetDedicatedHost</a></li>
-    <li><a href="getdedicatedhostgroup" title="GetDedicatedHostGroup"><span class="symbol function"></span>GetDedicatedHostGroup</a></li>
-    <li><a href="getdisk" title="GetDisk"><span class="symbol function"></span>GetDisk</a></li>
-    <li><a href="getdiskaccess" title="GetDiskAccess"><span class="symbol function"></span>GetDiskAccess</a></li>
-    <li><a href="getdiskaccessaprivateendpointconnection" title="GetDiskAccessAPrivateEndpointConnection"><span class="symbol function"></span>GetDiskAccessAPrivateEndpointConnection</a></li>
-    <li><a href="getdiskencryptionset" title="GetDiskEncryptionSet"><span class="symbol function"></span>GetDiskEncryptionSet</a></li>
-    <li><a href="getgallery" title="GetGallery"><span class="symbol function"></span>GetGallery</a></li>
-    <li><a href="getgalleryapplication" title="GetGalleryApplication"><span class="symbol function"></span>GetGalleryApplication</a></li>
-    <li><a href="getgalleryapplicationversion" title="GetGalleryApplicationVersion"><span class="symbol function"></span>GetGalleryApplicationVersion</a></li>
-    <li><a href="getgalleryimage" title="GetGalleryImage"><span class="symbol function"></span>GetGalleryImage</a></li>
-    <li><a href="getgalleryimageversion" title="GetGalleryImageVersion"><span class="symbol function"></span>GetGalleryImageVersion</a></li>
-    <li><a href="getimage" title="GetImage"><span class="symbol function"></span>GetImage</a></li>
-    <li><a href="getloganalyticexportrequestratebyinterval" title="GetLogAnalyticExportRequestRateByInterval"><span class="symbol function"></span>GetLogAnalyticExportRequestRateByInterval</a></li>
-    <li><a href="getloganalyticexportthrottledrequests" title="GetLogAnalyticExportThrottledRequests"><span class="symbol function"></span>GetLogAnalyticExportThrottledRequests</a></li>
-    <li><a href="getproximityplacementgroup" title="GetProximityPlacementGroup"><span class="symbol function"></span>GetProximityPlacementGroup</a></li>
-    <li><a href="getrestorepoint" title="GetRestorePoint"><span class="symbol function"></span>GetRestorePoint</a></li>
-    <li><a href="getrestorepointcollection" title="GetRestorePointCollection"><span class="symbol function"></span>GetRestorePointCollection</a></li>
-    <li><a href="getsnapshot" title="GetSnapshot"><span class="symbol function"></span>GetSnapshot</a></li>
-    <li><a href="getsshpublickey" title="GetSshPublicKey"><span class="symbol function"></span>GetSshPublicKey</a></li>
-    <li><a href="getvirtualmachine" title="GetVirtualMachine"><span class="symbol function"></span>GetVirtualMachine</a></li>
-    <li><a href="getvirtualmachineextension" title="GetVirtualMachineExtension"><span class="symbol function"></span>GetVirtualMachineExtension</a></li>
-    <li><a href="getvirtualmachineruncommandbyvirtualmachine" title="GetVirtualMachineRunCommandByVirtualMachine"><span class="symbol function"></span>GetVirtualMachineRunCommandByVirtualMachine</a></li>
-    <li><a href="getvirtualmachinescaleset" title="GetVirtualMachineScaleSet"><span class="symbol function"></span>GetVirtualMachineScaleSet</a></li>
-    <li><a href="getvirtualmachinescalesetextension" title="GetVirtualMachineScaleSetExtension"><span class="symbol function"></span>GetVirtualMachineScaleSetExtension</a></li>
-    <li><a href="getvirtualmachinescalesetvm" title="GetVirtualMachineScaleSetVM"><span class="symbol function"></span>GetVirtualMachineScaleSetVM</a></li>
-    <li><a href="getvirtualmachinescalesetvmextension" title="GetVirtualMachineScaleSetVMExtension"><span class="symbol function"></span>GetVirtualMachineScaleSetVMExtension</a></li>
-    <li><a href="getvirtualmachinescalesetvmruncommand" title="GetVirtualMachineScaleSetVMRunCommand"><span class="symbol function"></span>GetVirtualMachineScaleSetVMRunCommand</a></li>
+    <li><a href="getavailabilityset" title="GetAvailabilitySet"><span class="api-symbol api-symbol--function"></span>GetAvailabilitySet</a></li>
+    <li><a href="getcapacityreservation" title="GetCapacityReservation"><span class="api-symbol api-symbol--function"></span>GetCapacityReservation</a></li>
+    <li><a href="getcapacityreservationgroup" title="GetCapacityReservationGroup"><span class="api-symbol api-symbol--function"></span>GetCapacityReservationGroup</a></li>
+    <li><a href="getcloudservice" title="GetCloudService"><span class="api-symbol api-symbol--function"></span>GetCloudService</a></li>
+    <li><a href="getdedicatedhost" title="GetDedicatedHost"><span class="api-symbol api-symbol--function"></span>GetDedicatedHost</a></li>
+    <li><a href="getdedicatedhostgroup" title="GetDedicatedHostGroup"><span class="api-symbol api-symbol--function"></span>GetDedicatedHostGroup</a></li>
+    <li><a href="getdisk" title="GetDisk"><span class="api-symbol api-symbol--function"></span>GetDisk</a></li>
+    <li><a href="getdiskaccess" title="GetDiskAccess"><span class="api-symbol api-symbol--function"></span>GetDiskAccess</a></li>
+    <li><a href="getdiskaccessaprivateendpointconnection" title="GetDiskAccessAPrivateEndpointConnection"><span class="api-symbol api-symbol--function"></span>GetDiskAccessAPrivateEndpointConnection</a></li>
+    <li><a href="getdiskencryptionset" title="GetDiskEncryptionSet"><span class="api-symbol api-symbol--function"></span>GetDiskEncryptionSet</a></li>
+    <li><a href="getgallery" title="GetGallery"><span class="api-symbol api-symbol--function"></span>GetGallery</a></li>
+    <li><a href="getgalleryapplication" title="GetGalleryApplication"><span class="api-symbol api-symbol--function"></span>GetGalleryApplication</a></li>
+    <li><a href="getgalleryapplicationversion" title="GetGalleryApplicationVersion"><span class="api-symbol api-symbol--function"></span>GetGalleryApplicationVersion</a></li>
+    <li><a href="getgalleryimage" title="GetGalleryImage"><span class="api-symbol api-symbol--function"></span>GetGalleryImage</a></li>
+    <li><a href="getgalleryimageversion" title="GetGalleryImageVersion"><span class="api-symbol api-symbol--function"></span>GetGalleryImageVersion</a></li>
+    <li><a href="getimage" title="GetImage"><span class="api-symbol api-symbol--function"></span>GetImage</a></li>
+    <li><a href="getloganalyticexportrequestratebyinterval" title="GetLogAnalyticExportRequestRateByInterval"><span class="api-symbol api-symbol--function"></span>GetLogAnalyticExportRequestRateByInterval</a></li>
+    <li><a href="getloganalyticexportthrottledrequests" title="GetLogAnalyticExportThrottledRequests"><span class="api-symbol api-symbol--function"></span>GetLogAnalyticExportThrottledRequests</a></li>
+    <li><a href="getproximityplacementgroup" title="GetProximityPlacementGroup"><span class="api-symbol api-symbol--function"></span>GetProximityPlacementGroup</a></li>
+    <li><a href="getrestorepoint" title="GetRestorePoint"><span class="api-symbol api-symbol--function"></span>GetRestorePoint</a></li>
+    <li><a href="getrestorepointcollection" title="GetRestorePointCollection"><span class="api-symbol api-symbol--function"></span>GetRestorePointCollection</a></li>
+    <li><a href="getsnapshot" title="GetSnapshot"><span class="api-symbol api-symbol--function"></span>GetSnapshot</a></li>
+    <li><a href="getsshpublickey" title="GetSshPublicKey"><span class="api-symbol api-symbol--function"></span>GetSshPublicKey</a></li>
+    <li><a href="getvirtualmachine" title="GetVirtualMachine"><span class="api-symbol api-symbol--function"></span>GetVirtualMachine</a></li>
+    <li><a href="getvirtualmachineextension" title="GetVirtualMachineExtension"><span class="api-symbol api-symbol--function"></span>GetVirtualMachineExtension</a></li>
+    <li><a href="getvirtualmachineruncommandbyvirtualmachine" title="GetVirtualMachineRunCommandByVirtualMachine"><span class="api-symbol api-symbol--function"></span>GetVirtualMachineRunCommandByVirtualMachine</a></li>
+    <li><a href="getvirtualmachinescaleset" title="GetVirtualMachineScaleSet"><span class="api-symbol api-symbol--function"></span>GetVirtualMachineScaleSet</a></li>
+    <li><a href="getvirtualmachinescalesetextension" title="GetVirtualMachineScaleSetExtension"><span class="api-symbol api-symbol--function"></span>GetVirtualMachineScaleSetExtension</a></li>
+    <li><a href="getvirtualmachinescalesetvm" title="GetVirtualMachineScaleSetVM"><span class="api-symbol api-symbol--function"></span>GetVirtualMachineScaleSetVM</a></li>
+    <li><a href="getvirtualmachinescalesetvmextension" title="GetVirtualMachineScaleSetVMExtension"><span class="api-symbol api-symbol--function"></span>GetVirtualMachineScaleSetVMExtension</a></li>
+    <li><a href="getvirtualmachinescalesetvmruncommand" title="GetVirtualMachineScaleSetVMRunCommand"><span class="api-symbol api-symbol--function"></span>GetVirtualMachineScaleSetVMRunCommand</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -86,6 +86,6 @@ Explore the resources and functions of the azure-native.compute module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.36.0</dd>
+	<dd>1.37.0</dd>
 </dl>
 

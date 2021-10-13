@@ -13,11 +13,11 @@ Explore the resources and functions of the aws-native.configuration module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="aggregationauthorization" title="AggregationAuthorization"><span class="symbol resource"></span>AggregationAuthorization</a></li>
-    <li><a href="configurationaggregator" title="ConfigurationAggregator"><span class="symbol resource"></span>ConfigurationAggregator</a></li>
-    <li><a href="conformancepack" title="ConformancePack"><span class="symbol resource"></span>ConformancePack</a></li>
-    <li><a href="organizationconformancepack" title="OrganizationConformancePack"><span class="symbol resource"></span>OrganizationConformancePack</a></li>
-    <li><a href="storedquery" title="StoredQuery"><span class="symbol resource"></span>StoredQuery</a></li>
+    <li><a href="aggregationauthorization" title="AggregationAuthorization"><span class="api-symbol api-symbol--resource"></span>AggregationAuthorization</a></li>
+    <li><a href="configurationaggregator" title="ConfigurationAggregator"><span class="api-symbol api-symbol--resource"></span>ConfigurationAggregator</a></li>
+    <li><a href="conformancepack" title="ConformancePack"><span class="api-symbol api-symbol--resource"></span>ConformancePack</a></li>
+    <li><a href="organizationconformancepack" title="OrganizationConformancePack"><span class="api-symbol api-symbol--resource"></span>OrganizationConformancePack</a></li>
+    <li><a href="storedquery" title="StoredQuery"><span class="api-symbol api-symbol--resource"></span>StoredQuery</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -27,6 +27,6 @@ Explore the resources and functions of the aws-native.configuration module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.0</dd>
 </dl>
 

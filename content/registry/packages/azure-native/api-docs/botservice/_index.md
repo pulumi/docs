@@ -13,23 +13,23 @@ Explore the resources and functions of the azure-native.botservice module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="bot" title="Bot"><span class="symbol resource"></span>Bot</a></li>
-    <li><a href="botconnection" title="BotConnection"><span class="symbol resource"></span>BotConnection</a></li>
-    <li><a href="channel" title="Channel"><span class="symbol resource"></span>Channel</a></li>
-    <li><a href="enterprisechannel" title="EnterpriseChannel"><span class="symbol resource"></span>EnterpriseChannel</a></li>
-    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
+    <li><a href="bot" title="Bot"><span class="api-symbol api-symbol--resource"></span>Bot</a></li>
+    <li><a href="botconnection" title="BotConnection"><span class="api-symbol api-symbol--resource"></span>BotConnection</a></li>
+    <li><a href="channel" title="Channel"><span class="api-symbol api-symbol--resource"></span>Channel</a></li>
+    <li><a href="enterprisechannel" title="EnterpriseChannel"><span class="api-symbol api-symbol--resource"></span>EnterpriseChannel</a></li>
+    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="api-symbol api-symbol--resource"></span>PrivateEndpointConnection</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getbot" title="GetBot"><span class="symbol function"></span>GetBot</a></li>
-    <li><a href="getbotconnection" title="GetBotConnection"><span class="symbol function"></span>GetBotConnection</a></li>
-    <li><a href="getchannel" title="GetChannel"><span class="symbol function"></span>GetChannel</a></li>
-    <li><a href="getenterprisechannel" title="GetEnterpriseChannel"><span class="symbol function"></span>GetEnterpriseChannel</a></li>
-    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
-    <li><a href="listbotconnectionserviceproviders" title="ListBotConnectionServiceProviders"><span class="symbol function"></span>ListBotConnectionServiceProviders</a></li>
-    <li><a href="listbotconnectionwithsecrets" title="ListBotConnectionWithSecrets"><span class="symbol function"></span>ListBotConnectionWithSecrets</a></li>
-    <li><a href="listchannelwithkeys" title="ListChannelWithKeys"><span class="symbol function"></span>ListChannelWithKeys</a></li>
+    <li><a href="getbot" title="GetBot"><span class="api-symbol api-symbol--function"></span>GetBot</a></li>
+    <li><a href="getbotconnection" title="GetBotConnection"><span class="api-symbol api-symbol--function"></span>GetBotConnection</a></li>
+    <li><a href="getchannel" title="GetChannel"><span class="api-symbol api-symbol--function"></span>GetChannel</a></li>
+    <li><a href="getenterprisechannel" title="GetEnterpriseChannel"><span class="api-symbol api-symbol--function"></span>GetEnterpriseChannel</a></li>
+    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="api-symbol api-symbol--function"></span>GetPrivateEndpointConnection</a></li>
+    <li><a href="listbotconnectionserviceproviders" title="ListBotConnectionServiceProviders"><span class="api-symbol api-symbol--function"></span>ListBotConnectionServiceProviders</a></li>
+    <li><a href="listbotconnectionwithsecrets" title="ListBotConnectionWithSecrets"><span class="api-symbol api-symbol--function"></span>ListBotConnectionWithSecrets</a></li>
+    <li><a href="listchannelwithkeys" title="ListChannelWithKeys"><span class="api-symbol api-symbol--function"></span>ListChannelWithKeys</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -39,6 +39,6 @@ Explore the resources and functions of the azure-native.botservice module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.36.0</dd>
+	<dd>1.37.0</dd>
 </dl>
 

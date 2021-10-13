@@ -29,7 +29,7 @@ Kendra DataSource
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">DataSource</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-               <span class="nx">data_source_configuration</span><span class="p">:</span> <span class="nx">Optional[DataSourceDataSourceConfigurationArgs]</span> = None<span class="p">,</span>
+               <span class="nx">data_source_configuration</span><span class="p">:</span> <span class="nx">Optional[DataSourceConfigurationArgs]</span> = None<span class="p">,</span>
                <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">index_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -194,7 +194,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#datasourceconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourceconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Data<wbr>Source<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasourceconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -262,7 +262,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#datasourceconfiguration_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourceconfiguration">Data<wbr>Source<wbr>Data<wbr>Source<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasourceconfiguration">Data<wbr>Source<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -330,7 +330,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#datasourceconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourceconfiguration">Data<wbr>Source<wbr>Data<wbr>Source<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasourceconfiguration">Data<wbr>Source<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -398,7 +398,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#data_source_configuration_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourceconfiguration">Data<wbr>Source<wbr>Data<wbr>Source<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasourceconfiguration">Data<wbr>Source<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -673,7 +673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldmappings_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping&gt;</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -717,7 +717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldmappings_go" style="color: inherit; text-decoration: inherit;">Field<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">[]Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">[]Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -761,7 +761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldmappings_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping[]</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -805,7 +805,345 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_mappings_python" style="color: inherit; text-decoration: inherit;">field_<wbr>mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">Sequence[Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping]</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">Sequence[Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="datasourceconfiguration">Data<wbr>Source<wbr>Configuration</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="confluenceconfiguration_csharp">
+<a href="#confluenceconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Confluence<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourceconfluenceconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Confluence<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="databaseconfiguration_csharp">
+<a href="#databaseconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourcedatabaseconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Database<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="googledriveconfiguration_csharp">
+<a href="#googledriveconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Google<wbr>Drive<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourcegoogledriveconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Google<wbr>Drive<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="onedriveconfiguration_csharp">
+<a href="#onedriveconfiguration_csharp" style="color: inherit; text-decoration: inherit;">One<wbr>Drive<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourceonedriveconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>One<wbr>Drive<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="s3configuration_csharp">
+<a href="#s3configuration_csharp" style="color: inherit; text-decoration: inherit;">S3Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasources3datasourceconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>S3Data<wbr>Source<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="salesforceconfiguration_csharp">
+<a href="#salesforceconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Salesforce<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourcesalesforceconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Salesforce<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servicenowconfiguration_csharp">
+<a href="#servicenowconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Now<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourceservicenowconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Service<wbr>Now<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sharepointconfiguration_csharp">
+<a href="#sharepointconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Point<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourcesharepointconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Share<wbr>Point<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="webcrawlerconfiguration_csharp">
+<a href="#webcrawlerconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Crawler<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourcewebcrawlerconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Web<wbr>Crawler<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="workdocsconfiguration_csharp">
+<a href="#workdocsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Work<wbr>Docs<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourceworkdocsconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Work<wbr>Docs<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="confluenceconfiguration_go">
+<a href="#confluenceconfiguration_go" style="color: inherit; text-decoration: inherit;">Confluence<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourceconfluenceconfiguration">Data<wbr>Source<wbr>Confluence<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="databaseconfiguration_go">
+<a href="#databaseconfiguration_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourcedatabaseconfiguration">Data<wbr>Source<wbr>Database<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="googledriveconfiguration_go">
+<a href="#googledriveconfiguration_go" style="color: inherit; text-decoration: inherit;">Google<wbr>Drive<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourcegoogledriveconfiguration">Data<wbr>Source<wbr>Google<wbr>Drive<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="onedriveconfiguration_go">
+<a href="#onedriveconfiguration_go" style="color: inherit; text-decoration: inherit;">One<wbr>Drive<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourceonedriveconfiguration">Data<wbr>Source<wbr>One<wbr>Drive<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="s3configuration_go">
+<a href="#s3configuration_go" style="color: inherit; text-decoration: inherit;">S3Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasources3datasourceconfiguration">Data<wbr>Source<wbr>S3Data<wbr>Source<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="salesforceconfiguration_go">
+<a href="#salesforceconfiguration_go" style="color: inherit; text-decoration: inherit;">Salesforce<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourcesalesforceconfiguration">Data<wbr>Source<wbr>Salesforce<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servicenowconfiguration_go">
+<a href="#servicenowconfiguration_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Now<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourceservicenowconfiguration">Data<wbr>Source<wbr>Service<wbr>Now<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sharepointconfiguration_go">
+<a href="#sharepointconfiguration_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Point<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourcesharepointconfiguration">Data<wbr>Source<wbr>Share<wbr>Point<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="webcrawlerconfiguration_go">
+<a href="#webcrawlerconfiguration_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Crawler<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourcewebcrawlerconfiguration">Data<wbr>Source<wbr>Web<wbr>Crawler<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="workdocsconfiguration_go">
+<a href="#workdocsconfiguration_go" style="color: inherit; text-decoration: inherit;">Work<wbr>Docs<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourceworkdocsconfiguration">Data<wbr>Source<wbr>Work<wbr>Docs<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="confluenceconfiguration_nodejs">
+<a href="#confluenceconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">confluence<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourceconfluenceconfiguration">Data<wbr>Source<wbr>Confluence<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="databaseconfiguration_nodejs">
+<a href="#databaseconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourcedatabaseconfiguration">Data<wbr>Source<wbr>Database<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="googledriveconfiguration_nodejs">
+<a href="#googledriveconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Drive<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourcegoogledriveconfiguration">Data<wbr>Source<wbr>Google<wbr>Drive<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="onedriveconfiguration_nodejs">
+<a href="#onedriveconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">one<wbr>Drive<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourceonedriveconfiguration">Data<wbr>Source<wbr>One<wbr>Drive<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="s3configuration_nodejs">
+<a href="#s3configuration_nodejs" style="color: inherit; text-decoration: inherit;">s3Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasources3datasourceconfiguration">Data<wbr>Source<wbr>S3Data<wbr>Source<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="salesforceconfiguration_nodejs">
+<a href="#salesforceconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">salesforce<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourcesalesforceconfiguration">Data<wbr>Source<wbr>Salesforce<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servicenowconfiguration_nodejs">
+<a href="#servicenowconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Now<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourceservicenowconfiguration">Data<wbr>Source<wbr>Service<wbr>Now<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sharepointconfiguration_nodejs">
+<a href="#sharepointconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Point<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourcesharepointconfiguration">Data<wbr>Source<wbr>Share<wbr>Point<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="webcrawlerconfiguration_nodejs">
+<a href="#webcrawlerconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Crawler<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourcewebcrawlerconfiguration">Data<wbr>Source<wbr>Web<wbr>Crawler<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="workdocsconfiguration_nodejs">
+<a href="#workdocsconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">work<wbr>Docs<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourceworkdocsconfiguration">Data<wbr>Source<wbr>Work<wbr>Docs<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="confluence_configuration_python">
+<a href="#confluence_configuration_python" style="color: inherit; text-decoration: inherit;">confluence_<wbr>configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourceconfluenceconfiguration">Data<wbr>Source<wbr>Confluence<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="database_configuration_python">
+<a href="#database_configuration_python" style="color: inherit; text-decoration: inherit;">database_<wbr>configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourcedatabaseconfiguration">Data<wbr>Source<wbr>Database<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="google_drive_configuration_python">
+<a href="#google_drive_configuration_python" style="color: inherit; text-decoration: inherit;">google_<wbr>drive_<wbr>configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourcegoogledriveconfiguration">Data<wbr>Source<wbr>Google<wbr>Drive<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="one_drive_configuration_python">
+<a href="#one_drive_configuration_python" style="color: inherit; text-decoration: inherit;">one_<wbr>drive_<wbr>configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourceonedriveconfiguration">Data<wbr>Source<wbr>One<wbr>Drive<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="s3_configuration_python">
+<a href="#s3_configuration_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasources3datasourceconfiguration">Data<wbr>Source<wbr>S3Data<wbr>Source<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="salesforce_configuration_python">
+<a href="#salesforce_configuration_python" style="color: inherit; text-decoration: inherit;">salesforce_<wbr>configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourcesalesforceconfiguration">Data<wbr>Source<wbr>Salesforce<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="service_now_configuration_python">
+<a href="#service_now_configuration_python" style="color: inherit; text-decoration: inherit;">service_<wbr>now_<wbr>configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourceservicenowconfiguration">Data<wbr>Source<wbr>Service<wbr>Now<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="share_point_configuration_python">
+<a href="#share_point_configuration_python" style="color: inherit; text-decoration: inherit;">share_<wbr>point_<wbr>configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourcesharepointconfiguration">Data<wbr>Source<wbr>Share<wbr>Point<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="web_crawler_configuration_python">
+<a href="#web_crawler_configuration_python" style="color: inherit; text-decoration: inherit;">web_<wbr>crawler_<wbr>configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourcewebcrawlerconfiguration">Data<wbr>Source<wbr>Web<wbr>Crawler<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="work_docs_configuration_python">
+<a href="#work_docs_configuration_python" style="color: inherit; text-decoration: inherit;">work_<wbr>docs_<wbr>configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourceworkdocsconfiguration">Data<wbr>Source<wbr>Work<wbr>Docs<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1367,7 +1705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpcconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcevpcconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Data<wbr>Source<wbr>Vpc<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#datasourcevpcconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Vpc<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1451,7 +1789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpcconfiguration_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcevpcconfiguration">Data<wbr>Source<wbr>Data<wbr>Source<wbr>Vpc<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#datasourcevpcconfiguration">Data<wbr>Source<wbr>Vpc<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1535,7 +1873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpcconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcevpcconfiguration">Data<wbr>Source<wbr>Data<wbr>Source<wbr>Vpc<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#datasourcevpcconfiguration">Data<wbr>Source<wbr>Vpc<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1619,7 +1957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpc_configuration_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcevpcconfiguration">Data<wbr>Source<wbr>Data<wbr>Source<wbr>Vpc<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#datasourcevpcconfiguration">Data<wbr>Source<wbr>Vpc<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2384,540 +2722,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="datasourcedatasourceconfiguration">Data<wbr>Source<wbr>Data<wbr>Source<wbr>Configuration</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="confluenceconfiguration_csharp">
-<a href="#confluenceconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Confluence<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceconfluenceconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Confluence<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="databaseconfiguration_csharp">
-<a href="#databaseconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatabaseconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Database<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="googledriveconfiguration_csharp">
-<a href="#googledriveconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Google<wbr>Drive<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcegoogledriveconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Google<wbr>Drive<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="onedriveconfiguration_csharp">
-<a href="#onedriveconfiguration_csharp" style="color: inherit; text-decoration: inherit;">One<wbr>Drive<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceonedriveconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>One<wbr>Drive<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="s3configuration_csharp">
-<a href="#s3configuration_csharp" style="color: inherit; text-decoration: inherit;">S3Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasources3datasourceconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>S3Data<wbr>Source<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="salesforceconfiguration_csharp">
-<a href="#salesforceconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Salesforce<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcesalesforceconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Salesforce<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="servicenowconfiguration_csharp">
-<a href="#servicenowconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Now<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceservicenowconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Service<wbr>Now<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sharepointconfiguration_csharp">
-<a href="#sharepointconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Point<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcesharepointconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Share<wbr>Point<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="webcrawlerconfiguration_csharp">
-<a href="#webcrawlerconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Crawler<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcewebcrawlerconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Web<wbr>Crawler<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="workdocsconfiguration_csharp">
-<a href="#workdocsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Work<wbr>Docs<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceworkdocsconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Work<wbr>Docs<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="confluenceconfiguration_go">
-<a href="#confluenceconfiguration_go" style="color: inherit; text-decoration: inherit;">Confluence<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceconfluenceconfiguration">Data<wbr>Source<wbr>Confluence<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="databaseconfiguration_go">
-<a href="#databaseconfiguration_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatabaseconfiguration">Data<wbr>Source<wbr>Database<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="googledriveconfiguration_go">
-<a href="#googledriveconfiguration_go" style="color: inherit; text-decoration: inherit;">Google<wbr>Drive<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcegoogledriveconfiguration">Data<wbr>Source<wbr>Google<wbr>Drive<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="onedriveconfiguration_go">
-<a href="#onedriveconfiguration_go" style="color: inherit; text-decoration: inherit;">One<wbr>Drive<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceonedriveconfiguration">Data<wbr>Source<wbr>One<wbr>Drive<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="s3configuration_go">
-<a href="#s3configuration_go" style="color: inherit; text-decoration: inherit;">S3Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasources3datasourceconfiguration">Data<wbr>Source<wbr>S3Data<wbr>Source<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="salesforceconfiguration_go">
-<a href="#salesforceconfiguration_go" style="color: inherit; text-decoration: inherit;">Salesforce<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcesalesforceconfiguration">Data<wbr>Source<wbr>Salesforce<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="servicenowconfiguration_go">
-<a href="#servicenowconfiguration_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Now<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceservicenowconfiguration">Data<wbr>Source<wbr>Service<wbr>Now<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sharepointconfiguration_go">
-<a href="#sharepointconfiguration_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Point<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcesharepointconfiguration">Data<wbr>Source<wbr>Share<wbr>Point<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="webcrawlerconfiguration_go">
-<a href="#webcrawlerconfiguration_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Crawler<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcewebcrawlerconfiguration">Data<wbr>Source<wbr>Web<wbr>Crawler<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="workdocsconfiguration_go">
-<a href="#workdocsconfiguration_go" style="color: inherit; text-decoration: inherit;">Work<wbr>Docs<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceworkdocsconfiguration">Data<wbr>Source<wbr>Work<wbr>Docs<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="confluenceconfiguration_nodejs">
-<a href="#confluenceconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">confluence<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceconfluenceconfiguration">Data<wbr>Source<wbr>Confluence<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="databaseconfiguration_nodejs">
-<a href="#databaseconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatabaseconfiguration">Data<wbr>Source<wbr>Database<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="googledriveconfiguration_nodejs">
-<a href="#googledriveconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Drive<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcegoogledriveconfiguration">Data<wbr>Source<wbr>Google<wbr>Drive<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="onedriveconfiguration_nodejs">
-<a href="#onedriveconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">one<wbr>Drive<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceonedriveconfiguration">Data<wbr>Source<wbr>One<wbr>Drive<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="s3configuration_nodejs">
-<a href="#s3configuration_nodejs" style="color: inherit; text-decoration: inherit;">s3Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasources3datasourceconfiguration">Data<wbr>Source<wbr>S3Data<wbr>Source<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="salesforceconfiguration_nodejs">
-<a href="#salesforceconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">salesforce<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcesalesforceconfiguration">Data<wbr>Source<wbr>Salesforce<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="servicenowconfiguration_nodejs">
-<a href="#servicenowconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Now<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceservicenowconfiguration">Data<wbr>Source<wbr>Service<wbr>Now<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sharepointconfiguration_nodejs">
-<a href="#sharepointconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Point<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcesharepointconfiguration">Data<wbr>Source<wbr>Share<wbr>Point<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="webcrawlerconfiguration_nodejs">
-<a href="#webcrawlerconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Crawler<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcewebcrawlerconfiguration">Data<wbr>Source<wbr>Web<wbr>Crawler<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="workdocsconfiguration_nodejs">
-<a href="#workdocsconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">work<wbr>Docs<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceworkdocsconfiguration">Data<wbr>Source<wbr>Work<wbr>Docs<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="confluence_configuration_python">
-<a href="#confluence_configuration_python" style="color: inherit; text-decoration: inherit;">confluence_<wbr>configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceconfluenceconfiguration">Data<wbr>Source<wbr>Confluence<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="database_configuration_python">
-<a href="#database_configuration_python" style="color: inherit; text-decoration: inherit;">database_<wbr>configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatabaseconfiguration">Data<wbr>Source<wbr>Database<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="google_drive_configuration_python">
-<a href="#google_drive_configuration_python" style="color: inherit; text-decoration: inherit;">google_<wbr>drive_<wbr>configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcegoogledriveconfiguration">Data<wbr>Source<wbr>Google<wbr>Drive<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="one_drive_configuration_python">
-<a href="#one_drive_configuration_python" style="color: inherit; text-decoration: inherit;">one_<wbr>drive_<wbr>configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceonedriveconfiguration">Data<wbr>Source<wbr>One<wbr>Drive<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="s3_configuration_python">
-<a href="#s3_configuration_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasources3datasourceconfiguration">Data<wbr>Source<wbr>S3Data<wbr>Source<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="salesforce_configuration_python">
-<a href="#salesforce_configuration_python" style="color: inherit; text-decoration: inherit;">salesforce_<wbr>configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcesalesforceconfiguration">Data<wbr>Source<wbr>Salesforce<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="service_now_configuration_python">
-<a href="#service_now_configuration_python" style="color: inherit; text-decoration: inherit;">service_<wbr>now_<wbr>configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceservicenowconfiguration">Data<wbr>Source<wbr>Service<wbr>Now<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="share_point_configuration_python">
-<a href="#share_point_configuration_python" style="color: inherit; text-decoration: inherit;">share_<wbr>point_<wbr>configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcesharepointconfiguration">Data<wbr>Source<wbr>Share<wbr>Point<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="web_crawler_configuration_python">
-<a href="#web_crawler_configuration_python" style="color: inherit; text-decoration: inherit;">web_<wbr>crawler_<wbr>configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcewebcrawlerconfiguration">Data<wbr>Source<wbr>Web<wbr>Crawler<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="work_docs_configuration_python">
-<a href="#work_docs_configuration_python" style="color: inherit; text-decoration: inherit;">work_<wbr>docs_<wbr>configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceworkdocsconfiguration">Data<wbr>Source<wbr>Work<wbr>Docs<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="datasourcedatasourcetoindexfieldmapping">Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="datasourcefieldname_csharp">
-<a href="#datasourcefieldname_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Field<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="indexfieldname_csharp">
-<a href="#indexfieldname_csharp" style="color: inherit; text-decoration: inherit;">Index<wbr>Field<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="datefieldformat_csharp">
-<a href="#datefieldformat_csharp" style="color: inherit; text-decoration: inherit;">Date<wbr>Field<wbr>Format</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="datasourcefieldname_go">
-<a href="#datasourcefieldname_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Field<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="indexfieldname_go">
-<a href="#indexfieldname_go" style="color: inherit; text-decoration: inherit;">Index<wbr>Field<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="datefieldformat_go">
-<a href="#datefieldformat_go" style="color: inherit; text-decoration: inherit;">Date<wbr>Field<wbr>Format</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="datasourcefieldname_nodejs">
-<a href="#datasourcefieldname_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Field<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="indexfieldname_nodejs">
-<a href="#indexfieldname_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Field<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="datefieldformat_nodejs">
-<a href="#datefieldformat_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Field<wbr>Format</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="data_source_field_name_python">
-<a href="#data_source_field_name_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>field_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="index_field_name_python">
-<a href="#index_field_name_python" style="color: inherit; text-decoration: inherit;">index_<wbr>field_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="date_field_format_python">
-<a href="#date_field_format_python" style="color: inherit; text-decoration: inherit;">date_<wbr>field_<wbr>format</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="datasourcedatasourcevpcconfiguration">Data<wbr>Source<wbr>Data<wbr>Source<wbr>Vpc<wbr>Configuration</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="securitygroupids_csharp">
-<a href="#securitygroupids_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="subnetids_csharp">
-<a href="#subnetids_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="securitygroupids_go">
-<a href="#securitygroupids_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="subnetids_go">
-<a href="#subnetids_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="securitygroupids_nodejs">
-<a href="#securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="subnetids_nodejs">
-<a href="#subnetids_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Ids</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="security_group_ids_python">
-<a href="#security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="subnet_ids_python">
-<a href="#subnet_ids_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>ids</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
 <h4 id="datasourcedatabaseconfiguration">Data<wbr>Source<wbr>Database<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
@@ -2967,7 +2771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpcconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcevpcconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Data<wbr>Source<wbr>Vpc<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#datasourcevpcconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Vpc<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3019,7 +2823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpcconfiguration_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcevpcconfiguration">Data<wbr>Source<wbr>Data<wbr>Source<wbr>Vpc<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#datasourcevpcconfiguration">Data<wbr>Source<wbr>Vpc<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3071,7 +2875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpcconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcevpcconfiguration">Data<wbr>Source<wbr>Data<wbr>Source<wbr>Vpc<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#datasourcevpcconfiguration">Data<wbr>Source<wbr>Vpc<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3123,7 +2927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpc_configuration_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcevpcconfiguration">Data<wbr>Source<wbr>Data<wbr>Source<wbr>Vpc<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#datasourcevpcconfiguration">Data<wbr>Source<wbr>Vpc<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3261,7 +3065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldmappings_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping&gt;</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3321,7 +3125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldmappings_go" style="color: inherit; text-decoration: inherit;">Field<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">[]Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">[]Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3381,7 +3185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldmappings_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping[]</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3441,7 +3245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_mappings_python" style="color: inherit; text-decoration: inherit;">field_<wbr>mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">Sequence[Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping]</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">Sequence[Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3503,7 +3307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldmappings_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping&gt;</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3563,7 +3367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldmappings_go" style="color: inherit; text-decoration: inherit;">Field<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">[]Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">[]Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3623,7 +3427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldmappings_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping[]</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3683,7 +3487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_mappings_python" style="color: inherit; text-decoration: inherit;">field_<wbr>mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">Sequence[Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping]</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">Sequence[Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4235,7 +4039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldmappings_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping&gt;</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4271,7 +4075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldmappings_go" style="color: inherit; text-decoration: inherit;">Field<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">[]Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">[]Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4307,7 +4111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldmappings_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping[]</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4343,7 +4147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_mappings_python" style="color: inherit; text-decoration: inherit;">field_<wbr>mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">Sequence[Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping]</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">Sequence[Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4721,7 +4525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldmappings_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping&gt;</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4757,7 +4561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldmappings_go" style="color: inherit; text-decoration: inherit;">Field<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">[]Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">[]Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4793,7 +4597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldmappings_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping[]</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4829,7 +4633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_mappings_python" style="color: inherit; text-decoration: inherit;">field_<wbr>mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">Sequence[Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping]</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">Sequence[Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5003,7 +4807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldmappings_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping&gt;</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5031,7 +4835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldmappings_go" style="color: inherit; text-decoration: inherit;">Field<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">[]Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">[]Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5059,7 +4863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldmappings_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping[]</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5087,7 +4891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_mappings_python" style="color: inherit; text-decoration: inherit;">field_<wbr>mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">Sequence[Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping]</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">Sequence[Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5109,7 +4913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldmappings_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping&gt;</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5129,7 +4933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldmappings_go" style="color: inherit; text-decoration: inherit;">Field<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">[]Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">[]Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5149,7 +4953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldmappings_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping[]</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5169,7 +4973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_mappings_python" style="color: inherit; text-decoration: inherit;">field_<wbr>mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">Sequence[Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping]</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">Sequence[Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5207,7 +5011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldmappings_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping&gt;</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5243,7 +5047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldmappings_go" style="color: inherit; text-decoration: inherit;">Field<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">[]Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">[]Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5279,7 +5083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldmappings_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping[]</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5315,7 +5119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_mappings_python" style="color: inherit; text-decoration: inherit;">field_<wbr>mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">Sequence[Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping]</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">Sequence[Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5709,7 +5513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldmappings_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping&gt;</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5769,7 +5573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldmappings_go" style="color: inherit; text-decoration: inherit;">Field<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">[]Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">[]Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5829,7 +5633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldmappings_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping[]</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5889,7 +5693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_mappings_python" style="color: inherit; text-decoration: inherit;">field_<wbr>mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">Sequence[Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping]</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">Sequence[Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5951,7 +5755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldmappings_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping&gt;</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6003,7 +5807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldmappings_go" style="color: inherit; text-decoration: inherit;">Field<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">[]Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">[]Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6055,7 +5859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldmappings_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping[]</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6107,7 +5911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_mappings_python" style="color: inherit; text-decoration: inherit;">field_<wbr>mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">Sequence[Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping]</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">Sequence[Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6185,7 +5989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldmappings_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping&gt;</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6217,7 +6021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpcconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcevpcconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Data<wbr>Source<wbr>Vpc<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#datasourcevpcconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Vpc<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6285,7 +6089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldmappings_go" style="color: inherit; text-decoration: inherit;">Field<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">[]Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">[]Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6317,7 +6121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpcconfiguration_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcevpcconfiguration">Data<wbr>Source<wbr>Data<wbr>Source<wbr>Vpc<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#datasourcevpcconfiguration">Data<wbr>Source<wbr>Vpc<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6385,7 +6189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldmappings_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping[]</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6417,7 +6221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpcconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcevpcconfiguration">Data<wbr>Source<wbr>Data<wbr>Source<wbr>Vpc<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#datasourcevpcconfiguration">Data<wbr>Source<wbr>Vpc<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6485,7 +6289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_mappings_python" style="color: inherit; text-decoration: inherit;">field_<wbr>mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">Sequence[Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping]</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">Sequence[Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6517,7 +6321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpc_configuration_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcevpcconfiguration">Data<wbr>Source<wbr>Data<wbr>Source<wbr>Vpc<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#datasourcevpcconfiguration">Data<wbr>Source<wbr>Vpc<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6684,6 +6488,120 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}A string containing the value for the tag{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="datasourcetoindexfieldmapping">Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="datasourcefieldname_csharp">
+<a href="#datasourcefieldname_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Field<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="indexfieldname_csharp">
+<a href="#indexfieldname_csharp" style="color: inherit; text-decoration: inherit;">Index<wbr>Field<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datefieldformat_csharp">
+<a href="#datefieldformat_csharp" style="color: inherit; text-decoration: inherit;">Date<wbr>Field<wbr>Format</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="datasourcefieldname_go">
+<a href="#datasourcefieldname_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Field<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="indexfieldname_go">
+<a href="#indexfieldname_go" style="color: inherit; text-decoration: inherit;">Index<wbr>Field<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datefieldformat_go">
+<a href="#datefieldformat_go" style="color: inherit; text-decoration: inherit;">Date<wbr>Field<wbr>Format</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="datasourcefieldname_nodejs">
+<a href="#datasourcefieldname_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Field<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="indexfieldname_nodejs">
+<a href="#indexfieldname_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Field<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datefieldformat_nodejs">
+<a href="#datefieldformat_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Field<wbr>Format</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="data_source_field_name_python">
+<a href="#data_source_field_name_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>field_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="index_field_name_python">
+<a href="#index_field_name_python" style="color: inherit; text-decoration: inherit;">index_<wbr>field_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="date_field_format_python">
+<a href="#date_field_format_python" style="color: inherit; text-decoration: inherit;">date_<wbr>field_<wbr>format</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="datasourcetype">Data<wbr>Source<wbr>Type</h4>
 
 {{% choosable language csharp %}}
@@ -6744,6 +6662,88 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>GOOGLEDRIVE</dd><dt>WEBCRAWLER</dt>
     <dd>WEBCRAWLER</dd><dt>WORKDOCS</dt>
     <dd>WORKDOCS</dd></dl>
+{{% /choosable %}}
+
+<h4 id="datasourcevpcconfiguration">Data<wbr>Source<wbr>Vpc<wbr>Configuration</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="securitygroupids_csharp">
+<a href="#securitygroupids_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subnetids_csharp">
+<a href="#subnetids_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="securitygroupids_go">
+<a href="#securitygroupids_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subnetids_go">
+<a href="#subnetids_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="securitygroupids_nodejs">
+<a href="#securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subnetids_nodejs">
+<a href="#subnetids_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="security_group_ids_python">
+<a href="#security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subnet_ids_python">
+<a href="#subnet_ids_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="datasourcewebcrawlerauthenticationconfiguration">Data<wbr>Source<wbr>Web<wbr>Crawler<wbr>Authentication<wbr>Configuration</h4>
@@ -7493,7 +7493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldmappings_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping&gt;</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7545,7 +7545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldmappings_go" style="color: inherit; text-decoration: inherit;">Field<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">[]Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">[]Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7597,7 +7597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldmappings_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping[]</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7649,7 +7649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_mappings_python" style="color: inherit; text-decoration: inherit;">field_<wbr>mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedatasourcetoindexfieldmapping">Sequence[Data<wbr>Source<wbr>Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping]</a></span>
+        <span class="property-type"><a href="#datasourcetoindexfieldmapping">Sequence[Data<wbr>Source<wbr>To<wbr>Index<wbr>Field<wbr>Mapping]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

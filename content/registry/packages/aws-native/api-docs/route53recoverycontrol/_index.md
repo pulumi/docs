@@ -13,10 +13,10 @@ Explore the resources and functions of the aws-native.route53recoverycontrol mod
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
-    <li><a href="controlpanel" title="ControlPanel"><span class="symbol resource"></span>ControlPanel</a></li>
-    <li><a href="routingcontrol" title="RoutingControl"><span class="symbol resource"></span>RoutingControl</a></li>
-    <li><a href="safetyrule" title="SafetyRule"><span class="symbol resource"></span>SafetyRule</a></li>
+    <li><a href="cluster" title="Cluster"><span class="api-symbol api-symbol--resource"></span>Cluster</a></li>
+    <li><a href="controlpanel" title="ControlPanel"><span class="api-symbol api-symbol--resource"></span>ControlPanel</a></li>
+    <li><a href="routingcontrol" title="RoutingControl"><span class="api-symbol api-symbol--resource"></span>RoutingControl</a></li>
+    <li><a href="safetyrule" title="SafetyRule"><span class="api-symbol api-symbol--resource"></span>SafetyRule</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -26,6 +26,6 @@ Explore the resources and functions of the aws-native.route53recoverycontrol mod
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.0</dd>
 </dl>
 

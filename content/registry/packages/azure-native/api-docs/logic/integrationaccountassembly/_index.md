@@ -1309,88 +1309,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="contenthash">Content<wbr>Hash</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="algorithm_csharp">
-<a href="#algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The algorithm of the content hash.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="value_csharp">
-<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The value of the content hash.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="algorithm_go">
-<a href="#algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The algorithm of the content hash.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="value_go">
-<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The value of the content hash.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="algorithm_nodejs">
-<a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The algorithm of the content hash.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="value_nodejs">
-<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The value of the content hash.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="algorithm_python">
-<a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The algorithm of the content hash.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="value_python">
-<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The value of the content hash.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
 <h4 id="contenthashresponse">Content<wbr>Hash<wbr>Response</h4>
 
 {{% choosable language csharp %}}
@@ -1478,38 +1396,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="contenthash_csharp">
-<a href="#contenthash_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Hash</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contenthash">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Content<wbr>Hash</a></span>
-    </dt>
-    <dd>{{% md %}}The content hash.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="contentsize_csharp">
-<a href="#contentsize_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">double</span>
-    </dt>
-    <dd>{{% md %}}The content size.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="contentversion_csharp">
-<a href="#contentversion_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The content version.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="metadata_csharp">
-<a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">object</span>
-    </dt>
-    <dd>{{% md %}}The metadata.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="uri_csharp">
 <a href="#uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
 </span>
@@ -1521,38 +1407,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="contenthash_go">
-<a href="#contenthash_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Hash</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contenthash">Content<wbr>Hash</a></span>
-    </dt>
-    <dd>{{% md %}}The content hash.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="contentsize_go">
-<a href="#contentsize_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float64</span>
-    </dt>
-    <dd>{{% md %}}The content size.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="contentversion_go">
-<a href="#contentversion_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The content version.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="metadata_go">
-<a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
-    </dt>
-    <dd>{{% md %}}The metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_go">
 <a href="#uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -1566,38 +1420,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="contenthash_nodejs">
-<a href="#contenthash_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Hash</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contenthash">Content<wbr>Hash</a></span>
-    </dt>
-    <dd>{{% md %}}The content hash.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="contentsize_nodejs">
-<a href="#contentsize_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The content size.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="contentversion_nodejs">
-<a href="#contentversion_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The content version.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="metadata_nodejs">
-<a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">any</span>
-    </dt>
-    <dd>{{% md %}}The metadata.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="uri_nodejs">
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
@@ -1609,38 +1431,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="content_hash_python">
-<a href="#content_hash_python" style="color: inherit; text-decoration: inherit;">content_<wbr>hash</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contenthash">Content<wbr>Hash</a></span>
-    </dt>
-    <dd>{{% md %}}The content hash.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="content_size_python">
-<a href="#content_size_python" style="color: inherit; text-decoration: inherit;">content_<wbr>size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The content size.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="content_version_python">
-<a href="#content_version_python" style="color: inherit; text-decoration: inherit;">content_<wbr>version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The content version.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="metadata_python">
-<a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
-    </dt>
-    <dd>{{% md %}}The metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_python">
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -1654,32 +1444,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="contentlinkresponse">Content<wbr>Link<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
         <span id="contenthash_csharp">
 <a href="#contenthash_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Hash</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contenthashresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Content<wbr>Hash<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The content hash.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}The content hash.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="contentsize_csharp">
 <a href="#contentsize_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The content size.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}The content size.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="contentversion_csharp">
 <a href="#contentversion_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The content version.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}The content version.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
@@ -1698,32 +1488,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
         <span id="contenthash_go">
 <a href="#contenthash_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Hash</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contenthashresponse">Content<wbr>Hash<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The content hash.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}The content hash.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="contentsize_go">
 <a href="#contentsize_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The content size.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}The content size.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="contentversion_go">
 <a href="#contentversion_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The content version.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}The content version.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
@@ -1742,32 +1532,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
         <span id="contenthash_nodejs">
 <a href="#contenthash_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Hash</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contenthashresponse">Content<wbr>Hash<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The content hash.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}The content hash.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="contentsize_nodejs">
 <a href="#contentsize_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The content size.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}The content size.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="contentversion_nodejs">
 <a href="#contentversion_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The content version.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}The content version.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
@@ -1786,32 +1576,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
         <span id="content_hash_python">
 <a href="#content_hash_python" style="color: inherit; text-decoration: inherit;">content_<wbr>hash</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contenthashresponse">Content<wbr>Hash<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The content hash.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}The content hash.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="content_size_python">
 <a href="#content_size_python" style="color: inherit; text-decoration: inherit;">content_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The content size.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}The content size.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="content_version_python">
 <a href="#content_version_python" style="color: inherit; text-decoration: inherit;">content_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The content version.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}The content version.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>

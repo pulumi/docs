@@ -13,11 +13,11 @@ Explore the resources and functions of the azure.servicefabric module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
-    <li><a href="meshapplication" title="MeshApplication"><span class="symbol resource"></span>MeshApplication</a></li>
-    <li><a href="meshlocalnetwork" title="MeshLocalNetwork"><span class="symbol resource"></span>MeshLocalNetwork</a></li>
-    <li><a href="meshsecret" title="MeshSecret"><span class="symbol resource"></span>MeshSecret</a></li>
-    <li><a href="meshsecretvalue" title="MeshSecretValue"><span class="symbol resource"></span>MeshSecretValue</a></li>
+    <li><a href="cluster" title="Cluster"><span class="api-symbol api-symbol--resource"></span>Cluster</a></li>
+    <li><a href="meshapplication" title="MeshApplication"><span class="api-symbol api-symbol--resource"></span>MeshApplication</a></li>
+    <li><a href="meshlocalnetwork" title="MeshLocalNetwork"><span class="api-symbol api-symbol--resource"></span>MeshLocalNetwork</a></li>
+    <li><a href="meshsecret" title="MeshSecret"><span class="api-symbol api-symbol--resource"></span>MeshSecret</a></li>
+    <li><a href="meshsecretvalue" title="MeshSecretValue"><span class="api-symbol api-symbol--resource"></span>MeshSecretValue</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -29,6 +29,6 @@ Explore the resources and functions of the azure.servicefabric module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.21.0</dd>
+	<dd>4.22.0</dd>
 </dl>
 

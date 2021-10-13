@@ -13,7 +13,7 @@ Explore the resources and functions of the okta.profile module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="mapping" title="Mapping"><span class="symbol resource"></span>Mapping</a></li>
+    <li><a href="mapping" title="Mapping"><span class="api-symbol api-symbol--resource"></span>Mapping</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

@@ -126,7 +126,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name of the `AccessPolicy`. Format: `accessPolicies/{policy_id}`{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Resource name of the `AccessPolicy`. Format: `accessPolicies/{access_policy}`{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="parent_csharp">
 <a href="#parent_csharp" style="color: inherit; text-decoration: inherit;">Parent</a>
@@ -162,7 +162,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name of the `AccessPolicy`. Format: `accessPolicies/{policy_id}`{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Resource name of the `AccessPolicy`. Format: `accessPolicies/{access_policy}`{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="parent_go">
 <a href="#parent_go" style="color: inherit; text-decoration: inherit;">Parent</a>
@@ -198,7 +198,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name of the `AccessPolicy`. Format: `accessPolicies/{policy_id}`{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Resource name of the `AccessPolicy`. Format: `accessPolicies/{access_policy}`{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="parent_nodejs">
 <a href="#parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
@@ -234,7 +234,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name of the `AccessPolicy`. Format: `accessPolicies/{policy_id}`{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Resource name of the `AccessPolicy`. Format: `accessPolicies/{access_policy}`{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="parent_python">
 <a href="#parent_python" style="color: inherit; text-decoration: inherit;">parent</a>

@@ -13,9 +13,9 @@ Explore the resources and functions of the gcp.cloudasset module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="folderfeed" title="FolderFeed"><span class="symbol resource"></span>FolderFeed</a></li>
-    <li><a href="organizationfeed" title="OrganizationFeed"><span class="symbol resource"></span>OrganizationFeed</a></li>
-    <li><a href="projectfeed" title="ProjectFeed"><span class="symbol resource"></span>ProjectFeed</a></li>
+    <li><a href="folderfeed" title="FolderFeed"><span class="api-symbol api-symbol--resource"></span>FolderFeed</a></li>
+    <li><a href="organizationfeed" title="OrganizationFeed"><span class="api-symbol api-symbol--resource"></span>OrganizationFeed</a></li>
+    <li><a href="projectfeed" title="ProjectFeed"><span class="api-symbol api-symbol--resource"></span>ProjectFeed</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -27,6 +27,6 @@ Explore the resources and functions of the gcp.cloudasset module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>5.22.0</dd>
+	<dd>5.24.0</dd>
 </dl>
 

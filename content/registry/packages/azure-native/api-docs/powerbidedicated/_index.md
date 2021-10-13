@@ -13,14 +13,14 @@ Explore the resources and functions of the azure-native.powerbidedicated module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="autoscalevcore" title="AutoScaleVCore"><span class="symbol resource"></span>AutoScaleVCore</a></li>
-    <li><a href="capacitydetails" title="CapacityDetails"><span class="symbol resource"></span>CapacityDetails</a></li>
+    <li><a href="autoscalevcore" title="AutoScaleVCore"><span class="api-symbol api-symbol--resource"></span>AutoScaleVCore</a></li>
+    <li><a href="capacitydetails" title="CapacityDetails"><span class="api-symbol api-symbol--resource"></span>CapacityDetails</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getautoscalevcore" title="GetAutoScaleVCore"><span class="symbol function"></span>GetAutoScaleVCore</a></li>
-    <li><a href="getcapacitydetails" title="GetCapacityDetails"><span class="symbol function"></span>GetCapacityDetails</a></li>
+    <li><a href="getautoscalevcore" title="GetAutoScaleVCore"><span class="api-symbol api-symbol--function"></span>GetAutoScaleVCore</a></li>
+    <li><a href="getcapacitydetails" title="GetCapacityDetails"><span class="api-symbol api-symbol--function"></span>GetCapacityDetails</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -30,6 +30,6 @@ Explore the resources and functions of the azure-native.powerbidedicated module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.36.0</dd>
+	<dd>1.37.0</dd>
 </dl>
 

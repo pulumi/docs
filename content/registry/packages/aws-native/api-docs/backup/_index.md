@@ -13,9 +13,11 @@ Explore the resources and functions of the aws-native.backup module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="backupplan" title="BackupPlan"><span class="symbol resource"></span>BackupPlan</a></li>
-    <li><a href="backupselection" title="BackupSelection"><span class="symbol resource"></span>BackupSelection</a></li>
-    <li><a href="backupvault" title="BackupVault"><span class="symbol resource"></span>BackupVault</a></li>
+    <li><a href="backupplan" title="BackupPlan"><span class="api-symbol api-symbol--resource"></span>BackupPlan</a></li>
+    <li><a href="backupselection" title="BackupSelection"><span class="api-symbol api-symbol--resource"></span>BackupSelection</a></li>
+    <li><a href="backupvault" title="BackupVault"><span class="api-symbol api-symbol--resource"></span>BackupVault</a></li>
+    <li><a href="framework" title="Framework"><span class="api-symbol api-symbol--resource"></span>Framework</a></li>
+    <li><a href="reportplan" title="ReportPlan"><span class="api-symbol api-symbol--resource"></span>ReportPlan</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -25,6 +27,6 @@ Explore the resources and functions of the aws-native.backup module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.0</dd>
 </dl>
 

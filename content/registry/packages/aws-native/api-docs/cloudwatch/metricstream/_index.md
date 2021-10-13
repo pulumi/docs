@@ -42,11 +42,11 @@ class MyStack : Stack
             RoleArn = "arn:aws:iam::123456789012:role/service-role/MyRole",
             IncludeFilters = 
             {
-                new AwsNative.CloudWatch.Inputs.MetricStreamMetricStreamFilterArgs
+                new AwsNative.CloudWatch.Inputs.MetricStreamFilterArgs
                 {
                     Namespace = "AWS/ELB",
                 },
-                new AwsNative.CloudWatch.Inputs.MetricStreamMetricStreamFilterArgs
+                new AwsNative.CloudWatch.Inputs.MetricStreamFilterArgs
                 {
                     Namespace = "AWS/EC2",
                 },
@@ -79,11 +79,11 @@ func main() {
 			OutputFormat: pulumi.String("json"),
 			FirehoseArn:  pulumi.String("arn:aws:firehose:us-east-1:123456789012:deliverystream/MyDeliveryStream"),
 			RoleArn:      pulumi.String("arn:aws:iam::123456789012:role/service-role/MyRole"),
-			IncludeFilters: []cloudwatch.MetricStreamMetricStreamFilterArgs{
-				&cloudwatch.MetricStreamMetricStreamFilterArgs{
+			IncludeFilters: []cloudwatch.MetricStreamFilterArgs{
+				&cloudwatch.MetricStreamFilterArgs{
 					Namespace: pulumi.String("AWS/ELB"),
 				},
-				&cloudwatch.MetricStreamMetricStreamFilterArgs{
+				&cloudwatch.MetricStreamFilterArgs{
 					Namespace: pulumi.String("AWS/EC2"),
 				},
 			},
@@ -113,10 +113,10 @@ my_metric_stream = aws_native.cloudwatch.MetricStream("myMetricStream",
     firehose_arn="arn:aws:firehose:us-east-1:123456789012:deliverystream/MyDeliveryStream",
     role_arn="arn:aws:iam::123456789012:role/service-role/MyRole",
     include_filters=[
-        aws_native.cloudwatch.MetricStreamMetricStreamFilterArgs(
+        aws_native.cloudwatch.MetricStreamFilterArgs(
             namespace="AWS/ELB",
         ),
-        aws_native.cloudwatch.MetricStreamMetricStreamFilterArgs(
+        aws_native.cloudwatch.MetricStreamFilterArgs(
             namespace="AWS/EC2",
         ),
     ])
@@ -174,9 +174,9 @@ const myMetricStream = new aws_native.cloudwatch.MetricStream("myMetricStream", 
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">MetricStream</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                 <span class="nx">exclude_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[MetricStreamMetricStreamFilterArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">exclude_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[MetricStreamFilterArgs]]</span> = None<span class="p">,</span>
                  <span class="nx">firehose_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                 <span class="nx">include_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[MetricStreamMetricStreamFilterArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">include_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[MetricStreamFilterArgs]]</span> = None<span class="p">,</span>
                  <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">output_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -338,7 +338,7 @@ The MetricStream resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#excludefilters_csharp" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricstreammetricstreamfilter">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Cloud<wbr>Watch.<wbr>Inputs.<wbr>Metric<wbr>Stream<wbr>Metric<wbr>Stream<wbr>Filter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metricstreamfilter">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Cloud<wbr>Watch.<wbr>Inputs.<wbr>Metric<wbr>Stream<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Define which metrics will be not streamed. Metrics matched by multiple instances of MetricStreamFilter are joined with an OR operation by default. If both IncludeFilters and ExcludeFilters are omitted, all metrics in the account will be streamed. IncludeFilters and ExcludeFilters are mutually exclusive. Default to null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -346,7 +346,7 @@ The MetricStream resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#includefilters_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricstreammetricstreamfilter">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Cloud<wbr>Watch.<wbr>Inputs.<wbr>Metric<wbr>Stream<wbr>Metric<wbr>Stream<wbr>Filter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metricstreamfilter">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Cloud<wbr>Watch.<wbr>Inputs.<wbr>Metric<wbr>Stream<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Define which metrics will be streamed. Metrics matched by multiple instances of MetricStreamFilter are joined with an OR operation by default. If both IncludeFilters and ExcludeFilters are omitted, all metrics in the account will be streamed. IncludeFilters and ExcludeFilters are mutually exclusive. Default to null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -398,7 +398,7 @@ The MetricStream resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#excludefilters_go" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricstreammetricstreamfilter">[]Metric<wbr>Stream<wbr>Metric<wbr>Stream<wbr>Filter<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricstreamfilter">[]Metric<wbr>Stream<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Define which metrics will be not streamed. Metrics matched by multiple instances of MetricStreamFilter are joined with an OR operation by default. If both IncludeFilters and ExcludeFilters are omitted, all metrics in the account will be streamed. IncludeFilters and ExcludeFilters are mutually exclusive. Default to null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -406,7 +406,7 @@ The MetricStream resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#includefilters_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricstreammetricstreamfilter">[]Metric<wbr>Stream<wbr>Metric<wbr>Stream<wbr>Filter<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricstreamfilter">[]Metric<wbr>Stream<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Define which metrics will be streamed. Metrics matched by multiple instances of MetricStreamFilter are joined with an OR operation by default. If both IncludeFilters and ExcludeFilters are omitted, all metrics in the account will be streamed. IncludeFilters and ExcludeFilters are mutually exclusive. Default to null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -458,7 +458,7 @@ The MetricStream resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#excludefilters_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricstreammetricstreamfilter">Metric<wbr>Stream<wbr>Metric<wbr>Stream<wbr>Filter<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#metricstreamfilter">Metric<wbr>Stream<wbr>Filter<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Define which metrics will be not streamed. Metrics matched by multiple instances of MetricStreamFilter are joined with an OR operation by default. If both IncludeFilters and ExcludeFilters are omitted, all metrics in the account will be streamed. IncludeFilters and ExcludeFilters are mutually exclusive. Default to null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -466,7 +466,7 @@ The MetricStream resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#includefilters_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricstreammetricstreamfilter">Metric<wbr>Stream<wbr>Metric<wbr>Stream<wbr>Filter<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#metricstreamfilter">Metric<wbr>Stream<wbr>Filter<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Define which metrics will be streamed. Metrics matched by multiple instances of MetricStreamFilter are joined with an OR operation by default. If both IncludeFilters and ExcludeFilters are omitted, all metrics in the account will be streamed. IncludeFilters and ExcludeFilters are mutually exclusive. Default to null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -518,7 +518,7 @@ The MetricStream resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#exclude_filters_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricstreammetricstreamfilter">Sequence[Metric<wbr>Stream<wbr>Metric<wbr>Stream<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metricstreamfilter">Sequence[Metric<wbr>Stream<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Define which metrics will be not streamed. Metrics matched by multiple instances of MetricStreamFilter are joined with an OR operation by default. If both IncludeFilters and ExcludeFilters are omitted, all metrics in the account will be streamed. IncludeFilters and ExcludeFilters are mutually exclusive. Default to null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -526,7 +526,7 @@ The MetricStream resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#include_filters_python" style="color: inherit; text-decoration: inherit;">include_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricstreammetricstreamfilter">Sequence[Metric<wbr>Stream<wbr>Metric<wbr>Stream<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metricstreamfilter">Sequence[Metric<wbr>Stream<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Define which metrics will be streamed. Metrics matched by multiple instances of MetricStreamFilter are joined with an OR operation by default. If both IncludeFilters and ExcludeFilters are omitted, all metrics in the account will be streamed. IncludeFilters and ExcludeFilters are mutually exclusive. Default to null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -740,7 +740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="metricstreammetricstreamfilter">Metric<wbr>Stream<wbr>Metric<wbr>Stream<wbr>Filter</h4>
+<h4 id="metricstreamfilter">Metric<wbr>Stream<wbr>Filter</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"

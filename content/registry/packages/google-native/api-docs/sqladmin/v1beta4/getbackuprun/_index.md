@@ -200,7 +200,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskencryptionconfigurationresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Outputs.<wbr>Disk<wbr>Encryption<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Encryption configuration specific to a backup. Applies only to Second Generation instances.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Encryption configuration specific to a backup.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="diskencryptionstatus_csharp">
 <a href="#diskencryptionstatus_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Status</a>
@@ -208,7 +208,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskencryptionstatusresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Outputs.<wbr>Disk<wbr>Encryption<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Encryption status specific to a backup. Applies only to Second Generation instances.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Encryption status specific to a backup.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endtime_csharp">
 <a href="#endtime_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -216,7 +216,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time the backup operation completed in UTC timezone in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The time the backup operation completed in UTC timezone in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enqueuedtime_csharp">
 <a href="#enqueuedtime_csharp" style="color: inherit; text-decoration: inherit;">Enqueued<wbr>Time</a>
@@ -224,7 +224,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time the run was enqueued in UTC timezone in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The time the run was enqueued in UTC timezone in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="error_csharp">
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
@@ -248,7 +248,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#backupRun*.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}This is always **sql#backupRun**.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -272,7 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time the backup operation actually started in UTC timezone in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The time the backup operation actually started in UTC timezone in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -296,7 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start time of the backup window during which this the backup was attempted in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The start time of the backup window during which this the backup was attempted in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -324,7 +324,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskencryptionconfigurationresponse">Disk<wbr>Encryption<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Encryption configuration specific to a backup. Applies only to Second Generation instances.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Encryption configuration specific to a backup.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="diskencryptionstatus_go">
 <a href="#diskencryptionstatus_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Status</a>
@@ -332,7 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskencryptionstatusresponse">Disk<wbr>Encryption<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Encryption status specific to a backup. Applies only to Second Generation instances.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Encryption status specific to a backup.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endtime_go">
 <a href="#endtime_go" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -340,7 +340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time the backup operation completed in UTC timezone in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The time the backup operation completed in UTC timezone in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enqueuedtime_go">
 <a href="#enqueuedtime_go" style="color: inherit; text-decoration: inherit;">Enqueued<wbr>Time</a>
@@ -348,7 +348,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time the run was enqueued in UTC timezone in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The time the run was enqueued in UTC timezone in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="error_go">
 <a href="#error_go" style="color: inherit; text-decoration: inherit;">Error</a>
@@ -372,7 +372,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#backupRun*.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}This is always **sql#backupRun**.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -396,7 +396,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time the backup operation actually started in UTC timezone in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The time the backup operation actually started in UTC timezone in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -420,7 +420,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start time of the backup window during which this the backup was attempted in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The start time of the backup window during which this the backup was attempted in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -448,7 +448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskencryptionconfigurationresponse">Disk<wbr>Encryption<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Encryption configuration specific to a backup. Applies only to Second Generation instances.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Encryption configuration specific to a backup.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="diskencryptionstatus_nodejs">
 <a href="#diskencryptionstatus_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Status</a>
@@ -456,7 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskencryptionstatusresponse">Disk<wbr>Encryption<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Encryption status specific to a backup. Applies only to Second Generation instances.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Encryption status specific to a backup.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endtime_nodejs">
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
@@ -464,7 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time the backup operation completed in UTC timezone in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The time the backup operation completed in UTC timezone in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enqueuedtime_nodejs">
 <a href="#enqueuedtime_nodejs" style="color: inherit; text-decoration: inherit;">enqueued<wbr>Time</a>
@@ -472,7 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time the run was enqueued in UTC timezone in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The time the run was enqueued in UTC timezone in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="error_nodejs">
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
@@ -496,7 +496,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#backupRun*.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}This is always **sql#backupRun**.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -520,7 +520,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time the backup operation actually started in UTC timezone in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The time the backup operation actually started in UTC timezone in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -544,7 +544,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start time of the backup window during which this the backup was attempted in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The start time of the backup window during which this the backup was attempted in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -572,7 +572,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskencryptionconfigurationresponse">Disk<wbr>Encryption<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Encryption configuration specific to a backup. Applies only to Second Generation instances.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Encryption configuration specific to a backup.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disk_encryption_status_python">
 <a href="#disk_encryption_status_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>status</a>
@@ -580,7 +580,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskencryptionstatusresponse">Disk<wbr>Encryption<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Encryption status specific to a backup. Applies only to Second Generation instances.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Encryption status specific to a backup.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="end_time_python">
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
@@ -588,7 +588,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time the backup operation completed in UTC timezone in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The time the backup operation completed in UTC timezone in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enqueued_time_python">
 <a href="#enqueued_time_python" style="color: inherit; text-decoration: inherit;">enqueued_<wbr>time</a>
@@ -596,7 +596,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time the run was enqueued in UTC timezone in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The time the run was enqueued in UTC timezone in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="error_python">
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
@@ -620,7 +620,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#backupRun*.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}This is always **sql#backupRun**.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -644,7 +644,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time the backup operation actually started in UTC timezone in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The time the backup operation actually started in UTC timezone in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -668,7 +668,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The start time of the backup window during which this the backup was attempted in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The start time of the backup window during which this the backup was attempted in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -690,7 +690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#diskEncryptionConfiguration*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#diskEncryptionConfiguration**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kmskeyname_csharp">
 <a href="#kmskeyname_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
@@ -710,7 +710,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#diskEncryptionConfiguration*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#diskEncryptionConfiguration**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kmskeyname_go">
 <a href="#kmskeyname_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
@@ -730,7 +730,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#diskEncryptionConfiguration*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#diskEncryptionConfiguration**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kmskeyname_nodejs">
 <a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
@@ -750,7 +750,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#diskEncryptionConfiguration*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#diskEncryptionConfiguration**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kms_key_name_python">
 <a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
@@ -774,7 +774,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#diskEncryptionStatus*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#diskEncryptionStatus**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kmskeyversionname_csharp">
 <a href="#kmskeyversionname_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Version<wbr>Name</a>
@@ -794,7 +794,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#diskEncryptionStatus*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#diskEncryptionStatus**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kmskeyversionname_go">
 <a href="#kmskeyversionname_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Version<wbr>Name</a>
@@ -814,7 +814,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#diskEncryptionStatus*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#diskEncryptionStatus**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kmskeyversionname_nodejs">
 <a href="#kmskeyversionname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Version<wbr>Name</a>
@@ -834,7 +834,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#diskEncryptionStatus*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#diskEncryptionStatus**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kms_key_version_name_python">
 <a href="#kms_key_version_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>version_<wbr>name</a>
@@ -866,7 +866,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#operationError*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#operationError**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -894,7 +894,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#operationError*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#operationError**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -922,7 +922,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#operationError*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#operationError**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
@@ -950,7 +950,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#operationError*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#operationError**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>

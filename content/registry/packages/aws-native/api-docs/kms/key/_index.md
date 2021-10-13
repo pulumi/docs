@@ -33,8 +33,8 @@ The AWS::KMS::Key resource specifies a customer master key (CMK) in AWS Key Mana
         <span class="nx">enable_key_rotation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">key_policy</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">,</span>
-        <span class="nx">key_spec</span><span class="p">:</span> <span class="nx">Optional[KeyKeySpec]</span> = None<span class="p">,</span>
-        <span class="nx">key_usage</span><span class="p">:</span> <span class="nx">Optional[KeyKeyUsage]</span> = None<span class="p">,</span>
+        <span class="nx">key_spec</span><span class="p">:</span> <span class="nx">Optional[KeySpec]</span> = None<span class="p">,</span>
+        <span class="nx">key_usage</span><span class="p">:</span> <span class="nx">Optional[KeyUsage]</span> = None<span class="p">,</span>
         <span class="nx">multi_region</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">pending_window_in_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[KeyTagArgs]]</span> = None<span class="p">)</span>
@@ -203,7 +203,7 @@ The Key resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#keyspec_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keykeyspec">Pulumi.<wbr>Aws<wbr>Native.<wbr>KMS.<wbr>Key<wbr>Key<wbr>Spec</a></span>
+        <span class="property-type"><a href="#keyspec">Pulumi.<wbr>Aws<wbr>Native.<wbr>KMS.<wbr>Key<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of CMK to create. The default value is SYMMETRIC_DEFAULT. This property is required only for asymmetric CMKs. You can't change the KeySpec value after the CMK is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -211,7 +211,7 @@ The Key resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#keyusage_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keykeyusage">Pulumi.<wbr>Aws<wbr>Native.<wbr>KMS.<wbr>Key<wbr>Key<wbr>Usage</a></span>
+        <span class="property-type"><a href="#keyusage">Pulumi.<wbr>Aws<wbr>Native.<wbr>KMS.<wbr>Key<wbr>Usage</a></span>
     </dt>
     <dd>{{% md %}}Determines the cryptographic operations for which you can use the CMK. The default value is ENCRYPT_DECRYPT. This property is required only for asymmetric CMKs. You can't change the KeyUsage value after the CMK is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -279,7 +279,7 @@ The Key resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#keyspec_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keykeyspec">Key<wbr>Key<wbr>Spec</a></span>
+        <span class="property-type"><a href="#keyspec">Key<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of CMK to create. The default value is SYMMETRIC_DEFAULT. This property is required only for asymmetric CMKs. You can't change the KeySpec value after the CMK is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -287,7 +287,7 @@ The Key resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#keyusage_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keykeyusage">Key<wbr>Key<wbr>Usage</a></span>
+        <span class="property-type"><a href="#keyusage">Key<wbr>Usage</a></span>
     </dt>
     <dd>{{% md %}}Determines the cryptographic operations for which you can use the CMK. The default value is ENCRYPT_DECRYPT. This property is required only for asymmetric CMKs. You can't change the KeyUsage value after the CMK is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -355,7 +355,7 @@ The Key resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#keyspec_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keykeyspec">Key<wbr>Key<wbr>Spec</a></span>
+        <span class="property-type"><a href="#keyspec">Key<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of CMK to create. The default value is SYMMETRIC_DEFAULT. This property is required only for asymmetric CMKs. You can't change the KeySpec value after the CMK is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -363,7 +363,7 @@ The Key resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#keyusage_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keykeyusage">Key<wbr>Key<wbr>Usage</a></span>
+        <span class="property-type"><a href="#keyusage">Key<wbr>Usage</a></span>
     </dt>
     <dd>{{% md %}}Determines the cryptographic operations for which you can use the CMK. The default value is ENCRYPT_DECRYPT. This property is required only for asymmetric CMKs. You can't change the KeyUsage value after the CMK is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -431,7 +431,7 @@ The Key resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#key_spec_python" style="color: inherit; text-decoration: inherit;">key_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keykeyspec">Key<wbr>Key<wbr>Spec</a></span>
+        <span class="property-type"><a href="#keyspec">Key<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of CMK to create. The default value is SYMMETRIC_DEFAULT. This property is required only for asymmetric CMKs. You can't change the KeySpec value after the CMK is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -439,7 +439,7 @@ The Key resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#key_usage_python" style="color: inherit; text-decoration: inherit;">key_<wbr>usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keykeyusage">Key<wbr>Key<wbr>Usage</a></span>
+        <span class="property-type"><a href="#keyusage">Key<wbr>Usage</a></span>
     </dt>
     <dd>{{% md %}}Determines the cryptographic operations for which you can use the CMK. The default value is ENCRYPT_DECRYPT. This property is required only for asymmetric CMKs. You can't change the KeyUsage value after the CMK is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -597,7 +597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="keykeyspec">Key<wbr>Key<wbr>Spec</h4>
+<h4 id="keyspec">Key<wbr>Spec</h4>
 
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>Symmetric<wbr>Default</dt>
@@ -612,14 +612,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular"><dt>Key<wbr>Key<wbr>Spec<wbr>Symmetric<wbr>Default</dt>
-    <dd>SYMMETRIC_DEFAULT</dd><dt>Key<wbr>Key<wbr>Spec<wbr>Rsa2048</dt>
-    <dd>RSA_2048</dd><dt>Key<wbr>Key<wbr>Spec<wbr>Rsa3072</dt>
-    <dd>RSA_3072</dd><dt>Key<wbr>Key<wbr>Spec<wbr>Rsa4096</dt>
-    <dd>RSA_4096</dd><dt>Key<wbr>Key<wbr>Spec<wbr>Ecc<wbr>Nist<wbr>P256</dt>
-    <dd>ECC_NIST_P256</dd><dt>Key<wbr>Key<wbr>Spec<wbr>Ecc<wbr>Nist<wbr>P384</dt>
-    <dd>ECC_NIST_P384</dd><dt>Key<wbr>Key<wbr>Spec<wbr>Ecc<wbr>Nist<wbr>P521</dt>
-    <dd>ECC_NIST_P521</dd><dt>Key<wbr>Key<wbr>Spec<wbr>Ecc<wbr>Secg<wbr>P256k1</dt>
+<dl class="tabular"><dt>Key<wbr>Spec<wbr>Symmetric<wbr>Default</dt>
+    <dd>SYMMETRIC_DEFAULT</dd><dt>Key<wbr>Spec<wbr>Rsa2048</dt>
+    <dd>RSA_2048</dd><dt>Key<wbr>Spec<wbr>Rsa3072</dt>
+    <dd>RSA_3072</dd><dt>Key<wbr>Spec<wbr>Rsa4096</dt>
+    <dd>RSA_4096</dd><dt>Key<wbr>Spec<wbr>Ecc<wbr>Nist<wbr>P256</dt>
+    <dd>ECC_NIST_P256</dd><dt>Key<wbr>Spec<wbr>Ecc<wbr>Nist<wbr>P384</dt>
+    <dd>ECC_NIST_P384</dd><dt>Key<wbr>Spec<wbr>Ecc<wbr>Nist<wbr>P521</dt>
+    <dd>ECC_NIST_P521</dd><dt>Key<wbr>Spec<wbr>Ecc<wbr>Secg<wbr>P256k1</dt>
     <dd>ECC_SECG_P256K1</dd></dl>
 {{% /choosable %}}
 
@@ -645,32 +645,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>ECC_NIST_P384</dd><dt>ECC_NIST_P521</dt>
     <dd>ECC_NIST_P521</dd><dt>ECC_SECG_P256K1</dt>
     <dd>ECC_SECG_P256K1</dd></dl>
-{{% /choosable %}}
-
-<h4 id="keykeyusage">Key<wbr>Key<wbr>Usage</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Encrypt<wbr>Decrypt</dt>
-    <dd>ENCRYPT_DECRYPT</dd><dt>Sign<wbr>Verify</dt>
-    <dd>SIGN_VERIFY</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Key<wbr>Key<wbr>Usage<wbr>Encrypt<wbr>Decrypt</dt>
-    <dd>ENCRYPT_DECRYPT</dd><dt>Key<wbr>Key<wbr>Usage<wbr>Sign<wbr>Verify</dt>
-    <dd>SIGN_VERIFY</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Encrypt<wbr>Decrypt</dt>
-    <dd>ENCRYPT_DECRYPT</dd><dt>Sign<wbr>Verify</dt>
-    <dd>SIGN_VERIFY</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>ENCRYPT_DECRYPT</dt>
-    <dd>ENCRYPT_DECRYPT</dd><dt>SIGN_VERIFY</dt>
-    <dd>SIGN_VERIFY</dd></dl>
 {{% /choosable %}}
 
 <h4 id="keytag">Key<wbr>Tag</h4>
@@ -753,6 +727,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value for the tag. You can specify a value that is 0 to 256 Unicode characters in length and cannot be prefixed with aws:. You can use any of the following characters: the set of Unicode letters, digits, whitespace, _, ., /, =, +, and -.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="keyusage">Key<wbr>Usage</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Encrypt<wbr>Decrypt</dt>
+    <dd>ENCRYPT_DECRYPT</dd><dt>Sign<wbr>Verify</dt>
+    <dd>SIGN_VERIFY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Key<wbr>Usage<wbr>Encrypt<wbr>Decrypt</dt>
+    <dd>ENCRYPT_DECRYPT</dd><dt>Key<wbr>Usage<wbr>Sign<wbr>Verify</dt>
+    <dd>SIGN_VERIFY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Encrypt<wbr>Decrypt</dt>
+    <dd>ENCRYPT_DECRYPT</dd><dt>Sign<wbr>Verify</dt>
+    <dd>SIGN_VERIFY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ENCRYPT_DECRYPT</dt>
+    <dd>ENCRYPT_DECRYPT</dd><dt>SIGN_VERIFY</dt>
+    <dd>SIGN_VERIFY</dd></dl>
 {{% /choosable %}}
 
 

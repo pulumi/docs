@@ -29,7 +29,7 @@ Resource Type definition for AWS::EC2::SpotFleet
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">SpotFleet</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-              <span class="nx">spot_fleet_request_config_data</span><span class="p">:</span> <span class="nx">Optional[SpotFleetSpotFleetRequestConfigDataArgs]</span> = None<span class="p">)</span>
+              <span class="nx">spot_fleet_request_config_data</span><span class="p">:</span> <span class="nx">Optional[SpotFleetRequestConfigDataArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">SpotFleet</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SpotFleetArgs</a></span><span class="p">,</span>
@@ -163,7 +163,7 @@ The SpotFleet resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#spotfleetrequestconfigdata_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetspotfleetrequestconfigdata">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Inputs.<wbr>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Args</a></span>
+        <span class="property-type"><a href="#spotfleetrequestconfigdata">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Inputs.<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -175,7 +175,7 @@ The SpotFleet resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#spotfleetrequestconfigdata_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetspotfleetrequestconfigdata">Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Args</a></span>
+        <span class="property-type"><a href="#spotfleetrequestconfigdata">Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -187,7 +187,7 @@ The SpotFleet resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#spotfleetrequestconfigdata_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetspotfleetrequestconfigdata">Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Args</a></span>
+        <span class="property-type"><a href="#spotfleetrequestconfigdata">Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -199,7 +199,7 @@ The SpotFleet resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#spot_fleet_request_config_data_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>fleet_<wbr>request_<wbr>config_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetspotfleetrequestconfigdata">Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Args</a></span>
+        <span class="property-type"><a href="#spotfleetrequestconfigdata">Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1405,6 +1405,568 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="spotfleetlaunchspecification">Spot<wbr>Fleet<wbr>Launch<wbr>Specification</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="imageid_csharp">
+<a href="#imageid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="instancetype_csharp">
+<a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="blockdevicemappings_csharp">
+<a href="#blockdevicemappings_csharp" style="color: inherit; text-decoration: inherit;">Block<wbr>Device<wbr>Mappings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetblockdevicemapping">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Inputs.<wbr>Spot<wbr>Fleet<wbr>Block<wbr>Device<wbr>Mapping&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ebsoptimized_csharp">
+<a href="#ebsoptimized_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Optimized</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="iaminstanceprofile_csharp">
+<a href="#iaminstanceprofile_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Instance<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetiaminstanceprofilespecification">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Inputs.<wbr>Spot<wbr>Fleet<wbr>Iam<wbr>Instance<wbr>Profile<wbr>Specification</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kernelid_csharp">
+<a href="#kernelid_csharp" style="color: inherit; text-decoration: inherit;">Kernel<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyname_csharp">
+<a href="#keyname_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="monitoring_csharp">
+<a href="#monitoring_csharp" style="color: inherit; text-decoration: inherit;">Monitoring</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetmonitoring">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Inputs.<wbr>Spot<wbr>Fleet<wbr>Monitoring</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkinterfaces_csharp">
+<a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetinstancenetworkinterfacespecification">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Inputs.<wbr>Spot<wbr>Fleet<wbr>Instance<wbr>Network<wbr>Interface<wbr>Specification&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="placement_csharp">
+<a href="#placement_csharp" style="color: inherit; text-decoration: inherit;">Placement</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetspotplacement">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Inputs.<wbr>Spot<wbr>Fleet<wbr>Spot<wbr>Placement</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ramdiskid_csharp">
+<a href="#ramdiskid_csharp" style="color: inherit; text-decoration: inherit;">Ramdisk<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="securitygroups_csharp">
+<a href="#securitygroups_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetgroupidentifier">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Inputs.<wbr>Spot<wbr>Fleet<wbr>Group<wbr>Identifier&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="spotprice_csharp">
+<a href="#spotprice_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Price</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnetid_csharp">
+<a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagspecifications_csharp">
+<a href="#tagspecifications_csharp" style="color: inherit; text-decoration: inherit;">Tag<wbr>Specifications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleettagspecification">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Inputs.<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userdata_csharp">
+<a href="#userdata_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="weightedcapacity_csharp">
+<a href="#weightedcapacity_csharp" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="imageid_go">
+<a href="#imageid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="instancetype_go">
+<a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="blockdevicemappings_go">
+<a href="#blockdevicemappings_go" style="color: inherit; text-decoration: inherit;">Block<wbr>Device<wbr>Mappings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetblockdevicemapping">[]Spot<wbr>Fleet<wbr>Block<wbr>Device<wbr>Mapping</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ebsoptimized_go">
+<a href="#ebsoptimized_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Optimized</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="iaminstanceprofile_go">
+<a href="#iaminstanceprofile_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Instance<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetiaminstanceprofilespecification">Spot<wbr>Fleet<wbr>Iam<wbr>Instance<wbr>Profile<wbr>Specification</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kernelid_go">
+<a href="#kernelid_go" style="color: inherit; text-decoration: inherit;">Kernel<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyname_go">
+<a href="#keyname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="monitoring_go">
+<a href="#monitoring_go" style="color: inherit; text-decoration: inherit;">Monitoring</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetmonitoring">Spot<wbr>Fleet<wbr>Monitoring</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkinterfaces_go">
+<a href="#networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetinstancenetworkinterfacespecification">[]Spot<wbr>Fleet<wbr>Instance<wbr>Network<wbr>Interface<wbr>Specification</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="placement_go">
+<a href="#placement_go" style="color: inherit; text-decoration: inherit;">Placement</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetspotplacement">Spot<wbr>Fleet<wbr>Spot<wbr>Placement</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ramdiskid_go">
+<a href="#ramdiskid_go" style="color: inherit; text-decoration: inherit;">Ramdisk<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="securitygroups_go">
+<a href="#securitygroups_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetgroupidentifier">[]Spot<wbr>Fleet<wbr>Group<wbr>Identifier</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="spotprice_go">
+<a href="#spotprice_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Price</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnetid_go">
+<a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagspecifications_go">
+<a href="#tagspecifications_go" style="color: inherit; text-decoration: inherit;">Tag<wbr>Specifications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleettagspecification">[]Spot<wbr>Fleet<wbr>Tag<wbr>Specification</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userdata_go">
+<a href="#userdata_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="weightedcapacity_go">
+<a href="#weightedcapacity_go" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="imageid_nodejs">
+<a href="#imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="instancetype_nodejs">
+<a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="blockdevicemappings_nodejs">
+<a href="#blockdevicemappings_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Device<wbr>Mappings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetblockdevicemapping">Spot<wbr>Fleet<wbr>Block<wbr>Device<wbr>Mapping[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ebsoptimized_nodejs">
+<a href="#ebsoptimized_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Optimized</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="iaminstanceprofile_nodejs">
+<a href="#iaminstanceprofile_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Instance<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetiaminstanceprofilespecification">Spot<wbr>Fleet<wbr>Iam<wbr>Instance<wbr>Profile<wbr>Specification</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kernelid_nodejs">
+<a href="#kernelid_nodejs" style="color: inherit; text-decoration: inherit;">kernel<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyname_nodejs">
+<a href="#keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="monitoring_nodejs">
+<a href="#monitoring_nodejs" style="color: inherit; text-decoration: inherit;">monitoring</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetmonitoring">Spot<wbr>Fleet<wbr>Monitoring</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkinterfaces_nodejs">
+<a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetinstancenetworkinterfacespecification">Spot<wbr>Fleet<wbr>Instance<wbr>Network<wbr>Interface<wbr>Specification[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="placement_nodejs">
+<a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetspotplacement">Spot<wbr>Fleet<wbr>Spot<wbr>Placement</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ramdiskid_nodejs">
+<a href="#ramdiskid_nodejs" style="color: inherit; text-decoration: inherit;">ramdisk<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="securitygroups_nodejs">
+<a href="#securitygroups_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetgroupidentifier">Spot<wbr>Fleet<wbr>Group<wbr>Identifier[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="spotprice_nodejs">
+<a href="#spotprice_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Price</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnetid_nodejs">
+<a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagspecifications_nodejs">
+<a href="#tagspecifications_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Specifications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleettagspecification">Spot<wbr>Fleet<wbr>Tag<wbr>Specification[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userdata_nodejs">
+<a href="#userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="weightedcapacity_nodejs">
+<a href="#weightedcapacity_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="image_id_python">
+<a href="#image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="instance_type_python">
+<a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="block_device_mappings_python">
+<a href="#block_device_mappings_python" style="color: inherit; text-decoration: inherit;">block_<wbr>device_<wbr>mappings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetblockdevicemapping">Sequence[Spot<wbr>Fleet<wbr>Block<wbr>Device<wbr>Mapping]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ebs_optimized_python">
+<a href="#ebs_optimized_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>optimized</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="iam_instance_profile_python">
+<a href="#iam_instance_profile_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>instance_<wbr>profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetiaminstanceprofilespecification">Spot<wbr>Fleet<wbr>Iam<wbr>Instance<wbr>Profile<wbr>Specification</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kernel_id_python">
+<a href="#kernel_id_python" style="color: inherit; text-decoration: inherit;">kernel_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="key_name_python">
+<a href="#key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="monitoring_python">
+<a href="#monitoring_python" style="color: inherit; text-decoration: inherit;">monitoring</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetmonitoring">Spot<wbr>Fleet<wbr>Monitoring</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="network_interfaces_python">
+<a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetinstancenetworkinterfacespecification">Sequence[Spot<wbr>Fleet<wbr>Instance<wbr>Network<wbr>Interface<wbr>Specification]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="placement_python">
+<a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetspotplacement">Spot<wbr>Fleet<wbr>Spot<wbr>Placement</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ramdisk_id_python">
+<a href="#ramdisk_id_python" style="color: inherit; text-decoration: inherit;">ramdisk_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="security_groups_python">
+<a href="#security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetgroupidentifier">Sequence[Spot<wbr>Fleet<wbr>Group<wbr>Identifier]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="spot_price_python">
+<a href="#spot_price_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>price</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnet_id_python">
+<a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tag_specifications_python">
+<a href="#tag_specifications_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>specifications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleettagspecification">Sequence[Spot<wbr>Fleet<wbr>Tag<wbr>Specification]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="user_data_python">
+<a href="#user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="weighted_capacity_python">
+<a href="#weighted_capacity_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="spotfleetlaunchtemplateconfig">Spot<wbr>Fleet<wbr>Launch<wbr>Template<wbr>Config</h4>
 
 {{% choosable language csharp %}}
@@ -1747,6 +2309,56 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="spotfleetmonitoring">Spot<wbr>Fleet<wbr>Monitoring</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="spotfleetprivateipaddressspecification">Spot<wbr>Fleet<wbr>Private<wbr>Ip<wbr>Address<wbr>Specification</h4>
 
 {{% choosable language csharp %}}
@@ -1829,691 +2441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="spotfleetspotcapacityrebalance">Spot<wbr>Fleet<wbr>Spot<wbr>Capacity<wbr>Rebalance</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="replacementstrategy_csharp">
-<a href="#replacementstrategy_csharp" style="color: inherit; text-decoration: inherit;">Replacement<wbr>Strategy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetspotcapacityrebalancereplacementstrategy">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Spot<wbr>Fleet<wbr>Spot<wbr>Capacity<wbr>Rebalance<wbr>Replacement<wbr>Strategy</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="replacementstrategy_go">
-<a href="#replacementstrategy_go" style="color: inherit; text-decoration: inherit;">Replacement<wbr>Strategy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetspotcapacityrebalancereplacementstrategy">Spot<wbr>Fleet<wbr>Spot<wbr>Capacity<wbr>Rebalance<wbr>Replacement<wbr>Strategy</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="replacementstrategy_nodejs">
-<a href="#replacementstrategy_nodejs" style="color: inherit; text-decoration: inherit;">replacement<wbr>Strategy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetspotcapacityrebalancereplacementstrategy">Spot<wbr>Fleet<wbr>Spot<wbr>Capacity<wbr>Rebalance<wbr>Replacement<wbr>Strategy</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="replacement_strategy_python">
-<a href="#replacement_strategy_python" style="color: inherit; text-decoration: inherit;">replacement_<wbr>strategy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetspotcapacityrebalancereplacementstrategy">Spot<wbr>Fleet<wbr>Spot<wbr>Capacity<wbr>Rebalance<wbr>Replacement<wbr>Strategy</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="spotfleetspotcapacityrebalancereplacementstrategy">Spot<wbr>Fleet<wbr>Spot<wbr>Capacity<wbr>Rebalance<wbr>Replacement<wbr>Strategy</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Launch</dt>
-    <dd>launch</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Capacity<wbr>Rebalance<wbr>Replacement<wbr>Strategy<wbr>Launch</dt>
-    <dd>launch</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Launch</dt>
-    <dd>launch</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>LAUNCH</dt>
-    <dd>launch</dd></dl>
-{{% /choosable %}}
-
-<h4 id="spotfleetspotfleetlaunchspecification">Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Launch<wbr>Specification</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="imageid_csharp">
-<a href="#imageid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="instancetype_csharp">
-<a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="blockdevicemappings_csharp">
-<a href="#blockdevicemappings_csharp" style="color: inherit; text-decoration: inherit;">Block<wbr>Device<wbr>Mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetblockdevicemapping">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Inputs.<wbr>Spot<wbr>Fleet<wbr>Block<wbr>Device<wbr>Mapping&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="ebsoptimized_csharp">
-<a href="#ebsoptimized_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Optimized</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="iaminstanceprofile_csharp">
-<a href="#iaminstanceprofile_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Instance<wbr>Profile</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetiaminstanceprofilespecification">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Inputs.<wbr>Spot<wbr>Fleet<wbr>Iam<wbr>Instance<wbr>Profile<wbr>Specification</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kernelid_csharp">
-<a href="#kernelid_csharp" style="color: inherit; text-decoration: inherit;">Kernel<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="keyname_csharp">
-<a href="#keyname_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="monitoring_csharp">
-<a href="#monitoring_csharp" style="color: inherit; text-decoration: inherit;">Monitoring</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetspotfleetmonitoring">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Inputs.<wbr>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Monitoring</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="networkinterfaces_csharp">
-<a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetinstancenetworkinterfacespecification">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Inputs.<wbr>Spot<wbr>Fleet<wbr>Instance<wbr>Network<wbr>Interface<wbr>Specification&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="placement_csharp">
-<a href="#placement_csharp" style="color: inherit; text-decoration: inherit;">Placement</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetspotplacement">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Inputs.<wbr>Spot<wbr>Fleet<wbr>Spot<wbr>Placement</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="ramdiskid_csharp">
-<a href="#ramdiskid_csharp" style="color: inherit; text-decoration: inherit;">Ramdisk<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="securitygroups_csharp">
-<a href="#securitygroups_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetgroupidentifier">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Inputs.<wbr>Spot<wbr>Fleet<wbr>Group<wbr>Identifier&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="spotprice_csharp">
-<a href="#spotprice_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Price</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="subnetid_csharp">
-<a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tagspecifications_csharp">
-<a href="#tagspecifications_csharp" style="color: inherit; text-decoration: inherit;">Tag<wbr>Specifications</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetspotfleettagspecification">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Inputs.<wbr>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="userdata_csharp">
-<a href="#userdata_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="weightedcapacity_csharp">
-<a href="#weightedcapacity_csharp" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Capacity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">double</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="imageid_go">
-<a href="#imageid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="instancetype_go">
-<a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="blockdevicemappings_go">
-<a href="#blockdevicemappings_go" style="color: inherit; text-decoration: inherit;">Block<wbr>Device<wbr>Mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetblockdevicemapping">[]Spot<wbr>Fleet<wbr>Block<wbr>Device<wbr>Mapping</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="ebsoptimized_go">
-<a href="#ebsoptimized_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Optimized</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="iaminstanceprofile_go">
-<a href="#iaminstanceprofile_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Instance<wbr>Profile</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetiaminstanceprofilespecification">Spot<wbr>Fleet<wbr>Iam<wbr>Instance<wbr>Profile<wbr>Specification</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kernelid_go">
-<a href="#kernelid_go" style="color: inherit; text-decoration: inherit;">Kernel<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="keyname_go">
-<a href="#keyname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="monitoring_go">
-<a href="#monitoring_go" style="color: inherit; text-decoration: inherit;">Monitoring</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetspotfleetmonitoring">Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Monitoring</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="networkinterfaces_go">
-<a href="#networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetinstancenetworkinterfacespecification">[]Spot<wbr>Fleet<wbr>Instance<wbr>Network<wbr>Interface<wbr>Specification</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="placement_go">
-<a href="#placement_go" style="color: inherit; text-decoration: inherit;">Placement</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetspotplacement">Spot<wbr>Fleet<wbr>Spot<wbr>Placement</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="ramdiskid_go">
-<a href="#ramdiskid_go" style="color: inherit; text-decoration: inherit;">Ramdisk<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="securitygroups_go">
-<a href="#securitygroups_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetgroupidentifier">[]Spot<wbr>Fleet<wbr>Group<wbr>Identifier</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="spotprice_go">
-<a href="#spotprice_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Price</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="subnetid_go">
-<a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tagspecifications_go">
-<a href="#tagspecifications_go" style="color: inherit; text-decoration: inherit;">Tag<wbr>Specifications</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetspotfleettagspecification">[]Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="userdata_go">
-<a href="#userdata_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="weightedcapacity_go">
-<a href="#weightedcapacity_go" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Capacity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float64</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="imageid_nodejs">
-<a href="#imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="instancetype_nodejs">
-<a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="blockdevicemappings_nodejs">
-<a href="#blockdevicemappings_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Device<wbr>Mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetblockdevicemapping">Spot<wbr>Fleet<wbr>Block<wbr>Device<wbr>Mapping[]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="ebsoptimized_nodejs">
-<a href="#ebsoptimized_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Optimized</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="iaminstanceprofile_nodejs">
-<a href="#iaminstanceprofile_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Instance<wbr>Profile</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetiaminstanceprofilespecification">Spot<wbr>Fleet<wbr>Iam<wbr>Instance<wbr>Profile<wbr>Specification</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kernelid_nodejs">
-<a href="#kernelid_nodejs" style="color: inherit; text-decoration: inherit;">kernel<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="keyname_nodejs">
-<a href="#keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="monitoring_nodejs">
-<a href="#monitoring_nodejs" style="color: inherit; text-decoration: inherit;">monitoring</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetspotfleetmonitoring">Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Monitoring</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="networkinterfaces_nodejs">
-<a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetinstancenetworkinterfacespecification">Spot<wbr>Fleet<wbr>Instance<wbr>Network<wbr>Interface<wbr>Specification[]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="placement_nodejs">
-<a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetspotplacement">Spot<wbr>Fleet<wbr>Spot<wbr>Placement</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="ramdiskid_nodejs">
-<a href="#ramdiskid_nodejs" style="color: inherit; text-decoration: inherit;">ramdisk<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="securitygroups_nodejs">
-<a href="#securitygroups_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Groups</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetgroupidentifier">Spot<wbr>Fleet<wbr>Group<wbr>Identifier[]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="spotprice_nodejs">
-<a href="#spotprice_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Price</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="subnetid_nodejs">
-<a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tagspecifications_nodejs">
-<a href="#tagspecifications_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Specifications</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetspotfleettagspecification">Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification[]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="userdata_nodejs">
-<a href="#userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="weightedcapacity_nodejs">
-<a href="#weightedcapacity_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Capacity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="image_id_python">
-<a href="#image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="instance_type_python">
-<a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="block_device_mappings_python">
-<a href="#block_device_mappings_python" style="color: inherit; text-decoration: inherit;">block_<wbr>device_<wbr>mappings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetblockdevicemapping">Sequence[Spot<wbr>Fleet<wbr>Block<wbr>Device<wbr>Mapping]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="ebs_optimized_python">
-<a href="#ebs_optimized_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>optimized</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="iam_instance_profile_python">
-<a href="#iam_instance_profile_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>instance_<wbr>profile</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetiaminstanceprofilespecification">Spot<wbr>Fleet<wbr>Iam<wbr>Instance<wbr>Profile<wbr>Specification</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kernel_id_python">
-<a href="#kernel_id_python" style="color: inherit; text-decoration: inherit;">kernel_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="key_name_python">
-<a href="#key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="monitoring_python">
-<a href="#monitoring_python" style="color: inherit; text-decoration: inherit;">monitoring</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetspotfleetmonitoring">Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Monitoring</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="network_interfaces_python">
-<a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetinstancenetworkinterfacespecification">Sequence[Spot<wbr>Fleet<wbr>Instance<wbr>Network<wbr>Interface<wbr>Specification]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="placement_python">
-<a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetspotplacement">Spot<wbr>Fleet<wbr>Spot<wbr>Placement</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="ramdisk_id_python">
-<a href="#ramdisk_id_python" style="color: inherit; text-decoration: inherit;">ramdisk_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="security_groups_python">
-<a href="#security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetgroupidentifier">Sequence[Spot<wbr>Fleet<wbr>Group<wbr>Identifier]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="spot_price_python">
-<a href="#spot_price_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>price</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="subnet_id_python">
-<a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tag_specifications_python">
-<a href="#tag_specifications_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>specifications</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetspotfleettagspecification">Sequence[Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="user_data_python">
-<a href="#user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="weighted_capacity_python">
-<a href="#weighted_capacity_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>capacity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="spotfleetspotfleetmonitoring">Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Monitoring</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="enabled_csharp">
-<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="enabled_go">
-<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="enabled_nodejs">
-<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="enabled_python">
-<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="spotfleetspotfleetrequestconfigdata">Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data</h4>
+<h4 id="spotfleetrequestconfigdata">Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
@@ -2538,7 +2466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allocationstrategy_csharp" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetspotfleetrequestconfigdataallocationstrategy">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Allocation<wbr>Strategy</a></span>
+        <span class="property-type"><a href="#spotfleetrequestconfigdataallocationstrategy">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Allocation<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2554,7 +2482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excesscapacityterminationpolicy_csharp" style="color: inherit; text-decoration: inherit;">Excess<wbr>Capacity<wbr>Termination<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetspotfleetrequestconfigdataexcesscapacityterminationpolicy">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Excess<wbr>Capacity<wbr>Termination<wbr>Policy</a></span>
+        <span class="property-type"><a href="#spotfleetrequestconfigdataexcesscapacityterminationpolicy">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Excess<wbr>Capacity<wbr>Termination<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2562,7 +2490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instanceinterruptionbehavior_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Interruption<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetspotfleetrequestconfigdatainstanceinterruptionbehavior">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Instance<wbr>Interruption<wbr>Behavior</a></span>
+        <span class="property-type"><a href="#spotfleetrequestconfigdatainstanceinterruptionbehavior">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Instance<wbr>Interruption<wbr>Behavior</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2578,7 +2506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#launchspecifications_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetspotfleetlaunchspecification">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Inputs.<wbr>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Launch<wbr>Specification&gt;</a></span>
+        <span class="property-type"><a href="#spotfleetlaunchspecification">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Inputs.<wbr>Spot<wbr>Fleet<wbr>Launch<wbr>Specification&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2666,7 +2594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetspotfleetrequestconfigdatatype">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Type</a></span>
+        <span class="property-type"><a href="#spotfleetrequestconfigdatatype">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2710,7 +2638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allocationstrategy_go" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetspotfleetrequestconfigdataallocationstrategy">Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Allocation<wbr>Strategy</a></span>
+        <span class="property-type"><a href="#spotfleetrequestconfigdataallocationstrategy">Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Allocation<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2726,7 +2654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excesscapacityterminationpolicy_go" style="color: inherit; text-decoration: inherit;">Excess<wbr>Capacity<wbr>Termination<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetspotfleetrequestconfigdataexcesscapacityterminationpolicy">Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Excess<wbr>Capacity<wbr>Termination<wbr>Policy</a></span>
+        <span class="property-type"><a href="#spotfleetrequestconfigdataexcesscapacityterminationpolicy">Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Excess<wbr>Capacity<wbr>Termination<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2734,7 +2662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instanceinterruptionbehavior_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Interruption<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetspotfleetrequestconfigdatainstanceinterruptionbehavior">Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Instance<wbr>Interruption<wbr>Behavior</a></span>
+        <span class="property-type"><a href="#spotfleetrequestconfigdatainstanceinterruptionbehavior">Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Instance<wbr>Interruption<wbr>Behavior</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2750,7 +2678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#launchspecifications_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetspotfleetlaunchspecification">[]Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Launch<wbr>Specification</a></span>
+        <span class="property-type"><a href="#spotfleetlaunchspecification">[]Spot<wbr>Fleet<wbr>Launch<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2838,7 +2766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetspotfleetrequestconfigdatatype">Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Type</a></span>
+        <span class="property-type"><a href="#spotfleetrequestconfigdatatype">Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2882,7 +2810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allocationstrategy_nodejs" style="color: inherit; text-decoration: inherit;">allocation<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetspotfleetrequestconfigdataallocationstrategy">Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Allocation<wbr>Strategy</a></span>
+        <span class="property-type"><a href="#spotfleetrequestconfigdataallocationstrategy">Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Allocation<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2898,7 +2826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excesscapacityterminationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">excess<wbr>Capacity<wbr>Termination<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetspotfleetrequestconfigdataexcesscapacityterminationpolicy">Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Excess<wbr>Capacity<wbr>Termination<wbr>Policy</a></span>
+        <span class="property-type"><a href="#spotfleetrequestconfigdataexcesscapacityterminationpolicy">Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Excess<wbr>Capacity<wbr>Termination<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2906,7 +2834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instanceinterruptionbehavior_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Interruption<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetspotfleetrequestconfigdatainstanceinterruptionbehavior">Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Instance<wbr>Interruption<wbr>Behavior</a></span>
+        <span class="property-type"><a href="#spotfleetrequestconfigdatainstanceinterruptionbehavior">Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Instance<wbr>Interruption<wbr>Behavior</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2922,7 +2850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#launchspecifications_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetspotfleetlaunchspecification">Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Launch<wbr>Specification[]</a></span>
+        <span class="property-type"><a href="#spotfleetlaunchspecification">Spot<wbr>Fleet<wbr>Launch<wbr>Specification[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3010,7 +2938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetspotfleetrequestconfigdatatype">Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Type</a></span>
+        <span class="property-type"><a href="#spotfleetrequestconfigdatatype">Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3054,7 +2982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allocation_strategy_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetspotfleetrequestconfigdataallocationstrategy">Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Allocation<wbr>Strategy</a></span>
+        <span class="property-type"><a href="#spotfleetrequestconfigdataallocationstrategy">Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Allocation<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3070,7 +2998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excess_capacity_termination_policy_python" style="color: inherit; text-decoration: inherit;">excess_<wbr>capacity_<wbr>termination_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetspotfleetrequestconfigdataexcesscapacityterminationpolicy">Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Excess<wbr>Capacity<wbr>Termination<wbr>Policy</a></span>
+        <span class="property-type"><a href="#spotfleetrequestconfigdataexcesscapacityterminationpolicy">Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Excess<wbr>Capacity<wbr>Termination<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3078,7 +3006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instance_interruption_behavior_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>interruption_<wbr>behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetspotfleetrequestconfigdatainstanceinterruptionbehavior">Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Instance<wbr>Interruption<wbr>Behavior</a></span>
+        <span class="property-type"><a href="#spotfleetrequestconfigdatainstanceinterruptionbehavior">Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Instance<wbr>Interruption<wbr>Behavior</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3094,7 +3022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#launch_specifications_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetspotfleetlaunchspecification">Sequence[Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Launch<wbr>Specification]</a></span>
+        <span class="property-type"><a href="#spotfleetlaunchspecification">Sequence[Spot<wbr>Fleet<wbr>Launch<wbr>Specification]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3182,7 +3110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetspotfleetrequestconfigdatatype">Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Type</a></span>
+        <span class="property-type"><a href="#spotfleetrequestconfigdatatype">Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3203,7 +3131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="spotfleetspotfleetrequestconfigdataallocationstrategy">Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Allocation<wbr>Strategy</h4>
+<h4 id="spotfleetrequestconfigdataallocationstrategy">Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Allocation<wbr>Strategy</h4>
 
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>Capacity<wbr>Optimized</dt>
@@ -3214,10 +3142,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular"><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Allocation<wbr>Strategy<wbr>Capacity<wbr>Optimized</dt>
-    <dd>capacityOptimized</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Allocation<wbr>Strategy<wbr>Capacity<wbr>Optimized<wbr>Prioritized</dt>
-    <dd>capacityOptimizedPrioritized</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Allocation<wbr>Strategy<wbr>Diversified</dt>
-    <dd>diversified</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Allocation<wbr>Strategy<wbr>Lowest<wbr>Price</dt>
+<dl class="tabular"><dt>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Allocation<wbr>Strategy<wbr>Capacity<wbr>Optimized</dt>
+    <dd>capacityOptimized</dd><dt>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Allocation<wbr>Strategy<wbr>Capacity<wbr>Optimized<wbr>Prioritized</dt>
+    <dd>capacityOptimizedPrioritized</dd><dt>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Allocation<wbr>Strategy<wbr>Diversified</dt>
+    <dd>diversified</dd><dt>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Allocation<wbr>Strategy<wbr>Lowest<wbr>Price</dt>
     <dd>lowestPrice</dd></dl>
 {{% /choosable %}}
 
@@ -3237,7 +3165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>lowestPrice</dd></dl>
 {{% /choosable %}}
 
-<h4 id="spotfleetspotfleetrequestconfigdataexcesscapacityterminationpolicy">Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Excess<wbr>Capacity<wbr>Termination<wbr>Policy</h4>
+<h4 id="spotfleetrequestconfigdataexcesscapacityterminationpolicy">Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Excess<wbr>Capacity<wbr>Termination<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>Default</dt>
@@ -3246,8 +3174,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular"><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Excess<wbr>Capacity<wbr>Termination<wbr>Policy<wbr>Default</dt>
-    <dd>Default</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Excess<wbr>Capacity<wbr>Termination<wbr>Policy<wbr>No<wbr>Termination</dt>
+<dl class="tabular"><dt>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Excess<wbr>Capacity<wbr>Termination<wbr>Policy<wbr>Default</dt>
+    <dd>Default</dd><dt>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Excess<wbr>Capacity<wbr>Termination<wbr>Policy<wbr>No<wbr>Termination</dt>
     <dd>NoTermination</dd></dl>
 {{% /choosable %}}
 
@@ -3263,7 +3191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>NoTermination</dd></dl>
 {{% /choosable %}}
 
-<h4 id="spotfleetspotfleetrequestconfigdatainstanceinterruptionbehavior">Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Instance<wbr>Interruption<wbr>Behavior</h4>
+<h4 id="spotfleetrequestconfigdatainstanceinterruptionbehavior">Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Instance<wbr>Interruption<wbr>Behavior</h4>
 
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>Hibernate</dt>
@@ -3273,9 +3201,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular"><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Instance<wbr>Interruption<wbr>Behavior<wbr>Hibernate</dt>
-    <dd>hibernate</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Instance<wbr>Interruption<wbr>Behavior<wbr>Stop</dt>
-    <dd>stop</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Instance<wbr>Interruption<wbr>Behavior<wbr>Terminate</dt>
+<dl class="tabular"><dt>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Instance<wbr>Interruption<wbr>Behavior<wbr>Hibernate</dt>
+    <dd>hibernate</dd><dt>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Instance<wbr>Interruption<wbr>Behavior<wbr>Stop</dt>
+    <dd>stop</dd><dt>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Instance<wbr>Interruption<wbr>Behavior<wbr>Terminate</dt>
     <dd>terminate</dd></dl>
 {{% /choosable %}}
 
@@ -3293,7 +3221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>terminate</dd></dl>
 {{% /choosable %}}
 
-<h4 id="spotfleetspotfleetrequestconfigdatatype">Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Type</h4>
+<h4 id="spotfleetrequestconfigdatatype">Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Type</h4>
 
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>Maintain</dt>
@@ -3302,8 +3230,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular"><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Type<wbr>Maintain</dt>
-    <dd>maintain</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Type<wbr>Request</dt>
+<dl class="tabular"><dt>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Type<wbr>Maintain</dt>
+    <dd>maintain</dd><dt>Spot<wbr>Fleet<wbr>Request<wbr>Config<wbr>Data<wbr>Type<wbr>Request</dt>
     <dd>request</dd></dl>
 {{% /choosable %}}
 
@@ -3319,24 +3247,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>request</dd></dl>
 {{% /choosable %}}
 
-<h4 id="spotfleetspotfleettagspecification">Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification</h4>
+<h4 id="spotfleetspotcapacityrebalance">Spot<wbr>Fleet<wbr>Spot<wbr>Capacity<wbr>Rebalance</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="resourcetype_csharp">
-<a href="#resourcetype_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
+        <span id="replacementstrategy_csharp">
+<a href="#replacementstrategy_csharp" style="color: inherit; text-decoration: inherit;">Replacement<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetspotfleettagspecificationresourcetype">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tags_csharp">
-<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleettag">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Inputs.<wbr>Spot<wbr>Fleet<wbr>Tag&gt;</a></span>
+        <span class="property-type"><a href="#spotfleetspotcapacityrebalancereplacementstrategy">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Spot<wbr>Fleet<wbr>Spot<wbr>Capacity<wbr>Rebalance<wbr>Replacement<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3344,19 +3264,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="resourcetype_go">
-<a href="#resourcetype_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
+        <span id="replacementstrategy_go">
+<a href="#replacementstrategy_go" style="color: inherit; text-decoration: inherit;">Replacement<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetspotfleettagspecificationresourcetype">Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tags_go">
-<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleettag">[]Spot<wbr>Fleet<wbr>Tag</a></span>
+        <span class="property-type"><a href="#spotfleetspotcapacityrebalancereplacementstrategy">Spot<wbr>Fleet<wbr>Spot<wbr>Capacity<wbr>Rebalance<wbr>Replacement<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3364,19 +3276,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="resourcetype_nodejs">
-<a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
+        <span id="replacementstrategy_nodejs">
+<a href="#replacementstrategy_nodejs" style="color: inherit; text-decoration: inherit;">replacement<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetspotfleettagspecificationresourcetype">Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tags_nodejs">
-<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleettag">Spot<wbr>Fleet<wbr>Tag[]</a></span>
+        <span class="property-type"><a href="#spotfleetspotcapacityrebalancereplacementstrategy">Spot<wbr>Fleet<wbr>Spot<wbr>Capacity<wbr>Rebalance<wbr>Replacement<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3384,227 +3288,35 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="resource_type_python">
-<a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
+        <span id="replacement_strategy_python">
+<a href="#replacement_strategy_python" style="color: inherit; text-decoration: inherit;">replacement_<wbr>strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetspotfleettagspecificationresourcetype">Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tags_python">
-<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleettag">Sequence[Spot<wbr>Fleet<wbr>Tag]</a></span>
+        <span class="property-type"><a href="#spotfleetspotcapacityrebalancereplacementstrategy">Spot<wbr>Fleet<wbr>Spot<wbr>Capacity<wbr>Rebalance<wbr>Replacement<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="spotfleetspotfleettagspecificationresourcetype">Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type</h4>
+<h4 id="spotfleetspotcapacityrebalancereplacementstrategy">Spot<wbr>Fleet<wbr>Spot<wbr>Capacity<wbr>Rebalance<wbr>Replacement<wbr>Strategy</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular"><dt>Client<wbr>Vpn<wbr>Endpoint</dt>
-    <dd>client-vpn-endpoint</dd><dt>Customer<wbr>Gateway</dt>
-    <dd>customer-gateway</dd><dt>Dedicated<wbr>Host</dt>
-    <dd>dedicated-host</dd><dt>Dhcp<wbr>Options</dt>
-    <dd>dhcp-options</dd><dt>Egress<wbr>Only<wbr>Internet<wbr>Gateway</dt>
-    <dd>egress-only-internet-gateway</dd><dt>Elastic<wbr>Gpu</dt>
-    <dd>elastic-gpu</dd><dt>Elastic<wbr>Ip</dt>
-    <dd>elastic-ip</dd><dt>Export<wbr>Image<wbr>Task</dt>
-    <dd>export-image-task</dd><dt>Export<wbr>Instance<wbr>Task</dt>
-    <dd>export-instance-task</dd><dt>Fleet</dt>
-    <dd>fleet</dd><dt>Fpga<wbr>Image</dt>
-    <dd>fpga-image</dd><dt>Host<wbr>Reservation</dt>
-    <dd>host-reservation</dd><dt>Image</dt>
-    <dd>image</dd><dt>Import<wbr>Image<wbr>Task</dt>
-    <dd>import-image-task</dd><dt>Import<wbr>Snapshot<wbr>Task</dt>
-    <dd>import-snapshot-task</dd><dt>Instance</dt>
-    <dd>instance</dd><dt>Internet<wbr>Gateway</dt>
-    <dd>internet-gateway</dd><dt>Key<wbr>Pair</dt>
-    <dd>key-pair</dd><dt>Launch<wbr>Template</dt>
-    <dd>launch-template</dd><dt>Local<wbr>Gateway<wbr>Route<wbr>Table<wbr>Vpc<wbr>Association</dt>
-    <dd>local-gateway-route-table-vpc-association</dd><dt>Natgateway</dt>
-    <dd>natgateway</dd><dt>Network<wbr>Acl</dt>
-    <dd>network-acl</dd><dt>Network<wbr>Insights<wbr>Analysis</dt>
-    <dd>network-insights-analysis</dd><dt>Network<wbr>Insights<wbr>Path</dt>
-    <dd>network-insights-path</dd><dt>Network<wbr>Interface</dt>
-    <dd>network-interface</dd><dt>Placement<wbr>Group</dt>
-    <dd>placement-group</dd><dt>Reserved<wbr>Instances</dt>
-    <dd>reserved-instances</dd><dt>Route<wbr>Table</dt>
-    <dd>route-table</dd><dt>Security<wbr>Group</dt>
-    <dd>security-group</dd><dt>Snapshot</dt>
-    <dd>snapshot</dd><dt>Spot<wbr>Fleet<wbr>Request</dt>
-    <dd>spot-fleet-request</dd><dt>Spot<wbr>Instances<wbr>Request</dt>
-    <dd>spot-instances-request</dd><dt>Subnet</dt>
-    <dd>subnet</dd><dt>Traffic<wbr>Mirror<wbr>Filter</dt>
-    <dd>traffic-mirror-filter</dd><dt>Traffic<wbr>Mirror<wbr>Session</dt>
-    <dd>traffic-mirror-session</dd><dt>Traffic<wbr>Mirror<wbr>Target</dt>
-    <dd>traffic-mirror-target</dd><dt>Transit<wbr>Gateway</dt>
-    <dd>transit-gateway</dd><dt>Transit<wbr>Gateway<wbr>Attachment</dt>
-    <dd>transit-gateway-attachment</dd><dt>Transit<wbr>Gateway<wbr>Connect<wbr>Peer</dt>
-    <dd>transit-gateway-connect-peer</dd><dt>Transit<wbr>Gateway<wbr>Multicast<wbr>Domain</dt>
-    <dd>transit-gateway-multicast-domain</dd><dt>Transit<wbr>Gateway<wbr>Route<wbr>Table</dt>
-    <dd>transit-gateway-route-table</dd><dt>Volume</dt>
-    <dd>volume</dd><dt>Vpc</dt>
-    <dd>vpc</dd><dt>Vpc<wbr>Flow<wbr>Log</dt>
-    <dd>vpc-flow-log</dd><dt>Vpc<wbr>Peering<wbr>Connection</dt>
-    <dd>vpc-peering-connection</dd><dt>Vpn<wbr>Connection</dt>
-    <dd>vpn-connection</dd><dt>Vpn<wbr>Gateway</dt>
-    <dd>vpn-gateway</dd></dl>
+<dl class="tabular"><dt>Launch</dt>
+    <dd>launch</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular"><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Client<wbr>Vpn<wbr>Endpoint</dt>
-    <dd>client-vpn-endpoint</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Customer<wbr>Gateway</dt>
-    <dd>customer-gateway</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Dedicated<wbr>Host</dt>
-    <dd>dedicated-host</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Dhcp<wbr>Options</dt>
-    <dd>dhcp-options</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Egress<wbr>Only<wbr>Internet<wbr>Gateway</dt>
-    <dd>egress-only-internet-gateway</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Elastic<wbr>Gpu</dt>
-    <dd>elastic-gpu</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Elastic<wbr>Ip</dt>
-    <dd>elastic-ip</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Export<wbr>Image<wbr>Task</dt>
-    <dd>export-image-task</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Export<wbr>Instance<wbr>Task</dt>
-    <dd>export-instance-task</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Fleet</dt>
-    <dd>fleet</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Fpga<wbr>Image</dt>
-    <dd>fpga-image</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Host<wbr>Reservation</dt>
-    <dd>host-reservation</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Image</dt>
-    <dd>image</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Import<wbr>Image<wbr>Task</dt>
-    <dd>import-image-task</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Import<wbr>Snapshot<wbr>Task</dt>
-    <dd>import-snapshot-task</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Instance</dt>
-    <dd>instance</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Internet<wbr>Gateway</dt>
-    <dd>internet-gateway</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Key<wbr>Pair</dt>
-    <dd>key-pair</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Launch<wbr>Template</dt>
-    <dd>launch-template</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Local<wbr>Gateway<wbr>Route<wbr>Table<wbr>Vpc<wbr>Association</dt>
-    <dd>local-gateway-route-table-vpc-association</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Natgateway</dt>
-    <dd>natgateway</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Network<wbr>Acl</dt>
-    <dd>network-acl</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Network<wbr>Insights<wbr>Analysis</dt>
-    <dd>network-insights-analysis</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Network<wbr>Insights<wbr>Path</dt>
-    <dd>network-insights-path</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Network<wbr>Interface</dt>
-    <dd>network-interface</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Placement<wbr>Group</dt>
-    <dd>placement-group</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Reserved<wbr>Instances</dt>
-    <dd>reserved-instances</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Route<wbr>Table</dt>
-    <dd>route-table</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Security<wbr>Group</dt>
-    <dd>security-group</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Snapshot</dt>
-    <dd>snapshot</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Spot<wbr>Fleet<wbr>Request</dt>
-    <dd>spot-fleet-request</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Spot<wbr>Instances<wbr>Request</dt>
-    <dd>spot-instances-request</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Subnet</dt>
-    <dd>subnet</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Traffic<wbr>Mirror<wbr>Filter</dt>
-    <dd>traffic-mirror-filter</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Traffic<wbr>Mirror<wbr>Session</dt>
-    <dd>traffic-mirror-session</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Traffic<wbr>Mirror<wbr>Target</dt>
-    <dd>traffic-mirror-target</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Transit<wbr>Gateway</dt>
-    <dd>transit-gateway</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Transit<wbr>Gateway<wbr>Attachment</dt>
-    <dd>transit-gateway-attachment</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Transit<wbr>Gateway<wbr>Connect<wbr>Peer</dt>
-    <dd>transit-gateway-connect-peer</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Transit<wbr>Gateway<wbr>Multicast<wbr>Domain</dt>
-    <dd>transit-gateway-multicast-domain</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Transit<wbr>Gateway<wbr>Route<wbr>Table</dt>
-    <dd>transit-gateway-route-table</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Volume</dt>
-    <dd>volume</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Vpc</dt>
-    <dd>vpc</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Vpc<wbr>Flow<wbr>Log</dt>
-    <dd>vpc-flow-log</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Vpc<wbr>Peering<wbr>Connection</dt>
-    <dd>vpc-peering-connection</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Vpn<wbr>Connection</dt>
-    <dd>vpn-connection</dd><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Vpn<wbr>Gateway</dt>
-    <dd>vpn-gateway</dd></dl>
+<dl class="tabular"><dt>Spot<wbr>Fleet<wbr>Spot<wbr>Capacity<wbr>Rebalance<wbr>Replacement<wbr>Strategy<wbr>Launch</dt>
+    <dd>launch</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular"><dt>Client<wbr>Vpn<wbr>Endpoint</dt>
-    <dd>client-vpn-endpoint</dd><dt>Customer<wbr>Gateway</dt>
-    <dd>customer-gateway</dd><dt>Dedicated<wbr>Host</dt>
-    <dd>dedicated-host</dd><dt>Dhcp<wbr>Options</dt>
-    <dd>dhcp-options</dd><dt>Egress<wbr>Only<wbr>Internet<wbr>Gateway</dt>
-    <dd>egress-only-internet-gateway</dd><dt>Elastic<wbr>Gpu</dt>
-    <dd>elastic-gpu</dd><dt>Elastic<wbr>Ip</dt>
-    <dd>elastic-ip</dd><dt>Export<wbr>Image<wbr>Task</dt>
-    <dd>export-image-task</dd><dt>Export<wbr>Instance<wbr>Task</dt>
-    <dd>export-instance-task</dd><dt>Fleet</dt>
-    <dd>fleet</dd><dt>Fpga<wbr>Image</dt>
-    <dd>fpga-image</dd><dt>Host<wbr>Reservation</dt>
-    <dd>host-reservation</dd><dt>Image</dt>
-    <dd>image</dd><dt>Import<wbr>Image<wbr>Task</dt>
-    <dd>import-image-task</dd><dt>Import<wbr>Snapshot<wbr>Task</dt>
-    <dd>import-snapshot-task</dd><dt>Instance</dt>
-    <dd>instance</dd><dt>Internet<wbr>Gateway</dt>
-    <dd>internet-gateway</dd><dt>Key<wbr>Pair</dt>
-    <dd>key-pair</dd><dt>Launch<wbr>Template</dt>
-    <dd>launch-template</dd><dt>Local<wbr>Gateway<wbr>Route<wbr>Table<wbr>Vpc<wbr>Association</dt>
-    <dd>local-gateway-route-table-vpc-association</dd><dt>Natgateway</dt>
-    <dd>natgateway</dd><dt>Network<wbr>Acl</dt>
-    <dd>network-acl</dd><dt>Network<wbr>Insights<wbr>Analysis</dt>
-    <dd>network-insights-analysis</dd><dt>Network<wbr>Insights<wbr>Path</dt>
-    <dd>network-insights-path</dd><dt>Network<wbr>Interface</dt>
-    <dd>network-interface</dd><dt>Placement<wbr>Group</dt>
-    <dd>placement-group</dd><dt>Reserved<wbr>Instances</dt>
-    <dd>reserved-instances</dd><dt>Route<wbr>Table</dt>
-    <dd>route-table</dd><dt>Security<wbr>Group</dt>
-    <dd>security-group</dd><dt>Snapshot</dt>
-    <dd>snapshot</dd><dt>Spot<wbr>Fleet<wbr>Request</dt>
-    <dd>spot-fleet-request</dd><dt>Spot<wbr>Instances<wbr>Request</dt>
-    <dd>spot-instances-request</dd><dt>Subnet</dt>
-    <dd>subnet</dd><dt>Traffic<wbr>Mirror<wbr>Filter</dt>
-    <dd>traffic-mirror-filter</dd><dt>Traffic<wbr>Mirror<wbr>Session</dt>
-    <dd>traffic-mirror-session</dd><dt>Traffic<wbr>Mirror<wbr>Target</dt>
-    <dd>traffic-mirror-target</dd><dt>Transit<wbr>Gateway</dt>
-    <dd>transit-gateway</dd><dt>Transit<wbr>Gateway<wbr>Attachment</dt>
-    <dd>transit-gateway-attachment</dd><dt>Transit<wbr>Gateway<wbr>Connect<wbr>Peer</dt>
-    <dd>transit-gateway-connect-peer</dd><dt>Transit<wbr>Gateway<wbr>Multicast<wbr>Domain</dt>
-    <dd>transit-gateway-multicast-domain</dd><dt>Transit<wbr>Gateway<wbr>Route<wbr>Table</dt>
-    <dd>transit-gateway-route-table</dd><dt>Volume</dt>
-    <dd>volume</dd><dt>Vpc</dt>
-    <dd>vpc</dd><dt>Vpc<wbr>Flow<wbr>Log</dt>
-    <dd>vpc-flow-log</dd><dt>Vpc<wbr>Peering<wbr>Connection</dt>
-    <dd>vpc-peering-connection</dd><dt>Vpn<wbr>Connection</dt>
-    <dd>vpn-connection</dd><dt>Vpn<wbr>Gateway</dt>
-    <dd>vpn-gateway</dd></dl>
+<dl class="tabular"><dt>Launch</dt>
+    <dd>launch</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular"><dt>CLIENT_VPN_ENDPOINT</dt>
-    <dd>client-vpn-endpoint</dd><dt>CUSTOMER_GATEWAY</dt>
-    <dd>customer-gateway</dd><dt>DEDICATED_HOST</dt>
-    <dd>dedicated-host</dd><dt>DHCP_OPTIONS</dt>
-    <dd>dhcp-options</dd><dt>EGRESS_ONLY_INTERNET_GATEWAY</dt>
-    <dd>egress-only-internet-gateway</dd><dt>ELASTIC_GPU</dt>
-    <dd>elastic-gpu</dd><dt>ELASTIC_IP</dt>
-    <dd>elastic-ip</dd><dt>EXPORT_IMAGE_TASK</dt>
-    <dd>export-image-task</dd><dt>EXPORT_INSTANCE_TASK</dt>
-    <dd>export-instance-task</dd><dt>FLEET</dt>
-    <dd>fleet</dd><dt>FPGA_IMAGE</dt>
-    <dd>fpga-image</dd><dt>HOST_RESERVATION</dt>
-    <dd>host-reservation</dd><dt>IMAGE</dt>
-    <dd>image</dd><dt>IMPORT_IMAGE_TASK</dt>
-    <dd>import-image-task</dd><dt>IMPORT_SNAPSHOT_TASK</dt>
-    <dd>import-snapshot-task</dd><dt>INSTANCE</dt>
-    <dd>instance</dd><dt>INTERNET_GATEWAY</dt>
-    <dd>internet-gateway</dd><dt>KEY_PAIR</dt>
-    <dd>key-pair</dd><dt>LAUNCH_TEMPLATE</dt>
-    <dd>launch-template</dd><dt>LOCAL_GATEWAY_ROUTE_TABLE_VPC_ASSOCIATION</dt>
-    <dd>local-gateway-route-table-vpc-association</dd><dt>NATGATEWAY</dt>
-    <dd>natgateway</dd><dt>NETWORK_ACL</dt>
-    <dd>network-acl</dd><dt>NETWORK_INSIGHTS_ANALYSIS</dt>
-    <dd>network-insights-analysis</dd><dt>NETWORK_INSIGHTS_PATH</dt>
-    <dd>network-insights-path</dd><dt>NETWORK_INTERFACE</dt>
-    <dd>network-interface</dd><dt>PLACEMENT_GROUP</dt>
-    <dd>placement-group</dd><dt>RESERVED_INSTANCES</dt>
-    <dd>reserved-instances</dd><dt>ROUTE_TABLE</dt>
-    <dd>route-table</dd><dt>SECURITY_GROUP</dt>
-    <dd>security-group</dd><dt>SNAPSHOT</dt>
-    <dd>snapshot</dd><dt>SPOT_FLEET_REQUEST</dt>
-    <dd>spot-fleet-request</dd><dt>SPOT_INSTANCES_REQUEST</dt>
-    <dd>spot-instances-request</dd><dt>SUBNET</dt>
-    <dd>subnet</dd><dt>TRAFFIC_MIRROR_FILTER</dt>
-    <dd>traffic-mirror-filter</dd><dt>TRAFFIC_MIRROR_SESSION</dt>
-    <dd>traffic-mirror-session</dd><dt>TRAFFIC_MIRROR_TARGET</dt>
-    <dd>traffic-mirror-target</dd><dt>TRANSIT_GATEWAY</dt>
-    <dd>transit-gateway</dd><dt>TRANSIT_GATEWAY_ATTACHMENT</dt>
-    <dd>transit-gateway-attachment</dd><dt>TRANSIT_GATEWAY_CONNECT_PEER</dt>
-    <dd>transit-gateway-connect-peer</dd><dt>TRANSIT_GATEWAY_MULTICAST_DOMAIN</dt>
-    <dd>transit-gateway-multicast-domain</dd><dt>TRANSIT_GATEWAY_ROUTE_TABLE</dt>
-    <dd>transit-gateway-route-table</dd><dt>VOLUME</dt>
-    <dd>volume</dd><dt>VPC</dt>
-    <dd>vpc</dd><dt>VPC_FLOW_LOG</dt>
-    <dd>vpc-flow-log</dd><dt>VPC_PEERING_CONNECTION</dt>
-    <dd>vpc-peering-connection</dd><dt>VPN_CONNECTION</dt>
-    <dd>vpn-connection</dd><dt>VPN_GATEWAY</dt>
-    <dd>vpn-gateway</dd></dl>
+<dl class="tabular"><dt>LAUNCH</dt>
+    <dd>launch</dd></dl>
 {{% /choosable %}}
 
 <h4 id="spotfleetspotmaintenancestrategies">Spot<wbr>Fleet<wbr>Spot<wbr>Maintenance<wbr>Strategies</h4>
@@ -3881,6 +3593,294 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="spotfleettagspecification">Spot<wbr>Fleet<wbr>Tag<wbr>Specification</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="resourcetype_csharp">
+<a href="#resourcetype_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleettagspecificationresourcetype">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleettag">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Inputs.<wbr>Spot<wbr>Fleet<wbr>Tag&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="resourcetype_go">
+<a href="#resourcetype_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleettagspecificationresourcetype">Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleettag">[]Spot<wbr>Fleet<wbr>Tag</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="resourcetype_nodejs">
+<a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleettagspecificationresourcetype">Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleettag">Spot<wbr>Fleet<wbr>Tag[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="resource_type_python">
+<a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleettagspecificationresourcetype">Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleettag">Sequence[Spot<wbr>Fleet<wbr>Tag]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="spotfleettagspecificationresourcetype">Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Client<wbr>Vpn<wbr>Endpoint</dt>
+    <dd>client-vpn-endpoint</dd><dt>Customer<wbr>Gateway</dt>
+    <dd>customer-gateway</dd><dt>Dedicated<wbr>Host</dt>
+    <dd>dedicated-host</dd><dt>Dhcp<wbr>Options</dt>
+    <dd>dhcp-options</dd><dt>Egress<wbr>Only<wbr>Internet<wbr>Gateway</dt>
+    <dd>egress-only-internet-gateway</dd><dt>Elastic<wbr>Gpu</dt>
+    <dd>elastic-gpu</dd><dt>Elastic<wbr>Ip</dt>
+    <dd>elastic-ip</dd><dt>Export<wbr>Image<wbr>Task</dt>
+    <dd>export-image-task</dd><dt>Export<wbr>Instance<wbr>Task</dt>
+    <dd>export-instance-task</dd><dt>Fleet</dt>
+    <dd>fleet</dd><dt>Fpga<wbr>Image</dt>
+    <dd>fpga-image</dd><dt>Host<wbr>Reservation</dt>
+    <dd>host-reservation</dd><dt>Image</dt>
+    <dd>image</dd><dt>Import<wbr>Image<wbr>Task</dt>
+    <dd>import-image-task</dd><dt>Import<wbr>Snapshot<wbr>Task</dt>
+    <dd>import-snapshot-task</dd><dt>Instance</dt>
+    <dd>instance</dd><dt>Internet<wbr>Gateway</dt>
+    <dd>internet-gateway</dd><dt>Key<wbr>Pair</dt>
+    <dd>key-pair</dd><dt>Launch<wbr>Template</dt>
+    <dd>launch-template</dd><dt>Local<wbr>Gateway<wbr>Route<wbr>Table<wbr>Vpc<wbr>Association</dt>
+    <dd>local-gateway-route-table-vpc-association</dd><dt>Natgateway</dt>
+    <dd>natgateway</dd><dt>Network<wbr>Acl</dt>
+    <dd>network-acl</dd><dt>Network<wbr>Insights<wbr>Analysis</dt>
+    <dd>network-insights-analysis</dd><dt>Network<wbr>Insights<wbr>Path</dt>
+    <dd>network-insights-path</dd><dt>Network<wbr>Interface</dt>
+    <dd>network-interface</dd><dt>Placement<wbr>Group</dt>
+    <dd>placement-group</dd><dt>Reserved<wbr>Instances</dt>
+    <dd>reserved-instances</dd><dt>Route<wbr>Table</dt>
+    <dd>route-table</dd><dt>Security<wbr>Group</dt>
+    <dd>security-group</dd><dt>Snapshot</dt>
+    <dd>snapshot</dd><dt>Spot<wbr>Fleet<wbr>Request</dt>
+    <dd>spot-fleet-request</dd><dt>Spot<wbr>Instances<wbr>Request</dt>
+    <dd>spot-instances-request</dd><dt>Subnet</dt>
+    <dd>subnet</dd><dt>Traffic<wbr>Mirror<wbr>Filter</dt>
+    <dd>traffic-mirror-filter</dd><dt>Traffic<wbr>Mirror<wbr>Session</dt>
+    <dd>traffic-mirror-session</dd><dt>Traffic<wbr>Mirror<wbr>Target</dt>
+    <dd>traffic-mirror-target</dd><dt>Transit<wbr>Gateway</dt>
+    <dd>transit-gateway</dd><dt>Transit<wbr>Gateway<wbr>Attachment</dt>
+    <dd>transit-gateway-attachment</dd><dt>Transit<wbr>Gateway<wbr>Connect<wbr>Peer</dt>
+    <dd>transit-gateway-connect-peer</dd><dt>Transit<wbr>Gateway<wbr>Multicast<wbr>Domain</dt>
+    <dd>transit-gateway-multicast-domain</dd><dt>Transit<wbr>Gateway<wbr>Route<wbr>Table</dt>
+    <dd>transit-gateway-route-table</dd><dt>Volume</dt>
+    <dd>volume</dd><dt>Vpc</dt>
+    <dd>vpc</dd><dt>Vpc<wbr>Flow<wbr>Log</dt>
+    <dd>vpc-flow-log</dd><dt>Vpc<wbr>Peering<wbr>Connection</dt>
+    <dd>vpc-peering-connection</dd><dt>Vpn<wbr>Connection</dt>
+    <dd>vpn-connection</dd><dt>Vpn<wbr>Gateway</dt>
+    <dd>vpn-gateway</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Client<wbr>Vpn<wbr>Endpoint</dt>
+    <dd>client-vpn-endpoint</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Customer<wbr>Gateway</dt>
+    <dd>customer-gateway</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Dedicated<wbr>Host</dt>
+    <dd>dedicated-host</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Dhcp<wbr>Options</dt>
+    <dd>dhcp-options</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Egress<wbr>Only<wbr>Internet<wbr>Gateway</dt>
+    <dd>egress-only-internet-gateway</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Elastic<wbr>Gpu</dt>
+    <dd>elastic-gpu</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Elastic<wbr>Ip</dt>
+    <dd>elastic-ip</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Export<wbr>Image<wbr>Task</dt>
+    <dd>export-image-task</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Export<wbr>Instance<wbr>Task</dt>
+    <dd>export-instance-task</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Fleet</dt>
+    <dd>fleet</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Fpga<wbr>Image</dt>
+    <dd>fpga-image</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Host<wbr>Reservation</dt>
+    <dd>host-reservation</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Image</dt>
+    <dd>image</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Import<wbr>Image<wbr>Task</dt>
+    <dd>import-image-task</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Import<wbr>Snapshot<wbr>Task</dt>
+    <dd>import-snapshot-task</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Instance</dt>
+    <dd>instance</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Internet<wbr>Gateway</dt>
+    <dd>internet-gateway</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Key<wbr>Pair</dt>
+    <dd>key-pair</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Launch<wbr>Template</dt>
+    <dd>launch-template</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Local<wbr>Gateway<wbr>Route<wbr>Table<wbr>Vpc<wbr>Association</dt>
+    <dd>local-gateway-route-table-vpc-association</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Natgateway</dt>
+    <dd>natgateway</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Network<wbr>Acl</dt>
+    <dd>network-acl</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Network<wbr>Insights<wbr>Analysis</dt>
+    <dd>network-insights-analysis</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Network<wbr>Insights<wbr>Path</dt>
+    <dd>network-insights-path</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Network<wbr>Interface</dt>
+    <dd>network-interface</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Placement<wbr>Group</dt>
+    <dd>placement-group</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Reserved<wbr>Instances</dt>
+    <dd>reserved-instances</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Route<wbr>Table</dt>
+    <dd>route-table</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Security<wbr>Group</dt>
+    <dd>security-group</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Snapshot</dt>
+    <dd>snapshot</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Spot<wbr>Fleet<wbr>Request</dt>
+    <dd>spot-fleet-request</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Spot<wbr>Instances<wbr>Request</dt>
+    <dd>spot-instances-request</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Subnet</dt>
+    <dd>subnet</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Traffic<wbr>Mirror<wbr>Filter</dt>
+    <dd>traffic-mirror-filter</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Traffic<wbr>Mirror<wbr>Session</dt>
+    <dd>traffic-mirror-session</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Traffic<wbr>Mirror<wbr>Target</dt>
+    <dd>traffic-mirror-target</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Transit<wbr>Gateway</dt>
+    <dd>transit-gateway</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Transit<wbr>Gateway<wbr>Attachment</dt>
+    <dd>transit-gateway-attachment</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Transit<wbr>Gateway<wbr>Connect<wbr>Peer</dt>
+    <dd>transit-gateway-connect-peer</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Transit<wbr>Gateway<wbr>Multicast<wbr>Domain</dt>
+    <dd>transit-gateway-multicast-domain</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Transit<wbr>Gateway<wbr>Route<wbr>Table</dt>
+    <dd>transit-gateway-route-table</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Volume</dt>
+    <dd>volume</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Vpc</dt>
+    <dd>vpc</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Vpc<wbr>Flow<wbr>Log</dt>
+    <dd>vpc-flow-log</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Vpc<wbr>Peering<wbr>Connection</dt>
+    <dd>vpc-peering-connection</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Vpn<wbr>Connection</dt>
+    <dd>vpn-connection</dd><dt>Spot<wbr>Fleet<wbr>Tag<wbr>Specification<wbr>Resource<wbr>Type<wbr>Vpn<wbr>Gateway</dt>
+    <dd>vpn-gateway</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Client<wbr>Vpn<wbr>Endpoint</dt>
+    <dd>client-vpn-endpoint</dd><dt>Customer<wbr>Gateway</dt>
+    <dd>customer-gateway</dd><dt>Dedicated<wbr>Host</dt>
+    <dd>dedicated-host</dd><dt>Dhcp<wbr>Options</dt>
+    <dd>dhcp-options</dd><dt>Egress<wbr>Only<wbr>Internet<wbr>Gateway</dt>
+    <dd>egress-only-internet-gateway</dd><dt>Elastic<wbr>Gpu</dt>
+    <dd>elastic-gpu</dd><dt>Elastic<wbr>Ip</dt>
+    <dd>elastic-ip</dd><dt>Export<wbr>Image<wbr>Task</dt>
+    <dd>export-image-task</dd><dt>Export<wbr>Instance<wbr>Task</dt>
+    <dd>export-instance-task</dd><dt>Fleet</dt>
+    <dd>fleet</dd><dt>Fpga<wbr>Image</dt>
+    <dd>fpga-image</dd><dt>Host<wbr>Reservation</dt>
+    <dd>host-reservation</dd><dt>Image</dt>
+    <dd>image</dd><dt>Import<wbr>Image<wbr>Task</dt>
+    <dd>import-image-task</dd><dt>Import<wbr>Snapshot<wbr>Task</dt>
+    <dd>import-snapshot-task</dd><dt>Instance</dt>
+    <dd>instance</dd><dt>Internet<wbr>Gateway</dt>
+    <dd>internet-gateway</dd><dt>Key<wbr>Pair</dt>
+    <dd>key-pair</dd><dt>Launch<wbr>Template</dt>
+    <dd>launch-template</dd><dt>Local<wbr>Gateway<wbr>Route<wbr>Table<wbr>Vpc<wbr>Association</dt>
+    <dd>local-gateway-route-table-vpc-association</dd><dt>Natgateway</dt>
+    <dd>natgateway</dd><dt>Network<wbr>Acl</dt>
+    <dd>network-acl</dd><dt>Network<wbr>Insights<wbr>Analysis</dt>
+    <dd>network-insights-analysis</dd><dt>Network<wbr>Insights<wbr>Path</dt>
+    <dd>network-insights-path</dd><dt>Network<wbr>Interface</dt>
+    <dd>network-interface</dd><dt>Placement<wbr>Group</dt>
+    <dd>placement-group</dd><dt>Reserved<wbr>Instances</dt>
+    <dd>reserved-instances</dd><dt>Route<wbr>Table</dt>
+    <dd>route-table</dd><dt>Security<wbr>Group</dt>
+    <dd>security-group</dd><dt>Snapshot</dt>
+    <dd>snapshot</dd><dt>Spot<wbr>Fleet<wbr>Request</dt>
+    <dd>spot-fleet-request</dd><dt>Spot<wbr>Instances<wbr>Request</dt>
+    <dd>spot-instances-request</dd><dt>Subnet</dt>
+    <dd>subnet</dd><dt>Traffic<wbr>Mirror<wbr>Filter</dt>
+    <dd>traffic-mirror-filter</dd><dt>Traffic<wbr>Mirror<wbr>Session</dt>
+    <dd>traffic-mirror-session</dd><dt>Traffic<wbr>Mirror<wbr>Target</dt>
+    <dd>traffic-mirror-target</dd><dt>Transit<wbr>Gateway</dt>
+    <dd>transit-gateway</dd><dt>Transit<wbr>Gateway<wbr>Attachment</dt>
+    <dd>transit-gateway-attachment</dd><dt>Transit<wbr>Gateway<wbr>Connect<wbr>Peer</dt>
+    <dd>transit-gateway-connect-peer</dd><dt>Transit<wbr>Gateway<wbr>Multicast<wbr>Domain</dt>
+    <dd>transit-gateway-multicast-domain</dd><dt>Transit<wbr>Gateway<wbr>Route<wbr>Table</dt>
+    <dd>transit-gateway-route-table</dd><dt>Volume</dt>
+    <dd>volume</dd><dt>Vpc</dt>
+    <dd>vpc</dd><dt>Vpc<wbr>Flow<wbr>Log</dt>
+    <dd>vpc-flow-log</dd><dt>Vpc<wbr>Peering<wbr>Connection</dt>
+    <dd>vpc-peering-connection</dd><dt>Vpn<wbr>Connection</dt>
+    <dd>vpn-connection</dd><dt>Vpn<wbr>Gateway</dt>
+    <dd>vpn-gateway</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CLIENT_VPN_ENDPOINT</dt>
+    <dd>client-vpn-endpoint</dd><dt>CUSTOMER_GATEWAY</dt>
+    <dd>customer-gateway</dd><dt>DEDICATED_HOST</dt>
+    <dd>dedicated-host</dd><dt>DHCP_OPTIONS</dt>
+    <dd>dhcp-options</dd><dt>EGRESS_ONLY_INTERNET_GATEWAY</dt>
+    <dd>egress-only-internet-gateway</dd><dt>ELASTIC_GPU</dt>
+    <dd>elastic-gpu</dd><dt>ELASTIC_IP</dt>
+    <dd>elastic-ip</dd><dt>EXPORT_IMAGE_TASK</dt>
+    <dd>export-image-task</dd><dt>EXPORT_INSTANCE_TASK</dt>
+    <dd>export-instance-task</dd><dt>FLEET</dt>
+    <dd>fleet</dd><dt>FPGA_IMAGE</dt>
+    <dd>fpga-image</dd><dt>HOST_RESERVATION</dt>
+    <dd>host-reservation</dd><dt>IMAGE</dt>
+    <dd>image</dd><dt>IMPORT_IMAGE_TASK</dt>
+    <dd>import-image-task</dd><dt>IMPORT_SNAPSHOT_TASK</dt>
+    <dd>import-snapshot-task</dd><dt>INSTANCE</dt>
+    <dd>instance</dd><dt>INTERNET_GATEWAY</dt>
+    <dd>internet-gateway</dd><dt>KEY_PAIR</dt>
+    <dd>key-pair</dd><dt>LAUNCH_TEMPLATE</dt>
+    <dd>launch-template</dd><dt>LOCAL_GATEWAY_ROUTE_TABLE_VPC_ASSOCIATION</dt>
+    <dd>local-gateway-route-table-vpc-association</dd><dt>NATGATEWAY</dt>
+    <dd>natgateway</dd><dt>NETWORK_ACL</dt>
+    <dd>network-acl</dd><dt>NETWORK_INSIGHTS_ANALYSIS</dt>
+    <dd>network-insights-analysis</dd><dt>NETWORK_INSIGHTS_PATH</dt>
+    <dd>network-insights-path</dd><dt>NETWORK_INTERFACE</dt>
+    <dd>network-interface</dd><dt>PLACEMENT_GROUP</dt>
+    <dd>placement-group</dd><dt>RESERVED_INSTANCES</dt>
+    <dd>reserved-instances</dd><dt>ROUTE_TABLE</dt>
+    <dd>route-table</dd><dt>SECURITY_GROUP</dt>
+    <dd>security-group</dd><dt>SNAPSHOT</dt>
+    <dd>snapshot</dd><dt>SPOT_FLEET_REQUEST</dt>
+    <dd>spot-fleet-request</dd><dt>SPOT_INSTANCES_REQUEST</dt>
+    <dd>spot-instances-request</dd><dt>SUBNET</dt>
+    <dd>subnet</dd><dt>TRAFFIC_MIRROR_FILTER</dt>
+    <dd>traffic-mirror-filter</dd><dt>TRAFFIC_MIRROR_SESSION</dt>
+    <dd>traffic-mirror-session</dd><dt>TRAFFIC_MIRROR_TARGET</dt>
+    <dd>traffic-mirror-target</dd><dt>TRANSIT_GATEWAY</dt>
+    <dd>transit-gateway</dd><dt>TRANSIT_GATEWAY_ATTACHMENT</dt>
+    <dd>transit-gateway-attachment</dd><dt>TRANSIT_GATEWAY_CONNECT_PEER</dt>
+    <dd>transit-gateway-connect-peer</dd><dt>TRANSIT_GATEWAY_MULTICAST_DOMAIN</dt>
+    <dd>transit-gateway-multicast-domain</dd><dt>TRANSIT_GATEWAY_ROUTE_TABLE</dt>
+    <dd>transit-gateway-route-table</dd><dt>VOLUME</dt>
+    <dd>volume</dd><dt>VPC</dt>
+    <dd>vpc</dd><dt>VPC_FLOW_LOG</dt>
+    <dd>vpc-flow-log</dd><dt>VPC_PEERING_CONNECTION</dt>
+    <dd>vpc-peering-connection</dd><dt>VPN_CONNECTION</dt>
+    <dd>vpn-connection</dd><dt>VPN_GATEWAY</dt>
+    <dd>vpn-gateway</dd></dl>
 {{% /choosable %}}
 
 <h4 id="spotfleettargetgroup">Spot<wbr>Fleet<wbr>Target<wbr>Group</h4>

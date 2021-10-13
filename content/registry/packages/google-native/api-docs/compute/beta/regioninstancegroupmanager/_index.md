@@ -205,7 +205,7 @@ The RegionInstanceGroupManager resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}An optional description of this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="distributionpolicy_csharp">
 <a href="#distributionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Distribution<wbr>Policy</a>
@@ -345,7 +345,7 @@ The RegionInstanceGroupManager resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}An optional description of this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="distributionpolicy_go">
 <a href="#distributionpolicy_go" style="color: inherit; text-decoration: inherit;">Distribution<wbr>Policy</a>
@@ -485,7 +485,7 @@ The RegionInstanceGroupManager resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}An optional description of this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="distributionpolicy_nodejs">
 <a href="#distributionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">distribution<wbr>Policy</a>
@@ -625,7 +625,7 @@ The RegionInstanceGroupManager resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}An optional description of this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="distribution_policy_python">
 <a href="#distribution_policy_python" style="color: inherit; text-decoration: inherit;">distribution_<wbr>policy</a>

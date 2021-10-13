@@ -523,7 +523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The encrypted credential to connnect to Azure Search Service.
+    <dd>{{% md %}}The encrypted credential to connect to Azure Search Service.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
@@ -544,7 +544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The encrypted credential to connnect to Azure Search Service.
+    <dd>{{% md %}}The encrypted credential to connect to Azure Search Service.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
@@ -565,7 +565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The encrypted credential to connnect to Azure Search Service.
+    <dd>{{% md %}}The encrypted credential to connect to Azure Search Service.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -586,7 +586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The encrypted credential to connnect to Azure Search Service.
+    <dd>{{% md %}}The encrypted credential to connect to Azure Search Service.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
@@ -778,7 +778,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The encrypted credential to connnect to Azure Search Service.
+    <dd>{{% md %}}The encrypted credential to connect to Azure Search Service.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationruntimename_csharp">
@@ -873,7 +873,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The encrypted credential to connnect to Azure Search Service.
+    <dd>{{% md %}}The encrypted credential to connect to Azure Search Service.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationruntimename_go">
@@ -968,7 +968,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The encrypted credential to connnect to Azure Search Service.
+    <dd>{{% md %}}The encrypted credential to connect to Azure Search Service.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationruntimename_nodejs">
@@ -1063,7 +1063,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The encrypted credential to connnect to Azure Search Service.
+    <dd>{{% md %}}The encrypted credential to connect to Azure Search Service.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integration_runtime_name_python">

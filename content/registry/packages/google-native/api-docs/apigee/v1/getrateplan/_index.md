@@ -282,14 +282,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Name of the rate plan.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="paymentfundingmodel_csharp">
-<a href="#paymentfundingmodel_csharp" style="color: inherit; text-decoration: inherit;">Payment<wbr>Funding<wbr>Model</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Flag that specifies the billing account type, prepaid or postpaid.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="revenuesharerates_csharp">
 <a href="#revenuesharerates_csharp" style="color: inherit; text-decoration: inherit;">Revenue<wbr>Share<wbr>Rates</a>
 </span>
@@ -437,14 +429,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the rate plan.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="paymentfundingmodel_go">
-<a href="#paymentfundingmodel_go" style="color: inherit; text-decoration: inherit;">Payment<wbr>Funding<wbr>Model</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Flag that specifies the billing account type, prepaid or postpaid.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="revenuesharerates_go">
 <a href="#revenuesharerates_go" style="color: inherit; text-decoration: inherit;">Revenue<wbr>Share<wbr>Rates</a>
@@ -594,14 +578,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Name of the rate plan.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="paymentfundingmodel_nodejs">
-<a href="#paymentfundingmodel_nodejs" style="color: inherit; text-decoration: inherit;">payment<wbr>Funding<wbr>Model</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Flag that specifies the billing account type, prepaid or postpaid.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="revenuesharerates_nodejs">
 <a href="#revenuesharerates_nodejs" style="color: inherit; text-decoration: inherit;">revenue<wbr>Share<wbr>Rates</a>
 </span>
@@ -749,14 +725,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the rate plan.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="payment_funding_model_python">
-<a href="#payment_funding_model_python" style="color: inherit; text-decoration: inherit;">payment_<wbr>funding_<wbr>model</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Flag that specifies the billing account type, prepaid or postpaid.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="revenue_share_rates_python">
 <a href="#revenue_share_rates_python" style="color: inherit; text-decoration: inherit;">revenue_<wbr>share_<wbr>rates</a>

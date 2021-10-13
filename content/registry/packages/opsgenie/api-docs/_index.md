@@ -16,36 +16,36 @@ A Pulumi package for creating and managing opsgenie cloud resources.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="alertpolicy" title="AlertPolicy"><span class="symbol resource"></span>AlertPolicy</a></li>
-    <li><a href="apiintegration" title="ApiIntegration"><span class="symbol resource"></span>ApiIntegration</a></li>
-    <li><a href="customrole" title="CustomRole"><span class="symbol resource"></span>CustomRole</a></li>
-    <li><a href="emailintegration" title="EmailIntegration"><span class="symbol resource"></span>EmailIntegration</a></li>
-    <li><a href="escalation" title="Escalation"><span class="symbol resource"></span>Escalation</a></li>
-    <li><a href="heartbeat" title="Heartbeat"><span class="symbol resource"></span>Heartbeat</a></li>
-    <li><a href="incidenttemplate" title="IncidentTemplate"><span class="symbol resource"></span>IncidentTemplate</a></li>
-    <li><a href="integrationaction" title="IntegrationAction"><span class="symbol resource"></span>IntegrationAction</a></li>
-    <li><a href="maintenance" title="Maintenance"><span class="symbol resource"></span>Maintenance</a></li>
-    <li><a href="notificationpolicy" title="NotificationPolicy"><span class="symbol resource"></span>NotificationPolicy</a></li>
-    <li><a href="notificationrule" title="NotificationRule"><span class="symbol resource"></span>NotificationRule</a></li>
-    <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
-    <li><a href="schedule" title="Schedule"><span class="symbol resource"></span>Schedule</a></li>
-    <li><a href="schedulerotation" title="ScheduleRotation"><span class="symbol resource"></span>ScheduleRotation</a></li>
-    <li><a href="service" title="Service"><span class="symbol resource"></span>Service</a></li>
-    <li><a href="serviceincidentrule" title="ServiceIncidentRule"><span class="symbol resource"></span>ServiceIncidentRule</a></li>
-    <li><a href="team" title="Team"><span class="symbol resource"></span>Team</a></li>
-    <li><a href="teamroutingrule" title="TeamRoutingRule"><span class="symbol resource"></span>TeamRoutingRule</a></li>
-    <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
-    <li><a href="usercontact" title="UserContact"><span class="symbol resource"></span>UserContact</a></li>
+    <li><a href="alertpolicy" title="AlertPolicy"><span class="api-symbol api-symbol--resource"></span>AlertPolicy</a></li>
+    <li><a href="apiintegration" title="ApiIntegration"><span class="api-symbol api-symbol--resource"></span>ApiIntegration</a></li>
+    <li><a href="customrole" title="CustomRole"><span class="api-symbol api-symbol--resource"></span>CustomRole</a></li>
+    <li><a href="emailintegration" title="EmailIntegration"><span class="api-symbol api-symbol--resource"></span>EmailIntegration</a></li>
+    <li><a href="escalation" title="Escalation"><span class="api-symbol api-symbol--resource"></span>Escalation</a></li>
+    <li><a href="heartbeat" title="Heartbeat"><span class="api-symbol api-symbol--resource"></span>Heartbeat</a></li>
+    <li><a href="incidenttemplate" title="IncidentTemplate"><span class="api-symbol api-symbol--resource"></span>IncidentTemplate</a></li>
+    <li><a href="integrationaction" title="IntegrationAction"><span class="api-symbol api-symbol--resource"></span>IntegrationAction</a></li>
+    <li><a href="maintenance" title="Maintenance"><span class="api-symbol api-symbol--resource"></span>Maintenance</a></li>
+    <li><a href="notificationpolicy" title="NotificationPolicy"><span class="api-symbol api-symbol--resource"></span>NotificationPolicy</a></li>
+    <li><a href="notificationrule" title="NotificationRule"><span class="api-symbol api-symbol--resource"></span>NotificationRule</a></li>
+    <li><a href="provider" title="Provider"><span class="api-symbol api-symbol--resource"></span>Provider</a></li>
+    <li><a href="schedule" title="Schedule"><span class="api-symbol api-symbol--resource"></span>Schedule</a></li>
+    <li><a href="schedulerotation" title="ScheduleRotation"><span class="api-symbol api-symbol--resource"></span>ScheduleRotation</a></li>
+    <li><a href="service" title="Service"><span class="api-symbol api-symbol--resource"></span>Service</a></li>
+    <li><a href="serviceincidentrule" title="ServiceIncidentRule"><span class="api-symbol api-symbol--resource"></span>ServiceIncidentRule</a></li>
+    <li><a href="team" title="Team"><span class="api-symbol api-symbol--resource"></span>Team</a></li>
+    <li><a href="teamroutingrule" title="TeamRoutingRule"><span class="api-symbol api-symbol--resource"></span>TeamRoutingRule</a></li>
+    <li><a href="user" title="User"><span class="api-symbol api-symbol--resource"></span>User</a></li>
+    <li><a href="usercontact" title="UserContact"><span class="api-symbol api-symbol--resource"></span>UserContact</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getescalation" title="GetEscalation"><span class="symbol function"></span>GetEscalation</a></li>
-    <li><a href="getheartbeat" title="GetHeartbeat"><span class="symbol function"></span>GetHeartbeat</a></li>
-    <li><a href="getschedule" title="GetSchedule"><span class="symbol function"></span>GetSchedule</a></li>
-    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
-    <li><a href="getteam" title="GetTeam"><span class="symbol function"></span>GetTeam</a></li>
-    <li><a href="getuser" title="GetUser"><span class="symbol function"></span>GetUser</a></li>
+    <li><a href="getescalation" title="GetEscalation"><span class="api-symbol api-symbol--function"></span>GetEscalation</a></li>
+    <li><a href="getheartbeat" title="GetHeartbeat"><span class="api-symbol api-symbol--function"></span>GetHeartbeat</a></li>
+    <li><a href="getschedule" title="GetSchedule"><span class="api-symbol api-symbol--function"></span>GetSchedule</a></li>
+    <li><a href="getservice" title="GetService"><span class="api-symbol api-symbol--function"></span>GetService</a></li>
+    <li><a href="getteam" title="GetTeam"><span class="api-symbol api-symbol--function"></span>GetTeam</a></li>
+    <li><a href="getuser" title="GetUser"><span class="api-symbol api-symbol--function"></span>GetUser</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

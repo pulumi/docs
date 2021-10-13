@@ -36,7 +36,7 @@ FeatureMembership can be imported using any of these accepted formats
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">FeatureMembership</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">FeatureMembershipArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">FeatureMembership</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FeatureMembershipArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -50,16 +50,16 @@ FeatureMembership can be imported using any of these accepted formats
                       <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">FeatureMembership</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[FeatureMembershipArgs]</a></span> = None<span class="p">,</span>
+                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FeatureMembershipArgs</a></span><span class="p">,</span>
                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFeatureMembership</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">FeatureMembershipArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FeatureMembership</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFeatureMembership</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FeatureMembershipArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FeatureMembership</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">FeatureMembership</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">FeatureMembershipArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">FeatureMembership</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">FeatureMembershipArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -71,7 +71,7 @@ FeatureMembership can be imported using any of these accepted formats
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-optional" title="Optional">
+        class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">FeatureMembershipArgs</a></span>
@@ -95,7 +95,7 @@ FeatureMembership can be imported using any of these accepted formats
         <span class="property-type">str</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-optional" title="Optional">
+        class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">FeatureMembershipArgs</a></span>
@@ -125,7 +125,7 @@ FeatureMembership can be imported using any of these accepted formats
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-optional" title="Optional">
+        class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">FeatureMembershipArgs</a></span>
@@ -149,7 +149,7 @@ FeatureMembership can be imported using any of these accepted formats
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-optional" title="Optional">
+        class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">FeatureMembershipArgs</a></span>
@@ -175,8 +175,8 @@ The FeatureMembership resource accepts the following [input]({{< relref "/docs/i
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
         <span id="configmanagement_csharp">
 <a href="#configmanagement_csharp" style="color: inherit; text-decoration: inherit;">Configmanagement</a>
 </span>
@@ -184,8 +184,8 @@ The FeatureMembership resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#featuremembershipconfigmanagement">Feature<wbr>Membership<wbr>Configmanagement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Config Management-specific spec.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="feature_csharp">
 <a href="#feature_csharp" style="color: inherit; text-decoration: inherit;">Feature</a>
 </span>
@@ -193,8 +193,8 @@ The FeatureMembership resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the feature
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -202,8 +202,8 @@ The FeatureMembership resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the feature
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="membership_csharp">
 <a href="#membership_csharp" style="color: inherit; text-decoration: inherit;">Membership</a>
 </span>
@@ -224,8 +224,8 @@ The FeatureMembership resource accepts the following [input]({{< relref "/docs/i
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
         <span id="configmanagement_go">
 <a href="#configmanagement_go" style="color: inherit; text-decoration: inherit;">Configmanagement</a>
 </span>
@@ -233,8 +233,8 @@ The FeatureMembership resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#featuremembershipconfigmanagement">Feature<wbr>Membership<wbr>Configmanagement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Config Management-specific spec.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="feature_go">
 <a href="#feature_go" style="color: inherit; text-decoration: inherit;">Feature</a>
 </span>
@@ -242,8 +242,8 @@ The FeatureMembership resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the feature
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -251,8 +251,8 @@ The FeatureMembership resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the feature
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="membership_go">
 <a href="#membership_go" style="color: inherit; text-decoration: inherit;">Membership</a>
 </span>
@@ -273,8 +273,8 @@ The FeatureMembership resource accepts the following [input]({{< relref "/docs/i
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
         <span id="configmanagement_nodejs">
 <a href="#configmanagement_nodejs" style="color: inherit; text-decoration: inherit;">configmanagement</a>
 </span>
@@ -282,8 +282,8 @@ The FeatureMembership resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#featuremembershipconfigmanagement">Feature<wbr>Membership<wbr>Configmanagement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Config Management-specific spec.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="feature_nodejs">
 <a href="#feature_nodejs" style="color: inherit; text-decoration: inherit;">feature</a>
 </span>
@@ -291,8 +291,8 @@ The FeatureMembership resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the feature
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -300,8 +300,8 @@ The FeatureMembership resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the feature
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="membership_nodejs">
 <a href="#membership_nodejs" style="color: inherit; text-decoration: inherit;">membership</a>
 </span>
@@ -322,8 +322,8 @@ The FeatureMembership resource accepts the following [input]({{< relref "/docs/i
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
         <span id="configmanagement_python">
 <a href="#configmanagement_python" style="color: inherit; text-decoration: inherit;">configmanagement</a>
 </span>
@@ -331,8 +331,8 @@ The FeatureMembership resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#featuremembershipconfigmanagement">Feature<wbr>Membership<wbr>Configmanagement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Config Management-specific spec.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="feature_python">
 <a href="#feature_python" style="color: inherit; text-decoration: inherit;">feature</a>
 </span>
@@ -340,8 +340,8 @@ The FeatureMembership resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the feature
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -349,8 +349,8 @@ The FeatureMembership resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the feature
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="membership_python">
 <a href="#membership_python" style="color: inherit; text-decoration: inherit;">membership</a>
 </span>
@@ -1111,6 +1111,14 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="gcpserviceaccountemail_csharp">
+<a href="#gcpserviceaccountemail_csharp" style="color: inherit; text-decoration: inherit;">Gcp<wbr>Service<wbr>Account<wbr>Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="httpsproxy_csharp">
 <a href="#httpsproxy_csharp" style="color: inherit; text-decoration: inherit;">Https<wbr>Proxy</a>
 </span>
@@ -1177,6 +1185,14 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="gcpserviceaccountemail_go">
+<a href="#gcpserviceaccountemail_go" style="color: inherit; text-decoration: inherit;">Gcp<wbr>Service<wbr>Account<wbr>Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpsproxy_go">
 <a href="#httpsproxy_go" style="color: inherit; text-decoration: inherit;">Https<wbr>Proxy</a>
@@ -1245,6 +1261,14 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="gcpserviceaccountemail_nodejs">
+<a href="#gcpserviceaccountemail_nodejs" style="color: inherit; text-decoration: inherit;">gcp<wbr>Service<wbr>Account<wbr>Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="httpsproxy_nodejs">
 <a href="#httpsproxy_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Proxy</a>
 </span>
@@ -1311,6 +1335,14 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="gcp_service_account_email_python">
+<a href="#gcp_service_account_email_python" style="color: inherit; text-decoration: inherit;">gcp_<wbr>service_<wbr>account_<wbr>email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="https_proxy_python">
 <a href="#https_proxy_python" style="color: inherit; text-decoration: inherit;">https_<wbr>proxy</a>

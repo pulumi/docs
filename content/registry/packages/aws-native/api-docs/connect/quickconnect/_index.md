@@ -32,7 +32,7 @@ Resource Type definition for AWS::Connect::QuickConnect
                  <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">instance_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                 <span class="nx">quick_connect_config</span><span class="p">:</span> <span class="nx">Optional[QuickConnectQuickConnectConfigArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">quick_connect_config</span><span class="p">:</span> <span class="nx">Optional[QuickConnectConfigArgs]</span> = None<span class="p">,</span>
                  <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[QuickConnectTagArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">QuickConnect</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -183,7 +183,7 @@ The QuickConnect resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#quickconnectconfig_csharp" style="color: inherit; text-decoration: inherit;">Quick<wbr>Connect<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#quickconnectquickconnectconfig">Pulumi.<wbr>Aws<wbr>Native.<wbr>Connect.<wbr>Inputs.<wbr>Quick<wbr>Connect<wbr>Quick<wbr>Connect<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#quickconnectconfig">Pulumi.<wbr>Aws<wbr>Native.<wbr>Connect.<wbr>Inputs.<wbr>Quick<wbr>Connect<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration settings for the quick connect.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -227,7 +227,7 @@ The QuickConnect resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#quickconnectconfig_go" style="color: inherit; text-decoration: inherit;">Quick<wbr>Connect<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#quickconnectquickconnectconfig">Quick<wbr>Connect<wbr>Quick<wbr>Connect<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#quickconnectconfig">Quick<wbr>Connect<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration settings for the quick connect.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -271,7 +271,7 @@ The QuickConnect resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#quickconnectconfig_nodejs" style="color: inherit; text-decoration: inherit;">quick<wbr>Connect<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#quickconnectquickconnectconfig">Quick<wbr>Connect<wbr>Quick<wbr>Connect<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#quickconnectconfig">Quick<wbr>Connect<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration settings for the quick connect.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -315,7 +315,7 @@ The QuickConnect resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#quick_connect_config_python" style="color: inherit; text-decoration: inherit;">quick_<wbr>connect_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#quickconnectquickconnectconfig">Quick<wbr>Connect<wbr>Quick<wbr>Connect<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#quickconnectconfig">Quick<wbr>Connect<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration settings for the quick connect.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -432,6 +432,152 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="quickconnectconfig">Quick<wbr>Connect<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="quickconnecttype_csharp">
+<a href="#quickconnecttype_csharp" style="color: inherit; text-decoration: inherit;">Quick<wbr>Connect<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#quickconnecttype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Connect.<wbr>Quick<wbr>Connect<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="phoneconfig_csharp">
+<a href="#phoneconfig_csharp" style="color: inherit; text-decoration: inherit;">Phone<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#quickconnectphonenumberquickconnectconfig">Pulumi.<wbr>Aws<wbr>Native.<wbr>Connect.<wbr>Inputs.<wbr>Quick<wbr>Connect<wbr>Phone<wbr>Number<wbr>Quick<wbr>Connect<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="queueconfig_csharp">
+<a href="#queueconfig_csharp" style="color: inherit; text-decoration: inherit;">Queue<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#quickconnectqueuequickconnectconfig">Pulumi.<wbr>Aws<wbr>Native.<wbr>Connect.<wbr>Inputs.<wbr>Quick<wbr>Connect<wbr>Queue<wbr>Quick<wbr>Connect<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userconfig_csharp">
+<a href="#userconfig_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#quickconnectuserquickconnectconfig">Pulumi.<wbr>Aws<wbr>Native.<wbr>Connect.<wbr>Inputs.<wbr>Quick<wbr>Connect<wbr>User<wbr>Quick<wbr>Connect<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="quickconnecttype_go">
+<a href="#quickconnecttype_go" style="color: inherit; text-decoration: inherit;">Quick<wbr>Connect<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#quickconnecttype">Quick<wbr>Connect<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="phoneconfig_go">
+<a href="#phoneconfig_go" style="color: inherit; text-decoration: inherit;">Phone<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#quickconnectphonenumberquickconnectconfig">Quick<wbr>Connect<wbr>Phone<wbr>Number<wbr>Quick<wbr>Connect<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="queueconfig_go">
+<a href="#queueconfig_go" style="color: inherit; text-decoration: inherit;">Queue<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#quickconnectqueuequickconnectconfig">Quick<wbr>Connect<wbr>Queue<wbr>Quick<wbr>Connect<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userconfig_go">
+<a href="#userconfig_go" style="color: inherit; text-decoration: inherit;">User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#quickconnectuserquickconnectconfig">Quick<wbr>Connect<wbr>User<wbr>Quick<wbr>Connect<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="quickconnecttype_nodejs">
+<a href="#quickconnecttype_nodejs" style="color: inherit; text-decoration: inherit;">quick<wbr>Connect<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#quickconnecttype">Quick<wbr>Connect<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="phoneconfig_nodejs">
+<a href="#phoneconfig_nodejs" style="color: inherit; text-decoration: inherit;">phone<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#quickconnectphonenumberquickconnectconfig">Quick<wbr>Connect<wbr>Phone<wbr>Number<wbr>Quick<wbr>Connect<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="queueconfig_nodejs">
+<a href="#queueconfig_nodejs" style="color: inherit; text-decoration: inherit;">queue<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#quickconnectqueuequickconnectconfig">Quick<wbr>Connect<wbr>Queue<wbr>Quick<wbr>Connect<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userconfig_nodejs">
+<a href="#userconfig_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#quickconnectuserquickconnectconfig">Quick<wbr>Connect<wbr>User<wbr>Quick<wbr>Connect<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="quick_connect_type_python">
+<a href="#quick_connect_type_python" style="color: inherit; text-decoration: inherit;">quick_<wbr>connect_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#quickconnecttype">Quick<wbr>Connect<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="phone_config_python">
+<a href="#phone_config_python" style="color: inherit; text-decoration: inherit;">phone_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#quickconnectphonenumberquickconnectconfig">Quick<wbr>Connect<wbr>Phone<wbr>Number<wbr>Quick<wbr>Connect<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="queue_config_python">
+<a href="#queue_config_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#quickconnectqueuequickconnectconfig">Quick<wbr>Connect<wbr>Queue<wbr>Quick<wbr>Connect<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="user_config_python">
+<a href="#user_config_python" style="color: inherit; text-decoration: inherit;">user_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#quickconnectuserquickconnectconfig">Quick<wbr>Connect<wbr>User<wbr>Quick<wbr>Connect<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="quickconnectphonenumberquickconnectconfig">Quick<wbr>Connect<wbr>Phone<wbr>Number<wbr>Quick<wbr>Connect<wbr>Config</h4>
 
@@ -565,182 +711,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="quickconnectquickconnectconfig">Quick<wbr>Connect<wbr>Quick<wbr>Connect<wbr>Config</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="quickconnecttype_csharp">
-<a href="#quickconnecttype_csharp" style="color: inherit; text-decoration: inherit;">Quick<wbr>Connect<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#quickconnectquickconnecttype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Connect.<wbr>Quick<wbr>Connect<wbr>Quick<wbr>Connect<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="phoneconfig_csharp">
-<a href="#phoneconfig_csharp" style="color: inherit; text-decoration: inherit;">Phone<wbr>Config</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#quickconnectphonenumberquickconnectconfig">Pulumi.<wbr>Aws<wbr>Native.<wbr>Connect.<wbr>Inputs.<wbr>Quick<wbr>Connect<wbr>Phone<wbr>Number<wbr>Quick<wbr>Connect<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="queueconfig_csharp">
-<a href="#queueconfig_csharp" style="color: inherit; text-decoration: inherit;">Queue<wbr>Config</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#quickconnectqueuequickconnectconfig">Pulumi.<wbr>Aws<wbr>Native.<wbr>Connect.<wbr>Inputs.<wbr>Quick<wbr>Connect<wbr>Queue<wbr>Quick<wbr>Connect<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="userconfig_csharp">
-<a href="#userconfig_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Config</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#quickconnectuserquickconnectconfig">Pulumi.<wbr>Aws<wbr>Native.<wbr>Connect.<wbr>Inputs.<wbr>Quick<wbr>Connect<wbr>User<wbr>Quick<wbr>Connect<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="quickconnecttype_go">
-<a href="#quickconnecttype_go" style="color: inherit; text-decoration: inherit;">Quick<wbr>Connect<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#quickconnectquickconnecttype">Quick<wbr>Connect<wbr>Quick<wbr>Connect<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="phoneconfig_go">
-<a href="#phoneconfig_go" style="color: inherit; text-decoration: inherit;">Phone<wbr>Config</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#quickconnectphonenumberquickconnectconfig">Quick<wbr>Connect<wbr>Phone<wbr>Number<wbr>Quick<wbr>Connect<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="queueconfig_go">
-<a href="#queueconfig_go" style="color: inherit; text-decoration: inherit;">Queue<wbr>Config</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#quickconnectqueuequickconnectconfig">Quick<wbr>Connect<wbr>Queue<wbr>Quick<wbr>Connect<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="userconfig_go">
-<a href="#userconfig_go" style="color: inherit; text-decoration: inherit;">User<wbr>Config</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#quickconnectuserquickconnectconfig">Quick<wbr>Connect<wbr>User<wbr>Quick<wbr>Connect<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="quickconnecttype_nodejs">
-<a href="#quickconnecttype_nodejs" style="color: inherit; text-decoration: inherit;">quick<wbr>Connect<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#quickconnectquickconnecttype">Quick<wbr>Connect<wbr>Quick<wbr>Connect<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="phoneconfig_nodejs">
-<a href="#phoneconfig_nodejs" style="color: inherit; text-decoration: inherit;">phone<wbr>Config</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#quickconnectphonenumberquickconnectconfig">Quick<wbr>Connect<wbr>Phone<wbr>Number<wbr>Quick<wbr>Connect<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="queueconfig_nodejs">
-<a href="#queueconfig_nodejs" style="color: inherit; text-decoration: inherit;">queue<wbr>Config</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#quickconnectqueuequickconnectconfig">Quick<wbr>Connect<wbr>Queue<wbr>Quick<wbr>Connect<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="userconfig_nodejs">
-<a href="#userconfig_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Config</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#quickconnectuserquickconnectconfig">Quick<wbr>Connect<wbr>User<wbr>Quick<wbr>Connect<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="quick_connect_type_python">
-<a href="#quick_connect_type_python" style="color: inherit; text-decoration: inherit;">quick_<wbr>connect_<wbr>type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#quickconnectquickconnecttype">Quick<wbr>Connect<wbr>Quick<wbr>Connect<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="phone_config_python">
-<a href="#phone_config_python" style="color: inherit; text-decoration: inherit;">phone_<wbr>config</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#quickconnectphonenumberquickconnectconfig">Quick<wbr>Connect<wbr>Phone<wbr>Number<wbr>Quick<wbr>Connect<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="queue_config_python">
-<a href="#queue_config_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>config</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#quickconnectqueuequickconnectconfig">Quick<wbr>Connect<wbr>Queue<wbr>Quick<wbr>Connect<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="user_config_python">
-<a href="#user_config_python" style="color: inherit; text-decoration: inherit;">user_<wbr>config</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#quickconnectuserquickconnectconfig">Quick<wbr>Connect<wbr>User<wbr>Quick<wbr>Connect<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="quickconnectquickconnecttype">Quick<wbr>Connect<wbr>Quick<wbr>Connect<wbr>Type</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Phone<wbr>Number</dt>
-    <dd>PHONE_NUMBER</dd><dt>Queue</dt>
-    <dd>QUEUE</dd><dt>User</dt>
-    <dd>USER</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Quick<wbr>Connect<wbr>Quick<wbr>Connect<wbr>Type<wbr>Phone<wbr>Number</dt>
-    <dd>PHONE_NUMBER</dd><dt>Quick<wbr>Connect<wbr>Quick<wbr>Connect<wbr>Type<wbr>Queue</dt>
-    <dd>QUEUE</dd><dt>Quick<wbr>Connect<wbr>Quick<wbr>Connect<wbr>Type<wbr>User</dt>
-    <dd>USER</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Phone<wbr>Number</dt>
-    <dd>PHONE_NUMBER</dd><dt>Queue</dt>
-    <dd>QUEUE</dd><dt>User</dt>
-    <dd>USER</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>PHONE_NUMBER</dt>
-    <dd>PHONE_NUMBER</dd><dt>QUEUE</dt>
-    <dd>QUEUE</dd><dt>USER</dt>
-    <dd>USER</dd></dl>
-{{% /choosable %}}
-
 <h4 id="quickconnecttag">Quick<wbr>Connect<wbr>Tag</h4>
 
 {{% choosable language csharp %}}
@@ -821,6 +791,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value for the tag. You can specify a value that is maximum of 256 Unicode characters in length and cannot be prefixed with aws:. You can use any of the following characters: the set of Unicode letters, digits, whitespace, _, ., /, =, +, and -. {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="quickconnecttype">Quick<wbr>Connect<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Phone<wbr>Number</dt>
+    <dd>PHONE_NUMBER</dd><dt>Queue</dt>
+    <dd>QUEUE</dd><dt>User</dt>
+    <dd>USER</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Quick<wbr>Connect<wbr>Type<wbr>Phone<wbr>Number</dt>
+    <dd>PHONE_NUMBER</dd><dt>Quick<wbr>Connect<wbr>Type<wbr>Queue</dt>
+    <dd>QUEUE</dd><dt>Quick<wbr>Connect<wbr>Type<wbr>User</dt>
+    <dd>USER</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Phone<wbr>Number</dt>
+    <dd>PHONE_NUMBER</dd><dt>Queue</dt>
+    <dd>QUEUE</dd><dt>User</dt>
+    <dd>USER</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>PHONE_NUMBER</dt>
+    <dd>PHONE_NUMBER</dd><dt>QUEUE</dt>
+    <dd>QUEUE</dd><dt>USER</dt>
+    <dd>USER</dd></dl>
 {{% /choosable %}}
 
 <h4 id="quickconnectuserquickconnectconfig">Quick<wbr>Connect<wbr>User<wbr>Quick<wbr>Connect<wbr>Config</h4>

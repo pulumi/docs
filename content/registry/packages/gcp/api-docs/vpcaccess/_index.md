@@ -13,7 +13,7 @@ Explore the resources and functions of the gcp.vpcaccess module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="connector" title="Connector"><span class="symbol resource"></span>Connector</a></li>
+    <li><a href="connector" title="Connector"><span class="api-symbol api-symbol--resource"></span>Connector</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -25,6 +25,6 @@ Explore the resources and functions of the gcp.vpcaccess module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>5.22.0</dd>
+	<dd>5.24.0</dd>
 </dl>
 

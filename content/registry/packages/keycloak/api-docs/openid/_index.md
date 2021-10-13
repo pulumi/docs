@@ -13,41 +13,41 @@ Explore the resources and functions of the keycloak.openid module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="audienceprotocolmapper" title="AudienceProtocolMapper"><span class="symbol resource"></span>AudienceProtocolMapper</a></li>
-    <li><a href="client" title="Client"><span class="symbol resource"></span>Client</a></li>
-    <li><a href="clientaggregatepolicy" title="ClientAggregatePolicy"><span class="symbol resource"></span>ClientAggregatePolicy</a></li>
-    <li><a href="clientauthorizationpermission" title="ClientAuthorizationPermission"><span class="symbol resource"></span>ClientAuthorizationPermission</a></li>
-    <li><a href="clientauthorizationresource" title="ClientAuthorizationResource"><span class="symbol resource"></span>ClientAuthorizationResource</a></li>
-    <li><a href="clientauthorizationscope" title="ClientAuthorizationScope"><span class="symbol resource"></span>ClientAuthorizationScope</a></li>
-    <li><a href="clientdefaultscopes" title="ClientDefaultScopes"><span class="symbol resource"></span>ClientDefaultScopes</a></li>
-    <li><a href="clientgrouppolicy" title="ClientGroupPolicy"><span class="symbol resource"></span>ClientGroupPolicy</a></li>
-    <li><a href="clientjspolicy" title="ClientJsPolicy"><span class="symbol resource"></span>ClientJsPolicy</a></li>
-    <li><a href="clientoptionalscopes" title="ClientOptionalScopes"><span class="symbol resource"></span>ClientOptionalScopes</a></li>
-    <li><a href="clientpermissions" title="ClientPermissions"><span class="symbol resource"></span>ClientPermissions</a></li>
-    <li><a href="clientpolicy" title="ClientPolicy"><span class="symbol resource"></span>ClientPolicy</a></li>
-    <li><a href="clientrolepolicy" title="ClientRolePolicy"><span class="symbol resource"></span>ClientRolePolicy</a></li>
-    <li><a href="clientscope" title="ClientScope"><span class="symbol resource"></span>ClientScope</a></li>
-    <li><a href="clientserviceaccountrealmrole" title="ClientServiceAccountRealmRole"><span class="symbol resource"></span>ClientServiceAccountRealmRole</a></li>
-    <li><a href="clientserviceaccountrole" title="ClientServiceAccountRole"><span class="symbol resource"></span>ClientServiceAccountRole</a></li>
-    <li><a href="clienttimepolicy" title="ClientTimePolicy"><span class="symbol resource"></span>ClientTimePolicy</a></li>
-    <li><a href="clientuserpolicy" title="ClientUserPolicy"><span class="symbol resource"></span>ClientUserPolicy</a></li>
-    <li><a href="fullnameprotocolmapper" title="FullNameProtocolMapper"><span class="symbol resource"></span>FullNameProtocolMapper</a></li>
-    <li><a href="groupmembershipprotocolmapper" title="GroupMembershipProtocolMapper"><span class="symbol resource"></span>GroupMembershipProtocolMapper</a></li>
-    <li><a href="hardcodedclaimprotocolmapper" title="HardcodedClaimProtocolMapper"><span class="symbol resource"></span>HardcodedClaimProtocolMapper</a></li>
-    <li><a href="hardcodedroleprotocolmapper" title="HardcodedRoleProtocolMapper"><span class="symbol resource"></span>HardcodedRoleProtocolMapper</a></li>
-    <li><a href="scriptprotocolmapper" title="ScriptProtocolMapper"><span class="symbol resource"></span>ScriptProtocolMapper</a></li>
-    <li><a href="userattributeprotocolmapper" title="UserAttributeProtocolMapper"><span class="symbol resource"></span>UserAttributeProtocolMapper</a></li>
-    <li><a href="userclientroleprotocolmapper" title="UserClientRoleProtocolMapper"><span class="symbol resource"></span>UserClientRoleProtocolMapper</a></li>
-    <li><a href="userpropertyprotocolmapper" title="UserPropertyProtocolMapper"><span class="symbol resource"></span>UserPropertyProtocolMapper</a></li>
-    <li><a href="userrealmroleprotocolmapper" title="UserRealmRoleProtocolMapper"><span class="symbol resource"></span>UserRealmRoleProtocolMapper</a></li>
-    <li><a href="usersessionnoteprotocolmapper" title="UserSessionNoteProtocolMapper"><span class="symbol resource"></span>UserSessionNoteProtocolMapper</a></li>
+    <li><a href="audienceprotocolmapper" title="AudienceProtocolMapper"><span class="api-symbol api-symbol--resource"></span>AudienceProtocolMapper</a></li>
+    <li><a href="client" title="Client"><span class="api-symbol api-symbol--resource"></span>Client</a></li>
+    <li><a href="clientaggregatepolicy" title="ClientAggregatePolicy"><span class="api-symbol api-symbol--resource"></span>ClientAggregatePolicy</a></li>
+    <li><a href="clientauthorizationpermission" title="ClientAuthorizationPermission"><span class="api-symbol api-symbol--resource"></span>ClientAuthorizationPermission</a></li>
+    <li><a href="clientauthorizationresource" title="ClientAuthorizationResource"><span class="api-symbol api-symbol--resource"></span>ClientAuthorizationResource</a></li>
+    <li><a href="clientauthorizationscope" title="ClientAuthorizationScope"><span class="api-symbol api-symbol--resource"></span>ClientAuthorizationScope</a></li>
+    <li><a href="clientdefaultscopes" title="ClientDefaultScopes"><span class="api-symbol api-symbol--resource"></span>ClientDefaultScopes</a></li>
+    <li><a href="clientgrouppolicy" title="ClientGroupPolicy"><span class="api-symbol api-symbol--resource"></span>ClientGroupPolicy</a></li>
+    <li><a href="clientjspolicy" title="ClientJsPolicy"><span class="api-symbol api-symbol--resource"></span>ClientJsPolicy</a></li>
+    <li><a href="clientoptionalscopes" title="ClientOptionalScopes"><span class="api-symbol api-symbol--resource"></span>ClientOptionalScopes</a></li>
+    <li><a href="clientpermissions" title="ClientPermissions"><span class="api-symbol api-symbol--resource"></span>ClientPermissions</a></li>
+    <li><a href="clientpolicy" title="ClientPolicy"><span class="api-symbol api-symbol--resource"></span>ClientPolicy</a></li>
+    <li><a href="clientrolepolicy" title="ClientRolePolicy"><span class="api-symbol api-symbol--resource"></span>ClientRolePolicy</a></li>
+    <li><a href="clientscope" title="ClientScope"><span class="api-symbol api-symbol--resource"></span>ClientScope</a></li>
+    <li><a href="clientserviceaccountrealmrole" title="ClientServiceAccountRealmRole"><span class="api-symbol api-symbol--resource"></span>ClientServiceAccountRealmRole</a></li>
+    <li><a href="clientserviceaccountrole" title="ClientServiceAccountRole"><span class="api-symbol api-symbol--resource"></span>ClientServiceAccountRole</a></li>
+    <li><a href="clienttimepolicy" title="ClientTimePolicy"><span class="api-symbol api-symbol--resource"></span>ClientTimePolicy</a></li>
+    <li><a href="clientuserpolicy" title="ClientUserPolicy"><span class="api-symbol api-symbol--resource"></span>ClientUserPolicy</a></li>
+    <li><a href="fullnameprotocolmapper" title="FullNameProtocolMapper"><span class="api-symbol api-symbol--resource"></span>FullNameProtocolMapper</a></li>
+    <li><a href="groupmembershipprotocolmapper" title="GroupMembershipProtocolMapper"><span class="api-symbol api-symbol--resource"></span>GroupMembershipProtocolMapper</a></li>
+    <li><a href="hardcodedclaimprotocolmapper" title="HardcodedClaimProtocolMapper"><span class="api-symbol api-symbol--resource"></span>HardcodedClaimProtocolMapper</a></li>
+    <li><a href="hardcodedroleprotocolmapper" title="HardcodedRoleProtocolMapper"><span class="api-symbol api-symbol--resource"></span>HardcodedRoleProtocolMapper</a></li>
+    <li><a href="scriptprotocolmapper" title="ScriptProtocolMapper"><span class="api-symbol api-symbol--resource"></span>ScriptProtocolMapper</a></li>
+    <li><a href="userattributeprotocolmapper" title="UserAttributeProtocolMapper"><span class="api-symbol api-symbol--resource"></span>UserAttributeProtocolMapper</a></li>
+    <li><a href="userclientroleprotocolmapper" title="UserClientRoleProtocolMapper"><span class="api-symbol api-symbol--resource"></span>UserClientRoleProtocolMapper</a></li>
+    <li><a href="userpropertyprotocolmapper" title="UserPropertyProtocolMapper"><span class="api-symbol api-symbol--resource"></span>UserPropertyProtocolMapper</a></li>
+    <li><a href="userrealmroleprotocolmapper" title="UserRealmRoleProtocolMapper"><span class="api-symbol api-symbol--resource"></span>UserRealmRoleProtocolMapper</a></li>
+    <li><a href="usersessionnoteprotocolmapper" title="UserSessionNoteProtocolMapper"><span class="api-symbol api-symbol--resource"></span>UserSessionNoteProtocolMapper</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getclient" title="GetClient"><span class="symbol function"></span>GetClient</a></li>
-    <li><a href="getclientauthorizationpolicy" title="GetClientAuthorizationPolicy"><span class="symbol function"></span>GetClientAuthorizationPolicy</a></li>
-    <li><a href="getclientserviceaccountuser" title="GetClientServiceAccountUser"><span class="symbol function"></span>GetClientServiceAccountUser</a></li>
+    <li><a href="getclient" title="GetClient"><span class="api-symbol api-symbol--function"></span>GetClient</a></li>
+    <li><a href="getclientauthorizationpolicy" title="GetClientAuthorizationPolicy"><span class="api-symbol api-symbol--function"></span>GetClientAuthorizationPolicy</a></li>
+    <li><a href="getclientserviceaccountuser" title="GetClientServiceAccountUser"><span class="api-symbol api-symbol--function"></span>GetClientServiceAccountUser</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

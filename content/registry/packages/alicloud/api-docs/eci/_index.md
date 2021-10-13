@@ -13,15 +13,15 @@ Explore the resources and functions of the alicloud.eci module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="containergroup" title="ContainerGroup"><span class="symbol resource"></span>ContainerGroup</a></li>
-    <li><a href="imagecache" title="ImageCache"><span class="symbol resource"></span>ImageCache</a></li>
-    <li><a href="openapiimagecache" title="OpenApiImageCache"><span class="symbol resource"></span>OpenApiImageCache</a></li>
+    <li><a href="containergroup" title="ContainerGroup"><span class="api-symbol api-symbol--resource"></span>ContainerGroup</a></li>
+    <li><a href="imagecache" title="ImageCache"><span class="api-symbol api-symbol--resource"></span>ImageCache</a></li>
+    <li><a href="openapiimagecache" title="OpenApiImageCache"><span class="api-symbol api-symbol--resource"></span>OpenApiImageCache</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getcontainergroups" title="GetContainerGroups"><span class="symbol function"></span>GetContainerGroups</a></li>
-    <li><a href="getimagecaches" title="GetImageCaches"><span class="symbol function"></span>GetImageCaches</a></li>
+    <li><a href="getcontainergroups" title="GetContainerGroups"><span class="api-symbol api-symbol--function"></span>GetContainerGroups</a></li>
+    <li><a href="getimagecaches" title="GetImageCaches"><span class="api-symbol api-symbol--function"></span>GetImageCaches</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

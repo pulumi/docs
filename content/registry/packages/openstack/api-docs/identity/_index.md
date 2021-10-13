@@ -13,27 +13,27 @@ Explore the resources and functions of the openstack.identity module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="applicationcredential" title="ApplicationCredential"><span class="symbol resource"></span>ApplicationCredential</a></li>
-    <li><a href="ec2credentialv3" title="Ec2CredentialV3"><span class="symbol resource"></span>Ec2CredentialV3</a></li>
-    <li><a href="endpointv3" title="EndpointV3"><span class="symbol resource"></span>EndpointV3</a></li>
-    <li><a href="groupv3" title="GroupV3"><span class="symbol resource"></span>GroupV3</a></li>
-    <li><a href="project" title="Project"><span class="symbol resource"></span>Project</a></li>
-    <li><a href="role" title="Role"><span class="symbol resource"></span>Role</a></li>
-    <li><a href="roleassignment" title="RoleAssignment"><span class="symbol resource"></span>RoleAssignment</a></li>
-    <li><a href="servicev3" title="ServiceV3"><span class="symbol resource"></span>ServiceV3</a></li>
-    <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
-    <li><a href="usermembershipv3" title="UserMembershipV3"><span class="symbol resource"></span>UserMembershipV3</a></li>
+    <li><a href="applicationcredential" title="ApplicationCredential"><span class="api-symbol api-symbol--resource"></span>ApplicationCredential</a></li>
+    <li><a href="ec2credentialv3" title="Ec2CredentialV3"><span class="api-symbol api-symbol--resource"></span>Ec2CredentialV3</a></li>
+    <li><a href="endpointv3" title="EndpointV3"><span class="api-symbol api-symbol--resource"></span>EndpointV3</a></li>
+    <li><a href="groupv3" title="GroupV3"><span class="api-symbol api-symbol--resource"></span>GroupV3</a></li>
+    <li><a href="project" title="Project"><span class="api-symbol api-symbol--resource"></span>Project</a></li>
+    <li><a href="role" title="Role"><span class="api-symbol api-symbol--resource"></span>Role</a></li>
+    <li><a href="roleassignment" title="RoleAssignment"><span class="api-symbol api-symbol--resource"></span>RoleAssignment</a></li>
+    <li><a href="servicev3" title="ServiceV3"><span class="api-symbol api-symbol--resource"></span>ServiceV3</a></li>
+    <li><a href="user" title="User"><span class="api-symbol api-symbol--resource"></span>User</a></li>
+    <li><a href="usermembershipv3" title="UserMembershipV3"><span class="api-symbol api-symbol--resource"></span>UserMembershipV3</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getauthscope" title="GetAuthScope"><span class="symbol function"></span>GetAuthScope</a></li>
-    <li><a href="getendpoint" title="GetEndpoint"><span class="symbol function"></span>GetEndpoint</a></li>
-    <li><a href="getgroup" title="GetGroup"><span class="symbol function"></span>GetGroup</a></li>
-    <li><a href="getproject" title="GetProject"><span class="symbol function"></span>GetProject</a></li>
-    <li><a href="getrole" title="GetRole"><span class="symbol function"></span>GetRole</a></li>
-    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
-    <li><a href="getuser" title="GetUser"><span class="symbol function"></span>GetUser</a></li>
+    <li><a href="getauthscope" title="GetAuthScope"><span class="api-symbol api-symbol--function"></span>GetAuthScope</a></li>
+    <li><a href="getendpoint" title="GetEndpoint"><span class="api-symbol api-symbol--function"></span>GetEndpoint</a></li>
+    <li><a href="getgroup" title="GetGroup"><span class="api-symbol api-symbol--function"></span>GetGroup</a></li>
+    <li><a href="getproject" title="GetProject"><span class="api-symbol api-symbol--function"></span>GetProject</a></li>
+    <li><a href="getrole" title="GetRole"><span class="api-symbol api-symbol--function"></span>GetRole</a></li>
+    <li><a href="getservice" title="GetService"><span class="api-symbol api-symbol--function"></span>GetService</a></li>
+    <li><a href="getuser" title="GetUser"><span class="api-symbol api-symbol--function"></span>GetUser</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

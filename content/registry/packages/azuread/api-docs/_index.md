@@ -16,38 +16,38 @@ A Pulumi package for creating and managing azuread cloud resources.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="approleassignment" title="AppRoleAssignment"><span class="symbol resource"></span>AppRoleAssignment</a></li>
-    <li><a href="application" title="Application"><span class="symbol resource"></span>Application</a></li>
-    <li><a href="applicationcertificate" title="ApplicationCertificate"><span class="symbol resource"></span>ApplicationCertificate</a></li>
-    <li><a href="applicationpassword" title="ApplicationPassword"><span class="symbol resource"></span>ApplicationPassword</a></li>
-    <li><a href="applicationpreauthorized" title="ApplicationPreAuthorized"><span class="symbol resource"></span>ApplicationPreAuthorized</a></li>
-    <li><a href="conditionalaccesspolicy" title="ConditionalAccessPolicy"><span class="symbol resource"></span>ConditionalAccessPolicy</a></li>
-    <li><a href="directoryrole" title="DirectoryRole"><span class="symbol resource"></span>DirectoryRole</a></li>
-    <li><a href="directoryrolemember" title="DirectoryRoleMember"><span class="symbol resource"></span>DirectoryRoleMember</a></li>
-    <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
-    <li><a href="groupmember" title="GroupMember"><span class="symbol resource"></span>GroupMember</a></li>
-    <li><a href="invitation" title="Invitation"><span class="symbol resource"></span>Invitation</a></li>
-    <li><a href="namedlocation" title="NamedLocation"><span class="symbol resource"></span>NamedLocation</a></li>
-    <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
-    <li><a href="serviceprincipal" title="ServicePrincipal"><span class="symbol resource"></span>ServicePrincipal</a></li>
-    <li><a href="serviceprincipalcertificate" title="ServicePrincipalCertificate"><span class="symbol resource"></span>ServicePrincipalCertificate</a></li>
-    <li><a href="serviceprincipalpassword" title="ServicePrincipalPassword"><span class="symbol resource"></span>ServicePrincipalPassword</a></li>
-    <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
+    <li><a href="approleassignment" title="AppRoleAssignment"><span class="api-symbol api-symbol--resource"></span>AppRoleAssignment</a></li>
+    <li><a href="application" title="Application"><span class="api-symbol api-symbol--resource"></span>Application</a></li>
+    <li><a href="applicationcertificate" title="ApplicationCertificate"><span class="api-symbol api-symbol--resource"></span>ApplicationCertificate</a></li>
+    <li><a href="applicationpassword" title="ApplicationPassword"><span class="api-symbol api-symbol--resource"></span>ApplicationPassword</a></li>
+    <li><a href="applicationpreauthorized" title="ApplicationPreAuthorized"><span class="api-symbol api-symbol--resource"></span>ApplicationPreAuthorized</a></li>
+    <li><a href="conditionalaccesspolicy" title="ConditionalAccessPolicy"><span class="api-symbol api-symbol--resource"></span>ConditionalAccessPolicy</a></li>
+    <li><a href="directoryrole" title="DirectoryRole"><span class="api-symbol api-symbol--resource"></span>DirectoryRole</a></li>
+    <li><a href="directoryrolemember" title="DirectoryRoleMember"><span class="api-symbol api-symbol--resource"></span>DirectoryRoleMember</a></li>
+    <li><a href="group" title="Group"><span class="api-symbol api-symbol--resource"></span>Group</a></li>
+    <li><a href="groupmember" title="GroupMember"><span class="api-symbol api-symbol--resource"></span>GroupMember</a></li>
+    <li><a href="invitation" title="Invitation"><span class="api-symbol api-symbol--resource"></span>Invitation</a></li>
+    <li><a href="namedlocation" title="NamedLocation"><span class="api-symbol api-symbol--resource"></span>NamedLocation</a></li>
+    <li><a href="provider" title="Provider"><span class="api-symbol api-symbol--resource"></span>Provider</a></li>
+    <li><a href="serviceprincipal" title="ServicePrincipal"><span class="api-symbol api-symbol--resource"></span>ServicePrincipal</a></li>
+    <li><a href="serviceprincipalcertificate" title="ServicePrincipalCertificate"><span class="api-symbol api-symbol--resource"></span>ServicePrincipalCertificate</a></li>
+    <li><a href="serviceprincipalpassword" title="ServicePrincipalPassword"><span class="api-symbol api-symbol--resource"></span>ServicePrincipalPassword</a></li>
+    <li><a href="user" title="User"><span class="api-symbol api-symbol--resource"></span>User</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getapplication" title="GetApplication"><span class="symbol function"></span>GetApplication</a></li>
-    <li><a href="getapplicationpublishedappids" title="GetApplicationPublishedAppIds"><span class="symbol function"></span>GetApplicationPublishedAppIds</a></li>
-    <li><a href="getapplicationtemplate" title="GetApplicationTemplate"><span class="symbol function"></span>GetApplicationTemplate</a></li>
-    <li><a href="getclientconfig" title="GetClientConfig"><span class="symbol function"></span>GetClientConfig</a></li>
-    <li><a href="getdomains" title="GetDomains"><span class="symbol function"></span>GetDomains</a></li>
-    <li><a href="getgroup" title="GetGroup"><span class="symbol function"></span>GetGroup</a></li>
-    <li><a href="getgroups" title="GetGroups"><span class="symbol function"></span>GetGroups</a></li>
-    <li><a href="getserviceprincipal" title="GetServicePrincipal"><span class="symbol function"></span>GetServicePrincipal</a></li>
-    <li><a href="getserviceprincipals" title="GetServicePrincipals"><span class="symbol function"></span>GetServicePrincipals</a></li>
-    <li><a href="getuser" title="GetUser"><span class="symbol function"></span>GetUser</a></li>
-    <li><a href="getusers" title="GetUsers"><span class="symbol function"></span>GetUsers</a></li>
+    <li><a href="getapplication" title="GetApplication"><span class="api-symbol api-symbol--function"></span>GetApplication</a></li>
+    <li><a href="getapplicationpublishedappids" title="GetApplicationPublishedAppIds"><span class="api-symbol api-symbol--function"></span>GetApplicationPublishedAppIds</a></li>
+    <li><a href="getapplicationtemplate" title="GetApplicationTemplate"><span class="api-symbol api-symbol--function"></span>GetApplicationTemplate</a></li>
+    <li><a href="getclientconfig" title="GetClientConfig"><span class="api-symbol api-symbol--function"></span>GetClientConfig</a></li>
+    <li><a href="getdomains" title="GetDomains"><span class="api-symbol api-symbol--function"></span>GetDomains</a></li>
+    <li><a href="getgroup" title="GetGroup"><span class="api-symbol api-symbol--function"></span>GetGroup</a></li>
+    <li><a href="getgroups" title="GetGroups"><span class="api-symbol api-symbol--function"></span>GetGroups</a></li>
+    <li><a href="getserviceprincipal" title="GetServicePrincipal"><span class="api-symbol api-symbol--function"></span>GetServicePrincipal</a></li>
+    <li><a href="getserviceprincipals" title="GetServicePrincipals"><span class="api-symbol api-symbol--function"></span>GetServicePrincipals</a></li>
+    <li><a href="getuser" title="GetUser"><span class="api-symbol api-symbol--function"></span>GetUser</a></li>
+    <li><a href="getusers" title="GetUsers"><span class="api-symbol api-symbol--function"></span>GetUsers</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

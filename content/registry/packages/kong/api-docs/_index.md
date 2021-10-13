@@ -16,17 +16,17 @@ A Pulumi package for creating and managing Kong resources.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="certificate" title="Certificate"><span class="symbol resource"></span>Certificate</a></li>
-    <li><a href="consumer" title="Consumer"><span class="symbol resource"></span>Consumer</a></li>
-    <li><a href="consumeracl" title="ConsumerAcl"><span class="symbol resource"></span>ConsumerAcl</a></li>
-    <li><a href="consumerbasicauth" title="ConsumerBasicAuth"><span class="symbol resource"></span>ConsumerBasicAuth</a></li>
-    <li><a href="consumerjwtauth" title="ConsumerJwtAuth"><span class="symbol resource"></span>ConsumerJwtAuth</a></li>
-    <li><a href="plugin" title="Plugin"><span class="symbol resource"></span>Plugin</a></li>
-    <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
-    <li><a href="route" title="Route"><span class="symbol resource"></span>Route</a></li>
-    <li><a href="service" title="Service"><span class="symbol resource"></span>Service</a></li>
-    <li><a href="target" title="Target"><span class="symbol resource"></span>Target</a></li>
-    <li><a href="upstream" title="Upstream"><span class="symbol resource"></span>Upstream</a></li>
+    <li><a href="certificate" title="Certificate"><span class="api-symbol api-symbol--resource"></span>Certificate</a></li>
+    <li><a href="consumer" title="Consumer"><span class="api-symbol api-symbol--resource"></span>Consumer</a></li>
+    <li><a href="consumeracl" title="ConsumerAcl"><span class="api-symbol api-symbol--resource"></span>ConsumerAcl</a></li>
+    <li><a href="consumerbasicauth" title="ConsumerBasicAuth"><span class="api-symbol api-symbol--resource"></span>ConsumerBasicAuth</a></li>
+    <li><a href="consumerjwtauth" title="ConsumerJwtAuth"><span class="api-symbol api-symbol--resource"></span>ConsumerJwtAuth</a></li>
+    <li><a href="plugin" title="Plugin"><span class="api-symbol api-symbol--resource"></span>Plugin</a></li>
+    <li><a href="provider" title="Provider"><span class="api-symbol api-symbol--resource"></span>Provider</a></li>
+    <li><a href="route" title="Route"><span class="api-symbol api-symbol--resource"></span>Route</a></li>
+    <li><a href="service" title="Service"><span class="api-symbol api-symbol--resource"></span>Service</a></li>
+    <li><a href="target" title="Target"><span class="api-symbol api-symbol--resource"></span>Target</a></li>
+    <li><a href="upstream" title="Upstream"><span class="api-symbol api-symbol--resource"></span>Upstream</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

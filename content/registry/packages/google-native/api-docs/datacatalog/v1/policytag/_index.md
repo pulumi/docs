@@ -402,7 +402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name of this policy tag in the URL format. The policy tag manager generates unique taxonomy IDs and policy tag IDs. {{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource name of this policy tag in the URL format. The policy tag manager generates unique taxonomy IDs and policy tag IDs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -430,7 +430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name of this policy tag in the URL format. The policy tag manager generates unique taxonomy IDs and policy tag IDs. {{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource name of this policy tag in the URL format. The policy tag manager generates unique taxonomy IDs and policy tag IDs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -458,7 +458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name of this policy tag in the URL format. The policy tag manager generates unique taxonomy IDs and policy tag IDs. {{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource name of this policy tag in the URL format. The policy tag manager generates unique taxonomy IDs and policy tag IDs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -486,7 +486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name of this policy tag in the URL format. The policy tag manager generates unique taxonomy IDs and policy tag IDs. {{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resource name of this policy tag in the URL format. The policy tag manager generates unique taxonomy IDs and policy tag IDs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

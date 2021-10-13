@@ -13,11 +13,11 @@ Explore the resources and functions of the openstack.vpnaas module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="endpointgroup" title="EndpointGroup"><span class="symbol resource"></span>EndpointGroup</a></li>
-    <li><a href="ikepolicy" title="IkePolicy"><span class="symbol resource"></span>IkePolicy</a></li>
-    <li><a href="ipsecpolicy" title="IpSecPolicy"><span class="symbol resource"></span>IpSecPolicy</a></li>
-    <li><a href="service" title="Service"><span class="symbol resource"></span>Service</a></li>
-    <li><a href="siteconnection" title="SiteConnection"><span class="symbol resource"></span>SiteConnection</a></li>
+    <li><a href="endpointgroup" title="EndpointGroup"><span class="api-symbol api-symbol--resource"></span>EndpointGroup</a></li>
+    <li><a href="ikepolicy" title="IkePolicy"><span class="api-symbol api-symbol--resource"></span>IkePolicy</a></li>
+    <li><a href="ipsecpolicy" title="IpSecPolicy"><span class="api-symbol api-symbol--resource"></span>IpSecPolicy</a></li>
+    <li><a href="service" title="Service"><span class="api-symbol api-symbol--resource"></span>Service</a></li>
+    <li><a href="siteconnection" title="SiteConnection"><span class="api-symbol api-symbol--resource"></span>SiteConnection</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

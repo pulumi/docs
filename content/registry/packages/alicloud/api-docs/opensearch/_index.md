@@ -13,12 +13,12 @@ Explore the resources and functions of the alicloud.opensearch module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="appgroup" title="AppGroup"><span class="symbol resource"></span>AppGroup</a></li>
+    <li><a href="appgroup" title="AppGroup"><span class="api-symbol api-symbol--resource"></span>AppGroup</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getappgroups" title="GetAppGroups"><span class="symbol function"></span>GetAppGroups</a></li>
+    <li><a href="getappgroups" title="GetAppGroups"><span class="api-symbol api-symbol--function"></span>GetAppGroups</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

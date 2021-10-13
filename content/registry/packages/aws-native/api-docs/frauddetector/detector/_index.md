@@ -32,7 +32,7 @@ A resource schema for a Detector in Amazon Fraud Detector.
              <span class="nx">associated_models</span><span class="p">:</span> <span class="nx">Optional[Sequence[DetectorModelArgs]]</span> = None<span class="p">,</span>
              <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">detector_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">detector_version_status</span><span class="p">:</span> <span class="nx">Optional[DetectorDetectorVersionStatus]</span> = None<span class="p">,</span>
+             <span class="nx">detector_version_status</span><span class="p">:</span> <span class="nx">Optional[DetectorVersionStatus]</span> = None<span class="p">,</span>
              <span class="nx">event_type</span><span class="p">:</span> <span class="nx">Optional[DetectorEventTypeArgs]</span> = None<span class="p">,</span>
              <span class="nx">rule_execution_mode</span><span class="p">:</span> <span class="nx">Optional[DetectorRuleExecutionMode]</span> = None<span class="p">,</span>
              <span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[DetectorRuleArgs]]</span> = None<span class="p">,</span>
@@ -210,7 +210,7 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#detectorversionstatus_csharp" style="color: inherit; text-decoration: inherit;">Detector<wbr>Version<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#detectordetectorversionstatus">Pulumi.<wbr>Aws<wbr>Native.<wbr>Fraud<wbr>Detector.<wbr>Detector<wbr>Detector<wbr>Version<wbr>Status</a></span>
+        <span class="property-type"><a href="#detectorversionstatus">Pulumi.<wbr>Aws<wbr>Native.<wbr>Fraud<wbr>Detector.<wbr>Detector<wbr>Version<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The desired detector version status for the detector{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -278,7 +278,7 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#detectorversionstatus_go" style="color: inherit; text-decoration: inherit;">Detector<wbr>Version<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#detectordetectorversionstatus">Detector<wbr>Detector<wbr>Version<wbr>Status</a></span>
+        <span class="property-type"><a href="#detectorversionstatus">Detector<wbr>Version<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The desired detector version status for the detector{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -346,7 +346,7 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#detectorversionstatus_nodejs" style="color: inherit; text-decoration: inherit;">detector<wbr>Version<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#detectordetectorversionstatus">Detector<wbr>Detector<wbr>Version<wbr>Status</a></span>
+        <span class="property-type"><a href="#detectorversionstatus">Detector<wbr>Version<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The desired detector version status for the detector{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -414,7 +414,7 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#detector_version_status_python" style="color: inherit; text-decoration: inherit;">detector_<wbr>version_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#detectordetectorversionstatus">Detector<wbr>Detector<wbr>Version<wbr>Status</a></span>
+        <span class="property-type"><a href="#detectorversionstatus">Detector<wbr>Version<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The desired detector version status for the detector{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -627,32 +627,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
-
-<h4 id="detectordetectorversionstatus">Detector<wbr>Detector<wbr>Version<wbr>Status</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Draft</dt>
-    <dd>DRAFT</dd><dt>Active</dt>
-    <dd>ACTIVE</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Detector<wbr>Detector<wbr>Version<wbr>Status<wbr>Draft</dt>
-    <dd>DRAFT</dd><dt>Detector<wbr>Detector<wbr>Version<wbr>Status<wbr>Active</dt>
-    <dd>ACTIVE</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Draft</dt>
-    <dd>DRAFT</dd><dt>Active</dt>
-    <dd>ACTIVE</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>DRAFT</dt>
-    <dd>DRAFT</dd><dt>ACTIVE</dt>
-    <dd>ACTIVE</dd></dl>
-{{% /choosable %}}
 
 <h4 id="detectorentitytype">Detector<wbr>Entity<wbr>Type</h4>
 
@@ -2842,6 +2816,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="detectorversionstatus">Detector<wbr>Version<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Draft</dt>
+    <dd>DRAFT</dd><dt>Active</dt>
+    <dd>ACTIVE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Detector<wbr>Version<wbr>Status<wbr>Draft</dt>
+    <dd>DRAFT</dd><dt>Detector<wbr>Version<wbr>Status<wbr>Active</dt>
+    <dd>ACTIVE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Draft</dt>
+    <dd>DRAFT</dd><dt>Active</dt>
+    <dd>ACTIVE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DRAFT</dt>
+    <dd>DRAFT</dd><dt>ACTIVE</dt>
+    <dd>ACTIVE</dd></dl>
 {{% /choosable %}}
 
 

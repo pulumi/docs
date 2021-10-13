@@ -13,21 +13,21 @@ Explore the resources and functions of the aws.eks module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="addon" title="Addon"><span class="symbol resource"></span>Addon</a></li>
-    <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
-    <li><a href="fargateprofile" title="FargateProfile"><span class="symbol resource"></span>FargateProfile</a></li>
-    <li><a href="identityproviderconfig" title="IdentityProviderConfig"><span class="symbol resource"></span>IdentityProviderConfig</a></li>
-    <li><a href="nodegroup" title="NodeGroup"><span class="symbol resource"></span>NodeGroup</a></li>
+    <li><a href="addon" title="Addon"><span class="api-symbol api-symbol--resource"></span>Addon</a></li>
+    <li><a href="cluster" title="Cluster"><span class="api-symbol api-symbol--resource"></span>Cluster</a></li>
+    <li><a href="fargateprofile" title="FargateProfile"><span class="api-symbol api-symbol--resource"></span>FargateProfile</a></li>
+    <li><a href="identityproviderconfig" title="IdentityProviderConfig"><span class="api-symbol api-symbol--resource"></span>IdentityProviderConfig</a></li>
+    <li><a href="nodegroup" title="NodeGroup"><span class="api-symbol api-symbol--resource"></span>NodeGroup</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getaddon" title="GetAddon"><span class="symbol function"></span>GetAddon</a></li>
-    <li><a href="getcluster" title="GetCluster"><span class="symbol function"></span>GetCluster</a></li>
-    <li><a href="getclusterauth" title="GetClusterAuth"><span class="symbol function"></span>GetClusterAuth</a></li>
-    <li><a href="getclusters" title="GetClusters"><span class="symbol function"></span>GetClusters</a></li>
-    <li><a href="getnodegroup" title="GetNodeGroup"><span class="symbol function"></span>GetNodeGroup</a></li>
-    <li><a href="getnodegroups" title="GetNodeGroups"><span class="symbol function"></span>GetNodeGroups</a></li>
+    <li><a href="getaddon" title="GetAddon"><span class="api-symbol api-symbol--function"></span>GetAddon</a></li>
+    <li><a href="getcluster" title="GetCluster"><span class="api-symbol api-symbol--function"></span>GetCluster</a></li>
+    <li><a href="getclusterauth" title="GetClusterAuth"><span class="api-symbol api-symbol--function"></span>GetClusterAuth</a></li>
+    <li><a href="getclusters" title="GetClusters"><span class="api-symbol api-symbol--function"></span>GetClusters</a></li>
+    <li><a href="getnodegroup" title="GetNodeGroup"><span class="api-symbol api-symbol--function"></span>GetNodeGroup</a></li>
+    <li><a href="getnodegroups" title="GetNodeGroups"><span class="api-symbol api-symbol--function"></span>GetNodeGroups</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -39,6 +39,6 @@ Explore the resources and functions of the aws.eks module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.23.0</dd>
+	<dd>4.24.1</dd>
 </dl>
 

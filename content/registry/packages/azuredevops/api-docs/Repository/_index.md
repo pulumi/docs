@@ -13,12 +13,12 @@ Explore the resources and functions of the azuredevops.Repository module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="git" title="Git"><span class="symbol resource"></span>Git</a></li>
+    <li><a href="git" title="Git"><span class="api-symbol api-symbol--resource"></span>Git</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getrepositories" title="GetRepositories"><span class="symbol function"></span>GetRepositories</a></li>
+    <li><a href="getrepositories" title="GetRepositories"><span class="api-symbol api-symbol--function"></span>GetRepositories</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

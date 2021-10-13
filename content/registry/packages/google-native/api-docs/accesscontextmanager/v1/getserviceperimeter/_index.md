@@ -159,7 +159,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name for the ServicePerimeter. The `short_name` component must begin with a letter and only include alphanumeric and '_'. Format: `accessPolicies/{policy_id}/servicePerimeters/{short_name}`{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Resource name for the ServicePerimeter. The `short_name` component must begin with a letter and only include alphanumeric and '_'. Format: `accessPolicies/{access_policy}/servicePerimeters/{service_perimeter}`{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="perimetertype_csharp">
 <a href="#perimetertype_csharp" style="color: inherit; text-decoration: inherit;">Perimeter<wbr>Type</a>
@@ -219,7 +219,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name for the ServicePerimeter. The `short_name` component must begin with a letter and only include alphanumeric and '_'. Format: `accessPolicies/{policy_id}/servicePerimeters/{short_name}`{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Resource name for the ServicePerimeter. The `short_name` component must begin with a letter and only include alphanumeric and '_'. Format: `accessPolicies/{access_policy}/servicePerimeters/{service_perimeter}`{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="perimetertype_go">
 <a href="#perimetertype_go" style="color: inherit; text-decoration: inherit;">Perimeter<wbr>Type</a>
@@ -279,7 +279,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name for the ServicePerimeter. The `short_name` component must begin with a letter and only include alphanumeric and '_'. Format: `accessPolicies/{policy_id}/servicePerimeters/{short_name}`{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Resource name for the ServicePerimeter. The `short_name` component must begin with a letter and only include alphanumeric and '_'. Format: `accessPolicies/{access_policy}/servicePerimeters/{service_perimeter}`{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="perimetertype_nodejs">
 <a href="#perimetertype_nodejs" style="color: inherit; text-decoration: inherit;">perimeter<wbr>Type</a>
@@ -339,7 +339,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name for the ServicePerimeter. The `short_name` component must begin with a letter and only include alphanumeric and '_'. Format: `accessPolicies/{policy_id}/servicePerimeters/{short_name}`{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Resource name for the ServicePerimeter. The `short_name` component must begin with a letter and only include alphanumeric and '_'. Format: `accessPolicies/{access_policy}/servicePerimeters/{service_perimeter}`{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="perimeter_type_python">
 <a href="#perimeter_type_python" style="color: inherit; text-decoration: inherit;">perimeter_<wbr>type</a>

@@ -13,15 +13,15 @@ Explore the resources and functions of the openstack.dns module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="recordset" title="RecordSet"><span class="symbol resource"></span>RecordSet</a></li>
-    <li><a href="transferaccept" title="TransferAccept"><span class="symbol resource"></span>TransferAccept</a></li>
-    <li><a href="transferrequest" title="TransferRequest"><span class="symbol resource"></span>TransferRequest</a></li>
-    <li><a href="zone" title="Zone"><span class="symbol resource"></span>Zone</a></li>
+    <li><a href="recordset" title="RecordSet"><span class="api-symbol api-symbol--resource"></span>RecordSet</a></li>
+    <li><a href="transferaccept" title="TransferAccept"><span class="api-symbol api-symbol--resource"></span>TransferAccept</a></li>
+    <li><a href="transferrequest" title="TransferRequest"><span class="api-symbol api-symbol--resource"></span>TransferRequest</a></li>
+    <li><a href="zone" title="Zone"><span class="api-symbol api-symbol--resource"></span>Zone</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getdnszone" title="GetDnsZone"><span class="symbol function"></span>GetDnsZone</a></li>
+    <li><a href="getdnszone" title="GetDnsZone"><span class="api-symbol api-symbol--function"></span>GetDnsZone</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

@@ -31,11 +31,11 @@ Definition of the AWS::QuickSight::Dashboard Resource Type.
               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
               <span class="nx">aws_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">dashboard_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-              <span class="nx">dashboard_publish_options</span><span class="p">:</span> <span class="nx">Optional[DashboardDashboardPublishOptionsArgs]</span> = None<span class="p">,</span>
+              <span class="nx">dashboard_publish_options</span><span class="p">:</span> <span class="nx">Optional[DashboardPublishOptionsArgs]</span> = None<span class="p">,</span>
               <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[DashboardParametersArgs]</span> = None<span class="p">,</span>
               <span class="nx">permissions</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardResourcePermissionArgs]]</span> = None<span class="p">,</span>
-              <span class="nx">source_entity</span><span class="p">:</span> <span class="nx">Optional[DashboardDashboardSourceEntityArgs]</span> = None<span class="p">,</span>
+              <span class="nx">source_entity</span><span class="p">:</span> <span class="nx">Optional[DashboardSourceEntityArgs]</span> = None<span class="p">,</span>
               <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardTagArgs]]</span> = None<span class="p">,</span>
               <span class="nx">theme_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">version_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
@@ -188,7 +188,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#dashboardpublishoptions_csharp" style="color: inherit; text-decoration: inherit;">Dashboard<wbr>Publish<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboarddashboardpublishoptions">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Dashboard<wbr>Dashboard<wbr>Publish<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#dashboardpublishoptions">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Dashboard<wbr>Publish<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -224,7 +224,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sourceentity_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Entity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboarddashboardsourceentity">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Dashboard<wbr>Dashboard<wbr>Source<wbr>Entity<wbr>Args</a></span>
+        <span class="property-type"><a href="#dashboardsourceentity">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Dashboard<wbr>Source<wbr>Entity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -280,7 +280,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#dashboardpublishoptions_go" style="color: inherit; text-decoration: inherit;">Dashboard<wbr>Publish<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboarddashboardpublishoptions">Dashboard<wbr>Dashboard<wbr>Publish<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#dashboardpublishoptions">Dashboard<wbr>Publish<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -316,7 +316,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sourceentity_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Entity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboarddashboardsourceentity">Dashboard<wbr>Dashboard<wbr>Source<wbr>Entity<wbr>Args</a></span>
+        <span class="property-type"><a href="#dashboardsourceentity">Dashboard<wbr>Source<wbr>Entity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -372,7 +372,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#dashboardpublishoptions_nodejs" style="color: inherit; text-decoration: inherit;">dashboard<wbr>Publish<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboarddashboardpublishoptions">Dashboard<wbr>Dashboard<wbr>Publish<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#dashboardpublishoptions">Dashboard<wbr>Publish<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -408,7 +408,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sourceentity_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Entity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboarddashboardsourceentity">Dashboard<wbr>Dashboard<wbr>Source<wbr>Entity<wbr>Args</a></span>
+        <span class="property-type"><a href="#dashboardsourceentity">Dashboard<wbr>Source<wbr>Entity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -464,7 +464,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#dashboard_publish_options_python" style="color: inherit; text-decoration: inherit;">dashboard_<wbr>publish_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboarddashboardpublishoptions">Dashboard<wbr>Dashboard<wbr>Publish<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#dashboardpublishoptions">Dashboard<wbr>Publish<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -500,7 +500,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#source_entity_python" style="color: inherit; text-decoration: inherit;">source_<wbr>entity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboarddashboardsourceentity">Dashboard<wbr>Dashboard<wbr>Source<wbr>Entity<wbr>Args</a></span>
+        <span class="property-type"><a href="#dashboardsourceentity">Dashboard<wbr>Source<wbr>Entity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -587,7 +587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboarddashboardversion">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Outputs.<wbr>Dashboard<wbr>Dashboard<wbr>Version</a></span>
+        <span class="property-type"><a href="#dashboardversion">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Outputs.<wbr>Dashboard<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -639,7 +639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboarddashboardversion">Dashboard<wbr>Dashboard<wbr>Version</a></span>
+        <span class="property-type"><a href="#dashboardversion">Dashboard<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -691,7 +691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboarddashboardversion">Dashboard<wbr>Dashboard<wbr>Version</a></span>
+        <span class="property-type"><a href="#dashboardversion">Dashboard<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -743,7 +743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboarddashboardversion">Dashboard<wbr>Dashboard<wbr>Version</a></span>
+        <span class="property-type"><a href="#dashboardversion">Dashboard<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -767,7 +767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availabilitystatus_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboarddashboardbehavior">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Dashboard<wbr>Dashboard<wbr>Behavior</a></span>
+        <span class="property-type"><a href="#dashboardbehavior">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Dashboard<wbr>Behavior</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -779,7 +779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availabilitystatus_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboarddashboardbehavior">Dashboard<wbr>Dashboard<wbr>Behavior</a></span>
+        <span class="property-type"><a href="#dashboardbehavior">Dashboard<wbr>Behavior</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -791,7 +791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availabilitystatus_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboarddashboardbehavior">Dashboard<wbr>Dashboard<wbr>Behavior</a></span>
+        <span class="property-type"><a href="#dashboardbehavior">Dashboard<wbr>Behavior</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -803,12 +803,12 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availability_status_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboarddashboardbehavior">Dashboard<wbr>Dashboard<wbr>Behavior</a></span>
+        <span class="property-type"><a href="#dashboardbehavior">Dashboard<wbr>Behavior</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="dashboarddashboardbehavior">Dashboard<wbr>Dashboard<wbr>Behavior</h4>
+<h4 id="dashboardbehavior">Dashboard<wbr>Behavior</h4>
 
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>Enabled</dt>
@@ -817,8 +817,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular"><dt>Dashboard<wbr>Dashboard<wbr>Behavior<wbr>Enabled</dt>
-    <dd>ENABLED</dd><dt>Dashboard<wbr>Dashboard<wbr>Behavior<wbr>Disabled</dt>
+<dl class="tabular"><dt>Dashboard<wbr>Behavior<wbr>Enabled</dt>
+    <dd>ENABLED</dd><dt>Dashboard<wbr>Behavior<wbr>Disabled</dt>
     <dd>DISABLED</dd></dl>
 {{% /choosable %}}
 
@@ -832,760 +832,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular"><dt>ENABLED</dt>
     <dd>ENABLED</dd><dt>DISABLED</dt>
     <dd>DISABLED</dd></dl>
-{{% /choosable %}}
-
-<h4 id="dashboarddashboarderror">Dashboard<wbr>Dashboard<wbr>Error</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="message_csharp">
-<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>Message.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboarddashboarderrortype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Dashboard<wbr>Dashboard<wbr>Error<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="message_go">
-<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>Message.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboarddashboarderrortype">Dashboard<wbr>Dashboard<wbr>Error<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="message_nodejs">
-<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>Message.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboarddashboarderrortype">Dashboard<wbr>Dashboard<wbr>Error<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="message_python">
-<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}<p>Message.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboarddashboarderrortype">Dashboard<wbr>Dashboard<wbr>Error<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="dashboarddashboarderrortype">Dashboard<wbr>Dashboard<wbr>Error<wbr>Type</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Access<wbr>Denied</dt>
-    <dd>ACCESS_DENIED</dd><dt>Source<wbr>Not<wbr>Found</dt>
-    <dd>SOURCE_NOT_FOUND</dd><dt>Data<wbr>Set<wbr>Not<wbr>Found</dt>
-    <dd>DATA_SET_NOT_FOUND</dd><dt>Internal<wbr>Failure</dt>
-    <dd>INTERNAL_FAILURE</dd><dt>Parameter<wbr>Value<wbr>Incompatible</dt>
-    <dd>PARAMETER_VALUE_INCOMPATIBLE</dd><dt>Parameter<wbr>Type<wbr>Invalid</dt>
-    <dd>PARAMETER_TYPE_INVALID</dd><dt>Parameter<wbr>Not<wbr>Found</dt>
-    <dd>PARAMETER_NOT_FOUND</dd><dt>Column<wbr>Type<wbr>Mismatch</dt>
-    <dd>COLUMN_TYPE_MISMATCH</dd><dt>Column<wbr>Geographic<wbr>Role<wbr>Mismatch</dt>
-    <dd>COLUMN_GEOGRAPHIC_ROLE_MISMATCH</dd><dt>Column<wbr>Replacement<wbr>Missing</dt>
-    <dd>COLUMN_REPLACEMENT_MISSING</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Dashboard<wbr>Dashboard<wbr>Error<wbr>Type<wbr>Access<wbr>Denied</dt>
-    <dd>ACCESS_DENIED</dd><dt>Dashboard<wbr>Dashboard<wbr>Error<wbr>Type<wbr>Source<wbr>Not<wbr>Found</dt>
-    <dd>SOURCE_NOT_FOUND</dd><dt>Dashboard<wbr>Dashboard<wbr>Error<wbr>Type<wbr>Data<wbr>Set<wbr>Not<wbr>Found</dt>
-    <dd>DATA_SET_NOT_FOUND</dd><dt>Dashboard<wbr>Dashboard<wbr>Error<wbr>Type<wbr>Internal<wbr>Failure</dt>
-    <dd>INTERNAL_FAILURE</dd><dt>Dashboard<wbr>Dashboard<wbr>Error<wbr>Type<wbr>Parameter<wbr>Value<wbr>Incompatible</dt>
-    <dd>PARAMETER_VALUE_INCOMPATIBLE</dd><dt>Dashboard<wbr>Dashboard<wbr>Error<wbr>Type<wbr>Parameter<wbr>Type<wbr>Invalid</dt>
-    <dd>PARAMETER_TYPE_INVALID</dd><dt>Dashboard<wbr>Dashboard<wbr>Error<wbr>Type<wbr>Parameter<wbr>Not<wbr>Found</dt>
-    <dd>PARAMETER_NOT_FOUND</dd><dt>Dashboard<wbr>Dashboard<wbr>Error<wbr>Type<wbr>Column<wbr>Type<wbr>Mismatch</dt>
-    <dd>COLUMN_TYPE_MISMATCH</dd><dt>Dashboard<wbr>Dashboard<wbr>Error<wbr>Type<wbr>Column<wbr>Geographic<wbr>Role<wbr>Mismatch</dt>
-    <dd>COLUMN_GEOGRAPHIC_ROLE_MISMATCH</dd><dt>Dashboard<wbr>Dashboard<wbr>Error<wbr>Type<wbr>Column<wbr>Replacement<wbr>Missing</dt>
-    <dd>COLUMN_REPLACEMENT_MISSING</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Access<wbr>Denied</dt>
-    <dd>ACCESS_DENIED</dd><dt>Source<wbr>Not<wbr>Found</dt>
-    <dd>SOURCE_NOT_FOUND</dd><dt>Data<wbr>Set<wbr>Not<wbr>Found</dt>
-    <dd>DATA_SET_NOT_FOUND</dd><dt>Internal<wbr>Failure</dt>
-    <dd>INTERNAL_FAILURE</dd><dt>Parameter<wbr>Value<wbr>Incompatible</dt>
-    <dd>PARAMETER_VALUE_INCOMPATIBLE</dd><dt>Parameter<wbr>Type<wbr>Invalid</dt>
-    <dd>PARAMETER_TYPE_INVALID</dd><dt>Parameter<wbr>Not<wbr>Found</dt>
-    <dd>PARAMETER_NOT_FOUND</dd><dt>Column<wbr>Type<wbr>Mismatch</dt>
-    <dd>COLUMN_TYPE_MISMATCH</dd><dt>Column<wbr>Geographic<wbr>Role<wbr>Mismatch</dt>
-    <dd>COLUMN_GEOGRAPHIC_ROLE_MISMATCH</dd><dt>Column<wbr>Replacement<wbr>Missing</dt>
-    <dd>COLUMN_REPLACEMENT_MISSING</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>ACCESS_DENIED</dt>
-    <dd>ACCESS_DENIED</dd><dt>SOURCE_NOT_FOUND</dt>
-    <dd>SOURCE_NOT_FOUND</dd><dt>DATA_SET_NOT_FOUND</dt>
-    <dd>DATA_SET_NOT_FOUND</dd><dt>INTERNAL_FAILURE</dt>
-    <dd>INTERNAL_FAILURE</dd><dt>PARAMETER_VALUE_INCOMPATIBLE</dt>
-    <dd>PARAMETER_VALUE_INCOMPATIBLE</dd><dt>PARAMETER_TYPE_INVALID</dt>
-    <dd>PARAMETER_TYPE_INVALID</dd><dt>PARAMETER_NOT_FOUND</dt>
-    <dd>PARAMETER_NOT_FOUND</dd><dt>COLUMN_TYPE_MISMATCH</dt>
-    <dd>COLUMN_TYPE_MISMATCH</dd><dt>COLUMN_GEOGRAPHIC_ROLE_MISMATCH</dt>
-    <dd>COLUMN_GEOGRAPHIC_ROLE_MISMATCH</dd><dt>COLUMN_REPLACEMENT_MISSING</dt>
-    <dd>COLUMN_REPLACEMENT_MISSING</dd></dl>
-{{% /choosable %}}
-
-<h4 id="dashboarddashboardpublishoptions">Dashboard<wbr>Dashboard<wbr>Publish<wbr>Options</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="adhocfilteringoption_csharp">
-<a href="#adhocfilteringoption_csharp" style="color: inherit; text-decoration: inherit;">Ad<wbr>Hoc<wbr>Filtering<wbr>Option</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardadhocfilteringoption">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Dashboard<wbr>Ad<wbr>Hoc<wbr>Filtering<wbr>Option</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="exporttocsvoption_csharp">
-<a href="#exporttocsvoption_csharp" style="color: inherit; text-decoration: inherit;">Export<wbr>To<wbr>CSVOption</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardexporttocsvoption">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Dashboard<wbr>Export<wbr>To<wbr>CSVOption</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sheetcontrolsoption_csharp">
-<a href="#sheetcontrolsoption_csharp" style="color: inherit; text-decoration: inherit;">Sheet<wbr>Controls<wbr>Option</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardsheetcontrolsoption">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Dashboard<wbr>Sheet<wbr>Controls<wbr>Option</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="adhocfilteringoption_go">
-<a href="#adhocfilteringoption_go" style="color: inherit; text-decoration: inherit;">Ad<wbr>Hoc<wbr>Filtering<wbr>Option</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardadhocfilteringoption">Dashboard<wbr>Ad<wbr>Hoc<wbr>Filtering<wbr>Option</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="exporttocsvoption_go">
-<a href="#exporttocsvoption_go" style="color: inherit; text-decoration: inherit;">Export<wbr>To<wbr>CSVOption</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardexporttocsvoption">Dashboard<wbr>Export<wbr>To<wbr>CSVOption</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sheetcontrolsoption_go">
-<a href="#sheetcontrolsoption_go" style="color: inherit; text-decoration: inherit;">Sheet<wbr>Controls<wbr>Option</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardsheetcontrolsoption">Dashboard<wbr>Sheet<wbr>Controls<wbr>Option</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="adhocfilteringoption_nodejs">
-<a href="#adhocfilteringoption_nodejs" style="color: inherit; text-decoration: inherit;">ad<wbr>Hoc<wbr>Filtering<wbr>Option</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardadhocfilteringoption">Dashboard<wbr>Ad<wbr>Hoc<wbr>Filtering<wbr>Option</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="exporttocsvoption_nodejs">
-<a href="#exporttocsvoption_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>To<wbr>CSVOption</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardexporttocsvoption">Dashboard<wbr>Export<wbr>To<wbr>CSVOption</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sheetcontrolsoption_nodejs">
-<a href="#sheetcontrolsoption_nodejs" style="color: inherit; text-decoration: inherit;">sheet<wbr>Controls<wbr>Option</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardsheetcontrolsoption">Dashboard<wbr>Sheet<wbr>Controls<wbr>Option</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="ad_hoc_filtering_option_python">
-<a href="#ad_hoc_filtering_option_python" style="color: inherit; text-decoration: inherit;">ad_<wbr>hoc_<wbr>filtering_<wbr>option</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardadhocfilteringoption">Dashboard<wbr>Ad<wbr>Hoc<wbr>Filtering<wbr>Option</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="export_to_csv_option_python">
-<a href="#export_to_csv_option_python" style="color: inherit; text-decoration: inherit;">export_<wbr>to_<wbr>csv_<wbr>option</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardexporttocsvoption">Dashboard<wbr>Export<wbr>To<wbr>CSVOption</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sheet_controls_option_python">
-<a href="#sheet_controls_option_python" style="color: inherit; text-decoration: inherit;">sheet_<wbr>controls_<wbr>option</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardsheetcontrolsoption">Dashboard<wbr>Sheet<wbr>Controls<wbr>Option</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="dashboarddashboardsourceentity">Dashboard<wbr>Dashboard<wbr>Source<wbr>Entity</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="sourcetemplate_csharp">
-<a href="#sourcetemplate_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Template</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboarddashboardsourcetemplate">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Dashboard<wbr>Dashboard<wbr>Source<wbr>Template</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="sourcetemplate_go">
-<a href="#sourcetemplate_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Template</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboarddashboardsourcetemplate">Dashboard<wbr>Dashboard<wbr>Source<wbr>Template</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="sourcetemplate_nodejs">
-<a href="#sourcetemplate_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Template</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboarddashboardsourcetemplate">Dashboard<wbr>Dashboard<wbr>Source<wbr>Template</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="source_template_python">
-<a href="#source_template_python" style="color: inherit; text-decoration: inherit;">source_<wbr>template</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboarddashboardsourcetemplate">Dashboard<wbr>Dashboard<wbr>Source<wbr>Template</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="dashboarddashboardsourcetemplate">Dashboard<wbr>Dashboard<wbr>Source<wbr>Template</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="arn_csharp">
-<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>The Amazon Resource Name (ARN) of the resource.</p>{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="datasetreferences_csharp">
-<a href="#datasetreferences_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Set<wbr>References</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboarddatasetreference">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Dashboard<wbr>Data<wbr>Set<wbr>Reference&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}<p>Dataset references.</p>{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="arn_go">
-<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>The Amazon Resource Name (ARN) of the resource.</p>{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="datasetreferences_go">
-<a href="#datasetreferences_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Set<wbr>References</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboarddatasetreference">[]Dashboard<wbr>Data<wbr>Set<wbr>Reference</a></span>
-    </dt>
-    <dd>{{% md %}}<p>Dataset references.</p>{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="arn_nodejs">
-<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>The Amazon Resource Name (ARN) of the resource.</p>{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="datasetreferences_nodejs">
-<a href="#datasetreferences_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Set<wbr>References</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboarddatasetreference">Dashboard<wbr>Data<wbr>Set<wbr>Reference[]</a></span>
-    </dt>
-    <dd>{{% md %}}<p>Dataset references.</p>{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="arn_python">
-<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}<p>The Amazon Resource Name (ARN) of the resource.</p>{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="data_set_references_python">
-<a href="#data_set_references_python" style="color: inherit; text-decoration: inherit;">data_<wbr>set_<wbr>references</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboarddatasetreference">Sequence[Dashboard<wbr>Data<wbr>Set<wbr>Reference]</a></span>
-    </dt>
-    <dd>{{% md %}}<p>Dataset references.</p>{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="dashboarddashboarduistate">Dashboard<wbr>Dashboard<wbr>UIState</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Expanded</dt>
-    <dd>EXPANDED</dd><dt>Collapsed</dt>
-    <dd>COLLAPSED</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Dashboard<wbr>Dashboard<wbr>UIState<wbr>Expanded</dt>
-    <dd>EXPANDED</dd><dt>Dashboard<wbr>Dashboard<wbr>UIState<wbr>Collapsed</dt>
-    <dd>COLLAPSED</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Expanded</dt>
-    <dd>EXPANDED</dd><dt>Collapsed</dt>
-    <dd>COLLAPSED</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>EXPANDED</dt>
-    <dd>EXPANDED</dd><dt>COLLAPSED</dt>
-    <dd>COLLAPSED</dd></dl>
-{{% /choosable %}}
-
-<h4 id="dashboarddashboardversion">Dashboard<wbr>Dashboard<wbr>Version</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="arn_csharp">
-<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>The Amazon Resource Name (ARN) of the resource.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="createdtime_csharp">
-<a href="#createdtime_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>The time that this dashboard version was created.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="datasetarns_csharp">
-<a href="#datasetarns_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Set<wbr>Arns</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}<p>The Amazon Resource Numbers (ARNs) for the datasets that are associated with this
-            version of the dashboard.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="description_csharp">
-<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>Description.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="errors_csharp">
-<a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboarddashboarderror">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Dashboard<wbr>Dashboard<wbr>Error&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}<p>Errors associated with this dashboard version.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sheets_csharp">
-<a href="#sheets_csharp" style="color: inherit; text-decoration: inherit;">Sheets</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardsheet">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Dashboard<wbr>Sheet&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}<p>A list of the associated sheets with the unique identifier and name of each sheet.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sourceentityarn_csharp">
-<a href="#sourceentityarn_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Entity<wbr>Arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>Source entity ARN.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="status_csharp">
-<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardresourcestatus">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Dashboard<wbr>Resource<wbr>Status</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="themearn_csharp">
-<a href="#themearn_csharp" style="color: inherit; text-decoration: inherit;">Theme<wbr>Arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>The ARN of the theme associated with a version of the dashboard.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="versionnumber_csharp">
-<a href="#versionnumber_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Number</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">double</span>
-    </dt>
-    <dd>{{% md %}}<p>Version number for this version of the dashboard.</p>{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="arn_go">
-<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>The Amazon Resource Name (ARN) of the resource.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="createdtime_go">
-<a href="#createdtime_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>The time that this dashboard version was created.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="datasetarns_go">
-<a href="#datasetarns_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Set<wbr>Arns</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}<p>The Amazon Resource Numbers (ARNs) for the datasets that are associated with this
-            version of the dashboard.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="description_go">
-<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>Description.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="errors_go">
-<a href="#errors_go" style="color: inherit; text-decoration: inherit;">Errors</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboarddashboarderror">[]Dashboard<wbr>Dashboard<wbr>Error</a></span>
-    </dt>
-    <dd>{{% md %}}<p>Errors associated with this dashboard version.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sheets_go">
-<a href="#sheets_go" style="color: inherit; text-decoration: inherit;">Sheets</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardsheet">[]Dashboard<wbr>Sheet</a></span>
-    </dt>
-    <dd>{{% md %}}<p>A list of the associated sheets with the unique identifier and name of each sheet.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sourceentityarn_go">
-<a href="#sourceentityarn_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Entity<wbr>Arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>Source entity ARN.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="status_go">
-<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardresourcestatus">Dashboard<wbr>Resource<wbr>Status</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="themearn_go">
-<a href="#themearn_go" style="color: inherit; text-decoration: inherit;">Theme<wbr>Arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>The ARN of the theme associated with a version of the dashboard.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="versionnumber_go">
-<a href="#versionnumber_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Number</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float64</span>
-    </dt>
-    <dd>{{% md %}}<p>Version number for this version of the dashboard.</p>{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="arn_nodejs">
-<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>The Amazon Resource Name (ARN) of the resource.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="createdtime_nodejs">
-<a href="#createdtime_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>The time that this dashboard version was created.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="datasetarns_nodejs">
-<a href="#datasetarns_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Set<wbr>Arns</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}<p>The Amazon Resource Numbers (ARNs) for the datasets that are associated with this
-            version of the dashboard.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="description_nodejs">
-<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>Description.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="errors_nodejs">
-<a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboarddashboarderror">Dashboard<wbr>Dashboard<wbr>Error[]</a></span>
-    </dt>
-    <dd>{{% md %}}<p>Errors associated with this dashboard version.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sheets_nodejs">
-<a href="#sheets_nodejs" style="color: inherit; text-decoration: inherit;">sheets</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardsheet">Dashboard<wbr>Sheet[]</a></span>
-    </dt>
-    <dd>{{% md %}}<p>A list of the associated sheets with the unique identifier and name of each sheet.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sourceentityarn_nodejs">
-<a href="#sourceentityarn_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Entity<wbr>Arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>Source entity ARN.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="status_nodejs">
-<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardresourcestatus">Dashboard<wbr>Resource<wbr>Status</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="themearn_nodejs">
-<a href="#themearn_nodejs" style="color: inherit; text-decoration: inherit;">theme<wbr>Arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>The ARN of the theme associated with a version of the dashboard.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="versionnumber_nodejs">
-<a href="#versionnumber_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Number</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}<p>Version number for this version of the dashboard.</p>{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="arn_python">
-<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}<p>The Amazon Resource Name (ARN) of the resource.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="created_time_python">
-<a href="#created_time_python" style="color: inherit; text-decoration: inherit;">created_<wbr>time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}<p>The time that this dashboard version was created.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="data_set_arns_python">
-<a href="#data_set_arns_python" style="color: inherit; text-decoration: inherit;">data_<wbr>set_<wbr>arns</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}<p>The Amazon Resource Numbers (ARNs) for the datasets that are associated with this
-            version of the dashboard.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="description_python">
-<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}<p>Description.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="errors_python">
-<a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboarddashboarderror">Sequence[Dashboard<wbr>Dashboard<wbr>Error]</a></span>
-    </dt>
-    <dd>{{% md %}}<p>Errors associated with this dashboard version.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sheets_python">
-<a href="#sheets_python" style="color: inherit; text-decoration: inherit;">sheets</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardsheet">Sequence[Dashboard<wbr>Sheet]</a></span>
-    </dt>
-    <dd>{{% md %}}<p>A list of the associated sheets with the unique identifier and name of each sheet.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="source_entity_arn_python">
-<a href="#source_entity_arn_python" style="color: inherit; text-decoration: inherit;">source_<wbr>entity_<wbr>arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}<p>Source entity ARN.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="status_python">
-<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardresourcestatus">Dashboard<wbr>Resource<wbr>Status</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="theme_arn_python">
-<a href="#theme_arn_python" style="color: inherit; text-decoration: inherit;">theme_<wbr>arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}<p>The ARN of the theme associated with a version of the dashboard.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="version_number_python">
-<a href="#version_number_python" style="color: inherit; text-decoration: inherit;">version_<wbr>number</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}<p>Version number for this version of the dashboard.</p>{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dashboarddatasetreference">Dashboard<wbr>Data<wbr>Set<wbr>Reference</h4>
@@ -1834,6 +1080,146 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}<p>The values for the decimal parameter.</p>{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="dashboarderror">Dashboard<wbr>Error</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="message_csharp">
+<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>Message.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboarderrortype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Dashboard<wbr>Error<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="message_go">
+<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>Message.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboarderrortype">Dashboard<wbr>Error<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="message_nodejs">
+<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>Message.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboarderrortype">Dashboard<wbr>Error<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="message_python">
+<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}<p>Message.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboarderrortype">Dashboard<wbr>Error<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="dashboarderrortype">Dashboard<wbr>Error<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Access<wbr>Denied</dt>
+    <dd>ACCESS_DENIED</dd><dt>Source<wbr>Not<wbr>Found</dt>
+    <dd>SOURCE_NOT_FOUND</dd><dt>Data<wbr>Set<wbr>Not<wbr>Found</dt>
+    <dd>DATA_SET_NOT_FOUND</dd><dt>Internal<wbr>Failure</dt>
+    <dd>INTERNAL_FAILURE</dd><dt>Parameter<wbr>Value<wbr>Incompatible</dt>
+    <dd>PARAMETER_VALUE_INCOMPATIBLE</dd><dt>Parameter<wbr>Type<wbr>Invalid</dt>
+    <dd>PARAMETER_TYPE_INVALID</dd><dt>Parameter<wbr>Not<wbr>Found</dt>
+    <dd>PARAMETER_NOT_FOUND</dd><dt>Column<wbr>Type<wbr>Mismatch</dt>
+    <dd>COLUMN_TYPE_MISMATCH</dd><dt>Column<wbr>Geographic<wbr>Role<wbr>Mismatch</dt>
+    <dd>COLUMN_GEOGRAPHIC_ROLE_MISMATCH</dd><dt>Column<wbr>Replacement<wbr>Missing</dt>
+    <dd>COLUMN_REPLACEMENT_MISSING</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Dashboard<wbr>Error<wbr>Type<wbr>Access<wbr>Denied</dt>
+    <dd>ACCESS_DENIED</dd><dt>Dashboard<wbr>Error<wbr>Type<wbr>Source<wbr>Not<wbr>Found</dt>
+    <dd>SOURCE_NOT_FOUND</dd><dt>Dashboard<wbr>Error<wbr>Type<wbr>Data<wbr>Set<wbr>Not<wbr>Found</dt>
+    <dd>DATA_SET_NOT_FOUND</dd><dt>Dashboard<wbr>Error<wbr>Type<wbr>Internal<wbr>Failure</dt>
+    <dd>INTERNAL_FAILURE</dd><dt>Dashboard<wbr>Error<wbr>Type<wbr>Parameter<wbr>Value<wbr>Incompatible</dt>
+    <dd>PARAMETER_VALUE_INCOMPATIBLE</dd><dt>Dashboard<wbr>Error<wbr>Type<wbr>Parameter<wbr>Type<wbr>Invalid</dt>
+    <dd>PARAMETER_TYPE_INVALID</dd><dt>Dashboard<wbr>Error<wbr>Type<wbr>Parameter<wbr>Not<wbr>Found</dt>
+    <dd>PARAMETER_NOT_FOUND</dd><dt>Dashboard<wbr>Error<wbr>Type<wbr>Column<wbr>Type<wbr>Mismatch</dt>
+    <dd>COLUMN_TYPE_MISMATCH</dd><dt>Dashboard<wbr>Error<wbr>Type<wbr>Column<wbr>Geographic<wbr>Role<wbr>Mismatch</dt>
+    <dd>COLUMN_GEOGRAPHIC_ROLE_MISMATCH</dd><dt>Dashboard<wbr>Error<wbr>Type<wbr>Column<wbr>Replacement<wbr>Missing</dt>
+    <dd>COLUMN_REPLACEMENT_MISSING</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Access<wbr>Denied</dt>
+    <dd>ACCESS_DENIED</dd><dt>Source<wbr>Not<wbr>Found</dt>
+    <dd>SOURCE_NOT_FOUND</dd><dt>Data<wbr>Set<wbr>Not<wbr>Found</dt>
+    <dd>DATA_SET_NOT_FOUND</dd><dt>Internal<wbr>Failure</dt>
+    <dd>INTERNAL_FAILURE</dd><dt>Parameter<wbr>Value<wbr>Incompatible</dt>
+    <dd>PARAMETER_VALUE_INCOMPATIBLE</dd><dt>Parameter<wbr>Type<wbr>Invalid</dt>
+    <dd>PARAMETER_TYPE_INVALID</dd><dt>Parameter<wbr>Not<wbr>Found</dt>
+    <dd>PARAMETER_NOT_FOUND</dd><dt>Column<wbr>Type<wbr>Mismatch</dt>
+    <dd>COLUMN_TYPE_MISMATCH</dd><dt>Column<wbr>Geographic<wbr>Role<wbr>Mismatch</dt>
+    <dd>COLUMN_GEOGRAPHIC_ROLE_MISMATCH</dd><dt>Column<wbr>Replacement<wbr>Missing</dt>
+    <dd>COLUMN_REPLACEMENT_MISSING</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ACCESS_DENIED</dt>
+    <dd>ACCESS_DENIED</dd><dt>SOURCE_NOT_FOUND</dt>
+    <dd>SOURCE_NOT_FOUND</dd><dt>DATA_SET_NOT_FOUND</dt>
+    <dd>DATA_SET_NOT_FOUND</dd><dt>INTERNAL_FAILURE</dt>
+    <dd>INTERNAL_FAILURE</dd><dt>PARAMETER_VALUE_INCOMPATIBLE</dt>
+    <dd>PARAMETER_VALUE_INCOMPATIBLE</dd><dt>PARAMETER_TYPE_INVALID</dt>
+    <dd>PARAMETER_TYPE_INVALID</dd><dt>PARAMETER_NOT_FOUND</dt>
+    <dd>PARAMETER_NOT_FOUND</dd><dt>COLUMN_TYPE_MISMATCH</dt>
+    <dd>COLUMN_TYPE_MISMATCH</dd><dt>COLUMN_GEOGRAPHIC_ROLE_MISMATCH</dt>
+    <dd>COLUMN_GEOGRAPHIC_ROLE_MISMATCH</dd><dt>COLUMN_REPLACEMENT_MISSING</dt>
+    <dd>COLUMN_REPLACEMENT_MISSING</dd></dl>
+{{% /choosable %}}
+
 <h4 id="dashboardexporttocsvoption">Dashboard<wbr>Export<wbr>To<wbr>CSVOption</h4>
 
 {{% choosable language csharp %}}
@@ -1843,7 +1229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availabilitystatus_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboarddashboardbehavior">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Dashboard<wbr>Dashboard<wbr>Behavior</a></span>
+        <span class="property-type"><a href="#dashboardbehavior">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Dashboard<wbr>Behavior</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1855,7 +1241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availabilitystatus_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboarddashboardbehavior">Dashboard<wbr>Dashboard<wbr>Behavior</a></span>
+        <span class="property-type"><a href="#dashboardbehavior">Dashboard<wbr>Behavior</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1867,7 +1253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availabilitystatus_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboarddashboardbehavior">Dashboard<wbr>Dashboard<wbr>Behavior</a></span>
+        <span class="property-type"><a href="#dashboardbehavior">Dashboard<wbr>Behavior</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1879,7 +1265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availability_status_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboarddashboardbehavior">Dashboard<wbr>Dashboard<wbr>Behavior</a></span>
+        <span class="property-type"><a href="#dashboardbehavior">Dashboard<wbr>Behavior</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2110,6 +1496,120 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#dashboardstringparameter">Sequence[Dashboard<wbr>String<wbr>Parameter]</a></span>
     </dt>
     <dd>{{% md %}}<p>String parameters.</p>{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="dashboardpublishoptions">Dashboard<wbr>Publish<wbr>Options</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="adhocfilteringoption_csharp">
+<a href="#adhocfilteringoption_csharp" style="color: inherit; text-decoration: inherit;">Ad<wbr>Hoc<wbr>Filtering<wbr>Option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboardadhocfilteringoption">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Dashboard<wbr>Ad<wbr>Hoc<wbr>Filtering<wbr>Option</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exporttocsvoption_csharp">
+<a href="#exporttocsvoption_csharp" style="color: inherit; text-decoration: inherit;">Export<wbr>To<wbr>CSVOption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboardexporttocsvoption">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Dashboard<wbr>Export<wbr>To<wbr>CSVOption</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sheetcontrolsoption_csharp">
+<a href="#sheetcontrolsoption_csharp" style="color: inherit; text-decoration: inherit;">Sheet<wbr>Controls<wbr>Option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboardsheetcontrolsoption">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Dashboard<wbr>Sheet<wbr>Controls<wbr>Option</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="adhocfilteringoption_go">
+<a href="#adhocfilteringoption_go" style="color: inherit; text-decoration: inherit;">Ad<wbr>Hoc<wbr>Filtering<wbr>Option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboardadhocfilteringoption">Dashboard<wbr>Ad<wbr>Hoc<wbr>Filtering<wbr>Option</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exporttocsvoption_go">
+<a href="#exporttocsvoption_go" style="color: inherit; text-decoration: inherit;">Export<wbr>To<wbr>CSVOption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboardexporttocsvoption">Dashboard<wbr>Export<wbr>To<wbr>CSVOption</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sheetcontrolsoption_go">
+<a href="#sheetcontrolsoption_go" style="color: inherit; text-decoration: inherit;">Sheet<wbr>Controls<wbr>Option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboardsheetcontrolsoption">Dashboard<wbr>Sheet<wbr>Controls<wbr>Option</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="adhocfilteringoption_nodejs">
+<a href="#adhocfilteringoption_nodejs" style="color: inherit; text-decoration: inherit;">ad<wbr>Hoc<wbr>Filtering<wbr>Option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboardadhocfilteringoption">Dashboard<wbr>Ad<wbr>Hoc<wbr>Filtering<wbr>Option</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exporttocsvoption_nodejs">
+<a href="#exporttocsvoption_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>To<wbr>CSVOption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboardexporttocsvoption">Dashboard<wbr>Export<wbr>To<wbr>CSVOption</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sheetcontrolsoption_nodejs">
+<a href="#sheetcontrolsoption_nodejs" style="color: inherit; text-decoration: inherit;">sheet<wbr>Controls<wbr>Option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboardsheetcontrolsoption">Dashboard<wbr>Sheet<wbr>Controls<wbr>Option</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ad_hoc_filtering_option_python">
+<a href="#ad_hoc_filtering_option_python" style="color: inherit; text-decoration: inherit;">ad_<wbr>hoc_<wbr>filtering_<wbr>option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboardadhocfilteringoption">Dashboard<wbr>Ad<wbr>Hoc<wbr>Filtering<wbr>Option</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="export_to_csv_option_python">
+<a href="#export_to_csv_option_python" style="color: inherit; text-decoration: inherit;">export_<wbr>to_<wbr>csv_<wbr>option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboardexporttocsvoption">Dashboard<wbr>Export<wbr>To<wbr>CSVOption</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sheet_controls_option_python">
+<a href="#sheet_controls_option_python" style="color: inherit; text-decoration: inherit;">sheet_<wbr>controls_<wbr>option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboardsheetcontrolsoption">Dashboard<wbr>Sheet<wbr>Controls<wbr>Option</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dashboardresourcepermission">Dashboard<wbr>Resource<wbr>Permission</h4>
@@ -2391,7 +1891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#visibilitystate_csharp" style="color: inherit; text-decoration: inherit;">Visibility<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboarddashboarduistate">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Dashboard<wbr>Dashboard<wbr>UIState</a></span>
+        <span class="property-type"><a href="#dashboarduistate">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Dashboard<wbr>UIState</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2403,7 +1903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#visibilitystate_go" style="color: inherit; text-decoration: inherit;">Visibility<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboarddashboarduistate">Dashboard<wbr>Dashboard<wbr>UIState</a></span>
+        <span class="property-type"><a href="#dashboarduistate">Dashboard<wbr>UIState</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2415,7 +1915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#visibilitystate_nodejs" style="color: inherit; text-decoration: inherit;">visibility<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboarddashboarduistate">Dashboard<wbr>Dashboard<wbr>UIState</a></span>
+        <span class="property-type"><a href="#dashboarduistate">Dashboard<wbr>UIState</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2427,9 +1927,141 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#visibility_state_python" style="color: inherit; text-decoration: inherit;">visibility_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboarddashboarduistate">Dashboard<wbr>Dashboard<wbr>UIState</a></span>
+        <span class="property-type"><a href="#dashboarduistate">Dashboard<wbr>UIState</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="dashboardsourceentity">Dashboard<wbr>Source<wbr>Entity</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="sourcetemplate_csharp">
+<a href="#sourcetemplate_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboardsourcetemplate">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Dashboard<wbr>Source<wbr>Template</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="sourcetemplate_go">
+<a href="#sourcetemplate_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboardsourcetemplate">Dashboard<wbr>Source<wbr>Template</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="sourcetemplate_nodejs">
+<a href="#sourcetemplate_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboardsourcetemplate">Dashboard<wbr>Source<wbr>Template</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="source_template_python">
+<a href="#source_template_python" style="color: inherit; text-decoration: inherit;">source_<wbr>template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboardsourcetemplate">Dashboard<wbr>Source<wbr>Template</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="dashboardsourcetemplate">Dashboard<wbr>Source<wbr>Template</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>The Amazon Resource Name (ARN) of the resource.</p>{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="datasetreferences_csharp">
+<a href="#datasetreferences_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Set<wbr>References</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboarddatasetreference">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Dashboard<wbr>Data<wbr>Set<wbr>Reference&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}<p>Dataset references.</p>{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>The Amazon Resource Name (ARN) of the resource.</p>{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="datasetreferences_go">
+<a href="#datasetreferences_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Set<wbr>References</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboarddatasetreference">[]Dashboard<wbr>Data<wbr>Set<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}<p>Dataset references.</p>{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>The Amazon Resource Name (ARN) of the resource.</p>{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="datasetreferences_nodejs">
+<a href="#datasetreferences_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Set<wbr>References</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboarddatasetreference">Dashboard<wbr>Data<wbr>Set<wbr>Reference[]</a></span>
+    </dt>
+    <dd>{{% md %}}<p>Dataset references.</p>{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}<p>The Amazon Resource Name (ARN) of the resource.</p>{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="data_set_references_python">
+<a href="#data_set_references_python" style="color: inherit; text-decoration: inherit;">data_<wbr>set_<wbr>references</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboarddatasetreference">Sequence[Dashboard<wbr>Data<wbr>Set<wbr>Reference]</a></span>
+    </dt>
+    <dd>{{% md %}}<p>Dataset references.</p>{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dashboardstringparameter">Dashboard<wbr>String<wbr>Parameter</h4>
@@ -2594,6 +2226,374 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}<p>Tag value.</p>{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="dashboarduistate">Dashboard<wbr>UIState</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Expanded</dt>
+    <dd>EXPANDED</dd><dt>Collapsed</dt>
+    <dd>COLLAPSED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Dashboard<wbr>UIState<wbr>Expanded</dt>
+    <dd>EXPANDED</dd><dt>Dashboard<wbr>UIState<wbr>Collapsed</dt>
+    <dd>COLLAPSED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Expanded</dt>
+    <dd>EXPANDED</dd><dt>Collapsed</dt>
+    <dd>COLLAPSED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>EXPANDED</dt>
+    <dd>EXPANDED</dd><dt>COLLAPSED</dt>
+    <dd>COLLAPSED</dd></dl>
+{{% /choosable %}}
+
+<h4 id="dashboardversion">Dashboard<wbr>Version</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>The Amazon Resource Name (ARN) of the resource.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdtime_csharp">
+<a href="#createdtime_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>The time that this dashboard version was created.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datasetarns_csharp">
+<a href="#datasetarns_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Set<wbr>Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}<p>The Amazon Resource Numbers (ARNs) for the datasets that are associated with this
+            version of the dashboard.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>Description.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="errors_csharp">
+<a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboarderror">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Dashboard<wbr>Error&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}<p>Errors associated with this dashboard version.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sheets_csharp">
+<a href="#sheets_csharp" style="color: inherit; text-decoration: inherit;">Sheets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboardsheet">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Dashboard<wbr>Sheet&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}<p>A list of the associated sheets with the unique identifier and name of each sheet.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sourceentityarn_csharp">
+<a href="#sourceentityarn_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Entity<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>Source entity ARN.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboardresourcestatus">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Dashboard<wbr>Resource<wbr>Status</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="themearn_csharp">
+<a href="#themearn_csharp" style="color: inherit; text-decoration: inherit;">Theme<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>The ARN of the theme associated with a version of the dashboard.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="versionnumber_csharp">
+<a href="#versionnumber_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}<p>Version number for this version of the dashboard.</p>{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>The Amazon Resource Name (ARN) of the resource.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdtime_go">
+<a href="#createdtime_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>The time that this dashboard version was created.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datasetarns_go">
+<a href="#datasetarns_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Set<wbr>Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}<p>The Amazon Resource Numbers (ARNs) for the datasets that are associated with this
+            version of the dashboard.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>Description.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="errors_go">
+<a href="#errors_go" style="color: inherit; text-decoration: inherit;">Errors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboarderror">[]Dashboard<wbr>Error</a></span>
+    </dt>
+    <dd>{{% md %}}<p>Errors associated with this dashboard version.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sheets_go">
+<a href="#sheets_go" style="color: inherit; text-decoration: inherit;">Sheets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboardsheet">[]Dashboard<wbr>Sheet</a></span>
+    </dt>
+    <dd>{{% md %}}<p>A list of the associated sheets with the unique identifier and name of each sheet.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sourceentityarn_go">
+<a href="#sourceentityarn_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Entity<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>Source entity ARN.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboardresourcestatus">Dashboard<wbr>Resource<wbr>Status</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="themearn_go">
+<a href="#themearn_go" style="color: inherit; text-decoration: inherit;">Theme<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>The ARN of the theme associated with a version of the dashboard.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="versionnumber_go">
+<a href="#versionnumber_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}<p>Version number for this version of the dashboard.</p>{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>The Amazon Resource Name (ARN) of the resource.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdtime_nodejs">
+<a href="#createdtime_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>The time that this dashboard version was created.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datasetarns_nodejs">
+<a href="#datasetarns_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Set<wbr>Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}<p>The Amazon Resource Numbers (ARNs) for the datasets that are associated with this
+            version of the dashboard.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>Description.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="errors_nodejs">
+<a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboarderror">Dashboard<wbr>Error[]</a></span>
+    </dt>
+    <dd>{{% md %}}<p>Errors associated with this dashboard version.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sheets_nodejs">
+<a href="#sheets_nodejs" style="color: inherit; text-decoration: inherit;">sheets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboardsheet">Dashboard<wbr>Sheet[]</a></span>
+    </dt>
+    <dd>{{% md %}}<p>A list of the associated sheets with the unique identifier and name of each sheet.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sourceentityarn_nodejs">
+<a href="#sourceentityarn_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Entity<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>Source entity ARN.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboardresourcestatus">Dashboard<wbr>Resource<wbr>Status</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="themearn_nodejs">
+<a href="#themearn_nodejs" style="color: inherit; text-decoration: inherit;">theme<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>The ARN of the theme associated with a version of the dashboard.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="versionnumber_nodejs">
+<a href="#versionnumber_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}<p>Version number for this version of the dashboard.</p>{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}<p>The Amazon Resource Name (ARN) of the resource.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="created_time_python">
+<a href="#created_time_python" style="color: inherit; text-decoration: inherit;">created_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}<p>The time that this dashboard version was created.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="data_set_arns_python">
+<a href="#data_set_arns_python" style="color: inherit; text-decoration: inherit;">data_<wbr>set_<wbr>arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}<p>The Amazon Resource Numbers (ARNs) for the datasets that are associated with this
+            version of the dashboard.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}<p>Description.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="errors_python">
+<a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboarderror">Sequence[Dashboard<wbr>Error]</a></span>
+    </dt>
+    <dd>{{% md %}}<p>Errors associated with this dashboard version.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sheets_python">
+<a href="#sheets_python" style="color: inherit; text-decoration: inherit;">sheets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboardsheet">Sequence[Dashboard<wbr>Sheet]</a></span>
+    </dt>
+    <dd>{{% md %}}<p>A list of the associated sheets with the unique identifier and name of each sheet.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="source_entity_arn_python">
+<a href="#source_entity_arn_python" style="color: inherit; text-decoration: inherit;">source_<wbr>entity_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}<p>Source entity ARN.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboardresourcestatus">Dashboard<wbr>Resource<wbr>Status</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="theme_arn_python">
+<a href="#theme_arn_python" style="color: inherit; text-decoration: inherit;">theme_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}<p>The ARN of the theme associated with a version of the dashboard.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_number_python">
+<a href="#version_number_python" style="color: inherit; text-decoration: inherit;">version_<wbr>number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}<p>Version number for this version of the dashboard.</p>{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -178,6 +178,14 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="deidentifytemplate_csharp">
+<a href="#deidentifytemplate_csharp" style="color: inherit; text-decoration: inherit;">Deidentify<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[DLP](https://cloud.google.com/dlp/docs) deidentify template name. Use this template to define de-identification configuration for the content. If empty, Dialogflow replaces sensitive info with `[redacted]` text. The template name will have one of the following formats: `projects//locations//deidentifyTemplates/` OR `organizations//locations//deidentifyTemplates/` Note: `deidentify_template` must be located in the same region as the `SecuritySettings`.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
 </span>
@@ -186,13 +194,21 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The human-readable name of the security settings, unique within the location.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="insightsexportsettings_csharp">
+<a href="#insightsexportsettings_csharp" style="color: inherit; text-decoration: inherit;">Insights<wbr>Export<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1securitysettingsinsightsexportsettingsresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V3Beta1.<wbr>Outputs.<wbr>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Security<wbr>Settings<wbr>Insights<wbr>Export<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Controls conversation exporting settings to Insights after conversation is completed. If retention_strategy is set to REMOVE_AFTER_CONVERSATION, Insights export is disabled no matter what you configure here.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="inspecttemplate_csharp">
 <a href="#inspecttemplate_csharp" style="color: inherit; text-decoration: inherit;">Inspect<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}[DLP](https://cloud.google.com/dlp/docs) inspect template name. Use this template to define inspect base settings. If empty, we use the default DLP inspect config. The template name will have one of the following formats: `projects//inspectTemplates/` OR `projects//locations//inspectTemplates/` OR `organizations//inspectTemplates/`{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}[DLP](https://cloud.google.com/dlp/docs) inspect template name. Use this template to define inspect base settings. If empty, we use the default DLP inspect config. The template name will have one of the following formats: `projects//locations//inspectTemplates/` OR `organizations//locations//inspectTemplates/` Note: `inspect_template` must be located in the same region as the `SecuritySettings`.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -200,7 +216,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name of the settings. Format: `projects//locations//securitySettings/`.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Resource name of the settings. Required for the SecuritySettingsService.UpdateSecuritySettings method. SecuritySettingsService.CreateSecuritySettings populates the name automatically. Format: `projects//locations//securitySettings/`.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="purgedatatypes_csharp">
 <a href="#purgedatatypes_csharp" style="color: inherit; text-decoration: inherit;">Purge<wbr>Data<wbr>Types</a>
@@ -238,6 +254,14 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="deidentifytemplate_go">
+<a href="#deidentifytemplate_go" style="color: inherit; text-decoration: inherit;">Deidentify<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[DLP](https://cloud.google.com/dlp/docs) deidentify template name. Use this template to define de-identification configuration for the content. If empty, Dialogflow replaces sensitive info with `[redacted]` text. The template name will have one of the following formats: `projects//locations//deidentifyTemplates/` OR `organizations//locations//deidentifyTemplates/` Note: `deidentify_template` must be located in the same region as the `SecuritySettings`.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
 </span>
@@ -246,13 +270,21 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The human-readable name of the security settings, unique within the location.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="insightsexportsettings_go">
+<a href="#insightsexportsettings_go" style="color: inherit; text-decoration: inherit;">Insights<wbr>Export<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1securitysettingsinsightsexportsettingsresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Security<wbr>Settings<wbr>Insights<wbr>Export<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Controls conversation exporting settings to Insights after conversation is completed. If retention_strategy is set to REMOVE_AFTER_CONVERSATION, Insights export is disabled no matter what you configure here.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="inspecttemplate_go">
 <a href="#inspecttemplate_go" style="color: inherit; text-decoration: inherit;">Inspect<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}[DLP](https://cloud.google.com/dlp/docs) inspect template name. Use this template to define inspect base settings. If empty, we use the default DLP inspect config. The template name will have one of the following formats: `projects//inspectTemplates/` OR `projects//locations//inspectTemplates/` OR `organizations//inspectTemplates/`{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}[DLP](https://cloud.google.com/dlp/docs) inspect template name. Use this template to define inspect base settings. If empty, we use the default DLP inspect config. The template name will have one of the following formats: `projects//locations//inspectTemplates/` OR `organizations//locations//inspectTemplates/` Note: `inspect_template` must be located in the same region as the `SecuritySettings`.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -260,7 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name of the settings. Format: `projects//locations//securitySettings/`.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Resource name of the settings. Required for the SecuritySettingsService.UpdateSecuritySettings method. SecuritySettingsService.CreateSecuritySettings populates the name automatically. Format: `projects//locations//securitySettings/`.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="purgedatatypes_go">
 <a href="#purgedatatypes_go" style="color: inherit; text-decoration: inherit;">Purge<wbr>Data<wbr>Types</a>
@@ -298,6 +330,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="deidentifytemplate_nodejs">
+<a href="#deidentifytemplate_nodejs" style="color: inherit; text-decoration: inherit;">deidentify<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[DLP](https://cloud.google.com/dlp/docs) deidentify template name. Use this template to define de-identification configuration for the content. If empty, Dialogflow replaces sensitive info with `[redacted]` text. The template name will have one of the following formats: `projects//locations//deidentifyTemplates/` OR `organizations//locations//deidentifyTemplates/` Note: `deidentify_template` must be located in the same region as the `SecuritySettings`.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
@@ -306,13 +346,21 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The human-readable name of the security settings, unique within the location.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="insightsexportsettings_nodejs">
+<a href="#insightsexportsettings_nodejs" style="color: inherit; text-decoration: inherit;">insights<wbr>Export<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1securitysettingsinsightsexportsettingsresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Security<wbr>Settings<wbr>Insights<wbr>Export<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Controls conversation exporting settings to Insights after conversation is completed. If retention_strategy is set to REMOVE_AFTER_CONVERSATION, Insights export is disabled no matter what you configure here.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="inspecttemplate_nodejs">
 <a href="#inspecttemplate_nodejs" style="color: inherit; text-decoration: inherit;">inspect<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}[DLP](https://cloud.google.com/dlp/docs) inspect template name. Use this template to define inspect base settings. If empty, we use the default DLP inspect config. The template name will have one of the following formats: `projects//inspectTemplates/` OR `projects//locations//inspectTemplates/` OR `organizations//inspectTemplates/`{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}[DLP](https://cloud.google.com/dlp/docs) inspect template name. Use this template to define inspect base settings. If empty, we use the default DLP inspect config. The template name will have one of the following formats: `projects//locations//inspectTemplates/` OR `organizations//locations//inspectTemplates/` Note: `inspect_template` must be located in the same region as the `SecuritySettings`.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -320,7 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name of the settings. Format: `projects//locations//securitySettings/`.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Resource name of the settings. Required for the SecuritySettingsService.UpdateSecuritySettings method. SecuritySettingsService.CreateSecuritySettings populates the name automatically. Format: `projects//locations//securitySettings/`.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="purgedatatypes_nodejs">
 <a href="#purgedatatypes_nodejs" style="color: inherit; text-decoration: inherit;">purge<wbr>Data<wbr>Types</a>
@@ -358,6 +406,14 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="deidentify_template_python">
+<a href="#deidentify_template_python" style="color: inherit; text-decoration: inherit;">deidentify_<wbr>template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[DLP](https://cloud.google.com/dlp/docs) deidentify template name. Use this template to define de-identification configuration for the content. If empty, Dialogflow replaces sensitive info with `[redacted]` text. The template name will have one of the following formats: `projects//locations//deidentifyTemplates/` OR `organizations//locations//deidentifyTemplates/` Note: `deidentify_template` must be located in the same region as the `SecuritySettings`.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
@@ -366,13 +422,21 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The human-readable name of the security settings, unique within the location.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="insights_export_settings_python">
+<a href="#insights_export_settings_python" style="color: inherit; text-decoration: inherit;">insights_<wbr>export_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1securitysettingsinsightsexportsettingsresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Security<wbr>Settings<wbr>Insights<wbr>Export<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Controls conversation exporting settings to Insights after conversation is completed. If retention_strategy is set to REMOVE_AFTER_CONVERSATION, Insights export is disabled no matter what you configure here.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="inspect_template_python">
 <a href="#inspect_template_python" style="color: inherit; text-decoration: inherit;">inspect_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}[DLP](https://cloud.google.com/dlp/docs) inspect template name. Use this template to define inspect base settings. If empty, we use the default DLP inspect config. The template name will have one of the following formats: `projects//inspectTemplates/` OR `projects//locations//inspectTemplates/` OR `organizations//inspectTemplates/`{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}[DLP](https://cloud.google.com/dlp/docs) inspect template name. Use this template to define inspect base settings. If empty, we use the default DLP inspect config. The template name will have one of the following formats: `projects//locations//inspectTemplates/` OR `organizations//locations//inspectTemplates/` Note: `inspect_template` must be located in the same region as the `SecuritySettings`.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -380,7 +444,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name of the settings. Format: `projects//locations//securitySettings/`.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Resource name of the settings. Required for the SecuritySettingsService.UpdateSecuritySettings method. SecuritySettingsService.CreateSecuritySettings populates the name automatically. Format: `projects//locations//securitySettings/`.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="purge_data_types_python">
 <a href="#purge_data_types_python" style="color: inherit; text-decoration: inherit;">purge_<wbr>data_<wbr>types</a>
@@ -413,6 +477,64 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Retains data in interaction logging for the specified number of days. This does not apply to Cloud logging, which is owned by the user - not Dialogflow. User must Set a value lower than Dialogflow's default 30d TTL. Setting a value higher than that has no effect. A missing value or setting to 0 also means we use Dialogflow's default TTL. Note: Interaction logging is a limited access feature. Talk to your Google representative to check availability for you.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+
+
+
+## Supporting Types
+
+
+<h4 id="googleclouddialogflowcxv3beta1securitysettingsinsightsexportsettingsresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Security<wbr>Settings<wbr>Insights<wbr>Export<wbr>Settings<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enableinsightsexport_csharp">
+<a href="#enableinsightsexport_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Insights<wbr>Export</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If enabled, we will automatically exports conversations to Insights and Insights runs its analyzers.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enableinsightsexport_go">
+<a href="#enableinsightsexport_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Insights<wbr>Export</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If enabled, we will automatically exports conversations to Insights and Insights runs its analyzers.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enableinsightsexport_nodejs">
+<a href="#enableinsightsexport_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Insights<wbr>Export</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If enabled, we will automatically exports conversations to Insights and Insights runs its analyzers.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enable_insights_export_python">
+<a href="#enable_insights_export_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>insights_<wbr>export</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If enabled, we will automatically exports conversations to Insights and Insights runs its analyzers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

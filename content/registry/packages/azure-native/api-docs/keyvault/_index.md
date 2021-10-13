@@ -13,22 +13,22 @@ Explore the resources and functions of the azure-native.keyvault module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="key" title="Key"><span class="symbol resource"></span>Key</a></li>
-    <li><a href="mhsmprivateendpointconnection" title="MHSMPrivateEndpointConnection"><span class="symbol resource"></span>MHSMPrivateEndpointConnection</a></li>
-    <li><a href="managedhsm" title="ManagedHsm"><span class="symbol resource"></span>ManagedHsm</a></li>
-    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
-    <li><a href="secret" title="Secret"><span class="symbol resource"></span>Secret</a></li>
-    <li><a href="vault" title="Vault"><span class="symbol resource"></span>Vault</a></li>
+    <li><a href="key" title="Key"><span class="api-symbol api-symbol--resource"></span>Key</a></li>
+    <li><a href="mhsmprivateendpointconnection" title="MHSMPrivateEndpointConnection"><span class="api-symbol api-symbol--resource"></span>MHSMPrivateEndpointConnection</a></li>
+    <li><a href="managedhsm" title="ManagedHsm"><span class="api-symbol api-symbol--resource"></span>ManagedHsm</a></li>
+    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="api-symbol api-symbol--resource"></span>PrivateEndpointConnection</a></li>
+    <li><a href="secret" title="Secret"><span class="api-symbol api-symbol--resource"></span>Secret</a></li>
+    <li><a href="vault" title="Vault"><span class="api-symbol api-symbol--resource"></span>Vault</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getkey" title="GetKey"><span class="symbol function"></span>GetKey</a></li>
-    <li><a href="getmhsmprivateendpointconnection" title="GetMHSMPrivateEndpointConnection"><span class="symbol function"></span>GetMHSMPrivateEndpointConnection</a></li>
-    <li><a href="getmanagedhsm" title="GetManagedHsm"><span class="symbol function"></span>GetManagedHsm</a></li>
-    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
-    <li><a href="getsecret" title="GetSecret"><span class="symbol function"></span>GetSecret</a></li>
-    <li><a href="getvault" title="GetVault"><span class="symbol function"></span>GetVault</a></li>
+    <li><a href="getkey" title="GetKey"><span class="api-symbol api-symbol--function"></span>GetKey</a></li>
+    <li><a href="getmhsmprivateendpointconnection" title="GetMHSMPrivateEndpointConnection"><span class="api-symbol api-symbol--function"></span>GetMHSMPrivateEndpointConnection</a></li>
+    <li><a href="getmanagedhsm" title="GetManagedHsm"><span class="api-symbol api-symbol--function"></span>GetManagedHsm</a></li>
+    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="api-symbol api-symbol--function"></span>GetPrivateEndpointConnection</a></li>
+    <li><a href="getsecret" title="GetSecret"><span class="api-symbol api-symbol--function"></span>GetSecret</a></li>
+    <li><a href="getvault" title="GetVault"><span class="api-symbol api-symbol--function"></span>GetVault</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -38,6 +38,6 @@ Explore the resources and functions of the azure-native.keyvault module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.36.0</dd>
+	<dd>1.37.0</dd>
 </dl>
 

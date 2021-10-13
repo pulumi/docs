@@ -54,7 +54,7 @@ class MyStack : Stack
             {
                 { "Name", serverRandomPet.Id.Apply(id => $"web-server-{id}") },
             },
-            Ami = serverRandomPet.Keepers.Apply(keepers => keepers.AmiId),
+            Ami = serverRandomPet.Keepers.Apply(keepers => keepers?.AmiId),
         });
         // ... (other aws_instance arguments) ...
     }
@@ -116,7 +116,7 @@ const serverInstance = new aws.ec2.Instance("serverInstance", {
     tags: {
         Name: pulumi.interpolate`web-server-${serverRandomPet.id}`,
     },
-    ami: serverRandomPet.keepers.amiId,
+    ami: serverRandomPet.keepers.apply(keepers => keepers?.amiId),
 });
 // ... (other aws_instance arguments) ...
 ```

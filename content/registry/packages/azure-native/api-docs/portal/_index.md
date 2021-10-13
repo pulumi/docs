@@ -13,23 +13,23 @@ Explore the resources and functions of the azure-native.portal module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="console" title="Console"><span class="symbol resource"></span>Console</a></li>
-    <li><a href="consolewithlocation" title="ConsoleWithLocation"><span class="symbol resource"></span>ConsoleWithLocation</a></li>
-    <li><a href="dashboard" title="Dashboard"><span class="symbol resource"></span>Dashboard</a></li>
-    <li><a href="tenantconfiguration" title="TenantConfiguration"><span class="symbol resource"></span>TenantConfiguration</a></li>
-    <li><a href="usersettings" title="UserSettings"><span class="symbol resource"></span>UserSettings</a></li>
-    <li><a href="usersettingswithlocation" title="UserSettingsWithLocation"><span class="symbol resource"></span>UserSettingsWithLocation</a></li>
+    <li><a href="console" title="Console"><span class="api-symbol api-symbol--resource"></span>Console</a></li>
+    <li><a href="consolewithlocation" title="ConsoleWithLocation"><span class="api-symbol api-symbol--resource"></span>ConsoleWithLocation</a></li>
+    <li><a href="dashboard" title="Dashboard"><span class="api-symbol api-symbol--resource"></span>Dashboard</a></li>
+    <li><a href="tenantconfiguration" title="TenantConfiguration"><span class="api-symbol api-symbol--resource"></span>TenantConfiguration</a></li>
+    <li><a href="usersettings" title="UserSettings"><span class="api-symbol api-symbol--resource"></span>UserSettings</a></li>
+    <li><a href="usersettingswithlocation" title="UserSettingsWithLocation"><span class="api-symbol api-symbol--resource"></span>UserSettingsWithLocation</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getconsole" title="GetConsole"><span class="symbol function"></span>GetConsole</a></li>
-    <li><a href="getconsolewithlocation" title="GetConsoleWithLocation"><span class="symbol function"></span>GetConsoleWithLocation</a></li>
-    <li><a href="getdashboard" title="GetDashboard"><span class="symbol function"></span>GetDashboard</a></li>
-    <li><a href="gettenantconfiguration" title="GetTenantConfiguration"><span class="symbol function"></span>GetTenantConfiguration</a></li>
-    <li><a href="getusersettings" title="GetUserSettings"><span class="symbol function"></span>GetUserSettings</a></li>
-    <li><a href="getusersettingswithlocation" title="GetUserSettingsWithLocation"><span class="symbol function"></span>GetUserSettingsWithLocation</a></li>
-    <li><a href="listlisttenantconfigurationviolation" title="ListListTenantConfigurationViolation"><span class="symbol function"></span>ListListTenantConfigurationViolation</a></li>
+    <li><a href="getconsole" title="GetConsole"><span class="api-symbol api-symbol--function"></span>GetConsole</a></li>
+    <li><a href="getconsolewithlocation" title="GetConsoleWithLocation"><span class="api-symbol api-symbol--function"></span>GetConsoleWithLocation</a></li>
+    <li><a href="getdashboard" title="GetDashboard"><span class="api-symbol api-symbol--function"></span>GetDashboard</a></li>
+    <li><a href="gettenantconfiguration" title="GetTenantConfiguration"><span class="api-symbol api-symbol--function"></span>GetTenantConfiguration</a></li>
+    <li><a href="getusersettings" title="GetUserSettings"><span class="api-symbol api-symbol--function"></span>GetUserSettings</a></li>
+    <li><a href="getusersettingswithlocation" title="GetUserSettingsWithLocation"><span class="api-symbol api-symbol--function"></span>GetUserSettingsWithLocation</a></li>
+    <li><a href="listlisttenantconfigurationviolation" title="ListListTenantConfigurationViolation"><span class="api-symbol api-symbol--function"></span>ListListTenantConfigurationViolation</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -39,6 +39,6 @@ Explore the resources and functions of the azure-native.portal module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.36.0</dd>
+	<dd>1.37.0</dd>
 </dl>
 

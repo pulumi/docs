@@ -13,8 +13,8 @@ Explore the resources and functions of the keycloak.oidc module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="googleidentityprovider" title="GoogleIdentityProvider"><span class="symbol resource"></span>GoogleIdentityProvider</a></li>
-    <li><a href="identityprovider" title="IdentityProvider"><span class="symbol resource"></span>IdentityProvider</a></li>
+    <li><a href="googleidentityprovider" title="GoogleIdentityProvider"><span class="api-symbol api-symbol--resource"></span>GoogleIdentityProvider</a></li>
+    <li><a href="identityprovider" title="IdentityProvider"><span class="api-symbol api-symbol--resource"></span>IdentityProvider</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

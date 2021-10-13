@@ -13,7 +13,7 @@ Explore the resources and functions of the openstack.orchestration module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="stackv1" title="StackV1"><span class="symbol resource"></span>StackV1</a></li>
+    <li><a href="stackv1" title="StackV1"><span class="api-symbol api-symbol--resource"></span>StackV1</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

@@ -13,14 +13,14 @@ Explore the resources and functions of the gcp.cloudidentity module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
-    <li><a href="groupmembership" title="GroupMembership"><span class="symbol resource"></span>GroupMembership</a></li>
+    <li><a href="group" title="Group"><span class="api-symbol api-symbol--resource"></span>Group</a></li>
+    <li><a href="groupmembership" title="GroupMembership"><span class="api-symbol api-symbol--resource"></span>GroupMembership</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getgroupmemberships" title="GetGroupMemberships"><span class="symbol function"></span>GetGroupMemberships</a></li>
-    <li><a href="getgroups" title="GetGroups"><span class="symbol function"></span>GetGroups</a></li>
+    <li><a href="getgroupmemberships" title="GetGroupMemberships"><span class="api-symbol api-symbol--function"></span>GetGroupMemberships</a></li>
+    <li><a href="getgroups" title="GetGroups"><span class="api-symbol api-symbol--function"></span>GetGroups</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -32,6 +32,6 @@ Explore the resources and functions of the gcp.cloudidentity module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>5.22.0</dd>
+	<dd>5.24.0</dd>
 </dl>
 

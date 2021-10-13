@@ -202,6 +202,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}OS policy assignment description. Length of the description is limited to 1024 characters.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="etag_csharp">
+<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The etag for this OS policy assignment. If this is provided on update, it must match the server's etag.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="instancefilter_csharp">
 <a href="#instancefilter_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Filter</a>
 </span>
@@ -301,6 +309,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OS policy assignment description. Length of the description is limited to 1024 characters.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="etag_go">
+<a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The etag for this OS policy assignment. If this is provided on update, it must match the server's etag.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instancefilter_go">
 <a href="#instancefilter_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Filter</a>
@@ -402,6 +418,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}OS policy assignment description. Length of the description is limited to 1024 characters.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="etag_nodejs">
+<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The etag for this OS policy assignment. If this is provided on update, it must match the server's etag.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="instancefilter_nodejs">
 <a href="#instancefilter_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Filter</a>
 </span>
@@ -501,6 +525,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OS policy assignment description. Length of the description is limited to 1024 characters.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="etag_python">
+<a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The etag for this OS policy assignment. If this is provided on update, it must match the server's etag.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instance_filter_python">
 <a href="#instance_filter_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>filter</a>
@@ -665,6 +697,90 @@ The following output properties are available:
     <dd>{{% md %}}Specifies the relative value defined as a percentage, which will be multiplied by a reference value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="ospolicyassignmentinstancefilterinventoryresponse">OSPolicy<wbr>Assignment<wbr>Instance<wbr>Filter<wbr>Inventory<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="osshortname_csharp">
+<a href="#osshortname_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Short<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The OS short name{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="osversion_csharp">
+<a href="#osversion_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The OS version Prefix matches are supported if asterisk(*) is provided as the last character. For example, to match all versions with a major version of `7`, specify the following value for this field `7.*` An empty string matches all OS versions.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="osshortname_go">
+<a href="#osshortname_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Short<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The OS short name{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="osversion_go">
+<a href="#osversion_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The OS version Prefix matches are supported if asterisk(*) is provided as the last character. For example, to match all versions with a major version of `7`, specify the following value for this field `7.*` An empty string matches all OS versions.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="osshortname_nodejs">
+<a href="#osshortname_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Short<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The OS short name{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="osversion_nodejs">
+<a href="#osversion_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The OS version Prefix matches are supported if asterisk(*) is provided as the last character. For example, to match all versions with a major version of `7`, specify the following value for this field `7.*` An empty string matches all OS versions.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="os_short_name_python">
+<a href="#os_short_name_python" style="color: inherit; text-decoration: inherit;">os_<wbr>short_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The OS short name{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="os_version_python">
+<a href="#os_version_python" style="color: inherit; text-decoration: inherit;">os_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The OS version Prefix matches are supported if asterisk(*) is provided as the last character. For example, to match all versions with a major version of `7`, specify the following value for this field `7.*` An empty string matches all OS versions.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="ospolicyassignmentinstancefilterresponse">OSPolicy<wbr>Assignment<wbr>Instance<wbr>Filter<wbr>Response</h4>
 
 
@@ -686,7 +802,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ospolicyassignmentlabelsetresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>OSConfig.<wbr>V1Alpha.<wbr>Inputs.<wbr>OSPolicy<wbr>Assignment<wbr>Label<wbr>Set<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of label sets used for VM exclusion. If the list has more than one label set, the VM is excluded if any of the label sets are applicable for the VM. This filter is applied last in the filtering chain and therefore a VM is guaranteed to be excluded if it satisfies one of the below label sets.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}List of label sets used for VM exclusion. If the list has more than one label set, the VM is excluded if any of the label sets are applicable for the VM.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="inclusionlabels_csharp">
 <a href="#inclusionlabels_csharp" style="color: inherit; text-decoration: inherit;">Inclusion<wbr>Labels</a>
@@ -696,13 +812,13 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}List of label sets used for VM inclusion. If the list has more than one `LabelSet`, the VM is included if any of the label sets are applicable for the VM.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="osshortnames_csharp">
-<a href="#osshortnames_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Short<wbr>Names</a>
+        <span id="inventories_csharp">
+<a href="#inventories_csharp" style="color: inherit; text-decoration: inherit;">Inventories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="#ospolicyassignmentinstancefilterinventoryresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>OSConfig.<wbr>V1Alpha.<wbr>Inputs.<wbr>OSPolicy<wbr>Assignment<wbr>Instance<wbr>Filter<wbr>Inventory<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A VM is included if it's OS short name matches with any of the values provided in this list.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}List of inventories to select VMs. A VM is selected if its inventory data matches at least one of the following inventories.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -722,7 +838,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ospolicyassignmentlabelsetresponse">[]OSPolicy<wbr>Assignment<wbr>Label<wbr>Set<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of label sets used for VM exclusion. If the list has more than one label set, the VM is excluded if any of the label sets are applicable for the VM. This filter is applied last in the filtering chain and therefore a VM is guaranteed to be excluded if it satisfies one of the below label sets.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}List of label sets used for VM exclusion. If the list has more than one label set, the VM is excluded if any of the label sets are applicable for the VM.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="inclusionlabels_go">
 <a href="#inclusionlabels_go" style="color: inherit; text-decoration: inherit;">Inclusion<wbr>Labels</a>
@@ -732,13 +848,13 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}List of label sets used for VM inclusion. If the list has more than one `LabelSet`, the VM is included if any of the label sets are applicable for the VM.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="osshortnames_go">
-<a href="#osshortnames_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Short<wbr>Names</a>
+        <span id="inventories_go">
+<a href="#inventories_go" style="color: inherit; text-decoration: inherit;">Inventories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="#ospolicyassignmentinstancefilterinventoryresponse">[]OSPolicy<wbr>Assignment<wbr>Instance<wbr>Filter<wbr>Inventory<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A VM is included if it's OS short name matches with any of the values provided in this list.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}List of inventories to select VMs. A VM is selected if its inventory data matches at least one of the following inventories.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -758,7 +874,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ospolicyassignmentlabelsetresponse">OSPolicy<wbr>Assignment<wbr>Label<wbr>Set<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of label sets used for VM exclusion. If the list has more than one label set, the VM is excluded if any of the label sets are applicable for the VM. This filter is applied last in the filtering chain and therefore a VM is guaranteed to be excluded if it satisfies one of the below label sets.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}List of label sets used for VM exclusion. If the list has more than one label set, the VM is excluded if any of the label sets are applicable for the VM.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="inclusionlabels_nodejs">
 <a href="#inclusionlabels_nodejs" style="color: inherit; text-decoration: inherit;">inclusion<wbr>Labels</a>
@@ -768,13 +884,13 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}List of label sets used for VM inclusion. If the list has more than one `LabelSet`, the VM is included if any of the label sets are applicable for the VM.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="osshortnames_nodejs">
-<a href="#osshortnames_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Short<wbr>Names</a>
+        <span id="inventories_nodejs">
+<a href="#inventories_nodejs" style="color: inherit; text-decoration: inherit;">inventories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="#ospolicyassignmentinstancefilterinventoryresponse">OSPolicy<wbr>Assignment<wbr>Instance<wbr>Filter<wbr>Inventory<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}A VM is included if it's OS short name matches with any of the values provided in this list.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}List of inventories to select VMs. A VM is selected if its inventory data matches at least one of the following inventories.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -794,7 +910,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ospolicyassignmentlabelsetresponse">Sequence[OSPolicy<wbr>Assignment<wbr>Label<wbr>Set<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}List of label sets used for VM exclusion. If the list has more than one label set, the VM is excluded if any of the label sets are applicable for the VM. This filter is applied last in the filtering chain and therefore a VM is guaranteed to be excluded if it satisfies one of the below label sets.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}List of label sets used for VM exclusion. If the list has more than one label set, the VM is excluded if any of the label sets are applicable for the VM.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="inclusion_labels_python">
 <a href="#inclusion_labels_python" style="color: inherit; text-decoration: inherit;">inclusion_<wbr>labels</a>
@@ -804,13 +920,13 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}List of label sets used for VM inclusion. If the list has more than one `LabelSet`, the VM is included if any of the label sets are applicable for the VM.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="os_short_names_python">
-<a href="#os_short_names_python" style="color: inherit; text-decoration: inherit;">os_<wbr>short_<wbr>names</a>
+        <span id="inventories_python">
+<a href="#inventories_python" style="color: inherit; text-decoration: inherit;">inventories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type"><a href="#ospolicyassignmentinstancefilterinventoryresponse">Sequence[OSPolicy<wbr>Assignment<wbr>Instance<wbr>Filter<wbr>Inventory<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}A VM is included if it's OS short name matches with any of the values provided in this list.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}List of inventories to select VMs. A VM is selected if its inventory data matches at least one of the following inventories.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="ospolicyassignmentlabelsetresponse">OSPolicy<wbr>Assignment<wbr>Label<wbr>Set<wbr>Response</h4>
@@ -949,7 +1065,7 @@ The following output properties are available:
     <dd>{{% md %}}This determines the minimum duration of time to wait after the configuration changes are applied through the current rollout. A VM continues to count towards the `disruption_budget` at least until this duration of time has passed after configuration changes are applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="ospolicyosfilterresponse">OSPolicy<wbr>OSFilter<wbr>Response</h4>
+<h4 id="ospolicyinventoryfilterresponse">OSPolicy<wbr>Inventory<wbr>Filter<wbr>Response</h4>
 
 
 
@@ -962,7 +1078,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This should match OS short name emitted by the OS inventory agent. An empty value matches any OS.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The OS short name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="osversion_csharp">
 <a href="#osversion_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Version</a>
@@ -970,7 +1086,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This value should match the version emitted by the OS inventory agent. Prefix matches are supported if asterisk(*) is provided as the last character. For example, to match all versions with a major version of `7`, specify the following value for this field `7.*`{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The OS version Prefix matches are supported if asterisk(*) is provided as the last character. For example, to match all versions with a major version of `7`, specify the following value for this field `7.*` An empty string matches all OS versions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -982,7 +1098,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This should match OS short name emitted by the OS inventory agent. An empty value matches any OS.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The OS short name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="osversion_go">
 <a href="#osversion_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Version</a>
@@ -990,7 +1106,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This value should match the version emitted by the OS inventory agent. Prefix matches are supported if asterisk(*) is provided as the last character. For example, to match all versions with a major version of `7`, specify the following value for this field `7.*`{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The OS version Prefix matches are supported if asterisk(*) is provided as the last character. For example, to match all versions with a major version of `7`, specify the following value for this field `7.*` An empty string matches all OS versions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1002,7 +1118,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This should match OS short name emitted by the OS inventory agent. An empty value matches any OS.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The OS short name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="osversion_nodejs">
 <a href="#osversion_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Version</a>
@@ -1010,7 +1126,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This value should match the version emitted by the OS inventory agent. Prefix matches are supported if asterisk(*) is provided as the last character. For example, to match all versions with a major version of `7`, specify the following value for this field `7.*`{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The OS version Prefix matches are supported if asterisk(*) is provided as the last character. For example, to match all versions with a major version of `7`, specify the following value for this field `7.*` An empty string matches all OS versions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1022,7 +1138,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This should match OS short name emitted by the OS inventory agent. An empty value matches any OS.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The OS short name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="os_version_python">
 <a href="#os_version_python" style="color: inherit; text-decoration: inherit;">os_<wbr>version</a>
@@ -1030,7 +1146,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This value should match the version emitted by the OS inventory agent. Prefix matches are supported if asterisk(*) is provided as the last character. For example, to match all versions with a major version of `7`, specify the following value for this field `7.*`{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The OS version Prefix matches are supported if asterisk(*) is provided as the last character. For example, to match all versions with a major version of `7`, specify the following value for this field `7.*` An empty string matches all OS versions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="ospolicyresourceexecresourceexecresponse">OSPolicy<wbr>Resource<wbr>Exec<wbr>Resource<wbr>Exec<wbr>Response</h4>
@@ -1832,13 +1948,13 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="osfilter_csharp">
-<a href="#osfilter_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Filter</a>
+        <span id="inventoryfilters_csharp">
+<a href="#inventoryfilters_csharp" style="color: inherit; text-decoration: inherit;">Inventory<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ospolicyosfilterresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>OSConfig.<wbr>V1Alpha.<wbr>Inputs.<wbr>OSPolicy<wbr>OSFilter<wbr>Response</a></span>
+        <span class="property-type"><a href="#ospolicyinventoryfilterresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>OSConfig.<wbr>V1Alpha.<wbr>Inputs.<wbr>OSPolicy<wbr>Inventory<wbr>Filter<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Used to specify the OS filter for a resource group{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}List of inventory filters for the resource group. The resources in this resource group are applied to the target VM if it satisfies at least one of the following inventory filters. For example, to apply this resource group to VMs running either `RHEL` or `CentOS` operating systems, specify 2 items for the list with following values: inventory_filters[0].os_short_name='rhel' and inventory_filters[1].os_short_name='centos' If the list is empty, this resource group will be applied to the target VM unconditionally.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resources_csharp">
 <a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
@@ -1852,13 +1968,13 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="osfilter_go">
-<a href="#osfilter_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Filter</a>
+        <span id="inventoryfilters_go">
+<a href="#inventoryfilters_go" style="color: inherit; text-decoration: inherit;">Inventory<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ospolicyosfilterresponse">OSPolicy<wbr>OSFilter<wbr>Response</a></span>
+        <span class="property-type"><a href="#ospolicyinventoryfilterresponse">[]OSPolicy<wbr>Inventory<wbr>Filter<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Used to specify the OS filter for a resource group{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}List of inventory filters for the resource group. The resources in this resource group are applied to the target VM if it satisfies at least one of the following inventory filters. For example, to apply this resource group to VMs running either `RHEL` or `CentOS` operating systems, specify 2 items for the list with following values: inventory_filters[0].os_short_name='rhel' and inventory_filters[1].os_short_name='centos' If the list is empty, this resource group will be applied to the target VM unconditionally.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resources_go">
 <a href="#resources_go" style="color: inherit; text-decoration: inherit;">Resources</a>
@@ -1872,13 +1988,13 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="osfilter_nodejs">
-<a href="#osfilter_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Filter</a>
+        <span id="inventoryfilters_nodejs">
+<a href="#inventoryfilters_nodejs" style="color: inherit; text-decoration: inherit;">inventory<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ospolicyosfilterresponse">OSPolicy<wbr>OSFilter<wbr>Response</a></span>
+        <span class="property-type"><a href="#ospolicyinventoryfilterresponse">OSPolicy<wbr>Inventory<wbr>Filter<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Used to specify the OS filter for a resource group{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}List of inventory filters for the resource group. The resources in this resource group are applied to the target VM if it satisfies at least one of the following inventory filters. For example, to apply this resource group to VMs running either `RHEL` or `CentOS` operating systems, specify 2 items for the list with following values: inventory_filters[0].os_short_name='rhel' and inventory_filters[1].os_short_name='centos' If the list is empty, this resource group will be applied to the target VM unconditionally.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resources_nodejs">
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
@@ -1892,13 +2008,13 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="os_filter_python">
-<a href="#os_filter_python" style="color: inherit; text-decoration: inherit;">os_<wbr>filter</a>
+        <span id="inventory_filters_python">
+<a href="#inventory_filters_python" style="color: inherit; text-decoration: inherit;">inventory_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ospolicyosfilterresponse">OSPolicy<wbr>OSFilter<wbr>Response</a></span>
+        <span class="property-type"><a href="#ospolicyinventoryfilterresponse">Sequence[OSPolicy<wbr>Inventory<wbr>Filter<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Used to specify the OS filter for a resource group{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}List of inventory filters for the resource group. The resources in this resource group are applied to the target VM if it satisfies at least one of the following inventory filters. For example, to apply this resource group to VMs running either `RHEL` or `CentOS` operating systems, specify 2 items for the list with following values: inventory_filters[0].os_short_name='rhel' and inventory_filters[1].os_short_name='centos' If the list is empty, this resource group will be applied to the target VM unconditionally.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resources_python">
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>

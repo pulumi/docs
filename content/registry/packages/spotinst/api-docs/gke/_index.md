@@ -13,10 +13,10 @@ Explore the resources and functions of the spotinst.gke module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="elastigroup" title="Elastigroup"><span class="symbol resource"></span>Elastigroup</a></li>
-    <li><a href="oceanimport" title="OceanImport"><span class="symbol resource"></span>OceanImport</a></li>
-    <li><a href="oceanlaunchspec" title="OceanLaunchSpec"><span class="symbol resource"></span>OceanLaunchSpec</a></li>
-    <li><a href="oceanlaunchspecimport" title="OceanLaunchSpecImport"><span class="symbol resource"></span>OceanLaunchSpecImport</a></li>
+    <li><a href="elastigroup" title="Elastigroup"><span class="api-symbol api-symbol--resource"></span>Elastigroup</a></li>
+    <li><a href="oceanimport" title="OceanImport"><span class="api-symbol api-symbol--resource"></span>OceanImport</a></li>
+    <li><a href="oceanlaunchspec" title="OceanLaunchSpec"><span class="api-symbol api-symbol--resource"></span>OceanLaunchSpec</a></li>
+    <li><a href="oceanlaunchspecimport" title="OceanLaunchSpecImport"><span class="api-symbol api-symbol--resource"></span>OceanLaunchSpecImport</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

@@ -13,16 +13,16 @@ Explore the resources and functions of the alicloud.dts module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="jobmonitorrule" title="JobMonitorRule"><span class="symbol resource"></span>JobMonitorRule</a></li>
-    <li><a href="subscriptionjob" title="SubscriptionJob"><span class="symbol resource"></span>SubscriptionJob</a></li>
-    <li><a href="synchronizationinstance" title="SynchronizationInstance"><span class="symbol resource"></span>SynchronizationInstance</a></li>
-    <li><a href="synchronizationjob" title="SynchronizationJob"><span class="symbol resource"></span>SynchronizationJob</a></li>
+    <li><a href="jobmonitorrule" title="JobMonitorRule"><span class="api-symbol api-symbol--resource"></span>JobMonitorRule</a></li>
+    <li><a href="subscriptionjob" title="SubscriptionJob"><span class="api-symbol api-symbol--resource"></span>SubscriptionJob</a></li>
+    <li><a href="synchronizationinstance" title="SynchronizationInstance"><span class="api-symbol api-symbol--resource"></span>SynchronizationInstance</a></li>
+    <li><a href="synchronizationjob" title="SynchronizationJob"><span class="api-symbol api-symbol--resource"></span>SynchronizationJob</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getsubscriptionjobs" title="GetSubscriptionJobs"><span class="symbol function"></span>GetSubscriptionJobs</a></li>
-    <li><a href="getsynchronizationjobs" title="GetSynchronizationJobs"><span class="symbol function"></span>GetSynchronizationJobs</a></li>
+    <li><a href="getsubscriptionjobs" title="GetSubscriptionJobs"><span class="api-symbol api-symbol--function"></span>GetSubscriptionJobs</a></li>
+    <li><a href="getsynchronizationjobs" title="GetSynchronizationJobs"><span class="api-symbol api-symbol--function"></span>GetSynchronizationJobs</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

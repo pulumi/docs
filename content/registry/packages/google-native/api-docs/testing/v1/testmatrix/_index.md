@@ -2801,28 +2801,28 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>Robo<wbr>Mode<wbr>Unspecified</dt>
-    <dd>ROBO_MODE_UNSPECIFIED{{% md %}}LINT.IfChange This means that the server should choose the mode. Recommended.{{% /md %}}</dd><dt>Robo<wbr>Version1</dt>
+    <dd>ROBO_MODE_UNSPECIFIED{{% md %}}This means that the server should choose the mode. Recommended.{{% /md %}}</dd><dt>Robo<wbr>Version1</dt>
     <dd>ROBO_VERSION_1{{% md %}}Runs Robo in UIAutomator-only mode without app resigning{{% /md %}}</dd><dt>Robo<wbr>Version2</dt>
     <dd>ROBO_VERSION_2{{% md %}}Runs Robo in standard Espresso with UIAutomator fallback{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="tabular"><dt>Android<wbr>Robo<wbr>Test<wbr>Robo<wbr>Mode<wbr>Robo<wbr>Mode<wbr>Unspecified</dt>
-    <dd>ROBO_MODE_UNSPECIFIED{{% md %}}LINT.IfChange This means that the server should choose the mode. Recommended.{{% /md %}}</dd><dt>Android<wbr>Robo<wbr>Test<wbr>Robo<wbr>Mode<wbr>Robo<wbr>Version1</dt>
+    <dd>ROBO_MODE_UNSPECIFIED{{% md %}}This means that the server should choose the mode. Recommended.{{% /md %}}</dd><dt>Android<wbr>Robo<wbr>Test<wbr>Robo<wbr>Mode<wbr>Robo<wbr>Version1</dt>
     <dd>ROBO_VERSION_1{{% md %}}Runs Robo in UIAutomator-only mode without app resigning{{% /md %}}</dd><dt>Android<wbr>Robo<wbr>Test<wbr>Robo<wbr>Mode<wbr>Robo<wbr>Version2</dt>
     <dd>ROBO_VERSION_2{{% md %}}Runs Robo in standard Espresso with UIAutomator fallback{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="tabular"><dt>Robo<wbr>Mode<wbr>Unspecified</dt>
-    <dd>ROBO_MODE_UNSPECIFIED{{% md %}}LINT.IfChange This means that the server should choose the mode. Recommended.{{% /md %}}</dd><dt>Robo<wbr>Version1</dt>
+    <dd>ROBO_MODE_UNSPECIFIED{{% md %}}This means that the server should choose the mode. Recommended.{{% /md %}}</dd><dt>Robo<wbr>Version1</dt>
     <dd>ROBO_VERSION_1{{% md %}}Runs Robo in UIAutomator-only mode without app resigning{{% /md %}}</dd><dt>Robo<wbr>Version2</dt>
     <dd>ROBO_VERSION_2{{% md %}}Runs Robo in standard Espresso with UIAutomator fallback{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="tabular"><dt>ROBO_MODE_UNSPECIFIED</dt>
-    <dd>ROBO_MODE_UNSPECIFIED{{% md %}}LINT.IfChange This means that the server should choose the mode. Recommended.{{% /md %}}</dd><dt>ROBO_VERSION1</dt>
+    <dd>ROBO_MODE_UNSPECIFIED{{% md %}}This means that the server should choose the mode. Recommended.{{% /md %}}</dd><dt>ROBO_VERSION1</dt>
     <dd>ROBO_VERSION_1{{% md %}}Runs Robo in UIAutomator-only mode without app resigning{{% /md %}}</dd><dt>ROBO_VERSION2</dt>
     <dd>ROBO_VERSION_2{{% md %}}Runs Robo in standard Espresso with UIAutomator fallback{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5456,7 +5456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iosdevicefile">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Testing.<wbr>V1.<wbr>Inputs.<wbr>Ios<wbr>Device<wbr>File&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of directories on the device to upload to Cloud Storage at the end of the test. Directories should either be in a shared directory (e.g. /private/var/mobile/Media) or within an accessible directory inside the app's filesystem (e.g. /Documents) by specifying the bundle id.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List of directories on the device to upload to Cloud Storage at the end of the test. Directories should either be in a shared directory (such as /private/var/mobile/Media) or within an accessible directory inside the app's filesystem (such as /Documents) by specifying the bundle ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pushfiles_csharp">
 <a href="#pushfiles_csharp" style="color: inherit; text-decoration: inherit;">Push<wbr>Files</a>
@@ -5492,7 +5492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iosdevicefile">[]Ios<wbr>Device<wbr>File</a></span>
     </dt>
-    <dd>{{% md %}}List of directories on the device to upload to Cloud Storage at the end of the test. Directories should either be in a shared directory (e.g. /private/var/mobile/Media) or within an accessible directory inside the app's filesystem (e.g. /Documents) by specifying the bundle id.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List of directories on the device to upload to Cloud Storage at the end of the test. Directories should either be in a shared directory (such as /private/var/mobile/Media) or within an accessible directory inside the app's filesystem (such as /Documents) by specifying the bundle ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pushfiles_go">
 <a href="#pushfiles_go" style="color: inherit; text-decoration: inherit;">Push<wbr>Files</a>
@@ -5528,7 +5528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iosdevicefile">Ios<wbr>Device<wbr>File[]</a></span>
     </dt>
-    <dd>{{% md %}}List of directories on the device to upload to Cloud Storage at the end of the test. Directories should either be in a shared directory (e.g. /private/var/mobile/Media) or within an accessible directory inside the app's filesystem (e.g. /Documents) by specifying the bundle id.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List of directories on the device to upload to Cloud Storage at the end of the test. Directories should either be in a shared directory (such as /private/var/mobile/Media) or within an accessible directory inside the app's filesystem (such as /Documents) by specifying the bundle ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pushfiles_nodejs">
 <a href="#pushfiles_nodejs" style="color: inherit; text-decoration: inherit;">push<wbr>Files</a>
@@ -5564,7 +5564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iosdevicefile">Sequence[Ios<wbr>Device<wbr>File]</a></span>
     </dt>
-    <dd>{{% md %}}List of directories on the device to upload to Cloud Storage at the end of the test. Directories should either be in a shared directory (e.g. /private/var/mobile/Media) or within an accessible directory inside the app's filesystem (e.g. /Documents) by specifying the bundle id.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List of directories on the device to upload to Cloud Storage at the end of the test. Directories should either be in a shared directory (such as /private/var/mobile/Media) or within an accessible directory inside the app's filesystem (such as /Documents) by specifying the bundle ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="push_files_python">
 <a href="#push_files_python" style="color: inherit; text-decoration: inherit;">push_<wbr>files</a>
@@ -5602,7 +5602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iosdevicefileresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Testing.<wbr>V1.<wbr>Inputs.<wbr>Ios<wbr>Device<wbr>File<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of directories on the device to upload to Cloud Storage at the end of the test. Directories should either be in a shared directory (e.g. /private/var/mobile/Media) or within an accessible directory inside the app's filesystem (e.g. /Documents) by specifying the bundle id.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}List of directories on the device to upload to Cloud Storage at the end of the test. Directories should either be in a shared directory (such as /private/var/mobile/Media) or within an accessible directory inside the app's filesystem (such as /Documents) by specifying the bundle ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pushfiles_csharp">
 <a href="#pushfiles_csharp" style="color: inherit; text-decoration: inherit;">Push<wbr>Files</a>
@@ -5638,7 +5638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iosdevicefileresponse">[]Ios<wbr>Device<wbr>File<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of directories on the device to upload to Cloud Storage at the end of the test. Directories should either be in a shared directory (e.g. /private/var/mobile/Media) or within an accessible directory inside the app's filesystem (e.g. /Documents) by specifying the bundle id.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}List of directories on the device to upload to Cloud Storage at the end of the test. Directories should either be in a shared directory (such as /private/var/mobile/Media) or within an accessible directory inside the app's filesystem (such as /Documents) by specifying the bundle ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pushfiles_go">
 <a href="#pushfiles_go" style="color: inherit; text-decoration: inherit;">Push<wbr>Files</a>
@@ -5674,7 +5674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iosdevicefileresponse">Ios<wbr>Device<wbr>File<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of directories on the device to upload to Cloud Storage at the end of the test. Directories should either be in a shared directory (e.g. /private/var/mobile/Media) or within an accessible directory inside the app's filesystem (e.g. /Documents) by specifying the bundle id.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}List of directories on the device to upload to Cloud Storage at the end of the test. Directories should either be in a shared directory (such as /private/var/mobile/Media) or within an accessible directory inside the app's filesystem (such as /Documents) by specifying the bundle ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pushfiles_nodejs">
 <a href="#pushfiles_nodejs" style="color: inherit; text-decoration: inherit;">push<wbr>Files</a>
@@ -5710,7 +5710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iosdevicefileresponse">Sequence[Ios<wbr>Device<wbr>File<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}List of directories on the device to upload to Cloud Storage at the end of the test. Directories should either be in a shared directory (e.g. /private/var/mobile/Media) or within an accessible directory inside the app's filesystem (e.g. /Documents) by specifying the bundle id.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}List of directories on the device to upload to Cloud Storage at the end of the test. Directories should either be in a shared directory (such as /private/var/mobile/Media) or within an accessible directory inside the app's filesystem (such as /Documents) by specifying the bundle ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="push_files_python">
 <a href="#push_files_python" style="color: inherit; text-decoration: inherit;">push_<wbr>files</a>

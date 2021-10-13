@@ -13,16 +13,16 @@ Explore the resources and functions of the azure-native.vmwarecloudsimple module
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="dedicatedcloudnode" title="DedicatedCloudNode"><span class="symbol resource"></span>DedicatedCloudNode</a></li>
-    <li><a href="dedicatedcloudservice" title="DedicatedCloudService"><span class="symbol resource"></span>DedicatedCloudService</a></li>
-    <li><a href="virtualmachine" title="VirtualMachine"><span class="symbol resource"></span>VirtualMachine</a></li>
+    <li><a href="dedicatedcloudnode" title="DedicatedCloudNode"><span class="api-symbol api-symbol--resource"></span>DedicatedCloudNode</a></li>
+    <li><a href="dedicatedcloudservice" title="DedicatedCloudService"><span class="api-symbol api-symbol--resource"></span>DedicatedCloudService</a></li>
+    <li><a href="virtualmachine" title="VirtualMachine"><span class="api-symbol api-symbol--resource"></span>VirtualMachine</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getdedicatedcloudnode" title="GetDedicatedCloudNode"><span class="symbol function"></span>GetDedicatedCloudNode</a></li>
-    <li><a href="getdedicatedcloudservice" title="GetDedicatedCloudService"><span class="symbol function"></span>GetDedicatedCloudService</a></li>
-    <li><a href="getvirtualmachine" title="GetVirtualMachine"><span class="symbol function"></span>GetVirtualMachine</a></li>
+    <li><a href="getdedicatedcloudnode" title="GetDedicatedCloudNode"><span class="api-symbol api-symbol--function"></span>GetDedicatedCloudNode</a></li>
+    <li><a href="getdedicatedcloudservice" title="GetDedicatedCloudService"><span class="api-symbol api-symbol--function"></span>GetDedicatedCloudService</a></li>
+    <li><a href="getvirtualmachine" title="GetVirtualMachine"><span class="api-symbol api-symbol--function"></span>GetVirtualMachine</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -32,6 +32,6 @@ Explore the resources and functions of the azure-native.vmwarecloudsimple module
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.36.0</dd>
+	<dd>1.37.0</dd>
 </dl>
 

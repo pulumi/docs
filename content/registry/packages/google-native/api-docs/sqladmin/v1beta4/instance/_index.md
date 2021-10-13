@@ -194,7 +194,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancebackendtype">Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Instance<wbr>Backend<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}} *SECOND_GEN*: Cloud SQL database instance. *EXTERNAL*: A database server that is not managed by Google. This property is read-only; use the *tier* property in the *settings* object to determine the database type.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The backend type. **SECOND_GEN**: Cloud SQL database instance. **EXTERNAL**: A database server that is not managed by Google. This property is read-only; use the **tier** property in the **settings** object to determine the database type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionname_csharp">
 <a href="#connectionname_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Name</a>
@@ -210,7 +210,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current disk usage of the instance in bytes. This property has been deprecated. Use the "cloudsql.googleapis.com/database/disk/bytes_used" metric in Cloud Monitoring API instead. Please see this announcement for details.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The current disk usage of the instance in bytes. This property has been deprecated. Use the "cloudsql.googleapis.com/database/disk/bytes_used" metric in Cloud Monitoring API instead. Please see [this announcement](https://groups.google.com/d/msg/google-cloud-sql-announce/I_7-F9EBhT0/BtvFtdFeAgAJ) for details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databaseversion_csharp">
 <a href="#databaseversion_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Version</a>
@@ -218,7 +218,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancedatabaseversion">Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Instance<wbr>Database<wbr>Version</a></span>
     </dt>
-    <dd>{{% md %}}The database engine type and version. The *databaseVersion* field cannot be changed after instance creation. MySQL instances: *MYSQL_8_0*, *MYSQL_5_7* (default), or *MYSQL_5_6*. PostgreSQL instances: *POSTGRES_9_6*, *POSTGRES_10*, *POSTGRES_11*, *POSTGRES_12*, or *POSTGRES_13* (default). SQL Server instances: *SQLSERVER_2017_STANDARD* (default), *SQLSERVER_2017_ENTERPRISE*, *SQLSERVER_2017_EXPRESS*, or *SQLSERVER_2017_WEB*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The database engine type and version. The **databaseVersion** field cannot be changed after instance creation. * **MySQL instances**: MYSQL_8_0, MYSQL_5_7 (default), or MYSQL_5_6. * **PostgreSQL instances**: POSTGRES_9_6, POSTGRES_10, POSTGRES_11, POSTGRES_12, POSTGRES_13 (default). * **SQL Server instances**: SQLSERVER_2019_STANDARD, SQLSERVER_2019_ENTERPRISE, SQLSERVER_2019_EXPRESS, or SQLSERVER_2019_WEB, SQLSERVER_2017_STANDARD (default), SQLSERVER_2017_ENTERPRISE, SQLSERVER_2017_EXPRESS, or SQLSERVER_2017_WEB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionconfiguration_csharp">
 <a href="#diskencryptionconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Configuration</a>
@@ -226,7 +226,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskencryptionconfiguration">Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Disk encryption configuration specific to an instance. Applies only to Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Disk encryption configuration specific to an instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionstatus_csharp">
 <a href="#diskencryptionstatus_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Status</a>
@@ -234,7 +234,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskencryptionstatus">Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Status<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Disk encryption status specific to an instance. Applies only to Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Disk encryption status specific to an instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failoverreplica_csharp">
 <a href="#failoverreplica_csharp" style="color: inherit; text-decoration: inherit;">Failover<wbr>Replica</a>
@@ -242,7 +242,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefailoverreplica">Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Inputs.<wbr>Instance<wbr>Failover<wbr>Replica<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The name and status of the failover replica. This property is applicable only to Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name and status of the failover replica.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gcezone_csharp">
 <a href="#gcezone_csharp" style="color: inherit; text-decoration: inherit;">Gce<wbr>Zone</a>
@@ -258,7 +258,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceinstancetype">Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Instance<wbr>Instance<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The instance type. This can be one of the following. *CLOUD_SQL_INSTANCE*: A Cloud SQL instance that is not replicating from a primary instance. *ON_PREMISES_INSTANCE*: An instance running on the customer's premises. *READ_REPLICA_INSTANCE*: A Cloud SQL instance configured as a read-replica.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The instance type. This can be one of the following: * **CLOUD_SQL_INSTANCE**: A Cloud SQL instance that is not replicating from a primary instance. * **ON_PREMISES_INSTANCE**: An instance running on the customer's premises. * **READ_REPLICA_INSTANCE**: A Cloud SQL instance configured as a read-replica.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_csharp">
 <a href="#ipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
@@ -274,7 +274,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#instance*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#instance**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="masterinstancename_csharp">
 <a href="#masterinstancename_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Instance<wbr>Name</a>
@@ -314,7 +314,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqloutofdiskreport">Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Inputs.<wbr>Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>Report<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}This field represents the report generated by the proactive database wellness job for OutOfDisk issues. Writers: -- the proactive database wellness job for OOD. Readers: -- the proactive database wellness job{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This field represents the report generated by the proactive database wellness job for OutOfDisk issues. * Writers: * the proactive database wellness job for OOD. * Readers: * the proactive database wellness job{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -330,7 +330,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geographical region. Can be *us-central* (*FIRST_GEN* instances only) *us-central1* (*SECOND_GEN* instances only) *asia-east1* or *europe-west1*. Defaults to *us-central* or *us-central1* depending on the instance type. The region cannot be changed after instance creation.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The geographical region. Can be: * **us-central** (**FIRST_GEN** instances only) * **us-central1** (**SECOND_GEN** instances only) * **asia-east1** or **europe-west1**. Defaults to **us-central** or **us-central1** depending on the instance type. The region cannot be changed after instance creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicaconfiguration_csharp">
 <a href="#replicaconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Replica<wbr>Configuration</a>
@@ -418,7 +418,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancestate">Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Instance<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The current serving state of the Cloud SQL instance. This can be one of the following. *SQL_INSTANCE_STATE_UNSPECIFIED*: The state of the instance is unknown. *RUNNABLE*: The instance is running, or has been stopped by owner. *SUSPENDED*: The instance is not available, for example due to problems with billing. *PENDING_DELETE*: The instance is being deleted. *PENDING_CREATE*: The instance is being created. *MAINTENANCE*: The instance is down for maintenance. *FAILED*: The instance creation failed.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The current serving state of the Cloud SQL instance. This can be one of the following: * **SQL_INSTANCE_STATE_UNSPECIFIED**: The state of the instance is unknown. * **RUNNABLE**: The instance is running, or has been stopped by owner. * **SUSPENDED**: The instance is not available, for example due to problems with billing. * **PENDING_DELETE**: The instance is being deleted. * **PENDING_CREATE**: The instance is being created. * **MAINTENANCE**: The instance is down for maintenance. * **FAILED**: The instance creation failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="suspensionreason_csharp">
 <a href="#suspensionreason_csharp" style="color: inherit; text-decoration: inherit;">Suspension<wbr>Reason</a>
@@ -438,7 +438,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancebackendtype">Instance<wbr>Backend<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}} *SECOND_GEN*: Cloud SQL database instance. *EXTERNAL*: A database server that is not managed by Google. This property is read-only; use the *tier* property in the *settings* object to determine the database type.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The backend type. **SECOND_GEN**: Cloud SQL database instance. **EXTERNAL**: A database server that is not managed by Google. This property is read-only; use the **tier** property in the **settings** object to determine the database type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionname_go">
 <a href="#connectionname_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Name</a>
@@ -454,7 +454,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current disk usage of the instance in bytes. This property has been deprecated. Use the "cloudsql.googleapis.com/database/disk/bytes_used" metric in Cloud Monitoring API instead. Please see this announcement for details.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The current disk usage of the instance in bytes. This property has been deprecated. Use the "cloudsql.googleapis.com/database/disk/bytes_used" metric in Cloud Monitoring API instead. Please see [this announcement](https://groups.google.com/d/msg/google-cloud-sql-announce/I_7-F9EBhT0/BtvFtdFeAgAJ) for details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databaseversion_go">
 <a href="#databaseversion_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Version</a>
@@ -462,7 +462,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancedatabaseversion">Instance<wbr>Database<wbr>Version</a></span>
     </dt>
-    <dd>{{% md %}}The database engine type and version. The *databaseVersion* field cannot be changed after instance creation. MySQL instances: *MYSQL_8_0*, *MYSQL_5_7* (default), or *MYSQL_5_6*. PostgreSQL instances: *POSTGRES_9_6*, *POSTGRES_10*, *POSTGRES_11*, *POSTGRES_12*, or *POSTGRES_13* (default). SQL Server instances: *SQLSERVER_2017_STANDARD* (default), *SQLSERVER_2017_ENTERPRISE*, *SQLSERVER_2017_EXPRESS*, or *SQLSERVER_2017_WEB*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The database engine type and version. The **databaseVersion** field cannot be changed after instance creation. * **MySQL instances**: MYSQL_8_0, MYSQL_5_7 (default), or MYSQL_5_6. * **PostgreSQL instances**: POSTGRES_9_6, POSTGRES_10, POSTGRES_11, POSTGRES_12, POSTGRES_13 (default). * **SQL Server instances**: SQLSERVER_2019_STANDARD, SQLSERVER_2019_ENTERPRISE, SQLSERVER_2019_EXPRESS, or SQLSERVER_2019_WEB, SQLSERVER_2017_STANDARD (default), SQLSERVER_2017_ENTERPRISE, SQLSERVER_2017_EXPRESS, or SQLSERVER_2017_WEB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionconfiguration_go">
 <a href="#diskencryptionconfiguration_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Configuration</a>
@@ -470,7 +470,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskencryptionconfiguration">Disk<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Disk encryption configuration specific to an instance. Applies only to Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Disk encryption configuration specific to an instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionstatus_go">
 <a href="#diskencryptionstatus_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Status</a>
@@ -478,7 +478,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskencryptionstatus">Disk<wbr>Encryption<wbr>Status<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Disk encryption status specific to an instance. Applies only to Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Disk encryption status specific to an instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failoverreplica_go">
 <a href="#failoverreplica_go" style="color: inherit; text-decoration: inherit;">Failover<wbr>Replica</a>
@@ -486,7 +486,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefailoverreplica">Instance<wbr>Failover<wbr>Replica<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The name and status of the failover replica. This property is applicable only to Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name and status of the failover replica.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gcezone_go">
 <a href="#gcezone_go" style="color: inherit; text-decoration: inherit;">Gce<wbr>Zone</a>
@@ -502,7 +502,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceinstancetype">Instance<wbr>Instance<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The instance type. This can be one of the following. *CLOUD_SQL_INSTANCE*: A Cloud SQL instance that is not replicating from a primary instance. *ON_PREMISES_INSTANCE*: An instance running on the customer's premises. *READ_REPLICA_INSTANCE*: A Cloud SQL instance configured as a read-replica.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The instance type. This can be one of the following: * **CLOUD_SQL_INSTANCE**: A Cloud SQL instance that is not replicating from a primary instance. * **ON_PREMISES_INSTANCE**: An instance running on the customer's premises. * **READ_REPLICA_INSTANCE**: A Cloud SQL instance configured as a read-replica.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_go">
 <a href="#ipaddresses_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
@@ -518,7 +518,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#instance*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#instance**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="masterinstancename_go">
 <a href="#masterinstancename_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Instance<wbr>Name</a>
@@ -558,7 +558,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqloutofdiskreport">Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>Report<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}This field represents the report generated by the proactive database wellness job for OutOfDisk issues. Writers: -- the proactive database wellness job for OOD. Readers: -- the proactive database wellness job{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This field represents the report generated by the proactive database wellness job for OutOfDisk issues. * Writers: * the proactive database wellness job for OOD. * Readers: * the proactive database wellness job{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -574,7 +574,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geographical region. Can be *us-central* (*FIRST_GEN* instances only) *us-central1* (*SECOND_GEN* instances only) *asia-east1* or *europe-west1*. Defaults to *us-central* or *us-central1* depending on the instance type. The region cannot be changed after instance creation.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The geographical region. Can be: * **us-central** (**FIRST_GEN** instances only) * **us-central1** (**SECOND_GEN** instances only) * **asia-east1** or **europe-west1**. Defaults to **us-central** or **us-central1** depending on the instance type. The region cannot be changed after instance creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicaconfiguration_go">
 <a href="#replicaconfiguration_go" style="color: inherit; text-decoration: inherit;">Replica<wbr>Configuration</a>
@@ -662,7 +662,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancestate">Instance<wbr>State<wbr>Enum</a></span>
     </dt>
-    <dd>{{% md %}}The current serving state of the Cloud SQL instance. This can be one of the following. *SQL_INSTANCE_STATE_UNSPECIFIED*: The state of the instance is unknown. *RUNNABLE*: The instance is running, or has been stopped by owner. *SUSPENDED*: The instance is not available, for example due to problems with billing. *PENDING_DELETE*: The instance is being deleted. *PENDING_CREATE*: The instance is being created. *MAINTENANCE*: The instance is down for maintenance. *FAILED*: The instance creation failed.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The current serving state of the Cloud SQL instance. This can be one of the following: * **SQL_INSTANCE_STATE_UNSPECIFIED**: The state of the instance is unknown. * **RUNNABLE**: The instance is running, or has been stopped by owner. * **SUSPENDED**: The instance is not available, for example due to problems with billing. * **PENDING_DELETE**: The instance is being deleted. * **PENDING_CREATE**: The instance is being created. * **MAINTENANCE**: The instance is down for maintenance. * **FAILED**: The instance creation failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="suspensionreason_go">
 <a href="#suspensionreason_go" style="color: inherit; text-decoration: inherit;">Suspension<wbr>Reason</a>
@@ -682,7 +682,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancebackendtype">Instance<wbr>Backend<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}} *SECOND_GEN*: Cloud SQL database instance. *EXTERNAL*: A database server that is not managed by Google. This property is read-only; use the *tier* property in the *settings* object to determine the database type.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The backend type. **SECOND_GEN**: Cloud SQL database instance. **EXTERNAL**: A database server that is not managed by Google. This property is read-only; use the **tier** property in the **settings** object to determine the database type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionname_nodejs">
 <a href="#connectionname_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Name</a>
@@ -698,7 +698,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current disk usage of the instance in bytes. This property has been deprecated. Use the "cloudsql.googleapis.com/database/disk/bytes_used" metric in Cloud Monitoring API instead. Please see this announcement for details.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The current disk usage of the instance in bytes. This property has been deprecated. Use the "cloudsql.googleapis.com/database/disk/bytes_used" metric in Cloud Monitoring API instead. Please see [this announcement](https://groups.google.com/d/msg/google-cloud-sql-announce/I_7-F9EBhT0/BtvFtdFeAgAJ) for details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databaseversion_nodejs">
 <a href="#databaseversion_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Version</a>
@@ -706,7 +706,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancedatabaseversion">Instance<wbr>Database<wbr>Version</a></span>
     </dt>
-    <dd>{{% md %}}The database engine type and version. The *databaseVersion* field cannot be changed after instance creation. MySQL instances: *MYSQL_8_0*, *MYSQL_5_7* (default), or *MYSQL_5_6*. PostgreSQL instances: *POSTGRES_9_6*, *POSTGRES_10*, *POSTGRES_11*, *POSTGRES_12*, or *POSTGRES_13* (default). SQL Server instances: *SQLSERVER_2017_STANDARD* (default), *SQLSERVER_2017_ENTERPRISE*, *SQLSERVER_2017_EXPRESS*, or *SQLSERVER_2017_WEB*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The database engine type and version. The **databaseVersion** field cannot be changed after instance creation. * **MySQL instances**: MYSQL_8_0, MYSQL_5_7 (default), or MYSQL_5_6. * **PostgreSQL instances**: POSTGRES_9_6, POSTGRES_10, POSTGRES_11, POSTGRES_12, POSTGRES_13 (default). * **SQL Server instances**: SQLSERVER_2019_STANDARD, SQLSERVER_2019_ENTERPRISE, SQLSERVER_2019_EXPRESS, or SQLSERVER_2019_WEB, SQLSERVER_2017_STANDARD (default), SQLSERVER_2017_ENTERPRISE, SQLSERVER_2017_EXPRESS, or SQLSERVER_2017_WEB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionconfiguration_nodejs">
 <a href="#diskencryptionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Configuration</a>
@@ -714,7 +714,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskencryptionconfiguration">Disk<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Disk encryption configuration specific to an instance. Applies only to Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Disk encryption configuration specific to an instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionstatus_nodejs">
 <a href="#diskencryptionstatus_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Status</a>
@@ -722,7 +722,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskencryptionstatus">Disk<wbr>Encryption<wbr>Status<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Disk encryption status specific to an instance. Applies only to Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Disk encryption status specific to an instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failoverreplica_nodejs">
 <a href="#failoverreplica_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Replica</a>
@@ -730,7 +730,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefailoverreplica">Instance<wbr>Failover<wbr>Replica<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The name and status of the failover replica. This property is applicable only to Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name and status of the failover replica.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gcezone_nodejs">
 <a href="#gcezone_nodejs" style="color: inherit; text-decoration: inherit;">gce<wbr>Zone</a>
@@ -746,7 +746,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceinstancetype">Instance<wbr>Instance<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The instance type. This can be one of the following. *CLOUD_SQL_INSTANCE*: A Cloud SQL instance that is not replicating from a primary instance. *ON_PREMISES_INSTANCE*: An instance running on the customer's premises. *READ_REPLICA_INSTANCE*: A Cloud SQL instance configured as a read-replica.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The instance type. This can be one of the following: * **CLOUD_SQL_INSTANCE**: A Cloud SQL instance that is not replicating from a primary instance. * **ON_PREMISES_INSTANCE**: An instance running on the customer's premises. * **READ_REPLICA_INSTANCE**: A Cloud SQL instance configured as a read-replica.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_nodejs">
 <a href="#ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
@@ -762,7 +762,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#instance*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#instance**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="masterinstancename_nodejs">
 <a href="#masterinstancename_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Instance<wbr>Name</a>
@@ -802,7 +802,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqloutofdiskreport">Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>Report<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}This field represents the report generated by the proactive database wellness job for OutOfDisk issues. Writers: -- the proactive database wellness job for OOD. Readers: -- the proactive database wellness job{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This field represents the report generated by the proactive database wellness job for OutOfDisk issues. * Writers: * the proactive database wellness job for OOD. * Readers: * the proactive database wellness job{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -818,7 +818,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geographical region. Can be *us-central* (*FIRST_GEN* instances only) *us-central1* (*SECOND_GEN* instances only) *asia-east1* or *europe-west1*. Defaults to *us-central* or *us-central1* depending on the instance type. The region cannot be changed after instance creation.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The geographical region. Can be: * **us-central** (**FIRST_GEN** instances only) * **us-central1** (**SECOND_GEN** instances only) * **asia-east1** or **europe-west1**. Defaults to **us-central** or **us-central1** depending on the instance type. The region cannot be changed after instance creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicaconfiguration_nodejs">
 <a href="#replicaconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">replica<wbr>Configuration</a>
@@ -906,7 +906,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancestate">Instance<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The current serving state of the Cloud SQL instance. This can be one of the following. *SQL_INSTANCE_STATE_UNSPECIFIED*: The state of the instance is unknown. *RUNNABLE*: The instance is running, or has been stopped by owner. *SUSPENDED*: The instance is not available, for example due to problems with billing. *PENDING_DELETE*: The instance is being deleted. *PENDING_CREATE*: The instance is being created. *MAINTENANCE*: The instance is down for maintenance. *FAILED*: The instance creation failed.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The current serving state of the Cloud SQL instance. This can be one of the following: * **SQL_INSTANCE_STATE_UNSPECIFIED**: The state of the instance is unknown. * **RUNNABLE**: The instance is running, or has been stopped by owner. * **SUSPENDED**: The instance is not available, for example due to problems with billing. * **PENDING_DELETE**: The instance is being deleted. * **PENDING_CREATE**: The instance is being created. * **MAINTENANCE**: The instance is down for maintenance. * **FAILED**: The instance creation failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="suspensionreason_nodejs">
 <a href="#suspensionreason_nodejs" style="color: inherit; text-decoration: inherit;">suspension<wbr>Reason</a>
@@ -926,7 +926,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancebackendtype">Instance<wbr>Backend<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}} *SECOND_GEN*: Cloud SQL database instance. *EXTERNAL*: A database server that is not managed by Google. This property is read-only; use the *tier* property in the *settings* object to determine the database type.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The backend type. **SECOND_GEN**: Cloud SQL database instance. **EXTERNAL**: A database server that is not managed by Google. This property is read-only; use the **tier** property in the **settings** object to determine the database type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connection_name_python">
 <a href="#connection_name_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>name</a>
@@ -942,7 +942,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The current disk usage of the instance in bytes. This property has been deprecated. Use the "cloudsql.googleapis.com/database/disk/bytes_used" metric in Cloud Monitoring API instead. Please see this announcement for details.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The current disk usage of the instance in bytes. This property has been deprecated. Use the "cloudsql.googleapis.com/database/disk/bytes_used" metric in Cloud Monitoring API instead. Please see [this announcement](https://groups.google.com/d/msg/google-cloud-sql-announce/I_7-F9EBhT0/BtvFtdFeAgAJ) for details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="database_version_python">
 <a href="#database_version_python" style="color: inherit; text-decoration: inherit;">database_<wbr>version</a>
@@ -950,7 +950,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancedatabaseversion">Instance<wbr>Database<wbr>Version</a></span>
     </dt>
-    <dd>{{% md %}}The database engine type and version. The *databaseVersion* field cannot be changed after instance creation. MySQL instances: *MYSQL_8_0*, *MYSQL_5_7* (default), or *MYSQL_5_6*. PostgreSQL instances: *POSTGRES_9_6*, *POSTGRES_10*, *POSTGRES_11*, *POSTGRES_12*, or *POSTGRES_13* (default). SQL Server instances: *SQLSERVER_2017_STANDARD* (default), *SQLSERVER_2017_ENTERPRISE*, *SQLSERVER_2017_EXPRESS*, or *SQLSERVER_2017_WEB*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The database engine type and version. The **databaseVersion** field cannot be changed after instance creation. * **MySQL instances**: MYSQL_8_0, MYSQL_5_7 (default), or MYSQL_5_6. * **PostgreSQL instances**: POSTGRES_9_6, POSTGRES_10, POSTGRES_11, POSTGRES_12, POSTGRES_13 (default). * **SQL Server instances**: SQLSERVER_2019_STANDARD, SQLSERVER_2019_ENTERPRISE, SQLSERVER_2019_EXPRESS, or SQLSERVER_2019_WEB, SQLSERVER_2017_STANDARD (default), SQLSERVER_2017_ENTERPRISE, SQLSERVER_2017_EXPRESS, or SQLSERVER_2017_WEB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disk_encryption_configuration_python">
 <a href="#disk_encryption_configuration_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>configuration</a>
@@ -958,7 +958,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskencryptionconfiguration">Disk<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Disk encryption configuration specific to an instance. Applies only to Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Disk encryption configuration specific to an instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disk_encryption_status_python">
 <a href="#disk_encryption_status_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>status</a>
@@ -966,7 +966,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskencryptionstatus">Disk<wbr>Encryption<wbr>Status<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Disk encryption status specific to an instance. Applies only to Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Disk encryption status specific to an instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failover_replica_python">
 <a href="#failover_replica_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>replica</a>
@@ -974,7 +974,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefailoverreplica">Instance<wbr>Failover<wbr>Replica<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The name and status of the failover replica. This property is applicable only to Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name and status of the failover replica.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gce_zone_python">
 <a href="#gce_zone_python" style="color: inherit; text-decoration: inherit;">gce_<wbr>zone</a>
@@ -990,7 +990,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceinstancetype">Instance<wbr>Instance<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The instance type. This can be one of the following. *CLOUD_SQL_INSTANCE*: A Cloud SQL instance that is not replicating from a primary instance. *ON_PREMISES_INSTANCE*: An instance running on the customer's premises. *READ_REPLICA_INSTANCE*: A Cloud SQL instance configured as a read-replica.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The instance type. This can be one of the following: * **CLOUD_SQL_INSTANCE**: A Cloud SQL instance that is not replicating from a primary instance. * **ON_PREMISES_INSTANCE**: An instance running on the customer's premises. * **READ_REPLICA_INSTANCE**: A Cloud SQL instance configured as a read-replica.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_addresses_python">
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
@@ -1006,7 +1006,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#instance*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#instance**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="master_instance_name_python">
 <a href="#master_instance_name_python" style="color: inherit; text-decoration: inherit;">master_<wbr>instance_<wbr>name</a>
@@ -1046,7 +1046,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqloutofdiskreport">Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>Report<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}This field represents the report generated by the proactive database wellness job for OutOfDisk issues. Writers: -- the proactive database wellness job for OOD. Readers: -- the proactive database wellness job{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This field represents the report generated by the proactive database wellness job for OutOfDisk issues. * Writers: * the proactive database wellness job for OOD. * Readers: * the proactive database wellness job{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1062,7 +1062,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The geographical region. Can be *us-central* (*FIRST_GEN* instances only) *us-central1* (*SECOND_GEN* instances only) *asia-east1* or *europe-west1*. Defaults to *us-central* or *us-central1* depending on the instance type. The region cannot be changed after instance creation.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The geographical region. Can be: * **us-central** (**FIRST_GEN** instances only) * **us-central1** (**SECOND_GEN** instances only) * **asia-east1** or **europe-west1**. Defaults to **us-central** or **us-central1** depending on the instance type. The region cannot be changed after instance creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replica_configuration_python">
 <a href="#replica_configuration_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>configuration</a>
@@ -1150,7 +1150,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancestate">Instance<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The current serving state of the Cloud SQL instance. This can be one of the following. *SQL_INSTANCE_STATE_UNSPECIFIED*: The state of the instance is unknown. *RUNNABLE*: The instance is running, or has been stopped by owner. *SUSPENDED*: The instance is not available, for example due to problems with billing. *PENDING_DELETE*: The instance is being deleted. *PENDING_CREATE*: The instance is being created. *MAINTENANCE*: The instance is down for maintenance. *FAILED*: The instance creation failed.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The current serving state of the Cloud SQL instance. This can be one of the following: * **SQL_INSTANCE_STATE_UNSPECIFIED**: The state of the instance is unknown. * **RUNNABLE**: The instance is running, or has been stopped by owner. * **SUSPENDED**: The instance is not available, for example due to problems with billing. * **PENDING_DELETE**: The instance is being deleted. * **PENDING_CREATE**: The instance is being created. * **MAINTENANCE**: The instance is down for maintenance. * **FAILED**: The instance creation failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="suspension_reason_python">
 <a href="#suspension_reason_python" style="color: inherit; text-decoration: inherit;">suspension_<wbr>reason</a>
@@ -1171,6 +1171,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="createtime_csharp">
+<a href="#createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time when the instance was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -1182,6 +1190,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="createtime_go">
+<a href="#createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time when the instance was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1195,6 +1211,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="createtime_nodejs">
+<a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time when the instance was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -1206,6 +1230,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="create_time_python">
+<a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The time when the instance was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1237,7 +1269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time when this access control entry expires in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The time when this access control entry expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -1245,7 +1277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#aclEntry*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#aclEntry**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1273,7 +1305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time when this access control entry expires in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The time when this access control entry expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -1281,7 +1313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#aclEntry*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#aclEntry**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1309,7 +1341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time when this access control entry expires in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The time when this access control entry expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -1317,7 +1349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#aclEntry*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#aclEntry**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1345,7 +1377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time when this access control entry expires in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The time when this access control entry expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -1353,7 +1385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#aclEntry*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#aclEntry**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1383,7 +1415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time when this access control entry expires in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The time when this access control entry expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -1391,7 +1423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#aclEntry*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#aclEntry**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1419,7 +1451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time when this access control entry expires in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The time when this access control entry expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -1427,7 +1459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#aclEntry*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#aclEntry**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1455,7 +1487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time when this access control entry expires in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The time when this access control entry expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -1463,7 +1495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#aclEntry*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#aclEntry**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1491,7 +1523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time when this access control entry expires in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The time when this access control entry expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -1499,7 +1531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#aclEntry*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#aclEntry**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1553,7 +1585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#backupConfiguration*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#backupConfiguration**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1585,7 +1617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Start time for the daily backup configuration in UTC timezone in the 24 hour format - *HH:MM*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Start time for the daily backup configuration in UTC timezone in the 24 hour format - **HH:MM**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transactionlogretentiondays_csharp">
 <a href="#transactionlogretentiondays_csharp" style="color: inherit; text-decoration: inherit;">Transaction<wbr>Log<wbr>Retention<wbr>Days</a>
@@ -1629,7 +1661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#backupConfiguration*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#backupConfiguration**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1661,7 +1693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Start time for the daily backup configuration in UTC timezone in the 24 hour format - *HH:MM*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Start time for the daily backup configuration in UTC timezone in the 24 hour format - **HH:MM**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transactionlogretentiondays_go">
 <a href="#transactionlogretentiondays_go" style="color: inherit; text-decoration: inherit;">Transaction<wbr>Log<wbr>Retention<wbr>Days</a>
@@ -1705,7 +1737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#backupConfiguration*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#backupConfiguration**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1737,7 +1769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Start time for the daily backup configuration in UTC timezone in the 24 hour format - *HH:MM*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Start time for the daily backup configuration in UTC timezone in the 24 hour format - **HH:MM**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transactionlogretentiondays_nodejs">
 <a href="#transactionlogretentiondays_nodejs" style="color: inherit; text-decoration: inherit;">transaction<wbr>Log<wbr>Retention<wbr>Days</a>
@@ -1781,7 +1813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#backupConfiguration*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#backupConfiguration**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1813,7 +1845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Start time for the daily backup configuration in UTC timezone in the 24 hour format - *HH:MM*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Start time for the daily backup configuration in UTC timezone in the 24 hour format - **HH:MM**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transaction_log_retention_days_python">
 <a href="#transaction_log_retention_days_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>log_<wbr>retention_<wbr>days</a>
@@ -1859,7 +1891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#backupConfiguration*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#backupConfiguration**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1891,7 +1923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Start time for the daily backup configuration in UTC timezone in the 24 hour format - *HH:MM*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Start time for the daily backup configuration in UTC timezone in the 24 hour format - **HH:MM**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transactionlogretentiondays_csharp">
 <a href="#transactionlogretentiondays_csharp" style="color: inherit; text-decoration: inherit;">Transaction<wbr>Log<wbr>Retention<wbr>Days</a>
@@ -1935,7 +1967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#backupConfiguration*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#backupConfiguration**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1967,7 +1999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Start time for the daily backup configuration in UTC timezone in the 24 hour format - *HH:MM*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Start time for the daily backup configuration in UTC timezone in the 24 hour format - **HH:MM**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transactionlogretentiondays_go">
 <a href="#transactionlogretentiondays_go" style="color: inherit; text-decoration: inherit;">Transaction<wbr>Log<wbr>Retention<wbr>Days</a>
@@ -2011,7 +2043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#backupConfiguration*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#backupConfiguration**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -2043,7 +2075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Start time for the daily backup configuration in UTC timezone in the 24 hour format - *HH:MM*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Start time for the daily backup configuration in UTC timezone in the 24 hour format - **HH:MM**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transactionlogretentiondays_nodejs">
 <a href="#transactionlogretentiondays_nodejs" style="color: inherit; text-decoration: inherit;">transaction<wbr>Log<wbr>Retention<wbr>Days</a>
@@ -2087,7 +2119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#backupConfiguration*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#backupConfiguration**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -2119,7 +2151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Start time for the daily backup configuration in UTC timezone in the 24 hour format - *HH:MM*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Start time for the daily backup configuration in UTC timezone in the 24 hour format - **HH:MM**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transaction_log_retention_days_python">
 <a href="#transaction_log_retention_days_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>log_<wbr>retention_<wbr>days</a>
@@ -2331,7 +2363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the flag. These flags are passed at instance startup, so include both server options and system variables for MySQL. Flags are specified with underscores, not hyphens. For more information, see Configuring Database Flags in the Cloud SQL documentation.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the flag. These flags are passed at instance startup, so include both server options and system variables. Flags are specified with underscores, not hyphens. For more information, see [Configuring Database Flags](https://cloud.google.com/sql/docs/mysql/flags) in the Cloud SQL documentation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2339,7 +2371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the flag. Booleans are set to *on* for true and *off* for false. This field must be omitted if the flag doesn't take a value.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The value of the flag. Booleans are set to **on** for true and **off** for false. This field must be omitted if the flag doesn't take a value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2351,7 +2383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the flag. These flags are passed at instance startup, so include both server options and system variables for MySQL. Flags are specified with underscores, not hyphens. For more information, see Configuring Database Flags in the Cloud SQL documentation.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the flag. These flags are passed at instance startup, so include both server options and system variables. Flags are specified with underscores, not hyphens. For more information, see [Configuring Database Flags](https://cloud.google.com/sql/docs/mysql/flags) in the Cloud SQL documentation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2359,7 +2391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the flag. Booleans are set to *on* for true and *off* for false. This field must be omitted if the flag doesn't take a value.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The value of the flag. Booleans are set to **on** for true and **off** for false. This field must be omitted if the flag doesn't take a value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2371,7 +2403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the flag. These flags are passed at instance startup, so include both server options and system variables for MySQL. Flags are specified with underscores, not hyphens. For more information, see Configuring Database Flags in the Cloud SQL documentation.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the flag. These flags are passed at instance startup, so include both server options and system variables. Flags are specified with underscores, not hyphens. For more information, see [Configuring Database Flags](https://cloud.google.com/sql/docs/mysql/flags) in the Cloud SQL documentation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2379,7 +2411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the flag. Booleans are set to *on* for true and *off* for false. This field must be omitted if the flag doesn't take a value.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The value of the flag. Booleans are set to **on** for true and **off** for false. This field must be omitted if the flag doesn't take a value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2391,7 +2423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the flag. These flags are passed at instance startup, so include both server options and system variables for MySQL. Flags are specified with underscores, not hyphens. For more information, see Configuring Database Flags in the Cloud SQL documentation.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the flag. These flags are passed at instance startup, so include both server options and system variables. Flags are specified with underscores, not hyphens. For more information, see [Configuring Database Flags](https://cloud.google.com/sql/docs/mysql/flags) in the Cloud SQL documentation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2399,7 +2431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The value of the flag. Booleans are set to *on* for true and *off* for false. This field must be omitted if the flag doesn't take a value.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The value of the flag. Booleans are set to **on** for true and **off** for false. This field must be omitted if the flag doesn't take a value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="databaseflagsresponse">Database<wbr>Flags<wbr>Response</h4>
@@ -2413,7 +2445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the flag. These flags are passed at instance startup, so include both server options and system variables for MySQL. Flags are specified with underscores, not hyphens. For more information, see Configuring Database Flags in the Cloud SQL documentation.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the flag. These flags are passed at instance startup, so include both server options and system variables. Flags are specified with underscores, not hyphens. For more information, see [Configuring Database Flags](https://cloud.google.com/sql/docs/mysql/flags) in the Cloud SQL documentation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2421,7 +2453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the flag. Booleans are set to *on* for true and *off* for false. This field must be omitted if the flag doesn't take a value.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The value of the flag. Booleans are set to **on** for true and **off** for false. This field must be omitted if the flag doesn't take a value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2433,7 +2465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the flag. These flags are passed at instance startup, so include both server options and system variables for MySQL. Flags are specified with underscores, not hyphens. For more information, see Configuring Database Flags in the Cloud SQL documentation.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the flag. These flags are passed at instance startup, so include both server options and system variables. Flags are specified with underscores, not hyphens. For more information, see [Configuring Database Flags](https://cloud.google.com/sql/docs/mysql/flags) in the Cloud SQL documentation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2441,7 +2473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the flag. Booleans are set to *on* for true and *off* for false. This field must be omitted if the flag doesn't take a value.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The value of the flag. Booleans are set to **on** for true and **off** for false. This field must be omitted if the flag doesn't take a value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2453,7 +2485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the flag. These flags are passed at instance startup, so include both server options and system variables for MySQL. Flags are specified with underscores, not hyphens. For more information, see Configuring Database Flags in the Cloud SQL documentation.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the flag. These flags are passed at instance startup, so include both server options and system variables. Flags are specified with underscores, not hyphens. For more information, see [Configuring Database Flags](https://cloud.google.com/sql/docs/mysql/flags) in the Cloud SQL documentation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2461,7 +2493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the flag. Booleans are set to *on* for true and *off* for false. This field must be omitted if the flag doesn't take a value.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The value of the flag. Booleans are set to **on** for true and **off** for false. This field must be omitted if the flag doesn't take a value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2473,7 +2505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the flag. These flags are passed at instance startup, so include both server options and system variables for MySQL. Flags are specified with underscores, not hyphens. For more information, see Configuring Database Flags in the Cloud SQL documentation.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the flag. These flags are passed at instance startup, so include both server options and system variables. Flags are specified with underscores, not hyphens. For more information, see [Configuring Database Flags](https://cloud.google.com/sql/docs/mysql/flags) in the Cloud SQL documentation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2481,7 +2513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The value of the flag. Booleans are set to *on* for true and *off* for false. This field must be omitted if the flag doesn't take a value.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The value of the flag. Booleans are set to **on** for true and **off** for false. This field must be omitted if the flag doesn't take a value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="denymaintenanceperiod">Deny<wbr>Maintenance<wbr>Period</h4>
@@ -2723,7 +2755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#diskEncryptionConfiguration*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#diskEncryptionConfiguration**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyname_csharp">
 <a href="#kmskeyname_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
@@ -2743,7 +2775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#diskEncryptionConfiguration*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#diskEncryptionConfiguration**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyname_go">
 <a href="#kmskeyname_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
@@ -2763,7 +2795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#diskEncryptionConfiguration*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#diskEncryptionConfiguration**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyname_nodejs">
 <a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
@@ -2783,7 +2815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#diskEncryptionConfiguration*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#diskEncryptionConfiguration**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kms_key_name_python">
 <a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
@@ -2805,7 +2837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#diskEncryptionConfiguration*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#diskEncryptionConfiguration**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kmskeyname_csharp">
 <a href="#kmskeyname_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
@@ -2825,7 +2857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#diskEncryptionConfiguration*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#diskEncryptionConfiguration**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kmskeyname_go">
 <a href="#kmskeyname_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
@@ -2845,7 +2877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#diskEncryptionConfiguration*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#diskEncryptionConfiguration**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kmskeyname_nodejs">
 <a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
@@ -2865,7 +2897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#diskEncryptionConfiguration*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#diskEncryptionConfiguration**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kms_key_name_python">
 <a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
@@ -2887,7 +2919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#diskEncryptionStatus*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#diskEncryptionStatus**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyversionname_csharp">
 <a href="#kmskeyversionname_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Version<wbr>Name</a>
@@ -2907,7 +2939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#diskEncryptionStatus*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#diskEncryptionStatus**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyversionname_go">
 <a href="#kmskeyversionname_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Version<wbr>Name</a>
@@ -2927,7 +2959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#diskEncryptionStatus*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#diskEncryptionStatus**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyversionname_nodejs">
 <a href="#kmskeyversionname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Version<wbr>Name</a>
@@ -2947,7 +2979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#diskEncryptionStatus*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#diskEncryptionStatus**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kms_key_version_name_python">
 <a href="#kms_key_version_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>version_<wbr>name</a>
@@ -2969,7 +3001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#diskEncryptionStatus*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#diskEncryptionStatus**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kmskeyversionname_csharp">
 <a href="#kmskeyversionname_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Version<wbr>Name</a>
@@ -2989,7 +3021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#diskEncryptionStatus*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#diskEncryptionStatus**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kmskeyversionname_go">
 <a href="#kmskeyversionname_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Version<wbr>Name</a>
@@ -3009,7 +3041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#diskEncryptionStatus*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#diskEncryptionStatus**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kmskeyversionname_nodejs">
 <a href="#kmskeyversionname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Version<wbr>Name</a>
@@ -3029,7 +3061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#diskEncryptionStatus*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#diskEncryptionStatus**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kms_key_version_name_python">
 <a href="#kms_key_version_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>version_<wbr>name</a>
@@ -3059,7 +3091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of query plans generated by Insights per minute. Default is 5. Changing this will restart the database.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Number of query execution plans captured by Insights per minute for all queries combined. Default is 5.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querystringlength_csharp">
 <a href="#querystringlength_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>String<wbr>Length</a>
@@ -3103,7 +3135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of query plans generated by Insights per minute. Default is 5. Changing this will restart the database.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Number of query execution plans captured by Insights per minute for all queries combined. Default is 5.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querystringlength_go">
 <a href="#querystringlength_go" style="color: inherit; text-decoration: inherit;">Query<wbr>String<wbr>Length</a>
@@ -3147,7 +3179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of query plans generated by Insights per minute. Default is 5. Changing this will restart the database.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Number of query execution plans captured by Insights per minute for all queries combined. Default is 5.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querystringlength_nodejs">
 <a href="#querystringlength_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Length</a>
@@ -3191,7 +3223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of query plans generated by Insights per minute. Default is 5. Changing this will restart the database.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Number of query execution plans captured by Insights per minute for all queries combined. Default is 5.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_string_length_python">
 <a href="#query_string_length_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>length</a>
@@ -3237,7 +3269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of query plans generated by Insights per minute. Default is 5. Changing this will restart the database.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Number of query execution plans captured by Insights per minute for all queries combined. Default is 5.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="querystringlength_csharp">
 <a href="#querystringlength_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>String<wbr>Length</a>
@@ -3281,7 +3313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of query plans generated by Insights per minute. Default is 5. Changing this will restart the database.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Number of query execution plans captured by Insights per minute for all queries combined. Default is 5.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="querystringlength_go">
 <a href="#querystringlength_go" style="color: inherit; text-decoration: inherit;">Query<wbr>String<wbr>Length</a>
@@ -3325,7 +3357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of query plans generated by Insights per minute. Default is 5. Changing this will restart the database.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Number of query execution plans captured by Insights per minute for all queries combined. Default is 5.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="querystringlength_nodejs">
 <a href="#querystringlength_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Length</a>
@@ -3369,7 +3401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of query plans generated by Insights per minute. Default is 5. Changing this will restart the database.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Number of query execution plans captured by Insights per minute for all queries combined. Default is 5.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="query_string_length_python">
 <a href="#query_string_length_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>length</a>
@@ -3543,7 +3575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the failover replica. If specified at instance creation, a failover replica is created for the instance. The name doesn't include the project ID. This property is applicable only to Second Generation instances.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the failover replica. If specified at instance creation, a failover replica is created for the instance. The name doesn't include the project ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3563,7 +3595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the failover replica. If specified at instance creation, a failover replica is created for the instance. The name doesn't include the project ID. This property is applicable only to Second Generation instances.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the failover replica. If specified at instance creation, a failover replica is created for the instance. The name doesn't include the project ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3583,7 +3615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the failover replica. If specified at instance creation, a failover replica is created for the instance. The name doesn't include the project ID. This property is applicable only to Second Generation instances.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the failover replica. If specified at instance creation, a failover replica is created for the instance. The name doesn't include the project ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3603,7 +3635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the failover replica. If specified at instance creation, a failover replica is created for the instance. The name doesn't include the project ID. This property is applicable only to Second Generation instances.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the failover replica. If specified at instance creation, a failover replica is created for the instance. The name doesn't include the project ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="instancefailoverreplicaresponse">Instance<wbr>Failover<wbr>Replica<wbr>Response</h4>
@@ -3625,7 +3657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the failover replica. If specified at instance creation, a failover replica is created for the instance. The name doesn't include the project ID. This property is applicable only to Second Generation instances.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the failover replica. If specified at instance creation, a failover replica is created for the instance. The name doesn't include the project ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3645,7 +3677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the failover replica. If specified at instance creation, a failover replica is created for the instance. The name doesn't include the project ID. This property is applicable only to Second Generation instances.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the failover replica. If specified at instance creation, a failover replica is created for the instance. The name doesn't include the project ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3665,7 +3697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the failover replica. If specified at instance creation, a failover replica is created for the instance. The name doesn't include the project ID. This property is applicable only to Second Generation instances.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the failover replica. If specified at instance creation, a failover replica is created for the instance. The name doesn't include the project ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3685,7 +3717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the failover replica. If specified at instance creation, a failover replica is created for the instance. The name doesn't include the project ID. This property is applicable only to Second Generation instances.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the failover replica. If specified at instance creation, a failover replica is created for the instance. The name doesn't include the project ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="instanceinstancetype">Instance<wbr>Instance<wbr>Type</h4>
@@ -3722,6 +3754,234 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>READ_REPLICA_INSTANCE{{% md %}}A Cloud SQL instance acting as a read-replica.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="instancereference">Instance<wbr>Reference</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Cloud SQL instance being referenced. This does not include the project ID.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The project ID of the Cloud SQL instance being referenced. The default is the same project ID as the instance references it.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region of the Cloud SQL instance being referenced.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Cloud SQL instance being referenced. This does not include the project ID.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The project ID of the Cloud SQL instance being referenced. The default is the same project ID as the instance references it.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region of the Cloud SQL instance being referenced.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Cloud SQL instance being referenced. This does not include the project ID.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The project ID of the Cloud SQL instance being referenced. The default is the same project ID as the instance references it.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region of the Cloud SQL instance being referenced.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the Cloud SQL instance being referenced. This does not include the project ID.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The project ID of the Cloud SQL instance being referenced. The default is the same project ID as the instance references it.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The region of the Cloud SQL instance being referenced.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instancereferenceresponse">Instance<wbr>Reference<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Cloud SQL instance being referenced. This does not include the project ID.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The project ID of the Cloud SQL instance being referenced. The default is the same project ID as the instance references it.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region of the Cloud SQL instance being referenced.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Cloud SQL instance being referenced. This does not include the project ID.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The project ID of the Cloud SQL instance being referenced. The default is the same project ID as the instance references it.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region of the Cloud SQL instance being referenced.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Cloud SQL instance being referenced. This does not include the project ID.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The project ID of the Cloud SQL instance being referenced. The default is the same project ID as the instance references it.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region of the Cloud SQL instance being referenced.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the Cloud SQL instance being referenced. This does not include the project ID.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The project ID of the Cloud SQL instance being referenced. The default is the same project ID as the instance references it.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The region of the Cloud SQL instance being referenced.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="instancestate">Instance<wbr>State</h4>
 
 {{% choosable language csharp %}}
@@ -3732,7 +3992,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>PENDING_DELETE{{% md %}}The instance is being deleted.{{% /md %}}</dd><dt>Pending<wbr>Create</dt>
     <dd>PENDING_CREATE{{% md %}}The instance is being created.{{% /md %}}</dd><dt>Maintenance</dt>
     <dd>MAINTENANCE{{% md %}}The instance is down for maintenance.{{% /md %}}</dd><dt>Failed</dt>
-    <dd>FAILED{{% md %}}The creation of the instance failed or a fatal error occurred during maintenance.{{% /md %}}</dd></dl>
+    <dd>FAILED{{% md %}}The creation of the instance failed or a fatal error occurred during maintenance.{{% /md %}}</dd><dt>Online<wbr>Maintenance</dt>
+    <dd>ONLINE_MAINTENANCE{{% md %}}The instance is under maintenance operations and the database is available.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3743,7 +4004,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>PENDING_DELETE{{% md %}}The instance is being deleted.{{% /md %}}</dd><dt>Instance<wbr>State<wbr>Pending<wbr>Create</dt>
     <dd>PENDING_CREATE{{% md %}}The instance is being created.{{% /md %}}</dd><dt>Instance<wbr>State<wbr>Maintenance</dt>
     <dd>MAINTENANCE{{% md %}}The instance is down for maintenance.{{% /md %}}</dd><dt>Instance<wbr>State<wbr>Failed</dt>
-    <dd>FAILED{{% md %}}The creation of the instance failed or a fatal error occurred during maintenance.{{% /md %}}</dd></dl>
+    <dd>FAILED{{% md %}}The creation of the instance failed or a fatal error occurred during maintenance.{{% /md %}}</dd><dt>Instance<wbr>State<wbr>Online<wbr>Maintenance</dt>
+    <dd>ONLINE_MAINTENANCE{{% md %}}The instance is under maintenance operations and the database is available.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3754,7 +4016,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>PENDING_DELETE{{% md %}}The instance is being deleted.{{% /md %}}</dd><dt>Pending<wbr>Create</dt>
     <dd>PENDING_CREATE{{% md %}}The instance is being created.{{% /md %}}</dd><dt>Maintenance</dt>
     <dd>MAINTENANCE{{% md %}}The instance is down for maintenance.{{% /md %}}</dd><dt>Failed</dt>
-    <dd>FAILED{{% md %}}The creation of the instance failed or a fatal error occurred during maintenance.{{% /md %}}</dd></dl>
+    <dd>FAILED{{% md %}}The creation of the instance failed or a fatal error occurred during maintenance.{{% /md %}}</dd><dt>Online<wbr>Maintenance</dt>
+    <dd>ONLINE_MAINTENANCE{{% md %}}The instance is under maintenance operations and the database is available.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3765,7 +4028,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>PENDING_DELETE{{% md %}}The instance is being deleted.{{% /md %}}</dd><dt>PENDING_CREATE</dt>
     <dd>PENDING_CREATE{{% md %}}The instance is being created.{{% /md %}}</dd><dt>MAINTENANCE</dt>
     <dd>MAINTENANCE{{% md %}}The instance is down for maintenance.{{% /md %}}</dd><dt>FAILED</dt>
-    <dd>FAILED{{% md %}}The creation of the instance failed or a fatal error occurred during maintenance.{{% /md %}}</dd></dl>
+    <dd>FAILED{{% md %}}The creation of the instance failed or a fatal error occurred during maintenance.{{% /md %}}</dd><dt>ONLINE_MAINTENANCE</dt>
+    <dd>ONLINE_MAINTENANCE{{% md %}}The instance is under maintenance operations and the database is available.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="instancesuspensionreasonitem">Instance<wbr>Suspension<wbr>Reason<wbr>Item</h4>
@@ -3811,13 +4075,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="allocatediprange_csharp">
+<a href="#allocatediprange_csharp" style="color: inherit; text-decoration: inherit;">Allocated<wbr>Ip<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the allocated ip range for the private ip CloudSQL instance. For example: "google-managed-services-default". If set, the instance ip will be created in the allocated range. The range name must comply with [RFC 1035](https://tools.ietf.org/html/rfc1035). Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?.` Reserved for future use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="authorizednetworks_csharp">
 <a href="#authorizednetworks_csharp" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Networks</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aclentry">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Inputs.<wbr>Acl<wbr>Entry&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of external networks that are allowed to connect to the instance using the IP. In 'CIDR' notation, also known as 'slash' notation (for example: *192.168.100.0/24*).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The list of external networks that are allowed to connect to the instance using the IP. In 'CIDR' notation, also known as 'slash' notation (for example: **192.168.100.0/24**).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv4enabled_csharp">
 <a href="#ipv4enabled_csharp" style="color: inherit; text-decoration: inherit;">Ipv4Enabled</a>
@@ -3833,7 +4105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource link for the VPC network from which the Cloud SQL instance is accessible for private IP. For example, */projects/myProject/global/networks/default*. This setting can be updated, but it cannot be removed after it is set.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The resource link for the VPC network from which the Cloud SQL instance is accessible for private IP. For example, **/projects/myProject/global/networks/default**. This setting can be updated, but it cannot be removed after it is set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiressl_csharp">
 <a href="#requiressl_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Ssl</a>
@@ -3847,13 +4119,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="allocatediprange_go">
+<a href="#allocatediprange_go" style="color: inherit; text-decoration: inherit;">Allocated<wbr>Ip<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the allocated ip range for the private ip CloudSQL instance. For example: "google-managed-services-default". If set, the instance ip will be created in the allocated range. The range name must comply with [RFC 1035](https://tools.ietf.org/html/rfc1035). Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?.` Reserved for future use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="authorizednetworks_go">
 <a href="#authorizednetworks_go" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Networks</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aclentry">[]Acl<wbr>Entry</a></span>
     </dt>
-    <dd>{{% md %}}The list of external networks that are allowed to connect to the instance using the IP. In 'CIDR' notation, also known as 'slash' notation (for example: *192.168.100.0/24*).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The list of external networks that are allowed to connect to the instance using the IP. In 'CIDR' notation, also known as 'slash' notation (for example: **192.168.100.0/24**).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv4enabled_go">
 <a href="#ipv4enabled_go" style="color: inherit; text-decoration: inherit;">Ipv4Enabled</a>
@@ -3869,7 +4149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource link for the VPC network from which the Cloud SQL instance is accessible for private IP. For example, */projects/myProject/global/networks/default*. This setting can be updated, but it cannot be removed after it is set.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The resource link for the VPC network from which the Cloud SQL instance is accessible for private IP. For example, **/projects/myProject/global/networks/default**. This setting can be updated, but it cannot be removed after it is set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiressl_go">
 <a href="#requiressl_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Ssl</a>
@@ -3883,13 +4163,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="allocatediprange_nodejs">
+<a href="#allocatediprange_nodejs" style="color: inherit; text-decoration: inherit;">allocated<wbr>Ip<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the allocated ip range for the private ip CloudSQL instance. For example: "google-managed-services-default". If set, the instance ip will be created in the allocated range. The range name must comply with [RFC 1035](https://tools.ietf.org/html/rfc1035). Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?.` Reserved for future use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="authorizednetworks_nodejs">
 <a href="#authorizednetworks_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Networks</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aclentry">Acl<wbr>Entry[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of external networks that are allowed to connect to the instance using the IP. In 'CIDR' notation, also known as 'slash' notation (for example: *192.168.100.0/24*).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The list of external networks that are allowed to connect to the instance using the IP. In 'CIDR' notation, also known as 'slash' notation (for example: **192.168.100.0/24**).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv4enabled_nodejs">
 <a href="#ipv4enabled_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Enabled</a>
@@ -3905,7 +4193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource link for the VPC network from which the Cloud SQL instance is accessible for private IP. For example, */projects/myProject/global/networks/default*. This setting can be updated, but it cannot be removed after it is set.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The resource link for the VPC network from which the Cloud SQL instance is accessible for private IP. For example, **/projects/myProject/global/networks/default**. This setting can be updated, but it cannot be removed after it is set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiressl_nodejs">
 <a href="#requiressl_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Ssl</a>
@@ -3919,13 +4207,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="allocated_ip_range_python">
+<a href="#allocated_ip_range_python" style="color: inherit; text-decoration: inherit;">allocated_<wbr>ip_<wbr>range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the allocated ip range for the private ip CloudSQL instance. For example: "google-managed-services-default". If set, the instance ip will be created in the allocated range. The range name must comply with [RFC 1035](https://tools.ietf.org/html/rfc1035). Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?.` Reserved for future use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="authorized_networks_python">
 <a href="#authorized_networks_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>networks</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aclentry">Sequence[Acl<wbr>Entry]</a></span>
     </dt>
-    <dd>{{% md %}}The list of external networks that are allowed to connect to the instance using the IP. In 'CIDR' notation, also known as 'slash' notation (for example: *192.168.100.0/24*).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The list of external networks that are allowed to connect to the instance using the IP. In 'CIDR' notation, also known as 'slash' notation (for example: **192.168.100.0/24**).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv4_enabled_python">
 <a href="#ipv4_enabled_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>enabled</a>
@@ -3941,7 +4237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource link for the VPC network from which the Cloud SQL instance is accessible for private IP. For example, */projects/myProject/global/networks/default*. This setting can be updated, but it cannot be removed after it is set.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The resource link for the VPC network from which the Cloud SQL instance is accessible for private IP. For example, **/projects/myProject/global/networks/default**. This setting can be updated, but it cannot be removed after it is set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="require_ssl_python">
 <a href="#require_ssl_python" style="color: inherit; text-decoration: inherit;">require_<wbr>ssl</a>
@@ -3957,13 +4253,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="allocatediprange_csharp">
+<a href="#allocatediprange_csharp" style="color: inherit; text-decoration: inherit;">Allocated<wbr>Ip<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the allocated ip range for the private ip CloudSQL instance. For example: "google-managed-services-default". If set, the instance ip will be created in the allocated range. The range name must comply with [RFC 1035](https://tools.ietf.org/html/rfc1035). Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?.` Reserved for future use.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="authorizednetworks_csharp">
 <a href="#authorizednetworks_csharp" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Networks</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aclentryresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Inputs.<wbr>Acl<wbr>Entry<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of external networks that are allowed to connect to the instance using the IP. In 'CIDR' notation, also known as 'slash' notation (for example: *192.168.100.0/24*).{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The list of external networks that are allowed to connect to the instance using the IP. In 'CIDR' notation, also known as 'slash' notation (for example: **192.168.100.0/24**).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv4enabled_csharp">
 <a href="#ipv4enabled_csharp" style="color: inherit; text-decoration: inherit;">Ipv4Enabled</a>
@@ -3979,7 +4283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource link for the VPC network from which the Cloud SQL instance is accessible for private IP. For example, */projects/myProject/global/networks/default*. This setting can be updated, but it cannot be removed after it is set.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The resource link for the VPC network from which the Cloud SQL instance is accessible for private IP. For example, **/projects/myProject/global/networks/default**. This setting can be updated, but it cannot be removed after it is set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="requiressl_csharp">
 <a href="#requiressl_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Ssl</a>
@@ -3993,13 +4297,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="allocatediprange_go">
+<a href="#allocatediprange_go" style="color: inherit; text-decoration: inherit;">Allocated<wbr>Ip<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the allocated ip range for the private ip CloudSQL instance. For example: "google-managed-services-default". If set, the instance ip will be created in the allocated range. The range name must comply with [RFC 1035](https://tools.ietf.org/html/rfc1035). Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?.` Reserved for future use.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="authorizednetworks_go">
 <a href="#authorizednetworks_go" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Networks</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aclentryresponse">[]Acl<wbr>Entry<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of external networks that are allowed to connect to the instance using the IP. In 'CIDR' notation, also known as 'slash' notation (for example: *192.168.100.0/24*).{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The list of external networks that are allowed to connect to the instance using the IP. In 'CIDR' notation, also known as 'slash' notation (for example: **192.168.100.0/24**).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv4enabled_go">
 <a href="#ipv4enabled_go" style="color: inherit; text-decoration: inherit;">Ipv4Enabled</a>
@@ -4015,7 +4327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource link for the VPC network from which the Cloud SQL instance is accessible for private IP. For example, */projects/myProject/global/networks/default*. This setting can be updated, but it cannot be removed after it is set.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The resource link for the VPC network from which the Cloud SQL instance is accessible for private IP. For example, **/projects/myProject/global/networks/default**. This setting can be updated, but it cannot be removed after it is set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="requiressl_go">
 <a href="#requiressl_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Ssl</a>
@@ -4029,13 +4341,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="allocatediprange_nodejs">
+<a href="#allocatediprange_nodejs" style="color: inherit; text-decoration: inherit;">allocated<wbr>Ip<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the allocated ip range for the private ip CloudSQL instance. For example: "google-managed-services-default". If set, the instance ip will be created in the allocated range. The range name must comply with [RFC 1035](https://tools.ietf.org/html/rfc1035). Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?.` Reserved for future use.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="authorizednetworks_nodejs">
 <a href="#authorizednetworks_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Networks</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aclentryresponse">Acl<wbr>Entry<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of external networks that are allowed to connect to the instance using the IP. In 'CIDR' notation, also known as 'slash' notation (for example: *192.168.100.0/24*).{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The list of external networks that are allowed to connect to the instance using the IP. In 'CIDR' notation, also known as 'slash' notation (for example: **192.168.100.0/24**).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv4enabled_nodejs">
 <a href="#ipv4enabled_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Enabled</a>
@@ -4051,7 +4371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource link for the VPC network from which the Cloud SQL instance is accessible for private IP. For example, */projects/myProject/global/networks/default*. This setting can be updated, but it cannot be removed after it is set.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The resource link for the VPC network from which the Cloud SQL instance is accessible for private IP. For example, **/projects/myProject/global/networks/default**. This setting can be updated, but it cannot be removed after it is set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="requiressl_nodejs">
 <a href="#requiressl_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Ssl</a>
@@ -4065,13 +4385,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="allocated_ip_range_python">
+<a href="#allocated_ip_range_python" style="color: inherit; text-decoration: inherit;">allocated_<wbr>ip_<wbr>range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the allocated ip range for the private ip CloudSQL instance. For example: "google-managed-services-default". If set, the instance ip will be created in the allocated range. The range name must comply with [RFC 1035](https://tools.ietf.org/html/rfc1035). Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?.` Reserved for future use.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="authorized_networks_python">
 <a href="#authorized_networks_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>networks</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aclentryresponse">Sequence[Acl<wbr>Entry<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The list of external networks that are allowed to connect to the instance using the IP. In 'CIDR' notation, also known as 'slash' notation (for example: *192.168.100.0/24*).{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The list of external networks that are allowed to connect to the instance using the IP. In 'CIDR' notation, also known as 'slash' notation (for example: **192.168.100.0/24**).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv4_enabled_python">
 <a href="#ipv4_enabled_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>enabled</a>
@@ -4087,7 +4415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource link for the VPC network from which the Cloud SQL instance is accessible for private IP. For example, */projects/myProject/global/networks/default*. This setting can be updated, but it cannot be removed after it is set.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The resource link for the VPC network from which the Cloud SQL instance is accessible for private IP. For example, **/projects/myProject/global/networks/default**. This setting can be updated, but it cannot be removed after it is set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="require_ssl_python">
 <a href="#require_ssl_python" style="color: inherit; text-decoration: inherit;">require_<wbr>ssl</a>
@@ -4117,7 +4445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The due time for this IP to be retired in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*. This field is only available when the IP is scheduled to be retired.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The due time for this IP to be retired in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**. This field is only available when the IP is scheduled to be retired.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -4125,7 +4453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipmappingtype">Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Ip<wbr>Mapping<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of this IP address. A *PRIMARY* address is a public address that can accept incoming connections. A *PRIVATE* address is a private address that can accept incoming connections. An *OUTGOING* address is the source address of connections originating from the instance, if supported.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The type of this IP address. A **PRIMARY** address is a public address that can accept incoming connections. A **PRIVATE** address is a private address that can accept incoming connections. An **OUTGOING** address is the source address of connections originating from the instance, if supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4145,7 +4473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The due time for this IP to be retired in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*. This field is only available when the IP is scheduled to be retired.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The due time for this IP to be retired in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**. This field is only available when the IP is scheduled to be retired.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -4153,7 +4481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipmappingtype">Ip<wbr>Mapping<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of this IP address. A *PRIMARY* address is a public address that can accept incoming connections. A *PRIVATE* address is a private address that can accept incoming connections. An *OUTGOING* address is the source address of connections originating from the instance, if supported.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The type of this IP address. A **PRIMARY** address is a public address that can accept incoming connections. A **PRIVATE** address is a private address that can accept incoming connections. An **OUTGOING** address is the source address of connections originating from the instance, if supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4173,7 +4501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The due time for this IP to be retired in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*. This field is only available when the IP is scheduled to be retired.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The due time for this IP to be retired in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**. This field is only available when the IP is scheduled to be retired.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -4181,7 +4509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipmappingtype">Ip<wbr>Mapping<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of this IP address. A *PRIMARY* address is a public address that can accept incoming connections. A *PRIVATE* address is a private address that can accept incoming connections. An *OUTGOING* address is the source address of connections originating from the instance, if supported.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The type of this IP address. A **PRIMARY** address is a public address that can accept incoming connections. A **PRIVATE** address is a private address that can accept incoming connections. An **OUTGOING** address is the source address of connections originating from the instance, if supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -4201,7 +4529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The due time for this IP to be retired in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*. This field is only available when the IP is scheduled to be retired.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The due time for this IP to be retired in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**. This field is only available when the IP is scheduled to be retired.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -4209,7 +4537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipmappingtype">Ip<wbr>Mapping<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of this IP address. A *PRIMARY* address is a public address that can accept incoming connections. A *PRIVATE* address is a private address that can accept incoming connections. An *OUTGOING* address is the source address of connections originating from the instance, if supported.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The type of this IP address. A **PRIMARY** address is a public address that can accept incoming connections. A **PRIVATE** address is a private address that can accept incoming connections. An **OUTGOING** address is the source address of connections originating from the instance, if supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="ipmappingresponse">Ip<wbr>Mapping<wbr>Response</h4>
@@ -4231,7 +4559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The due time for this IP to be retired in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*. This field is only available when the IP is scheduled to be retired.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The due time for this IP to be retired in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**. This field is only available when the IP is scheduled to be retired.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -4239,7 +4567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of this IP address. A *PRIMARY* address is a public address that can accept incoming connections. A *PRIVATE* address is a private address that can accept incoming connections. An *OUTGOING* address is the source address of connections originating from the instance, if supported.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The type of this IP address. A **PRIMARY** address is a public address that can accept incoming connections. A **PRIVATE** address is a private address that can accept incoming connections. An **OUTGOING** address is the source address of connections originating from the instance, if supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4259,7 +4587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The due time for this IP to be retired in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*. This field is only available when the IP is scheduled to be retired.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The due time for this IP to be retired in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**. This field is only available when the IP is scheduled to be retired.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -4267,7 +4595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of this IP address. A *PRIMARY* address is a public address that can accept incoming connections. A *PRIVATE* address is a private address that can accept incoming connections. An *OUTGOING* address is the source address of connections originating from the instance, if supported.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The type of this IP address. A **PRIMARY** address is a public address that can accept incoming connections. A **PRIVATE** address is a private address that can accept incoming connections. An **OUTGOING** address is the source address of connections originating from the instance, if supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4287,7 +4615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The due time for this IP to be retired in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*. This field is only available when the IP is scheduled to be retired.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The due time for this IP to be retired in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**. This field is only available when the IP is scheduled to be retired.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -4295,7 +4623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of this IP address. A *PRIMARY* address is a public address that can accept incoming connections. A *PRIVATE* address is a private address that can accept incoming connections. An *OUTGOING* address is the source address of connections originating from the instance, if supported.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The type of this IP address. A **PRIMARY** address is a public address that can accept incoming connections. A **PRIVATE** address is a private address that can accept incoming connections. An **OUTGOING** address is the source address of connections originating from the instance, if supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -4315,7 +4643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The due time for this IP to be retired in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*. This field is only available when the IP is scheduled to be retired.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The due time for this IP to be retired in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**. This field is only available when the IP is scheduled to be retired.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -4323,7 +4651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of this IP address. A *PRIMARY* address is a public address that can accept incoming connections. A *PRIVATE* address is a private address that can accept incoming connections. An *OUTGOING* address is the source address of connections originating from the instance, if supported.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The type of this IP address. A **PRIMARY** address is a public address that can accept incoming connections. A **PRIVATE** address is a private address that can accept incoming connections. An **OUTGOING** address is the source address of connections originating from the instance, if supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="ipmappingtype">Ip<wbr>Mapping<wbr>Type</h4>
@@ -4383,7 +4711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#locationPreference*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#locationPreference**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondaryzone_csharp">
 <a href="#secondaryzone_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Zone</a>
@@ -4419,7 +4747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#locationPreference*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#locationPreference**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondaryzone_go">
 <a href="#secondaryzone_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Zone</a>
@@ -4455,7 +4783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#locationPreference*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#locationPreference**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondaryzone_nodejs">
 <a href="#secondaryzone_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Zone</a>
@@ -4491,7 +4819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#locationPreference*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#locationPreference**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondary_zone_python">
 <a href="#secondary_zone_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>zone</a>
@@ -4529,7 +4857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#locationPreference*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#locationPreference**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secondaryzone_csharp">
 <a href="#secondaryzone_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Zone</a>
@@ -4565,7 +4893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#locationPreference*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#locationPreference**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secondaryzone_go">
 <a href="#secondaryzone_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Zone</a>
@@ -4601,7 +4929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#locationPreference*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#locationPreference**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secondaryzone_nodejs">
 <a href="#secondaryzone_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Zone</a>
@@ -4637,7 +4965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#locationPreference*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#locationPreference**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secondary_zone_python">
 <a href="#secondary_zone_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>zone</a>
@@ -4683,7 +5011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#maintenanceWindow*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#maintenanceWindow**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatetrack_csharp">
 <a href="#updatetrack_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Track</a>
@@ -4691,7 +5019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#maintenancewindowupdatetrack">Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Maintenance<wbr>Window<wbr>Update<wbr>Track</a></span>
     </dt>
-    <dd>{{% md %}}Maintenance timing setting: *canary* (Earlier) or *stable* (Later). Learn more.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Maintenance timing setting: **canary** (Earlier) or **stable** (Later). [Learn more](https://cloud.google.com/sql/docs/mysql/instance-settings#maintenance-timing-2ndgen).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4719,7 +5047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#maintenanceWindow*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#maintenanceWindow**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatetrack_go">
 <a href="#updatetrack_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Track</a>
@@ -4727,7 +5055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#maintenancewindowupdatetrack">Maintenance<wbr>Window<wbr>Update<wbr>Track</a></span>
     </dt>
-    <dd>{{% md %}}Maintenance timing setting: *canary* (Earlier) or *stable* (Later). Learn more.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Maintenance timing setting: **canary** (Earlier) or **stable** (Later). [Learn more](https://cloud.google.com/sql/docs/mysql/instance-settings#maintenance-timing-2ndgen).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4755,7 +5083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#maintenanceWindow*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#maintenanceWindow**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatetrack_nodejs">
 <a href="#updatetrack_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Track</a>
@@ -4763,7 +5091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#maintenancewindowupdatetrack">Maintenance<wbr>Window<wbr>Update<wbr>Track</a></span>
     </dt>
-    <dd>{{% md %}}Maintenance timing setting: *canary* (Earlier) or *stable* (Later). Learn more.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Maintenance timing setting: **canary** (Earlier) or **stable** (Later). [Learn more](https://cloud.google.com/sql/docs/mysql/instance-settings#maintenance-timing-2ndgen).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -4791,7 +5119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#maintenanceWindow*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#maintenanceWindow**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="update_track_python">
 <a href="#update_track_python" style="color: inherit; text-decoration: inherit;">update_<wbr>track</a>
@@ -4799,7 +5127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#maintenancewindowupdatetrack">Maintenance<wbr>Window<wbr>Update<wbr>Track</a></span>
     </dt>
-    <dd>{{% md %}}Maintenance timing setting: *canary* (Earlier) or *stable* (Later). Learn more.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Maintenance timing setting: **canary** (Earlier) or **stable** (Later). [Learn more](https://cloud.google.com/sql/docs/mysql/instance-settings#maintenance-timing-2ndgen).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="maintenancewindowresponse">Maintenance<wbr>Window<wbr>Response</h4>
@@ -4829,7 +5157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#maintenanceWindow*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#maintenanceWindow**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updatetrack_csharp">
 <a href="#updatetrack_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Track</a>
@@ -4837,7 +5165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Maintenance timing setting: *canary* (Earlier) or *stable* (Later). Learn more.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Maintenance timing setting: **canary** (Earlier) or **stable** (Later). [Learn more](https://cloud.google.com/sql/docs/mysql/instance-settings#maintenance-timing-2ndgen).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4865,7 +5193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#maintenanceWindow*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#maintenanceWindow**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updatetrack_go">
 <a href="#updatetrack_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Track</a>
@@ -4873,7 +5201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Maintenance timing setting: *canary* (Earlier) or *stable* (Later). Learn more.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Maintenance timing setting: **canary** (Earlier) or **stable** (Later). [Learn more](https://cloud.google.com/sql/docs/mysql/instance-settings#maintenance-timing-2ndgen).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4901,7 +5229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#maintenanceWindow*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#maintenanceWindow**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updatetrack_nodejs">
 <a href="#updatetrack_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Track</a>
@@ -4909,7 +5237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Maintenance timing setting: *canary* (Earlier) or *stable* (Later). Learn more.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Maintenance timing setting: **canary** (Earlier) or **stable** (Later). [Learn more](https://cloud.google.com/sql/docs/mysql/instance-settings#maintenance-timing-2ndgen).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -4937,7 +5265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#maintenanceWindow*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#maintenanceWindow**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="update_track_python">
 <a href="#update_track_python" style="color: inherit; text-decoration: inherit;">update_<wbr>track</a>
@@ -4945,7 +5273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Maintenance timing setting: *canary* (Earlier) or *stable* (Later). Learn more.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Maintenance timing setting: **canary** (Earlier) or **stable** (Later). [Learn more](https://cloud.google.com/sql/docs/mysql/instance-settings#maintenance-timing-2ndgen).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="maintenancewindowupdatetrack">Maintenance<wbr>Window<wbr>Update<wbr>Track</h4>
@@ -5029,7 +5357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#mysqlReplicaConfiguration*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#mysqlReplicaConfiguration**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="masterheartbeatperiod_csharp">
 <a href="#masterheartbeatperiod_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Heartbeat<wbr>Period</a>
@@ -5121,7 +5449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#mysqlReplicaConfiguration*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#mysqlReplicaConfiguration**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="masterheartbeatperiod_go">
 <a href="#masterheartbeatperiod_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Heartbeat<wbr>Period</a>
@@ -5213,7 +5541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#mysqlReplicaConfiguration*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#mysqlReplicaConfiguration**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="masterheartbeatperiod_nodejs">
 <a href="#masterheartbeatperiod_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Heartbeat<wbr>Period</a>
@@ -5305,7 +5633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#mysqlReplicaConfiguration*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#mysqlReplicaConfiguration**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="master_heartbeat_period_python">
 <a href="#master_heartbeat_period_python" style="color: inherit; text-decoration: inherit;">master_<wbr>heartbeat_<wbr>period</a>
@@ -5399,7 +5727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#mysqlReplicaConfiguration*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#mysqlReplicaConfiguration**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="masterheartbeatperiod_csharp">
 <a href="#masterheartbeatperiod_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Heartbeat<wbr>Period</a>
@@ -5491,7 +5819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#mysqlReplicaConfiguration*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#mysqlReplicaConfiguration**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="masterheartbeatperiod_go">
 <a href="#masterheartbeatperiod_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Heartbeat<wbr>Period</a>
@@ -5583,7 +5911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#mysqlReplicaConfiguration*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#mysqlReplicaConfiguration**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="masterheartbeatperiod_nodejs">
 <a href="#masterheartbeatperiod_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Heartbeat<wbr>Period</a>
@@ -5675,7 +6003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#mysqlReplicaConfiguration*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#mysqlReplicaConfiguration**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="master_heartbeat_period_python">
 <a href="#master_heartbeat_period_python" style="color: inherit; text-decoration: inherit;">master_<wbr>heartbeat_<wbr>period</a>
@@ -5769,7 +6097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#onPremisesConfiguration*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#onPremisesConfiguration**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -5778,6 +6106,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for connecting to on-premises instance.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sourceinstance_csharp">
+<a href="#sourceinstance_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Instance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancereference">Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Inputs.<wbr>Instance<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}The reference to Cloud SQL instance if the source is Cloud SQL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -5837,7 +6173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#onPremisesConfiguration*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#onPremisesConfiguration**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -5846,6 +6182,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for connecting to on-premises instance.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sourceinstance_go">
+<a href="#sourceinstance_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Instance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancereference">Instance<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}The reference to Cloud SQL instance if the source is Cloud SQL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -5905,7 +6249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#onPremisesConfiguration*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#onPremisesConfiguration**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -5914,6 +6258,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for connecting to on-premises instance.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sourceinstance_nodejs">
+<a href="#sourceinstance_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Instance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancereference">Instance<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}The reference to Cloud SQL instance if the source is Cloud SQL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -5973,7 +6325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#onPremisesConfiguration*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#onPremisesConfiguration**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -5982,6 +6334,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password for connecting to on-premises instance.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="source_instance_python">
+<a href="#source_instance_python" style="color: inherit; text-decoration: inherit;">source_<wbr>instance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancereference">Instance<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}The reference to Cloud SQL instance if the source is Cloud SQL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -6043,7 +6403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#onPremisesConfiguration*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#onPremisesConfiguration**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -6052,6 +6412,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for connecting to on-premises instance.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sourceinstance_csharp">
+<a href="#sourceinstance_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Instance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancereferenceresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Inputs.<wbr>Instance<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The reference to Cloud SQL instance if the source is Cloud SQL.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -6111,7 +6479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#onPremisesConfiguration*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#onPremisesConfiguration**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -6120,6 +6488,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for connecting to on-premises instance.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sourceinstance_go">
+<a href="#sourceinstance_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Instance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancereferenceresponse">Instance<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The reference to Cloud SQL instance if the source is Cloud SQL.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -6179,7 +6555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#onPremisesConfiguration*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#onPremisesConfiguration**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -6188,6 +6564,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for connecting to on-premises instance.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sourceinstance_nodejs">
+<a href="#sourceinstance_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Instance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancereferenceresponse">Instance<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The reference to Cloud SQL instance if the source is Cloud SQL.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -6247,7 +6631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#onPremisesConfiguration*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#onPremisesConfiguration**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -6256,6 +6640,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password for connecting to on-premises instance.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="source_instance_python">
+<a href="#source_instance_python" style="color: inherit; text-decoration: inherit;">source_<wbr>instance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancereferenceresponse">Instance<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The reference to Cloud SQL instance if the source is Cloud SQL.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -6277,7 +6669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies if the replica is the failover target. If the field is set to *true* the replica will be designated as a failover replica. In case the primary instance fails, the replica instance will be promoted as the new primary instance. Only one replica can be specified as failover target, and the replica has to be in different zone with the primary instance.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies if the replica is the failover target. If the field is set to **true** the replica will be designated as a failover replica. In case the primary instance fails, the replica instance will be promoted as the new primary instance. Only one replica can be specified as failover target, and the replica has to be in different zone with the primary instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -6285,7 +6677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#replicaConfiguration*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#replicaConfiguration**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mysqlreplicaconfiguration_csharp">
 <a href="#mysqlreplicaconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Mysql<wbr>Replica<wbr>Configuration</a>
@@ -6293,7 +6685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mysqlreplicaconfiguration">Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Inputs.<wbr>My<wbr>Sql<wbr>Replica<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}MySQL specific configuration when replicating from a MySQL on-premises primary instance. Replication configuration information such as the username, password, certificates, and keys are not stored in the instance metadata. The configuration information is used only to set up the replication connection and is stored by MySQL in a file named *master.info* in the data directory.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}MySQL specific configuration when replicating from a MySQL on-premises primary instance. Replication configuration information such as the username, password, certificates, and keys are not stored in the instance metadata. The configuration information is used only to set up the replication connection and is stored by MySQL in a file named **master.info** in the data directory.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -6305,7 +6697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies if the replica is the failover target. If the field is set to *true* the replica will be designated as a failover replica. In case the primary instance fails, the replica instance will be promoted as the new primary instance. Only one replica can be specified as failover target, and the replica has to be in different zone with the primary instance.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies if the replica is the failover target. If the field is set to **true** the replica will be designated as a failover replica. In case the primary instance fails, the replica instance will be promoted as the new primary instance. Only one replica can be specified as failover target, and the replica has to be in different zone with the primary instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -6313,7 +6705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#replicaConfiguration*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#replicaConfiguration**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mysqlreplicaconfiguration_go">
 <a href="#mysqlreplicaconfiguration_go" style="color: inherit; text-decoration: inherit;">Mysql<wbr>Replica<wbr>Configuration</a>
@@ -6321,7 +6713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mysqlreplicaconfiguration">My<wbr>Sql<wbr>Replica<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}MySQL specific configuration when replicating from a MySQL on-premises primary instance. Replication configuration information such as the username, password, certificates, and keys are not stored in the instance metadata. The configuration information is used only to set up the replication connection and is stored by MySQL in a file named *master.info* in the data directory.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}MySQL specific configuration when replicating from a MySQL on-premises primary instance. Replication configuration information such as the username, password, certificates, and keys are not stored in the instance metadata. The configuration information is used only to set up the replication connection and is stored by MySQL in a file named **master.info** in the data directory.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -6333,7 +6725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Specifies if the replica is the failover target. If the field is set to *true* the replica will be designated as a failover replica. In case the primary instance fails, the replica instance will be promoted as the new primary instance. Only one replica can be specified as failover target, and the replica has to be in different zone with the primary instance.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies if the replica is the failover target. If the field is set to **true** the replica will be designated as a failover replica. In case the primary instance fails, the replica instance will be promoted as the new primary instance. Only one replica can be specified as failover target, and the replica has to be in different zone with the primary instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -6341,7 +6733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#replicaConfiguration*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#replicaConfiguration**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mysqlreplicaconfiguration_nodejs">
 <a href="#mysqlreplicaconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">mysql<wbr>Replica<wbr>Configuration</a>
@@ -6349,7 +6741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mysqlreplicaconfiguration">My<wbr>Sql<wbr>Replica<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}MySQL specific configuration when replicating from a MySQL on-premises primary instance. Replication configuration information such as the username, password, certificates, and keys are not stored in the instance metadata. The configuration information is used only to set up the replication connection and is stored by MySQL in a file named *master.info* in the data directory.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}MySQL specific configuration when replicating from a MySQL on-premises primary instance. Replication configuration information such as the username, password, certificates, and keys are not stored in the instance metadata. The configuration information is used only to set up the replication connection and is stored by MySQL in a file named **master.info** in the data directory.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -6361,7 +6753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies if the replica is the failover target. If the field is set to *true* the replica will be designated as a failover replica. In case the primary instance fails, the replica instance will be promoted as the new primary instance. Only one replica can be specified as failover target, and the replica has to be in different zone with the primary instance.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies if the replica is the failover target. If the field is set to **true** the replica will be designated as a failover replica. In case the primary instance fails, the replica instance will be promoted as the new primary instance. Only one replica can be specified as failover target, and the replica has to be in different zone with the primary instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -6369,7 +6761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#replicaConfiguration*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#replicaConfiguration**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mysql_replica_configuration_python">
 <a href="#mysql_replica_configuration_python" style="color: inherit; text-decoration: inherit;">mysql_<wbr>replica_<wbr>configuration</a>
@@ -6377,7 +6769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mysqlreplicaconfiguration">My<wbr>Sql<wbr>Replica<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}MySQL specific configuration when replicating from a MySQL on-premises primary instance. Replication configuration information such as the username, password, certificates, and keys are not stored in the instance metadata. The configuration information is used only to set up the replication connection and is stored by MySQL in a file named *master.info* in the data directory.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}MySQL specific configuration when replicating from a MySQL on-premises primary instance. Replication configuration information such as the username, password, certificates, and keys are not stored in the instance metadata. The configuration information is used only to set up the replication connection and is stored by MySQL in a file named **master.info** in the data directory.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="replicaconfigurationresponse">Replica<wbr>Configuration<wbr>Response</h4>
@@ -6391,7 +6783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies if the replica is the failover target. If the field is set to *true* the replica will be designated as a failover replica. In case the primary instance fails, the replica instance will be promoted as the new primary instance. Only one replica can be specified as failover target, and the replica has to be in different zone with the primary instance.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Specifies if the replica is the failover target. If the field is set to **true** the replica will be designated as a failover replica. In case the primary instance fails, the replica instance will be promoted as the new primary instance. Only one replica can be specified as failover target, and the replica has to be in different zone with the primary instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -6399,7 +6791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#replicaConfiguration*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#replicaConfiguration**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mysqlreplicaconfiguration_csharp">
 <a href="#mysqlreplicaconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Mysql<wbr>Replica<wbr>Configuration</a>
@@ -6407,7 +6799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mysqlreplicaconfigurationresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Inputs.<wbr>My<wbr>Sql<wbr>Replica<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}MySQL specific configuration when replicating from a MySQL on-premises primary instance. Replication configuration information such as the username, password, certificates, and keys are not stored in the instance metadata. The configuration information is used only to set up the replication connection and is stored by MySQL in a file named *master.info* in the data directory.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}MySQL specific configuration when replicating from a MySQL on-premises primary instance. Replication configuration information such as the username, password, certificates, and keys are not stored in the instance metadata. The configuration information is used only to set up the replication connection and is stored by MySQL in a file named **master.info** in the data directory.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -6419,7 +6811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies if the replica is the failover target. If the field is set to *true* the replica will be designated as a failover replica. In case the primary instance fails, the replica instance will be promoted as the new primary instance. Only one replica can be specified as failover target, and the replica has to be in different zone with the primary instance.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Specifies if the replica is the failover target. If the field is set to **true** the replica will be designated as a failover replica. In case the primary instance fails, the replica instance will be promoted as the new primary instance. Only one replica can be specified as failover target, and the replica has to be in different zone with the primary instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -6427,7 +6819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#replicaConfiguration*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#replicaConfiguration**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mysqlreplicaconfiguration_go">
 <a href="#mysqlreplicaconfiguration_go" style="color: inherit; text-decoration: inherit;">Mysql<wbr>Replica<wbr>Configuration</a>
@@ -6435,7 +6827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mysqlreplicaconfigurationresponse">My<wbr>Sql<wbr>Replica<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}MySQL specific configuration when replicating from a MySQL on-premises primary instance. Replication configuration information such as the username, password, certificates, and keys are not stored in the instance metadata. The configuration information is used only to set up the replication connection and is stored by MySQL in a file named *master.info* in the data directory.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}MySQL specific configuration when replicating from a MySQL on-premises primary instance. Replication configuration information such as the username, password, certificates, and keys are not stored in the instance metadata. The configuration information is used only to set up the replication connection and is stored by MySQL in a file named **master.info** in the data directory.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -6447,7 +6839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Specifies if the replica is the failover target. If the field is set to *true* the replica will be designated as a failover replica. In case the primary instance fails, the replica instance will be promoted as the new primary instance. Only one replica can be specified as failover target, and the replica has to be in different zone with the primary instance.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Specifies if the replica is the failover target. If the field is set to **true** the replica will be designated as a failover replica. In case the primary instance fails, the replica instance will be promoted as the new primary instance. Only one replica can be specified as failover target, and the replica has to be in different zone with the primary instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -6455,7 +6847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#replicaConfiguration*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#replicaConfiguration**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mysqlreplicaconfiguration_nodejs">
 <a href="#mysqlreplicaconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">mysql<wbr>Replica<wbr>Configuration</a>
@@ -6463,7 +6855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mysqlreplicaconfigurationresponse">My<wbr>Sql<wbr>Replica<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}MySQL specific configuration when replicating from a MySQL on-premises primary instance. Replication configuration information such as the username, password, certificates, and keys are not stored in the instance metadata. The configuration information is used only to set up the replication connection and is stored by MySQL in a file named *master.info* in the data directory.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}MySQL specific configuration when replicating from a MySQL on-premises primary instance. Replication configuration information such as the username, password, certificates, and keys are not stored in the instance metadata. The configuration information is used only to set up the replication connection and is stored by MySQL in a file named **master.info** in the data directory.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -6475,7 +6867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies if the replica is the failover target. If the field is set to *true* the replica will be designated as a failover replica. In case the primary instance fails, the replica instance will be promoted as the new primary instance. Only one replica can be specified as failover target, and the replica has to be in different zone with the primary instance.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Specifies if the replica is the failover target. If the field is set to **true** the replica will be designated as a failover replica. In case the primary instance fails, the replica instance will be promoted as the new primary instance. Only one replica can be specified as failover target, and the replica has to be in different zone with the primary instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -6483,7 +6875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#replicaConfiguration*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#replicaConfiguration**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mysql_replica_configuration_python">
 <a href="#mysql_replica_configuration_python" style="color: inherit; text-decoration: inherit;">mysql_<wbr>replica_<wbr>configuration</a>
@@ -6491,7 +6883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mysqlreplicaconfigurationresponse">My<wbr>Sql<wbr>Replica<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}MySQL specific configuration when replicating from a MySQL on-premises primary instance. Replication configuration information such as the username, password, certificates, and keys are not stored in the instance metadata. The configuration information is used only to set up the replication connection and is stored by MySQL in a file named *master.info* in the data directory.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}MySQL specific configuration when replicating from a MySQL on-premises primary instance. Replication configuration information such as the username, password, certificates, and keys are not stored in the instance metadata. The configuration information is used only to set up the replication connection and is stored by MySQL in a file named **master.info** in the data directory.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="settings">Settings</h4>
@@ -6505,7 +6897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#settingsactivationpolicy">Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Settings<wbr>Activation<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}The activation policy specifies when the instance is activated; it is applicable only when the instance state is RUNNABLE. Valid values: *ALWAYS*: The instance is on, and remains so even in the absence of connection requests. *NEVER*: The instance is off; it is not activated, even if a connection request arrives.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The activation policy specifies when the instance is activated; it is applicable only when the instance state is RUNNABLE. Valid values: * **ALWAYS**: The instance is on, and remains so even in the absence of connection requests. * **NEVER**: The instance is off; it is not activated, even if a connection request arrives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activedirectoryconfig_csharp">
 <a href="#activedirectoryconfig_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory<wbr>Config</a>
@@ -6521,7 +6913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#settingsavailabilitytype">Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Settings<wbr>Availability<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Availability type. Potential values: *ZONAL*: The instance serves data from only one zone. Outages in that zone affect data accessibility. *REGIONAL*: The instance can serve data from more than one zone in a region (it is highly available). For more information, see Overview of the High Availability Configuration.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Availability type. Potential values: * **ZONAL**: The instance serves data from only one zone. Outages in that zone affect data accessibility. * **REGIONAL**: The instance can serve data from more than one zone in a region (it is highly available)./ For more information, see [Overview of the High Availability Configuration](https://cloud.google.com/sql/docs/mysql/high-availability).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backupconfiguration_csharp">
 <a href="#backupconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Configuration</a>
@@ -6561,7 +6953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#settingsdatadisktype">Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Settings<wbr>Data<wbr>Disk<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of data disk: PD_SSD (default) or PD_HDD. Not used for First Generation instances.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The type of data disk: **PD_SSD** (default) or **PD_HDD**. Not used for First Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databaseflags_csharp">
 <a href="#databaseflags_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Flags</a>
@@ -6609,7 +7001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#settings*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#settings**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locationpreference_csharp">
 <a href="#locationpreference_csharp" style="color: inherit; text-decoration: inherit;">Location<wbr>Preference</a>
@@ -6633,7 +7025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#settingspricingplan">Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Settings<wbr>Pricing<wbr>Plan</a></span>
     </dt>
-    <dd>{{% md %}}The pricing plan for this instance. This can be either *PER_USE* or *PACKAGE*. Only *PER_USE* is supported for Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The pricing plan for this instance. This can be either **PER_USE** or **PACKAGE**. Only **PER_USE** is supported for Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="settingsversion_csharp">
 <a href="#settingsversion_csharp" style="color: inherit; text-decoration: inherit;">Settings<wbr>Version</a>
@@ -6642,6 +7034,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of instance settings. This is a required field for update method to make sure concurrent updates are handled properly. During update, use the most recent settingsVersion value for this instance and do not try to update this value.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sqlserverauditconfig_csharp">
+<a href="#sqlserverauditconfig_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Server<wbr>Audit<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlserverauditconfig">Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Inputs.<wbr>Sql<wbr>Server<wbr>Audit<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}SQL Server specific audit configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageautoresize_csharp">
 <a href="#storageautoresize_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Auto<wbr>Resize</a>
@@ -6665,7 +7065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tier (or machine type) for this instance, for example *db-custom-1-3840* .{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The tier (or machine type) for this instance, for example **db-custom-1-3840**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userlabels_csharp">
 <a href="#userlabels_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Labels</a>
@@ -6685,7 +7085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#settingsactivationpolicy">Settings<wbr>Activation<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}The activation policy specifies when the instance is activated; it is applicable only when the instance state is RUNNABLE. Valid values: *ALWAYS*: The instance is on, and remains so even in the absence of connection requests. *NEVER*: The instance is off; it is not activated, even if a connection request arrives.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The activation policy specifies when the instance is activated; it is applicable only when the instance state is RUNNABLE. Valid values: * **ALWAYS**: The instance is on, and remains so even in the absence of connection requests. * **NEVER**: The instance is off; it is not activated, even if a connection request arrives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activedirectoryconfig_go">
 <a href="#activedirectoryconfig_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory<wbr>Config</a>
@@ -6701,7 +7101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#settingsavailabilitytype">Settings<wbr>Availability<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Availability type. Potential values: *ZONAL*: The instance serves data from only one zone. Outages in that zone affect data accessibility. *REGIONAL*: The instance can serve data from more than one zone in a region (it is highly available). For more information, see Overview of the High Availability Configuration.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Availability type. Potential values: * **ZONAL**: The instance serves data from only one zone. Outages in that zone affect data accessibility. * **REGIONAL**: The instance can serve data from more than one zone in a region (it is highly available)./ For more information, see [Overview of the High Availability Configuration](https://cloud.google.com/sql/docs/mysql/high-availability).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backupconfiguration_go">
 <a href="#backupconfiguration_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Configuration</a>
@@ -6741,7 +7141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#settingsdatadisktype">Settings<wbr>Data<wbr>Disk<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of data disk: PD_SSD (default) or PD_HDD. Not used for First Generation instances.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The type of data disk: **PD_SSD** (default) or **PD_HDD**. Not used for First Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databaseflags_go">
 <a href="#databaseflags_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Flags</a>
@@ -6789,7 +7189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#settings*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#settings**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locationpreference_go">
 <a href="#locationpreference_go" style="color: inherit; text-decoration: inherit;">Location<wbr>Preference</a>
@@ -6813,7 +7213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#settingspricingplan">Settings<wbr>Pricing<wbr>Plan</a></span>
     </dt>
-    <dd>{{% md %}}The pricing plan for this instance. This can be either *PER_USE* or *PACKAGE*. Only *PER_USE* is supported for Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The pricing plan for this instance. This can be either **PER_USE** or **PACKAGE**. Only **PER_USE** is supported for Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="settingsversion_go">
 <a href="#settingsversion_go" style="color: inherit; text-decoration: inherit;">Settings<wbr>Version</a>
@@ -6822,6 +7222,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of instance settings. This is a required field for update method to make sure concurrent updates are handled properly. During update, use the most recent settingsVersion value for this instance and do not try to update this value.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sqlserverauditconfig_go">
+<a href="#sqlserverauditconfig_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Server<wbr>Audit<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlserverauditconfig">Sql<wbr>Server<wbr>Audit<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}SQL Server specific audit configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageautoresize_go">
 <a href="#storageautoresize_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Auto<wbr>Resize</a>
@@ -6845,7 +7253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tier (or machine type) for this instance, for example *db-custom-1-3840* .{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The tier (or machine type) for this instance, for example **db-custom-1-3840**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userlabels_go">
 <a href="#userlabels_go" style="color: inherit; text-decoration: inherit;">User<wbr>Labels</a>
@@ -6865,7 +7273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#settingsactivationpolicy">Settings<wbr>Activation<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}The activation policy specifies when the instance is activated; it is applicable only when the instance state is RUNNABLE. Valid values: *ALWAYS*: The instance is on, and remains so even in the absence of connection requests. *NEVER*: The instance is off; it is not activated, even if a connection request arrives.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The activation policy specifies when the instance is activated; it is applicable only when the instance state is RUNNABLE. Valid values: * **ALWAYS**: The instance is on, and remains so even in the absence of connection requests. * **NEVER**: The instance is off; it is not activated, even if a connection request arrives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activedirectoryconfig_nodejs">
 <a href="#activedirectoryconfig_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Directory<wbr>Config</a>
@@ -6881,7 +7289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#settingsavailabilitytype">Settings<wbr>Availability<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Availability type. Potential values: *ZONAL*: The instance serves data from only one zone. Outages in that zone affect data accessibility. *REGIONAL*: The instance can serve data from more than one zone in a region (it is highly available). For more information, see Overview of the High Availability Configuration.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Availability type. Potential values: * **ZONAL**: The instance serves data from only one zone. Outages in that zone affect data accessibility. * **REGIONAL**: The instance can serve data from more than one zone in a region (it is highly available)./ For more information, see [Overview of the High Availability Configuration](https://cloud.google.com/sql/docs/mysql/high-availability).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backupconfiguration_nodejs">
 <a href="#backupconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Configuration</a>
@@ -6921,7 +7329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#settingsdatadisktype">Settings<wbr>Data<wbr>Disk<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of data disk: PD_SSD (default) or PD_HDD. Not used for First Generation instances.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The type of data disk: **PD_SSD** (default) or **PD_HDD**. Not used for First Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databaseflags_nodejs">
 <a href="#databaseflags_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Flags</a>
@@ -6969,7 +7377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#settings*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#settings**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locationpreference_nodejs">
 <a href="#locationpreference_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Preference</a>
@@ -6993,7 +7401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#settingspricingplan">Settings<wbr>Pricing<wbr>Plan</a></span>
     </dt>
-    <dd>{{% md %}}The pricing plan for this instance. This can be either *PER_USE* or *PACKAGE*. Only *PER_USE* is supported for Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The pricing plan for this instance. This can be either **PER_USE** or **PACKAGE**. Only **PER_USE** is supported for Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="settingsversion_nodejs">
 <a href="#settingsversion_nodejs" style="color: inherit; text-decoration: inherit;">settings<wbr>Version</a>
@@ -7002,6 +7410,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of instance settings. This is a required field for update method to make sure concurrent updates are handled properly. During update, use the most recent settingsVersion value for this instance and do not try to update this value.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sqlserverauditconfig_nodejs">
+<a href="#sqlserverauditconfig_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Server<wbr>Audit<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlserverauditconfig">Sql<wbr>Server<wbr>Audit<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}SQL Server specific audit configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageautoresize_nodejs">
 <a href="#storageautoresize_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Auto<wbr>Resize</a>
@@ -7025,7 +7441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tier (or machine type) for this instance, for example *db-custom-1-3840* .{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The tier (or machine type) for this instance, for example **db-custom-1-3840**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userlabels_nodejs">
 <a href="#userlabels_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Labels</a>
@@ -7045,7 +7461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#settingsactivationpolicy">Settings<wbr>Activation<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}The activation policy specifies when the instance is activated; it is applicable only when the instance state is RUNNABLE. Valid values: *ALWAYS*: The instance is on, and remains so even in the absence of connection requests. *NEVER*: The instance is off; it is not activated, even if a connection request arrives.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The activation policy specifies when the instance is activated; it is applicable only when the instance state is RUNNABLE. Valid values: * **ALWAYS**: The instance is on, and remains so even in the absence of connection requests. * **NEVER**: The instance is off; it is not activated, even if a connection request arrives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="active_directory_config_python">
 <a href="#active_directory_config_python" style="color: inherit; text-decoration: inherit;">active_<wbr>directory_<wbr>config</a>
@@ -7061,7 +7477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#settingsavailabilitytype">Settings<wbr>Availability<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Availability type. Potential values: *ZONAL*: The instance serves data from only one zone. Outages in that zone affect data accessibility. *REGIONAL*: The instance can serve data from more than one zone in a region (it is highly available). For more information, see Overview of the High Availability Configuration.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Availability type. Potential values: * **ZONAL**: The instance serves data from only one zone. Outages in that zone affect data accessibility. * **REGIONAL**: The instance can serve data from more than one zone in a region (it is highly available)./ For more information, see [Overview of the High Availability Configuration](https://cloud.google.com/sql/docs/mysql/high-availability).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backup_configuration_python">
 <a href="#backup_configuration_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>configuration</a>
@@ -7101,7 +7517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#settingsdatadisktype">Settings<wbr>Data<wbr>Disk<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of data disk: PD_SSD (default) or PD_HDD. Not used for First Generation instances.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The type of data disk: **PD_SSD** (default) or **PD_HDD**. Not used for First Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="database_flags_python">
 <a href="#database_flags_python" style="color: inherit; text-decoration: inherit;">database_<wbr>flags</a>
@@ -7149,7 +7565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#settings*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#settings**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_preference_python">
 <a href="#location_preference_python" style="color: inherit; text-decoration: inherit;">location_<wbr>preference</a>
@@ -7173,7 +7589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#settingspricingplan">Settings<wbr>Pricing<wbr>Plan</a></span>
     </dt>
-    <dd>{{% md %}}The pricing plan for this instance. This can be either *PER_USE* or *PACKAGE*. Only *PER_USE* is supported for Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The pricing plan for this instance. This can be either **PER_USE** or **PACKAGE**. Only **PER_USE** is supported for Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="settings_version_python">
 <a href="#settings_version_python" style="color: inherit; text-decoration: inherit;">settings_<wbr>version</a>
@@ -7182,6 +7598,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of instance settings. This is a required field for update method to make sure concurrent updates are handled properly. During update, use the most recent settingsVersion value for this instance and do not try to update this value.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sql_server_audit_config_python">
+<a href="#sql_server_audit_config_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>server_<wbr>audit_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlserverauditconfig">Sql<wbr>Server<wbr>Audit<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}SQL Server specific audit configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_auto_resize_python">
 <a href="#storage_auto_resize_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>auto_<wbr>resize</a>
@@ -7205,7 +7629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The tier (or machine type) for this instance, for example *db-custom-1-3840* .{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The tier (or machine type) for this instance, for example **db-custom-1-3840**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_labels_python">
 <a href="#user_labels_python" style="color: inherit; text-decoration: inherit;">user_<wbr>labels</a>
@@ -7355,7 +7779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The activation policy specifies when the instance is activated; it is applicable only when the instance state is RUNNABLE. Valid values: *ALWAYS*: The instance is on, and remains so even in the absence of connection requests. *NEVER*: The instance is off; it is not activated, even if a connection request arrives.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The activation policy specifies when the instance is activated; it is applicable only when the instance state is RUNNABLE. Valid values: * **ALWAYS**: The instance is on, and remains so even in the absence of connection requests. * **NEVER**: The instance is off; it is not activated, even if a connection request arrives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="activedirectoryconfig_csharp">
 <a href="#activedirectoryconfig_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory<wbr>Config</a>
@@ -7371,7 +7795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Availability type. Potential values: *ZONAL*: The instance serves data from only one zone. Outages in that zone affect data accessibility. *REGIONAL*: The instance can serve data from more than one zone in a region (it is highly available). For more information, see Overview of the High Availability Configuration.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Availability type. Potential values: * **ZONAL**: The instance serves data from only one zone. Outages in that zone affect data accessibility. * **REGIONAL**: The instance can serve data from more than one zone in a region (it is highly available)./ For more information, see [Overview of the High Availability Configuration](https://cloud.google.com/sql/docs/mysql/high-availability).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="backupconfiguration_csharp">
 <a href="#backupconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Configuration</a>
@@ -7411,7 +7835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of data disk: PD_SSD (default) or PD_HDD. Not used for First Generation instances.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The type of data disk: **PD_SSD** (default) or **PD_HDD**. Not used for First Generation instances.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="databaseflags_csharp">
 <a href="#databaseflags_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Flags</a>
@@ -7459,7 +7883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#settings*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#settings**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="locationpreference_csharp">
 <a href="#locationpreference_csharp" style="color: inherit; text-decoration: inherit;">Location<wbr>Preference</a>
@@ -7483,7 +7907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The pricing plan for this instance. This can be either *PER_USE* or *PACKAGE*. Only *PER_USE* is supported for Second Generation instances.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The pricing plan for this instance. This can be either **PER_USE** or **PACKAGE**. Only **PER_USE** is supported for Second Generation instances.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="settingsversion_csharp">
 <a href="#settingsversion_csharp" style="color: inherit; text-decoration: inherit;">Settings<wbr>Version</a>
@@ -7492,6 +7916,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of instance settings. This is a required field for update method to make sure concurrent updates are handled properly. During update, use the most recent settingsVersion value for this instance and do not try to update this value.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sqlserverauditconfig_csharp">
+<a href="#sqlserverauditconfig_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Server<wbr>Audit<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlserverauditconfigresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Inputs.<wbr>Sql<wbr>Server<wbr>Audit<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SQL Server specific audit configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageautoresize_csharp">
 <a href="#storageautoresize_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Auto<wbr>Resize</a>
@@ -7515,7 +7947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tier (or machine type) for this instance, for example *db-custom-1-3840* .{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The tier (or machine type) for this instance, for example **db-custom-1-3840**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userlabels_csharp">
 <a href="#userlabels_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Labels</a>
@@ -7535,7 +7967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The activation policy specifies when the instance is activated; it is applicable only when the instance state is RUNNABLE. Valid values: *ALWAYS*: The instance is on, and remains so even in the absence of connection requests. *NEVER*: The instance is off; it is not activated, even if a connection request arrives.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The activation policy specifies when the instance is activated; it is applicable only when the instance state is RUNNABLE. Valid values: * **ALWAYS**: The instance is on, and remains so even in the absence of connection requests. * **NEVER**: The instance is off; it is not activated, even if a connection request arrives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="activedirectoryconfig_go">
 <a href="#activedirectoryconfig_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory<wbr>Config</a>
@@ -7551,7 +7983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Availability type. Potential values: *ZONAL*: The instance serves data from only one zone. Outages in that zone affect data accessibility. *REGIONAL*: The instance can serve data from more than one zone in a region (it is highly available). For more information, see Overview of the High Availability Configuration.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Availability type. Potential values: * **ZONAL**: The instance serves data from only one zone. Outages in that zone affect data accessibility. * **REGIONAL**: The instance can serve data from more than one zone in a region (it is highly available)./ For more information, see [Overview of the High Availability Configuration](https://cloud.google.com/sql/docs/mysql/high-availability).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="backupconfiguration_go">
 <a href="#backupconfiguration_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Configuration</a>
@@ -7591,7 +8023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of data disk: PD_SSD (default) or PD_HDD. Not used for First Generation instances.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The type of data disk: **PD_SSD** (default) or **PD_HDD**. Not used for First Generation instances.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="databaseflags_go">
 <a href="#databaseflags_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Flags</a>
@@ -7639,7 +8071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#settings*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#settings**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="locationpreference_go">
 <a href="#locationpreference_go" style="color: inherit; text-decoration: inherit;">Location<wbr>Preference</a>
@@ -7663,7 +8095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The pricing plan for this instance. This can be either *PER_USE* or *PACKAGE*. Only *PER_USE* is supported for Second Generation instances.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The pricing plan for this instance. This can be either **PER_USE** or **PACKAGE**. Only **PER_USE** is supported for Second Generation instances.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="settingsversion_go">
 <a href="#settingsversion_go" style="color: inherit; text-decoration: inherit;">Settings<wbr>Version</a>
@@ -7672,6 +8104,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of instance settings. This is a required field for update method to make sure concurrent updates are handled properly. During update, use the most recent settingsVersion value for this instance and do not try to update this value.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sqlserverauditconfig_go">
+<a href="#sqlserverauditconfig_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Server<wbr>Audit<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlserverauditconfigresponse">Sql<wbr>Server<wbr>Audit<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SQL Server specific audit configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageautoresize_go">
 <a href="#storageautoresize_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Auto<wbr>Resize</a>
@@ -7695,7 +8135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tier (or machine type) for this instance, for example *db-custom-1-3840* .{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The tier (or machine type) for this instance, for example **db-custom-1-3840**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userlabels_go">
 <a href="#userlabels_go" style="color: inherit; text-decoration: inherit;">User<wbr>Labels</a>
@@ -7715,7 +8155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The activation policy specifies when the instance is activated; it is applicable only when the instance state is RUNNABLE. Valid values: *ALWAYS*: The instance is on, and remains so even in the absence of connection requests. *NEVER*: The instance is off; it is not activated, even if a connection request arrives.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The activation policy specifies when the instance is activated; it is applicable only when the instance state is RUNNABLE. Valid values: * **ALWAYS**: The instance is on, and remains so even in the absence of connection requests. * **NEVER**: The instance is off; it is not activated, even if a connection request arrives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="activedirectoryconfig_nodejs">
 <a href="#activedirectoryconfig_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Directory<wbr>Config</a>
@@ -7731,7 +8171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Availability type. Potential values: *ZONAL*: The instance serves data from only one zone. Outages in that zone affect data accessibility. *REGIONAL*: The instance can serve data from more than one zone in a region (it is highly available). For more information, see Overview of the High Availability Configuration.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Availability type. Potential values: * **ZONAL**: The instance serves data from only one zone. Outages in that zone affect data accessibility. * **REGIONAL**: The instance can serve data from more than one zone in a region (it is highly available)./ For more information, see [Overview of the High Availability Configuration](https://cloud.google.com/sql/docs/mysql/high-availability).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="backupconfiguration_nodejs">
 <a href="#backupconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Configuration</a>
@@ -7771,7 +8211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of data disk: PD_SSD (default) or PD_HDD. Not used for First Generation instances.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The type of data disk: **PD_SSD** (default) or **PD_HDD**. Not used for First Generation instances.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="databaseflags_nodejs">
 <a href="#databaseflags_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Flags</a>
@@ -7819,7 +8259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#settings*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#settings**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="locationpreference_nodejs">
 <a href="#locationpreference_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Preference</a>
@@ -7843,7 +8283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The pricing plan for this instance. This can be either *PER_USE* or *PACKAGE*. Only *PER_USE* is supported for Second Generation instances.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The pricing plan for this instance. This can be either **PER_USE** or **PACKAGE**. Only **PER_USE** is supported for Second Generation instances.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="settingsversion_nodejs">
 <a href="#settingsversion_nodejs" style="color: inherit; text-decoration: inherit;">settings<wbr>Version</a>
@@ -7852,6 +8292,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of instance settings. This is a required field for update method to make sure concurrent updates are handled properly. During update, use the most recent settingsVersion value for this instance and do not try to update this value.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sqlserverauditconfig_nodejs">
+<a href="#sqlserverauditconfig_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Server<wbr>Audit<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlserverauditconfigresponse">Sql<wbr>Server<wbr>Audit<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SQL Server specific audit configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageautoresize_nodejs">
 <a href="#storageautoresize_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Auto<wbr>Resize</a>
@@ -7875,7 +8323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tier (or machine type) for this instance, for example *db-custom-1-3840* .{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The tier (or machine type) for this instance, for example **db-custom-1-3840**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userlabels_nodejs">
 <a href="#userlabels_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Labels</a>
@@ -7895,7 +8343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The activation policy specifies when the instance is activated; it is applicable only when the instance state is RUNNABLE. Valid values: *ALWAYS*: The instance is on, and remains so even in the absence of connection requests. *NEVER*: The instance is off; it is not activated, even if a connection request arrives.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The activation policy specifies when the instance is activated; it is applicable only when the instance state is RUNNABLE. Valid values: * **ALWAYS**: The instance is on, and remains so even in the absence of connection requests. * **NEVER**: The instance is off; it is not activated, even if a connection request arrives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="active_directory_config_python">
 <a href="#active_directory_config_python" style="color: inherit; text-decoration: inherit;">active_<wbr>directory_<wbr>config</a>
@@ -7911,7 +8359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Availability type. Potential values: *ZONAL*: The instance serves data from only one zone. Outages in that zone affect data accessibility. *REGIONAL*: The instance can serve data from more than one zone in a region (it is highly available). For more information, see Overview of the High Availability Configuration.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Availability type. Potential values: * **ZONAL**: The instance serves data from only one zone. Outages in that zone affect data accessibility. * **REGIONAL**: The instance can serve data from more than one zone in a region (it is highly available)./ For more information, see [Overview of the High Availability Configuration](https://cloud.google.com/sql/docs/mysql/high-availability).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="backup_configuration_python">
 <a href="#backup_configuration_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>configuration</a>
@@ -7951,7 +8399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of data disk: PD_SSD (default) or PD_HDD. Not used for First Generation instances.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The type of data disk: **PD_SSD** (default) or **PD_HDD**. Not used for First Generation instances.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="database_flags_python">
 <a href="#database_flags_python" style="color: inherit; text-decoration: inherit;">database_<wbr>flags</a>
@@ -7999,7 +8447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#settings*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#settings**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_preference_python">
 <a href="#location_preference_python" style="color: inherit; text-decoration: inherit;">location_<wbr>preference</a>
@@ -8023,7 +8471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The pricing plan for this instance. This can be either *PER_USE* or *PACKAGE*. Only *PER_USE* is supported for Second Generation instances.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The pricing plan for this instance. This can be either **PER_USE** or **PACKAGE**. Only **PER_USE** is supported for Second Generation instances.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="settings_version_python">
 <a href="#settings_version_python" style="color: inherit; text-decoration: inherit;">settings_<wbr>version</a>
@@ -8032,6 +8480,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of instance settings. This is a required field for update method to make sure concurrent updates are handled properly. During update, use the most recent settingsVersion value for this instance and do not try to update this value.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sql_server_audit_config_python">
+<a href="#sql_server_audit_config_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>server_<wbr>audit_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlserverauditconfigresponse">Sql<wbr>Server<wbr>Audit<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SQL Server specific audit configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storage_auto_resize_python">
 <a href="#storage_auto_resize_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>auto_<wbr>resize</a>
@@ -8055,7 +8511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The tier (or machine type) for this instance, for example *db-custom-1-3840* .{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The tier (or machine type) for this instance, for example **db-custom-1-3840**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_labels_python">
 <a href="#user_labels_python" style="color: inherit; text-decoration: inherit;">user_<wbr>labels</a>
@@ -8241,7 +8697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum recommended increase size in GigaBytes This field is consumed by the frontend Writers: -- the proactive database wellness job for OOD.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The minimum recommended increase size in GigaBytes This field is consumed by the frontend * Writers: * the proactive database wellness job for OOD. * Readers:{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqloutofdiskstate_csharp">
 <a href="#sqloutofdiskstate_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>State</a>
@@ -8249,7 +8705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqloutofdiskreportsqloutofdiskstate">Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>Report<wbr>Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}This field represents the state generated by the proactive database wellness job for OutOfDisk issues. Writers: -- the proactive database wellness job for OOD. Readers: -- the proactive database wellness job{{% /md %}}</dd></dl>
+    <dd>{{% md %}}This field represents the state generated by the proactive database wellness job for OutOfDisk issues. * Writers: * the proactive database wellness job for OOD. * Readers: * the proactive database wellness job{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -8261,7 +8717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum recommended increase size in GigaBytes This field is consumed by the frontend Writers: -- the proactive database wellness job for OOD.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The minimum recommended increase size in GigaBytes This field is consumed by the frontend * Writers: * the proactive database wellness job for OOD. * Readers:{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqloutofdiskstate_go">
 <a href="#sqloutofdiskstate_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>State</a>
@@ -8269,7 +8725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqloutofdiskreportsqloutofdiskstate">Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>Report<wbr>Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}This field represents the state generated by the proactive database wellness job for OutOfDisk issues. Writers: -- the proactive database wellness job for OOD. Readers: -- the proactive database wellness job{{% /md %}}</dd></dl>
+    <dd>{{% md %}}This field represents the state generated by the proactive database wellness job for OutOfDisk issues. * Writers: * the proactive database wellness job for OOD. * Readers: * the proactive database wellness job{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -8281,7 +8737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The minimum recommended increase size in GigaBytes This field is consumed by the frontend Writers: -- the proactive database wellness job for OOD.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The minimum recommended increase size in GigaBytes This field is consumed by the frontend * Writers: * the proactive database wellness job for OOD. * Readers:{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqloutofdiskstate_nodejs">
 <a href="#sqloutofdiskstate_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Out<wbr>Of<wbr>Disk<wbr>State</a>
@@ -8289,7 +8745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqloutofdiskreportsqloutofdiskstate">Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>Report<wbr>Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}This field represents the state generated by the proactive database wellness job for OutOfDisk issues. Writers: -- the proactive database wellness job for OOD. Readers: -- the proactive database wellness job{{% /md %}}</dd></dl>
+    <dd>{{% md %}}This field represents the state generated by the proactive database wellness job for OutOfDisk issues. * Writers: * the proactive database wellness job for OOD. * Readers: * the proactive database wellness job{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -8301,7 +8757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum recommended increase size in GigaBytes This field is consumed by the frontend Writers: -- the proactive database wellness job for OOD.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The minimum recommended increase size in GigaBytes This field is consumed by the frontend * Writers: * the proactive database wellness job for OOD. * Readers:{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sql_out_of_disk_state_python">
 <a href="#sql_out_of_disk_state_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>out_<wbr>of_<wbr>disk_<wbr>state</a>
@@ -8309,7 +8765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqloutofdiskreportsqloutofdiskstate">Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>Report<wbr>Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}This field represents the state generated by the proactive database wellness job for OutOfDisk issues. Writers: -- the proactive database wellness job for OOD. Readers: -- the proactive database wellness job{{% /md %}}</dd></dl>
+    <dd>{{% md %}}This field represents the state generated by the proactive database wellness job for OutOfDisk issues. * Writers: * the proactive database wellness job for OOD. * Readers: * the proactive database wellness job{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sqloutofdiskreportresponse">Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>Report<wbr>Response</h4>
@@ -8323,7 +8779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum recommended increase size in GigaBytes This field is consumed by the frontend Writers: -- the proactive database wellness job for OOD.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The minimum recommended increase size in GigaBytes This field is consumed by the frontend * Writers: * the proactive database wellness job for OOD. * Readers:{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sqloutofdiskstate_csharp">
 <a href="#sqloutofdiskstate_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>State</a>
@@ -8331,7 +8787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This field represents the state generated by the proactive database wellness job for OutOfDisk issues. Writers: -- the proactive database wellness job for OOD. Readers: -- the proactive database wellness job{{% /md %}}</dd></dl>
+    <dd>{{% md %}}This field represents the state generated by the proactive database wellness job for OutOfDisk issues. * Writers: * the proactive database wellness job for OOD. * Readers: * the proactive database wellness job{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -8343,7 +8799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum recommended increase size in GigaBytes This field is consumed by the frontend Writers: -- the proactive database wellness job for OOD.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The minimum recommended increase size in GigaBytes This field is consumed by the frontend * Writers: * the proactive database wellness job for OOD. * Readers:{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sqloutofdiskstate_go">
 <a href="#sqloutofdiskstate_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>State</a>
@@ -8351,7 +8807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This field represents the state generated by the proactive database wellness job for OutOfDisk issues. Writers: -- the proactive database wellness job for OOD. Readers: -- the proactive database wellness job{{% /md %}}</dd></dl>
+    <dd>{{% md %}}This field represents the state generated by the proactive database wellness job for OutOfDisk issues. * Writers: * the proactive database wellness job for OOD. * Readers: * the proactive database wellness job{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -8363,7 +8819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The minimum recommended increase size in GigaBytes This field is consumed by the frontend Writers: -- the proactive database wellness job for OOD.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The minimum recommended increase size in GigaBytes This field is consumed by the frontend * Writers: * the proactive database wellness job for OOD. * Readers:{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sqloutofdiskstate_nodejs">
 <a href="#sqloutofdiskstate_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Out<wbr>Of<wbr>Disk<wbr>State</a>
@@ -8371,7 +8827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This field represents the state generated by the proactive database wellness job for OutOfDisk issues. Writers: -- the proactive database wellness job for OOD. Readers: -- the proactive database wellness job{{% /md %}}</dd></dl>
+    <dd>{{% md %}}This field represents the state generated by the proactive database wellness job for OutOfDisk issues. * Writers: * the proactive database wellness job for OOD. * Readers: * the proactive database wellness job{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -8383,7 +8839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum recommended increase size in GigaBytes This field is consumed by the frontend Writers: -- the proactive database wellness job for OOD.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The minimum recommended increase size in GigaBytes This field is consumed by the frontend * Writers: * the proactive database wellness job for OOD. * Readers:{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sql_out_of_disk_state_python">
 <a href="#sql_out_of_disk_state_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>out_<wbr>of_<wbr>disk_<wbr>state</a>
@@ -8391,7 +8847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This field represents the state generated by the proactive database wellness job for OutOfDisk issues. Writers: -- the proactive database wellness job for OOD. Readers: -- the proactive database wellness job{{% /md %}}</dd></dl>
+    <dd>{{% md %}}This field represents the state generated by the proactive database wellness job for OutOfDisk issues. * Writers: * the proactive database wellness job for OOD. * Readers: * the proactive database wellness job{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sqloutofdiskreportsqloutofdiskstate">Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>Report<wbr>Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>State</h4>
@@ -8716,6 +9172,170 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The start time of any upcoming scheduled maintenance for this instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="sqlserverauditconfig">Sql<wbr>Server<wbr>Audit<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="bucket_csharp">
+<a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the destination bucket (e.g., gs://mybucket).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kind_csharp">
+<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This is always sql#sqlServerAuditConfig{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="bucket_go">
+<a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the destination bucket (e.g., gs://mybucket).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kind_go">
+<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This is always sql#sqlServerAuditConfig{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="bucket_nodejs">
+<a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the destination bucket (e.g., gs://mybucket).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kind_nodejs">
+<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This is always sql#sqlServerAuditConfig{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="bucket_python">
+<a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the destination bucket (e.g., gs://mybucket).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kind_python">
+<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}This is always sql#sqlServerAuditConfig{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="sqlserverauditconfigresponse">Sql<wbr>Server<wbr>Audit<wbr>Config<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="bucket_csharp">
+<a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the destination bucket (e.g., gs://mybucket).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="kind_csharp">
+<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This is always sql#sqlServerAuditConfig{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="bucket_go">
+<a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the destination bucket (e.g., gs://mybucket).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="kind_go">
+<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This is always sql#sqlServerAuditConfig{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="bucket_nodejs">
+<a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the destination bucket (e.g., gs://mybucket).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="kind_nodejs">
+<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This is always sql#sqlServerAuditConfig{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="bucket_python">
+<a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the destination bucket (e.g., gs://mybucket).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="kind_python">
+<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}This is always sql#sqlServerAuditConfig{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="sslcert">Ssl<wbr>Cert</h4>
 
 {{% choosable language csharp %}}
@@ -8751,7 +9371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time when the certificate was created in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The time when the certificate was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirationtime_csharp">
 <a href="#expirationtime_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
@@ -8759,7 +9379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time when the certificate expires in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The time when the certificate expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_csharp">
 <a href="#instance_csharp" style="color: inherit; text-decoration: inherit;">Instance</a>
@@ -8775,7 +9395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#sslCert*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#sslCert**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -8827,7 +9447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time when the certificate was created in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The time when the certificate was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirationtime_go">
 <a href="#expirationtime_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
@@ -8835,7 +9455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time when the certificate expires in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The time when the certificate expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_go">
 <a href="#instance_go" style="color: inherit; text-decoration: inherit;">Instance</a>
@@ -8851,7 +9471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#sslCert*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#sslCert**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -8903,7 +9523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time when the certificate was created in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The time when the certificate was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirationtime_nodejs">
 <a href="#expirationtime_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time</a>
@@ -8911,7 +9531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time when the certificate expires in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The time when the certificate expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_nodejs">
 <a href="#instance_nodejs" style="color: inherit; text-decoration: inherit;">instance</a>
@@ -8927,7 +9547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#sslCert*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#sslCert**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -8979,7 +9599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time when the certificate was created in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The time when the certificate was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiration_time_python">
 <a href="#expiration_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time</a>
@@ -8987,7 +9607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time when the certificate expires in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The time when the certificate expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_python">
 <a href="#instance_python" style="color: inherit; text-decoration: inherit;">instance</a>
@@ -9003,7 +9623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#sslCert*.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This is always **sql#sslCert**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -9057,7 +9677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time when the certificate was created in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The time when the certificate was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="expirationtime_csharp">
 <a href="#expirationtime_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
@@ -9065,7 +9685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time when the certificate expires in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The time when the certificate expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instance_csharp">
 <a href="#instance_csharp" style="color: inherit; text-decoration: inherit;">Instance</a>
@@ -9081,7 +9701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#sslCert*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#sslCert**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -9133,7 +9753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time when the certificate was created in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The time when the certificate was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="expirationtime_go">
 <a href="#expirationtime_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
@@ -9141,7 +9761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time when the certificate expires in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The time when the certificate expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instance_go">
 <a href="#instance_go" style="color: inherit; text-decoration: inherit;">Instance</a>
@@ -9157,7 +9777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#sslCert*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#sslCert**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -9209,7 +9829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time when the certificate was created in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The time when the certificate was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="expirationtime_nodejs">
 <a href="#expirationtime_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time</a>
@@ -9217,7 +9837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time when the certificate expires in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The time when the certificate expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instance_nodejs">
 <a href="#instance_nodejs" style="color: inherit; text-decoration: inherit;">instance</a>
@@ -9233,7 +9853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#sslCert*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#sslCert**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -9285,7 +9905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time when the certificate was created in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The time when the certificate was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="expiration_time_python">
 <a href="#expiration_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time</a>
@@ -9293,7 +9913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time when the certificate expires in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The time when the certificate expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instance_python">
 <a href="#instance_python" style="color: inherit; text-decoration: inherit;">instance</a>
@@ -9309,7 +9929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This is always *sql#sslCert*.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}This is always **sql#sslCert**.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>

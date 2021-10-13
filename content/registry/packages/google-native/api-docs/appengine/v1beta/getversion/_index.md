@@ -3965,6 +3965,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}List of ports, or port pairs, to forward from the virtual machine to the application container. Only applicable in the App Engine flexible environment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="instanceipmode_csharp">
+<a href="#instanceipmode_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Ip<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IP mode for instances. Only applicable in the App Engine flexible environment.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="instancetag_csharp">
 <a href="#instancetag_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Tag</a>
 </span>
@@ -4008,6 +4016,14 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of ports, or port pairs, to forward from the virtual machine to the application container. Only applicable in the App Engine flexible environment.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="instanceipmode_go">
+<a href="#instanceipmode_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Ip<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IP mode for instances. Only applicable in the App Engine flexible environment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instancetag_go">
 <a href="#instancetag_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Tag</a>
@@ -4053,6 +4069,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}List of ports, or port pairs, to forward from the virtual machine to the application container. Only applicable in the App Engine flexible environment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="instanceipmode_nodejs">
+<a href="#instanceipmode_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Ip<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IP mode for instances. Only applicable in the App Engine flexible environment.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="instancetag_nodejs">
 <a href="#instancetag_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Tag</a>
 </span>
@@ -4096,6 +4120,14 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of ports, or port pairs, to forward from the virtual machine to the application container. Only applicable in the App Engine flexible environment.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="instance_ip_mode_python">
+<a href="#instance_ip_mode_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>ip_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The IP mode for instances. Only applicable in the App Engine flexible environment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instance_tag_python">
 <a href="#instance_tag_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>tag</a>

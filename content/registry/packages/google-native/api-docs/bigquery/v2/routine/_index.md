@@ -41,7 +41,8 @@ Auto-naming is currently not supported for this resource.
             <span class="nx">return_table_type</span><span class="p">:</span> <span class="nx">Optional[StandardSqlTableTypeArgs]</span> = None<span class="p">,</span>
             <span class="nx">return_type</span><span class="p">:</span> <span class="nx">Optional[StandardSqlDataTypeArgs]</span> = None<span class="p">,</span>
             <span class="nx">routine_reference</span><span class="p">:</span> <span class="nx">Optional[RoutineReferenceArgs]</span> = None<span class="p">,</span>
-            <span class="nx">routine_type</span><span class="p">:</span> <span class="nx">Optional[RoutineRoutineType]</span> = None<span class="p">)</span>
+            <span class="nx">routine_type</span><span class="p">:</span> <span class="nx">Optional[RoutineRoutineType]</span> = None<span class="p">,</span>
+            <span class="nx">strict_mode</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Routine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RoutineArgs</a></span><span class="p">,</span>
@@ -217,7 +218,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. [Experimental] The description of the routine if defined.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional. The description of the routine, if defined.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="determinismlevel_csharp">
 <a href="#determinismlevel_csharp" style="color: inherit; text-decoration: inherit;">Determinism<wbr>Level</a>
@@ -225,7 +226,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routinedeterminismlevel">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Routine<wbr>Determinism<wbr>Level</a></span>
     </dt>
-    <dd>{{% md %}}Optional. [Experimental] The determinism level of the JavaScript UDF if defined.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional. The determinism level of the JavaScript UDF, if defined.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="importedlibraries_csharp">
 <a href="#importedlibraries_csharp" style="color: inherit; text-decoration: inherit;">Imported<wbr>Libraries</a>
@@ -257,7 +258,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardsqltabletype">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Standard<wbr>Sql<wbr>Table<wbr>Type<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Optional. Set only if Routine is a "TABLE_VALUED_FUNCTION".{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional. Can be set only if routine_type = "TABLE_VALUED_FUNCTION". If absent, the return table type is inferred from definition_body at query time in each query that references this routine. If present, then the columns in the evaluated table result will be cast to match the column types specificed in return table type, at query time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="returntype_csharp">
 <a href="#returntype_csharp" style="color: inherit; text-decoration: inherit;">Return<wbr>Type</a>
@@ -265,7 +266,15 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardsqldatatype">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Optional if language = "SQL"; required otherwise. If absent, the return type is inferred from definition_body at query time in each query that references this routine. If present, then the evaluated result will be cast to the specified returned type at query time. For example, for the functions created with the following statements: * `CREATE FUNCTION Add(x FLOAT64, y FLOAT64) RETURNS FLOAT64 AS (x + y);` * `CREATE FUNCTION Increment(x FLOAT64) AS (Add(x, 1));` * `CREATE FUNCTION Decrement(x FLOAT64) RETURNS FLOAT64 AS (Add(x, -1));` The return_type is `{type_kind: "FLOAT64"}` for `Add` and `Decrement`, and is absent for `Increment` (inferred as FLOAT64 at query time). Suppose the function `Add` is replaced by `CREATE OR REPLACE FUNCTION Add(x INT64, y INT64) AS (x + y);` Then the inferred return type of `Increment` is automatically changed to INT64 at query time, while the return type of `Decrement` remains FLOAT64.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optional if language = "SQL"; required otherwise. Cannot be set if routine_type = "TABLE_VALUED_FUNCTION". If absent, the return type is inferred from definition_body at query time in each query that references this routine. If present, then the evaluated result will be cast to the specified returned type at query time. For example, for the functions created with the following statements: * `CREATE FUNCTION Add(x FLOAT64, y FLOAT64) RETURNS FLOAT64 AS (x + y);` * `CREATE FUNCTION Increment(x FLOAT64) AS (Add(x, 1));` * `CREATE FUNCTION Decrement(x FLOAT64) RETURNS FLOAT64 AS (Add(x, -1));` The return_type is `{type_kind: "FLOAT64"}` for `Add` and `Decrement`, and is absent for `Increment` (inferred as FLOAT64 at query time). Suppose the function `Add` is replaced by `CREATE OR REPLACE FUNCTION Add(x INT64, y INT64) AS (x + y);` Then the inferred return type of `Increment` is automatically changed to INT64 at query time, while the return type of `Decrement` remains FLOAT64.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="strictmode_csharp">
+<a href="#strictmode_csharp" style="color: inherit; text-decoration: inherit;">Strict<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Optional. Can be set for procedures only. If true (default), the definition body will be validated in the creation and the updates of the procedure. For procedures with an argument of ANY TYPE, the definition body validtion is not supported at creation/update time, and thus this field must be set to false explicitly.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -317,7 +326,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. [Experimental] The description of the routine if defined.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional. The description of the routine, if defined.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="determinismlevel_go">
 <a href="#determinismlevel_go" style="color: inherit; text-decoration: inherit;">Determinism<wbr>Level</a>
@@ -325,7 +334,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routinedeterminismlevel">Routine<wbr>Determinism<wbr>Level</a></span>
     </dt>
-    <dd>{{% md %}}Optional. [Experimental] The determinism level of the JavaScript UDF if defined.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional. The determinism level of the JavaScript UDF, if defined.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="importedlibraries_go">
 <a href="#importedlibraries_go" style="color: inherit; text-decoration: inherit;">Imported<wbr>Libraries</a>
@@ -357,7 +366,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardsqltabletype">Standard<wbr>Sql<wbr>Table<wbr>Type<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Optional. Set only if Routine is a "TABLE_VALUED_FUNCTION".{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional. Can be set only if routine_type = "TABLE_VALUED_FUNCTION". If absent, the return table type is inferred from definition_body at query time in each query that references this routine. If present, then the columns in the evaluated table result will be cast to match the column types specificed in return table type, at query time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="returntype_go">
 <a href="#returntype_go" style="color: inherit; text-decoration: inherit;">Return<wbr>Type</a>
@@ -365,7 +374,15 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardsqldatatype">Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Optional if language = "SQL"; required otherwise. If absent, the return type is inferred from definition_body at query time in each query that references this routine. If present, then the evaluated result will be cast to the specified returned type at query time. For example, for the functions created with the following statements: * `CREATE FUNCTION Add(x FLOAT64, y FLOAT64) RETURNS FLOAT64 AS (x + y);` * `CREATE FUNCTION Increment(x FLOAT64) AS (Add(x, 1));` * `CREATE FUNCTION Decrement(x FLOAT64) RETURNS FLOAT64 AS (Add(x, -1));` The return_type is `{type_kind: "FLOAT64"}` for `Add` and `Decrement`, and is absent for `Increment` (inferred as FLOAT64 at query time). Suppose the function `Add` is replaced by `CREATE OR REPLACE FUNCTION Add(x INT64, y INT64) AS (x + y);` Then the inferred return type of `Increment` is automatically changed to INT64 at query time, while the return type of `Decrement` remains FLOAT64.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optional if language = "SQL"; required otherwise. Cannot be set if routine_type = "TABLE_VALUED_FUNCTION". If absent, the return type is inferred from definition_body at query time in each query that references this routine. If present, then the evaluated result will be cast to the specified returned type at query time. For example, for the functions created with the following statements: * `CREATE FUNCTION Add(x FLOAT64, y FLOAT64) RETURNS FLOAT64 AS (x + y);` * `CREATE FUNCTION Increment(x FLOAT64) AS (Add(x, 1));` * `CREATE FUNCTION Decrement(x FLOAT64) RETURNS FLOAT64 AS (Add(x, -1));` The return_type is `{type_kind: "FLOAT64"}` for `Add` and `Decrement`, and is absent for `Increment` (inferred as FLOAT64 at query time). Suppose the function `Add` is replaced by `CREATE OR REPLACE FUNCTION Add(x INT64, y INT64) AS (x + y);` Then the inferred return type of `Increment` is automatically changed to INT64 at query time, while the return type of `Decrement` remains FLOAT64.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="strictmode_go">
+<a href="#strictmode_go" style="color: inherit; text-decoration: inherit;">Strict<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Optional. Can be set for procedures only. If true (default), the definition body will be validated in the creation and the updates of the procedure. For procedures with an argument of ANY TYPE, the definition body validtion is not supported at creation/update time, and thus this field must be set to false explicitly.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -417,7 +434,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. [Experimental] The description of the routine if defined.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional. The description of the routine, if defined.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="determinismlevel_nodejs">
 <a href="#determinismlevel_nodejs" style="color: inherit; text-decoration: inherit;">determinism<wbr>Level</a>
@@ -425,7 +442,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routinedeterminismlevel">Routine<wbr>Determinism<wbr>Level</a></span>
     </dt>
-    <dd>{{% md %}}Optional. [Experimental] The determinism level of the JavaScript UDF if defined.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional. The determinism level of the JavaScript UDF, if defined.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="importedlibraries_nodejs">
 <a href="#importedlibraries_nodejs" style="color: inherit; text-decoration: inherit;">imported<wbr>Libraries</a>
@@ -457,7 +474,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardsqltabletype">Standard<wbr>Sql<wbr>Table<wbr>Type<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Optional. Set only if Routine is a "TABLE_VALUED_FUNCTION".{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional. Can be set only if routine_type = "TABLE_VALUED_FUNCTION". If absent, the return table type is inferred from definition_body at query time in each query that references this routine. If present, then the columns in the evaluated table result will be cast to match the column types specificed in return table type, at query time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="returntype_nodejs">
 <a href="#returntype_nodejs" style="color: inherit; text-decoration: inherit;">return<wbr>Type</a>
@@ -465,7 +482,15 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardsqldatatype">Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Optional if language = "SQL"; required otherwise. If absent, the return type is inferred from definition_body at query time in each query that references this routine. If present, then the evaluated result will be cast to the specified returned type at query time. For example, for the functions created with the following statements: * `CREATE FUNCTION Add(x FLOAT64, y FLOAT64) RETURNS FLOAT64 AS (x + y);` * `CREATE FUNCTION Increment(x FLOAT64) AS (Add(x, 1));` * `CREATE FUNCTION Decrement(x FLOAT64) RETURNS FLOAT64 AS (Add(x, -1));` The return_type is `{type_kind: "FLOAT64"}` for `Add` and `Decrement`, and is absent for `Increment` (inferred as FLOAT64 at query time). Suppose the function `Add` is replaced by `CREATE OR REPLACE FUNCTION Add(x INT64, y INT64) AS (x + y);` Then the inferred return type of `Increment` is automatically changed to INT64 at query time, while the return type of `Decrement` remains FLOAT64.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optional if language = "SQL"; required otherwise. Cannot be set if routine_type = "TABLE_VALUED_FUNCTION". If absent, the return type is inferred from definition_body at query time in each query that references this routine. If present, then the evaluated result will be cast to the specified returned type at query time. For example, for the functions created with the following statements: * `CREATE FUNCTION Add(x FLOAT64, y FLOAT64) RETURNS FLOAT64 AS (x + y);` * `CREATE FUNCTION Increment(x FLOAT64) AS (Add(x, 1));` * `CREATE FUNCTION Decrement(x FLOAT64) RETURNS FLOAT64 AS (Add(x, -1));` The return_type is `{type_kind: "FLOAT64"}` for `Add` and `Decrement`, and is absent for `Increment` (inferred as FLOAT64 at query time). Suppose the function `Add` is replaced by `CREATE OR REPLACE FUNCTION Add(x INT64, y INT64) AS (x + y);` Then the inferred return type of `Increment` is automatically changed to INT64 at query time, while the return type of `Decrement` remains FLOAT64.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="strictmode_nodejs">
+<a href="#strictmode_nodejs" style="color: inherit; text-decoration: inherit;">strict<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Optional. Can be set for procedures only. If true (default), the definition body will be validated in the creation and the updates of the procedure. For procedures with an argument of ANY TYPE, the definition body validtion is not supported at creation/update time, and thus this field must be set to false explicitly.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -517,7 +542,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Optional. [Experimental] The description of the routine if defined.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional. The description of the routine, if defined.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="determinism_level_python">
 <a href="#determinism_level_python" style="color: inherit; text-decoration: inherit;">determinism_<wbr>level</a>
@@ -525,7 +550,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routinedeterminismlevel">Routine<wbr>Determinism<wbr>Level</a></span>
     </dt>
-    <dd>{{% md %}}Optional. [Experimental] The determinism level of the JavaScript UDF if defined.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional. The determinism level of the JavaScript UDF, if defined.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imported_libraries_python">
 <a href="#imported_libraries_python" style="color: inherit; text-decoration: inherit;">imported_<wbr>libraries</a>
@@ -557,7 +582,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardsqltabletype">Standard<wbr>Sql<wbr>Table<wbr>Type<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Optional. Set only if Routine is a "TABLE_VALUED_FUNCTION".{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional. Can be set only if routine_type = "TABLE_VALUED_FUNCTION". If absent, the return table type is inferred from definition_body at query time in each query that references this routine. If present, then the columns in the evaluated table result will be cast to match the column types specificed in return table type, at query time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="return_type_python">
 <a href="#return_type_python" style="color: inherit; text-decoration: inherit;">return_<wbr>type</a>
@@ -565,7 +590,15 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardsqldatatype">Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Optional if language = "SQL"; required otherwise. If absent, the return type is inferred from definition_body at query time in each query that references this routine. If present, then the evaluated result will be cast to the specified returned type at query time. For example, for the functions created with the following statements: * `CREATE FUNCTION Add(x FLOAT64, y FLOAT64) RETURNS FLOAT64 AS (x + y);` * `CREATE FUNCTION Increment(x FLOAT64) AS (Add(x, 1));` * `CREATE FUNCTION Decrement(x FLOAT64) RETURNS FLOAT64 AS (Add(x, -1));` The return_type is `{type_kind: "FLOAT64"}` for `Add` and `Decrement`, and is absent for `Increment` (inferred as FLOAT64 at query time). Suppose the function `Add` is replaced by `CREATE OR REPLACE FUNCTION Add(x INT64, y INT64) AS (x + y);` Then the inferred return type of `Increment` is automatically changed to INT64 at query time, while the return type of `Decrement` remains FLOAT64.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optional if language = "SQL"; required otherwise. Cannot be set if routine_type = "TABLE_VALUED_FUNCTION". If absent, the return type is inferred from definition_body at query time in each query that references this routine. If present, then the evaluated result will be cast to the specified returned type at query time. For example, for the functions created with the following statements: * `CREATE FUNCTION Add(x FLOAT64, y FLOAT64) RETURNS FLOAT64 AS (x + y);` * `CREATE FUNCTION Increment(x FLOAT64) AS (Add(x, 1));` * `CREATE FUNCTION Decrement(x FLOAT64) RETURNS FLOAT64 AS (Add(x, -1));` The return_type is `{type_kind: "FLOAT64"}` for `Add` and `Decrement`, and is absent for `Increment` (inferred as FLOAT64 at query time). Suppose the function `Add` is replaced by `CREATE OR REPLACE FUNCTION Add(x INT64, y INT64) AS (x + y);` Then the inferred return type of `Increment` is automatically changed to INT64 at query time, while the return type of `Decrement` remains FLOAT64.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="strict_mode_python">
+<a href="#strict_mode_python" style="color: inherit; text-decoration: inherit;">strict_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Optional. Can be set for procedures only. If true (default), the definition body will be validated in the creation and the updates of the procedure. For procedures with an argument of ANY TYPE, the definition body validtion is not supported at creation/update time, and thus this field must be set to false explicitly.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

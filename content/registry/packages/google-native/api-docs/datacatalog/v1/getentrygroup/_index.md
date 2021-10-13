@@ -241,7 +241,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name of the entry group in URL format. Note: The entry group itself and its child resources might not be stored in the location specified in its name. {{% /md %}}</dd></dl>
+    <dd>{{% md %}}The resource name of the entry group in URL format. Note: The entry group itself and its child resources might not be stored in the location specified in its name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -277,7 +277,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name of the entry group in URL format. Note: The entry group itself and its child resources might not be stored in the location specified in its name. {{% /md %}}</dd></dl>
+    <dd>{{% md %}}The resource name of the entry group in URL format. Note: The entry group itself and its child resources might not be stored in the location specified in its name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -313,7 +313,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name of the entry group in URL format. Note: The entry group itself and its child resources might not be stored in the location specified in its name. {{% /md %}}</dd></dl>
+    <dd>{{% md %}}The resource name of the entry group in URL format. Note: The entry group itself and its child resources might not be stored in the location specified in its name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -349,7 +349,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource name of the entry group in URL format. Note: The entry group itself and its child resources might not be stored in the location specified in its name. {{% /md %}}</dd></dl>
+    <dd>{{% md %}}The resource name of the entry group in URL format. Note: The entry group itself and its child resources might not be stored in the location specified in its name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

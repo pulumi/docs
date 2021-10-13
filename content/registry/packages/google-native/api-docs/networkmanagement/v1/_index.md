@@ -13,14 +13,14 @@ Explore the resources and functions of the google-native.networkmanagement/v1 mo
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="connectivitytest" title="ConnectivityTest"><span class="symbol resource"></span>ConnectivityTest</a></li>
-    <li><a href="connectivitytestiampolicy" title="ConnectivityTestIamPolicy"><span class="symbol resource"></span>ConnectivityTestIamPolicy</a></li>
+    <li><a href="connectivitytest" title="ConnectivityTest"><span class="api-symbol api-symbol--resource"></span>ConnectivityTest</a></li>
+    <li><a href="connectivitytestiampolicy" title="ConnectivityTestIamPolicy"><span class="api-symbol api-symbol--resource"></span>ConnectivityTestIamPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getconnectivitytest" title="GetConnectivityTest"><span class="symbol function"></span>GetConnectivityTest</a></li>
-    <li><a href="getconnectivitytestiampolicy" title="GetConnectivityTestIamPolicy"><span class="symbol function"></span>GetConnectivityTestIamPolicy</a></li>
+    <li><a href="getconnectivitytest" title="GetConnectivityTest"><span class="api-symbol api-symbol--function"></span>GetConnectivityTest</a></li>
+    <li><a href="getconnectivitytestiampolicy" title="GetConnectivityTestIamPolicy"><span class="api-symbol api-symbol--function"></span>GetConnectivityTestIamPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -30,6 +30,6 @@ Explore the resources and functions of the google-native.networkmanagement/v1 mo
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.0</dd>
+	<dd>0.8.0</dd>
 </dl>
 

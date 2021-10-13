@@ -13,10 +13,10 @@ Explore the resources and functions of the aws-native.route53recoveryreadiness m
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="cell" title="Cell"><span class="symbol resource"></span>Cell</a></li>
-    <li><a href="readinesscheck" title="ReadinessCheck"><span class="symbol resource"></span>ReadinessCheck</a></li>
-    <li><a href="recoverygroup" title="RecoveryGroup"><span class="symbol resource"></span>RecoveryGroup</a></li>
-    <li><a href="resourceset" title="ResourceSet"><span class="symbol resource"></span>ResourceSet</a></li>
+    <li><a href="cell" title="Cell"><span class="api-symbol api-symbol--resource"></span>Cell</a></li>
+    <li><a href="readinesscheck" title="ReadinessCheck"><span class="api-symbol api-symbol--resource"></span>ReadinessCheck</a></li>
+    <li><a href="recoverygroup" title="RecoveryGroup"><span class="api-symbol api-symbol--resource"></span>RecoveryGroup</a></li>
+    <li><a href="resourceset" title="ResourceSet"><span class="api-symbol api-symbol--resource"></span>ResourceSet</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -26,6 +26,6 @@ Explore the resources and functions of the aws-native.route53recoveryreadiness m
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.0</dd>
 </dl>
 

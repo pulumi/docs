@@ -13,36 +13,36 @@ Explore the resources and functions of the google-native.dialogflow/v3 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="agent" title="Agent"><span class="symbol resource"></span>Agent</a></li>
-    <li><a href="entitytype" title="EntityType"><span class="symbol resource"></span>EntityType</a></li>
-    <li><a href="environment" title="Environment"><span class="symbol resource"></span>Environment</a></li>
-    <li><a href="experiment" title="Experiment"><span class="symbol resource"></span>Experiment</a></li>
-    <li><a href="flow" title="Flow"><span class="symbol resource"></span>Flow</a></li>
-    <li><a href="intent" title="Intent"><span class="symbol resource"></span>Intent</a></li>
-    <li><a href="page" title="Page"><span class="symbol resource"></span>Page</a></li>
-    <li><a href="securitysetting" title="SecuritySetting"><span class="symbol resource"></span>SecuritySetting</a></li>
-    <li><a href="sessionentitytype" title="SessionEntityType"><span class="symbol resource"></span>SessionEntityType</a></li>
-    <li><a href="testcase" title="TestCase"><span class="symbol resource"></span>TestCase</a></li>
-    <li><a href="transitionroutegroup" title="TransitionRouteGroup"><span class="symbol resource"></span>TransitionRouteGroup</a></li>
-    <li><a href="version" title="Version"><span class="symbol resource"></span>Version</a></li>
-    <li><a href="webhook" title="Webhook"><span class="symbol resource"></span>Webhook</a></li>
+    <li><a href="agent" title="Agent"><span class="api-symbol api-symbol--resource"></span>Agent</a></li>
+    <li><a href="entitytype" title="EntityType"><span class="api-symbol api-symbol--resource"></span>EntityType</a></li>
+    <li><a href="environment" title="Environment"><span class="api-symbol api-symbol--resource"></span>Environment</a></li>
+    <li><a href="experiment" title="Experiment"><span class="api-symbol api-symbol--resource"></span>Experiment</a></li>
+    <li><a href="flow" title="Flow"><span class="api-symbol api-symbol--resource"></span>Flow</a></li>
+    <li><a href="intent" title="Intent"><span class="api-symbol api-symbol--resource"></span>Intent</a></li>
+    <li><a href="page" title="Page"><span class="api-symbol api-symbol--resource"></span>Page</a></li>
+    <li><a href="securitysetting" title="SecuritySetting"><span class="api-symbol api-symbol--resource"></span>SecuritySetting</a></li>
+    <li><a href="sessionentitytype" title="SessionEntityType"><span class="api-symbol api-symbol--resource"></span>SessionEntityType</a></li>
+    <li><a href="testcase" title="TestCase"><span class="api-symbol api-symbol--resource"></span>TestCase</a></li>
+    <li><a href="transitionroutegroup" title="TransitionRouteGroup"><span class="api-symbol api-symbol--resource"></span>TransitionRouteGroup</a></li>
+    <li><a href="version" title="Version"><span class="api-symbol api-symbol--resource"></span>Version</a></li>
+    <li><a href="webhook" title="Webhook"><span class="api-symbol api-symbol--resource"></span>Webhook</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getagent" title="GetAgent"><span class="symbol function"></span>GetAgent</a></li>
-    <li><a href="getentitytype" title="GetEntityType"><span class="symbol function"></span>GetEntityType</a></li>
-    <li><a href="getenvironment" title="GetEnvironment"><span class="symbol function"></span>GetEnvironment</a></li>
-    <li><a href="getexperiment" title="GetExperiment"><span class="symbol function"></span>GetExperiment</a></li>
-    <li><a href="getflow" title="GetFlow"><span class="symbol function"></span>GetFlow</a></li>
-    <li><a href="getintent" title="GetIntent"><span class="symbol function"></span>GetIntent</a></li>
-    <li><a href="getpage" title="GetPage"><span class="symbol function"></span>GetPage</a></li>
-    <li><a href="getsecuritysetting" title="GetSecuritySetting"><span class="symbol function"></span>GetSecuritySetting</a></li>
-    <li><a href="getsessionentitytype" title="GetSessionEntityType"><span class="symbol function"></span>GetSessionEntityType</a></li>
-    <li><a href="gettestcase" title="GetTestCase"><span class="symbol function"></span>GetTestCase</a></li>
-    <li><a href="gettransitionroutegroup" title="GetTransitionRouteGroup"><span class="symbol function"></span>GetTransitionRouteGroup</a></li>
-    <li><a href="getversion" title="GetVersion"><span class="symbol function"></span>GetVersion</a></li>
-    <li><a href="getwebhook" title="GetWebhook"><span class="symbol function"></span>GetWebhook</a></li>
+    <li><a href="getagent" title="GetAgent"><span class="api-symbol api-symbol--function"></span>GetAgent</a></li>
+    <li><a href="getentitytype" title="GetEntityType"><span class="api-symbol api-symbol--function"></span>GetEntityType</a></li>
+    <li><a href="getenvironment" title="GetEnvironment"><span class="api-symbol api-symbol--function"></span>GetEnvironment</a></li>
+    <li><a href="getexperiment" title="GetExperiment"><span class="api-symbol api-symbol--function"></span>GetExperiment</a></li>
+    <li><a href="getflow" title="GetFlow"><span class="api-symbol api-symbol--function"></span>GetFlow</a></li>
+    <li><a href="getintent" title="GetIntent"><span class="api-symbol api-symbol--function"></span>GetIntent</a></li>
+    <li><a href="getpage" title="GetPage"><span class="api-symbol api-symbol--function"></span>GetPage</a></li>
+    <li><a href="getsecuritysetting" title="GetSecuritySetting"><span class="api-symbol api-symbol--function"></span>GetSecuritySetting</a></li>
+    <li><a href="getsessionentitytype" title="GetSessionEntityType"><span class="api-symbol api-symbol--function"></span>GetSessionEntityType</a></li>
+    <li><a href="gettestcase" title="GetTestCase"><span class="api-symbol api-symbol--function"></span>GetTestCase</a></li>
+    <li><a href="gettransitionroutegroup" title="GetTransitionRouteGroup"><span class="api-symbol api-symbol--function"></span>GetTransitionRouteGroup</a></li>
+    <li><a href="getversion" title="GetVersion"><span class="api-symbol api-symbol--function"></span>GetVersion</a></li>
+    <li><a href="getwebhook" title="GetWebhook"><span class="api-symbol api-symbol--function"></span>GetWebhook</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -52,6 +52,6 @@ Explore the resources and functions of the google-native.dialogflow/v3 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.0</dd>
+	<dd>0.8.0</dd>
 </dl>
 

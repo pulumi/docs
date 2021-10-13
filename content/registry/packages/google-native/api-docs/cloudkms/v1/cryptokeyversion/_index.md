@@ -444,7 +444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The root cause of an import failure. Only present if state is IMPORT_FAILED.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The root cause of the most recent import failure. Only present if state is IMPORT_FAILED.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="importjob_csharp">
 <a href="#importjob_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Job</a>
@@ -452,7 +452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the ImportJob used to import this CryptoKeyVersion. Only present if the underlying key material was imported.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The name of the ImportJob used in the most recent import of this CryptoKeyVersion. Only present if the underlying key material was imported.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="importtime_csharp">
 <a href="#importtime_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Time</a>
@@ -460,7 +460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time at which this CryptoKeyVersion's key material was imported.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The time at which this CryptoKeyVersion's key material was most recently imported.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -476,7 +476,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ProtectionLevel describing how crypto operations are performed with this CryptoKeyVersion.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The ProtectionLevel describing how crypto operations are performed with this CryptoKeyVersion.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="reimporteligible_csharp">
+<a href="#reimporteligible_csharp" style="color: inherit; text-decoration: inherit;">Reimport<wbr>Eligible</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not this key version is eligible for reimport, by being specified as a target in ImportCryptoKeyVersionRequest.crypto_key_version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -544,7 +552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The root cause of an import failure. Only present if state is IMPORT_FAILED.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The root cause of the most recent import failure. Only present if state is IMPORT_FAILED.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="importjob_go">
 <a href="#importjob_go" style="color: inherit; text-decoration: inherit;">Import<wbr>Job</a>
@@ -552,7 +560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the ImportJob used to import this CryptoKeyVersion. Only present if the underlying key material was imported.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The name of the ImportJob used in the most recent import of this CryptoKeyVersion. Only present if the underlying key material was imported.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="importtime_go">
 <a href="#importtime_go" style="color: inherit; text-decoration: inherit;">Import<wbr>Time</a>
@@ -560,7 +568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time at which this CryptoKeyVersion's key material was imported.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The time at which this CryptoKeyVersion's key material was most recently imported.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -576,7 +584,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ProtectionLevel describing how crypto operations are performed with this CryptoKeyVersion.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The ProtectionLevel describing how crypto operations are performed with this CryptoKeyVersion.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="reimporteligible_go">
+<a href="#reimporteligible_go" style="color: inherit; text-decoration: inherit;">Reimport<wbr>Eligible</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not this key version is eligible for reimport, by being specified as a target in ImportCryptoKeyVersionRequest.crypto_key_version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -644,7 +660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The root cause of an import failure. Only present if state is IMPORT_FAILED.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The root cause of the most recent import failure. Only present if state is IMPORT_FAILED.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="importjob_nodejs">
 <a href="#importjob_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Job</a>
@@ -652,7 +668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the ImportJob used to import this CryptoKeyVersion. Only present if the underlying key material was imported.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The name of the ImportJob used in the most recent import of this CryptoKeyVersion. Only present if the underlying key material was imported.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="importtime_nodejs">
 <a href="#importtime_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Time</a>
@@ -660,7 +676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time at which this CryptoKeyVersion's key material was imported.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The time at which this CryptoKeyVersion's key material was most recently imported.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -676,7 +692,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ProtectionLevel describing how crypto operations are performed with this CryptoKeyVersion.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The ProtectionLevel describing how crypto operations are performed with this CryptoKeyVersion.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="reimporteligible_nodejs">
+<a href="#reimporteligible_nodejs" style="color: inherit; text-decoration: inherit;">reimport<wbr>Eligible</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether or not this key version is eligible for reimport, by being specified as a target in ImportCryptoKeyVersionRequest.crypto_key_version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -744,7 +768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The root cause of an import failure. Only present if state is IMPORT_FAILED.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The root cause of the most recent import failure. Only present if state is IMPORT_FAILED.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="import_job_python">
 <a href="#import_job_python" style="color: inherit; text-decoration: inherit;">import_<wbr>job</a>
@@ -752,7 +776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the ImportJob used to import this CryptoKeyVersion. Only present if the underlying key material was imported.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The name of the ImportJob used in the most recent import of this CryptoKeyVersion. Only present if the underlying key material was imported.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="import_time_python">
 <a href="#import_time_python" style="color: inherit; text-decoration: inherit;">import_<wbr>time</a>
@@ -760,7 +784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time at which this CryptoKeyVersion's key material was imported.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The time at which this CryptoKeyVersion's key material was most recently imported.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -776,7 +800,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ProtectionLevel describing how crypto operations are performed with this CryptoKeyVersion.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The ProtectionLevel describing how crypto operations are performed with this CryptoKeyVersion.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="reimport_eligible_python">
+<a href="#reimport_eligible_python" style="color: inherit; text-decoration: inherit;">reimport_<wbr>eligible</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not this key version is eligible for reimport, by being specified as a target in ImportCryptoKeyVersionRequest.crypto_key_version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -911,7 +943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>PENDING_GENERATION{{% md %}}This version is still being generated. It may not be used, enabled, disabled, or destroyed yet. Cloud KMS will automatically mark this version ENABLED as soon as the version is ready.{{% /md %}}</dd><dt>Enabled</dt>
     <dd>ENABLED{{% md %}}This version may be used for cryptographic operations.{{% /md %}}</dd><dt>Disabled</dt>
     <dd>DISABLED{{% md %}}This version may not be used, but the key material is still available, and the version can be placed back into the ENABLED state.{{% /md %}}</dd><dt>Destroyed</dt>
-    <dd>DESTROYED{{% md %}}This version is destroyed, and the key material is no longer stored.{{% /md %}}</dd><dt>Destroy<wbr>Scheduled</dt>
+    <dd>DESTROYED{{% md %}}This version is destroyed, and the key material is no longer stored. This version may only become ENABLED again if this version is reimport_eligible and the original key material is reimported with a call to KeyManagementService.ImportCryptoKeyVersion.{{% /md %}}</dd><dt>Destroy<wbr>Scheduled</dt>
     <dd>DESTROY_SCHEDULED{{% md %}}This version is scheduled for destruction, and will be destroyed soon. Call RestoreCryptoKeyVersion to put it back into the DISABLED state.{{% /md %}}</dd><dt>Pending<wbr>Import</dt>
     <dd>PENDING_IMPORT{{% md %}}This version is still being imported. It may not be used, enabled, disabled, or destroyed yet. Cloud KMS will automatically mark this version ENABLED as soon as the version is ready.{{% /md %}}</dd><dt>Import<wbr>Failed</dt>
     <dd>IMPORT_FAILED{{% md %}}This version was not imported successfully. It may not be used, enabled, disabled, or destroyed. The submitted key material has been discarded. Additional details can be found in CryptoKeyVersion.import_failure_reason.{{% /md %}}</dd></dl>
@@ -923,7 +955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>PENDING_GENERATION{{% md %}}This version is still being generated. It may not be used, enabled, disabled, or destroyed yet. Cloud KMS will automatically mark this version ENABLED as soon as the version is ready.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>State<wbr>Enabled</dt>
     <dd>ENABLED{{% md %}}This version may be used for cryptographic operations.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>State<wbr>Disabled</dt>
     <dd>DISABLED{{% md %}}This version may not be used, but the key material is still available, and the version can be placed back into the ENABLED state.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>State<wbr>Destroyed</dt>
-    <dd>DESTROYED{{% md %}}This version is destroyed, and the key material is no longer stored.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>State<wbr>Destroy<wbr>Scheduled</dt>
+    <dd>DESTROYED{{% md %}}This version is destroyed, and the key material is no longer stored. This version may only become ENABLED again if this version is reimport_eligible and the original key material is reimported with a call to KeyManagementService.ImportCryptoKeyVersion.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>State<wbr>Destroy<wbr>Scheduled</dt>
     <dd>DESTROY_SCHEDULED{{% md %}}This version is scheduled for destruction, and will be destroyed soon. Call RestoreCryptoKeyVersion to put it back into the DISABLED state.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>State<wbr>Pending<wbr>Import</dt>
     <dd>PENDING_IMPORT{{% md %}}This version is still being imported. It may not be used, enabled, disabled, or destroyed yet. Cloud KMS will automatically mark this version ENABLED as soon as the version is ready.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>State<wbr>Import<wbr>Failed</dt>
     <dd>IMPORT_FAILED{{% md %}}This version was not imported successfully. It may not be used, enabled, disabled, or destroyed. The submitted key material has been discarded. Additional details can be found in CryptoKeyVersion.import_failure_reason.{{% /md %}}</dd></dl>
@@ -935,7 +967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>PENDING_GENERATION{{% md %}}This version is still being generated. It may not be used, enabled, disabled, or destroyed yet. Cloud KMS will automatically mark this version ENABLED as soon as the version is ready.{{% /md %}}</dd><dt>Enabled</dt>
     <dd>ENABLED{{% md %}}This version may be used for cryptographic operations.{{% /md %}}</dd><dt>Disabled</dt>
     <dd>DISABLED{{% md %}}This version may not be used, but the key material is still available, and the version can be placed back into the ENABLED state.{{% /md %}}</dd><dt>Destroyed</dt>
-    <dd>DESTROYED{{% md %}}This version is destroyed, and the key material is no longer stored.{{% /md %}}</dd><dt>Destroy<wbr>Scheduled</dt>
+    <dd>DESTROYED{{% md %}}This version is destroyed, and the key material is no longer stored. This version may only become ENABLED again if this version is reimport_eligible and the original key material is reimported with a call to KeyManagementService.ImportCryptoKeyVersion.{{% /md %}}</dd><dt>Destroy<wbr>Scheduled</dt>
     <dd>DESTROY_SCHEDULED{{% md %}}This version is scheduled for destruction, and will be destroyed soon. Call RestoreCryptoKeyVersion to put it back into the DISABLED state.{{% /md %}}</dd><dt>Pending<wbr>Import</dt>
     <dd>PENDING_IMPORT{{% md %}}This version is still being imported. It may not be used, enabled, disabled, or destroyed yet. Cloud KMS will automatically mark this version ENABLED as soon as the version is ready.{{% /md %}}</dd><dt>Import<wbr>Failed</dt>
     <dd>IMPORT_FAILED{{% md %}}This version was not imported successfully. It may not be used, enabled, disabled, or destroyed. The submitted key material has been discarded. Additional details can be found in CryptoKeyVersion.import_failure_reason.{{% /md %}}</dd></dl>
@@ -947,7 +979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>PENDING_GENERATION{{% md %}}This version is still being generated. It may not be used, enabled, disabled, or destroyed yet. Cloud KMS will automatically mark this version ENABLED as soon as the version is ready.{{% /md %}}</dd><dt>ENABLED</dt>
     <dd>ENABLED{{% md %}}This version may be used for cryptographic operations.{{% /md %}}</dd><dt>DISABLED</dt>
     <dd>DISABLED{{% md %}}This version may not be used, but the key material is still available, and the version can be placed back into the ENABLED state.{{% /md %}}</dd><dt>DESTROYED</dt>
-    <dd>DESTROYED{{% md %}}This version is destroyed, and the key material is no longer stored.{{% /md %}}</dd><dt>DESTROY_SCHEDULED</dt>
+    <dd>DESTROYED{{% md %}}This version is destroyed, and the key material is no longer stored. This version may only become ENABLED again if this version is reimport_eligible and the original key material is reimported with a call to KeyManagementService.ImportCryptoKeyVersion.{{% /md %}}</dd><dt>DESTROY_SCHEDULED</dt>
     <dd>DESTROY_SCHEDULED{{% md %}}This version is scheduled for destruction, and will be destroyed soon. Call RestoreCryptoKeyVersion to put it back into the DISABLED state.{{% /md %}}</dd><dt>PENDING_IMPORT</dt>
     <dd>PENDING_IMPORT{{% md %}}This version is still being imported. It may not be used, enabled, disabled, or destroyed yet. Cloud KMS will automatically mark this version ENABLED as soon as the version is ready.{{% /md %}}</dd><dt>IMPORT_FAILED</dt>
     <dd>IMPORT_FAILED{{% md %}}This version was not imported successfully. It may not be used, enabled, disabled, or destroyed. The submitted key material has been discarded. Additional details can be found in CryptoKeyVersion.import_failure_reason.{{% /md %}}</dd></dl>

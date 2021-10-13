@@ -394,6 +394,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The internal fully qualified service name for this Forwarding Rule. This field is only used for internal load balancing.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="sourceipranges_csharp">
+<a href="#sourceipranges_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Ip<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}If not empty, this Forwarding Rule will only forward the traffic when the source IP address matches one of the IP addresses or CIDR ranges set here. Note that a Forwarding Rule can only have up to 64 source IP ranges, and this field can only be used with a regional Forwarding Rule whose scheme is EXTERNAL. Each source_ip_range entry should be either an IP address (for example, 1.2.3.4) or a CIDR range (for example, 1.2.3.0/24).{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="subnetwork_csharp">
 <a href="#subnetwork_csharp" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
 </span>
@@ -629,6 +637,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The internal fully qualified service name for this Forwarding Rule. This field is only used for internal load balancing.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="sourceipranges_go">
+<a href="#sourceipranges_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Ip<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}If not empty, this Forwarding Rule will only forward the traffic when the source IP address matches one of the IP addresses or CIDR ranges set here. Note that a Forwarding Rule can only have up to 64 source IP ranges, and this field can only be used with a regional Forwarding Rule whose scheme is EXTERNAL. Each source_ip_range entry should be either an IP address (for example, 1.2.3.4) or a CIDR range (for example, 1.2.3.0/24).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subnetwork_go">
 <a href="#subnetwork_go" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
@@ -866,6 +882,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The internal fully qualified service name for this Forwarding Rule. This field is only used for internal load balancing.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="sourceipranges_nodejs">
+<a href="#sourceipranges_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ip<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}If not empty, this Forwarding Rule will only forward the traffic when the source IP address matches one of the IP addresses or CIDR ranges set here. Note that a Forwarding Rule can only have up to 64 source IP ranges, and this field can only be used with a regional Forwarding Rule whose scheme is EXTERNAL. Each source_ip_range entry should be either an IP address (for example, 1.2.3.4) or a CIDR range (for example, 1.2.3.0/24).{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="subnetwork_nodejs">
 <a href="#subnetwork_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
@@ -1101,6 +1125,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The internal fully qualified service name for this Forwarding Rule. This field is only used for internal load balancing.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="source_ip_ranges_python">
+<a href="#source_ip_ranges_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip_<wbr>ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}If not empty, this Forwarding Rule will only forward the traffic when the source IP address matches one of the IP addresses or CIDR ranges set here. Note that a Forwarding Rule can only have up to 64 source IP ranges, and this field can only be used with a regional Forwarding Rule whose scheme is EXTERNAL. Each source_ip_range entry should be either an IP address (for example, 1.2.3.4) or a CIDR range (for example, 1.2.3.0/24).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subnetwork_python">
 <a href="#subnetwork_python" style="color: inherit; text-decoration: inherit;">subnetwork</a>

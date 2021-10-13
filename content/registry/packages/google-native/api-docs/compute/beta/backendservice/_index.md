@@ -1461,7 +1461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendbalancingmode">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Backend<wbr>Balancing<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}Specifies how to determine whether the backend of a load balancer can handle additional traffic or is fully loaded. For usage guidelines, see Connection balancing mode.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies how to determine whether the backend of a load balancer can handle additional traffic or is fully loaded. For usage guidelines, see Connection balancing mode. Backends must use compatible balancing modes. For more information, see Supported balancing modes and target capacity settings and Restrictions and guidance for instance groups. Note: Currently, if you use the API to configure incompatible balancing modes, the configuration might be accepted even though it has no impact and is ignored. Specifically, Backend.maxUtilization is ignored when Backend.balancingMode is RATE. In the future, this incompatible combination will be rejected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacityscaler_csharp">
 <a href="#capacityscaler_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Scaler</a>
@@ -1549,7 +1549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optional parameter to define a target capacity for the UTILIZATIONbalancing mode. The valid range is [0.0, 1.0]. For usage guidelines, see Utilization balancing mode.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1561,7 +1561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendbalancingmode">Backend<wbr>Balancing<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}Specifies how to determine whether the backend of a load balancer can handle additional traffic or is fully loaded. For usage guidelines, see Connection balancing mode.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies how to determine whether the backend of a load balancer can handle additional traffic or is fully loaded. For usage guidelines, see Connection balancing mode. Backends must use compatible balancing modes. For more information, see Supported balancing modes and target capacity settings and Restrictions and guidance for instance groups. Note: Currently, if you use the API to configure incompatible balancing modes, the configuration might be accepted even though it has no impact and is ignored. Specifically, Backend.maxUtilization is ignored when Backend.balancingMode is RATE. In the future, this incompatible combination will be rejected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacityscaler_go">
 <a href="#capacityscaler_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Scaler</a>
@@ -1649,7 +1649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optional parameter to define a target capacity for the UTILIZATIONbalancing mode. The valid range is [0.0, 1.0]. For usage guidelines, see Utilization balancing mode.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1661,7 +1661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendbalancingmode">Backend<wbr>Balancing<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}Specifies how to determine whether the backend of a load balancer can handle additional traffic or is fully loaded. For usage guidelines, see Connection balancing mode.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies how to determine whether the backend of a load balancer can handle additional traffic or is fully loaded. For usage guidelines, see Connection balancing mode. Backends must use compatible balancing modes. For more information, see Supported balancing modes and target capacity settings and Restrictions and guidance for instance groups. Note: Currently, if you use the API to configure incompatible balancing modes, the configuration might be accepted even though it has no impact and is ignored. Specifically, Backend.maxUtilization is ignored when Backend.balancingMode is RATE. In the future, this incompatible combination will be rejected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacityscaler_nodejs">
 <a href="#capacityscaler_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Scaler</a>
@@ -1749,7 +1749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optional parameter to define a target capacity for the UTILIZATIONbalancing mode. The valid range is [0.0, 1.0]. For usage guidelines, see Utilization balancing mode.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1761,7 +1761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendbalancingmode">Backend<wbr>Balancing<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}Specifies how to determine whether the backend of a load balancer can handle additional traffic or is fully loaded. For usage guidelines, see Connection balancing mode.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies how to determine whether the backend of a load balancer can handle additional traffic or is fully loaded. For usage guidelines, see Connection balancing mode. Backends must use compatible balancing modes. For more information, see Supported balancing modes and target capacity settings and Restrictions and guidance for instance groups. Note: Currently, if you use the API to configure incompatible balancing modes, the configuration might be accepted even though it has no impact and is ignored. Specifically, Backend.maxUtilization is ignored when Backend.balancingMode is RATE. In the future, this incompatible combination will be rejected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacity_scaler_python">
 <a href="#capacity_scaler_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>scaler</a>
@@ -1849,7 +1849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optional parameter to define a target capacity for the UTILIZATIONbalancing mode. The valid range is [0.0, 1.0]. For usage guidelines, see Utilization balancing mode.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="backendbalancingmode">Backend<wbr>Balancing<wbr>Mode</h4>
@@ -1893,7 +1893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies how to determine whether the backend of a load balancer can handle additional traffic or is fully loaded. For usage guidelines, see Connection balancing mode.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Specifies how to determine whether the backend of a load balancer can handle additional traffic or is fully loaded. For usage guidelines, see Connection balancing mode. Backends must use compatible balancing modes. For more information, see Supported balancing modes and target capacity settings and Restrictions and guidance for instance groups. Note: Currently, if you use the API to configure incompatible balancing modes, the configuration might be accepted even though it has no impact and is ignored. Specifically, Backend.maxUtilization is ignored when Backend.balancingMode is RATE. In the future, this incompatible combination will be rejected.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="capacityscaler_csharp">
 <a href="#capacityscaler_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Scaler</a>
@@ -1981,7 +1981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optional parameter to define a target capacity for the UTILIZATIONbalancing mode. The valid range is [0.0, 1.0]. For usage guidelines, see Utilization balancing mode.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1993,7 +1993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies how to determine whether the backend of a load balancer can handle additional traffic or is fully loaded. For usage guidelines, see Connection balancing mode.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Specifies how to determine whether the backend of a load balancer can handle additional traffic or is fully loaded. For usage guidelines, see Connection balancing mode. Backends must use compatible balancing modes. For more information, see Supported balancing modes and target capacity settings and Restrictions and guidance for instance groups. Note: Currently, if you use the API to configure incompatible balancing modes, the configuration might be accepted even though it has no impact and is ignored. Specifically, Backend.maxUtilization is ignored when Backend.balancingMode is RATE. In the future, this incompatible combination will be rejected.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="capacityscaler_go">
 <a href="#capacityscaler_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Scaler</a>
@@ -2081,7 +2081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optional parameter to define a target capacity for the UTILIZATIONbalancing mode. The valid range is [0.0, 1.0]. For usage guidelines, see Utilization balancing mode.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2093,7 +2093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies how to determine whether the backend of a load balancer can handle additional traffic or is fully loaded. For usage guidelines, see Connection balancing mode.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Specifies how to determine whether the backend of a load balancer can handle additional traffic or is fully loaded. For usage guidelines, see Connection balancing mode. Backends must use compatible balancing modes. For more information, see Supported balancing modes and target capacity settings and Restrictions and guidance for instance groups. Note: Currently, if you use the API to configure incompatible balancing modes, the configuration might be accepted even though it has no impact and is ignored. Specifically, Backend.maxUtilization is ignored when Backend.balancingMode is RATE. In the future, this incompatible combination will be rejected.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="capacityscaler_nodejs">
 <a href="#capacityscaler_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Scaler</a>
@@ -2181,7 +2181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optional parameter to define a target capacity for the UTILIZATIONbalancing mode. The valid range is [0.0, 1.0]. For usage guidelines, see Utilization balancing mode.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2193,7 +2193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies how to determine whether the backend of a load balancer can handle additional traffic or is fully loaded. For usage guidelines, see Connection balancing mode.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Specifies how to determine whether the backend of a load balancer can handle additional traffic or is fully loaded. For usage guidelines, see Connection balancing mode. Backends must use compatible balancing modes. For more information, see Supported balancing modes and target capacity settings and Restrictions and guidance for instance groups. Note: Currently, if you use the API to configure incompatible balancing modes, the configuration might be accepted even though it has no impact and is ignored. Specifically, Backend.maxUtilization is ignored when Backend.balancingMode is RATE. In the future, this incompatible combination will be rejected.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="capacity_scaler_python">
 <a href="#capacity_scaler_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>scaler</a>
@@ -2281,7 +2281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optional parameter to define a target capacity for the UTILIZATIONbalancing mode. The valid range is [0.0, 1.0]. For usage guidelines, see Utilization balancing mode.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="backendservicecdnpolicy">Backend<wbr>Service<wbr>Cdn<wbr>Policy</h4>
@@ -3399,7 +3399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable Strong Session Affinity. This is only available in External TCP/UDP load balancer.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Enable Strong Session Affinity for Network Load Balancing. This option is not available publicly.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="idletimeoutsec_csharp">
 <a href="#idletimeoutsec_csharp" style="color: inherit; text-decoration: inherit;">Idle<wbr>Timeout<wbr>Sec</a>
@@ -3407,7 +3407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies how long to keep a Connection Tracking entry while there is no matching traffic (in seconds). For L4 ILB the minimum(default) is 10 minutes and maximum is 16 hours. For NLB the minimum(default) is 60 seconds and the maximum is 16 hours. This field will be supported only if the Connection Tracking key is less than 5-tuple.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies how long to keep a Connection Tracking entry while there is no matching traffic (in seconds). For L4 ILB the minimum(default) is 10 minutes and maximum is 16 hours. For Network Load Balancer the default is 60 seconds. This option is not available publicly. This field will be supported only if the Connection Tracking key is less than 5-tuple.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trackingmode_csharp">
 <a href="#trackingmode_csharp" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Mode</a>
@@ -3435,7 +3435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable Strong Session Affinity. This is only available in External TCP/UDP load balancer.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Enable Strong Session Affinity for Network Load Balancing. This option is not available publicly.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="idletimeoutsec_go">
 <a href="#idletimeoutsec_go" style="color: inherit; text-decoration: inherit;">Idle<wbr>Timeout<wbr>Sec</a>
@@ -3443,7 +3443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies how long to keep a Connection Tracking entry while there is no matching traffic (in seconds). For L4 ILB the minimum(default) is 10 minutes and maximum is 16 hours. For NLB the minimum(default) is 60 seconds and the maximum is 16 hours. This field will be supported only if the Connection Tracking key is less than 5-tuple.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies how long to keep a Connection Tracking entry while there is no matching traffic (in seconds). For L4 ILB the minimum(default) is 10 minutes and maximum is 16 hours. For Network Load Balancer the default is 60 seconds. This option is not available publicly. This field will be supported only if the Connection Tracking key is less than 5-tuple.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trackingmode_go">
 <a href="#trackingmode_go" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Mode</a>
@@ -3471,7 +3471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable Strong Session Affinity. This is only available in External TCP/UDP load balancer.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Enable Strong Session Affinity for Network Load Balancing. This option is not available publicly.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="idletimeoutsec_nodejs">
 <a href="#idletimeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Timeout<wbr>Sec</a>
@@ -3479,7 +3479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Specifies how long to keep a Connection Tracking entry while there is no matching traffic (in seconds). For L4 ILB the minimum(default) is 10 minutes and maximum is 16 hours. For NLB the minimum(default) is 60 seconds and the maximum is 16 hours. This field will be supported only if the Connection Tracking key is less than 5-tuple.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies how long to keep a Connection Tracking entry while there is no matching traffic (in seconds). For L4 ILB the minimum(default) is 10 minutes and maximum is 16 hours. For Network Load Balancer the default is 60 seconds. This option is not available publicly. This field will be supported only if the Connection Tracking key is less than 5-tuple.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trackingmode_nodejs">
 <a href="#trackingmode_nodejs" style="color: inherit; text-decoration: inherit;">tracking<wbr>Mode</a>
@@ -3507,7 +3507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable Strong Session Affinity. This is only available in External TCP/UDP load balancer.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Enable Strong Session Affinity for Network Load Balancing. This option is not available publicly.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="idle_timeout_sec_python">
 <a href="#idle_timeout_sec_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>timeout_<wbr>sec</a>
@@ -3515,7 +3515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies how long to keep a Connection Tracking entry while there is no matching traffic (in seconds). For L4 ILB the minimum(default) is 10 minutes and maximum is 16 hours. For NLB the minimum(default) is 60 seconds and the maximum is 16 hours. This field will be supported only if the Connection Tracking key is less than 5-tuple.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies how long to keep a Connection Tracking entry while there is no matching traffic (in seconds). For L4 ILB the minimum(default) is 10 minutes and maximum is 16 hours. For Network Load Balancer the default is 60 seconds. This option is not available publicly. This field will be supported only if the Connection Tracking key is less than 5-tuple.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tracking_mode_python">
 <a href="#tracking_mode_python" style="color: inherit; text-decoration: inherit;">tracking_<wbr>mode</a>
@@ -3575,7 +3575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable Strong Session Affinity. This is only available in External TCP/UDP load balancer.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Enable Strong Session Affinity for Network Load Balancing. This option is not available publicly.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="idletimeoutsec_csharp">
 <a href="#idletimeoutsec_csharp" style="color: inherit; text-decoration: inherit;">Idle<wbr>Timeout<wbr>Sec</a>
@@ -3583,7 +3583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies how long to keep a Connection Tracking entry while there is no matching traffic (in seconds). For L4 ILB the minimum(default) is 10 minutes and maximum is 16 hours. For NLB the minimum(default) is 60 seconds and the maximum is 16 hours. This field will be supported only if the Connection Tracking key is less than 5-tuple.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Specifies how long to keep a Connection Tracking entry while there is no matching traffic (in seconds). For L4 ILB the minimum(default) is 10 minutes and maximum is 16 hours. For Network Load Balancer the default is 60 seconds. This option is not available publicly. This field will be supported only if the Connection Tracking key is less than 5-tuple.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trackingmode_csharp">
 <a href="#trackingmode_csharp" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Mode</a>
@@ -3611,7 +3611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable Strong Session Affinity. This is only available in External TCP/UDP load balancer.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Enable Strong Session Affinity for Network Load Balancing. This option is not available publicly.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="idletimeoutsec_go">
 <a href="#idletimeoutsec_go" style="color: inherit; text-decoration: inherit;">Idle<wbr>Timeout<wbr>Sec</a>
@@ -3619,7 +3619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies how long to keep a Connection Tracking entry while there is no matching traffic (in seconds). For L4 ILB the minimum(default) is 10 minutes and maximum is 16 hours. For NLB the minimum(default) is 60 seconds and the maximum is 16 hours. This field will be supported only if the Connection Tracking key is less than 5-tuple.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Specifies how long to keep a Connection Tracking entry while there is no matching traffic (in seconds). For L4 ILB the minimum(default) is 10 minutes and maximum is 16 hours. For Network Load Balancer the default is 60 seconds. This option is not available publicly. This field will be supported only if the Connection Tracking key is less than 5-tuple.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trackingmode_go">
 <a href="#trackingmode_go" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Mode</a>
@@ -3647,7 +3647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable Strong Session Affinity. This is only available in External TCP/UDP load balancer.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Enable Strong Session Affinity for Network Load Balancing. This option is not available publicly.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="idletimeoutsec_nodejs">
 <a href="#idletimeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Timeout<wbr>Sec</a>
@@ -3655,7 +3655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Specifies how long to keep a Connection Tracking entry while there is no matching traffic (in seconds). For L4 ILB the minimum(default) is 10 minutes and maximum is 16 hours. For NLB the minimum(default) is 60 seconds and the maximum is 16 hours. This field will be supported only if the Connection Tracking key is less than 5-tuple.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Specifies how long to keep a Connection Tracking entry while there is no matching traffic (in seconds). For L4 ILB the minimum(default) is 10 minutes and maximum is 16 hours. For Network Load Balancer the default is 60 seconds. This option is not available publicly. This field will be supported only if the Connection Tracking key is less than 5-tuple.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trackingmode_nodejs">
 <a href="#trackingmode_nodejs" style="color: inherit; text-decoration: inherit;">tracking<wbr>Mode</a>
@@ -3683,7 +3683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable Strong Session Affinity. This is only available in External TCP/UDP load balancer.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Enable Strong Session Affinity for Network Load Balancing. This option is not available publicly.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="idle_timeout_sec_python">
 <a href="#idle_timeout_sec_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>timeout_<wbr>sec</a>
@@ -3691,7 +3691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies how long to keep a Connection Tracking entry while there is no matching traffic (in seconds). For L4 ILB the minimum(default) is 10 minutes and maximum is 16 hours. For NLB the minimum(default) is 60 seconds and the maximum is 16 hours. This field will be supported only if the Connection Tracking key is less than 5-tuple.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Specifies how long to keep a Connection Tracking entry while there is no matching traffic (in seconds). For L4 ILB the minimum(default) is 10 minutes and maximum is 16 hours. For Network Load Balancer the default is 60 seconds. This option is not available publicly. This field will be supported only if the Connection Tracking key is less than 5-tuple.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tracking_mode_python">
 <a href="#tracking_mode_python" style="color: inherit; text-decoration: inherit;">tracking_<wbr>mode</a>
@@ -4224,7 +4224,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>External</dt>
-    <dd>EXTERNAL{{% md %}}Signifies that this will be used for external HTTP(S), SSL Proxy, TCP Proxy, or Network Load Balancing{{% /md %}}</dd><dt>Internal</dt>
+    <dd>EXTERNAL{{% md %}}Signifies that this will be used for external HTTP(S), SSL Proxy, TCP Proxy, or Network Load Balancing{{% /md %}}</dd><dt>External<wbr>Managed</dt>
+    <dd>EXTERNAL_MANAGED{{% md %}}Signifies that this will be used for External Managed HTTP(S), SSL Proxy, or TCP Proxy Load Balancing.{{% /md %}}</dd><dt>Internal</dt>
     <dd>INTERNAL{{% md %}}Signifies that this will be used for Internal TCP/UDP Load Balancing.{{% /md %}}</dd><dt>Internal<wbr>Managed</dt>
     <dd>INTERNAL_MANAGED{{% md %}}Signifies that this will be used for Internal HTTP(S) Load Balancing.{{% /md %}}</dd><dt>Internal<wbr>Self<wbr>Managed</dt>
     <dd>INTERNAL_SELF_MANAGED{{% md %}}Signifies that this will be used by Traffic Director.{{% /md %}}</dd><dt>Invalid<wbr>Load<wbr>Balancing<wbr>Scheme</dt>
@@ -4233,7 +4234,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="tabular"><dt>Backend<wbr>Service<wbr>Load<wbr>Balancing<wbr>Scheme<wbr>External</dt>
-    <dd>EXTERNAL{{% md %}}Signifies that this will be used for external HTTP(S), SSL Proxy, TCP Proxy, or Network Load Balancing{{% /md %}}</dd><dt>Backend<wbr>Service<wbr>Load<wbr>Balancing<wbr>Scheme<wbr>Internal</dt>
+    <dd>EXTERNAL{{% md %}}Signifies that this will be used for external HTTP(S), SSL Proxy, TCP Proxy, or Network Load Balancing{{% /md %}}</dd><dt>Backend<wbr>Service<wbr>Load<wbr>Balancing<wbr>Scheme<wbr>External<wbr>Managed</dt>
+    <dd>EXTERNAL_MANAGED{{% md %}}Signifies that this will be used for External Managed HTTP(S), SSL Proxy, or TCP Proxy Load Balancing.{{% /md %}}</dd><dt>Backend<wbr>Service<wbr>Load<wbr>Balancing<wbr>Scheme<wbr>Internal</dt>
     <dd>INTERNAL{{% md %}}Signifies that this will be used for Internal TCP/UDP Load Balancing.{{% /md %}}</dd><dt>Backend<wbr>Service<wbr>Load<wbr>Balancing<wbr>Scheme<wbr>Internal<wbr>Managed</dt>
     <dd>INTERNAL_MANAGED{{% md %}}Signifies that this will be used for Internal HTTP(S) Load Balancing.{{% /md %}}</dd><dt>Backend<wbr>Service<wbr>Load<wbr>Balancing<wbr>Scheme<wbr>Internal<wbr>Self<wbr>Managed</dt>
     <dd>INTERNAL_SELF_MANAGED{{% md %}}Signifies that this will be used by Traffic Director.{{% /md %}}</dd><dt>Backend<wbr>Service<wbr>Load<wbr>Balancing<wbr>Scheme<wbr>Invalid<wbr>Load<wbr>Balancing<wbr>Scheme</dt>
@@ -4242,7 +4244,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="tabular"><dt>External</dt>
-    <dd>EXTERNAL{{% md %}}Signifies that this will be used for external HTTP(S), SSL Proxy, TCP Proxy, or Network Load Balancing{{% /md %}}</dd><dt>Internal</dt>
+    <dd>EXTERNAL{{% md %}}Signifies that this will be used for external HTTP(S), SSL Proxy, TCP Proxy, or Network Load Balancing{{% /md %}}</dd><dt>External<wbr>Managed</dt>
+    <dd>EXTERNAL_MANAGED{{% md %}}Signifies that this will be used for External Managed HTTP(S), SSL Proxy, or TCP Proxy Load Balancing.{{% /md %}}</dd><dt>Internal</dt>
     <dd>INTERNAL{{% md %}}Signifies that this will be used for Internal TCP/UDP Load Balancing.{{% /md %}}</dd><dt>Internal<wbr>Managed</dt>
     <dd>INTERNAL_MANAGED{{% md %}}Signifies that this will be used for Internal HTTP(S) Load Balancing.{{% /md %}}</dd><dt>Internal<wbr>Self<wbr>Managed</dt>
     <dd>INTERNAL_SELF_MANAGED{{% md %}}Signifies that this will be used by Traffic Director.{{% /md %}}</dd><dt>Invalid<wbr>Load<wbr>Balancing<wbr>Scheme</dt>
@@ -4251,7 +4254,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="tabular"><dt>EXTERNAL</dt>
-    <dd>EXTERNAL{{% md %}}Signifies that this will be used for external HTTP(S), SSL Proxy, TCP Proxy, or Network Load Balancing{{% /md %}}</dd><dt>INTERNAL</dt>
+    <dd>EXTERNAL{{% md %}}Signifies that this will be used for external HTTP(S), SSL Proxy, TCP Proxy, or Network Load Balancing{{% /md %}}</dd><dt>EXTERNAL_MANAGED</dt>
+    <dd>EXTERNAL_MANAGED{{% md %}}Signifies that this will be used for External Managed HTTP(S), SSL Proxy, or TCP Proxy Load Balancing.{{% /md %}}</dd><dt>INTERNAL</dt>
     <dd>INTERNAL{{% md %}}Signifies that this will be used for Internal TCP/UDP Load Balancing.{{% /md %}}</dd><dt>INTERNAL_MANAGED</dt>
     <dd>INTERNAL_MANAGED{{% md %}}Signifies that this will be used for Internal HTTP(S) Load Balancing.{{% /md %}}</dd><dt>INTERNAL_SELF_MANAGED</dt>
     <dd>INTERNAL_SELF_MANAGED{{% md %}}Signifies that this will be used by Traffic Director.{{% /md %}}</dd><dt>INVALID_LOAD_BALANCING_SCHEME</dt>
@@ -7150,25 +7154,25 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>Consistent<wbr>Hash<wbr>Subsetting</dt>
-    <dd>CONSISTENT_HASH_SUBSETTING{{% md %}}Subsetting based on consistent hashing. For Traffic Director, the number of backends per backend group (the subset size) is adjusted based on the `subset_size` parameter. For Internal HTTP(S) load balancing, the number of backends per backend group (the subset size) is dynamically adjusted in two cases: - As the number of proxy instances participating in Internal HTTP(S) load balancing increases, the subset size decreases. - When the total number of backends in a network exceeds the capacity of a single proxy instance, subset sizes are reduced automatically for each service that has backend subsetting enabled.{{% /md %}}</dd><dt>None</dt>
+    <dd>CONSISTENT_HASH_SUBSETTING{{% md %}}Subsetting based on consistent hashing. For Traffic Director, the number of backends per backend group (the subset size) is based on the `subset_size` parameter. For Internal HTTP(S) load balancing, the number of backends per backend group (the subset size) is dynamically adjusted in two cases: - As the number of proxy instances participating in Internal HTTP(S) load balancing increases, the subset size decreases. - When the total number of backends in a network exceeds the capacity of a single proxy instance, subset sizes are reduced automatically for each service that has backend subsetting enabled.{{% /md %}}</dd><dt>None</dt>
     <dd>NONE{{% md %}}No Subsetting. Clients may open connections and send traffic to all backends of this backend service. This can lead to performance issues if there is substantial imbalance in the count of clients and backends.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="tabular"><dt>Subsetting<wbr>Policy<wbr>Consistent<wbr>Hash<wbr>Subsetting</dt>
-    <dd>CONSISTENT_HASH_SUBSETTING{{% md %}}Subsetting based on consistent hashing. For Traffic Director, the number of backends per backend group (the subset size) is adjusted based on the `subset_size` parameter. For Internal HTTP(S) load balancing, the number of backends per backend group (the subset size) is dynamically adjusted in two cases: - As the number of proxy instances participating in Internal HTTP(S) load balancing increases, the subset size decreases. - When the total number of backends in a network exceeds the capacity of a single proxy instance, subset sizes are reduced automatically for each service that has backend subsetting enabled.{{% /md %}}</dd><dt>Subsetting<wbr>Policy<wbr>None</dt>
+    <dd>CONSISTENT_HASH_SUBSETTING{{% md %}}Subsetting based on consistent hashing. For Traffic Director, the number of backends per backend group (the subset size) is based on the `subset_size` parameter. For Internal HTTP(S) load balancing, the number of backends per backend group (the subset size) is dynamically adjusted in two cases: - As the number of proxy instances participating in Internal HTTP(S) load balancing increases, the subset size decreases. - When the total number of backends in a network exceeds the capacity of a single proxy instance, subset sizes are reduced automatically for each service that has backend subsetting enabled.{{% /md %}}</dd><dt>Subsetting<wbr>Policy<wbr>None</dt>
     <dd>NONE{{% md %}}No Subsetting. Clients may open connections and send traffic to all backends of this backend service. This can lead to performance issues if there is substantial imbalance in the count of clients and backends.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="tabular"><dt>Consistent<wbr>Hash<wbr>Subsetting</dt>
-    <dd>CONSISTENT_HASH_SUBSETTING{{% md %}}Subsetting based on consistent hashing. For Traffic Director, the number of backends per backend group (the subset size) is adjusted based on the `subset_size` parameter. For Internal HTTP(S) load balancing, the number of backends per backend group (the subset size) is dynamically adjusted in two cases: - As the number of proxy instances participating in Internal HTTP(S) load balancing increases, the subset size decreases. - When the total number of backends in a network exceeds the capacity of a single proxy instance, subset sizes are reduced automatically for each service that has backend subsetting enabled.{{% /md %}}</dd><dt>None</dt>
+    <dd>CONSISTENT_HASH_SUBSETTING{{% md %}}Subsetting based on consistent hashing. For Traffic Director, the number of backends per backend group (the subset size) is based on the `subset_size` parameter. For Internal HTTP(S) load balancing, the number of backends per backend group (the subset size) is dynamically adjusted in two cases: - As the number of proxy instances participating in Internal HTTP(S) load balancing increases, the subset size decreases. - When the total number of backends in a network exceeds the capacity of a single proxy instance, subset sizes are reduced automatically for each service that has backend subsetting enabled.{{% /md %}}</dd><dt>None</dt>
     <dd>NONE{{% md %}}No Subsetting. Clients may open connections and send traffic to all backends of this backend service. This can lead to performance issues if there is substantial imbalance in the count of clients and backends.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="tabular"><dt>CONSISTENT_HASH_SUBSETTING</dt>
-    <dd>CONSISTENT_HASH_SUBSETTING{{% md %}}Subsetting based on consistent hashing. For Traffic Director, the number of backends per backend group (the subset size) is adjusted based on the `subset_size` parameter. For Internal HTTP(S) load balancing, the number of backends per backend group (the subset size) is dynamically adjusted in two cases: - As the number of proxy instances participating in Internal HTTP(S) load balancing increases, the subset size decreases. - When the total number of backends in a network exceeds the capacity of a single proxy instance, subset sizes are reduced automatically for each service that has backend subsetting enabled.{{% /md %}}</dd><dt>NONE</dt>
+    <dd>CONSISTENT_HASH_SUBSETTING{{% md %}}Subsetting based on consistent hashing. For Traffic Director, the number of backends per backend group (the subset size) is based on the `subset_size` parameter. For Internal HTTP(S) load balancing, the number of backends per backend group (the subset size) is dynamically adjusted in two cases: - As the number of proxy instances participating in Internal HTTP(S) load balancing increases, the subset size decreases. - When the total number of backends in a network exceeds the capacity of a single proxy instance, subset sizes are reduced automatically for each service that has backend subsetting enabled.{{% /md %}}</dd><dt>NONE</dt>
     <dd>NONE{{% md %}}No Subsetting. Clients may open connections and send traffic to all backends of this backend service. This can lead to performance issues if there is substantial imbalance in the count of clients and backends.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 

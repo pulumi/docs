@@ -13,19 +13,20 @@ Explore the resources and functions of the aws-native.iot module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="accountauditconfiguration" title="AccountAuditConfiguration"><span class="symbol resource"></span>AccountAuditConfiguration</a></li>
-    <li><a href="authorizer" title="Authorizer"><span class="symbol resource"></span>Authorizer</a></li>
-    <li><a href="certificate" title="Certificate"><span class="symbol resource"></span>Certificate</a></li>
-    <li><a href="custommetric" title="CustomMetric"><span class="symbol resource"></span>CustomMetric</a></li>
-    <li><a href="dimension" title="Dimension"><span class="symbol resource"></span>Dimension</a></li>
-    <li><a href="domainconfiguration" title="DomainConfiguration"><span class="symbol resource"></span>DomainConfiguration</a></li>
-    <li><a href="fleetmetric" title="FleetMetric"><span class="symbol resource"></span>FleetMetric</a></li>
-    <li><a href="mitigationaction" title="MitigationAction"><span class="symbol resource"></span>MitigationAction</a></li>
-    <li><a href="provisioningtemplate" title="ProvisioningTemplate"><span class="symbol resource"></span>ProvisioningTemplate</a></li>
-    <li><a href="scheduledaudit" title="ScheduledAudit"><span class="symbol resource"></span>ScheduledAudit</a></li>
-    <li><a href="securityprofile" title="SecurityProfile"><span class="symbol resource"></span>SecurityProfile</a></li>
-    <li><a href="topicrule" title="TopicRule"><span class="symbol resource"></span>TopicRule</a></li>
-    <li><a href="topicruledestination" title="TopicRuleDestination"><span class="symbol resource"></span>TopicRuleDestination</a></li>
+    <li><a href="accountauditconfiguration" title="AccountAuditConfiguration"><span class="api-symbol api-symbol--resource"></span>AccountAuditConfiguration</a></li>
+    <li><a href="authorizer" title="Authorizer"><span class="api-symbol api-symbol--resource"></span>Authorizer</a></li>
+    <li><a href="certificate" title="Certificate"><span class="api-symbol api-symbol--resource"></span>Certificate</a></li>
+    <li><a href="custommetric" title="CustomMetric"><span class="api-symbol api-symbol--resource"></span>CustomMetric</a></li>
+    <li><a href="dimension" title="Dimension"><span class="api-symbol api-symbol--resource"></span>Dimension</a></li>
+    <li><a href="domainconfiguration" title="DomainConfiguration"><span class="api-symbol api-symbol--resource"></span>DomainConfiguration</a></li>
+    <li><a href="fleetmetric" title="FleetMetric"><span class="api-symbol api-symbol--resource"></span>FleetMetric</a></li>
+    <li><a href="jobtemplate" title="JobTemplate"><span class="api-symbol api-symbol--resource"></span>JobTemplate</a></li>
+    <li><a href="mitigationaction" title="MitigationAction"><span class="api-symbol api-symbol--resource"></span>MitigationAction</a></li>
+    <li><a href="provisioningtemplate" title="ProvisioningTemplate"><span class="api-symbol api-symbol--resource"></span>ProvisioningTemplate</a></li>
+    <li><a href="scheduledaudit" title="ScheduledAudit"><span class="api-symbol api-symbol--resource"></span>ScheduledAudit</a></li>
+    <li><a href="securityprofile" title="SecurityProfile"><span class="api-symbol api-symbol--resource"></span>SecurityProfile</a></li>
+    <li><a href="topicrule" title="TopicRule"><span class="api-symbol api-symbol--resource"></span>TopicRule</a></li>
+    <li><a href="topicruledestination" title="TopicRuleDestination"><span class="api-symbol api-symbol--resource"></span>TopicRuleDestination</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -35,6 +36,6 @@ Explore the resources and functions of the aws-native.iot module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.0</dd>
 </dl>
 

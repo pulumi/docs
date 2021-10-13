@@ -13,28 +13,28 @@ Explore the resources and functions of the google-native.datacatalog/v1beta1 mod
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="entry" title="Entry"><span class="symbol resource"></span>Entry</a></li>
-    <li><a href="entrygroup" title="EntryGroup"><span class="symbol resource"></span>EntryGroup</a></li>
-    <li><a href="entrygroupiampolicy" title="EntryGroupIamPolicy"><span class="symbol resource"></span>EntryGroupIamPolicy</a></li>
-    <li><a href="policytag" title="PolicyTag"><span class="symbol resource"></span>PolicyTag</a></li>
-    <li><a href="tagtemplate" title="TagTemplate"><span class="symbol resource"></span>TagTemplate</a></li>
-    <li><a href="tagtemplateiampolicy" title="TagTemplateIamPolicy"><span class="symbol resource"></span>TagTemplateIamPolicy</a></li>
-    <li><a href="taxonomy" title="Taxonomy"><span class="symbol resource"></span>Taxonomy</a></li>
-    <li><a href="taxonomyiampolicy" title="TaxonomyIamPolicy"><span class="symbol resource"></span>TaxonomyIamPolicy</a></li>
-    <li><a href="taxonomypolicytagiampolicy" title="TaxonomyPolicyTagIamPolicy"><span class="symbol resource"></span>TaxonomyPolicyTagIamPolicy</a></li>
+    <li><a href="entry" title="Entry"><span class="api-symbol api-symbol--resource"></span>Entry</a></li>
+    <li><a href="entrygroup" title="EntryGroup"><span class="api-symbol api-symbol--resource"></span>EntryGroup</a></li>
+    <li><a href="entrygroupiampolicy" title="EntryGroupIamPolicy"><span class="api-symbol api-symbol--resource"></span>EntryGroupIamPolicy</a></li>
+    <li><a href="policytag" title="PolicyTag"><span class="api-symbol api-symbol--resource"></span>PolicyTag</a></li>
+    <li><a href="tagtemplate" title="TagTemplate"><span class="api-symbol api-symbol--resource"></span>TagTemplate</a></li>
+    <li><a href="tagtemplateiampolicy" title="TagTemplateIamPolicy"><span class="api-symbol api-symbol--resource"></span>TagTemplateIamPolicy</a></li>
+    <li><a href="taxonomy" title="Taxonomy"><span class="api-symbol api-symbol--resource"></span>Taxonomy</a></li>
+    <li><a href="taxonomyiampolicy" title="TaxonomyIamPolicy"><span class="api-symbol api-symbol--resource"></span>TaxonomyIamPolicy</a></li>
+    <li><a href="taxonomypolicytagiampolicy" title="TaxonomyPolicyTagIamPolicy"><span class="api-symbol api-symbol--resource"></span>TaxonomyPolicyTagIamPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getentry" title="GetEntry"><span class="symbol function"></span>GetEntry</a></li>
-    <li><a href="getentrygroup" title="GetEntryGroup"><span class="symbol function"></span>GetEntryGroup</a></li>
-    <li><a href="getentrygroupiampolicy" title="GetEntryGroupIamPolicy"><span class="symbol function"></span>GetEntryGroupIamPolicy</a></li>
-    <li><a href="getpolicytag" title="GetPolicyTag"><span class="symbol function"></span>GetPolicyTag</a></li>
-    <li><a href="gettagtemplate" title="GetTagTemplate"><span class="symbol function"></span>GetTagTemplate</a></li>
-    <li><a href="gettagtemplateiampolicy" title="GetTagTemplateIamPolicy"><span class="symbol function"></span>GetTagTemplateIamPolicy</a></li>
-    <li><a href="gettaxonomy" title="GetTaxonomy"><span class="symbol function"></span>GetTaxonomy</a></li>
-    <li><a href="gettaxonomyiampolicy" title="GetTaxonomyIamPolicy"><span class="symbol function"></span>GetTaxonomyIamPolicy</a></li>
-    <li><a href="gettaxonomypolicytagiampolicy" title="GetTaxonomyPolicyTagIamPolicy"><span class="symbol function"></span>GetTaxonomyPolicyTagIamPolicy</a></li>
+    <li><a href="getentry" title="GetEntry"><span class="api-symbol api-symbol--function"></span>GetEntry</a></li>
+    <li><a href="getentrygroup" title="GetEntryGroup"><span class="api-symbol api-symbol--function"></span>GetEntryGroup</a></li>
+    <li><a href="getentrygroupiampolicy" title="GetEntryGroupIamPolicy"><span class="api-symbol api-symbol--function"></span>GetEntryGroupIamPolicy</a></li>
+    <li><a href="getpolicytag" title="GetPolicyTag"><span class="api-symbol api-symbol--function"></span>GetPolicyTag</a></li>
+    <li><a href="gettagtemplate" title="GetTagTemplate"><span class="api-symbol api-symbol--function"></span>GetTagTemplate</a></li>
+    <li><a href="gettagtemplateiampolicy" title="GetTagTemplateIamPolicy"><span class="api-symbol api-symbol--function"></span>GetTagTemplateIamPolicy</a></li>
+    <li><a href="gettaxonomy" title="GetTaxonomy"><span class="api-symbol api-symbol--function"></span>GetTaxonomy</a></li>
+    <li><a href="gettaxonomyiampolicy" title="GetTaxonomyIamPolicy"><span class="api-symbol api-symbol--function"></span>GetTaxonomyIamPolicy</a></li>
+    <li><a href="gettaxonomypolicytagiampolicy" title="GetTaxonomyPolicyTagIamPolicy"><span class="api-symbol api-symbol--function"></span>GetTaxonomyPolicyTagIamPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -44,6 +44,6 @@ Explore the resources and functions of the google-native.datacatalog/v1beta1 mod
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.0</dd>
+	<dd>0.8.0</dd>
 </dl>
 

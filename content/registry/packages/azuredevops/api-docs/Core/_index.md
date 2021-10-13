@@ -13,15 +13,15 @@ Explore the resources and functions of the azuredevops.Core module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="project" title="Project"><span class="symbol resource"></span>Project</a></li>
-    <li><a href="projectfeatures" title="ProjectFeatures"><span class="symbol resource"></span>ProjectFeatures</a></li>
+    <li><a href="project" title="Project"><span class="api-symbol api-symbol--resource"></span>Project</a></li>
+    <li><a href="projectfeatures" title="ProjectFeatures"><span class="api-symbol api-symbol--resource"></span>ProjectFeatures</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getclientconfig" title="GetClientConfig"><span class="symbol function"></span>GetClientConfig</a></li>
-    <li><a href="getproject" title="GetProject"><span class="symbol function"></span>GetProject</a></li>
-    <li><a href="getprojects" title="GetProjects"><span class="symbol function"></span>GetProjects</a></li>
+    <li><a href="getclientconfig" title="GetClientConfig"><span class="api-symbol api-symbol--function"></span>GetClientConfig</a></li>
+    <li><a href="getproject" title="GetProject"><span class="api-symbol api-symbol--function"></span>GetProject</a></li>
+    <li><a href="getprojects" title="GetProjects"><span class="api-symbol api-symbol--function"></span>GetProjects</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

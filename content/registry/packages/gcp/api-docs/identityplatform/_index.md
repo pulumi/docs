@@ -13,13 +13,13 @@ Explore the resources and functions of the gcp.identityplatform module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="defaultsupportedidpconfig" title="DefaultSupportedIdpConfig"><span class="symbol resource"></span>DefaultSupportedIdpConfig</a></li>
-    <li><a href="inboundsamlconfig" title="InboundSamlConfig"><span class="symbol resource"></span>InboundSamlConfig</a></li>
-    <li><a href="oauthidpconfig" title="OauthIdpConfig"><span class="symbol resource"></span>OauthIdpConfig</a></li>
-    <li><a href="tenant" title="Tenant"><span class="symbol resource"></span>Tenant</a></li>
-    <li><a href="tenantdefaultsupportedidpconfig" title="TenantDefaultSupportedIdpConfig"><span class="symbol resource"></span>TenantDefaultSupportedIdpConfig</a></li>
-    <li><a href="tenantinboundsamlconfig" title="TenantInboundSamlConfig"><span class="symbol resource"></span>TenantInboundSamlConfig</a></li>
-    <li><a href="tenantoauthidpconfig" title="TenantOauthIdpConfig"><span class="symbol resource"></span>TenantOauthIdpConfig</a></li>
+    <li><a href="defaultsupportedidpconfig" title="DefaultSupportedIdpConfig"><span class="api-symbol api-symbol--resource"></span>DefaultSupportedIdpConfig</a></li>
+    <li><a href="inboundsamlconfig" title="InboundSamlConfig"><span class="api-symbol api-symbol--resource"></span>InboundSamlConfig</a></li>
+    <li><a href="oauthidpconfig" title="OauthIdpConfig"><span class="api-symbol api-symbol--resource"></span>OauthIdpConfig</a></li>
+    <li><a href="tenant" title="Tenant"><span class="api-symbol api-symbol--resource"></span>Tenant</a></li>
+    <li><a href="tenantdefaultsupportedidpconfig" title="TenantDefaultSupportedIdpConfig"><span class="api-symbol api-symbol--resource"></span>TenantDefaultSupportedIdpConfig</a></li>
+    <li><a href="tenantinboundsamlconfig" title="TenantInboundSamlConfig"><span class="api-symbol api-symbol--resource"></span>TenantInboundSamlConfig</a></li>
+    <li><a href="tenantoauthidpconfig" title="TenantOauthIdpConfig"><span class="api-symbol api-symbol--resource"></span>TenantOauthIdpConfig</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -31,6 +31,6 @@ Explore the resources and functions of the gcp.identityplatform module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>5.22.0</dd>
+	<dd>5.24.0</dd>
 </dl>
 

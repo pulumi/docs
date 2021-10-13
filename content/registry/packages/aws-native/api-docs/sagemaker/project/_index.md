@@ -39,10 +39,10 @@ class MyStack : Stack
         {
             ProjectName = "project1",
             ProjectDescription = "Project Description",
-            ServiceCatalogProvisioningDetails = 
+            ServiceCatalogProvisioningDetails = new AwsNative.SageMaker.Inputs.ServiceCatalogProvisioningDetailsPropertiesArgs
             {
-                { "productId", "prod-53ibyqbj2cgmo" },
-                { "provisioningArtifactId", "pa-sm4pjfuzictpe" },
+                ProductId = "prod-53ibyqbj2cgmo",
+                ProvisioningArtifactId = "pa-sm4pjfuzictpe",
             },
         });
     }
@@ -71,9 +71,9 @@ func main() {
 		_, err := sagemaker.NewProject(ctx, "sampleProject", &sagemaker.ProjectArgs{
 			ProjectName:        pulumi.String("project1"),
 			ProjectDescription: pulumi.String("Project Description"),
-			ServiceCatalogProvisioningDetails: pulumi.Any{
-				ProductId:              "prod-53ibyqbj2cgmo",
-				ProvisioningArtifactId: "pa-sm4pjfuzictpe",
+			ServiceCatalogProvisioningDetails: &sagemaker.ServiceCatalogProvisioningDetailsPropertiesArgs{
+				ProductId:              pulumi.String("prod-53ibyqbj2cgmo"),
+				ProvisioningArtifactId: pulumi.String("pa-sm4pjfuzictpe"),
 			},
 		})
 		if err != nil {
@@ -99,10 +99,10 @@ import pulumi_aws_native as aws_native
 sample_project = aws_native.sagemaker.Project("sampleProject",
     project_name="project1",
     project_description="Project Description",
-    service_catalog_provisioning_details={
-        "productId": "prod-53ibyqbj2cgmo",
-        "provisioningArtifactId": "pa-sm4pjfuzictpe",
-    })
+    service_catalog_provisioning_details=aws_native.sagemaker.ServiceCatalogProvisioningDetailsPropertiesArgs(
+        product_id="prod-53ibyqbj2cgmo",
+        provisioning_artifact_id="pa-sm4pjfuzictpe",
+    ))
 
 ```
 
@@ -151,10 +151,10 @@ class MyStack : Stack
         {
             ProjectName = "SampleProject",
             ProjectDescription = "Project Description",
-            ServiceCatalogProvisioningDetails = 
+            ServiceCatalogProvisioningDetails = new AwsNative.SageMaker.Inputs.ServiceCatalogProvisioningDetailsPropertiesArgs
             {
-                { "productId", "prod-53ibyqbj2cgmo" },
-                { "provisioningArtifactId", "pa-sm4pjfuzictpe" },
+                ProductId = "prod-53ibyqbj2cgmo",
+                ProvisioningArtifactId = "pa-sm4pjfuzictpe",
             },
         });
     }
@@ -183,9 +183,9 @@ func main() {
 		_, err := sagemaker.NewProject(ctx, "sampleProject", &sagemaker.ProjectArgs{
 			ProjectName:        pulumi.String("SampleProject"),
 			ProjectDescription: pulumi.String("Project Description"),
-			ServiceCatalogProvisioningDetails: pulumi.Any{
-				ProductId:              "prod-53ibyqbj2cgmo",
-				ProvisioningArtifactId: "pa-sm4pjfuzictpe",
+			ServiceCatalogProvisioningDetails: &sagemaker.ServiceCatalogProvisioningDetailsPropertiesArgs{
+				ProductId:              pulumi.String("prod-53ibyqbj2cgmo"),
+				ProvisioningArtifactId: pulumi.String("pa-sm4pjfuzictpe"),
 			},
 		})
 		if err != nil {
@@ -211,10 +211,10 @@ import pulumi_aws_native as aws_native
 sample_project = aws_native.sagemaker.Project("sampleProject",
     project_name="SampleProject",
     project_description="Project Description",
-    service_catalog_provisioning_details={
-        "productId": "prod-53ibyqbj2cgmo",
-        "provisioningArtifactId": "pa-sm4pjfuzictpe",
-    })
+    service_catalog_provisioning_details=aws_native.sagemaker.ServiceCatalogProvisioningDetailsPropertiesArgs(
+        product_id="prod-53ibyqbj2cgmo",
+        provisioning_artifact_id="pa-sm4pjfuzictpe",
+    ))
 
 ```
 
@@ -266,7 +266,7 @@ const sampleProject = new aws_native.sagemaker.Project("sampleProject", {
             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
             <span class="nx">project_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">project_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-            <span class="nx">service_catalog_provisioning_details</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">,</span>
+            <span class="nx">service_catalog_provisioning_details</span><span class="p">:</span> <span class="nx">Optional[ServiceCatalogProvisioningDetailsPropertiesArgs]</span> = None<span class="p">,</span>
             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[ProjectTagArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Project</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -409,7 +409,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#servicecatalogprovisioningdetails_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Catalog<wbr>Provisioning<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">object</span>
+        <span class="property-type"><a href="#servicecatalogprovisioningdetailsproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>Sage<wbr>Maker.<wbr>Inputs.<wbr>Service<wbr>Catalog<wbr>Provisioning<wbr>Details<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Input ServiceCatalog Provisioning Details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -445,7 +445,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#servicecatalogprovisioningdetails_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Catalog<wbr>Provisioning<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#servicecatalogprovisioningdetailsproperties">Service<wbr>Catalog<wbr>Provisioning<wbr>Details<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Input ServiceCatalog Provisioning Details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -481,7 +481,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#servicecatalogprovisioningdetails_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Catalog<wbr>Provisioning<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">any</span>
+        <span class="property-type"><a href="#servicecatalogprovisioningdetailsproperties">Service<wbr>Catalog<wbr>Provisioning<wbr>Details<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Input ServiceCatalog Provisioning Details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -517,7 +517,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#service_catalog_provisioning_details_python" style="color: inherit; text-decoration: inherit;">service_<wbr>catalog_<wbr>provisioning_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#servicecatalogprovisioningdetailsproperties">Service<wbr>Catalog<wbr>Provisioning<wbr>Details<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Input ServiceCatalog Provisioning Details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -584,7 +584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectstatus_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectprojectstatus">Pulumi.<wbr>Aws<wbr>Native.<wbr>Sage<wbr>Maker.<wbr>Project<wbr>Project<wbr>Status</a></span>
+        <span class="property-type"><a href="#projectstatus">Pulumi.<wbr>Aws<wbr>Native.<wbr>Sage<wbr>Maker.<wbr>Project<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of a project.{{% /md %}}</dd><dt class="property-"
             title="">
@@ -592,7 +592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicecatalogprovisionedproductdetails_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Catalog<wbr>Provisioned<wbr>Product<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">object</span>
+        <span class="property-type"><a href="#servicecatalogprovisionedproductdetailsproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>Sage<wbr>Maker.<wbr>Outputs.<wbr>Service<wbr>Catalog<wbr>Provisioned<wbr>Product<wbr>Details<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Provisioned ServiceCatalog  Details{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -636,7 +636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectstatus_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectprojectstatus">Project<wbr>Project<wbr>Status</a></span>
+        <span class="property-type"><a href="#projectstatus">Project<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of a project.{{% /md %}}</dd><dt class="property-"
             title="">
@@ -644,7 +644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicecatalogprovisionedproductdetails_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Catalog<wbr>Provisioned<wbr>Product<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#servicecatalogprovisionedproductdetailsproperties">Service<wbr>Catalog<wbr>Provisioned<wbr>Product<wbr>Details<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Provisioned ServiceCatalog  Details{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -688,7 +688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectstatus_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectprojectstatus">Project<wbr>Project<wbr>Status</a></span>
+        <span class="property-type"><a href="#projectstatus">Project<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of a project.{{% /md %}}</dd><dt class="property-"
             title="">
@@ -696,7 +696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicecatalogprovisionedproductdetails_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Catalog<wbr>Provisioned<wbr>Product<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">any</span>
+        <span class="property-type"><a href="#servicecatalogprovisionedproductdetailsproperties">Service<wbr>Catalog<wbr>Provisioned<wbr>Product<wbr>Details<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Provisioned ServiceCatalog  Details{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -740,7 +740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_status_python" style="color: inherit; text-decoration: inherit;">project_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectprojectstatus">Project<wbr>Project<wbr>Status</a></span>
+        <span class="property-type"><a href="#projectstatus">Project<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of a project.{{% /md %}}</dd><dt class="property-"
             title="">
@@ -748,7 +748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_catalog_provisioned_product_details_python" style="color: inherit; text-decoration: inherit;">service_<wbr>catalog_<wbr>provisioned_<wbr>product_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#servicecatalogprovisionedproductdetailsproperties">Service<wbr>Catalog<wbr>Provisioned<wbr>Product<wbr>Details<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Provisioned ServiceCatalog  Details{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -763,7 +763,89 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="projectprojectstatus">Project<wbr>Project<wbr>Status</h4>
+<h4 id="projectprovisioningparameter">Project<wbr>Provisioning<wbr>Parameter</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The parameter key.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The parameter value.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The parameter key.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The parameter value.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The parameter key.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The parameter value.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The parameter key.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The parameter value.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="projectstatus">Project<wbr>Status</h4>
 
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>Pending</dt>
@@ -777,13 +859,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular"><dt>Project<wbr>Project<wbr>Status<wbr>Pending</dt>
-    <dd>Pending</dd><dt>Project<wbr>Project<wbr>Status<wbr>Create<wbr>In<wbr>Progress</dt>
-    <dd>CreateInProgress</dd><dt>Project<wbr>Project<wbr>Status<wbr>Create<wbr>Completed</dt>
-    <dd>CreateCompleted</dd><dt>Project<wbr>Project<wbr>Status<wbr>Create<wbr>Failed</dt>
-    <dd>CreateFailed</dd><dt>Project<wbr>Project<wbr>Status<wbr>Delete<wbr>In<wbr>Progress</dt>
-    <dd>DeleteInProgress</dd><dt>Project<wbr>Project<wbr>Status<wbr>Delete<wbr>Failed</dt>
-    <dd>DeleteFailed</dd><dt>Project<wbr>Project<wbr>Status<wbr>Delete<wbr>Completed</dt>
+<dl class="tabular"><dt>Project<wbr>Status<wbr>Pending</dt>
+    <dd>Pending</dd><dt>Project<wbr>Status<wbr>Create<wbr>In<wbr>Progress</dt>
+    <dd>CreateInProgress</dd><dt>Project<wbr>Status<wbr>Create<wbr>Completed</dt>
+    <dd>CreateCompleted</dd><dt>Project<wbr>Status<wbr>Create<wbr>Failed</dt>
+    <dd>CreateFailed</dd><dt>Project<wbr>Status<wbr>Delete<wbr>In<wbr>Progress</dt>
+    <dd>DeleteInProgress</dd><dt>Project<wbr>Status<wbr>Delete<wbr>Failed</dt>
+    <dd>DeleteFailed</dd><dt>Project<wbr>Status<wbr>Delete<wbr>Completed</dt>
     <dd>DeleteCompleted</dd></dl>
 {{% /choosable %}}
 
@@ -889,6 +971,234 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value for the tag. You can specify a value that is 1 to 255 Unicode characters in length and cannot be prefixed with aws:. You can use any of the following characters: the set of Unicode letters, digits, whitespace, _, ., /, =, +, and -. {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="servicecatalogprovisionedproductdetailsproperties">Service<wbr>Catalog<wbr>Provisioned<wbr>Product<wbr>Details<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="provisionedproductid_csharp">
+<a href="#provisionedproductid_csharp" style="color: inherit; text-decoration: inherit;">Provisioned<wbr>Product<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="provisionedproductstatusmessage_csharp">
+<a href="#provisionedproductstatusmessage_csharp" style="color: inherit; text-decoration: inherit;">Provisioned<wbr>Product<wbr>Status<wbr>Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="provisionedproductid_go">
+<a href="#provisionedproductid_go" style="color: inherit; text-decoration: inherit;">Provisioned<wbr>Product<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="provisionedproductstatusmessage_go">
+<a href="#provisionedproductstatusmessage_go" style="color: inherit; text-decoration: inherit;">Provisioned<wbr>Product<wbr>Status<wbr>Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="provisionedproductid_nodejs">
+<a href="#provisionedproductid_nodejs" style="color: inherit; text-decoration: inherit;">provisioned<wbr>Product<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="provisionedproductstatusmessage_nodejs">
+<a href="#provisionedproductstatusmessage_nodejs" style="color: inherit; text-decoration: inherit;">provisioned<wbr>Product<wbr>Status<wbr>Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="provisioned_product_id_python">
+<a href="#provisioned_product_id_python" style="color: inherit; text-decoration: inherit;">provisioned_<wbr>product_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="provisioned_product_status_message_python">
+<a href="#provisioned_product_status_message_python" style="color: inherit; text-decoration: inherit;">provisioned_<wbr>product_<wbr>status_<wbr>message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="servicecatalogprovisioningdetailsproperties">Service<wbr>Catalog<wbr>Provisioning<wbr>Details<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="productid_csharp">
+<a href="#productid_csharp" style="color: inherit; text-decoration: inherit;">Product<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="provisioningartifactid_csharp">
+<a href="#provisioningartifactid_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Artifact<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pathid_csharp">
+<a href="#pathid_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="provisioningparameters_csharp">
+<a href="#provisioningparameters_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectprovisioningparameter">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Sage<wbr>Maker.<wbr>Inputs.<wbr>Project<wbr>Provisioning<wbr>Parameter&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters specified by the administrator that are required for provisioning the product.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="productid_go">
+<a href="#productid_go" style="color: inherit; text-decoration: inherit;">Product<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="provisioningartifactid_go">
+<a href="#provisioningartifactid_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Artifact<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pathid_go">
+<a href="#pathid_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="provisioningparameters_go">
+<a href="#provisioningparameters_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectprovisioningparameter">[]Project<wbr>Provisioning<wbr>Parameter</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters specified by the administrator that are required for provisioning the product.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="productid_nodejs">
+<a href="#productid_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="provisioningartifactid_nodejs">
+<a href="#provisioningartifactid_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Artifact<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pathid_nodejs">
+<a href="#pathid_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="provisioningparameters_nodejs">
+<a href="#provisioningparameters_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectprovisioningparameter">Project<wbr>Provisioning<wbr>Parameter[]</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters specified by the administrator that are required for provisioning the product.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="product_id_python">
+<a href="#product_id_python" style="color: inherit; text-decoration: inherit;">product_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="provisioning_artifact_id_python">
+<a href="#provisioning_artifact_id_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>artifact_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="path_id_python">
+<a href="#path_id_python" style="color: inherit; text-decoration: inherit;">path_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="provisioning_parameters_python">
+<a href="#provisioning_parameters_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectprovisioningparameter">Sequence[Project<wbr>Provisioning<wbr>Parameter]</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters specified by the administrator that are required for provisioning the product.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

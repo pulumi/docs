@@ -13,25 +13,25 @@ Explore the resources and functions of the azure-native.appplatform module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="app" title="App"><span class="symbol resource"></span>App</a></li>
-    <li><a href="binding" title="Binding"><span class="symbol resource"></span>Binding</a></li>
-    <li><a href="certificate" title="Certificate"><span class="symbol resource"></span>Certificate</a></li>
-    <li><a href="customdomain" title="CustomDomain"><span class="symbol resource"></span>CustomDomain</a></li>
-    <li><a href="deployment" title="Deployment"><span class="symbol resource"></span>Deployment</a></li>
-    <li><a href="service" title="Service"><span class="symbol resource"></span>Service</a></li>
+    <li><a href="app" title="App"><span class="api-symbol api-symbol--resource"></span>App</a></li>
+    <li><a href="binding" title="Binding"><span class="api-symbol api-symbol--resource"></span>Binding</a></li>
+    <li><a href="certificate" title="Certificate"><span class="api-symbol api-symbol--resource"></span>Certificate</a></li>
+    <li><a href="customdomain" title="CustomDomain"><span class="api-symbol api-symbol--resource"></span>CustomDomain</a></li>
+    <li><a href="deployment" title="Deployment"><span class="api-symbol api-symbol--resource"></span>Deployment</a></li>
+    <li><a href="service" title="Service"><span class="api-symbol api-symbol--resource"></span>Service</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getapp" title="GetApp"><span class="symbol function"></span>GetApp</a></li>
-    <li><a href="getappresourceuploadurl" title="GetAppResourceUploadUrl"><span class="symbol function"></span>GetAppResourceUploadUrl</a></li>
-    <li><a href="getbinding" title="GetBinding"><span class="symbol function"></span>GetBinding</a></li>
-    <li><a href="getcertificate" title="GetCertificate"><span class="symbol function"></span>GetCertificate</a></li>
-    <li><a href="getcustomdomain" title="GetCustomDomain"><span class="symbol function"></span>GetCustomDomain</a></li>
-    <li><a href="getdeployment" title="GetDeployment"><span class="symbol function"></span>GetDeployment</a></li>
-    <li><a href="getdeploymentlogfileurl" title="GetDeploymentLogFileUrl"><span class="symbol function"></span>GetDeploymentLogFileUrl</a></li>
-    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
-    <li><a href="listservicetestkeys" title="ListServiceTestKeys"><span class="symbol function"></span>ListServiceTestKeys</a></li>
+    <li><a href="getapp" title="GetApp"><span class="api-symbol api-symbol--function"></span>GetApp</a></li>
+    <li><a href="getappresourceuploadurl" title="GetAppResourceUploadUrl"><span class="api-symbol api-symbol--function"></span>GetAppResourceUploadUrl</a></li>
+    <li><a href="getbinding" title="GetBinding"><span class="api-symbol api-symbol--function"></span>GetBinding</a></li>
+    <li><a href="getcertificate" title="GetCertificate"><span class="api-symbol api-symbol--function"></span>GetCertificate</a></li>
+    <li><a href="getcustomdomain" title="GetCustomDomain"><span class="api-symbol api-symbol--function"></span>GetCustomDomain</a></li>
+    <li><a href="getdeployment" title="GetDeployment"><span class="api-symbol api-symbol--function"></span>GetDeployment</a></li>
+    <li><a href="getdeploymentlogfileurl" title="GetDeploymentLogFileUrl"><span class="api-symbol api-symbol--function"></span>GetDeploymentLogFileUrl</a></li>
+    <li><a href="getservice" title="GetService"><span class="api-symbol api-symbol--function"></span>GetService</a></li>
+    <li><a href="listservicetestkeys" title="ListServiceTestKeys"><span class="api-symbol api-symbol--function"></span>ListServiceTestKeys</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -41,6 +41,6 @@ Explore the resources and functions of the azure-native.appplatform module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.36.0</dd>
+	<dd>1.37.0</dd>
 </dl>
 

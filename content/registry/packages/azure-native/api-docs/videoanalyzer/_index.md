@@ -13,29 +13,29 @@ Explore the resources and functions of the azure-native.videoanalyzer module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="accesspolicy" title="AccessPolicy"><span class="symbol resource"></span>AccessPolicy</a></li>
-    <li><a href="edgemodule" title="EdgeModule"><span class="symbol resource"></span>EdgeModule</a></li>
-    <li><a href="livepipeline" title="LivePipeline"><span class="symbol resource"></span>LivePipeline</a></li>
-    <li><a href="pipelinejob" title="PipelineJob"><span class="symbol resource"></span>PipelineJob</a></li>
-    <li><a href="pipelinetopology" title="PipelineTopology"><span class="symbol resource"></span>PipelineTopology</a></li>
-    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
-    <li><a href="video" title="Video"><span class="symbol resource"></span>Video</a></li>
-    <li><a href="videoanalyzer" title="VideoAnalyzer"><span class="symbol resource"></span>VideoAnalyzer</a></li>
+    <li><a href="accesspolicy" title="AccessPolicy"><span class="api-symbol api-symbol--resource"></span>AccessPolicy</a></li>
+    <li><a href="edgemodule" title="EdgeModule"><span class="api-symbol api-symbol--resource"></span>EdgeModule</a></li>
+    <li><a href="livepipeline" title="LivePipeline"><span class="api-symbol api-symbol--resource"></span>LivePipeline</a></li>
+    <li><a href="pipelinejob" title="PipelineJob"><span class="api-symbol api-symbol--resource"></span>PipelineJob</a></li>
+    <li><a href="pipelinetopology" title="PipelineTopology"><span class="api-symbol api-symbol--resource"></span>PipelineTopology</a></li>
+    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="api-symbol api-symbol--resource"></span>PrivateEndpointConnection</a></li>
+    <li><a href="video" title="Video"><span class="api-symbol api-symbol--resource"></span>Video</a></li>
+    <li><a href="videoanalyzer" title="VideoAnalyzer"><span class="api-symbol api-symbol--resource"></span>VideoAnalyzer</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getaccesspolicy" title="GetAccessPolicy"><span class="symbol function"></span>GetAccessPolicy</a></li>
-    <li><a href="getedgemodule" title="GetEdgeModule"><span class="symbol function"></span>GetEdgeModule</a></li>
-    <li><a href="getlivepipeline" title="GetLivePipeline"><span class="symbol function"></span>GetLivePipeline</a></li>
-    <li><a href="getpipelinejob" title="GetPipelineJob"><span class="symbol function"></span>GetPipelineJob</a></li>
-    <li><a href="getpipelinetopology" title="GetPipelineTopology"><span class="symbol function"></span>GetPipelineTopology</a></li>
-    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
-    <li><a href="getvideo" title="GetVideo"><span class="symbol function"></span>GetVideo</a></li>
-    <li><a href="getvideoanalyzer" title="GetVideoAnalyzer"><span class="symbol function"></span>GetVideoAnalyzer</a></li>
-    <li><a href="listedgemoduleprovisioningtoken" title="ListEdgeModuleProvisioningToken"><span class="symbol function"></span>ListEdgeModuleProvisioningToken</a></li>
-    <li><a href="listvideocontenttoken" title="ListVideoContentToken"><span class="symbol function"></span>ListVideoContentToken</a></li>
-    <li><a href="listvideostreamingtoken" title="ListVideoStreamingToken"><span class="symbol function"></span>ListVideoStreamingToken</a></li>
+    <li><a href="getaccesspolicy" title="GetAccessPolicy"><span class="api-symbol api-symbol--function"></span>GetAccessPolicy</a></li>
+    <li><a href="getedgemodule" title="GetEdgeModule"><span class="api-symbol api-symbol--function"></span>GetEdgeModule</a></li>
+    <li><a href="getlivepipeline" title="GetLivePipeline"><span class="api-symbol api-symbol--function"></span>GetLivePipeline</a></li>
+    <li><a href="getpipelinejob" title="GetPipelineJob"><span class="api-symbol api-symbol--function"></span>GetPipelineJob</a></li>
+    <li><a href="getpipelinetopology" title="GetPipelineTopology"><span class="api-symbol api-symbol--function"></span>GetPipelineTopology</a></li>
+    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="api-symbol api-symbol--function"></span>GetPrivateEndpointConnection</a></li>
+    <li><a href="getvideo" title="GetVideo"><span class="api-symbol api-symbol--function"></span>GetVideo</a></li>
+    <li><a href="getvideoanalyzer" title="GetVideoAnalyzer"><span class="api-symbol api-symbol--function"></span>GetVideoAnalyzer</a></li>
+    <li><a href="listedgemoduleprovisioningtoken" title="ListEdgeModuleProvisioningToken"><span class="api-symbol api-symbol--function"></span>ListEdgeModuleProvisioningToken</a></li>
+    <li><a href="listvideocontenttoken" title="ListVideoContentToken"><span class="api-symbol api-symbol--function"></span>ListVideoContentToken</a></li>
+    <li><a href="listvideostreamingtoken" title="ListVideoStreamingToken"><span class="api-symbol api-symbol--function"></span>ListVideoStreamingToken</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -45,6 +45,6 @@ Explore the resources and functions of the azure-native.videoanalyzer module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.36.0</dd>
+	<dd>1.37.0</dd>
 </dl>
 

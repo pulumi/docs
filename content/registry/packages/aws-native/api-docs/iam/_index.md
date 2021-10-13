@@ -13,10 +13,11 @@ Explore the resources and functions of the aws-native.iam module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="oidcprovider" title="OIDCProvider"><span class="symbol resource"></span>OIDCProvider</a></li>
-    <li><a href="samlprovider" title="SAMLProvider"><span class="symbol resource"></span>SAMLProvider</a></li>
-    <li><a href="servercertificate" title="ServerCertificate"><span class="symbol resource"></span>ServerCertificate</a></li>
-    <li><a href="virtualmfadevice" title="VirtualMFADevice"><span class="symbol resource"></span>VirtualMFADevice</a></li>
+    <li><a href="oidcprovider" title="OIDCProvider"><span class="api-symbol api-symbol--resource"></span>OIDCProvider</a></li>
+    <li><a href="role" title="Role"><span class="api-symbol api-symbol--resource"></span>Role</a></li>
+    <li><a href="samlprovider" title="SAMLProvider"><span class="api-symbol api-symbol--resource"></span>SAMLProvider</a></li>
+    <li><a href="servercertificate" title="ServerCertificate"><span class="api-symbol api-symbol--resource"></span>ServerCertificate</a></li>
+    <li><a href="virtualmfadevice" title="VirtualMFADevice"><span class="api-symbol api-symbol--resource"></span>VirtualMFADevice</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -26,6 +27,6 @@ Explore the resources and functions of the aws-native.iam module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.0</dd>
 </dl>
 

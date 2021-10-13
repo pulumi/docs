@@ -31,7 +31,7 @@ Create and manage a Domain Configuration
                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                         <span class="nx">authorizer_config</span><span class="p">:</span> <span class="nx">Optional[DomainConfigurationAuthorizerConfigArgs]</span> = None<span class="p">,</span>
                         <span class="nx">domain_configuration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                        <span class="nx">domain_configuration_status</span><span class="p">:</span> <span class="nx">Optional[DomainConfigurationDomainConfigurationStatus]</span> = None<span class="p">,</span>
+                        <span class="nx">domain_configuration_status</span><span class="p">:</span> <span class="nx">Optional[DomainConfigurationStatus]</span> = None<span class="p">,</span>
                         <span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">server_certificate_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                         <span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[DomainConfigurationServiceType]</span> = None<span class="p">,</span>
@@ -186,7 +186,7 @@ The DomainConfiguration resource accepts the following [input]({{< relref "/docs
 <a href="#domainconfigurationstatus_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Configuration<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainconfigurationdomainconfigurationstatus">Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>T.<wbr>Domain<wbr>Configuration<wbr>Domain<wbr>Configuration<wbr>Status</a></span>
+        <span class="property-type"><a href="#domainconfigurationstatus">Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>T.<wbr>Domain<wbr>Configuration<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -254,7 +254,7 @@ The DomainConfiguration resource accepts the following [input]({{< relref "/docs
 <a href="#domainconfigurationstatus_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Configuration<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainconfigurationdomainconfigurationstatus">Domain<wbr>Configuration<wbr>Domain<wbr>Configuration<wbr>Status</a></span>
+        <span class="property-type"><a href="#domainconfigurationstatus">Domain<wbr>Configuration<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -322,7 +322,7 @@ The DomainConfiguration resource accepts the following [input]({{< relref "/docs
 <a href="#domainconfigurationstatus_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Configuration<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainconfigurationdomainconfigurationstatus">Domain<wbr>Configuration<wbr>Domain<wbr>Configuration<wbr>Status</a></span>
+        <span class="property-type"><a href="#domainconfigurationstatus">Domain<wbr>Configuration<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -390,7 +390,7 @@ The DomainConfiguration resource accepts the following [input]({{< relref "/docs
 <a href="#domain_configuration_status_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>configuration_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainconfigurationdomainconfigurationstatus">Domain<wbr>Configuration<wbr>Domain<wbr>Configuration<wbr>Status</a></span>
+        <span class="property-type"><a href="#domainconfigurationstatus">Domain<wbr>Configuration<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -678,32 +678,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="domainconfigurationdomainconfigurationstatus">Domain<wbr>Configuration<wbr>Domain<wbr>Configuration<wbr>Status</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Enabled</dt>
-    <dd>ENABLED</dd><dt>Disabled</dt>
-    <dd>DISABLED</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Domain<wbr>Configuration<wbr>Domain<wbr>Configuration<wbr>Status<wbr>Enabled</dt>
-    <dd>ENABLED</dd><dt>Domain<wbr>Configuration<wbr>Domain<wbr>Configuration<wbr>Status<wbr>Disabled</dt>
-    <dd>DISABLED</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Enabled</dt>
-    <dd>ENABLED</dd><dt>Disabled</dt>
-    <dd>DISABLED</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>ENABLED</dt>
-    <dd>ENABLED</dd><dt>DISABLED</dt>
-    <dd>DISABLED</dd></dl>
-{{% /choosable %}}
-
 <h4 id="domainconfigurationdomaintype">Domain<wbr>Configuration<wbr>Domain<wbr>Type</h4>
 
 {{% choosable language csharp %}}
@@ -902,6 +876,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>DATA</dd><dt>CREDENTIAL_PROVIDER</dt>
     <dd>CREDENTIAL_PROVIDER</dd><dt>JOBS</dt>
     <dd>JOBS</dd></dl>
+{{% /choosable %}}
+
+<h4 id="domainconfigurationstatus">Domain<wbr>Configuration<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>ENABLED</dd><dt>Disabled</dt>
+    <dd>DISABLED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Domain<wbr>Configuration<wbr>Status<wbr>Enabled</dt>
+    <dd>ENABLED</dd><dt>Domain<wbr>Configuration<wbr>Status<wbr>Disabled</dt>
+    <dd>DISABLED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>ENABLED</dd><dt>Disabled</dt>
+    <dd>DISABLED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ENABLED</dt>
+    <dd>ENABLED</dd><dt>DISABLED</dt>
+    <dd>DISABLED</dd></dl>
 {{% /choosable %}}
 
 <h4 id="domainconfigurationtag">Domain<wbr>Configuration<wbr>Tag</h4>

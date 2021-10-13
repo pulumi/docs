@@ -13,14 +13,14 @@ Explore the resources and functions of the google-native.firebaserules/v1 module
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="release" title="Release"><span class="symbol resource"></span>Release</a></li>
-    <li><a href="ruleset" title="Ruleset"><span class="symbol resource"></span>Ruleset</a></li>
+    <li><a href="release" title="Release"><span class="api-symbol api-symbol--resource"></span>Release</a></li>
+    <li><a href="ruleset" title="Ruleset"><span class="api-symbol api-symbol--resource"></span>Ruleset</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getrelease" title="GetRelease"><span class="symbol function"></span>GetRelease</a></li>
-    <li><a href="getruleset" title="GetRuleset"><span class="symbol function"></span>GetRuleset</a></li>
+    <li><a href="getrelease" title="GetRelease"><span class="api-symbol api-symbol--function"></span>GetRelease</a></li>
+    <li><a href="getruleset" title="GetRuleset"><span class="api-symbol api-symbol--function"></span>GetRuleset</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -30,6 +30,6 @@ Explore the resources and functions of the google-native.firebaserules/v1 module
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.0</dd>
+	<dd>0.8.0</dd>
 </dl>
 

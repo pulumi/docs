@@ -31,7 +31,7 @@ Resource Type definition for AWS::EC2::Host
          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
          <span class="nx">auto_placement</span><span class="p">:</span> <span class="nx">Optional[HostAutoPlacement]</span> = None<span class="p">,</span>
          <span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-         <span class="nx">host_recovery</span><span class="p">:</span> <span class="nx">Optional[HostHostRecovery]</span> = None<span class="p">,</span>
+         <span class="nx">host_recovery</span><span class="p">:</span> <span class="nx">Optional[HostRecovery]</span> = None<span class="p">,</span>
          <span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Host</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -190,7 +190,7 @@ The Host resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#hostrecovery_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Recovery</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hosthostrecovery">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Host<wbr>Host<wbr>Recovery</a></span>
+        <span class="property-type"><a href="#hostrecovery">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Host<wbr>Recovery</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable or disable host recovery for the Dedicated Host. Host recovery is disabled by default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -226,7 +226,7 @@ The Host resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#hostrecovery_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Recovery</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hosthostrecovery">Host<wbr>Host<wbr>Recovery</a></span>
+        <span class="property-type"><a href="#hostrecovery">Host<wbr>Recovery</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable or disable host recovery for the Dedicated Host. Host recovery is disabled by default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -262,7 +262,7 @@ The Host resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#hostrecovery_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Recovery</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hosthostrecovery">Host<wbr>Host<wbr>Recovery</a></span>
+        <span class="property-type"><a href="#hostrecovery">Host<wbr>Recovery</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable or disable host recovery for the Dedicated Host. Host recovery is disabled by default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -298,7 +298,7 @@ The Host resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#host_recovery_python" style="color: inherit; text-decoration: inherit;">host_<wbr>recovery</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hosthostrecovery">Host<wbr>Host<wbr>Recovery</a></span>
+        <span class="property-type"><a href="#hostrecovery">Host<wbr>Recovery</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable or disable host recovery for the Dedicated Host. Host recovery is disabled by default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -426,7 +426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>off</dd></dl>
 {{% /choosable %}}
 
-<h4 id="hosthostrecovery">Host<wbr>Host<wbr>Recovery</h4>
+<h4 id="hostrecovery">Host<wbr>Recovery</h4>
 
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>On</dt>
@@ -435,8 +435,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular"><dt>Host<wbr>Host<wbr>Recovery<wbr>On</dt>
-    <dd>on</dd><dt>Host<wbr>Host<wbr>Recovery<wbr>Off</dt>
+<dl class="tabular"><dt>Host<wbr>Recovery<wbr>On</dt>
+    <dd>on</dd><dt>Host<wbr>Recovery<wbr>Off</dt>
     <dd>off</dd></dl>
 {{% /choosable %}}
 

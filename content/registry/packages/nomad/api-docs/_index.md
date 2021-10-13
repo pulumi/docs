@@ -16,37 +16,37 @@ A Pulumi package for creating and managing nomad cloud resources.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="aclpolicy" title="AclPolicy"><span class="symbol resource"></span>AclPolicy</a></li>
-    <li><a href="acltoken" title="AclToken"><span class="symbol resource"></span>AclToken</a></li>
-    <li><a href="externalvolume" title="ExternalVolume"><span class="symbol resource"></span>ExternalVolume</a></li>
-    <li><a href="job" title="Job"><span class="symbol resource"></span>Job</a></li>
-    <li><a href="namespace" title="Namespace"><span class="symbol resource"></span>Namespace</a></li>
-    <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
-    <li><a href="quotespecification" title="QuoteSpecification"><span class="symbol resource"></span>QuoteSpecification</a></li>
-    <li><a href="schedulerconfig" title="SchedulerConfig"><span class="symbol resource"></span>SchedulerConfig</a></li>
-    <li><a href="sentinelpolicy" title="SentinelPolicy"><span class="symbol resource"></span>SentinelPolicy</a></li>
-    <li><a href="volume" title="Volume"><span class="symbol resource"></span>Volume</a></li>
+    <li><a href="aclpolicy" title="AclPolicy"><span class="api-symbol api-symbol--resource"></span>AclPolicy</a></li>
+    <li><a href="acltoken" title="AclToken"><span class="api-symbol api-symbol--resource"></span>AclToken</a></li>
+    <li><a href="externalvolume" title="ExternalVolume"><span class="api-symbol api-symbol--resource"></span>ExternalVolume</a></li>
+    <li><a href="job" title="Job"><span class="api-symbol api-symbol--resource"></span>Job</a></li>
+    <li><a href="namespace" title="Namespace"><span class="api-symbol api-symbol--resource"></span>Namespace</a></li>
+    <li><a href="provider" title="Provider"><span class="api-symbol api-symbol--resource"></span>Provider</a></li>
+    <li><a href="quotespecification" title="QuoteSpecification"><span class="api-symbol api-symbol--resource"></span>QuoteSpecification</a></li>
+    <li><a href="schedulerconfig" title="SchedulerConfig"><span class="api-symbol api-symbol--resource"></span>SchedulerConfig</a></li>
+    <li><a href="sentinelpolicy" title="SentinelPolicy"><span class="api-symbol api-symbol--resource"></span>SentinelPolicy</a></li>
+    <li><a href="volume" title="Volume"><span class="api-symbol api-symbol--resource"></span>Volume</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getaclpolicies" title="GetAclPolicies"><span class="symbol function"></span>GetAclPolicies</a></li>
-    <li><a href="getaclpolicy" title="GetAclPolicy"><span class="symbol function"></span>GetAclPolicy</a></li>
-    <li><a href="getacltoken" title="GetAclToken"><span class="symbol function"></span>GetAclToken</a></li>
-    <li><a href="getacltokens" title="GetAclTokens"><span class="symbol function"></span>GetAclTokens</a></li>
-    <li><a href="getdatacenters" title="GetDatacenters"><span class="symbol function"></span>GetDatacenters</a></li>
-    <li><a href="getdeployments" title="GetDeployments"><span class="symbol function"></span>GetDeployments</a></li>
-    <li><a href="getjob" title="GetJob"><span class="symbol function"></span>GetJob</a></li>
-    <li><a href="getjobparser" title="GetJobParser"><span class="symbol function"></span>GetJobParser</a></li>
-    <li><a href="getnamespace" title="GetNamespace"><span class="symbol function"></span>GetNamespace</a></li>
-    <li><a href="getnamespaces" title="GetNamespaces"><span class="symbol function"></span>GetNamespaces</a></li>
-    <li><a href="getplugin" title="GetPlugin"><span class="symbol function"></span>GetPlugin</a></li>
-    <li><a href="getplugins" title="GetPlugins"><span class="symbol function"></span>GetPlugins</a></li>
-    <li><a href="getregions" title="GetRegions"><span class="symbol function"></span>GetRegions</a></li>
-    <li><a href="getscalingpolicies" title="GetScalingPolicies"><span class="symbol function"></span>GetScalingPolicies</a></li>
-    <li><a href="getscalingpolicy" title="GetScalingPolicy"><span class="symbol function"></span>GetScalingPolicy</a></li>
-    <li><a href="getschedulerpolicy" title="GetSchedulerPolicy"><span class="symbol function"></span>GetSchedulerPolicy</a></li>
-    <li><a href="getvolumes" title="GetVolumes"><span class="symbol function"></span>GetVolumes</a></li>
+    <li><a href="getaclpolicies" title="GetAclPolicies"><span class="api-symbol api-symbol--function"></span>GetAclPolicies</a></li>
+    <li><a href="getaclpolicy" title="GetAclPolicy"><span class="api-symbol api-symbol--function"></span>GetAclPolicy</a></li>
+    <li><a href="getacltoken" title="GetAclToken"><span class="api-symbol api-symbol--function"></span>GetAclToken</a></li>
+    <li><a href="getacltokens" title="GetAclTokens"><span class="api-symbol api-symbol--function"></span>GetAclTokens</a></li>
+    <li><a href="getdatacenters" title="GetDatacenters"><span class="api-symbol api-symbol--function"></span>GetDatacenters</a></li>
+    <li><a href="getdeployments" title="GetDeployments"><span class="api-symbol api-symbol--function"></span>GetDeployments</a></li>
+    <li><a href="getjob" title="GetJob"><span class="api-symbol api-symbol--function"></span>GetJob</a></li>
+    <li><a href="getjobparser" title="GetJobParser"><span class="api-symbol api-symbol--function"></span>GetJobParser</a></li>
+    <li><a href="getnamespace" title="GetNamespace"><span class="api-symbol api-symbol--function"></span>GetNamespace</a></li>
+    <li><a href="getnamespaces" title="GetNamespaces"><span class="api-symbol api-symbol--function"></span>GetNamespaces</a></li>
+    <li><a href="getplugin" title="GetPlugin"><span class="api-symbol api-symbol--function"></span>GetPlugin</a></li>
+    <li><a href="getplugins" title="GetPlugins"><span class="api-symbol api-symbol--function"></span>GetPlugins</a></li>
+    <li><a href="getregions" title="GetRegions"><span class="api-symbol api-symbol--function"></span>GetRegions</a></li>
+    <li><a href="getscalingpolicies" title="GetScalingPolicies"><span class="api-symbol api-symbol--function"></span>GetScalingPolicies</a></li>
+    <li><a href="getscalingpolicy" title="GetScalingPolicy"><span class="api-symbol api-symbol--function"></span>GetScalingPolicy</a></li>
+    <li><a href="getschedulerpolicy" title="GetSchedulerPolicy"><span class="api-symbol api-symbol--function"></span>GetSchedulerPolicy</a></li>
+    <li><a href="getvolumes" title="GetVolumes"><span class="api-symbol api-symbol--function"></span>GetVolumes</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

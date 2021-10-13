@@ -13,35 +13,35 @@ Explore the resources and functions of the aws.route53 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="delegationset" title="DelegationSet"><span class="symbol resource"></span>DelegationSet</a></li>
-    <li><a href="healthcheck" title="HealthCheck"><span class="symbol resource"></span>HealthCheck</a></li>
-    <li><a href="hostedzonednssec" title="HostedZoneDnsSec"><span class="symbol resource"></span>HostedZoneDnsSec</a></li>
-    <li><a href="keysigningkey" title="KeySigningKey"><span class="symbol resource"></span>KeySigningKey</a></li>
-    <li><a href="querylog" title="QueryLog"><span class="symbol resource"></span>QueryLog</a></li>
-    <li><a href="record" title="Record"><span class="symbol resource"></span>Record</a></li>
-    <li><a href="resolverdnssecconfig" title="ResolverDnsSecConfig"><span class="symbol resource"></span>ResolverDnsSecConfig</a></li>
-    <li><a href="resolverendpoint" title="ResolverEndpoint"><span class="symbol resource"></span>ResolverEndpoint</a></li>
-    <li><a href="resolverfirewallconfig" title="ResolverFirewallConfig"><span class="symbol resource"></span>ResolverFirewallConfig</a></li>
-    <li><a href="resolverfirewalldomainlist" title="ResolverFirewallDomainList"><span class="symbol resource"></span>ResolverFirewallDomainList</a></li>
-    <li><a href="resolverfirewallrule" title="ResolverFirewallRule"><span class="symbol resource"></span>ResolverFirewallRule</a></li>
-    <li><a href="resolverfirewallrulegroup" title="ResolverFirewallRuleGroup"><span class="symbol resource"></span>ResolverFirewallRuleGroup</a></li>
-    <li><a href="resolverfirewallrulegroupassociation" title="ResolverFirewallRuleGroupAssociation"><span class="symbol resource"></span>ResolverFirewallRuleGroupAssociation</a></li>
-    <li><a href="resolverquerylogconfig" title="ResolverQueryLogConfig"><span class="symbol resource"></span>ResolverQueryLogConfig</a></li>
-    <li><a href="resolverquerylogconfigassociation" title="ResolverQueryLogConfigAssociation"><span class="symbol resource"></span>ResolverQueryLogConfigAssociation</a></li>
-    <li><a href="resolverrule" title="ResolverRule"><span class="symbol resource"></span>ResolverRule</a></li>
-    <li><a href="resolverruleassociation" title="ResolverRuleAssociation"><span class="symbol resource"></span>ResolverRuleAssociation</a></li>
-    <li><a href="vpcassociationauthorization" title="VpcAssociationAuthorization"><span class="symbol resource"></span>VpcAssociationAuthorization</a></li>
-    <li><a href="zone" title="Zone"><span class="symbol resource"></span>Zone</a></li>
-    <li><a href="zoneassociation" title="ZoneAssociation"><span class="symbol resource"></span>ZoneAssociation</a></li>
+    <li><a href="delegationset" title="DelegationSet"><span class="api-symbol api-symbol--resource"></span>DelegationSet</a></li>
+    <li><a href="healthcheck" title="HealthCheck"><span class="api-symbol api-symbol--resource"></span>HealthCheck</a></li>
+    <li><a href="hostedzonednssec" title="HostedZoneDnsSec"><span class="api-symbol api-symbol--resource"></span>HostedZoneDnsSec</a></li>
+    <li><a href="keysigningkey" title="KeySigningKey"><span class="api-symbol api-symbol--resource"></span>KeySigningKey</a></li>
+    <li><a href="querylog" title="QueryLog"><span class="api-symbol api-symbol--resource"></span>QueryLog</a></li>
+    <li><a href="record" title="Record"><span class="api-symbol api-symbol--resource"></span>Record</a></li>
+    <li><a href="resolverdnssecconfig" title="ResolverDnsSecConfig"><span class="api-symbol api-symbol--resource"></span>ResolverDnsSecConfig</a></li>
+    <li><a href="resolverendpoint" title="ResolverEndpoint"><span class="api-symbol api-symbol--resource"></span>ResolverEndpoint</a></li>
+    <li><a href="resolverfirewallconfig" title="ResolverFirewallConfig"><span class="api-symbol api-symbol--resource"></span>ResolverFirewallConfig</a></li>
+    <li><a href="resolverfirewalldomainlist" title="ResolverFirewallDomainList"><span class="api-symbol api-symbol--resource"></span>ResolverFirewallDomainList</a></li>
+    <li><a href="resolverfirewallrule" title="ResolverFirewallRule"><span class="api-symbol api-symbol--resource"></span>ResolverFirewallRule</a></li>
+    <li><a href="resolverfirewallrulegroup" title="ResolverFirewallRuleGroup"><span class="api-symbol api-symbol--resource"></span>ResolverFirewallRuleGroup</a></li>
+    <li><a href="resolverfirewallrulegroupassociation" title="ResolverFirewallRuleGroupAssociation"><span class="api-symbol api-symbol--resource"></span>ResolverFirewallRuleGroupAssociation</a></li>
+    <li><a href="resolverquerylogconfig" title="ResolverQueryLogConfig"><span class="api-symbol api-symbol--resource"></span>ResolverQueryLogConfig</a></li>
+    <li><a href="resolverquerylogconfigassociation" title="ResolverQueryLogConfigAssociation"><span class="api-symbol api-symbol--resource"></span>ResolverQueryLogConfigAssociation</a></li>
+    <li><a href="resolverrule" title="ResolverRule"><span class="api-symbol api-symbol--resource"></span>ResolverRule</a></li>
+    <li><a href="resolverruleassociation" title="ResolverRuleAssociation"><span class="api-symbol api-symbol--resource"></span>ResolverRuleAssociation</a></li>
+    <li><a href="vpcassociationauthorization" title="VpcAssociationAuthorization"><span class="api-symbol api-symbol--resource"></span>VpcAssociationAuthorization</a></li>
+    <li><a href="zone" title="Zone"><span class="api-symbol api-symbol--resource"></span>Zone</a></li>
+    <li><a href="zoneassociation" title="ZoneAssociation"><span class="api-symbol api-symbol--resource"></span>ZoneAssociation</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getdelegationset" title="GetDelegationSet"><span class="symbol function"></span>GetDelegationSet</a></li>
-    <li><a href="getresolverendpoint" title="GetResolverEndpoint"><span class="symbol function"></span>GetResolverEndpoint</a></li>
-    <li><a href="getresolverrule" title="GetResolverRule"><span class="symbol function"></span>GetResolverRule</a></li>
-    <li><a href="getresolverrules" title="GetResolverRules"><span class="symbol function"></span>GetResolverRules</a></li>
-    <li><a href="getzone" title="GetZone"><span class="symbol function"></span>GetZone</a></li>
+    <li><a href="getdelegationset" title="GetDelegationSet"><span class="api-symbol api-symbol--function"></span>GetDelegationSet</a></li>
+    <li><a href="getresolverendpoint" title="GetResolverEndpoint"><span class="api-symbol api-symbol--function"></span>GetResolverEndpoint</a></li>
+    <li><a href="getresolverrule" title="GetResolverRule"><span class="api-symbol api-symbol--function"></span>GetResolverRule</a></li>
+    <li><a href="getresolverrules" title="GetResolverRules"><span class="api-symbol api-symbol--function"></span>GetResolverRules</a></li>
+    <li><a href="getzone" title="GetZone"><span class="api-symbol api-symbol--function"></span>GetZone</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -53,6 +53,6 @@ Explore the resources and functions of the aws.route53 module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.23.0</dd>
+	<dd>4.24.1</dd>
 </dl>
 

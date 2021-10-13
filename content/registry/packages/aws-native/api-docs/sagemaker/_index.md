@@ -13,23 +13,23 @@ Explore the resources and functions of the aws-native.sagemaker module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="app" title="App"><span class="symbol resource"></span>App</a></li>
-    <li><a href="appimageconfig" title="AppImageConfig"><span class="symbol resource"></span>AppImageConfig</a></li>
-    <li><a href="dataqualityjobdefinition" title="DataQualityJobDefinition"><span class="symbol resource"></span>DataQualityJobDefinition</a></li>
-    <li><a href="device" title="Device"><span class="symbol resource"></span>Device</a></li>
-    <li><a href="devicefleet" title="DeviceFleet"><span class="symbol resource"></span>DeviceFleet</a></li>
-    <li><a href="domain" title="Domain"><span class="symbol resource"></span>Domain</a></li>
-    <li><a href="featuregroup" title="FeatureGroup"><span class="symbol resource"></span>FeatureGroup</a></li>
-    <li><a href="image" title="Image"><span class="symbol resource"></span>Image</a></li>
-    <li><a href="imageversion" title="ImageVersion"><span class="symbol resource"></span>ImageVersion</a></li>
-    <li><a href="modelbiasjobdefinition" title="ModelBiasJobDefinition"><span class="symbol resource"></span>ModelBiasJobDefinition</a></li>
-    <li><a href="modelexplainabilityjobdefinition" title="ModelExplainabilityJobDefinition"><span class="symbol resource"></span>ModelExplainabilityJobDefinition</a></li>
-    <li><a href="modelpackagegroup" title="ModelPackageGroup"><span class="symbol resource"></span>ModelPackageGroup</a></li>
-    <li><a href="modelqualityjobdefinition" title="ModelQualityJobDefinition"><span class="symbol resource"></span>ModelQualityJobDefinition</a></li>
-    <li><a href="monitoringschedule" title="MonitoringSchedule"><span class="symbol resource"></span>MonitoringSchedule</a></li>
-    <li><a href="pipeline" title="Pipeline"><span class="symbol resource"></span>Pipeline</a></li>
-    <li><a href="project" title="Project"><span class="symbol resource"></span>Project</a></li>
-    <li><a href="userprofile" title="UserProfile"><span class="symbol resource"></span>UserProfile</a></li>
+    <li><a href="app" title="App"><span class="api-symbol api-symbol--resource"></span>App</a></li>
+    <li><a href="appimageconfig" title="AppImageConfig"><span class="api-symbol api-symbol--resource"></span>AppImageConfig</a></li>
+    <li><a href="dataqualityjobdefinition" title="DataQualityJobDefinition"><span class="api-symbol api-symbol--resource"></span>DataQualityJobDefinition</a></li>
+    <li><a href="device" title="Device"><span class="api-symbol api-symbol--resource"></span>Device</a></li>
+    <li><a href="devicefleet" title="DeviceFleet"><span class="api-symbol api-symbol--resource"></span>DeviceFleet</a></li>
+    <li><a href="domain" title="Domain"><span class="api-symbol api-symbol--resource"></span>Domain</a></li>
+    <li><a href="featuregroup" title="FeatureGroup"><span class="api-symbol api-symbol--resource"></span>FeatureGroup</a></li>
+    <li><a href="image" title="Image"><span class="api-symbol api-symbol--resource"></span>Image</a></li>
+    <li><a href="imageversion" title="ImageVersion"><span class="api-symbol api-symbol--resource"></span>ImageVersion</a></li>
+    <li><a href="modelbiasjobdefinition" title="ModelBiasJobDefinition"><span class="api-symbol api-symbol--resource"></span>ModelBiasJobDefinition</a></li>
+    <li><a href="modelexplainabilityjobdefinition" title="ModelExplainabilityJobDefinition"><span class="api-symbol api-symbol--resource"></span>ModelExplainabilityJobDefinition</a></li>
+    <li><a href="modelpackagegroup" title="ModelPackageGroup"><span class="api-symbol api-symbol--resource"></span>ModelPackageGroup</a></li>
+    <li><a href="modelqualityjobdefinition" title="ModelQualityJobDefinition"><span class="api-symbol api-symbol--resource"></span>ModelQualityJobDefinition</a></li>
+    <li><a href="monitoringschedule" title="MonitoringSchedule"><span class="api-symbol api-symbol--resource"></span>MonitoringSchedule</a></li>
+    <li><a href="pipeline" title="Pipeline"><span class="api-symbol api-symbol--resource"></span>Pipeline</a></li>
+    <li><a href="project" title="Project"><span class="api-symbol api-symbol--resource"></span>Project</a></li>
+    <li><a href="userprofile" title="UserProfile"><span class="api-symbol api-symbol--resource"></span>UserProfile</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -39,6 +39,6 @@ Explore the resources and functions of the aws-native.sagemaker module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.0</dd>
 </dl>
 

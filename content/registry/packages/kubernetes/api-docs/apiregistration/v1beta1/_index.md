@@ -13,8 +13,8 @@ Explore the resources and functions of the kubernetes.apiregistration/v1beta1 mo
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="apiservice" title="APIService"><span class="symbol resource"></span>APIService</a></li>
-    <li><a href="apiservicelist" title="APIServiceList"><span class="symbol resource"></span>APIServiceList</a></li>
+    <li><a href="apiservice" title="APIService"><span class="api-symbol api-symbol--resource"></span>APIService</a></li>
+    <li><a href="apiservicelist" title="APIServiceList"><span class="api-symbol api-symbol--resource"></span>APIServiceList</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -24,6 +24,6 @@ Explore the resources and functions of the kubernetes.apiregistration/v1beta1 mo
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>3.8.0</dd>
+	<dd>3.8.1</dd>
 </dl>
 

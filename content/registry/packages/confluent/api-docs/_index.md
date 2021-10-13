@@ -16,13 +16,13 @@ A Pulumi package for creating and managing confluent cloud resources.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="apikey" title="ApiKey"><span class="symbol resource"></span>ApiKey</a></li>
-    <li><a href="confluentenvironment" title="ConfluentEnvironment"><span class="symbol resource"></span>ConfluentEnvironment</a></li>
-    <li><a href="connector" title="Connector"><span class="symbol resource"></span>Connector</a></li>
-    <li><a href="kafkacluster" title="KafkaCluster"><span class="symbol resource"></span>KafkaCluster</a></li>
-    <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
-    <li><a href="schemaregistry" title="SchemaRegistry"><span class="symbol resource"></span>SchemaRegistry</a></li>
-    <li><a href="serviceaccount" title="ServiceAccount"><span class="symbol resource"></span>ServiceAccount</a></li>
+    <li><a href="apikey" title="ApiKey"><span class="api-symbol api-symbol--resource"></span>ApiKey</a></li>
+    <li><a href="confluentenvironment" title="ConfluentEnvironment"><span class="api-symbol api-symbol--resource"></span>ConfluentEnvironment</a></li>
+    <li><a href="connector" title="Connector"><span class="api-symbol api-symbol--resource"></span>Connector</a></li>
+    <li><a href="kafkacluster" title="KafkaCluster"><span class="api-symbol api-symbol--resource"></span>KafkaCluster</a></li>
+    <li><a href="provider" title="Provider"><span class="api-symbol api-symbol--resource"></span>Provider</a></li>
+    <li><a href="schemaregistry" title="SchemaRegistry"><span class="api-symbol api-symbol--resource"></span>SchemaRegistry</a></li>
+    <li><a href="serviceaccount" title="ServiceAccount"><span class="api-symbol api-symbol--resource"></span>ServiceAccount</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

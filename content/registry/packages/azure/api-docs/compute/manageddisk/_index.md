@@ -350,6 +350,7 @@ const copy = new azure.compute.ManagedDisk("copy", {
                 <span class="nx">encryption_settings</span><span class="p">:</span> <span class="nx">Optional[ManagedDiskEncryptionSettingsArgs]</span> = None<span class="p">,</span>
                 <span class="nx">image_reference_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">logical_sector_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                 <span class="nx">max_shares</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">network_access_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -590,6 +591,15 @@ The ManagedDisk resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}Specified the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="logicalsectorsize_csharp">
+<a href="#logicalsectorsize_csharp" style="color: inherit; text-decoration: inherit;">Logical<wbr>Sector<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Logical Sector Size. Possible values are: `512` and `4096`. Defaults to `4096`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxshares_csharp">
 <a href="#maxshares_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Shares</a>
 </span>
@@ -781,6 +791,15 @@ The ManagedDisk resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specified the supported Azure location where the resource exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="logicalsectorsize_go">
+<a href="#logicalsectorsize_go" style="color: inherit; text-decoration: inherit;">Logical<wbr>Sector<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Logical Sector Size. Possible values are: `512` and `4096`. Defaults to `4096`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxshares_go">
@@ -976,6 +995,15 @@ The ManagedDisk resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}Specified the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="logicalsectorsize_nodejs">
+<a href="#logicalsectorsize_nodejs" style="color: inherit; text-decoration: inherit;">logical<wbr>Sector<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Logical Sector Size. Possible values are: `512` and `4096`. Defaults to `4096`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxshares_nodejs">
 <a href="#maxshares_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Shares</a>
 </span>
@@ -1169,6 +1197,15 @@ The ManagedDisk resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}Specified the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="logical_sector_size_python">
+<a href="#logical_sector_size_python" style="color: inherit; text-decoration: inherit;">logical_<wbr>sector_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Logical Sector Size. Possible values are: `512` and `4096`. Defaults to `4096`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="max_shares_python">
 <a href="#max_shares_python" style="color: inherit; text-decoration: inherit;">max_<wbr>shares</a>
 </span>
@@ -1340,6 +1377,7 @@ Get an existing ManagedDisk resource's state with the given name, ID, and option
         <span class="nx">encryption_settings</span><span class="p">:</span> <span class="nx">Optional[ManagedDiskEncryptionSettingsArgs]</span> = None<span class="p">,</span>
         <span class="nx">image_reference_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">logical_sector_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">max_shares</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">network_access_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1545,6 +1583,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specified the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_logicalsectorsize_csharp">
+<a href="#state_logicalsectorsize_csharp" style="color: inherit; text-decoration: inherit;">Logical<wbr>Sector<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Logical Sector Size. Possible values are: `512` and `4096`. Defaults to `4096`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_maxshares_csharp">
 <a href="#state_maxshares_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Shares</a>
 </span>
@@ -1736,6 +1783,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specified the supported Azure location where the resource exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_logicalsectorsize_go">
+<a href="#state_logicalsectorsize_go" style="color: inherit; text-decoration: inherit;">Logical<wbr>Sector<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Logical Sector Size. Possible values are: `512` and `4096`. Defaults to `4096`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxshares_go">
@@ -1931,6 +1987,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specified the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_logicalsectorsize_nodejs">
+<a href="#state_logicalsectorsize_nodejs" style="color: inherit; text-decoration: inherit;">logical<wbr>Sector<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Logical Sector Size. Possible values are: `512` and `4096`. Defaults to `4096`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_maxshares_nodejs">
 <a href="#state_maxshares_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Shares</a>
 </span>
@@ -2122,6 +2187,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specified the supported Azure location where the resource exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_logical_sector_size_python">
+<a href="#state_logical_sector_size_python" style="color: inherit; text-decoration: inherit;">logical_<wbr>sector_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Logical Sector Size. Possible values are: `512` and `4096`. Defaults to `4096`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_shares_python">

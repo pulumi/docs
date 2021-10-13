@@ -13,22 +13,22 @@ Explore the resources and functions of the azure-native.deploymentmanager module
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="artifactsource" title="ArtifactSource"><span class="symbol resource"></span>ArtifactSource</a></li>
-    <li><a href="rollout" title="Rollout"><span class="symbol resource"></span>Rollout</a></li>
-    <li><a href="service" title="Service"><span class="symbol resource"></span>Service</a></li>
-    <li><a href="servicetopology" title="ServiceTopology"><span class="symbol resource"></span>ServiceTopology</a></li>
-    <li><a href="serviceunit" title="ServiceUnit"><span class="symbol resource"></span>ServiceUnit</a></li>
-    <li><a href="step" title="Step"><span class="symbol resource"></span>Step</a></li>
+    <li><a href="artifactsource" title="ArtifactSource"><span class="api-symbol api-symbol--resource"></span>ArtifactSource</a></li>
+    <li><a href="rollout" title="Rollout"><span class="api-symbol api-symbol--resource"></span>Rollout</a></li>
+    <li><a href="service" title="Service"><span class="api-symbol api-symbol--resource"></span>Service</a></li>
+    <li><a href="servicetopology" title="ServiceTopology"><span class="api-symbol api-symbol--resource"></span>ServiceTopology</a></li>
+    <li><a href="serviceunit" title="ServiceUnit"><span class="api-symbol api-symbol--resource"></span>ServiceUnit</a></li>
+    <li><a href="step" title="Step"><span class="api-symbol api-symbol--resource"></span>Step</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getartifactsource" title="GetArtifactSource"><span class="symbol function"></span>GetArtifactSource</a></li>
-    <li><a href="getrollout" title="GetRollout"><span class="symbol function"></span>GetRollout</a></li>
-    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
-    <li><a href="getservicetopology" title="GetServiceTopology"><span class="symbol function"></span>GetServiceTopology</a></li>
-    <li><a href="getserviceunit" title="GetServiceUnit"><span class="symbol function"></span>GetServiceUnit</a></li>
-    <li><a href="getstep" title="GetStep"><span class="symbol function"></span>GetStep</a></li>
+    <li><a href="getartifactsource" title="GetArtifactSource"><span class="api-symbol api-symbol--function"></span>GetArtifactSource</a></li>
+    <li><a href="getrollout" title="GetRollout"><span class="api-symbol api-symbol--function"></span>GetRollout</a></li>
+    <li><a href="getservice" title="GetService"><span class="api-symbol api-symbol--function"></span>GetService</a></li>
+    <li><a href="getservicetopology" title="GetServiceTopology"><span class="api-symbol api-symbol--function"></span>GetServiceTopology</a></li>
+    <li><a href="getserviceunit" title="GetServiceUnit"><span class="api-symbol api-symbol--function"></span>GetServiceUnit</a></li>
+    <li><a href="getstep" title="GetStep"><span class="api-symbol api-symbol--function"></span>GetStep</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -38,6 +38,6 @@ Explore the resources and functions of the azure-native.deploymentmanager module
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.36.0</dd>
+	<dd>1.37.0</dd>
 </dl>
 

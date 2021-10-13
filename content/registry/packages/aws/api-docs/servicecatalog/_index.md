@@ -13,28 +13,28 @@ Explore the resources and functions of the aws.servicecatalog module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="budgetresourceassociation" title="BudgetResourceAssociation"><span class="symbol resource"></span>BudgetResourceAssociation</a></li>
-    <li><a href="constraint" title="Constraint"><span class="symbol resource"></span>Constraint</a></li>
-    <li><a href="organizationsaccess" title="OrganizationsAccess"><span class="symbol resource"></span>OrganizationsAccess</a></li>
-    <li><a href="portfolio" title="Portfolio"><span class="symbol resource"></span>Portfolio</a></li>
-    <li><a href="portfolioshare" title="PortfolioShare"><span class="symbol resource"></span>PortfolioShare</a></li>
-    <li><a href="principalportfolioassociation" title="PrincipalPortfolioAssociation"><span class="symbol resource"></span>PrincipalPortfolioAssociation</a></li>
-    <li><a href="product" title="Product"><span class="symbol resource"></span>Product</a></li>
-    <li><a href="productportfolioassociation" title="ProductPortfolioAssociation"><span class="symbol resource"></span>ProductPortfolioAssociation</a></li>
-    <li><a href="provisionedproduct" title="ProvisionedProduct"><span class="symbol resource"></span>ProvisionedProduct</a></li>
-    <li><a href="provisioningartifact" title="ProvisioningArtifact"><span class="symbol resource"></span>ProvisioningArtifact</a></li>
-    <li><a href="serviceaction" title="ServiceAction"><span class="symbol resource"></span>ServiceAction</a></li>
-    <li><a href="tagoption" title="TagOption"><span class="symbol resource"></span>TagOption</a></li>
-    <li><a href="tagoptionresourceassociation" title="TagOptionResourceAssociation"><span class="symbol resource"></span>TagOptionResourceAssociation</a></li>
+    <li><a href="budgetresourceassociation" title="BudgetResourceAssociation"><span class="api-symbol api-symbol--resource"></span>BudgetResourceAssociation</a></li>
+    <li><a href="constraint" title="Constraint"><span class="api-symbol api-symbol--resource"></span>Constraint</a></li>
+    <li><a href="organizationsaccess" title="OrganizationsAccess"><span class="api-symbol api-symbol--resource"></span>OrganizationsAccess</a></li>
+    <li><a href="portfolio" title="Portfolio"><span class="api-symbol api-symbol--resource"></span>Portfolio</a></li>
+    <li><a href="portfolioshare" title="PortfolioShare"><span class="api-symbol api-symbol--resource"></span>PortfolioShare</a></li>
+    <li><a href="principalportfolioassociation" title="PrincipalPortfolioAssociation"><span class="api-symbol api-symbol--resource"></span>PrincipalPortfolioAssociation</a></li>
+    <li><a href="product" title="Product"><span class="api-symbol api-symbol--resource"></span>Product</a></li>
+    <li><a href="productportfolioassociation" title="ProductPortfolioAssociation"><span class="api-symbol api-symbol--resource"></span>ProductPortfolioAssociation</a></li>
+    <li><a href="provisionedproduct" title="ProvisionedProduct"><span class="api-symbol api-symbol--resource"></span>ProvisionedProduct</a></li>
+    <li><a href="provisioningartifact" title="ProvisioningArtifact"><span class="api-symbol api-symbol--resource"></span>ProvisioningArtifact</a></li>
+    <li><a href="serviceaction" title="ServiceAction"><span class="api-symbol api-symbol--resource"></span>ServiceAction</a></li>
+    <li><a href="tagoption" title="TagOption"><span class="api-symbol api-symbol--resource"></span>TagOption</a></li>
+    <li><a href="tagoptionresourceassociation" title="TagOptionResourceAssociation"><span class="api-symbol api-symbol--resource"></span>TagOptionResourceAssociation</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getconstraint" title="GetConstraint"><span class="symbol function"></span>GetConstraint</a></li>
-    <li><a href="getlaunchpaths" title="GetLaunchPaths"><span class="symbol function"></span>GetLaunchPaths</a></li>
-    <li><a href="getportfolio" title="GetPortfolio"><span class="symbol function"></span>GetPortfolio</a></li>
-    <li><a href="getportfolioconstraints" title="GetPortfolioConstraints"><span class="symbol function"></span>GetPortfolioConstraints</a></li>
-    <li><a href="getproduct" title="GetProduct"><span class="symbol function"></span>GetProduct</a></li>
+    <li><a href="getconstraint" title="GetConstraint"><span class="api-symbol api-symbol--function"></span>GetConstraint</a></li>
+    <li><a href="getlaunchpaths" title="GetLaunchPaths"><span class="api-symbol api-symbol--function"></span>GetLaunchPaths</a></li>
+    <li><a href="getportfolio" title="GetPortfolio"><span class="api-symbol api-symbol--function"></span>GetPortfolio</a></li>
+    <li><a href="getportfolioconstraints" title="GetPortfolioConstraints"><span class="api-symbol api-symbol--function"></span>GetPortfolioConstraints</a></li>
+    <li><a href="getproduct" title="GetProduct"><span class="api-symbol api-symbol--function"></span>GetProduct</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -46,6 +46,6 @@ Explore the resources and functions of the aws.servicecatalog module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.23.0</dd>
+	<dd>4.24.1</dd>
 </dl>
 

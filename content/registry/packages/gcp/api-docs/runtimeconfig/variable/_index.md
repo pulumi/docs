@@ -17,6 +17,120 @@ Manages a RuntimeConfig variable in Google Cloud. For more information, see the
 or the
 [JSON API](https://cloud.google.com/deployment-manager/runtime-configurator/reference/rest/).
 
+!> This resource has been deprecated in the google (GA) provider, and will only be available in the google-beta provider in a future release.
+
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var my_runtime_config = new Gcp.RuntimeConfig.Config("my-runtime-config", new Gcp.RuntimeConfig.ConfigArgs
+        {
+            Description = "Runtime configuration values for my service",
+        });
+        var environment = new Gcp.RuntimeConfig.Variable("environment", new Gcp.RuntimeConfig.VariableArgs
+        {
+            Parent = my_runtime_config.Name,
+            Text = "example.com",
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/runtimeconfig"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := runtimeconfig.NewConfig(ctx, "my_runtime_config", &runtimeconfig.ConfigArgs{
+			Description: pulumi.String("Runtime configuration values for my service"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = runtimeconfig.NewVariable(ctx, "environment", &runtimeconfig.VariableArgs{
+			Parent: my_runtime_config.Name,
+			Text:   pulumi.String("example.com"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_runtime_config = gcp.runtimeconfig.Config("my-runtime-config", description="Runtime configuration values for my service")
+environment = gcp.runtimeconfig.Variable("environment",
+    parent=my_runtime_config.name,
+    text="example.com")
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const my_runtime_config = new gcp.runtimeconfig.Config("my-runtime-config", {description: "Runtime configuration values for my service"});
+const environment = new gcp.runtimeconfig.Variable("environment", {
+    parent: my_runtime_config.name,
+    text: "example.com",
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a Variable Resource {#create}

@@ -13,14 +13,14 @@ Explore the resources and functions of the google-native.osconfig/v1beta module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="guestpolicy" title="GuestPolicy"><span class="symbol resource"></span>GuestPolicy</a></li>
-    <li><a href="patchdeployment" title="PatchDeployment"><span class="symbol resource"></span>PatchDeployment</a></li>
+    <li><a href="guestpolicy" title="GuestPolicy"><span class="api-symbol api-symbol--resource"></span>GuestPolicy</a></li>
+    <li><a href="patchdeployment" title="PatchDeployment"><span class="api-symbol api-symbol--resource"></span>PatchDeployment</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getguestpolicy" title="GetGuestPolicy"><span class="symbol function"></span>GetGuestPolicy</a></li>
-    <li><a href="getpatchdeployment" title="GetPatchDeployment"><span class="symbol function"></span>GetPatchDeployment</a></li>
+    <li><a href="getguestpolicy" title="GetGuestPolicy"><span class="api-symbol api-symbol--function"></span>GetGuestPolicy</a></li>
+    <li><a href="getpatchdeployment" title="GetPatchDeployment"><span class="api-symbol api-symbol--function"></span>GetPatchDeployment</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -30,6 +30,6 @@ Explore the resources and functions of the google-native.osconfig/v1beta module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.0</dd>
+	<dd>0.8.0</dd>
 </dl>
 

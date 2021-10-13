@@ -13,14 +13,14 @@ Explore the resources and functions of the azure-native.kubernetesconfiguration 
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="extension" title="Extension"><span class="symbol resource"></span>Extension</a></li>
-    <li><a href="sourcecontrolconfiguration" title="SourceControlConfiguration"><span class="symbol resource"></span>SourceControlConfiguration</a></li>
+    <li><a href="extension" title="Extension"><span class="api-symbol api-symbol--resource"></span>Extension</a></li>
+    <li><a href="sourcecontrolconfiguration" title="SourceControlConfiguration"><span class="api-symbol api-symbol--resource"></span>SourceControlConfiguration</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getextension" title="GetExtension"><span class="symbol function"></span>GetExtension</a></li>
-    <li><a href="getsourcecontrolconfiguration" title="GetSourceControlConfiguration"><span class="symbol function"></span>GetSourceControlConfiguration</a></li>
+    <li><a href="getextension" title="GetExtension"><span class="api-symbol api-symbol--function"></span>GetExtension</a></li>
+    <li><a href="getsourcecontrolconfiguration" title="GetSourceControlConfiguration"><span class="api-symbol api-symbol--function"></span>GetSourceControlConfiguration</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -30,6 +30,6 @@ Explore the resources and functions of the azure-native.kubernetesconfiguration 
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.36.0</dd>
+	<dd>1.37.0</dd>
 </dl>
 

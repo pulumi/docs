@@ -13,47 +13,47 @@ Explore the resources and functions of the google-native.healthcare/v1beta1 modu
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="annotation" title="Annotation"><span class="symbol resource"></span>Annotation</a></li>
-    <li><a href="annotationstore" title="AnnotationStore"><span class="symbol resource"></span>AnnotationStore</a></li>
-    <li><a href="attributedefinition" title="AttributeDefinition"><span class="symbol resource"></span>AttributeDefinition</a></li>
-    <li><a href="consent" title="Consent"><span class="symbol resource"></span>Consent</a></li>
-    <li><a href="consentartifact" title="ConsentArtifact"><span class="symbol resource"></span>ConsentArtifact</a></li>
-    <li><a href="consentstore" title="ConsentStore"><span class="symbol resource"></span>ConsentStore</a></li>
-    <li><a href="dataset" title="Dataset"><span class="symbol resource"></span>Dataset</a></li>
-    <li><a href="datasetannotationstoreiampolicy" title="DatasetAnnotationStoreIamPolicy"><span class="symbol resource"></span>DatasetAnnotationStoreIamPolicy</a></li>
-    <li><a href="datasetconsentstoreiampolicy" title="DatasetConsentStoreIamPolicy"><span class="symbol resource"></span>DatasetConsentStoreIamPolicy</a></li>
-    <li><a href="datasetdicomstoreiampolicy" title="DatasetDicomStoreIamPolicy"><span class="symbol resource"></span>DatasetDicomStoreIamPolicy</a></li>
-    <li><a href="datasetfhirstoreiampolicy" title="DatasetFhirStoreIamPolicy"><span class="symbol resource"></span>DatasetFhirStoreIamPolicy</a></li>
-    <li><a href="datasethl7v2storeiampolicy" title="DatasetHl7V2StoreIamPolicy"><span class="symbol resource"></span>DatasetHl7V2StoreIamPolicy</a></li>
-    <li><a href="datasetiampolicy" title="DatasetIamPolicy"><span class="symbol resource"></span>DatasetIamPolicy</a></li>
-    <li><a href="dicomstore" title="DicomStore"><span class="symbol resource"></span>DicomStore</a></li>
-    <li><a href="fhirstore" title="FhirStore"><span class="symbol resource"></span>FhirStore</a></li>
-    <li><a href="hl7v2store" title="Hl7V2Store"><span class="symbol resource"></span>Hl7V2Store</a></li>
-    <li><a href="message" title="Message"><span class="symbol resource"></span>Message</a></li>
-    <li><a href="userdatamapping" title="UserDataMapping"><span class="symbol resource"></span>UserDataMapping</a></li>
+    <li><a href="annotation" title="Annotation"><span class="api-symbol api-symbol--resource"></span>Annotation</a></li>
+    <li><a href="annotationstore" title="AnnotationStore"><span class="api-symbol api-symbol--resource"></span>AnnotationStore</a></li>
+    <li><a href="attributedefinition" title="AttributeDefinition"><span class="api-symbol api-symbol--resource"></span>AttributeDefinition</a></li>
+    <li><a href="consent" title="Consent"><span class="api-symbol api-symbol--resource"></span>Consent</a></li>
+    <li><a href="consentartifact" title="ConsentArtifact"><span class="api-symbol api-symbol--resource"></span>ConsentArtifact</a></li>
+    <li><a href="consentstore" title="ConsentStore"><span class="api-symbol api-symbol--resource"></span>ConsentStore</a></li>
+    <li><a href="dataset" title="Dataset"><span class="api-symbol api-symbol--resource"></span>Dataset</a></li>
+    <li><a href="datasetannotationstoreiampolicy" title="DatasetAnnotationStoreIamPolicy"><span class="api-symbol api-symbol--resource"></span>DatasetAnnotationStoreIamPolicy</a></li>
+    <li><a href="datasetconsentstoreiampolicy" title="DatasetConsentStoreIamPolicy"><span class="api-symbol api-symbol--resource"></span>DatasetConsentStoreIamPolicy</a></li>
+    <li><a href="datasetdicomstoreiampolicy" title="DatasetDicomStoreIamPolicy"><span class="api-symbol api-symbol--resource"></span>DatasetDicomStoreIamPolicy</a></li>
+    <li><a href="datasetfhirstoreiampolicy" title="DatasetFhirStoreIamPolicy"><span class="api-symbol api-symbol--resource"></span>DatasetFhirStoreIamPolicy</a></li>
+    <li><a href="datasethl7v2storeiampolicy" title="DatasetHl7V2StoreIamPolicy"><span class="api-symbol api-symbol--resource"></span>DatasetHl7V2StoreIamPolicy</a></li>
+    <li><a href="datasetiampolicy" title="DatasetIamPolicy"><span class="api-symbol api-symbol--resource"></span>DatasetIamPolicy</a></li>
+    <li><a href="dicomstore" title="DicomStore"><span class="api-symbol api-symbol--resource"></span>DicomStore</a></li>
+    <li><a href="fhirstore" title="FhirStore"><span class="api-symbol api-symbol--resource"></span>FhirStore</a></li>
+    <li><a href="hl7v2store" title="Hl7V2Store"><span class="api-symbol api-symbol--resource"></span>Hl7V2Store</a></li>
+    <li><a href="message" title="Message"><span class="api-symbol api-symbol--resource"></span>Message</a></li>
+    <li><a href="userdatamapping" title="UserDataMapping"><span class="api-symbol api-symbol--resource"></span>UserDataMapping</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getannotation" title="GetAnnotation"><span class="symbol function"></span>GetAnnotation</a></li>
-    <li><a href="getannotationstore" title="GetAnnotationStore"><span class="symbol function"></span>GetAnnotationStore</a></li>
-    <li><a href="getattributedefinition" title="GetAttributeDefinition"><span class="symbol function"></span>GetAttributeDefinition</a></li>
-    <li><a href="getconsent" title="GetConsent"><span class="symbol function"></span>GetConsent</a></li>
-    <li><a href="getconsentartifact" title="GetConsentArtifact"><span class="symbol function"></span>GetConsentArtifact</a></li>
-    <li><a href="getconsentstore" title="GetConsentStore"><span class="symbol function"></span>GetConsentStore</a></li>
-    <li><a href="getdataset" title="GetDataset"><span class="symbol function"></span>GetDataset</a></li>
-    <li><a href="getdatasetannotationstoreiampolicy" title="GetDatasetAnnotationStoreIamPolicy"><span class="symbol function"></span>GetDatasetAnnotationStoreIamPolicy</a></li>
-    <li><a href="getdatasetconsentstoreiampolicy" title="GetDatasetConsentStoreIamPolicy"><span class="symbol function"></span>GetDatasetConsentStoreIamPolicy</a></li>
-    <li><a href="getdatasetdicomstoreiampolicy" title="GetDatasetDicomStoreIamPolicy"><span class="symbol function"></span>GetDatasetDicomStoreIamPolicy</a></li>
-    <li><a href="getdatasetfhirstoreiampolicy" title="GetDatasetFhirStoreIamPolicy"><span class="symbol function"></span>GetDatasetFhirStoreIamPolicy</a></li>
-    <li><a href="getdatasethl7v2storeiampolicy" title="GetDatasetHl7V2StoreIamPolicy"><span class="symbol function"></span>GetDatasetHl7V2StoreIamPolicy</a></li>
-    <li><a href="getdatasetiampolicy" title="GetDatasetIamPolicy"><span class="symbol function"></span>GetDatasetIamPolicy</a></li>
-    <li><a href="getdicomstore" title="GetDicomStore"><span class="symbol function"></span>GetDicomStore</a></li>
-    <li><a href="getfhir" title="GetFhir"><span class="symbol function"></span>GetFhir</a></li>
-    <li><a href="getfhirstore" title="GetFhirStore"><span class="symbol function"></span>GetFhirStore</a></li>
-    <li><a href="gethl7v2store" title="GetHl7V2Store"><span class="symbol function"></span>GetHl7V2Store</a></li>
-    <li><a href="getmessage" title="GetMessage"><span class="symbol function"></span>GetMessage</a></li>
-    <li><a href="getuserdatamapping" title="GetUserDataMapping"><span class="symbol function"></span>GetUserDataMapping</a></li>
+    <li><a href="getannotation" title="GetAnnotation"><span class="api-symbol api-symbol--function"></span>GetAnnotation</a></li>
+    <li><a href="getannotationstore" title="GetAnnotationStore"><span class="api-symbol api-symbol--function"></span>GetAnnotationStore</a></li>
+    <li><a href="getattributedefinition" title="GetAttributeDefinition"><span class="api-symbol api-symbol--function"></span>GetAttributeDefinition</a></li>
+    <li><a href="getconsent" title="GetConsent"><span class="api-symbol api-symbol--function"></span>GetConsent</a></li>
+    <li><a href="getconsentartifact" title="GetConsentArtifact"><span class="api-symbol api-symbol--function"></span>GetConsentArtifact</a></li>
+    <li><a href="getconsentstore" title="GetConsentStore"><span class="api-symbol api-symbol--function"></span>GetConsentStore</a></li>
+    <li><a href="getdataset" title="GetDataset"><span class="api-symbol api-symbol--function"></span>GetDataset</a></li>
+    <li><a href="getdatasetannotationstoreiampolicy" title="GetDatasetAnnotationStoreIamPolicy"><span class="api-symbol api-symbol--function"></span>GetDatasetAnnotationStoreIamPolicy</a></li>
+    <li><a href="getdatasetconsentstoreiampolicy" title="GetDatasetConsentStoreIamPolicy"><span class="api-symbol api-symbol--function"></span>GetDatasetConsentStoreIamPolicy</a></li>
+    <li><a href="getdatasetdicomstoreiampolicy" title="GetDatasetDicomStoreIamPolicy"><span class="api-symbol api-symbol--function"></span>GetDatasetDicomStoreIamPolicy</a></li>
+    <li><a href="getdatasetfhirstoreiampolicy" title="GetDatasetFhirStoreIamPolicy"><span class="api-symbol api-symbol--function"></span>GetDatasetFhirStoreIamPolicy</a></li>
+    <li><a href="getdatasethl7v2storeiampolicy" title="GetDatasetHl7V2StoreIamPolicy"><span class="api-symbol api-symbol--function"></span>GetDatasetHl7V2StoreIamPolicy</a></li>
+    <li><a href="getdatasetiampolicy" title="GetDatasetIamPolicy"><span class="api-symbol api-symbol--function"></span>GetDatasetIamPolicy</a></li>
+    <li><a href="getdicomstore" title="GetDicomStore"><span class="api-symbol api-symbol--function"></span>GetDicomStore</a></li>
+    <li><a href="getfhir" title="GetFhir"><span class="api-symbol api-symbol--function"></span>GetFhir</a></li>
+    <li><a href="getfhirstore" title="GetFhirStore"><span class="api-symbol api-symbol--function"></span>GetFhirStore</a></li>
+    <li><a href="gethl7v2store" title="GetHl7V2Store"><span class="api-symbol api-symbol--function"></span>GetHl7V2Store</a></li>
+    <li><a href="getmessage" title="GetMessage"><span class="api-symbol api-symbol--function"></span>GetMessage</a></li>
+    <li><a href="getuserdatamapping" title="GetUserDataMapping"><span class="api-symbol api-symbol--function"></span>GetUserDataMapping</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -63,6 +63,6 @@ Explore the resources and functions of the google-native.healthcare/v1beta1 modu
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.0</dd>
+	<dd>0.8.0</dd>
 </dl>
 

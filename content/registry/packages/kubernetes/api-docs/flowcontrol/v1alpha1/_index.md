@@ -13,10 +13,10 @@ Explore the resources and functions of the kubernetes.flowcontrol/v1alpha1 modul
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="flowschema" title="FlowSchema"><span class="symbol resource"></span>FlowSchema</a></li>
-    <li><a href="flowschemalist" title="FlowSchemaList"><span class="symbol resource"></span>FlowSchemaList</a></li>
-    <li><a href="prioritylevelconfiguration" title="PriorityLevelConfiguration"><span class="symbol resource"></span>PriorityLevelConfiguration</a></li>
-    <li><a href="prioritylevelconfigurationlist" title="PriorityLevelConfigurationList"><span class="symbol resource"></span>PriorityLevelConfigurationList</a></li>
+    <li><a href="flowschema" title="FlowSchema"><span class="api-symbol api-symbol--resource"></span>FlowSchema</a></li>
+    <li><a href="flowschemalist" title="FlowSchemaList"><span class="api-symbol api-symbol--resource"></span>FlowSchemaList</a></li>
+    <li><a href="prioritylevelconfiguration" title="PriorityLevelConfiguration"><span class="api-symbol api-symbol--resource"></span>PriorityLevelConfiguration</a></li>
+    <li><a href="prioritylevelconfigurationlist" title="PriorityLevelConfigurationList"><span class="api-symbol api-symbol--resource"></span>PriorityLevelConfigurationList</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -26,6 +26,6 @@ Explore the resources and functions of the kubernetes.flowcontrol/v1alpha1 modul
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>3.8.0</dd>
+	<dd>3.8.1</dd>
 </dl>
 

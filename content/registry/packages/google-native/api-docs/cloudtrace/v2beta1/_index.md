@@ -13,12 +13,12 @@ Explore the resources and functions of the google-native.cloudtrace/v2beta1 modu
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="tracesink" title="TraceSink"><span class="symbol resource"></span>TraceSink</a></li>
+    <li><a href="tracesink" title="TraceSink"><span class="api-symbol api-symbol--resource"></span>TraceSink</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="gettracesink" title="GetTraceSink"><span class="symbol function"></span>GetTraceSink</a></li>
+    <li><a href="gettracesink" title="GetTraceSink"><span class="api-symbol api-symbol--function"></span>GetTraceSink</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -28,6 +28,6 @@ Explore the resources and functions of the google-native.cloudtrace/v2beta1 modu
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.0</dd>
+	<dd>0.8.0</dd>
 </dl>
 

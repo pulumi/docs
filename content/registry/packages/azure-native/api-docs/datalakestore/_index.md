@@ -13,18 +13,18 @@ Explore the resources and functions of the azure-native.datalakestore module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="account" title="Account"><span class="symbol resource"></span>Account</a></li>
-    <li><a href="firewallrule" title="FirewallRule"><span class="symbol resource"></span>FirewallRule</a></li>
-    <li><a href="trustedidprovider" title="TrustedIdProvider"><span class="symbol resource"></span>TrustedIdProvider</a></li>
-    <li><a href="virtualnetworkrule" title="VirtualNetworkRule"><span class="symbol resource"></span>VirtualNetworkRule</a></li>
+    <li><a href="account" title="Account"><span class="api-symbol api-symbol--resource"></span>Account</a></li>
+    <li><a href="firewallrule" title="FirewallRule"><span class="api-symbol api-symbol--resource"></span>FirewallRule</a></li>
+    <li><a href="trustedidprovider" title="TrustedIdProvider"><span class="api-symbol api-symbol--resource"></span>TrustedIdProvider</a></li>
+    <li><a href="virtualnetworkrule" title="VirtualNetworkRule"><span class="api-symbol api-symbol--resource"></span>VirtualNetworkRule</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getaccount" title="GetAccount"><span class="symbol function"></span>GetAccount</a></li>
-    <li><a href="getfirewallrule" title="GetFirewallRule"><span class="symbol function"></span>GetFirewallRule</a></li>
-    <li><a href="gettrustedidprovider" title="GetTrustedIdProvider"><span class="symbol function"></span>GetTrustedIdProvider</a></li>
-    <li><a href="getvirtualnetworkrule" title="GetVirtualNetworkRule"><span class="symbol function"></span>GetVirtualNetworkRule</a></li>
+    <li><a href="getaccount" title="GetAccount"><span class="api-symbol api-symbol--function"></span>GetAccount</a></li>
+    <li><a href="getfirewallrule" title="GetFirewallRule"><span class="api-symbol api-symbol--function"></span>GetFirewallRule</a></li>
+    <li><a href="gettrustedidprovider" title="GetTrustedIdProvider"><span class="api-symbol api-symbol--function"></span>GetTrustedIdProvider</a></li>
+    <li><a href="getvirtualnetworkrule" title="GetVirtualNetworkRule"><span class="api-symbol api-symbol--function"></span>GetVirtualNetworkRule</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -34,6 +34,6 @@ Explore the resources and functions of the azure-native.datalakestore module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.36.0</dd>
+	<dd>1.37.0</dd>
 </dl>
 

@@ -13,12 +13,12 @@ Explore the resources and functions of the google-native.firebaseml/v1beta2 modu
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="model" title="Model"><span class="symbol resource"></span>Model</a></li>
+    <li><a href="model" title="Model"><span class="api-symbol api-symbol--resource"></span>Model</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getmodel" title="GetModel"><span class="symbol function"></span>GetModel</a></li>
+    <li><a href="getmodel" title="GetModel"><span class="api-symbol api-symbol--function"></span>GetModel</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -28,6 +28,6 @@ Explore the resources and functions of the google-native.firebaseml/v1beta2 modu
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.0</dd>
+	<dd>0.8.0</dd>
 </dl>
 

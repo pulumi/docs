@@ -13,24 +13,24 @@ Explore the resources and functions of the google-native.privateca/v1 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="capool" title="CaPool"><span class="symbol resource"></span>CaPool</a></li>
-    <li><a href="capoolcertificateauthoritycertificaterevocationlistiampolicy" title="CaPoolCertificateAuthorityCertificateRevocationListIamPolicy"><span class="symbol resource"></span>CaPoolCertificateAuthorityCertificateRevocationListIamPolicy</a></li>
-    <li><a href="capooliampolicy" title="CaPoolIamPolicy"><span class="symbol resource"></span>CaPoolIamPolicy</a></li>
-    <li><a href="certificate" title="Certificate"><span class="symbol resource"></span>Certificate</a></li>
-    <li><a href="certificateauthority" title="CertificateAuthority"><span class="symbol resource"></span>CertificateAuthority</a></li>
-    <li><a href="certificatetemplate" title="CertificateTemplate"><span class="symbol resource"></span>CertificateTemplate</a></li>
-    <li><a href="certificatetemplateiampolicy" title="CertificateTemplateIamPolicy"><span class="symbol resource"></span>CertificateTemplateIamPolicy</a></li>
+    <li><a href="capool" title="CaPool"><span class="api-symbol api-symbol--resource"></span>CaPool</a></li>
+    <li><a href="capoolcertificateauthoritycertificaterevocationlistiampolicy" title="CaPoolCertificateAuthorityCertificateRevocationListIamPolicy"><span class="api-symbol api-symbol--resource"></span>CaPoolCertificateAuthorityCertificateRevocationListIamPolicy</a></li>
+    <li><a href="capooliampolicy" title="CaPoolIamPolicy"><span class="api-symbol api-symbol--resource"></span>CaPoolIamPolicy</a></li>
+    <li><a href="certificate" title="Certificate"><span class="api-symbol api-symbol--resource"></span>Certificate</a></li>
+    <li><a href="certificateauthority" title="CertificateAuthority"><span class="api-symbol api-symbol--resource"></span>CertificateAuthority</a></li>
+    <li><a href="certificatetemplate" title="CertificateTemplate"><span class="api-symbol api-symbol--resource"></span>CertificateTemplate</a></li>
+    <li><a href="certificatetemplateiampolicy" title="CertificateTemplateIamPolicy"><span class="api-symbol api-symbol--resource"></span>CertificateTemplateIamPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getcapool" title="GetCaPool"><span class="symbol function"></span>GetCaPool</a></li>
-    <li><a href="getcapoolcertificateauthoritycertificaterevocationlistiampolicy" title="GetCaPoolCertificateAuthorityCertificateRevocationListIamPolicy"><span class="symbol function"></span>GetCaPoolCertificateAuthorityCertificateRevocationListIamPolicy</a></li>
-    <li><a href="getcapooliampolicy" title="GetCaPoolIamPolicy"><span class="symbol function"></span>GetCaPoolIamPolicy</a></li>
-    <li><a href="getcertificate" title="GetCertificate"><span class="symbol function"></span>GetCertificate</a></li>
-    <li><a href="getcertificateauthority" title="GetCertificateAuthority"><span class="symbol function"></span>GetCertificateAuthority</a></li>
-    <li><a href="getcertificatetemplate" title="GetCertificateTemplate"><span class="symbol function"></span>GetCertificateTemplate</a></li>
-    <li><a href="getcertificatetemplateiampolicy" title="GetCertificateTemplateIamPolicy"><span class="symbol function"></span>GetCertificateTemplateIamPolicy</a></li>
+    <li><a href="getcapool" title="GetCaPool"><span class="api-symbol api-symbol--function"></span>GetCaPool</a></li>
+    <li><a href="getcapoolcertificateauthoritycertificaterevocationlistiampolicy" title="GetCaPoolCertificateAuthorityCertificateRevocationListIamPolicy"><span class="api-symbol api-symbol--function"></span>GetCaPoolCertificateAuthorityCertificateRevocationListIamPolicy</a></li>
+    <li><a href="getcapooliampolicy" title="GetCaPoolIamPolicy"><span class="api-symbol api-symbol--function"></span>GetCaPoolIamPolicy</a></li>
+    <li><a href="getcertificate" title="GetCertificate"><span class="api-symbol api-symbol--function"></span>GetCertificate</a></li>
+    <li><a href="getcertificateauthority" title="GetCertificateAuthority"><span class="api-symbol api-symbol--function"></span>GetCertificateAuthority</a></li>
+    <li><a href="getcertificatetemplate" title="GetCertificateTemplate"><span class="api-symbol api-symbol--function"></span>GetCertificateTemplate</a></li>
+    <li><a href="getcertificatetemplateiampolicy" title="GetCertificateTemplateIamPolicy"><span class="api-symbol api-symbol--function"></span>GetCertificateTemplateIamPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -40,6 +40,6 @@ Explore the resources and functions of the google-native.privateca/v1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.0</dd>
+	<dd>0.8.0</dd>
 </dl>
 

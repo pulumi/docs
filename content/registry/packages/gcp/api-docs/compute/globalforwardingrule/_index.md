@@ -43,7 +43,7 @@ class MyStack : Stack
         // External HTTP load balancer with a CDN-enabled managed instance group backend
         // and custom request and response headers
         // VPC
-        var xlbNetwork = new Gcp.Compute.Network("xlbNetwork", new Gcp.Compute.NetworkArgs
+        var defaultNetwork = new Gcp.Compute.Network("defaultNetwork", new Gcp.Compute.NetworkArgs
         {
             AutoCreateSubnetworks = false,
         }, new CustomResourceOptions
@@ -51,14 +51,18 @@ class MyStack : Stack
             Provider = google,
         });
         // backend subnet
-        var xlbSubnet = new Gcp.Compute.Subnetwork("xlbSubnet", new Gcp.Compute.SubnetworkArgs
+        var defaultSubnetwork = new Gcp.Compute.Subnetwork("defaultSubnetwork", new Gcp.Compute.SubnetworkArgs
         {
             IpCidrRange = "10.0.1.0/24",
             Region = "us-central1",
-            Network = xlbNetwork.Id,
+            Network = defaultNetwork.Id,
         }, new CustomResourceOptions
         {
             Provider = google,
+        });
+        // reserved IP address
+        var defaultGlobalAddress = new Gcp.Compute.GlobalAddress("defaultGlobalAddress", new Gcp.Compute.GlobalAddressArgs
+        {
         });
         // health check
         var defaultHealthCheck = new Gcp.Compute.HealthCheck("defaultHealthCheck", new Gcp.Compute.HealthCheckArgs
@@ -72,7 +76,7 @@ class MyStack : Stack
             Provider = google,
         });
         // instance template
-        var instanceTemplate = new Gcp.Compute.InstanceTemplate("instanceTemplate", new Gcp.Compute.InstanceTemplateArgs
+        var defaultInstanceTemplate = new Gcp.Compute.InstanceTemplate("defaultInstanceTemplate", new Gcp.Compute.InstanceTemplateArgs
         {
             MachineType = "e2-small",
             Tags = 
@@ -83,8 +87,8 @@ class MyStack : Stack
             {
                 new Gcp.Compute.Inputs.InstanceTemplateNetworkInterfaceArgs
                 {
-                    Network = xlbNetwork.Id,
-                    Subnetwork = xlbSubnet.Id,
+                    Network = defaultNetwork.Id,
+                    Subnetwork = defaultSubnetwork.Id,
                     AccessConfigs = 
                     {
                         ,
@@ -127,7 +131,7 @@ EOF
             Provider = google,
         });
         // MIG
-        var mig = new Gcp.Compute.InstanceGroupManager("mig", new Gcp.Compute.InstanceGroupManagerArgs
+        var defaultInstanceGroupManager = new Gcp.Compute.InstanceGroupManager("defaultInstanceGroupManager", new Gcp.Compute.InstanceGroupManagerArgs
         {
             Zone = "us-central1-c",
             NamedPorts = 
@@ -142,7 +146,7 @@ EOF
             {
                 new Gcp.Compute.Inputs.InstanceGroupManagerVersionArgs
                 {
-                    InstanceTemplate = instanceTemplate.Id,
+                    InstanceTemplate = defaultInstanceTemplate.Id,
                     Name = "primary",
                 },
             },
@@ -176,7 +180,7 @@ EOF
             {
                 new Gcp.Compute.Inputs.BackendServiceBackendArgs
                 {
-                    Group = mig.InstanceGroup,
+                    Group = defaultInstanceGroupManager.InstanceGroup,
                     BalancingMode = "UTILIZATION",
                     CapacityScaler = 1,
                 },
@@ -202,21 +206,22 @@ EOF
             Provider = google,
         });
         // forwarding rule
-        var googleComputeGlobalForwardingRule = new Gcp.Compute.GlobalForwardingRule("googleComputeGlobalForwardingRule", new Gcp.Compute.GlobalForwardingRuleArgs
+        var defaultGlobalForwardingRule = new Gcp.Compute.GlobalForwardingRule("defaultGlobalForwardingRule", new Gcp.Compute.GlobalForwardingRuleArgs
         {
             IpProtocol = "TCP",
             LoadBalancingScheme = "EXTERNAL",
             PortRange = "80",
             Target = defaultTargetHttpProxy.Id,
+            IpAddress = defaultGlobalAddress.Id,
         }, new CustomResourceOptions
         {
             Provider = google,
         });
         // allow access from health check ranges
-        var fwHealthCheck = new Gcp.Compute.Firewall("fwHealthCheck", new Gcp.Compute.FirewallArgs
+        var defaultFirewall = new Gcp.Compute.Firewall("defaultFirewall", new Gcp.Compute.FirewallArgs
         {
             Direction = "INGRESS",
-            Network = xlbNetwork.Id,
+            Network = defaultNetwork.Id,
             SourceRanges = 
             {
                 "130.211.0.0/22",
@@ -260,17 +265,21 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		xlbNetwork, err := compute.NewNetwork(ctx, "xlbNetwork", &compute.NetworkArgs{
+		defaultNetwork, err := compute.NewNetwork(ctx, "defaultNetwork", &compute.NetworkArgs{
 			AutoCreateSubnetworks: pulumi.Bool(false),
 		}, pulumi.Provider(google))
 		if err != nil {
 			return err
 		}
-		xlbSubnet, err := compute.NewSubnetwork(ctx, "xlbSubnet", &compute.SubnetworkArgs{
+		defaultSubnetwork, err := compute.NewSubnetwork(ctx, "defaultSubnetwork", &compute.SubnetworkArgs{
 			IpCidrRange: pulumi.String("10.0.1.0/24"),
 			Region:      pulumi.String("us-central1"),
-			Network:     xlbNetwork.ID(),
+			Network:     defaultNetwork.ID(),
 		}, pulumi.Provider(google))
+		if err != nil {
+			return err
+		}
+		defaultGlobalAddress, err := compute.NewGlobalAddress(ctx, "defaultGlobalAddress", nil)
 		if err != nil {
 			return err
 		}
@@ -282,15 +291,15 @@ func main() {
 		if err != nil {
 			return err
 		}
-		instanceTemplate, err := compute.NewInstanceTemplate(ctx, "instanceTemplate", &compute.InstanceTemplateArgs{
+		defaultInstanceTemplate, err := compute.NewInstanceTemplate(ctx, "defaultInstanceTemplate", &compute.InstanceTemplateArgs{
 			MachineType: pulumi.String("e2-small"),
 			Tags: pulumi.StringArray{
 				pulumi.String("allow-health-check"),
 			},
 			NetworkInterfaces: compute.InstanceTemplateNetworkInterfaceArray{
 				&compute.InstanceTemplateNetworkInterfaceArgs{
-					Network:    xlbNetwork.ID(),
-					Subnetwork: xlbSubnet.ID(),
+					Network:    defaultNetwork.ID(),
+					Subnetwork: defaultSubnetwork.ID(),
 					AccessConfigs: compute.InstanceTemplateNetworkInterfaceAccessConfigArray{
 						nil,
 					},
@@ -310,7 +319,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		mig, err := compute.NewInstanceGroupManager(ctx, "mig", &compute.InstanceGroupManagerArgs{
+		defaultInstanceGroupManager, err := compute.NewInstanceGroupManager(ctx, "defaultInstanceGroupManager", &compute.InstanceGroupManagerArgs{
 			Zone: pulumi.String("us-central1-c"),
 			NamedPorts: compute.InstanceGroupManagerNamedPortArray{
 				&compute.InstanceGroupManagerNamedPortArgs{
@@ -320,7 +329,7 @@ func main() {
 			},
 			Versions: compute.InstanceGroupManagerVersionArray{
 				&compute.InstanceGroupManagerVersionArgs{
-					InstanceTemplate: instanceTemplate.ID(),
+					InstanceTemplate: defaultInstanceTemplate.ID(),
 					Name:             pulumi.String("primary"),
 				},
 			},
@@ -347,7 +356,7 @@ func main() {
 			},
 			Backends: compute.BackendServiceBackendArray{
 				&compute.BackendServiceBackendArgs{
-					Group:          mig.InstanceGroup,
+					Group:          defaultInstanceGroupManager.InstanceGroup,
 					BalancingMode:  pulumi.String("UTILIZATION"),
 					CapacityScaler: pulumi.Float64(1),
 				},
@@ -368,18 +377,19 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = compute.NewGlobalForwardingRule(ctx, "googleComputeGlobalForwardingRule", &compute.GlobalForwardingRuleArgs{
+		_, err = compute.NewGlobalForwardingRule(ctx, "defaultGlobalForwardingRule", &compute.GlobalForwardingRuleArgs{
 			IpProtocol:          pulumi.String("TCP"),
 			LoadBalancingScheme: pulumi.String("EXTERNAL"),
 			PortRange:           pulumi.String("80"),
 			Target:              defaultTargetHttpProxy.ID(),
+			IpAddress:           defaultGlobalAddress.ID(),
 		}, pulumi.Provider(google))
 		if err != nil {
 			return err
 		}
-		_, err = compute.NewFirewall(ctx, "fwHealthCheck", &compute.FirewallArgs{
+		_, err = compute.NewFirewall(ctx, "defaultFirewall", &compute.FirewallArgs{
 			Direction: pulumi.String("INGRESS"),
-			Network:   xlbNetwork.ID(),
+			Network:   defaultNetwork.ID(),
 			SourceRanges: pulumi.StringArray{
 				pulumi.String("130.211.0.0/22"),
 				pulumi.String("35.191.0.0/16"),
@@ -414,26 +424,28 @@ import pulumi_gcp as gcp
 # External HTTP load balancer with a CDN-enabled managed instance group backend
 # and custom request and response headers
 # VPC
-xlb_network = gcp.compute.Network("xlbNetwork", auto_create_subnetworks=False,
+default_network = gcp.compute.Network("defaultNetwork", auto_create_subnetworks=False,
 opts=pulumi.ResourceOptions(provider=google))
 # backend subnet
-xlb_subnet = gcp.compute.Subnetwork("xlbSubnet",
+default_subnetwork = gcp.compute.Subnetwork("defaultSubnetwork",
     ip_cidr_range="10.0.1.0/24",
     region="us-central1",
-    network=xlb_network.id,
+    network=default_network.id,
     opts=pulumi.ResourceOptions(provider=google))
+# reserved IP address
+default_global_address = gcp.compute.GlobalAddress("defaultGlobalAddress")
 # health check
 default_health_check = gcp.compute.HealthCheck("defaultHealthCheck", http_health_check=gcp.compute.HealthCheckHttpHealthCheckArgs(
     port_specification="USE_SERVING_PORT",
 ),
 opts=pulumi.ResourceOptions(provider=google))
 # instance template
-instance_template = gcp.compute.InstanceTemplate("instanceTemplate",
+default_instance_template = gcp.compute.InstanceTemplate("defaultInstanceTemplate",
     machine_type="e2-small",
     tags=["allow-health-check"],
     network_interfaces=[gcp.compute.InstanceTemplateNetworkInterfaceArgs(
-        network=xlb_network.id,
-        subnetwork=xlb_subnet.id,
+        network=default_network.id,
+        subnetwork=default_subnetwork.id,
         access_configs=[gcp.compute.InstanceTemplateNetworkInterfaceAccessConfigArgs()],
     )],
     disks=[gcp.compute.InstanceTemplateDiskArgs(
@@ -464,14 +476,14 @@ EOF
     },
     opts=pulumi.ResourceOptions(provider=google))
 # MIG
-mig = gcp.compute.InstanceGroupManager("mig",
+default_instance_group_manager = gcp.compute.InstanceGroupManager("defaultInstanceGroupManager",
     zone="us-central1-c",
     named_ports=[gcp.compute.InstanceGroupManagerNamedPortArgs(
         name="http",
         port=8080,
     )],
     versions=[gcp.compute.InstanceGroupManagerVersionArgs(
-        instance_template=instance_template.id,
+        instance_template=default_instance_template.id,
         name="primary",
     )],
     base_instance_name="vm",
@@ -488,7 +500,7 @@ default_backend_service = gcp.compute.BackendService("defaultBackendService",
     custom_response_headers=["X-Cache-Hit: {cdn_cache_status}"],
     health_checks=[default_health_check.id],
     backends=[gcp.compute.BackendServiceBackendArgs(
-        group=mig.instance_group,
+        group=default_instance_group_manager.instance_group,
         balancing_mode="UTILIZATION",
         capacity_scaler=1,
     )],
@@ -500,16 +512,17 @@ opts=pulumi.ResourceOptions(provider=google))
 default_target_http_proxy = gcp.compute.TargetHttpProxy("defaultTargetHttpProxy", url_map=default_url_map.id,
 opts=pulumi.ResourceOptions(provider=google))
 # forwarding rule
-google_compute_global_forwarding_rule = gcp.compute.GlobalForwardingRule("googleComputeGlobalForwardingRule",
+default_global_forwarding_rule = gcp.compute.GlobalForwardingRule("defaultGlobalForwardingRule",
     ip_protocol="TCP",
     load_balancing_scheme="EXTERNAL",
     port_range="80",
     target=default_target_http_proxy.id,
+    ip_address=default_global_address.id,
     opts=pulumi.ResourceOptions(provider=google))
 # allow access from health check ranges
-fw_health_check = gcp.compute.Firewall("fwHealthCheck",
+default_firewall = gcp.compute.Firewall("defaultFirewall",
     direction="INGRESS",
-    network=xlb_network.id,
+    network=default_network.id,
     source_ranges=[
         "130.211.0.0/22",
         "35.191.0.0/16",
@@ -535,17 +548,19 @@ import * as gcp from "@pulumi/gcp";
 // External HTTP load balancer with a CDN-enabled managed instance group backend
 // and custom request and response headers
 // VPC
-const xlbNetwork = new gcp.compute.Network("xlbNetwork", {autoCreateSubnetworks: false}, {
+const defaultNetwork = new gcp.compute.Network("defaultNetwork", {autoCreateSubnetworks: false}, {
     provider: google,
 });
 // backend subnet
-const xlbSubnet = new gcp.compute.Subnetwork("xlbSubnet", {
+const defaultSubnetwork = new gcp.compute.Subnetwork("defaultSubnetwork", {
     ipCidrRange: "10.0.1.0/24",
     region: "us-central1",
-    network: xlbNetwork.id,
+    network: defaultNetwork.id,
 }, {
     provider: google,
 });
+// reserved IP address
+const defaultGlobalAddress = new gcp.compute.GlobalAddress("defaultGlobalAddress", {});
 // health check
 const defaultHealthCheck = new gcp.compute.HealthCheck("defaultHealthCheck", {httpHealthCheck: {
     portSpecification: "USE_SERVING_PORT",
@@ -553,12 +568,12 @@ const defaultHealthCheck = new gcp.compute.HealthCheck("defaultHealthCheck", {ht
     provider: google,
 });
 // instance template
-const instanceTemplate = new gcp.compute.InstanceTemplate("instanceTemplate", {
+const defaultInstanceTemplate = new gcp.compute.InstanceTemplate("defaultInstanceTemplate", {
     machineType: "e2-small",
     tags: ["allow-health-check"],
     networkInterfaces: [{
-        network: xlbNetwork.id,
-        subnetwork: xlbSubnet.id,
+        network: defaultNetwork.id,
+        subnetwork: defaultSubnetwork.id,
         accessConfigs: [{}],
     }],
     disks: [{
@@ -591,14 +606,14 @@ EOF
     provider: google,
 });
 // MIG
-const mig = new gcp.compute.InstanceGroupManager("mig", {
+const defaultInstanceGroupManager = new gcp.compute.InstanceGroupManager("defaultInstanceGroupManager", {
     zone: "us-central1-c",
     namedPorts: [{
         name: "http",
         port: 8080,
     }],
     versions: [{
-        instanceTemplate: instanceTemplate.id,
+        instanceTemplate: defaultInstanceTemplate.id,
         name: "primary",
     }],
     baseInstanceName: "vm",
@@ -617,7 +632,7 @@ const defaultBackendService = new gcp.compute.BackendService("defaultBackendServ
     customResponseHeaders: ["X-Cache-Hit: {cdn_cache_status}"],
     healthChecks: [defaultHealthCheck.id],
     backends: [{
-        group: mig.instanceGroup,
+        group: defaultInstanceGroupManager.instanceGroup,
         balancingMode: "UTILIZATION",
         capacityScaler: 1,
     }],
@@ -633,18 +648,19 @@ const defaultTargetHttpProxy = new gcp.compute.TargetHttpProxy("defaultTargetHtt
     provider: google,
 });
 // forwarding rule
-const googleComputeGlobalForwardingRule = new gcp.compute.GlobalForwardingRule("googleComputeGlobalForwardingRule", {
+const defaultGlobalForwardingRule = new gcp.compute.GlobalForwardingRule("defaultGlobalForwardingRule", {
     ipProtocol: "TCP",
     loadBalancingScheme: "EXTERNAL",
     portRange: "80",
     target: defaultTargetHttpProxy.id,
+    ipAddress: defaultGlobalAddress.id,
 }, {
     provider: google,
 });
 // allow access from health check ranges
-const fwHealthCheck = new gcp.compute.Firewall("fwHealthCheck", {
+const defaultFirewall = new gcp.compute.Firewall("defaultFirewall", {
     direction: "INGRESS",
-    network: xlbNetwork.id,
+    network: defaultNetwork.id,
     sourceRanges: [
         "130.211.0.0/22",
         "35.191.0.0/16",

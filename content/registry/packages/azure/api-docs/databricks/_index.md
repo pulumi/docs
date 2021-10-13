@@ -13,14 +13,14 @@ Explore the resources and functions of the azure.databricks module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="workspace" title="Workspace"><span class="symbol resource"></span>Workspace</a></li>
-    <li><a href="workspacecustomermanagedkey" title="WorkspaceCustomerManagedKey"><span class="symbol resource"></span>WorkspaceCustomerManagedKey</a></li>
+    <li><a href="workspace" title="Workspace"><span class="api-symbol api-symbol--resource"></span>Workspace</a></li>
+    <li><a href="workspacecustomermanagedkey" title="WorkspaceCustomerManagedKey"><span class="api-symbol api-symbol--resource"></span>WorkspaceCustomerManagedKey</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getworkspace" title="GetWorkspace"><span class="symbol function"></span>GetWorkspace</a></li>
-    <li><a href="getworkspaceprivateendpointconnection" title="GetWorkspacePrivateEndpointConnection"><span class="symbol function"></span>GetWorkspacePrivateEndpointConnection</a></li>
+    <li><a href="getworkspace" title="GetWorkspace"><span class="api-symbol api-symbol--function"></span>GetWorkspace</a></li>
+    <li><a href="getworkspaceprivateendpointconnection" title="GetWorkspacePrivateEndpointConnection"><span class="api-symbol api-symbol--function"></span>GetWorkspacePrivateEndpointConnection</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -32,6 +32,6 @@ Explore the resources and functions of the azure.databricks module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.21.0</dd>
+	<dd>4.22.0</dd>
 </dl>
 

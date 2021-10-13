@@ -13,19 +13,19 @@ Explore the resources and functions of the alicloud.sae module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="application" title="Application"><span class="symbol resource"></span>Application</a></li>
-    <li><a href="configmap" title="ConfigMap"><span class="symbol resource"></span>ConfigMap</a></li>
-    <li><a href="ingress" title="Ingress"><span class="symbol resource"></span>Ingress</a></li>
-    <li><a href="namespace" title="Namespace"><span class="symbol resource"></span>Namespace</a></li>
+    <li><a href="application" title="Application"><span class="api-symbol api-symbol--resource"></span>Application</a></li>
+    <li><a href="configmap" title="ConfigMap"><span class="api-symbol api-symbol--resource"></span>ConfigMap</a></li>
+    <li><a href="ingress" title="Ingress"><span class="api-symbol api-symbol--resource"></span>Ingress</a></li>
+    <li><a href="namespace" title="Namespace"><span class="api-symbol api-symbol--resource"></span>Namespace</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getapplications" title="GetApplications"><span class="symbol function"></span>GetApplications</a></li>
-    <li><a href="getconfigmaps" title="GetConfigMaps"><span class="symbol function"></span>GetConfigMaps</a></li>
-    <li><a href="getingresses" title="GetIngresses"><span class="symbol function"></span>GetIngresses</a></li>
-    <li><a href="getnamespaces" title="GetNamespaces"><span class="symbol function"></span>GetNamespaces</a></li>
-    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
+    <li><a href="getapplications" title="GetApplications"><span class="api-symbol api-symbol--function"></span>GetApplications</a></li>
+    <li><a href="getconfigmaps" title="GetConfigMaps"><span class="api-symbol api-symbol--function"></span>GetConfigMaps</a></li>
+    <li><a href="getingresses" title="GetIngresses"><span class="api-symbol api-symbol--function"></span>GetIngresses</a></li>
+    <li><a href="getnamespaces" title="GetNamespaces"><span class="api-symbol api-symbol--function"></span>GetNamespaces</a></li>
+    <li><a href="getservice" title="GetService"><span class="api-symbol api-symbol--function"></span>GetService</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

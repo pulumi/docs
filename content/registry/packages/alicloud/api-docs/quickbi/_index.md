@@ -13,12 +13,12 @@ Explore the resources and functions of the alicloud.quickbi module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
+    <li><a href="user" title="User"><span class="api-symbol api-symbol--resource"></span>User</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getusers" title="GetUsers"><span class="symbol function"></span>GetUsers</a></li>
+    <li><a href="getusers" title="GetUsers"><span class="api-symbol api-symbol--function"></span>GetUsers</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

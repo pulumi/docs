@@ -13,7 +13,7 @@ Explore the resources and functions of the azuredevops.Security module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="resourceauthorization" title="ResourceAuthorization"><span class="symbol resource"></span>ResourceAuthorization</a></li>
+    <li><a href="resourceauthorization" title="ResourceAuthorization"><span class="api-symbol api-symbol--resource"></span>ResourceAuthorization</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

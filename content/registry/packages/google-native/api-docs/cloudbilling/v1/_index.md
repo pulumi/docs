@@ -13,14 +13,14 @@ Explore the resources and functions of the google-native.cloudbilling/v1 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="billingaccount" title="BillingAccount"><span class="symbol resource"></span>BillingAccount</a></li>
-    <li><a href="billingaccountiampolicy" title="BillingAccountIamPolicy"><span class="symbol resource"></span>BillingAccountIamPolicy</a></li>
+    <li><a href="billingaccount" title="BillingAccount"><span class="api-symbol api-symbol--resource"></span>BillingAccount</a></li>
+    <li><a href="billingaccountiampolicy" title="BillingAccountIamPolicy"><span class="api-symbol api-symbol--resource"></span>BillingAccountIamPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getbillingaccount" title="GetBillingAccount"><span class="symbol function"></span>GetBillingAccount</a></li>
-    <li><a href="getbillingaccountiampolicy" title="GetBillingAccountIamPolicy"><span class="symbol function"></span>GetBillingAccountIamPolicy</a></li>
+    <li><a href="getbillingaccount" title="GetBillingAccount"><span class="api-symbol api-symbol--function"></span>GetBillingAccount</a></li>
+    <li><a href="getbillingaccountiampolicy" title="GetBillingAccountIamPolicy"><span class="api-symbol api-symbol--function"></span>GetBillingAccountIamPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -30,6 +30,6 @@ Explore the resources and functions of the google-native.cloudbilling/v1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.0</dd>
+	<dd>0.8.0</dd>
 </dl>
 

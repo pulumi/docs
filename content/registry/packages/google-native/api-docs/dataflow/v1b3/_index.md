@@ -13,14 +13,14 @@ Explore the resources and functions of the google-native.dataflow/v1b3 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="job" title="Job"><span class="symbol resource"></span>Job</a></li>
-    <li><a href="template" title="Template"><span class="symbol resource"></span>Template</a></li>
+    <li><a href="job" title="Job"><span class="api-symbol api-symbol--resource"></span>Job</a></li>
+    <li><a href="template" title="Template"><span class="api-symbol api-symbol--resource"></span>Template</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getjob" title="GetJob"><span class="symbol function"></span>GetJob</a></li>
-    <li><a href="gettemplate" title="GetTemplate"><span class="symbol function"></span>GetTemplate</a></li>
+    <li><a href="getjob" title="GetJob"><span class="api-symbol api-symbol--function"></span>GetJob</a></li>
+    <li><a href="gettemplate" title="GetTemplate"><span class="api-symbol api-symbol--function"></span>GetTemplate</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -30,6 +30,6 @@ Explore the resources and functions of the google-native.dataflow/v1b3 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.7.0</dd>
+	<dd>0.8.0</dd>
 </dl>
 

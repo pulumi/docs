@@ -13,14 +13,14 @@ Explore the resources and functions of the azure-native.scheduler module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="job" title="Job"><span class="symbol resource"></span>Job</a></li>
-    <li><a href="jobcollection" title="JobCollection"><span class="symbol resource"></span>JobCollection</a></li>
+    <li><a href="job" title="Job"><span class="api-symbol api-symbol--resource"></span>Job</a></li>
+    <li><a href="jobcollection" title="JobCollection"><span class="api-symbol api-symbol--resource"></span>JobCollection</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getjob" title="GetJob"><span class="symbol function"></span>GetJob</a></li>
-    <li><a href="getjobcollection" title="GetJobCollection"><span class="symbol function"></span>GetJobCollection</a></li>
+    <li><a href="getjob" title="GetJob"><span class="api-symbol api-symbol--function"></span>GetJob</a></li>
+    <li><a href="getjobcollection" title="GetJobCollection"><span class="api-symbol api-symbol--function"></span>GetJobCollection</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -30,6 +30,6 @@ Explore the resources and functions of the azure-native.scheduler module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.36.0</dd>
+	<dd>1.37.0</dd>
 </dl>
 

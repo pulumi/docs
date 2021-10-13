@@ -13,9 +13,9 @@ Explore the resources and functions of the aws-native.amplify module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="app" title="App"><span class="symbol resource"></span>App</a></li>
-    <li><a href="branch" title="Branch"><span class="symbol resource"></span>Branch</a></li>
-    <li><a href="domain" title="Domain"><span class="symbol resource"></span>Domain</a></li>
+    <li><a href="app" title="App"><span class="api-symbol api-symbol--resource"></span>App</a></li>
+    <li><a href="branch" title="Branch"><span class="api-symbol api-symbol--resource"></span>Branch</a></li>
+    <li><a href="domain" title="Domain"><span class="api-symbol api-symbol--resource"></span>Domain</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -25,6 +25,6 @@ Explore the resources and functions of the aws-native.amplify module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.0</dd>
 </dl>
 

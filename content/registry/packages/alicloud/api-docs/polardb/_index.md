@@ -13,23 +13,23 @@ Explore the resources and functions of the alicloud.polardb module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="account" title="Account"><span class="symbol resource"></span>Account</a></li>
-    <li><a href="accountprivilege" title="AccountPrivilege"><span class="symbol resource"></span>AccountPrivilege</a></li>
-    <li><a href="backuppolicy" title="BackupPolicy"><span class="symbol resource"></span>BackupPolicy</a></li>
-    <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
-    <li><a href="database" title="Database"><span class="symbol resource"></span>Database</a></li>
-    <li><a href="endpoint" title="Endpoint"><span class="symbol resource"></span>Endpoint</a></li>
-    <li><a href="endpointaddress" title="EndpointAddress"><span class="symbol resource"></span>EndpointAddress</a></li>
+    <li><a href="account" title="Account"><span class="api-symbol api-symbol--resource"></span>Account</a></li>
+    <li><a href="accountprivilege" title="AccountPrivilege"><span class="api-symbol api-symbol--resource"></span>AccountPrivilege</a></li>
+    <li><a href="backuppolicy" title="BackupPolicy"><span class="api-symbol api-symbol--resource"></span>BackupPolicy</a></li>
+    <li><a href="cluster" title="Cluster"><span class="api-symbol api-symbol--resource"></span>Cluster</a></li>
+    <li><a href="database" title="Database"><span class="api-symbol api-symbol--resource"></span>Database</a></li>
+    <li><a href="endpoint" title="Endpoint"><span class="api-symbol api-symbol--resource"></span>Endpoint</a></li>
+    <li><a href="endpointaddress" title="EndpointAddress"><span class="api-symbol api-symbol--resource"></span>EndpointAddress</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getaccounts" title="GetAccounts"><span class="symbol function"></span>GetAccounts</a></li>
-    <li><a href="getclusters" title="GetClusters"><span class="symbol function"></span>GetClusters</a></li>
-    <li><a href="getdatabases" title="GetDatabases"><span class="symbol function"></span>GetDatabases</a></li>
-    <li><a href="getendpoints" title="GetEndpoints"><span class="symbol function"></span>GetEndpoints</a></li>
-    <li><a href="getnodeclasses" title="GetNodeClasses"><span class="symbol function"></span>GetNodeClasses</a></li>
-    <li><a href="getzones" title="GetZones"><span class="symbol function"></span>GetZones</a></li>
+    <li><a href="getaccounts" title="GetAccounts"><span class="api-symbol api-symbol--function"></span>GetAccounts</a></li>
+    <li><a href="getclusters" title="GetClusters"><span class="api-symbol api-symbol--function"></span>GetClusters</a></li>
+    <li><a href="getdatabases" title="GetDatabases"><span class="api-symbol api-symbol--function"></span>GetDatabases</a></li>
+    <li><a href="getendpoints" title="GetEndpoints"><span class="api-symbol api-symbol--function"></span>GetEndpoints</a></li>
+    <li><a href="getnodeclasses" title="GetNodeClasses"><span class="api-symbol api-symbol--function"></span>GetNodeClasses</a></li>
+    <li><a href="getzones" title="GetZones"><span class="api-symbol api-symbol--function"></span>GetZones</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

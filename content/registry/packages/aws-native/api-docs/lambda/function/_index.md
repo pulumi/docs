@@ -403,6 +403,7 @@ const _function = new aws_native.lambda.Function("function", {
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Function</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">architectures</span><span class="p">:</span> <span class="nx">Optional[Sequence[_lambda_.FunctionArchitecturesItem]]</span> = None<span class="p">,</span>
              <span class="nx">code</span><span class="p">:</span> <span class="nx">Optional[_lambda_.FunctionCodeArgs]</span> = None<span class="p">,</span>
              <span class="nx">code_signing_config_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">dead_letter_config</span><span class="p">:</span> <span class="nx">Optional[_lambda_.FunctionDeadLetterConfigArgs]</span> = None<span class="p">,</span>
@@ -568,6 +569,14 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the function's execution role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="architectures_csharp">
+<a href="#architectures_csharp" style="color: inherit; text-decoration: inherit;">Architectures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#functionarchitecturesitem">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Lambda.<wbr>Function<wbr>Architectures<wbr>Item&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="codesigningconfigarn_csharp">
 <a href="#codesigningconfigarn_csharp" style="color: inherit; text-decoration: inherit;">Code<wbr>Signing<wbr>Config<wbr>Arn</a>
 </span>
@@ -731,6 +740,14 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the function's execution role.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="architectures_go">
+<a href="#architectures_go" style="color: inherit; text-decoration: inherit;">Architectures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#functionarchitecturesitem">[]Function<wbr>Architectures<wbr>Item</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="codesigningconfigarn_go">
 <a href="#codesigningconfigarn_go" style="color: inherit; text-decoration: inherit;">Code<wbr>Signing<wbr>Config<wbr>Arn</a>
@@ -896,6 +913,14 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the function's execution role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="architectures_nodejs">
+<a href="#architectures_nodejs" style="color: inherit; text-decoration: inherit;">architectures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#functionarchitecturesitem">Function<wbr>Architectures<wbr>Item[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="codesigningconfigarn_nodejs">
 <a href="#codesigningconfigarn_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Signing<wbr>Config<wbr>Arn</a>
 </span>
@@ -1059,6 +1084,14 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the function's execution role.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="architectures_python">
+<a href="#architectures_python" style="color: inherit; text-decoration: inherit;">architectures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#functionarchitecturesitem">Function<wbr>Architectures<wbr>Item]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="code_signing_config_arn_python">
 <a href="#code_signing_config_arn_python" style="color: inherit; text-decoration: inherit;">code_<wbr>signing_<wbr>config_<wbr>arn</a>
@@ -1301,6 +1334,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="functionarchitecturesitem">Function<wbr>Architectures<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>X8664</dt>
+    <dd>x86_64</dd><dt>Arm64</dt>
+    <dd>arm64</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Function<wbr>Architectures<wbr>Item<wbr>X8664</dt>
+    <dd>x86_64</dd><dt>Function<wbr>Architectures<wbr>Item<wbr>Arm64</dt>
+    <dd>arm64</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>X8664</dt>
+    <dd>x86_64</dd><dt>Arm64</dt>
+    <dd>arm64</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>X8664</dt>
+    <dd>x86_64</dd><dt>ARM64</dt>
+    <dd>arm64</dd></dl>
+{{% /choosable %}}
 
 <h4 id="functioncode">Function<wbr>Code</h4>
 

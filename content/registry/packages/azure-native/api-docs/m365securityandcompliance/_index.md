@@ -13,34 +13,34 @@ Explore the resources and functions of the azure-native.m365securityandcomplianc
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="privateendpointconnectionsadtapi" title="PrivateEndpointConnectionsAdtAPI"><span class="symbol resource"></span>PrivateEndpointConnectionsAdtAPI</a></li>
-    <li><a href="privateendpointconnectionscomp" title="PrivateEndpointConnectionsComp"><span class="symbol resource"></span>PrivateEndpointConnectionsComp</a></li>
-    <li><a href="privateendpointconnectionsforedm" title="PrivateEndpointConnectionsForEDM"><span class="symbol resource"></span>PrivateEndpointConnectionsForEDM</a></li>
-    <li><a href="privateendpointconnectionsformippolicysync" title="PrivateEndpointConnectionsForMIPPolicySync"><span class="symbol resource"></span>PrivateEndpointConnectionsForMIPPolicySync</a></li>
-    <li><a href="privateendpointconnectionsforsccpowershell" title="PrivateEndpointConnectionsForSCCPowershell"><span class="symbol resource"></span>PrivateEndpointConnectionsForSCCPowershell</a></li>
-    <li><a href="privateendpointconnectionssec" title="PrivateEndpointConnectionsSec"><span class="symbol resource"></span>PrivateEndpointConnectionsSec</a></li>
-    <li><a href="privatelinkservicesforedmupload" title="PrivateLinkServicesForEDMUpload"><span class="symbol resource"></span>PrivateLinkServicesForEDMUpload</a></li>
-    <li><a href="privatelinkservicesform365compliancecenter" title="PrivateLinkServicesForM365ComplianceCenter"><span class="symbol resource"></span>PrivateLinkServicesForM365ComplianceCenter</a></li>
-    <li><a href="privatelinkservicesform365securitycenter" title="PrivateLinkServicesForM365SecurityCenter"><span class="symbol resource"></span>PrivateLinkServicesForM365SecurityCenter</a></li>
-    <li><a href="privatelinkservicesformippolicysync" title="PrivateLinkServicesForMIPPolicySync"><span class="symbol resource"></span>PrivateLinkServicesForMIPPolicySync</a></li>
-    <li><a href="privatelinkservicesforo365managementactivityapi" title="PrivateLinkServicesForO365ManagementActivityAPI"><span class="symbol resource"></span>PrivateLinkServicesForO365ManagementActivityAPI</a></li>
-    <li><a href="privatelinkservicesforsccpowershell" title="PrivateLinkServicesForSCCPowershell"><span class="symbol resource"></span>PrivateLinkServicesForSCCPowershell</a></li>
+    <li><a href="privateendpointconnectionsadtapi" title="PrivateEndpointConnectionsAdtAPI"><span class="api-symbol api-symbol--resource"></span>PrivateEndpointConnectionsAdtAPI</a></li>
+    <li><a href="privateendpointconnectionscomp" title="PrivateEndpointConnectionsComp"><span class="api-symbol api-symbol--resource"></span>PrivateEndpointConnectionsComp</a></li>
+    <li><a href="privateendpointconnectionsforedm" title="PrivateEndpointConnectionsForEDM"><span class="api-symbol api-symbol--resource"></span>PrivateEndpointConnectionsForEDM</a></li>
+    <li><a href="privateendpointconnectionsformippolicysync" title="PrivateEndpointConnectionsForMIPPolicySync"><span class="api-symbol api-symbol--resource"></span>PrivateEndpointConnectionsForMIPPolicySync</a></li>
+    <li><a href="privateendpointconnectionsforsccpowershell" title="PrivateEndpointConnectionsForSCCPowershell"><span class="api-symbol api-symbol--resource"></span>PrivateEndpointConnectionsForSCCPowershell</a></li>
+    <li><a href="privateendpointconnectionssec" title="PrivateEndpointConnectionsSec"><span class="api-symbol api-symbol--resource"></span>PrivateEndpointConnectionsSec</a></li>
+    <li><a href="privatelinkservicesforedmupload" title="PrivateLinkServicesForEDMUpload"><span class="api-symbol api-symbol--resource"></span>PrivateLinkServicesForEDMUpload</a></li>
+    <li><a href="privatelinkservicesform365compliancecenter" title="PrivateLinkServicesForM365ComplianceCenter"><span class="api-symbol api-symbol--resource"></span>PrivateLinkServicesForM365ComplianceCenter</a></li>
+    <li><a href="privatelinkservicesform365securitycenter" title="PrivateLinkServicesForM365SecurityCenter"><span class="api-symbol api-symbol--resource"></span>PrivateLinkServicesForM365SecurityCenter</a></li>
+    <li><a href="privatelinkservicesformippolicysync" title="PrivateLinkServicesForMIPPolicySync"><span class="api-symbol api-symbol--resource"></span>PrivateLinkServicesForMIPPolicySync</a></li>
+    <li><a href="privatelinkservicesforo365managementactivityapi" title="PrivateLinkServicesForO365ManagementActivityAPI"><span class="api-symbol api-symbol--resource"></span>PrivateLinkServicesForO365ManagementActivityAPI</a></li>
+    <li><a href="privatelinkservicesforsccpowershell" title="PrivateLinkServicesForSCCPowershell"><span class="api-symbol api-symbol--resource"></span>PrivateLinkServicesForSCCPowershell</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getprivateendpointconnectionsadtapi" title="GetPrivateEndpointConnectionsAdtAPI"><span class="symbol function"></span>GetPrivateEndpointConnectionsAdtAPI</a></li>
-    <li><a href="getprivateendpointconnectionscomp" title="GetPrivateEndpointConnectionsComp"><span class="symbol function"></span>GetPrivateEndpointConnectionsComp</a></li>
-    <li><a href="getprivateendpointconnectionsforedm" title="GetPrivateEndpointConnectionsForEDM"><span class="symbol function"></span>GetPrivateEndpointConnectionsForEDM</a></li>
-    <li><a href="getprivateendpointconnectionsformippolicysync" title="GetPrivateEndpointConnectionsForMIPPolicySync"><span class="symbol function"></span>GetPrivateEndpointConnectionsForMIPPolicySync</a></li>
-    <li><a href="getprivateendpointconnectionsforsccpowershell" title="GetPrivateEndpointConnectionsForSCCPowershell"><span class="symbol function"></span>GetPrivateEndpointConnectionsForSCCPowershell</a></li>
-    <li><a href="getprivateendpointconnectionssec" title="GetPrivateEndpointConnectionsSec"><span class="symbol function"></span>GetPrivateEndpointConnectionsSec</a></li>
-    <li><a href="getprivatelinkservicesforedmupload" title="GetprivateLinkServicesForEDMUpload"><span class="symbol function"></span>GetprivateLinkServicesForEDMUpload</a></li>
-    <li><a href="getprivatelinkservicesform365compliancecenter" title="GetprivateLinkServicesForM365ComplianceCenter"><span class="symbol function"></span>GetprivateLinkServicesForM365ComplianceCenter</a></li>
-    <li><a href="getprivatelinkservicesform365securitycenter" title="GetprivateLinkServicesForM365SecurityCenter"><span class="symbol function"></span>GetprivateLinkServicesForM365SecurityCenter</a></li>
-    <li><a href="getprivatelinkservicesformippolicysync" title="GetprivateLinkServicesForMIPPolicySync"><span class="symbol function"></span>GetprivateLinkServicesForMIPPolicySync</a></li>
-    <li><a href="getprivatelinkservicesforo365managementactivityapi" title="GetprivateLinkServicesForO365ManagementActivityAPI"><span class="symbol function"></span>GetprivateLinkServicesForO365ManagementActivityAPI</a></li>
-    <li><a href="getprivatelinkservicesforsccpowershell" title="GetprivateLinkServicesForSCCPowershell"><span class="symbol function"></span>GetprivateLinkServicesForSCCPowershell</a></li>
+    <li><a href="getprivateendpointconnectionsadtapi" title="GetPrivateEndpointConnectionsAdtAPI"><span class="api-symbol api-symbol--function"></span>GetPrivateEndpointConnectionsAdtAPI</a></li>
+    <li><a href="getprivateendpointconnectionscomp" title="GetPrivateEndpointConnectionsComp"><span class="api-symbol api-symbol--function"></span>GetPrivateEndpointConnectionsComp</a></li>
+    <li><a href="getprivateendpointconnectionsforedm" title="GetPrivateEndpointConnectionsForEDM"><span class="api-symbol api-symbol--function"></span>GetPrivateEndpointConnectionsForEDM</a></li>
+    <li><a href="getprivateendpointconnectionsformippolicysync" title="GetPrivateEndpointConnectionsForMIPPolicySync"><span class="api-symbol api-symbol--function"></span>GetPrivateEndpointConnectionsForMIPPolicySync</a></li>
+    <li><a href="getprivateendpointconnectionsforsccpowershell" title="GetPrivateEndpointConnectionsForSCCPowershell"><span class="api-symbol api-symbol--function"></span>GetPrivateEndpointConnectionsForSCCPowershell</a></li>
+    <li><a href="getprivateendpointconnectionssec" title="GetPrivateEndpointConnectionsSec"><span class="api-symbol api-symbol--function"></span>GetPrivateEndpointConnectionsSec</a></li>
+    <li><a href="getprivatelinkservicesforedmupload" title="GetprivateLinkServicesForEDMUpload"><span class="api-symbol api-symbol--function"></span>GetprivateLinkServicesForEDMUpload</a></li>
+    <li><a href="getprivatelinkservicesform365compliancecenter" title="GetprivateLinkServicesForM365ComplianceCenter"><span class="api-symbol api-symbol--function"></span>GetprivateLinkServicesForM365ComplianceCenter</a></li>
+    <li><a href="getprivatelinkservicesform365securitycenter" title="GetprivateLinkServicesForM365SecurityCenter"><span class="api-symbol api-symbol--function"></span>GetprivateLinkServicesForM365SecurityCenter</a></li>
+    <li><a href="getprivatelinkservicesformippolicysync" title="GetprivateLinkServicesForMIPPolicySync"><span class="api-symbol api-symbol--function"></span>GetprivateLinkServicesForMIPPolicySync</a></li>
+    <li><a href="getprivatelinkservicesforo365managementactivityapi" title="GetprivateLinkServicesForO365ManagementActivityAPI"><span class="api-symbol api-symbol--function"></span>GetprivateLinkServicesForO365ManagementActivityAPI</a></li>
+    <li><a href="getprivatelinkservicesforsccpowershell" title="GetprivateLinkServicesForSCCPowershell"><span class="api-symbol api-symbol--function"></span>GetprivateLinkServicesForSCCPowershell</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -50,6 +50,6 @@ Explore the resources and functions of the azure-native.m365securityandcomplianc
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.36.0</dd>
+	<dd>1.37.0</dd>
 </dl>
 

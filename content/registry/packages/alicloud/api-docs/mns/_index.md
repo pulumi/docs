@@ -13,17 +13,17 @@ Explore the resources and functions of the alicloud.mns module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="queue" title="Queue"><span class="symbol resource"></span>Queue</a></li>
-    <li><a href="topic" title="Topic"><span class="symbol resource"></span>Topic</a></li>
-    <li><a href="topicsubscription" title="TopicSubscription"><span class="symbol resource"></span>TopicSubscription</a></li>
+    <li><a href="queue" title="Queue"><span class="api-symbol api-symbol--resource"></span>Queue</a></li>
+    <li><a href="topic" title="Topic"><span class="api-symbol api-symbol--resource"></span>Topic</a></li>
+    <li><a href="topicsubscription" title="TopicSubscription"><span class="api-symbol api-symbol--resource"></span>TopicSubscription</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getqueues" title="GetQueues"><span class="symbol function"></span>GetQueues</a></li>
-    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
-    <li><a href="gettopicsubscriptions" title="GetTopicSubscriptions"><span class="symbol function"></span>GetTopicSubscriptions</a></li>
-    <li><a href="gettopics" title="GetTopics"><span class="symbol function"></span>GetTopics</a></li>
+    <li><a href="getqueues" title="GetQueues"><span class="api-symbol api-symbol--function"></span>GetQueues</a></li>
+    <li><a href="getservice" title="GetService"><span class="api-symbol api-symbol--function"></span>GetService</a></li>
+    <li><a href="gettopicsubscriptions" title="GetTopicSubscriptions"><span class="api-symbol api-symbol--function"></span>GetTopicSubscriptions</a></li>
+    <li><a href="gettopics" title="GetTopics"><span class="api-symbol api-symbol--function"></span>GetTopics</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

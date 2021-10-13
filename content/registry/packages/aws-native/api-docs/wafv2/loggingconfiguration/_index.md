@@ -46,18 +46,18 @@ class MyStack : Stack
             {
                 new AwsNative.WAFv2.Inputs.LoggingConfigurationFieldToMatchArgs
                 {
-                    JsonBody = 
+                    JsonBody = new AwsNative.WAFv2.Inputs.LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs
                     {
-                        { "invalidFallbackBehavior", "EVALUATE_AS_STRING" },
-                        { "matchPattern", 
+                        InvalidFallbackBehavior = "EVALUATE_AS_STRING",
+                        MatchPattern = new AwsNative.WAFv2.Inputs.LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs
                         {
-                            { "includedPaths", 
+                            IncludedPaths = 
                             {
                                 "/path/0/name",
                                 "/path/1/name",
-                            } },
-                        } },
-                        { "matchScope", "ALL" },
+                            },
+                        },
+                        MatchScope = "ALL",
                     },
                 },
                 new AwsNative.WAFv2.Inputs.LoggingConfigurationFieldToMatchArgs
@@ -70,9 +70,9 @@ class MyStack : Stack
                 },
                 new AwsNative.WAFv2.Inputs.LoggingConfigurationFieldToMatchArgs
                 {
-                    SingleHeader = 
+                    SingleHeader = new AwsNative.WAFv2.Inputs.LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs
                     {
-                        { "name", "password" },
+                        Name = "password",
                     },
                 },
                 new AwsNative.WAFv2.Inputs.LoggingConfigurationFieldToMatchArgs
@@ -111,12 +111,12 @@ func main() {
 			},
 			RedactedFields: []wafv2.LoggingConfigurationFieldToMatchArgs{
 				&wafv2.LoggingConfigurationFieldToMatchArgs{
-					JsonBody: pulumi.Any{
+					JsonBody: &wafv2.LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs{
 						InvalidFallbackBehavior: "EVALUATE_AS_STRING",
-						MatchPattern: map[string]interface{}{
-							"includedPaths": []string{
-								"/path/0/name",
-								"/path/1/name",
+						MatchPattern: &wafv2.LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs{
+							IncludedPaths: pulumi.StringArray{
+								pulumi.String("/path/0/name"),
+								pulumi.String("/path/1/name"),
 							},
 						},
 						MatchScope: "ALL",
@@ -129,8 +129,8 @@ func main() {
 					QueryString: nil,
 				},
 				&wafv2.LoggingConfigurationFieldToMatchArgs{
-					SingleHeader: pulumi.Any{
-						Name: "password",
+					SingleHeader: &wafv2.LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs{
+						Name: pulumi.String("password"),
 					},
 				},
 				&wafv2.LoggingConfigurationFieldToMatchArgs{
@@ -163,16 +163,16 @@ logging_configuration = aws_native.wafv2.LoggingConfiguration("loggingConfigurat
     log_destination_configs=["arn:aws:firehose:us-east-1:123456789000:deliverystream/aws-waf-logs-firehose"],
     redacted_fields=[
         aws_native.wafv2.LoggingConfigurationFieldToMatchArgs(
-            json_body={
-                "invalidFallbackBehavior": "EVALUATE_AS_STRING",
-                "matchPattern": {
-                    "includedPaths": [
+            json_body=aws_native.wafv2.LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs(
+                invalid_fallback_behavior="EVALUATE_AS_STRING",
+                match_pattern=aws_native.wafv2.LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs(
+                    included_paths=[
                         "/path/0/name",
                         "/path/1/name",
                     ],
-                },
-                "matchScope": "ALL",
-            },
+                ),
+                match_scope="ALL",
+            ),
         ),
         aws_native.wafv2.LoggingConfigurationFieldToMatchArgs(
             method={},
@@ -181,9 +181,9 @@ logging_configuration = aws_native.wafv2.LoggingConfiguration("loggingConfigurat
             query_string={},
         ),
         aws_native.wafv2.LoggingConfigurationFieldToMatchArgs(
-            single_header={
-                "name": "password",
-            },
+            single_header=aws_native.wafv2.LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs(
+                name="password",
+            ),
         ),
         aws_native.wafv2.LoggingConfigurationFieldToMatchArgs(
             uri_path={},
@@ -268,18 +268,18 @@ class MyStack : Stack
             {
                 new AwsNative.WAFv2.Inputs.LoggingConfigurationFieldToMatchArgs
                 {
-                    JsonBody = 
+                    JsonBody = new AwsNative.WAFv2.Inputs.LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs
                     {
-                        { "invalidFallbackBehavior", "EVALUATE_AS_STRING" },
-                        { "matchPattern", 
+                        InvalidFallbackBehavior = "EVALUATE_AS_STRING",
+                        MatchPattern = new AwsNative.WAFv2.Inputs.LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs
                         {
-                            { "includedPaths", 
+                            IncludedPaths = 
                             {
                                 "/path/0/name",
                                 "/path/1/name",
-                            } },
-                        } },
-                        { "matchScope", "ALL" },
+                            },
+                        },
+                        MatchScope = "ALL",
                     },
                 },
                 new AwsNative.WAFv2.Inputs.LoggingConfigurationFieldToMatchArgs
@@ -292,9 +292,9 @@ class MyStack : Stack
                 },
                 new AwsNative.WAFv2.Inputs.LoggingConfigurationFieldToMatchArgs
                 {
-                    SingleHeader = 
+                    SingleHeader = new AwsNative.WAFv2.Inputs.LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs
                     {
-                        { "name", "password" },
+                        Name = "password",
                     },
                 },
                 new AwsNative.WAFv2.Inputs.LoggingConfigurationFieldToMatchArgs
@@ -333,12 +333,12 @@ func main() {
 			},
 			RedactedFields: []wafv2.LoggingConfigurationFieldToMatchArgs{
 				&wafv2.LoggingConfigurationFieldToMatchArgs{
-					JsonBody: pulumi.Any{
+					JsonBody: &wafv2.LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs{
 						InvalidFallbackBehavior: "EVALUATE_AS_STRING",
-						MatchPattern: map[string]interface{}{
-							"includedPaths": []string{
-								"/path/0/name",
-								"/path/1/name",
+						MatchPattern: &wafv2.LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs{
+							IncludedPaths: pulumi.StringArray{
+								pulumi.String("/path/0/name"),
+								pulumi.String("/path/1/name"),
 							},
 						},
 						MatchScope: "ALL",
@@ -351,8 +351,8 @@ func main() {
 					QueryString: nil,
 				},
 				&wafv2.LoggingConfigurationFieldToMatchArgs{
-					SingleHeader: pulumi.Any{
-						Name: "password",
+					SingleHeader: &wafv2.LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs{
+						Name: pulumi.String("password"),
 					},
 				},
 				&wafv2.LoggingConfigurationFieldToMatchArgs{
@@ -385,16 +385,16 @@ logging_configuration = aws_native.wafv2.LoggingConfiguration("loggingConfigurat
     log_destination_configs=["arn:aws:firehose:us-east-1:123456789000:deliverystream/aws-waf-logs-firehose"],
     redacted_fields=[
         aws_native.wafv2.LoggingConfigurationFieldToMatchArgs(
-            json_body={
-                "invalidFallbackBehavior": "EVALUATE_AS_STRING",
-                "matchPattern": {
-                    "includedPaths": [
+            json_body=aws_native.wafv2.LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs(
+                invalid_fallback_behavior="EVALUATE_AS_STRING",
+                match_pattern=aws_native.wafv2.LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs(
+                    included_paths=[
                         "/path/0/name",
                         "/path/1/name",
                     ],
-                },
-                "matchScope": "ALL",
-            },
+                ),
+                match_scope="ALL",
+            ),
         ),
         aws_native.wafv2.LoggingConfigurationFieldToMatchArgs(
             method={},
@@ -403,9 +403,9 @@ logging_configuration = aws_native.wafv2.LoggingConfiguration("loggingConfigurat
             query_string={},
         ),
         aws_native.wafv2.LoggingConfigurationFieldToMatchArgs(
-            single_header={
-                "name": "password",
-            },
+            single_header=aws_native.wafv2.LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs(
+                name="password",
+            ),
         ),
         aws_native.wafv2.LoggingConfigurationFieldToMatchArgs(
             uri_path={},
@@ -490,18 +490,18 @@ class MyStack : Stack
             {
                 new AwsNative.WAFv2.Inputs.LoggingConfigurationFieldToMatchArgs
                 {
-                    JsonBody = 
+                    JsonBody = new AwsNative.WAFv2.Inputs.LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs
                     {
-                        { "invalidFallbackBehavior", "EVALUATE_AS_STRING" },
-                        { "matchPattern", 
+                        InvalidFallbackBehavior = "EVALUATE_AS_STRING",
+                        MatchPattern = new AwsNative.WAFv2.Inputs.LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs
                         {
-                            { "includedPaths", 
+                            IncludedPaths = 
                             {
                                 "/path/0/name",
                                 "/path/1/name",
-                            } },
-                        } },
-                        { "matchScope", "ALL" },
+                            },
+                        },
+                        MatchScope = "ALL",
                     },
                 },
                 new AwsNative.WAFv2.Inputs.LoggingConfigurationFieldToMatchArgs
@@ -514,9 +514,9 @@ class MyStack : Stack
                 },
                 new AwsNative.WAFv2.Inputs.LoggingConfigurationFieldToMatchArgs
                 {
-                    SingleHeader = 
+                    SingleHeader = new AwsNative.WAFv2.Inputs.LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs
                     {
-                        { "name", "password" },
+                        Name = "password",
                     },
                 },
                 new AwsNative.WAFv2.Inputs.LoggingConfigurationFieldToMatchArgs
@@ -524,34 +524,34 @@ class MyStack : Stack
                     UriPath = ,
                 },
             },
-            LoggingFilter = 
+            LoggingFilter = new AwsNative.WAFv2.Inputs.LoggingFilterPropertiesArgs
             {
-                { "defaultBehavior", "KEEP" },
-                { "filters", 
+                DefaultBehavior = "KEEP",
+                Filters = 
                 {
-                    
+                    new AwsNative.WAFv2.Inputs.LoggingConfigurationFilterArgs
                     {
-                        { "behavior", "KEEP" },
-                        { "conditions", 
+                        Behavior = "KEEP",
+                        Conditions = 
                         {
-                            
+                            new AwsNative.WAFv2.Inputs.LoggingConfigurationConditionArgs
                             {
-                                { "actionCondition", 
+                                ActionCondition = new AwsNative.WAFv2.Inputs.LoggingConfigurationConditionActionConditionPropertiesArgs
                                 {
-                                    { "action", "BLOCK" },
-                                } },
+                                    Action = "BLOCK",
+                                },
                             },
-                            
+                            new AwsNative.WAFv2.Inputs.LoggingConfigurationConditionArgs
                             {
-                                { "labelNameCondition", 
+                                LabelNameCondition = new AwsNative.WAFv2.Inputs.LoggingConfigurationConditionLabelNameConditionPropertiesArgs
                                 {
-                                    { "labelName", "fooLabel" },
-                                } },
+                                    LabelName = "fooLabel",
+                                },
                             },
-                        } },
-                        { "requirement", "MEETS_ANY" },
+                        },
+                        Requirement = "MEETS_ANY",
                     },
-                } },
+                },
             },
         });
     }
@@ -584,12 +584,12 @@ func main() {
 			},
 			RedactedFields: []wafv2.LoggingConfigurationFieldToMatchArgs{
 				&wafv2.LoggingConfigurationFieldToMatchArgs{
-					JsonBody: pulumi.Any{
+					JsonBody: &wafv2.LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs{
 						InvalidFallbackBehavior: "EVALUATE_AS_STRING",
-						MatchPattern: map[string]interface{}{
-							"includedPaths": []string{
-								"/path/0/name",
-								"/path/1/name",
+						MatchPattern: &wafv2.LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs{
+							IncludedPaths: pulumi.StringArray{
+								pulumi.String("/path/0/name"),
+								pulumi.String("/path/1/name"),
 							},
 						},
 						MatchScope: "ALL",
@@ -602,32 +602,32 @@ func main() {
 					QueryString: nil,
 				},
 				&wafv2.LoggingConfigurationFieldToMatchArgs{
-					SingleHeader: pulumi.Any{
-						Name: "password",
+					SingleHeader: &wafv2.LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs{
+						Name: pulumi.String("password"),
 					},
 				},
 				&wafv2.LoggingConfigurationFieldToMatchArgs{
 					UriPath: nil,
 				},
 			},
-			LoggingFilter: pulumi.Any{
+			LoggingFilter: &wafv2.LoggingFilterPropertiesArgs{
 				DefaultBehavior: "KEEP",
-				Filters: []map[string]interface{}{
-					map[string]interface{}{
-						"behavior": "KEEP",
-						"conditions": []interface{}{
-							map[string]interface{}{
-								"actionCondition": map[string]interface{}{
-									"action": "BLOCK",
+				Filters: []wafv2.LoggingConfigurationFilterArgs{
+					&wafv2.LoggingConfigurationFilterArgs{
+						Behavior: "KEEP",
+						Conditions: []wafv2.LoggingConfigurationConditionArgs{
+							&wafv2.LoggingConfigurationConditionArgs{
+								ActionCondition: &wafv2.LoggingConfigurationConditionActionConditionPropertiesArgs{
+									Action: "BLOCK",
 								},
 							},
-							map[string]interface{}{
-								"labelNameCondition": map[string]interface{}{
-									"labelName": "fooLabel",
+							&wafv2.LoggingConfigurationConditionArgs{
+								LabelNameCondition: &wafv2.LoggingConfigurationConditionLabelNameConditionPropertiesArgs{
+									LabelName: pulumi.String("fooLabel"),
 								},
 							},
 						},
-						"requirement": "MEETS_ANY",
+						Requirement: "MEETS_ANY",
 					},
 				},
 			},
@@ -657,16 +657,16 @@ logging_configuration = aws_native.wafv2.LoggingConfiguration("loggingConfigurat
     log_destination_configs=["arn:aws:firehose:us-east-1:123456789000:deliverystream/aws-waf-logs-firehose"],
     redacted_fields=[
         aws_native.wafv2.LoggingConfigurationFieldToMatchArgs(
-            json_body={
-                "invalidFallbackBehavior": "EVALUATE_AS_STRING",
-                "matchPattern": {
-                    "includedPaths": [
+            json_body=aws_native.wafv2.LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs(
+                invalid_fallback_behavior="EVALUATE_AS_STRING",
+                match_pattern=aws_native.wafv2.LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs(
+                    included_paths=[
                         "/path/0/name",
                         "/path/1/name",
                     ],
-                },
-                "matchScope": "ALL",
-            },
+                ),
+                match_scope="ALL",
+            ),
         ),
         aws_native.wafv2.LoggingConfigurationFieldToMatchArgs(
             method={},
@@ -675,33 +675,33 @@ logging_configuration = aws_native.wafv2.LoggingConfiguration("loggingConfigurat
             query_string={},
         ),
         aws_native.wafv2.LoggingConfigurationFieldToMatchArgs(
-            single_header={
-                "name": "password",
-            },
+            single_header=aws_native.wafv2.LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs(
+                name="password",
+            ),
         ),
         aws_native.wafv2.LoggingConfigurationFieldToMatchArgs(
             uri_path={},
         ),
     ],
-    logging_filter={
-        "defaultBehavior": "KEEP",
-        "filters": [{
-            "behavior": "KEEP",
-            "conditions": [
-                {
-                    "actionCondition": {
-                        "action": "BLOCK",
-                    },
-                },
-                {
-                    "labelNameCondition": {
-                        "labelName": "fooLabel",
-                    },
-                },
+    logging_filter=aws_native.wafv2.LoggingFilterPropertiesArgs(
+        default_behavior="KEEP",
+        filters=[aws_native.wafv2.LoggingConfigurationFilterArgs(
+            behavior="KEEP",
+            conditions=[
+                aws_native.wafv2.LoggingConfigurationConditionArgs(
+                    action_condition=aws_native.wafv2.LoggingConfigurationConditionActionConditionPropertiesArgs(
+                        action="BLOCK",
+                    ),
+                ),
+                aws_native.wafv2.LoggingConfigurationConditionArgs(
+                    label_name_condition=aws_native.wafv2.LoggingConfigurationConditionLabelNameConditionPropertiesArgs(
+                        label_name="fooLabel",
+                    ),
+                ),
             ],
-            "requirement": "MEETS_ANY",
-        }],
-    })
+            requirement="MEETS_ANY",
+        )],
+    ))
 
 ```
 
@@ -800,18 +800,18 @@ class MyStack : Stack
             {
                 new AwsNative.WAFv2.Inputs.LoggingConfigurationFieldToMatchArgs
                 {
-                    JsonBody = 
+                    JsonBody = new AwsNative.WAFv2.Inputs.LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs
                     {
-                        { "invalidFallbackBehavior", "EVALUATE_AS_STRING" },
-                        { "matchPattern", 
+                        InvalidFallbackBehavior = "EVALUATE_AS_STRING",
+                        MatchPattern = new AwsNative.WAFv2.Inputs.LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs
                         {
-                            { "includedPaths", 
+                            IncludedPaths = 
                             {
                                 "/path/0/name",
                                 "/path/1/name",
-                            } },
-                        } },
-                        { "matchScope", "ALL" },
+                            },
+                        },
+                        MatchScope = "ALL",
                     },
                 },
                 new AwsNative.WAFv2.Inputs.LoggingConfigurationFieldToMatchArgs
@@ -824,9 +824,9 @@ class MyStack : Stack
                 },
                 new AwsNative.WAFv2.Inputs.LoggingConfigurationFieldToMatchArgs
                 {
-                    SingleHeader = 
+                    SingleHeader = new AwsNative.WAFv2.Inputs.LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs
                     {
-                        { "name", "password" },
+                        Name = "password",
                     },
                 },
                 new AwsNative.WAFv2.Inputs.LoggingConfigurationFieldToMatchArgs
@@ -834,34 +834,34 @@ class MyStack : Stack
                     UriPath = ,
                 },
             },
-            LoggingFilter = 
+            LoggingFilter = new AwsNative.WAFv2.Inputs.LoggingFilterPropertiesArgs
             {
-                { "defaultBehavior", "KEEP" },
-                { "filters", 
+                DefaultBehavior = "KEEP",
+                Filters = 
                 {
-                    
+                    new AwsNative.WAFv2.Inputs.LoggingConfigurationFilterArgs
                     {
-                        { "behavior", "KEEP" },
-                        { "conditions", 
+                        Behavior = "KEEP",
+                        Conditions = 
                         {
-                            
+                            new AwsNative.WAFv2.Inputs.LoggingConfigurationConditionArgs
                             {
-                                { "actionCondition", 
+                                ActionCondition = new AwsNative.WAFv2.Inputs.LoggingConfigurationConditionActionConditionPropertiesArgs
                                 {
-                                    { "action", "BLOCK" },
-                                } },
+                                    Action = "BLOCK",
+                                },
                             },
-                            
+                            new AwsNative.WAFv2.Inputs.LoggingConfigurationConditionArgs
                             {
-                                { "labelNameCondition", 
+                                LabelNameCondition = new AwsNative.WAFv2.Inputs.LoggingConfigurationConditionLabelNameConditionPropertiesArgs
                                 {
-                                    { "labelName", "fooLabel" },
-                                } },
+                                    LabelName = "fooLabel",
+                                },
                             },
-                        } },
-                        { "requirement", "MEETS_ANY" },
+                        },
+                        Requirement = "MEETS_ANY",
                     },
-                } },
+                },
             },
         });
     }
@@ -894,12 +894,12 @@ func main() {
 			},
 			RedactedFields: []wafv2.LoggingConfigurationFieldToMatchArgs{
 				&wafv2.LoggingConfigurationFieldToMatchArgs{
-					JsonBody: pulumi.Any{
+					JsonBody: &wafv2.LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs{
 						InvalidFallbackBehavior: "EVALUATE_AS_STRING",
-						MatchPattern: map[string]interface{}{
-							"includedPaths": []string{
-								"/path/0/name",
-								"/path/1/name",
+						MatchPattern: &wafv2.LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs{
+							IncludedPaths: pulumi.StringArray{
+								pulumi.String("/path/0/name"),
+								pulumi.String("/path/1/name"),
 							},
 						},
 						MatchScope: "ALL",
@@ -912,32 +912,32 @@ func main() {
 					QueryString: nil,
 				},
 				&wafv2.LoggingConfigurationFieldToMatchArgs{
-					SingleHeader: pulumi.Any{
-						Name: "password",
+					SingleHeader: &wafv2.LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs{
+						Name: pulumi.String("password"),
 					},
 				},
 				&wafv2.LoggingConfigurationFieldToMatchArgs{
 					UriPath: nil,
 				},
 			},
-			LoggingFilter: pulumi.Any{
+			LoggingFilter: &wafv2.LoggingFilterPropertiesArgs{
 				DefaultBehavior: "KEEP",
-				Filters: []map[string]interface{}{
-					map[string]interface{}{
-						"behavior": "KEEP",
-						"conditions": []interface{}{
-							map[string]interface{}{
-								"actionCondition": map[string]interface{}{
-									"action": "BLOCK",
+				Filters: []wafv2.LoggingConfigurationFilterArgs{
+					&wafv2.LoggingConfigurationFilterArgs{
+						Behavior: "KEEP",
+						Conditions: []wafv2.LoggingConfigurationConditionArgs{
+							&wafv2.LoggingConfigurationConditionArgs{
+								ActionCondition: &wafv2.LoggingConfigurationConditionActionConditionPropertiesArgs{
+									Action: "BLOCK",
 								},
 							},
-							map[string]interface{}{
-								"labelNameCondition": map[string]interface{}{
-									"labelName": "fooLabel",
+							&wafv2.LoggingConfigurationConditionArgs{
+								LabelNameCondition: &wafv2.LoggingConfigurationConditionLabelNameConditionPropertiesArgs{
+									LabelName: pulumi.String("fooLabel"),
 								},
 							},
 						},
-						"requirement": "MEETS_ANY",
+						Requirement: "MEETS_ANY",
 					},
 				},
 			},
@@ -967,16 +967,16 @@ logging_configuration = aws_native.wafv2.LoggingConfiguration("loggingConfigurat
     log_destination_configs=["arn:aws:firehose:us-east-1:123456789000:deliverystream/aws-waf-logs-firehose"],
     redacted_fields=[
         aws_native.wafv2.LoggingConfigurationFieldToMatchArgs(
-            json_body={
-                "invalidFallbackBehavior": "EVALUATE_AS_STRING",
-                "matchPattern": {
-                    "includedPaths": [
+            json_body=aws_native.wafv2.LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs(
+                invalid_fallback_behavior="EVALUATE_AS_STRING",
+                match_pattern=aws_native.wafv2.LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs(
+                    included_paths=[
                         "/path/0/name",
                         "/path/1/name",
                     ],
-                },
-                "matchScope": "ALL",
-            },
+                ),
+                match_scope="ALL",
+            ),
         ),
         aws_native.wafv2.LoggingConfigurationFieldToMatchArgs(
             method={},
@@ -985,33 +985,33 @@ logging_configuration = aws_native.wafv2.LoggingConfiguration("loggingConfigurat
             query_string={},
         ),
         aws_native.wafv2.LoggingConfigurationFieldToMatchArgs(
-            single_header={
-                "name": "password",
-            },
+            single_header=aws_native.wafv2.LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs(
+                name="password",
+            ),
         ),
         aws_native.wafv2.LoggingConfigurationFieldToMatchArgs(
             uri_path={},
         ),
     ],
-    logging_filter={
-        "defaultBehavior": "KEEP",
-        "filters": [{
-            "behavior": "KEEP",
-            "conditions": [
-                {
-                    "actionCondition": {
-                        "action": "BLOCK",
-                    },
-                },
-                {
-                    "labelNameCondition": {
-                        "labelName": "fooLabel",
-                    },
-                },
+    logging_filter=aws_native.wafv2.LoggingFilterPropertiesArgs(
+        default_behavior="KEEP",
+        filters=[aws_native.wafv2.LoggingConfigurationFilterArgs(
+            behavior="KEEP",
+            conditions=[
+                aws_native.wafv2.LoggingConfigurationConditionArgs(
+                    action_condition=aws_native.wafv2.LoggingConfigurationConditionActionConditionPropertiesArgs(
+                        action="BLOCK",
+                    ),
+                ),
+                aws_native.wafv2.LoggingConfigurationConditionArgs(
+                    label_name_condition=aws_native.wafv2.LoggingConfigurationConditionLabelNameConditionPropertiesArgs(
+                        label_name="fooLabel",
+                    ),
+                ),
             ],
-            "requirement": "MEETS_ANY",
-        }],
-    })
+            requirement="MEETS_ANY",
+        )],
+    ))
 
 ```
 
@@ -1105,7 +1105,7 @@ const loggingConfiguration = new aws_native.wafv2.LoggingConfiguration("loggingC
 <span class="k">def </span><span class="nx">LoggingConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                          <span class="nx">log_destination_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
-                         <span class="nx">logging_filter</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">,</span>
+                         <span class="nx">logging_filter</span><span class="p">:</span> <span class="nx">Optional[LoggingFilterPropertiesArgs]</span> = None<span class="p">,</span>
                          <span class="nx">redacted_fields</span><span class="p">:</span> <span class="nx">Optional[Sequence[LoggingConfigurationFieldToMatchArgs]]</span> = None<span class="p">,</span>
                          <span class="nx">resource_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -1257,7 +1257,7 @@ The LoggingConfiguration resource accepts the following [input]({{< relref "/doc
 <a href="#loggingfilter_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">object</span>
+        <span class="property-type"><a href="#loggingfilterproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>WAFv2.<wbr>Inputs.<wbr>Logging<wbr>Filter<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Filtering that specifies which web requests are kept in the logs and which are dropped. You can filter on the rule action and on the web request labels that were applied by matching rules during web ACL evaluation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1293,7 +1293,7 @@ The LoggingConfiguration resource accepts the following [input]({{< relref "/doc
 <a href="#loggingfilter_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#loggingfilterproperties">Logging<wbr>Filter<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Filtering that specifies which web requests are kept in the logs and which are dropped. You can filter on the rule action and on the web request labels that were applied by matching rules during web ACL evaluation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1329,7 +1329,7 @@ The LoggingConfiguration resource accepts the following [input]({{< relref "/doc
 <a href="#loggingfilter_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">any</span>
+        <span class="property-type"><a href="#loggingfilterproperties">Logging<wbr>Filter<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Filtering that specifies which web requests are kept in the logs and which are dropped. You can filter on the rule action and on the web request labels that were applied by matching rules during web ACL evaluation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1365,7 +1365,7 @@ The LoggingConfiguration resource accepts the following [input]({{< relref "/doc
 <a href="#logging_filter_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#loggingfilterproperties">Logging<wbr>Filter<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Filtering that specifies which web requests are kept in the logs and which are dropped. You can filter on the rule action and on the web request labels that were applied by matching rules during web ACL evaluation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1475,6 +1475,218 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="loggingconfigurationcondition">Logging<wbr>Configuration<wbr>Condition</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="actioncondition_csharp">
+<a href="#actioncondition_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationconditionactionconditionproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>WAFv2.<wbr>Inputs.<wbr>Logging<wbr>Configuration<wbr>Condition<wbr>Action<wbr>Condition<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}A single action condition.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="labelnamecondition_csharp">
+<a href="#labelnamecondition_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Name<wbr>Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationconditionlabelnameconditionproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>WAFv2.<wbr>Inputs.<wbr>Logging<wbr>Configuration<wbr>Condition<wbr>Label<wbr>Name<wbr>Condition<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}A single label name condition.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="actioncondition_go">
+<a href="#actioncondition_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationconditionactionconditionproperties">Logging<wbr>Configuration<wbr>Condition<wbr>Action<wbr>Condition<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}A single action condition.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="labelnamecondition_go">
+<a href="#labelnamecondition_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Name<wbr>Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationconditionlabelnameconditionproperties">Logging<wbr>Configuration<wbr>Condition<wbr>Label<wbr>Name<wbr>Condition<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}A single label name condition.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="actioncondition_nodejs">
+<a href="#actioncondition_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationconditionactionconditionproperties">Logging<wbr>Configuration<wbr>Condition<wbr>Action<wbr>Condition<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}A single action condition.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="labelnamecondition_nodejs">
+<a href="#labelnamecondition_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Name<wbr>Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationconditionlabelnameconditionproperties">Logging<wbr>Configuration<wbr>Condition<wbr>Label<wbr>Name<wbr>Condition<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}A single label name condition.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="action_condition_python">
+<a href="#action_condition_python" style="color: inherit; text-decoration: inherit;">action_<wbr>condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationconditionactionconditionproperties">Logging<wbr>Configuration<wbr>Condition<wbr>Action<wbr>Condition<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}A single action condition.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="label_name_condition_python">
+<a href="#label_name_condition_python" style="color: inherit; text-decoration: inherit;">label_<wbr>name_<wbr>condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationconditionlabelnameconditionproperties">Logging<wbr>Configuration<wbr>Condition<wbr>Label<wbr>Name<wbr>Condition<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}A single label name condition.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="loggingconfigurationconditionactionconditionproperties">Logging<wbr>Configuration<wbr>Condition<wbr>Action<wbr>Condition<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="action_csharp">
+<a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationconditionactionconditionpropertiesaction">Pulumi.<wbr>Aws<wbr>Native.<wbr>WAFv2.<wbr>Logging<wbr>Configuration<wbr>Condition<wbr>Action<wbr>Condition<wbr>Properties<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}Logic to apply to the filtering conditions. You can specify that, in order to satisfy the filter, a log must match all conditions or must match at least one condition.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="action_go">
+<a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationconditionactionconditionpropertiesaction">Logging<wbr>Configuration<wbr>Condition<wbr>Action<wbr>Condition<wbr>Properties<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}Logic to apply to the filtering conditions. You can specify that, in order to satisfy the filter, a log must match all conditions or must match at least one condition.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="action_nodejs">
+<a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationconditionactionconditionpropertiesaction">Logging<wbr>Configuration<wbr>Condition<wbr>Action<wbr>Condition<wbr>Properties<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}Logic to apply to the filtering conditions. You can specify that, in order to satisfy the filter, a log must match all conditions or must match at least one condition.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="action_python">
+<a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationconditionactionconditionpropertiesaction">Logging<wbr>Configuration<wbr>Condition<wbr>Action<wbr>Condition<wbr>Properties<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}Logic to apply to the filtering conditions. You can specify that, in order to satisfy the filter, a log must match all conditions or must match at least one condition.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="loggingconfigurationconditionactionconditionpropertiesaction">Logging<wbr>Configuration<wbr>Condition<wbr>Action<wbr>Condition<wbr>Properties<wbr>Action</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Allow</dt>
+    <dd>ALLOW</dd><dt>Block</dt>
+    <dd>BLOCK</dd><dt>Count</dt>
+    <dd>COUNT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Logging<wbr>Configuration<wbr>Condition<wbr>Action<wbr>Condition<wbr>Properties<wbr>Action<wbr>Allow</dt>
+    <dd>ALLOW</dd><dt>Logging<wbr>Configuration<wbr>Condition<wbr>Action<wbr>Condition<wbr>Properties<wbr>Action<wbr>Block</dt>
+    <dd>BLOCK</dd><dt>Logging<wbr>Configuration<wbr>Condition<wbr>Action<wbr>Condition<wbr>Properties<wbr>Action<wbr>Count</dt>
+    <dd>COUNT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Allow</dt>
+    <dd>ALLOW</dd><dt>Block</dt>
+    <dd>BLOCK</dd><dt>Count</dt>
+    <dd>COUNT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ALLOW</dt>
+    <dd>ALLOW</dd><dt>BLOCK</dt>
+    <dd>BLOCK</dd><dt>COUNT</dt>
+    <dd>COUNT</dd></dl>
+{{% /choosable %}}
+
+<h4 id="loggingconfigurationconditionlabelnameconditionproperties">Logging<wbr>Configuration<wbr>Condition<wbr>Label<wbr>Name<wbr>Condition<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="labelname_csharp">
+<a href="#labelname_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The label name that a log record must contain in order to meet the condition. This must be a fully qualified label name. Fully qualified labels have a prefix, optional namespaces, and label name. The prefix identifies the rule group or web ACL context of the rule that added the label. {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="labelname_go">
+<a href="#labelname_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The label name that a log record must contain in order to meet the condition. This must be a fully qualified label name. Fully qualified labels have a prefix, optional namespaces, and label name. The prefix identifies the rule group or web ACL context of the rule that added the label. {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="labelname_nodejs">
+<a href="#labelname_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The label name that a log record must contain in order to meet the condition. This must be a fully qualified label name. Fully qualified labels have a prefix, optional namespaces, and label name. The prefix identifies the rule group or web ACL context of the rule that added the label. {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="label_name_python">
+<a href="#label_name_python" style="color: inherit; text-decoration: inherit;">label_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The label name that a log record must contain in order to meet the condition. This must be a fully qualified label name. Fully qualified labels have a prefix, optional namespaces, and label name. The prefix identifies the rule group or web ACL context of the rule that added the label. {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="loggingconfigurationfieldtomatch">Logging<wbr>Configuration<wbr>Field<wbr>To<wbr>Match</h4>
 
 {{% choosable language csharp %}}
@@ -1484,7 +1696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jsonbody_csharp" style="color: inherit; text-decoration: inherit;">Json<wbr>Body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">object</span>
+        <span class="property-type"><a href="#loggingconfigurationfieldtomatchjsonbodyproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>WAFv2.<wbr>Inputs.<wbr>Logging<wbr>Configuration<wbr>Field<wbr>To<wbr>Match<wbr>Json<wbr>Body<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body as JSON. The request body immediately follows the request headers. This is the part of a request that contains any additional data that you want to send to your web server as the HTTP request body, such as data from a form. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1508,7 +1720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#singleheader_csharp" style="color: inherit; text-decoration: inherit;">Single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">object</span>
+        <span class="property-type"><a href="#loggingconfigurationfieldtomatchsingleheaderproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>WAFv2.<wbr>Inputs.<wbr>Logging<wbr>Configuration<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. Provide the name of the header to inspect, for example, User-Agent or Referer. This setting isn't case sensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1528,7 +1740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jsonbody_go" style="color: inherit; text-decoration: inherit;">Json<wbr>Body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#loggingconfigurationfieldtomatchjsonbodyproperties">Logging<wbr>Configuration<wbr>Field<wbr>To<wbr>Match<wbr>Json<wbr>Body<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body as JSON. The request body immediately follows the request headers. This is the part of a request that contains any additional data that you want to send to your web server as the HTTP request body, such as data from a form. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1552,7 +1764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#singleheader_go" style="color: inherit; text-decoration: inherit;">Single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#loggingconfigurationfieldtomatchsingleheaderproperties">Logging<wbr>Configuration<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. Provide the name of the header to inspect, for example, User-Agent or Referer. This setting isn't case sensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1572,7 +1784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jsonbody_nodejs" style="color: inherit; text-decoration: inherit;">json<wbr>Body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">any</span>
+        <span class="property-type"><a href="#loggingconfigurationfieldtomatchjsonbodyproperties">Logging<wbr>Configuration<wbr>Field<wbr>To<wbr>Match<wbr>Json<wbr>Body<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body as JSON. The request body immediately follows the request headers. This is the part of a request that contains any additional data that you want to send to your web server as the HTTP request body, such as data from a form. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1596,7 +1808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">any</span>
+        <span class="property-type"><a href="#loggingconfigurationfieldtomatchsingleheaderproperties">Logging<wbr>Configuration<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. Provide the name of the header to inspect, for example, User-Agent or Referer. This setting isn't case sensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1616,7 +1828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#json_body_python" style="color: inherit; text-decoration: inherit;">json_<wbr>body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#loggingconfigurationfieldtomatchjsonbodyproperties">Logging<wbr>Configuration<wbr>Field<wbr>To<wbr>Match<wbr>Json<wbr>Body<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body as JSON. The request body immediately follows the request headers. This is the part of a request that contains any additional data that you want to send to your web server as the HTTP request body, such as data from a form. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1640,7 +1852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#single_header_python" style="color: inherit; text-decoration: inherit;">single_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#loggingconfigurationfieldtomatchsingleheaderproperties">Logging<wbr>Configuration<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. Provide the name of the header to inspect, for example, User-Agent or Referer. This setting isn't case sensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1651,6 +1863,586 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, /images/daily-ad.jpg. {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="loggingconfigurationfieldtomatchjsonbodyproperties">Logging<wbr>Configuration<wbr>Field<wbr>To<wbr>Match<wbr>Json<wbr>Body<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="matchpattern_csharp">
+<a href="#matchpattern_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationfieldtomatchjsonbodypropertiesmatchpatternproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>WAFv2.<wbr>Inputs.<wbr>Logging<wbr>Configuration<wbr>Field<wbr>To<wbr>Match<wbr>Json<wbr>Body<wbr>Properties<wbr>Match<wbr>Pattern<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}The patterns to look for in the JSON body. AWS WAF inspects the results of these pattern matches against the rule inspection criteria. {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="matchscope_csharp">
+<a href="#matchscope_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationfieldtomatchjsonbodypropertiesmatchscope">Pulumi.<wbr>Aws<wbr>Native.<wbr>WAFv2.<wbr>Logging<wbr>Configuration<wbr>Field<wbr>To<wbr>Match<wbr>Json<wbr>Body<wbr>Properties<wbr>Match<wbr>Scope</a></span>
+    </dt>
+    <dd>{{% md %}}The parts of the JSON to match against using the MatchPattern. If you specify All, AWS WAF matches against keys and values. {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="invalidfallbackbehavior_csharp">
+<a href="#invalidfallbackbehavior_csharp" style="color: inherit; text-decoration: inherit;">Invalid<wbr>Fallback<wbr>Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationfieldtomatchjsonbodypropertiesinvalidfallbackbehavior">Pulumi.<wbr>Aws<wbr>Native.<wbr>WAFv2.<wbr>Logging<wbr>Configuration<wbr>Field<wbr>To<wbr>Match<wbr>Json<wbr>Body<wbr>Properties<wbr>Invalid<wbr>Fallback<wbr>Behavior</a></span>
+    </dt>
+    <dd>{{% md %}}What AWS WAF should do if it fails to completely parse the JSON body.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="matchpattern_go">
+<a href="#matchpattern_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationfieldtomatchjsonbodypropertiesmatchpatternproperties">Logging<wbr>Configuration<wbr>Field<wbr>To<wbr>Match<wbr>Json<wbr>Body<wbr>Properties<wbr>Match<wbr>Pattern<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}The patterns to look for in the JSON body. AWS WAF inspects the results of these pattern matches against the rule inspection criteria. {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="matchscope_go">
+<a href="#matchscope_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationfieldtomatchjsonbodypropertiesmatchscope">Logging<wbr>Configuration<wbr>Field<wbr>To<wbr>Match<wbr>Json<wbr>Body<wbr>Properties<wbr>Match<wbr>Scope</a></span>
+    </dt>
+    <dd>{{% md %}}The parts of the JSON to match against using the MatchPattern. If you specify All, AWS WAF matches against keys and values. {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="invalidfallbackbehavior_go">
+<a href="#invalidfallbackbehavior_go" style="color: inherit; text-decoration: inherit;">Invalid<wbr>Fallback<wbr>Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationfieldtomatchjsonbodypropertiesinvalidfallbackbehavior">Logging<wbr>Configuration<wbr>Field<wbr>To<wbr>Match<wbr>Json<wbr>Body<wbr>Properties<wbr>Invalid<wbr>Fallback<wbr>Behavior</a></span>
+    </dt>
+    <dd>{{% md %}}What AWS WAF should do if it fails to completely parse the JSON body.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="matchpattern_nodejs">
+<a href="#matchpattern_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationfieldtomatchjsonbodypropertiesmatchpatternproperties">Logging<wbr>Configuration<wbr>Field<wbr>To<wbr>Match<wbr>Json<wbr>Body<wbr>Properties<wbr>Match<wbr>Pattern<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}The patterns to look for in the JSON body. AWS WAF inspects the results of these pattern matches against the rule inspection criteria. {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="matchscope_nodejs">
+<a href="#matchscope_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationfieldtomatchjsonbodypropertiesmatchscope">Logging<wbr>Configuration<wbr>Field<wbr>To<wbr>Match<wbr>Json<wbr>Body<wbr>Properties<wbr>Match<wbr>Scope</a></span>
+    </dt>
+    <dd>{{% md %}}The parts of the JSON to match against using the MatchPattern. If you specify All, AWS WAF matches against keys and values. {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="invalidfallbackbehavior_nodejs">
+<a href="#invalidfallbackbehavior_nodejs" style="color: inherit; text-decoration: inherit;">invalid<wbr>Fallback<wbr>Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationfieldtomatchjsonbodypropertiesinvalidfallbackbehavior">Logging<wbr>Configuration<wbr>Field<wbr>To<wbr>Match<wbr>Json<wbr>Body<wbr>Properties<wbr>Invalid<wbr>Fallback<wbr>Behavior</a></span>
+    </dt>
+    <dd>{{% md %}}What AWS WAF should do if it fails to completely parse the JSON body.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="match_pattern_python">
+<a href="#match_pattern_python" style="color: inherit; text-decoration: inherit;">match_<wbr>pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationfieldtomatchjsonbodypropertiesmatchpatternproperties">Logging<wbr>Configuration<wbr>Field<wbr>To<wbr>Match<wbr>Json<wbr>Body<wbr>Properties<wbr>Match<wbr>Pattern<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}The patterns to look for in the JSON body. AWS WAF inspects the results of these pattern matches against the rule inspection criteria. {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="match_scope_python">
+<a href="#match_scope_python" style="color: inherit; text-decoration: inherit;">match_<wbr>scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationfieldtomatchjsonbodypropertiesmatchscope">Logging<wbr>Configuration<wbr>Field<wbr>To<wbr>Match<wbr>Json<wbr>Body<wbr>Properties<wbr>Match<wbr>Scope</a></span>
+    </dt>
+    <dd>{{% md %}}The parts of the JSON to match against using the MatchPattern. If you specify All, AWS WAF matches against keys and values. {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="invalid_fallback_behavior_python">
+<a href="#invalid_fallback_behavior_python" style="color: inherit; text-decoration: inherit;">invalid_<wbr>fallback_<wbr>behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationfieldtomatchjsonbodypropertiesinvalidfallbackbehavior">Logging<wbr>Configuration<wbr>Field<wbr>To<wbr>Match<wbr>Json<wbr>Body<wbr>Properties<wbr>Invalid<wbr>Fallback<wbr>Behavior</a></span>
+    </dt>
+    <dd>{{% md %}}What AWS WAF should do if it fails to completely parse the JSON body.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="loggingconfigurationfieldtomatchjsonbodypropertiesinvalidfallbackbehavior">Logging<wbr>Configuration<wbr>Field<wbr>To<wbr>Match<wbr>Json<wbr>Body<wbr>Properties<wbr>Invalid<wbr>Fallback<wbr>Behavior</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Match</dt>
+    <dd>MATCH</dd><dt>No<wbr>Match</dt>
+    <dd>NO_MATCH</dd><dt>Evaluate<wbr>As<wbr>String</dt>
+    <dd>EVALUATE_AS_STRING</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Logging<wbr>Configuration<wbr>Field<wbr>To<wbr>Match<wbr>Json<wbr>Body<wbr>Properties<wbr>Invalid<wbr>Fallback<wbr>Behavior<wbr>Match</dt>
+    <dd>MATCH</dd><dt>Logging<wbr>Configuration<wbr>Field<wbr>To<wbr>Match<wbr>Json<wbr>Body<wbr>Properties<wbr>Invalid<wbr>Fallback<wbr>Behavior<wbr>No<wbr>Match</dt>
+    <dd>NO_MATCH</dd><dt>Logging<wbr>Configuration<wbr>Field<wbr>To<wbr>Match<wbr>Json<wbr>Body<wbr>Properties<wbr>Invalid<wbr>Fallback<wbr>Behavior<wbr>Evaluate<wbr>As<wbr>String</dt>
+    <dd>EVALUATE_AS_STRING</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Match</dt>
+    <dd>MATCH</dd><dt>No<wbr>Match</dt>
+    <dd>NO_MATCH</dd><dt>Evaluate<wbr>As<wbr>String</dt>
+    <dd>EVALUATE_AS_STRING</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>MATCH</dt>
+    <dd>MATCH</dd><dt>NO_MATCH</dt>
+    <dd>NO_MATCH</dd><dt>EVALUATE_AS_STRING</dt>
+    <dd>EVALUATE_AS_STRING</dd></dl>
+{{% /choosable %}}
+
+<h4 id="loggingconfigurationfieldtomatchjsonbodypropertiesmatchpatternproperties">Logging<wbr>Configuration<wbr>Field<wbr>To<wbr>Match<wbr>Json<wbr>Body<wbr>Properties<wbr>Match<wbr>Pattern<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="all_csharp">
+<a href="#all_csharp" style="color: inherit; text-decoration: inherit;">All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Match all of the elements. See also MatchScope in JsonBody. You must specify either this setting or the IncludedPaths setting, but not both.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="includedpaths_csharp">
+<a href="#includedpaths_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Paths</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Match only the specified include paths. See also MatchScope in JsonBody.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="all_go">
+<a href="#all_go" style="color: inherit; text-decoration: inherit;">All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Match all of the elements. See also MatchScope in JsonBody. You must specify either this setting or the IncludedPaths setting, but not both.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="includedpaths_go">
+<a href="#includedpaths_go" style="color: inherit; text-decoration: inherit;">Included<wbr>Paths</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Match only the specified include paths. See also MatchScope in JsonBody.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="all_nodejs">
+<a href="#all_nodejs" style="color: inherit; text-decoration: inherit;">all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Match all of the elements. See also MatchScope in JsonBody. You must specify either this setting or the IncludedPaths setting, but not both.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="includedpaths_nodejs">
+<a href="#includedpaths_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Paths</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Match only the specified include paths. See also MatchScope in JsonBody.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="all_python">
+<a href="#all_python" style="color: inherit; text-decoration: inherit;">all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Match all of the elements. See also MatchScope in JsonBody. You must specify either this setting or the IncludedPaths setting, but not both.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="included_paths_python">
+<a href="#included_paths_python" style="color: inherit; text-decoration: inherit;">included_<wbr>paths</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Match only the specified include paths. See also MatchScope in JsonBody.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="loggingconfigurationfieldtomatchjsonbodypropertiesmatchscope">Logging<wbr>Configuration<wbr>Field<wbr>To<wbr>Match<wbr>Json<wbr>Body<wbr>Properties<wbr>Match<wbr>Scope</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>All</dt>
+    <dd>ALL</dd><dt>Key</dt>
+    <dd>KEY</dd><dt>Value</dt>
+    <dd>VALUE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Logging<wbr>Configuration<wbr>Field<wbr>To<wbr>Match<wbr>Json<wbr>Body<wbr>Properties<wbr>Match<wbr>Scope<wbr>All</dt>
+    <dd>ALL</dd><dt>Logging<wbr>Configuration<wbr>Field<wbr>To<wbr>Match<wbr>Json<wbr>Body<wbr>Properties<wbr>Match<wbr>Scope<wbr>Key</dt>
+    <dd>KEY</dd><dt>Logging<wbr>Configuration<wbr>Field<wbr>To<wbr>Match<wbr>Json<wbr>Body<wbr>Properties<wbr>Match<wbr>Scope<wbr>Value</dt>
+    <dd>VALUE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>All</dt>
+    <dd>ALL</dd><dt>Key</dt>
+    <dd>KEY</dd><dt>Value</dt>
+    <dd>VALUE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ALL</dt>
+    <dd>ALL</dd><dt>KEY</dt>
+    <dd>KEY</dd><dt>VALUE</dt>
+    <dd>VALUE</dd></dl>
+{{% /choosable %}}
+
+<h4 id="loggingconfigurationfieldtomatchsingleheaderproperties">Logging<wbr>Configuration<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the query header to inspect.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the query header to inspect.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the query header to inspect.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the query header to inspect.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="loggingconfigurationfilter">Logging<wbr>Configuration<wbr>Filter</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="behavior_csharp">
+<a href="#behavior_csharp" style="color: inherit; text-decoration: inherit;">Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationfilterbehavior">Pulumi.<wbr>Aws<wbr>Native.<wbr>WAFv2.<wbr>Logging<wbr>Configuration<wbr>Filter<wbr>Behavior</a></span>
+    </dt>
+    <dd>{{% md %}}How to handle logs that satisfy the filter's conditions and requirement. {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="conditions_csharp">
+<a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationcondition">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>WAFv2.<wbr>Inputs.<wbr>Logging<wbr>Configuration<wbr>Condition&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Match conditions for the filter.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="requirement_csharp">
+<a href="#requirement_csharp" style="color: inherit; text-decoration: inherit;">Requirement</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationfilterrequirement">Pulumi.<wbr>Aws<wbr>Native.<wbr>WAFv2.<wbr>Logging<wbr>Configuration<wbr>Filter<wbr>Requirement</a></span>
+    </dt>
+    <dd>{{% md %}}Logic to apply to the filtering conditions. You can specify that, in order to satisfy the filter, a log must match all conditions or must match at least one condition.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="behavior_go">
+<a href="#behavior_go" style="color: inherit; text-decoration: inherit;">Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationfilterbehavior">Logging<wbr>Configuration<wbr>Filter<wbr>Behavior</a></span>
+    </dt>
+    <dd>{{% md %}}How to handle logs that satisfy the filter's conditions and requirement. {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="conditions_go">
+<a href="#conditions_go" style="color: inherit; text-decoration: inherit;">Conditions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationcondition">[]Logging<wbr>Configuration<wbr>Condition</a></span>
+    </dt>
+    <dd>{{% md %}}Match conditions for the filter.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="requirement_go">
+<a href="#requirement_go" style="color: inherit; text-decoration: inherit;">Requirement</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationfilterrequirement">Logging<wbr>Configuration<wbr>Filter<wbr>Requirement</a></span>
+    </dt>
+    <dd>{{% md %}}Logic to apply to the filtering conditions. You can specify that, in order to satisfy the filter, a log must match all conditions or must match at least one condition.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="behavior_nodejs">
+<a href="#behavior_nodejs" style="color: inherit; text-decoration: inherit;">behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationfilterbehavior">Logging<wbr>Configuration<wbr>Filter<wbr>Behavior</a></span>
+    </dt>
+    <dd>{{% md %}}How to handle logs that satisfy the filter's conditions and requirement. {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="conditions_nodejs">
+<a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationcondition">Logging<wbr>Configuration<wbr>Condition[]</a></span>
+    </dt>
+    <dd>{{% md %}}Match conditions for the filter.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="requirement_nodejs">
+<a href="#requirement_nodejs" style="color: inherit; text-decoration: inherit;">requirement</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationfilterrequirement">Logging<wbr>Configuration<wbr>Filter<wbr>Requirement</a></span>
+    </dt>
+    <dd>{{% md %}}Logic to apply to the filtering conditions. You can specify that, in order to satisfy the filter, a log must match all conditions or must match at least one condition.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="behavior_python">
+<a href="#behavior_python" style="color: inherit; text-decoration: inherit;">behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationfilterbehavior">Logging<wbr>Configuration<wbr>Filter<wbr>Behavior</a></span>
+    </dt>
+    <dd>{{% md %}}How to handle logs that satisfy the filter's conditions and requirement. {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="conditions_python">
+<a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationcondition">Sequence[Logging<wbr>Configuration<wbr>Condition]</a></span>
+    </dt>
+    <dd>{{% md %}}Match conditions for the filter.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="requirement_python">
+<a href="#requirement_python" style="color: inherit; text-decoration: inherit;">requirement</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationfilterrequirement">Logging<wbr>Configuration<wbr>Filter<wbr>Requirement</a></span>
+    </dt>
+    <dd>{{% md %}}Logic to apply to the filtering conditions. You can specify that, in order to satisfy the filter, a log must match all conditions or must match at least one condition.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="loggingconfigurationfilterbehavior">Logging<wbr>Configuration<wbr>Filter<wbr>Behavior</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Keep</dt>
+    <dd>KEEP</dd><dt>Drop</dt>
+    <dd>DROP</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Logging<wbr>Configuration<wbr>Filter<wbr>Behavior<wbr>Keep</dt>
+    <dd>KEEP</dd><dt>Logging<wbr>Configuration<wbr>Filter<wbr>Behavior<wbr>Drop</dt>
+    <dd>DROP</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Keep</dt>
+    <dd>KEEP</dd><dt>Drop</dt>
+    <dd>DROP</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>KEEP</dt>
+    <dd>KEEP</dd><dt>DROP</dt>
+    <dd>DROP</dd></dl>
+{{% /choosable %}}
+
+<h4 id="loggingconfigurationfilterrequirement">Logging<wbr>Configuration<wbr>Filter<wbr>Requirement</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Meets<wbr>All</dt>
+    <dd>MEETS_ALL</dd><dt>Meets<wbr>Any</dt>
+    <dd>MEETS_ANY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Logging<wbr>Configuration<wbr>Filter<wbr>Requirement<wbr>Meets<wbr>All</dt>
+    <dd>MEETS_ALL</dd><dt>Logging<wbr>Configuration<wbr>Filter<wbr>Requirement<wbr>Meets<wbr>Any</dt>
+    <dd>MEETS_ANY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Meets<wbr>All</dt>
+    <dd>MEETS_ALL</dd><dt>Meets<wbr>Any</dt>
+    <dd>MEETS_ANY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>MEETS_ALL</dt>
+    <dd>MEETS_ALL</dd><dt>MEETS_ANY</dt>
+    <dd>MEETS_ANY</dd></dl>
+{{% /choosable %}}
+
+<h4 id="loggingconfigurationloggingfilterpropertiesdefaultbehavior">Logging<wbr>Configuration<wbr>Logging<wbr>Filter<wbr>Properties<wbr>Default<wbr>Behavior</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Keep</dt>
+    <dd>KEEP</dd><dt>Drop</dt>
+    <dd>DROP</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Logging<wbr>Configuration<wbr>Logging<wbr>Filter<wbr>Properties<wbr>Default<wbr>Behavior<wbr>Keep</dt>
+    <dd>KEEP</dd><dt>Logging<wbr>Configuration<wbr>Logging<wbr>Filter<wbr>Properties<wbr>Default<wbr>Behavior<wbr>Drop</dt>
+    <dd>DROP</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Keep</dt>
+    <dd>KEEP</dd><dt>Drop</dt>
+    <dd>DROP</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>KEEP</dt>
+    <dd>KEEP</dd><dt>DROP</dt>
+    <dd>DROP</dd></dl>
+{{% /choosable %}}
+
+<h4 id="loggingfilterproperties">Logging<wbr>Filter<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="defaultbehavior_csharp">
+<a href="#defaultbehavior_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationloggingfilterpropertiesdefaultbehavior">Pulumi.<wbr>Aws<wbr>Native.<wbr>WAFv2.<wbr>Logging<wbr>Configuration<wbr>Logging<wbr>Filter<wbr>Properties<wbr>Default<wbr>Behavior</a></span>
+    </dt>
+    <dd>{{% md %}}Default handling for logs that don't match any of the specified filtering conditions.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="filters_csharp">
+<a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationfilter">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>WAFv2.<wbr>Inputs.<wbr>Logging<wbr>Configuration<wbr>Filter&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The filters that you want to apply to the logs.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="defaultbehavior_go">
+<a href="#defaultbehavior_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationloggingfilterpropertiesdefaultbehavior">Logging<wbr>Configuration<wbr>Logging<wbr>Filter<wbr>Properties<wbr>Default<wbr>Behavior</a></span>
+    </dt>
+    <dd>{{% md %}}Default handling for logs that don't match any of the specified filtering conditions.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="filters_go">
+<a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationfilter">[]Logging<wbr>Configuration<wbr>Filter</a></span>
+    </dt>
+    <dd>{{% md %}}The filters that you want to apply to the logs.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="defaultbehavior_nodejs">
+<a href="#defaultbehavior_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationloggingfilterpropertiesdefaultbehavior">Logging<wbr>Configuration<wbr>Logging<wbr>Filter<wbr>Properties<wbr>Default<wbr>Behavior</a></span>
+    </dt>
+    <dd>{{% md %}}Default handling for logs that don't match any of the specified filtering conditions.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="filters_nodejs">
+<a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationfilter">Logging<wbr>Configuration<wbr>Filter[]</a></span>
+    </dt>
+    <dd>{{% md %}}The filters that you want to apply to the logs.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="default_behavior_python">
+<a href="#default_behavior_python" style="color: inherit; text-decoration: inherit;">default_<wbr>behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationloggingfilterpropertiesdefaultbehavior">Logging<wbr>Configuration<wbr>Logging<wbr>Filter<wbr>Properties<wbr>Default<wbr>Behavior</a></span>
+    </dt>
+    <dd>{{% md %}}Default handling for logs that don't match any of the specified filtering conditions.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="filters_python">
+<a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loggingconfigurationfilter">Sequence[Logging<wbr>Configuration<wbr>Filter]</a></span>
+    </dt>
+    <dd>{{% md %}}The filters that you want to apply to the logs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

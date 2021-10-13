@@ -29,12 +29,14 @@ Creates a new `BuildTrigger`. This API is experimental.
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Trigger</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">approval_config</span><span class="p">:</span> <span class="nx">Optional[ApprovalConfigArgs]</span> = None<span class="p">,</span>
             <span class="nx">autodetect</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">build</span><span class="p">:</span> <span class="nx">Optional[BuildArgs]</span> = None<span class="p">,</span>
             <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">filename</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">git_file_source</span><span class="p">:</span> <span class="nx">Optional[GitFileSourceArgs]</span> = None<span class="p">,</span>
             <span class="nx">github</span><span class="p">:</span> <span class="nx">Optional[GitHubEventsConfigArgs]</span> = None<span class="p">,</span>
             <span class="nx">ignored_files</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
             <span class="nx">included_files</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -44,6 +46,7 @@ Creates a new `BuildTrigger`. This API is experimental.
             <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">pubsub_config</span><span class="p">:</span> <span class="nx">Optional[PubsubConfigArgs]</span> = None<span class="p">,</span>
             <span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">source_to_build</span><span class="p">:</span> <span class="nx">Optional[GitRepoSourceArgs]</span> = None<span class="p">,</span>
             <span class="nx">substitutions</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -186,6 +189,14 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="approvalconfig_csharp">
+<a href="#approvalconfig_csharp" style="color: inherit; text-decoration: inherit;">Approval<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#approvalconfig">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Build.<wbr>V1.<wbr>Inputs.<wbr>Approval<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for manual approval to start a build invocation of this BuildTrigger.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="autodetect_csharp">
 <a href="#autodetect_csharp" style="color: inherit; text-decoration: inherit;">Autodetect</a>
 </span>
@@ -232,7 +243,15 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. A Common Expression Language string.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A Common Expression Language string.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gitfilesource_csharp">
+<a href="#gitfilesource_csharp" style="color: inherit; text-decoration: inherit;">Git<wbr>File<wbr>Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gitfilesource">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Build.<wbr>V1.<wbr>Inputs.<wbr>Git<wbr>File<wbr>Source<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The file source describing the local or remote Build template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="github_csharp">
 <a href="#github_csharp" style="color: inherit; text-decoration: inherit;">Github</a>
@@ -298,6 +317,14 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}The `Trigger` name with format: `projects/{project}/locations/{location}/triggers/{trigger}`, where {trigger} is a unique identifier generated by the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="serviceaccount_csharp">
+<a href="#serviceaccount_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The service account used for all user-controlled operations including UpdateBuildTrigger, RunBuildTrigger, CreateBuild, and CancelBuild. If no service account is set, then the standard Cloud Build service account ([PROJECT_NUM]@system.gserviceaccount.com) will be used instead. Format: `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sourcetobuild_csharp">
 <a href="#sourcetobuild_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>To<wbr>Build</a>
 </span>
@@ -350,6 +377,14 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="approvalconfig_go">
+<a href="#approvalconfig_go" style="color: inherit; text-decoration: inherit;">Approval<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#approvalconfig">Approval<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for manual approval to start a build invocation of this BuildTrigger.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="autodetect_go">
 <a href="#autodetect_go" style="color: inherit; text-decoration: inherit;">Autodetect</a>
 </span>
@@ -396,7 +431,15 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. A Common Expression Language string.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A Common Expression Language string.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gitfilesource_go">
+<a href="#gitfilesource_go" style="color: inherit; text-decoration: inherit;">Git<wbr>File<wbr>Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gitfilesource">Git<wbr>File<wbr>Source<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The file source describing the local or remote Build template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="github_go">
 <a href="#github_go" style="color: inherit; text-decoration: inherit;">Github</a>
@@ -462,6 +505,14 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}The `Trigger` name with format: `projects/{project}/locations/{location}/triggers/{trigger}`, where {trigger} is a unique identifier generated by the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="serviceaccount_go">
+<a href="#serviceaccount_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The service account used for all user-controlled operations including UpdateBuildTrigger, RunBuildTrigger, CreateBuild, and CancelBuild. If no service account is set, then the standard Cloud Build service account ([PROJECT_NUM]@system.gserviceaccount.com) will be used instead. Format: `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sourcetobuild_go">
 <a href="#sourcetobuild_go" style="color: inherit; text-decoration: inherit;">Source<wbr>To<wbr>Build</a>
 </span>
@@ -514,6 +565,14 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="approvalconfig_nodejs">
+<a href="#approvalconfig_nodejs" style="color: inherit; text-decoration: inherit;">approval<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#approvalconfig">Approval<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for manual approval to start a build invocation of this BuildTrigger.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="autodetect_nodejs">
 <a href="#autodetect_nodejs" style="color: inherit; text-decoration: inherit;">autodetect</a>
 </span>
@@ -560,7 +619,15 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. A Common Expression Language string.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A Common Expression Language string.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gitfilesource_nodejs">
+<a href="#gitfilesource_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>File<wbr>Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gitfilesource">Git<wbr>File<wbr>Source<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The file source describing the local or remote Build template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="github_nodejs">
 <a href="#github_nodejs" style="color: inherit; text-decoration: inherit;">github</a>
@@ -626,6 +693,14 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}The `Trigger` name with format: `projects/{project}/locations/{location}/triggers/{trigger}`, where {trigger} is a unique identifier generated by the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="serviceaccount_nodejs">
+<a href="#serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The service account used for all user-controlled operations including UpdateBuildTrigger, RunBuildTrigger, CreateBuild, and CancelBuild. If no service account is set, then the standard Cloud Build service account ([PROJECT_NUM]@system.gserviceaccount.com) will be used instead. Format: `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sourcetobuild_nodejs">
 <a href="#sourcetobuild_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>To<wbr>Build</a>
 </span>
@@ -678,6 +753,14 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="approval_config_python">
+<a href="#approval_config_python" style="color: inherit; text-decoration: inherit;">approval_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#approvalconfig">Approval<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for manual approval to start a build invocation of this BuildTrigger.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="autodetect_python">
 <a href="#autodetect_python" style="color: inherit; text-decoration: inherit;">autodetect</a>
 </span>
@@ -724,7 +807,15 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Optional. A Common Expression Language string.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A Common Expression Language string.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="git_file_source_python">
+<a href="#git_file_source_python" style="color: inherit; text-decoration: inherit;">git_<wbr>file_<wbr>source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gitfilesource">Git<wbr>File<wbr>Source<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The file source describing the local or remote Build template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="github_python">
 <a href="#github_python" style="color: inherit; text-decoration: inherit;">github</a>
@@ -789,6 +880,14 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The `Trigger` name with format: `projects/{project}/locations/{location}/triggers/{trigger}`, where {trigger} is a unique identifier generated by the service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="service_account_python">
+<a href="#service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The service account used for all user-controlled operations including UpdateBuildTrigger, RunBuildTrigger, CreateBuild, and CancelBuild. If no service account is set, then the standard Cloud Build service account ([PROJECT_NUM]@system.gserviceaccount.com) will be used instead. Format: `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_to_build_python">
 <a href="#source_to_build_python" style="color: inherit; text-decoration: inherit;">source_<wbr>to_<wbr>build</a>
@@ -927,6 +1026,284 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="approvalconfig">Approval<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="approvalrequired_csharp">
+<a href="#approvalrequired_csharp" style="color: inherit; text-decoration: inherit;">Approval<wbr>Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not approval is needed. If this is set on a build, it will become pending when created, and will need to be explicitly approved to start.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="approvalrequired_go">
+<a href="#approvalrequired_go" style="color: inherit; text-decoration: inherit;">Approval<wbr>Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not approval is needed. If this is set on a build, it will become pending when created, and will need to be explicitly approved to start.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="approvalrequired_nodejs">
+<a href="#approvalrequired_nodejs" style="color: inherit; text-decoration: inherit;">approval<wbr>Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether or not approval is needed. If this is set on a build, it will become pending when created, and will need to be explicitly approved to start.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="approval_required_python">
+<a href="#approval_required_python" style="color: inherit; text-decoration: inherit;">approval_<wbr>required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not approval is needed. If this is set on a build, it will become pending when created, and will need to be explicitly approved to start.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="approvalconfigresponse">Approval<wbr>Config<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="approvalrequired_csharp">
+<a href="#approvalrequired_csharp" style="color: inherit; text-decoration: inherit;">Approval<wbr>Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not approval is needed. If this is set on a build, it will become pending when created, and will need to be explicitly approved to start.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="approvalrequired_go">
+<a href="#approvalrequired_go" style="color: inherit; text-decoration: inherit;">Approval<wbr>Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not approval is needed. If this is set on a build, it will become pending when created, and will need to be explicitly approved to start.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="approvalrequired_nodejs">
+<a href="#approvalrequired_nodejs" style="color: inherit; text-decoration: inherit;">approval<wbr>Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether or not approval is needed. If this is set on a build, it will become pending when created, and will need to be explicitly approved to start.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="approval_required_python">
+<a href="#approval_required_python" style="color: inherit; text-decoration: inherit;">approval_<wbr>required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not approval is needed. If this is set on a build, it will become pending when created, and will need to be explicitly approved to start.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="approvalresultresponse">Approval<wbr>Result<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="approvaltime_csharp">
+<a href="#approvaltime_csharp" style="color: inherit; text-decoration: inherit;">Approval<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time when the approval decision was made.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="approveraccount_csharp">
+<a href="#approveraccount_csharp" style="color: inherit; text-decoration: inherit;">Approver<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Email of the user that called the ApproveBuild API to approve or reject a build at the time that the API was called.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="comment_csharp">
+<a href="#comment_csharp" style="color: inherit; text-decoration: inherit;">Comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. An optional comment for this manual approval result.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="decision_csharp">
+<a href="#decision_csharp" style="color: inherit; text-decoration: inherit;">Decision</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The decision of this manual approval.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="url_csharp">
+<a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. An optional URL tied to this manual approval result. This field is essentially the same as comment, except that it will be rendered by the UI differently. An example use case is a link to an external job that approved this Build.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="approvaltime_go">
+<a href="#approvaltime_go" style="color: inherit; text-decoration: inherit;">Approval<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time when the approval decision was made.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="approveraccount_go">
+<a href="#approveraccount_go" style="color: inherit; text-decoration: inherit;">Approver<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Email of the user that called the ApproveBuild API to approve or reject a build at the time that the API was called.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="comment_go">
+<a href="#comment_go" style="color: inherit; text-decoration: inherit;">Comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. An optional comment for this manual approval result.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="decision_go">
+<a href="#decision_go" style="color: inherit; text-decoration: inherit;">Decision</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The decision of this manual approval.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="url_go">
+<a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. An optional URL tied to this manual approval result. This field is essentially the same as comment, except that it will be rendered by the UI differently. An example use case is a link to an external job that approved this Build.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="approvaltime_nodejs">
+<a href="#approvaltime_nodejs" style="color: inherit; text-decoration: inherit;">approval<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time when the approval decision was made.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="approveraccount_nodejs">
+<a href="#approveraccount_nodejs" style="color: inherit; text-decoration: inherit;">approver<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Email of the user that called the ApproveBuild API to approve or reject a build at the time that the API was called.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="comment_nodejs">
+<a href="#comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. An optional comment for this manual approval result.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="decision_nodejs">
+<a href="#decision_nodejs" style="color: inherit; text-decoration: inherit;">decision</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The decision of this manual approval.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="url_nodejs">
+<a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. An optional URL tied to this manual approval result. This field is essentially the same as comment, except that it will be rendered by the UI differently. An example use case is a link to an external job that approved this Build.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="approval_time_python">
+<a href="#approval_time_python" style="color: inherit; text-decoration: inherit;">approval_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The time when the approval decision was made.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="approver_account_python">
+<a href="#approver_account_python" style="color: inherit; text-decoration: inherit;">approver_<wbr>account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Email of the user that called the ApproveBuild API to approve or reject a build at the time that the API was called.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="comment_python">
+<a href="#comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Optional. An optional comment for this manual approval result.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="decision_python">
+<a href="#decision_python" style="color: inherit; text-decoration: inherit;">decision</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The decision of this manual approval.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="url_python">
+<a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Optional. An optional URL tied to this manual approval result. This field is essentially the same as comment, except that it will be rendered by the UI differently. An example use case is a link to an external job that approved this Build.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="artifactobjects">Artifact<wbr>Objects</h4>
 
@@ -1720,6 +2097,120 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amount of time that this build should be allowed to run, to second granularity. If this amount of time elapses, work on the build will cease and the build status will be `TIMEOUT`. `timeout` starts ticking from `startTime`. Default time is ten minutes.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="buildapprovalresponse">Build<wbr>Approval<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="config_csharp">
+<a href="#config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#approvalconfigresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Build.<wbr>V1.<wbr>Inputs.<wbr>Approval<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for manual approval of this build.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="result_csharp">
+<a href="#result_csharp" style="color: inherit; text-decoration: inherit;">Result</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#approvalresultresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Build.<wbr>V1.<wbr>Inputs.<wbr>Approval<wbr>Result<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Result of manual approval for this Build.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="state_csharp">
+<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The state of this build's approval.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="config_go">
+<a href="#config_go" style="color: inherit; text-decoration: inherit;">Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#approvalconfigresponse">Approval<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for manual approval of this build.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="result_go">
+<a href="#result_go" style="color: inherit; text-decoration: inherit;">Result</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#approvalresultresponse">Approval<wbr>Result<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Result of manual approval for this Build.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="state_go">
+<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The state of this build's approval.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="config_nodejs">
+<a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#approvalconfigresponse">Approval<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for manual approval of this build.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="result_nodejs">
+<a href="#result_nodejs" style="color: inherit; text-decoration: inherit;">result</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#approvalresultresponse">Approval<wbr>Result<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Result of manual approval for this Build.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="state_nodejs">
+<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The state of this build's approval.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="config_python">
+<a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#approvalconfigresponse">Approval<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for manual approval of this build.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="result_python">
+<a href="#result_python" style="color: inherit; text-decoration: inherit;">result</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#approvalresultresponse">Approval<wbr>Result<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Result of manual approval for this Build.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="state_python">
+<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The state of this build's approval.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="buildoptions">Build<wbr>Options</h4>
@@ -2787,6 +3278,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="approval_csharp">
+<a href="#approval_csharp" style="color: inherit; text-decoration: inherit;">Approval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#buildapprovalresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Build.<wbr>V1.<wbr>Inputs.<wbr>Build<wbr>Approval<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Describes this build's approval configuration, status, and result.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="artifacts_csharp">
 <a href="#artifacts_csharp" style="color: inherit; text-decoration: inherit;">Artifacts</a>
 </span>
@@ -2993,7 +3492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Stores timing information for phases of the build. Valid keys are: * BUILD: time to execute all build steps * PUSH: time to push all specified images. * FETCHSOURCE: time to fetch source. If the build does not specify source or images, these keys will not be included.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Stores timing information for phases of the build. Valid keys are: * BUILD: time to execute all build steps. * PUSH: time to push all specified images. * FETCHSOURCE: time to fetch source. * SETUPBUILD: time to set up build. If the build does not specify source or images, these keys will not be included.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="warnings_csharp">
 <a href="#warnings_csharp" style="color: inherit; text-decoration: inherit;">Warnings</a>
@@ -3006,6 +3505,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="approval_go">
+<a href="#approval_go" style="color: inherit; text-decoration: inherit;">Approval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#buildapprovalresponse">Build<wbr>Approval<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Describes this build's approval configuration, status, and result.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="artifacts_go">
 <a href="#artifacts_go" style="color: inherit; text-decoration: inherit;">Artifacts</a>
@@ -3213,7 +3720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Stores timing information for phases of the build. Valid keys are: * BUILD: time to execute all build steps * PUSH: time to push all specified images. * FETCHSOURCE: time to fetch source. If the build does not specify source or images, these keys will not be included.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Stores timing information for phases of the build. Valid keys are: * BUILD: time to execute all build steps. * PUSH: time to push all specified images. * FETCHSOURCE: time to fetch source. * SETUPBUILD: time to set up build. If the build does not specify source or images, these keys will not be included.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="warnings_go">
 <a href="#warnings_go" style="color: inherit; text-decoration: inherit;">Warnings</a>
@@ -3226,6 +3733,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="approval_nodejs">
+<a href="#approval_nodejs" style="color: inherit; text-decoration: inherit;">approval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#buildapprovalresponse">Build<wbr>Approval<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Describes this build's approval configuration, status, and result.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="artifacts_nodejs">
 <a href="#artifacts_nodejs" style="color: inherit; text-decoration: inherit;">artifacts</a>
@@ -3433,7 +3948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Stores timing information for phases of the build. Valid keys are: * BUILD: time to execute all build steps * PUSH: time to push all specified images. * FETCHSOURCE: time to fetch source. If the build does not specify source or images, these keys will not be included.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Stores timing information for phases of the build. Valid keys are: * BUILD: time to execute all build steps. * PUSH: time to push all specified images. * FETCHSOURCE: time to fetch source. * SETUPBUILD: time to set up build. If the build does not specify source or images, these keys will not be included.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="warnings_nodejs">
 <a href="#warnings_nodejs" style="color: inherit; text-decoration: inherit;">warnings</a>
@@ -3446,6 +3961,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="approval_python">
+<a href="#approval_python" style="color: inherit; text-decoration: inherit;">approval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#buildapprovalresponse">Build<wbr>Approval<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Describes this build's approval configuration, status, and result.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="artifacts_python">
 <a href="#artifacts_python" style="color: inherit; text-decoration: inherit;">artifacts</a>
@@ -3653,7 +4176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Stores timing information for phases of the build. Valid keys are: * BUILD: time to execute all build steps * PUSH: time to push all specified images. * FETCHSOURCE: time to fetch source. If the build does not specify source or images, these keys will not be included.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Stores timing information for phases of the build. Valid keys are: * BUILD: time to execute all build steps. * PUSH: time to push all specified images. * FETCHSOURCE: time to fetch source. * SETUPBUILD: time to set up build. If the build does not specify source or images, these keys will not be included.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="warnings_python">
 <a href="#warnings_python" style="color: inherit; text-decoration: inherit;">warnings</a>
@@ -3716,6 +4239,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for this build step, used in `wait_for` to reference this build step as a dependency.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="script_csharp">
+<a href="#script_csharp" style="color: inherit; text-decoration: inherit;">Script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A shell script to be executed in the step. When script is provided, the user cannot specify the entrypoint or args.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretenv_csharp">
 <a href="#secretenv_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Env</a>
@@ -3801,6 +4332,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Unique identifier for this build step, used in `wait_for` to reference this build step as a dependency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="script_go">
+<a href="#script_go" style="color: inherit; text-decoration: inherit;">Script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A shell script to be executed in the step. When script is provided, the user cannot specify the entrypoint or args.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="secretenv_go">
 <a href="#secretenv_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Env</a>
 </span>
@@ -3885,6 +4424,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Unique identifier for this build step, used in `wait_for` to reference this build step as a dependency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="script_nodejs">
+<a href="#script_nodejs" style="color: inherit; text-decoration: inherit;">script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A shell script to be executed in the step. When script is provided, the user cannot specify the entrypoint or args.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="secretenv_nodejs">
 <a href="#secretenv_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Env</a>
 </span>
@@ -3968,6 +4515,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier for this build step, used in `wait_for` to reference this build step as a dependency.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="script_python">
+<a href="#script_python" style="color: inherit; text-decoration: inherit;">script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A shell script to be executed in the step. When script is provided, the user cannot specify the entrypoint or args.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secret_env_python">
 <a href="#secret_env_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>env</a>
@@ -4054,6 +4609,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#timespanresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Build.<wbr>V1.<wbr>Inputs.<wbr>Time<wbr>Span<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Stores timing information for pulling this build step's builder image only.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="script_csharp">
+<a href="#script_csharp" style="color: inherit; text-decoration: inherit;">Script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A shell script to be executed in the step. When script is provided, the user cannot specify the entrypoint or args.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretenv_csharp">
 <a href="#secretenv_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Env</a>
@@ -4155,6 +4718,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Stores timing information for pulling this build step's builder image only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="script_go">
+<a href="#script_go" style="color: inherit; text-decoration: inherit;">Script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A shell script to be executed in the step. When script is provided, the user cannot specify the entrypoint or args.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="secretenv_go">
 <a href="#secretenv_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Env</a>
 </span>
@@ -4255,6 +4826,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Stores timing information for pulling this build step's builder image only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="script_nodejs">
+<a href="#script_nodejs" style="color: inherit; text-decoration: inherit;">script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A shell script to be executed in the step. When script is provided, the user cannot specify the entrypoint or args.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="secretenv_nodejs">
 <a href="#secretenv_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Env</a>
 </span>
@@ -4354,6 +4933,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#timespanresponse">Time<wbr>Span<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Stores timing information for pulling this build step's builder image only.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="script_python">
+<a href="#script_python" style="color: inherit; text-decoration: inherit;">script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A shell script to be executed in the step. When script is provided, the user cannot specify the entrypoint or args.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_env_python">
 <a href="#secret_env_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>env</a>
@@ -4600,10 +5187,340 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The name of the failure.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="gitfilesource">Git<wbr>File<wbr>Source</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The path of the file, with the repo root as the root of the path.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="repotype_csharp">
+<a href="#repotype_csharp" style="color: inherit; text-decoration: inherit;">Repo<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gitfilesourcerepotype">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Build.<wbr>V1.<wbr>Git<wbr>File<wbr>Source<wbr>Repo<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}See RepoType above.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="revision_csharp">
+<a href="#revision_csharp" style="color: inherit; text-decoration: inherit;">Revision</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The branch, tag, arbitrary ref, or SHA version of the repo to use when resolving the filename (optional). This field respects the same syntax/resolution as described here: https://git-scm.com/docs/gitrevisions If unspecified, the revision from which the trigger invocation originated is assumed to be the revision from which to read the specified path.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="uri_csharp">
+<a href="#uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URI of the repo (optional). If unspecified, the repo from which the trigger invocation originated is assumed to be the repo from which to read the specified path.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The path of the file, with the repo root as the root of the path.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="repotype_go">
+<a href="#repotype_go" style="color: inherit; text-decoration: inherit;">Repo<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gitfilesourcerepotype">Git<wbr>File<wbr>Source<wbr>Repo<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}See RepoType above.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="revision_go">
+<a href="#revision_go" style="color: inherit; text-decoration: inherit;">Revision</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The branch, tag, arbitrary ref, or SHA version of the repo to use when resolving the filename (optional). This field respects the same syntax/resolution as described here: https://git-scm.com/docs/gitrevisions If unspecified, the revision from which the trigger invocation originated is assumed to be the revision from which to read the specified path.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="uri_go">
+<a href="#uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URI of the repo (optional). If unspecified, the repo from which the trigger invocation originated is assumed to be the repo from which to read the specified path.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The path of the file, with the repo root as the root of the path.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="repotype_nodejs">
+<a href="#repotype_nodejs" style="color: inherit; text-decoration: inherit;">repo<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gitfilesourcerepotype">Git<wbr>File<wbr>Source<wbr>Repo<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}See RepoType above.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="revision_nodejs">
+<a href="#revision_nodejs" style="color: inherit; text-decoration: inherit;">revision</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The branch, tag, arbitrary ref, or SHA version of the repo to use when resolving the filename (optional). This field respects the same syntax/resolution as described here: https://git-scm.com/docs/gitrevisions If unspecified, the revision from which the trigger invocation originated is assumed to be the revision from which to read the specified path.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="uri_nodejs">
+<a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URI of the repo (optional). If unspecified, the repo from which the trigger invocation originated is assumed to be the repo from which to read the specified path.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The path of the file, with the repo root as the root of the path.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="repo_type_python">
+<a href="#repo_type_python" style="color: inherit; text-decoration: inherit;">repo_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gitfilesourcerepotype">Git<wbr>File<wbr>Source<wbr>Repo<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}See RepoType above.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="revision_python">
+<a href="#revision_python" style="color: inherit; text-decoration: inherit;">revision</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The branch, tag, arbitrary ref, or SHA version of the repo to use when resolving the filename (optional). This field respects the same syntax/resolution as described here: https://git-scm.com/docs/gitrevisions If unspecified, the revision from which the trigger invocation originated is assumed to be the revision from which to read the specified path.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="uri_python">
+<a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The URI of the repo (optional). If unspecified, the repo from which the trigger invocation originated is assumed to be the repo from which to read the specified path.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="gitfilesourcerepotype">Git<wbr>File<wbr>Source<wbr>Repo<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Unknown</dt>
+    <dd>UNKNOWN{{% md %}}The default, unknown repo type.{{% /md %}}</dd><dt>Cloud<wbr>Source<wbr>Repositories</dt>
+    <dd>CLOUD_SOURCE_REPOSITORIES{{% md %}}A Google Cloud Source Repositories-hosted repo.{{% /md %}}</dd><dt>Github</dt>
+    <dd>GITHUB{{% md %}}A GitHub-hosted repo not necessarily on "github.com" (i.e. GitHub Enterprise).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Git<wbr>File<wbr>Source<wbr>Repo<wbr>Type<wbr>Unknown</dt>
+    <dd>UNKNOWN{{% md %}}The default, unknown repo type.{{% /md %}}</dd><dt>Git<wbr>File<wbr>Source<wbr>Repo<wbr>Type<wbr>Cloud<wbr>Source<wbr>Repositories</dt>
+    <dd>CLOUD_SOURCE_REPOSITORIES{{% md %}}A Google Cloud Source Repositories-hosted repo.{{% /md %}}</dd><dt>Git<wbr>File<wbr>Source<wbr>Repo<wbr>Type<wbr>Github</dt>
+    <dd>GITHUB{{% md %}}A GitHub-hosted repo not necessarily on "github.com" (i.e. GitHub Enterprise).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Unknown</dt>
+    <dd>UNKNOWN{{% md %}}The default, unknown repo type.{{% /md %}}</dd><dt>Cloud<wbr>Source<wbr>Repositories</dt>
+    <dd>CLOUD_SOURCE_REPOSITORIES{{% md %}}A Google Cloud Source Repositories-hosted repo.{{% /md %}}</dd><dt>Github</dt>
+    <dd>GITHUB{{% md %}}A GitHub-hosted repo not necessarily on "github.com" (i.e. GitHub Enterprise).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>UNKNOWN</dt>
+    <dd>UNKNOWN{{% md %}}The default, unknown repo type.{{% /md %}}</dd><dt>CLOUD_SOURCE_REPOSITORIES</dt>
+    <dd>CLOUD_SOURCE_REPOSITORIES{{% md %}}A Google Cloud Source Repositories-hosted repo.{{% /md %}}</dd><dt>GITHUB</dt>
+    <dd>GITHUB{{% md %}}A GitHub-hosted repo not necessarily on "github.com" (i.e. GitHub Enterprise).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="gitfilesourceresponse">Git<wbr>File<wbr>Source<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The path of the file, with the repo root as the root of the path.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="repotype_csharp">
+<a href="#repotype_csharp" style="color: inherit; text-decoration: inherit;">Repo<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}See RepoType above.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="revision_csharp">
+<a href="#revision_csharp" style="color: inherit; text-decoration: inherit;">Revision</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The branch, tag, arbitrary ref, or SHA version of the repo to use when resolving the filename (optional). This field respects the same syntax/resolution as described here: https://git-scm.com/docs/gitrevisions If unspecified, the revision from which the trigger invocation originated is assumed to be the revision from which to read the specified path.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="uri_csharp">
+<a href="#uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URI of the repo (optional). If unspecified, the repo from which the trigger invocation originated is assumed to be the repo from which to read the specified path.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The path of the file, with the repo root as the root of the path.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="repotype_go">
+<a href="#repotype_go" style="color: inherit; text-decoration: inherit;">Repo<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}See RepoType above.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="revision_go">
+<a href="#revision_go" style="color: inherit; text-decoration: inherit;">Revision</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The branch, tag, arbitrary ref, or SHA version of the repo to use when resolving the filename (optional). This field respects the same syntax/resolution as described here: https://git-scm.com/docs/gitrevisions If unspecified, the revision from which the trigger invocation originated is assumed to be the revision from which to read the specified path.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="uri_go">
+<a href="#uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URI of the repo (optional). If unspecified, the repo from which the trigger invocation originated is assumed to be the repo from which to read the specified path.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The path of the file, with the repo root as the root of the path.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="repotype_nodejs">
+<a href="#repotype_nodejs" style="color: inherit; text-decoration: inherit;">repo<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}See RepoType above.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="revision_nodejs">
+<a href="#revision_nodejs" style="color: inherit; text-decoration: inherit;">revision</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The branch, tag, arbitrary ref, or SHA version of the repo to use when resolving the filename (optional). This field respects the same syntax/resolution as described here: https://git-scm.com/docs/gitrevisions If unspecified, the revision from which the trigger invocation originated is assumed to be the revision from which to read the specified path.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="uri_nodejs">
+<a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URI of the repo (optional). If unspecified, the repo from which the trigger invocation originated is assumed to be the repo from which to read the specified path.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The path of the file, with the repo root as the root of the path.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="repo_type_python">
+<a href="#repo_type_python" style="color: inherit; text-decoration: inherit;">repo_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}See RepoType above.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="revision_python">
+<a href="#revision_python" style="color: inherit; text-decoration: inherit;">revision</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The branch, tag, arbitrary ref, or SHA version of the repo to use when resolving the filename (optional). This field respects the same syntax/resolution as described here: https://git-scm.com/docs/gitrevisions If unspecified, the revision from which the trigger invocation originated is assumed to be the revision from which to read the specified path.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="uri_python">
+<a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The URI of the repo (optional). If unspecified, the repo from which the trigger invocation originated is assumed to be the repo from which to read the specified path.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="githubeventsconfig">Git<wbr>Hub<wbr>Events<wbr>Config</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enterpriseconfigresourcename_csharp">
+<a href="#enterpriseconfigresourcename_csharp" style="color: inherit; text-decoration: inherit;">Enterprise<wbr>Config<wbr>Resource<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. The resource name of the github enterprise config that should be applied to this installation. For example: "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="installationid_csharp">
 <a href="#installationid_csharp" style="color: inherit; text-decoration: inherit;">Installation<wbr>Id</a>
@@ -4649,6 +5566,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="enterpriseconfigresourcename_go">
+<a href="#enterpriseconfigresourcename_go" style="color: inherit; text-decoration: inherit;">Enterprise<wbr>Config<wbr>Resource<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. The resource name of the github enterprise config that should be applied to this installation. For example: "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="installationid_go">
 <a href="#installationid_go" style="color: inherit; text-decoration: inherit;">Installation<wbr>Id</a>
 </span>
@@ -4693,6 +5618,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="enterpriseconfigresourcename_nodejs">
+<a href="#enterpriseconfigresourcename_nodejs" style="color: inherit; text-decoration: inherit;">enterprise<wbr>Config<wbr>Resource<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. The resource name of the github enterprise config that should be applied to this installation. For example: "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="installationid_nodejs">
 <a href="#installationid_nodejs" style="color: inherit; text-decoration: inherit;">installation<wbr>Id</a>
 </span>
@@ -4736,6 +5669,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enterprise_config_resource_name_python">
+<a href="#enterprise_config_resource_name_python" style="color: inherit; text-decoration: inherit;">enterprise_<wbr>config_<wbr>resource_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Optional. The resource name of the github enterprise config that should be applied to this installation. For example: "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="installation_id_python">
 <a href="#installation_id_python" style="color: inherit; text-decoration: inherit;">installation_<wbr>id</a>
@@ -4783,6 +5724,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="enterpriseconfigresourcename_csharp">
+<a href="#enterpriseconfigresourcename_csharp" style="color: inherit; text-decoration: inherit;">Enterprise<wbr>Config<wbr>Resource<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. The resource name of the github enterprise config that should be applied to this installation. For example: "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="installationid_csharp">
 <a href="#installationid_csharp" style="color: inherit; text-decoration: inherit;">Installation<wbr>Id</a>
 </span>
@@ -4826,6 +5775,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enterpriseconfigresourcename_go">
+<a href="#enterpriseconfigresourcename_go" style="color: inherit; text-decoration: inherit;">Enterprise<wbr>Config<wbr>Resource<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. The resource name of the github enterprise config that should be applied to this installation. For example: "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="installationid_go">
 <a href="#installationid_go" style="color: inherit; text-decoration: inherit;">Installation<wbr>Id</a>
@@ -4871,6 +5828,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="enterpriseconfigresourcename_nodejs">
+<a href="#enterpriseconfigresourcename_nodejs" style="color: inherit; text-decoration: inherit;">enterprise<wbr>Config<wbr>Resource<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. The resource name of the github enterprise config that should be applied to this installation. For example: "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="installationid_nodejs">
 <a href="#installationid_nodejs" style="color: inherit; text-decoration: inherit;">installation<wbr>Id</a>
 </span>
@@ -4914,6 +5879,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enterprise_config_resource_name_python">
+<a href="#enterprise_config_resource_name_python" style="color: inherit; text-decoration: inherit;">enterprise_<wbr>config_<wbr>resource_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Optional. The resource name of the github enterprise config that should be applied to this installation. For example: "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="installation_id_python">
 <a href="#installation_id_python" style="color: inherit; text-decoration: inherit;">installation_<wbr>id</a>

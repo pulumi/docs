@@ -427,6 +427,14 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="allowallpackagenames_csharp">
+<a href="#allowallpackagenames_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>All<wbr>Package<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to true, it means allowed_package_names will not be enforced.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="allowedpackagenames_csharp">
 <a href="#allowedpackagenames_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Package<wbr>Names</a>
 </span>
@@ -438,6 +446,14 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="allowallpackagenames_go">
+<a href="#allowallpackagenames_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>All<wbr>Package<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to true, it means allowed_package_names will not be enforced.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="allowedpackagenames_go">
 <a href="#allowedpackagenames_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Package<wbr>Names</a>
@@ -451,6 +467,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="allowallpackagenames_nodejs">
+<a href="#allowallpackagenames_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>All<wbr>Package<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If set to true, it means allowed_package_names will not be enforced.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="allowedpackagenames_nodejs">
 <a href="#allowedpackagenames_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Package<wbr>Names</a>
 </span>
@@ -462,6 +486,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="allow_all_package_names_python">
+<a href="#allow_all_package_names_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>all_<wbr>package_<wbr>names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to true, it means allowed_package_names will not be enforced.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="allowed_package_names_python">
 <a href="#allowed_package_names_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>package_<wbr>names</a>
@@ -479,6 +511,14 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="allowallbundleids_csharp">
+<a href="#allowallbundleids_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>All<wbr>Bundle<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to true, it means allowed_bundle_ids will not be enforced.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="allowedbundleids_csharp">
 <a href="#allowedbundleids_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Bundle<wbr>Ids</a>
 </span>
@@ -490,6 +530,14 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="allowallbundleids_go">
+<a href="#allowallbundleids_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>All<wbr>Bundle<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to true, it means allowed_bundle_ids will not be enforced.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="allowedbundleids_go">
 <a href="#allowedbundleids_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Bundle<wbr>Ids</a>
@@ -503,6 +551,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="allowallbundleids_nodejs">
+<a href="#allowallbundleids_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>All<wbr>Bundle<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If set to true, it means allowed_bundle_ids will not be enforced.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="allowedbundleids_nodejs">
 <a href="#allowedbundleids_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Bundle<wbr>Ids</a>
 </span>
@@ -514,6 +570,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="allow_all_bundle_ids_python">
+<a href="#allow_all_bundle_ids_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>all_<wbr>bundle_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to true, it means allowed_bundle_ids will not be enforced.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="allowed_bundle_ids_python">
 <a href="#allowed_bundle_ids_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>bundle_<wbr>ids</a>

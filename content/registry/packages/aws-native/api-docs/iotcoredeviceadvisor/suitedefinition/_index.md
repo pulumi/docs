@@ -37,18 +37,18 @@ class MyStack : Stack
     {
         var testSuiteDefinition = new AwsNative.IoTCoreDeviceAdvisor.SuiteDefinition("testSuiteDefinition", new AwsNative.IoTCoreDeviceAdvisor.SuiteDefinitionArgs
         {
-            SuiteDefinitionConfiguration = 
+            SuiteDefinitionConfiguration = new AwsNative.IoTCoreDeviceAdvisor.Inputs.SuiteDefinitionConfigurationPropertiesArgs
             {
-                { "suiteDefinitionName", "SuiteDefinitionName" },
-                { "devicePermissionRoleArn", "arn:aws:iam::123456789012:role/RoleName" },
-                { "devices", 
+                SuiteDefinitionName = "SuiteDefinitionName",
+                DevicePermissionRoleArn = "arn:aws:iam::123456789012:role/RoleName",
+                Devices = 
                 {
-                    
+                    new AwsNative.IoTCoreDeviceAdvisor.Inputs.SuiteDefinitionDeviceUnderTestArgs
                     {
-                        { "thingArn", "arn:aws:iot:us-east-1:123456789012:thing/ThingName" },
+                        ThingArn = "arn:aws:iot:us-east-1:123456789012:thing/ThingName",
                     },
-                } },
-                { "rootGroup", @"{
+                },
+                RootGroup = @"{
 ""configuration"": {},
 ""tests"": [{
 ""name"": ""TestGroup"",
@@ -66,8 +66,8 @@ class MyStack : Stack
 }
 }]
 }]
-}" },
-                { "intendedForQualification", false },
+}",
+                IntendedForQualification = false,
             },
         });
     }
@@ -94,16 +94,16 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := iotcoredeviceadvisor.NewSuiteDefinition(ctx, "testSuiteDefinition", &iotcoredeviceadvisor.SuiteDefinitionArgs{
-			SuiteDefinitionConfiguration: pulumi.Any{
-				SuiteDefinitionName:     "SuiteDefinitionName",
-				DevicePermissionRoleArn: "arn:aws:iam::123456789012:role/RoleName",
-				Devices: []map[string]interface{}{
-					map[string]interface{}{
-						"thingArn": "arn:aws:iot:us-east-1:123456789012:thing/ThingName",
+			SuiteDefinitionConfiguration: &iotcoredeviceadvisor.SuiteDefinitionConfigurationPropertiesArgs{
+				SuiteDefinitionName:     pulumi.String("SuiteDefinitionName"),
+				DevicePermissionRoleArn: pulumi.String("arn:aws:iam::123456789012:role/RoleName"),
+				Devices: iotcoredeviceadvisor.SuiteDefinitionDeviceUnderTestArray{
+					&iotcoredeviceadvisor.SuiteDefinitionDeviceUnderTestArgs{
+						ThingArn: pulumi.String("arn:aws:iot:us-east-1:123456789012:thing/ThingName"),
 					},
 				},
-				RootGroup:                "{\n\"configuration\": {},\n\"tests\": [{\n\"name\": \"TestGroup\",\n\"configuration\": {\n\"EXECUTION_TIMEOUT\": \"30\"\n},\n\"tests\": [{\n\"name\": \"MQTTPublishTest\",\n\"configuration\": {\n\"TOPIC_FOR_PUBLISH_VALIDATION\": \"target\"\n},\n\"test\": {\n\"id\": \"MQTT_Publish\",\n\"version\": \"0.0.0\"\n}\n}]\n}]\n}",
-				IntendedForQualification: false,
+				RootGroup:                pulumi.String("{\n\"configuration\": {},\n\"tests\": [{\n\"name\": \"TestGroup\",\n\"configuration\": {\n\"EXECUTION_TIMEOUT\": \"30\"\n},\n\"tests\": [{\n\"name\": \"MQTTPublishTest\",\n\"configuration\": {\n\"TOPIC_FOR_PUBLISH_VALIDATION\": \"target\"\n},\n\"test\": {\n\"id\": \"MQTT_Publish\",\n\"version\": \"0.0.0\"\n}\n}]\n}]\n}"),
+				IntendedForQualification: pulumi.Bool(false),
 			},
 		})
 		if err != nil {
@@ -126,13 +126,13 @@ func main() {
 import pulumi
 import pulumi_aws_native as aws_native
 
-test_suite_definition = aws_native.iotcoredeviceadvisor.SuiteDefinition("testSuiteDefinition", suite_definition_configuration={
-    "suiteDefinitionName": "SuiteDefinitionName",
-    "devicePermissionRoleArn": "arn:aws:iam::123456789012:role/RoleName",
-    "devices": [{
-        "thingArn": "arn:aws:iot:us-east-1:123456789012:thing/ThingName",
-    }],
-    "rootGroup": """{
+test_suite_definition = aws_native.iotcoredeviceadvisor.SuiteDefinition("testSuiteDefinition", suite_definition_configuration=aws_native.iotcoredeviceadvisor.SuiteDefinitionConfigurationPropertiesArgs(
+    suite_definition_name="SuiteDefinitionName",
+    device_permission_role_arn="arn:aws:iam::123456789012:role/RoleName",
+    devices=[aws_native.iotcoredeviceadvisor.SuiteDefinitionDeviceUnderTestArgs(
+        thing_arn="arn:aws:iot:us-east-1:123456789012:thing/ThingName",
+    )],
+    root_group="""{
 "configuration": {},
 "tests": [{
 "name": "TestGroup",
@@ -151,8 +151,8 @@ test_suite_definition = aws_native.iotcoredeviceadvisor.SuiteDefinition("testSui
 }]
 }]
 }""",
-    "intendedForQualification": False,
-})
+    intended_for_qualification=False,
+))
 
 ```
 
@@ -218,19 +218,19 @@ class MyStack : Stack
     {
         var testSuiteDefinition = new AwsNative.IoTCoreDeviceAdvisor.SuiteDefinition("testSuiteDefinition", new AwsNative.IoTCoreDeviceAdvisor.SuiteDefinitionArgs
         {
-            SuiteDefinitionConfiguration = 
+            SuiteDefinitionConfiguration = new AwsNative.IoTCoreDeviceAdvisor.Inputs.SuiteDefinitionConfigurationPropertiesArgs
             {
-                { "suiteDefinitionName", "SuiteDefinitionName" },
-                { "devicePermissionRoleArn", "arn:aws:iam::123456789012:role/RoleName" },
-                { "devices", 
+                SuiteDefinitionName = "SuiteDefinitionName",
+                DevicePermissionRoleArn = "arn:aws:iam::123456789012:role/RoleName",
+                Devices = 
                 {
-                    
+                    new AwsNative.IoTCoreDeviceAdvisor.Inputs.SuiteDefinitionDeviceUnderTestArgs
                     {
-                        { "thingArn", "arn:aws:iot:us-east-1:123456789012:thing/ThingName" },
+                        ThingArn = "arn:aws:iot:us-east-1:123456789012:thing/ThingName",
                     },
-                } },
-                { "rootGroup", "{ \"configuration\": {}, \"tests\": [{ \"name\": \"TestGroup\", \"configuration\": { \"EXECUTION_TIMEOUT\": \"30\" }, \"tests\": [{ \"name\": \"MQTTPublishTest\", \"configuration\": { \"TOPIC_FOR_PUBLISH_VALIDATION\": \"target\" }, \"test\": { \"id\": \"MQTT_Publish\", \"version\": \"0.0.0\" } }] }] }" },
-                { "intendedForQualification", false },
+                },
+                RootGroup = "{ \"configuration\": {}, \"tests\": [{ \"name\": \"TestGroup\", \"configuration\": { \"EXECUTION_TIMEOUT\": \"30\" }, \"tests\": [{ \"name\": \"MQTTPublishTest\", \"configuration\": { \"TOPIC_FOR_PUBLISH_VALIDATION\": \"target\" }, \"test\": { \"id\": \"MQTT_Publish\", \"version\": \"0.0.0\" } }] }] }",
+                IntendedForQualification = false,
             },
         });
     }
@@ -257,16 +257,16 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := iotcoredeviceadvisor.NewSuiteDefinition(ctx, "testSuiteDefinition", &iotcoredeviceadvisor.SuiteDefinitionArgs{
-			SuiteDefinitionConfiguration: pulumi.Any{
-				SuiteDefinitionName:     "SuiteDefinitionName",
-				DevicePermissionRoleArn: "arn:aws:iam::123456789012:role/RoleName",
-				Devices: []map[string]interface{}{
-					map[string]interface{}{
-						"thingArn": "arn:aws:iot:us-east-1:123456789012:thing/ThingName",
+			SuiteDefinitionConfiguration: &iotcoredeviceadvisor.SuiteDefinitionConfigurationPropertiesArgs{
+				SuiteDefinitionName:     pulumi.String("SuiteDefinitionName"),
+				DevicePermissionRoleArn: pulumi.String("arn:aws:iam::123456789012:role/RoleName"),
+				Devices: iotcoredeviceadvisor.SuiteDefinitionDeviceUnderTestArray{
+					&iotcoredeviceadvisor.SuiteDefinitionDeviceUnderTestArgs{
+						ThingArn: pulumi.String("arn:aws:iot:us-east-1:123456789012:thing/ThingName"),
 					},
 				},
-				RootGroup:                "{ \"configuration\": {}, \"tests\": [{ \"name\": \"TestGroup\", \"configuration\": { \"EXECUTION_TIMEOUT\": \"30\" }, \"tests\": [{ \"name\": \"MQTTPublishTest\", \"configuration\": { \"TOPIC_FOR_PUBLISH_VALIDATION\": \"target\" }, \"test\": { \"id\": \"MQTT_Publish\", \"version\": \"0.0.0\" } }] }] }",
-				IntendedForQualification: false,
+				RootGroup:                pulumi.String("{ \"configuration\": {}, \"tests\": [{ \"name\": \"TestGroup\", \"configuration\": { \"EXECUTION_TIMEOUT\": \"30\" }, \"tests\": [{ \"name\": \"MQTTPublishTest\", \"configuration\": { \"TOPIC_FOR_PUBLISH_VALIDATION\": \"target\" }, \"test\": { \"id\": \"MQTT_Publish\", \"version\": \"0.0.0\" } }] }] }"),
+				IntendedForQualification: pulumi.Bool(false),
 			},
 		})
 		if err != nil {
@@ -289,15 +289,15 @@ func main() {
 import pulumi
 import pulumi_aws_native as aws_native
 
-test_suite_definition = aws_native.iotcoredeviceadvisor.SuiteDefinition("testSuiteDefinition", suite_definition_configuration={
-    "suiteDefinitionName": "SuiteDefinitionName",
-    "devicePermissionRoleArn": "arn:aws:iam::123456789012:role/RoleName",
-    "devices": [{
-        "thingArn": "arn:aws:iot:us-east-1:123456789012:thing/ThingName",
-    }],
-    "rootGroup": "{ \"configuration\": {}, \"tests\": [{ \"name\": \"TestGroup\", \"configuration\": { \"EXECUTION_TIMEOUT\": \"30\" }, \"tests\": [{ \"name\": \"MQTTPublishTest\", \"configuration\": { \"TOPIC_FOR_PUBLISH_VALIDATION\": \"target\" }, \"test\": { \"id\": \"MQTT_Publish\", \"version\": \"0.0.0\" } }] }] }",
-    "intendedForQualification": False,
-})
+test_suite_definition = aws_native.iotcoredeviceadvisor.SuiteDefinition("testSuiteDefinition", suite_definition_configuration=aws_native.iotcoredeviceadvisor.SuiteDefinitionConfigurationPropertiesArgs(
+    suite_definition_name="SuiteDefinitionName",
+    device_permission_role_arn="arn:aws:iam::123456789012:role/RoleName",
+    devices=[aws_native.iotcoredeviceadvisor.SuiteDefinitionDeviceUnderTestArgs(
+        thing_arn="arn:aws:iot:us-east-1:123456789012:thing/ThingName",
+    )],
+    root_group="{ \"configuration\": {}, \"tests\": [{ \"name\": \"TestGroup\", \"configuration\": { \"EXECUTION_TIMEOUT\": \"30\" }, \"tests\": [{ \"name\": \"MQTTPublishTest\", \"configuration\": { \"TOPIC_FOR_PUBLISH_VALIDATION\": \"target\" }, \"test\": { \"id\": \"MQTT_Publish\", \"version\": \"0.0.0\" } }] }] }",
+    intended_for_qualification=False,
+))
 
 ```
 
@@ -348,7 +348,7 @@ const testSuiteDefinition = new aws_native.iotcoredeviceadvisor.SuiteDefinition(
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">SuiteDefinition</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                    <span class="nx">suite_definition_configuration</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">,</span>
+                    <span class="nx">suite_definition_configuration</span><span class="p">:</span> <span class="nx">Optional[SuiteDefinitionConfigurationPropertiesArgs]</span> = None<span class="p">,</span>
                     <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[SuiteDefinitionTagArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">SuiteDefinition</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -483,7 +483,7 @@ The SuiteDefinition resource accepts the following [input]({{< relref "/docs/int
 <a href="#suitedefinitionconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Suite<wbr>Definition<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">object</span>
+        <span class="property-type"><a href="#suitedefinitionconfigurationproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TCore<wbr>Device<wbr>Advisor.<wbr>Inputs.<wbr>Suite<wbr>Definition<wbr>Configuration<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -503,7 +503,7 @@ The SuiteDefinition resource accepts the following [input]({{< relref "/docs/int
 <a href="#suitedefinitionconfiguration_go" style="color: inherit; text-decoration: inherit;">Suite<wbr>Definition<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#suitedefinitionconfigurationproperties">Suite<wbr>Definition<wbr>Configuration<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -523,7 +523,7 @@ The SuiteDefinition resource accepts the following [input]({{< relref "/docs/int
 <a href="#suitedefinitionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">suite<wbr>Definition<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">any</span>
+        <span class="property-type"><a href="#suitedefinitionconfigurationproperties">Suite<wbr>Definition<wbr>Configuration<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -543,7 +543,7 @@ The SuiteDefinition resource accepts the following [input]({{< relref "/docs/int
 <a href="#suite_definition_configuration_python" style="color: inherit; text-decoration: inherit;">suite_<wbr>definition_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#suitedefinitionconfigurationproperties">Suite<wbr>Definition<wbr>Configuration<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -716,6 +716,266 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="suitedefinitionconfigurationproperties">Suite<wbr>Definition<wbr>Configuration<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="devicepermissionrolearn_csharp">
+<a href="#devicepermissionrolearn_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Permission<wbr>Role<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rootgroup_csharp">
+<a href="#rootgroup_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="devices_csharp">
+<a href="#devices_csharp" style="color: inherit; text-decoration: inherit;">Devices</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#suitedefinitiondeviceundertest">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TCore<wbr>Device<wbr>Advisor.<wbr>Inputs.<wbr>Suite<wbr>Definition<wbr>Device<wbr>Under<wbr>Test&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intendedforqualification_csharp">
+<a href="#intendedforqualification_csharp" style="color: inherit; text-decoration: inherit;">Intended<wbr>For<wbr>Qualification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="suitedefinitionname_csharp">
+<a href="#suitedefinitionname_csharp" style="color: inherit; text-decoration: inherit;">Suite<wbr>Definition<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="devicepermissionrolearn_go">
+<a href="#devicepermissionrolearn_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Permission<wbr>Role<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rootgroup_go">
+<a href="#rootgroup_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="devices_go">
+<a href="#devices_go" style="color: inherit; text-decoration: inherit;">Devices</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#suitedefinitiondeviceundertest">[]Suite<wbr>Definition<wbr>Device<wbr>Under<wbr>Test</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intendedforqualification_go">
+<a href="#intendedforqualification_go" style="color: inherit; text-decoration: inherit;">Intended<wbr>For<wbr>Qualification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="suitedefinitionname_go">
+<a href="#suitedefinitionname_go" style="color: inherit; text-decoration: inherit;">Suite<wbr>Definition<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="devicepermissionrolearn_nodejs">
+<a href="#devicepermissionrolearn_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Permission<wbr>Role<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rootgroup_nodejs">
+<a href="#rootgroup_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="devices_nodejs">
+<a href="#devices_nodejs" style="color: inherit; text-decoration: inherit;">devices</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#suitedefinitiondeviceundertest">Suite<wbr>Definition<wbr>Device<wbr>Under<wbr>Test[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intendedforqualification_nodejs">
+<a href="#intendedforqualification_nodejs" style="color: inherit; text-decoration: inherit;">intended<wbr>For<wbr>Qualification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="suitedefinitionname_nodejs">
+<a href="#suitedefinitionname_nodejs" style="color: inherit; text-decoration: inherit;">suite<wbr>Definition<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="device_permission_role_arn_python">
+<a href="#device_permission_role_arn_python" style="color: inherit; text-decoration: inherit;">device_<wbr>permission_<wbr>role_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="root_group_python">
+<a href="#root_group_python" style="color: inherit; text-decoration: inherit;">root_<wbr>group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="devices_python">
+<a href="#devices_python" style="color: inherit; text-decoration: inherit;">devices</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#suitedefinitiondeviceundertest">Sequence[Suite<wbr>Definition<wbr>Device<wbr>Under<wbr>Test]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intended_for_qualification_python">
+<a href="#intended_for_qualification_python" style="color: inherit; text-decoration: inherit;">intended_<wbr>for_<wbr>qualification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="suite_definition_name_python">
+<a href="#suite_definition_name_python" style="color: inherit; text-decoration: inherit;">suite_<wbr>definition_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="suitedefinitiondeviceundertest">Suite<wbr>Definition<wbr>Device<wbr>Under<wbr>Test</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="certificatearn_csharp">
+<a href="#certificatearn_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thingarn_csharp">
+<a href="#thingarn_csharp" style="color: inherit; text-decoration: inherit;">Thing<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="certificatearn_go">
+<a href="#certificatearn_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thingarn_go">
+<a href="#thingarn_go" style="color: inherit; text-decoration: inherit;">Thing<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="certificatearn_nodejs">
+<a href="#certificatearn_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thingarn_nodejs">
+<a href="#thingarn_nodejs" style="color: inherit; text-decoration: inherit;">thing<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="certificate_arn_python">
+<a href="#certificate_arn_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thing_arn_python">
+<a href="#thing_arn_python" style="color: inherit; text-decoration: inherit;">thing_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="suitedefinitiontag">Suite<wbr>Definition<wbr>Tag</h4>
 

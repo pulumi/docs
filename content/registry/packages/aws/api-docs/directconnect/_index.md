@@ -13,30 +13,32 @@ Explore the resources and functions of the aws.directconnect module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="bgppeer" title="BgpPeer"><span class="symbol resource"></span>BgpPeer</a></li>
-    <li><a href="connection" title="Connection"><span class="symbol resource"></span>Connection</a></li>
-    <li><a href="connectionassociation" title="ConnectionAssociation"><span class="symbol resource"></span>ConnectionAssociation</a></li>
-    <li><a href="gateway" title="Gateway"><span class="symbol resource"></span>Gateway</a></li>
-    <li><a href="gatewayassociation" title="GatewayAssociation"><span class="symbol resource"></span>GatewayAssociation</a></li>
-    <li><a href="gatewayassociationproposal" title="GatewayAssociationProposal"><span class="symbol resource"></span>GatewayAssociationProposal</a></li>
-    <li><a href="hostedprivatevirtualinterface" title="HostedPrivateVirtualInterface"><span class="symbol resource"></span>HostedPrivateVirtualInterface</a></li>
-    <li><a href="hostedprivatevirtualinterfaceaccepter" title="HostedPrivateVirtualInterfaceAccepter"><span class="symbol resource"></span>HostedPrivateVirtualInterfaceAccepter</a></li>
-    <li><a href="hostedpublicvirtualinterface" title="HostedPublicVirtualInterface"><span class="symbol resource"></span>HostedPublicVirtualInterface</a></li>
-    <li><a href="hostedpublicvirtualinterfaceaccepter" title="HostedPublicVirtualInterfaceAccepter"><span class="symbol resource"></span>HostedPublicVirtualInterfaceAccepter</a></li>
-    <li><a href="hostedtransitvirtualinterface" title="HostedTransitVirtualInterface"><span class="symbol resource"></span>HostedTransitVirtualInterface</a></li>
-    <li><a href="hostedtransitvirtualinterfaceacceptor" title="HostedTransitVirtualInterfaceAcceptor"><span class="symbol resource"></span>HostedTransitVirtualInterfaceAcceptor</a></li>
-    <li><a href="linkaggregationgroup" title="LinkAggregationGroup"><span class="symbol resource"></span>LinkAggregationGroup</a></li>
-    <li><a href="privatevirtualinterface" title="PrivateVirtualInterface"><span class="symbol resource"></span>PrivateVirtualInterface</a></li>
-    <li><a href="publicvirtualinterface" title="PublicVirtualInterface"><span class="symbol resource"></span>PublicVirtualInterface</a></li>
-    <li><a href="transitvirtualinterface" title="TransitVirtualInterface"><span class="symbol resource"></span>TransitVirtualInterface</a></li>
+    <li><a href="bgppeer" title="BgpPeer"><span class="api-symbol api-symbol--resource"></span>BgpPeer</a></li>
+    <li><a href="connection" title="Connection"><span class="api-symbol api-symbol--resource"></span>Connection</a></li>
+    <li><a href="connectionassociation" title="ConnectionAssociation"><span class="api-symbol api-symbol--resource"></span>ConnectionAssociation</a></li>
+    <li><a href="connectionconfirmation" title="ConnectionConfirmation"><span class="api-symbol api-symbol--resource"></span>ConnectionConfirmation</a></li>
+    <li><a href="gateway" title="Gateway"><span class="api-symbol api-symbol--resource"></span>Gateway</a></li>
+    <li><a href="gatewayassociation" title="GatewayAssociation"><span class="api-symbol api-symbol--resource"></span>GatewayAssociation</a></li>
+    <li><a href="gatewayassociationproposal" title="GatewayAssociationProposal"><span class="api-symbol api-symbol--resource"></span>GatewayAssociationProposal</a></li>
+    <li><a href="hostedconnection" title="HostedConnection"><span class="api-symbol api-symbol--resource"></span>HostedConnection</a></li>
+    <li><a href="hostedprivatevirtualinterface" title="HostedPrivateVirtualInterface"><span class="api-symbol api-symbol--resource"></span>HostedPrivateVirtualInterface</a></li>
+    <li><a href="hostedprivatevirtualinterfaceaccepter" title="HostedPrivateVirtualInterfaceAccepter"><span class="api-symbol api-symbol--resource"></span>HostedPrivateVirtualInterfaceAccepter</a></li>
+    <li><a href="hostedpublicvirtualinterface" title="HostedPublicVirtualInterface"><span class="api-symbol api-symbol--resource"></span>HostedPublicVirtualInterface</a></li>
+    <li><a href="hostedpublicvirtualinterfaceaccepter" title="HostedPublicVirtualInterfaceAccepter"><span class="api-symbol api-symbol--resource"></span>HostedPublicVirtualInterfaceAccepter</a></li>
+    <li><a href="hostedtransitvirtualinterface" title="HostedTransitVirtualInterface"><span class="api-symbol api-symbol--resource"></span>HostedTransitVirtualInterface</a></li>
+    <li><a href="hostedtransitvirtualinterfaceacceptor" title="HostedTransitVirtualInterfaceAcceptor"><span class="api-symbol api-symbol--resource"></span>HostedTransitVirtualInterfaceAcceptor</a></li>
+    <li><a href="linkaggregationgroup" title="LinkAggregationGroup"><span class="api-symbol api-symbol--resource"></span>LinkAggregationGroup</a></li>
+    <li><a href="privatevirtualinterface" title="PrivateVirtualInterface"><span class="api-symbol api-symbol--resource"></span>PrivateVirtualInterface</a></li>
+    <li><a href="publicvirtualinterface" title="PublicVirtualInterface"><span class="api-symbol api-symbol--resource"></span>PublicVirtualInterface</a></li>
+    <li><a href="transitvirtualinterface" title="TransitVirtualInterface"><span class="api-symbol api-symbol--resource"></span>TransitVirtualInterface</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getconnection" title="GetConnection"><span class="symbol function"></span>GetConnection</a></li>
-    <li><a href="getgateway" title="GetGateway"><span class="symbol function"></span>GetGateway</a></li>
-    <li><a href="getlocation" title="GetLocation"><span class="symbol function"></span>GetLocation</a></li>
-    <li><a href="getlocations" title="GetLocations"><span class="symbol function"></span>GetLocations</a></li>
+    <li><a href="getconnection" title="GetConnection"><span class="api-symbol api-symbol--function"></span>GetConnection</a></li>
+    <li><a href="getgateway" title="GetGateway"><span class="api-symbol api-symbol--function"></span>GetGateway</a></li>
+    <li><a href="getlocation" title="GetLocation"><span class="api-symbol api-symbol--function"></span>GetLocation</a></li>
+    <li><a href="getlocations" title="GetLocations"><span class="api-symbol api-symbol--function"></span>GetLocations</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -48,6 +50,6 @@ Explore the resources and functions of the aws.directconnect module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.23.0</dd>
+	<dd>4.24.1</dd>
 </dl>
 

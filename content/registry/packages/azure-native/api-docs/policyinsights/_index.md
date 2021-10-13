@@ -13,28 +13,28 @@ Explore the resources and functions of the azure-native.policyinsights module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="attestationatresource" title="AttestationAtResource"><span class="symbol resource"></span>AttestationAtResource</a></li>
-    <li><a href="attestationatresourcegroup" title="AttestationAtResourceGroup"><span class="symbol resource"></span>AttestationAtResourceGroup</a></li>
-    <li><a href="attestationatsubscription" title="AttestationAtSubscription"><span class="symbol resource"></span>AttestationAtSubscription</a></li>
-    <li><a href="remediationatmanagementgroup" title="RemediationAtManagementGroup"><span class="symbol resource"></span>RemediationAtManagementGroup</a></li>
-    <li><a href="remediationatresource" title="RemediationAtResource"><span class="symbol resource"></span>RemediationAtResource</a></li>
-    <li><a href="remediationatresourcegroup" title="RemediationAtResourceGroup"><span class="symbol resource"></span>RemediationAtResourceGroup</a></li>
-    <li><a href="remediationatsubscription" title="RemediationAtSubscription"><span class="symbol resource"></span>RemediationAtSubscription</a></li>
+    <li><a href="attestationatresource" title="AttestationAtResource"><span class="api-symbol api-symbol--resource"></span>AttestationAtResource</a></li>
+    <li><a href="attestationatresourcegroup" title="AttestationAtResourceGroup"><span class="api-symbol api-symbol--resource"></span>AttestationAtResourceGroup</a></li>
+    <li><a href="attestationatsubscription" title="AttestationAtSubscription"><span class="api-symbol api-symbol--resource"></span>AttestationAtSubscription</a></li>
+    <li><a href="remediationatmanagementgroup" title="RemediationAtManagementGroup"><span class="api-symbol api-symbol--resource"></span>RemediationAtManagementGroup</a></li>
+    <li><a href="remediationatresource" title="RemediationAtResource"><span class="api-symbol api-symbol--resource"></span>RemediationAtResource</a></li>
+    <li><a href="remediationatresourcegroup" title="RemediationAtResourceGroup"><span class="api-symbol api-symbol--resource"></span>RemediationAtResourceGroup</a></li>
+    <li><a href="remediationatsubscription" title="RemediationAtSubscription"><span class="api-symbol api-symbol--resource"></span>RemediationAtSubscription</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getattestationatresource" title="GetAttestationAtResource"><span class="symbol function"></span>GetAttestationAtResource</a></li>
-    <li><a href="getattestationatresourcegroup" title="GetAttestationAtResourceGroup"><span class="symbol function"></span>GetAttestationAtResourceGroup</a></li>
-    <li><a href="getattestationatsubscription" title="GetAttestationAtSubscription"><span class="symbol function"></span>GetAttestationAtSubscription</a></li>
-    <li><a href="getremediationatmanagementgroup" title="GetRemediationAtManagementGroup"><span class="symbol function"></span>GetRemediationAtManagementGroup</a></li>
-    <li><a href="getremediationatresource" title="GetRemediationAtResource"><span class="symbol function"></span>GetRemediationAtResource</a></li>
-    <li><a href="getremediationatresourcegroup" title="GetRemediationAtResourceGroup"><span class="symbol function"></span>GetRemediationAtResourceGroup</a></li>
-    <li><a href="getremediationatsubscription" title="GetRemediationAtSubscription"><span class="symbol function"></span>GetRemediationAtSubscription</a></li>
-    <li><a href="listremediationdeploymentsatmanagementgroup" title="ListRemediationDeploymentsAtManagementGroup"><span class="symbol function"></span>ListRemediationDeploymentsAtManagementGroup</a></li>
-    <li><a href="listremediationdeploymentsatresource" title="ListRemediationDeploymentsAtResource"><span class="symbol function"></span>ListRemediationDeploymentsAtResource</a></li>
-    <li><a href="listremediationdeploymentsatresourcegroup" title="ListRemediationDeploymentsAtResourceGroup"><span class="symbol function"></span>ListRemediationDeploymentsAtResourceGroup</a></li>
-    <li><a href="listremediationdeploymentsatsubscription" title="ListRemediationDeploymentsAtSubscription"><span class="symbol function"></span>ListRemediationDeploymentsAtSubscription</a></li>
+    <li><a href="getattestationatresource" title="GetAttestationAtResource"><span class="api-symbol api-symbol--function"></span>GetAttestationAtResource</a></li>
+    <li><a href="getattestationatresourcegroup" title="GetAttestationAtResourceGroup"><span class="api-symbol api-symbol--function"></span>GetAttestationAtResourceGroup</a></li>
+    <li><a href="getattestationatsubscription" title="GetAttestationAtSubscription"><span class="api-symbol api-symbol--function"></span>GetAttestationAtSubscription</a></li>
+    <li><a href="getremediationatmanagementgroup" title="GetRemediationAtManagementGroup"><span class="api-symbol api-symbol--function"></span>GetRemediationAtManagementGroup</a></li>
+    <li><a href="getremediationatresource" title="GetRemediationAtResource"><span class="api-symbol api-symbol--function"></span>GetRemediationAtResource</a></li>
+    <li><a href="getremediationatresourcegroup" title="GetRemediationAtResourceGroup"><span class="api-symbol api-symbol--function"></span>GetRemediationAtResourceGroup</a></li>
+    <li><a href="getremediationatsubscription" title="GetRemediationAtSubscription"><span class="api-symbol api-symbol--function"></span>GetRemediationAtSubscription</a></li>
+    <li><a href="listremediationdeploymentsatmanagementgroup" title="ListRemediationDeploymentsAtManagementGroup"><span class="api-symbol api-symbol--function"></span>ListRemediationDeploymentsAtManagementGroup</a></li>
+    <li><a href="listremediationdeploymentsatresource" title="ListRemediationDeploymentsAtResource"><span class="api-symbol api-symbol--function"></span>ListRemediationDeploymentsAtResource</a></li>
+    <li><a href="listremediationdeploymentsatresourcegroup" title="ListRemediationDeploymentsAtResourceGroup"><span class="api-symbol api-symbol--function"></span>ListRemediationDeploymentsAtResourceGroup</a></li>
+    <li><a href="listremediationdeploymentsatsubscription" title="ListRemediationDeploymentsAtSubscription"><span class="api-symbol api-symbol--function"></span>ListRemediationDeploymentsAtSubscription</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -44,6 +44,6 @@ Explore the resources and functions of the azure-native.policyinsights module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.36.0</dd>
+	<dd>1.37.0</dd>
 </dl>
 

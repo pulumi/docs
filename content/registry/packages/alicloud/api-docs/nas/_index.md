@@ -13,20 +13,20 @@ Explore the resources and functions of the alicloud.nas module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="accessgroup" title="AccessGroup"><span class="symbol resource"></span>AccessGroup</a></li>
-    <li><a href="accessrule" title="AccessRule"><span class="symbol resource"></span>AccessRule</a></li>
-    <li><a href="filesystem" title="FileSystem"><span class="symbol resource"></span>FileSystem</a></li>
-    <li><a href="mounttarget" title="MountTarget"><span class="symbol resource"></span>MountTarget</a></li>
+    <li><a href="accessgroup" title="AccessGroup"><span class="api-symbol api-symbol--resource"></span>AccessGroup</a></li>
+    <li><a href="accessrule" title="AccessRule"><span class="api-symbol api-symbol--resource"></span>AccessRule</a></li>
+    <li><a href="filesystem" title="FileSystem"><span class="api-symbol api-symbol--resource"></span>FileSystem</a></li>
+    <li><a href="mounttarget" title="MountTarget"><span class="api-symbol api-symbol--resource"></span>MountTarget</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getaccessgroups" title="GetAccessGroups"><span class="symbol function"></span>GetAccessGroups</a></li>
-    <li><a href="getaccessrules" title="GetAccessRules"><span class="symbol function"></span>GetAccessRules</a></li>
-    <li><a href="getfilesystems" title="GetFileSystems"><span class="symbol function"></span>GetFileSystems</a></li>
-    <li><a href="getmounttargets" title="GetMountTargets"><span class="symbol function"></span>GetMountTargets</a></li>
-    <li><a href="getprotocols" title="GetProtocols"><span class="symbol function"></span>GetProtocols</a></li>
-    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
+    <li><a href="getaccessgroups" title="GetAccessGroups"><span class="api-symbol api-symbol--function"></span>GetAccessGroups</a></li>
+    <li><a href="getaccessrules" title="GetAccessRules"><span class="api-symbol api-symbol--function"></span>GetAccessRules</a></li>
+    <li><a href="getfilesystems" title="GetFileSystems"><span class="api-symbol api-symbol--function"></span>GetFileSystems</a></li>
+    <li><a href="getmounttargets" title="GetMountTargets"><span class="api-symbol api-symbol--function"></span>GetMountTargets</a></li>
+    <li><a href="getprotocols" title="GetProtocols"><span class="api-symbol api-symbol--function"></span>GetProtocols</a></li>
+    <li><a href="getservice" title="GetService"><span class="api-symbol api-symbol--function"></span>GetService</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

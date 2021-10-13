@@ -1329,7 +1329,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>NVIDIA_TESLA_T4{{% md %}}Nvidia T4 GPU.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>A100</dt>
     <dd>NVIDIA_TESLA_A100{{% md %}}Nvidia A100 GPU.{{% /md %}}</dd><dt>Tpu<wbr>V2</dt>
     <dd>TPU_V2{{% md %}}TPU v2.{{% /md %}}</dd><dt>Tpu<wbr>V3</dt>
-    <dd>TPU_V3{{% md %}}TPU v3.{{% /md %}}</dd></dl>
+    <dd>TPU_V3{{% md %}}TPU v3.{{% /md %}}</dd><dt>Tpu<wbr>V2Pod</dt>
+    <dd>TPU_V2_POD{{% md %}}TPU v2 POD.{{% /md %}}</dd><dt>Tpu<wbr>V3Pod</dt>
+    <dd>TPU_V3_POD{{% md %}}TPU v3 POD.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1342,7 +1344,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>NVIDIA_TESLA_T4{{% md %}}Nvidia T4 GPU.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Accelerator<wbr>Config<wbr>Type<wbr>Nvidia<wbr>Tesla<wbr>A100</dt>
     <dd>NVIDIA_TESLA_A100{{% md %}}Nvidia A100 GPU.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Accelerator<wbr>Config<wbr>Type<wbr>Tpu<wbr>V2</dt>
     <dd>TPU_V2{{% md %}}TPU v2.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Accelerator<wbr>Config<wbr>Type<wbr>Tpu<wbr>V3</dt>
-    <dd>TPU_V3{{% md %}}TPU v3.{{% /md %}}</dd></dl>
+    <dd>TPU_V3{{% md %}}TPU v3.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Accelerator<wbr>Config<wbr>Type<wbr>Tpu<wbr>V2Pod</dt>
+    <dd>TPU_V2_POD{{% md %}}TPU v2 POD.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Accelerator<wbr>Config<wbr>Type<wbr>Tpu<wbr>V3Pod</dt>
+    <dd>TPU_V3_POD{{% md %}}TPU v3 POD.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1355,7 +1359,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>NVIDIA_TESLA_T4{{% md %}}Nvidia T4 GPU.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>A100</dt>
     <dd>NVIDIA_TESLA_A100{{% md %}}Nvidia A100 GPU.{{% /md %}}</dd><dt>Tpu<wbr>V2</dt>
     <dd>TPU_V2{{% md %}}TPU v2.{{% /md %}}</dd><dt>Tpu<wbr>V3</dt>
-    <dd>TPU_V3{{% md %}}TPU v3.{{% /md %}}</dd></dl>
+    <dd>TPU_V3{{% md %}}TPU v3.{{% /md %}}</dd><dt>Tpu<wbr>V2Pod</dt>
+    <dd>TPU_V2_POD{{% md %}}TPU v2 POD.{{% /md %}}</dd><dt>Tpu<wbr>V3Pod</dt>
+    <dd>TPU_V3_POD{{% md %}}TPU v3 POD.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1368,7 +1374,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>NVIDIA_TESLA_T4{{% md %}}Nvidia T4 GPU.{{% /md %}}</dd><dt>NVIDIA_TESLA_A100</dt>
     <dd>NVIDIA_TESLA_A100{{% md %}}Nvidia A100 GPU.{{% /md %}}</dd><dt>TPU_V2</dt>
     <dd>TPU_V2{{% md %}}TPU v2.{{% /md %}}</dd><dt>TPU_V3</dt>
-    <dd>TPU_V3{{% md %}}TPU v3.{{% /md %}}</dd></dl>
+    <dd>TPU_V3{{% md %}}TPU v3.{{% /md %}}</dd><dt>TPU_V2_POD</dt>
+    <dd>TPU_V2_POD{{% md %}}TPU v2 POD.{{% /md %}}</dd><dt>TPU_V3_POD</dt>
+    <dd>TPU_V3_POD{{% md %}}TPU v3 POD.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googlecloudmlv1__autoscaling">Google<wbr>Cloud<wbr>Ml<wbr>V1__Auto<wbr>Scaling</h4>

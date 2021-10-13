@@ -13,17 +13,17 @@ Explore the resources and functions of the alicloud.ots module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
-    <li><a href="instanceattachment" title="InstanceAttachment"><span class="symbol resource"></span>InstanceAttachment</a></li>
-    <li><a href="table" title="Table"><span class="symbol resource"></span>Table</a></li>
+    <li><a href="instance" title="Instance"><span class="api-symbol api-symbol--resource"></span>Instance</a></li>
+    <li><a href="instanceattachment" title="InstanceAttachment"><span class="api-symbol api-symbol--resource"></span>InstanceAttachment</a></li>
+    <li><a href="table" title="Table"><span class="api-symbol api-symbol--resource"></span>Table</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getinstanceattachments" title="GetInstanceAttachments"><span class="symbol function"></span>GetInstanceAttachments</a></li>
-    <li><a href="getinstances" title="GetInstances"><span class="symbol function"></span>GetInstances</a></li>
-    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
-    <li><a href="gettables" title="GetTables"><span class="symbol function"></span>GetTables</a></li>
+    <li><a href="getinstanceattachments" title="GetInstanceAttachments"><span class="api-symbol api-symbol--function"></span>GetInstanceAttachments</a></li>
+    <li><a href="getinstances" title="GetInstances"><span class="api-symbol api-symbol--function"></span>GetInstances</a></li>
+    <li><a href="getservice" title="GetService"><span class="api-symbol api-symbol--function"></span>GetService</a></li>
+    <li><a href="gettables" title="GetTables"><span class="api-symbol api-symbol--function"></span>GetTables</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
