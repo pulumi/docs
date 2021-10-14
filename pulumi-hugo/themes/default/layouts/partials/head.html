@@ -81,6 +81,8 @@
         <!-- For blog posts that come up in Swiftype result sets, denote that the links are blog posts by adding a "Blog" prefix to the title. -->
         {{ if and (eq .Type "blog") .IsPage }}
             <meta class="swiftype" name="title" data-type="string" content="Blog: {{ .Title }}" />
+        {{ else if and (eq .Type "registry") .IsPage }}
+            <meta class="swiftype" name="title" data-type="string" content="Registry: {{ .Title }}" />
         {{ else }}
             <meta class="swiftype" name="title" data-type="string" content="{{ .Title }}" />
         {{ end }}
