@@ -13,12 +13,12 @@ Explore the resources and functions of the aws-native.quicksight module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="analysis" title="Analysis"><span class="api-symbol api-symbol--resource"></span>Analysis</a></li>
-    <li><a href="dashboard" title="Dashboard"><span class="api-symbol api-symbol--resource"></span>Dashboard</a></li>
-    <li><a href="dataset" title="DataSet"><span class="api-symbol api-symbol--resource"></span>DataSet</a></li>
-    <li><a href="datasource" title="DataSource"><span class="api-symbol api-symbol--resource"></span>DataSource</a></li>
-    <li><a href="template" title="Template"><span class="api-symbol api-symbol--resource"></span>Template</a></li>
-    <li><a href="theme" title="Theme"><span class="api-symbol api-symbol--resource"></span>Theme</a></li>
+    <li><a href="analysis" title="Analysis"><span class="symbol resource"></span>Analysis</a></li>
+    <li><a href="dashboard" title="Dashboard"><span class="symbol resource"></span>Dashboard</a></li>
+    <li><a href="dataset" title="DataSet"><span class="symbol resource"></span>DataSet</a></li>
+    <li><a href="datasource" title="DataSource"><span class="symbol resource"></span>DataSource</a></li>
+    <li><a href="template" title="Template"><span class="symbol resource"></span>Template</a></li>
+    <li><a href="theme" title="Theme"><span class="symbol resource"></span>Theme</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

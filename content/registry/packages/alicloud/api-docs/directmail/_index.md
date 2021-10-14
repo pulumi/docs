@@ -13,16 +13,16 @@ Explore the resources and functions of the alicloud.directmail module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="domain" title="Domain"><span class="api-symbol api-symbol--resource"></span>Domain</a></li>
-    <li><a href="mailaddress" title="MailAddress"><span class="api-symbol api-symbol--resource"></span>MailAddress</a></li>
-    <li><a href="receivers" title="Receivers"><span class="api-symbol api-symbol--resource"></span>Receivers</a></li>
+    <li><a href="domain" title="Domain"><span class="symbol resource"></span>Domain</a></li>
+    <li><a href="mailaddress" title="MailAddress"><span class="symbol resource"></span>MailAddress</a></li>
+    <li><a href="receivers" title="Receivers"><span class="symbol resource"></span>Receivers</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getdomains" title="GetDomains"><span class="api-symbol api-symbol--function"></span>GetDomains</a></li>
-    <li><a href="getmailaddresses" title="GetMailAddresses"><span class="api-symbol api-symbol--function"></span>GetMailAddresses</a></li>
-    <li><a href="getreceivers" title="GetReceivers"><span class="api-symbol api-symbol--function"></span>GetReceivers</a></li>
+    <li><a href="getdomains" title="GetDomains"><span class="symbol function"></span>GetDomains</a></li>
+    <li><a href="getmailaddresses" title="GetMailAddresses"><span class="symbol function"></span>GetMailAddresses</a></li>
+    <li><a href="getreceivers" title="GetReceivers"><span class="symbol function"></span>GetReceivers</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

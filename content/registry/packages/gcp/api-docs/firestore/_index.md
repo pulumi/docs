@@ -13,8 +13,8 @@ Explore the resources and functions of the gcp.firestore module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="document" title="Document"><span class="api-symbol api-symbol--resource"></span>Document</a></li>
-    <li><a href="index" title="Index"><span class="api-symbol api-symbol--resource"></span>Index</a></li>
+    <li><a href="document" title="Document"><span class="symbol resource"></span>Document</a></li>
+    <li><a href="index" title="Index"><span class="symbol resource"></span>Index</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

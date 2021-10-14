@@ -13,39 +13,39 @@ Explore the resources and functions of the aws.rds module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="cluster" title="Cluster"><span class="api-symbol api-symbol--resource"></span>Cluster</a></li>
-    <li><a href="clusterendpoint" title="ClusterEndpoint"><span class="api-symbol api-symbol--resource"></span>ClusterEndpoint</a></li>
-    <li><a href="clusterinstance" title="ClusterInstance"><span class="api-symbol api-symbol--resource"></span>ClusterInstance</a></li>
-    <li><a href="clusterparametergroup" title="ClusterParameterGroup"><span class="api-symbol api-symbol--resource"></span>ClusterParameterGroup</a></li>
-    <li><a href="clusterroleassociation" title="ClusterRoleAssociation"><span class="api-symbol api-symbol--resource"></span>ClusterRoleAssociation</a></li>
-    <li><a href="clustersnapshot" title="ClusterSnapshot"><span class="api-symbol api-symbol--resource"></span>ClusterSnapshot</a></li>
-    <li><a href="eventsubscription" title="EventSubscription"><span class="api-symbol api-symbol--resource"></span>EventSubscription</a></li>
-    <li><a href="globalcluster" title="GlobalCluster"><span class="api-symbol api-symbol--resource"></span>GlobalCluster</a></li>
-    <li><a href="instance" title="Instance"><span class="api-symbol api-symbol--resource"></span>Instance</a></li>
-    <li><a href="optiongroup" title="OptionGroup"><span class="api-symbol api-symbol--resource"></span>OptionGroup</a></li>
-    <li><a href="parametergroup" title="ParameterGroup"><span class="api-symbol api-symbol--resource"></span>ParameterGroup</a></li>
-    <li><a href="proxy" title="Proxy"><span class="api-symbol api-symbol--resource"></span>Proxy</a></li>
-    <li><a href="proxydefaulttargetgroup" title="ProxyDefaultTargetGroup"><span class="api-symbol api-symbol--resource"></span>ProxyDefaultTargetGroup</a></li>
-    <li><a href="proxyendpoint" title="ProxyEndpoint"><span class="api-symbol api-symbol--resource"></span>ProxyEndpoint</a></li>
-    <li><a href="proxytarget" title="ProxyTarget"><span class="api-symbol api-symbol--resource"></span>ProxyTarget</a></li>
-    <li><a href="roleassociation" title="RoleAssociation"><span class="api-symbol api-symbol--resource"></span>RoleAssociation</a></li>
-    <li><a href="securitygroup" title="SecurityGroup"><span class="api-symbol api-symbol--resource"></span>SecurityGroup</a></li>
-    <li><a href="snapshot" title="Snapshot"><span class="api-symbol api-symbol--resource"></span>Snapshot</a></li>
-    <li><a href="subnetgroup" title="SubnetGroup"><span class="api-symbol api-symbol--resource"></span>SubnetGroup</a></li>
+    <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
+    <li><a href="clusterendpoint" title="ClusterEndpoint"><span class="symbol resource"></span>ClusterEndpoint</a></li>
+    <li><a href="clusterinstance" title="ClusterInstance"><span class="symbol resource"></span>ClusterInstance</a></li>
+    <li><a href="clusterparametergroup" title="ClusterParameterGroup"><span class="symbol resource"></span>ClusterParameterGroup</a></li>
+    <li><a href="clusterroleassociation" title="ClusterRoleAssociation"><span class="symbol resource"></span>ClusterRoleAssociation</a></li>
+    <li><a href="clustersnapshot" title="ClusterSnapshot"><span class="symbol resource"></span>ClusterSnapshot</a></li>
+    <li><a href="eventsubscription" title="EventSubscription"><span class="symbol resource"></span>EventSubscription</a></li>
+    <li><a href="globalcluster" title="GlobalCluster"><span class="symbol resource"></span>GlobalCluster</a></li>
+    <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
+    <li><a href="optiongroup" title="OptionGroup"><span class="symbol resource"></span>OptionGroup</a></li>
+    <li><a href="parametergroup" title="ParameterGroup"><span class="symbol resource"></span>ParameterGroup</a></li>
+    <li><a href="proxy" title="Proxy"><span class="symbol resource"></span>Proxy</a></li>
+    <li><a href="proxydefaulttargetgroup" title="ProxyDefaultTargetGroup"><span class="symbol resource"></span>ProxyDefaultTargetGroup</a></li>
+    <li><a href="proxyendpoint" title="ProxyEndpoint"><span class="symbol resource"></span>ProxyEndpoint</a></li>
+    <li><a href="proxytarget" title="ProxyTarget"><span class="symbol resource"></span>ProxyTarget</a></li>
+    <li><a href="roleassociation" title="RoleAssociation"><span class="symbol resource"></span>RoleAssociation</a></li>
+    <li><a href="securitygroup" title="SecurityGroup"><span class="symbol resource"></span>SecurityGroup</a></li>
+    <li><a href="snapshot" title="Snapshot"><span class="symbol resource"></span>Snapshot</a></li>
+    <li><a href="subnetgroup" title="SubnetGroup"><span class="symbol resource"></span>SubnetGroup</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getcertificate" title="GetCertificate"><span class="api-symbol api-symbol--function"></span>GetCertificate</a></li>
-    <li><a href="getcluster" title="GetCluster"><span class="api-symbol api-symbol--function"></span>GetCluster</a></li>
-    <li><a href="getclustersnapshot" title="GetClusterSnapshot"><span class="api-symbol api-symbol--function"></span>GetClusterSnapshot</a></li>
-    <li><a href="getengineversion" title="GetEngineVersion"><span class="api-symbol api-symbol--function"></span>GetEngineVersion</a></li>
-    <li><a href="geteventcategories" title="GetEventCategories"><span class="api-symbol api-symbol--function"></span>GetEventCategories</a></li>
-    <li><a href="getinstance" title="GetInstance"><span class="api-symbol api-symbol--function"></span>GetInstance</a></li>
-    <li><a href="getorderabledbinstance" title="GetOrderableDbInstance"><span class="api-symbol api-symbol--function"></span>GetOrderableDbInstance</a></li>
-    <li><a href="getproxy" title="GetProxy"><span class="api-symbol api-symbol--function"></span>GetProxy</a></li>
-    <li><a href="getsnapshot" title="GetSnapshot"><span class="api-symbol api-symbol--function"></span>GetSnapshot</a></li>
-    <li><a href="getsubnetgroup" title="GetSubnetGroup"><span class="api-symbol api-symbol--function"></span>GetSubnetGroup</a></li>
+    <li><a href="getcertificate" title="GetCertificate"><span class="symbol function"></span>GetCertificate</a></li>
+    <li><a href="getcluster" title="GetCluster"><span class="symbol function"></span>GetCluster</a></li>
+    <li><a href="getclustersnapshot" title="GetClusterSnapshot"><span class="symbol function"></span>GetClusterSnapshot</a></li>
+    <li><a href="getengineversion" title="GetEngineVersion"><span class="symbol function"></span>GetEngineVersion</a></li>
+    <li><a href="geteventcategories" title="GetEventCategories"><span class="symbol function"></span>GetEventCategories</a></li>
+    <li><a href="getinstance" title="GetInstance"><span class="symbol function"></span>GetInstance</a></li>
+    <li><a href="getorderabledbinstance" title="GetOrderableDbInstance"><span class="symbol function"></span>GetOrderableDbInstance</a></li>
+    <li><a href="getproxy" title="GetProxy"><span class="symbol function"></span>GetProxy</a></li>
+    <li><a href="getsnapshot" title="GetSnapshot"><span class="symbol function"></span>GetSnapshot</a></li>
+    <li><a href="getsubnetgroup" title="GetSubnetGroup"><span class="symbol function"></span>GetSubnetGroup</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

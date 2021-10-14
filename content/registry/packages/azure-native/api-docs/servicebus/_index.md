@@ -13,42 +13,42 @@ Explore the resources and functions of the azure-native.servicebus module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="disasterrecoveryconfig" title="DisasterRecoveryConfig"><span class="api-symbol api-symbol--resource"></span>DisasterRecoveryConfig</a></li>
-    <li><a href="migrationconfig" title="MigrationConfig"><span class="api-symbol api-symbol--resource"></span>MigrationConfig</a></li>
-    <li><a href="namespace" title="Namespace"><span class="api-symbol api-symbol--resource"></span>Namespace</a></li>
-    <li><a href="namespaceauthorizationrule" title="NamespaceAuthorizationRule"><span class="api-symbol api-symbol--resource"></span>NamespaceAuthorizationRule</a></li>
-    <li><a href="namespaceipfilterrule" title="NamespaceIpFilterRule"><span class="api-symbol api-symbol--resource"></span>NamespaceIpFilterRule</a></li>
-    <li><a href="namespacenetworkruleset" title="NamespaceNetworkRuleSet"><span class="api-symbol api-symbol--resource"></span>NamespaceNetworkRuleSet</a></li>
-    <li><a href="namespacevirtualnetworkrule" title="NamespaceVirtualNetworkRule"><span class="api-symbol api-symbol--resource"></span>NamespaceVirtualNetworkRule</a></li>
-    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="api-symbol api-symbol--resource"></span>PrivateEndpointConnection</a></li>
-    <li><a href="queue" title="Queue"><span class="api-symbol api-symbol--resource"></span>Queue</a></li>
-    <li><a href="queueauthorizationrule" title="QueueAuthorizationRule"><span class="api-symbol api-symbol--resource"></span>QueueAuthorizationRule</a></li>
-    <li><a href="rule" title="Rule"><span class="api-symbol api-symbol--resource"></span>Rule</a></li>
-    <li><a href="subscription" title="Subscription"><span class="api-symbol api-symbol--resource"></span>Subscription</a></li>
-    <li><a href="topic" title="Topic"><span class="api-symbol api-symbol--resource"></span>Topic</a></li>
-    <li><a href="topicauthorizationrule" title="TopicAuthorizationRule"><span class="api-symbol api-symbol--resource"></span>TopicAuthorizationRule</a></li>
+    <li><a href="disasterrecoveryconfig" title="DisasterRecoveryConfig"><span class="symbol resource"></span>DisasterRecoveryConfig</a></li>
+    <li><a href="migrationconfig" title="MigrationConfig"><span class="symbol resource"></span>MigrationConfig</a></li>
+    <li><a href="namespace" title="Namespace"><span class="symbol resource"></span>Namespace</a></li>
+    <li><a href="namespaceauthorizationrule" title="NamespaceAuthorizationRule"><span class="symbol resource"></span>NamespaceAuthorizationRule</a></li>
+    <li><a href="namespaceipfilterrule" title="NamespaceIpFilterRule"><span class="symbol resource"></span>NamespaceIpFilterRule</a></li>
+    <li><a href="namespacenetworkruleset" title="NamespaceNetworkRuleSet"><span class="symbol resource"></span>NamespaceNetworkRuleSet</a></li>
+    <li><a href="namespacevirtualnetworkrule" title="NamespaceVirtualNetworkRule"><span class="symbol resource"></span>NamespaceVirtualNetworkRule</a></li>
+    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
+    <li><a href="queue" title="Queue"><span class="symbol resource"></span>Queue</a></li>
+    <li><a href="queueauthorizationrule" title="QueueAuthorizationRule"><span class="symbol resource"></span>QueueAuthorizationRule</a></li>
+    <li><a href="rule" title="Rule"><span class="symbol resource"></span>Rule</a></li>
+    <li><a href="subscription" title="Subscription"><span class="symbol resource"></span>Subscription</a></li>
+    <li><a href="topic" title="Topic"><span class="symbol resource"></span>Topic</a></li>
+    <li><a href="topicauthorizationrule" title="TopicAuthorizationRule"><span class="symbol resource"></span>TopicAuthorizationRule</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getdisasterrecoveryconfig" title="GetDisasterRecoveryConfig"><span class="api-symbol api-symbol--function"></span>GetDisasterRecoveryConfig</a></li>
-    <li><a href="getmigrationconfig" title="GetMigrationConfig"><span class="api-symbol api-symbol--function"></span>GetMigrationConfig</a></li>
-    <li><a href="getnamespace" title="GetNamespace"><span class="api-symbol api-symbol--function"></span>GetNamespace</a></li>
-    <li><a href="getnamespaceauthorizationrule" title="GetNamespaceAuthorizationRule"><span class="api-symbol api-symbol--function"></span>GetNamespaceAuthorizationRule</a></li>
-    <li><a href="getnamespaceipfilterrule" title="GetNamespaceIpFilterRule"><span class="api-symbol api-symbol--function"></span>GetNamespaceIpFilterRule</a></li>
-    <li><a href="getnamespacenetworkruleset" title="GetNamespaceNetworkRuleSet"><span class="api-symbol api-symbol--function"></span>GetNamespaceNetworkRuleSet</a></li>
-    <li><a href="getnamespacevirtualnetworkrule" title="GetNamespaceVirtualNetworkRule"><span class="api-symbol api-symbol--function"></span>GetNamespaceVirtualNetworkRule</a></li>
-    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="api-symbol api-symbol--function"></span>GetPrivateEndpointConnection</a></li>
-    <li><a href="getqueue" title="GetQueue"><span class="api-symbol api-symbol--function"></span>GetQueue</a></li>
-    <li><a href="getqueueauthorizationrule" title="GetQueueAuthorizationRule"><span class="api-symbol api-symbol--function"></span>GetQueueAuthorizationRule</a></li>
-    <li><a href="getrule" title="GetRule"><span class="api-symbol api-symbol--function"></span>GetRule</a></li>
-    <li><a href="getsubscription" title="GetSubscription"><span class="api-symbol api-symbol--function"></span>GetSubscription</a></li>
-    <li><a href="gettopic" title="GetTopic"><span class="api-symbol api-symbol--function"></span>GetTopic</a></li>
-    <li><a href="gettopicauthorizationrule" title="GetTopicAuthorizationRule"><span class="api-symbol api-symbol--function"></span>GetTopicAuthorizationRule</a></li>
-    <li><a href="listdisasterrecoveryconfigkeys" title="ListDisasterRecoveryConfigKeys"><span class="api-symbol api-symbol--function"></span>ListDisasterRecoveryConfigKeys</a></li>
-    <li><a href="listnamespacekeys" title="ListNamespaceKeys"><span class="api-symbol api-symbol--function"></span>ListNamespaceKeys</a></li>
-    <li><a href="listqueuekeys" title="ListQueueKeys"><span class="api-symbol api-symbol--function"></span>ListQueueKeys</a></li>
-    <li><a href="listtopickeys" title="ListTopicKeys"><span class="api-symbol api-symbol--function"></span>ListTopicKeys</a></li>
+    <li><a href="getdisasterrecoveryconfig" title="GetDisasterRecoveryConfig"><span class="symbol function"></span>GetDisasterRecoveryConfig</a></li>
+    <li><a href="getmigrationconfig" title="GetMigrationConfig"><span class="symbol function"></span>GetMigrationConfig</a></li>
+    <li><a href="getnamespace" title="GetNamespace"><span class="symbol function"></span>GetNamespace</a></li>
+    <li><a href="getnamespaceauthorizationrule" title="GetNamespaceAuthorizationRule"><span class="symbol function"></span>GetNamespaceAuthorizationRule</a></li>
+    <li><a href="getnamespaceipfilterrule" title="GetNamespaceIpFilterRule"><span class="symbol function"></span>GetNamespaceIpFilterRule</a></li>
+    <li><a href="getnamespacenetworkruleset" title="GetNamespaceNetworkRuleSet"><span class="symbol function"></span>GetNamespaceNetworkRuleSet</a></li>
+    <li><a href="getnamespacevirtualnetworkrule" title="GetNamespaceVirtualNetworkRule"><span class="symbol function"></span>GetNamespaceVirtualNetworkRule</a></li>
+    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
+    <li><a href="getqueue" title="GetQueue"><span class="symbol function"></span>GetQueue</a></li>
+    <li><a href="getqueueauthorizationrule" title="GetQueueAuthorizationRule"><span class="symbol function"></span>GetQueueAuthorizationRule</a></li>
+    <li><a href="getrule" title="GetRule"><span class="symbol function"></span>GetRule</a></li>
+    <li><a href="getsubscription" title="GetSubscription"><span class="symbol function"></span>GetSubscription</a></li>
+    <li><a href="gettopic" title="GetTopic"><span class="symbol function"></span>GetTopic</a></li>
+    <li><a href="gettopicauthorizationrule" title="GetTopicAuthorizationRule"><span class="symbol function"></span>GetTopicAuthorizationRule</a></li>
+    <li><a href="listdisasterrecoveryconfigkeys" title="ListDisasterRecoveryConfigKeys"><span class="symbol function"></span>ListDisasterRecoveryConfigKeys</a></li>
+    <li><a href="listnamespacekeys" title="ListNamespaceKeys"><span class="symbol function"></span>ListNamespaceKeys</a></li>
+    <li><a href="listqueuekeys" title="ListQueueKeys"><span class="symbol function"></span>ListQueueKeys</a></li>
+    <li><a href="listtopickeys" title="ListTopicKeys"><span class="symbol function"></span>ListTopicKeys</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -58,6 +58,6 @@ Explore the resources and functions of the azure-native.servicebus module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.37.0</dd>
+	<dd>1.38.0</dd>
 </dl>
 

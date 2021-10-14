@@ -13,14 +13,14 @@ Explore the resources and functions of the azure.cdn module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="endpoint" title="Endpoint"><span class="api-symbol api-symbol--resource"></span>Endpoint</a></li>
-    <li><a href="endpointcustomdomain" title="EndpointCustomDomain"><span class="api-symbol api-symbol--resource"></span>EndpointCustomDomain</a></li>
-    <li><a href="profile" title="Profile"><span class="api-symbol api-symbol--resource"></span>Profile</a></li>
+    <li><a href="endpoint" title="Endpoint"><span class="symbol resource"></span>Endpoint</a></li>
+    <li><a href="endpointcustomdomain" title="EndpointCustomDomain"><span class="symbol resource"></span>EndpointCustomDomain</a></li>
+    <li><a href="profile" title="Profile"><span class="symbol resource"></span>Profile</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getprofile" title="GetProfile"><span class="api-symbol api-symbol--function"></span>GetProfile</a></li>
+    <li><a href="getprofile" title="GetProfile"><span class="symbol function"></span>GetProfile</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

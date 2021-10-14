@@ -13,14 +13,14 @@ Explore the resources and functions of the google-native.logging/v2 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="billingaccountexclusion" title="BillingAccountExclusion"><span class="api-symbol api-symbol--resource"></span>BillingAccountExclusion</a></li>
-    <li><a href="billingaccountsink" title="BillingAccountSink"><span class="api-symbol api-symbol--resource"></span>BillingAccountSink</a></li>
+    <li><a href="billingaccountexclusion" title="BillingAccountExclusion"><span class="symbol resource"></span>BillingAccountExclusion</a></li>
+    <li><a href="billingaccountsink" title="BillingAccountSink"><span class="symbol resource"></span>BillingAccountSink</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getbillingaccountexclusion" title="GetBillingAccountExclusion"><span class="api-symbol api-symbol--function"></span>GetBillingAccountExclusion</a></li>
-    <li><a href="getbillingaccountsink" title="GetBillingAccountSink"><span class="api-symbol api-symbol--function"></span>GetBillingAccountSink</a></li>
+    <li><a href="getbillingaccountexclusion" title="GetBillingAccountExclusion"><span class="symbol function"></span>GetBillingAccountExclusion</a></li>
+    <li><a href="getbillingaccountsink" title="GetBillingAccountSink"><span class="symbol function"></span>GetBillingAccountSink</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

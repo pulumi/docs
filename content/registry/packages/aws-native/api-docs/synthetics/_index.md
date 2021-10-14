@@ -13,7 +13,7 @@ Explore the resources and functions of the aws-native.synthetics module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="canary" title="Canary"><span class="api-symbol api-symbol--resource"></span>Canary</a></li>
+    <li><a href="canary" title="Canary"><span class="symbol resource"></span>Canary</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

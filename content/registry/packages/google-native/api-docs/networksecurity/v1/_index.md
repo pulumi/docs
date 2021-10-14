@@ -13,22 +13,22 @@ Explore the resources and functions of the google-native.networksecurity/v1 modu
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="authorizationpolicy" title="AuthorizationPolicy"><span class="api-symbol api-symbol--resource"></span>AuthorizationPolicy</a></li>
-    <li><a href="authorizationpolicyiampolicy" title="AuthorizationPolicyIamPolicy"><span class="api-symbol api-symbol--resource"></span>AuthorizationPolicyIamPolicy</a></li>
-    <li><a href="clienttlspolicy" title="ClientTlsPolicy"><span class="api-symbol api-symbol--resource"></span>ClientTlsPolicy</a></li>
-    <li><a href="clienttlspolicyiampolicy" title="ClientTlsPolicyIamPolicy"><span class="api-symbol api-symbol--resource"></span>ClientTlsPolicyIamPolicy</a></li>
-    <li><a href="servertlspolicy" title="ServerTlsPolicy"><span class="api-symbol api-symbol--resource"></span>ServerTlsPolicy</a></li>
-    <li><a href="servertlspolicyiampolicy" title="ServerTlsPolicyIamPolicy"><span class="api-symbol api-symbol--resource"></span>ServerTlsPolicyIamPolicy</a></li>
+    <li><a href="authorizationpolicy" title="AuthorizationPolicy"><span class="symbol resource"></span>AuthorizationPolicy</a></li>
+    <li><a href="authorizationpolicyiampolicy" title="AuthorizationPolicyIamPolicy"><span class="symbol resource"></span>AuthorizationPolicyIamPolicy</a></li>
+    <li><a href="clienttlspolicy" title="ClientTlsPolicy"><span class="symbol resource"></span>ClientTlsPolicy</a></li>
+    <li><a href="clienttlspolicyiampolicy" title="ClientTlsPolicyIamPolicy"><span class="symbol resource"></span>ClientTlsPolicyIamPolicy</a></li>
+    <li><a href="servertlspolicy" title="ServerTlsPolicy"><span class="symbol resource"></span>ServerTlsPolicy</a></li>
+    <li><a href="servertlspolicyiampolicy" title="ServerTlsPolicyIamPolicy"><span class="symbol resource"></span>ServerTlsPolicyIamPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getauthorizationpolicy" title="GetAuthorizationPolicy"><span class="api-symbol api-symbol--function"></span>GetAuthorizationPolicy</a></li>
-    <li><a href="getauthorizationpolicyiampolicy" title="GetAuthorizationPolicyIamPolicy"><span class="api-symbol api-symbol--function"></span>GetAuthorizationPolicyIamPolicy</a></li>
-    <li><a href="getclienttlspolicy" title="GetClientTlsPolicy"><span class="api-symbol api-symbol--function"></span>GetClientTlsPolicy</a></li>
-    <li><a href="getclienttlspolicyiampolicy" title="GetClientTlsPolicyIamPolicy"><span class="api-symbol api-symbol--function"></span>GetClientTlsPolicyIamPolicy</a></li>
-    <li><a href="getservertlspolicy" title="GetServerTlsPolicy"><span class="api-symbol api-symbol--function"></span>GetServerTlsPolicy</a></li>
-    <li><a href="getservertlspolicyiampolicy" title="GetServerTlsPolicyIamPolicy"><span class="api-symbol api-symbol--function"></span>GetServerTlsPolicyIamPolicy</a></li>
+    <li><a href="getauthorizationpolicy" title="GetAuthorizationPolicy"><span class="symbol function"></span>GetAuthorizationPolicy</a></li>
+    <li><a href="getauthorizationpolicyiampolicy" title="GetAuthorizationPolicyIamPolicy"><span class="symbol function"></span>GetAuthorizationPolicyIamPolicy</a></li>
+    <li><a href="getclienttlspolicy" title="GetClientTlsPolicy"><span class="symbol function"></span>GetClientTlsPolicy</a></li>
+    <li><a href="getclienttlspolicyiampolicy" title="GetClientTlsPolicyIamPolicy"><span class="symbol function"></span>GetClientTlsPolicyIamPolicy</a></li>
+    <li><a href="getservertlspolicy" title="GetServerTlsPolicy"><span class="symbol function"></span>GetServerTlsPolicy</a></li>
+    <li><a href="getservertlspolicyiampolicy" title="GetServerTlsPolicyIamPolicy"><span class="symbol function"></span>GetServerTlsPolicyIamPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

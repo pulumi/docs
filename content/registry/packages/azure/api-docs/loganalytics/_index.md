@@ -13,15 +13,15 @@ Explore the resources and functions of the azure.loganalytics module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="cluster" title="Cluster"><span class="api-symbol api-symbol--resource"></span>Cluster</a></li>
-    <li><a href="clustercustomermanagedkey" title="ClusterCustomerManagedKey"><span class="api-symbol api-symbol--resource"></span>ClusterCustomerManagedKey</a></li>
-    <li><a href="dataexportrule" title="DataExportRule"><span class="api-symbol api-symbol--resource"></span>DataExportRule</a></li>
-    <li><a href="datasourcewindowsevent" title="DataSourceWindowsEvent"><span class="api-symbol api-symbol--resource"></span>DataSourceWindowsEvent</a></li>
-    <li><a href="datasourcewindowsperformancecounter" title="DataSourceWindowsPerformanceCounter"><span class="api-symbol api-symbol--resource"></span>DataSourceWindowsPerformanceCounter</a></li>
-    <li><a href="linkedservice" title="LinkedService"><span class="api-symbol api-symbol--resource"></span>LinkedService</a></li>
-    <li><a href="linkedstorageaccount" title="LinkedStorageAccount"><span class="api-symbol api-symbol--resource"></span>LinkedStorageAccount</a></li>
-    <li><a href="savedsearch" title="SavedSearch"><span class="api-symbol api-symbol--resource"></span>SavedSearch</a></li>
-    <li><a href="storageinsights" title="StorageInsights"><span class="api-symbol api-symbol--resource"></span>StorageInsights</a></li>
+    <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
+    <li><a href="clustercustomermanagedkey" title="ClusterCustomerManagedKey"><span class="symbol resource"></span>ClusterCustomerManagedKey</a></li>
+    <li><a href="dataexportrule" title="DataExportRule"><span class="symbol resource"></span>DataExportRule</a></li>
+    <li><a href="datasourcewindowsevent" title="DataSourceWindowsEvent"><span class="symbol resource"></span>DataSourceWindowsEvent</a></li>
+    <li><a href="datasourcewindowsperformancecounter" title="DataSourceWindowsPerformanceCounter"><span class="symbol resource"></span>DataSourceWindowsPerformanceCounter</a></li>
+    <li><a href="linkedservice" title="LinkedService"><span class="symbol resource"></span>LinkedService</a></li>
+    <li><a href="linkedstorageaccount" title="LinkedStorageAccount"><span class="symbol resource"></span>LinkedStorageAccount</a></li>
+    <li><a href="savedsearch" title="SavedSearch"><span class="symbol resource"></span>SavedSearch</a></li>
+    <li><a href="storageinsights" title="StorageInsights"><span class="symbol resource"></span>StorageInsights</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

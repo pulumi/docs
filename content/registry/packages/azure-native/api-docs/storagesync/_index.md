@@ -13,22 +13,22 @@ Explore the resources and functions of the azure-native.storagesync module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="cloudendpoint" title="CloudEndpoint"><span class="api-symbol api-symbol--resource"></span>CloudEndpoint</a></li>
-    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="api-symbol api-symbol--resource"></span>PrivateEndpointConnection</a></li>
-    <li><a href="registeredserver" title="RegisteredServer"><span class="api-symbol api-symbol--resource"></span>RegisteredServer</a></li>
-    <li><a href="serverendpoint" title="ServerEndpoint"><span class="api-symbol api-symbol--resource"></span>ServerEndpoint</a></li>
-    <li><a href="storagesyncservice" title="StorageSyncService"><span class="api-symbol api-symbol--resource"></span>StorageSyncService</a></li>
-    <li><a href="syncgroup" title="SyncGroup"><span class="api-symbol api-symbol--resource"></span>SyncGroup</a></li>
+    <li><a href="cloudendpoint" title="CloudEndpoint"><span class="symbol resource"></span>CloudEndpoint</a></li>
+    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
+    <li><a href="registeredserver" title="RegisteredServer"><span class="symbol resource"></span>RegisteredServer</a></li>
+    <li><a href="serverendpoint" title="ServerEndpoint"><span class="symbol resource"></span>ServerEndpoint</a></li>
+    <li><a href="storagesyncservice" title="StorageSyncService"><span class="symbol resource"></span>StorageSyncService</a></li>
+    <li><a href="syncgroup" title="SyncGroup"><span class="symbol resource"></span>SyncGroup</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getcloudendpoint" title="GetCloudEndpoint"><span class="api-symbol api-symbol--function"></span>GetCloudEndpoint</a></li>
-    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="api-symbol api-symbol--function"></span>GetPrivateEndpointConnection</a></li>
-    <li><a href="getregisteredserver" title="GetRegisteredServer"><span class="api-symbol api-symbol--function"></span>GetRegisteredServer</a></li>
-    <li><a href="getserverendpoint" title="GetServerEndpoint"><span class="api-symbol api-symbol--function"></span>GetServerEndpoint</a></li>
-    <li><a href="getstoragesyncservice" title="GetStorageSyncService"><span class="api-symbol api-symbol--function"></span>GetStorageSyncService</a></li>
-    <li><a href="getsyncgroup" title="GetSyncGroup"><span class="api-symbol api-symbol--function"></span>GetSyncGroup</a></li>
+    <li><a href="getcloudendpoint" title="GetCloudEndpoint"><span class="symbol function"></span>GetCloudEndpoint</a></li>
+    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
+    <li><a href="getregisteredserver" title="GetRegisteredServer"><span class="symbol function"></span>GetRegisteredServer</a></li>
+    <li><a href="getserverendpoint" title="GetServerEndpoint"><span class="symbol function"></span>GetServerEndpoint</a></li>
+    <li><a href="getstoragesyncservice" title="GetStorageSyncService"><span class="symbol function"></span>GetStorageSyncService</a></li>
+    <li><a href="getsyncgroup" title="GetSyncGroup"><span class="symbol function"></span>GetSyncGroup</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -38,6 +38,6 @@ Explore the resources and functions of the azure-native.storagesync module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.37.0</dd>
+	<dd>1.38.0</dd>
 </dl>
 

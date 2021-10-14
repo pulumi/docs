@@ -13,8 +13,8 @@ Explore the resources and functions of the aws-native.lightsail module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="disk" title="Disk"><span class="api-symbol api-symbol--resource"></span>Disk</a></li>
-    <li><a href="instance" title="Instance"><span class="api-symbol api-symbol--resource"></span>Instance</a></li>
+    <li><a href="disk" title="Disk"><span class="symbol resource"></span>Disk</a></li>
+    <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

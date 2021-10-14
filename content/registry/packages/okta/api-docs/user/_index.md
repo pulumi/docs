@@ -13,18 +13,18 @@ Explore the resources and functions of the okta.user module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="baseschema" title="BaseSchema"><span class="api-symbol api-symbol--resource"></span>BaseSchema</a></li>
-    <li><a href="schema" title="Schema"><span class="api-symbol api-symbol--resource"></span>Schema</a></li>
-    <li><a href="user" title="User"><span class="api-symbol api-symbol--resource"></span>User</a></li>
-    <li><a href="usertype" title="UserType"><span class="api-symbol api-symbol--resource"></span>UserType</a></li>
+    <li><a href="baseschema" title="BaseSchema"><span class="symbol resource"></span>BaseSchema</a></li>
+    <li><a href="schema" title="Schema"><span class="symbol resource"></span>Schema</a></li>
+    <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
+    <li><a href="usertype" title="UserType"><span class="symbol resource"></span>UserType</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getuser" title="GetUser"><span class="api-symbol api-symbol--function"></span>GetUser</a></li>
-    <li><a href="getuserprofilemappingsource" title="GetUserProfileMappingSource"><span class="api-symbol api-symbol--function"></span>GetUserProfileMappingSource</a></li>
-    <li><a href="getusertype" title="GetUserType"><span class="api-symbol api-symbol--function"></span>GetUserType</a></li>
-    <li><a href="getusers" title="GetUsers"><span class="api-symbol api-symbol--function"></span>GetUsers</a></li>
+    <li><a href="getuser" title="GetUser"><span class="symbol function"></span>GetUser</a></li>
+    <li><a href="getuserprofilemappingsource" title="GetUserProfileMappingSource"><span class="symbol function"></span>GetUserProfileMappingSource</a></li>
+    <li><a href="getusertype" title="GetUserType"><span class="symbol function"></span>GetUserType</a></li>
+    <li><a href="getusers" title="GetUsers"><span class="symbol function"></span>GetUsers</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

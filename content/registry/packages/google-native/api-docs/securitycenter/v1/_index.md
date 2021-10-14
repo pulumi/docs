@@ -13,16 +13,16 @@ Explore the resources and functions of the google-native.securitycenter/v1 modul
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="notificationconfig" title="NotificationConfig"><span class="api-symbol api-symbol--resource"></span>NotificationConfig</a></li>
-    <li><a href="organizationsourceiampolicy" title="OrganizationSourceIamPolicy"><span class="api-symbol api-symbol--resource"></span>OrganizationSourceIamPolicy</a></li>
-    <li><a href="source" title="Source"><span class="api-symbol api-symbol--resource"></span>Source</a></li>
+    <li><a href="notificationconfig" title="NotificationConfig"><span class="symbol resource"></span>NotificationConfig</a></li>
+    <li><a href="organizationsourceiampolicy" title="OrganizationSourceIamPolicy"><span class="symbol resource"></span>OrganizationSourceIamPolicy</a></li>
+    <li><a href="source" title="Source"><span class="symbol resource"></span>Source</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getnotificationconfig" title="GetNotificationConfig"><span class="api-symbol api-symbol--function"></span>GetNotificationConfig</a></li>
-    <li><a href="getorganizationsourceiampolicy" title="GetOrganizationSourceIamPolicy"><span class="api-symbol api-symbol--function"></span>GetOrganizationSourceIamPolicy</a></li>
-    <li><a href="getsource" title="GetSource"><span class="api-symbol api-symbol--function"></span>GetSource</a></li>
+    <li><a href="getnotificationconfig" title="GetNotificationConfig"><span class="symbol function"></span>GetNotificationConfig</a></li>
+    <li><a href="getorganizationsourceiampolicy" title="GetOrganizationSourceIamPolicy"><span class="symbol function"></span>GetOrganizationSourceIamPolicy</a></li>
+    <li><a href="getsource" title="GetSource"><span class="symbol function"></span>GetSource</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

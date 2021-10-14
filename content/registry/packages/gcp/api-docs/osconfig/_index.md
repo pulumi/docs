@@ -13,8 +13,8 @@ Explore the resources and functions of the gcp.osconfig module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="guestpolicies" title="GuestPolicies"><span class="api-symbol api-symbol--resource"></span>GuestPolicies</a></li>
-    <li><a href="patchdeployment" title="PatchDeployment"><span class="api-symbol api-symbol--resource"></span>PatchDeployment</a></li>
+    <li><a href="guestpolicies" title="GuestPolicies"><span class="symbol resource"></span>GuestPolicies</a></li>
+    <li><a href="patchdeployment" title="PatchDeployment"><span class="symbol resource"></span>PatchDeployment</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

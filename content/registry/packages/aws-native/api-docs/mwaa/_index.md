@@ -13,7 +13,7 @@ Explore the resources and functions of the aws-native.mwaa module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="environment" title="Environment"><span class="api-symbol api-symbol--resource"></span>Environment</a></li>
+    <li><a href="environment" title="Environment"><span class="symbol resource"></span>Environment</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

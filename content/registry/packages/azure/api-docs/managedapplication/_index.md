@@ -13,13 +13,13 @@ Explore the resources and functions of the azure.managedapplication module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="application" title="Application"><span class="api-symbol api-symbol--resource"></span>Application</a></li>
-    <li><a href="definition" title="Definition"><span class="api-symbol api-symbol--resource"></span>Definition</a></li>
+    <li><a href="application" title="Application"><span class="symbol resource"></span>Application</a></li>
+    <li><a href="definition" title="Definition"><span class="symbol resource"></span>Definition</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getdefinition" title="GetDefinition"><span class="api-symbol api-symbol--function"></span>GetDefinition</a></li>
+    <li><a href="getdefinition" title="GetDefinition"><span class="symbol function"></span>GetDefinition</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

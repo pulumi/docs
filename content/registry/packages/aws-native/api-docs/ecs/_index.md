@@ -13,13 +13,13 @@ Explore the resources and functions of the aws-native.ecs module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="capacityprovider" title="CapacityProvider"><span class="api-symbol api-symbol--resource"></span>CapacityProvider</a></li>
-    <li><a href="cluster" title="Cluster"><span class="api-symbol api-symbol--resource"></span>Cluster</a></li>
-    <li><a href="clustercapacityproviderassociations" title="ClusterCapacityProviderAssociations"><span class="api-symbol api-symbol--resource"></span>ClusterCapacityProviderAssociations</a></li>
-    <li><a href="primarytaskset" title="PrimaryTaskSet"><span class="api-symbol api-symbol--resource"></span>PrimaryTaskSet</a></li>
-    <li><a href="service" title="Service"><span class="api-symbol api-symbol--resource"></span>Service</a></li>
-    <li><a href="taskdefinition" title="TaskDefinition"><span class="api-symbol api-symbol--resource"></span>TaskDefinition</a></li>
-    <li><a href="taskset" title="TaskSet"><span class="api-symbol api-symbol--resource"></span>TaskSet</a></li>
+    <li><a href="capacityprovider" title="CapacityProvider"><span class="symbol resource"></span>CapacityProvider</a></li>
+    <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
+    <li><a href="clustercapacityproviderassociations" title="ClusterCapacityProviderAssociations"><span class="symbol resource"></span>ClusterCapacityProviderAssociations</a></li>
+    <li><a href="primarytaskset" title="PrimaryTaskSet"><span class="symbol resource"></span>PrimaryTaskSet</a></li>
+    <li><a href="service" title="Service"><span class="symbol resource"></span>Service</a></li>
+    <li><a href="taskdefinition" title="TaskDefinition"><span class="symbol resource"></span>TaskDefinition</a></li>
+    <li><a href="taskset" title="TaskSet"><span class="symbol resource"></span>TaskSet</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

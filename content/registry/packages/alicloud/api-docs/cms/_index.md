@@ -13,25 +13,25 @@ Explore the resources and functions of the alicloud.cms module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="alarm" title="Alarm"><span class="api-symbol api-symbol--resource"></span>Alarm</a></li>
-    <li><a href="alarmcontact" title="AlarmContact"><span class="api-symbol api-symbol--resource"></span>AlarmContact</a></li>
-    <li><a href="alarmcontactgroup" title="AlarmContactGroup"><span class="api-symbol api-symbol--resource"></span>AlarmContactGroup</a></li>
-    <li><a href="groupmetricrule" title="GroupMetricRule"><span class="api-symbol api-symbol--resource"></span>GroupMetricRule</a></li>
-    <li><a href="metricruletemplate" title="MetricRuleTemplate"><span class="api-symbol api-symbol--resource"></span>MetricRuleTemplate</a></li>
-    <li><a href="monitorgroup" title="MonitorGroup"><span class="api-symbol api-symbol--resource"></span>MonitorGroup</a></li>
-    <li><a href="monitorgroupinstances" title="MonitorGroupInstances"><span class="api-symbol api-symbol--resource"></span>MonitorGroupInstances</a></li>
-    <li><a href="sitemonitor" title="SiteMonitor"><span class="api-symbol api-symbol--resource"></span>SiteMonitor</a></li>
+    <li><a href="alarm" title="Alarm"><span class="symbol resource"></span>Alarm</a></li>
+    <li><a href="alarmcontact" title="AlarmContact"><span class="symbol resource"></span>AlarmContact</a></li>
+    <li><a href="alarmcontactgroup" title="AlarmContactGroup"><span class="symbol resource"></span>AlarmContactGroup</a></li>
+    <li><a href="groupmetricrule" title="GroupMetricRule"><span class="symbol resource"></span>GroupMetricRule</a></li>
+    <li><a href="metricruletemplate" title="MetricRuleTemplate"><span class="symbol resource"></span>MetricRuleTemplate</a></li>
+    <li><a href="monitorgroup" title="MonitorGroup"><span class="symbol resource"></span>MonitorGroup</a></li>
+    <li><a href="monitorgroupinstances" title="MonitorGroupInstances"><span class="symbol resource"></span>MonitorGroupInstances</a></li>
+    <li><a href="sitemonitor" title="SiteMonitor"><span class="symbol resource"></span>SiteMonitor</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getalarmcontactgroups" title="GetAlarmContactGroups"><span class="api-symbol api-symbol--function"></span>GetAlarmContactGroups</a></li>
-    <li><a href="getalarmcontacts" title="GetAlarmContacts"><span class="api-symbol api-symbol--function"></span>GetAlarmContacts</a></li>
-    <li><a href="getgroupmetricrules" title="GetGroupMetricRules"><span class="api-symbol api-symbol--function"></span>GetGroupMetricRules</a></li>
-    <li><a href="getmetricruletemplates" title="GetMetricRuleTemplates"><span class="api-symbol api-symbol--function"></span>GetMetricRuleTemplates</a></li>
-    <li><a href="getmonitorgroupinstances" title="GetMonitorGroupInstances"><span class="api-symbol api-symbol--function"></span>GetMonitorGroupInstances</a></li>
-    <li><a href="getmonitorgroups" title="GetMonitorGroups"><span class="api-symbol api-symbol--function"></span>GetMonitorGroups</a></li>
-    <li><a href="getservice" title="GetService"><span class="api-symbol api-symbol--function"></span>GetService</a></li>
+    <li><a href="getalarmcontactgroups" title="GetAlarmContactGroups"><span class="symbol function"></span>GetAlarmContactGroups</a></li>
+    <li><a href="getalarmcontacts" title="GetAlarmContacts"><span class="symbol function"></span>GetAlarmContacts</a></li>
+    <li><a href="getgroupmetricrules" title="GetGroupMetricRules"><span class="symbol function"></span>GetGroupMetricRules</a></li>
+    <li><a href="getmetricruletemplates" title="GetMetricRuleTemplates"><span class="symbol function"></span>GetMetricRuleTemplates</a></li>
+    <li><a href="getmonitorgroupinstances" title="GetMonitorGroupInstances"><span class="symbol function"></span>GetMonitorGroupInstances</a></li>
+    <li><a href="getmonitorgroups" title="GetMonitorGroups"><span class="symbol function"></span>GetMonitorGroups</a></li>
+    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

@@ -13,16 +13,16 @@ Explore the resources and functions of the aws.servicediscovery module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="httpnamespace" title="HttpNamespace"><span class="api-symbol api-symbol--resource"></span>HttpNamespace</a></li>
-    <li><a href="instance" title="Instance"><span class="api-symbol api-symbol--resource"></span>Instance</a></li>
-    <li><a href="privatednsnamespace" title="PrivateDnsNamespace"><span class="api-symbol api-symbol--resource"></span>PrivateDnsNamespace</a></li>
-    <li><a href="publicdnsnamespace" title="PublicDnsNamespace"><span class="api-symbol api-symbol--resource"></span>PublicDnsNamespace</a></li>
-    <li><a href="service" title="Service"><span class="api-symbol api-symbol--resource"></span>Service</a></li>
+    <li><a href="httpnamespace" title="HttpNamespace"><span class="symbol resource"></span>HttpNamespace</a></li>
+    <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
+    <li><a href="privatednsnamespace" title="PrivateDnsNamespace"><span class="symbol resource"></span>PrivateDnsNamespace</a></li>
+    <li><a href="publicdnsnamespace" title="PublicDnsNamespace"><span class="symbol resource"></span>PublicDnsNamespace</a></li>
+    <li><a href="service" title="Service"><span class="symbol resource"></span>Service</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getdnsnamespace" title="GetDnsNamespace"><span class="api-symbol api-symbol--function"></span>GetDnsNamespace</a></li>
+    <li><a href="getdnsnamespace" title="GetDnsNamespace"><span class="symbol function"></span>GetDnsNamespace</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

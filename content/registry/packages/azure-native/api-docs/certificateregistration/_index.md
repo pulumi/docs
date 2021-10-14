@@ -13,14 +13,14 @@ Explore the resources and functions of the azure-native.certificateregistration 
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="appservicecertificateorder" title="AppServiceCertificateOrder"><span class="api-symbol api-symbol--resource"></span>AppServiceCertificateOrder</a></li>
-    <li><a href="appservicecertificateordercertificate" title="AppServiceCertificateOrderCertificate"><span class="api-symbol api-symbol--resource"></span>AppServiceCertificateOrderCertificate</a></li>
+    <li><a href="appservicecertificateorder" title="AppServiceCertificateOrder"><span class="symbol resource"></span>AppServiceCertificateOrder</a></li>
+    <li><a href="appservicecertificateordercertificate" title="AppServiceCertificateOrderCertificate"><span class="symbol resource"></span>AppServiceCertificateOrderCertificate</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getappservicecertificateorder" title="GetAppServiceCertificateOrder"><span class="api-symbol api-symbol--function"></span>GetAppServiceCertificateOrder</a></li>
-    <li><a href="getappservicecertificateordercertificate" title="GetAppServiceCertificateOrderCertificate"><span class="api-symbol api-symbol--function"></span>GetAppServiceCertificateOrderCertificate</a></li>
+    <li><a href="getappservicecertificateorder" title="GetAppServiceCertificateOrder"><span class="symbol function"></span>GetAppServiceCertificateOrder</a></li>
+    <li><a href="getappservicecertificateordercertificate" title="GetAppServiceCertificateOrderCertificate"><span class="symbol function"></span>GetAppServiceCertificateOrderCertificate</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -30,6 +30,6 @@ Explore the resources and functions of the azure-native.certificateregistration 
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.37.0</dd>
+	<dd>1.38.0</dd>
 </dl>
 

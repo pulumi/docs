@@ -45097,6 +45097,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="flowlet_csharp">
+<a href="#flowlet_csharp" style="color: inherit; text-decoration: inherit;">Flowlet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Flowlet Reference{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="linkedservice_csharp">
 <a href="#linkedservice_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
 </span>
@@ -45148,6 +45156,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="flowlet_go">
+<a href="#flowlet_go" style="color: inherit; text-decoration: inherit;">Flowlet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowreferenceresponse">Data<wbr>Flow<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Flowlet Reference{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linkedservice_go">
 <a href="#linkedservice_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
@@ -45201,6 +45217,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="flowlet_nodejs">
+<a href="#flowlet_nodejs" style="color: inherit; text-decoration: inherit;">flowlet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowreferenceresponse">Data<wbr>Flow<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Flowlet Reference{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="linkedservice_nodejs">
 <a href="#linkedservice_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service</a>
 </span>
@@ -45252,6 +45276,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="flowlet_python">
+<a href="#flowlet_python" style="color: inherit; text-decoration: inherit;">flowlet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowreferenceresponse">Data<wbr>Flow<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Flowlet Reference{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linked_service_python">
 <a href="#linked_service_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service</a>

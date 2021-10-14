@@ -13,19 +13,19 @@ Explore the resources and functions of the okta.policy module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="mfa" title="Mfa"><span class="api-symbol api-symbol--resource"></span>Mfa</a></li>
-    <li><a href="password" title="Password"><span class="api-symbol api-symbol--resource"></span>Password</a></li>
-    <li><a href="ruleidpdiscovery" title="RuleIdpDiscovery"><span class="api-symbol api-symbol--resource"></span>RuleIdpDiscovery</a></li>
-    <li><a href="rulemfa" title="RuleMfa"><span class="api-symbol api-symbol--resource"></span>RuleMfa</a></li>
-    <li><a href="rulepassword" title="RulePassword"><span class="api-symbol api-symbol--resource"></span>RulePassword</a></li>
-    <li><a href="rulesignon" title="RuleSignon"><span class="api-symbol api-symbol--resource"></span>RuleSignon</a></li>
-    <li><a href="signon" title="Signon"><span class="api-symbol api-symbol--resource"></span>Signon</a></li>
+    <li><a href="mfa" title="Mfa"><span class="symbol resource"></span>Mfa</a></li>
+    <li><a href="password" title="Password"><span class="symbol resource"></span>Password</a></li>
+    <li><a href="ruleidpdiscovery" title="RuleIdpDiscovery"><span class="symbol resource"></span>RuleIdpDiscovery</a></li>
+    <li><a href="rulemfa" title="RuleMfa"><span class="symbol resource"></span>RuleMfa</a></li>
+    <li><a href="rulepassword" title="RulePassword"><span class="symbol resource"></span>RulePassword</a></li>
+    <li><a href="rulesignon" title="RuleSignon"><span class="symbol resource"></span>RuleSignon</a></li>
+    <li><a href="signon" title="Signon"><span class="symbol resource"></span>Signon</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getdefaultpolicy" title="GetDefaultPolicy"><span class="api-symbol api-symbol--function"></span>GetDefaultPolicy</a></li>
-    <li><a href="getpolicy" title="GetPolicy"><span class="api-symbol api-symbol--function"></span>GetPolicy</a></li>
+    <li><a href="getdefaultpolicy" title="GetDefaultPolicy"><span class="symbol function"></span>GetDefaultPolicy</a></li>
+    <li><a href="getpolicy" title="GetPolicy"><span class="symbol function"></span>GetPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

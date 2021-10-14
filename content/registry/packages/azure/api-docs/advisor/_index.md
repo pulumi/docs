@@ -13,7 +13,7 @@ Explore the resources and functions of the azure.advisor module.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getrecommendations" title="GetRecommendations"><span class="api-symbol api-symbol--function"></span>GetRecommendations</a></li>
+    <li><a href="getrecommendations" title="GetRecommendations"><span class="symbol function"></span>GetRecommendations</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

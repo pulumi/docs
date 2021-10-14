@@ -13,13 +13,13 @@ Explore the resources and functions of the alicloud.iot module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="devicegroup" title="DeviceGroup"><span class="api-symbol api-symbol--resource"></span>DeviceGroup</a></li>
+    <li><a href="devicegroup" title="DeviceGroup"><span class="symbol resource"></span>DeviceGroup</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getdevicegroups" title="GetDeviceGroups"><span class="api-symbol api-symbol--function"></span>GetDeviceGroups</a></li>
-    <li><a href="getservice" title="GetService"><span class="api-symbol api-symbol--function"></span>GetService</a></li>
+    <li><a href="getdevicegroups" title="GetDeviceGroups"><span class="symbol function"></span>GetDeviceGroups</a></li>
+    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

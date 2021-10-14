@@ -13,7 +13,7 @@ Explore the resources and functions of the aws-native.dynamodb module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="globaltable" title="GlobalTable"><span class="api-symbol api-symbol--resource"></span>GlobalTable</a></li>
+    <li><a href="globaltable" title="GlobalTable"><span class="symbol resource"></span>GlobalTable</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

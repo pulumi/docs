@@ -13,24 +13,24 @@ Explore the resources and functions of the alicloud.hbr module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="ecsbackupclient" title="EcsBackupClient"><span class="api-symbol api-symbol--resource"></span>EcsBackupClient</a></li>
-    <li><a href="ecsbackupplan" title="EcsBackupPlan"><span class="api-symbol api-symbol--resource"></span>EcsBackupPlan</a></li>
-    <li><a href="nasbackupplan" title="NasBackupPlan"><span class="api-symbol api-symbol--resource"></span>NasBackupPlan</a></li>
-    <li><a href="ossbackupplan" title="OssBackupPlan"><span class="api-symbol api-symbol--resource"></span>OssBackupPlan</a></li>
-    <li><a href="restorejob" title="RestoreJob"><span class="api-symbol api-symbol--resource"></span>RestoreJob</a></li>
-    <li><a href="vault" title="Vault"><span class="api-symbol api-symbol--resource"></span>Vault</a></li>
+    <li><a href="ecsbackupclient" title="EcsBackupClient"><span class="symbol resource"></span>EcsBackupClient</a></li>
+    <li><a href="ecsbackupplan" title="EcsBackupPlan"><span class="symbol resource"></span>EcsBackupPlan</a></li>
+    <li><a href="nasbackupplan" title="NasBackupPlan"><span class="symbol resource"></span>NasBackupPlan</a></li>
+    <li><a href="ossbackupplan" title="OssBackupPlan"><span class="symbol resource"></span>OssBackupPlan</a></li>
+    <li><a href="restorejob" title="RestoreJob"><span class="symbol resource"></span>RestoreJob</a></li>
+    <li><a href="vault" title="Vault"><span class="symbol resource"></span>Vault</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getbackupjobs" title="GetBackupJobs"><span class="api-symbol api-symbol--function"></span>GetBackupJobs</a></li>
-    <li><a href="getecsbackupclients" title="GetEcsBackupClients"><span class="api-symbol api-symbol--function"></span>GetEcsBackupClients</a></li>
-    <li><a href="getecsbackupplans" title="GetEcsBackupPlans"><span class="api-symbol api-symbol--function"></span>GetEcsBackupPlans</a></li>
-    <li><a href="getnasbackupplans" title="GetNasBackupPlans"><span class="api-symbol api-symbol--function"></span>GetNasBackupPlans</a></li>
-    <li><a href="getossbackupplans" title="GetOssBackupPlans"><span class="api-symbol api-symbol--function"></span>GetOssBackupPlans</a></li>
-    <li><a href="getrestorejobs" title="GetRestoreJobs"><span class="api-symbol api-symbol--function"></span>GetRestoreJobs</a></li>
-    <li><a href="getsnapshots" title="GetSnapshots"><span class="api-symbol api-symbol--function"></span>GetSnapshots</a></li>
-    <li><a href="getvaults" title="GetVaults"><span class="api-symbol api-symbol--function"></span>GetVaults</a></li>
+    <li><a href="getbackupjobs" title="GetBackupJobs"><span class="symbol function"></span>GetBackupJobs</a></li>
+    <li><a href="getecsbackupclients" title="GetEcsBackupClients"><span class="symbol function"></span>GetEcsBackupClients</a></li>
+    <li><a href="getecsbackupplans" title="GetEcsBackupPlans"><span class="symbol function"></span>GetEcsBackupPlans</a></li>
+    <li><a href="getnasbackupplans" title="GetNasBackupPlans"><span class="symbol function"></span>GetNasBackupPlans</a></li>
+    <li><a href="getossbackupplans" title="GetOssBackupPlans"><span class="symbol function"></span>GetOssBackupPlans</a></li>
+    <li><a href="getrestorejobs" title="GetRestoreJobs"><span class="symbol function"></span>GetRestoreJobs</a></li>
+    <li><a href="getsnapshots" title="GetSnapshots"><span class="symbol function"></span>GetSnapshots</a></li>
+    <li><a href="getvaults" title="GetVaults"><span class="symbol function"></span>GetVaults</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

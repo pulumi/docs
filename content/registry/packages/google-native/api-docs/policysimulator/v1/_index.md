@@ -13,16 +13,16 @@ Explore the resources and functions of the google-native.policysimulator/v1 modu
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="folderreplay" title="FolderReplay"><span class="api-symbol api-symbol--resource"></span>FolderReplay</a></li>
-    <li><a href="organizationreplay" title="OrganizationReplay"><span class="api-symbol api-symbol--resource"></span>OrganizationReplay</a></li>
-    <li><a href="replay" title="Replay"><span class="api-symbol api-symbol--resource"></span>Replay</a></li>
+    <li><a href="folderreplay" title="FolderReplay"><span class="symbol resource"></span>FolderReplay</a></li>
+    <li><a href="organizationreplay" title="OrganizationReplay"><span class="symbol resource"></span>OrganizationReplay</a></li>
+    <li><a href="replay" title="Replay"><span class="symbol resource"></span>Replay</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getfolderreplay" title="GetFolderReplay"><span class="api-symbol api-symbol--function"></span>GetFolderReplay</a></li>
-    <li><a href="getorganizationreplay" title="GetOrganizationReplay"><span class="api-symbol api-symbol--function"></span>GetOrganizationReplay</a></li>
-    <li><a href="getreplay" title="GetReplay"><span class="api-symbol api-symbol--function"></span>GetReplay</a></li>
+    <li><a href="getfolderreplay" title="GetFolderReplay"><span class="symbol function"></span>GetFolderReplay</a></li>
+    <li><a href="getorganizationreplay" title="GetOrganizationReplay"><span class="symbol function"></span>GetOrganizationReplay</a></li>
+    <li><a href="getreplay" title="GetReplay"><span class="symbol function"></span>GetReplay</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

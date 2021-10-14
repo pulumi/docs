@@ -13,12 +13,12 @@ Explore the resources and functions of the google-native.workflowexecutions/v1 m
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="execution" title="Execution"><span class="api-symbol api-symbol--resource"></span>Execution</a></li>
+    <li><a href="execution" title="Execution"><span class="symbol resource"></span>Execution</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getexecution" title="GetExecution"><span class="api-symbol api-symbol--function"></span>GetExecution</a></li>
+    <li><a href="getexecution" title="GetExecution"><span class="symbol function"></span>GetExecution</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

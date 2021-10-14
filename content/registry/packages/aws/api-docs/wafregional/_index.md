@@ -13,27 +13,27 @@ Explore the resources and functions of the aws.wafregional module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="bytematchset" title="ByteMatchSet"><span class="api-symbol api-symbol--resource"></span>ByteMatchSet</a></li>
-    <li><a href="geomatchset" title="GeoMatchSet"><span class="api-symbol api-symbol--resource"></span>GeoMatchSet</a></li>
-    <li><a href="ipset" title="IpSet"><span class="api-symbol api-symbol--resource"></span>IpSet</a></li>
-    <li><a href="ratebasedrule" title="RateBasedRule"><span class="api-symbol api-symbol--resource"></span>RateBasedRule</a></li>
-    <li><a href="regexmatchset" title="RegexMatchSet"><span class="api-symbol api-symbol--resource"></span>RegexMatchSet</a></li>
-    <li><a href="regexpatternset" title="RegexPatternSet"><span class="api-symbol api-symbol--resource"></span>RegexPatternSet</a></li>
-    <li><a href="rule" title="Rule"><span class="api-symbol api-symbol--resource"></span>Rule</a></li>
-    <li><a href="rulegroup" title="RuleGroup"><span class="api-symbol api-symbol--resource"></span>RuleGroup</a></li>
-    <li><a href="sizeconstraintset" title="SizeConstraintSet"><span class="api-symbol api-symbol--resource"></span>SizeConstraintSet</a></li>
-    <li><a href="sqlinjectionmatchset" title="SqlInjectionMatchSet"><span class="api-symbol api-symbol--resource"></span>SqlInjectionMatchSet</a></li>
-    <li><a href="webacl" title="WebAcl"><span class="api-symbol api-symbol--resource"></span>WebAcl</a></li>
-    <li><a href="webaclassociation" title="WebAclAssociation"><span class="api-symbol api-symbol--resource"></span>WebAclAssociation</a></li>
-    <li><a href="xssmatchset" title="XssMatchSet"><span class="api-symbol api-symbol--resource"></span>XssMatchSet</a></li>
+    <li><a href="bytematchset" title="ByteMatchSet"><span class="symbol resource"></span>ByteMatchSet</a></li>
+    <li><a href="geomatchset" title="GeoMatchSet"><span class="symbol resource"></span>GeoMatchSet</a></li>
+    <li><a href="ipset" title="IpSet"><span class="symbol resource"></span>IpSet</a></li>
+    <li><a href="ratebasedrule" title="RateBasedRule"><span class="symbol resource"></span>RateBasedRule</a></li>
+    <li><a href="regexmatchset" title="RegexMatchSet"><span class="symbol resource"></span>RegexMatchSet</a></li>
+    <li><a href="regexpatternset" title="RegexPatternSet"><span class="symbol resource"></span>RegexPatternSet</a></li>
+    <li><a href="rule" title="Rule"><span class="symbol resource"></span>Rule</a></li>
+    <li><a href="rulegroup" title="RuleGroup"><span class="symbol resource"></span>RuleGroup</a></li>
+    <li><a href="sizeconstraintset" title="SizeConstraintSet"><span class="symbol resource"></span>SizeConstraintSet</a></li>
+    <li><a href="sqlinjectionmatchset" title="SqlInjectionMatchSet"><span class="symbol resource"></span>SqlInjectionMatchSet</a></li>
+    <li><a href="webacl" title="WebAcl"><span class="symbol resource"></span>WebAcl</a></li>
+    <li><a href="webaclassociation" title="WebAclAssociation"><span class="symbol resource"></span>WebAclAssociation</a></li>
+    <li><a href="xssmatchset" title="XssMatchSet"><span class="symbol resource"></span>XssMatchSet</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getipset" title="GetIpset"><span class="api-symbol api-symbol--function"></span>GetIpset</a></li>
-    <li><a href="getratebasedmod" title="GetRateBasedMod"><span class="api-symbol api-symbol--function"></span>GetRateBasedMod</a></li>
-    <li><a href="getrule" title="GetRule"><span class="api-symbol api-symbol--function"></span>GetRule</a></li>
-    <li><a href="getwebacl" title="GetWebAcl"><span class="api-symbol api-symbol--function"></span>GetWebAcl</a></li>
+    <li><a href="getipset" title="GetIpset"><span class="symbol function"></span>GetIpset</a></li>
+    <li><a href="getratebasedmod" title="GetRateBasedMod"><span class="symbol function"></span>GetRateBasedMod</a></li>
+    <li><a href="getrule" title="GetRule"><span class="symbol function"></span>GetRule</a></li>
+    <li><a href="getwebacl" title="GetWebAcl"><span class="symbol function"></span>GetWebAcl</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

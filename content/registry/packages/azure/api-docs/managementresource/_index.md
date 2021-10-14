@@ -13,7 +13,7 @@ Explore the resources and functions of the azure.managementresource module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="manangementlock" title="ManangementLock"><span class="api-symbol api-symbol--resource"></span>ManangementLock</a></li>
+    <li><a href="manangementlock" title="ManangementLock"><span class="symbol resource"></span>ManangementLock</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

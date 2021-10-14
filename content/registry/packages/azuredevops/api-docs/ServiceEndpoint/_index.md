@@ -13,11 +13,11 @@ Explore the resources and functions of the azuredevops.ServiceEndpoint module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="azurerm" title="AzureRM"><span class="api-symbol api-symbol--resource"></span>AzureRM</a></li>
-    <li><a href="bitbucket" title="BitBucket"><span class="api-symbol api-symbol--resource"></span>BitBucket</a></li>
-    <li><a href="dockerregistry" title="DockerRegistry"><span class="api-symbol api-symbol--resource"></span>DockerRegistry</a></li>
-    <li><a href="github" title="GitHub"><span class="api-symbol api-symbol--resource"></span>GitHub</a></li>
-    <li><a href="kubernetes" title="Kubernetes"><span class="api-symbol api-symbol--resource"></span>Kubernetes</a></li>
+    <li><a href="azurerm" title="AzureRM"><span class="symbol resource"></span>AzureRM</a></li>
+    <li><a href="bitbucket" title="BitBucket"><span class="symbol resource"></span>BitBucket</a></li>
+    <li><a href="dockerregistry" title="DockerRegistry"><span class="symbol resource"></span>DockerRegistry</a></li>
+    <li><a href="github" title="GitHub"><span class="symbol resource"></span>GitHub</a></li>
+    <li><a href="kubernetes" title="Kubernetes"><span class="symbol resource"></span>Kubernetes</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

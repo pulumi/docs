@@ -13,12 +13,12 @@ Explore the resources and functions of the aws-native.iotwireless module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="destination" title="Destination"><span class="api-symbol api-symbol--resource"></span>Destination</a></li>
-    <li><a href="deviceprofile" title="DeviceProfile"><span class="api-symbol api-symbol--resource"></span>DeviceProfile</a></li>
-    <li><a href="serviceprofile" title="ServiceProfile"><span class="api-symbol api-symbol--resource"></span>ServiceProfile</a></li>
-    <li><a href="taskdefinition" title="TaskDefinition"><span class="api-symbol api-symbol--resource"></span>TaskDefinition</a></li>
-    <li><a href="wirelessdevice" title="WirelessDevice"><span class="api-symbol api-symbol--resource"></span>WirelessDevice</a></li>
-    <li><a href="wirelessgateway" title="WirelessGateway"><span class="api-symbol api-symbol--resource"></span>WirelessGateway</a></li>
+    <li><a href="destination" title="Destination"><span class="symbol resource"></span>Destination</a></li>
+    <li><a href="deviceprofile" title="DeviceProfile"><span class="symbol resource"></span>DeviceProfile</a></li>
+    <li><a href="serviceprofile" title="ServiceProfile"><span class="symbol resource"></span>ServiceProfile</a></li>
+    <li><a href="taskdefinition" title="TaskDefinition"><span class="symbol resource"></span>TaskDefinition</a></li>
+    <li><a href="wirelessdevice" title="WirelessDevice"><span class="symbol resource"></span>WirelessDevice</a></li>
+    <li><a href="wirelessgateway" title="WirelessGateway"><span class="symbol resource"></span>WirelessGateway</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

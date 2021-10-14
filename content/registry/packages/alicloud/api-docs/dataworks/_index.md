@@ -13,13 +13,13 @@ Explore the resources and functions of the alicloud.dataworks module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="folder" title="Folder"><span class="api-symbol api-symbol--resource"></span>Folder</a></li>
+    <li><a href="folder" title="Folder"><span class="symbol resource"></span>Folder</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getfolders" title="GetFolders"><span class="api-symbol api-symbol--function"></span>GetFolders</a></li>
-    <li><a href="getservice" title="GetService"><span class="api-symbol api-symbol--function"></span>GetService</a></li>
+    <li><a href="getfolders" title="GetFolders"><span class="symbol function"></span>GetFolders</a></li>
+    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

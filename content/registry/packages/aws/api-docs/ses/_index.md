@@ -13,21 +13,21 @@ Explore the resources and functions of the aws.ses module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="activereceiptruleset" title="ActiveReceiptRuleSet"><span class="api-symbol api-symbol--resource"></span>ActiveReceiptRuleSet</a></li>
-    <li><a href="confgurationset" title="ConfgurationSet"><span class="api-symbol api-symbol--resource"></span>ConfgurationSet</a></li>
-    <li><a href="configurationset" title="ConfigurationSet"><span class="api-symbol api-symbol--resource"></span>ConfigurationSet</a></li>
-    <li><a href="domaindkim" title="DomainDkim"><span class="api-symbol api-symbol--resource"></span>DomainDkim</a></li>
-    <li><a href="domainidentity" title="DomainIdentity"><span class="api-symbol api-symbol--resource"></span>DomainIdentity</a></li>
-    <li><a href="domainidentityverification" title="DomainIdentityVerification"><span class="api-symbol api-symbol--resource"></span>DomainIdentityVerification</a></li>
-    <li><a href="emailidentity" title="EmailIdentity"><span class="api-symbol api-symbol--resource"></span>EmailIdentity</a></li>
-    <li><a href="eventdestination" title="EventDestination"><span class="api-symbol api-symbol--resource"></span>EventDestination</a></li>
-    <li><a href="identitynotificationtopic" title="IdentityNotificationTopic"><span class="api-symbol api-symbol--resource"></span>IdentityNotificationTopic</a></li>
-    <li><a href="identitypolicy" title="IdentityPolicy"><span class="api-symbol api-symbol--resource"></span>IdentityPolicy</a></li>
-    <li><a href="mailfrom" title="MailFrom"><span class="api-symbol api-symbol--resource"></span>MailFrom</a></li>
-    <li><a href="receiptfilter" title="ReceiptFilter"><span class="api-symbol api-symbol--resource"></span>ReceiptFilter</a></li>
-    <li><a href="receiptrule" title="ReceiptRule"><span class="api-symbol api-symbol--resource"></span>ReceiptRule</a></li>
-    <li><a href="receiptruleset" title="ReceiptRuleSet"><span class="api-symbol api-symbol--resource"></span>ReceiptRuleSet</a></li>
-    <li><a href="template" title="Template"><span class="api-symbol api-symbol--resource"></span>Template</a></li>
+    <li><a href="activereceiptruleset" title="ActiveReceiptRuleSet"><span class="symbol resource"></span>ActiveReceiptRuleSet</a></li>
+    <li><a href="confgurationset" title="ConfgurationSet"><span class="symbol resource"></span>ConfgurationSet</a></li>
+    <li><a href="configurationset" title="ConfigurationSet"><span class="symbol resource"></span>ConfigurationSet</a></li>
+    <li><a href="domaindkim" title="DomainDkim"><span class="symbol resource"></span>DomainDkim</a></li>
+    <li><a href="domainidentity" title="DomainIdentity"><span class="symbol resource"></span>DomainIdentity</a></li>
+    <li><a href="domainidentityverification" title="DomainIdentityVerification"><span class="symbol resource"></span>DomainIdentityVerification</a></li>
+    <li><a href="emailidentity" title="EmailIdentity"><span class="symbol resource"></span>EmailIdentity</a></li>
+    <li><a href="eventdestination" title="EventDestination"><span class="symbol resource"></span>EventDestination</a></li>
+    <li><a href="identitynotificationtopic" title="IdentityNotificationTopic"><span class="symbol resource"></span>IdentityNotificationTopic</a></li>
+    <li><a href="identitypolicy" title="IdentityPolicy"><span class="symbol resource"></span>IdentityPolicy</a></li>
+    <li><a href="mailfrom" title="MailFrom"><span class="symbol resource"></span>MailFrom</a></li>
+    <li><a href="receiptfilter" title="ReceiptFilter"><span class="symbol resource"></span>ReceiptFilter</a></li>
+    <li><a href="receiptrule" title="ReceiptRule"><span class="symbol resource"></span>ReceiptRule</a></li>
+    <li><a href="receiptruleset" title="ReceiptRuleSet"><span class="symbol resource"></span>ReceiptRuleSet</a></li>
+    <li><a href="template" title="Template"><span class="symbol resource"></span>Template</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

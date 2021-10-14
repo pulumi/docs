@@ -13,18 +13,18 @@ Explore the resources and functions of the azure.netapp module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="account" title="Account"><span class="api-symbol api-symbol--resource"></span>Account</a></li>
-    <li><a href="pool" title="Pool"><span class="api-symbol api-symbol--resource"></span>Pool</a></li>
-    <li><a href="snapshot" title="Snapshot"><span class="api-symbol api-symbol--resource"></span>Snapshot</a></li>
-    <li><a href="volume" title="Volume"><span class="api-symbol api-symbol--resource"></span>Volume</a></li>
+    <li><a href="account" title="Account"><span class="symbol resource"></span>Account</a></li>
+    <li><a href="pool" title="Pool"><span class="symbol resource"></span>Pool</a></li>
+    <li><a href="snapshot" title="Snapshot"><span class="symbol resource"></span>Snapshot</a></li>
+    <li><a href="volume" title="Volume"><span class="symbol resource"></span>Volume</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getaccount" title="GetAccount"><span class="api-symbol api-symbol--function"></span>GetAccount</a></li>
-    <li><a href="getpool" title="GetPool"><span class="api-symbol api-symbol--function"></span>GetPool</a></li>
-    <li><a href="getsnapshot" title="GetSnapshot"><span class="api-symbol api-symbol--function"></span>GetSnapshot</a></li>
-    <li><a href="getvolume" title="GetVolume"><span class="api-symbol api-symbol--function"></span>GetVolume</a></li>
+    <li><a href="getaccount" title="GetAccount"><span class="symbol function"></span>GetAccount</a></li>
+    <li><a href="getpool" title="GetPool"><span class="symbol function"></span>GetPool</a></li>
+    <li><a href="getsnapshot" title="GetSnapshot"><span class="symbol function"></span>GetSnapshot</a></li>
+    <li><a href="getvolume" title="GetVolume"><span class="symbol function"></span>GetVolume</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

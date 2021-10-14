@@ -2,9 +2,6 @@
 title: "Snowflake"
 title_tag: "snowflake.Snowflake"
 meta_desc: "A Pulumi package for creating and managing snowflake cloud resources."
-menu:
-    reference:
-        parent: API Reference
 layout: api
 no_edit_this_page: true
 ---
@@ -16,86 +13,86 @@ A Pulumi package for creating and managing snowflake cloud resources.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="accountgrant" title="AccountGrant"><span class="api-symbol api-symbol--resource"></span>AccountGrant</a></li>
-    <li><a href="apiintegration" title="ApiIntegration"><span class="api-symbol api-symbol--resource"></span>ApiIntegration</a></li>
-    <li><a href="database" title="Database"><span class="api-symbol api-symbol--resource"></span>Database</a></li>
-    <li><a href="databasegrant" title="DatabaseGrant"><span class="api-symbol api-symbol--resource"></span>DatabaseGrant</a></li>
-    <li><a href="externalfunction" title="ExternalFunction"><span class="api-symbol api-symbol--resource"></span>ExternalFunction</a></li>
-    <li><a href="externaltable" title="ExternalTable"><span class="api-symbol api-symbol--resource"></span>ExternalTable</a></li>
-    <li><a href="externaltablegrant" title="ExternalTableGrant"><span class="api-symbol api-symbol--resource"></span>ExternalTableGrant</a></li>
-    <li><a href="fileformat" title="FileFormat"><span class="api-symbol api-symbol--resource"></span>FileFormat</a></li>
-    <li><a href="fileformatgrant" title="FileFormatGrant"><span class="api-symbol api-symbol--resource"></span>FileFormatGrant</a></li>
-    <li><a href="function" title="Function"><span class="api-symbol api-symbol--resource"></span>Function</a></li>
-    <li><a href="functiongrant" title="FunctionGrant"><span class="api-symbol api-symbol--resource"></span>FunctionGrant</a></li>
-    <li><a href="integrationgrant" title="IntegrationGrant"><span class="api-symbol api-symbol--resource"></span>IntegrationGrant</a></li>
-    <li><a href="managedaccount" title="ManagedAccount"><span class="api-symbol api-symbol--resource"></span>ManagedAccount</a></li>
-    <li><a href="maskingpolicy" title="MaskingPolicy"><span class="api-symbol api-symbol--resource"></span>MaskingPolicy</a></li>
-    <li><a href="maskingpolicygrant" title="MaskingPolicyGrant"><span class="api-symbol api-symbol--resource"></span>MaskingPolicyGrant</a></li>
-    <li><a href="materializedview" title="MaterializedView"><span class="api-symbol api-symbol--resource"></span>MaterializedView</a></li>
-    <li><a href="materializedviewgrant" title="MaterializedViewGrant"><span class="api-symbol api-symbol--resource"></span>MaterializedViewGrant</a></li>
-    <li><a href="networkpolicy" title="NetworkPolicy"><span class="api-symbol api-symbol--resource"></span>NetworkPolicy</a></li>
-    <li><a href="networkpolicyattachment" title="NetworkPolicyAttachment"><span class="api-symbol api-symbol--resource"></span>NetworkPolicyAttachment</a></li>
-    <li><a href="notificationintegration" title="NotificationIntegration"><span class="api-symbol api-symbol--resource"></span>NotificationIntegration</a></li>
-    <li><a href="pipe" title="Pipe"><span class="api-symbol api-symbol--resource"></span>Pipe</a></li>
-    <li><a href="pipegrant" title="PipeGrant"><span class="api-symbol api-symbol--resource"></span>PipeGrant</a></li>
-    <li><a href="procedure" title="Procedure"><span class="api-symbol api-symbol--resource"></span>Procedure</a></li>
-    <li><a href="proceduregrant" title="ProcedureGrant"><span class="api-symbol api-symbol--resource"></span>ProcedureGrant</a></li>
-    <li><a href="provider" title="Provider"><span class="api-symbol api-symbol--resource"></span>Provider</a></li>
-    <li><a href="resourcemonitor" title="ResourceMonitor"><span class="api-symbol api-symbol--resource"></span>ResourceMonitor</a></li>
-    <li><a href="resourcemonitorgrant" title="ResourceMonitorGrant"><span class="api-symbol api-symbol--resource"></span>ResourceMonitorGrant</a></li>
-    <li><a href="role" title="Role"><span class="api-symbol api-symbol--resource"></span>Role</a></li>
-    <li><a href="rolegrants" title="RoleGrants"><span class="api-symbol api-symbol--resource"></span>RoleGrants</a></li>
-    <li><a href="rowaccesspolicy" title="RowAccessPolicy"><span class="api-symbol api-symbol--resource"></span>RowAccessPolicy</a></li>
-    <li><a href="rowaccesspolicygrant" title="RowAccessPolicyGrant"><span class="api-symbol api-symbol--resource"></span>RowAccessPolicyGrant</a></li>
-    <li><a href="schema" title="Schema"><span class="api-symbol api-symbol--resource"></span>Schema</a></li>
-    <li><a href="schemagrant" title="SchemaGrant"><span class="api-symbol api-symbol--resource"></span>SchemaGrant</a></li>
-    <li><a href="scimintegration" title="ScimIntegration"><span class="api-symbol api-symbol--resource"></span>ScimIntegration</a></li>
-    <li><a href="sequence" title="Sequence"><span class="api-symbol api-symbol--resource"></span>Sequence</a></li>
-    <li><a href="sequencegrant" title="SequenceGrant"><span class="api-symbol api-symbol--resource"></span>SequenceGrant</a></li>
-    <li><a href="share" title="Share"><span class="api-symbol api-symbol--resource"></span>Share</a></li>
-    <li><a href="stage" title="Stage"><span class="api-symbol api-symbol--resource"></span>Stage</a></li>
-    <li><a href="stagegrant" title="StageGrant"><span class="api-symbol api-symbol--resource"></span>StageGrant</a></li>
-    <li><a href="storageintegration" title="StorageIntegration"><span class="api-symbol api-symbol--resource"></span>StorageIntegration</a></li>
-    <li><a href="stream" title="Stream"><span class="api-symbol api-symbol--resource"></span>Stream</a></li>
-    <li><a href="streamgrant" title="StreamGrant"><span class="api-symbol api-symbol--resource"></span>StreamGrant</a></li>
-    <li><a href="table" title="Table"><span class="api-symbol api-symbol--resource"></span>Table</a></li>
-    <li><a href="tablegrant" title="TableGrant"><span class="api-symbol api-symbol--resource"></span>TableGrant</a></li>
-    <li><a href="task" title="Task"><span class="api-symbol api-symbol--resource"></span>Task</a></li>
-    <li><a href="taskgrant" title="TaskGrant"><span class="api-symbol api-symbol--resource"></span>TaskGrant</a></li>
-    <li><a href="user" title="User"><span class="api-symbol api-symbol--resource"></span>User</a></li>
-    <li><a href="userpublickeys" title="UserPublicKeys"><span class="api-symbol api-symbol--resource"></span>UserPublicKeys</a></li>
-    <li><a href="view" title="View"><span class="api-symbol api-symbol--resource"></span>View</a></li>
-    <li><a href="viewgrant" title="ViewGrant"><span class="api-symbol api-symbol--resource"></span>ViewGrant</a></li>
-    <li><a href="warehouse" title="Warehouse"><span class="api-symbol api-symbol--resource"></span>Warehouse</a></li>
-    <li><a href="warehousegrant" title="WarehouseGrant"><span class="api-symbol api-symbol--resource"></span>WarehouseGrant</a></li>
+    <li><a href="accountgrant" title="AccountGrant"><span class="symbol resource"></span>AccountGrant</a></li>
+    <li><a href="apiintegration" title="ApiIntegration"><span class="symbol resource"></span>ApiIntegration</a></li>
+    <li><a href="database" title="Database"><span class="symbol resource"></span>Database</a></li>
+    <li><a href="databasegrant" title="DatabaseGrant"><span class="symbol resource"></span>DatabaseGrant</a></li>
+    <li><a href="externalfunction" title="ExternalFunction"><span class="symbol resource"></span>ExternalFunction</a></li>
+    <li><a href="externaltable" title="ExternalTable"><span class="symbol resource"></span>ExternalTable</a></li>
+    <li><a href="externaltablegrant" title="ExternalTableGrant"><span class="symbol resource"></span>ExternalTableGrant</a></li>
+    <li><a href="fileformat" title="FileFormat"><span class="symbol resource"></span>FileFormat</a></li>
+    <li><a href="fileformatgrant" title="FileFormatGrant"><span class="symbol resource"></span>FileFormatGrant</a></li>
+    <li><a href="function" title="Function"><span class="symbol resource"></span>Function</a></li>
+    <li><a href="functiongrant" title="FunctionGrant"><span class="symbol resource"></span>FunctionGrant</a></li>
+    <li><a href="integrationgrant" title="IntegrationGrant"><span class="symbol resource"></span>IntegrationGrant</a></li>
+    <li><a href="managedaccount" title="ManagedAccount"><span class="symbol resource"></span>ManagedAccount</a></li>
+    <li><a href="maskingpolicy" title="MaskingPolicy"><span class="symbol resource"></span>MaskingPolicy</a></li>
+    <li><a href="maskingpolicygrant" title="MaskingPolicyGrant"><span class="symbol resource"></span>MaskingPolicyGrant</a></li>
+    <li><a href="materializedview" title="MaterializedView"><span class="symbol resource"></span>MaterializedView</a></li>
+    <li><a href="materializedviewgrant" title="MaterializedViewGrant"><span class="symbol resource"></span>MaterializedViewGrant</a></li>
+    <li><a href="networkpolicy" title="NetworkPolicy"><span class="symbol resource"></span>NetworkPolicy</a></li>
+    <li><a href="networkpolicyattachment" title="NetworkPolicyAttachment"><span class="symbol resource"></span>NetworkPolicyAttachment</a></li>
+    <li><a href="notificationintegration" title="NotificationIntegration"><span class="symbol resource"></span>NotificationIntegration</a></li>
+    <li><a href="pipe" title="Pipe"><span class="symbol resource"></span>Pipe</a></li>
+    <li><a href="pipegrant" title="PipeGrant"><span class="symbol resource"></span>PipeGrant</a></li>
+    <li><a href="procedure" title="Procedure"><span class="symbol resource"></span>Procedure</a></li>
+    <li><a href="proceduregrant" title="ProcedureGrant"><span class="symbol resource"></span>ProcedureGrant</a></li>
+    <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
+    <li><a href="resourcemonitor" title="ResourceMonitor"><span class="symbol resource"></span>ResourceMonitor</a></li>
+    <li><a href="resourcemonitorgrant" title="ResourceMonitorGrant"><span class="symbol resource"></span>ResourceMonitorGrant</a></li>
+    <li><a href="role" title="Role"><span class="symbol resource"></span>Role</a></li>
+    <li><a href="rolegrants" title="RoleGrants"><span class="symbol resource"></span>RoleGrants</a></li>
+    <li><a href="rowaccesspolicy" title="RowAccessPolicy"><span class="symbol resource"></span>RowAccessPolicy</a></li>
+    <li><a href="rowaccesspolicygrant" title="RowAccessPolicyGrant"><span class="symbol resource"></span>RowAccessPolicyGrant</a></li>
+    <li><a href="schema" title="Schema"><span class="symbol resource"></span>Schema</a></li>
+    <li><a href="schemagrant" title="SchemaGrant"><span class="symbol resource"></span>SchemaGrant</a></li>
+    <li><a href="scimintegration" title="ScimIntegration"><span class="symbol resource"></span>ScimIntegration</a></li>
+    <li><a href="sequence" title="Sequence"><span class="symbol resource"></span>Sequence</a></li>
+    <li><a href="sequencegrant" title="SequenceGrant"><span class="symbol resource"></span>SequenceGrant</a></li>
+    <li><a href="share" title="Share"><span class="symbol resource"></span>Share</a></li>
+    <li><a href="stage" title="Stage"><span class="symbol resource"></span>Stage</a></li>
+    <li><a href="stagegrant" title="StageGrant"><span class="symbol resource"></span>StageGrant</a></li>
+    <li><a href="storageintegration" title="StorageIntegration"><span class="symbol resource"></span>StorageIntegration</a></li>
+    <li><a href="stream" title="Stream"><span class="symbol resource"></span>Stream</a></li>
+    <li><a href="streamgrant" title="StreamGrant"><span class="symbol resource"></span>StreamGrant</a></li>
+    <li><a href="table" title="Table"><span class="symbol resource"></span>Table</a></li>
+    <li><a href="tablegrant" title="TableGrant"><span class="symbol resource"></span>TableGrant</a></li>
+    <li><a href="task" title="Task"><span class="symbol resource"></span>Task</a></li>
+    <li><a href="taskgrant" title="TaskGrant"><span class="symbol resource"></span>TaskGrant</a></li>
+    <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
+    <li><a href="userpublickeys" title="UserPublicKeys"><span class="symbol resource"></span>UserPublicKeys</a></li>
+    <li><a href="view" title="View"><span class="symbol resource"></span>View</a></li>
+    <li><a href="viewgrant" title="ViewGrant"><span class="symbol resource"></span>ViewGrant</a></li>
+    <li><a href="warehouse" title="Warehouse"><span class="symbol resource"></span>Warehouse</a></li>
+    <li><a href="warehousegrant" title="WarehouseGrant"><span class="symbol resource"></span>WarehouseGrant</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getcurrentaccount" title="GetCurrentAccount"><span class="api-symbol api-symbol--function"></span>GetCurrentAccount</a></li>
-    <li><a href="getexternalfunctions" title="GetExternalFunctions"><span class="api-symbol api-symbol--function"></span>GetExternalFunctions</a></li>
-    <li><a href="getexternaltables" title="GetExternalTables"><span class="api-symbol api-symbol--function"></span>GetExternalTables</a></li>
-    <li><a href="getfileformats" title="GetFileFormats"><span class="api-symbol api-symbol--function"></span>GetFileFormats</a></li>
-    <li><a href="getfunctions" title="GetFunctions"><span class="api-symbol api-symbol--function"></span>GetFunctions</a></li>
-    <li><a href="getmaskingpolicies" title="GetMaskingPolicies"><span class="api-symbol api-symbol--function"></span>GetMaskingPolicies</a></li>
-    <li><a href="getmaterializedviews" title="GetMaterializedViews"><span class="api-symbol api-symbol--function"></span>GetMaterializedViews</a></li>
-    <li><a href="getpipes" title="GetPipes"><span class="api-symbol api-symbol--function"></span>GetPipes</a></li>
-    <li><a href="getprocedures" title="GetProcedures"><span class="api-symbol api-symbol--function"></span>GetProcedures</a></li>
-    <li><a href="getresourcemonitors" title="GetResourceMonitors"><span class="api-symbol api-symbol--function"></span>GetResourceMonitors</a></li>
-    <li><a href="getrowaccesspolicies" title="GetRowAccessPolicies"><span class="api-symbol api-symbol--function"></span>GetRowAccessPolicies</a></li>
-    <li><a href="getschemas" title="GetSchemas"><span class="api-symbol api-symbol--function"></span>GetSchemas</a></li>
-    <li><a href="getsequences" title="GetSequences"><span class="api-symbol api-symbol--function"></span>GetSequences</a></li>
-    <li><a href="getstages" title="GetStages"><span class="api-symbol api-symbol--function"></span>GetStages</a></li>
-    <li><a href="getstorageintegrations" title="GetStorageIntegrations"><span class="api-symbol api-symbol--function"></span>GetStorageIntegrations</a></li>
-    <li><a href="getstreams" title="GetStreams"><span class="api-symbol api-symbol--function"></span>GetStreams</a></li>
-    <li><a href="getsystemgeneratescimaccesstoken" title="GetSystemGenerateScimAccessToken"><span class="api-symbol api-symbol--function"></span>GetSystemGenerateScimAccessToken</a></li>
-    <li><a href="getsystemgetawssnsiampolicy" title="GetSystemGetAwsSnsIamPolicy"><span class="api-symbol api-symbol--function"></span>GetSystemGetAwsSnsIamPolicy</a></li>
-    <li><a href="getsystemgetprivatelinkconfig" title="GetSystemGetPrivateLinkConfig"><span class="api-symbol api-symbol--function"></span>GetSystemGetPrivateLinkConfig</a></li>
-    <li><a href="getsystemgetsnowflakeplatforminfo" title="GetSystemGetSnowflakePlatformInfo"><span class="api-symbol api-symbol--function"></span>GetSystemGetSnowflakePlatformInfo</a></li>
-    <li><a href="gettables" title="GetTables"><span class="api-symbol api-symbol--function"></span>GetTables</a></li>
-    <li><a href="gettasks" title="GetTasks"><span class="api-symbol api-symbol--function"></span>GetTasks</a></li>
-    <li><a href="getviews" title="GetViews"><span class="api-symbol api-symbol--function"></span>GetViews</a></li>
-    <li><a href="getwarehouses" title="GetWarehouses"><span class="api-symbol api-symbol--function"></span>GetWarehouses</a></li>
+    <li><a href="getcurrentaccount" title="GetCurrentAccount"><span class="symbol function"></span>GetCurrentAccount</a></li>
+    <li><a href="getexternalfunctions" title="GetExternalFunctions"><span class="symbol function"></span>GetExternalFunctions</a></li>
+    <li><a href="getexternaltables" title="GetExternalTables"><span class="symbol function"></span>GetExternalTables</a></li>
+    <li><a href="getfileformats" title="GetFileFormats"><span class="symbol function"></span>GetFileFormats</a></li>
+    <li><a href="getfunctions" title="GetFunctions"><span class="symbol function"></span>GetFunctions</a></li>
+    <li><a href="getmaskingpolicies" title="GetMaskingPolicies"><span class="symbol function"></span>GetMaskingPolicies</a></li>
+    <li><a href="getmaterializedviews" title="GetMaterializedViews"><span class="symbol function"></span>GetMaterializedViews</a></li>
+    <li><a href="getpipes" title="GetPipes"><span class="symbol function"></span>GetPipes</a></li>
+    <li><a href="getprocedures" title="GetProcedures"><span class="symbol function"></span>GetProcedures</a></li>
+    <li><a href="getresourcemonitors" title="GetResourceMonitors"><span class="symbol function"></span>GetResourceMonitors</a></li>
+    <li><a href="getrowaccesspolicies" title="GetRowAccessPolicies"><span class="symbol function"></span>GetRowAccessPolicies</a></li>
+    <li><a href="getschemas" title="GetSchemas"><span class="symbol function"></span>GetSchemas</a></li>
+    <li><a href="getsequences" title="GetSequences"><span class="symbol function"></span>GetSequences</a></li>
+    <li><a href="getstages" title="GetStages"><span class="symbol function"></span>GetStages</a></li>
+    <li><a href="getstorageintegrations" title="GetStorageIntegrations"><span class="symbol function"></span>GetStorageIntegrations</a></li>
+    <li><a href="getstreams" title="GetStreams"><span class="symbol function"></span>GetStreams</a></li>
+    <li><a href="getsystemgeneratescimaccesstoken" title="GetSystemGenerateScimAccessToken"><span class="symbol function"></span>GetSystemGenerateScimAccessToken</a></li>
+    <li><a href="getsystemgetawssnsiampolicy" title="GetSystemGetAwsSnsIamPolicy"><span class="symbol function"></span>GetSystemGetAwsSnsIamPolicy</a></li>
+    <li><a href="getsystemgetprivatelinkconfig" title="GetSystemGetPrivateLinkConfig"><span class="symbol function"></span>GetSystemGetPrivateLinkConfig</a></li>
+    <li><a href="getsystemgetsnowflakeplatforminfo" title="GetSystemGetSnowflakePlatformInfo"><span class="symbol function"></span>GetSystemGetSnowflakePlatformInfo</a></li>
+    <li><a href="gettables" title="GetTables"><span class="symbol function"></span>GetTables</a></li>
+    <li><a href="gettasks" title="GetTasks"><span class="symbol function"></span>GetTasks</a></li>
+    <li><a href="getviews" title="GetViews"><span class="symbol function"></span>GetViews</a></li>
+    <li><a href="getwarehouses" title="GetWarehouses"><span class="symbol function"></span>GetWarehouses</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

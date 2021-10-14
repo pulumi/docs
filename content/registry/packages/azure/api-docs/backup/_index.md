@@ -13,17 +13,17 @@ Explore the resources and functions of the azure.backup module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="containerstorageaccount" title="ContainerStorageAccount"><span class="api-symbol api-symbol--resource"></span>ContainerStorageAccount</a></li>
-    <li><a href="policyfileshare" title="PolicyFileShare"><span class="api-symbol api-symbol--resource"></span>PolicyFileShare</a></li>
-    <li><a href="policyvm" title="PolicyVM"><span class="api-symbol api-symbol--resource"></span>PolicyVM</a></li>
-    <li><a href="protectedfileshare" title="ProtectedFileShare"><span class="api-symbol api-symbol--resource"></span>ProtectedFileShare</a></li>
-    <li><a href="protectedvm" title="ProtectedVM"><span class="api-symbol api-symbol--resource"></span>ProtectedVM</a></li>
+    <li><a href="containerstorageaccount" title="ContainerStorageAccount"><span class="symbol resource"></span>ContainerStorageAccount</a></li>
+    <li><a href="policyfileshare" title="PolicyFileShare"><span class="symbol resource"></span>PolicyFileShare</a></li>
+    <li><a href="policyvm" title="PolicyVM"><span class="symbol resource"></span>PolicyVM</a></li>
+    <li><a href="protectedfileshare" title="ProtectedFileShare"><span class="symbol resource"></span>ProtectedFileShare</a></li>
+    <li><a href="protectedvm" title="ProtectedVM"><span class="symbol resource"></span>ProtectedVM</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getpolicyfileshare" title="GetPolicyFileshare"><span class="api-symbol api-symbol--function"></span>GetPolicyFileshare</a></li>
-    <li><a href="getpolicyvm" title="GetPolicyVM"><span class="api-symbol api-symbol--function"></span>GetPolicyVM</a></li>
+    <li><a href="getpolicyfileshare" title="GetPolicyFileshare"><span class="symbol function"></span>GetPolicyFileshare</a></li>
+    <li><a href="getpolicyvm" title="GetPolicyVM"><span class="symbol function"></span>GetPolicyVM</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

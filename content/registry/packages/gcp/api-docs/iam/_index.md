@@ -13,16 +13,16 @@ Explore the resources and functions of the gcp.iam module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="workloadidentitypool" title="WorkloadIdentityPool"><span class="api-symbol api-symbol--resource"></span>WorkloadIdentityPool</a></li>
-    <li><a href="workloadidentitypoolprovider" title="WorkloadIdentityPoolProvider"><span class="api-symbol api-symbol--resource"></span>WorkloadIdentityPoolProvider</a></li>
+    <li><a href="workloadidentitypool" title="WorkloadIdentityPool"><span class="symbol resource"></span>WorkloadIdentityPool</a></li>
+    <li><a href="workloadidentitypoolprovider" title="WorkloadIdentityPoolProvider"><span class="symbol resource"></span>WorkloadIdentityPoolProvider</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getrule" title="GetRule"><span class="api-symbol api-symbol--function"></span>GetRule</a></li>
-    <li><a href="gettestablepermissions" title="GetTestablePermissions"><span class="api-symbol api-symbol--function"></span>GetTestablePermissions</a></li>
-    <li><a href="getworkloadidentitypool" title="GetWorkloadIdentityPool"><span class="api-symbol api-symbol--function"></span>GetWorkloadIdentityPool</a></li>
-    <li><a href="getworkloadidentitypoolprovider" title="GetWorkloadIdentityPoolProvider"><span class="api-symbol api-symbol--function"></span>GetWorkloadIdentityPoolProvider</a></li>
+    <li><a href="getrule" title="GetRule"><span class="symbol function"></span>GetRule</a></li>
+    <li><a href="gettestablepermissions" title="GetTestablePermissions"><span class="symbol function"></span>GetTestablePermissions</a></li>
+    <li><a href="getworkloadidentitypool" title="GetWorkloadIdentityPool"><span class="symbol function"></span>GetWorkloadIdentityPool</a></li>
+    <li><a href="getworkloadidentitypoolprovider" title="GetWorkloadIdentityPoolProvider"><span class="symbol function"></span>GetWorkloadIdentityPoolProvider</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

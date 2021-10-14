@@ -13,40 +13,40 @@ Explore the resources and functions of the f5bigip.ltm module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="datagroup" title="DataGroup"><span class="api-symbol api-symbol--resource"></span>DataGroup</a></li>
-    <li><a href="irule" title="IRule"><span class="api-symbol api-symbol--resource"></span>IRule</a></li>
-    <li><a href="monitor" title="Monitor"><span class="api-symbol api-symbol--resource"></span>Monitor</a></li>
-    <li><a href="node" title="Node"><span class="api-symbol api-symbol--resource"></span>Node</a></li>
-    <li><a href="persistenceprofilecookie" title="PersistenceProfileCookie"><span class="api-symbol api-symbol--resource"></span>PersistenceProfileCookie</a></li>
-    <li><a href="persistenceprofiledstaddr" title="PersistenceProfileDstAddr"><span class="api-symbol api-symbol--resource"></span>PersistenceProfileDstAddr</a></li>
-    <li><a href="persistenceprofilesrcaddr" title="PersistenceProfileSrcAddr"><span class="api-symbol api-symbol--resource"></span>PersistenceProfileSrcAddr</a></li>
-    <li><a href="persistenceprofilessl" title="PersistenceProfileSsl"><span class="api-symbol api-symbol--resource"></span>PersistenceProfileSsl</a></li>
-    <li><a href="policy" title="Policy"><span class="api-symbol api-symbol--resource"></span>Policy</a></li>
-    <li><a href="pool" title="Pool"><span class="api-symbol api-symbol--resource"></span>Pool</a></li>
-    <li><a href="poolattachment" title="PoolAttachment"><span class="api-symbol api-symbol--resource"></span>PoolAttachment</a></li>
-    <li><a href="profileclientssl" title="ProfileClientSsl"><span class="api-symbol api-symbol--resource"></span>ProfileClientSsl</a></li>
-    <li><a href="profilefasthttp" title="ProfileFastHttp"><span class="api-symbol api-symbol--resource"></span>ProfileFastHttp</a></li>
-    <li><a href="profilefastl4" title="ProfileFastL4"><span class="api-symbol api-symbol--resource"></span>ProfileFastL4</a></li>
-    <li><a href="profileftp" title="ProfileFtp"><span class="api-symbol api-symbol--resource"></span>ProfileFtp</a></li>
-    <li><a href="profilehttp" title="ProfileHttp"><span class="api-symbol api-symbol--resource"></span>ProfileHttp</a></li>
-    <li><a href="profilehttp2" title="ProfileHttp2"><span class="api-symbol api-symbol--resource"></span>ProfileHttp2</a></li>
-    <li><a href="profilehttpcompress" title="ProfileHttpCompress"><span class="api-symbol api-symbol--resource"></span>ProfileHttpCompress</a></li>
-    <li><a href="profileoneconnect" title="ProfileOneConnect"><span class="api-symbol api-symbol--resource"></span>ProfileOneConnect</a></li>
-    <li><a href="profileserverssl" title="ProfileServerSsl"><span class="api-symbol api-symbol--resource"></span>ProfileServerSsl</a></li>
-    <li><a href="profiletcp" title="ProfileTcp"><span class="api-symbol api-symbol--resource"></span>ProfileTcp</a></li>
-    <li><a href="snat" title="Snat"><span class="api-symbol api-symbol--resource"></span>Snat</a></li>
-    <li><a href="snatpool" title="SnatPool"><span class="api-symbol api-symbol--resource"></span>SnatPool</a></li>
-    <li><a href="virtualaddress" title="VirtualAddress"><span class="api-symbol api-symbol--resource"></span>VirtualAddress</a></li>
-    <li><a href="virtualserver" title="VirtualServer"><span class="api-symbol api-symbol--resource"></span>VirtualServer</a></li>
+    <li><a href="datagroup" title="DataGroup"><span class="symbol resource"></span>DataGroup</a></li>
+    <li><a href="irule" title="IRule"><span class="symbol resource"></span>IRule</a></li>
+    <li><a href="monitor" title="Monitor"><span class="symbol resource"></span>Monitor</a></li>
+    <li><a href="node" title="Node"><span class="symbol resource"></span>Node</a></li>
+    <li><a href="persistenceprofilecookie" title="PersistenceProfileCookie"><span class="symbol resource"></span>PersistenceProfileCookie</a></li>
+    <li><a href="persistenceprofiledstaddr" title="PersistenceProfileDstAddr"><span class="symbol resource"></span>PersistenceProfileDstAddr</a></li>
+    <li><a href="persistenceprofilesrcaddr" title="PersistenceProfileSrcAddr"><span class="symbol resource"></span>PersistenceProfileSrcAddr</a></li>
+    <li><a href="persistenceprofilessl" title="PersistenceProfileSsl"><span class="symbol resource"></span>PersistenceProfileSsl</a></li>
+    <li><a href="policy" title="Policy"><span class="symbol resource"></span>Policy</a></li>
+    <li><a href="pool" title="Pool"><span class="symbol resource"></span>Pool</a></li>
+    <li><a href="poolattachment" title="PoolAttachment"><span class="symbol resource"></span>PoolAttachment</a></li>
+    <li><a href="profileclientssl" title="ProfileClientSsl"><span class="symbol resource"></span>ProfileClientSsl</a></li>
+    <li><a href="profilefasthttp" title="ProfileFastHttp"><span class="symbol resource"></span>ProfileFastHttp</a></li>
+    <li><a href="profilefastl4" title="ProfileFastL4"><span class="symbol resource"></span>ProfileFastL4</a></li>
+    <li><a href="profileftp" title="ProfileFtp"><span class="symbol resource"></span>ProfileFtp</a></li>
+    <li><a href="profilehttp" title="ProfileHttp"><span class="symbol resource"></span>ProfileHttp</a></li>
+    <li><a href="profilehttp2" title="ProfileHttp2"><span class="symbol resource"></span>ProfileHttp2</a></li>
+    <li><a href="profilehttpcompress" title="ProfileHttpCompress"><span class="symbol resource"></span>ProfileHttpCompress</a></li>
+    <li><a href="profileoneconnect" title="ProfileOneConnect"><span class="symbol resource"></span>ProfileOneConnect</a></li>
+    <li><a href="profileserverssl" title="ProfileServerSsl"><span class="symbol resource"></span>ProfileServerSsl</a></li>
+    <li><a href="profiletcp" title="ProfileTcp"><span class="symbol resource"></span>ProfileTcp</a></li>
+    <li><a href="snat" title="Snat"><span class="symbol resource"></span>Snat</a></li>
+    <li><a href="snatpool" title="SnatPool"><span class="symbol resource"></span>SnatPool</a></li>
+    <li><a href="virtualaddress" title="VirtualAddress"><span class="symbol resource"></span>VirtualAddress</a></li>
+    <li><a href="virtualserver" title="VirtualServer"><span class="symbol resource"></span>VirtualServer</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getdatagroup" title="GetDataGroup"><span class="api-symbol api-symbol--function"></span>GetDataGroup</a></li>
-    <li><a href="getirule" title="GetIrule"><span class="api-symbol api-symbol--function"></span>GetIrule</a></li>
-    <li><a href="getmonitor" title="GetMonitor"><span class="api-symbol api-symbol--function"></span>GetMonitor</a></li>
-    <li><a href="getnode" title="GetNode"><span class="api-symbol api-symbol--function"></span>GetNode</a></li>
-    <li><a href="getpool" title="GetPool"><span class="api-symbol api-symbol--function"></span>GetPool</a></li>
+    <li><a href="getdatagroup" title="GetDataGroup"><span class="symbol function"></span>GetDataGroup</a></li>
+    <li><a href="getirule" title="GetIrule"><span class="symbol function"></span>GetIrule</a></li>
+    <li><a href="getmonitor" title="GetMonitor"><span class="symbol function"></span>GetMonitor</a></li>
+    <li><a href="getnode" title="GetNode"><span class="symbol function"></span>GetNode</a></li>
+    <li><a href="getpool" title="GetPool"><span class="symbol function"></span>GetPool</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

@@ -13,14 +13,14 @@ Explore the resources and functions of the google-native.domains/v1beta1 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="registration" title="Registration"><span class="api-symbol api-symbol--resource"></span>Registration</a></li>
-    <li><a href="registrationiampolicy" title="RegistrationIamPolicy"><span class="api-symbol api-symbol--resource"></span>RegistrationIamPolicy</a></li>
+    <li><a href="registration" title="Registration"><span class="symbol resource"></span>Registration</a></li>
+    <li><a href="registrationiampolicy" title="RegistrationIamPolicy"><span class="symbol resource"></span>RegistrationIamPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getregistration" title="GetRegistration"><span class="api-symbol api-symbol--function"></span>GetRegistration</a></li>
-    <li><a href="getregistrationiampolicy" title="GetRegistrationIamPolicy"><span class="api-symbol api-symbol--function"></span>GetRegistrationIamPolicy</a></li>
+    <li><a href="getregistration" title="GetRegistration"><span class="symbol function"></span>GetRegistration</a></li>
+    <li><a href="getregistrationiampolicy" title="GetRegistrationIamPolicy"><span class="symbol function"></span>GetRegistrationIamPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

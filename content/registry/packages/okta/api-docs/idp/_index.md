@@ -13,18 +13,18 @@ Explore the resources and functions of the okta.idp module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="oidc" title="Oidc"><span class="api-symbol api-symbol--resource"></span>Oidc</a></li>
-    <li><a href="saml" title="Saml"><span class="api-symbol api-symbol--resource"></span>Saml</a></li>
-    <li><a href="samlkey" title="SamlKey"><span class="api-symbol api-symbol--resource"></span>SamlKey</a></li>
-    <li><a href="social" title="Social"><span class="api-symbol api-symbol--resource"></span>Social</a></li>
+    <li><a href="oidc" title="Oidc"><span class="symbol resource"></span>Oidc</a></li>
+    <li><a href="saml" title="Saml"><span class="symbol resource"></span>Saml</a></li>
+    <li><a href="samlkey" title="SamlKey"><span class="symbol resource"></span>SamlKey</a></li>
+    <li><a href="social" title="Social"><span class="symbol resource"></span>Social</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getmetadatasaml" title="GetMetadataSaml"><span class="api-symbol api-symbol--function"></span>GetMetadataSaml</a></li>
-    <li><a href="getoidc" title="GetOidc"><span class="api-symbol api-symbol--function"></span>GetOidc</a></li>
-    <li><a href="getsaml" title="GetSaml"><span class="api-symbol api-symbol--function"></span>GetSaml</a></li>
-    <li><a href="getsocial" title="GetSocial"><span class="api-symbol api-symbol--function"></span>GetSocial</a></li>
+    <li><a href="getmetadatasaml" title="GetMetadataSaml"><span class="symbol function"></span>GetMetadataSaml</a></li>
+    <li><a href="getoidc" title="GetOidc"><span class="symbol function"></span>GetOidc</a></li>
+    <li><a href="getsaml" title="GetSaml"><span class="symbol function"></span>GetSaml</a></li>
+    <li><a href="getsocial" title="GetSocial"><span class="symbol function"></span>GetSocial</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

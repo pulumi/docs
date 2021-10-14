@@ -2,9 +2,6 @@
 title: "MinIO"
 title_tag: "minio.MinIO"
 meta_desc: "A Pulumi package for creating and managing minio cloud resources."
-menu:
-    reference:
-        parent: API Reference
 layout: api
 no_edit_this_page: true
 ---
@@ -16,22 +13,22 @@ A Pulumi package for creating and managing minio cloud resources.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="iamgroup" title="IamGroup"><span class="api-symbol api-symbol--resource"></span>IamGroup</a></li>
-    <li><a href="iamgroupmembership" title="IamGroupMembership"><span class="api-symbol api-symbol--resource"></span>IamGroupMembership</a></li>
-    <li><a href="iamgrouppolicy" title="IamGroupPolicy"><span class="api-symbol api-symbol--resource"></span>IamGroupPolicy</a></li>
-    <li><a href="iamgrouppolicyattachment" title="IamGroupPolicyAttachment"><span class="api-symbol api-symbol--resource"></span>IamGroupPolicyAttachment</a></li>
-    <li><a href="iamgroupuserattachment" title="IamGroupUserAttachment"><span class="api-symbol api-symbol--resource"></span>IamGroupUserAttachment</a></li>
-    <li><a href="iampolicy" title="IamPolicy"><span class="api-symbol api-symbol--resource"></span>IamPolicy</a></li>
-    <li><a href="iamuser" title="IamUser"><span class="api-symbol api-symbol--resource"></span>IamUser</a></li>
-    <li><a href="iamuserpolicyattachment" title="IamUserPolicyAttachment"><span class="api-symbol api-symbol--resource"></span>IamUserPolicyAttachment</a></li>
-    <li><a href="provider" title="Provider"><span class="api-symbol api-symbol--resource"></span>Provider</a></li>
-    <li><a href="s3bucket" title="S3Bucket"><span class="api-symbol api-symbol--resource"></span>S3Bucket</a></li>
-    <li><a href="s3object" title="S3Object"><span class="api-symbol api-symbol--resource"></span>S3Object</a></li>
+    <li><a href="iamgroup" title="IamGroup"><span class="symbol resource"></span>IamGroup</a></li>
+    <li><a href="iamgroupmembership" title="IamGroupMembership"><span class="symbol resource"></span>IamGroupMembership</a></li>
+    <li><a href="iamgrouppolicy" title="IamGroupPolicy"><span class="symbol resource"></span>IamGroupPolicy</a></li>
+    <li><a href="iamgrouppolicyattachment" title="IamGroupPolicyAttachment"><span class="symbol resource"></span>IamGroupPolicyAttachment</a></li>
+    <li><a href="iamgroupuserattachment" title="IamGroupUserAttachment"><span class="symbol resource"></span>IamGroupUserAttachment</a></li>
+    <li><a href="iampolicy" title="IamPolicy"><span class="symbol resource"></span>IamPolicy</a></li>
+    <li><a href="iamuser" title="IamUser"><span class="symbol resource"></span>IamUser</a></li>
+    <li><a href="iamuserpolicyattachment" title="IamUserPolicyAttachment"><span class="symbol resource"></span>IamUserPolicyAttachment</a></li>
+    <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
+    <li><a href="s3bucket" title="S3Bucket"><span class="symbol resource"></span>S3Bucket</a></li>
+    <li><a href="s3object" title="S3Object"><span class="symbol resource"></span>S3Object</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getiampolicydocument" title="GetIamPolicyDocument"><span class="api-symbol api-symbol--function"></span>GetIamPolicyDocument</a></li>
+    <li><a href="getiampolicydocument" title="GetIamPolicyDocument"><span class="symbol function"></span>GetIamPolicyDocument</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

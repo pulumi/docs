@@ -13,12 +13,12 @@ Explore the resources and functions of the alicloud.ens module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="keypair" title="KeyPair"><span class="api-symbol api-symbol--resource"></span>KeyPair</a></li>
+    <li><a href="keypair" title="KeyPair"><span class="symbol resource"></span>KeyPair</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getkeypairs" title="GetKeyPairs"><span class="api-symbol api-symbol--function"></span>GetKeyPairs</a></li>
+    <li><a href="getkeypairs" title="GetKeyPairs"><span class="symbol function"></span>GetKeyPairs</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

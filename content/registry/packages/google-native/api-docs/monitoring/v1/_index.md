@@ -13,12 +13,12 @@ Explore the resources and functions of the google-native.monitoring/v1 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="dashboard" title="Dashboard"><span class="api-symbol api-symbol--resource"></span>Dashboard</a></li>
+    <li><a href="dashboard" title="Dashboard"><span class="symbol resource"></span>Dashboard</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getdashboard" title="GetDashboard"><span class="api-symbol api-symbol--function"></span>GetDashboard</a></li>
+    <li><a href="getdashboard" title="GetDashboard"><span class="symbol function"></span>GetDashboard</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

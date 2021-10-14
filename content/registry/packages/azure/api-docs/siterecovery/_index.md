@@ -13,12 +13,12 @@ Explore the resources and functions of the azure.siterecovery module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="fabric" title="Fabric"><span class="api-symbol api-symbol--resource"></span>Fabric</a></li>
-    <li><a href="networkmapping" title="NetworkMapping"><span class="api-symbol api-symbol--resource"></span>NetworkMapping</a></li>
-    <li><a href="protectioncontainer" title="ProtectionContainer"><span class="api-symbol api-symbol--resource"></span>ProtectionContainer</a></li>
-    <li><a href="protectioncontainermapping" title="ProtectionContainerMapping"><span class="api-symbol api-symbol--resource"></span>ProtectionContainerMapping</a></li>
-    <li><a href="replicatedvm" title="ReplicatedVM"><span class="api-symbol api-symbol--resource"></span>ReplicatedVM</a></li>
-    <li><a href="replicationpolicy" title="ReplicationPolicy"><span class="api-symbol api-symbol--resource"></span>ReplicationPolicy</a></li>
+    <li><a href="fabric" title="Fabric"><span class="symbol resource"></span>Fabric</a></li>
+    <li><a href="networkmapping" title="NetworkMapping"><span class="symbol resource"></span>NetworkMapping</a></li>
+    <li><a href="protectioncontainer" title="ProtectionContainer"><span class="symbol resource"></span>ProtectionContainer</a></li>
+    <li><a href="protectioncontainermapping" title="ProtectionContainerMapping"><span class="symbol resource"></span>ProtectionContainerMapping</a></li>
+    <li><a href="replicatedvm" title="ReplicatedVM"><span class="symbol resource"></span>ReplicatedVM</a></li>
+    <li><a href="replicationpolicy" title="ReplicationPolicy"><span class="symbol resource"></span>ReplicationPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

@@ -13,16 +13,16 @@ Explore the resources and functions of the kubernetes.apps/v1 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="controllerrevision" title="ControllerRevision"><span class="api-symbol api-symbol--resource"></span>ControllerRevision</a></li>
-    <li><a href="controllerrevisionlist" title="ControllerRevisionList"><span class="api-symbol api-symbol--resource"></span>ControllerRevisionList</a></li>
-    <li><a href="daemonset" title="DaemonSet"><span class="api-symbol api-symbol--resource"></span>DaemonSet</a></li>
-    <li><a href="daemonsetlist" title="DaemonSetList"><span class="api-symbol api-symbol--resource"></span>DaemonSetList</a></li>
-    <li><a href="deployment" title="Deployment"><span class="api-symbol api-symbol--resource"></span>Deployment</a></li>
-    <li><a href="deploymentlist" title="DeploymentList"><span class="api-symbol api-symbol--resource"></span>DeploymentList</a></li>
-    <li><a href="replicaset" title="ReplicaSet"><span class="api-symbol api-symbol--resource"></span>ReplicaSet</a></li>
-    <li><a href="replicasetlist" title="ReplicaSetList"><span class="api-symbol api-symbol--resource"></span>ReplicaSetList</a></li>
-    <li><a href="statefulset" title="StatefulSet"><span class="api-symbol api-symbol--resource"></span>StatefulSet</a></li>
-    <li><a href="statefulsetlist" title="StatefulSetList"><span class="api-symbol api-symbol--resource"></span>StatefulSetList</a></li>
+    <li><a href="controllerrevision" title="ControllerRevision"><span class="symbol resource"></span>ControllerRevision</a></li>
+    <li><a href="controllerrevisionlist" title="ControllerRevisionList"><span class="symbol resource"></span>ControllerRevisionList</a></li>
+    <li><a href="daemonset" title="DaemonSet"><span class="symbol resource"></span>DaemonSet</a></li>
+    <li><a href="daemonsetlist" title="DaemonSetList"><span class="symbol resource"></span>DaemonSetList</a></li>
+    <li><a href="deployment" title="Deployment"><span class="symbol resource"></span>Deployment</a></li>
+    <li><a href="deploymentlist" title="DeploymentList"><span class="symbol resource"></span>DeploymentList</a></li>
+    <li><a href="replicaset" title="ReplicaSet"><span class="symbol resource"></span>ReplicaSet</a></li>
+    <li><a href="replicasetlist" title="ReplicaSetList"><span class="symbol resource"></span>ReplicaSetList</a></li>
+    <li><a href="statefulset" title="StatefulSet"><span class="symbol resource"></span>StatefulSet</a></li>
+    <li><a href="statefulsetlist" title="StatefulSetList"><span class="symbol resource"></span>StatefulSetList</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

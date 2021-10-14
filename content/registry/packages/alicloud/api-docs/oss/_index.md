@@ -13,18 +13,18 @@ Explore the resources and functions of the alicloud.oss module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="bucket" title="Bucket"><span class="api-symbol api-symbol--resource"></span>Bucket</a></li>
-    <li><a href="bucketobject" title="BucketObject"><span class="api-symbol api-symbol--resource"></span>BucketObject</a></li>
+    <li><a href="bucket" title="Bucket"><span class="symbol resource"></span>Bucket</a></li>
+    <li><a href="bucketobject" title="BucketObject"><span class="symbol resource"></span>BucketObject</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getbucketobjects" title="GetBucketObjects"><span class="api-symbol api-symbol--function"></span>GetBucketObjects</a></li>
-    <li><a href="getbuckets" title="GetBuckets"><span class="api-symbol api-symbol--function"></span>GetBuckets</a></li>
-    <li><a href="getinstanceattachments" title="GetInstanceAttachments"><span class="api-symbol api-symbol--function"></span>GetInstanceAttachments</a></li>
-    <li><a href="getinstances" title="GetInstances"><span class="api-symbol api-symbol--function"></span>GetInstances</a></li>
-    <li><a href="getservice" title="GetService"><span class="api-symbol api-symbol--function"></span>GetService</a></li>
-    <li><a href="gettables" title="GetTables"><span class="api-symbol api-symbol--function"></span>GetTables</a></li>
+    <li><a href="getbucketobjects" title="GetBucketObjects"><span class="symbol function"></span>GetBucketObjects</a></li>
+    <li><a href="getbuckets" title="GetBuckets"><span class="symbol function"></span>GetBuckets</a></li>
+    <li><a href="getinstanceattachments" title="GetInstanceAttachments"><span class="symbol function"></span>GetInstanceAttachments</a></li>
+    <li><a href="getinstances" title="GetInstances"><span class="symbol function"></span>GetInstances</a></li>
+    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
+    <li><a href="gettables" title="GetTables"><span class="symbol function"></span>GetTables</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

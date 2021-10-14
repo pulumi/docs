@@ -13,16 +13,16 @@ Explore the resources and functions of the alicloud.cloudsso module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="directory" title="Directory"><span class="api-symbol api-symbol--resource"></span>Directory</a></li>
-    <li><a href="group" title="Group"><span class="api-symbol api-symbol--resource"></span>Group</a></li>
-    <li><a href="scimservercredential" title="ScimServerCredential"><span class="api-symbol api-symbol--resource"></span>ScimServerCredential</a></li>
+    <li><a href="directory" title="Directory"><span class="symbol resource"></span>Directory</a></li>
+    <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
+    <li><a href="scimservercredential" title="ScimServerCredential"><span class="symbol resource"></span>ScimServerCredential</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getdirectories" title="GetDirectories"><span class="api-symbol api-symbol--function"></span>GetDirectories</a></li>
-    <li><a href="getgroups" title="GetGroups"><span class="api-symbol api-symbol--function"></span>GetGroups</a></li>
-    <li><a href="getscimservercredentials" title="GetScimServerCredentials"><span class="api-symbol api-symbol--function"></span>GetScimServerCredentials</a></li>
+    <li><a href="getdirectories" title="GetDirectories"><span class="symbol function"></span>GetDirectories</a></li>
+    <li><a href="getgroups" title="GetGroups"><span class="symbol function"></span>GetGroups</a></li>
+    <li><a href="getscimservercredentials" title="GetScimServerCredentials"><span class="symbol function"></span>GetScimServerCredentials</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

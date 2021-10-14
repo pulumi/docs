@@ -13,16 +13,16 @@ Explore the resources and functions of the aws.ssoadmin module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="accountassignment" title="AccountAssignment"><span class="api-symbol api-symbol--resource"></span>AccountAssignment</a></li>
-    <li><a href="managedpolicyattachment" title="ManagedPolicyAttachment"><span class="api-symbol api-symbol--resource"></span>ManagedPolicyAttachment</a></li>
-    <li><a href="permissionset" title="PermissionSet"><span class="api-symbol api-symbol--resource"></span>PermissionSet</a></li>
-    <li><a href="permissionsetinlinepolicy" title="PermissionSetInlinePolicy"><span class="api-symbol api-symbol--resource"></span>PermissionSetInlinePolicy</a></li>
+    <li><a href="accountassignment" title="AccountAssignment"><span class="symbol resource"></span>AccountAssignment</a></li>
+    <li><a href="managedpolicyattachment" title="ManagedPolicyAttachment"><span class="symbol resource"></span>ManagedPolicyAttachment</a></li>
+    <li><a href="permissionset" title="PermissionSet"><span class="symbol resource"></span>PermissionSet</a></li>
+    <li><a href="permissionsetinlinepolicy" title="PermissionSetInlinePolicy"><span class="symbol resource"></span>PermissionSetInlinePolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getinstances" title="GetInstances"><span class="api-symbol api-symbol--function"></span>GetInstances</a></li>
-    <li><a href="getpermissionset" title="GetPermissionSet"><span class="api-symbol api-symbol--function"></span>GetPermissionSet</a></li>
+    <li><a href="getinstances" title="GetInstances"><span class="symbol function"></span>GetInstances</a></li>
+    <li><a href="getpermissionset" title="GetPermissionSet"><span class="symbol function"></span>GetPermissionSet</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

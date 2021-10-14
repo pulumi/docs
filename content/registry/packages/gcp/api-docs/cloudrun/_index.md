@@ -13,17 +13,17 @@ Explore the resources and functions of the gcp.cloudrun module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="domainmapping" title="DomainMapping"><span class="api-symbol api-symbol--resource"></span>DomainMapping</a></li>
-    <li><a href="iambinding" title="IamBinding"><span class="api-symbol api-symbol--resource"></span>IamBinding</a></li>
-    <li><a href="iammember" title="IamMember"><span class="api-symbol api-symbol--resource"></span>IamMember</a></li>
-    <li><a href="iampolicy" title="IamPolicy"><span class="api-symbol api-symbol--resource"></span>IamPolicy</a></li>
-    <li><a href="service" title="Service"><span class="api-symbol api-symbol--resource"></span>Service</a></li>
+    <li><a href="domainmapping" title="DomainMapping"><span class="symbol resource"></span>DomainMapping</a></li>
+    <li><a href="iambinding" title="IamBinding"><span class="symbol resource"></span>IamBinding</a></li>
+    <li><a href="iammember" title="IamMember"><span class="symbol resource"></span>IamMember</a></li>
+    <li><a href="iampolicy" title="IamPolicy"><span class="symbol resource"></span>IamPolicy</a></li>
+    <li><a href="service" title="Service"><span class="symbol resource"></span>Service</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getlocations" title="GetLocations"><span class="api-symbol api-symbol--function"></span>GetLocations</a></li>
-    <li><a href="getservice" title="GetService"><span class="api-symbol api-symbol--function"></span>GetService</a></li>
+    <li><a href="getlocations" title="GetLocations"><span class="symbol function"></span>GetLocations</a></li>
+    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

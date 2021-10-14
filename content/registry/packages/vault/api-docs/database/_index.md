@@ -13,9 +13,9 @@ Explore the resources and functions of the vault.database module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="secretbackendconnection" title="SecretBackendConnection"><span class="api-symbol api-symbol--resource"></span>SecretBackendConnection</a></li>
-    <li><a href="secretbackendrole" title="SecretBackendRole"><span class="api-symbol api-symbol--resource"></span>SecretBackendRole</a></li>
-    <li><a href="secretbackendstaticrole" title="SecretBackendStaticRole"><span class="api-symbol api-symbol--resource"></span>SecretBackendStaticRole</a></li>
+    <li><a href="secretbackendconnection" title="SecretBackendConnection"><span class="symbol resource"></span>SecretBackendConnection</a></li>
+    <li><a href="secretbackendrole" title="SecretBackendRole"><span class="symbol resource"></span>SecretBackendRole</a></li>
+    <li><a href="secretbackendstaticrole" title="SecretBackendStaticRole"><span class="symbol resource"></span>SecretBackendStaticRole</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

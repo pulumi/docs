@@ -13,10 +13,10 @@ Explore the resources and functions of the kubernetes.admissionregistration/v1be
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="mutatingwebhookconfiguration" title="MutatingWebhookConfiguration"><span class="api-symbol api-symbol--resource"></span>MutatingWebhookConfiguration</a></li>
-    <li><a href="mutatingwebhookconfigurationlist" title="MutatingWebhookConfigurationList"><span class="api-symbol api-symbol--resource"></span>MutatingWebhookConfigurationList</a></li>
-    <li><a href="validatingwebhookconfiguration" title="ValidatingWebhookConfiguration"><span class="api-symbol api-symbol--resource"></span>ValidatingWebhookConfiguration</a></li>
-    <li><a href="validatingwebhookconfigurationlist" title="ValidatingWebhookConfigurationList"><span class="api-symbol api-symbol--resource"></span>ValidatingWebhookConfigurationList</a></li>
+    <li><a href="mutatingwebhookconfiguration" title="MutatingWebhookConfiguration"><span class="symbol resource"></span>MutatingWebhookConfiguration</a></li>
+    <li><a href="mutatingwebhookconfigurationlist" title="MutatingWebhookConfigurationList"><span class="symbol resource"></span>MutatingWebhookConfigurationList</a></li>
+    <li><a href="validatingwebhookconfiguration" title="ValidatingWebhookConfiguration"><span class="symbol resource"></span>ValidatingWebhookConfiguration</a></li>
+    <li><a href="validatingwebhookconfigurationlist" title="ValidatingWebhookConfigurationList"><span class="symbol resource"></span>ValidatingWebhookConfigurationList</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

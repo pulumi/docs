@@ -13,7 +13,7 @@ Explore the resources and functions of the aws.resourcegroupstaggingapi module.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getresources" title="GetResources"><span class="api-symbol api-symbol--function"></span>GetResources</a></li>
+    <li><a href="getresources" title="GetResources"><span class="symbol function"></span>GetResources</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

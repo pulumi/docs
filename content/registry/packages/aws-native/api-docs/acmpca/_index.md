@@ -13,10 +13,10 @@ Explore the resources and functions of the aws-native.acmpca module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="certificate" title="Certificate"><span class="api-symbol api-symbol--resource"></span>Certificate</a></li>
-    <li><a href="certificateauthority" title="CertificateAuthority"><span class="api-symbol api-symbol--resource"></span>CertificateAuthority</a></li>
-    <li><a href="certificateauthorityactivation" title="CertificateAuthorityActivation"><span class="api-symbol api-symbol--resource"></span>CertificateAuthorityActivation</a></li>
-    <li><a href="permission" title="Permission"><span class="api-symbol api-symbol--resource"></span>Permission</a></li>
+    <li><a href="certificate" title="Certificate"><span class="symbol resource"></span>Certificate</a></li>
+    <li><a href="certificateauthority" title="CertificateAuthority"><span class="symbol resource"></span>CertificateAuthority</a></li>
+    <li><a href="certificateauthorityactivation" title="CertificateAuthorityActivation"><span class="symbol resource"></span>CertificateAuthorityActivation</a></li>
+    <li><a href="permission" title="Permission"><span class="symbol resource"></span>Permission</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

@@ -13,9 +13,9 @@ Explore the resources and functions of the aws-native.ssm module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="association" title="Association"><span class="api-symbol api-symbol--resource"></span>Association</a></li>
-    <li><a href="document" title="Document"><span class="api-symbol api-symbol--resource"></span>Document</a></li>
-    <li><a href="resourcedatasync" title="ResourceDataSync"><span class="api-symbol api-symbol--resource"></span>ResourceDataSync</a></li>
+    <li><a href="association" title="Association"><span class="symbol resource"></span>Association</a></li>
+    <li><a href="document" title="Document"><span class="symbol resource"></span>Document</a></li>
+    <li><a href="resourcedatasync" title="ResourceDataSync"><span class="symbol resource"></span>ResourceDataSync</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

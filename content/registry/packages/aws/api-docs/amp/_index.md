@@ -13,7 +13,7 @@ Explore the resources and functions of the aws.amp module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="workspace" title="Workspace"><span class="api-symbol api-symbol--resource"></span>Workspace</a></li>
+    <li><a href="workspace" title="Workspace"><span class="symbol resource"></span>Workspace</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

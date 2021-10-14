@@ -13,14 +13,14 @@ Explore the resources and functions of the google-native.gkehub/v1beta1 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="membership" title="Membership"><span class="api-symbol api-symbol--resource"></span>Membership</a></li>
-    <li><a href="membershipiampolicy" title="MembershipIamPolicy"><span class="api-symbol api-symbol--resource"></span>MembershipIamPolicy</a></li>
+    <li><a href="membership" title="Membership"><span class="symbol resource"></span>Membership</a></li>
+    <li><a href="membershipiampolicy" title="MembershipIamPolicy"><span class="symbol resource"></span>MembershipIamPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getmembership" title="GetMembership"><span class="api-symbol api-symbol--function"></span>GetMembership</a></li>
-    <li><a href="getmembershipiampolicy" title="GetMembershipIamPolicy"><span class="api-symbol api-symbol--function"></span>GetMembershipIamPolicy</a></li>
+    <li><a href="getmembership" title="GetMembership"><span class="symbol function"></span>GetMembership</a></li>
+    <li><a href="getmembershipiampolicy" title="GetMembershipIamPolicy"><span class="symbol function"></span>GetMembershipIamPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

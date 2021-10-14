@@ -13,8 +13,8 @@ Explore the resources and functions of the aws-native.elasticloadbalancingv2 mod
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="listener" title="Listener"><span class="api-symbol api-symbol--resource"></span>Listener</a></li>
-    <li><a href="listenerrule" title="ListenerRule"><span class="api-symbol api-symbol--resource"></span>ListenerRule</a></li>
+    <li><a href="listener" title="Listener"><span class="symbol resource"></span>Listener</a></li>
+    <li><a href="listenerrule" title="ListenerRule"><span class="symbol resource"></span>ListenerRule</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

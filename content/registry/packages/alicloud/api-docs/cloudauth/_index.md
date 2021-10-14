@@ -13,12 +13,12 @@ Explore the resources and functions of the alicloud.cloudauth module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="faceconfig" title="FaceConfig"><span class="api-symbol api-symbol--resource"></span>FaceConfig</a></li>
+    <li><a href="faceconfig" title="FaceConfig"><span class="symbol resource"></span>FaceConfig</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getfaceconfigs" title="GetFaceConfigs"><span class="api-symbol api-symbol--function"></span>GetFaceConfigs</a></li>
+    <li><a href="getfaceconfigs" title="GetFaceConfigs"><span class="symbol function"></span>GetFaceConfigs</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

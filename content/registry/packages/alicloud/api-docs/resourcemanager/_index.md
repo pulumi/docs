@@ -13,38 +13,38 @@ Explore the resources and functions of the alicloud.resourcemanager module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="account" title="Account"><span class="api-symbol api-symbol--resource"></span>Account</a></li>
-    <li><a href="controlpolicy" title="ControlPolicy"><span class="api-symbol api-symbol--resource"></span>ControlPolicy</a></li>
-    <li><a href="controlpolicyattachment" title="ControlPolicyAttachment"><span class="api-symbol api-symbol--resource"></span>ControlPolicyAttachment</a></li>
-    <li><a href="folder" title="Folder"><span class="api-symbol api-symbol--resource"></span>Folder</a></li>
-    <li><a href="handshake" title="Handshake"><span class="api-symbol api-symbol--resource"></span>Handshake</a></li>
-    <li><a href="policy" title="Policy"><span class="api-symbol api-symbol--resource"></span>Policy</a></li>
-    <li><a href="policyattachment" title="PolicyAttachment"><span class="api-symbol api-symbol--resource"></span>PolicyAttachment</a></li>
-    <li><a href="policyversion" title="PolicyVersion"><span class="api-symbol api-symbol--resource"></span>PolicyVersion</a></li>
-    <li><a href="resourcedirectory" title="ResourceDirectory"><span class="api-symbol api-symbol--resource"></span>ResourceDirectory</a></li>
-    <li><a href="resourcegroup" title="ResourceGroup"><span class="api-symbol api-symbol--resource"></span>ResourceGroup</a></li>
-    <li><a href="resourceshare" title="ResourceShare"><span class="api-symbol api-symbol--resource"></span>ResourceShare</a></li>
-    <li><a href="role" title="Role"><span class="api-symbol api-symbol--resource"></span>Role</a></li>
-    <li><a href="sharedresource" title="SharedResource"><span class="api-symbol api-symbol--resource"></span>SharedResource</a></li>
-    <li><a href="sharedtarget" title="SharedTarget"><span class="api-symbol api-symbol--resource"></span>SharedTarget</a></li>
+    <li><a href="account" title="Account"><span class="symbol resource"></span>Account</a></li>
+    <li><a href="controlpolicy" title="ControlPolicy"><span class="symbol resource"></span>ControlPolicy</a></li>
+    <li><a href="controlpolicyattachment" title="ControlPolicyAttachment"><span class="symbol resource"></span>ControlPolicyAttachment</a></li>
+    <li><a href="folder" title="Folder"><span class="symbol resource"></span>Folder</a></li>
+    <li><a href="handshake" title="Handshake"><span class="symbol resource"></span>Handshake</a></li>
+    <li><a href="policy" title="Policy"><span class="symbol resource"></span>Policy</a></li>
+    <li><a href="policyattachment" title="PolicyAttachment"><span class="symbol resource"></span>PolicyAttachment</a></li>
+    <li><a href="policyversion" title="PolicyVersion"><span class="symbol resource"></span>PolicyVersion</a></li>
+    <li><a href="resourcedirectory" title="ResourceDirectory"><span class="symbol resource"></span>ResourceDirectory</a></li>
+    <li><a href="resourcegroup" title="ResourceGroup"><span class="symbol resource"></span>ResourceGroup</a></li>
+    <li><a href="resourceshare" title="ResourceShare"><span class="symbol resource"></span>ResourceShare</a></li>
+    <li><a href="role" title="Role"><span class="symbol resource"></span>Role</a></li>
+    <li><a href="sharedresource" title="SharedResource"><span class="symbol resource"></span>SharedResource</a></li>
+    <li><a href="sharedtarget" title="SharedTarget"><span class="symbol resource"></span>SharedTarget</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getaccounts" title="GetAccounts"><span class="api-symbol api-symbol--function"></span>GetAccounts</a></li>
-    <li><a href="getcontrolpolicies" title="GetControlPolicies"><span class="api-symbol api-symbol--function"></span>GetControlPolicies</a></li>
-    <li><a href="getcontrolpolicyattachments" title="GetControlPolicyAttachments"><span class="api-symbol api-symbol--function"></span>GetControlPolicyAttachments</a></li>
-    <li><a href="getfolders" title="GetFolders"><span class="api-symbol api-symbol--function"></span>GetFolders</a></li>
-    <li><a href="gethandshakes" title="GetHandshakes"><span class="api-symbol api-symbol--function"></span>GetHandshakes</a></li>
-    <li><a href="getpolicies" title="GetPolicies"><span class="api-symbol api-symbol--function"></span>GetPolicies</a></li>
-    <li><a href="getpolicyattachments" title="GetPolicyAttachments"><span class="api-symbol api-symbol--function"></span>GetPolicyAttachments</a></li>
-    <li><a href="getpolicyversions" title="GetPolicyVersions"><span class="api-symbol api-symbol--function"></span>GetPolicyVersions</a></li>
-    <li><a href="getresourcedirectories" title="GetResourceDirectories"><span class="api-symbol api-symbol--function"></span>GetResourceDirectories</a></li>
-    <li><a href="getresourcegroups" title="GetResourceGroups"><span class="api-symbol api-symbol--function"></span>GetResourceGroups</a></li>
-    <li><a href="getresourceshares" title="GetResourceShares"><span class="api-symbol api-symbol--function"></span>GetResourceShares</a></li>
-    <li><a href="getroles" title="GetRoles"><span class="api-symbol api-symbol--function"></span>GetRoles</a></li>
-    <li><a href="getsharedresources" title="GetSharedResources"><span class="api-symbol api-symbol--function"></span>GetSharedResources</a></li>
-    <li><a href="getsharedtargets" title="GetSharedTargets"><span class="api-symbol api-symbol--function"></span>GetSharedTargets</a></li>
+    <li><a href="getaccounts" title="GetAccounts"><span class="symbol function"></span>GetAccounts</a></li>
+    <li><a href="getcontrolpolicies" title="GetControlPolicies"><span class="symbol function"></span>GetControlPolicies</a></li>
+    <li><a href="getcontrolpolicyattachments" title="GetControlPolicyAttachments"><span class="symbol function"></span>GetControlPolicyAttachments</a></li>
+    <li><a href="getfolders" title="GetFolders"><span class="symbol function"></span>GetFolders</a></li>
+    <li><a href="gethandshakes" title="GetHandshakes"><span class="symbol function"></span>GetHandshakes</a></li>
+    <li><a href="getpolicies" title="GetPolicies"><span class="symbol function"></span>GetPolicies</a></li>
+    <li><a href="getpolicyattachments" title="GetPolicyAttachments"><span class="symbol function"></span>GetPolicyAttachments</a></li>
+    <li><a href="getpolicyversions" title="GetPolicyVersions"><span class="symbol function"></span>GetPolicyVersions</a></li>
+    <li><a href="getresourcedirectories" title="GetResourceDirectories"><span class="symbol function"></span>GetResourceDirectories</a></li>
+    <li><a href="getresourcegroups" title="GetResourceGroups"><span class="symbol function"></span>GetResourceGroups</a></li>
+    <li><a href="getresourceshares" title="GetResourceShares"><span class="symbol function"></span>GetResourceShares</a></li>
+    <li><a href="getroles" title="GetRoles"><span class="symbol function"></span>GetRoles</a></li>
+    <li><a href="getsharedresources" title="GetSharedResources"><span class="symbol function"></span>GetSharedResources</a></li>
+    <li><a href="getsharedtargets" title="GetSharedTargets"><span class="symbol function"></span>GetSharedTargets</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

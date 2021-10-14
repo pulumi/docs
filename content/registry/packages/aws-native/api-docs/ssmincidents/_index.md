@@ -13,8 +13,8 @@ Explore the resources and functions of the aws-native.ssmincidents module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="replicationset" title="ReplicationSet"><span class="api-symbol api-symbol--resource"></span>ReplicationSet</a></li>
-    <li><a href="responseplan" title="ResponsePlan"><span class="api-symbol api-symbol--resource"></span>ResponsePlan</a></li>
+    <li><a href="replicationset" title="ReplicationSet"><span class="symbol resource"></span>ReplicationSet</a></li>
+    <li><a href="responseplan" title="ResponsePlan"><span class="symbol resource"></span>ResponsePlan</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

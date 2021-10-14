@@ -13,17 +13,17 @@ Explore the resources and functions of the gcp.folder module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="accessapprovalsettings" title="AccessApprovalSettings"><span class="api-symbol api-symbol--resource"></span>AccessApprovalSettings</a></li>
-    <li><a href="iambinding" title="IAMBinding"><span class="api-symbol api-symbol--resource"></span>IAMBinding</a></li>
-    <li><a href="iammember" title="IAMMember"><span class="api-symbol api-symbol--resource"></span>IAMMember</a></li>
-    <li><a href="iampolicy" title="IAMPolicy"><span class="api-symbol api-symbol--resource"></span>IAMPolicy</a></li>
-    <li><a href="iamauditconfig" title="IamAuditConfig"><span class="api-symbol api-symbol--resource"></span>IamAuditConfig</a></li>
-    <li><a href="organizationpolicy" title="OrganizationPolicy"><span class="api-symbol api-symbol--resource"></span>OrganizationPolicy</a></li>
+    <li><a href="accessapprovalsettings" title="AccessApprovalSettings"><span class="symbol resource"></span>AccessApprovalSettings</a></li>
+    <li><a href="iambinding" title="IAMBinding"><span class="symbol resource"></span>IAMBinding</a></li>
+    <li><a href="iammember" title="IAMMember"><span class="symbol resource"></span>IAMMember</a></li>
+    <li><a href="iampolicy" title="IAMPolicy"><span class="symbol resource"></span>IAMPolicy</a></li>
+    <li><a href="iamauditconfig" title="IamAuditConfig"><span class="symbol resource"></span>IamAuditConfig</a></li>
+    <li><a href="organizationpolicy" title="OrganizationPolicy"><span class="symbol resource"></span>OrganizationPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getorganizationpolicy" title="GetOrganizationPolicy"><span class="api-symbol api-symbol--function"></span>GetOrganizationPolicy</a></li>
+    <li><a href="getorganizationpolicy" title="GetOrganizationPolicy"><span class="symbol function"></span>GetOrganizationPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

@@ -13,8 +13,8 @@ Explore the resources and functions of the spotinst.ecs module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="ocean" title="Ocean"><span class="api-symbol api-symbol--resource"></span>Ocean</a></li>
-    <li><a href="oceanlaunchspec" title="OceanLaunchSpec"><span class="api-symbol api-symbol--resource"></span>OceanLaunchSpec</a></li>
+    <li><a href="ocean" title="Ocean"><span class="symbol resource"></span>Ocean</a></li>
+    <li><a href="oceanlaunchspec" title="OceanLaunchSpec"><span class="symbol resource"></span>OceanLaunchSpec</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

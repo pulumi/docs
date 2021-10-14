@@ -13,13 +13,13 @@ Explore the resources and functions of the alicloud.eipanycast module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="anycasteipaddress" title="AnycastEipAddress"><span class="api-symbol api-symbol--resource"></span>AnycastEipAddress</a></li>
-    <li><a href="anycasteipaddressattachment" title="AnycastEipAddressAttachment"><span class="api-symbol api-symbol--resource"></span>AnycastEipAddressAttachment</a></li>
+    <li><a href="anycasteipaddress" title="AnycastEipAddress"><span class="symbol resource"></span>AnycastEipAddress</a></li>
+    <li><a href="anycasteipaddressattachment" title="AnycastEipAddressAttachment"><span class="symbol resource"></span>AnycastEipAddressAttachment</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getanycasteipaddresses" title="GetAnycastEipAddresses"><span class="api-symbol api-symbol--function"></span>GetAnycastEipAddresses</a></li>
+    <li><a href="getanycasteipaddresses" title="GetAnycastEipAddresses"><span class="symbol function"></span>GetAnycastEipAddresses</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

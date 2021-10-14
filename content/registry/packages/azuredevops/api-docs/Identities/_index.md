@@ -13,14 +13,14 @@ Explore the resources and functions of the azuredevops.Identities module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="group" title="Group"><span class="api-symbol api-symbol--resource"></span>Group</a></li>
-    <li><a href="groupmembership" title="GroupMembership"><span class="api-symbol api-symbol--resource"></span>GroupMembership</a></li>
+    <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
+    <li><a href="groupmembership" title="GroupMembership"><span class="symbol resource"></span>GroupMembership</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getgroup" title="GetGroup"><span class="api-symbol api-symbol--function"></span>GetGroup</a></li>
-    <li><a href="getusers" title="GetUsers"><span class="api-symbol api-symbol--function"></span>GetUsers</a></li>
+    <li><a href="getgroup" title="GetGroup"><span class="symbol function"></span>GetGroup</a></li>
+    <li><a href="getusers" title="GetUsers"><span class="symbol function"></span>GetUsers</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

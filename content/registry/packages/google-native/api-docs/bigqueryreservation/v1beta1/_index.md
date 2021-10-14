@@ -13,14 +13,14 @@ Explore the resources and functions of the google-native.bigqueryreservation/v1b
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="capacitycommitment" title="CapacityCommitment"><span class="api-symbol api-symbol--resource"></span>CapacityCommitment</a></li>
-    <li><a href="reservation" title="Reservation"><span class="api-symbol api-symbol--resource"></span>Reservation</a></li>
+    <li><a href="capacitycommitment" title="CapacityCommitment"><span class="symbol resource"></span>CapacityCommitment</a></li>
+    <li><a href="reservation" title="Reservation"><span class="symbol resource"></span>Reservation</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getcapacitycommitment" title="GetCapacityCommitment"><span class="api-symbol api-symbol--function"></span>GetCapacityCommitment</a></li>
-    <li><a href="getreservation" title="GetReservation"><span class="api-symbol api-symbol--function"></span>GetReservation</a></li>
+    <li><a href="getcapacitycommitment" title="GetCapacityCommitment"><span class="symbol function"></span>GetCapacityCommitment</a></li>
+    <li><a href="getreservation" title="GetReservation"><span class="symbol function"></span>GetReservation</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

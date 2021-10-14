@@ -13,28 +13,28 @@ Explore the resources and functions of the azure.synapse module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="firewallrule" title="FirewallRule"><span class="api-symbol api-symbol--resource"></span>FirewallRule</a></li>
-    <li><a href="integrationruntimeazure" title="IntegrationRuntimeAzure"><span class="api-symbol api-symbol--resource"></span>IntegrationRuntimeAzure</a></li>
-    <li><a href="integrationruntimeselfhosted" title="IntegrationRuntimeSelfHosted"><span class="api-symbol api-symbol--resource"></span>IntegrationRuntimeSelfHosted</a></li>
-    <li><a href="linkedservice" title="LinkedService"><span class="api-symbol api-symbol--resource"></span>LinkedService</a></li>
-    <li><a href="managedprivateendpoint" title="ManagedPrivateEndpoint"><span class="api-symbol api-symbol--resource"></span>ManagedPrivateEndpoint</a></li>
-    <li><a href="privatelinkhub" title="PrivateLinkHub"><span class="api-symbol api-symbol--resource"></span>PrivateLinkHub</a></li>
-    <li><a href="roleassignment" title="RoleAssignment"><span class="api-symbol api-symbol--resource"></span>RoleAssignment</a></li>
-    <li><a href="sparkpool" title="SparkPool"><span class="api-symbol api-symbol--resource"></span>SparkPool</a></li>
-    <li><a href="sqlpool" title="SqlPool"><span class="api-symbol api-symbol--resource"></span>SqlPool</a></li>
-    <li><a href="sqlpoolextendedauditingpolicy" title="SqlPoolExtendedAuditingPolicy"><span class="api-symbol api-symbol--resource"></span>SqlPoolExtendedAuditingPolicy</a></li>
-    <li><a href="sqlpoolsecurityalertpolicy" title="SqlPoolSecurityAlertPolicy"><span class="api-symbol api-symbol--resource"></span>SqlPoolSecurityAlertPolicy</a></li>
-    <li><a href="sqlpoolvulnerabilityassessment" title="SqlPoolVulnerabilityAssessment"><span class="api-symbol api-symbol--resource"></span>SqlPoolVulnerabilityAssessment</a></li>
-    <li><a href="workspace" title="Workspace"><span class="api-symbol api-symbol--resource"></span>Workspace</a></li>
-    <li><a href="workspaceextendedauditingpolicy" title="WorkspaceExtendedAuditingPolicy"><span class="api-symbol api-symbol--resource"></span>WorkspaceExtendedAuditingPolicy</a></li>
-    <li><a href="workspacekey" title="WorkspaceKey"><span class="api-symbol api-symbol--resource"></span>WorkspaceKey</a></li>
-    <li><a href="workspacesecurityalertpolicy" title="WorkspaceSecurityAlertPolicy"><span class="api-symbol api-symbol--resource"></span>WorkspaceSecurityAlertPolicy</a></li>
-    <li><a href="workspacevulnerabilityassessment" title="WorkspaceVulnerabilityAssessment"><span class="api-symbol api-symbol--resource"></span>WorkspaceVulnerabilityAssessment</a></li>
+    <li><a href="firewallrule" title="FirewallRule"><span class="symbol resource"></span>FirewallRule</a></li>
+    <li><a href="integrationruntimeazure" title="IntegrationRuntimeAzure"><span class="symbol resource"></span>IntegrationRuntimeAzure</a></li>
+    <li><a href="integrationruntimeselfhosted" title="IntegrationRuntimeSelfHosted"><span class="symbol resource"></span>IntegrationRuntimeSelfHosted</a></li>
+    <li><a href="linkedservice" title="LinkedService"><span class="symbol resource"></span>LinkedService</a></li>
+    <li><a href="managedprivateendpoint" title="ManagedPrivateEndpoint"><span class="symbol resource"></span>ManagedPrivateEndpoint</a></li>
+    <li><a href="privatelinkhub" title="PrivateLinkHub"><span class="symbol resource"></span>PrivateLinkHub</a></li>
+    <li><a href="roleassignment" title="RoleAssignment"><span class="symbol resource"></span>RoleAssignment</a></li>
+    <li><a href="sparkpool" title="SparkPool"><span class="symbol resource"></span>SparkPool</a></li>
+    <li><a href="sqlpool" title="SqlPool"><span class="symbol resource"></span>SqlPool</a></li>
+    <li><a href="sqlpoolextendedauditingpolicy" title="SqlPoolExtendedAuditingPolicy"><span class="symbol resource"></span>SqlPoolExtendedAuditingPolicy</a></li>
+    <li><a href="sqlpoolsecurityalertpolicy" title="SqlPoolSecurityAlertPolicy"><span class="symbol resource"></span>SqlPoolSecurityAlertPolicy</a></li>
+    <li><a href="sqlpoolvulnerabilityassessment" title="SqlPoolVulnerabilityAssessment"><span class="symbol resource"></span>SqlPoolVulnerabilityAssessment</a></li>
+    <li><a href="workspace" title="Workspace"><span class="symbol resource"></span>Workspace</a></li>
+    <li><a href="workspaceextendedauditingpolicy" title="WorkspaceExtendedAuditingPolicy"><span class="symbol resource"></span>WorkspaceExtendedAuditingPolicy</a></li>
+    <li><a href="workspacekey" title="WorkspaceKey"><span class="symbol resource"></span>WorkspaceKey</a></li>
+    <li><a href="workspacesecurityalertpolicy" title="WorkspaceSecurityAlertPolicy"><span class="symbol resource"></span>WorkspaceSecurityAlertPolicy</a></li>
+    <li><a href="workspacevulnerabilityassessment" title="WorkspaceVulnerabilityAssessment"><span class="symbol resource"></span>WorkspaceVulnerabilityAssessment</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getworkspace" title="GetWorkspace"><span class="api-symbol api-symbol--function"></span>GetWorkspace</a></li>
+    <li><a href="getworkspace" title="GetWorkspace"><span class="symbol function"></span>GetWorkspace</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

@@ -13,23 +13,23 @@ Explore the resources and functions of the aws.lambda module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="alias" title="Alias"><span class="api-symbol api-symbol--resource"></span>Alias</a></li>
-    <li><a href="codesigningconfig" title="CodeSigningConfig"><span class="api-symbol api-symbol--resource"></span>CodeSigningConfig</a></li>
-    <li><a href="eventsourcemapping" title="EventSourceMapping"><span class="api-symbol api-symbol--resource"></span>EventSourceMapping</a></li>
-    <li><a href="function" title="Function"><span class="api-symbol api-symbol--resource"></span>Function</a></li>
-    <li><a href="functioneventinvokeconfig" title="FunctionEventInvokeConfig"><span class="api-symbol api-symbol--resource"></span>FunctionEventInvokeConfig</a></li>
-    <li><a href="layerversion" title="LayerVersion"><span class="api-symbol api-symbol--resource"></span>LayerVersion</a></li>
-    <li><a href="permission" title="Permission"><span class="api-symbol api-symbol--resource"></span>Permission</a></li>
-    <li><a href="provisionedconcurrencyconfig" title="ProvisionedConcurrencyConfig"><span class="api-symbol api-symbol--resource"></span>ProvisionedConcurrencyConfig</a></li>
+    <li><a href="alias" title="Alias"><span class="symbol resource"></span>Alias</a></li>
+    <li><a href="codesigningconfig" title="CodeSigningConfig"><span class="symbol resource"></span>CodeSigningConfig</a></li>
+    <li><a href="eventsourcemapping" title="EventSourceMapping"><span class="symbol resource"></span>EventSourceMapping</a></li>
+    <li><a href="function" title="Function"><span class="symbol resource"></span>Function</a></li>
+    <li><a href="functioneventinvokeconfig" title="FunctionEventInvokeConfig"><span class="symbol resource"></span>FunctionEventInvokeConfig</a></li>
+    <li><a href="layerversion" title="LayerVersion"><span class="symbol resource"></span>LayerVersion</a></li>
+    <li><a href="permission" title="Permission"><span class="symbol resource"></span>Permission</a></li>
+    <li><a href="provisionedconcurrencyconfig" title="ProvisionedConcurrencyConfig"><span class="symbol resource"></span>ProvisionedConcurrencyConfig</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getalias" title="GetAlias"><span class="api-symbol api-symbol--function"></span>GetAlias</a></li>
-    <li><a href="getcodesigningconfig" title="GetCodeSigningConfig"><span class="api-symbol api-symbol--function"></span>GetCodeSigningConfig</a></li>
-    <li><a href="getfunction" title="GetFunction"><span class="api-symbol api-symbol--function"></span>GetFunction</a></li>
-    <li><a href="getinvocation" title="GetInvocation"><span class="api-symbol api-symbol--function"></span>GetInvocation</a></li>
-    <li><a href="getlayerversion" title="GetLayerVersion"><span class="api-symbol api-symbol--function"></span>GetLayerVersion</a></li>
+    <li><a href="getalias" title="GetAlias"><span class="symbol function"></span>GetAlias</a></li>
+    <li><a href="getcodesigningconfig" title="GetCodeSigningConfig"><span class="symbol function"></span>GetCodeSigningConfig</a></li>
+    <li><a href="getfunction" title="GetFunction"><span class="symbol function"></span>GetFunction</a></li>
+    <li><a href="getinvocation" title="GetInvocation"><span class="symbol function"></span>GetInvocation</a></li>
+    <li><a href="getlayerversion" title="GetLayerVersion"><span class="symbol function"></span>GetLayerVersion</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

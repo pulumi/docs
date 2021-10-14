@@ -13,19 +13,19 @@ Explore the resources and functions of the keycloak.saml module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="client" title="Client"><span class="api-symbol api-symbol--resource"></span>Client</a></li>
-    <li><a href="clientdefaultscope" title="ClientDefaultScope"><span class="api-symbol api-symbol--resource"></span>ClientDefaultScope</a></li>
-    <li><a href="clientscope" title="ClientScope"><span class="api-symbol api-symbol--resource"></span>ClientScope</a></li>
-    <li><a href="identityprovider" title="IdentityProvider"><span class="api-symbol api-symbol--resource"></span>IdentityProvider</a></li>
-    <li><a href="scriptprotocolmapper" title="ScriptProtocolMapper"><span class="api-symbol api-symbol--resource"></span>ScriptProtocolMapper</a></li>
-    <li><a href="userattributeprotocolmapper" title="UserAttributeProtocolMapper"><span class="api-symbol api-symbol--resource"></span>UserAttributeProtocolMapper</a></li>
-    <li><a href="userpropertyprotocolmapper" title="UserPropertyProtocolMapper"><span class="api-symbol api-symbol--resource"></span>UserPropertyProtocolMapper</a></li>
+    <li><a href="client" title="Client"><span class="symbol resource"></span>Client</a></li>
+    <li><a href="clientdefaultscope" title="ClientDefaultScope"><span class="symbol resource"></span>ClientDefaultScope</a></li>
+    <li><a href="clientscope" title="ClientScope"><span class="symbol resource"></span>ClientScope</a></li>
+    <li><a href="identityprovider" title="IdentityProvider"><span class="symbol resource"></span>IdentityProvider</a></li>
+    <li><a href="scriptprotocolmapper" title="ScriptProtocolMapper"><span class="symbol resource"></span>ScriptProtocolMapper</a></li>
+    <li><a href="userattributeprotocolmapper" title="UserAttributeProtocolMapper"><span class="symbol resource"></span>UserAttributeProtocolMapper</a></li>
+    <li><a href="userpropertyprotocolmapper" title="UserPropertyProtocolMapper"><span class="symbol resource"></span>UserPropertyProtocolMapper</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getclient" title="GetClient"><span class="api-symbol api-symbol--function"></span>GetClient</a></li>
-    <li><a href="getclientinstallationprovider" title="GetClientInstallationProvider"><span class="api-symbol api-symbol--function"></span>GetClientInstallationProvider</a></li>
+    <li><a href="getclient" title="GetClient"><span class="symbol function"></span>GetClient</a></li>
+    <li><a href="getclientinstallationprovider" title="GetClientInstallationProvider"><span class="symbol function"></span>GetClientInstallationProvider</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

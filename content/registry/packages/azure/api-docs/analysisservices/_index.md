@@ -13,7 +13,7 @@ Explore the resources and functions of the azure.analysisservices module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="server" title="Server"><span class="api-symbol api-symbol--resource"></span>Server</a></li>
+    <li><a href="server" title="Server"><span class="symbol resource"></span>Server</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

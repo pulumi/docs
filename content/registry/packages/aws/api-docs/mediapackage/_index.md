@@ -13,7 +13,7 @@ Explore the resources and functions of the aws.mediapackage module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="channel" title="Channel"><span class="api-symbol api-symbol--resource"></span>Channel</a></li>
+    <li><a href="channel" title="Channel"><span class="symbol resource"></span>Channel</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

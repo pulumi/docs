@@ -13,22 +13,22 @@ Explore the resources and functions of the google-native.bigquery/v2 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="dataset" title="Dataset"><span class="api-symbol api-symbol--resource"></span>Dataset</a></li>
-    <li><a href="job" title="Job"><span class="api-symbol api-symbol--resource"></span>Job</a></li>
-    <li><a href="routine" title="Routine"><span class="api-symbol api-symbol--resource"></span>Routine</a></li>
-    <li><a href="rowaccesspolicyiampolicy" title="RowAccessPolicyIamPolicy"><span class="api-symbol api-symbol--resource"></span>RowAccessPolicyIamPolicy</a></li>
-    <li><a href="table" title="Table"><span class="api-symbol api-symbol--resource"></span>Table</a></li>
-    <li><a href="tableiampolicy" title="TableIamPolicy"><span class="api-symbol api-symbol--resource"></span>TableIamPolicy</a></li>
+    <li><a href="dataset" title="Dataset"><span class="symbol resource"></span>Dataset</a></li>
+    <li><a href="job" title="Job"><span class="symbol resource"></span>Job</a></li>
+    <li><a href="routine" title="Routine"><span class="symbol resource"></span>Routine</a></li>
+    <li><a href="rowaccesspolicyiampolicy" title="RowAccessPolicyIamPolicy"><span class="symbol resource"></span>RowAccessPolicyIamPolicy</a></li>
+    <li><a href="table" title="Table"><span class="symbol resource"></span>Table</a></li>
+    <li><a href="tableiampolicy" title="TableIamPolicy"><span class="symbol resource"></span>TableIamPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getdataset" title="GetDataset"><span class="api-symbol api-symbol--function"></span>GetDataset</a></li>
-    <li><a href="getjob" title="GetJob"><span class="api-symbol api-symbol--function"></span>GetJob</a></li>
-    <li><a href="getroutine" title="GetRoutine"><span class="api-symbol api-symbol--function"></span>GetRoutine</a></li>
-    <li><a href="getrowaccesspolicyiampolicy" title="GetRowAccessPolicyIamPolicy"><span class="api-symbol api-symbol--function"></span>GetRowAccessPolicyIamPolicy</a></li>
-    <li><a href="gettable" title="GetTable"><span class="api-symbol api-symbol--function"></span>GetTable</a></li>
-    <li><a href="gettableiampolicy" title="GetTableIamPolicy"><span class="api-symbol api-symbol--function"></span>GetTableIamPolicy</a></li>
+    <li><a href="getdataset" title="GetDataset"><span class="symbol function"></span>GetDataset</a></li>
+    <li><a href="getjob" title="GetJob"><span class="symbol function"></span>GetJob</a></li>
+    <li><a href="getroutine" title="GetRoutine"><span class="symbol function"></span>GetRoutine</a></li>
+    <li><a href="getrowaccesspolicyiampolicy" title="GetRowAccessPolicyIamPolicy"><span class="symbol function"></span>GetRowAccessPolicyIamPolicy</a></li>
+    <li><a href="gettable" title="GetTable"><span class="symbol function"></span>GetTable</a></li>
+    <li><a href="gettableiampolicy" title="GetTableIamPolicy"><span class="symbol function"></span>GetTableIamPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

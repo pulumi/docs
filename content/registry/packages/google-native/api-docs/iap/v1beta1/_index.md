@@ -13,12 +13,12 @@ Explore the resources and functions of the google-native.iap/v1beta1 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="v1beta1iampolicy" title="V1beta1IamPolicy"><span class="api-symbol api-symbol--resource"></span>V1beta1IamPolicy</a></li>
+    <li><a href="v1beta1iampolicy" title="V1beta1IamPolicy"><span class="symbol resource"></span>V1beta1IamPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getv1beta1iampolicy" title="GetV1beta1IamPolicy"><span class="api-symbol api-symbol--function"></span>GetV1beta1IamPolicy</a></li>
+    <li><a href="getv1beta1iampolicy" title="GetV1beta1IamPolicy"><span class="symbol function"></span>GetV1beta1IamPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

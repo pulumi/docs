@@ -13,9 +13,9 @@ Explore the resources and functions of the aws-native.logs module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="loggroup" title="LogGroup"><span class="api-symbol api-symbol--resource"></span>LogGroup</a></li>
-    <li><a href="querydefinition" title="QueryDefinition"><span class="api-symbol api-symbol--resource"></span>QueryDefinition</a></li>
-    <li><a href="resourcepolicy" title="ResourcePolicy"><span class="api-symbol api-symbol--resource"></span>ResourcePolicy</a></li>
+    <li><a href="loggroup" title="LogGroup"><span class="symbol resource"></span>LogGroup</a></li>
+    <li><a href="querydefinition" title="QueryDefinition"><span class="symbol resource"></span>QueryDefinition</a></li>
+    <li><a href="resourcepolicy" title="ResourcePolicy"><span class="symbol resource"></span>ResourcePolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

@@ -13,12 +13,12 @@ Explore the resources and functions of the azure-native.managementpartner module
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="partner" title="Partner"><span class="api-symbol api-symbol--resource"></span>Partner</a></li>
+    <li><a href="partner" title="Partner"><span class="symbol resource"></span>Partner</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getpartner" title="GetPartner"><span class="api-symbol api-symbol--function"></span>GetPartner</a></li>
+    <li><a href="getpartner" title="GetPartner"><span class="symbol function"></span>GetPartner</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -28,6 +28,6 @@ Explore the resources and functions of the azure-native.managementpartner module
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.37.0</dd>
+	<dd>1.38.0</dd>
 </dl>
 

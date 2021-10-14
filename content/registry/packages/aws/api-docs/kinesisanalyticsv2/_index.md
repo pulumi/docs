@@ -13,8 +13,8 @@ Explore the resources and functions of the aws.kinesisanalyticsv2 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="application" title="Application"><span class="api-symbol api-symbol--resource"></span>Application</a></li>
-    <li><a href="applicationsnapshot" title="ApplicationSnapshot"><span class="api-symbol api-symbol--resource"></span>ApplicationSnapshot</a></li>
+    <li><a href="application" title="Application"><span class="symbol resource"></span>Application</a></li>
+    <li><a href="applicationsnapshot" title="ApplicationSnapshot"><span class="symbol resource"></span>ApplicationSnapshot</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

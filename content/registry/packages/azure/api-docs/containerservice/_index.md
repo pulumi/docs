@@ -13,24 +13,24 @@ Explore the resources and functions of the azure.containerservice module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="group" title="Group"><span class="api-symbol api-symbol--resource"></span>Group</a></li>
-    <li><a href="kubernetescluster" title="KubernetesCluster"><span class="api-symbol api-symbol--resource"></span>KubernetesCluster</a></li>
-    <li><a href="kubernetesclusternodepool" title="KubernetesClusterNodePool"><span class="api-symbol api-symbol--resource"></span>KubernetesClusterNodePool</a></li>
-    <li><a href="registry" title="Registry"><span class="api-symbol api-symbol--resource"></span>Registry</a></li>
-    <li><a href="registryscopemap" title="RegistryScopeMap"><span class="api-symbol api-symbol--resource"></span>RegistryScopeMap</a></li>
-    <li><a href="registrytoken" title="RegistryToken"><span class="api-symbol api-symbol--resource"></span>RegistryToken</a></li>
-    <li><a href="registrywebhook" title="RegistryWebhook"><span class="api-symbol api-symbol--resource"></span>RegistryWebhook</a></li>
-    <li><a href="registrywebook" title="RegistryWebook"><span class="api-symbol api-symbol--resource"></span>RegistryWebook</a></li>
+    <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
+    <li><a href="kubernetescluster" title="KubernetesCluster"><span class="symbol resource"></span>KubernetesCluster</a></li>
+    <li><a href="kubernetesclusternodepool" title="KubernetesClusterNodePool"><span class="symbol resource"></span>KubernetesClusterNodePool</a></li>
+    <li><a href="registry" title="Registry"><span class="symbol resource"></span>Registry</a></li>
+    <li><a href="registryscopemap" title="RegistryScopeMap"><span class="symbol resource"></span>RegistryScopeMap</a></li>
+    <li><a href="registrytoken" title="RegistryToken"><span class="symbol resource"></span>RegistryToken</a></li>
+    <li><a href="registrywebhook" title="RegistryWebhook"><span class="symbol resource"></span>RegistryWebhook</a></li>
+    <li><a href="registrywebook" title="RegistryWebook"><span class="symbol resource"></span>RegistryWebook</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getclusternodepool" title="GetClusterNodePool"><span class="api-symbol api-symbol--function"></span>GetClusterNodePool</a></li>
-    <li><a href="getkubernetescluster" title="GetKubernetesCluster"><span class="api-symbol api-symbol--function"></span>GetKubernetesCluster</a></li>
-    <li><a href="getkubernetesserviceversions" title="GetKubernetesServiceVersions"><span class="api-symbol api-symbol--function"></span>GetKubernetesServiceVersions</a></li>
-    <li><a href="getregistry" title="GetRegistry"><span class="api-symbol api-symbol--function"></span>GetRegistry</a></li>
-    <li><a href="getregistryscopemap" title="GetRegistryScopeMap"><span class="api-symbol api-symbol--function"></span>GetRegistryScopeMap</a></li>
-    <li><a href="getregistrytoken" title="GetRegistryToken"><span class="api-symbol api-symbol--function"></span>GetRegistryToken</a></li>
+    <li><a href="getclusternodepool" title="GetClusterNodePool"><span class="symbol function"></span>GetClusterNodePool</a></li>
+    <li><a href="getkubernetescluster" title="GetKubernetesCluster"><span class="symbol function"></span>GetKubernetesCluster</a></li>
+    <li><a href="getkubernetesserviceversions" title="GetKubernetesServiceVersions"><span class="symbol function"></span>GetKubernetesServiceVersions</a></li>
+    <li><a href="getregistry" title="GetRegistry"><span class="symbol function"></span>GetRegistry</a></li>
+    <li><a href="getregistryscopemap" title="GetRegistryScopeMap"><span class="symbol function"></span>GetRegistryScopeMap</a></li>
+    <li><a href="getregistrytoken" title="GetRegistryToken"><span class="symbol function"></span>GetRegistryToken</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

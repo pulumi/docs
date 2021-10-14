@@ -13,10 +13,10 @@ Explore the resources and functions of the datadog.aws module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="integration" title="Integration"><span class="api-symbol api-symbol--resource"></span>Integration</a></li>
-    <li><a href="integrationlambdaarn" title="IntegrationLambdaArn"><span class="api-symbol api-symbol--resource"></span>IntegrationLambdaArn</a></li>
-    <li><a href="integrationlogcollection" title="IntegrationLogCollection"><span class="api-symbol api-symbol--resource"></span>IntegrationLogCollection</a></li>
-    <li><a href="integrationtagfilter" title="IntegrationTagFilter"><span class="api-symbol api-symbol--resource"></span>IntegrationTagFilter</a></li>
+    <li><a href="integration" title="Integration"><span class="symbol resource"></span>Integration</a></li>
+    <li><a href="integrationlambdaarn" title="IntegrationLambdaArn"><span class="symbol resource"></span>IntegrationLambdaArn</a></li>
+    <li><a href="integrationlogcollection" title="IntegrationLogCollection"><span class="symbol resource"></span>IntegrationLogCollection</a></li>
+    <li><a href="integrationtagfilter" title="IntegrationTagFilter"><span class="symbol resource"></span>IntegrationTagFilter</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

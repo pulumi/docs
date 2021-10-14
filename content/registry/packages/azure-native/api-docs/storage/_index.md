@@ -13,45 +13,45 @@ Explore the resources and functions of the azure-native.storage module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="blob" title="Blob"><span class="api-symbol api-symbol--resource"></span>Blob</a></li>
-    <li><a href="blobcontainer" title="BlobContainer"><span class="api-symbol api-symbol--resource"></span>BlobContainer</a></li>
-    <li><a href="blobcontainerimmutabilitypolicy" title="BlobContainerImmutabilityPolicy"><span class="api-symbol api-symbol--resource"></span>BlobContainerImmutabilityPolicy</a></li>
-    <li><a href="blobinventorypolicy" title="BlobInventoryPolicy"><span class="api-symbol api-symbol--resource"></span>BlobInventoryPolicy</a></li>
-    <li><a href="blobserviceproperties" title="BlobServiceProperties"><span class="api-symbol api-symbol--resource"></span>BlobServiceProperties</a></li>
-    <li><a href="encryptionscope" title="EncryptionScope"><span class="api-symbol api-symbol--resource"></span>EncryptionScope</a></li>
-    <li><a href="fileserviceproperties" title="FileServiceProperties"><span class="api-symbol api-symbol--resource"></span>FileServiceProperties</a></li>
-    <li><a href="fileshare" title="FileShare"><span class="api-symbol api-symbol--resource"></span>FileShare</a></li>
-    <li><a href="managementpolicy" title="ManagementPolicy"><span class="api-symbol api-symbol--resource"></span>ManagementPolicy</a></li>
-    <li><a href="objectreplicationpolicy" title="ObjectReplicationPolicy"><span class="api-symbol api-symbol--resource"></span>ObjectReplicationPolicy</a></li>
-    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="api-symbol api-symbol--resource"></span>PrivateEndpointConnection</a></li>
-    <li><a href="queue" title="Queue"><span class="api-symbol api-symbol--resource"></span>Queue</a></li>
-    <li><a href="queueserviceproperties" title="QueueServiceProperties"><span class="api-symbol api-symbol--resource"></span>QueueServiceProperties</a></li>
-    <li><a href="storageaccount" title="StorageAccount"><span class="api-symbol api-symbol--resource"></span>StorageAccount</a></li>
-    <li><a href="storageaccountstaticwebsite" title="StorageAccountStaticWebsite"><span class="api-symbol api-symbol--resource"></span>StorageAccountStaticWebsite</a></li>
-    <li><a href="table" title="Table"><span class="api-symbol api-symbol--resource"></span>Table</a></li>
-    <li><a href="tableserviceproperties" title="TableServiceProperties"><span class="api-symbol api-symbol--resource"></span>TableServiceProperties</a></li>
+    <li><a href="blob" title="Blob"><span class="symbol resource"></span>Blob</a></li>
+    <li><a href="blobcontainer" title="BlobContainer"><span class="symbol resource"></span>BlobContainer</a></li>
+    <li><a href="blobcontainerimmutabilitypolicy" title="BlobContainerImmutabilityPolicy"><span class="symbol resource"></span>BlobContainerImmutabilityPolicy</a></li>
+    <li><a href="blobinventorypolicy" title="BlobInventoryPolicy"><span class="symbol resource"></span>BlobInventoryPolicy</a></li>
+    <li><a href="blobserviceproperties" title="BlobServiceProperties"><span class="symbol resource"></span>BlobServiceProperties</a></li>
+    <li><a href="encryptionscope" title="EncryptionScope"><span class="symbol resource"></span>EncryptionScope</a></li>
+    <li><a href="fileserviceproperties" title="FileServiceProperties"><span class="symbol resource"></span>FileServiceProperties</a></li>
+    <li><a href="fileshare" title="FileShare"><span class="symbol resource"></span>FileShare</a></li>
+    <li><a href="managementpolicy" title="ManagementPolicy"><span class="symbol resource"></span>ManagementPolicy</a></li>
+    <li><a href="objectreplicationpolicy" title="ObjectReplicationPolicy"><span class="symbol resource"></span>ObjectReplicationPolicy</a></li>
+    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
+    <li><a href="queue" title="Queue"><span class="symbol resource"></span>Queue</a></li>
+    <li><a href="queueserviceproperties" title="QueueServiceProperties"><span class="symbol resource"></span>QueueServiceProperties</a></li>
+    <li><a href="storageaccount" title="StorageAccount"><span class="symbol resource"></span>StorageAccount</a></li>
+    <li><a href="storageaccountstaticwebsite" title="StorageAccountStaticWebsite"><span class="symbol resource"></span>StorageAccountStaticWebsite</a></li>
+    <li><a href="table" title="Table"><span class="symbol resource"></span>Table</a></li>
+    <li><a href="tableserviceproperties" title="TableServiceProperties"><span class="symbol resource"></span>TableServiceProperties</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getblobcontainer" title="GetBlobContainer"><span class="api-symbol api-symbol--function"></span>GetBlobContainer</a></li>
-    <li><a href="getblobcontainerimmutabilitypolicy" title="GetBlobContainerImmutabilityPolicy"><span class="api-symbol api-symbol--function"></span>GetBlobContainerImmutabilityPolicy</a></li>
-    <li><a href="getblobinventorypolicy" title="GetBlobInventoryPolicy"><span class="api-symbol api-symbol--function"></span>GetBlobInventoryPolicy</a></li>
-    <li><a href="getblobserviceproperties" title="GetBlobServiceProperties"><span class="api-symbol api-symbol--function"></span>GetBlobServiceProperties</a></li>
-    <li><a href="getencryptionscope" title="GetEncryptionScope"><span class="api-symbol api-symbol--function"></span>GetEncryptionScope</a></li>
-    <li><a href="getfileserviceproperties" title="GetFileServiceProperties"><span class="api-symbol api-symbol--function"></span>GetFileServiceProperties</a></li>
-    <li><a href="getfileshare" title="GetFileShare"><span class="api-symbol api-symbol--function"></span>GetFileShare</a></li>
-    <li><a href="getmanagementpolicy" title="GetManagementPolicy"><span class="api-symbol api-symbol--function"></span>GetManagementPolicy</a></li>
-    <li><a href="getobjectreplicationpolicy" title="GetObjectReplicationPolicy"><span class="api-symbol api-symbol--function"></span>GetObjectReplicationPolicy</a></li>
-    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="api-symbol api-symbol--function"></span>GetPrivateEndpointConnection</a></li>
-    <li><a href="getqueue" title="GetQueue"><span class="api-symbol api-symbol--function"></span>GetQueue</a></li>
-    <li><a href="getqueueserviceproperties" title="GetQueueServiceProperties"><span class="api-symbol api-symbol--function"></span>GetQueueServiceProperties</a></li>
-    <li><a href="getstorageaccount" title="GetStorageAccount"><span class="api-symbol api-symbol--function"></span>GetStorageAccount</a></li>
-    <li><a href="gettable" title="GetTable"><span class="api-symbol api-symbol--function"></span>GetTable</a></li>
-    <li><a href="gettableserviceproperties" title="GetTableServiceProperties"><span class="api-symbol api-symbol--function"></span>GetTableServiceProperties</a></li>
-    <li><a href="liststorageaccountkeys" title="ListStorageAccountKeys"><span class="api-symbol api-symbol--function"></span>ListStorageAccountKeys</a></li>
-    <li><a href="liststorageaccountsas" title="ListStorageAccountSAS"><span class="api-symbol api-symbol--function"></span>ListStorageAccountSAS</a></li>
-    <li><a href="liststorageaccountservicesas" title="ListStorageAccountServiceSAS"><span class="api-symbol api-symbol--function"></span>ListStorageAccountServiceSAS</a></li>
+    <li><a href="getblobcontainer" title="GetBlobContainer"><span class="symbol function"></span>GetBlobContainer</a></li>
+    <li><a href="getblobcontainerimmutabilitypolicy" title="GetBlobContainerImmutabilityPolicy"><span class="symbol function"></span>GetBlobContainerImmutabilityPolicy</a></li>
+    <li><a href="getblobinventorypolicy" title="GetBlobInventoryPolicy"><span class="symbol function"></span>GetBlobInventoryPolicy</a></li>
+    <li><a href="getblobserviceproperties" title="GetBlobServiceProperties"><span class="symbol function"></span>GetBlobServiceProperties</a></li>
+    <li><a href="getencryptionscope" title="GetEncryptionScope"><span class="symbol function"></span>GetEncryptionScope</a></li>
+    <li><a href="getfileserviceproperties" title="GetFileServiceProperties"><span class="symbol function"></span>GetFileServiceProperties</a></li>
+    <li><a href="getfileshare" title="GetFileShare"><span class="symbol function"></span>GetFileShare</a></li>
+    <li><a href="getmanagementpolicy" title="GetManagementPolicy"><span class="symbol function"></span>GetManagementPolicy</a></li>
+    <li><a href="getobjectreplicationpolicy" title="GetObjectReplicationPolicy"><span class="symbol function"></span>GetObjectReplicationPolicy</a></li>
+    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
+    <li><a href="getqueue" title="GetQueue"><span class="symbol function"></span>GetQueue</a></li>
+    <li><a href="getqueueserviceproperties" title="GetQueueServiceProperties"><span class="symbol function"></span>GetQueueServiceProperties</a></li>
+    <li><a href="getstorageaccount" title="GetStorageAccount"><span class="symbol function"></span>GetStorageAccount</a></li>
+    <li><a href="gettable" title="GetTable"><span class="symbol function"></span>GetTable</a></li>
+    <li><a href="gettableserviceproperties" title="GetTableServiceProperties"><span class="symbol function"></span>GetTableServiceProperties</a></li>
+    <li><a href="liststorageaccountkeys" title="ListStorageAccountKeys"><span class="symbol function"></span>ListStorageAccountKeys</a></li>
+    <li><a href="liststorageaccountsas" title="ListStorageAccountSAS"><span class="symbol function"></span>ListStorageAccountSAS</a></li>
+    <li><a href="liststorageaccountservicesas" title="ListStorageAccountServiceSAS"><span class="symbol function"></span>ListStorageAccountServiceSAS</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -61,6 +61,6 @@ Explore the resources and functions of the azure-native.storage module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.37.0</dd>
+	<dd>1.38.0</dd>
 </dl>
 

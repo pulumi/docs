@@ -13,8 +13,8 @@ Explore the resources and functions of the aws.identitystore module.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getgroup" title="GetGroup"><span class="api-symbol api-symbol--function"></span>GetGroup</a></li>
-    <li><a href="getuser" title="GetUser"><span class="api-symbol api-symbol--function"></span>GetUser</a></li>
+    <li><a href="getgroup" title="GetGroup"><span class="symbol function"></span>GetGroup</a></li>
+    <li><a href="getuser" title="GetUser"><span class="symbol function"></span>GetUser</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

@@ -13,14 +13,14 @@ Explore the resources and functions of the f5bigip.ssl module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="certificate" title="Certificate"><span class="api-symbol api-symbol--resource"></span>Certificate</a></li>
-    <li><a href="key" title="Key"><span class="api-symbol api-symbol--resource"></span>Key</a></li>
+    <li><a href="certificate" title="Certificate"><span class="symbol resource"></span>Certificate</a></li>
+    <li><a href="key" title="Key"><span class="symbol resource"></span>Key</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getcertificate" title="GetCertificate"><span class="api-symbol api-symbol--function"></span>GetCertificate</a></li>
-    <li><a href="getvwanconfig" title="GetVWanConfig"><span class="api-symbol api-symbol--function"></span>GetVWanConfig</a></li>
+    <li><a href="getcertificate" title="GetCertificate"><span class="symbol function"></span>GetCertificate</a></li>
+    <li><a href="getvwanconfig" title="GetVWanConfig"><span class="symbol function"></span>GetVWanConfig</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

@@ -13,23 +13,23 @@ Explore the resources and functions of the azure.postgresql module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="activedirectoryadministrator" title="ActiveDirectoryAdministrator"><span class="api-symbol api-symbol--resource"></span>ActiveDirectoryAdministrator</a></li>
-    <li><a href="configuration" title="Configuration"><span class="api-symbol api-symbol--resource"></span>Configuration</a></li>
-    <li><a href="database" title="Database"><span class="api-symbol api-symbol--resource"></span>Database</a></li>
-    <li><a href="firewallrule" title="FirewallRule"><span class="api-symbol api-symbol--resource"></span>FirewallRule</a></li>
-    <li><a href="flexibleserver" title="FlexibleServer"><span class="api-symbol api-symbol--resource"></span>FlexibleServer</a></li>
-    <li><a href="flexibleserverconfiguration" title="FlexibleServerConfiguration"><span class="api-symbol api-symbol--resource"></span>FlexibleServerConfiguration</a></li>
-    <li><a href="flexibleserverdatabase" title="FlexibleServerDatabase"><span class="api-symbol api-symbol--resource"></span>FlexibleServerDatabase</a></li>
-    <li><a href="flexibleserverfirewallrule" title="FlexibleServerFirewallRule"><span class="api-symbol api-symbol--resource"></span>FlexibleServerFirewallRule</a></li>
-    <li><a href="server" title="Server"><span class="api-symbol api-symbol--resource"></span>Server</a></li>
-    <li><a href="serverkey" title="ServerKey"><span class="api-symbol api-symbol--resource"></span>ServerKey</a></li>
-    <li><a href="virtualnetworkrule" title="VirtualNetworkRule"><span class="api-symbol api-symbol--resource"></span>VirtualNetworkRule</a></li>
+    <li><a href="activedirectoryadministrator" title="ActiveDirectoryAdministrator"><span class="symbol resource"></span>ActiveDirectoryAdministrator</a></li>
+    <li><a href="configuration" title="Configuration"><span class="symbol resource"></span>Configuration</a></li>
+    <li><a href="database" title="Database"><span class="symbol resource"></span>Database</a></li>
+    <li><a href="firewallrule" title="FirewallRule"><span class="symbol resource"></span>FirewallRule</a></li>
+    <li><a href="flexibleserver" title="FlexibleServer"><span class="symbol resource"></span>FlexibleServer</a></li>
+    <li><a href="flexibleserverconfiguration" title="FlexibleServerConfiguration"><span class="symbol resource"></span>FlexibleServerConfiguration</a></li>
+    <li><a href="flexibleserverdatabase" title="FlexibleServerDatabase"><span class="symbol resource"></span>FlexibleServerDatabase</a></li>
+    <li><a href="flexibleserverfirewallrule" title="FlexibleServerFirewallRule"><span class="symbol resource"></span>FlexibleServerFirewallRule</a></li>
+    <li><a href="server" title="Server"><span class="symbol resource"></span>Server</a></li>
+    <li><a href="serverkey" title="ServerKey"><span class="symbol resource"></span>ServerKey</a></li>
+    <li><a href="virtualnetworkrule" title="VirtualNetworkRule"><span class="symbol resource"></span>VirtualNetworkRule</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getflexibleserver" title="GetFlexibleServer"><span class="api-symbol api-symbol--function"></span>GetFlexibleServer</a></li>
-    <li><a href="getserver" title="GetServer"><span class="api-symbol api-symbol--function"></span>GetServer</a></li>
+    <li><a href="getflexibleserver" title="GetFlexibleServer"><span class="symbol function"></span>GetFlexibleServer</a></li>
+    <li><a href="getserver" title="GetServer"><span class="symbol function"></span>GetServer</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

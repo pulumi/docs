@@ -13,10 +13,10 @@ Explore the resources and functions of the aws-native.rds module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="dbproxy" title="DBProxy"><span class="api-symbol api-symbol--resource"></span>DBProxy</a></li>
-    <li><a href="dbproxyendpoint" title="DBProxyEndpoint"><span class="api-symbol api-symbol--resource"></span>DBProxyEndpoint</a></li>
-    <li><a href="dbproxytargetgroup" title="DBProxyTargetGroup"><span class="api-symbol api-symbol--resource"></span>DBProxyTargetGroup</a></li>
-    <li><a href="globalcluster" title="GlobalCluster"><span class="api-symbol api-symbol--resource"></span>GlobalCluster</a></li>
+    <li><a href="dbproxy" title="DBProxy"><span class="symbol resource"></span>DBProxy</a></li>
+    <li><a href="dbproxyendpoint" title="DBProxyEndpoint"><span class="symbol resource"></span>DBProxyEndpoint</a></li>
+    <li><a href="dbproxytargetgroup" title="DBProxyTargetGroup"><span class="symbol resource"></span>DBProxyTargetGroup</a></li>
+    <li><a href="globalcluster" title="GlobalCluster"><span class="symbol resource"></span>GlobalCluster</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

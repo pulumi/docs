@@ -13,41 +13,41 @@ Explore the resources and functions of the azure-native.cdn module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="afdcustomdomain" title="AFDCustomDomain"><span class="api-symbol api-symbol--resource"></span>AFDCustomDomain</a></li>
-    <li><a href="afdendpoint" title="AFDEndpoint"><span class="api-symbol api-symbol--resource"></span>AFDEndpoint</a></li>
-    <li><a href="afdorigin" title="AFDOrigin"><span class="api-symbol api-symbol--resource"></span>AFDOrigin</a></li>
-    <li><a href="afdorigingroup" title="AFDOriginGroup"><span class="api-symbol api-symbol--resource"></span>AFDOriginGroup</a></li>
-    <li><a href="customdomain" title="CustomDomain"><span class="api-symbol api-symbol--resource"></span>CustomDomain</a></li>
-    <li><a href="endpoint" title="Endpoint"><span class="api-symbol api-symbol--resource"></span>Endpoint</a></li>
-    <li><a href="origin" title="Origin"><span class="api-symbol api-symbol--resource"></span>Origin</a></li>
-    <li><a href="origingroup" title="OriginGroup"><span class="api-symbol api-symbol--resource"></span>OriginGroup</a></li>
-    <li><a href="policy" title="Policy"><span class="api-symbol api-symbol--resource"></span>Policy</a></li>
-    <li><a href="profile" title="Profile"><span class="api-symbol api-symbol--resource"></span>Profile</a></li>
-    <li><a href="route" title="Route"><span class="api-symbol api-symbol--resource"></span>Route</a></li>
-    <li><a href="rule" title="Rule"><span class="api-symbol api-symbol--resource"></span>Rule</a></li>
-    <li><a href="ruleset" title="RuleSet"><span class="api-symbol api-symbol--resource"></span>RuleSet</a></li>
-    <li><a href="secret" title="Secret"><span class="api-symbol api-symbol--resource"></span>Secret</a></li>
-    <li><a href="securitypolicy" title="SecurityPolicy"><span class="api-symbol api-symbol--resource"></span>SecurityPolicy</a></li>
+    <li><a href="afdcustomdomain" title="AFDCustomDomain"><span class="symbol resource"></span>AFDCustomDomain</a></li>
+    <li><a href="afdendpoint" title="AFDEndpoint"><span class="symbol resource"></span>AFDEndpoint</a></li>
+    <li><a href="afdorigin" title="AFDOrigin"><span class="symbol resource"></span>AFDOrigin</a></li>
+    <li><a href="afdorigingroup" title="AFDOriginGroup"><span class="symbol resource"></span>AFDOriginGroup</a></li>
+    <li><a href="customdomain" title="CustomDomain"><span class="symbol resource"></span>CustomDomain</a></li>
+    <li><a href="endpoint" title="Endpoint"><span class="symbol resource"></span>Endpoint</a></li>
+    <li><a href="origin" title="Origin"><span class="symbol resource"></span>Origin</a></li>
+    <li><a href="origingroup" title="OriginGroup"><span class="symbol resource"></span>OriginGroup</a></li>
+    <li><a href="policy" title="Policy"><span class="symbol resource"></span>Policy</a></li>
+    <li><a href="profile" title="Profile"><span class="symbol resource"></span>Profile</a></li>
+    <li><a href="route" title="Route"><span class="symbol resource"></span>Route</a></li>
+    <li><a href="rule" title="Rule"><span class="symbol resource"></span>Rule</a></li>
+    <li><a href="ruleset" title="RuleSet"><span class="symbol resource"></span>RuleSet</a></li>
+    <li><a href="secret" title="Secret"><span class="symbol resource"></span>Secret</a></li>
+    <li><a href="securitypolicy" title="SecurityPolicy"><span class="symbol resource"></span>SecurityPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getafdcustomdomain" title="GetAFDCustomDomain"><span class="api-symbol api-symbol--function"></span>GetAFDCustomDomain</a></li>
-    <li><a href="getafdendpoint" title="GetAFDEndpoint"><span class="api-symbol api-symbol--function"></span>GetAFDEndpoint</a></li>
-    <li><a href="getafdorigin" title="GetAFDOrigin"><span class="api-symbol api-symbol--function"></span>GetAFDOrigin</a></li>
-    <li><a href="getafdorigingroup" title="GetAFDOriginGroup"><span class="api-symbol api-symbol--function"></span>GetAFDOriginGroup</a></li>
-    <li><a href="getcustomdomain" title="GetCustomDomain"><span class="api-symbol api-symbol--function"></span>GetCustomDomain</a></li>
-    <li><a href="getendpoint" title="GetEndpoint"><span class="api-symbol api-symbol--function"></span>GetEndpoint</a></li>
-    <li><a href="getorigin" title="GetOrigin"><span class="api-symbol api-symbol--function"></span>GetOrigin</a></li>
-    <li><a href="getorigingroup" title="GetOriginGroup"><span class="api-symbol api-symbol--function"></span>GetOriginGroup</a></li>
-    <li><a href="getpolicy" title="GetPolicy"><span class="api-symbol api-symbol--function"></span>GetPolicy</a></li>
-    <li><a href="getprofile" title="GetProfile"><span class="api-symbol api-symbol--function"></span>GetProfile</a></li>
-    <li><a href="getprofilesupportedoptimizationtypes" title="GetProfileSupportedOptimizationTypes"><span class="api-symbol api-symbol--function"></span>GetProfileSupportedOptimizationTypes</a></li>
-    <li><a href="getroute" title="GetRoute"><span class="api-symbol api-symbol--function"></span>GetRoute</a></li>
-    <li><a href="getrule" title="GetRule"><span class="api-symbol api-symbol--function"></span>GetRule</a></li>
-    <li><a href="getruleset" title="GetRuleSet"><span class="api-symbol api-symbol--function"></span>GetRuleSet</a></li>
-    <li><a href="getsecret" title="GetSecret"><span class="api-symbol api-symbol--function"></span>GetSecret</a></li>
-    <li><a href="getsecuritypolicy" title="GetSecurityPolicy"><span class="api-symbol api-symbol--function"></span>GetSecurityPolicy</a></li>
+    <li><a href="getafdcustomdomain" title="GetAFDCustomDomain"><span class="symbol function"></span>GetAFDCustomDomain</a></li>
+    <li><a href="getafdendpoint" title="GetAFDEndpoint"><span class="symbol function"></span>GetAFDEndpoint</a></li>
+    <li><a href="getafdorigin" title="GetAFDOrigin"><span class="symbol function"></span>GetAFDOrigin</a></li>
+    <li><a href="getafdorigingroup" title="GetAFDOriginGroup"><span class="symbol function"></span>GetAFDOriginGroup</a></li>
+    <li><a href="getcustomdomain" title="GetCustomDomain"><span class="symbol function"></span>GetCustomDomain</a></li>
+    <li><a href="getendpoint" title="GetEndpoint"><span class="symbol function"></span>GetEndpoint</a></li>
+    <li><a href="getorigin" title="GetOrigin"><span class="symbol function"></span>GetOrigin</a></li>
+    <li><a href="getorigingroup" title="GetOriginGroup"><span class="symbol function"></span>GetOriginGroup</a></li>
+    <li><a href="getpolicy" title="GetPolicy"><span class="symbol function"></span>GetPolicy</a></li>
+    <li><a href="getprofile" title="GetProfile"><span class="symbol function"></span>GetProfile</a></li>
+    <li><a href="getprofilesupportedoptimizationtypes" title="GetProfileSupportedOptimizationTypes"><span class="symbol function"></span>GetProfileSupportedOptimizationTypes</a></li>
+    <li><a href="getroute" title="GetRoute"><span class="symbol function"></span>GetRoute</a></li>
+    <li><a href="getrule" title="GetRule"><span class="symbol function"></span>GetRule</a></li>
+    <li><a href="getruleset" title="GetRuleSet"><span class="symbol function"></span>GetRuleSet</a></li>
+    <li><a href="getsecret" title="GetSecret"><span class="symbol function"></span>GetSecret</a></li>
+    <li><a href="getsecuritypolicy" title="GetSecurityPolicy"><span class="symbol function"></span>GetSecurityPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -57,6 +57,6 @@ Explore the resources and functions of the azure-native.cdn module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.37.0</dd>
+	<dd>1.38.0</dd>
 </dl>
 

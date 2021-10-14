@@ -13,16 +13,16 @@ Explore the resources and functions of the aws.codeartifact module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="domain" title="Domain"><span class="api-symbol api-symbol--resource"></span>Domain</a></li>
-    <li><a href="domainpermissions" title="DomainPermissions"><span class="api-symbol api-symbol--resource"></span>DomainPermissions</a></li>
-    <li><a href="repository" title="Repository"><span class="api-symbol api-symbol--resource"></span>Repository</a></li>
-    <li><a href="repositorypermissionspolicy" title="RepositoryPermissionsPolicy"><span class="api-symbol api-symbol--resource"></span>RepositoryPermissionsPolicy</a></li>
+    <li><a href="domain" title="Domain"><span class="symbol resource"></span>Domain</a></li>
+    <li><a href="domainpermissions" title="DomainPermissions"><span class="symbol resource"></span>DomainPermissions</a></li>
+    <li><a href="repository" title="Repository"><span class="symbol resource"></span>Repository</a></li>
+    <li><a href="repositorypermissionspolicy" title="RepositoryPermissionsPolicy"><span class="symbol resource"></span>RepositoryPermissionsPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getauthorizationtoken" title="GetAuthorizationToken"><span class="api-symbol api-symbol--function"></span>GetAuthorizationToken</a></li>
-    <li><a href="getrepositoryendpoint" title="GetRepositoryEndpoint"><span class="api-symbol api-symbol--function"></span>GetRepositoryEndpoint</a></li>
+    <li><a href="getauthorizationtoken" title="GetAuthorizationToken"><span class="symbol function"></span>GetAuthorizationToken</a></li>
+    <li><a href="getrepositoryendpoint" title="GetRepositoryEndpoint"><span class="symbol function"></span>GetRepositoryEndpoint</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

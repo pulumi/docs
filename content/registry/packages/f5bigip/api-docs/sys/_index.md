@@ -13,13 +13,13 @@ Explore the resources and functions of the f5bigip.sys module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="bigiplicense" title="BigIpLicense"><span class="api-symbol api-symbol--resource"></span>BigIpLicense</a></li>
-    <li><a href="dns" title="Dns"><span class="api-symbol api-symbol--resource"></span>Dns</a></li>
-    <li><a href="iapp" title="IApp"><span class="api-symbol api-symbol--resource"></span>IApp</a></li>
-    <li><a href="ntp" title="Ntp"><span class="api-symbol api-symbol--resource"></span>Ntp</a></li>
-    <li><a href="provision" title="Provision"><span class="api-symbol api-symbol--resource"></span>Provision</a></li>
-    <li><a href="snmp" title="Snmp"><span class="api-symbol api-symbol--resource"></span>Snmp</a></li>
-    <li><a href="snmptraps" title="SnmpTraps"><span class="api-symbol api-symbol--resource"></span>SnmpTraps</a></li>
+    <li><a href="bigiplicense" title="BigIpLicense"><span class="symbol resource"></span>BigIpLicense</a></li>
+    <li><a href="dns" title="Dns"><span class="symbol resource"></span>Dns</a></li>
+    <li><a href="iapp" title="IApp"><span class="symbol resource"></span>IApp</a></li>
+    <li><a href="ntp" title="Ntp"><span class="symbol resource"></span>Ntp</a></li>
+    <li><a href="provision" title="Provision"><span class="symbol resource"></span>Provision</a></li>
+    <li><a href="snmp" title="Snmp"><span class="symbol resource"></span>Snmp</a></li>
+    <li><a href="snmptraps" title="SnmpTraps"><span class="symbol resource"></span>SnmpTraps</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

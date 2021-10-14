@@ -2,9 +2,6 @@
 title: "MySQL"
 title_tag: "mysql.MySQL"
 meta_desc: "A Pulumi package for creating and managing mysql cloud resources."
-menu:
-    reference:
-        parent: API Reference
 layout: api
 no_edit_this_page: true
 ---
@@ -16,12 +13,12 @@ A Pulumi package for creating and managing mysql cloud resources.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="database" title="Database"><span class="api-symbol api-symbol--resource"></span>Database</a></li>
-    <li><a href="grant" title="Grant"><span class="api-symbol api-symbol--resource"></span>Grant</a></li>
-    <li><a href="provider" title="Provider"><span class="api-symbol api-symbol--resource"></span>Provider</a></li>
-    <li><a href="role" title="Role"><span class="api-symbol api-symbol--resource"></span>Role</a></li>
-    <li><a href="user" title="User"><span class="api-symbol api-symbol--resource"></span>User</a></li>
-    <li><a href="userpassword" title="UserPassword"><span class="api-symbol api-symbol--resource"></span>UserPassword</a></li>
+    <li><a href="database" title="Database"><span class="symbol resource"></span>Database</a></li>
+    <li><a href="grant" title="Grant"><span class="symbol resource"></span>Grant</a></li>
+    <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
+    <li><a href="role" title="Role"><span class="symbol resource"></span>Role</a></li>
+    <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
+    <li><a href="userpassword" title="UserPassword"><span class="symbol resource"></span>UserPassword</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

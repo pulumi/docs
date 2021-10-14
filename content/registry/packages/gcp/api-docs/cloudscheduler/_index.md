@@ -13,7 +13,7 @@ Explore the resources and functions of the gcp.cloudscheduler module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="job" title="Job"><span class="api-symbol api-symbol--resource"></span>Job</a></li>
+    <li><a href="job" title="Job"><span class="symbol resource"></span>Job</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

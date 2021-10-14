@@ -13,7 +13,7 @@ Explore the resources and functions of the kubernetes.kustomize module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="directory" title="Directory"><span class="api-symbol api-symbol--resource"></span>Directory</a></li>
+    <li><a href="directory" title="Directory"><span class="symbol resource"></span>Directory</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

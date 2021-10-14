@@ -13,11 +13,11 @@ Explore the resources and functions of the aws-native.s3 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="accesspoint" title="AccessPoint"><span class="api-symbol api-symbol--resource"></span>AccessPoint</a></li>
-    <li><a href="bucket" title="Bucket"><span class="api-symbol api-symbol--resource"></span>Bucket</a></li>
-    <li><a href="multiregionaccesspoint" title="MultiRegionAccessPoint"><span class="api-symbol api-symbol--resource"></span>MultiRegionAccessPoint</a></li>
-    <li><a href="multiregionaccesspointpolicy" title="MultiRegionAccessPointPolicy"><span class="api-symbol api-symbol--resource"></span>MultiRegionAccessPointPolicy</a></li>
-    <li><a href="storagelens" title="StorageLens"><span class="api-symbol api-symbol--resource"></span>StorageLens</a></li>
+    <li><a href="accesspoint" title="AccessPoint"><span class="symbol resource"></span>AccessPoint</a></li>
+    <li><a href="bucket" title="Bucket"><span class="symbol resource"></span>Bucket</a></li>
+    <li><a href="multiregionaccesspoint" title="MultiRegionAccessPoint"><span class="symbol resource"></span>MultiRegionAccessPoint</a></li>
+    <li><a href="multiregionaccesspointpolicy" title="MultiRegionAccessPointPolicy"><span class="symbol resource"></span>MultiRegionAccessPointPolicy</a></li>
+    <li><a href="storagelens" title="StorageLens"><span class="symbol resource"></span>StorageLens</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

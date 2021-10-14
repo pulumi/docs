@@ -13,14 +13,14 @@ Explore the resources and functions of the vault.appRole module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="authbackendlogin" title="AuthBackendLogin"><span class="api-symbol api-symbol--resource"></span>AuthBackendLogin</a></li>
-    <li><a href="authbackendrole" title="AuthBackendRole"><span class="api-symbol api-symbol--resource"></span>AuthBackendRole</a></li>
-    <li><a href="authbackendrolesecretid" title="AuthBackendRoleSecretID"><span class="api-symbol api-symbol--resource"></span>AuthBackendRoleSecretID</a></li>
+    <li><a href="authbackendlogin" title="AuthBackendLogin"><span class="symbol resource"></span>AuthBackendLogin</a></li>
+    <li><a href="authbackendrole" title="AuthBackendRole"><span class="symbol resource"></span>AuthBackendRole</a></li>
+    <li><a href="authbackendrolesecretid" title="AuthBackendRoleSecretID"><span class="symbol resource"></span>AuthBackendRoleSecretID</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getauthbackendroleid" title="GetAuthBackendRoleId"><span class="api-symbol api-symbol--function"></span>GetAuthBackendRoleId</a></li>
+    <li><a href="getauthbackendroleid" title="GetAuthBackendRoleId"><span class="symbol function"></span>GetAuthBackendRoleId</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

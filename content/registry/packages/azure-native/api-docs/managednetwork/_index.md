@@ -13,18 +13,18 @@ Explore the resources and functions of the azure-native.managednetwork module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="managednetwork" title="ManagedNetwork"><span class="api-symbol api-symbol--resource"></span>ManagedNetwork</a></li>
-    <li><a href="managednetworkgroup" title="ManagedNetworkGroup"><span class="api-symbol api-symbol--resource"></span>ManagedNetworkGroup</a></li>
-    <li><a href="managednetworkpeeringpolicy" title="ManagedNetworkPeeringPolicy"><span class="api-symbol api-symbol--resource"></span>ManagedNetworkPeeringPolicy</a></li>
-    <li><a href="scopeassignment" title="ScopeAssignment"><span class="api-symbol api-symbol--resource"></span>ScopeAssignment</a></li>
+    <li><a href="managednetwork" title="ManagedNetwork"><span class="symbol resource"></span>ManagedNetwork</a></li>
+    <li><a href="managednetworkgroup" title="ManagedNetworkGroup"><span class="symbol resource"></span>ManagedNetworkGroup</a></li>
+    <li><a href="managednetworkpeeringpolicy" title="ManagedNetworkPeeringPolicy"><span class="symbol resource"></span>ManagedNetworkPeeringPolicy</a></li>
+    <li><a href="scopeassignment" title="ScopeAssignment"><span class="symbol resource"></span>ScopeAssignment</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getmanagednetwork" title="GetManagedNetwork"><span class="api-symbol api-symbol--function"></span>GetManagedNetwork</a></li>
-    <li><a href="getmanagednetworkgroup" title="GetManagedNetworkGroup"><span class="api-symbol api-symbol--function"></span>GetManagedNetworkGroup</a></li>
-    <li><a href="getmanagednetworkpeeringpolicy" title="GetManagedNetworkPeeringPolicy"><span class="api-symbol api-symbol--function"></span>GetManagedNetworkPeeringPolicy</a></li>
-    <li><a href="getscopeassignment" title="GetScopeAssignment"><span class="api-symbol api-symbol--function"></span>GetScopeAssignment</a></li>
+    <li><a href="getmanagednetwork" title="GetManagedNetwork"><span class="symbol function"></span>GetManagedNetwork</a></li>
+    <li><a href="getmanagednetworkgroup" title="GetManagedNetworkGroup"><span class="symbol function"></span>GetManagedNetworkGroup</a></li>
+    <li><a href="getmanagednetworkpeeringpolicy" title="GetManagedNetworkPeeringPolicy"><span class="symbol function"></span>GetManagedNetworkPeeringPolicy</a></li>
+    <li><a href="getscopeassignment" title="GetScopeAssignment"><span class="symbol function"></span>GetScopeAssignment</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -34,6 +34,6 @@ Explore the resources and functions of the azure-native.managednetwork module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.37.0</dd>
+	<dd>1.38.0</dd>
 </dl>
 

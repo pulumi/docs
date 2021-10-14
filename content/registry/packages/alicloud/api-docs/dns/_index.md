@@ -13,35 +13,35 @@ Explore the resources and functions of the alicloud.dns module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="alidnsdomain" title="AlidnsDomain"><span class="api-symbol api-symbol--resource"></span>AlidnsDomain</a></li>
-    <li><a href="alidnsdomainattachment" title="AlidnsDomainAttachment"><span class="api-symbol api-symbol--resource"></span>AlidnsDomainAttachment</a></li>
-    <li><a href="alidnsinstance" title="AlidnsInstance"><span class="api-symbol api-symbol--resource"></span>AlidnsInstance</a></li>
-    <li><a href="alidnsrecord" title="AlidnsRecord"><span class="api-symbol api-symbol--resource"></span>AlidnsRecord</a></li>
-    <li><a href="ddosbgpinstance" title="DdosBgpInstance"><span class="api-symbol api-symbol--resource"></span>DdosBgpInstance</a></li>
-    <li><a href="ddoscooinstance" title="DdosCooInstance"><span class="api-symbol api-symbol--resource"></span>DdosCooInstance</a></li>
-    <li><a href="dnsdomain" title="DnsDomain"><span class="api-symbol api-symbol--resource"></span>DnsDomain</a></li>
-    <li><a href="domain" title="Domain"><span class="api-symbol api-symbol--resource"></span>Domain</a></li>
-    <li><a href="domainattachment" title="DomainAttachment"><span class="api-symbol api-symbol--resource"></span>DomainAttachment</a></li>
-    <li><a href="domaingroup" title="DomainGroup"><span class="api-symbol api-symbol--resource"></span>DomainGroup</a></li>
-    <li><a href="group" title="Group"><span class="api-symbol api-symbol--resource"></span>Group</a></li>
-    <li><a href="instance" title="Instance"><span class="api-symbol api-symbol--resource"></span>Instance</a></li>
-    <li><a href="record" title="Record"><span class="api-symbol api-symbol--resource"></span>Record</a></li>
+    <li><a href="alidnsdomain" title="AlidnsDomain"><span class="symbol resource"></span>AlidnsDomain</a></li>
+    <li><a href="alidnsdomainattachment" title="AlidnsDomainAttachment"><span class="symbol resource"></span>AlidnsDomainAttachment</a></li>
+    <li><a href="alidnsinstance" title="AlidnsInstance"><span class="symbol resource"></span>AlidnsInstance</a></li>
+    <li><a href="alidnsrecord" title="AlidnsRecord"><span class="symbol resource"></span>AlidnsRecord</a></li>
+    <li><a href="ddosbgpinstance" title="DdosBgpInstance"><span class="symbol resource"></span>DdosBgpInstance</a></li>
+    <li><a href="ddoscooinstance" title="DdosCooInstance"><span class="symbol resource"></span>DdosCooInstance</a></li>
+    <li><a href="dnsdomain" title="DnsDomain"><span class="symbol resource"></span>DnsDomain</a></li>
+    <li><a href="domain" title="Domain"><span class="symbol resource"></span>Domain</a></li>
+    <li><a href="domainattachment" title="DomainAttachment"><span class="symbol resource"></span>DomainAttachment</a></li>
+    <li><a href="domaingroup" title="DomainGroup"><span class="symbol resource"></span>DomainGroup</a></li>
+    <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
+    <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
+    <li><a href="record" title="Record"><span class="symbol resource"></span>Record</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getalidnsdomaingroups" title="GetAlidnsDomainGroups"><span class="api-symbol api-symbol--function"></span>GetAlidnsDomainGroups</a></li>
-    <li><a href="getalidnsdomains" title="GetAlidnsDomains"><span class="api-symbol api-symbol--function"></span>GetAlidnsDomains</a></li>
-    <li><a href="getalidnsinstances" title="GetAlidnsInstances"><span class="api-symbol api-symbol--function"></span>GetAlidnsInstances</a></li>
-    <li><a href="getalidnsrecords" title="GetAlidnsRecords"><span class="api-symbol api-symbol--function"></span>GetAlidnsRecords</a></li>
-    <li><a href="getdomaingroups" title="GetDomainGroups"><span class="api-symbol api-symbol--function"></span>GetDomainGroups</a></li>
-    <li><a href="getdomainrecords" title="GetDomainRecords"><span class="api-symbol api-symbol--function"></span>GetDomainRecords</a></li>
-    <li><a href="getdomaintxtguid" title="GetDomainTxtGuid"><span class="api-symbol api-symbol--function"></span>GetDomainTxtGuid</a></li>
-    <li><a href="getdomains" title="GetDomains"><span class="api-symbol api-symbol--function"></span>GetDomains</a></li>
-    <li><a href="getgroups" title="GetGroups"><span class="api-symbol api-symbol--function"></span>GetGroups</a></li>
-    <li><a href="getinstances" title="GetInstances"><span class="api-symbol api-symbol--function"></span>GetInstances</a></li>
-    <li><a href="getrecords" title="GetRecords"><span class="api-symbol api-symbol--function"></span>GetRecords</a></li>
-    <li><a href="getresolutionlines" title="GetResolutionLines"><span class="api-symbol api-symbol--function"></span>GetResolutionLines</a></li>
+    <li><a href="getalidnsdomaingroups" title="GetAlidnsDomainGroups"><span class="symbol function"></span>GetAlidnsDomainGroups</a></li>
+    <li><a href="getalidnsdomains" title="GetAlidnsDomains"><span class="symbol function"></span>GetAlidnsDomains</a></li>
+    <li><a href="getalidnsinstances" title="GetAlidnsInstances"><span class="symbol function"></span>GetAlidnsInstances</a></li>
+    <li><a href="getalidnsrecords" title="GetAlidnsRecords"><span class="symbol function"></span>GetAlidnsRecords</a></li>
+    <li><a href="getdomaingroups" title="GetDomainGroups"><span class="symbol function"></span>GetDomainGroups</a></li>
+    <li><a href="getdomainrecords" title="GetDomainRecords"><span class="symbol function"></span>GetDomainRecords</a></li>
+    <li><a href="getdomaintxtguid" title="GetDomainTxtGuid"><span class="symbol function"></span>GetDomainTxtGuid</a></li>
+    <li><a href="getdomains" title="GetDomains"><span class="symbol function"></span>GetDomains</a></li>
+    <li><a href="getgroups" title="GetGroups"><span class="symbol function"></span>GetGroups</a></li>
+    <li><a href="getinstances" title="GetInstances"><span class="symbol function"></span>GetInstances</a></li>
+    <li><a href="getrecords" title="GetRecords"><span class="symbol function"></span>GetRecords</a></li>
+    <li><a href="getresolutionlines" title="GetResolutionLines"><span class="symbol function"></span>GetResolutionLines</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

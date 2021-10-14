@@ -13,8 +13,8 @@ Explore the resources and functions of the aws-native.ses module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="configurationset" title="ConfigurationSet"><span class="api-symbol api-symbol--resource"></span>ConfigurationSet</a></li>
-    <li><a href="contactlist" title="ContactList"><span class="api-symbol api-symbol--resource"></span>ContactList</a></li>
+    <li><a href="configurationset" title="ConfigurationSet"><span class="symbol resource"></span>ConfigurationSet</a></li>
+    <li><a href="contactlist" title="ContactList"><span class="symbol resource"></span>ContactList</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

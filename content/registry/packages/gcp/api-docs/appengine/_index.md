@@ -13,19 +13,19 @@ Explore the resources and functions of the gcp.appengine module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="application" title="Application"><span class="api-symbol api-symbol--resource"></span>Application</a></li>
-    <li><a href="applicationurldispatchrules" title="ApplicationUrlDispatchRules"><span class="api-symbol api-symbol--resource"></span>ApplicationUrlDispatchRules</a></li>
-    <li><a href="domainmapping" title="DomainMapping"><span class="api-symbol api-symbol--resource"></span>DomainMapping</a></li>
-    <li><a href="enginesplittraffic" title="EngineSplitTraffic"><span class="api-symbol api-symbol--resource"></span>EngineSplitTraffic</a></li>
-    <li><a href="firewallrule" title="FirewallRule"><span class="api-symbol api-symbol--resource"></span>FirewallRule</a></li>
-    <li><a href="flexibleappversion" title="FlexibleAppVersion"><span class="api-symbol api-symbol--resource"></span>FlexibleAppVersion</a></li>
-    <li><a href="servicenetworksettings" title="ServiceNetworkSettings"><span class="api-symbol api-symbol--resource"></span>ServiceNetworkSettings</a></li>
-    <li><a href="standardappversion" title="StandardAppVersion"><span class="api-symbol api-symbol--resource"></span>StandardAppVersion</a></li>
+    <li><a href="application" title="Application"><span class="symbol resource"></span>Application</a></li>
+    <li><a href="applicationurldispatchrules" title="ApplicationUrlDispatchRules"><span class="symbol resource"></span>ApplicationUrlDispatchRules</a></li>
+    <li><a href="domainmapping" title="DomainMapping"><span class="symbol resource"></span>DomainMapping</a></li>
+    <li><a href="enginesplittraffic" title="EngineSplitTraffic"><span class="symbol resource"></span>EngineSplitTraffic</a></li>
+    <li><a href="firewallrule" title="FirewallRule"><span class="symbol resource"></span>FirewallRule</a></li>
+    <li><a href="flexibleappversion" title="FlexibleAppVersion"><span class="symbol resource"></span>FlexibleAppVersion</a></li>
+    <li><a href="servicenetworksettings" title="ServiceNetworkSettings"><span class="symbol resource"></span>ServiceNetworkSettings</a></li>
+    <li><a href="standardappversion" title="StandardAppVersion"><span class="symbol resource"></span>StandardAppVersion</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getdefaultserviceaccount" title="GetDefaultServiceAccount"><span class="api-symbol api-symbol--function"></span>GetDefaultServiceAccount</a></li>
+    <li><a href="getdefaultserviceaccount" title="GetDefaultServiceAccount"><span class="symbol function"></span>GetDefaultServiceAccount</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

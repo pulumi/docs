@@ -13,12 +13,12 @@ Explore the resources and functions of the alicloud.dfs module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="accessgroup" title="AccessGroup"><span class="api-symbol api-symbol--resource"></span>AccessGroup</a></li>
+    <li><a href="accessgroup" title="AccessGroup"><span class="symbol resource"></span>AccessGroup</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getaccessgroups" title="GetAccessGroups"><span class="api-symbol api-symbol--function"></span>GetAccessGroups</a></li>
+    <li><a href="getaccessgroups" title="GetAccessGroups"><span class="symbol function"></span>GetAccessGroups</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

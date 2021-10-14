@@ -13,12 +13,12 @@ Explore the resources and functions of the alicloud.imm module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="project" title="Project"><span class="api-symbol api-symbol--resource"></span>Project</a></li>
+    <li><a href="project" title="Project"><span class="symbol resource"></span>Project</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getprojects" title="GetProjects"><span class="api-symbol api-symbol--function"></span>GetProjects</a></li>
+    <li><a href="getprojects" title="GetProjects"><span class="symbol function"></span>GetProjects</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

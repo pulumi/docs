@@ -2,9 +2,6 @@
 title: "Sumo Logic"
 title_tag: "sumologic.Sumo Logic"
 meta_desc: "A Pulumi package for creating and managing sumologic cloud resources."
-menu:
-    reference:
-        parent: API Reference
 layout: api
 no_edit_this_page: true
 ---
@@ -16,52 +13,52 @@ A Pulumi package for creating and managing sumologic cloud resources.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="awsinventorysource" title="AwsInventorySource"><span class="api-symbol api-symbol--resource"></span>AwsInventorySource</a></li>
-    <li><a href="awsxraysource" title="AwsXraySource"><span class="api-symbol api-symbol--resource"></span>AwsXraySource</a></li>
-    <li><a href="cloudsyslogsource" title="CloudSyslogSource"><span class="api-symbol api-symbol--resource"></span>CloudSyslogSource</a></li>
-    <li><a href="cloudtocloudsource" title="CloudToCloudSource"><span class="api-symbol api-symbol--resource"></span>CloudToCloudSource</a></li>
-    <li><a href="cloudfrontsource" title="CloudfrontSource"><span class="api-symbol api-symbol--resource"></span>CloudfrontSource</a></li>
-    <li><a href="cloudtrailsource" title="CloudtrailSource"><span class="api-symbol api-symbol--resource"></span>CloudtrailSource</a></li>
-    <li><a href="cloudwatchsource" title="CloudwatchSource"><span class="api-symbol api-symbol--resource"></span>CloudwatchSource</a></li>
-    <li><a href="collector" title="Collector"><span class="api-symbol api-symbol--resource"></span>Collector</a></li>
-    <li><a href="collectoringestbudgetassignment" title="CollectorIngestBudgetAssignment"><span class="api-symbol api-symbol--resource"></span>CollectorIngestBudgetAssignment</a></li>
-    <li><a href="connection" title="Connection"><span class="api-symbol api-symbol--resource"></span>Connection</a></li>
-    <li><a href="content" title="Content"><span class="api-symbol api-symbol--resource"></span>Content</a></li>
-    <li><a href="dashboard" title="Dashboard"><span class="api-symbol api-symbol--resource"></span>Dashboard</a></li>
-    <li><a href="elbsource" title="ElbSource"><span class="api-symbol api-symbol--resource"></span>ElbSource</a></li>
-    <li><a href="field" title="Field"><span class="api-symbol api-symbol--resource"></span>Field</a></li>
-    <li><a href="fieldextractionrule" title="FieldExtractionRule"><span class="api-symbol api-symbol--resource"></span>FieldExtractionRule</a></li>
-    <li><a href="folder" title="Folder"><span class="api-symbol api-symbol--resource"></span>Folder</a></li>
-    <li><a href="gcpsource" title="GcpSource"><span class="api-symbol api-symbol--resource"></span>GcpSource</a></li>
-    <li><a href="httpsource" title="HttpSource"><span class="api-symbol api-symbol--resource"></span>HttpSource</a></li>
-    <li><a href="ingestbudget" title="IngestBudget"><span class="api-symbol api-symbol--resource"></span>IngestBudget</a></li>
-    <li><a href="ingestbudgetv2" title="IngestBudgetV2"><span class="api-symbol api-symbol--resource"></span>IngestBudgetV2</a></li>
-    <li><a href="kinesismetricssource" title="KinesisMetricsSource"><span class="api-symbol api-symbol--resource"></span>KinesisMetricsSource</a></li>
-    <li><a href="lookuptable" title="LookupTable"><span class="api-symbol api-symbol--resource"></span>LookupTable</a></li>
-    <li><a href="metadatasource" title="MetadataSource"><span class="api-symbol api-symbol--resource"></span>MetadataSource</a></li>
-    <li><a href="monitor" title="Monitor"><span class="api-symbol api-symbol--resource"></span>Monitor</a></li>
-    <li><a href="monitorfolder" title="MonitorFolder"><span class="api-symbol api-symbol--resource"></span>MonitorFolder</a></li>
-    <li><a href="partition" title="Partition"><span class="api-symbol api-symbol--resource"></span>Partition</a></li>
-    <li><a href="passwordpolicy" title="PasswordPolicy"><span class="api-symbol api-symbol--resource"></span>PasswordPolicy</a></li>
-    <li><a href="pollingsource" title="PollingSource"><span class="api-symbol api-symbol--resource"></span>PollingSource</a></li>
-    <li><a href="provider" title="Provider"><span class="api-symbol api-symbol--resource"></span>Provider</a></li>
-    <li><a href="role" title="Role"><span class="api-symbol api-symbol--resource"></span>Role</a></li>
-    <li><a href="s3auditsource" title="S3AuditSource"><span class="api-symbol api-symbol--resource"></span>S3AuditSource</a></li>
-    <li><a href="s3source" title="S3Source"><span class="api-symbol api-symbol--resource"></span>S3Source</a></li>
-    <li><a href="samlconfiguration" title="SamlConfiguration"><span class="api-symbol api-symbol--resource"></span>SamlConfiguration</a></li>
-    <li><a href="scheduledview" title="ScheduledView"><span class="api-symbol api-symbol--resource"></span>ScheduledView</a></li>
-    <li><a href="subdomain" title="Subdomain"><span class="api-symbol api-symbol--resource"></span>Subdomain</a></li>
-    <li><a href="user" title="User"><span class="api-symbol api-symbol--resource"></span>User</a></li>
+    <li><a href="awsinventorysource" title="AwsInventorySource"><span class="symbol resource"></span>AwsInventorySource</a></li>
+    <li><a href="awsxraysource" title="AwsXraySource"><span class="symbol resource"></span>AwsXraySource</a></li>
+    <li><a href="cloudsyslogsource" title="CloudSyslogSource"><span class="symbol resource"></span>CloudSyslogSource</a></li>
+    <li><a href="cloudtocloudsource" title="CloudToCloudSource"><span class="symbol resource"></span>CloudToCloudSource</a></li>
+    <li><a href="cloudfrontsource" title="CloudfrontSource"><span class="symbol resource"></span>CloudfrontSource</a></li>
+    <li><a href="cloudtrailsource" title="CloudtrailSource"><span class="symbol resource"></span>CloudtrailSource</a></li>
+    <li><a href="cloudwatchsource" title="CloudwatchSource"><span class="symbol resource"></span>CloudwatchSource</a></li>
+    <li><a href="collector" title="Collector"><span class="symbol resource"></span>Collector</a></li>
+    <li><a href="collectoringestbudgetassignment" title="CollectorIngestBudgetAssignment"><span class="symbol resource"></span>CollectorIngestBudgetAssignment</a></li>
+    <li><a href="connection" title="Connection"><span class="symbol resource"></span>Connection</a></li>
+    <li><a href="content" title="Content"><span class="symbol resource"></span>Content</a></li>
+    <li><a href="dashboard" title="Dashboard"><span class="symbol resource"></span>Dashboard</a></li>
+    <li><a href="elbsource" title="ElbSource"><span class="symbol resource"></span>ElbSource</a></li>
+    <li><a href="field" title="Field"><span class="symbol resource"></span>Field</a></li>
+    <li><a href="fieldextractionrule" title="FieldExtractionRule"><span class="symbol resource"></span>FieldExtractionRule</a></li>
+    <li><a href="folder" title="Folder"><span class="symbol resource"></span>Folder</a></li>
+    <li><a href="gcpsource" title="GcpSource"><span class="symbol resource"></span>GcpSource</a></li>
+    <li><a href="httpsource" title="HttpSource"><span class="symbol resource"></span>HttpSource</a></li>
+    <li><a href="ingestbudget" title="IngestBudget"><span class="symbol resource"></span>IngestBudget</a></li>
+    <li><a href="ingestbudgetv2" title="IngestBudgetV2"><span class="symbol resource"></span>IngestBudgetV2</a></li>
+    <li><a href="kinesismetricssource" title="KinesisMetricsSource"><span class="symbol resource"></span>KinesisMetricsSource</a></li>
+    <li><a href="lookuptable" title="LookupTable"><span class="symbol resource"></span>LookupTable</a></li>
+    <li><a href="metadatasource" title="MetadataSource"><span class="symbol resource"></span>MetadataSource</a></li>
+    <li><a href="monitor" title="Monitor"><span class="symbol resource"></span>Monitor</a></li>
+    <li><a href="monitorfolder" title="MonitorFolder"><span class="symbol resource"></span>MonitorFolder</a></li>
+    <li><a href="partition" title="Partition"><span class="symbol resource"></span>Partition</a></li>
+    <li><a href="passwordpolicy" title="PasswordPolicy"><span class="symbol resource"></span>PasswordPolicy</a></li>
+    <li><a href="pollingsource" title="PollingSource"><span class="symbol resource"></span>PollingSource</a></li>
+    <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
+    <li><a href="role" title="Role"><span class="symbol resource"></span>Role</a></li>
+    <li><a href="s3auditsource" title="S3AuditSource"><span class="symbol resource"></span>S3AuditSource</a></li>
+    <li><a href="s3source" title="S3Source"><span class="symbol resource"></span>S3Source</a></li>
+    <li><a href="samlconfiguration" title="SamlConfiguration"><span class="symbol resource"></span>SamlConfiguration</a></li>
+    <li><a href="scheduledview" title="ScheduledView"><span class="symbol resource"></span>ScheduledView</a></li>
+    <li><a href="subdomain" title="Subdomain"><span class="symbol resource"></span>Subdomain</a></li>
+    <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getcalleridentity" title="GetCallerIdentity"><span class="api-symbol api-symbol--function"></span>GetCallerIdentity</a></li>
-    <li><a href="getcollector" title="GetCollector"><span class="api-symbol api-symbol--function"></span>GetCollector</a></li>
-    <li><a href="gethttpsource" title="GetHttpSource"><span class="api-symbol api-symbol--function"></span>GetHttpSource</a></li>
-    <li><a href="getmyuserid" title="GetMyUserId"><span class="api-symbol api-symbol--function"></span>GetMyUserId</a></li>
-    <li><a href="getpersonalfolder" title="GetPersonalFolder"><span class="api-symbol api-symbol--function"></span>GetPersonalFolder</a></li>
-    <li><a href="getrole" title="GetRole"><span class="api-symbol api-symbol--function"></span>GetRole</a></li>
+    <li><a href="getcalleridentity" title="GetCallerIdentity"><span class="symbol function"></span>GetCallerIdentity</a></li>
+    <li><a href="getcollector" title="GetCollector"><span class="symbol function"></span>GetCollector</a></li>
+    <li><a href="gethttpsource" title="GetHttpSource"><span class="symbol function"></span>GetHttpSource</a></li>
+    <li><a href="getmyuserid" title="GetMyUserId"><span class="symbol function"></span>GetMyUserId</a></li>
+    <li><a href="getpersonalfolder" title="GetPersonalFolder"><span class="symbol function"></span>GetPersonalFolder</a></li>
+    <li><a href="getrole" title="GetRole"><span class="symbol function"></span>GetRole</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

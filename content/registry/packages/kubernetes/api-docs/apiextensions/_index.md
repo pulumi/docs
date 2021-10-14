@@ -13,13 +13,13 @@ no_edit_this_page: true
 
 <h2 id="modules">Modules</h2>
 <ul class="api">
-    <li><a href="v1/" title="v1"><span class="api-symbol api-symbol--module"></span>v1</a></li>
-    <li><a href="v1beta1/" title="v1beta1"><span class="api-symbol api-symbol--module"></span>v1beta1</a></li>
+    <li><a href="v1/" title="v1"><span class="symbol module"></span>v1</a></li>
+    <li><a href="v1beta1/" title="v1beta1"><span class="symbol module"></span>v1beta1</a></li>
 </ul>
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="customresource" title="CustomResource"><span class="api-symbol api-symbol--resource"></span>CustomResource</a></li>
+    <li><a href="customresource" title="CustomResource"><span class="symbol resource"></span>CustomResource</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

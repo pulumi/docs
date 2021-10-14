@@ -13,15 +13,15 @@ Explore the resources and functions of the azure.authorization module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="assignment" title="Assignment"><span class="api-symbol api-symbol--resource"></span>Assignment</a></li>
-    <li><a href="roledefinition" title="RoleDefinition"><span class="api-symbol api-symbol--resource"></span>RoleDefinition</a></li>
-    <li><a href="userassignedidentity" title="UserAssignedIdentity"><span class="api-symbol api-symbol--resource"></span>UserAssignedIdentity</a></li>
+    <li><a href="assignment" title="Assignment"><span class="symbol resource"></span>Assignment</a></li>
+    <li><a href="roledefinition" title="RoleDefinition"><span class="symbol resource"></span>RoleDefinition</a></li>
+    <li><a href="userassignedidentity" title="UserAssignedIdentity"><span class="symbol resource"></span>UserAssignedIdentity</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getroledefinition" title="GetRoleDefinition"><span class="api-symbol api-symbol--function"></span>GetRoleDefinition</a></li>
-    <li><a href="getuserassignedidentity" title="GetUserAssignedIdentity"><span class="api-symbol api-symbol--function"></span>GetUserAssignedIdentity</a></li>
+    <li><a href="getroledefinition" title="GetRoleDefinition"><span class="symbol function"></span>GetRoleDefinition</a></li>
+    <li><a href="getuserassignedidentity" title="GetUserAssignedIdentity"><span class="symbol function"></span>GetUserAssignedIdentity</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

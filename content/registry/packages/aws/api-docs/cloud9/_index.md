@@ -13,7 +13,7 @@ Explore the resources and functions of the aws.cloud9 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="environmentec2" title="EnvironmentEC2"><span class="api-symbol api-symbol--resource"></span>EnvironmentEC2</a></li>
+    <li><a href="environmentec2" title="EnvironmentEC2"><span class="symbol resource"></span>EnvironmentEC2</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

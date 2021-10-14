@@ -13,23 +13,23 @@ Explore the resources and functions of the vault.identity module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="entity" title="Entity"><span class="api-symbol api-symbol--resource"></span>Entity</a></li>
-    <li><a href="entityalias" title="EntityAlias"><span class="api-symbol api-symbol--resource"></span>EntityAlias</a></li>
-    <li><a href="entitypolicies" title="EntityPolicies"><span class="api-symbol api-symbol--resource"></span>EntityPolicies</a></li>
-    <li><a href="group" title="Group"><span class="api-symbol api-symbol--resource"></span>Group</a></li>
-    <li><a href="groupalias" title="GroupAlias"><span class="api-symbol api-symbol--resource"></span>GroupAlias</a></li>
-    <li><a href="groupmemberentityids" title="GroupMemberEntityIds"><span class="api-symbol api-symbol--resource"></span>GroupMemberEntityIds</a></li>
-    <li><a href="grouppolicies" title="GroupPolicies"><span class="api-symbol api-symbol--resource"></span>GroupPolicies</a></li>
-    <li><a href="oidc" title="Oidc"><span class="api-symbol api-symbol--resource"></span>Oidc</a></li>
-    <li><a href="oidckey" title="OidcKey"><span class="api-symbol api-symbol--resource"></span>OidcKey</a></li>
-    <li><a href="oidckeyallowedclientid" title="OidcKeyAllowedClientID"><span class="api-symbol api-symbol--resource"></span>OidcKeyAllowedClientID</a></li>
-    <li><a href="oidcrole" title="OidcRole"><span class="api-symbol api-symbol--resource"></span>OidcRole</a></li>
+    <li><a href="entity" title="Entity"><span class="symbol resource"></span>Entity</a></li>
+    <li><a href="entityalias" title="EntityAlias"><span class="symbol resource"></span>EntityAlias</a></li>
+    <li><a href="entitypolicies" title="EntityPolicies"><span class="symbol resource"></span>EntityPolicies</a></li>
+    <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
+    <li><a href="groupalias" title="GroupAlias"><span class="symbol resource"></span>GroupAlias</a></li>
+    <li><a href="groupmemberentityids" title="GroupMemberEntityIds"><span class="symbol resource"></span>GroupMemberEntityIds</a></li>
+    <li><a href="grouppolicies" title="GroupPolicies"><span class="symbol resource"></span>GroupPolicies</a></li>
+    <li><a href="oidc" title="Oidc"><span class="symbol resource"></span>Oidc</a></li>
+    <li><a href="oidckey" title="OidcKey"><span class="symbol resource"></span>OidcKey</a></li>
+    <li><a href="oidckeyallowedclientid" title="OidcKeyAllowedClientID"><span class="symbol resource"></span>OidcKeyAllowedClientID</a></li>
+    <li><a href="oidcrole" title="OidcRole"><span class="symbol resource"></span>OidcRole</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getentity" title="GetEntity"><span class="api-symbol api-symbol--function"></span>GetEntity</a></li>
-    <li><a href="getgroup" title="GetGroup"><span class="api-symbol api-symbol--function"></span>GetGroup</a></li>
+    <li><a href="getentity" title="GetEntity"><span class="symbol function"></span>GetEntity</a></li>
+    <li><a href="getgroup" title="GetGroup"><span class="symbol function"></span>GetGroup</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

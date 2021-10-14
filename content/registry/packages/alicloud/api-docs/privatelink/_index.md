@@ -13,23 +13,23 @@ Explore the resources and functions of the alicloud.privatelink module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="vpcendpoint" title="VpcEndpoint"><span class="api-symbol api-symbol--resource"></span>VpcEndpoint</a></li>
-    <li><a href="vpcendpointservice" title="VpcEndpointService"><span class="api-symbol api-symbol--resource"></span>VpcEndpointService</a></li>
-    <li><a href="vpcendpointserviceconnection" title="VpcEndpointServiceConnection"><span class="api-symbol api-symbol--resource"></span>VpcEndpointServiceConnection</a></li>
-    <li><a href="vpcendpointserviceresource" title="VpcEndpointServiceResource"><span class="api-symbol api-symbol--resource"></span>VpcEndpointServiceResource</a></li>
-    <li><a href="vpcendpointserviceuser" title="VpcEndpointServiceUser"><span class="api-symbol api-symbol--resource"></span>VpcEndpointServiceUser</a></li>
-    <li><a href="vpcendpointzone" title="VpcEndpointZone"><span class="api-symbol api-symbol--resource"></span>VpcEndpointZone</a></li>
+    <li><a href="vpcendpoint" title="VpcEndpoint"><span class="symbol resource"></span>VpcEndpoint</a></li>
+    <li><a href="vpcendpointservice" title="VpcEndpointService"><span class="symbol resource"></span>VpcEndpointService</a></li>
+    <li><a href="vpcendpointserviceconnection" title="VpcEndpointServiceConnection"><span class="symbol resource"></span>VpcEndpointServiceConnection</a></li>
+    <li><a href="vpcendpointserviceresource" title="VpcEndpointServiceResource"><span class="symbol resource"></span>VpcEndpointServiceResource</a></li>
+    <li><a href="vpcendpointserviceuser" title="VpcEndpointServiceUser"><span class="symbol resource"></span>VpcEndpointServiceUser</a></li>
+    <li><a href="vpcendpointzone" title="VpcEndpointZone"><span class="symbol resource"></span>VpcEndpointZone</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getservice" title="GetService"><span class="api-symbol api-symbol--function"></span>GetService</a></li>
-    <li><a href="getvpcendpointconnections" title="GetVpcEndpointConnections"><span class="api-symbol api-symbol--function"></span>GetVpcEndpointConnections</a></li>
-    <li><a href="getvpcendpointserviceresources" title="GetVpcEndpointServiceResources"><span class="api-symbol api-symbol--function"></span>GetVpcEndpointServiceResources</a></li>
-    <li><a href="getvpcendpointserviceusers" title="GetVpcEndpointServiceUsers"><span class="api-symbol api-symbol--function"></span>GetVpcEndpointServiceUsers</a></li>
-    <li><a href="getvpcendpointservices" title="GetVpcEndpointServices"><span class="api-symbol api-symbol--function"></span>GetVpcEndpointServices</a></li>
-    <li><a href="getvpcendpointzones" title="GetVpcEndpointZones"><span class="api-symbol api-symbol--function"></span>GetVpcEndpointZones</a></li>
-    <li><a href="getvpcendpoints" title="GetVpcEndpoints"><span class="api-symbol api-symbol--function"></span>GetVpcEndpoints</a></li>
+    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
+    <li><a href="getvpcendpointconnections" title="GetVpcEndpointConnections"><span class="symbol function"></span>GetVpcEndpointConnections</a></li>
+    <li><a href="getvpcendpointserviceresources" title="GetVpcEndpointServiceResources"><span class="symbol function"></span>GetVpcEndpointServiceResources</a></li>
+    <li><a href="getvpcendpointserviceusers" title="GetVpcEndpointServiceUsers"><span class="symbol function"></span>GetVpcEndpointServiceUsers</a></li>
+    <li><a href="getvpcendpointservices" title="GetVpcEndpointServices"><span class="symbol function"></span>GetVpcEndpointServices</a></li>
+    <li><a href="getvpcendpointzones" title="GetVpcEndpointZones"><span class="symbol function"></span>GetVpcEndpointZones</a></li>
+    <li><a href="getvpcendpoints" title="GetVpcEndpoints"><span class="symbol function"></span>GetVpcEndpoints</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

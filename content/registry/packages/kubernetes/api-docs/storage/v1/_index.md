@@ -13,14 +13,14 @@ Explore the resources and functions of the kubernetes.storage/v1 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="csidriver" title="CSIDriver"><span class="api-symbol api-symbol--resource"></span>CSIDriver</a></li>
-    <li><a href="csidriverlist" title="CSIDriverList"><span class="api-symbol api-symbol--resource"></span>CSIDriverList</a></li>
-    <li><a href="csinode" title="CSINode"><span class="api-symbol api-symbol--resource"></span>CSINode</a></li>
-    <li><a href="csinodelist" title="CSINodeList"><span class="api-symbol api-symbol--resource"></span>CSINodeList</a></li>
-    <li><a href="storageclass" title="StorageClass"><span class="api-symbol api-symbol--resource"></span>StorageClass</a></li>
-    <li><a href="storageclasslist" title="StorageClassList"><span class="api-symbol api-symbol--resource"></span>StorageClassList</a></li>
-    <li><a href="volumeattachment" title="VolumeAttachment"><span class="api-symbol api-symbol--resource"></span>VolumeAttachment</a></li>
-    <li><a href="volumeattachmentlist" title="VolumeAttachmentList"><span class="api-symbol api-symbol--resource"></span>VolumeAttachmentList</a></li>
+    <li><a href="csidriver" title="CSIDriver"><span class="symbol resource"></span>CSIDriver</a></li>
+    <li><a href="csidriverlist" title="CSIDriverList"><span class="symbol resource"></span>CSIDriverList</a></li>
+    <li><a href="csinode" title="CSINode"><span class="symbol resource"></span>CSINode</a></li>
+    <li><a href="csinodelist" title="CSINodeList"><span class="symbol resource"></span>CSINodeList</a></li>
+    <li><a href="storageclass" title="StorageClass"><span class="symbol resource"></span>StorageClass</a></li>
+    <li><a href="storageclasslist" title="StorageClassList"><span class="symbol resource"></span>StorageClassList</a></li>
+    <li><a href="volumeattachment" title="VolumeAttachment"><span class="symbol resource"></span>VolumeAttachment</a></li>
+    <li><a href="volumeattachmentlist" title="VolumeAttachmentList"><span class="symbol resource"></span>VolumeAttachmentList</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

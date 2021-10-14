@@ -13,7 +13,7 @@ Explore the resources and functions of the okta.factor module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="factor" title="Factor"><span class="api-symbol api-symbol--resource"></span>Factor</a></li>
+    <li><a href="factor" title="Factor"><span class="symbol resource"></span>Factor</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

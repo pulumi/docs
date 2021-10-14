@@ -13,18 +13,18 @@ Explore the resources and functions of the alicloud.adb module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="account" title="Account"><span class="api-symbol api-symbol--resource"></span>Account</a></li>
-    <li><a href="backuppolicy" title="BackupPolicy"><span class="api-symbol api-symbol--resource"></span>BackupPolicy</a></li>
-    <li><a href="cluster" title="Cluster"><span class="api-symbol api-symbol--resource"></span>Cluster</a></li>
-    <li><a href="connection" title="Connection"><span class="api-symbol api-symbol--resource"></span>Connection</a></li>
-    <li><a href="dbcluster" title="DBCluster"><span class="api-symbol api-symbol--resource"></span>DBCluster</a></li>
+    <li><a href="account" title="Account"><span class="symbol resource"></span>Account</a></li>
+    <li><a href="backuppolicy" title="BackupPolicy"><span class="symbol resource"></span>BackupPolicy</a></li>
+    <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
+    <li><a href="connection" title="Connection"><span class="symbol resource"></span>Connection</a></li>
+    <li><a href="dbcluster" title="DBCluster"><span class="symbol resource"></span>DBCluster</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getclusters" title="GetClusters"><span class="api-symbol api-symbol--function"></span>GetClusters</a></li>
-    <li><a href="getdbclusters" title="GetDBClusters"><span class="api-symbol api-symbol--function"></span>GetDBClusters</a></li>
-    <li><a href="getzones" title="GetZones"><span class="api-symbol api-symbol--function"></span>GetZones</a></li>
+    <li><a href="getclusters" title="GetClusters"><span class="symbol function"></span>GetClusters</a></li>
+    <li><a href="getdbclusters" title="GetDBClusters"><span class="symbol function"></span>GetDBClusters</a></li>
+    <li><a href="getzones" title="GetZones"><span class="symbol function"></span>GetZones</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

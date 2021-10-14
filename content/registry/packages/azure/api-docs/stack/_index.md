@@ -13,7 +13,7 @@ Explore the resources and functions of the azure.stack module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="hcicluster" title="HciCluster"><span class="api-symbol api-symbol--resource"></span>HciCluster</a></li>
+    <li><a href="hcicluster" title="HciCluster"><span class="symbol resource"></span>HciCluster</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

@@ -13,29 +13,29 @@ Explore the resources and functions of the azure.core module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="customprovider" title="CustomProvider"><span class="api-symbol api-symbol--resource"></span>CustomProvider</a></li>
-    <li><a href="portaltenantconfiguration" title="PortalTenantConfiguration"><span class="api-symbol api-symbol--resource"></span>PortalTenantConfiguration</a></li>
-    <li><a href="resourcegroup" title="ResourceGroup"><span class="api-symbol api-symbol--resource"></span>ResourceGroup</a></li>
-    <li><a href="resourcegrouppolicyassignment" title="ResourceGroupPolicyAssignment"><span class="api-symbol api-symbol--resource"></span>ResourceGroupPolicyAssignment</a></li>
-    <li><a href="resourcegrouptemplatedeployment" title="ResourceGroupTemplateDeployment"><span class="api-symbol api-symbol--resource"></span>ResourceGroupTemplateDeployment</a></li>
-    <li><a href="resourcepolicyassignment" title="ResourcePolicyAssignment"><span class="api-symbol api-symbol--resource"></span>ResourcePolicyAssignment</a></li>
-    <li><a href="resourceproviderregistration" title="ResourceProviderRegistration"><span class="api-symbol api-symbol--resource"></span>ResourceProviderRegistration</a></li>
-    <li><a href="subscription" title="Subscription"><span class="api-symbol api-symbol--resource"></span>Subscription</a></li>
-    <li><a href="subscriptionpolicyassignment" title="SubscriptionPolicyAssignment"><span class="api-symbol api-symbol--resource"></span>SubscriptionPolicyAssignment</a></li>
-    <li><a href="subscriptiontemplatedeployment" title="SubscriptionTemplateDeployment"><span class="api-symbol api-symbol--resource"></span>SubscriptionTemplateDeployment</a></li>
-    <li><a href="templatedeployment" title="TemplateDeployment"><span class="api-symbol api-symbol--resource"></span>TemplateDeployment</a></li>
-    <li><a href="tenanttemplatedeployment" title="TenantTemplateDeployment"><span class="api-symbol api-symbol--resource"></span>TenantTemplateDeployment</a></li>
+    <li><a href="customprovider" title="CustomProvider"><span class="symbol resource"></span>CustomProvider</a></li>
+    <li><a href="portaltenantconfiguration" title="PortalTenantConfiguration"><span class="symbol resource"></span>PortalTenantConfiguration</a></li>
+    <li><a href="resourcegroup" title="ResourceGroup"><span class="symbol resource"></span>ResourceGroup</a></li>
+    <li><a href="resourcegrouppolicyassignment" title="ResourceGroupPolicyAssignment"><span class="symbol resource"></span>ResourceGroupPolicyAssignment</a></li>
+    <li><a href="resourcegrouptemplatedeployment" title="ResourceGroupTemplateDeployment"><span class="symbol resource"></span>ResourceGroupTemplateDeployment</a></li>
+    <li><a href="resourcepolicyassignment" title="ResourcePolicyAssignment"><span class="symbol resource"></span>ResourcePolicyAssignment</a></li>
+    <li><a href="resourceproviderregistration" title="ResourceProviderRegistration"><span class="symbol resource"></span>ResourceProviderRegistration</a></li>
+    <li><a href="subscription" title="Subscription"><span class="symbol resource"></span>Subscription</a></li>
+    <li><a href="subscriptionpolicyassignment" title="SubscriptionPolicyAssignment"><span class="symbol resource"></span>SubscriptionPolicyAssignment</a></li>
+    <li><a href="subscriptiontemplatedeployment" title="SubscriptionTemplateDeployment"><span class="symbol resource"></span>SubscriptionTemplateDeployment</a></li>
+    <li><a href="templatedeployment" title="TemplateDeployment"><span class="symbol resource"></span>TemplateDeployment</a></li>
+    <li><a href="tenanttemplatedeployment" title="TenantTemplateDeployment"><span class="symbol resource"></span>TenantTemplateDeployment</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getclientconfig" title="GetClientConfig"><span class="api-symbol api-symbol--function"></span>GetClientConfig</a></li>
-    <li><a href="getresourcegroup" title="GetResourceGroup"><span class="api-symbol api-symbol--function"></span>GetResourceGroup</a></li>
-    <li><a href="getresources" title="GetResources"><span class="api-symbol api-symbol--function"></span>GetResources</a></li>
-    <li><a href="getsubscription" title="GetSubscription"><span class="api-symbol api-symbol--function"></span>GetSubscription</a></li>
-    <li><a href="getsubscriptions" title="GetSubscriptions"><span class="api-symbol api-symbol--function"></span>GetSubscriptions</a></li>
-    <li><a href="gettemplatespecversion" title="GetTemplateSpecVersion"><span class="api-symbol api-symbol--function"></span>GetTemplateSpecVersion</a></li>
-    <li><a href="getuserassignedidentity" title="GetUserAssignedIdentity"><span class="api-symbol api-symbol--function"></span>GetUserAssignedIdentity</a></li>
+    <li><a href="getclientconfig" title="GetClientConfig"><span class="symbol function"></span>GetClientConfig</a></li>
+    <li><a href="getresourcegroup" title="GetResourceGroup"><span class="symbol function"></span>GetResourceGroup</a></li>
+    <li><a href="getresources" title="GetResources"><span class="symbol function"></span>GetResources</a></li>
+    <li><a href="getsubscription" title="GetSubscription"><span class="symbol function"></span>GetSubscription</a></li>
+    <li><a href="getsubscriptions" title="GetSubscriptions"><span class="symbol function"></span>GetSubscriptions</a></li>
+    <li><a href="gettemplatespecversion" title="GetTemplateSpecVersion"><span class="symbol function"></span>GetTemplateSpecVersion</a></li>
+    <li><a href="getuserassignedidentity" title="GetUserAssignedIdentity"><span class="symbol function"></span>GetUserAssignedIdentity</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

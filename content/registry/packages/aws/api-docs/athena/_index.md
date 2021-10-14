@@ -13,9 +13,9 @@ Explore the resources and functions of the aws.athena module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="database" title="Database"><span class="api-symbol api-symbol--resource"></span>Database</a></li>
-    <li><a href="namedquery" title="NamedQuery"><span class="api-symbol api-symbol--resource"></span>NamedQuery</a></li>
-    <li><a href="workgroup" title="Workgroup"><span class="api-symbol api-symbol--resource"></span>Workgroup</a></li>
+    <li><a href="database" title="Database"><span class="symbol resource"></span>Database</a></li>
+    <li><a href="namedquery" title="NamedQuery"><span class="symbol resource"></span>NamedQuery</a></li>
+    <li><a href="workgroup" title="Workgroup"><span class="symbol resource"></span>Workgroup</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

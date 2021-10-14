@@ -13,14 +13,14 @@ Explore the resources and functions of the alicloud.mhub module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="app" title="App"><span class="api-symbol api-symbol--resource"></span>App</a></li>
-    <li><a href="product" title="Product"><span class="api-symbol api-symbol--resource"></span>Product</a></li>
+    <li><a href="app" title="App"><span class="symbol resource"></span>App</a></li>
+    <li><a href="product" title="Product"><span class="symbol resource"></span>Product</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getapps" title="GetApps"><span class="api-symbol api-symbol--function"></span>GetApps</a></li>
-    <li><a href="getproducts" title="GetProducts"><span class="api-symbol api-symbol--function"></span>GetProducts</a></li>
+    <li><a href="getapps" title="GetApps"><span class="symbol function"></span>GetApps</a></li>
+    <li><a href="getproducts" title="GetProducts"><span class="symbol function"></span>GetProducts</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

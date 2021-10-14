@@ -13,18 +13,18 @@ Explore the resources and functions of the google-native.cloudiot/v1 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="device" title="Device"><span class="api-symbol api-symbol--resource"></span>Device</a></li>
-    <li><a href="registry" title="Registry"><span class="api-symbol api-symbol--resource"></span>Registry</a></li>
-    <li><a href="registrygroupiampolicy" title="RegistryGroupIamPolicy"><span class="api-symbol api-symbol--resource"></span>RegistryGroupIamPolicy</a></li>
-    <li><a href="registryiampolicy" title="RegistryIamPolicy"><span class="api-symbol api-symbol--resource"></span>RegistryIamPolicy</a></li>
+    <li><a href="device" title="Device"><span class="symbol resource"></span>Device</a></li>
+    <li><a href="registry" title="Registry"><span class="symbol resource"></span>Registry</a></li>
+    <li><a href="registrygroupiampolicy" title="RegistryGroupIamPolicy"><span class="symbol resource"></span>RegistryGroupIamPolicy</a></li>
+    <li><a href="registryiampolicy" title="RegistryIamPolicy"><span class="symbol resource"></span>RegistryIamPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getdevice" title="GetDevice"><span class="api-symbol api-symbol--function"></span>GetDevice</a></li>
-    <li><a href="getregistry" title="GetRegistry"><span class="api-symbol api-symbol--function"></span>GetRegistry</a></li>
-    <li><a href="getregistrygroupiampolicy" title="GetRegistryGroupIamPolicy"><span class="api-symbol api-symbol--function"></span>GetRegistryGroupIamPolicy</a></li>
-    <li><a href="getregistryiampolicy" title="GetRegistryIamPolicy"><span class="api-symbol api-symbol--function"></span>GetRegistryIamPolicy</a></li>
+    <li><a href="getdevice" title="GetDevice"><span class="symbol function"></span>GetDevice</a></li>
+    <li><a href="getregistry" title="GetRegistry"><span class="symbol function"></span>GetRegistry</a></li>
+    <li><a href="getregistrygroupiampolicy" title="GetRegistryGroupIamPolicy"><span class="symbol function"></span>GetRegistryGroupIamPolicy</a></li>
+    <li><a href="getregistryiampolicy" title="GetRegistryIamPolicy"><span class="symbol function"></span>GetRegistryIamPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

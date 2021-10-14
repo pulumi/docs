@@ -2,9 +2,6 @@
 title: "MongoDB Atlas"
 title_tag: "mongodbatlas.MongoDB Atlas"
 meta_desc: "A Pulumi package for creating and managing mongodbatlas cloud resources."
-menu:
-    reference:
-        parent: API Reference
 layout: api
 no_edit_this_page: true
 ---
@@ -16,87 +13,87 @@ A Pulumi package for creating and managing mongodbatlas cloud resources.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="alertconfiguration" title="AlertConfiguration"><span class="api-symbol api-symbol--resource"></span>AlertConfiguration</a></li>
-    <li><a href="auditing" title="Auditing"><span class="api-symbol api-symbol--resource"></span>Auditing</a></li>
-    <li><a href="cloudbackupschedule" title="CloudBackupSchedule"><span class="api-symbol api-symbol--resource"></span>CloudBackupSchedule</a></li>
-    <li><a href="cloudprovideraccess" title="CloudProviderAccess"><span class="api-symbol api-symbol--resource"></span>CloudProviderAccess</a></li>
-    <li><a href="cloudprovideraccessauthorization" title="CloudProviderAccessAuthorization"><span class="api-symbol api-symbol--resource"></span>CloudProviderAccessAuthorization</a></li>
-    <li><a href="cloudprovideraccesssetup" title="CloudProviderAccessSetup"><span class="api-symbol api-symbol--resource"></span>CloudProviderAccessSetup</a></li>
-    <li><a href="cloudprovidersnapshot" title="CloudProviderSnapshot"><span class="api-symbol api-symbol--resource"></span>CloudProviderSnapshot</a></li>
-    <li><a href="cloudprovidersnapshotbackuppolicy" title="CloudProviderSnapshotBackupPolicy"><span class="api-symbol api-symbol--resource"></span>CloudProviderSnapshotBackupPolicy</a></li>
-    <li><a href="cloudprovidersnapshotrestorejob" title="CloudProviderSnapshotRestoreJob"><span class="api-symbol api-symbol--resource"></span>CloudProviderSnapshotRestoreJob</a></li>
-    <li><a href="cluster" title="Cluster"><span class="api-symbol api-symbol--resource"></span>Cluster</a></li>
-    <li><a href="customdbrole" title="CustomDbRole"><span class="api-symbol api-symbol--resource"></span>CustomDbRole</a></li>
-    <li><a href="customdnsconfigurationclusteraws" title="CustomDnsConfigurationClusterAws"><span class="api-symbol api-symbol--resource"></span>CustomDnsConfigurationClusterAws</a></li>
-    <li><a href="datalake" title="DataLake"><span class="api-symbol api-symbol--resource"></span>DataLake</a></li>
-    <li><a href="databaseuser" title="DatabaseUser"><span class="api-symbol api-symbol--resource"></span>DatabaseUser</a></li>
-    <li><a href="encryptionatrest" title="EncryptionAtRest"><span class="api-symbol api-symbol--resource"></span>EncryptionAtRest</a></li>
-    <li><a href="eventtrigger" title="EventTrigger"><span class="api-symbol api-symbol--resource"></span>EventTrigger</a></li>
-    <li><a href="globalclusterconfig" title="GlobalClusterConfig"><span class="api-symbol api-symbol--resource"></span>GlobalClusterConfig</a></li>
-    <li><a href="ldapconfiguration" title="LdapConfiguration"><span class="api-symbol api-symbol--resource"></span>LdapConfiguration</a></li>
-    <li><a href="ldapverify" title="LdapVerify"><span class="api-symbol api-symbol--resource"></span>LdapVerify</a></li>
-    <li><a href="maintenancewindow" title="MaintenanceWindow"><span class="api-symbol api-symbol--resource"></span>MaintenanceWindow</a></li>
-    <li><a href="networkcontainer" title="NetworkContainer"><span class="api-symbol api-symbol--resource"></span>NetworkContainer</a></li>
-    <li><a href="networkpeering" title="NetworkPeering"><span class="api-symbol api-symbol--resource"></span>NetworkPeering</a></li>
-    <li><a href="onlinearchive" title="OnlineArchive"><span class="api-symbol api-symbol--resource"></span>OnlineArchive</a></li>
-    <li><a href="privateipmode" title="PrivateIpMode"><span class="api-symbol api-symbol--resource"></span>PrivateIpMode</a></li>
-    <li><a href="privatelinkendpoint" title="PrivateLinkEndpoint"><span class="api-symbol api-symbol--resource"></span>PrivateLinkEndpoint</a></li>
-    <li><a href="privatelinkendpointservice" title="PrivateLinkEndpointService"><span class="api-symbol api-symbol--resource"></span>PrivateLinkEndpointService</a></li>
-    <li><a href="project" title="Project"><span class="api-symbol api-symbol--resource"></span>Project</a></li>
-    <li><a href="projectipaccesslist" title="ProjectIpAccessList"><span class="api-symbol api-symbol--resource"></span>ProjectIpAccessList</a></li>
-    <li><a href="provider" title="Provider"><span class="api-symbol api-symbol--resource"></span>Provider</a></li>
-    <li><a href="searchindex" title="SearchIndex"><span class="api-symbol api-symbol--resource"></span>SearchIndex</a></li>
-    <li><a href="team" title="Team"><span class="api-symbol api-symbol--resource"></span>Team</a></li>
-    <li><a href="teams" title="Teams"><span class="api-symbol api-symbol--resource"></span>Teams</a></li>
-    <li><a href="thirdpartyintegration" title="ThirdPartyIntegration"><span class="api-symbol api-symbol--resource"></span>ThirdPartyIntegration</a></li>
-    <li><a href="x509authenticationdatabaseuser" title="X509AuthenticationDatabaseUser"><span class="api-symbol api-symbol--resource"></span>X509AuthenticationDatabaseUser</a></li>
+    <li><a href="alertconfiguration" title="AlertConfiguration"><span class="symbol resource"></span>AlertConfiguration</a></li>
+    <li><a href="auditing" title="Auditing"><span class="symbol resource"></span>Auditing</a></li>
+    <li><a href="cloudbackupschedule" title="CloudBackupSchedule"><span class="symbol resource"></span>CloudBackupSchedule</a></li>
+    <li><a href="cloudprovideraccess" title="CloudProviderAccess"><span class="symbol resource"></span>CloudProviderAccess</a></li>
+    <li><a href="cloudprovideraccessauthorization" title="CloudProviderAccessAuthorization"><span class="symbol resource"></span>CloudProviderAccessAuthorization</a></li>
+    <li><a href="cloudprovideraccesssetup" title="CloudProviderAccessSetup"><span class="symbol resource"></span>CloudProviderAccessSetup</a></li>
+    <li><a href="cloudprovidersnapshot" title="CloudProviderSnapshot"><span class="symbol resource"></span>CloudProviderSnapshot</a></li>
+    <li><a href="cloudprovidersnapshotbackuppolicy" title="CloudProviderSnapshotBackupPolicy"><span class="symbol resource"></span>CloudProviderSnapshotBackupPolicy</a></li>
+    <li><a href="cloudprovidersnapshotrestorejob" title="CloudProviderSnapshotRestoreJob"><span class="symbol resource"></span>CloudProviderSnapshotRestoreJob</a></li>
+    <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
+    <li><a href="customdbrole" title="CustomDbRole"><span class="symbol resource"></span>CustomDbRole</a></li>
+    <li><a href="customdnsconfigurationclusteraws" title="CustomDnsConfigurationClusterAws"><span class="symbol resource"></span>CustomDnsConfigurationClusterAws</a></li>
+    <li><a href="datalake" title="DataLake"><span class="symbol resource"></span>DataLake</a></li>
+    <li><a href="databaseuser" title="DatabaseUser"><span class="symbol resource"></span>DatabaseUser</a></li>
+    <li><a href="encryptionatrest" title="EncryptionAtRest"><span class="symbol resource"></span>EncryptionAtRest</a></li>
+    <li><a href="eventtrigger" title="EventTrigger"><span class="symbol resource"></span>EventTrigger</a></li>
+    <li><a href="globalclusterconfig" title="GlobalClusterConfig"><span class="symbol resource"></span>GlobalClusterConfig</a></li>
+    <li><a href="ldapconfiguration" title="LdapConfiguration"><span class="symbol resource"></span>LdapConfiguration</a></li>
+    <li><a href="ldapverify" title="LdapVerify"><span class="symbol resource"></span>LdapVerify</a></li>
+    <li><a href="maintenancewindow" title="MaintenanceWindow"><span class="symbol resource"></span>MaintenanceWindow</a></li>
+    <li><a href="networkcontainer" title="NetworkContainer"><span class="symbol resource"></span>NetworkContainer</a></li>
+    <li><a href="networkpeering" title="NetworkPeering"><span class="symbol resource"></span>NetworkPeering</a></li>
+    <li><a href="onlinearchive" title="OnlineArchive"><span class="symbol resource"></span>OnlineArchive</a></li>
+    <li><a href="privateipmode" title="PrivateIpMode"><span class="symbol resource"></span>PrivateIpMode</a></li>
+    <li><a href="privatelinkendpoint" title="PrivateLinkEndpoint"><span class="symbol resource"></span>PrivateLinkEndpoint</a></li>
+    <li><a href="privatelinkendpointservice" title="PrivateLinkEndpointService"><span class="symbol resource"></span>PrivateLinkEndpointService</a></li>
+    <li><a href="project" title="Project"><span class="symbol resource"></span>Project</a></li>
+    <li><a href="projectipaccesslist" title="ProjectIpAccessList"><span class="symbol resource"></span>ProjectIpAccessList</a></li>
+    <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
+    <li><a href="searchindex" title="SearchIndex"><span class="symbol resource"></span>SearchIndex</a></li>
+    <li><a href="team" title="Team"><span class="symbol resource"></span>Team</a></li>
+    <li><a href="teams" title="Teams"><span class="symbol resource"></span>Teams</a></li>
+    <li><a href="thirdpartyintegration" title="ThirdPartyIntegration"><span class="symbol resource"></span>ThirdPartyIntegration</a></li>
+    <li><a href="x509authenticationdatabaseuser" title="X509AuthenticationDatabaseUser"><span class="symbol resource"></span>X509AuthenticationDatabaseUser</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="get509authenticationdatabaseuser" title="Get509AuthenticationDatabaseUser"><span class="api-symbol api-symbol--function"></span>Get509AuthenticationDatabaseUser</a></li>
-    <li><a href="getalertconfiguration" title="GetAlertConfiguration"><span class="api-symbol api-symbol--function"></span>GetAlertConfiguration</a></li>
-    <li><a href="getauditing" title="GetAuditing"><span class="api-symbol api-symbol--function"></span>GetAuditing</a></li>
-    <li><a href="getcloudbackupschedule" title="GetCloudBackupSchedule"><span class="api-symbol api-symbol--function"></span>GetCloudBackupSchedule</a></li>
-    <li><a href="getcloudprovideraccess" title="GetCloudProviderAccess"><span class="api-symbol api-symbol--function"></span>GetCloudProviderAccess</a></li>
-    <li><a href="getcloudprovideraccesssetup" title="GetCloudProviderAccessSetup"><span class="api-symbol api-symbol--function"></span>GetCloudProviderAccessSetup</a></li>
-    <li><a href="getcloudprovidersnapshot" title="GetCloudProviderSnapshot"><span class="api-symbol api-symbol--function"></span>GetCloudProviderSnapshot</a></li>
-    <li><a href="getcloudprovidersnapshotbackuppolicy" title="GetCloudProviderSnapshotBackupPolicy"><span class="api-symbol api-symbol--function"></span>GetCloudProviderSnapshotBackupPolicy</a></li>
-    <li><a href="getcloudprovidersnapshotrestorejob" title="GetCloudProviderSnapshotRestoreJob"><span class="api-symbol api-symbol--function"></span>GetCloudProviderSnapshotRestoreJob</a></li>
-    <li><a href="getcloudprovidersnapshotrestorejobs" title="GetCloudProviderSnapshotRestoreJobs"><span class="api-symbol api-symbol--function"></span>GetCloudProviderSnapshotRestoreJobs</a></li>
-    <li><a href="getcloudprovidersnapshots" title="GetCloudProviderSnapshots"><span class="api-symbol api-symbol--function"></span>GetCloudProviderSnapshots</a></li>
-    <li><a href="getcluster" title="GetCluster"><span class="api-symbol api-symbol--function"></span>GetCluster</a></li>
-    <li><a href="getclusters" title="GetClusters"><span class="api-symbol api-symbol--function"></span>GetClusters</a></li>
-    <li><a href="getcustomdbrole" title="GetCustomDbRole"><span class="api-symbol api-symbol--function"></span>GetCustomDbRole</a></li>
-    <li><a href="getcustomdbroles" title="GetCustomDbRoles"><span class="api-symbol api-symbol--function"></span>GetCustomDbRoles</a></li>
-    <li><a href="getcustomdnsconfigurationclusteraws" title="GetCustomDnsConfigurationClusterAws"><span class="api-symbol api-symbol--function"></span>GetCustomDnsConfigurationClusterAws</a></li>
-    <li><a href="getdatalake" title="GetDataLake"><span class="api-symbol api-symbol--function"></span>GetDataLake</a></li>
-    <li><a href="getdatalakes" title="GetDataLakes"><span class="api-symbol api-symbol--function"></span>GetDataLakes</a></li>
-    <li><a href="getdatabaseuser" title="GetDatabaseUser"><span class="api-symbol api-symbol--function"></span>GetDatabaseUser</a></li>
-    <li><a href="getdatabaseusers" title="GetDatabaseUsers"><span class="api-symbol api-symbol--function"></span>GetDatabaseUsers</a></li>
-    <li><a href="geteventtrigger" title="GetEventTrigger"><span class="api-symbol api-symbol--function"></span>GetEventTrigger</a></li>
-    <li><a href="geteventtriggers" title="GetEventTriggers"><span class="api-symbol api-symbol--function"></span>GetEventTriggers</a></li>
-    <li><a href="getglobalclusterconfig" title="GetGlobalClusterConfig"><span class="api-symbol api-symbol--function"></span>GetGlobalClusterConfig</a></li>
-    <li><a href="getldapconfiguration" title="GetLdapConfiguration"><span class="api-symbol api-symbol--function"></span>GetLdapConfiguration</a></li>
-    <li><a href="getldapverify" title="GetLdapVerify"><span class="api-symbol api-symbol--function"></span>GetLdapVerify</a></li>
-    <li><a href="getmaintenancewindow" title="GetMaintenanceWindow"><span class="api-symbol api-symbol--function"></span>GetMaintenanceWindow</a></li>
-    <li><a href="getnetworkcontainer" title="GetNetworkContainer"><span class="api-symbol api-symbol--function"></span>GetNetworkContainer</a></li>
-    <li><a href="getnetworkcontainers" title="GetNetworkContainers"><span class="api-symbol api-symbol--function"></span>GetNetworkContainers</a></li>
-    <li><a href="getnetworkpeering" title="GetNetworkPeering"><span class="api-symbol api-symbol--function"></span>GetNetworkPeering</a></li>
-    <li><a href="getnetworkpeerings" title="GetNetworkPeerings"><span class="api-symbol api-symbol--function"></span>GetNetworkPeerings</a></li>
-    <li><a href="getonlinearchive" title="GetOnlineArchive"><span class="api-symbol api-symbol--function"></span>GetOnlineArchive</a></li>
-    <li><a href="getonlinearchives" title="GetOnlineArchives"><span class="api-symbol api-symbol--function"></span>GetOnlineArchives</a></li>
-    <li><a href="getprivatelinkendpoint" title="GetPrivateLinkEndpoint"><span class="api-symbol api-symbol--function"></span>GetPrivateLinkEndpoint</a></li>
-    <li><a href="getprivatelinkendpointservice" title="GetPrivateLinkEndpointService"><span class="api-symbol api-symbol--function"></span>GetPrivateLinkEndpointService</a></li>
-    <li><a href="getproject" title="GetProject"><span class="api-symbol api-symbol--function"></span>GetProject</a></li>
-    <li><a href="getprojectipaccesslist" title="GetProjectIpAccessList"><span class="api-symbol api-symbol--function"></span>GetProjectIpAccessList</a></li>
-    <li><a href="getprojects" title="GetProjects"><span class="api-symbol api-symbol--function"></span>GetProjects</a></li>
-    <li><a href="getsearchindex" title="GetSearchIndex"><span class="api-symbol api-symbol--function"></span>GetSearchIndex</a></li>
-    <li><a href="getsearchindexes" title="GetSearchIndexes"><span class="api-symbol api-symbol--function"></span>GetSearchIndexes</a></li>
-    <li><a href="getteam" title="GetTeam"><span class="api-symbol api-symbol--function"></span>GetTeam</a></li>
-    <li><a href="getteams" title="GetTeams"><span class="api-symbol api-symbol--function"></span>GetTeams</a></li>
-    <li><a href="getthirdpartyintegration" title="GetThirdPartyIntegration"><span class="api-symbol api-symbol--function"></span>GetThirdPartyIntegration</a></li>
-    <li><a href="getthirdpartyintegrations" title="GetThirdPartyIntegrations"><span class="api-symbol api-symbol--function"></span>GetThirdPartyIntegrations</a></li>
+    <li><a href="get509authenticationdatabaseuser" title="Get509AuthenticationDatabaseUser"><span class="symbol function"></span>Get509AuthenticationDatabaseUser</a></li>
+    <li><a href="getalertconfiguration" title="GetAlertConfiguration"><span class="symbol function"></span>GetAlertConfiguration</a></li>
+    <li><a href="getauditing" title="GetAuditing"><span class="symbol function"></span>GetAuditing</a></li>
+    <li><a href="getcloudbackupschedule" title="GetCloudBackupSchedule"><span class="symbol function"></span>GetCloudBackupSchedule</a></li>
+    <li><a href="getcloudprovideraccess" title="GetCloudProviderAccess"><span class="symbol function"></span>GetCloudProviderAccess</a></li>
+    <li><a href="getcloudprovideraccesssetup" title="GetCloudProviderAccessSetup"><span class="symbol function"></span>GetCloudProviderAccessSetup</a></li>
+    <li><a href="getcloudprovidersnapshot" title="GetCloudProviderSnapshot"><span class="symbol function"></span>GetCloudProviderSnapshot</a></li>
+    <li><a href="getcloudprovidersnapshotbackuppolicy" title="GetCloudProviderSnapshotBackupPolicy"><span class="symbol function"></span>GetCloudProviderSnapshotBackupPolicy</a></li>
+    <li><a href="getcloudprovidersnapshotrestorejob" title="GetCloudProviderSnapshotRestoreJob"><span class="symbol function"></span>GetCloudProviderSnapshotRestoreJob</a></li>
+    <li><a href="getcloudprovidersnapshotrestorejobs" title="GetCloudProviderSnapshotRestoreJobs"><span class="symbol function"></span>GetCloudProviderSnapshotRestoreJobs</a></li>
+    <li><a href="getcloudprovidersnapshots" title="GetCloudProviderSnapshots"><span class="symbol function"></span>GetCloudProviderSnapshots</a></li>
+    <li><a href="getcluster" title="GetCluster"><span class="symbol function"></span>GetCluster</a></li>
+    <li><a href="getclusters" title="GetClusters"><span class="symbol function"></span>GetClusters</a></li>
+    <li><a href="getcustomdbrole" title="GetCustomDbRole"><span class="symbol function"></span>GetCustomDbRole</a></li>
+    <li><a href="getcustomdbroles" title="GetCustomDbRoles"><span class="symbol function"></span>GetCustomDbRoles</a></li>
+    <li><a href="getcustomdnsconfigurationclusteraws" title="GetCustomDnsConfigurationClusterAws"><span class="symbol function"></span>GetCustomDnsConfigurationClusterAws</a></li>
+    <li><a href="getdatalake" title="GetDataLake"><span class="symbol function"></span>GetDataLake</a></li>
+    <li><a href="getdatalakes" title="GetDataLakes"><span class="symbol function"></span>GetDataLakes</a></li>
+    <li><a href="getdatabaseuser" title="GetDatabaseUser"><span class="symbol function"></span>GetDatabaseUser</a></li>
+    <li><a href="getdatabaseusers" title="GetDatabaseUsers"><span class="symbol function"></span>GetDatabaseUsers</a></li>
+    <li><a href="geteventtrigger" title="GetEventTrigger"><span class="symbol function"></span>GetEventTrigger</a></li>
+    <li><a href="geteventtriggers" title="GetEventTriggers"><span class="symbol function"></span>GetEventTriggers</a></li>
+    <li><a href="getglobalclusterconfig" title="GetGlobalClusterConfig"><span class="symbol function"></span>GetGlobalClusterConfig</a></li>
+    <li><a href="getldapconfiguration" title="GetLdapConfiguration"><span class="symbol function"></span>GetLdapConfiguration</a></li>
+    <li><a href="getldapverify" title="GetLdapVerify"><span class="symbol function"></span>GetLdapVerify</a></li>
+    <li><a href="getmaintenancewindow" title="GetMaintenanceWindow"><span class="symbol function"></span>GetMaintenanceWindow</a></li>
+    <li><a href="getnetworkcontainer" title="GetNetworkContainer"><span class="symbol function"></span>GetNetworkContainer</a></li>
+    <li><a href="getnetworkcontainers" title="GetNetworkContainers"><span class="symbol function"></span>GetNetworkContainers</a></li>
+    <li><a href="getnetworkpeering" title="GetNetworkPeering"><span class="symbol function"></span>GetNetworkPeering</a></li>
+    <li><a href="getnetworkpeerings" title="GetNetworkPeerings"><span class="symbol function"></span>GetNetworkPeerings</a></li>
+    <li><a href="getonlinearchive" title="GetOnlineArchive"><span class="symbol function"></span>GetOnlineArchive</a></li>
+    <li><a href="getonlinearchives" title="GetOnlineArchives"><span class="symbol function"></span>GetOnlineArchives</a></li>
+    <li><a href="getprivatelinkendpoint" title="GetPrivateLinkEndpoint"><span class="symbol function"></span>GetPrivateLinkEndpoint</a></li>
+    <li><a href="getprivatelinkendpointservice" title="GetPrivateLinkEndpointService"><span class="symbol function"></span>GetPrivateLinkEndpointService</a></li>
+    <li><a href="getproject" title="GetProject"><span class="symbol function"></span>GetProject</a></li>
+    <li><a href="getprojectipaccesslist" title="GetProjectIpAccessList"><span class="symbol function"></span>GetProjectIpAccessList</a></li>
+    <li><a href="getprojects" title="GetProjects"><span class="symbol function"></span>GetProjects</a></li>
+    <li><a href="getsearchindex" title="GetSearchIndex"><span class="symbol function"></span>GetSearchIndex</a></li>
+    <li><a href="getsearchindexes" title="GetSearchIndexes"><span class="symbol function"></span>GetSearchIndexes</a></li>
+    <li><a href="getteam" title="GetTeam"><span class="symbol function"></span>GetTeam</a></li>
+    <li><a href="getteams" title="GetTeams"><span class="symbol function"></span>GetTeams</a></li>
+    <li><a href="getthirdpartyintegration" title="GetThirdPartyIntegration"><span class="symbol function"></span>GetThirdPartyIntegration</a></li>
+    <li><a href="getthirdpartyintegrations" title="GetThirdPartyIntegrations"><span class="symbol function"></span>GetThirdPartyIntegrations</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

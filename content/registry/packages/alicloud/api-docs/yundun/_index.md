@@ -13,14 +13,14 @@ Explore the resources and functions of the alicloud.yundun module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="bastionhostinstance" title="BastionHostInstance"><span class="api-symbol api-symbol--resource"></span>BastionHostInstance</a></li>
-    <li><a href="dbauditinstance" title="DBAuditInstance"><span class="api-symbol api-symbol--resource"></span>DBAuditInstance</a></li>
+    <li><a href="bastionhostinstance" title="BastionHostInstance"><span class="symbol resource"></span>BastionHostInstance</a></li>
+    <li><a href="dbauditinstance" title="DBAuditInstance"><span class="symbol resource"></span>DBAuditInstance</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getbastionhostinstances" title="GetBastionHostInstances"><span class="api-symbol api-symbol--function"></span>GetBastionHostInstances</a></li>
-    <li><a href="getdbauditinstance" title="GetDBAuditInstance"><span class="api-symbol api-symbol--function"></span>GetDBAuditInstance</a></li>
+    <li><a href="getbastionhostinstances" title="GetBastionHostInstances"><span class="symbol function"></span>GetBastionHostInstances</a></li>
+    <li><a href="getdbauditinstance" title="GetDBAuditInstance"><span class="symbol function"></span>GetDBAuditInstance</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

@@ -13,30 +13,30 @@ Explore the resources and functions of the google-native.cloudresourcemanager/v3
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="folder" title="Folder"><span class="api-symbol api-symbol--resource"></span>Folder</a></li>
-    <li><a href="folderiampolicy" title="FolderIamPolicy"><span class="api-symbol api-symbol--resource"></span>FolderIamPolicy</a></li>
-    <li><a href="lien" title="Lien"><span class="api-symbol api-symbol--resource"></span>Lien</a></li>
-    <li><a href="organizationiampolicy" title="OrganizationIamPolicy"><span class="api-symbol api-symbol--resource"></span>OrganizationIamPolicy</a></li>
-    <li><a href="project" title="Project"><span class="api-symbol api-symbol--resource"></span>Project</a></li>
-    <li><a href="projectiampolicy" title="ProjectIamPolicy"><span class="api-symbol api-symbol--resource"></span>ProjectIamPolicy</a></li>
-    <li><a href="tagkey" title="TagKey"><span class="api-symbol api-symbol--resource"></span>TagKey</a></li>
-    <li><a href="tagkeyiampolicy" title="TagKeyIamPolicy"><span class="api-symbol api-symbol--resource"></span>TagKeyIamPolicy</a></li>
-    <li><a href="tagvalue" title="TagValue"><span class="api-symbol api-symbol--resource"></span>TagValue</a></li>
-    <li><a href="tagvalueiampolicy" title="TagValueIamPolicy"><span class="api-symbol api-symbol--resource"></span>TagValueIamPolicy</a></li>
+    <li><a href="folder" title="Folder"><span class="symbol resource"></span>Folder</a></li>
+    <li><a href="folderiampolicy" title="FolderIamPolicy"><span class="symbol resource"></span>FolderIamPolicy</a></li>
+    <li><a href="lien" title="Lien"><span class="symbol resource"></span>Lien</a></li>
+    <li><a href="organizationiampolicy" title="OrganizationIamPolicy"><span class="symbol resource"></span>OrganizationIamPolicy</a></li>
+    <li><a href="project" title="Project"><span class="symbol resource"></span>Project</a></li>
+    <li><a href="projectiampolicy" title="ProjectIamPolicy"><span class="symbol resource"></span>ProjectIamPolicy</a></li>
+    <li><a href="tagkey" title="TagKey"><span class="symbol resource"></span>TagKey</a></li>
+    <li><a href="tagkeyiampolicy" title="TagKeyIamPolicy"><span class="symbol resource"></span>TagKeyIamPolicy</a></li>
+    <li><a href="tagvalue" title="TagValue"><span class="symbol resource"></span>TagValue</a></li>
+    <li><a href="tagvalueiampolicy" title="TagValueIamPolicy"><span class="symbol resource"></span>TagValueIamPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getfolder" title="GetFolder"><span class="api-symbol api-symbol--function"></span>GetFolder</a></li>
-    <li><a href="getfolderiampolicy" title="GetFolderIamPolicy"><span class="api-symbol api-symbol--function"></span>GetFolderIamPolicy</a></li>
-    <li><a href="getlien" title="GetLien"><span class="api-symbol api-symbol--function"></span>GetLien</a></li>
-    <li><a href="getorganizationiampolicy" title="GetOrganizationIamPolicy"><span class="api-symbol api-symbol--function"></span>GetOrganizationIamPolicy</a></li>
-    <li><a href="getproject" title="GetProject"><span class="api-symbol api-symbol--function"></span>GetProject</a></li>
-    <li><a href="getprojectiampolicy" title="GetProjectIamPolicy"><span class="api-symbol api-symbol--function"></span>GetProjectIamPolicy</a></li>
-    <li><a href="gettagkey" title="GetTagKey"><span class="api-symbol api-symbol--function"></span>GetTagKey</a></li>
-    <li><a href="gettagkeyiampolicy" title="GetTagKeyIamPolicy"><span class="api-symbol api-symbol--function"></span>GetTagKeyIamPolicy</a></li>
-    <li><a href="gettagvalue" title="GetTagValue"><span class="api-symbol api-symbol--function"></span>GetTagValue</a></li>
-    <li><a href="gettagvalueiampolicy" title="GetTagValueIamPolicy"><span class="api-symbol api-symbol--function"></span>GetTagValueIamPolicy</a></li>
+    <li><a href="getfolder" title="GetFolder"><span class="symbol function"></span>GetFolder</a></li>
+    <li><a href="getfolderiampolicy" title="GetFolderIamPolicy"><span class="symbol function"></span>GetFolderIamPolicy</a></li>
+    <li><a href="getlien" title="GetLien"><span class="symbol function"></span>GetLien</a></li>
+    <li><a href="getorganizationiampolicy" title="GetOrganizationIamPolicy"><span class="symbol function"></span>GetOrganizationIamPolicy</a></li>
+    <li><a href="getproject" title="GetProject"><span class="symbol function"></span>GetProject</a></li>
+    <li><a href="getprojectiampolicy" title="GetProjectIamPolicy"><span class="symbol function"></span>GetProjectIamPolicy</a></li>
+    <li><a href="gettagkey" title="GetTagKey"><span class="symbol function"></span>GetTagKey</a></li>
+    <li><a href="gettagkeyiampolicy" title="GetTagKeyIamPolicy"><span class="symbol function"></span>GetTagKeyIamPolicy</a></li>
+    <li><a href="gettagvalue" title="GetTagValue"><span class="symbol function"></span>GetTagValue</a></li>
+    <li><a href="gettagvalueiampolicy" title="GetTagValueIamPolicy"><span class="symbol function"></span>GetTagValueIamPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

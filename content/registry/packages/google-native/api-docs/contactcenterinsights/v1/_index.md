@@ -13,18 +13,18 @@ Explore the resources and functions of the google-native.contactcenterinsights/v
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="analysis" title="Analysis"><span class="api-symbol api-symbol--resource"></span>Analysis</a></li>
-    <li><a href="conversation" title="Conversation"><span class="api-symbol api-symbol--resource"></span>Conversation</a></li>
-    <li><a href="issuemodel" title="IssueModel"><span class="api-symbol api-symbol--resource"></span>IssueModel</a></li>
-    <li><a href="phrasematcher" title="PhraseMatcher"><span class="api-symbol api-symbol--resource"></span>PhraseMatcher</a></li>
+    <li><a href="analysis" title="Analysis"><span class="symbol resource"></span>Analysis</a></li>
+    <li><a href="conversation" title="Conversation"><span class="symbol resource"></span>Conversation</a></li>
+    <li><a href="issuemodel" title="IssueModel"><span class="symbol resource"></span>IssueModel</a></li>
+    <li><a href="phrasematcher" title="PhraseMatcher"><span class="symbol resource"></span>PhraseMatcher</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getanalysis" title="GetAnalysis"><span class="api-symbol api-symbol--function"></span>GetAnalysis</a></li>
-    <li><a href="getconversation" title="GetConversation"><span class="api-symbol api-symbol--function"></span>GetConversation</a></li>
-    <li><a href="getissuemodel" title="GetIssueModel"><span class="api-symbol api-symbol--function"></span>GetIssueModel</a></li>
-    <li><a href="getphrasematcher" title="GetPhraseMatcher"><span class="api-symbol api-symbol--function"></span>GetPhraseMatcher</a></li>
+    <li><a href="getanalysis" title="GetAnalysis"><span class="symbol function"></span>GetAnalysis</a></li>
+    <li><a href="getconversation" title="GetConversation"><span class="symbol function"></span>GetConversation</a></li>
+    <li><a href="getissuemodel" title="GetIssueModel"><span class="symbol function"></span>GetIssueModel</a></li>
+    <li><a href="getphrasematcher" title="GetPhraseMatcher"><span class="symbol function"></span>GetPhraseMatcher</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

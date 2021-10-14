@@ -13,10 +13,10 @@ Explore the resources and functions of the aws-native.ivs module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="channel" title="Channel"><span class="api-symbol api-symbol--resource"></span>Channel</a></li>
-    <li><a href="playbackkeypair" title="PlaybackKeyPair"><span class="api-symbol api-symbol--resource"></span>PlaybackKeyPair</a></li>
-    <li><a href="recordingconfiguration" title="RecordingConfiguration"><span class="api-symbol api-symbol--resource"></span>RecordingConfiguration</a></li>
-    <li><a href="streamkey" title="StreamKey"><span class="api-symbol api-symbol--resource"></span>StreamKey</a></li>
+    <li><a href="channel" title="Channel"><span class="symbol resource"></span>Channel</a></li>
+    <li><a href="playbackkeypair" title="PlaybackKeyPair"><span class="symbol resource"></span>PlaybackKeyPair</a></li>
+    <li><a href="recordingconfiguration" title="RecordingConfiguration"><span class="symbol resource"></span>RecordingConfiguration</a></li>
+    <li><a href="streamkey" title="StreamKey"><span class="symbol resource"></span>StreamKey</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

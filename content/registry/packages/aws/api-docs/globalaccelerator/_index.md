@@ -13,14 +13,14 @@ Explore the resources and functions of the aws.globalaccelerator module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="accelerator" title="Accelerator"><span class="api-symbol api-symbol--resource"></span>Accelerator</a></li>
-    <li><a href="endpointgroup" title="EndpointGroup"><span class="api-symbol api-symbol--resource"></span>EndpointGroup</a></li>
-    <li><a href="listener" title="Listener"><span class="api-symbol api-symbol--resource"></span>Listener</a></li>
+    <li><a href="accelerator" title="Accelerator"><span class="symbol resource"></span>Accelerator</a></li>
+    <li><a href="endpointgroup" title="EndpointGroup"><span class="symbol resource"></span>EndpointGroup</a></li>
+    <li><a href="listener" title="Listener"><span class="symbol resource"></span>Listener</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getaccelerator" title="GetAccelerator"><span class="api-symbol api-symbol--function"></span>GetAccelerator</a></li>
+    <li><a href="getaccelerator" title="GetAccelerator"><span class="symbol function"></span>GetAccelerator</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

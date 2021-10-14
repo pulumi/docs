@@ -13,8 +13,8 @@ Explore the resources and functions of the kubernetes.events/v1beta1 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="event" title="Event"><span class="api-symbol api-symbol--resource"></span>Event</a></li>
-    <li><a href="eventlist" title="EventList"><span class="api-symbol api-symbol--resource"></span>EventList</a></li>
+    <li><a href="event" title="Event"><span class="symbol resource"></span>Event</a></li>
+    <li><a href="eventlist" title="EventList"><span class="symbol resource"></span>EventList</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

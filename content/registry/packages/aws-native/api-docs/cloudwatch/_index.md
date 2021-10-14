@@ -13,8 +13,8 @@ Explore the resources and functions of the aws-native.cloudwatch module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="compositealarm" title="CompositeAlarm"><span class="api-symbol api-symbol--resource"></span>CompositeAlarm</a></li>
-    <li><a href="metricstream" title="MetricStream"><span class="api-symbol api-symbol--resource"></span>MetricStream</a></li>
+    <li><a href="compositealarm" title="CompositeAlarm"><span class="symbol resource"></span>CompositeAlarm</a></li>
+    <li><a href="metricstream" title="MetricStream"><span class="symbol resource"></span>MetricStream</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

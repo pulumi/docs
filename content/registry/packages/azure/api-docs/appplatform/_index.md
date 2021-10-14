@@ -13,21 +13,21 @@ Explore the resources and functions of the azure.appplatform module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="springcloudactivedeployment" title="SpringCloudActiveDeployment"><span class="api-symbol api-symbol--resource"></span>SpringCloudActiveDeployment</a></li>
-    <li><a href="springcloudapp" title="SpringCloudApp"><span class="api-symbol api-symbol--resource"></span>SpringCloudApp</a></li>
-    <li><a href="springcloudappcosmosdbassociation" title="SpringCloudAppCosmosDBAssociation"><span class="api-symbol api-symbol--resource"></span>SpringCloudAppCosmosDBAssociation</a></li>
-    <li><a href="springcloudappmysqlassociation" title="SpringCloudAppMysqlAssociation"><span class="api-symbol api-symbol--resource"></span>SpringCloudAppMysqlAssociation</a></li>
-    <li><a href="springcloudappredisassociation" title="SpringCloudAppRedisAssociation"><span class="api-symbol api-symbol--resource"></span>SpringCloudAppRedisAssociation</a></li>
-    <li><a href="springcloudcertificate" title="SpringCloudCertificate"><span class="api-symbol api-symbol--resource"></span>SpringCloudCertificate</a></li>
-    <li><a href="springcloudcustomdomain" title="SpringCloudCustomDomain"><span class="api-symbol api-symbol--resource"></span>SpringCloudCustomDomain</a></li>
-    <li><a href="springcloudjavadeployment" title="SpringCloudJavaDeployment"><span class="api-symbol api-symbol--resource"></span>SpringCloudJavaDeployment</a></li>
-    <li><a href="springcloudservice" title="SpringCloudService"><span class="api-symbol api-symbol--resource"></span>SpringCloudService</a></li>
+    <li><a href="springcloudactivedeployment" title="SpringCloudActiveDeployment"><span class="symbol resource"></span>SpringCloudActiveDeployment</a></li>
+    <li><a href="springcloudapp" title="SpringCloudApp"><span class="symbol resource"></span>SpringCloudApp</a></li>
+    <li><a href="springcloudappcosmosdbassociation" title="SpringCloudAppCosmosDBAssociation"><span class="symbol resource"></span>SpringCloudAppCosmosDBAssociation</a></li>
+    <li><a href="springcloudappmysqlassociation" title="SpringCloudAppMysqlAssociation"><span class="symbol resource"></span>SpringCloudAppMysqlAssociation</a></li>
+    <li><a href="springcloudappredisassociation" title="SpringCloudAppRedisAssociation"><span class="symbol resource"></span>SpringCloudAppRedisAssociation</a></li>
+    <li><a href="springcloudcertificate" title="SpringCloudCertificate"><span class="symbol resource"></span>SpringCloudCertificate</a></li>
+    <li><a href="springcloudcustomdomain" title="SpringCloudCustomDomain"><span class="symbol resource"></span>SpringCloudCustomDomain</a></li>
+    <li><a href="springcloudjavadeployment" title="SpringCloudJavaDeployment"><span class="symbol resource"></span>SpringCloudJavaDeployment</a></li>
+    <li><a href="springcloudservice" title="SpringCloudService"><span class="symbol resource"></span>SpringCloudService</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getspringcloudapp" title="GetSpringCloudApp"><span class="api-symbol api-symbol--function"></span>GetSpringCloudApp</a></li>
-    <li><a href="getspringcloudservice" title="GetSpringCloudService"><span class="api-symbol api-symbol--function"></span>GetSpringCloudService</a></li>
+    <li><a href="getspringcloudapp" title="GetSpringCloudApp"><span class="symbol function"></span>GetSpringCloudApp</a></li>
+    <li><a href="getspringcloudservice" title="GetSpringCloudService"><span class="symbol function"></span>GetSpringCloudService</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

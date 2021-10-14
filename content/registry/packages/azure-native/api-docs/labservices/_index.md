@@ -13,33 +13,33 @@ Explore the resources and functions of the azure-native.labservices module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="environment" title="Environment"><span class="api-symbol api-symbol--resource"></span>Environment</a></li>
-    <li><a href="environmentsetting" title="EnvironmentSetting"><span class="api-symbol api-symbol--resource"></span>EnvironmentSetting</a></li>
-    <li><a href="galleryimage" title="GalleryImage"><span class="api-symbol api-symbol--resource"></span>GalleryImage</a></li>
-    <li><a href="lab" title="Lab"><span class="api-symbol api-symbol--resource"></span>Lab</a></li>
-    <li><a href="labaccount" title="LabAccount"><span class="api-symbol api-symbol--resource"></span>LabAccount</a></li>
-    <li><a href="labplan" title="LabPlan"><span class="api-symbol api-symbol--resource"></span>LabPlan</a></li>
-    <li><a href="schedule" title="Schedule"><span class="api-symbol api-symbol--resource"></span>Schedule</a></li>
-    <li><a href="user" title="User"><span class="api-symbol api-symbol--resource"></span>User</a></li>
+    <li><a href="environment" title="Environment"><span class="symbol resource"></span>Environment</a></li>
+    <li><a href="environmentsetting" title="EnvironmentSetting"><span class="symbol resource"></span>EnvironmentSetting</a></li>
+    <li><a href="galleryimage" title="GalleryImage"><span class="symbol resource"></span>GalleryImage</a></li>
+    <li><a href="lab" title="Lab"><span class="symbol resource"></span>Lab</a></li>
+    <li><a href="labaccount" title="LabAccount"><span class="symbol resource"></span>LabAccount</a></li>
+    <li><a href="labplan" title="LabPlan"><span class="symbol resource"></span>LabPlan</a></li>
+    <li><a href="schedule" title="Schedule"><span class="symbol resource"></span>Schedule</a></li>
+    <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getenvironment" title="GetEnvironment"><span class="api-symbol api-symbol--function"></span>GetEnvironment</a></li>
-    <li><a href="getenvironmentsetting" title="GetEnvironmentSetting"><span class="api-symbol api-symbol--function"></span>GetEnvironmentSetting</a></li>
-    <li><a href="getgalleryimage" title="GetGalleryImage"><span class="api-symbol api-symbol--function"></span>GetGalleryImage</a></li>
-    <li><a href="getglobaluserenvironment" title="GetGlobalUserEnvironment"><span class="api-symbol api-symbol--function"></span>GetGlobalUserEnvironment</a></li>
-    <li><a href="getglobaluseroperationbatchstatus" title="GetGlobalUserOperationBatchStatus"><span class="api-symbol api-symbol--function"></span>GetGlobalUserOperationBatchStatus</a></li>
-    <li><a href="getglobaluseroperationstatus" title="GetGlobalUserOperationStatus"><span class="api-symbol api-symbol--function"></span>GetGlobalUserOperationStatus</a></li>
-    <li><a href="getglobaluserpersonalpreferences" title="GetGlobalUserPersonalPreferences"><span class="api-symbol api-symbol--function"></span>GetGlobalUserPersonalPreferences</a></li>
-    <li><a href="getlab" title="GetLab"><span class="api-symbol api-symbol--function"></span>GetLab</a></li>
-    <li><a href="getlabaccount" title="GetLabAccount"><span class="api-symbol api-symbol--function"></span>GetLabAccount</a></li>
-    <li><a href="getlabaccountregionalavailability" title="GetLabAccountRegionalAvailability"><span class="api-symbol api-symbol--function"></span>GetLabAccountRegionalAvailability</a></li>
-    <li><a href="getlabplan" title="GetLabPlan"><span class="api-symbol api-symbol--function"></span>GetLabPlan</a></li>
-    <li><a href="getschedule" title="GetSchedule"><span class="api-symbol api-symbol--function"></span>GetSchedule</a></li>
-    <li><a href="getuser" title="GetUser"><span class="api-symbol api-symbol--function"></span>GetUser</a></li>
-    <li><a href="listglobaluserenvironments" title="ListGlobalUserEnvironments"><span class="api-symbol api-symbol--function"></span>ListGlobalUserEnvironments</a></li>
-    <li><a href="listglobaluserlabs" title="ListGlobalUserLabs"><span class="api-symbol api-symbol--function"></span>ListGlobalUserLabs</a></li>
+    <li><a href="getenvironment" title="GetEnvironment"><span class="symbol function"></span>GetEnvironment</a></li>
+    <li><a href="getenvironmentsetting" title="GetEnvironmentSetting"><span class="symbol function"></span>GetEnvironmentSetting</a></li>
+    <li><a href="getgalleryimage" title="GetGalleryImage"><span class="symbol function"></span>GetGalleryImage</a></li>
+    <li><a href="getglobaluserenvironment" title="GetGlobalUserEnvironment"><span class="symbol function"></span>GetGlobalUserEnvironment</a></li>
+    <li><a href="getglobaluseroperationbatchstatus" title="GetGlobalUserOperationBatchStatus"><span class="symbol function"></span>GetGlobalUserOperationBatchStatus</a></li>
+    <li><a href="getglobaluseroperationstatus" title="GetGlobalUserOperationStatus"><span class="symbol function"></span>GetGlobalUserOperationStatus</a></li>
+    <li><a href="getglobaluserpersonalpreferences" title="GetGlobalUserPersonalPreferences"><span class="symbol function"></span>GetGlobalUserPersonalPreferences</a></li>
+    <li><a href="getlab" title="GetLab"><span class="symbol function"></span>GetLab</a></li>
+    <li><a href="getlabaccount" title="GetLabAccount"><span class="symbol function"></span>GetLabAccount</a></li>
+    <li><a href="getlabaccountregionalavailability" title="GetLabAccountRegionalAvailability"><span class="symbol function"></span>GetLabAccountRegionalAvailability</a></li>
+    <li><a href="getlabplan" title="GetLabPlan"><span class="symbol function"></span>GetLabPlan</a></li>
+    <li><a href="getschedule" title="GetSchedule"><span class="symbol function"></span>GetSchedule</a></li>
+    <li><a href="getuser" title="GetUser"><span class="symbol function"></span>GetUser</a></li>
+    <li><a href="listglobaluserenvironments" title="ListGlobalUserEnvironments"><span class="symbol function"></span>ListGlobalUserEnvironments</a></li>
+    <li><a href="listglobaluserlabs" title="ListGlobalUserLabs"><span class="symbol function"></span>ListGlobalUserLabs</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -49,6 +49,6 @@ Explore the resources and functions of the azure-native.labservices module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.37.0</dd>
+	<dd>1.38.0</dd>
 </dl>
 

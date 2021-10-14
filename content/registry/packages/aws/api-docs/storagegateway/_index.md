@@ -13,21 +13,21 @@ Explore the resources and functions of the aws.storagegateway module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="cache" title="Cache"><span class="api-symbol api-symbol--resource"></span>Cache</a></li>
-    <li><a href="cachesiscsivolume" title="CachesIscsiVolume"><span class="api-symbol api-symbol--resource"></span>CachesIscsiVolume</a></li>
-    <li><a href="filesystemassociation" title="FileSystemAssociation"><span class="api-symbol api-symbol--resource"></span>FileSystemAssociation</a></li>
-    <li><a href="gateway" title="Gateway"><span class="api-symbol api-symbol--resource"></span>Gateway</a></li>
-    <li><a href="nfsfileshare" title="NfsFileShare"><span class="api-symbol api-symbol--resource"></span>NfsFileShare</a></li>
-    <li><a href="smbfileshare" title="SmbFileShare"><span class="api-symbol api-symbol--resource"></span>SmbFileShare</a></li>
-    <li><a href="storediscsivolume" title="StoredIscsiVolume"><span class="api-symbol api-symbol--resource"></span>StoredIscsiVolume</a></li>
-    <li><a href="tapepool" title="TapePool"><span class="api-symbol api-symbol--resource"></span>TapePool</a></li>
-    <li><a href="uploadbuffer" title="UploadBuffer"><span class="api-symbol api-symbol--resource"></span>UploadBuffer</a></li>
-    <li><a href="workingstorage" title="WorkingStorage"><span class="api-symbol api-symbol--resource"></span>WorkingStorage</a></li>
+    <li><a href="cache" title="Cache"><span class="symbol resource"></span>Cache</a></li>
+    <li><a href="cachesiscsivolume" title="CachesIscsiVolume"><span class="symbol resource"></span>CachesIscsiVolume</a></li>
+    <li><a href="filesystemassociation" title="FileSystemAssociation"><span class="symbol resource"></span>FileSystemAssociation</a></li>
+    <li><a href="gateway" title="Gateway"><span class="symbol resource"></span>Gateway</a></li>
+    <li><a href="nfsfileshare" title="NfsFileShare"><span class="symbol resource"></span>NfsFileShare</a></li>
+    <li><a href="smbfileshare" title="SmbFileShare"><span class="symbol resource"></span>SmbFileShare</a></li>
+    <li><a href="storediscsivolume" title="StoredIscsiVolume"><span class="symbol resource"></span>StoredIscsiVolume</a></li>
+    <li><a href="tapepool" title="TapePool"><span class="symbol resource"></span>TapePool</a></li>
+    <li><a href="uploadbuffer" title="UploadBuffer"><span class="symbol resource"></span>UploadBuffer</a></li>
+    <li><a href="workingstorage" title="WorkingStorage"><span class="symbol resource"></span>WorkingStorage</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getlocaldisk" title="GetLocalDisk"><span class="api-symbol api-symbol--function"></span>GetLocalDisk</a></li>
+    <li><a href="getlocaldisk" title="GetLocalDisk"><span class="symbol function"></span>GetLocalDisk</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

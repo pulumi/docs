@@ -13,21 +13,21 @@ Explore the resources and functions of the vault.aws module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="authbackendcert" title="AuthBackendCert"><span class="api-symbol api-symbol--resource"></span>AuthBackendCert</a></li>
-    <li><a href="authbackendclient" title="AuthBackendClient"><span class="api-symbol api-symbol--resource"></span>AuthBackendClient</a></li>
-    <li><a href="authbackendidentitywhitelist" title="AuthBackendIdentityWhitelist"><span class="api-symbol api-symbol--resource"></span>AuthBackendIdentityWhitelist</a></li>
-    <li><a href="authbackendlogin" title="AuthBackendLogin"><span class="api-symbol api-symbol--resource"></span>AuthBackendLogin</a></li>
-    <li><a href="authbackendrole" title="AuthBackendRole"><span class="api-symbol api-symbol--resource"></span>AuthBackendRole</a></li>
-    <li><a href="authbackendroletag" title="AuthBackendRoleTag"><span class="api-symbol api-symbol--resource"></span>AuthBackendRoleTag</a></li>
-    <li><a href="authbackendroletagblacklist" title="AuthBackendRoletagBlacklist"><span class="api-symbol api-symbol--resource"></span>AuthBackendRoletagBlacklist</a></li>
-    <li><a href="authbackendstsrole" title="AuthBackendStsRole"><span class="api-symbol api-symbol--resource"></span>AuthBackendStsRole</a></li>
-    <li><a href="secretbackend" title="SecretBackend"><span class="api-symbol api-symbol--resource"></span>SecretBackend</a></li>
-    <li><a href="secretbackendrole" title="SecretBackendRole"><span class="api-symbol api-symbol--resource"></span>SecretBackendRole</a></li>
+    <li><a href="authbackendcert" title="AuthBackendCert"><span class="symbol resource"></span>AuthBackendCert</a></li>
+    <li><a href="authbackendclient" title="AuthBackendClient"><span class="symbol resource"></span>AuthBackendClient</a></li>
+    <li><a href="authbackendidentitywhitelist" title="AuthBackendIdentityWhitelist"><span class="symbol resource"></span>AuthBackendIdentityWhitelist</a></li>
+    <li><a href="authbackendlogin" title="AuthBackendLogin"><span class="symbol resource"></span>AuthBackendLogin</a></li>
+    <li><a href="authbackendrole" title="AuthBackendRole"><span class="symbol resource"></span>AuthBackendRole</a></li>
+    <li><a href="authbackendroletag" title="AuthBackendRoleTag"><span class="symbol resource"></span>AuthBackendRoleTag</a></li>
+    <li><a href="authbackendroletagblacklist" title="AuthBackendRoletagBlacklist"><span class="symbol resource"></span>AuthBackendRoletagBlacklist</a></li>
+    <li><a href="authbackendstsrole" title="AuthBackendStsRole"><span class="symbol resource"></span>AuthBackendStsRole</a></li>
+    <li><a href="secretbackend" title="SecretBackend"><span class="symbol resource"></span>SecretBackend</a></li>
+    <li><a href="secretbackendrole" title="SecretBackendRole"><span class="symbol resource"></span>SecretBackendRole</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getaccesscredentials" title="GetAccessCredentials"><span class="api-symbol api-symbol--function"></span>GetAccessCredentials</a></li>
+    <li><a href="getaccesscredentials" title="GetAccessCredentials"><span class="symbol function"></span>GetAccessCredentials</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

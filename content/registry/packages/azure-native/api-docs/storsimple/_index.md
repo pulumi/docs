@@ -13,33 +13,33 @@ Explore the resources and functions of the azure-native.storsimple module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="accesscontrolrecord" title="AccessControlRecord"><span class="api-symbol api-symbol--resource"></span>AccessControlRecord</a></li>
-    <li><a href="backuppolicy" title="BackupPolicy"><span class="api-symbol api-symbol--resource"></span>BackupPolicy</a></li>
-    <li><a href="backupschedule" title="BackupSchedule"><span class="api-symbol api-symbol--resource"></span>BackupSchedule</a></li>
-    <li><a href="bandwidthsetting" title="BandwidthSetting"><span class="api-symbol api-symbol--resource"></span>BandwidthSetting</a></li>
-    <li><a href="manager" title="Manager"><span class="api-symbol api-symbol--resource"></span>Manager</a></li>
-    <li><a href="managerextendedinfo" title="ManagerExtendedInfo"><span class="api-symbol api-symbol--resource"></span>ManagerExtendedInfo</a></li>
-    <li><a href="storageaccountcredential" title="StorageAccountCredential"><span class="api-symbol api-symbol--resource"></span>StorageAccountCredential</a></li>
-    <li><a href="volume" title="Volume"><span class="api-symbol api-symbol--resource"></span>Volume</a></li>
-    <li><a href="volumecontainer" title="VolumeContainer"><span class="api-symbol api-symbol--resource"></span>VolumeContainer</a></li>
+    <li><a href="accesscontrolrecord" title="AccessControlRecord"><span class="symbol resource"></span>AccessControlRecord</a></li>
+    <li><a href="backuppolicy" title="BackupPolicy"><span class="symbol resource"></span>BackupPolicy</a></li>
+    <li><a href="backupschedule" title="BackupSchedule"><span class="symbol resource"></span>BackupSchedule</a></li>
+    <li><a href="bandwidthsetting" title="BandwidthSetting"><span class="symbol resource"></span>BandwidthSetting</a></li>
+    <li><a href="manager" title="Manager"><span class="symbol resource"></span>Manager</a></li>
+    <li><a href="managerextendedinfo" title="ManagerExtendedInfo"><span class="symbol resource"></span>ManagerExtendedInfo</a></li>
+    <li><a href="storageaccountcredential" title="StorageAccountCredential"><span class="symbol resource"></span>StorageAccountCredential</a></li>
+    <li><a href="volume" title="Volume"><span class="symbol resource"></span>Volume</a></li>
+    <li><a href="volumecontainer" title="VolumeContainer"><span class="symbol resource"></span>VolumeContainer</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getaccesscontrolrecord" title="GetAccessControlRecord"><span class="api-symbol api-symbol--function"></span>GetAccessControlRecord</a></li>
-    <li><a href="getbackuppolicy" title="GetBackupPolicy"><span class="api-symbol api-symbol--function"></span>GetBackupPolicy</a></li>
-    <li><a href="getbackupschedule" title="GetBackupSchedule"><span class="api-symbol api-symbol--function"></span>GetBackupSchedule</a></li>
-    <li><a href="getbandwidthsetting" title="GetBandwidthSetting"><span class="api-symbol api-symbol--function"></span>GetBandwidthSetting</a></li>
-    <li><a href="getmanager" title="GetManager"><span class="api-symbol api-symbol--function"></span>GetManager</a></li>
-    <li><a href="getmanagerdevicepublicencryptionkey" title="GetManagerDevicePublicEncryptionKey"><span class="api-symbol api-symbol--function"></span>GetManagerDevicePublicEncryptionKey</a></li>
-    <li><a href="getmanagerextendedinfo" title="GetManagerExtendedInfo"><span class="api-symbol api-symbol--function"></span>GetManagerExtendedInfo</a></li>
-    <li><a href="getstorageaccountcredential" title="GetStorageAccountCredential"><span class="api-symbol api-symbol--function"></span>GetStorageAccountCredential</a></li>
-    <li><a href="getvolume" title="GetVolume"><span class="api-symbol api-symbol--function"></span>GetVolume</a></li>
-    <li><a href="getvolumecontainer" title="GetVolumeContainer"><span class="api-symbol api-symbol--function"></span>GetVolumeContainer</a></li>
-    <li><a href="listdevicefailoversets" title="ListDeviceFailoverSets"><span class="api-symbol api-symbol--function"></span>ListDeviceFailoverSets</a></li>
-    <li><a href="listdevicefailovertars" title="ListDeviceFailoverTars"><span class="api-symbol api-symbol--function"></span>ListDeviceFailoverTars</a></li>
-    <li><a href="listmanageractivationkey" title="ListManagerActivationKey"><span class="api-symbol api-symbol--function"></span>ListManagerActivationKey</a></li>
-    <li><a href="listmanagerpublicencryptionkey" title="ListManagerPublicEncryptionKey"><span class="api-symbol api-symbol--function"></span>ListManagerPublicEncryptionKey</a></li>
+    <li><a href="getaccesscontrolrecord" title="GetAccessControlRecord"><span class="symbol function"></span>GetAccessControlRecord</a></li>
+    <li><a href="getbackuppolicy" title="GetBackupPolicy"><span class="symbol function"></span>GetBackupPolicy</a></li>
+    <li><a href="getbackupschedule" title="GetBackupSchedule"><span class="symbol function"></span>GetBackupSchedule</a></li>
+    <li><a href="getbandwidthsetting" title="GetBandwidthSetting"><span class="symbol function"></span>GetBandwidthSetting</a></li>
+    <li><a href="getmanager" title="GetManager"><span class="symbol function"></span>GetManager</a></li>
+    <li><a href="getmanagerdevicepublicencryptionkey" title="GetManagerDevicePublicEncryptionKey"><span class="symbol function"></span>GetManagerDevicePublicEncryptionKey</a></li>
+    <li><a href="getmanagerextendedinfo" title="GetManagerExtendedInfo"><span class="symbol function"></span>GetManagerExtendedInfo</a></li>
+    <li><a href="getstorageaccountcredential" title="GetStorageAccountCredential"><span class="symbol function"></span>GetStorageAccountCredential</a></li>
+    <li><a href="getvolume" title="GetVolume"><span class="symbol function"></span>GetVolume</a></li>
+    <li><a href="getvolumecontainer" title="GetVolumeContainer"><span class="symbol function"></span>GetVolumeContainer</a></li>
+    <li><a href="listdevicefailoversets" title="ListDeviceFailoverSets"><span class="symbol function"></span>ListDeviceFailoverSets</a></li>
+    <li><a href="listdevicefailovertars" title="ListDeviceFailoverTars"><span class="symbol function"></span>ListDeviceFailoverTars</a></li>
+    <li><a href="listmanageractivationkey" title="ListManagerActivationKey"><span class="symbol function"></span>ListManagerActivationKey</a></li>
+    <li><a href="listmanagerpublicencryptionkey" title="ListManagerPublicEncryptionKey"><span class="symbol function"></span>ListManagerPublicEncryptionKey</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -49,6 +49,6 @@ Explore the resources and functions of the azure-native.storsimple module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.37.0</dd>
+	<dd>1.38.0</dd>
 </dl>
 

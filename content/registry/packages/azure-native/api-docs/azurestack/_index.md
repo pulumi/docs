@@ -13,20 +13,20 @@ Explore the resources and functions of the azure-native.azurestack module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="customersubscription" title="CustomerSubscription"><span class="api-symbol api-symbol--resource"></span>CustomerSubscription</a></li>
-    <li><a href="linkedsubscription" title="LinkedSubscription"><span class="api-symbol api-symbol--resource"></span>LinkedSubscription</a></li>
-    <li><a href="registration" title="Registration"><span class="api-symbol api-symbol--resource"></span>Registration</a></li>
+    <li><a href="customersubscription" title="CustomerSubscription"><span class="symbol resource"></span>CustomerSubscription</a></li>
+    <li><a href="linkedsubscription" title="LinkedSubscription"><span class="symbol resource"></span>LinkedSubscription</a></li>
+    <li><a href="registration" title="Registration"><span class="symbol resource"></span>Registration</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getcustomersubscription" title="GetCustomerSubscription"><span class="api-symbol api-symbol--function"></span>GetCustomerSubscription</a></li>
-    <li><a href="getlinkedsubscription" title="GetLinkedSubscription"><span class="api-symbol api-symbol--function"></span>GetLinkedSubscription</a></li>
-    <li><a href="getproduct" title="GetProduct"><span class="api-symbol api-symbol--function"></span>GetProduct</a></li>
-    <li><a href="getproducts" title="GetProducts"><span class="api-symbol api-symbol--function"></span>GetProducts</a></li>
-    <li><a href="getregistration" title="GetRegistration"><span class="api-symbol api-symbol--function"></span>GetRegistration</a></li>
-    <li><a href="getregistrationactivationkey" title="GetRegistrationActivationKey"><span class="api-symbol api-symbol--function"></span>GetRegistrationActivationKey</a></li>
-    <li><a href="listproductdetails" title="ListProductDetails"><span class="api-symbol api-symbol--function"></span>ListProductDetails</a></li>
+    <li><a href="getcustomersubscription" title="GetCustomerSubscription"><span class="symbol function"></span>GetCustomerSubscription</a></li>
+    <li><a href="getlinkedsubscription" title="GetLinkedSubscription"><span class="symbol function"></span>GetLinkedSubscription</a></li>
+    <li><a href="getproduct" title="GetProduct"><span class="symbol function"></span>GetProduct</a></li>
+    <li><a href="getproducts" title="GetProducts"><span class="symbol function"></span>GetProducts</a></li>
+    <li><a href="getregistration" title="GetRegistration"><span class="symbol function"></span>GetRegistration</a></li>
+    <li><a href="getregistrationactivationkey" title="GetRegistrationActivationKey"><span class="symbol function"></span>GetRegistrationActivationKey</a></li>
+    <li><a href="listproductdetails" title="ListProductDetails"><span class="symbol function"></span>ListProductDetails</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -36,6 +36,6 @@ Explore the resources and functions of the azure-native.azurestack module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.37.0</dd>
+	<dd>1.38.0</dd>
 </dl>
 

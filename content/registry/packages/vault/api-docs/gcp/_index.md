@@ -13,16 +13,16 @@ Explore the resources and functions of the vault.gcp module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="authbackend" title="AuthBackend"><span class="api-symbol api-symbol--resource"></span>AuthBackend</a></li>
-    <li><a href="authbackendrole" title="AuthBackendRole"><span class="api-symbol api-symbol--resource"></span>AuthBackendRole</a></li>
-    <li><a href="secretbackend" title="SecretBackend"><span class="api-symbol api-symbol--resource"></span>SecretBackend</a></li>
-    <li><a href="secretroleset" title="SecretRoleset"><span class="api-symbol api-symbol--resource"></span>SecretRoleset</a></li>
-    <li><a href="secretstaticaccount" title="SecretStaticAccount"><span class="api-symbol api-symbol--resource"></span>SecretStaticAccount</a></li>
+    <li><a href="authbackend" title="AuthBackend"><span class="symbol resource"></span>AuthBackend</a></li>
+    <li><a href="authbackendrole" title="AuthBackendRole"><span class="symbol resource"></span>AuthBackendRole</a></li>
+    <li><a href="secretbackend" title="SecretBackend"><span class="symbol resource"></span>SecretBackend</a></li>
+    <li><a href="secretroleset" title="SecretRoleset"><span class="symbol resource"></span>SecretRoleset</a></li>
+    <li><a href="secretstaticaccount" title="SecretStaticAccount"><span class="symbol resource"></span>SecretStaticAccount</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getauthbackendrole" title="GetAuthBackendRole"><span class="api-symbol api-symbol--function"></span>GetAuthBackendRole</a></li>
+    <li><a href="getauthbackendrole" title="GetAuthBackendRole"><span class="symbol function"></span>GetAuthBackendRole</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

@@ -13,10 +13,10 @@ Explore the resources and functions of the gcp.dataloss module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="preventiondeidentifytemplate" title="PreventionDeidentifyTemplate"><span class="api-symbol api-symbol--resource"></span>PreventionDeidentifyTemplate</a></li>
-    <li><a href="preventioninspecttemplate" title="PreventionInspectTemplate"><span class="api-symbol api-symbol--resource"></span>PreventionInspectTemplate</a></li>
-    <li><a href="preventionjobtrigger" title="PreventionJobTrigger"><span class="api-symbol api-symbol--resource"></span>PreventionJobTrigger</a></li>
-    <li><a href="preventionstoredinfotype" title="PreventionStoredInfoType"><span class="api-symbol api-symbol--resource"></span>PreventionStoredInfoType</a></li>
+    <li><a href="preventiondeidentifytemplate" title="PreventionDeidentifyTemplate"><span class="symbol resource"></span>PreventionDeidentifyTemplate</a></li>
+    <li><a href="preventioninspecttemplate" title="PreventionInspectTemplate"><span class="symbol resource"></span>PreventionInspectTemplate</a></li>
+    <li><a href="preventionjobtrigger" title="PreventionJobTrigger"><span class="symbol resource"></span>PreventionJobTrigger</a></li>
+    <li><a href="preventionstoredinfotype" title="PreventionStoredInfoType"><span class="symbol resource"></span>PreventionStoredInfoType</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

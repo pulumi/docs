@@ -13,8 +13,8 @@ Explore the resources and functions of the aws-native.timestream module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="database" title="Database"><span class="api-symbol api-symbol--resource"></span>Database</a></li>
-    <li><a href="table" title="Table"><span class="api-symbol api-symbol--resource"></span>Table</a></li>
+    <li><a href="database" title="Database"><span class="symbol resource"></span>Database</a></li>
+    <li><a href="table" title="Table"><span class="symbol resource"></span>Table</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

@@ -13,20 +13,20 @@ Explore the resources and functions of the google-native.dlp/v2 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="deidentifytemplate" title="DeidentifyTemplate"><span class="api-symbol api-symbol--resource"></span>DeidentifyTemplate</a></li>
-    <li><a href="dlpjob" title="DlpJob"><span class="api-symbol api-symbol--resource"></span>DlpJob</a></li>
-    <li><a href="inspecttemplate" title="InspectTemplate"><span class="api-symbol api-symbol--resource"></span>InspectTemplate</a></li>
-    <li><a href="jobtrigger" title="JobTrigger"><span class="api-symbol api-symbol--resource"></span>JobTrigger</a></li>
-    <li><a href="storedinfotype" title="StoredInfoType"><span class="api-symbol api-symbol--resource"></span>StoredInfoType</a></li>
+    <li><a href="deidentifytemplate" title="DeidentifyTemplate"><span class="symbol resource"></span>DeidentifyTemplate</a></li>
+    <li><a href="dlpjob" title="DlpJob"><span class="symbol resource"></span>DlpJob</a></li>
+    <li><a href="inspecttemplate" title="InspectTemplate"><span class="symbol resource"></span>InspectTemplate</a></li>
+    <li><a href="jobtrigger" title="JobTrigger"><span class="symbol resource"></span>JobTrigger</a></li>
+    <li><a href="storedinfotype" title="StoredInfoType"><span class="symbol resource"></span>StoredInfoType</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getdeidentifytemplate" title="GetDeidentifyTemplate"><span class="api-symbol api-symbol--function"></span>GetDeidentifyTemplate</a></li>
-    <li><a href="getdlpjob" title="GetDlpJob"><span class="api-symbol api-symbol--function"></span>GetDlpJob</a></li>
-    <li><a href="getinspecttemplate" title="GetInspectTemplate"><span class="api-symbol api-symbol--function"></span>GetInspectTemplate</a></li>
-    <li><a href="getjobtrigger" title="GetJobTrigger"><span class="api-symbol api-symbol--function"></span>GetJobTrigger</a></li>
-    <li><a href="getstoredinfotype" title="GetStoredInfoType"><span class="api-symbol api-symbol--function"></span>GetStoredInfoType</a></li>
+    <li><a href="getdeidentifytemplate" title="GetDeidentifyTemplate"><span class="symbol function"></span>GetDeidentifyTemplate</a></li>
+    <li><a href="getdlpjob" title="GetDlpJob"><span class="symbol function"></span>GetDlpJob</a></li>
+    <li><a href="getinspecttemplate" title="GetInspectTemplate"><span class="symbol function"></span>GetInspectTemplate</a></li>
+    <li><a href="getjobtrigger" title="GetJobTrigger"><span class="symbol function"></span>GetJobTrigger</a></li>
+    <li><a href="getstoredinfotype" title="GetStoredInfoType"><span class="symbol function"></span>GetStoredInfoType</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

@@ -13,17 +13,17 @@ Explore the resources and functions of the gcp.dataproc module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="autoscalingpolicy" title="AutoscalingPolicy"><span class="api-symbol api-symbol--resource"></span>AutoscalingPolicy</a></li>
-    <li><a href="cluster" title="Cluster"><span class="api-symbol api-symbol--resource"></span>Cluster</a></li>
-    <li><a href="clusteriambinding" title="ClusterIAMBinding"><span class="api-symbol api-symbol--resource"></span>ClusterIAMBinding</a></li>
-    <li><a href="clusteriammember" title="ClusterIAMMember"><span class="api-symbol api-symbol--resource"></span>ClusterIAMMember</a></li>
-    <li><a href="clusteriampolicy" title="ClusterIAMPolicy"><span class="api-symbol api-symbol--resource"></span>ClusterIAMPolicy</a></li>
-    <li><a href="job" title="Job"><span class="api-symbol api-symbol--resource"></span>Job</a></li>
-    <li><a href="jobiambinding" title="JobIAMBinding"><span class="api-symbol api-symbol--resource"></span>JobIAMBinding</a></li>
-    <li><a href="jobiammember" title="JobIAMMember"><span class="api-symbol api-symbol--resource"></span>JobIAMMember</a></li>
-    <li><a href="jobiampolicy" title="JobIAMPolicy"><span class="api-symbol api-symbol--resource"></span>JobIAMPolicy</a></li>
-    <li><a href="metastoreservice" title="MetastoreService"><span class="api-symbol api-symbol--resource"></span>MetastoreService</a></li>
-    <li><a href="workflowtemplate" title="WorkflowTemplate"><span class="api-symbol api-symbol--resource"></span>WorkflowTemplate</a></li>
+    <li><a href="autoscalingpolicy" title="AutoscalingPolicy"><span class="symbol resource"></span>AutoscalingPolicy</a></li>
+    <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
+    <li><a href="clusteriambinding" title="ClusterIAMBinding"><span class="symbol resource"></span>ClusterIAMBinding</a></li>
+    <li><a href="clusteriammember" title="ClusterIAMMember"><span class="symbol resource"></span>ClusterIAMMember</a></li>
+    <li><a href="clusteriampolicy" title="ClusterIAMPolicy"><span class="symbol resource"></span>ClusterIAMPolicy</a></li>
+    <li><a href="job" title="Job"><span class="symbol resource"></span>Job</a></li>
+    <li><a href="jobiambinding" title="JobIAMBinding"><span class="symbol resource"></span>JobIAMBinding</a></li>
+    <li><a href="jobiammember" title="JobIAMMember"><span class="symbol resource"></span>JobIAMMember</a></li>
+    <li><a href="jobiampolicy" title="JobIAMPolicy"><span class="symbol resource"></span>JobIAMPolicy</a></li>
+    <li><a href="metastoreservice" title="MetastoreService"><span class="symbol resource"></span>MetastoreService</a></li>
+    <li><a href="workflowtemplate" title="WorkflowTemplate"><span class="symbol resource"></span>WorkflowTemplate</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

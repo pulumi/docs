@@ -13,14 +13,14 @@ Explore the resources and functions of the vault.transit module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="secretbackendkey" title="SecretBackendKey"><span class="api-symbol api-symbol--resource"></span>SecretBackendKey</a></li>
-    <li><a href="secretcacheconfig" title="SecretCacheConfig"><span class="api-symbol api-symbol--resource"></span>SecretCacheConfig</a></li>
+    <li><a href="secretbackendkey" title="SecretBackendKey"><span class="symbol resource"></span>SecretBackendKey</a></li>
+    <li><a href="secretcacheconfig" title="SecretCacheConfig"><span class="symbol resource"></span>SecretCacheConfig</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getdecrypt" title="GetDecrypt"><span class="api-symbol api-symbol--function"></span>GetDecrypt</a></li>
-    <li><a href="getencrypt" title="GetEncrypt"><span class="api-symbol api-symbol--function"></span>GetEncrypt</a></li>
+    <li><a href="getdecrypt" title="GetDecrypt"><span class="symbol function"></span>GetDecrypt</a></li>
+    <li><a href="getencrypt" title="GetEncrypt"><span class="symbol function"></span>GetEncrypt</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

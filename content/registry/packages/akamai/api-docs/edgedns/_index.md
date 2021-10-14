@@ -13,14 +13,14 @@ Explore the resources and functions of the akamai.edgedns module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="dnsrecord" title="DnsRecord"><span class="api-symbol api-symbol--resource"></span>DnsRecord</a></li>
-    <li><a href="dnszone" title="DnsZone"><span class="api-symbol api-symbol--resource"></span>DnsZone</a></li>
+    <li><a href="dnsrecord" title="DnsRecord"><span class="symbol resource"></span>DnsRecord</a></li>
+    <li><a href="dnszone" title="DnsZone"><span class="symbol resource"></span>DnsZone</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getauthoritiesset" title="GetAuthoritiesSet"><span class="api-symbol api-symbol--function"></span>GetAuthoritiesSet</a></li>
-    <li><a href="getdnsrecordset" title="GetDnsRecordSet"><span class="api-symbol api-symbol--function"></span>GetDnsRecordSet</a></li>
+    <li><a href="getauthoritiesset" title="GetAuthoritiesSet"><span class="symbol function"></span>GetAuthoritiesSet</a></li>
+    <li><a href="getdnsrecordset" title="GetDnsRecordSet"><span class="symbol function"></span>GetDnsRecordSet</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

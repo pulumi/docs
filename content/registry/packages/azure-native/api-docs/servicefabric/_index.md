@@ -13,25 +13,25 @@ Explore the resources and functions of the azure-native.servicefabric module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="application" title="Application"><span class="api-symbol api-symbol--resource"></span>Application</a></li>
-    <li><a href="applicationtype" title="ApplicationType"><span class="api-symbol api-symbol--resource"></span>ApplicationType</a></li>
-    <li><a href="applicationtypeversion" title="ApplicationTypeVersion"><span class="api-symbol api-symbol--resource"></span>ApplicationTypeVersion</a></li>
-    <li><a href="cluster" title="Cluster"><span class="api-symbol api-symbol--resource"></span>Cluster</a></li>
-    <li><a href="managedcluster" title="ManagedCluster"><span class="api-symbol api-symbol--resource"></span>ManagedCluster</a></li>
-    <li><a href="nodetype" title="NodeType"><span class="api-symbol api-symbol--resource"></span>NodeType</a></li>
-    <li><a href="service" title="Service"><span class="api-symbol api-symbol--resource"></span>Service</a></li>
+    <li><a href="application" title="Application"><span class="symbol resource"></span>Application</a></li>
+    <li><a href="applicationtype" title="ApplicationType"><span class="symbol resource"></span>ApplicationType</a></li>
+    <li><a href="applicationtypeversion" title="ApplicationTypeVersion"><span class="symbol resource"></span>ApplicationTypeVersion</a></li>
+    <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
+    <li><a href="managedcluster" title="ManagedCluster"><span class="symbol resource"></span>ManagedCluster</a></li>
+    <li><a href="nodetype" title="NodeType"><span class="symbol resource"></span>NodeType</a></li>
+    <li><a href="service" title="Service"><span class="symbol resource"></span>Service</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getapplication" title="GetApplication"><span class="api-symbol api-symbol--function"></span>GetApplication</a></li>
-    <li><a href="getapplicationtype" title="GetApplicationType"><span class="api-symbol api-symbol--function"></span>GetApplicationType</a></li>
-    <li><a href="getapplicationtypeversion" title="GetApplicationTypeVersion"><span class="api-symbol api-symbol--function"></span>GetApplicationTypeVersion</a></li>
-    <li><a href="getcluster" title="GetCluster"><span class="api-symbol api-symbol--function"></span>GetCluster</a></li>
-    <li><a href="getmanagedcluster" title="GetManagedCluster"><span class="api-symbol api-symbol--function"></span>GetManagedCluster</a></li>
-    <li><a href="getnodetype" title="GetNodeType"><span class="api-symbol api-symbol--function"></span>GetNodeType</a></li>
-    <li><a href="getservice" title="GetService"><span class="api-symbol api-symbol--function"></span>GetService</a></li>
-    <li><a href="listlistupgradableversionpost" title="ListListUpgradableVersionPost"><span class="api-symbol api-symbol--function"></span>ListListUpgradableVersionPost</a></li>
+    <li><a href="getapplication" title="GetApplication"><span class="symbol function"></span>GetApplication</a></li>
+    <li><a href="getapplicationtype" title="GetApplicationType"><span class="symbol function"></span>GetApplicationType</a></li>
+    <li><a href="getapplicationtypeversion" title="GetApplicationTypeVersion"><span class="symbol function"></span>GetApplicationTypeVersion</a></li>
+    <li><a href="getcluster" title="GetCluster"><span class="symbol function"></span>GetCluster</a></li>
+    <li><a href="getmanagedcluster" title="GetManagedCluster"><span class="symbol function"></span>GetManagedCluster</a></li>
+    <li><a href="getnodetype" title="GetNodeType"><span class="symbol function"></span>GetNodeType</a></li>
+    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
+    <li><a href="listlistupgradableversionpost" title="ListListUpgradableVersionPost"><span class="symbol function"></span>ListListUpgradableVersionPost</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -41,6 +41,6 @@ Explore the resources and functions of the azure-native.servicefabric module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.37.0</dd>
+	<dd>1.38.0</dd>
 </dl>
 

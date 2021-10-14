@@ -13,17 +13,17 @@ Explore the resources and functions of the okta.group module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="group" title="Group"><span class="api-symbol api-symbol--resource"></span>Group</a></li>
-    <li><a href="membership" title="Membership"><span class="api-symbol api-symbol--resource"></span>Membership</a></li>
-    <li><a href="role" title="Role"><span class="api-symbol api-symbol--resource"></span>Role</a></li>
-    <li><a href="roles" title="Roles"><span class="api-symbol api-symbol--resource"></span>Roles</a></li>
-    <li><a href="rule" title="Rule"><span class="api-symbol api-symbol--resource"></span>Rule</a></li>
+    <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
+    <li><a href="membership" title="Membership"><span class="symbol resource"></span>Membership</a></li>
+    <li><a href="role" title="Role"><span class="symbol resource"></span>Role</a></li>
+    <li><a href="roles" title="Roles"><span class="symbol resource"></span>Roles</a></li>
+    <li><a href="rule" title="Rule"><span class="symbol resource"></span>Rule</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="geteveryonegroup" title="GetEveryoneGroup"><span class="api-symbol api-symbol--function"></span>GetEveryoneGroup</a></li>
-    <li><a href="getgroup" title="GetGroup"><span class="api-symbol api-symbol--function"></span>GetGroup</a></li>
+    <li><a href="geteveryonegroup" title="GetEveryoneGroup"><span class="symbol function"></span>GetEveryoneGroup</a></li>
+    <li><a href="getgroup" title="GetGroup"><span class="symbol function"></span>GetGroup</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

@@ -13,26 +13,26 @@ Explore the resources and functions of the google-native.pubsub/v1 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="schema" title="Schema"><span class="api-symbol api-symbol--resource"></span>Schema</a></li>
-    <li><a href="schemaiampolicy" title="SchemaIamPolicy"><span class="api-symbol api-symbol--resource"></span>SchemaIamPolicy</a></li>
-    <li><a href="snapshot" title="Snapshot"><span class="api-symbol api-symbol--resource"></span>Snapshot</a></li>
-    <li><a href="snapshotiampolicy" title="SnapshotIamPolicy"><span class="api-symbol api-symbol--resource"></span>SnapshotIamPolicy</a></li>
-    <li><a href="subscription" title="Subscription"><span class="api-symbol api-symbol--resource"></span>Subscription</a></li>
-    <li><a href="subscriptioniampolicy" title="SubscriptionIamPolicy"><span class="api-symbol api-symbol--resource"></span>SubscriptionIamPolicy</a></li>
-    <li><a href="topic" title="Topic"><span class="api-symbol api-symbol--resource"></span>Topic</a></li>
-    <li><a href="topiciampolicy" title="TopicIamPolicy"><span class="api-symbol api-symbol--resource"></span>TopicIamPolicy</a></li>
+    <li><a href="schema" title="Schema"><span class="symbol resource"></span>Schema</a></li>
+    <li><a href="schemaiampolicy" title="SchemaIamPolicy"><span class="symbol resource"></span>SchemaIamPolicy</a></li>
+    <li><a href="snapshot" title="Snapshot"><span class="symbol resource"></span>Snapshot</a></li>
+    <li><a href="snapshotiampolicy" title="SnapshotIamPolicy"><span class="symbol resource"></span>SnapshotIamPolicy</a></li>
+    <li><a href="subscription" title="Subscription"><span class="symbol resource"></span>Subscription</a></li>
+    <li><a href="subscriptioniampolicy" title="SubscriptionIamPolicy"><span class="symbol resource"></span>SubscriptionIamPolicy</a></li>
+    <li><a href="topic" title="Topic"><span class="symbol resource"></span>Topic</a></li>
+    <li><a href="topiciampolicy" title="TopicIamPolicy"><span class="symbol resource"></span>TopicIamPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getschema" title="GetSchema"><span class="api-symbol api-symbol--function"></span>GetSchema</a></li>
-    <li><a href="getschemaiampolicy" title="GetSchemaIamPolicy"><span class="api-symbol api-symbol--function"></span>GetSchemaIamPolicy</a></li>
-    <li><a href="getsnapshot" title="GetSnapshot"><span class="api-symbol api-symbol--function"></span>GetSnapshot</a></li>
-    <li><a href="getsnapshotiampolicy" title="GetSnapshotIamPolicy"><span class="api-symbol api-symbol--function"></span>GetSnapshotIamPolicy</a></li>
-    <li><a href="getsubscription" title="GetSubscription"><span class="api-symbol api-symbol--function"></span>GetSubscription</a></li>
-    <li><a href="getsubscriptioniampolicy" title="GetSubscriptionIamPolicy"><span class="api-symbol api-symbol--function"></span>GetSubscriptionIamPolicy</a></li>
-    <li><a href="gettopic" title="GetTopic"><span class="api-symbol api-symbol--function"></span>GetTopic</a></li>
-    <li><a href="gettopiciampolicy" title="GetTopicIamPolicy"><span class="api-symbol api-symbol--function"></span>GetTopicIamPolicy</a></li>
+    <li><a href="getschema" title="GetSchema"><span class="symbol function"></span>GetSchema</a></li>
+    <li><a href="getschemaiampolicy" title="GetSchemaIamPolicy"><span class="symbol function"></span>GetSchemaIamPolicy</a></li>
+    <li><a href="getsnapshot" title="GetSnapshot"><span class="symbol function"></span>GetSnapshot</a></li>
+    <li><a href="getsnapshotiampolicy" title="GetSnapshotIamPolicy"><span class="symbol function"></span>GetSnapshotIamPolicy</a></li>
+    <li><a href="getsubscription" title="GetSubscription"><span class="symbol function"></span>GetSubscription</a></li>
+    <li><a href="getsubscriptioniampolicy" title="GetSubscriptionIamPolicy"><span class="symbol function"></span>GetSubscriptionIamPolicy</a></li>
+    <li><a href="gettopic" title="GetTopic"><span class="symbol function"></span>GetTopic</a></li>
+    <li><a href="gettopiciampolicy" title="GetTopicIamPolicy"><span class="symbol function"></span>GetTopicIamPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

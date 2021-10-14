@@ -13,24 +13,24 @@ Explore the resources and functions of the google-native.monitoring/v3 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="alertpolicy" title="AlertPolicy"><span class="api-symbol api-symbol--resource"></span>AlertPolicy</a></li>
-    <li><a href="group" title="Group"><span class="api-symbol api-symbol--resource"></span>Group</a></li>
-    <li><a href="metricdescriptor" title="MetricDescriptor"><span class="api-symbol api-symbol--resource"></span>MetricDescriptor</a></li>
-    <li><a href="notificationchannel" title="NotificationChannel"><span class="api-symbol api-symbol--resource"></span>NotificationChannel</a></li>
-    <li><a href="service" title="Service"><span class="api-symbol api-symbol--resource"></span>Service</a></li>
-    <li><a href="servicelevelobjective" title="ServiceLevelObjective"><span class="api-symbol api-symbol--resource"></span>ServiceLevelObjective</a></li>
-    <li><a href="uptimecheckconfig" title="UptimeCheckConfig"><span class="api-symbol api-symbol--resource"></span>UptimeCheckConfig</a></li>
+    <li><a href="alertpolicy" title="AlertPolicy"><span class="symbol resource"></span>AlertPolicy</a></li>
+    <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
+    <li><a href="metricdescriptor" title="MetricDescriptor"><span class="symbol resource"></span>MetricDescriptor</a></li>
+    <li><a href="notificationchannel" title="NotificationChannel"><span class="symbol resource"></span>NotificationChannel</a></li>
+    <li><a href="service" title="Service"><span class="symbol resource"></span>Service</a></li>
+    <li><a href="servicelevelobjective" title="ServiceLevelObjective"><span class="symbol resource"></span>ServiceLevelObjective</a></li>
+    <li><a href="uptimecheckconfig" title="UptimeCheckConfig"><span class="symbol resource"></span>UptimeCheckConfig</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getalertpolicy" title="GetAlertPolicy"><span class="api-symbol api-symbol--function"></span>GetAlertPolicy</a></li>
-    <li><a href="getgroup" title="GetGroup"><span class="api-symbol api-symbol--function"></span>GetGroup</a></li>
-    <li><a href="getmetricdescriptor" title="GetMetricDescriptor"><span class="api-symbol api-symbol--function"></span>GetMetricDescriptor</a></li>
-    <li><a href="getnotificationchannel" title="GetNotificationChannel"><span class="api-symbol api-symbol--function"></span>GetNotificationChannel</a></li>
-    <li><a href="getservice" title="GetService"><span class="api-symbol api-symbol--function"></span>GetService</a></li>
-    <li><a href="getservicelevelobjective" title="GetServiceLevelObjective"><span class="api-symbol api-symbol--function"></span>GetServiceLevelObjective</a></li>
-    <li><a href="getuptimecheckconfig" title="GetUptimeCheckConfig"><span class="api-symbol api-symbol--function"></span>GetUptimeCheckConfig</a></li>
+    <li><a href="getalertpolicy" title="GetAlertPolicy"><span class="symbol function"></span>GetAlertPolicy</a></li>
+    <li><a href="getgroup" title="GetGroup"><span class="symbol function"></span>GetGroup</a></li>
+    <li><a href="getmetricdescriptor" title="GetMetricDescriptor"><span class="symbol function"></span>GetMetricDescriptor</a></li>
+    <li><a href="getnotificationchannel" title="GetNotificationChannel"><span class="symbol function"></span>GetNotificationChannel</a></li>
+    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
+    <li><a href="getservicelevelobjective" title="GetServiceLevelObjective"><span class="symbol function"></span>GetServiceLevelObjective</a></li>
+    <li><a href="getuptimecheckconfig" title="GetUptimeCheckConfig"><span class="symbol function"></span>GetUptimeCheckConfig</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

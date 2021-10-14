@@ -13,11 +13,11 @@ Explore the resources and functions of the alicloud.alikafka module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="consumergroup" title="ConsumerGroup"><span class="api-symbol api-symbol--resource"></span>ConsumerGroup</a></li>
-    <li><a href="instance" title="Instance"><span class="api-symbol api-symbol--resource"></span>Instance</a></li>
-    <li><a href="saslacl" title="SaslAcl"><span class="api-symbol api-symbol--resource"></span>SaslAcl</a></li>
-    <li><a href="sasluser" title="SaslUser"><span class="api-symbol api-symbol--resource"></span>SaslUser</a></li>
-    <li><a href="topic" title="Topic"><span class="api-symbol api-symbol--resource"></span>Topic</a></li>
+    <li><a href="consumergroup" title="ConsumerGroup"><span class="symbol resource"></span>ConsumerGroup</a></li>
+    <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
+    <li><a href="saslacl" title="SaslAcl"><span class="symbol resource"></span>SaslAcl</a></li>
+    <li><a href="sasluser" title="SaslUser"><span class="symbol resource"></span>SaslUser</a></li>
+    <li><a href="topic" title="Topic"><span class="symbol resource"></span>Topic</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

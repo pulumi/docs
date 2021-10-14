@@ -13,11 +13,11 @@ Explore the resources and functions of the azure.hpc module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="cache" title="Cache"><span class="api-symbol api-symbol--resource"></span>Cache</a></li>
-    <li><a href="cacheaccesspolicy" title="CacheAccessPolicy"><span class="api-symbol api-symbol--resource"></span>CacheAccessPolicy</a></li>
-    <li><a href="cacheblobnfstarget" title="CacheBlobNfsTarget"><span class="api-symbol api-symbol--resource"></span>CacheBlobNfsTarget</a></li>
-    <li><a href="cacheblobtarget" title="CacheBlobTarget"><span class="api-symbol api-symbol--resource"></span>CacheBlobTarget</a></li>
-    <li><a href="cachenfstarget" title="CacheNfsTarget"><span class="api-symbol api-symbol--resource"></span>CacheNfsTarget</a></li>
+    <li><a href="cache" title="Cache"><span class="symbol resource"></span>Cache</a></li>
+    <li><a href="cacheaccesspolicy" title="CacheAccessPolicy"><span class="symbol resource"></span>CacheAccessPolicy</a></li>
+    <li><a href="cacheblobnfstarget" title="CacheBlobNfsTarget"><span class="symbol resource"></span>CacheBlobNfsTarget</a></li>
+    <li><a href="cacheblobtarget" title="CacheBlobTarget"><span class="symbol resource"></span>CacheBlobTarget</a></li>
+    <li><a href="cachenfstarget" title="CacheNfsTarget"><span class="symbol resource"></span>CacheNfsTarget</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

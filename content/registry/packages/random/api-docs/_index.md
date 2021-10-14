@@ -2,9 +2,6 @@
 title: "random"
 title_tag: "random.random"
 meta_desc: "A Pulumi package to safely use randomness in Pulumi programs."
-menu:
-    reference:
-        parent: API Reference
 layout: api
 no_edit_this_page: true
 ---
@@ -16,14 +13,14 @@ A Pulumi package to safely use randomness in Pulumi programs.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="provider" title="Provider"><span class="api-symbol api-symbol--resource"></span>Provider</a></li>
-    <li><a href="randomid" title="RandomId"><span class="api-symbol api-symbol--resource"></span>RandomId</a></li>
-    <li><a href="randominteger" title="RandomInteger"><span class="api-symbol api-symbol--resource"></span>RandomInteger</a></li>
-    <li><a href="randompassword" title="RandomPassword"><span class="api-symbol api-symbol--resource"></span>RandomPassword</a></li>
-    <li><a href="randompet" title="RandomPet"><span class="api-symbol api-symbol--resource"></span>RandomPet</a></li>
-    <li><a href="randomshuffle" title="RandomShuffle"><span class="api-symbol api-symbol--resource"></span>RandomShuffle</a></li>
-    <li><a href="randomstring" title="RandomString"><span class="api-symbol api-symbol--resource"></span>RandomString</a></li>
-    <li><a href="randomuuid" title="RandomUuid"><span class="api-symbol api-symbol--resource"></span>RandomUuid</a></li>
+    <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
+    <li><a href="randomid" title="RandomId"><span class="symbol resource"></span>RandomId</a></li>
+    <li><a href="randominteger" title="RandomInteger"><span class="symbol resource"></span>RandomInteger</a></li>
+    <li><a href="randompassword" title="RandomPassword"><span class="symbol resource"></span>RandomPassword</a></li>
+    <li><a href="randompet" title="RandomPet"><span class="symbol resource"></span>RandomPet</a></li>
+    <li><a href="randomshuffle" title="RandomShuffle"><span class="symbol resource"></span>RandomShuffle</a></li>
+    <li><a href="randomstring" title="RandomString"><span class="symbol resource"></span>RandomString</a></li>
+    <li><a href="randomuuid" title="RandomUuid"><span class="symbol resource"></span>RandomUuid</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

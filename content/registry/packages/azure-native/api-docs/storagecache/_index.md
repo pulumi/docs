@@ -13,14 +13,14 @@ Explore the resources and functions of the azure-native.storagecache module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="cache" title="Cache"><span class="api-symbol api-symbol--resource"></span>Cache</a></li>
-    <li><a href="storagetarget" title="StorageTarget"><span class="api-symbol api-symbol--resource"></span>StorageTarget</a></li>
+    <li><a href="cache" title="Cache"><span class="symbol resource"></span>Cache</a></li>
+    <li><a href="storagetarget" title="StorageTarget"><span class="symbol resource"></span>StorageTarget</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getcache" title="GetCache"><span class="api-symbol api-symbol--function"></span>GetCache</a></li>
-    <li><a href="getstoragetarget" title="GetStorageTarget"><span class="api-symbol api-symbol--function"></span>GetStorageTarget</a></li>
+    <li><a href="getcache" title="GetCache"><span class="symbol function"></span>GetCache</a></li>
+    <li><a href="getstoragetarget" title="GetStorageTarget"><span class="symbol function"></span>GetStorageTarget</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -30,6 +30,6 @@ Explore the resources and functions of the azure-native.storagecache module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.37.0</dd>
+	<dd>1.38.0</dd>
 </dl>
 

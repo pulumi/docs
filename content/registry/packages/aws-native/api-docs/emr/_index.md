@@ -13,8 +13,8 @@ Explore the resources and functions of the aws-native.emr module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="studio" title="Studio"><span class="api-symbol api-symbol--resource"></span>Studio</a></li>
-    <li><a href="studiosessionmapping" title="StudioSessionMapping"><span class="api-symbol api-symbol--resource"></span>StudioSessionMapping</a></li>
+    <li><a href="studio" title="Studio"><span class="symbol resource"></span>Studio</a></li>
+    <li><a href="studiosessionmapping" title="StudioSessionMapping"><span class="symbol resource"></span>StudioSessionMapping</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

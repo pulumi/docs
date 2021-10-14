@@ -13,44 +13,44 @@ Explore the resources and functions of the aws.iam module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="accesskey" title="AccessKey"><span class="api-symbol api-symbol--resource"></span>AccessKey</a></li>
-    <li><a href="accountalias" title="AccountAlias"><span class="api-symbol api-symbol--resource"></span>AccountAlias</a></li>
-    <li><a href="accountpasswordpolicy" title="AccountPasswordPolicy"><span class="api-symbol api-symbol--resource"></span>AccountPasswordPolicy</a></li>
-    <li><a href="group" title="Group"><span class="api-symbol api-symbol--resource"></span>Group</a></li>
-    <li><a href="groupmembership" title="GroupMembership"><span class="api-symbol api-symbol--resource"></span>GroupMembership</a></li>
-    <li><a href="grouppolicy" title="GroupPolicy"><span class="api-symbol api-symbol--resource"></span>GroupPolicy</a></li>
-    <li><a href="grouppolicyattachment" title="GroupPolicyAttachment"><span class="api-symbol api-symbol--resource"></span>GroupPolicyAttachment</a></li>
-    <li><a href="instanceprofile" title="InstanceProfile"><span class="api-symbol api-symbol--resource"></span>InstanceProfile</a></li>
-    <li><a href="openidconnectprovider" title="OpenIdConnectProvider"><span class="api-symbol api-symbol--resource"></span>OpenIdConnectProvider</a></li>
-    <li><a href="policy" title="Policy"><span class="api-symbol api-symbol--resource"></span>Policy</a></li>
-    <li><a href="policyattachment" title="PolicyAttachment"><span class="api-symbol api-symbol--resource"></span>PolicyAttachment</a></li>
-    <li><a href="role" title="Role"><span class="api-symbol api-symbol--resource"></span>Role</a></li>
-    <li><a href="rolepolicy" title="RolePolicy"><span class="api-symbol api-symbol--resource"></span>RolePolicy</a></li>
-    <li><a href="rolepolicyattachment" title="RolePolicyAttachment"><span class="api-symbol api-symbol--resource"></span>RolePolicyAttachment</a></li>
-    <li><a href="samlprovider" title="SamlProvider"><span class="api-symbol api-symbol--resource"></span>SamlProvider</a></li>
-    <li><a href="servercertificate" title="ServerCertificate"><span class="api-symbol api-symbol--resource"></span>ServerCertificate</a></li>
-    <li><a href="servicelinkedrole" title="ServiceLinkedRole"><span class="api-symbol api-symbol--resource"></span>ServiceLinkedRole</a></li>
-    <li><a href="sshkey" title="SshKey"><span class="api-symbol api-symbol--resource"></span>SshKey</a></li>
-    <li><a href="user" title="User"><span class="api-symbol api-symbol--resource"></span>User</a></li>
-    <li><a href="usergroupmembership" title="UserGroupMembership"><span class="api-symbol api-symbol--resource"></span>UserGroupMembership</a></li>
-    <li><a href="userloginprofile" title="UserLoginProfile"><span class="api-symbol api-symbol--resource"></span>UserLoginProfile</a></li>
-    <li><a href="userpolicy" title="UserPolicy"><span class="api-symbol api-symbol--resource"></span>UserPolicy</a></li>
-    <li><a href="userpolicyattachment" title="UserPolicyAttachment"><span class="api-symbol api-symbol--resource"></span>UserPolicyAttachment</a></li>
+    <li><a href="accesskey" title="AccessKey"><span class="symbol resource"></span>AccessKey</a></li>
+    <li><a href="accountalias" title="AccountAlias"><span class="symbol resource"></span>AccountAlias</a></li>
+    <li><a href="accountpasswordpolicy" title="AccountPasswordPolicy"><span class="symbol resource"></span>AccountPasswordPolicy</a></li>
+    <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
+    <li><a href="groupmembership" title="GroupMembership"><span class="symbol resource"></span>GroupMembership</a></li>
+    <li><a href="grouppolicy" title="GroupPolicy"><span class="symbol resource"></span>GroupPolicy</a></li>
+    <li><a href="grouppolicyattachment" title="GroupPolicyAttachment"><span class="symbol resource"></span>GroupPolicyAttachment</a></li>
+    <li><a href="instanceprofile" title="InstanceProfile"><span class="symbol resource"></span>InstanceProfile</a></li>
+    <li><a href="openidconnectprovider" title="OpenIdConnectProvider"><span class="symbol resource"></span>OpenIdConnectProvider</a></li>
+    <li><a href="policy" title="Policy"><span class="symbol resource"></span>Policy</a></li>
+    <li><a href="policyattachment" title="PolicyAttachment"><span class="symbol resource"></span>PolicyAttachment</a></li>
+    <li><a href="role" title="Role"><span class="symbol resource"></span>Role</a></li>
+    <li><a href="rolepolicy" title="RolePolicy"><span class="symbol resource"></span>RolePolicy</a></li>
+    <li><a href="rolepolicyattachment" title="RolePolicyAttachment"><span class="symbol resource"></span>RolePolicyAttachment</a></li>
+    <li><a href="samlprovider" title="SamlProvider"><span class="symbol resource"></span>SamlProvider</a></li>
+    <li><a href="servercertificate" title="ServerCertificate"><span class="symbol resource"></span>ServerCertificate</a></li>
+    <li><a href="servicelinkedrole" title="ServiceLinkedRole"><span class="symbol resource"></span>ServiceLinkedRole</a></li>
+    <li><a href="sshkey" title="SshKey"><span class="symbol resource"></span>SshKey</a></li>
+    <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
+    <li><a href="usergroupmembership" title="UserGroupMembership"><span class="symbol resource"></span>UserGroupMembership</a></li>
+    <li><a href="userloginprofile" title="UserLoginProfile"><span class="symbol resource"></span>UserLoginProfile</a></li>
+    <li><a href="userpolicy" title="UserPolicy"><span class="symbol resource"></span>UserPolicy</a></li>
+    <li><a href="userpolicyattachment" title="UserPolicyAttachment"><span class="symbol resource"></span>UserPolicyAttachment</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getaccountalias" title="GetAccountAlias"><span class="api-symbol api-symbol--function"></span>GetAccountAlias</a></li>
-    <li><a href="getgroup" title="GetGroup"><span class="api-symbol api-symbol--function"></span>GetGroup</a></li>
-    <li><a href="getinstanceprofile" title="GetInstanceProfile"><span class="api-symbol api-symbol--function"></span>GetInstanceProfile</a></li>
-    <li><a href="getpolicy" title="GetPolicy"><span class="api-symbol api-symbol--function"></span>GetPolicy</a></li>
-    <li><a href="getpolicydocument" title="GetPolicyDocument"><span class="api-symbol api-symbol--function"></span>GetPolicyDocument</a></li>
-    <li><a href="getrole" title="GetRole"><span class="api-symbol api-symbol--function"></span>GetRole</a></li>
-    <li><a href="getroles" title="GetRoles"><span class="api-symbol api-symbol--function"></span>GetRoles</a></li>
-    <li><a href="getservercertificate" title="GetServerCertificate"><span class="api-symbol api-symbol--function"></span>GetServerCertificate</a></li>
-    <li><a href="getsessioncontext" title="GetSessionContext"><span class="api-symbol api-symbol--function"></span>GetSessionContext</a></li>
-    <li><a href="getuser" title="GetUser"><span class="api-symbol api-symbol--function"></span>GetUser</a></li>
-    <li><a href="getusers" title="GetUsers"><span class="api-symbol api-symbol--function"></span>GetUsers</a></li>
+    <li><a href="getaccountalias" title="GetAccountAlias"><span class="symbol function"></span>GetAccountAlias</a></li>
+    <li><a href="getgroup" title="GetGroup"><span class="symbol function"></span>GetGroup</a></li>
+    <li><a href="getinstanceprofile" title="GetInstanceProfile"><span class="symbol function"></span>GetInstanceProfile</a></li>
+    <li><a href="getpolicy" title="GetPolicy"><span class="symbol function"></span>GetPolicy</a></li>
+    <li><a href="getpolicydocument" title="GetPolicyDocument"><span class="symbol function"></span>GetPolicyDocument</a></li>
+    <li><a href="getrole" title="GetRole"><span class="symbol function"></span>GetRole</a></li>
+    <li><a href="getroles" title="GetRoles"><span class="symbol function"></span>GetRoles</a></li>
+    <li><a href="getservercertificate" title="GetServerCertificate"><span class="symbol function"></span>GetServerCertificate</a></li>
+    <li><a href="getsessioncontext" title="GetSessionContext"><span class="symbol function"></span>GetSessionContext</a></li>
+    <li><a href="getuser" title="GetUser"><span class="symbol function"></span>GetUser</a></li>
+    <li><a href="getusers" title="GetUsers"><span class="symbol function"></span>GetUsers</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

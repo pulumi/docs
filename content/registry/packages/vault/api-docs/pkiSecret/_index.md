@@ -13,17 +13,17 @@ Explore the resources and functions of the vault.pkiSecret module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="secretbackend" title="SecretBackend"><span class="api-symbol api-symbol--resource"></span>SecretBackend</a></li>
-    <li><a href="secretbackendcert" title="SecretBackendCert"><span class="api-symbol api-symbol--resource"></span>SecretBackendCert</a></li>
-    <li><a href="secretbackendconfigca" title="SecretBackendConfigCa"><span class="api-symbol api-symbol--resource"></span>SecretBackendConfigCa</a></li>
-    <li><a href="secretbackendconfigurls" title="SecretBackendConfigUrls"><span class="api-symbol api-symbol--resource"></span>SecretBackendConfigUrls</a></li>
-    <li><a href="secretbackendcrlconfig" title="SecretBackendCrlConfig"><span class="api-symbol api-symbol--resource"></span>SecretBackendCrlConfig</a></li>
-    <li><a href="secretbackendintermediatecertrequest" title="SecretBackendIntermediateCertRequest"><span class="api-symbol api-symbol--resource"></span>SecretBackendIntermediateCertRequest</a></li>
-    <li><a href="secretbackendintermediatesetsigned" title="SecretBackendIntermediateSetSigned"><span class="api-symbol api-symbol--resource"></span>SecretBackendIntermediateSetSigned</a></li>
-    <li><a href="secretbackendrole" title="SecretBackendRole"><span class="api-symbol api-symbol--resource"></span>SecretBackendRole</a></li>
-    <li><a href="secretbackendrootcert" title="SecretBackendRootCert"><span class="api-symbol api-symbol--resource"></span>SecretBackendRootCert</a></li>
-    <li><a href="secretbackendrootsignintermediate" title="SecretBackendRootSignIntermediate"><span class="api-symbol api-symbol--resource"></span>SecretBackendRootSignIntermediate</a></li>
-    <li><a href="secretbackendsign" title="SecretBackendSign"><span class="api-symbol api-symbol--resource"></span>SecretBackendSign</a></li>
+    <li><a href="secretbackend" title="SecretBackend"><span class="symbol resource"></span>SecretBackend</a></li>
+    <li><a href="secretbackendcert" title="SecretBackendCert"><span class="symbol resource"></span>SecretBackendCert</a></li>
+    <li><a href="secretbackendconfigca" title="SecretBackendConfigCa"><span class="symbol resource"></span>SecretBackendConfigCa</a></li>
+    <li><a href="secretbackendconfigurls" title="SecretBackendConfigUrls"><span class="symbol resource"></span>SecretBackendConfigUrls</a></li>
+    <li><a href="secretbackendcrlconfig" title="SecretBackendCrlConfig"><span class="symbol resource"></span>SecretBackendCrlConfig</a></li>
+    <li><a href="secretbackendintermediatecertrequest" title="SecretBackendIntermediateCertRequest"><span class="symbol resource"></span>SecretBackendIntermediateCertRequest</a></li>
+    <li><a href="secretbackendintermediatesetsigned" title="SecretBackendIntermediateSetSigned"><span class="symbol resource"></span>SecretBackendIntermediateSetSigned</a></li>
+    <li><a href="secretbackendrole" title="SecretBackendRole"><span class="symbol resource"></span>SecretBackendRole</a></li>
+    <li><a href="secretbackendrootcert" title="SecretBackendRootCert"><span class="symbol resource"></span>SecretBackendRootCert</a></li>
+    <li><a href="secretbackendrootsignintermediate" title="SecretBackendRootSignIntermediate"><span class="symbol resource"></span>SecretBackendRootSignIntermediate</a></li>
+    <li><a href="secretbackendsign" title="SecretBackendSign"><span class="symbol resource"></span>SecretBackendSign</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

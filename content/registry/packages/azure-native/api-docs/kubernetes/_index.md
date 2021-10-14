@@ -13,14 +13,14 @@ Explore the resources and functions of the azure-native.kubernetes module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="connectedcluster" title="ConnectedCluster"><span class="api-symbol api-symbol--resource"></span>ConnectedCluster</a></li>
+    <li><a href="connectedcluster" title="ConnectedCluster"><span class="symbol resource"></span>ConnectedCluster</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getconnectedcluster" title="GetConnectedCluster"><span class="api-symbol api-symbol--function"></span>GetConnectedCluster</a></li>
-    <li><a href="listconnectedclusterusercredential" title="ListConnectedClusterUserCredential"><span class="api-symbol api-symbol--function"></span>ListConnectedClusterUserCredential</a></li>
-    <li><a href="listconnectedclusterusercredentials" title="ListConnectedClusterUserCredentials"><span class="api-symbol api-symbol--function"></span>ListConnectedClusterUserCredentials</a></li>
+    <li><a href="getconnectedcluster" title="GetConnectedCluster"><span class="symbol function"></span>GetConnectedCluster</a></li>
+    <li><a href="listconnectedclusterusercredential" title="ListConnectedClusterUserCredential"><span class="symbol function"></span>ListConnectedClusterUserCredential</a></li>
+    <li><a href="listconnectedclusterusercredentials" title="ListConnectedClusterUserCredentials"><span class="symbol function"></span>ListConnectedClusterUserCredentials</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -30,6 +30,6 @@ Explore the resources and functions of the azure-native.kubernetes module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.37.0</dd>
+	<dd>1.38.0</dd>
 </dl>
 

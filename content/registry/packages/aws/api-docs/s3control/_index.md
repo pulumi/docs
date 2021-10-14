@@ -13,9 +13,9 @@ Explore the resources and functions of the aws.s3control module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="bucket" title="Bucket"><span class="api-symbol api-symbol--resource"></span>Bucket</a></li>
-    <li><a href="bucketlifecycleconfiguration" title="BucketLifecycleConfiguration"><span class="api-symbol api-symbol--resource"></span>BucketLifecycleConfiguration</a></li>
-    <li><a href="bucketpolicy" title="BucketPolicy"><span class="api-symbol api-symbol--resource"></span>BucketPolicy</a></li>
+    <li><a href="bucket" title="Bucket"><span class="symbol resource"></span>Bucket</a></li>
+    <li><a href="bucketlifecycleconfiguration" title="BucketLifecycleConfiguration"><span class="symbol resource"></span>BucketLifecycleConfiguration</a></li>
+    <li><a href="bucketpolicy" title="BucketPolicy"><span class="symbol resource"></span>BucketPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

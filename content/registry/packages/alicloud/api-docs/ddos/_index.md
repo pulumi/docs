@@ -13,19 +13,19 @@ Explore the resources and functions of the alicloud.ddos module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="ddosbgpinstance" title="DdosBgpInstance"><span class="api-symbol api-symbol--resource"></span>DdosBgpInstance</a></li>
-    <li><a href="ddoscooinstance" title="DdosCooInstance"><span class="api-symbol api-symbol--resource"></span>DdosCooInstance</a></li>
-    <li><a href="domainresource" title="DomainResource"><span class="api-symbol api-symbol--resource"></span>DomainResource</a></li>
-    <li><a href="port" title="Port"><span class="api-symbol api-symbol--resource"></span>Port</a></li>
-    <li><a href="schedulerrule" title="SchedulerRule"><span class="api-symbol api-symbol--resource"></span>SchedulerRule</a></li>
+    <li><a href="ddosbgpinstance" title="DdosBgpInstance"><span class="symbol resource"></span>DdosBgpInstance</a></li>
+    <li><a href="ddoscooinstance" title="DdosCooInstance"><span class="symbol resource"></span>DdosCooInstance</a></li>
+    <li><a href="domainresource" title="DomainResource"><span class="symbol resource"></span>DomainResource</a></li>
+    <li><a href="port" title="Port"><span class="symbol resource"></span>Port</a></li>
+    <li><a href="schedulerrule" title="SchedulerRule"><span class="symbol resource"></span>SchedulerRule</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getddosbgpinstances" title="GetDdosBgpInstances"><span class="api-symbol api-symbol--function"></span>GetDdosBgpInstances</a></li>
-    <li><a href="getddoscoodomainresources" title="GetDdosCooDomainResources"><span class="api-symbol api-symbol--function"></span>GetDdosCooDomainResources</a></li>
-    <li><a href="getddoscooinstances" title="GetDdosCooInstances"><span class="api-symbol api-symbol--function"></span>GetDdosCooInstances</a></li>
-    <li><a href="getddoscooports" title="GetDdosCooPorts"><span class="api-symbol api-symbol--function"></span>GetDdosCooPorts</a></li>
+    <li><a href="getddosbgpinstances" title="GetDdosBgpInstances"><span class="symbol function"></span>GetDdosBgpInstances</a></li>
+    <li><a href="getddoscoodomainresources" title="GetDdosCooDomainResources"><span class="symbol function"></span>GetDdosCooDomainResources</a></li>
+    <li><a href="getddoscooinstances" title="GetDdosCooInstances"><span class="symbol function"></span>GetDdosCooInstances</a></li>
+    <li><a href="getddoscooports" title="GetDdosCooPorts"><span class="symbol function"></span>GetDdosCooPorts</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

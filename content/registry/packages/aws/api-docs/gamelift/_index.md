@@ -13,10 +13,10 @@ Explore the resources and functions of the aws.gamelift module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="alias" title="Alias"><span class="api-symbol api-symbol--resource"></span>Alias</a></li>
-    <li><a href="build" title="Build"><span class="api-symbol api-symbol--resource"></span>Build</a></li>
-    <li><a href="fleet" title="Fleet"><span class="api-symbol api-symbol--resource"></span>Fleet</a></li>
-    <li><a href="gamesessionqueue" title="GameSessionQueue"><span class="api-symbol api-symbol--resource"></span>GameSessionQueue</a></li>
+    <li><a href="alias" title="Alias"><span class="symbol resource"></span>Alias</a></li>
+    <li><a href="build" title="Build"><span class="symbol resource"></span>Build</a></li>
+    <li><a href="fleet" title="Fleet"><span class="symbol resource"></span>Fleet</a></li>
+    <li><a href="gamesessionqueue" title="GameSessionQueue"><span class="symbol resource"></span>GameSessionQueue</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

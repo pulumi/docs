@@ -13,12 +13,12 @@ Explore the resources and functions of the gcp.notebooks module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="environment" title="Environment"><span class="api-symbol api-symbol--resource"></span>Environment</a></li>
-    <li><a href="instance" title="Instance"><span class="api-symbol api-symbol--resource"></span>Instance</a></li>
-    <li><a href="instanceiambinding" title="InstanceIamBinding"><span class="api-symbol api-symbol--resource"></span>InstanceIamBinding</a></li>
-    <li><a href="instanceiammember" title="InstanceIamMember"><span class="api-symbol api-symbol--resource"></span>InstanceIamMember</a></li>
-    <li><a href="instanceiampolicy" title="InstanceIamPolicy"><span class="api-symbol api-symbol--resource"></span>InstanceIamPolicy</a></li>
-    <li><a href="location" title="Location"><span class="api-symbol api-symbol--resource"></span>Location</a></li>
+    <li><a href="environment" title="Environment"><span class="symbol resource"></span>Environment</a></li>
+    <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
+    <li><a href="instanceiambinding" title="InstanceIamBinding"><span class="symbol resource"></span>InstanceIamBinding</a></li>
+    <li><a href="instanceiammember" title="InstanceIamMember"><span class="symbol resource"></span>InstanceIamMember</a></li>
+    <li><a href="instanceiampolicy" title="InstanceIamPolicy"><span class="symbol resource"></span>InstanceIamPolicy</a></li>
+    <li><a href="location" title="Location"><span class="symbol resource"></span>Location</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

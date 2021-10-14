@@ -13,17 +13,17 @@ Explore the resources and functions of the azure-native.management module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="hierarchysetting" title="HierarchySetting"><span class="api-symbol api-symbol--resource"></span>HierarchySetting</a></li>
-    <li><a href="managementgroup" title="ManagementGroup"><span class="api-symbol api-symbol--resource"></span>ManagementGroup</a></li>
-    <li><a href="managementgroupsubscription" title="ManagementGroupSubscription"><span class="api-symbol api-symbol--resource"></span>ManagementGroupSubscription</a></li>
+    <li><a href="hierarchysetting" title="HierarchySetting"><span class="symbol resource"></span>HierarchySetting</a></li>
+    <li><a href="managementgroup" title="ManagementGroup"><span class="symbol resource"></span>ManagementGroup</a></li>
+    <li><a href="managementgroupsubscription" title="ManagementGroupSubscription"><span class="symbol resource"></span>ManagementGroupSubscription</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getentity" title="GetEntity"><span class="api-symbol api-symbol--function"></span>GetEntity</a></li>
-    <li><a href="gethierarchysetting" title="GetHierarchySetting"><span class="api-symbol api-symbol--function"></span>GetHierarchySetting</a></li>
-    <li><a href="getmanagementgroup" title="GetManagementGroup"><span class="api-symbol api-symbol--function"></span>GetManagementGroup</a></li>
-    <li><a href="getmanagementgroupsubscription" title="GetManagementGroupSubscription"><span class="api-symbol api-symbol--function"></span>GetManagementGroupSubscription</a></li>
+    <li><a href="getentity" title="GetEntity"><span class="symbol function"></span>GetEntity</a></li>
+    <li><a href="gethierarchysetting" title="GetHierarchySetting"><span class="symbol function"></span>GetHierarchySetting</a></li>
+    <li><a href="getmanagementgroup" title="GetManagementGroup"><span class="symbol function"></span>GetManagementGroup</a></li>
+    <li><a href="getmanagementgroupsubscription" title="GetManagementGroupSubscription"><span class="symbol function"></span>GetManagementGroupSubscription</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -33,6 +33,6 @@ Explore the resources and functions of the azure-native.management module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.37.0</dd>
+	<dd>1.38.0</dd>
 </dl>
 

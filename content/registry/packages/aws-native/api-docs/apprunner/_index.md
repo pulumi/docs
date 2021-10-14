@@ -13,7 +13,7 @@ Explore the resources and functions of the aws-native.apprunner module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="service" title="Service"><span class="api-symbol api-symbol--resource"></span>Service</a></li>
+    <li><a href="service" title="Service"><span class="symbol resource"></span>Service</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

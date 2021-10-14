@@ -13,21 +13,21 @@ Explore the resources and functions of the azure-native.batch module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="application" title="Application"><span class="api-symbol api-symbol--resource"></span>Application</a></li>
-    <li><a href="applicationpackage" title="ApplicationPackage"><span class="api-symbol api-symbol--resource"></span>ApplicationPackage</a></li>
-    <li><a href="batchaccount" title="BatchAccount"><span class="api-symbol api-symbol--resource"></span>BatchAccount</a></li>
-    <li><a href="certificate" title="Certificate"><span class="api-symbol api-symbol--resource"></span>Certificate</a></li>
-    <li><a href="pool" title="Pool"><span class="api-symbol api-symbol--resource"></span>Pool</a></li>
+    <li><a href="application" title="Application"><span class="symbol resource"></span>Application</a></li>
+    <li><a href="applicationpackage" title="ApplicationPackage"><span class="symbol resource"></span>ApplicationPackage</a></li>
+    <li><a href="batchaccount" title="BatchAccount"><span class="symbol resource"></span>BatchAccount</a></li>
+    <li><a href="certificate" title="Certificate"><span class="symbol resource"></span>Certificate</a></li>
+    <li><a href="pool" title="Pool"><span class="symbol resource"></span>Pool</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getapplication" title="GetApplication"><span class="api-symbol api-symbol--function"></span>GetApplication</a></li>
-    <li><a href="getapplicationpackage" title="GetApplicationPackage"><span class="api-symbol api-symbol--function"></span>GetApplicationPackage</a></li>
-    <li><a href="getbatchaccount" title="GetBatchAccount"><span class="api-symbol api-symbol--function"></span>GetBatchAccount</a></li>
-    <li><a href="getcertificate" title="GetCertificate"><span class="api-symbol api-symbol--function"></span>GetCertificate</a></li>
-    <li><a href="getpool" title="GetPool"><span class="api-symbol api-symbol--function"></span>GetPool</a></li>
-    <li><a href="listbatchaccountkeys" title="ListBatchAccountKeys"><span class="api-symbol api-symbol--function"></span>ListBatchAccountKeys</a></li>
+    <li><a href="getapplication" title="GetApplication"><span class="symbol function"></span>GetApplication</a></li>
+    <li><a href="getapplicationpackage" title="GetApplicationPackage"><span class="symbol function"></span>GetApplicationPackage</a></li>
+    <li><a href="getbatchaccount" title="GetBatchAccount"><span class="symbol function"></span>GetBatchAccount</a></li>
+    <li><a href="getcertificate" title="GetCertificate"><span class="symbol function"></span>GetCertificate</a></li>
+    <li><a href="getpool" title="GetPool"><span class="symbol function"></span>GetPool</a></li>
+    <li><a href="listbatchaccountkeys" title="ListBatchAccountKeys"><span class="symbol function"></span>ListBatchAccountKeys</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -37,6 +37,6 @@ Explore the resources and functions of the azure-native.batch module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.37.0</dd>
+	<dd>1.38.0</dd>
 </dl>
 

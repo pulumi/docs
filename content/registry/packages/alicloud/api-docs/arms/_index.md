@@ -13,18 +13,18 @@ Explore the resources and functions of the alicloud.arms module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="alertcontact" title="AlertContact"><span class="api-symbol api-symbol--resource"></span>AlertContact</a></li>
-    <li><a href="alertcontactgroup" title="AlertContactGroup"><span class="api-symbol api-symbol--resource"></span>AlertContactGroup</a></li>
-    <li><a href="dispatchrule" title="DispatchRule"><span class="api-symbol api-symbol--resource"></span>DispatchRule</a></li>
-    <li><a href="prometheusalertrule" title="PrometheusAlertRule"><span class="api-symbol api-symbol--resource"></span>PrometheusAlertRule</a></li>
+    <li><a href="alertcontact" title="AlertContact"><span class="symbol resource"></span>AlertContact</a></li>
+    <li><a href="alertcontactgroup" title="AlertContactGroup"><span class="symbol resource"></span>AlertContactGroup</a></li>
+    <li><a href="dispatchrule" title="DispatchRule"><span class="symbol resource"></span>DispatchRule</a></li>
+    <li><a href="prometheusalertrule" title="PrometheusAlertRule"><span class="symbol resource"></span>PrometheusAlertRule</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getalertcontactgroups" title="GetAlertContactGroups"><span class="api-symbol api-symbol--function"></span>GetAlertContactGroups</a></li>
-    <li><a href="getalertcontacts" title="GetAlertContacts"><span class="api-symbol api-symbol--function"></span>GetAlertContacts</a></li>
-    <li><a href="getdispatchrules" title="GetDispatchRules"><span class="api-symbol api-symbol--function"></span>GetDispatchRules</a></li>
-    <li><a href="getprometheusalertrules" title="GetPrometheusAlertRules"><span class="api-symbol api-symbol--function"></span>GetPrometheusAlertRules</a></li>
+    <li><a href="getalertcontactgroups" title="GetAlertContactGroups"><span class="symbol function"></span>GetAlertContactGroups</a></li>
+    <li><a href="getalertcontacts" title="GetAlertContacts"><span class="symbol function"></span>GetAlertContacts</a></li>
+    <li><a href="getdispatchrules" title="GetDispatchRules"><span class="symbol function"></span>GetDispatchRules</a></li>
+    <li><a href="getprometheusalertrules" title="GetPrometheusAlertRules"><span class="symbol function"></span>GetPrometheusAlertRules</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

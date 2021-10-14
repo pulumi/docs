@@ -13,14 +13,14 @@ Explore the resources and functions of the azure-native.guestconfiguration modul
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="guestconfigurationassignment" title="GuestConfigurationAssignment"><span class="api-symbol api-symbol--resource"></span>GuestConfigurationAssignment</a></li>
-    <li><a href="guestconfigurationhcrpassignment" title="GuestConfigurationHCRPAssignment"><span class="api-symbol api-symbol--resource"></span>GuestConfigurationHCRPAssignment</a></li>
+    <li><a href="guestconfigurationassignment" title="GuestConfigurationAssignment"><span class="symbol resource"></span>GuestConfigurationAssignment</a></li>
+    <li><a href="guestconfigurationhcrpassignment" title="GuestConfigurationHCRPAssignment"><span class="symbol resource"></span>GuestConfigurationHCRPAssignment</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getguestconfigurationassignment" title="GetGuestConfigurationAssignment"><span class="api-symbol api-symbol--function"></span>GetGuestConfigurationAssignment</a></li>
-    <li><a href="getguestconfigurationhcrpassignment" title="GetGuestConfigurationHCRPAssignment"><span class="api-symbol api-symbol--function"></span>GetGuestConfigurationHCRPAssignment</a></li>
+    <li><a href="getguestconfigurationassignment" title="GetGuestConfigurationAssignment"><span class="symbol function"></span>GetGuestConfigurationAssignment</a></li>
+    <li><a href="getguestconfigurationhcrpassignment" title="GetGuestConfigurationHCRPAssignment"><span class="symbol function"></span>GetGuestConfigurationHCRPAssignment</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -30,6 +30,6 @@ Explore the resources and functions of the azure-native.guestconfiguration modul
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.37.0</dd>
+	<dd>1.38.0</dd>
 </dl>
 

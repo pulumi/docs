@@ -2,9 +2,6 @@
 title: "NS1"
 title_tag: "ns1.NS1"
 meta_desc: "A Pulumi package for creating and managing ns1 cloud resources."
-menu:
-    reference:
-        parent: API Reference
 layout: api
 no_edit_this_page: true
 ---
@@ -16,25 +13,25 @@ A Pulumi package for creating and managing ns1 cloud resources.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="apikey" title="APIKey"><span class="api-symbol api-symbol--resource"></span>APIKey</a></li>
-    <li><a href="application" title="Application"><span class="api-symbol api-symbol--resource"></span>Application</a></li>
-    <li><a href="datafeed" title="DataFeed"><span class="api-symbol api-symbol--resource"></span>DataFeed</a></li>
-    <li><a href="datasource" title="DataSource"><span class="api-symbol api-symbol--resource"></span>DataSource</a></li>
-    <li><a href="monitoringjob" title="MonitoringJob"><span class="api-symbol api-symbol--resource"></span>MonitoringJob</a></li>
-    <li><a href="notifylist" title="NotifyList"><span class="api-symbol api-symbol--resource"></span>NotifyList</a></li>
-    <li><a href="provider" title="Provider"><span class="api-symbol api-symbol--resource"></span>Provider</a></li>
-    <li><a href="pulsarjob" title="PulsarJob"><span class="api-symbol api-symbol--resource"></span>PulsarJob</a></li>
-    <li><a href="record" title="Record"><span class="api-symbol api-symbol--resource"></span>Record</a></li>
-    <li><a href="team" title="Team"><span class="api-symbol api-symbol--resource"></span>Team</a></li>
-    <li><a href="user" title="User"><span class="api-symbol api-symbol--resource"></span>User</a></li>
-    <li><a href="zone" title="Zone"><span class="api-symbol api-symbol--resource"></span>Zone</a></li>
+    <li><a href="apikey" title="APIKey"><span class="symbol resource"></span>APIKey</a></li>
+    <li><a href="application" title="Application"><span class="symbol resource"></span>Application</a></li>
+    <li><a href="datafeed" title="DataFeed"><span class="symbol resource"></span>DataFeed</a></li>
+    <li><a href="datasource" title="DataSource"><span class="symbol resource"></span>DataSource</a></li>
+    <li><a href="monitoringjob" title="MonitoringJob"><span class="symbol resource"></span>MonitoringJob</a></li>
+    <li><a href="notifylist" title="NotifyList"><span class="symbol resource"></span>NotifyList</a></li>
+    <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
+    <li><a href="pulsarjob" title="PulsarJob"><span class="symbol resource"></span>PulsarJob</a></li>
+    <li><a href="record" title="Record"><span class="symbol resource"></span>Record</a></li>
+    <li><a href="team" title="Team"><span class="symbol resource"></span>Team</a></li>
+    <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
+    <li><a href="zone" title="Zone"><span class="symbol resource"></span>Zone</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getdnssec" title="GetDNSSec"><span class="api-symbol api-symbol--function"></span>GetDNSSec</a></li>
-    <li><a href="getrecord" title="GetRecord"><span class="api-symbol api-symbol--function"></span>GetRecord</a></li>
-    <li><a href="getzone" title="GetZone"><span class="api-symbol api-symbol--function"></span>GetZone</a></li>
+    <li><a href="getdnssec" title="GetDNSSec"><span class="symbol function"></span>GetDNSSec</a></li>
+    <li><a href="getrecord" title="GetRecord"><span class="symbol function"></span>GetRecord</a></li>
+    <li><a href="getzone" title="GetZone"><span class="symbol function"></span>GetZone</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

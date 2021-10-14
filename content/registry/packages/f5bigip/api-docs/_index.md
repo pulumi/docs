@@ -2,9 +2,6 @@
 title: "f5 BIG-IP"
 title_tag: "f5 BIG-IP Package"
 meta_desc: "A Pulumi package for creating and managing F5 BigIP resources."
-menu:
-    reference:
-        parent: API Reference
 layout: api
 no_edit_this_page: true
 ---
@@ -16,28 +13,28 @@ A Pulumi package for creating and managing F5 BigIP resources.
 
 <h2 id="modules">Modules</h2>
 <ul class="api">
-    <li><a href="cm/" title="cm"><span class="api-symbol api-symbol--module"></span>cm</a></li>
-    <li><a href="ltm/" title="ltm"><span class="api-symbol api-symbol--module"></span>ltm</a></li>
-    <li><a href="net/" title="net"><span class="api-symbol api-symbol--module"></span>net</a></li>
-    <li><a href="ssl/" title="ssl"><span class="api-symbol api-symbol--module"></span>ssl</a></li>
-    <li><a href="sys/" title="sys"><span class="api-symbol api-symbol--module"></span>sys</a></li>
+    <li><a href="cm/" title="cm"><span class="symbol module"></span>cm</a></li>
+    <li><a href="ltm/" title="ltm"><span class="symbol module"></span>ltm</a></li>
+    <li><a href="net/" title="net"><span class="symbol module"></span>net</a></li>
+    <li><a href="ssl/" title="ssl"><span class="symbol module"></span>ssl</a></li>
+    <li><a href="sys/" title="sys"><span class="symbol module"></span>sys</a></li>
 </ul>
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="as3" title="As3"><span class="api-symbol api-symbol--resource"></span>As3</a></li>
-    <li><a href="bigiqas3" title="BigIqAs3"><span class="api-symbol api-symbol--resource"></span>BigIqAs3</a></li>
-    <li><a href="command" title="Command"><span class="api-symbol api-symbol--resource"></span>Command</a></li>
-    <li><a href="commonlicensemanagebigiq" title="CommonLicenseManageBigIq"><span class="api-symbol api-symbol--resource"></span>CommonLicenseManageBigIq</a></li>
-    <li><a href="do" title="Do"><span class="api-symbol api-symbol--resource"></span>Do</a></li>
-    <li><a href="eventservicediscovery" title="EventServiceDiscovery"><span class="api-symbol api-symbol--resource"></span>EventServiceDiscovery</a></li>
-    <li><a href="fastapplication" title="FastApplication"><span class="api-symbol api-symbol--resource"></span>FastApplication</a></li>
-    <li><a href="fasttemplate" title="FastTemplate"><span class="api-symbol api-symbol--resource"></span>FastTemplate</a></li>
-    <li><a href="ipsecpolicy" title="IpsecPolicy"><span class="api-symbol api-symbol--resource"></span>IpsecPolicy</a></li>
-    <li><a href="netikepeer" title="NetIkePeer"><span class="api-symbol api-symbol--resource"></span>NetIkePeer</a></li>
-    <li><a href="nettunnel" title="NetTunnel"><span class="api-symbol api-symbol--resource"></span>NetTunnel</a></li>
-    <li><a href="provider" title="Provider"><span class="api-symbol api-symbol--resource"></span>Provider</a></li>
-    <li><a href="trafficselector" title="TrafficSelector"><span class="api-symbol api-symbol--resource"></span>TrafficSelector</a></li>
+    <li><a href="as3" title="As3"><span class="symbol resource"></span>As3</a></li>
+    <li><a href="bigiqas3" title="BigIqAs3"><span class="symbol resource"></span>BigIqAs3</a></li>
+    <li><a href="command" title="Command"><span class="symbol resource"></span>Command</a></li>
+    <li><a href="commonlicensemanagebigiq" title="CommonLicenseManageBigIq"><span class="symbol resource"></span>CommonLicenseManageBigIq</a></li>
+    <li><a href="do" title="Do"><span class="symbol resource"></span>Do</a></li>
+    <li><a href="eventservicediscovery" title="EventServiceDiscovery"><span class="symbol resource"></span>EventServiceDiscovery</a></li>
+    <li><a href="fastapplication" title="FastApplication"><span class="symbol resource"></span>FastApplication</a></li>
+    <li><a href="fasttemplate" title="FastTemplate"><span class="symbol resource"></span>FastTemplate</a></li>
+    <li><a href="ipsecpolicy" title="IpsecPolicy"><span class="symbol resource"></span>IpsecPolicy</a></li>
+    <li><a href="netikepeer" title="NetIkePeer"><span class="symbol resource"></span>NetIkePeer</a></li>
+    <li><a href="nettunnel" title="NetTunnel"><span class="symbol resource"></span>NetTunnel</a></li>
+    <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
+    <li><a href="trafficselector" title="TrafficSelector"><span class="symbol resource"></span>TrafficSelector</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

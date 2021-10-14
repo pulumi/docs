@@ -13,18 +13,18 @@ Explore the resources and functions of the azure.dataprotection module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="backupinstanceblogstorage" title="BackupInstanceBlogStorage"><span class="api-symbol api-symbol--resource"></span>BackupInstanceBlogStorage</a></li>
-    <li><a href="backupinstancedisk" title="BackupInstanceDisk"><span class="api-symbol api-symbol--resource"></span>BackupInstanceDisk</a></li>
-    <li><a href="backupinstancepostgresql" title="BackupInstancePostgresql"><span class="api-symbol api-symbol--resource"></span>BackupInstancePostgresql</a></li>
-    <li><a href="backuppolicyblobstorage" title="BackupPolicyBlobStorage"><span class="api-symbol api-symbol--resource"></span>BackupPolicyBlobStorage</a></li>
-    <li><a href="backuppolicydisk" title="BackupPolicyDisk"><span class="api-symbol api-symbol--resource"></span>BackupPolicyDisk</a></li>
-    <li><a href="backuppolicypostgresql" title="BackupPolicyPostgresql"><span class="api-symbol api-symbol--resource"></span>BackupPolicyPostgresql</a></li>
-    <li><a href="backupvault" title="BackupVault"><span class="api-symbol api-symbol--resource"></span>BackupVault</a></li>
+    <li><a href="backupinstanceblogstorage" title="BackupInstanceBlogStorage"><span class="symbol resource"></span>BackupInstanceBlogStorage</a></li>
+    <li><a href="backupinstancedisk" title="BackupInstanceDisk"><span class="symbol resource"></span>BackupInstanceDisk</a></li>
+    <li><a href="backupinstancepostgresql" title="BackupInstancePostgresql"><span class="symbol resource"></span>BackupInstancePostgresql</a></li>
+    <li><a href="backuppolicyblobstorage" title="BackupPolicyBlobStorage"><span class="symbol resource"></span>BackupPolicyBlobStorage</a></li>
+    <li><a href="backuppolicydisk" title="BackupPolicyDisk"><span class="symbol resource"></span>BackupPolicyDisk</a></li>
+    <li><a href="backuppolicypostgresql" title="BackupPolicyPostgresql"><span class="symbol resource"></span>BackupPolicyPostgresql</a></li>
+    <li><a href="backupvault" title="BackupVault"><span class="symbol resource"></span>BackupVault</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getbackupvault" title="GetBackupVault"><span class="api-symbol api-symbol--function"></span>GetBackupVault</a></li>
+    <li><a href="getbackupvault" title="GetBackupVault"><span class="symbol function"></span>GetBackupVault</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

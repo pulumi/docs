@@ -13,15 +13,15 @@ Explore the resources and functions of the alicloud.cloudstoragegateway module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="gateway" title="Gateway"><span class="api-symbol api-symbol--resource"></span>Gateway</a></li>
-    <li><a href="storagebundle" title="StorageBundle"><span class="api-symbol api-symbol--resource"></span>StorageBundle</a></li>
+    <li><a href="gateway" title="Gateway"><span class="symbol resource"></span>Gateway</a></li>
+    <li><a href="storagebundle" title="StorageBundle"><span class="symbol resource"></span>StorageBundle</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getgateways" title="GetGateways"><span class="api-symbol api-symbol--function"></span>GetGateways</a></li>
-    <li><a href="getservice" title="GetService"><span class="api-symbol api-symbol--function"></span>GetService</a></li>
-    <li><a href="getstoragebundles" title="GetStorageBundles"><span class="api-symbol api-symbol--function"></span>GetStorageBundles</a></li>
+    <li><a href="getgateways" title="GetGateways"><span class="symbol function"></span>GetGateways</a></li>
+    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
+    <li><a href="getstoragebundles" title="GetStorageBundles"><span class="symbol function"></span>GetStorageBundles</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

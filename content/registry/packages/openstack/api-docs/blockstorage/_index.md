@@ -13,24 +13,24 @@ Explore the resources and functions of the openstack.blockstorage module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="quotesetv2" title="QuoteSetV2"><span class="api-symbol api-symbol--resource"></span>QuoteSetV2</a></li>
-    <li><a href="quotesetv3" title="QuoteSetV3"><span class="api-symbol api-symbol--resource"></span>QuoteSetV3</a></li>
-    <li><a href="volume" title="Volume"><span class="api-symbol api-symbol--resource"></span>Volume</a></li>
-    <li><a href="volumeattach" title="VolumeAttach"><span class="api-symbol api-symbol--resource"></span>VolumeAttach</a></li>
-    <li><a href="volumeattachv2" title="VolumeAttachV2"><span class="api-symbol api-symbol--resource"></span>VolumeAttachV2</a></li>
-    <li><a href="volumetypeaccessv3" title="VolumeTypeAccessV3"><span class="api-symbol api-symbol--resource"></span>VolumeTypeAccessV3</a></li>
-    <li><a href="volumetypev3" title="VolumeTypeV3"><span class="api-symbol api-symbol--resource"></span>VolumeTypeV3</a></li>
-    <li><a href="volumev1" title="VolumeV1"><span class="api-symbol api-symbol--resource"></span>VolumeV1</a></li>
-    <li><a href="volumev2" title="VolumeV2"><span class="api-symbol api-symbol--resource"></span>VolumeV2</a></li>
+    <li><a href="quotesetv2" title="QuoteSetV2"><span class="symbol resource"></span>QuoteSetV2</a></li>
+    <li><a href="quotesetv3" title="QuoteSetV3"><span class="symbol resource"></span>QuoteSetV3</a></li>
+    <li><a href="volume" title="Volume"><span class="symbol resource"></span>Volume</a></li>
+    <li><a href="volumeattach" title="VolumeAttach"><span class="symbol resource"></span>VolumeAttach</a></li>
+    <li><a href="volumeattachv2" title="VolumeAttachV2"><span class="symbol resource"></span>VolumeAttachV2</a></li>
+    <li><a href="volumetypeaccessv3" title="VolumeTypeAccessV3"><span class="symbol resource"></span>VolumeTypeAccessV3</a></li>
+    <li><a href="volumetypev3" title="VolumeTypeV3"><span class="symbol resource"></span>VolumeTypeV3</a></li>
+    <li><a href="volumev1" title="VolumeV1"><span class="symbol resource"></span>VolumeV1</a></li>
+    <li><a href="volumev2" title="VolumeV2"><span class="symbol resource"></span>VolumeV2</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getavailabilityzonesv3" title="GetAvailabilityZonesV3"><span class="api-symbol api-symbol--function"></span>GetAvailabilityZonesV3</a></li>
-    <li><a href="getsnapshotv2" title="GetSnapshotV2"><span class="api-symbol api-symbol--function"></span>GetSnapshotV2</a></li>
-    <li><a href="getsnapshotv3" title="GetSnapshotV3"><span class="api-symbol api-symbol--function"></span>GetSnapshotV3</a></li>
-    <li><a href="getvolumev2" title="GetVolumeV2"><span class="api-symbol api-symbol--function"></span>GetVolumeV2</a></li>
-    <li><a href="getvolumev3" title="GetVolumeV3"><span class="api-symbol api-symbol--function"></span>GetVolumeV3</a></li>
+    <li><a href="getavailabilityzonesv3" title="GetAvailabilityZonesV3"><span class="symbol function"></span>GetAvailabilityZonesV3</a></li>
+    <li><a href="getsnapshotv2" title="GetSnapshotV2"><span class="symbol function"></span>GetSnapshotV2</a></li>
+    <li><a href="getsnapshotv3" title="GetSnapshotV3"><span class="symbol function"></span>GetSnapshotV3</a></li>
+    <li><a href="getvolumev2" title="GetVolumeV2"><span class="symbol function"></span>GetVolumeV2</a></li>
+    <li><a href="getvolumev3" title="GetVolumeV3"><span class="symbol function"></span>GetVolumeV3</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

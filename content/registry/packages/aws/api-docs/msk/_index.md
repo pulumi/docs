@@ -13,17 +13,17 @@ Explore the resources and functions of the aws.msk module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="cluster" title="Cluster"><span class="api-symbol api-symbol--resource"></span>Cluster</a></li>
-    <li><a href="configuration" title="Configuration"><span class="api-symbol api-symbol--resource"></span>Configuration</a></li>
-    <li><a href="scramsecretassociation" title="ScramSecretAssociation"><span class="api-symbol api-symbol--resource"></span>ScramSecretAssociation</a></li>
+    <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
+    <li><a href="configuration" title="Configuration"><span class="symbol resource"></span>Configuration</a></li>
+    <li><a href="scramsecretassociation" title="ScramSecretAssociation"><span class="symbol resource"></span>ScramSecretAssociation</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getbrokernodes" title="GetBrokerNodes"><span class="api-symbol api-symbol--function"></span>GetBrokerNodes</a></li>
-    <li><a href="getcluster" title="GetCluster"><span class="api-symbol api-symbol--function"></span>GetCluster</a></li>
-    <li><a href="getconfiguration" title="GetConfiguration"><span class="api-symbol api-symbol--function"></span>GetConfiguration</a></li>
-    <li><a href="getkafkaversion" title="GetKafkaVersion"><span class="api-symbol api-symbol--function"></span>GetKafkaVersion</a></li>
+    <li><a href="getbrokernodes" title="GetBrokerNodes"><span class="symbol function"></span>GetBrokerNodes</a></li>
+    <li><a href="getcluster" title="GetCluster"><span class="symbol function"></span>GetCluster</a></li>
+    <li><a href="getconfiguration" title="GetConfiguration"><span class="symbol function"></span>GetConfiguration</a></li>
+    <li><a href="getkafkaversion" title="GetKafkaVersion"><span class="symbol function"></span>GetKafkaVersion</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

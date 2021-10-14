@@ -13,28 +13,28 @@ Explore the resources and functions of the alicloud.bastionhost module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="host" title="Host"><span class="api-symbol api-symbol--resource"></span>Host</a></li>
-    <li><a href="hostaccount" title="HostAccount"><span class="api-symbol api-symbol--resource"></span>HostAccount</a></li>
-    <li><a href="hostaccountuserattachment" title="HostAccountUserAttachment"><span class="api-symbol api-symbol--resource"></span>HostAccountUserAttachment</a></li>
-    <li><a href="hostaccountusergroupattachment" title="HostAccountUserGroupAttachment"><span class="api-symbol api-symbol--resource"></span>HostAccountUserGroupAttachment</a></li>
-    <li><a href="hostattachment" title="HostAttachment"><span class="api-symbol api-symbol--resource"></span>HostAttachment</a></li>
-    <li><a href="hostgroup" title="HostGroup"><span class="api-symbol api-symbol--resource"></span>HostGroup</a></li>
-    <li><a href="hostgroupaccountuserattachment" title="HostGroupAccountUserAttachment"><span class="api-symbol api-symbol--resource"></span>HostGroupAccountUserAttachment</a></li>
-    <li><a href="hostgroupaccountusergroupattachment" title="HostGroupAccountUserGroupAttachment"><span class="api-symbol api-symbol--resource"></span>HostGroupAccountUserGroupAttachment</a></li>
-    <li><a href="instance" title="Instance"><span class="api-symbol api-symbol--resource"></span>Instance</a></li>
-    <li><a href="user" title="User"><span class="api-symbol api-symbol--resource"></span>User</a></li>
-    <li><a href="userattachment" title="UserAttachment"><span class="api-symbol api-symbol--resource"></span>UserAttachment</a></li>
-    <li><a href="usergroup" title="UserGroup"><span class="api-symbol api-symbol--resource"></span>UserGroup</a></li>
+    <li><a href="host" title="Host"><span class="symbol resource"></span>Host</a></li>
+    <li><a href="hostaccount" title="HostAccount"><span class="symbol resource"></span>HostAccount</a></li>
+    <li><a href="hostaccountuserattachment" title="HostAccountUserAttachment"><span class="symbol resource"></span>HostAccountUserAttachment</a></li>
+    <li><a href="hostaccountusergroupattachment" title="HostAccountUserGroupAttachment"><span class="symbol resource"></span>HostAccountUserGroupAttachment</a></li>
+    <li><a href="hostattachment" title="HostAttachment"><span class="symbol resource"></span>HostAttachment</a></li>
+    <li><a href="hostgroup" title="HostGroup"><span class="symbol resource"></span>HostGroup</a></li>
+    <li><a href="hostgroupaccountuserattachment" title="HostGroupAccountUserAttachment"><span class="symbol resource"></span>HostGroupAccountUserAttachment</a></li>
+    <li><a href="hostgroupaccountusergroupattachment" title="HostGroupAccountUserGroupAttachment"><span class="symbol resource"></span>HostGroupAccountUserGroupAttachment</a></li>
+    <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
+    <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
+    <li><a href="userattachment" title="UserAttachment"><span class="symbol resource"></span>UserAttachment</a></li>
+    <li><a href="usergroup" title="UserGroup"><span class="symbol resource"></span>UserGroup</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="gethostaccounts" title="GetHostAccounts"><span class="api-symbol api-symbol--function"></span>GetHostAccounts</a></li>
-    <li><a href="gethostgroups" title="GetHostGroups"><span class="api-symbol api-symbol--function"></span>GetHostGroups</a></li>
-    <li><a href="gethosts" title="GetHosts"><span class="api-symbol api-symbol--function"></span>GetHosts</a></li>
-    <li><a href="getinstances" title="GetInstances"><span class="api-symbol api-symbol--function"></span>GetInstances</a></li>
-    <li><a href="getusergroups" title="GetUserGroups"><span class="api-symbol api-symbol--function"></span>GetUserGroups</a></li>
-    <li><a href="getusers" title="GetUsers"><span class="api-symbol api-symbol--function"></span>GetUsers</a></li>
+    <li><a href="gethostaccounts" title="GetHostAccounts"><span class="symbol function"></span>GetHostAccounts</a></li>
+    <li><a href="gethostgroups" title="GetHostGroups"><span class="symbol function"></span>GetHostGroups</a></li>
+    <li><a href="gethosts" title="GetHosts"><span class="symbol function"></span>GetHosts</a></li>
+    <li><a href="getinstances" title="GetInstances"><span class="symbol function"></span>GetInstances</a></li>
+    <li><a href="getusergroups" title="GetUserGroups"><span class="symbol function"></span>GetUserGroups</a></li>
+    <li><a href="getusers" title="GetUsers"><span class="symbol function"></span>GetUsers</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

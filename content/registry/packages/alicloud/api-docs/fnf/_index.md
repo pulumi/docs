@@ -13,15 +13,15 @@ Explore the resources and functions of the alicloud.fnf module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="flow" title="Flow"><span class="api-symbol api-symbol--resource"></span>Flow</a></li>
-    <li><a href="schedule" title="Schedule"><span class="api-symbol api-symbol--resource"></span>Schedule</a></li>
+    <li><a href="flow" title="Flow"><span class="symbol resource"></span>Flow</a></li>
+    <li><a href="schedule" title="Schedule"><span class="symbol resource"></span>Schedule</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getflows" title="GetFlows"><span class="api-symbol api-symbol--function"></span>GetFlows</a></li>
-    <li><a href="getschedules" title="GetSchedules"><span class="api-symbol api-symbol--function"></span>GetSchedules</a></li>
-    <li><a href="getservice" title="GetService"><span class="api-symbol api-symbol--function"></span>GetService</a></li>
+    <li><a href="getflows" title="GetFlows"><span class="symbol function"></span>GetFlows</a></li>
+    <li><a href="getschedules" title="GetSchedules"><span class="symbol function"></span>GetSchedules</a></li>
+    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

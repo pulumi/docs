@@ -2,9 +2,6 @@
 title: "Linode"
 title_tag: "linode.Linode"
 meta_desc: "A Pulumi package for creating and managing linode cloud resources."
-menu:
-    reference:
-        parent: API Reference
 layout: api
 no_edit_this_page: true
 ---
@@ -16,53 +13,53 @@ A Pulumi package for creating and managing linode cloud resources.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="domain" title="Domain"><span class="api-symbol api-symbol--resource"></span>Domain</a></li>
-    <li><a href="domainrecord" title="DomainRecord"><span class="api-symbol api-symbol--resource"></span>DomainRecord</a></li>
-    <li><a href="firewall" title="Firewall"><span class="api-symbol api-symbol--resource"></span>Firewall</a></li>
-    <li><a href="image" title="Image"><span class="api-symbol api-symbol--resource"></span>Image</a></li>
-    <li><a href="instance" title="Instance"><span class="api-symbol api-symbol--resource"></span>Instance</a></li>
-    <li><a href="instanceip" title="InstanceIp"><span class="api-symbol api-symbol--resource"></span>InstanceIp</a></li>
-    <li><a href="lkecluster" title="LkeCluster"><span class="api-symbol api-symbol--resource"></span>LkeCluster</a></li>
-    <li><a href="nodebalancer" title="NodeBalancer"><span class="api-symbol api-symbol--resource"></span>NodeBalancer</a></li>
-    <li><a href="nodebalancerconfig" title="NodeBalancerConfig"><span class="api-symbol api-symbol--resource"></span>NodeBalancerConfig</a></li>
-    <li><a href="nodebalancernode" title="NodeBalancerNode"><span class="api-symbol api-symbol--resource"></span>NodeBalancerNode</a></li>
-    <li><a href="objectstoragebucket" title="ObjectStorageBucket"><span class="api-symbol api-symbol--resource"></span>ObjectStorageBucket</a></li>
-    <li><a href="objectstoragekey" title="ObjectStorageKey"><span class="api-symbol api-symbol--resource"></span>ObjectStorageKey</a></li>
-    <li><a href="objectstorageobject" title="ObjectStorageObject"><span class="api-symbol api-symbol--resource"></span>ObjectStorageObject</a></li>
-    <li><a href="provider" title="Provider"><span class="api-symbol api-symbol--resource"></span>Provider</a></li>
-    <li><a href="rdns" title="Rdns"><span class="api-symbol api-symbol--resource"></span>Rdns</a></li>
-    <li><a href="sshkey" title="SshKey"><span class="api-symbol api-symbol--resource"></span>SshKey</a></li>
-    <li><a href="stackscript" title="StackScript"><span class="api-symbol api-symbol--resource"></span>StackScript</a></li>
-    <li><a href="token" title="Token"><span class="api-symbol api-symbol--resource"></span>Token</a></li>
-    <li><a href="user" title="User"><span class="api-symbol api-symbol--resource"></span>User</a></li>
-    <li><a href="volume" title="Volume"><span class="api-symbol api-symbol--resource"></span>Volume</a></li>
+    <li><a href="domain" title="Domain"><span class="symbol resource"></span>Domain</a></li>
+    <li><a href="domainrecord" title="DomainRecord"><span class="symbol resource"></span>DomainRecord</a></li>
+    <li><a href="firewall" title="Firewall"><span class="symbol resource"></span>Firewall</a></li>
+    <li><a href="image" title="Image"><span class="symbol resource"></span>Image</a></li>
+    <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
+    <li><a href="instanceip" title="InstanceIp"><span class="symbol resource"></span>InstanceIp</a></li>
+    <li><a href="lkecluster" title="LkeCluster"><span class="symbol resource"></span>LkeCluster</a></li>
+    <li><a href="nodebalancer" title="NodeBalancer"><span class="symbol resource"></span>NodeBalancer</a></li>
+    <li><a href="nodebalancerconfig" title="NodeBalancerConfig"><span class="symbol resource"></span>NodeBalancerConfig</a></li>
+    <li><a href="nodebalancernode" title="NodeBalancerNode"><span class="symbol resource"></span>NodeBalancerNode</a></li>
+    <li><a href="objectstoragebucket" title="ObjectStorageBucket"><span class="symbol resource"></span>ObjectStorageBucket</a></li>
+    <li><a href="objectstoragekey" title="ObjectStorageKey"><span class="symbol resource"></span>ObjectStorageKey</a></li>
+    <li><a href="objectstorageobject" title="ObjectStorageObject"><span class="symbol resource"></span>ObjectStorageObject</a></li>
+    <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
+    <li><a href="rdns" title="Rdns"><span class="symbol resource"></span>Rdns</a></li>
+    <li><a href="sshkey" title="SshKey"><span class="symbol resource"></span>SshKey</a></li>
+    <li><a href="stackscript" title="StackScript"><span class="symbol resource"></span>StackScript</a></li>
+    <li><a href="token" title="Token"><span class="symbol resource"></span>Token</a></li>
+    <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
+    <li><a href="volume" title="Volume"><span class="symbol resource"></span>Volume</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getaccount" title="GetAccount"><span class="api-symbol api-symbol--function"></span>GetAccount</a></li>
-    <li><a href="getdomain" title="GetDomain"><span class="api-symbol api-symbol--function"></span>GetDomain</a></li>
-    <li><a href="getdomainrecord" title="GetDomainRecord"><span class="api-symbol api-symbol--function"></span>GetDomainRecord</a></li>
-    <li><a href="getfirewall" title="GetFirewall"><span class="api-symbol api-symbol--function"></span>GetFirewall</a></li>
-    <li><a href="getimage" title="GetImage"><span class="api-symbol api-symbol--function"></span>GetImage</a></li>
-    <li><a href="getimages" title="GetImages"><span class="api-symbol api-symbol--function"></span>GetImages</a></li>
-    <li><a href="getinstancebackups" title="GetInstanceBackups"><span class="api-symbol api-symbol--function"></span>GetInstanceBackups</a></li>
-    <li><a href="getinstancetype" title="GetInstanceType"><span class="api-symbol api-symbol--function"></span>GetInstanceType</a></li>
-    <li><a href="getinstances" title="GetInstances"><span class="api-symbol api-symbol--function"></span>GetInstances</a></li>
-    <li><a href="getkernel" title="GetKernel"><span class="api-symbol api-symbol--function"></span>GetKernel</a></li>
-    <li><a href="getlkecluster" title="GetLkeCluster"><span class="api-symbol api-symbol--function"></span>GetLkeCluster</a></li>
-    <li><a href="getnetworkingip" title="GetNetworkingIp"><span class="api-symbol api-symbol--function"></span>GetNetworkingIp</a></li>
-    <li><a href="getnodebalancer" title="GetNodeBalancer"><span class="api-symbol api-symbol--function"></span>GetNodeBalancer</a></li>
-    <li><a href="getnodebalancerconfig" title="GetNodeBalancerConfig"><span class="api-symbol api-symbol--function"></span>GetNodeBalancerConfig</a></li>
-    <li><a href="getnodebalancernode" title="GetNodeBalancerNode"><span class="api-symbol api-symbol--function"></span>GetNodeBalancerNode</a></li>
-    <li><a href="getobjectstoragecluster" title="GetObjectStorageCluster"><span class="api-symbol api-symbol--function"></span>GetObjectStorageCluster</a></li>
-    <li><a href="getprofile" title="GetProfile"><span class="api-symbol api-symbol--function"></span>GetProfile</a></li>
-    <li><a href="getregion" title="GetRegion"><span class="api-symbol api-symbol--function"></span>GetRegion</a></li>
-    <li><a href="getsshkey" title="GetSshKey"><span class="api-symbol api-symbol--function"></span>GetSshKey</a></li>
-    <li><a href="getstackscript" title="GetStackScript"><span class="api-symbol api-symbol--function"></span>GetStackScript</a></li>
-    <li><a href="getuser" title="GetUser"><span class="api-symbol api-symbol--function"></span>GetUser</a></li>
-    <li><a href="getvlans" title="GetVlans"><span class="api-symbol api-symbol--function"></span>GetVlans</a></li>
-    <li><a href="getvolume" title="GetVolume"><span class="api-symbol api-symbol--function"></span>GetVolume</a></li>
+    <li><a href="getaccount" title="GetAccount"><span class="symbol function"></span>GetAccount</a></li>
+    <li><a href="getdomain" title="GetDomain"><span class="symbol function"></span>GetDomain</a></li>
+    <li><a href="getdomainrecord" title="GetDomainRecord"><span class="symbol function"></span>GetDomainRecord</a></li>
+    <li><a href="getfirewall" title="GetFirewall"><span class="symbol function"></span>GetFirewall</a></li>
+    <li><a href="getimage" title="GetImage"><span class="symbol function"></span>GetImage</a></li>
+    <li><a href="getimages" title="GetImages"><span class="symbol function"></span>GetImages</a></li>
+    <li><a href="getinstancebackups" title="GetInstanceBackups"><span class="symbol function"></span>GetInstanceBackups</a></li>
+    <li><a href="getinstancetype" title="GetInstanceType"><span class="symbol function"></span>GetInstanceType</a></li>
+    <li><a href="getinstances" title="GetInstances"><span class="symbol function"></span>GetInstances</a></li>
+    <li><a href="getkernel" title="GetKernel"><span class="symbol function"></span>GetKernel</a></li>
+    <li><a href="getlkecluster" title="GetLkeCluster"><span class="symbol function"></span>GetLkeCluster</a></li>
+    <li><a href="getnetworkingip" title="GetNetworkingIp"><span class="symbol function"></span>GetNetworkingIp</a></li>
+    <li><a href="getnodebalancer" title="GetNodeBalancer"><span class="symbol function"></span>GetNodeBalancer</a></li>
+    <li><a href="getnodebalancerconfig" title="GetNodeBalancerConfig"><span class="symbol function"></span>GetNodeBalancerConfig</a></li>
+    <li><a href="getnodebalancernode" title="GetNodeBalancerNode"><span class="symbol function"></span>GetNodeBalancerNode</a></li>
+    <li><a href="getobjectstoragecluster" title="GetObjectStorageCluster"><span class="symbol function"></span>GetObjectStorageCluster</a></li>
+    <li><a href="getprofile" title="GetProfile"><span class="symbol function"></span>GetProfile</a></li>
+    <li><a href="getregion" title="GetRegion"><span class="symbol function"></span>GetRegion</a></li>
+    <li><a href="getsshkey" title="GetSshKey"><span class="symbol function"></span>GetSshKey</a></li>
+    <li><a href="getstackscript" title="GetStackScript"><span class="symbol function"></span>GetStackScript</a></li>
+    <li><a href="getuser" title="GetUser"><span class="symbol function"></span>GetUser</a></li>
+    <li><a href="getvlans" title="GetVlans"><span class="symbol function"></span>GetVlans</a></li>
+    <li><a href="getvolume" title="GetVolume"><span class="symbol function"></span>GetVolume</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

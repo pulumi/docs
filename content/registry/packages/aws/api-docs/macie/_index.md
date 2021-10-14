@@ -13,10 +13,10 @@ Explore the resources and functions of the aws.macie module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="customdataidentifier" title="CustomDataIdentifier"><span class="api-symbol api-symbol--resource"></span>CustomDataIdentifier</a></li>
-    <li><a href="findingsfilter" title="FindingsFilter"><span class="api-symbol api-symbol--resource"></span>FindingsFilter</a></li>
-    <li><a href="memberaccountassociation" title="MemberAccountAssociation"><span class="api-symbol api-symbol--resource"></span>MemberAccountAssociation</a></li>
-    <li><a href="s3bucketassociation" title="S3BucketAssociation"><span class="api-symbol api-symbol--resource"></span>S3BucketAssociation</a></li>
+    <li><a href="customdataidentifier" title="CustomDataIdentifier"><span class="symbol resource"></span>CustomDataIdentifier</a></li>
+    <li><a href="findingsfilter" title="FindingsFilter"><span class="symbol resource"></span>FindingsFilter</a></li>
+    <li><a href="memberaccountassociation" title="MemberAccountAssociation"><span class="symbol resource"></span>MemberAccountAssociation</a></li>
+    <li><a href="s3bucketassociation" title="S3BucketAssociation"><span class="symbol resource"></span>S3BucketAssociation</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

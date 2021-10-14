@@ -13,16 +13,16 @@ Explore the resources and functions of the google-native.cloudidentity/v1 module
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="device" title="Device"><span class="api-symbol api-symbol--resource"></span>Device</a></li>
-    <li><a href="group" title="Group"><span class="api-symbol api-symbol--resource"></span>Group</a></li>
-    <li><a href="membership" title="Membership"><span class="api-symbol api-symbol--resource"></span>Membership</a></li>
+    <li><a href="device" title="Device"><span class="symbol resource"></span>Device</a></li>
+    <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
+    <li><a href="membership" title="Membership"><span class="symbol resource"></span>Membership</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getdevice" title="GetDevice"><span class="api-symbol api-symbol--function"></span>GetDevice</a></li>
-    <li><a href="getgroup" title="GetGroup"><span class="api-symbol api-symbol--function"></span>GetGroup</a></li>
-    <li><a href="getmembership" title="GetMembership"><span class="api-symbol api-symbol--function"></span>GetMembership</a></li>
+    <li><a href="getdevice" title="GetDevice"><span class="symbol function"></span>GetDevice</a></li>
+    <li><a href="getgroup" title="GetGroup"><span class="symbol function"></span>GetGroup</a></li>
+    <li><a href="getmembership" title="GetMembership"><span class="symbol function"></span>GetMembership</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

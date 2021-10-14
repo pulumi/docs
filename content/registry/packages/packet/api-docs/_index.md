@@ -2,9 +2,6 @@
 title: "Packet"
 title_tag: "packet.Packet"
 meta_desc: "A Pulumi package for creating and managing Packet cloud resources."
-menu:
-    reference:
-        parent: API Reference
 layout: api
 no_edit_this_page: true
 ---
@@ -16,35 +13,35 @@ A Pulumi package for creating and managing Packet cloud resources.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="bgpsession" title="BgpSession"><span class="api-symbol api-symbol--resource"></span>BgpSession</a></li>
-    <li><a href="device" title="Device"><span class="api-symbol api-symbol--resource"></span>Device</a></li>
-    <li><a href="devicenetworktype" title="DeviceNetworkType"><span class="api-symbol api-symbol--resource"></span>DeviceNetworkType</a></li>
-    <li><a href="ipattachment" title="IpAttachment"><span class="api-symbol api-symbol--resource"></span>IpAttachment</a></li>
-    <li><a href="organization" title="Organization"><span class="api-symbol api-symbol--resource"></span>Organization</a></li>
-    <li><a href="portvlanattachment" title="PortVlanAttachment"><span class="api-symbol api-symbol--resource"></span>PortVlanAttachment</a></li>
-    <li><a href="project" title="Project"><span class="api-symbol api-symbol--resource"></span>Project</a></li>
-    <li><a href="projectsshkey" title="ProjectSshKey"><span class="api-symbol api-symbol--resource"></span>ProjectSshKey</a></li>
-    <li><a href="provider" title="Provider"><span class="api-symbol api-symbol--resource"></span>Provider</a></li>
-    <li><a href="reservedipblock" title="ReservedIpBlock"><span class="api-symbol api-symbol--resource"></span>ReservedIpBlock</a></li>
-    <li><a href="spotmarketrequest" title="SpotMarketRequest"><span class="api-symbol api-symbol--resource"></span>SpotMarketRequest</a></li>
-    <li><a href="sshkey" title="SshKey"><span class="api-symbol api-symbol--resource"></span>SshKey</a></li>
-    <li><a href="vlan" title="Vlan"><span class="api-symbol api-symbol--resource"></span>Vlan</a></li>
-    <li><a href="volume" title="Volume"><span class="api-symbol api-symbol--resource"></span>Volume</a></li>
-    <li><a href="volumeattachment" title="VolumeAttachment"><span class="api-symbol api-symbol--resource"></span>VolumeAttachment</a></li>
+    <li><a href="bgpsession" title="BgpSession"><span class="symbol resource"></span>BgpSession</a></li>
+    <li><a href="device" title="Device"><span class="symbol resource"></span>Device</a></li>
+    <li><a href="devicenetworktype" title="DeviceNetworkType"><span class="symbol resource"></span>DeviceNetworkType</a></li>
+    <li><a href="ipattachment" title="IpAttachment"><span class="symbol resource"></span>IpAttachment</a></li>
+    <li><a href="organization" title="Organization"><span class="symbol resource"></span>Organization</a></li>
+    <li><a href="portvlanattachment" title="PortVlanAttachment"><span class="symbol resource"></span>PortVlanAttachment</a></li>
+    <li><a href="project" title="Project"><span class="symbol resource"></span>Project</a></li>
+    <li><a href="projectsshkey" title="ProjectSshKey"><span class="symbol resource"></span>ProjectSshKey</a></li>
+    <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
+    <li><a href="reservedipblock" title="ReservedIpBlock"><span class="symbol resource"></span>ReservedIpBlock</a></li>
+    <li><a href="spotmarketrequest" title="SpotMarketRequest"><span class="symbol resource"></span>SpotMarketRequest</a></li>
+    <li><a href="sshkey" title="SshKey"><span class="symbol resource"></span>SshKey</a></li>
+    <li><a href="vlan" title="Vlan"><span class="symbol resource"></span>Vlan</a></li>
+    <li><a href="volume" title="Volume"><span class="symbol resource"></span>Volume</a></li>
+    <li><a href="volumeattachment" title="VolumeAttachment"><span class="symbol resource"></span>VolumeAttachment</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getdevice" title="GetDevice"><span class="api-symbol api-symbol--function"></span>GetDevice</a></li>
-    <li><a href="getdevicebgpneighbors" title="GetDeviceBgpNeighbors"><span class="api-symbol api-symbol--function"></span>GetDeviceBgpNeighbors</a></li>
-    <li><a href="getipblockranges" title="GetIpBlockRanges"><span class="api-symbol api-symbol--function"></span>GetIpBlockRanges</a></li>
-    <li><a href="getoperatingsystem" title="GetOperatingSystem"><span class="api-symbol api-symbol--function"></span>GetOperatingSystem</a></li>
-    <li><a href="getorganization" title="GetOrganization"><span class="api-symbol api-symbol--function"></span>GetOrganization</a></li>
-    <li><a href="getprecreatedipblock" title="GetPrecreatedIpBlock"><span class="api-symbol api-symbol--function"></span>GetPrecreatedIpBlock</a></li>
-    <li><a href="getproject" title="GetProject"><span class="api-symbol api-symbol--function"></span>GetProject</a></li>
-    <li><a href="getspotmarketprice" title="GetSpotMarketPrice"><span class="api-symbol api-symbol--function"></span>GetSpotMarketPrice</a></li>
-    <li><a href="getspotmarketrequest" title="GetSpotMarketRequest"><span class="api-symbol api-symbol--function"></span>GetSpotMarketRequest</a></li>
-    <li><a href="getvolume" title="GetVolume"><span class="api-symbol api-symbol--function"></span>GetVolume</a></li>
+    <li><a href="getdevice" title="GetDevice"><span class="symbol function"></span>GetDevice</a></li>
+    <li><a href="getdevicebgpneighbors" title="GetDeviceBgpNeighbors"><span class="symbol function"></span>GetDeviceBgpNeighbors</a></li>
+    <li><a href="getipblockranges" title="GetIpBlockRanges"><span class="symbol function"></span>GetIpBlockRanges</a></li>
+    <li><a href="getoperatingsystem" title="GetOperatingSystem"><span class="symbol function"></span>GetOperatingSystem</a></li>
+    <li><a href="getorganization" title="GetOrganization"><span class="symbol function"></span>GetOrganization</a></li>
+    <li><a href="getprecreatedipblock" title="GetPrecreatedIpBlock"><span class="symbol function"></span>GetPrecreatedIpBlock</a></li>
+    <li><a href="getproject" title="GetProject"><span class="symbol function"></span>GetProject</a></li>
+    <li><a href="getspotmarketprice" title="GetSpotMarketPrice"><span class="symbol function"></span>GetSpotMarketPrice</a></li>
+    <li><a href="getspotmarketrequest" title="GetSpotMarketRequest"><span class="symbol function"></span>GetSpotMarketRequest</a></li>
+    <li><a href="getvolume" title="GetVolume"><span class="symbol function"></span>GetVolume</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

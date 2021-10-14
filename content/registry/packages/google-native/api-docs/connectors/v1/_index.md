@@ -13,16 +13,16 @@ Explore the resources and functions of the google-native.connectors/v1 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="connection" title="Connection"><span class="api-symbol api-symbol--resource"></span>Connection</a></li>
-    <li><a href="connectioniampolicy" title="ConnectionIamPolicy"><span class="api-symbol api-symbol--resource"></span>ConnectionIamPolicy</a></li>
-    <li><a href="provideriampolicy" title="ProviderIamPolicy"><span class="api-symbol api-symbol--resource"></span>ProviderIamPolicy</a></li>
+    <li><a href="connection" title="Connection"><span class="symbol resource"></span>Connection</a></li>
+    <li><a href="connectioniampolicy" title="ConnectionIamPolicy"><span class="symbol resource"></span>ConnectionIamPolicy</a></li>
+    <li><a href="provideriampolicy" title="ProviderIamPolicy"><span class="symbol resource"></span>ProviderIamPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getconnection" title="GetConnection"><span class="api-symbol api-symbol--function"></span>GetConnection</a></li>
-    <li><a href="getconnectioniampolicy" title="GetConnectionIamPolicy"><span class="api-symbol api-symbol--function"></span>GetConnectionIamPolicy</a></li>
-    <li><a href="getprovideriampolicy" title="GetProviderIamPolicy"><span class="api-symbol api-symbol--function"></span>GetProviderIamPolicy</a></li>
+    <li><a href="getconnection" title="GetConnection"><span class="symbol function"></span>GetConnection</a></li>
+    <li><a href="getconnectioniampolicy" title="GetConnectionIamPolicy"><span class="symbol function"></span>GetConnectionIamPolicy</a></li>
+    <li><a href="getprovideriampolicy" title="GetProviderIamPolicy"><span class="symbol function"></span>GetProviderIamPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

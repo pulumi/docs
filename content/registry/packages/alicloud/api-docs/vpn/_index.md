@@ -13,19 +13,19 @@ Explore the resources and functions of the alicloud.vpn module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="connection" title="Connection"><span class="api-symbol api-symbol--resource"></span>Connection</a></li>
-    <li><a href="customergateway" title="CustomerGateway"><span class="api-symbol api-symbol--resource"></span>CustomerGateway</a></li>
-    <li><a href="gateway" title="Gateway"><span class="api-symbol api-symbol--resource"></span>Gateway</a></li>
-    <li><a href="routeentry" title="RouteEntry"><span class="api-symbol api-symbol--resource"></span>RouteEntry</a></li>
-    <li><a href="sslvpnclientcert" title="SslVpnClientCert"><span class="api-symbol api-symbol--resource"></span>SslVpnClientCert</a></li>
-    <li><a href="sslvpnserver" title="SslVpnServer"><span class="api-symbol api-symbol--resource"></span>SslVpnServer</a></li>
+    <li><a href="connection" title="Connection"><span class="symbol resource"></span>Connection</a></li>
+    <li><a href="customergateway" title="CustomerGateway"><span class="symbol resource"></span>CustomerGateway</a></li>
+    <li><a href="gateway" title="Gateway"><span class="symbol resource"></span>Gateway</a></li>
+    <li><a href="routeentry" title="RouteEntry"><span class="symbol resource"></span>RouteEntry</a></li>
+    <li><a href="sslvpnclientcert" title="SslVpnClientCert"><span class="symbol resource"></span>SslVpnClientCert</a></li>
+    <li><a href="sslvpnserver" title="SslVpnServer"><span class="symbol resource"></span>SslVpnServer</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getconnections" title="GetConnections"><span class="api-symbol api-symbol--function"></span>GetConnections</a></li>
-    <li><a href="getcustomergateways" title="GetCustomerGateways"><span class="api-symbol api-symbol--function"></span>GetCustomerGateways</a></li>
-    <li><a href="getgateways" title="GetGateways"><span class="api-symbol api-symbol--function"></span>GetGateways</a></li>
+    <li><a href="getconnections" title="GetConnections"><span class="symbol function"></span>GetConnections</a></li>
+    <li><a href="getcustomergateways" title="GetCustomerGateways"><span class="symbol function"></span>GetCustomerGateways</a></li>
+    <li><a href="getgateways" title="GetGateways"><span class="symbol function"></span>GetGateways</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

@@ -13,15 +13,15 @@ Explore the resources and functions of the azure.notificationhub module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="authorizationrule" title="AuthorizationRule"><span class="api-symbol api-symbol--resource"></span>AuthorizationRule</a></li>
-    <li><a href="hub" title="Hub"><span class="api-symbol api-symbol--resource"></span>Hub</a></li>
-    <li><a href="namespace" title="Namespace"><span class="api-symbol api-symbol--resource"></span>Namespace</a></li>
+    <li><a href="authorizationrule" title="AuthorizationRule"><span class="symbol resource"></span>AuthorizationRule</a></li>
+    <li><a href="hub" title="Hub"><span class="symbol resource"></span>Hub</a></li>
+    <li><a href="namespace" title="Namespace"><span class="symbol resource"></span>Namespace</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="gethub" title="GetHub"><span class="api-symbol api-symbol--function"></span>GetHub</a></li>
-    <li><a href="getnamespace" title="GetNamespace"><span class="api-symbol api-symbol--function"></span>GetNamespace</a></li>
+    <li><a href="gethub" title="GetHub"><span class="symbol function"></span>GetHub</a></li>
+    <li><a href="getnamespace" title="GetNamespace"><span class="symbol function"></span>GetNamespace</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

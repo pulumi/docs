@@ -13,34 +13,34 @@ Explore the resources and functions of the azure.iot module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="consumergroup" title="ConsumerGroup"><span class="api-symbol api-symbol--resource"></span>ConsumerGroup</a></li>
-    <li><a href="dpssharedaccesspolicy" title="DpsSharedAccessPolicy"><span class="api-symbol api-symbol--resource"></span>DpsSharedAccessPolicy</a></li>
-    <li><a href="endpointeventhub" title="EndpointEventhub"><span class="api-symbol api-symbol--resource"></span>EndpointEventhub</a></li>
-    <li><a href="endpointservicebusqueue" title="EndpointServicebusQueue"><span class="api-symbol api-symbol--resource"></span>EndpointServicebusQueue</a></li>
-    <li><a href="endpointservicebustopic" title="EndpointServicebusTopic"><span class="api-symbol api-symbol--resource"></span>EndpointServicebusTopic</a></li>
-    <li><a href="endpointstoragecontainer" title="EndpointStorageContainer"><span class="api-symbol api-symbol--resource"></span>EndpointStorageContainer</a></li>
-    <li><a href="enrichment" title="Enrichment"><span class="api-symbol api-symbol--resource"></span>Enrichment</a></li>
-    <li><a href="fallbackroute" title="FallbackRoute"><span class="api-symbol api-symbol--resource"></span>FallbackRoute</a></li>
-    <li><a href="iothub" title="IoTHub"><span class="api-symbol api-symbol--resource"></span>IoTHub</a></li>
-    <li><a href="iothubcertificate" title="IotHubCertificate"><span class="api-symbol api-symbol--resource"></span>IotHubCertificate</a></li>
-    <li><a href="iothubdps" title="IotHubDps"><span class="api-symbol api-symbol--resource"></span>IotHubDps</a></li>
-    <li><a href="route" title="Route"><span class="api-symbol api-symbol--resource"></span>Route</a></li>
-    <li><a href="securitydevicegroup" title="SecurityDeviceGroup"><span class="api-symbol api-symbol--resource"></span>SecurityDeviceGroup</a></li>
-    <li><a href="securitysolution" title="SecuritySolution"><span class="api-symbol api-symbol--resource"></span>SecuritySolution</a></li>
-    <li><a href="sharedaccesspolicy" title="SharedAccessPolicy"><span class="api-symbol api-symbol--resource"></span>SharedAccessPolicy</a></li>
-    <li><a href="timeseriesinsightsaccesspolicy" title="TimeSeriesInsightsAccessPolicy"><span class="api-symbol api-symbol--resource"></span>TimeSeriesInsightsAccessPolicy</a></li>
-    <li><a href="timeseriesinsightseventsourceiothub" title="TimeSeriesInsightsEventSourceIothub"><span class="api-symbol api-symbol--resource"></span>TimeSeriesInsightsEventSourceIothub</a></li>
-    <li><a href="timeseriesinsightsgen2environment" title="TimeSeriesInsightsGen2Environment"><span class="api-symbol api-symbol--resource"></span>TimeSeriesInsightsGen2Environment</a></li>
-    <li><a href="timeseriesinsightsreferencedataset" title="TimeSeriesInsightsReferenceDataSet"><span class="api-symbol api-symbol--resource"></span>TimeSeriesInsightsReferenceDataSet</a></li>
-    <li><a href="timeseriesinsightsstandardenvironment" title="TimeSeriesInsightsStandardEnvironment"><span class="api-symbol api-symbol--resource"></span>TimeSeriesInsightsStandardEnvironment</a></li>
+    <li><a href="consumergroup" title="ConsumerGroup"><span class="symbol resource"></span>ConsumerGroup</a></li>
+    <li><a href="dpssharedaccesspolicy" title="DpsSharedAccessPolicy"><span class="symbol resource"></span>DpsSharedAccessPolicy</a></li>
+    <li><a href="endpointeventhub" title="EndpointEventhub"><span class="symbol resource"></span>EndpointEventhub</a></li>
+    <li><a href="endpointservicebusqueue" title="EndpointServicebusQueue"><span class="symbol resource"></span>EndpointServicebusQueue</a></li>
+    <li><a href="endpointservicebustopic" title="EndpointServicebusTopic"><span class="symbol resource"></span>EndpointServicebusTopic</a></li>
+    <li><a href="endpointstoragecontainer" title="EndpointStorageContainer"><span class="symbol resource"></span>EndpointStorageContainer</a></li>
+    <li><a href="enrichment" title="Enrichment"><span class="symbol resource"></span>Enrichment</a></li>
+    <li><a href="fallbackroute" title="FallbackRoute"><span class="symbol resource"></span>FallbackRoute</a></li>
+    <li><a href="iothub" title="IoTHub"><span class="symbol resource"></span>IoTHub</a></li>
+    <li><a href="iothubcertificate" title="IotHubCertificate"><span class="symbol resource"></span>IotHubCertificate</a></li>
+    <li><a href="iothubdps" title="IotHubDps"><span class="symbol resource"></span>IotHubDps</a></li>
+    <li><a href="route" title="Route"><span class="symbol resource"></span>Route</a></li>
+    <li><a href="securitydevicegroup" title="SecurityDeviceGroup"><span class="symbol resource"></span>SecurityDeviceGroup</a></li>
+    <li><a href="securitysolution" title="SecuritySolution"><span class="symbol resource"></span>SecuritySolution</a></li>
+    <li><a href="sharedaccesspolicy" title="SharedAccessPolicy"><span class="symbol resource"></span>SharedAccessPolicy</a></li>
+    <li><a href="timeseriesinsightsaccesspolicy" title="TimeSeriesInsightsAccessPolicy"><span class="symbol resource"></span>TimeSeriesInsightsAccessPolicy</a></li>
+    <li><a href="timeseriesinsightseventsourceiothub" title="TimeSeriesInsightsEventSourceIothub"><span class="symbol resource"></span>TimeSeriesInsightsEventSourceIothub</a></li>
+    <li><a href="timeseriesinsightsgen2environment" title="TimeSeriesInsightsGen2Environment"><span class="symbol resource"></span>TimeSeriesInsightsGen2Environment</a></li>
+    <li><a href="timeseriesinsightsreferencedataset" title="TimeSeriesInsightsReferenceDataSet"><span class="symbol resource"></span>TimeSeriesInsightsReferenceDataSet</a></li>
+    <li><a href="timeseriesinsightsstandardenvironment" title="TimeSeriesInsightsStandardEnvironment"><span class="symbol resource"></span>TimeSeriesInsightsStandardEnvironment</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getdps" title="GetDps"><span class="api-symbol api-symbol--function"></span>GetDps</a></li>
-    <li><a href="getdpssharedaccesspolicy" title="GetDpsSharedAccessPolicy"><span class="api-symbol api-symbol--function"></span>GetDpsSharedAccessPolicy</a></li>
-    <li><a href="getiothub" title="GetIotHub"><span class="api-symbol api-symbol--function"></span>GetIotHub</a></li>
-    <li><a href="getsharedaccesspolicy" title="GetSharedAccessPolicy"><span class="api-symbol api-symbol--function"></span>GetSharedAccessPolicy</a></li>
+    <li><a href="getdps" title="GetDps"><span class="symbol function"></span>GetDps</a></li>
+    <li><a href="getdpssharedaccesspolicy" title="GetDpsSharedAccessPolicy"><span class="symbol function"></span>GetDpsSharedAccessPolicy</a></li>
+    <li><a href="getiothub" title="GetIotHub"><span class="symbol function"></span>GetIotHub</a></li>
+    <li><a href="getsharedaccesspolicy" title="GetSharedAccessPolicy"><span class="symbol function"></span>GetSharedAccessPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

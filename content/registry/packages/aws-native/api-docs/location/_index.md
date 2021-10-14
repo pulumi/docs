@@ -13,12 +13,12 @@ Explore the resources and functions of the aws-native.location module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="geofencecollection" title="GeofenceCollection"><span class="api-symbol api-symbol--resource"></span>GeofenceCollection</a></li>
-    <li><a href="map" title="Map"><span class="api-symbol api-symbol--resource"></span>Map</a></li>
-    <li><a href="placeindex" title="PlaceIndex"><span class="api-symbol api-symbol--resource"></span>PlaceIndex</a></li>
-    <li><a href="routecalculator" title="RouteCalculator"><span class="api-symbol api-symbol--resource"></span>RouteCalculator</a></li>
-    <li><a href="tracker" title="Tracker"><span class="api-symbol api-symbol--resource"></span>Tracker</a></li>
-    <li><a href="trackerconsumer" title="TrackerConsumer"><span class="api-symbol api-symbol--resource"></span>TrackerConsumer</a></li>
+    <li><a href="geofencecollection" title="GeofenceCollection"><span class="symbol resource"></span>GeofenceCollection</a></li>
+    <li><a href="map" title="Map"><span class="symbol resource"></span>Map</a></li>
+    <li><a href="placeindex" title="PlaceIndex"><span class="symbol resource"></span>PlaceIndex</a></li>
+    <li><a href="routecalculator" title="RouteCalculator"><span class="symbol resource"></span>RouteCalculator</a></li>
+    <li><a href="tracker" title="Tracker"><span class="symbol resource"></span>Tracker</a></li>
+    <li><a href="trackerconsumer" title="TrackerConsumer"><span class="symbol resource"></span>TrackerConsumer</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

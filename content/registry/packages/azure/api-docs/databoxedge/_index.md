@@ -13,8 +13,8 @@ Explore the resources and functions of the azure.databoxedge module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="device" title="Device"><span class="api-symbol api-symbol--resource"></span>Device</a></li>
-    <li><a href="order" title="Order"><span class="api-symbol api-symbol--resource"></span>Order</a></li>
+    <li><a href="device" title="Device"><span class="symbol resource"></span>Device</a></li>
+    <li><a href="order" title="Order"><span class="symbol resource"></span>Order</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

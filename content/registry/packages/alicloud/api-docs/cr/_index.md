@@ -13,16 +13,16 @@ Explore the resources and functions of the alicloud.cr module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="namespace" title="Namespace"><span class="api-symbol api-symbol--resource"></span>Namespace</a></li>
-    <li><a href="registryenterpriseinstance" title="RegistryEnterpriseInstance"><span class="api-symbol api-symbol--resource"></span>RegistryEnterpriseInstance</a></li>
-    <li><a href="repo" title="Repo"><span class="api-symbol api-symbol--resource"></span>Repo</a></li>
+    <li><a href="namespace" title="Namespace"><span class="symbol resource"></span>Namespace</a></li>
+    <li><a href="registryenterpriseinstance" title="RegistryEnterpriseInstance"><span class="symbol resource"></span>RegistryEnterpriseInstance</a></li>
+    <li><a href="repo" title="Repo"><span class="symbol resource"></span>Repo</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getnamespaces" title="GetNamespaces"><span class="api-symbol api-symbol--function"></span>GetNamespaces</a></li>
-    <li><a href="getrepos" title="GetRepos"><span class="api-symbol api-symbol--function"></span>GetRepos</a></li>
-    <li><a href="getservice" title="GetService"><span class="api-symbol api-symbol--function"></span>GetService</a></li>
+    <li><a href="getnamespaces" title="GetNamespaces"><span class="symbol function"></span>GetNamespaces</a></li>
+    <li><a href="getrepos" title="GetRepos"><span class="symbol function"></span>GetRepos</a></li>
+    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

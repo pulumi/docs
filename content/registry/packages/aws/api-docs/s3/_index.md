@@ -13,26 +13,26 @@ Explore the resources and functions of the aws.s3 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="accesspoint" title="AccessPoint"><span class="api-symbol api-symbol--resource"></span>AccessPoint</a></li>
-    <li><a href="accountpublicaccessblock" title="AccountPublicAccessBlock"><span class="api-symbol api-symbol--resource"></span>AccountPublicAccessBlock</a></li>
-    <li><a href="analyticsconfiguration" title="AnalyticsConfiguration"><span class="api-symbol api-symbol--resource"></span>AnalyticsConfiguration</a></li>
-    <li><a href="bucket" title="Bucket"><span class="api-symbol api-symbol--resource"></span>Bucket</a></li>
-    <li><a href="bucketmetric" title="BucketMetric"><span class="api-symbol api-symbol--resource"></span>BucketMetric</a></li>
-    <li><a href="bucketnotification" title="BucketNotification"><span class="api-symbol api-symbol--resource"></span>BucketNotification</a></li>
-    <li><a href="bucketobject" title="BucketObject"><span class="api-symbol api-symbol--resource"></span>BucketObject</a></li>
-    <li><a href="bucketownershipcontrols" title="BucketOwnershipControls"><span class="api-symbol api-symbol--resource"></span>BucketOwnershipControls</a></li>
-    <li><a href="bucketpolicy" title="BucketPolicy"><span class="api-symbol api-symbol--resource"></span>BucketPolicy</a></li>
-    <li><a href="bucketpublicaccessblock" title="BucketPublicAccessBlock"><span class="api-symbol api-symbol--resource"></span>BucketPublicAccessBlock</a></li>
-    <li><a href="inventory" title="Inventory"><span class="api-symbol api-symbol--resource"></span>Inventory</a></li>
-    <li><a href="objectcopy" title="ObjectCopy"><span class="api-symbol api-symbol--resource"></span>ObjectCopy</a></li>
+    <li><a href="accesspoint" title="AccessPoint"><span class="symbol resource"></span>AccessPoint</a></li>
+    <li><a href="accountpublicaccessblock" title="AccountPublicAccessBlock"><span class="symbol resource"></span>AccountPublicAccessBlock</a></li>
+    <li><a href="analyticsconfiguration" title="AnalyticsConfiguration"><span class="symbol resource"></span>AnalyticsConfiguration</a></li>
+    <li><a href="bucket" title="Bucket"><span class="symbol resource"></span>Bucket</a></li>
+    <li><a href="bucketmetric" title="BucketMetric"><span class="symbol resource"></span>BucketMetric</a></li>
+    <li><a href="bucketnotification" title="BucketNotification"><span class="symbol resource"></span>BucketNotification</a></li>
+    <li><a href="bucketobject" title="BucketObject"><span class="symbol resource"></span>BucketObject</a></li>
+    <li><a href="bucketownershipcontrols" title="BucketOwnershipControls"><span class="symbol resource"></span>BucketOwnershipControls</a></li>
+    <li><a href="bucketpolicy" title="BucketPolicy"><span class="symbol resource"></span>BucketPolicy</a></li>
+    <li><a href="bucketpublicaccessblock" title="BucketPublicAccessBlock"><span class="symbol resource"></span>BucketPublicAccessBlock</a></li>
+    <li><a href="inventory" title="Inventory"><span class="symbol resource"></span>Inventory</a></li>
+    <li><a href="objectcopy" title="ObjectCopy"><span class="symbol resource"></span>ObjectCopy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getbucket" title="GetBucket"><span class="api-symbol api-symbol--function"></span>GetBucket</a></li>
-    <li><a href="getbucketobject" title="GetBucketObject"><span class="api-symbol api-symbol--function"></span>GetBucketObject</a></li>
-    <li><a href="getbucketobjects" title="GetBucketObjects"><span class="api-symbol api-symbol--function"></span>GetBucketObjects</a></li>
-    <li><a href="getcanonicaluserid" title="GetCanonicalUserId"><span class="api-symbol api-symbol--function"></span>GetCanonicalUserId</a></li>
+    <li><a href="getbucket" title="GetBucket"><span class="symbol function"></span>GetBucket</a></li>
+    <li><a href="getbucketobject" title="GetBucketObject"><span class="symbol function"></span>GetBucketObject</a></li>
+    <li><a href="getbucketobjects" title="GetBucketObjects"><span class="symbol function"></span>GetBucketObjects</a></li>
+    <li><a href="getcanonicaluserid" title="GetCanonicalUserId"><span class="symbol function"></span>GetCanonicalUserId</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

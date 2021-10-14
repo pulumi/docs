@@ -13,8 +13,8 @@ Explore the resources and functions of the aws-native.iotevents module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="detectormodel" title="DetectorModel"><span class="api-symbol api-symbol--resource"></span>DetectorModel</a></li>
-    <li><a href="input" title="Input"><span class="api-symbol api-symbol--resource"></span>Input</a></li>
+    <li><a href="detectormodel" title="DetectorModel"><span class="symbol resource"></span>DetectorModel</a></li>
+    <li><a href="input" title="Input"><span class="symbol resource"></span>Input</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

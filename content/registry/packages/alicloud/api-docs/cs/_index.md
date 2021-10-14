@@ -13,34 +13,34 @@ Explore the resources and functions of the alicloud.cs module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="application" title="Application"><span class="api-symbol api-symbol--resource"></span>Application</a></li>
-    <li><a href="autoscalingconfig" title="AutoscalingConfig"><span class="api-symbol api-symbol--resource"></span>AutoscalingConfig</a></li>
-    <li><a href="cluster" title="Cluster"><span class="api-symbol api-symbol--resource"></span>Cluster</a></li>
-    <li><a href="edgekubernetes" title="EdgeKubernetes"><span class="api-symbol api-symbol--resource"></span>EdgeKubernetes</a></li>
-    <li><a href="kubernetes" title="Kubernetes"><span class="api-symbol api-symbol--resource"></span>Kubernetes</a></li>
-    <li><a href="kubernetesautoscaler" title="KubernetesAutoscaler"><span class="api-symbol api-symbol--resource"></span>KubernetesAutoscaler</a></li>
-    <li><a href="kubernetespermission" title="KubernetesPermission"><span class="api-symbol api-symbol--resource"></span>KubernetesPermission</a></li>
-    <li><a href="managedkubernetes" title="ManagedKubernetes"><span class="api-symbol api-symbol--resource"></span>ManagedKubernetes</a></li>
-    <li><a href="nodepool" title="NodePool"><span class="api-symbol api-symbol--resource"></span>NodePool</a></li>
-    <li><a href="registryenterprisenamespace" title="RegistryEnterpriseNamespace"><span class="api-symbol api-symbol--resource"></span>RegistryEnterpriseNamespace</a></li>
-    <li><a href="registryenterpriserepo" title="RegistryEnterpriseRepo"><span class="api-symbol api-symbol--resource"></span>RegistryEnterpriseRepo</a></li>
-    <li><a href="registryenterprisesyncrule" title="RegistryEnterpriseSyncRule"><span class="api-symbol api-symbol--resource"></span>RegistryEnterpriseSyncRule</a></li>
-    <li><a href="serverlesskubernetes" title="ServerlessKubernetes"><span class="api-symbol api-symbol--resource"></span>ServerlessKubernetes</a></li>
-    <li><a href="swarm" title="Swarm"><span class="api-symbol api-symbol--resource"></span>Swarm</a></li>
+    <li><a href="application" title="Application"><span class="symbol resource"></span>Application</a></li>
+    <li><a href="autoscalingconfig" title="AutoscalingConfig"><span class="symbol resource"></span>AutoscalingConfig</a></li>
+    <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
+    <li><a href="edgekubernetes" title="EdgeKubernetes"><span class="symbol resource"></span>EdgeKubernetes</a></li>
+    <li><a href="kubernetes" title="Kubernetes"><span class="symbol resource"></span>Kubernetes</a></li>
+    <li><a href="kubernetesautoscaler" title="KubernetesAutoscaler"><span class="symbol resource"></span>KubernetesAutoscaler</a></li>
+    <li><a href="kubernetespermission" title="KubernetesPermission"><span class="symbol resource"></span>KubernetesPermission</a></li>
+    <li><a href="managedkubernetes" title="ManagedKubernetes"><span class="symbol resource"></span>ManagedKubernetes</a></li>
+    <li><a href="nodepool" title="NodePool"><span class="symbol resource"></span>NodePool</a></li>
+    <li><a href="registryenterprisenamespace" title="RegistryEnterpriseNamespace"><span class="symbol resource"></span>RegistryEnterpriseNamespace</a></li>
+    <li><a href="registryenterpriserepo" title="RegistryEnterpriseRepo"><span class="symbol resource"></span>RegistryEnterpriseRepo</a></li>
+    <li><a href="registryenterprisesyncrule" title="RegistryEnterpriseSyncRule"><span class="symbol resource"></span>RegistryEnterpriseSyncRule</a></li>
+    <li><a href="serverlesskubernetes" title="ServerlessKubernetes"><span class="symbol resource"></span>ServerlessKubernetes</a></li>
+    <li><a href="swarm" title="Swarm"><span class="symbol resource"></span>Swarm</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getackservice" title="GetAckService"><span class="api-symbol api-symbol--function"></span>GetAckService</a></li>
-    <li><a href="getedgekubernetesclusters" title="GetEdgeKubernetesClusters"><span class="api-symbol api-symbol--function"></span>GetEdgeKubernetesClusters</a></li>
-    <li><a href="getkubernetesclusters" title="GetKubernetesClusters"><span class="api-symbol api-symbol--function"></span>GetKubernetesClusters</a></li>
-    <li><a href="getkubernetespermission" title="GetKubernetesPermission"><span class="api-symbol api-symbol--function"></span>GetKubernetesPermission</a></li>
-    <li><a href="getmanagedkubernetesclusters" title="GetManagedKubernetesClusters"><span class="api-symbol api-symbol--function"></span>GetManagedKubernetesClusters</a></li>
-    <li><a href="getregistryenterpriseinstances" title="GetRegistryEnterpriseInstances"><span class="api-symbol api-symbol--function"></span>GetRegistryEnterpriseInstances</a></li>
-    <li><a href="getregistryenterprisenamespaces" title="GetRegistryEnterpriseNamespaces"><span class="api-symbol api-symbol--function"></span>GetRegistryEnterpriseNamespaces</a></li>
-    <li><a href="getregistryenterpriserepos" title="GetRegistryEnterpriseRepos"><span class="api-symbol api-symbol--function"></span>GetRegistryEnterpriseRepos</a></li>
-    <li><a href="getregistryenterprisesyncrules" title="GetRegistryEnterpriseSyncRules"><span class="api-symbol api-symbol--function"></span>GetRegistryEnterpriseSyncRules</a></li>
-    <li><a href="getserverlesskubernetesclusters" title="GetServerlessKubernetesClusters"><span class="api-symbol api-symbol--function"></span>GetServerlessKubernetesClusters</a></li>
+    <li><a href="getackservice" title="GetAckService"><span class="symbol function"></span>GetAckService</a></li>
+    <li><a href="getedgekubernetesclusters" title="GetEdgeKubernetesClusters"><span class="symbol function"></span>GetEdgeKubernetesClusters</a></li>
+    <li><a href="getkubernetesclusters" title="GetKubernetesClusters"><span class="symbol function"></span>GetKubernetesClusters</a></li>
+    <li><a href="getkubernetespermission" title="GetKubernetesPermission"><span class="symbol function"></span>GetKubernetesPermission</a></li>
+    <li><a href="getmanagedkubernetesclusters" title="GetManagedKubernetesClusters"><span class="symbol function"></span>GetManagedKubernetesClusters</a></li>
+    <li><a href="getregistryenterpriseinstances" title="GetRegistryEnterpriseInstances"><span class="symbol function"></span>GetRegistryEnterpriseInstances</a></li>
+    <li><a href="getregistryenterprisenamespaces" title="GetRegistryEnterpriseNamespaces"><span class="symbol function"></span>GetRegistryEnterpriseNamespaces</a></li>
+    <li><a href="getregistryenterpriserepos" title="GetRegistryEnterpriseRepos"><span class="symbol function"></span>GetRegistryEnterpriseRepos</a></li>
+    <li><a href="getregistryenterprisesyncrules" title="GetRegistryEnterpriseSyncRules"><span class="symbol function"></span>GetRegistryEnterpriseSyncRules</a></li>
+    <li><a href="getserverlesskubernetesclusters" title="GetServerlessKubernetesClusters"><span class="symbol function"></span>GetServerlessKubernetesClusters</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

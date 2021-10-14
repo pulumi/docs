@@ -13,14 +13,14 @@ Explore the resources and functions of the alicloud.cas module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="certificate" title="Certificate"><span class="api-symbol api-symbol--resource"></span>Certificate</a></li>
-    <li><a href="servicecertificate" title="ServiceCertificate"><span class="api-symbol api-symbol--resource"></span>ServiceCertificate</a></li>
+    <li><a href="certificate" title="Certificate"><span class="symbol resource"></span>Certificate</a></li>
+    <li><a href="servicecertificate" title="ServiceCertificate"><span class="symbol resource"></span>ServiceCertificate</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getcertificates" title="GetCertificates"><span class="api-symbol api-symbol--function"></span>GetCertificates</a></li>
-    <li><a href="getservicecertificates" title="GetServiceCertificates"><span class="api-symbol api-symbol--function"></span>GetServiceCertificates</a></li>
+    <li><a href="getcertificates" title="GetCertificates"><span class="symbol function"></span>GetCertificates</a></li>
+    <li><a href="getservicecertificates" title="GetServiceCertificates"><span class="symbol function"></span>GetServiceCertificates</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

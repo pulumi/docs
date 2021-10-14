@@ -13,13 +13,13 @@ Explore the resources and functions of the aws.cloudtrail module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="trail" title="Trail"><span class="api-symbol api-symbol--resource"></span>Trail</a></li>
+    <li><a href="trail" title="Trail"><span class="symbol resource"></span>Trail</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getfunction" title="GetFunction"><span class="api-symbol api-symbol--function"></span>GetFunction</a></li>
-    <li><a href="getserviceaccount" title="GetServiceAccount"><span class="api-symbol api-symbol--function"></span>GetServiceAccount</a></li>
+    <li><a href="getfunction" title="GetFunction"><span class="symbol function"></span>GetFunction</a></li>
+    <li><a href="getserviceaccount" title="GetServiceAccount"><span class="symbol function"></span>GetServiceAccount</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

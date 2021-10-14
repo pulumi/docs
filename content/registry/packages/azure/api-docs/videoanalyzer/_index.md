@@ -13,8 +13,8 @@ Explore the resources and functions of the azure.videoanalyzer module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="analyzer" title="Analyzer"><span class="api-symbol api-symbol--resource"></span>Analyzer</a></li>
-    <li><a href="edgemodule" title="EdgeModule"><span class="api-symbol api-symbol--resource"></span>EdgeModule</a></li>
+    <li><a href="analyzer" title="Analyzer"><span class="symbol resource"></span>Analyzer</a></li>
+    <li><a href="edgemodule" title="EdgeModule"><span class="symbol resource"></span>EdgeModule</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

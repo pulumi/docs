@@ -13,8 +13,8 @@ Explore the resources and functions of the aws-native.s3objectlambda module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="accesspoint" title="AccessPoint"><span class="api-symbol api-symbol--resource"></span>AccessPoint</a></li>
-    <li><a href="accesspointpolicy" title="AccessPointPolicy"><span class="api-symbol api-symbol--resource"></span>AccessPointPolicy</a></li>
+    <li><a href="accesspoint" title="AccessPoint"><span class="symbol resource"></span>AccessPoint</a></li>
+    <li><a href="accesspointpolicy" title="AccessPointPolicy"><span class="symbol resource"></span>AccessPointPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

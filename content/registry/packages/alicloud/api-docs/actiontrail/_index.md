@@ -13,19 +13,19 @@ Explore the resources and functions of the alicloud.actiontrail module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="trail" title="Trail"><span class="api-symbol api-symbol--resource"></span>Trail</a></li>
-    <li><a href="traildeprecated" title="TrailDeprecated"><span class="api-symbol api-symbol--resource"></span>TrailDeprecated</a></li>
+    <li><a href="trail" title="Trail"><span class="symbol resource"></span>Trail</a></li>
+    <li><a href="traildeprecated" title="TrailDeprecated"><span class="symbol resource"></span>TrailDeprecated</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getconsumergroups" title="GetConsumerGroups"><span class="api-symbol api-symbol--function"></span>GetConsumerGroups</a></li>
-    <li><a href="getinstances" title="GetInstances"><span class="api-symbol api-symbol--function"></span>GetInstances</a></li>
-    <li><a href="getsaslacls" title="GetSaslAcls"><span class="api-symbol api-symbol--function"></span>GetSaslAcls</a></li>
-    <li><a href="getsaslusers" title="GetSaslUsers"><span class="api-symbol api-symbol--function"></span>GetSaslUsers</a></li>
-    <li><a href="gettopics" title="GetTopics"><span class="api-symbol api-symbol--function"></span>GetTopics</a></li>
-    <li><a href="gettrails" title="GetTrails"><span class="api-symbol api-symbol--function"></span>GetTrails</a></li>
-    <li><a href="gettrailsdeprecated" title="GetTrailsDeprecated"><span class="api-symbol api-symbol--function"></span>GetTrailsDeprecated</a></li>
+    <li><a href="getconsumergroups" title="GetConsumerGroups"><span class="symbol function"></span>GetConsumerGroups</a></li>
+    <li><a href="getinstances" title="GetInstances"><span class="symbol function"></span>GetInstances</a></li>
+    <li><a href="getsaslacls" title="GetSaslAcls"><span class="symbol function"></span>GetSaslAcls</a></li>
+    <li><a href="getsaslusers" title="GetSaslUsers"><span class="symbol function"></span>GetSaslUsers</a></li>
+    <li><a href="gettopics" title="GetTopics"><span class="symbol function"></span>GetTopics</a></li>
+    <li><a href="gettrails" title="GetTrails"><span class="symbol function"></span>GetTrails</a></li>
+    <li><a href="gettrailsdeprecated" title="GetTrailsDeprecated"><span class="symbol function"></span>GetTrailsDeprecated</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

@@ -13,18 +13,18 @@ Explore the resources and functions of the newrelic.synthetics module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="alertcondition" title="AlertCondition"><span class="api-symbol api-symbol--resource"></span>AlertCondition</a></li>
-    <li><a href="monitor" title="Monitor"><span class="api-symbol api-symbol--resource"></span>Monitor</a></li>
-    <li><a href="monitorscript" title="MonitorScript"><span class="api-symbol api-symbol--resource"></span>MonitorScript</a></li>
-    <li><a href="multilocationalertcondition" title="MultiLocationAlertCondition"><span class="api-symbol api-symbol--resource"></span>MultiLocationAlertCondition</a></li>
-    <li><a href="securecredential" title="SecureCredential"><span class="api-symbol api-symbol--resource"></span>SecureCredential</a></li>
+    <li><a href="alertcondition" title="AlertCondition"><span class="symbol resource"></span>AlertCondition</a></li>
+    <li><a href="monitor" title="Monitor"><span class="symbol resource"></span>Monitor</a></li>
+    <li><a href="monitorscript" title="MonitorScript"><span class="symbol resource"></span>MonitorScript</a></li>
+    <li><a href="multilocationalertcondition" title="MultiLocationAlertCondition"><span class="symbol resource"></span>MultiLocationAlertCondition</a></li>
+    <li><a href="securecredential" title="SecureCredential"><span class="symbol resource"></span>SecureCredential</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getmonitor" title="GetMonitor"><span class="api-symbol api-symbol--function"></span>GetMonitor</a></li>
-    <li><a href="getmonitorlocation" title="GetMonitorLocation"><span class="api-symbol api-symbol--function"></span>GetMonitorLocation</a></li>
-    <li><a href="getsecurecredential" title="GetSecureCredential"><span class="api-symbol api-symbol--function"></span>GetSecureCredential</a></li>
+    <li><a href="getmonitor" title="GetMonitor"><span class="symbol function"></span>GetMonitor</a></li>
+    <li><a href="getmonitorlocation" title="GetMonitorLocation"><span class="symbol function"></span>GetMonitorLocation</a></li>
+    <li><a href="getsecurecredential" title="GetSecureCredential"><span class="symbol function"></span>GetSecureCredential</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

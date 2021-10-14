@@ -13,9 +13,9 @@ Explore the resources and functions of the f5bigip.net module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="route" title="Route"><span class="api-symbol api-symbol--resource"></span>Route</a></li>
-    <li><a href="selfip" title="SelfIp"><span class="api-symbol api-symbol--resource"></span>SelfIp</a></li>
-    <li><a href="vlan" title="Vlan"><span class="api-symbol api-symbol--resource"></span>Vlan</a></li>
+    <li><a href="route" title="Route"><span class="symbol resource"></span>Route</a></li>
+    <li><a href="selfip" title="SelfIp"><span class="symbol resource"></span>SelfIp</a></li>
+    <li><a href="vlan" title="Vlan"><span class="symbol resource"></span>Vlan</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

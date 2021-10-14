@@ -13,8 +13,8 @@ Explore the resources and functions of the aws-native.licensemanager module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="grant" title="Grant"><span class="api-symbol api-symbol--resource"></span>Grant</a></li>
-    <li><a href="license" title="License"><span class="api-symbol api-symbol--resource"></span>License</a></li>
+    <li><a href="grant" title="Grant"><span class="symbol resource"></span>Grant</a></li>
+    <li><a href="license" title="License"><span class="symbol resource"></span>License</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

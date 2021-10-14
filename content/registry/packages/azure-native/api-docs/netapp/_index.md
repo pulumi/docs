@@ -13,24 +13,24 @@ Explore the resources and functions of the azure-native.netapp module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="account" title="Account"><span class="api-symbol api-symbol--resource"></span>Account</a></li>
-    <li><a href="backup" title="Backup"><span class="api-symbol api-symbol--resource"></span>Backup</a></li>
-    <li><a href="backuppolicy" title="BackupPolicy"><span class="api-symbol api-symbol--resource"></span>BackupPolicy</a></li>
-    <li><a href="pool" title="Pool"><span class="api-symbol api-symbol--resource"></span>Pool</a></li>
-    <li><a href="snapshot" title="Snapshot"><span class="api-symbol api-symbol--resource"></span>Snapshot</a></li>
-    <li><a href="snapshotpolicy" title="SnapshotPolicy"><span class="api-symbol api-symbol--resource"></span>SnapshotPolicy</a></li>
-    <li><a href="volume" title="Volume"><span class="api-symbol api-symbol--resource"></span>Volume</a></li>
+    <li><a href="account" title="Account"><span class="symbol resource"></span>Account</a></li>
+    <li><a href="backup" title="Backup"><span class="symbol resource"></span>Backup</a></li>
+    <li><a href="backuppolicy" title="BackupPolicy"><span class="symbol resource"></span>BackupPolicy</a></li>
+    <li><a href="pool" title="Pool"><span class="symbol resource"></span>Pool</a></li>
+    <li><a href="snapshot" title="Snapshot"><span class="symbol resource"></span>Snapshot</a></li>
+    <li><a href="snapshotpolicy" title="SnapshotPolicy"><span class="symbol resource"></span>SnapshotPolicy</a></li>
+    <li><a href="volume" title="Volume"><span class="symbol resource"></span>Volume</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getaccount" title="GetAccount"><span class="api-symbol api-symbol--function"></span>GetAccount</a></li>
-    <li><a href="getbackup" title="GetBackup"><span class="api-symbol api-symbol--function"></span>GetBackup</a></li>
-    <li><a href="getbackuppolicy" title="GetBackupPolicy"><span class="api-symbol api-symbol--function"></span>GetBackupPolicy</a></li>
-    <li><a href="getpool" title="GetPool"><span class="api-symbol api-symbol--function"></span>GetPool</a></li>
-    <li><a href="getsnapshot" title="GetSnapshot"><span class="api-symbol api-symbol--function"></span>GetSnapshot</a></li>
-    <li><a href="getsnapshotpolicy" title="GetSnapshotPolicy"><span class="api-symbol api-symbol--function"></span>GetSnapshotPolicy</a></li>
-    <li><a href="getvolume" title="GetVolume"><span class="api-symbol api-symbol--function"></span>GetVolume</a></li>
+    <li><a href="getaccount" title="GetAccount"><span class="symbol function"></span>GetAccount</a></li>
+    <li><a href="getbackup" title="GetBackup"><span class="symbol function"></span>GetBackup</a></li>
+    <li><a href="getbackuppolicy" title="GetBackupPolicy"><span class="symbol function"></span>GetBackupPolicy</a></li>
+    <li><a href="getpool" title="GetPool"><span class="symbol function"></span>GetPool</a></li>
+    <li><a href="getsnapshot" title="GetSnapshot"><span class="symbol function"></span>GetSnapshot</a></li>
+    <li><a href="getsnapshotpolicy" title="GetSnapshotPolicy"><span class="symbol function"></span>GetSnapshotPolicy</a></li>
+    <li><a href="getvolume" title="GetVolume"><span class="symbol function"></span>GetVolume</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -40,6 +40,6 @@ Explore the resources and functions of the azure-native.netapp module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.37.0</dd>
+	<dd>1.38.0</dd>
 </dl>
 

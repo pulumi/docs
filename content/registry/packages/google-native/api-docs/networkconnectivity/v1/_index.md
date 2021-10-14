@@ -13,20 +13,20 @@ Explore the resources and functions of the google-native.networkconnectivity/v1 
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="hub" title="Hub"><span class="api-symbol api-symbol--resource"></span>Hub</a></li>
-    <li><a href="hubiampolicy" title="HubIamPolicy"><span class="api-symbol api-symbol--resource"></span>HubIamPolicy</a></li>
-    <li><a href="policybasedrouteiampolicy" title="PolicyBasedRouteIamPolicy"><span class="api-symbol api-symbol--resource"></span>PolicyBasedRouteIamPolicy</a></li>
-    <li><a href="spoke" title="Spoke"><span class="api-symbol api-symbol--resource"></span>Spoke</a></li>
-    <li><a href="spokeiampolicy" title="SpokeIamPolicy"><span class="api-symbol api-symbol--resource"></span>SpokeIamPolicy</a></li>
+    <li><a href="hub" title="Hub"><span class="symbol resource"></span>Hub</a></li>
+    <li><a href="hubiampolicy" title="HubIamPolicy"><span class="symbol resource"></span>HubIamPolicy</a></li>
+    <li><a href="policybasedrouteiampolicy" title="PolicyBasedRouteIamPolicy"><span class="symbol resource"></span>PolicyBasedRouteIamPolicy</a></li>
+    <li><a href="spoke" title="Spoke"><span class="symbol resource"></span>Spoke</a></li>
+    <li><a href="spokeiampolicy" title="SpokeIamPolicy"><span class="symbol resource"></span>SpokeIamPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="gethub" title="GetHub"><span class="api-symbol api-symbol--function"></span>GetHub</a></li>
-    <li><a href="gethubiampolicy" title="GetHubIamPolicy"><span class="api-symbol api-symbol--function"></span>GetHubIamPolicy</a></li>
-    <li><a href="getpolicybasedrouteiampolicy" title="GetPolicyBasedRouteIamPolicy"><span class="api-symbol api-symbol--function"></span>GetPolicyBasedRouteIamPolicy</a></li>
-    <li><a href="getspoke" title="GetSpoke"><span class="api-symbol api-symbol--function"></span>GetSpoke</a></li>
-    <li><a href="getspokeiampolicy" title="GetSpokeIamPolicy"><span class="api-symbol api-symbol--function"></span>GetSpokeIamPolicy</a></li>
+    <li><a href="gethub" title="GetHub"><span class="symbol function"></span>GetHub</a></li>
+    <li><a href="gethubiampolicy" title="GetHubIamPolicy"><span class="symbol function"></span>GetHubIamPolicy</a></li>
+    <li><a href="getpolicybasedrouteiampolicy" title="GetPolicyBasedRouteIamPolicy"><span class="symbol function"></span>GetPolicyBasedRouteIamPolicy</a></li>
+    <li><a href="getspoke" title="GetSpoke"><span class="symbol function"></span>GetSpoke</a></li>
+    <li><a href="getspokeiampolicy" title="GetSpokeIamPolicy"><span class="symbol function"></span>GetSpokeIamPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

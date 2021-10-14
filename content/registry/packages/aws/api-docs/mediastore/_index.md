@@ -13,8 +13,8 @@ Explore the resources and functions of the aws.mediastore module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="container" title="Container"><span class="api-symbol api-symbol--resource"></span>Container</a></li>
-    <li><a href="containerpolicy" title="ContainerPolicy"><span class="api-symbol api-symbol--resource"></span>ContainerPolicy</a></li>
+    <li><a href="container" title="Container"><span class="symbol resource"></span>Container</a></li>
+    <li><a href="containerpolicy" title="ContainerPolicy"><span class="symbol resource"></span>ContainerPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

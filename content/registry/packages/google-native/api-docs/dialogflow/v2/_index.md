@@ -13,32 +13,32 @@ Explore the resources and functions of the google-native.dialogflow/v2 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="context" title="Context"><span class="api-symbol api-symbol--resource"></span>Context</a></li>
-    <li><a href="conversation" title="Conversation"><span class="api-symbol api-symbol--resource"></span>Conversation</a></li>
-    <li><a href="conversationprofile" title="ConversationProfile"><span class="api-symbol api-symbol--resource"></span>ConversationProfile</a></li>
-    <li><a href="document" title="Document"><span class="api-symbol api-symbol--resource"></span>Document</a></li>
-    <li><a href="entitytype" title="EntityType"><span class="api-symbol api-symbol--resource"></span>EntityType</a></li>
-    <li><a href="environment" title="Environment"><span class="api-symbol api-symbol--resource"></span>Environment</a></li>
-    <li><a href="intent" title="Intent"><span class="api-symbol api-symbol--resource"></span>Intent</a></li>
-    <li><a href="knowledgebase" title="KnowledgeBase"><span class="api-symbol api-symbol--resource"></span>KnowledgeBase</a></li>
-    <li><a href="participant" title="Participant"><span class="api-symbol api-symbol--resource"></span>Participant</a></li>
-    <li><a href="sessionentitytype" title="SessionEntityType"><span class="api-symbol api-symbol--resource"></span>SessionEntityType</a></li>
-    <li><a href="version" title="Version"><span class="api-symbol api-symbol--resource"></span>Version</a></li>
+    <li><a href="context" title="Context"><span class="symbol resource"></span>Context</a></li>
+    <li><a href="conversation" title="Conversation"><span class="symbol resource"></span>Conversation</a></li>
+    <li><a href="conversationprofile" title="ConversationProfile"><span class="symbol resource"></span>ConversationProfile</a></li>
+    <li><a href="document" title="Document"><span class="symbol resource"></span>Document</a></li>
+    <li><a href="entitytype" title="EntityType"><span class="symbol resource"></span>EntityType</a></li>
+    <li><a href="environment" title="Environment"><span class="symbol resource"></span>Environment</a></li>
+    <li><a href="intent" title="Intent"><span class="symbol resource"></span>Intent</a></li>
+    <li><a href="knowledgebase" title="KnowledgeBase"><span class="symbol resource"></span>KnowledgeBase</a></li>
+    <li><a href="participant" title="Participant"><span class="symbol resource"></span>Participant</a></li>
+    <li><a href="sessionentitytype" title="SessionEntityType"><span class="symbol resource"></span>SessionEntityType</a></li>
+    <li><a href="version" title="Version"><span class="symbol resource"></span>Version</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getcontext" title="GetContext"><span class="api-symbol api-symbol--function"></span>GetContext</a></li>
-    <li><a href="getconversation" title="GetConversation"><span class="api-symbol api-symbol--function"></span>GetConversation</a></li>
-    <li><a href="getconversationprofile" title="GetConversationProfile"><span class="api-symbol api-symbol--function"></span>GetConversationProfile</a></li>
-    <li><a href="getdocument" title="GetDocument"><span class="api-symbol api-symbol--function"></span>GetDocument</a></li>
-    <li><a href="getentitytype" title="GetEntityType"><span class="api-symbol api-symbol--function"></span>GetEntityType</a></li>
-    <li><a href="getenvironment" title="GetEnvironment"><span class="api-symbol api-symbol--function"></span>GetEnvironment</a></li>
-    <li><a href="getintent" title="GetIntent"><span class="api-symbol api-symbol--function"></span>GetIntent</a></li>
-    <li><a href="getknowledgebase" title="GetKnowledgeBase"><span class="api-symbol api-symbol--function"></span>GetKnowledgeBase</a></li>
-    <li><a href="getparticipant" title="GetParticipant"><span class="api-symbol api-symbol--function"></span>GetParticipant</a></li>
-    <li><a href="getsessionentitytype" title="GetSessionEntityType"><span class="api-symbol api-symbol--function"></span>GetSessionEntityType</a></li>
-    <li><a href="getversion" title="GetVersion"><span class="api-symbol api-symbol--function"></span>GetVersion</a></li>
+    <li><a href="getcontext" title="GetContext"><span class="symbol function"></span>GetContext</a></li>
+    <li><a href="getconversation" title="GetConversation"><span class="symbol function"></span>GetConversation</a></li>
+    <li><a href="getconversationprofile" title="GetConversationProfile"><span class="symbol function"></span>GetConversationProfile</a></li>
+    <li><a href="getdocument" title="GetDocument"><span class="symbol function"></span>GetDocument</a></li>
+    <li><a href="getentitytype" title="GetEntityType"><span class="symbol function"></span>GetEntityType</a></li>
+    <li><a href="getenvironment" title="GetEnvironment"><span class="symbol function"></span>GetEnvironment</a></li>
+    <li><a href="getintent" title="GetIntent"><span class="symbol function"></span>GetIntent</a></li>
+    <li><a href="getknowledgebase" title="GetKnowledgeBase"><span class="symbol function"></span>GetKnowledgeBase</a></li>
+    <li><a href="getparticipant" title="GetParticipant"><span class="symbol function"></span>GetParticipant</a></li>
+    <li><a href="getsessionentitytype" title="GetSessionEntityType"><span class="symbol function"></span>GetSessionEntityType</a></li>
+    <li><a href="getversion" title="GetVersion"><span class="symbol function"></span>GetVersion</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

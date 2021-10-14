@@ -13,16 +13,16 @@ Explore the resources and functions of the google-native.firebase/v1beta1 module
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="androidapp" title="AndroidApp"><span class="api-symbol api-symbol--resource"></span>AndroidApp</a></li>
-    <li><a href="iosapp" title="IosApp"><span class="api-symbol api-symbol--resource"></span>IosApp</a></li>
-    <li><a href="webapp" title="WebApp"><span class="api-symbol api-symbol--resource"></span>WebApp</a></li>
+    <li><a href="androidapp" title="AndroidApp"><span class="symbol resource"></span>AndroidApp</a></li>
+    <li><a href="iosapp" title="IosApp"><span class="symbol resource"></span>IosApp</a></li>
+    <li><a href="webapp" title="WebApp"><span class="symbol resource"></span>WebApp</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getandroidapp" title="GetAndroidApp"><span class="api-symbol api-symbol--function"></span>GetAndroidApp</a></li>
-    <li><a href="getiosapp" title="GetIosApp"><span class="api-symbol api-symbol--function"></span>GetIosApp</a></li>
-    <li><a href="getwebapp" title="GetWebApp"><span class="api-symbol api-symbol--function"></span>GetWebApp</a></li>
+    <li><a href="getandroidapp" title="GetAndroidApp"><span class="symbol function"></span>GetAndroidApp</a></li>
+    <li><a href="getiosapp" title="GetIosApp"><span class="symbol function"></span>GetIosApp</a></li>
+    <li><a href="getwebapp" title="GetWebApp"><span class="symbol function"></span>GetWebApp</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

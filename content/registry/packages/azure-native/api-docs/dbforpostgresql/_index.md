@@ -13,28 +13,28 @@ Explore the resources and functions of the azure-native.dbforpostgresql module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="configuration" title="Configuration"><span class="api-symbol api-symbol--resource"></span>Configuration</a></li>
-    <li><a href="database" title="Database"><span class="api-symbol api-symbol--resource"></span>Database</a></li>
-    <li><a href="firewallrule" title="FirewallRule"><span class="api-symbol api-symbol--resource"></span>FirewallRule</a></li>
-    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="api-symbol api-symbol--resource"></span>PrivateEndpointConnection</a></li>
-    <li><a href="server" title="Server"><span class="api-symbol api-symbol--resource"></span>Server</a></li>
-    <li><a href="serveradministrator" title="ServerAdministrator"><span class="api-symbol api-symbol--resource"></span>ServerAdministrator</a></li>
-    <li><a href="serverkey" title="ServerKey"><span class="api-symbol api-symbol--resource"></span>ServerKey</a></li>
-    <li><a href="serversecurityalertpolicy" title="ServerSecurityAlertPolicy"><span class="api-symbol api-symbol--resource"></span>ServerSecurityAlertPolicy</a></li>
-    <li><a href="virtualnetworkrule" title="VirtualNetworkRule"><span class="api-symbol api-symbol--resource"></span>VirtualNetworkRule</a></li>
+    <li><a href="configuration" title="Configuration"><span class="symbol resource"></span>Configuration</a></li>
+    <li><a href="database" title="Database"><span class="symbol resource"></span>Database</a></li>
+    <li><a href="firewallrule" title="FirewallRule"><span class="symbol resource"></span>FirewallRule</a></li>
+    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
+    <li><a href="server" title="Server"><span class="symbol resource"></span>Server</a></li>
+    <li><a href="serveradministrator" title="ServerAdministrator"><span class="symbol resource"></span>ServerAdministrator</a></li>
+    <li><a href="serverkey" title="ServerKey"><span class="symbol resource"></span>ServerKey</a></li>
+    <li><a href="serversecurityalertpolicy" title="ServerSecurityAlertPolicy"><span class="symbol resource"></span>ServerSecurityAlertPolicy</a></li>
+    <li><a href="virtualnetworkrule" title="VirtualNetworkRule"><span class="symbol resource"></span>VirtualNetworkRule</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getconfiguration" title="GetConfiguration"><span class="api-symbol api-symbol--function"></span>GetConfiguration</a></li>
-    <li><a href="getdatabase" title="GetDatabase"><span class="api-symbol api-symbol--function"></span>GetDatabase</a></li>
-    <li><a href="getfirewallrule" title="GetFirewallRule"><span class="api-symbol api-symbol--function"></span>GetFirewallRule</a></li>
-    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="api-symbol api-symbol--function"></span>GetPrivateEndpointConnection</a></li>
-    <li><a href="getserver" title="GetServer"><span class="api-symbol api-symbol--function"></span>GetServer</a></li>
-    <li><a href="getserveradministrator" title="GetServerAdministrator"><span class="api-symbol api-symbol--function"></span>GetServerAdministrator</a></li>
-    <li><a href="getserverkey" title="GetServerKey"><span class="api-symbol api-symbol--function"></span>GetServerKey</a></li>
-    <li><a href="getserversecurityalertpolicy" title="GetServerSecurityAlertPolicy"><span class="api-symbol api-symbol--function"></span>GetServerSecurityAlertPolicy</a></li>
-    <li><a href="getvirtualnetworkrule" title="GetVirtualNetworkRule"><span class="api-symbol api-symbol--function"></span>GetVirtualNetworkRule</a></li>
+    <li><a href="getconfiguration" title="GetConfiguration"><span class="symbol function"></span>GetConfiguration</a></li>
+    <li><a href="getdatabase" title="GetDatabase"><span class="symbol function"></span>GetDatabase</a></li>
+    <li><a href="getfirewallrule" title="GetFirewallRule"><span class="symbol function"></span>GetFirewallRule</a></li>
+    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
+    <li><a href="getserver" title="GetServer"><span class="symbol function"></span>GetServer</a></li>
+    <li><a href="getserveradministrator" title="GetServerAdministrator"><span class="symbol function"></span>GetServerAdministrator</a></li>
+    <li><a href="getserverkey" title="GetServerKey"><span class="symbol function"></span>GetServerKey</a></li>
+    <li><a href="getserversecurityalertpolicy" title="GetServerSecurityAlertPolicy"><span class="symbol function"></span>GetServerSecurityAlertPolicy</a></li>
+    <li><a href="getvirtualnetworkrule" title="GetVirtualNetworkRule"><span class="symbol function"></span>GetVirtualNetworkRule</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -44,6 +44,6 @@ Explore the resources and functions of the azure-native.dbforpostgresql module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.37.0</dd>
+	<dd>1.38.0</dd>
 </dl>
 

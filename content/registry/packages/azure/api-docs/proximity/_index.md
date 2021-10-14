@@ -13,12 +13,12 @@ Explore the resources and functions of the azure.proximity module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="placementgroup" title="PlacementGroup"><span class="api-symbol api-symbol--resource"></span>PlacementGroup</a></li>
+    <li><a href="placementgroup" title="PlacementGroup"><span class="symbol resource"></span>PlacementGroup</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getplacementgroup" title="GetPlacementGroup"><span class="api-symbol api-symbol--function"></span>GetPlacementGroup</a></li>
+    <li><a href="getplacementgroup" title="GetPlacementGroup"><span class="symbol function"></span>GetPlacementGroup</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

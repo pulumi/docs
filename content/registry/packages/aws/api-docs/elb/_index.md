@@ -13,21 +13,21 @@ Explore the resources and functions of the aws.elb module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="appcookiestickinesspolicy" title="AppCookieStickinessPolicy"><span class="api-symbol api-symbol--resource"></span>AppCookieStickinessPolicy</a></li>
-    <li><a href="attachment" title="Attachment"><span class="api-symbol api-symbol--resource"></span>Attachment</a></li>
-    <li><a href="listenerpolicy" title="ListenerPolicy"><span class="api-symbol api-symbol--resource"></span>ListenerPolicy</a></li>
-    <li><a href="loadbalancer" title="LoadBalancer"><span class="api-symbol api-symbol--resource"></span>LoadBalancer</a></li>
-    <li><a href="loadbalancerbackendserverpolicy" title="LoadBalancerBackendServerPolicy"><span class="api-symbol api-symbol--resource"></span>LoadBalancerBackendServerPolicy</a></li>
-    <li><a href="loadbalancercookiestickinesspolicy" title="LoadBalancerCookieStickinessPolicy"><span class="api-symbol api-symbol--resource"></span>LoadBalancerCookieStickinessPolicy</a></li>
-    <li><a href="loadbalancerpolicy" title="LoadBalancerPolicy"><span class="api-symbol api-symbol--resource"></span>LoadBalancerPolicy</a></li>
-    <li><a href="sslnegotiationpolicy" title="SslNegotiationPolicy"><span class="api-symbol api-symbol--resource"></span>SslNegotiationPolicy</a></li>
+    <li><a href="appcookiestickinesspolicy" title="AppCookieStickinessPolicy"><span class="symbol resource"></span>AppCookieStickinessPolicy</a></li>
+    <li><a href="attachment" title="Attachment"><span class="symbol resource"></span>Attachment</a></li>
+    <li><a href="listenerpolicy" title="ListenerPolicy"><span class="symbol resource"></span>ListenerPolicy</a></li>
+    <li><a href="loadbalancer" title="LoadBalancer"><span class="symbol resource"></span>LoadBalancer</a></li>
+    <li><a href="loadbalancerbackendserverpolicy" title="LoadBalancerBackendServerPolicy"><span class="symbol resource"></span>LoadBalancerBackendServerPolicy</a></li>
+    <li><a href="loadbalancercookiestickinesspolicy" title="LoadBalancerCookieStickinessPolicy"><span class="symbol resource"></span>LoadBalancerCookieStickinessPolicy</a></li>
+    <li><a href="loadbalancerpolicy" title="LoadBalancerPolicy"><span class="symbol resource"></span>LoadBalancerPolicy</a></li>
+    <li><a href="sslnegotiationpolicy" title="SslNegotiationPolicy"><span class="symbol resource"></span>SslNegotiationPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="gethostedzoneid" title="GetHostedZoneId"><span class="api-symbol api-symbol--function"></span>GetHostedZoneId</a></li>
-    <li><a href="getloadbalancer" title="GetLoadBalancer"><span class="api-symbol api-symbol--function"></span>GetLoadBalancer</a></li>
-    <li><a href="getserviceaccount" title="GetServiceAccount"><span class="api-symbol api-symbol--function"></span>GetServiceAccount</a></li>
+    <li><a href="gethostedzoneid" title="GetHostedZoneId"><span class="symbol function"></span>GetHostedZoneId</a></li>
+    <li><a href="getloadbalancer" title="GetLoadBalancer"><span class="symbol function"></span>GetLoadBalancer</a></li>
+    <li><a href="getserviceaccount" title="GetServiceAccount"><span class="symbol function"></span>GetServiceAccount</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

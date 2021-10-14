@@ -13,10 +13,10 @@ Explore the resources and functions of the aws.route53recoveryreadiness module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="cell" title="Cell"><span class="api-symbol api-symbol--resource"></span>Cell</a></li>
-    <li><a href="readinesscheck" title="ReadinessCheck"><span class="api-symbol api-symbol--resource"></span>ReadinessCheck</a></li>
-    <li><a href="recoverygroup" title="RecoveryGroup"><span class="api-symbol api-symbol--resource"></span>RecoveryGroup</a></li>
-    <li><a href="resourceset" title="ResourceSet"><span class="api-symbol api-symbol--resource"></span>ResourceSet</a></li>
+    <li><a href="cell" title="Cell"><span class="symbol resource"></span>Cell</a></li>
+    <li><a href="readinesscheck" title="ReadinessCheck"><span class="symbol resource"></span>ReadinessCheck</a></li>
+    <li><a href="recoverygroup" title="RecoveryGroup"><span class="symbol resource"></span>RecoveryGroup</a></li>
+    <li><a href="resourceset" title="ResourceSet"><span class="symbol resource"></span>ResourceSet</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

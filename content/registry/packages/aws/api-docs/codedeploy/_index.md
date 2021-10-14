@@ -13,9 +13,9 @@ Explore the resources and functions of the aws.codedeploy module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="application" title="Application"><span class="api-symbol api-symbol--resource"></span>Application</a></li>
-    <li><a href="deploymentconfig" title="DeploymentConfig"><span class="api-symbol api-symbol--resource"></span>DeploymentConfig</a></li>
-    <li><a href="deploymentgroup" title="DeploymentGroup"><span class="api-symbol api-symbol--resource"></span>DeploymentGroup</a></li>
+    <li><a href="application" title="Application"><span class="symbol resource"></span>Application</a></li>
+    <li><a href="deploymentconfig" title="DeploymentConfig"><span class="symbol resource"></span>DeploymentConfig</a></li>
+    <li><a href="deploymentgroup" title="DeploymentGroup"><span class="symbol resource"></span>DeploymentGroup</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

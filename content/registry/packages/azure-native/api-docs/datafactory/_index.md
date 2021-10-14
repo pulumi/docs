@@ -13,37 +13,37 @@ Explore the resources and functions of the azure-native.datafactory module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="dataflow" title="DataFlow"><span class="api-symbol api-symbol--resource"></span>DataFlow</a></li>
-    <li><a href="dataset" title="Dataset"><span class="api-symbol api-symbol--resource"></span>Dataset</a></li>
-    <li><a href="factory" title="Factory"><span class="api-symbol api-symbol--resource"></span>Factory</a></li>
-    <li><a href="integrationruntime" title="IntegrationRuntime"><span class="api-symbol api-symbol--resource"></span>IntegrationRuntime</a></li>
-    <li><a href="linkedservice" title="LinkedService"><span class="api-symbol api-symbol--resource"></span>LinkedService</a></li>
-    <li><a href="managedprivateendpoint" title="ManagedPrivateEndpoint"><span class="api-symbol api-symbol--resource"></span>ManagedPrivateEndpoint</a></li>
-    <li><a href="pipeline" title="Pipeline"><span class="api-symbol api-symbol--resource"></span>Pipeline</a></li>
-    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="api-symbol api-symbol--resource"></span>PrivateEndpointConnection</a></li>
-    <li><a href="trigger" title="Trigger"><span class="api-symbol api-symbol--resource"></span>Trigger</a></li>
+    <li><a href="dataflow" title="DataFlow"><span class="symbol resource"></span>DataFlow</a></li>
+    <li><a href="dataset" title="Dataset"><span class="symbol resource"></span>Dataset</a></li>
+    <li><a href="factory" title="Factory"><span class="symbol resource"></span>Factory</a></li>
+    <li><a href="integrationruntime" title="IntegrationRuntime"><span class="symbol resource"></span>IntegrationRuntime</a></li>
+    <li><a href="linkedservice" title="LinkedService"><span class="symbol resource"></span>LinkedService</a></li>
+    <li><a href="managedprivateendpoint" title="ManagedPrivateEndpoint"><span class="symbol resource"></span>ManagedPrivateEndpoint</a></li>
+    <li><a href="pipeline" title="Pipeline"><span class="symbol resource"></span>Pipeline</a></li>
+    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
+    <li><a href="trigger" title="Trigger"><span class="symbol resource"></span>Trigger</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getdataflow" title="GetDataFlow"><span class="api-symbol api-symbol--function"></span>GetDataFlow</a></li>
-    <li><a href="getdataset" title="GetDataset"><span class="api-symbol api-symbol--function"></span>GetDataset</a></li>
-    <li><a href="getexposurecontrolfeaturevalue" title="GetExposureControlFeatureValue"><span class="api-symbol api-symbol--function"></span>GetExposureControlFeatureValue</a></li>
-    <li><a href="getexposurecontrolfeaturevaluebyfactory" title="GetExposureControlFeatureValueByFactory"><span class="api-symbol api-symbol--function"></span>GetExposureControlFeatureValueByFactory</a></li>
-    <li><a href="getfactory" title="GetFactory"><span class="api-symbol api-symbol--function"></span>GetFactory</a></li>
-    <li><a href="getfactorydataplaneaccess" title="GetFactoryDataPlaneAccess"><span class="api-symbol api-symbol--function"></span>GetFactoryDataPlaneAccess</a></li>
-    <li><a href="getfactorygithubaccesstoken" title="GetFactoryGitHubAccessToken"><span class="api-symbol api-symbol--function"></span>GetFactoryGitHubAccessToken</a></li>
-    <li><a href="getintegrationruntime" title="GetIntegrationRuntime"><span class="api-symbol api-symbol--function"></span>GetIntegrationRuntime</a></li>
-    <li><a href="getintegrationruntimeconnectioninfo" title="GetIntegrationRuntimeConnectionInfo"><span class="api-symbol api-symbol--function"></span>GetIntegrationRuntimeConnectionInfo</a></li>
-    <li><a href="getintegrationruntimeobjectmetadatum" title="GetIntegrationRuntimeObjectMetadatum"><span class="api-symbol api-symbol--function"></span>GetIntegrationRuntimeObjectMetadatum</a></li>
-    <li><a href="getintegrationruntimestatus" title="GetIntegrationRuntimeStatus"><span class="api-symbol api-symbol--function"></span>GetIntegrationRuntimeStatus</a></li>
-    <li><a href="getlinkedservice" title="GetLinkedService"><span class="api-symbol api-symbol--function"></span>GetLinkedService</a></li>
-    <li><a href="getmanagedprivateendpoint" title="GetManagedPrivateEndpoint"><span class="api-symbol api-symbol--function"></span>GetManagedPrivateEndpoint</a></li>
-    <li><a href="getpipeline" title="GetPipeline"><span class="api-symbol api-symbol--function"></span>GetPipeline</a></li>
-    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="api-symbol api-symbol--function"></span>GetPrivateEndpointConnection</a></li>
-    <li><a href="gettrigger" title="GetTrigger"><span class="api-symbol api-symbol--function"></span>GetTrigger</a></li>
-    <li><a href="gettriggereventsubscriptionstatus" title="GetTriggerEventSubscriptionStatus"><span class="api-symbol api-symbol--function"></span>GetTriggerEventSubscriptionStatus</a></li>
-    <li><a href="listintegrationruntimeauthkeys" title="ListIntegrationRuntimeAuthKeys"><span class="api-symbol api-symbol--function"></span>ListIntegrationRuntimeAuthKeys</a></li>
+    <li><a href="getdataflow" title="GetDataFlow"><span class="symbol function"></span>GetDataFlow</a></li>
+    <li><a href="getdataset" title="GetDataset"><span class="symbol function"></span>GetDataset</a></li>
+    <li><a href="getexposurecontrolfeaturevalue" title="GetExposureControlFeatureValue"><span class="symbol function"></span>GetExposureControlFeatureValue</a></li>
+    <li><a href="getexposurecontrolfeaturevaluebyfactory" title="GetExposureControlFeatureValueByFactory"><span class="symbol function"></span>GetExposureControlFeatureValueByFactory</a></li>
+    <li><a href="getfactory" title="GetFactory"><span class="symbol function"></span>GetFactory</a></li>
+    <li><a href="getfactorydataplaneaccess" title="GetFactoryDataPlaneAccess"><span class="symbol function"></span>GetFactoryDataPlaneAccess</a></li>
+    <li><a href="getfactorygithubaccesstoken" title="GetFactoryGitHubAccessToken"><span class="symbol function"></span>GetFactoryGitHubAccessToken</a></li>
+    <li><a href="getintegrationruntime" title="GetIntegrationRuntime"><span class="symbol function"></span>GetIntegrationRuntime</a></li>
+    <li><a href="getintegrationruntimeconnectioninfo" title="GetIntegrationRuntimeConnectionInfo"><span class="symbol function"></span>GetIntegrationRuntimeConnectionInfo</a></li>
+    <li><a href="getintegrationruntimeobjectmetadatum" title="GetIntegrationRuntimeObjectMetadatum"><span class="symbol function"></span>GetIntegrationRuntimeObjectMetadatum</a></li>
+    <li><a href="getintegrationruntimestatus" title="GetIntegrationRuntimeStatus"><span class="symbol function"></span>GetIntegrationRuntimeStatus</a></li>
+    <li><a href="getlinkedservice" title="GetLinkedService"><span class="symbol function"></span>GetLinkedService</a></li>
+    <li><a href="getmanagedprivateendpoint" title="GetManagedPrivateEndpoint"><span class="symbol function"></span>GetManagedPrivateEndpoint</a></li>
+    <li><a href="getpipeline" title="GetPipeline"><span class="symbol function"></span>GetPipeline</a></li>
+    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
+    <li><a href="gettrigger" title="GetTrigger"><span class="symbol function"></span>GetTrigger</a></li>
+    <li><a href="gettriggereventsubscriptionstatus" title="GetTriggerEventSubscriptionStatus"><span class="symbol function"></span>GetTriggerEventSubscriptionStatus</a></li>
+    <li><a href="listintegrationruntimeauthkeys" title="ListIntegrationRuntimeAuthKeys"><span class="symbol function"></span>ListIntegrationRuntimeAuthKeys</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -53,6 +53,6 @@ Explore the resources and functions of the azure-native.datafactory module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.37.0</dd>
+	<dd>1.38.0</dd>
 </dl>
 

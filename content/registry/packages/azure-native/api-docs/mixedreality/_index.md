@@ -13,19 +13,19 @@ Explore the resources and functions of the azure-native.mixedreality module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="objectanchorsaccount" title="ObjectAnchorsAccount"><span class="api-symbol api-symbol--resource"></span>ObjectAnchorsAccount</a></li>
-    <li><a href="remoterenderingaccount" title="RemoteRenderingAccount"><span class="api-symbol api-symbol--resource"></span>RemoteRenderingAccount</a></li>
-    <li><a href="spatialanchorsaccount" title="SpatialAnchorsAccount"><span class="api-symbol api-symbol--resource"></span>SpatialAnchorsAccount</a></li>
+    <li><a href="objectanchorsaccount" title="ObjectAnchorsAccount"><span class="symbol resource"></span>ObjectAnchorsAccount</a></li>
+    <li><a href="remoterenderingaccount" title="RemoteRenderingAccount"><span class="symbol resource"></span>RemoteRenderingAccount</a></li>
+    <li><a href="spatialanchorsaccount" title="SpatialAnchorsAccount"><span class="symbol resource"></span>SpatialAnchorsAccount</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getobjectanchorsaccount" title="GetObjectAnchorsAccount"><span class="api-symbol api-symbol--function"></span>GetObjectAnchorsAccount</a></li>
-    <li><a href="getremoterenderingaccount" title="GetRemoteRenderingAccount"><span class="api-symbol api-symbol--function"></span>GetRemoteRenderingAccount</a></li>
-    <li><a href="getspatialanchorsaccount" title="GetSpatialAnchorsAccount"><span class="api-symbol api-symbol--function"></span>GetSpatialAnchorsAccount</a></li>
-    <li><a href="listobjectanchorsaccountkeys" title="ListObjectAnchorsAccountKeys"><span class="api-symbol api-symbol--function"></span>ListObjectAnchorsAccountKeys</a></li>
-    <li><a href="listremoterenderingaccountkeys" title="ListRemoteRenderingAccountKeys"><span class="api-symbol api-symbol--function"></span>ListRemoteRenderingAccountKeys</a></li>
-    <li><a href="listspatialanchorsaccountkeys" title="ListSpatialAnchorsAccountKeys"><span class="api-symbol api-symbol--function"></span>ListSpatialAnchorsAccountKeys</a></li>
+    <li><a href="getobjectanchorsaccount" title="GetObjectAnchorsAccount"><span class="symbol function"></span>GetObjectAnchorsAccount</a></li>
+    <li><a href="getremoterenderingaccount" title="GetRemoteRenderingAccount"><span class="symbol function"></span>GetRemoteRenderingAccount</a></li>
+    <li><a href="getspatialanchorsaccount" title="GetSpatialAnchorsAccount"><span class="symbol function"></span>GetSpatialAnchorsAccount</a></li>
+    <li><a href="listobjectanchorsaccountkeys" title="ListObjectAnchorsAccountKeys"><span class="symbol function"></span>ListObjectAnchorsAccountKeys</a></li>
+    <li><a href="listremoterenderingaccountkeys" title="ListRemoteRenderingAccountKeys"><span class="symbol function"></span>ListRemoteRenderingAccountKeys</a></li>
+    <li><a href="listspatialanchorsaccountkeys" title="ListSpatialAnchorsAccountKeys"><span class="symbol function"></span>ListSpatialAnchorsAccountKeys</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -35,6 +35,6 @@ Explore the resources and functions of the azure-native.mixedreality module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.37.0</dd>
+	<dd>1.38.0</dd>
 </dl>
 

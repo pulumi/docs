@@ -2,9 +2,6 @@
 title: "Equinix Metal"
 title_tag: "equinix-metal.Equinix Metal"
 meta_desc: "A Pulumi package for creating and managing equinix-metal cloud resources."
-menu:
-    reference:
-        parent: API Reference
 layout: api
 no_edit_this_page: true
 ---
@@ -16,50 +13,50 @@ A Pulumi package for creating and managing equinix-metal cloud resources.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="bgpsession" title="BgpSession"><span class="api-symbol api-symbol--resource"></span>BgpSession</a></li>
-    <li><a href="connection" title="Connection"><span class="api-symbol api-symbol--resource"></span>Connection</a></li>
-    <li><a href="device" title="Device"><span class="api-symbol api-symbol--resource"></span>Device</a></li>
-    <li><a href="devicenetworktype" title="DeviceNetworkType"><span class="api-symbol api-symbol--resource"></span>DeviceNetworkType</a></li>
-    <li><a href="gateway" title="Gateway"><span class="api-symbol api-symbol--resource"></span>Gateway</a></li>
-    <li><a href="ipattachment" title="IpAttachment"><span class="api-symbol api-symbol--resource"></span>IpAttachment</a></li>
-    <li><a href="organization" title="Organization"><span class="api-symbol api-symbol--resource"></span>Organization</a></li>
-    <li><a href="portvlanattachment" title="PortVlanAttachment"><span class="api-symbol api-symbol--resource"></span>PortVlanAttachment</a></li>
-    <li><a href="project" title="Project"><span class="api-symbol api-symbol--resource"></span>Project</a></li>
-    <li><a href="projectapikey" title="ProjectApiKey"><span class="api-symbol api-symbol--resource"></span>ProjectApiKey</a></li>
-    <li><a href="projectsshkey" title="ProjectSshKey"><span class="api-symbol api-symbol--resource"></span>ProjectSshKey</a></li>
-    <li><a href="provider" title="Provider"><span class="api-symbol api-symbol--resource"></span>Provider</a></li>
-    <li><a href="reservedipblock" title="ReservedIpBlock"><span class="api-symbol api-symbol--resource"></span>ReservedIpBlock</a></li>
-    <li><a href="spotmarketrequest" title="SpotMarketRequest"><span class="api-symbol api-symbol--resource"></span>SpotMarketRequest</a></li>
-    <li><a href="sshkey" title="SshKey"><span class="api-symbol api-symbol--resource"></span>SshKey</a></li>
-    <li><a href="userapikey" title="UserApiKey"><span class="api-symbol api-symbol--resource"></span>UserApiKey</a></li>
-    <li><a href="virtualcircuit" title="VirtualCircuit"><span class="api-symbol api-symbol--resource"></span>VirtualCircuit</a></li>
-    <li><a href="vlan" title="Vlan"><span class="api-symbol api-symbol--resource"></span>Vlan</a></li>
-    <li><a href="volume" title="Volume"><span class="api-symbol api-symbol--resource"></span>Volume</a></li>
-    <li><a href="volumeattachment" title="VolumeAttachment"><span class="api-symbol api-symbol--resource"></span>VolumeAttachment</a></li>
+    <li><a href="bgpsession" title="BgpSession"><span class="symbol resource"></span>BgpSession</a></li>
+    <li><a href="connection" title="Connection"><span class="symbol resource"></span>Connection</a></li>
+    <li><a href="device" title="Device"><span class="symbol resource"></span>Device</a></li>
+    <li><a href="devicenetworktype" title="DeviceNetworkType"><span class="symbol resource"></span>DeviceNetworkType</a></li>
+    <li><a href="gateway" title="Gateway"><span class="symbol resource"></span>Gateway</a></li>
+    <li><a href="ipattachment" title="IpAttachment"><span class="symbol resource"></span>IpAttachment</a></li>
+    <li><a href="organization" title="Organization"><span class="symbol resource"></span>Organization</a></li>
+    <li><a href="portvlanattachment" title="PortVlanAttachment"><span class="symbol resource"></span>PortVlanAttachment</a></li>
+    <li><a href="project" title="Project"><span class="symbol resource"></span>Project</a></li>
+    <li><a href="projectapikey" title="ProjectApiKey"><span class="symbol resource"></span>ProjectApiKey</a></li>
+    <li><a href="projectsshkey" title="ProjectSshKey"><span class="symbol resource"></span>ProjectSshKey</a></li>
+    <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
+    <li><a href="reservedipblock" title="ReservedIpBlock"><span class="symbol resource"></span>ReservedIpBlock</a></li>
+    <li><a href="spotmarketrequest" title="SpotMarketRequest"><span class="symbol resource"></span>SpotMarketRequest</a></li>
+    <li><a href="sshkey" title="SshKey"><span class="symbol resource"></span>SshKey</a></li>
+    <li><a href="userapikey" title="UserApiKey"><span class="symbol resource"></span>UserApiKey</a></li>
+    <li><a href="virtualcircuit" title="VirtualCircuit"><span class="symbol resource"></span>VirtualCircuit</a></li>
+    <li><a href="vlan" title="Vlan"><span class="symbol resource"></span>Vlan</a></li>
+    <li><a href="volume" title="Volume"><span class="symbol resource"></span>Volume</a></li>
+    <li><a href="volumeattachment" title="VolumeAttachment"><span class="symbol resource"></span>VolumeAttachment</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getconnection" title="GetConnection"><span class="api-symbol api-symbol--function"></span>GetConnection</a></li>
-    <li><a href="getdevice" title="GetDevice"><span class="api-symbol api-symbol--function"></span>GetDevice</a></li>
-    <li><a href="getdevicebgpneighbors" title="GetDeviceBgpNeighbors"><span class="api-symbol api-symbol--function"></span>GetDeviceBgpNeighbors</a></li>
-    <li><a href="getfacility" title="GetFacility"><span class="api-symbol api-symbol--function"></span>GetFacility</a></li>
-    <li><a href="getgateway" title="GetGateway"><span class="api-symbol api-symbol--function"></span>GetGateway</a></li>
-    <li><a href="gethardwarereservation" title="GetHardwareReservation"><span class="api-symbol api-symbol--function"></span>GetHardwareReservation</a></li>
-    <li><a href="getipblockranges" title="GetIpBlockRanges"><span class="api-symbol api-symbol--function"></span>GetIpBlockRanges</a></li>
-    <li><a href="getmetro" title="GetMetro"><span class="api-symbol api-symbol--function"></span>GetMetro</a></li>
-    <li><a href="getoperatingsystem" title="GetOperatingSystem"><span class="api-symbol api-symbol--function"></span>GetOperatingSystem</a></li>
-    <li><a href="getorganization" title="GetOrganization"><span class="api-symbol api-symbol--function"></span>GetOrganization</a></li>
-    <li><a href="getport" title="GetPort"><span class="api-symbol api-symbol--function"></span>GetPort</a></li>
-    <li><a href="getprecreatedipblock" title="GetPrecreatedIpBlock"><span class="api-symbol api-symbol--function"></span>GetPrecreatedIpBlock</a></li>
-    <li><a href="getproject" title="GetProject"><span class="api-symbol api-symbol--function"></span>GetProject</a></li>
-    <li><a href="getprojectsshkey" title="GetProjectSshKey"><span class="api-symbol api-symbol--function"></span>GetProjectSshKey</a></li>
-    <li><a href="getreservedipblock" title="GetReservedIpBlock"><span class="api-symbol api-symbol--function"></span>GetReservedIpBlock</a></li>
-    <li><a href="getspotmarketprice" title="GetSpotMarketPrice"><span class="api-symbol api-symbol--function"></span>GetSpotMarketPrice</a></li>
-    <li><a href="getspotmarketrequest" title="GetSpotMarketRequest"><span class="api-symbol api-symbol--function"></span>GetSpotMarketRequest</a></li>
-    <li><a href="getvirtualcircuit" title="GetVirtualCircuit"><span class="api-symbol api-symbol--function"></span>GetVirtualCircuit</a></li>
-    <li><a href="getvlan" title="GetVlan"><span class="api-symbol api-symbol--function"></span>GetVlan</a></li>
-    <li><a href="getvolume" title="GetVolume"><span class="api-symbol api-symbol--function"></span>GetVolume</a></li>
+    <li><a href="getconnection" title="GetConnection"><span class="symbol function"></span>GetConnection</a></li>
+    <li><a href="getdevice" title="GetDevice"><span class="symbol function"></span>GetDevice</a></li>
+    <li><a href="getdevicebgpneighbors" title="GetDeviceBgpNeighbors"><span class="symbol function"></span>GetDeviceBgpNeighbors</a></li>
+    <li><a href="getfacility" title="GetFacility"><span class="symbol function"></span>GetFacility</a></li>
+    <li><a href="getgateway" title="GetGateway"><span class="symbol function"></span>GetGateway</a></li>
+    <li><a href="gethardwarereservation" title="GetHardwareReservation"><span class="symbol function"></span>GetHardwareReservation</a></li>
+    <li><a href="getipblockranges" title="GetIpBlockRanges"><span class="symbol function"></span>GetIpBlockRanges</a></li>
+    <li><a href="getmetro" title="GetMetro"><span class="symbol function"></span>GetMetro</a></li>
+    <li><a href="getoperatingsystem" title="GetOperatingSystem"><span class="symbol function"></span>GetOperatingSystem</a></li>
+    <li><a href="getorganization" title="GetOrganization"><span class="symbol function"></span>GetOrganization</a></li>
+    <li><a href="getport" title="GetPort"><span class="symbol function"></span>GetPort</a></li>
+    <li><a href="getprecreatedipblock" title="GetPrecreatedIpBlock"><span class="symbol function"></span>GetPrecreatedIpBlock</a></li>
+    <li><a href="getproject" title="GetProject"><span class="symbol function"></span>GetProject</a></li>
+    <li><a href="getprojectsshkey" title="GetProjectSshKey"><span class="symbol function"></span>GetProjectSshKey</a></li>
+    <li><a href="getreservedipblock" title="GetReservedIpBlock"><span class="symbol function"></span>GetReservedIpBlock</a></li>
+    <li><a href="getspotmarketprice" title="GetSpotMarketPrice"><span class="symbol function"></span>GetSpotMarketPrice</a></li>
+    <li><a href="getspotmarketrequest" title="GetSpotMarketRequest"><span class="symbol function"></span>GetSpotMarketRequest</a></li>
+    <li><a href="getvirtualcircuit" title="GetVirtualCircuit"><span class="symbol function"></span>GetVirtualCircuit</a></li>
+    <li><a href="getvlan" title="GetVlan"><span class="symbol function"></span>GetVlan</a></li>
+    <li><a href="getvolume" title="GetVolume"><span class="symbol function"></span>GetVolume</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

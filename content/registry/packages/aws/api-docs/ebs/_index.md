@@ -13,22 +13,22 @@ Explore the resources and functions of the aws.ebs module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="defaultkmskey" title="DefaultKmsKey"><span class="api-symbol api-symbol--resource"></span>DefaultKmsKey</a></li>
-    <li><a href="encryptionbydefault" title="EncryptionByDefault"><span class="api-symbol api-symbol--resource"></span>EncryptionByDefault</a></li>
-    <li><a href="snapshot" title="Snapshot"><span class="api-symbol api-symbol--resource"></span>Snapshot</a></li>
-    <li><a href="snapshotcopy" title="SnapshotCopy"><span class="api-symbol api-symbol--resource"></span>SnapshotCopy</a></li>
-    <li><a href="snapshotimport" title="SnapshotImport"><span class="api-symbol api-symbol--resource"></span>SnapshotImport</a></li>
-    <li><a href="volume" title="Volume"><span class="api-symbol api-symbol--resource"></span>Volume</a></li>
+    <li><a href="defaultkmskey" title="DefaultKmsKey"><span class="symbol resource"></span>DefaultKmsKey</a></li>
+    <li><a href="encryptionbydefault" title="EncryptionByDefault"><span class="symbol resource"></span>EncryptionByDefault</a></li>
+    <li><a href="snapshot" title="Snapshot"><span class="symbol resource"></span>Snapshot</a></li>
+    <li><a href="snapshotcopy" title="SnapshotCopy"><span class="symbol resource"></span>SnapshotCopy</a></li>
+    <li><a href="snapshotimport" title="SnapshotImport"><span class="symbol resource"></span>SnapshotImport</a></li>
+    <li><a href="volume" title="Volume"><span class="symbol resource"></span>Volume</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getdefaultkmskey" title="GetDefaultKmsKey"><span class="api-symbol api-symbol--function"></span>GetDefaultKmsKey</a></li>
-    <li><a href="getebsvolumes" title="GetEbsVolumes"><span class="api-symbol api-symbol--function"></span>GetEbsVolumes</a></li>
-    <li><a href="getencryptionbydefault" title="GetEncryptionByDefault"><span class="api-symbol api-symbol--function"></span>GetEncryptionByDefault</a></li>
-    <li><a href="getsnapshot" title="GetSnapshot"><span class="api-symbol api-symbol--function"></span>GetSnapshot</a></li>
-    <li><a href="getsnapshotids" title="GetSnapshotIds"><span class="api-symbol api-symbol--function"></span>GetSnapshotIds</a></li>
-    <li><a href="getvolume" title="GetVolume"><span class="api-symbol api-symbol--function"></span>GetVolume</a></li>
+    <li><a href="getdefaultkmskey" title="GetDefaultKmsKey"><span class="symbol function"></span>GetDefaultKmsKey</a></li>
+    <li><a href="getebsvolumes" title="GetEbsVolumes"><span class="symbol function"></span>GetEbsVolumes</a></li>
+    <li><a href="getencryptionbydefault" title="GetEncryptionByDefault"><span class="symbol function"></span>GetEncryptionByDefault</a></li>
+    <li><a href="getsnapshot" title="GetSnapshot"><span class="symbol function"></span>GetSnapshot</a></li>
+    <li><a href="getsnapshotids" title="GetSnapshotIds"><span class="symbol function"></span>GetSnapshotIds</a></li>
+    <li><a href="getvolume" title="GetVolume"><span class="symbol function"></span>GetVolume</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

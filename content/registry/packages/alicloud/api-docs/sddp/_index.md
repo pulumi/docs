@@ -13,16 +13,16 @@ Explore the resources and functions of the alicloud.sddp module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="config" title="Config"><span class="api-symbol api-symbol--resource"></span>Config</a></li>
-    <li><a href="instance" title="Instance"><span class="api-symbol api-symbol--resource"></span>Instance</a></li>
-    <li><a href="rule" title="Rule"><span class="api-symbol api-symbol--resource"></span>Rule</a></li>
+    <li><a href="config" title="Config"><span class="symbol resource"></span>Config</a></li>
+    <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
+    <li><a href="rule" title="Rule"><span class="symbol resource"></span>Rule</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getconfigs" title="GetConfigs"><span class="api-symbol api-symbol--function"></span>GetConfigs</a></li>
-    <li><a href="getinstances" title="GetInstances"><span class="api-symbol api-symbol--function"></span>GetInstances</a></li>
-    <li><a href="getrules" title="GetRules"><span class="api-symbol api-symbol--function"></span>GetRules</a></li>
+    <li><a href="getconfigs" title="GetConfigs"><span class="symbol function"></span>GetConfigs</a></li>
+    <li><a href="getinstances" title="GetInstances"><span class="symbol function"></span>GetInstances</a></li>
+    <li><a href="getrules" title="GetRules"><span class="symbol function"></span>GetRules</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

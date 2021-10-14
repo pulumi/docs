@@ -13,17 +13,17 @@ Explore the resources and functions of the gcp.runtimeconfig module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="config" title="Config"><span class="api-symbol api-symbol--resource"></span>Config</a></li>
-    <li><a href="configiambinding" title="ConfigIamBinding"><span class="api-symbol api-symbol--resource"></span>ConfigIamBinding</a></li>
-    <li><a href="configiammember" title="ConfigIamMember"><span class="api-symbol api-symbol--resource"></span>ConfigIamMember</a></li>
-    <li><a href="configiampolicy" title="ConfigIamPolicy"><span class="api-symbol api-symbol--resource"></span>ConfigIamPolicy</a></li>
-    <li><a href="variable" title="Variable"><span class="api-symbol api-symbol--resource"></span>Variable</a></li>
+    <li><a href="config" title="Config"><span class="symbol resource"></span>Config</a></li>
+    <li><a href="configiambinding" title="ConfigIamBinding"><span class="symbol resource"></span>ConfigIamBinding</a></li>
+    <li><a href="configiammember" title="ConfigIamMember"><span class="symbol resource"></span>ConfigIamMember</a></li>
+    <li><a href="configiampolicy" title="ConfigIamPolicy"><span class="symbol resource"></span>ConfigIamPolicy</a></li>
+    <li><a href="variable" title="Variable"><span class="symbol resource"></span>Variable</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getconfig" title="GetConfig"><span class="api-symbol api-symbol--function"></span>GetConfig</a></li>
-    <li><a href="getvariable" title="GetVariable"><span class="api-symbol api-symbol--function"></span>GetVariable</a></li>
+    <li><a href="getconfig" title="GetConfig"><span class="symbol function"></span>GetConfig</a></li>
+    <li><a href="getvariable" title="GetVariable"><span class="symbol function"></span>GetVariable</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

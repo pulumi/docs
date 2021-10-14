@@ -13,13 +13,13 @@ Explore the resources and functions of the spotinst.aws module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="beanstalk" title="Beanstalk"><span class="api-symbol api-symbol--resource"></span>Beanstalk</a></li>
-    <li><a href="elastigroup" title="Elastigroup"><span class="api-symbol api-symbol--resource"></span>Elastigroup</a></li>
-    <li><a href="managedinstance" title="ManagedInstance"><span class="api-symbol api-symbol--resource"></span>ManagedInstance</a></li>
-    <li><a href="mrscalar" title="MrScalar"><span class="api-symbol api-symbol--resource"></span>MrScalar</a></li>
-    <li><a href="ocean" title="Ocean"><span class="api-symbol api-symbol--resource"></span>Ocean</a></li>
-    <li><a href="oceanlaunchspec" title="OceanLaunchSpec"><span class="api-symbol api-symbol--resource"></span>OceanLaunchSpec</a></li>
-    <li><a href="suspension" title="Suspension"><span class="api-symbol api-symbol--resource"></span>Suspension</a></li>
+    <li><a href="beanstalk" title="Beanstalk"><span class="symbol resource"></span>Beanstalk</a></li>
+    <li><a href="elastigroup" title="Elastigroup"><span class="symbol resource"></span>Elastigroup</a></li>
+    <li><a href="managedinstance" title="ManagedInstance"><span class="symbol resource"></span>ManagedInstance</a></li>
+    <li><a href="mrscalar" title="MrScalar"><span class="symbol resource"></span>MrScalar</a></li>
+    <li><a href="ocean" title="Ocean"><span class="symbol resource"></span>Ocean</a></li>
+    <li><a href="oceanlaunchspec" title="OceanLaunchSpec"><span class="symbol resource"></span>OceanLaunchSpec</a></li>
+    <li><a href="suspension" title="Suspension"><span class="symbol resource"></span>Suspension</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

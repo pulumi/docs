@@ -13,12 +13,12 @@ Explore the resources and functions of the google-native.datastore/v1 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="index" title="Index"><span class="api-symbol api-symbol--resource"></span>Index</a></li>
+    <li><a href="index" title="Index"><span class="symbol resource"></span>Index</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getindex" title="GetIndex"><span class="api-symbol api-symbol--function"></span>GetIndex</a></li>
+    <li><a href="getindex" title="GetIndex"><span class="symbol function"></span>GetIndex</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

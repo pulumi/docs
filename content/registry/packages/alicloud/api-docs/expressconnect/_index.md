@@ -13,16 +13,16 @@ Explore the resources and functions of the alicloud.expressconnect module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="physicalconnection" title="PhysicalConnection"><span class="api-symbol api-symbol--resource"></span>PhysicalConnection</a></li>
-    <li><a href="virtualborderrouter" title="VirtualBorderRouter"><span class="api-symbol api-symbol--resource"></span>VirtualBorderRouter</a></li>
+    <li><a href="physicalconnection" title="PhysicalConnection"><span class="symbol resource"></span>PhysicalConnection</a></li>
+    <li><a href="virtualborderrouter" title="VirtualBorderRouter"><span class="symbol resource"></span>VirtualBorderRouter</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getaccesspoints" title="GetAccessPoints"><span class="api-symbol api-symbol--function"></span>GetAccessPoints</a></li>
-    <li><a href="getphysicalconnectionservice" title="GetPhysicalConnectionService"><span class="api-symbol api-symbol--function"></span>GetPhysicalConnectionService</a></li>
-    <li><a href="getphysicalconnections" title="GetPhysicalConnections"><span class="api-symbol api-symbol--function"></span>GetPhysicalConnections</a></li>
-    <li><a href="getvirtualborderrouters" title="GetVirtualBorderRouters"><span class="api-symbol api-symbol--function"></span>GetVirtualBorderRouters</a></li>
+    <li><a href="getaccesspoints" title="GetAccessPoints"><span class="symbol function"></span>GetAccessPoints</a></li>
+    <li><a href="getphysicalconnectionservice" title="GetPhysicalConnectionService"><span class="symbol function"></span>GetPhysicalConnectionService</a></li>
+    <li><a href="getphysicalconnections" title="GetPhysicalConnections"><span class="symbol function"></span>GetPhysicalConnections</a></li>
+    <li><a href="getvirtualborderrouters" title="GetVirtualBorderRouters"><span class="symbol function"></span>GetVirtualBorderRouters</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

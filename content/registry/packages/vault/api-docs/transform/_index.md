@@ -13,16 +13,16 @@ Explore the resources and functions of the vault.transform module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="alphabet" title="Alphabet"><span class="api-symbol api-symbol--resource"></span>Alphabet</a></li>
-    <li><a href="role" title="Role"><span class="api-symbol api-symbol--resource"></span>Role</a></li>
-    <li><a href="template" title="Template"><span class="api-symbol api-symbol--resource"></span>Template</a></li>
-    <li><a href="transformation" title="Transformation"><span class="api-symbol api-symbol--resource"></span>Transformation</a></li>
+    <li><a href="alphabet" title="Alphabet"><span class="symbol resource"></span>Alphabet</a></li>
+    <li><a href="role" title="Role"><span class="symbol resource"></span>Role</a></li>
+    <li><a href="template" title="Template"><span class="symbol resource"></span>Template</a></li>
+    <li><a href="transformation" title="Transformation"><span class="symbol resource"></span>Transformation</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getdecode" title="GetDecode"><span class="api-symbol api-symbol--function"></span>GetDecode</a></li>
-    <li><a href="getencode" title="GetEncode"><span class="api-symbol api-symbol--function"></span>GetEncode</a></li>
+    <li><a href="getdecode" title="GetDecode"><span class="symbol function"></span>GetDecode</a></li>
+    <li><a href="getencode" title="GetEncode"><span class="symbol function"></span>GetEncode</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

@@ -13,18 +13,18 @@ Explore the resources and functions of the google-native.dns/v1 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="change" title="Change"><span class="api-symbol api-symbol--resource"></span>Change</a></li>
-    <li><a href="managedzone" title="ManagedZone"><span class="api-symbol api-symbol--resource"></span>ManagedZone</a></li>
-    <li><a href="policy" title="Policy"><span class="api-symbol api-symbol--resource"></span>Policy</a></li>
-    <li><a href="resourcerecordset" title="ResourceRecordSet"><span class="api-symbol api-symbol--resource"></span>ResourceRecordSet</a></li>
+    <li><a href="change" title="Change"><span class="symbol resource"></span>Change</a></li>
+    <li><a href="managedzone" title="ManagedZone"><span class="symbol resource"></span>ManagedZone</a></li>
+    <li><a href="policy" title="Policy"><span class="symbol resource"></span>Policy</a></li>
+    <li><a href="resourcerecordset" title="ResourceRecordSet"><span class="symbol resource"></span>ResourceRecordSet</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getchange" title="GetChange"><span class="api-symbol api-symbol--function"></span>GetChange</a></li>
-    <li><a href="getmanagedzone" title="GetManagedZone"><span class="api-symbol api-symbol--function"></span>GetManagedZone</a></li>
-    <li><a href="getpolicy" title="GetPolicy"><span class="api-symbol api-symbol--function"></span>GetPolicy</a></li>
-    <li><a href="getresourcerecordset" title="GetResourceRecordSet"><span class="api-symbol api-symbol--function"></span>GetResourceRecordSet</a></li>
+    <li><a href="getchange" title="GetChange"><span class="symbol function"></span>GetChange</a></li>
+    <li><a href="getmanagedzone" title="GetManagedZone"><span class="symbol function"></span>GetManagedZone</a></li>
+    <li><a href="getpolicy" title="GetPolicy"><span class="symbol function"></span>GetPolicy</a></li>
+    <li><a href="getresourcerecordset" title="GetResourceRecordSet"><span class="symbol function"></span>GetResourceRecordSet</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

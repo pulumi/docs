@@ -13,8 +13,8 @@ Explore the resources and functions of the vault.rabbitMq module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="secretbackend" title="SecretBackend"><span class="api-symbol api-symbol--resource"></span>SecretBackend</a></li>
-    <li><a href="secretbackendrole" title="SecretBackendRole"><span class="api-symbol api-symbol--resource"></span>SecretBackendRole</a></li>
+    <li><a href="secretbackend" title="SecretBackend"><span class="symbol resource"></span>SecretBackend</a></li>
+    <li><a href="secretbackendrole" title="SecretBackendRole"><span class="symbol resource"></span>SecretBackendRole</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

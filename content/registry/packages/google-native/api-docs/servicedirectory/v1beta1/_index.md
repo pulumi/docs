@@ -13,20 +13,20 @@ Explore the resources and functions of the google-native.servicedirectory/v1beta
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="endpoint" title="Endpoint"><span class="api-symbol api-symbol--resource"></span>Endpoint</a></li>
-    <li><a href="namespace" title="Namespace"><span class="api-symbol api-symbol--resource"></span>Namespace</a></li>
-    <li><a href="namespaceiampolicy" title="NamespaceIamPolicy"><span class="api-symbol api-symbol--resource"></span>NamespaceIamPolicy</a></li>
-    <li><a href="namespaceserviceiampolicy" title="NamespaceServiceIamPolicy"><span class="api-symbol api-symbol--resource"></span>NamespaceServiceIamPolicy</a></li>
-    <li><a href="service" title="Service"><span class="api-symbol api-symbol--resource"></span>Service</a></li>
+    <li><a href="endpoint" title="Endpoint"><span class="symbol resource"></span>Endpoint</a></li>
+    <li><a href="namespace" title="Namespace"><span class="symbol resource"></span>Namespace</a></li>
+    <li><a href="namespaceiampolicy" title="NamespaceIamPolicy"><span class="symbol resource"></span>NamespaceIamPolicy</a></li>
+    <li><a href="namespaceserviceiampolicy" title="NamespaceServiceIamPolicy"><span class="symbol resource"></span>NamespaceServiceIamPolicy</a></li>
+    <li><a href="service" title="Service"><span class="symbol resource"></span>Service</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getendpoint" title="GetEndpoint"><span class="api-symbol api-symbol--function"></span>GetEndpoint</a></li>
-    <li><a href="getnamespace" title="GetNamespace"><span class="api-symbol api-symbol--function"></span>GetNamespace</a></li>
-    <li><a href="getnamespaceiampolicy" title="GetNamespaceIamPolicy"><span class="api-symbol api-symbol--function"></span>GetNamespaceIamPolicy</a></li>
-    <li><a href="getnamespaceserviceiampolicy" title="GetNamespaceServiceIamPolicy"><span class="api-symbol api-symbol--function"></span>GetNamespaceServiceIamPolicy</a></li>
-    <li><a href="getservice" title="GetService"><span class="api-symbol api-symbol--function"></span>GetService</a></li>
+    <li><a href="getendpoint" title="GetEndpoint"><span class="symbol function"></span>GetEndpoint</a></li>
+    <li><a href="getnamespace" title="GetNamespace"><span class="symbol function"></span>GetNamespace</a></li>
+    <li><a href="getnamespaceiampolicy" title="GetNamespaceIamPolicy"><span class="symbol function"></span>GetNamespaceIamPolicy</a></li>
+    <li><a href="getnamespaceserviceiampolicy" title="GetNamespaceServiceIamPolicy"><span class="symbol function"></span>GetNamespaceServiceIamPolicy</a></li>
+    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

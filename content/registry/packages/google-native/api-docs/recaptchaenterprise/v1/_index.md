@@ -13,12 +13,12 @@ Explore the resources and functions of the google-native.recaptchaenterprise/v1 
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="key" title="Key"><span class="api-symbol api-symbol--resource"></span>Key</a></li>
+    <li><a href="key" title="Key"><span class="symbol resource"></span>Key</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getkey" title="GetKey"><span class="api-symbol api-symbol--function"></span>GetKey</a></li>
+    <li><a href="getkey" title="GetKey"><span class="symbol function"></span>GetKey</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

@@ -13,14 +13,14 @@ Explore the resources and functions of the vault.kubernetes module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="authbackendconfig" title="AuthBackendConfig"><span class="api-symbol api-symbol--resource"></span>AuthBackendConfig</a></li>
-    <li><a href="authbackendrole" title="AuthBackendRole"><span class="api-symbol api-symbol--resource"></span>AuthBackendRole</a></li>
+    <li><a href="authbackendconfig" title="AuthBackendConfig"><span class="symbol resource"></span>AuthBackendConfig</a></li>
+    <li><a href="authbackendrole" title="AuthBackendRole"><span class="symbol resource"></span>AuthBackendRole</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getauthbackendconfig" title="GetAuthBackendConfig"><span class="api-symbol api-symbol--function"></span>GetAuthBackendConfig</a></li>
-    <li><a href="getauthbackendrole" title="GetAuthBackendRole"><span class="api-symbol api-symbol--function"></span>GetAuthBackendRole</a></li>
+    <li><a href="getauthbackendconfig" title="GetAuthBackendConfig"><span class="symbol function"></span>GetAuthBackendConfig</a></li>
+    <li><a href="getauthbackendrole" title="GetAuthBackendRole"><span class="symbol function"></span>GetAuthBackendRole</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

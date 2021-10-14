@@ -2,9 +2,6 @@
 title: "Kafka"
 title_tag: "kafka.Kafka"
 meta_desc: "A Pulumi package for creating and managing Kafka."
-menu:
-    reference:
-        parent: API Reference
 layout: api
 no_edit_this_page: true
 ---
@@ -16,9 +13,9 @@ A Pulumi package for creating and managing Kafka.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="acl" title="Acl"><span class="api-symbol api-symbol--resource"></span>Acl</a></li>
-    <li><a href="provider" title="Provider"><span class="api-symbol api-symbol--resource"></span>Provider</a></li>
-    <li><a href="topic" title="Topic"><span class="api-symbol api-symbol--resource"></span>Topic</a></li>
+    <li><a href="acl" title="Acl"><span class="symbol resource"></span>Acl</a></li>
+    <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
+    <li><a href="topic" title="Topic"><span class="symbol resource"></span>Topic</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

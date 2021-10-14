@@ -13,20 +13,20 @@ Explore the resources and functions of the azure.eventgrid module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="domain" title="Domain"><span class="api-symbol api-symbol--resource"></span>Domain</a></li>
-    <li><a href="domaintopic" title="DomainTopic"><span class="api-symbol api-symbol--resource"></span>DomainTopic</a></li>
-    <li><a href="eventsubscription" title="EventSubscription"><span class="api-symbol api-symbol--resource"></span>EventSubscription</a></li>
-    <li><a href="getsystemtopic" title="GetSystemTopic"><span class="api-symbol api-symbol--resource"></span>GetSystemTopic</a></li>
-    <li><a href="systemtopic" title="SystemTopic"><span class="api-symbol api-symbol--resource"></span>SystemTopic</a></li>
-    <li><a href="systemtopiceventsubscription" title="SystemTopicEventSubscription"><span class="api-symbol api-symbol--resource"></span>SystemTopicEventSubscription</a></li>
-    <li><a href="topic" title="Topic"><span class="api-symbol api-symbol--resource"></span>Topic</a></li>
+    <li><a href="domain" title="Domain"><span class="symbol resource"></span>Domain</a></li>
+    <li><a href="domaintopic" title="DomainTopic"><span class="symbol resource"></span>DomainTopic</a></li>
+    <li><a href="eventsubscription" title="EventSubscription"><span class="symbol resource"></span>EventSubscription</a></li>
+    <li><a href="getsystemtopic" title="GetSystemTopic"><span class="symbol resource"></span>GetSystemTopic</a></li>
+    <li><a href="systemtopic" title="SystemTopic"><span class="symbol resource"></span>SystemTopic</a></li>
+    <li><a href="systemtopiceventsubscription" title="SystemTopicEventSubscription"><span class="symbol resource"></span>SystemTopicEventSubscription</a></li>
+    <li><a href="topic" title="Topic"><span class="symbol resource"></span>Topic</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getdomain" title="GetDomain"><span class="api-symbol api-symbol--function"></span>GetDomain</a></li>
-    <li><a href="getdomaintopic" title="GetDomainTopic"><span class="api-symbol api-symbol--function"></span>GetDomainTopic</a></li>
-    <li><a href="gettopic" title="GetTopic"><span class="api-symbol api-symbol--function"></span>GetTopic</a></li>
+    <li><a href="getdomain" title="GetDomain"><span class="symbol function"></span>GetDomain</a></li>
+    <li><a href="getdomaintopic" title="GetDomainTopic"><span class="symbol function"></span>GetDomainTopic</a></li>
+    <li><a href="gettopic" title="GetTopic"><span class="symbol function"></span>GetTopic</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

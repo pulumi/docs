@@ -13,19 +13,19 @@ Explore the resources and functions of the azure.bot module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="channelalexa" title="ChannelAlexa"><span class="api-symbol api-symbol--resource"></span>ChannelAlexa</a></li>
-    <li><a href="channeldirectline" title="ChannelDirectLine"><span class="api-symbol api-symbol--resource"></span>ChannelDirectLine</a></li>
-    <li><a href="channeldirectlinespeech" title="ChannelDirectLineSpeech"><span class="api-symbol api-symbol--resource"></span>ChannelDirectLineSpeech</a></li>
-    <li><a href="channelemail" title="ChannelEmail"><span class="api-symbol api-symbol--resource"></span>ChannelEmail</a></li>
-    <li><a href="channelfacebook" title="ChannelFacebook"><span class="api-symbol api-symbol--resource"></span>ChannelFacebook</a></li>
-    <li><a href="channelline" title="ChannelLine"><span class="api-symbol api-symbol--resource"></span>ChannelLine</a></li>
-    <li><a href="channelslack" title="ChannelSlack"><span class="api-symbol api-symbol--resource"></span>ChannelSlack</a></li>
-    <li><a href="channelsms" title="ChannelSms"><span class="api-symbol api-symbol--resource"></span>ChannelSms</a></li>
-    <li><a href="channelteams" title="ChannelTeams"><span class="api-symbol api-symbol--resource"></span>ChannelTeams</a></li>
-    <li><a href="channelwebchat" title="ChannelWebChat"><span class="api-symbol api-symbol--resource"></span>ChannelWebChat</a></li>
-    <li><a href="channelsregistration" title="ChannelsRegistration"><span class="api-symbol api-symbol--resource"></span>ChannelsRegistration</a></li>
-    <li><a href="connection" title="Connection"><span class="api-symbol api-symbol--resource"></span>Connection</a></li>
-    <li><a href="webapp" title="WebApp"><span class="api-symbol api-symbol--resource"></span>WebApp</a></li>
+    <li><a href="channelalexa" title="ChannelAlexa"><span class="symbol resource"></span>ChannelAlexa</a></li>
+    <li><a href="channeldirectline" title="ChannelDirectLine"><span class="symbol resource"></span>ChannelDirectLine</a></li>
+    <li><a href="channeldirectlinespeech" title="ChannelDirectLineSpeech"><span class="symbol resource"></span>ChannelDirectLineSpeech</a></li>
+    <li><a href="channelemail" title="ChannelEmail"><span class="symbol resource"></span>ChannelEmail</a></li>
+    <li><a href="channelfacebook" title="ChannelFacebook"><span class="symbol resource"></span>ChannelFacebook</a></li>
+    <li><a href="channelline" title="ChannelLine"><span class="symbol resource"></span>ChannelLine</a></li>
+    <li><a href="channelslack" title="ChannelSlack"><span class="symbol resource"></span>ChannelSlack</a></li>
+    <li><a href="channelsms" title="ChannelSms"><span class="symbol resource"></span>ChannelSms</a></li>
+    <li><a href="channelteams" title="ChannelTeams"><span class="symbol resource"></span>ChannelTeams</a></li>
+    <li><a href="channelwebchat" title="ChannelWebChat"><span class="symbol resource"></span>ChannelWebChat</a></li>
+    <li><a href="channelsregistration" title="ChannelsRegistration"><span class="symbol resource"></span>ChannelsRegistration</a></li>
+    <li><a href="connection" title="Connection"><span class="symbol resource"></span>Connection</a></li>
+    <li><a href="webapp" title="WebApp"><span class="symbol resource"></span>WebApp</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

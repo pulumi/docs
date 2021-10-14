@@ -13,15 +13,15 @@ Explore the resources and functions of the newrelic.plugins module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="alertcondition" title="AlertCondition"><span class="api-symbol api-symbol--resource"></span>AlertCondition</a></li>
-    <li><a href="applicationsettings" title="ApplicationSettings"><span class="api-symbol api-symbol--resource"></span>ApplicationSettings</a></li>
-    <li><a href="workload" title="Workload"><span class="api-symbol api-symbol--resource"></span>Workload</a></li>
+    <li><a href="alertcondition" title="AlertCondition"><span class="symbol resource"></span>AlertCondition</a></li>
+    <li><a href="applicationsettings" title="ApplicationSettings"><span class="symbol resource"></span>ApplicationSettings</a></li>
+    <li><a href="workload" title="Workload"><span class="symbol resource"></span>Workload</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getplugin" title="GetPlugin"><span class="api-symbol api-symbol--function"></span>GetPlugin</a></li>
-    <li><a href="getplugincomponent" title="GetPluginComponent"><span class="api-symbol api-symbol--function"></span>GetPluginComponent</a></li>
+    <li><a href="getplugin" title="GetPlugin"><span class="symbol function"></span>GetPlugin</a></li>
+    <li><a href="getplugincomponent" title="GetPluginComponent"><span class="symbol function"></span>GetPluginComponent</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

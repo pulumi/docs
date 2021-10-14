@@ -13,16 +13,16 @@ Explore the resources and functions of the google-native.vision/v1 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="product" title="Product"><span class="api-symbol api-symbol--resource"></span>Product</a></li>
-    <li><a href="productset" title="ProductSet"><span class="api-symbol api-symbol--resource"></span>ProductSet</a></li>
-    <li><a href="referenceimage" title="ReferenceImage"><span class="api-symbol api-symbol--resource"></span>ReferenceImage</a></li>
+    <li><a href="product" title="Product"><span class="symbol resource"></span>Product</a></li>
+    <li><a href="productset" title="ProductSet"><span class="symbol resource"></span>ProductSet</a></li>
+    <li><a href="referenceimage" title="ReferenceImage"><span class="symbol resource"></span>ReferenceImage</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getproduct" title="GetProduct"><span class="api-symbol api-symbol--function"></span>GetProduct</a></li>
-    <li><a href="getproductset" title="GetProductSet"><span class="api-symbol api-symbol--function"></span>GetProductSet</a></li>
-    <li><a href="getreferenceimage" title="GetReferenceImage"><span class="api-symbol api-symbol--function"></span>GetReferenceImage</a></li>
+    <li><a href="getproduct" title="GetProduct"><span class="symbol function"></span>GetProduct</a></li>
+    <li><a href="getproductset" title="GetProductSet"><span class="symbol function"></span>GetProductSet</a></li>
+    <li><a href="getreferenceimage" title="GetReferenceImage"><span class="symbol function"></span>GetReferenceImage</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

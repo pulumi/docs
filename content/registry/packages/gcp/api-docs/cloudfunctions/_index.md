@@ -13,15 +13,15 @@ Explore the resources and functions of the gcp.cloudfunctions module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="function" title="Function"><span class="api-symbol api-symbol--resource"></span>Function</a></li>
-    <li><a href="functioniambinding" title="FunctionIamBinding"><span class="api-symbol api-symbol--resource"></span>FunctionIamBinding</a></li>
-    <li><a href="functioniammember" title="FunctionIamMember"><span class="api-symbol api-symbol--resource"></span>FunctionIamMember</a></li>
-    <li><a href="functioniampolicy" title="FunctionIamPolicy"><span class="api-symbol api-symbol--resource"></span>FunctionIamPolicy</a></li>
+    <li><a href="function" title="Function"><span class="symbol resource"></span>Function</a></li>
+    <li><a href="functioniambinding" title="FunctionIamBinding"><span class="symbol resource"></span>FunctionIamBinding</a></li>
+    <li><a href="functioniammember" title="FunctionIamMember"><span class="symbol resource"></span>FunctionIamMember</a></li>
+    <li><a href="functioniampolicy" title="FunctionIamPolicy"><span class="symbol resource"></span>FunctionIamPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getfunction" title="GetFunction"><span class="api-symbol api-symbol--function"></span>GetFunction</a></li>
+    <li><a href="getfunction" title="GetFunction"><span class="symbol function"></span>GetFunction</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

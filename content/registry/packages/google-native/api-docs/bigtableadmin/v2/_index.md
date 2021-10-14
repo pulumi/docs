@@ -13,26 +13,26 @@ Explore the resources and functions of the google-native.bigtableadmin/v2 module
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="appprofile" title="AppProfile"><span class="api-symbol api-symbol--resource"></span>AppProfile</a></li>
-    <li><a href="backup" title="Backup"><span class="api-symbol api-symbol--resource"></span>Backup</a></li>
-    <li><a href="cluster" title="Cluster"><span class="api-symbol api-symbol--resource"></span>Cluster</a></li>
-    <li><a href="instance" title="Instance"><span class="api-symbol api-symbol--resource"></span>Instance</a></li>
-    <li><a href="instanceclusterbackupiampolicy" title="InstanceClusterBackupIamPolicy"><span class="api-symbol api-symbol--resource"></span>InstanceClusterBackupIamPolicy</a></li>
-    <li><a href="instanceiampolicy" title="InstanceIamPolicy"><span class="api-symbol api-symbol--resource"></span>InstanceIamPolicy</a></li>
-    <li><a href="instancetableiampolicy" title="InstanceTableIamPolicy"><span class="api-symbol api-symbol--resource"></span>InstanceTableIamPolicy</a></li>
-    <li><a href="table" title="Table"><span class="api-symbol api-symbol--resource"></span>Table</a></li>
+    <li><a href="appprofile" title="AppProfile"><span class="symbol resource"></span>AppProfile</a></li>
+    <li><a href="backup" title="Backup"><span class="symbol resource"></span>Backup</a></li>
+    <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
+    <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
+    <li><a href="instanceclusterbackupiampolicy" title="InstanceClusterBackupIamPolicy"><span class="symbol resource"></span>InstanceClusterBackupIamPolicy</a></li>
+    <li><a href="instanceiampolicy" title="InstanceIamPolicy"><span class="symbol resource"></span>InstanceIamPolicy</a></li>
+    <li><a href="instancetableiampolicy" title="InstanceTableIamPolicy"><span class="symbol resource"></span>InstanceTableIamPolicy</a></li>
+    <li><a href="table" title="Table"><span class="symbol resource"></span>Table</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getappprofile" title="GetAppProfile"><span class="api-symbol api-symbol--function"></span>GetAppProfile</a></li>
-    <li><a href="getbackup" title="GetBackup"><span class="api-symbol api-symbol--function"></span>GetBackup</a></li>
-    <li><a href="getcluster" title="GetCluster"><span class="api-symbol api-symbol--function"></span>GetCluster</a></li>
-    <li><a href="getinstance" title="GetInstance"><span class="api-symbol api-symbol--function"></span>GetInstance</a></li>
-    <li><a href="getinstanceclusterbackupiampolicy" title="GetInstanceClusterBackupIamPolicy"><span class="api-symbol api-symbol--function"></span>GetInstanceClusterBackupIamPolicy</a></li>
-    <li><a href="getinstanceiampolicy" title="GetInstanceIamPolicy"><span class="api-symbol api-symbol--function"></span>GetInstanceIamPolicy</a></li>
-    <li><a href="getinstancetableiampolicy" title="GetInstanceTableIamPolicy"><span class="api-symbol api-symbol--function"></span>GetInstanceTableIamPolicy</a></li>
-    <li><a href="gettable" title="GetTable"><span class="api-symbol api-symbol--function"></span>GetTable</a></li>
+    <li><a href="getappprofile" title="GetAppProfile"><span class="symbol function"></span>GetAppProfile</a></li>
+    <li><a href="getbackup" title="GetBackup"><span class="symbol function"></span>GetBackup</a></li>
+    <li><a href="getcluster" title="GetCluster"><span class="symbol function"></span>GetCluster</a></li>
+    <li><a href="getinstance" title="GetInstance"><span class="symbol function"></span>GetInstance</a></li>
+    <li><a href="getinstanceclusterbackupiampolicy" title="GetInstanceClusterBackupIamPolicy"><span class="symbol function"></span>GetInstanceClusterBackupIamPolicy</a></li>
+    <li><a href="getinstanceiampolicy" title="GetInstanceIamPolicy"><span class="symbol function"></span>GetInstanceIamPolicy</a></li>
+    <li><a href="getinstancetableiampolicy" title="GetInstanceTableIamPolicy"><span class="symbol function"></span>GetInstanceTableIamPolicy</a></li>
+    <li><a href="gettable" title="GetTable"><span class="symbol function"></span>GetTable</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

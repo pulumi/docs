@@ -13,7 +13,7 @@ Explore the resources and functions of the gcp.filestore module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="instance" title="Instance"><span class="api-symbol api-symbol--resource"></span>Instance</a></li>
+    <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

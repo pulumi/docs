@@ -13,9 +13,9 @@ Explore the resources and functions of the aws-native.elasticache module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="globalreplicationgroup" title="GlobalReplicationGroup"><span class="api-symbol api-symbol--resource"></span>GlobalReplicationGroup</a></li>
-    <li><a href="user" title="User"><span class="api-symbol api-symbol--resource"></span>User</a></li>
-    <li><a href="usergroup" title="UserGroup"><span class="api-symbol api-symbol--resource"></span>UserGroup</a></li>
+    <li><a href="globalreplicationgroup" title="GlobalReplicationGroup"><span class="symbol resource"></span>GlobalReplicationGroup</a></li>
+    <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
+    <li><a href="usergroup" title="UserGroup"><span class="symbol resource"></span>UserGroup</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

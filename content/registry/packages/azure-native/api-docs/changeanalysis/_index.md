@@ -13,12 +13,12 @@ Explore the resources and functions of the azure-native.changeanalysis module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="configurationprofile" title="ConfigurationProfile"><span class="api-symbol api-symbol--resource"></span>ConfigurationProfile</a></li>
+    <li><a href="configurationprofile" title="ConfigurationProfile"><span class="symbol resource"></span>ConfigurationProfile</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getconfigurationprofile" title="GetConfigurationProfile"><span class="api-symbol api-symbol--function"></span>GetConfigurationProfile</a></li>
+    <li><a href="getconfigurationprofile" title="GetConfigurationProfile"><span class="symbol function"></span>GetConfigurationProfile</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -28,6 +28,6 @@ Explore the resources and functions of the azure-native.changeanalysis module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.37.0</dd>
+	<dd>1.38.0</dd>
 </dl>
 

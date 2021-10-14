@@ -13,18 +13,18 @@ Explore the resources and functions of the gcp.apigateway module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="api" title="Api"><span class="api-symbol api-symbol--resource"></span>Api</a></li>
-    <li><a href="apiconfig" title="ApiConfig"><span class="api-symbol api-symbol--resource"></span>ApiConfig</a></li>
-    <li><a href="apiconfigiambinding" title="ApiConfigIamBinding"><span class="api-symbol api-symbol--resource"></span>ApiConfigIamBinding</a></li>
-    <li><a href="apiconfigiammember" title="ApiConfigIamMember"><span class="api-symbol api-symbol--resource"></span>ApiConfigIamMember</a></li>
-    <li><a href="apiconfigiampolicy" title="ApiConfigIamPolicy"><span class="api-symbol api-symbol--resource"></span>ApiConfigIamPolicy</a></li>
-    <li><a href="apiiambinding" title="ApiIamBinding"><span class="api-symbol api-symbol--resource"></span>ApiIamBinding</a></li>
-    <li><a href="apiiammember" title="ApiIamMember"><span class="api-symbol api-symbol--resource"></span>ApiIamMember</a></li>
-    <li><a href="apiiampolicy" title="ApiIamPolicy"><span class="api-symbol api-symbol--resource"></span>ApiIamPolicy</a></li>
-    <li><a href="gateway" title="Gateway"><span class="api-symbol api-symbol--resource"></span>Gateway</a></li>
-    <li><a href="gatewayiambinding" title="GatewayIamBinding"><span class="api-symbol api-symbol--resource"></span>GatewayIamBinding</a></li>
-    <li><a href="gatewayiammember" title="GatewayIamMember"><span class="api-symbol api-symbol--resource"></span>GatewayIamMember</a></li>
-    <li><a href="gatewayiampolicy" title="GatewayIamPolicy"><span class="api-symbol api-symbol--resource"></span>GatewayIamPolicy</a></li>
+    <li><a href="api" title="Api"><span class="symbol resource"></span>Api</a></li>
+    <li><a href="apiconfig" title="ApiConfig"><span class="symbol resource"></span>ApiConfig</a></li>
+    <li><a href="apiconfigiambinding" title="ApiConfigIamBinding"><span class="symbol resource"></span>ApiConfigIamBinding</a></li>
+    <li><a href="apiconfigiammember" title="ApiConfigIamMember"><span class="symbol resource"></span>ApiConfigIamMember</a></li>
+    <li><a href="apiconfigiampolicy" title="ApiConfigIamPolicy"><span class="symbol resource"></span>ApiConfigIamPolicy</a></li>
+    <li><a href="apiiambinding" title="ApiIamBinding"><span class="symbol resource"></span>ApiIamBinding</a></li>
+    <li><a href="apiiammember" title="ApiIamMember"><span class="symbol resource"></span>ApiIamMember</a></li>
+    <li><a href="apiiampolicy" title="ApiIamPolicy"><span class="symbol resource"></span>ApiIamPolicy</a></li>
+    <li><a href="gateway" title="Gateway"><span class="symbol resource"></span>Gateway</a></li>
+    <li><a href="gatewayiambinding" title="GatewayIamBinding"><span class="symbol resource"></span>GatewayIamBinding</a></li>
+    <li><a href="gatewayiammember" title="GatewayIamMember"><span class="symbol resource"></span>GatewayIamMember</a></li>
+    <li><a href="gatewayiampolicy" title="GatewayIamPolicy"><span class="symbol resource"></span>GatewayIamPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

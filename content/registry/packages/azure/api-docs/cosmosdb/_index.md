@@ -13,26 +13,26 @@ Explore the resources and functions of the azure.cosmosdb module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="account" title="Account"><span class="api-symbol api-symbol--resource"></span>Account</a></li>
-    <li><a href="cassandrakeyspace" title="CassandraKeyspace"><span class="api-symbol api-symbol--resource"></span>CassandraKeyspace</a></li>
-    <li><a href="cassandratable" title="CassandraTable"><span class="api-symbol api-symbol--resource"></span>CassandraTable</a></li>
-    <li><a href="gremlindatabase" title="GremlinDatabase"><span class="api-symbol api-symbol--resource"></span>GremlinDatabase</a></li>
-    <li><a href="gremlingraph" title="GremlinGraph"><span class="api-symbol api-symbol--resource"></span>GremlinGraph</a></li>
-    <li><a href="mongocollection" title="MongoCollection"><span class="api-symbol api-symbol--resource"></span>MongoCollection</a></li>
-    <li><a href="mongodatabase" title="MongoDatabase"><span class="api-symbol api-symbol--resource"></span>MongoDatabase</a></li>
-    <li><a href="notebookworkspace" title="NotebookWorkspace"><span class="api-symbol api-symbol--resource"></span>NotebookWorkspace</a></li>
-    <li><a href="sqlcontainer" title="SqlContainer"><span class="api-symbol api-symbol--resource"></span>SqlContainer</a></li>
-    <li><a href="sqldatabase" title="SqlDatabase"><span class="api-symbol api-symbol--resource"></span>SqlDatabase</a></li>
-    <li><a href="sqlfunction" title="SqlFunction"><span class="api-symbol api-symbol--resource"></span>SqlFunction</a></li>
-    <li><a href="sqlstoredprocedure" title="SqlStoredProcedure"><span class="api-symbol api-symbol--resource"></span>SqlStoredProcedure</a></li>
-    <li><a href="sqltrigger" title="SqlTrigger"><span class="api-symbol api-symbol--resource"></span>SqlTrigger</a></li>
-    <li><a href="table" title="Table"><span class="api-symbol api-symbol--resource"></span>Table</a></li>
+    <li><a href="account" title="Account"><span class="symbol resource"></span>Account</a></li>
+    <li><a href="cassandrakeyspace" title="CassandraKeyspace"><span class="symbol resource"></span>CassandraKeyspace</a></li>
+    <li><a href="cassandratable" title="CassandraTable"><span class="symbol resource"></span>CassandraTable</a></li>
+    <li><a href="gremlindatabase" title="GremlinDatabase"><span class="symbol resource"></span>GremlinDatabase</a></li>
+    <li><a href="gremlingraph" title="GremlinGraph"><span class="symbol resource"></span>GremlinGraph</a></li>
+    <li><a href="mongocollection" title="MongoCollection"><span class="symbol resource"></span>MongoCollection</a></li>
+    <li><a href="mongodatabase" title="MongoDatabase"><span class="symbol resource"></span>MongoDatabase</a></li>
+    <li><a href="notebookworkspace" title="NotebookWorkspace"><span class="symbol resource"></span>NotebookWorkspace</a></li>
+    <li><a href="sqlcontainer" title="SqlContainer"><span class="symbol resource"></span>SqlContainer</a></li>
+    <li><a href="sqldatabase" title="SqlDatabase"><span class="symbol resource"></span>SqlDatabase</a></li>
+    <li><a href="sqlfunction" title="SqlFunction"><span class="symbol resource"></span>SqlFunction</a></li>
+    <li><a href="sqlstoredprocedure" title="SqlStoredProcedure"><span class="symbol resource"></span>SqlStoredProcedure</a></li>
+    <li><a href="sqltrigger" title="SqlTrigger"><span class="symbol resource"></span>SqlTrigger</a></li>
+    <li><a href="table" title="Table"><span class="symbol resource"></span>Table</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getaccount" title="GetAccount"><span class="api-symbol api-symbol--function"></span>GetAccount</a></li>
-    <li><a href="getmongodatabase" title="GetMongoDatabase"><span class="api-symbol api-symbol--function"></span>GetMongoDatabase</a></li>
+    <li><a href="getaccount" title="GetAccount"><span class="symbol function"></span>GetAccount</a></li>
+    <li><a href="getmongodatabase" title="GetMongoDatabase"><span class="symbol function"></span>GetMongoDatabase</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

@@ -13,7 +13,7 @@ Explore the resources and functions of the alicloud.sag module.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getacls" title="GetAcls"><span class="api-symbol api-symbol--function"></span>GetAcls</a></li>
+    <li><a href="getacls" title="GetAcls"><span class="symbol function"></span>GetAcls</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

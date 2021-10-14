@@ -13,15 +13,15 @@ Explore the resources and functions of the openstack.images module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="image" title="Image"><span class="api-symbol api-symbol--resource"></span>Image</a></li>
-    <li><a href="imageaccess" title="ImageAccess"><span class="api-symbol api-symbol--resource"></span>ImageAccess</a></li>
-    <li><a href="imageaccessaccept" title="ImageAccessAccept"><span class="api-symbol api-symbol--resource"></span>ImageAccessAccept</a></li>
+    <li><a href="image" title="Image"><span class="symbol resource"></span>Image</a></li>
+    <li><a href="imageaccess" title="ImageAccess"><span class="symbol resource"></span>ImageAccess</a></li>
+    <li><a href="imageaccessaccept" title="ImageAccessAccept"><span class="symbol resource"></span>ImageAccessAccept</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getimage" title="GetImage"><span class="api-symbol api-symbol--function"></span>GetImage</a></li>
-    <li><a href="getimageids" title="GetImageIds"><span class="api-symbol api-symbol--function"></span>GetImageIds</a></li>
+    <li><a href="getimage" title="GetImage"><span class="symbol function"></span>GetImage</a></li>
+    <li><a href="getimageids" title="GetImageIds"><span class="symbol function"></span>GetImageIds</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

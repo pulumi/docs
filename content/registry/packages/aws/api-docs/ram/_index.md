@@ -13,15 +13,15 @@ Explore the resources and functions of the aws.ram module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="principalassociation" title="PrincipalAssociation"><span class="api-symbol api-symbol--resource"></span>PrincipalAssociation</a></li>
-    <li><a href="resourceassociation" title="ResourceAssociation"><span class="api-symbol api-symbol--resource"></span>ResourceAssociation</a></li>
-    <li><a href="resourceshare" title="ResourceShare"><span class="api-symbol api-symbol--resource"></span>ResourceShare</a></li>
-    <li><a href="resourceshareaccepter" title="ResourceShareAccepter"><span class="api-symbol api-symbol--resource"></span>ResourceShareAccepter</a></li>
+    <li><a href="principalassociation" title="PrincipalAssociation"><span class="symbol resource"></span>PrincipalAssociation</a></li>
+    <li><a href="resourceassociation" title="ResourceAssociation"><span class="symbol resource"></span>ResourceAssociation</a></li>
+    <li><a href="resourceshare" title="ResourceShare"><span class="symbol resource"></span>ResourceShare</a></li>
+    <li><a href="resourceshareaccepter" title="ResourceShareAccepter"><span class="symbol resource"></span>ResourceShareAccepter</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getresourceshare" title="GetResourceShare"><span class="api-symbol api-symbol--function"></span>GetResourceShare</a></li>
+    <li><a href="getresourceshare" title="GetResourceShare"><span class="symbol function"></span>GetResourceShare</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

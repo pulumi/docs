@@ -13,8 +13,8 @@ Explore the resources and functions of the aws.glacier module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="vault" title="Vault"><span class="api-symbol api-symbol--resource"></span>Vault</a></li>
-    <li><a href="vaultlock" title="VaultLock"><span class="api-symbol api-symbol--resource"></span>VaultLock</a></li>
+    <li><a href="vault" title="Vault"><span class="symbol resource"></span>Vault</a></li>
+    <li><a href="vaultlock" title="VaultLock"><span class="symbol resource"></span>VaultLock</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

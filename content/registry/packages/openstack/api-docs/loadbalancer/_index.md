@@ -13,19 +13,19 @@ Explore the resources and functions of the openstack.loadbalancer module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="l7policyv2" title="L7PolicyV2"><span class="api-symbol api-symbol--resource"></span>L7PolicyV2</a></li>
-    <li><a href="l7rulev2" title="L7RuleV2"><span class="api-symbol api-symbol--resource"></span>L7RuleV2</a></li>
-    <li><a href="listener" title="Listener"><span class="api-symbol api-symbol--resource"></span>Listener</a></li>
-    <li><a href="loadbalancer" title="LoadBalancer"><span class="api-symbol api-symbol--resource"></span>LoadBalancer</a></li>
-    <li><a href="member" title="Member"><span class="api-symbol api-symbol--resource"></span>Member</a></li>
-    <li><a href="memberv1" title="MemberV1"><span class="api-symbol api-symbol--resource"></span>MemberV1</a></li>
-    <li><a href="members" title="Members"><span class="api-symbol api-symbol--resource"></span>Members</a></li>
-    <li><a href="monitor" title="Monitor"><span class="api-symbol api-symbol--resource"></span>Monitor</a></li>
-    <li><a href="monitorv1" title="MonitorV1"><span class="api-symbol api-symbol--resource"></span>MonitorV1</a></li>
-    <li><a href="pool" title="Pool"><span class="api-symbol api-symbol--resource"></span>Pool</a></li>
-    <li><a href="poolv1" title="PoolV1"><span class="api-symbol api-symbol--resource"></span>PoolV1</a></li>
-    <li><a href="quota" title="Quota"><span class="api-symbol api-symbol--resource"></span>Quota</a></li>
-    <li><a href="vip" title="Vip"><span class="api-symbol api-symbol--resource"></span>Vip</a></li>
+    <li><a href="l7policyv2" title="L7PolicyV2"><span class="symbol resource"></span>L7PolicyV2</a></li>
+    <li><a href="l7rulev2" title="L7RuleV2"><span class="symbol resource"></span>L7RuleV2</a></li>
+    <li><a href="listener" title="Listener"><span class="symbol resource"></span>Listener</a></li>
+    <li><a href="loadbalancer" title="LoadBalancer"><span class="symbol resource"></span>LoadBalancer</a></li>
+    <li><a href="member" title="Member"><span class="symbol resource"></span>Member</a></li>
+    <li><a href="memberv1" title="MemberV1"><span class="symbol resource"></span>MemberV1</a></li>
+    <li><a href="members" title="Members"><span class="symbol resource"></span>Members</a></li>
+    <li><a href="monitor" title="Monitor"><span class="symbol resource"></span>Monitor</a></li>
+    <li><a href="monitorv1" title="MonitorV1"><span class="symbol resource"></span>MonitorV1</a></li>
+    <li><a href="pool" title="Pool"><span class="symbol resource"></span>Pool</a></li>
+    <li><a href="poolv1" title="PoolV1"><span class="symbol resource"></span>PoolV1</a></li>
+    <li><a href="quota" title="Quota"><span class="symbol resource"></span>Quota</a></li>
+    <li><a href="vip" title="Vip"><span class="symbol resource"></span>Vip</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

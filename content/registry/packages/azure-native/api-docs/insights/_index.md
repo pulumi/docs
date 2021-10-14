@@ -13,73 +13,73 @@ Explore the resources and functions of the azure-native.insights module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="actiongroup" title="ActionGroup"><span class="api-symbol api-symbol--resource"></span>ActionGroup</a></li>
-    <li><a href="activitylogalert" title="ActivityLogAlert"><span class="api-symbol api-symbol--resource"></span>ActivityLogAlert</a></li>
-    <li><a href="alertrule" title="AlertRule"><span class="api-symbol api-symbol--resource"></span>AlertRule</a></li>
-    <li><a href="analyticsitem" title="AnalyticsItem"><span class="api-symbol api-symbol--resource"></span>AnalyticsItem</a></li>
-    <li><a href="autoscalesetting" title="AutoscaleSetting"><span class="api-symbol api-symbol--resource"></span>AutoscaleSetting</a></li>
-    <li><a href="component" title="Component"><span class="api-symbol api-symbol--resource"></span>Component</a></li>
-    <li><a href="componentcurrentbillingfeature" title="ComponentCurrentBillingFeature"><span class="api-symbol api-symbol--resource"></span>ComponentCurrentBillingFeature</a></li>
-    <li><a href="componentlinkedstorageaccount" title="ComponentLinkedStorageAccount"><span class="api-symbol api-symbol--resource"></span>ComponentLinkedStorageAccount</a></li>
-    <li><a href="datacollectionendpoint" title="DataCollectionEndpoint"><span class="api-symbol api-symbol--resource"></span>DataCollectionEndpoint</a></li>
-    <li><a href="datacollectionrule" title="DataCollectionRule"><span class="api-symbol api-symbol--resource"></span>DataCollectionRule</a></li>
-    <li><a href="datacollectionruleassociation" title="DataCollectionRuleAssociation"><span class="api-symbol api-symbol--resource"></span>DataCollectionRuleAssociation</a></li>
-    <li><a href="diagnosticsetting" title="DiagnosticSetting"><span class="api-symbol api-symbol--resource"></span>DiagnosticSetting</a></li>
-    <li><a href="exportconfiguration" title="ExportConfiguration"><span class="api-symbol api-symbol--resource"></span>ExportConfiguration</a></li>
-    <li><a href="favorite" title="Favorite"><span class="api-symbol api-symbol--resource"></span>Favorite</a></li>
-    <li><a href="guestdiagnosticssetting" title="GuestDiagnosticsSetting"><span class="api-symbol api-symbol--resource"></span>GuestDiagnosticsSetting</a></li>
-    <li><a href="guestdiagnosticssettingsassociation" title="GuestDiagnosticsSettingsAssociation"><span class="api-symbol api-symbol--resource"></span>GuestDiagnosticsSettingsAssociation</a></li>
-    <li><a href="logprofile" title="LogProfile"><span class="api-symbol api-symbol--resource"></span>LogProfile</a></li>
-    <li><a href="managementgroupdiagnosticsetting" title="ManagementGroupDiagnosticSetting"><span class="api-symbol api-symbol--resource"></span>ManagementGroupDiagnosticSetting</a></li>
-    <li><a href="metricalert" title="MetricAlert"><span class="api-symbol api-symbol--resource"></span>MetricAlert</a></li>
-    <li><a href="myworkbook" title="MyWorkbook"><span class="api-symbol api-symbol--resource"></span>MyWorkbook</a></li>
-    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="api-symbol api-symbol--resource"></span>PrivateEndpointConnection</a></li>
-    <li><a href="privatelinkscope" title="PrivateLinkScope"><span class="api-symbol api-symbol--resource"></span>PrivateLinkScope</a></li>
-    <li><a href="privatelinkscopedresource" title="PrivateLinkScopedResource"><span class="api-symbol api-symbol--resource"></span>PrivateLinkScopedResource</a></li>
-    <li><a href="proactivedetectionconfiguration" title="ProactiveDetectionConfiguration"><span class="api-symbol api-symbol--resource"></span>ProactiveDetectionConfiguration</a></li>
-    <li><a href="scheduledqueryrule" title="ScheduledQueryRule"><span class="api-symbol api-symbol--resource"></span>ScheduledQueryRule</a></li>
-    <li><a href="subscriptiondiagnosticsetting" title="SubscriptionDiagnosticSetting"><span class="api-symbol api-symbol--resource"></span>SubscriptionDiagnosticSetting</a></li>
-    <li><a href="webtest" title="WebTest"><span class="api-symbol api-symbol--resource"></span>WebTest</a></li>
-    <li><a href="workbook" title="Workbook"><span class="api-symbol api-symbol--resource"></span>Workbook</a></li>
-    <li><a href="workbooktemplate" title="WorkbookTemplate"><span class="api-symbol api-symbol--resource"></span>WorkbookTemplate</a></li>
+    <li><a href="actiongroup" title="ActionGroup"><span class="symbol resource"></span>ActionGroup</a></li>
+    <li><a href="activitylogalert" title="ActivityLogAlert"><span class="symbol resource"></span>ActivityLogAlert</a></li>
+    <li><a href="alertrule" title="AlertRule"><span class="symbol resource"></span>AlertRule</a></li>
+    <li><a href="analyticsitem" title="AnalyticsItem"><span class="symbol resource"></span>AnalyticsItem</a></li>
+    <li><a href="autoscalesetting" title="AutoscaleSetting"><span class="symbol resource"></span>AutoscaleSetting</a></li>
+    <li><a href="component" title="Component"><span class="symbol resource"></span>Component</a></li>
+    <li><a href="componentcurrentbillingfeature" title="ComponentCurrentBillingFeature"><span class="symbol resource"></span>ComponentCurrentBillingFeature</a></li>
+    <li><a href="componentlinkedstorageaccount" title="ComponentLinkedStorageAccount"><span class="symbol resource"></span>ComponentLinkedStorageAccount</a></li>
+    <li><a href="datacollectionendpoint" title="DataCollectionEndpoint"><span class="symbol resource"></span>DataCollectionEndpoint</a></li>
+    <li><a href="datacollectionrule" title="DataCollectionRule"><span class="symbol resource"></span>DataCollectionRule</a></li>
+    <li><a href="datacollectionruleassociation" title="DataCollectionRuleAssociation"><span class="symbol resource"></span>DataCollectionRuleAssociation</a></li>
+    <li><a href="diagnosticsetting" title="DiagnosticSetting"><span class="symbol resource"></span>DiagnosticSetting</a></li>
+    <li><a href="exportconfiguration" title="ExportConfiguration"><span class="symbol resource"></span>ExportConfiguration</a></li>
+    <li><a href="favorite" title="Favorite"><span class="symbol resource"></span>Favorite</a></li>
+    <li><a href="guestdiagnosticssetting" title="GuestDiagnosticsSetting"><span class="symbol resource"></span>GuestDiagnosticsSetting</a></li>
+    <li><a href="guestdiagnosticssettingsassociation" title="GuestDiagnosticsSettingsAssociation"><span class="symbol resource"></span>GuestDiagnosticsSettingsAssociation</a></li>
+    <li><a href="logprofile" title="LogProfile"><span class="symbol resource"></span>LogProfile</a></li>
+    <li><a href="managementgroupdiagnosticsetting" title="ManagementGroupDiagnosticSetting"><span class="symbol resource"></span>ManagementGroupDiagnosticSetting</a></li>
+    <li><a href="metricalert" title="MetricAlert"><span class="symbol resource"></span>MetricAlert</a></li>
+    <li><a href="myworkbook" title="MyWorkbook"><span class="symbol resource"></span>MyWorkbook</a></li>
+    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
+    <li><a href="privatelinkscope" title="PrivateLinkScope"><span class="symbol resource"></span>PrivateLinkScope</a></li>
+    <li><a href="privatelinkscopedresource" title="PrivateLinkScopedResource"><span class="symbol resource"></span>PrivateLinkScopedResource</a></li>
+    <li><a href="proactivedetectionconfiguration" title="ProactiveDetectionConfiguration"><span class="symbol resource"></span>ProactiveDetectionConfiguration</a></li>
+    <li><a href="scheduledqueryrule" title="ScheduledQueryRule"><span class="symbol resource"></span>ScheduledQueryRule</a></li>
+    <li><a href="subscriptiondiagnosticsetting" title="SubscriptionDiagnosticSetting"><span class="symbol resource"></span>SubscriptionDiagnosticSetting</a></li>
+    <li><a href="webtest" title="WebTest"><span class="symbol resource"></span>WebTest</a></li>
+    <li><a href="workbook" title="Workbook"><span class="symbol resource"></span>Workbook</a></li>
+    <li><a href="workbooktemplate" title="WorkbookTemplate"><span class="symbol resource"></span>WorkbookTemplate</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getactiongroup" title="GetActionGroup"><span class="api-symbol api-symbol--function"></span>GetActionGroup</a></li>
-    <li><a href="getactivitylogalert" title="GetActivityLogAlert"><span class="api-symbol api-symbol--function"></span>GetActivityLogAlert</a></li>
-    <li><a href="getalertrule" title="GetAlertRule"><span class="api-symbol api-symbol--function"></span>GetAlertRule</a></li>
-    <li><a href="getanalyticsitem" title="GetAnalyticsItem"><span class="api-symbol api-symbol--function"></span>GetAnalyticsItem</a></li>
-    <li><a href="getautoscalesetting" title="GetAutoscaleSetting"><span class="api-symbol api-symbol--function"></span>GetAutoscaleSetting</a></li>
-    <li><a href="getcomponent" title="GetComponent"><span class="api-symbol api-symbol--function"></span>GetComponent</a></li>
-    <li><a href="getcomponentcurrentbillingfeature" title="GetComponentCurrentBillingFeature"><span class="api-symbol api-symbol--function"></span>GetComponentCurrentBillingFeature</a></li>
-    <li><a href="getcomponentlinkedstorageaccount" title="GetComponentLinkedStorageAccount"><span class="api-symbol api-symbol--function"></span>GetComponentLinkedStorageAccount</a></li>
-    <li><a href="getdatacollectionendpoint" title="GetDataCollectionEndpoint"><span class="api-symbol api-symbol--function"></span>GetDataCollectionEndpoint</a></li>
-    <li><a href="getdatacollectionrule" title="GetDataCollectionRule"><span class="api-symbol api-symbol--function"></span>GetDataCollectionRule</a></li>
-    <li><a href="getdatacollectionruleassociation" title="GetDataCollectionRuleAssociation"><span class="api-symbol api-symbol--function"></span>GetDataCollectionRuleAssociation</a></li>
-    <li><a href="getdiagnosticservicetokenreadonly" title="GetDiagnosticServiceTokenReadOnly"><span class="api-symbol api-symbol--function"></span>GetDiagnosticServiceTokenReadOnly</a></li>
-    <li><a href="getdiagnosticservicetokenreadwrite" title="GetDiagnosticServiceTokenReadWrite"><span class="api-symbol api-symbol--function"></span>GetDiagnosticServiceTokenReadWrite</a></li>
-    <li><a href="getdiagnosticsetting" title="GetDiagnosticSetting"><span class="api-symbol api-symbol--function"></span>GetDiagnosticSetting</a></li>
-    <li><a href="getexportconfiguration" title="GetExportConfiguration"><span class="api-symbol api-symbol--function"></span>GetExportConfiguration</a></li>
-    <li><a href="getfavorite" title="GetFavorite"><span class="api-symbol api-symbol--function"></span>GetFavorite</a></li>
-    <li><a href="getguestdiagnosticssettingsassociation" title="GetGuestDiagnosticsSettingsAssociation"><span class="api-symbol api-symbol--function"></span>GetGuestDiagnosticsSettingsAssociation</a></li>
-    <li><a href="getlivetoken" title="GetLiveToken"><span class="api-symbol api-symbol--function"></span>GetLiveToken</a></li>
-    <li><a href="getlogprofile" title="GetLogProfile"><span class="api-symbol api-symbol--function"></span>GetLogProfile</a></li>
-    <li><a href="getmanagementgroupdiagnosticsetting" title="GetManagementGroupDiagnosticSetting"><span class="api-symbol api-symbol--function"></span>GetManagementGroupDiagnosticSetting</a></li>
-    <li><a href="getmetricalert" title="GetMetricAlert"><span class="api-symbol api-symbol--function"></span>GetMetricAlert</a></li>
-    <li><a href="getmyworkbook" title="GetMyWorkbook"><span class="api-symbol api-symbol--function"></span>GetMyWorkbook</a></li>
-    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="api-symbol api-symbol--function"></span>GetPrivateEndpointConnection</a></li>
-    <li><a href="getprivatelinkscope" title="GetPrivateLinkScope"><span class="api-symbol api-symbol--function"></span>GetPrivateLinkScope</a></li>
-    <li><a href="getprivatelinkscopedresource" title="GetPrivateLinkScopedResource"><span class="api-symbol api-symbol--function"></span>GetPrivateLinkScopedResource</a></li>
-    <li><a href="getproactivedetectionconfiguration" title="GetProactiveDetectionConfiguration"><span class="api-symbol api-symbol--function"></span>GetProactiveDetectionConfiguration</a></li>
-    <li><a href="getscheduledqueryrule" title="GetScheduledQueryRule"><span class="api-symbol api-symbol--function"></span>GetScheduledQueryRule</a></li>
-    <li><a href="getsubscriptiondiagnosticsetting" title="GetSubscriptionDiagnosticSetting"><span class="api-symbol api-symbol--function"></span>GetSubscriptionDiagnosticSetting</a></li>
-    <li><a href="gettestresultfile" title="GetTestResultFile"><span class="api-symbol api-symbol--function"></span>GetTestResultFile</a></li>
-    <li><a href="getwebtest" title="GetWebTest"><span class="api-symbol api-symbol--function"></span>GetWebTest</a></li>
-    <li><a href="getworkbook" title="GetWorkbook"><span class="api-symbol api-symbol--function"></span>GetWorkbook</a></li>
-    <li><a href="getworkbooktemplate" title="GetWorkbookTemplate"><span class="api-symbol api-symbol--function"></span>GetWorkbookTemplate</a></li>
-    <li><a href="getguestdiagnosticssetting" title="GetguestDiagnosticsSetting"><span class="api-symbol api-symbol--function"></span>GetguestDiagnosticsSetting</a></li>
-    <li><a href="listeasubscriptionlistmigrationdatepost" title="ListEASubscriptionListMigrationDatePost"><span class="api-symbol api-symbol--function"></span>ListEASubscriptionListMigrationDatePost</a></li>
+    <li><a href="getactiongroup" title="GetActionGroup"><span class="symbol function"></span>GetActionGroup</a></li>
+    <li><a href="getactivitylogalert" title="GetActivityLogAlert"><span class="symbol function"></span>GetActivityLogAlert</a></li>
+    <li><a href="getalertrule" title="GetAlertRule"><span class="symbol function"></span>GetAlertRule</a></li>
+    <li><a href="getanalyticsitem" title="GetAnalyticsItem"><span class="symbol function"></span>GetAnalyticsItem</a></li>
+    <li><a href="getautoscalesetting" title="GetAutoscaleSetting"><span class="symbol function"></span>GetAutoscaleSetting</a></li>
+    <li><a href="getcomponent" title="GetComponent"><span class="symbol function"></span>GetComponent</a></li>
+    <li><a href="getcomponentcurrentbillingfeature" title="GetComponentCurrentBillingFeature"><span class="symbol function"></span>GetComponentCurrentBillingFeature</a></li>
+    <li><a href="getcomponentlinkedstorageaccount" title="GetComponentLinkedStorageAccount"><span class="symbol function"></span>GetComponentLinkedStorageAccount</a></li>
+    <li><a href="getdatacollectionendpoint" title="GetDataCollectionEndpoint"><span class="symbol function"></span>GetDataCollectionEndpoint</a></li>
+    <li><a href="getdatacollectionrule" title="GetDataCollectionRule"><span class="symbol function"></span>GetDataCollectionRule</a></li>
+    <li><a href="getdatacollectionruleassociation" title="GetDataCollectionRuleAssociation"><span class="symbol function"></span>GetDataCollectionRuleAssociation</a></li>
+    <li><a href="getdiagnosticservicetokenreadonly" title="GetDiagnosticServiceTokenReadOnly"><span class="symbol function"></span>GetDiagnosticServiceTokenReadOnly</a></li>
+    <li><a href="getdiagnosticservicetokenreadwrite" title="GetDiagnosticServiceTokenReadWrite"><span class="symbol function"></span>GetDiagnosticServiceTokenReadWrite</a></li>
+    <li><a href="getdiagnosticsetting" title="GetDiagnosticSetting"><span class="symbol function"></span>GetDiagnosticSetting</a></li>
+    <li><a href="getexportconfiguration" title="GetExportConfiguration"><span class="symbol function"></span>GetExportConfiguration</a></li>
+    <li><a href="getfavorite" title="GetFavorite"><span class="symbol function"></span>GetFavorite</a></li>
+    <li><a href="getguestdiagnosticssettingsassociation" title="GetGuestDiagnosticsSettingsAssociation"><span class="symbol function"></span>GetGuestDiagnosticsSettingsAssociation</a></li>
+    <li><a href="getlivetoken" title="GetLiveToken"><span class="symbol function"></span>GetLiveToken</a></li>
+    <li><a href="getlogprofile" title="GetLogProfile"><span class="symbol function"></span>GetLogProfile</a></li>
+    <li><a href="getmanagementgroupdiagnosticsetting" title="GetManagementGroupDiagnosticSetting"><span class="symbol function"></span>GetManagementGroupDiagnosticSetting</a></li>
+    <li><a href="getmetricalert" title="GetMetricAlert"><span class="symbol function"></span>GetMetricAlert</a></li>
+    <li><a href="getmyworkbook" title="GetMyWorkbook"><span class="symbol function"></span>GetMyWorkbook</a></li>
+    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
+    <li><a href="getprivatelinkscope" title="GetPrivateLinkScope"><span class="symbol function"></span>GetPrivateLinkScope</a></li>
+    <li><a href="getprivatelinkscopedresource" title="GetPrivateLinkScopedResource"><span class="symbol function"></span>GetPrivateLinkScopedResource</a></li>
+    <li><a href="getproactivedetectionconfiguration" title="GetProactiveDetectionConfiguration"><span class="symbol function"></span>GetProactiveDetectionConfiguration</a></li>
+    <li><a href="getscheduledqueryrule" title="GetScheduledQueryRule"><span class="symbol function"></span>GetScheduledQueryRule</a></li>
+    <li><a href="getsubscriptiondiagnosticsetting" title="GetSubscriptionDiagnosticSetting"><span class="symbol function"></span>GetSubscriptionDiagnosticSetting</a></li>
+    <li><a href="gettestresultfile" title="GetTestResultFile"><span class="symbol function"></span>GetTestResultFile</a></li>
+    <li><a href="getwebtest" title="GetWebTest"><span class="symbol function"></span>GetWebTest</a></li>
+    <li><a href="getworkbook" title="GetWorkbook"><span class="symbol function"></span>GetWorkbook</a></li>
+    <li><a href="getworkbooktemplate" title="GetWorkbookTemplate"><span class="symbol function"></span>GetWorkbookTemplate</a></li>
+    <li><a href="getguestdiagnosticssetting" title="GetguestDiagnosticsSetting"><span class="symbol function"></span>GetguestDiagnosticsSetting</a></li>
+    <li><a href="listeasubscriptionlistmigrationdatepost" title="ListEASubscriptionListMigrationDatePost"><span class="symbol function"></span>ListEASubscriptionListMigrationDatePost</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -89,6 +89,6 @@ Explore the resources and functions of the azure-native.insights module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.37.0</dd>
+	<dd>1.38.0</dd>
 </dl>
 

@@ -13,11 +13,11 @@ no_edit_this_page: true
 
 <h2 id="modules">Modules</h2>
 <ul class="api">
-    <li><a href="v1/" title="v1"><span class="api-symbol api-symbol--module"></span>v1</a></li>
-    <li><a href="v1alpha/" title="v1alpha"><span class="api-symbol api-symbol--module"></span>v1alpha</a></li>
-    <li><a href="v1alpha2/" title="v1alpha2"><span class="api-symbol api-symbol--module"></span>v1alpha2</a></li>
-    <li><a href="v1beta/" title="v1beta"><span class="api-symbol api-symbol--module"></span>v1beta</a></li>
-    <li><a href="v1beta1/" title="v1beta1"><span class="api-symbol api-symbol--module"></span>v1beta1</a></li>
+    <li><a href="v1/" title="v1"><span class="symbol module"></span>v1</a></li>
+    <li><a href="v1alpha/" title="v1alpha"><span class="symbol module"></span>v1alpha</a></li>
+    <li><a href="v1alpha2/" title="v1alpha2"><span class="symbol module"></span>v1alpha2</a></li>
+    <li><a href="v1beta/" title="v1beta"><span class="symbol module"></span>v1beta</a></li>
+    <li><a href="v1beta1/" title="v1beta1"><span class="symbol module"></span>v1beta1</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

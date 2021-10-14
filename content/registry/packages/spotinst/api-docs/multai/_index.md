@@ -13,12 +13,12 @@ Explore the resources and functions of the spotinst.multai module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="balancer" title="Balancer"><span class="api-symbol api-symbol--resource"></span>Balancer</a></li>
-    <li><a href="deployment" title="Deployment"><span class="api-symbol api-symbol--resource"></span>Deployment</a></li>
-    <li><a href="listener" title="Listener"><span class="api-symbol api-symbol--resource"></span>Listener</a></li>
-    <li><a href="routingrule" title="RoutingRule"><span class="api-symbol api-symbol--resource"></span>RoutingRule</a></li>
-    <li><a href="target" title="Target"><span class="api-symbol api-symbol--resource"></span>Target</a></li>
-    <li><a href="targetset" title="TargetSet"><span class="api-symbol api-symbol--resource"></span>TargetSet</a></li>
+    <li><a href="balancer" title="Balancer"><span class="symbol resource"></span>Balancer</a></li>
+    <li><a href="deployment" title="Deployment"><span class="symbol resource"></span>Deployment</a></li>
+    <li><a href="listener" title="Listener"><span class="symbol resource"></span>Listener</a></li>
+    <li><a href="routingrule" title="RoutingRule"><span class="symbol resource"></span>RoutingRule</a></li>
+    <li><a href="target" title="Target"><span class="symbol resource"></span>Target</a></li>
+    <li><a href="targetset" title="TargetSet"><span class="symbol resource"></span>TargetSet</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

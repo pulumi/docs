@@ -13,49 +13,49 @@ Explore the resources and functions of the azure-native.containerregistry module
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="agentpool" title="AgentPool"><span class="api-symbol api-symbol--resource"></span>AgentPool</a></li>
-    <li><a href="connectedregistry" title="ConnectedRegistry"><span class="api-symbol api-symbol--resource"></span>ConnectedRegistry</a></li>
-    <li><a href="exportpipeline" title="ExportPipeline"><span class="api-symbol api-symbol--resource"></span>ExportPipeline</a></li>
-    <li><a href="importpipeline" title="ImportPipeline"><span class="api-symbol api-symbol--resource"></span>ImportPipeline</a></li>
-    <li><a href="pipelinerun" title="PipelineRun"><span class="api-symbol api-symbol--resource"></span>PipelineRun</a></li>
-    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="api-symbol api-symbol--resource"></span>PrivateEndpointConnection</a></li>
-    <li><a href="registry" title="Registry"><span class="api-symbol api-symbol--resource"></span>Registry</a></li>
-    <li><a href="replication" title="Replication"><span class="api-symbol api-symbol--resource"></span>Replication</a></li>
-    <li><a href="scopemap" title="ScopeMap"><span class="api-symbol api-symbol--resource"></span>ScopeMap</a></li>
-    <li><a href="task" title="Task"><span class="api-symbol api-symbol--resource"></span>Task</a></li>
-    <li><a href="taskrun" title="TaskRun"><span class="api-symbol api-symbol--resource"></span>TaskRun</a></li>
-    <li><a href="token" title="Token"><span class="api-symbol api-symbol--resource"></span>Token</a></li>
-    <li><a href="webhook" title="Webhook"><span class="api-symbol api-symbol--resource"></span>Webhook</a></li>
+    <li><a href="agentpool" title="AgentPool"><span class="symbol resource"></span>AgentPool</a></li>
+    <li><a href="connectedregistry" title="ConnectedRegistry"><span class="symbol resource"></span>ConnectedRegistry</a></li>
+    <li><a href="exportpipeline" title="ExportPipeline"><span class="symbol resource"></span>ExportPipeline</a></li>
+    <li><a href="importpipeline" title="ImportPipeline"><span class="symbol resource"></span>ImportPipeline</a></li>
+    <li><a href="pipelinerun" title="PipelineRun"><span class="symbol resource"></span>PipelineRun</a></li>
+    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
+    <li><a href="registry" title="Registry"><span class="symbol resource"></span>Registry</a></li>
+    <li><a href="replication" title="Replication"><span class="symbol resource"></span>Replication</a></li>
+    <li><a href="scopemap" title="ScopeMap"><span class="symbol resource"></span>ScopeMap</a></li>
+    <li><a href="task" title="Task"><span class="symbol resource"></span>Task</a></li>
+    <li><a href="taskrun" title="TaskRun"><span class="symbol resource"></span>TaskRun</a></li>
+    <li><a href="token" title="Token"><span class="symbol resource"></span>Token</a></li>
+    <li><a href="webhook" title="Webhook"><span class="symbol resource"></span>Webhook</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getagentpool" title="GetAgentPool"><span class="api-symbol api-symbol--function"></span>GetAgentPool</a></li>
-    <li><a href="getbuildloglink" title="GetBuildLogLink"><span class="api-symbol api-symbol--function"></span>GetBuildLogLink</a></li>
-    <li><a href="getconnectedregistry" title="GetConnectedRegistry"><span class="api-symbol api-symbol--function"></span>GetConnectedRegistry</a></li>
-    <li><a href="getexportpipeline" title="GetExportPipeline"><span class="api-symbol api-symbol--function"></span>GetExportPipeline</a></li>
-    <li><a href="getimportpipeline" title="GetImportPipeline"><span class="api-symbol api-symbol--function"></span>GetImportPipeline</a></li>
-    <li><a href="getpipelinerun" title="GetPipelineRun"><span class="api-symbol api-symbol--function"></span>GetPipelineRun</a></li>
-    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="api-symbol api-symbol--function"></span>GetPrivateEndpointConnection</a></li>
-    <li><a href="getregistry" title="GetRegistry"><span class="api-symbol api-symbol--function"></span>GetRegistry</a></li>
-    <li><a href="getregistrybuildsourceuploadurl" title="GetRegistryBuildSourceUploadUrl"><span class="api-symbol api-symbol--function"></span>GetRegistryBuildSourceUploadUrl</a></li>
-    <li><a href="getregistrycredentials" title="GetRegistryCredentials"><span class="api-symbol api-symbol--function"></span>GetRegistryCredentials</a></li>
-    <li><a href="getreplication" title="GetReplication"><span class="api-symbol api-symbol--function"></span>GetReplication</a></li>
-    <li><a href="getscopemap" title="GetScopeMap"><span class="api-symbol api-symbol--function"></span>GetScopeMap</a></li>
-    <li><a href="gettask" title="GetTask"><span class="api-symbol api-symbol--function"></span>GetTask</a></li>
-    <li><a href="gettaskrun" title="GetTaskRun"><span class="api-symbol api-symbol--function"></span>GetTaskRun</a></li>
-    <li><a href="gettoken" title="GetToken"><span class="api-symbol api-symbol--function"></span>GetToken</a></li>
-    <li><a href="getwebhook" title="GetWebhook"><span class="api-symbol api-symbol--function"></span>GetWebhook</a></li>
-    <li><a href="getwebhookcallbackconfig" title="GetWebhookCallbackConfig"><span class="api-symbol api-symbol--function"></span>GetWebhookCallbackConfig</a></li>
-    <li><a href="listagentpoolqueuestatus" title="ListAgentPoolQueueStatus"><span class="api-symbol api-symbol--function"></span>ListAgentPoolQueueStatus</a></li>
-    <li><a href="listbuildstepbuildarguments" title="ListBuildStepBuildArguments"><span class="api-symbol api-symbol--function"></span>ListBuildStepBuildArguments</a></li>
-    <li><a href="listbuildtasksourcerepositoryproperties" title="ListBuildTaskSourceRepositoryProperties"><span class="api-symbol api-symbol--function"></span>ListBuildTaskSourceRepositoryProperties</a></li>
-    <li><a href="listregistrybuildsourceuploadurl" title="ListRegistryBuildSourceUploadUrl"><span class="api-symbol api-symbol--function"></span>ListRegistryBuildSourceUploadUrl</a></li>
-    <li><a href="listregistrycredentials" title="ListRegistryCredentials"><span class="api-symbol api-symbol--function"></span>ListRegistryCredentials</a></li>
-    <li><a href="listrunlogsasurl" title="ListRunLogSasUrl"><span class="api-symbol api-symbol--function"></span>ListRunLogSasUrl</a></li>
-    <li><a href="listtaskdetails" title="ListTaskDetails"><span class="api-symbol api-symbol--function"></span>ListTaskDetails</a></li>
-    <li><a href="listtaskrundetails" title="ListTaskRunDetails"><span class="api-symbol api-symbol--function"></span>ListTaskRunDetails</a></li>
-    <li><a href="listwebhookevents" title="ListWebhookEvents"><span class="api-symbol api-symbol--function"></span>ListWebhookEvents</a></li>
+    <li><a href="getagentpool" title="GetAgentPool"><span class="symbol function"></span>GetAgentPool</a></li>
+    <li><a href="getbuildloglink" title="GetBuildLogLink"><span class="symbol function"></span>GetBuildLogLink</a></li>
+    <li><a href="getconnectedregistry" title="GetConnectedRegistry"><span class="symbol function"></span>GetConnectedRegistry</a></li>
+    <li><a href="getexportpipeline" title="GetExportPipeline"><span class="symbol function"></span>GetExportPipeline</a></li>
+    <li><a href="getimportpipeline" title="GetImportPipeline"><span class="symbol function"></span>GetImportPipeline</a></li>
+    <li><a href="getpipelinerun" title="GetPipelineRun"><span class="symbol function"></span>GetPipelineRun</a></li>
+    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
+    <li><a href="getregistry" title="GetRegistry"><span class="symbol function"></span>GetRegistry</a></li>
+    <li><a href="getregistrybuildsourceuploadurl" title="GetRegistryBuildSourceUploadUrl"><span class="symbol function"></span>GetRegistryBuildSourceUploadUrl</a></li>
+    <li><a href="getregistrycredentials" title="GetRegistryCredentials"><span class="symbol function"></span>GetRegistryCredentials</a></li>
+    <li><a href="getreplication" title="GetReplication"><span class="symbol function"></span>GetReplication</a></li>
+    <li><a href="getscopemap" title="GetScopeMap"><span class="symbol function"></span>GetScopeMap</a></li>
+    <li><a href="gettask" title="GetTask"><span class="symbol function"></span>GetTask</a></li>
+    <li><a href="gettaskrun" title="GetTaskRun"><span class="symbol function"></span>GetTaskRun</a></li>
+    <li><a href="gettoken" title="GetToken"><span class="symbol function"></span>GetToken</a></li>
+    <li><a href="getwebhook" title="GetWebhook"><span class="symbol function"></span>GetWebhook</a></li>
+    <li><a href="getwebhookcallbackconfig" title="GetWebhookCallbackConfig"><span class="symbol function"></span>GetWebhookCallbackConfig</a></li>
+    <li><a href="listagentpoolqueuestatus" title="ListAgentPoolQueueStatus"><span class="symbol function"></span>ListAgentPoolQueueStatus</a></li>
+    <li><a href="listbuildstepbuildarguments" title="ListBuildStepBuildArguments"><span class="symbol function"></span>ListBuildStepBuildArguments</a></li>
+    <li><a href="listbuildtasksourcerepositoryproperties" title="ListBuildTaskSourceRepositoryProperties"><span class="symbol function"></span>ListBuildTaskSourceRepositoryProperties</a></li>
+    <li><a href="listregistrybuildsourceuploadurl" title="ListRegistryBuildSourceUploadUrl"><span class="symbol function"></span>ListRegistryBuildSourceUploadUrl</a></li>
+    <li><a href="listregistrycredentials" title="ListRegistryCredentials"><span class="symbol function"></span>ListRegistryCredentials</a></li>
+    <li><a href="listrunlogsasurl" title="ListRunLogSasUrl"><span class="symbol function"></span>ListRunLogSasUrl</a></li>
+    <li><a href="listtaskdetails" title="ListTaskDetails"><span class="symbol function"></span>ListTaskDetails</a></li>
+    <li><a href="listtaskrundetails" title="ListTaskRunDetails"><span class="symbol function"></span>ListTaskRunDetails</a></li>
+    <li><a href="listwebhookevents" title="ListWebhookEvents"><span class="symbol function"></span>ListWebhookEvents</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -65,6 +65,6 @@ Explore the resources and functions of the azure-native.containerregistry module
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.37.0</dd>
+	<dd>1.38.0</dd>
 </dl>
 

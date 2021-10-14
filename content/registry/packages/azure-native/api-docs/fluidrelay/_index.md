@@ -13,13 +13,13 @@ Explore the resources and functions of the azure-native.fluidrelay module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="fluidrelayserver" title="FluidRelayServer"><span class="api-symbol api-symbol--resource"></span>FluidRelayServer</a></li>
+    <li><a href="fluidrelayserver" title="FluidRelayServer"><span class="symbol resource"></span>FluidRelayServer</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getfluidrelayserver" title="GetFluidRelayServer"><span class="api-symbol api-symbol--function"></span>GetFluidRelayServer</a></li>
-    <li><a href="getfluidrelayserverkeys" title="GetFluidRelayServerKeys"><span class="api-symbol api-symbol--function"></span>GetFluidRelayServerKeys</a></li>
+    <li><a href="getfluidrelayserver" title="GetFluidRelayServer"><span class="symbol function"></span>GetFluidRelayServer</a></li>
+    <li><a href="getfluidrelayserverkeys" title="GetFluidRelayServerKeys"><span class="symbol function"></span>GetFluidRelayServerKeys</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -29,6 +29,6 @@ Explore the resources and functions of the azure-native.fluidrelay module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.37.0</dd>
+	<dd>1.38.0</dd>
 </dl>
 
