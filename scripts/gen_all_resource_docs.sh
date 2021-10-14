@@ -53,6 +53,7 @@ REPOS=(
     "nomad"
     "ns1"
     "okta"
+    "onelogin"
     "openstack"
     "opsgenie"
     "packet"
