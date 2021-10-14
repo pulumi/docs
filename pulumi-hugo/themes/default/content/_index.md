@@ -4,8 +4,8 @@ title: Pulumi - Modern Infrastructure as Code
 meta_desc: Pulumi's open source infrastructure as code SDK enables you to create, deploy, and manage infrastructure on any cloud, using your favorite languages.
 
 hero:
-  title: [ "Cloud Engineering", "for Everyone" ]
-  description: Modern Infrastructure as Code for Developers and Infrastructure Teams. From Open Source to Enterprise.
+  title: [ "Developer-First", "Infrastructure" ]
+  description: Adopt Cloud Engineering to Tame Modern Cloud Complexity. Your Cloud, Your Language, Your Way.
   cta_text: Get Started
 
 overview:
