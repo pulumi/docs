@@ -1,10 +1,10 @@
 ---
-title: ""
+title: "Azure API Management | TypeScript"
 h1: "Azure API Management"
 linktitle: "Azure API Management"
 no_edit_this_page: true
-cloud: classic
-language: azure
+cloud: classic-azure
+language: ts
 layout: how-to-guide
 ---
 

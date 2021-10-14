@@ -1,10 +1,10 @@
 ---
-title: ""
+title: "Azure Kubernetes Service (AKS) Cluster | F#"
 h1: "Azure Kubernetes Service (AKS) Cluster"
 linktitle: "Azure Kubernetes Service (AKS) Cluster"
 no_edit_this_page: true
-cloud: classic
-language: azure
+cloud: classic-azure
+language: fs
 layout: how-to-guide
 ---
 

@@ -1,10 +1,10 @@
 ---
-title: ""
+title: "Azure Stream Analytics | TypeScript"
 h1: "Azure Stream Analytics"
 linktitle: "Azure Stream Analytics"
 no_edit_this_page: true
-cloud: classic
-language: azure
+cloud: classic-azure
+language: ts
 layout: how-to-guide
 ---
 

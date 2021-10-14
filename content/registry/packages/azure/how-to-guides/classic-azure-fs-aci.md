@@ -1,10 +1,10 @@
 ---
-title: ""
+title: "Custom Docker Image running in Azure Container Instances | F#"
 h1: "Custom Docker Image running in Azure Container Instances"
 linktitle: "Custom Docker Image running in Azure Container Instances"
 no_edit_this_page: true
-cloud: classic
-language: azure
+cloud: classic-azure
+language: fs
 layout: how-to-guide
 ---
 

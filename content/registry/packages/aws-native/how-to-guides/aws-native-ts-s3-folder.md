@@ -1,10 +1,10 @@
 ---
-title: ""
+title: "Host a Static Website on Amazon S3 with the AWS Native Provider | TypeScript"
 h1: "Host a Static Website on Amazon S3 with the AWS Native Provider"
 linktitle: "Host a Static Website on Amazon S3 with the AWS Native Provider"
 no_edit_this_page: true
-cloud: aws
-language: native
+cloud: aws-native
+language: ts
 layout: how-to-guide
 ---
 

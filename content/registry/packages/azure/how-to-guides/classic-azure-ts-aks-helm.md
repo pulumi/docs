@@ -1,10 +1,10 @@
 ---
-title: ""
+title: "Azure Kubernetes Service (AKS) Cluster and Helm Chart | TypeScript"
 h1: "Azure Kubernetes Service (AKS) Cluster and Helm Chart"
 linktitle: "Azure Kubernetes Service (AKS) Cluster and Helm Chart"
 no_edit_this_page: true
-cloud: classic
-language: azure
+cloud: classic-azure
+language: ts
 layout: how-to-guide
 ---
 

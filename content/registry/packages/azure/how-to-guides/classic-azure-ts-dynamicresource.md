@@ -1,10 +1,10 @@
 ---
-title: ""
+title: "Azure CDN Custom Domain Dynamic Provider | TypeScript"
 h1: "Azure CDN Custom Domain Dynamic Provider"
 linktitle: "Azure CDN Custom Domain Dynamic Provider"
 no_edit_this_page: true
-cloud: classic
-language: azure
+cloud: classic-azure
+language: ts
 layout: how-to-guide
 ---
 

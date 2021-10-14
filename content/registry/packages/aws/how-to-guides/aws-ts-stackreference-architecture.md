@@ -1,10 +1,10 @@
 ---
-title: ""
+title: "AWS StackReference Architecture | TypeScript"
 h1: "AWS StackReference Architecture"
 linktitle: "AWS StackReference Architecture"
 no_edit_this_page: true
 cloud: aws
-language: stackreference
+language: ts
 layout: how-to-guide
 ---
 
@@ -12,7 +12,7 @@ layout: how-to-guide
 <!-- To change it, please see https://github.com/pulumi/docs/tree/master/tools/mktutorial. -->
 
 <p class="mb-4 flex">
-    <a class="flex flex-wrap items-center rounded text-xs text-white bg-blue-600 border-2 border-blue-600 px-2 mr-2 whitespace-no-wrap hover:text-white" style="height: 32px" href="https://github.com/pulumi/examples/tree/master/aws-stackreference-architecture" target="_blank">
+    <a class="flex flex-wrap items-center rounded text-xs text-white bg-blue-600 border-2 border-blue-600 px-2 mr-2 whitespace-no-wrap hover:text-white" style="height: 32px" href="https://github.com/pulumi/examples/tree/master/aws-ts-stackreference-architecture" target="_blank">
         <span><i class="fab fa-github pr-2"></i> View Code</span>
     </a>
 </p>

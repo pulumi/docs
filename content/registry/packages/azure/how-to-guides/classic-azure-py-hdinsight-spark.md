@@ -1,10 +1,10 @@
 ---
-title: ""
+title: "Spark on Azure HDInsight | Python"
 h1: "Spark on Azure HDInsight"
 linktitle: "Spark on Azure HDInsight"
 no_edit_this_page: true
-cloud: classic
-language: azure
+cloud: classic-azure
+language: py
 layout: how-to-guide
 ---
 

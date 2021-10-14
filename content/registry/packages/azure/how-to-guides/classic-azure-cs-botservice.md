@@ -1,10 +1,10 @@
 ---
-title: ""
+title: "Azure Bot Service with Application Insights | C#"
 h1: "Azure Bot Service with Application Insights"
 linktitle: "Azure Bot Service with Application Insights"
 no_edit_this_page: true
-cloud: classic
-language: azure
+cloud: classic-azure
+language: cs
 layout: how-to-guide
 ---
 

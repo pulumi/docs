@@ -1,10 +1,10 @@
 ---
-title: ""
+title: "AWS Step Functions with the AWS Native Provider | TypeScript"
 h1: "AWS Step Functions with the AWS Native Provider"
 linktitle: "AWS Step Functions with the AWS Native Provider"
 no_edit_this_page: true
-cloud: aws
-language: native
+cloud: aws-native
+language: ts
 layout: how-to-guide
 ---
 

@@ -1,10 +1,10 @@
 ---
-title: ""
+title: "Web Server Component Using Azure Virtual Machine | Go"
 h1: "Web Server Component Using Azure Virtual Machine"
 linktitle: "Web Server Component Using Azure Virtual Machine"
 no_edit_this_page: true
-cloud: classic
-language: azure
+cloud: classic-azure
+language: go
 layout: how-to-guide
 ---
 
