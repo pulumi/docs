@@ -155,7 +155,7 @@ function getCloudProvidersRedirect(uri: string): string | undefined {
     return undefined;
 }
 
-function getAPIDocsRedirect(uri: string): string | undefined {  
+function getAPIDocsRedirect(uri: string): string | undefined {
     if (uri.match(/\/docs\/reference\/pkg\/nodejs|python|dotnet\//)) {
         return undefined;
     }
@@ -175,6 +175,11 @@ function getTutorialsRedirect(uri: string): string | undefined {
     const tutorialsPage = uri.match(/\/docs\/(?:reference\/)?tutorials\/([^\/]+)/);
     if (tutorialsPage) {
         const packageName = tutorialsPage[1];
+
+        // Don't redirect cloudfx, as we don't have a new home for its tutorial content yet.
+        if (packageName === "cloudfx") {
+            return undefined;
+        }
 
         return uri.replace("docs/tutorials", "registry/packages")
             .replace("docs/reference/tutorials", "registry/packages")
