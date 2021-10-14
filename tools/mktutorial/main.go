@@ -29,7 +29,7 @@ import (
 )
 
 // clouds contains an index of the clouds for which we want to publish tutorials.
-var clouds = []string{"aws", "aws-native", "azure", "azure-native", "gcp", "kubernetes"}
+var clouds = []string{"aws", "aws-native", "azure", "classic-azure", "gcp", "kubernetes"}
 var langAbbreviations = []string{"js", "ts", "go", "py", "cs", "fs"}
 
 var langMap = map[string]string{
