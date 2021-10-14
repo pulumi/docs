@@ -1,5 +1,5 @@
 ---
-title: "aws-apigateway"
+title: "AWS API Gateway"
 title_tag: "aws-apigateway.aws-apigateway"
 meta_desc: ""
 layout: api
