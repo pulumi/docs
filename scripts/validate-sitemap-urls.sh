@@ -9,7 +9,7 @@ parse_urls() {
 }
 
 request_urls() {
-    cat site_urls.txt | xargs -I {} curl -s -o /dev/null -w "%{http_code} %{url_effective}\n" {} | grep -v '200\|301'
+    cat site_urls.txt | xargs -I {} curl -L -s -o /dev/null -w "%{http_code} %{url_effective}\n" {} | grep -v '200\|301'
 }
 
 request_and_format_sitemap
