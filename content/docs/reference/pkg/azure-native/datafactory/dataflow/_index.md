@@ -592,7 +592,7 @@ ConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink`,
              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
              <span class="nx">data_flow_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[MappingDataFlowArgs, WranglingDataFlowArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[FlowletArgs, MappingDataFlowArgs, WranglingDataFlowArgs]]</span> = None<span class="p">,</span>
              <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">DataFlow</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -735,7 +735,7 @@ The DataFlow resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mappingdataflow">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Mapping<wbr>Data<wbr>Flow<wbr>Args</a> | <a href="#wranglingdataflow">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Wrangling<wbr>Data<wbr>Flow<wbr>Args</a></span>
+        <span class="property-type"><a href="#flowlet">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Flowlet<wbr>Args</a> | <a href="#mappingdataflow">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Mapping<wbr>Data<wbr>Flow<wbr>Args</a> | <a href="#wranglingdataflow">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Wrangling<wbr>Data<wbr>Flow<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data flow properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -771,7 +771,7 @@ The DataFlow resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mappingdataflow">Mapping<wbr>Data<wbr>Flow<wbr>Args</a> | <a href="#wranglingdataflow">Wrangling<wbr>Data<wbr>Flow<wbr>Args</a></span>
+        <span class="property-type"><a href="#flowlet">Flowlet<wbr>Args</a> | <a href="#mappingdataflow">Mapping<wbr>Data<wbr>Flow<wbr>Args</a> | <a href="#wranglingdataflow">Wrangling<wbr>Data<wbr>Flow<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data flow properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -807,7 +807,7 @@ The DataFlow resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mappingdataflow">Mapping<wbr>Data<wbr>Flow<wbr>Args</a> | <a href="#wranglingdataflow">Wrangling<wbr>Data<wbr>Flow<wbr>Args</a></span>
+        <span class="property-type"><a href="#flowlet">Flowlet<wbr>Args</a> | <a href="#mappingdataflow">Mapping<wbr>Data<wbr>Flow<wbr>Args</a> | <a href="#wranglingdataflow">Wrangling<wbr>Data<wbr>Flow<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data flow properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -843,7 +843,7 @@ The DataFlow resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mappingdataflow">Mapping<wbr>Data<wbr>Flow<wbr>Args</a> | <a href="#wranglingdataflow">Wrangling<wbr>Data<wbr>Flow<wbr>Args</a></span>
+        <span class="property-type"><a href="#flowlet">Flowlet<wbr>Args</a> | <a href="#mappingdataflow">Mapping<wbr>Data<wbr>Flow<wbr>Args</a> | <a href="#wranglingdataflow">Wrangling<wbr>Data<wbr>Flow<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data flow properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1075,6 +1075,234 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The name of the folder that this data flow is in.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="dataflowreference">Data<wbr>Flow<wbr>Reference</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="referencename_csharp">
+<a href="#referencename_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Reference data flow name.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Data flow reference type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datasetparameters_csharp">
+<a href="#datasetparameters_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Reference data flow parameters from dataset.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="referencename_go">
+<a href="#referencename_go" style="color: inherit; text-decoration: inherit;">Reference<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Reference data flow name.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Data flow reference type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datasetparameters_go">
+<a href="#datasetparameters_go" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Reference data flow parameters from dataset.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="referencename_nodejs">
+<a href="#referencename_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Reference data flow name.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Data flow reference type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datasetparameters_nodejs">
+<a href="#datasetparameters_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Reference data flow parameters from dataset.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="reference_name_python">
+<a href="#reference_name_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Reference data flow name.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Data flow reference type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dataset_parameters_python">
+<a href="#dataset_parameters_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Reference data flow parameters from dataset.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="dataflowreferenceresponse">Data<wbr>Flow<wbr>Reference<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="referencename_csharp">
+<a href="#referencename_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Reference data flow name.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Data flow reference type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datasetparameters_csharp">
+<a href="#datasetparameters_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Reference data flow parameters from dataset.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="referencename_go">
+<a href="#referencename_go" style="color: inherit; text-decoration: inherit;">Reference<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Reference data flow name.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Data flow reference type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datasetparameters_go">
+<a href="#datasetparameters_go" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Reference data flow parameters from dataset.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="referencename_nodejs">
+<a href="#referencename_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Reference data flow name.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Data flow reference type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datasetparameters_nodejs">
+<a href="#datasetparameters_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Reference data flow parameters from dataset.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="reference_name_python">
+<a href="#reference_name_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Reference data flow name.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Data flow reference type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dataset_parameters_python">
+<a href="#dataset_parameters_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Reference data flow parameters from dataset.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="dataflowresponsefolder">Data<wbr>Flow<wbr>Response<wbr>Folder</h4>
 
 {{% choosable language csharp %}}
@@ -1154,6 +1382,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="flowlet_csharp">
+<a href="#flowlet_csharp" style="color: inherit; text-decoration: inherit;">Flowlet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Flowlet Reference{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="linkedservice_csharp">
 <a href="#linkedservice_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
 </span>
@@ -1197,6 +1433,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="flowlet_go">
+<a href="#flowlet_go" style="color: inherit; text-decoration: inherit;">Flowlet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowreference">Data<wbr>Flow<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Flowlet Reference{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linkedservice_go">
 <a href="#linkedservice_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
@@ -1242,6 +1486,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="flowlet_nodejs">
+<a href="#flowlet_nodejs" style="color: inherit; text-decoration: inherit;">flowlet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowreference">Data<wbr>Flow<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Flowlet Reference{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="linkedservice_nodejs">
 <a href="#linkedservice_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service</a>
 </span>
@@ -1285,6 +1537,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="flowlet_python">
+<a href="#flowlet_python" style="color: inherit; text-decoration: inherit;">flowlet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowreference">Data<wbr>Flow<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Flowlet Reference{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linked_service_python">
 <a href="#linked_service_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service</a>
@@ -1332,6 +1592,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="flowlet_csharp">
+<a href="#flowlet_csharp" style="color: inherit; text-decoration: inherit;">Flowlet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Flowlet Reference{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="linkedservice_csharp">
 <a href="#linkedservice_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
 </span>
@@ -1375,6 +1643,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="flowlet_go">
+<a href="#flowlet_go" style="color: inherit; text-decoration: inherit;">Flowlet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowreferenceresponse">Data<wbr>Flow<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Flowlet Reference{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linkedservice_go">
 <a href="#linkedservice_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
@@ -1420,6 +1696,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="flowlet_nodejs">
+<a href="#flowlet_nodejs" style="color: inherit; text-decoration: inherit;">flowlet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowreferenceresponse">Data<wbr>Flow<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Flowlet Reference{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="linkedservice_nodejs">
 <a href="#linkedservice_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service</a>
 </span>
@@ -1463,6 +1747,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="flowlet_python">
+<a href="#flowlet_python" style="color: inherit; text-decoration: inherit;">flowlet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowreferenceresponse">Data<wbr>Flow<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Flowlet Reference{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linked_service_python">
 <a href="#linked_service_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service</a>
@@ -1510,6 +1802,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="flowlet_csharp">
+<a href="#flowlet_csharp" style="color: inherit; text-decoration: inherit;">Flowlet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Flowlet Reference{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="linkedservice_csharp">
 <a href="#linkedservice_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
 </span>
@@ -1553,6 +1853,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="flowlet_go">
+<a href="#flowlet_go" style="color: inherit; text-decoration: inherit;">Flowlet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowreference">Data<wbr>Flow<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Flowlet Reference{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linkedservice_go">
 <a href="#linkedservice_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
@@ -1598,6 +1906,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="flowlet_nodejs">
+<a href="#flowlet_nodejs" style="color: inherit; text-decoration: inherit;">flowlet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowreference">Data<wbr>Flow<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Flowlet Reference{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="linkedservice_nodejs">
 <a href="#linkedservice_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service</a>
 </span>
@@ -1641,6 +1957,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="flowlet_python">
+<a href="#flowlet_python" style="color: inherit; text-decoration: inherit;">flowlet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowreference">Data<wbr>Flow<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Flowlet Reference{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linked_service_python">
 <a href="#linked_service_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service</a>
@@ -1688,6 +2012,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="flowlet_csharp">
+<a href="#flowlet_csharp" style="color: inherit; text-decoration: inherit;">Flowlet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Flowlet Reference{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="linkedservice_csharp">
 <a href="#linkedservice_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
 </span>
@@ -1731,6 +2063,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="flowlet_go">
+<a href="#flowlet_go" style="color: inherit; text-decoration: inherit;">Flowlet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowreferenceresponse">Data<wbr>Flow<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Flowlet Reference{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linkedservice_go">
 <a href="#linkedservice_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
@@ -1776,6 +2116,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="flowlet_nodejs">
+<a href="#flowlet_nodejs" style="color: inherit; text-decoration: inherit;">flowlet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowreferenceresponse">Data<wbr>Flow<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Flowlet Reference{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="linkedservice_nodejs">
 <a href="#linkedservice_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service</a>
 </span>
@@ -1819,6 +2167,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="flowlet_python">
+<a href="#flowlet_python" style="color: inherit; text-decoration: inherit;">flowlet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowreferenceresponse">Data<wbr>Flow<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Flowlet Reference{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linked_service_python">
 <a href="#linked_service_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service</a>
@@ -2063,6 +2419,618 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Arguments for dataset.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="flowlet">Flowlet</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="additionalproperties_csharp">
+<a href="#additionalproperties_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="annotations_csharp">
+<a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;object&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the data flow.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the data flow.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="folder_csharp">
+<a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowfolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Folder</a></span>
+    </dt>
+    <dd>{{% md %}}The folder that this data flow is in. If not specified, Data flow will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="script_csharp">
+<a href="#script_csharp" style="color: inherit; text-decoration: inherit;">Script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Flowlet script.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="scriptlines_csharp">
+<a href="#scriptlines_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Lines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Flowlet script lines.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sinks_csharp">
+<a href="#sinks_csharp" style="color: inherit; text-decoration: inherit;">Sinks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowsink">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Sink&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of sinks in Flowlet.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sources_csharp">
+<a href="#sources_csharp" style="color: inherit; text-decoration: inherit;">Sources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowsource">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Source&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of sources in Flowlet.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="transformations_csharp">
+<a href="#transformations_csharp" style="color: inherit; text-decoration: inherit;">Transformations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#transformation">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Transformation&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of transformations in Flowlet.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="additionalproperties_go">
+<a href="#additionalproperties_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="annotations_go">
+<a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]interface{}</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the data flow.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the data flow.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="folder_go">
+<a href="#folder_go" style="color: inherit; text-decoration: inherit;">Folder</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowfolder">Data<wbr>Flow<wbr>Folder</a></span>
+    </dt>
+    <dd>{{% md %}}The folder that this data flow is in. If not specified, Data flow will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="script_go">
+<a href="#script_go" style="color: inherit; text-decoration: inherit;">Script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Flowlet script.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="scriptlines_go">
+<a href="#scriptlines_go" style="color: inherit; text-decoration: inherit;">Script<wbr>Lines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Flowlet script lines.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sinks_go">
+<a href="#sinks_go" style="color: inherit; text-decoration: inherit;">Sinks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowsink">[]Data<wbr>Flow<wbr>Sink</a></span>
+    </dt>
+    <dd>{{% md %}}List of sinks in Flowlet.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sources_go">
+<a href="#sources_go" style="color: inherit; text-decoration: inherit;">Sources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowsource">[]Data<wbr>Flow<wbr>Source</a></span>
+    </dt>
+    <dd>{{% md %}}List of sources in Flowlet.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="transformations_go">
+<a href="#transformations_go" style="color: inherit; text-decoration: inherit;">Transformations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#transformation">[]Transformation</a></span>
+    </dt>
+    <dd>{{% md %}}List of transformations in Flowlet.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="additionalproperties_nodejs">
+<a href="#additionalproperties_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="annotations_nodejs">
+<a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any[]</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the data flow.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the data flow.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="folder_nodejs">
+<a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowfolder">Data<wbr>Flow<wbr>Folder</a></span>
+    </dt>
+    <dd>{{% md %}}The folder that this data flow is in. If not specified, Data flow will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="script_nodejs">
+<a href="#script_nodejs" style="color: inherit; text-decoration: inherit;">script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Flowlet script.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="scriptlines_nodejs">
+<a href="#scriptlines_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Lines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Flowlet script lines.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sinks_nodejs">
+<a href="#sinks_nodejs" style="color: inherit; text-decoration: inherit;">sinks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowsink">Data<wbr>Flow<wbr>Sink[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of sinks in Flowlet.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sources_nodejs">
+<a href="#sources_nodejs" style="color: inherit; text-decoration: inherit;">sources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowsource">Data<wbr>Flow<wbr>Source[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of sources in Flowlet.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="transformations_nodejs">
+<a href="#transformations_nodejs" style="color: inherit; text-decoration: inherit;">transformations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#transformation">Transformation[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of transformations in Flowlet.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="additional_properties_python">
+<a href="#additional_properties_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="annotations_python">
+<a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[Any]</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the data flow.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The description of the data flow.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="folder_python">
+<a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowfolder">Data<wbr>Flow<wbr>Folder</a></span>
+    </dt>
+    <dd>{{% md %}}The folder that this data flow is in. If not specified, Data flow will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="script_python">
+<a href="#script_python" style="color: inherit; text-decoration: inherit;">script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Flowlet script.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="script_lines_python">
+<a href="#script_lines_python" style="color: inherit; text-decoration: inherit;">script_<wbr>lines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Flowlet script lines.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sinks_python">
+<a href="#sinks_python" style="color: inherit; text-decoration: inherit;">sinks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowsink">Sequence[Data<wbr>Flow<wbr>Sink]</a></span>
+    </dt>
+    <dd>{{% md %}}List of sinks in Flowlet.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sources_python">
+<a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowsource">Sequence[Data<wbr>Flow<wbr>Source]</a></span>
+    </dt>
+    <dd>{{% md %}}List of sources in Flowlet.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="transformations_python">
+<a href="#transformations_python" style="color: inherit; text-decoration: inherit;">transformations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#transformation">Sequence[Transformation]</a></span>
+    </dt>
+    <dd>{{% md %}}List of transformations in Flowlet.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="flowletresponse">Flowlet<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="additionalproperties_csharp">
+<a href="#additionalproperties_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="annotations_csharp">
+<a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;object&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the data flow.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the data flow.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="folder_csharp">
+<a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Response<wbr>Folder</a></span>
+    </dt>
+    <dd>{{% md %}}The folder that this data flow is in. If not specified, Data flow will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="script_csharp">
+<a href="#script_csharp" style="color: inherit; text-decoration: inherit;">Script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Flowlet script.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="scriptlines_csharp">
+<a href="#scriptlines_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Lines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Flowlet script lines.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sinks_csharp">
+<a href="#sinks_csharp" style="color: inherit; text-decoration: inherit;">Sinks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowsinkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Sink<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of sinks in Flowlet.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sources_csharp">
+<a href="#sources_csharp" style="color: inherit; text-decoration: inherit;">Sources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowsourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Source<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of sources in Flowlet.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="transformations_csharp">
+<a href="#transformations_csharp" style="color: inherit; text-decoration: inherit;">Transformations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#transformationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Transformation<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of transformations in Flowlet.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="additionalproperties_go">
+<a href="#additionalproperties_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="annotations_go">
+<a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]interface{}</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the data flow.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the data flow.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="folder_go">
+<a href="#folder_go" style="color: inherit; text-decoration: inherit;">Folder</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowresponsefolder">Data<wbr>Flow<wbr>Response<wbr>Folder</a></span>
+    </dt>
+    <dd>{{% md %}}The folder that this data flow is in. If not specified, Data flow will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="script_go">
+<a href="#script_go" style="color: inherit; text-decoration: inherit;">Script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Flowlet script.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="scriptlines_go">
+<a href="#scriptlines_go" style="color: inherit; text-decoration: inherit;">Script<wbr>Lines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Flowlet script lines.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sinks_go">
+<a href="#sinks_go" style="color: inherit; text-decoration: inherit;">Sinks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowsinkresponse">[]Data<wbr>Flow<wbr>Sink<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}List of sinks in Flowlet.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sources_go">
+<a href="#sources_go" style="color: inherit; text-decoration: inherit;">Sources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowsourceresponse">[]Data<wbr>Flow<wbr>Source<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}List of sources in Flowlet.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="transformations_go">
+<a href="#transformations_go" style="color: inherit; text-decoration: inherit;">Transformations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#transformationresponse">[]Transformation<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}List of transformations in Flowlet.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="additionalproperties_nodejs">
+<a href="#additionalproperties_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="annotations_nodejs">
+<a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any[]</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the data flow.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the data flow.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="folder_nodejs">
+<a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowresponsefolder">Data<wbr>Flow<wbr>Response<wbr>Folder</a></span>
+    </dt>
+    <dd>{{% md %}}The folder that this data flow is in. If not specified, Data flow will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="script_nodejs">
+<a href="#script_nodejs" style="color: inherit; text-decoration: inherit;">script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Flowlet script.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="scriptlines_nodejs">
+<a href="#scriptlines_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Lines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Flowlet script lines.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sinks_nodejs">
+<a href="#sinks_nodejs" style="color: inherit; text-decoration: inherit;">sinks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowsinkresponse">Data<wbr>Flow<wbr>Sink<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of sinks in Flowlet.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sources_nodejs">
+<a href="#sources_nodejs" style="color: inherit; text-decoration: inherit;">sources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowsourceresponse">Data<wbr>Flow<wbr>Source<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of sources in Flowlet.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="transformations_nodejs">
+<a href="#transformations_nodejs" style="color: inherit; text-decoration: inherit;">transformations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#transformationresponse">Transformation<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of transformations in Flowlet.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="additional_properties_python">
+<a href="#additional_properties_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="annotations_python">
+<a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[Any]</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the data flow.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The description of the data flow.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="folder_python">
+<a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowresponsefolder">Data<wbr>Flow<wbr>Response<wbr>Folder</a></span>
+    </dt>
+    <dd>{{% md %}}The folder that this data flow is in. If not specified, Data flow will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="script_python">
+<a href="#script_python" style="color: inherit; text-decoration: inherit;">script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Flowlet script.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="script_lines_python">
+<a href="#script_lines_python" style="color: inherit; text-decoration: inherit;">script_<wbr>lines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Flowlet script lines.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sinks_python">
+<a href="#sinks_python" style="color: inherit; text-decoration: inherit;">sinks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowsinkresponse">Sequence[Data<wbr>Flow<wbr>Sink<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}List of sinks in Flowlet.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sources_python">
+<a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowsourceresponse">Sequence[Data<wbr>Flow<wbr>Source<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}List of sources in Flowlet.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="transformations_python">
+<a href="#transformations_python" style="color: inherit; text-decoration: inherit;">transformations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#transformationresponse">Sequence[Transformation<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}List of transformations in Flowlet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="linkedservicereference">Linked<wbr>Service<wbr>Reference</h4>
@@ -2330,6 +3298,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}DataFlow script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="scriptlines_csharp">
+<a href="#scriptlines_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Lines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Data flow script lines.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sinks_csharp">
 <a href="#sinks_csharp" style="color: inherit; text-decoration: inherit;">Sinks</a>
 </span>
@@ -2389,6 +3365,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DataFlow script.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="scriptlines_go">
+<a href="#scriptlines_go" style="color: inherit; text-decoration: inherit;">Script<wbr>Lines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Data flow script lines.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sinks_go">
 <a href="#sinks_go" style="color: inherit; text-decoration: inherit;">Sinks</a>
@@ -2450,6 +3434,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}DataFlow script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="scriptlines_nodejs">
+<a href="#scriptlines_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Lines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Data flow script lines.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sinks_nodejs">
 <a href="#sinks_nodejs" style="color: inherit; text-decoration: inherit;">sinks</a>
 </span>
@@ -2509,6 +3501,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}DataFlow script.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="script_lines_python">
+<a href="#script_lines_python" style="color: inherit; text-decoration: inherit;">script_<wbr>lines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Data flow script lines.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sinks_python">
 <a href="#sinks_python" style="color: inherit; text-decoration: inherit;">sinks</a>
@@ -2572,6 +3572,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}DataFlow script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="scriptlines_csharp">
+<a href="#scriptlines_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Lines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Data flow script lines.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sinks_csharp">
 <a href="#sinks_csharp" style="color: inherit; text-decoration: inherit;">Sinks</a>
 </span>
@@ -2631,6 +3639,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DataFlow script.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="scriptlines_go">
+<a href="#scriptlines_go" style="color: inherit; text-decoration: inherit;">Script<wbr>Lines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Data flow script lines.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sinks_go">
 <a href="#sinks_go" style="color: inherit; text-decoration: inherit;">Sinks</a>
@@ -2692,6 +3708,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}DataFlow script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="scriptlines_nodejs">
+<a href="#scriptlines_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Lines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Data flow script lines.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sinks_nodejs">
 <a href="#sinks_nodejs" style="color: inherit; text-decoration: inherit;">sinks</a>
 </span>
@@ -2752,6 +3776,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}DataFlow script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="script_lines_python">
+<a href="#script_lines_python" style="color: inherit; text-decoration: inherit;">script_<wbr>lines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Data flow script lines.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sinks_python">
 <a href="#sinks_python" style="color: inherit; text-decoration: inherit;">sinks</a>
 </span>
@@ -2806,6 +3838,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="flowlet_csharp">
+<a href="#flowlet_csharp" style="color: inherit; text-decoration: inherit;">Flowlet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Flowlet Reference{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="linkedservice_csharp">
 <a href="#linkedservice_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
 </span>
@@ -2857,6 +3897,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="flowlet_go">
+<a href="#flowlet_go" style="color: inherit; text-decoration: inherit;">Flowlet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowreference">Data<wbr>Flow<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Flowlet Reference{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linkedservice_go">
 <a href="#linkedservice_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
@@ -2910,6 +3958,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="flowlet_nodejs">
+<a href="#flowlet_nodejs" style="color: inherit; text-decoration: inherit;">flowlet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowreference">Data<wbr>Flow<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Flowlet Reference{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="linkedservice_nodejs">
 <a href="#linkedservice_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service</a>
 </span>
@@ -2961,6 +4017,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="flowlet_python">
+<a href="#flowlet_python" style="color: inherit; text-decoration: inherit;">flowlet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowreference">Data<wbr>Flow<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Flowlet Reference{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linked_service_python">
 <a href="#linked_service_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service</a>
@@ -3016,6 +4080,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="flowlet_csharp">
+<a href="#flowlet_csharp" style="color: inherit; text-decoration: inherit;">Flowlet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Flowlet Reference{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="linkedservice_csharp">
 <a href="#linkedservice_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
 </span>
@@ -3067,6 +4139,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="flowlet_go">
+<a href="#flowlet_go" style="color: inherit; text-decoration: inherit;">Flowlet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowreferenceresponse">Data<wbr>Flow<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Flowlet Reference{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linkedservice_go">
 <a href="#linkedservice_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
@@ -3120,6 +4200,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="flowlet_nodejs">
+<a href="#flowlet_nodejs" style="color: inherit; text-decoration: inherit;">flowlet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowreferenceresponse">Data<wbr>Flow<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Flowlet Reference{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="linkedservice_nodejs">
 <a href="#linkedservice_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service</a>
 </span>
@@ -3172,6 +4260,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="flowlet_python">
+<a href="#flowlet_python" style="color: inherit; text-decoration: inherit;">flowlet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowreferenceresponse">Data<wbr>Flow<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Flowlet Reference{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="linked_service_python">
 <a href="#linked_service_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service</a>
 </span>
@@ -3216,7 +4312,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Transformation description.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="flowlet_csharp">
+<a href="#flowlet_csharp" style="color: inherit; text-decoration: inherit;">Flowlet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Flowlet Reference{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3236,7 +4340,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Transformation description.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="flowlet_go">
+<a href="#flowlet_go" style="color: inherit; text-decoration: inherit;">Flowlet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowreference">Data<wbr>Flow<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Flowlet Reference{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3256,7 +4368,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Transformation description.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="flowlet_nodejs">
+<a href="#flowlet_nodejs" style="color: inherit; text-decoration: inherit;">flowlet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowreference">Data<wbr>Flow<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Flowlet Reference{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3276,7 +4396,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Transformation description.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="flowlet_python">
+<a href="#flowlet_python" style="color: inherit; text-decoration: inherit;">flowlet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowreference">Data<wbr>Flow<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Flowlet Reference{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="transformationresponse">Transformation<wbr>Response</h4>
@@ -3298,7 +4426,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Transformation description.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="flowlet_csharp">
+<a href="#flowlet_csharp" style="color: inherit; text-decoration: inherit;">Flowlet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Flowlet Reference{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3318,7 +4454,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Transformation description.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="flowlet_go">
+<a href="#flowlet_go" style="color: inherit; text-decoration: inherit;">Flowlet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowreferenceresponse">Data<wbr>Flow<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Flowlet Reference{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3338,7 +4482,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Transformation description.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="flowlet_nodejs">
+<a href="#flowlet_nodejs" style="color: inherit; text-decoration: inherit;">flowlet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowreferenceresponse">Data<wbr>Flow<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Flowlet Reference{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3358,7 +4510,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Transformation description.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="flowlet_python">
+<a href="#flowlet_python" style="color: inherit; text-decoration: inherit;">flowlet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowreferenceresponse">Data<wbr>Flow<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Flowlet Reference{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="wranglingdataflow">Wrangling<wbr>Data<wbr>Flow</h4>
