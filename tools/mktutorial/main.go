@@ -29,7 +29,17 @@ import (
 )
 
 // clouds contains an index of the clouds for which we want to publish tutorials.
-var clouds = []string{"aws", "azure", "gcp", "kubernetes"}
+var clouds = []string{"aws", "aws-native", "azure", "azure-native", "gcp", "kubernetes"}
+var langAbbreviations = []string{"js", "ts", "go", "py", "cs", "fs"}
+
+var langMap = map[string]string{
+	"js": "JavaScript",
+	"ts": "TypeScript",
+	"go": "Go",
+	"py": "Python",
+	"cs": "C#",
+	"fs": "F#",
+}
 
 func main() {
 	// Parse and validate the args.
@@ -99,22 +109,6 @@ func gatherTutorials(root string) ([]tutorial, error) {
 		githubURL := fmt.Sprintf("%s/tree/master/%s", gitHubBaseURL, name)
 		pulumiTemplateURL := ""
 
-		// Each tutorial directory follows a convention: <cloud>-<language>-<short-name>. Parse it.
-		// Warn and ignore any that don't follow this convention (ideally we'd fix them).
-		var parts []string
-		for i, rem := 0, file.Name(); i < 2; i++ {
-			dashIx := strings.Index(rem, "-")
-			if dashIx == -1 {
-				break
-			}
-			parts = append(parts, rem[:dashIx])
-			rem = rem[dashIx+1:]
-		}
-		if len(parts) != 2 || parts[0] == "" || parts[1] == "" {
-			warn("malformed tutorial name; expected <cloud>-<language>-<short-name>, got '%s'", name)
-			continue
-		}
-
 		// Now that we've got the cloud and language, parse the contents to get extra metadata.
 		body, err := ioutil.ReadFile(filepath.Join(root, name, "README.md"))
 		if err != nil {
@@ -155,20 +149,29 @@ func gatherTutorials(root string) ([]tutorial, error) {
 		}
 		h1 = strings.TrimSpace(h1)
 
-		// Assign the parts of the tutorial name to variables.
-		cloud := parts[0]
-		language := parts[1]
+		// Each tutorial directory follows a convention: <cloud>-<language>-<short-name>. Parse it.
+		// Warn and ignore any that don't follow this convention (ideally we'd fix them).
+		cloud := ""
+		language := ""
+		for _, langAbbreviation := range langAbbreviations {
+			languageAbbreviationIndex := strings.Index(file.Name(), "-"+langAbbreviation+"-")
+			languageFound := languageAbbreviationIndex >= 0
+
+			if languageFound {
+				cloud = file.Name()[0:languageAbbreviationIndex]
+				language = langAbbreviation
+				break
+			}
+		}
+
+		if cloud == "" || language == "" {
+			warn("malformed tutorial name; expected <cloud>-<language>-<short-name>, got '%s'", name)
+			continue
+		}
 
 		// Add the language to the page title to avoid duplicate titles.
 		var title string
-		langMap := map[string]string{
-			"js": "JavaScript",
-			"ts": "TypeScript",
-			"go": "Go",
-			"py": "Python",
-			"cs": "C#",
-			"fs": "F#",
-		}
+
 		if val, ok := langMap[language]; ok {
 			title = fmt.Sprintf("%s | %s", h1, val)
 		}
