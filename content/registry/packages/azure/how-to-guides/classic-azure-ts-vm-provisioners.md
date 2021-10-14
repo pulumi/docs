@@ -1,10 +1,10 @@
 ---
-title: ""
+title: "Azure WebServer with Manual Provisioning | TypeScript"
 h1: "Azure WebServer with Manual Provisioning"
 linktitle: "Azure WebServer with Manual Provisioning"
 no_edit_this_page: true
-cloud: classic
-language: azure
+cloud: classic-azure
+language: ts
 layout: how-to-guide
 ---
 

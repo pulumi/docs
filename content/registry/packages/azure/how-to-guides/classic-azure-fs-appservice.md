@@ -1,10 +1,10 @@
 ---
-title: ""
+title: "Azure App Service with SQL Database and Application Insights | F#"
 h1: "Azure App Service with SQL Database and Application Insights"
 linktitle: "Azure App Service with SQL Database and Application Insights"
 no_edit_this_page: true
-cloud: classic
-language: azure
+cloud: classic-azure
+language: fs
 layout: how-to-guide
 ---
 

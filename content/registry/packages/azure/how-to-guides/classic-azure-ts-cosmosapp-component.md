@@ -1,10 +1,10 @@
 ---
-title: ""
+title: "Reusable Component to Create Globally-distributed Applications with Azure Cosmos DB | TypeScript"
 h1: "Reusable Component to Create Globally-distributed Applications with Azure Cosmos DB"
 linktitle: "Reusable Component to Create Globally-distributed Applications with Azure Cosmos DB"
 no_edit_this_page: true
-cloud: classic
-language: azure
+cloud: classic-azure
+language: ts
 layout: how-to-guide
 ---
 

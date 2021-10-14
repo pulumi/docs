@@ -1,10 +1,10 @@
 ---
-title: ""
+title: "Azure VM Scale Sets | TypeScript"
 h1: "Azure VM Scale Sets"
 linktitle: "Azure VM Scale Sets"
 no_edit_this_page: true
-cloud: classic
-language: azure
+cloud: classic-azure
+language: ts
 layout: how-to-guide
 ---
 

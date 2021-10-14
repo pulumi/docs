@@ -1,10 +1,10 @@
 ---
-title: ""
+title: "Azure Resource Manager (ARM) Template | TypeScript"
 h1: "Azure Resource Manager (ARM) Template"
 linktitle: "Azure Resource Manager (ARM) Template"
 no_edit_this_page: true
-cloud: classic
-language: azure
+cloud: classic-azure
+language: ts
 layout: how-to-guide
 ---
 

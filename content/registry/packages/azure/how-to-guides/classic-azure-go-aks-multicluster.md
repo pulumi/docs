@@ -1,10 +1,10 @@
 ---
-title: ""
+title: "Multiple Azure Kubernetes Service (AKS) Clusters | Go"
 h1: "Multiple Azure Kubernetes Service (AKS) Clusters"
 linktitle: "Multiple Azure Kubernetes Service (AKS) Clusters"
 no_edit_this_page: true
-cloud: classic
-language: azure
+cloud: classic-azure
+language: go
 layout: how-to-guide
 ---
 

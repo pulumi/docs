@@ -1,10 +1,10 @@
 ---
-title: ""
+title: "Spring Boot App on Azure App Service Using Jenkins | TypeScript"
 h1: "Spring Boot App on Azure App Service Using Jenkins"
 linktitle: "Spring Boot App on Azure App Service Using Jenkins"
 no_edit_this_page: true
-cloud: classic
-language: azure
+cloud: classic-azure
+language: ts
 layout: how-to-guide
 ---
 

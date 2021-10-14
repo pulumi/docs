@@ -1,10 +1,10 @@
 ---
-title: ""
+title: "Web Server Using Azure Virtual Machine with ComponentResource | Python"
 h1: "Web Server Using Azure Virtual Machine with ComponentResource"
 linktitle: "Web Server Using Azure Virtual Machine with ComponentResource"
 no_edit_this_page: true
-cloud: classic
-language: azure
+cloud: classic-azure
+language: py
 layout: how-to-guide
 ---
 

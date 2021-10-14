@@ -1,10 +1,10 @@
 ---
-title: ""
+title: "Globally Distributed Serverless URL Shortener Using Azure Functions and Cosmos DB | TypeScript"
 h1: "Globally Distributed Serverless URL Shortener Using Azure Functions and Cosmos DB"
 linktitle: "Globally Distributed Serverless URL Shortener Using Azure Functions and Cosmos DB"
 no_edit_this_page: true
-cloud: classic
-language: azure
+cloud: classic-azure
+language: ts
 layout: how-to-guide
 ---
 

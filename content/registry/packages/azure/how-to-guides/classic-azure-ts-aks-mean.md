@@ -1,10 +1,10 @@
 ---
-title: ""
+title: "Azure Kubernetes Service (AKS) App Using CosmosDB | TypeScript"
 h1: "Azure Kubernetes Service (AKS) App Using CosmosDB"
 linktitle: "Azure Kubernetes Service (AKS) App Using CosmosDB"
 no_edit_this_page: true
-cloud: classic
-language: azure
+cloud: classic-azure
+language: ts
 layout: how-to-guide
 ---
 
