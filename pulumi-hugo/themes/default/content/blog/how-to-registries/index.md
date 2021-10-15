@@ -203,6 +203,6 @@ export const repoEndpoint = pulumi.interpolate`gcr.io/${gcp.config.project}`;
 
 Container registries are just one of the many resources used for deploying modern applications. Implementations among cloud service providers differ by the functionality they offer and how they are deployed. The commonality among them is that they provide a secure place to store and retrieve Docker or OCI compliant container images. Explore how to create and manage resources for the cloud service provider of your choice with Pulumi. Great places to start are:
 
-- [Tutorials]({{< relref "/docs/tutorials" >}})
+- [Tutorials]({{< relref "/registry" >}})
 - [Examples](https://github.com/pulumi/examples)
 - [API Reference]({{< relref "/docs/reference/pkg" >}})
