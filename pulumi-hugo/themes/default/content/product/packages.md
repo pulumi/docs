@@ -8,7 +8,7 @@ layout: product-packages
 overview:
     title: Build and reuse cloud infrastructure as code
     description: |
-        Pulumi Packages give you the building block to easily build and deploy cloud infrastructure with TypeScript/JavaScript, Python, Go, and C#. Provision resources from all of the top clouds and SaaS providers to build cloud infrastructure that meets your needs. For popular architectures like Kubernetes or serverless, use Pulumi components to get to production faster than ever.
+        Pulumi Packages give you the building blocks to easily build and deploy cloud infrastructure with TypeScript/JavaScript, Python, Go, and C#. Provision resources from all of the top clouds and SaaS providers to build cloud infrastructure that meets your needs. For popular architectures like Kubernetes or serverless, use Pulumi components to get to production faster than ever.
 
 details:
     title: A package for every cloud and architecture
