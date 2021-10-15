@@ -15,13 +15,13 @@
         {{ $isAPIDoc := and (hasPrefix .Path "docs/reference/pkg/") (ne .Path "docs/reference/pkg/_index.md") }}
         {{ if not (or $isCLICommand $isAPIDoc $.Page.Params.no_edit_this_page) }}
             <li>
-                <a data-track="edit-page" class="text-gray-600 hover:text-gray-700 text-xs" href="{{ $.Site.Params.repositoryURL }}/edit/{{ $.Site.Params.repositoryBranch }}/{{ getenv "REPO_THEME_PATH" }}content/{{ .Path }}" target="_blank">
+                <a data-track="edit-page" class="text-gray-600 hover:text-gray-700 text-xs" href="{{ $.Site.Params.contentRepositoryURL }}/edit/{{ $.Site.Params.contentRepositoryBaseBranch }}/{{ getenv "REPO_THEME_PATH" }}content/{{ .Path }}" target="_blank">
                     <i class="fas fa-edit mr-2" style="width: 14px"></i>Edit this Page
                 </a>
             </li>
         {{ end }}
         <li>
-            <a data-track="request-change" class="text-gray-600 hover:text-gray-700 text-xs" href="{{ $.Site.Params.repositoryURL }}/issues/new?body=File: [{{ getenv "REPO_THEME_PATH" }}content/{{ .Path }}]({{ $.Page.Permalink }})" target="_blank">
+            <a data-track="request-change" class="text-gray-600 hover:text-gray-700 text-xs" href="{{ $.Site.Params.contentRepositoryURL }}/issues/new?body=File: [{{ getenv "REPO_THEME_PATH" }}content/{{ .Path }}]({{ $.Page.Permalink }})" target="_blank">
                 <i class="far fa-check-square mr-2" style="width: 14px"></i>Request a Change
             </a>
         </li>
