@@ -99,6 +99,7 @@ A native Pulumi package for creating and managing Azure resources.
     <li><a href="healthbot/" title="healthbot"><span class="symbol module"></span>healthbot</a></li>
     <li><a href="healthcareapis/" title="healthcareapis"><span class="symbol module"></span>healthcareapis</a></li>
     <li><a href="hybridcompute/" title="hybridcompute"><span class="symbol module"></span>hybridcompute</a></li>
+    <li><a href="hybridconnectivity/" title="hybridconnectivity"><span class="symbol module"></span>hybridconnectivity</a></li>
     <li><a href="hybriddata/" title="hybriddata"><span class="symbol module"></span>hybriddata</a></li>
     <li><a href="hybridnetwork/" title="hybridnetwork"><span class="symbol module"></span>hybridnetwork</a></li>
     <li><a href="importexport/" title="importexport"><span class="symbol module"></span>importexport</a></li>
@@ -198,6 +199,6 @@ A native Pulumi package for creating and managing Azure resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.37.0</dd>
+	<dd>1.39.0</dd>
 </dl>
 
