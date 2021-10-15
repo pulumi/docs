@@ -355,6 +355,130 @@ const exampleFlowLog = new aws.ec2.FlowLog("exampleFlowLog", {
 
 
 
+### S3 Logging in Apache Parquet format with per-hour partitions
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleBucket = new Aws.S3.Bucket("exampleBucket", new Aws.S3.BucketArgs
+        {
+        });
+        var exampleFlowLog = new Aws.Ec2.FlowLog("exampleFlowLog", new Aws.Ec2.FlowLogArgs
+        {
+            LogDestination = exampleBucket.Arn,
+            LogDestinationType = "s3",
+            TrafficType = "ALL",
+            VpcId = aws_vpc.Example.Id,
+            DestinationOptions = new Aws.Ec2.Inputs.FlowLogDestinationOptionsArgs
+            {
+                FileFormat = "parquet",
+                PerHourPartition = true,
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleBucket, err := s3.NewBucket(ctx, "exampleBucket", nil)
+		if err != nil {
+			return err
+		}
+		_, err = ec2.NewFlowLog(ctx, "exampleFlowLog", &ec2.FlowLogArgs{
+			LogDestination:     exampleBucket.Arn,
+			LogDestinationType: pulumi.String("s3"),
+			TrafficType:        pulumi.String("ALL"),
+			VpcId:              pulumi.Any(aws_vpc.Example.Id),
+			DestinationOptions: &ec2.FlowLogDestinationOptionsArgs{
+				FileFormat:       pulumi.String("parquet"),
+				PerHourPartition: pulumi.Bool(true),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_bucket = aws.s3.Bucket("exampleBucket")
+example_flow_log = aws.ec2.FlowLog("exampleFlowLog",
+    log_destination=example_bucket.arn,
+    log_destination_type="s3",
+    traffic_type="ALL",
+    vpc_id=aws_vpc["example"]["id"],
+    destination_options=aws.ec2.FlowLogDestinationOptionsArgs(
+        file_format="parquet",
+        per_hour_partition=True,
+    ))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const exampleBucket = new aws.s3.Bucket("exampleBucket", {});
+const exampleFlowLog = new aws.ec2.FlowLog("exampleFlowLog", {
+    logDestination: exampleBucket.arn,
+    logDestinationType: "s3",
+    trafficType: "ALL",
+    vpcId: aws_vpc.example.id,
+    destinationOptions: {
+        fileFormat: "parquet",
+        perHourPartition: true,
+    },
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 
@@ -373,6 +497,7 @@ const exampleFlowLog = new aws.ec2.FlowLog("exampleFlowLog", {
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">FlowLog</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">destination_options</span><span class="p">:</span> <span class="nx">Optional[FlowLogDestinationOptionsArgs]</span> = None<span class="p">,</span>
             <span class="nx">eni_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">iam_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">log_destination</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -522,6 +647,15 @@ The FlowLog resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}The type of traffic to capture. Valid values: `ACCEPT`,`REJECT`, `ALL`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="destinationoptions_csharp">
+<a href="#destinationoptions_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowlogdestinationoptions">Flow<wbr>Log<wbr>Destination<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the destination options for a flow log. More details below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="eniid_csharp">
 <a href="#eniid_csharp" style="color: inherit; text-decoration: inherit;">Eni<wbr>Id</a>
 </span>
@@ -626,6 +760,15 @@ minutes). Default: `600`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of traffic to capture. Valid values: `ACCEPT`,`REJECT`, `ALL`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destinationoptions_go">
+<a href="#destinationoptions_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowlogdestinationoptions">Flow<wbr>Log<wbr>Destination<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the destination options for a flow log. More details below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eniid_go">
@@ -734,6 +877,15 @@ minutes). Default: `600`.
     <dd>{{% md %}}The type of traffic to capture. Valid values: `ACCEPT`,`REJECT`, `ALL`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="destinationoptions_nodejs">
+<a href="#destinationoptions_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowlogdestinationoptions">Flow<wbr>Log<wbr>Destination<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the destination options for a flow log. More details below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="eniid_nodejs">
 <a href="#eniid_nodejs" style="color: inherit; text-decoration: inherit;">eni<wbr>Id</a>
 </span>
@@ -838,6 +990,15 @@ minutes). Default: `600`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of traffic to capture. Valid values: `ACCEPT`,`REJECT`, `ALL`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destination_options_python">
+<a href="#destination_options_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowlogdestinationoptions">Flow<wbr>Log<wbr>Destination<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the destination options for a flow log. More details below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eni_id_python">
@@ -1078,6 +1239,7 @@ Get an existing FlowLog resource's state with the given name, ID, and optional e
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">destination_options</span><span class="p">:</span> <span class="nx">Optional[FlowLogDestinationOptionsArgs]</span> = None<span class="p">,</span>
         <span class="nx">eni_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">iam_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">log_destination</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1211,6 +1373,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The ARN of the Flow Log.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_destinationoptions_csharp">
+<a href="#state_destinationoptions_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowlogdestinationoptions">Flow<wbr>Log<wbr>Destination<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the destination options for a flow log. More details below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_eniid_csharp">
 <a href="#state_eniid_csharp" style="color: inherit; text-decoration: inherit;">Eni<wbr>Id</a>
 </span>
@@ -1333,6 +1504,15 @@ minutes). Default: `600`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Flow Log.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_destinationoptions_go">
+<a href="#state_destinationoptions_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowlogdestinationoptions">Flow<wbr>Log<wbr>Destination<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the destination options for a flow log. More details below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eniid_go">
@@ -1459,6 +1639,15 @@ minutes). Default: `600`.
     <dd>{{% md %}}The ARN of the Flow Log.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_destinationoptions_nodejs">
+<a href="#state_destinationoptions_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowlogdestinationoptions">Flow<wbr>Log<wbr>Destination<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the destination options for a flow log. More details below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_eniid_nodejs">
 <a href="#state_eniid_nodejs" style="color: inherit; text-decoration: inherit;">eni<wbr>Id</a>
 </span>
@@ -1583,6 +1772,15 @@ minutes). Default: `600`.
     <dd>{{% md %}}The ARN of the Flow Log.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_destination_options_python">
+<a href="#state_destination_options_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowlogdestinationoptions">Flow<wbr>Log<wbr>Destination<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the destination options for a flow log. More details below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_eni_id_python">
 <a href="#state_eni_id_python" style="color: inherit; text-decoration: inherit;">eni_<wbr>id</a>
 </span>
@@ -1699,6 +1897,136 @@ minutes). Default: `600`.
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="flowlogdestinationoptions">Flow<wbr>Log<wbr>Destination<wbr>Options</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="fileformat_csharp">
+<a href="#fileformat_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Format</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The format for the flow log. Default value: `plain-text`. Valid values: `plain-text`, `parquet`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hivecompatiblepartitions_csharp">
+<a href="#hivecompatiblepartitions_csharp" style="color: inherit; text-decoration: inherit;">Hive<wbr>Compatible<wbr>Partitions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to use Hive-compatible prefixes for flow logs stored in Amazon S3. Default value: `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="perhourpartition_csharp">
+<a href="#perhourpartition_csharp" style="color: inherit; text-decoration: inherit;">Per<wbr>Hour<wbr>Partition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to partition the flow log per hour. This reduces the cost and response time for queries. Default value: `false`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="fileformat_go">
+<a href="#fileformat_go" style="color: inherit; text-decoration: inherit;">File<wbr>Format</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The format for the flow log. Default value: `plain-text`. Valid values: `plain-text`, `parquet`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hivecompatiblepartitions_go">
+<a href="#hivecompatiblepartitions_go" style="color: inherit; text-decoration: inherit;">Hive<wbr>Compatible<wbr>Partitions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to use Hive-compatible prefixes for flow logs stored in Amazon S3. Default value: `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="perhourpartition_go">
+<a href="#perhourpartition_go" style="color: inherit; text-decoration: inherit;">Per<wbr>Hour<wbr>Partition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to partition the flow log per hour. This reduces the cost and response time for queries. Default value: `false`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="fileformat_nodejs">
+<a href="#fileformat_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Format</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The format for the flow log. Default value: `plain-text`. Valid values: `plain-text`, `parquet`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hivecompatiblepartitions_nodejs">
+<a href="#hivecompatiblepartitions_nodejs" style="color: inherit; text-decoration: inherit;">hive<wbr>Compatible<wbr>Partitions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to use Hive-compatible prefixes for flow logs stored in Amazon S3. Default value: `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="perhourpartition_nodejs">
+<a href="#perhourpartition_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Hour<wbr>Partition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to partition the flow log per hour. This reduces the cost and response time for queries. Default value: `false`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="file_format_python">
+<a href="#file_format_python" style="color: inherit; text-decoration: inherit;">file_<wbr>format</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The format for the flow log. Default value: `plain-text`. Valid values: `plain-text`, `parquet`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hive_compatible_partitions_python">
+<a href="#hive_compatible_partitions_python" style="color: inherit; text-decoration: inherit;">hive_<wbr>compatible_<wbr>partitions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to use Hive-compatible prefixes for flow logs stored in Amazon S3. Default value: `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="per_hour_partition_python">
+<a href="#per_hour_partition_python" style="color: inherit; text-decoration: inherit;">per_<wbr>hour_<wbr>partition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to partition the flow log per hour. This reduces the cost and response time for queries. Default value: `false`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 ## Import
 
 
