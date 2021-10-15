@@ -13,10 +13,10 @@ Explore the resources and functions of the kubernetes.storage/v1alpha1 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="csistoragecapacity" title="CSIStorageCapacity"><span class="symbol resource"></span>CSIStorageCapacity</a></li>
-    <li><a href="csistoragecapacitylist" title="CSIStorageCapacityList"><span class="symbol resource"></span>CSIStorageCapacityList</a></li>
-    <li><a href="volumeattachment" title="VolumeAttachment"><span class="symbol resource"></span>VolumeAttachment</a></li>
-    <li><a href="volumeattachmentlist" title="VolumeAttachmentList"><span class="symbol resource"></span>VolumeAttachmentList</a></li>
+    <li><a href="csistoragecapacity" title="CSIStorageCapacity"><span class="api-symbol api-symbol--resource"></span>CSIStorageCapacity</a></li>
+    <li><a href="csistoragecapacitylist" title="CSIStorageCapacityList"><span class="api-symbol api-symbol--resource"></span>CSIStorageCapacityList</a></li>
+    <li><a href="volumeattachment" title="VolumeAttachment"><span class="api-symbol api-symbol--resource"></span>VolumeAttachment</a></li>
+    <li><a href="volumeattachmentlist" title="VolumeAttachmentList"><span class="api-symbol api-symbol--resource"></span>VolumeAttachmentList</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

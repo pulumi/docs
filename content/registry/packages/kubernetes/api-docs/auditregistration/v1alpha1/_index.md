@@ -13,8 +13,8 @@ Explore the resources and functions of the kubernetes.auditregistration/v1alpha1
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="auditsink" title="AuditSink"><span class="symbol resource"></span>AuditSink</a></li>
-    <li><a href="auditsinklist" title="AuditSinkList"><span class="symbol resource"></span>AuditSinkList</a></li>
+    <li><a href="auditsink" title="AuditSink"><span class="api-symbol api-symbol--resource"></span>AuditSink</a></li>
+    <li><a href="auditsinklist" title="AuditSinkList"><span class="api-symbol api-symbol--resource"></span>AuditSinkList</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

@@ -13,9 +13,9 @@ Explore the resources and functions of the gcp.networkservices module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="edgecachekeyset" title="EdgeCacheKeyset"><span class="symbol resource"></span>EdgeCacheKeyset</a></li>
-    <li><a href="edgecacheorigin" title="EdgeCacheOrigin"><span class="symbol resource"></span>EdgeCacheOrigin</a></li>
-    <li><a href="edgecacheservice" title="EdgeCacheService"><span class="symbol resource"></span>EdgeCacheService</a></li>
+    <li><a href="edgecachekeyset" title="EdgeCacheKeyset"><span class="api-symbol api-symbol--resource"></span>EdgeCacheKeyset</a></li>
+    <li><a href="edgecacheorigin" title="EdgeCacheOrigin"><span class="api-symbol api-symbol--resource"></span>EdgeCacheOrigin</a></li>
+    <li><a href="edgecacheservice" title="EdgeCacheService"><span class="api-symbol api-symbol--resource"></span>EdgeCacheService</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

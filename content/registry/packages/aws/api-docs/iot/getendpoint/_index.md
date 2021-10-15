@@ -61,7 +61,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Endpoint type. Valid values: `iot:CredentialProvider`, `iot:Data`, `iot:Data-ATS`, `iot:Job`.
+    <dd>{{% md %}}Endpoint type. Valid values: `iot:CredentialProvider`, `iot:Data`, `iot:Data-ATS`, `iot:Jobs`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -74,7 +74,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Endpoint type. Valid values: `iot:CredentialProvider`, `iot:Data`, `iot:Data-ATS`, `iot:Job`.
+    <dd>{{% md %}}Endpoint type. Valid values: `iot:CredentialProvider`, `iot:Data`, `iot:Data-ATS`, `iot:Jobs`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -87,7 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Endpoint type. Valid values: `iot:CredentialProvider`, `iot:Data`, `iot:Data-ATS`, `iot:Job`.
+    <dd>{{% md %}}Endpoint type. Valid values: `iot:CredentialProvider`, `iot:Data`, `iot:Data-ATS`, `iot:Jobs`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -100,7 +100,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Endpoint type. Valid values: `iot:CredentialProvider`, `iot:Data`, `iot:Data-ATS`, `iot:Job`.
+    <dd>{{% md %}}Endpoint type. Valid values: `iot:CredentialProvider`, `iot:Data`, `iot:Data-ATS`, `iot:Jobs`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -127,7 +127,7 @@ The following output properties are available:
 * `iot:CredentialsProvider`: `IDENTIFIER.credentials.iot.REGION.amazonaws.com`
 * `iot:Data`: `IDENTIFIER.iot.REGION.amazonaws.com`
 * `iot:Data-ATS`: `IDENTIFIER-ats.iot.REGION.amazonaws.com`
-* `iot:Job`: `IDENTIFIER.jobs.iot.REGION.amazonaws.com`
+* `iot:Jobs`: `IDENTIFIER.jobs.iot.REGION.amazonaws.com`
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
@@ -162,7 +162,7 @@ The following output properties are available:
 * `iot:CredentialsProvider`: `IDENTIFIER.credentials.iot.REGION.amazonaws.com`
 * `iot:Data`: `IDENTIFIER.iot.REGION.amazonaws.com`
 * `iot:Data-ATS`: `IDENTIFIER-ats.iot.REGION.amazonaws.com`
-* `iot:Job`: `IDENTIFIER.jobs.iot.REGION.amazonaws.com`
+* `iot:Jobs`: `IDENTIFIER.jobs.iot.REGION.amazonaws.com`
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
@@ -197,7 +197,7 @@ The following output properties are available:
 * `iot:CredentialsProvider`: `IDENTIFIER.credentials.iot.REGION.amazonaws.com`
 * `iot:Data`: `IDENTIFIER.iot.REGION.amazonaws.com`
 * `iot:Data-ATS`: `IDENTIFIER-ats.iot.REGION.amazonaws.com`
-* `iot:Job`: `IDENTIFIER.jobs.iot.REGION.amazonaws.com`
+* `iot:Jobs`: `IDENTIFIER.jobs.iot.REGION.amazonaws.com`
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -232,7 +232,7 @@ The following output properties are available:
 * `iot:CredentialsProvider`: `IDENTIFIER.credentials.iot.REGION.amazonaws.com`
 * `iot:Data`: `IDENTIFIER.iot.REGION.amazonaws.com`
 * `iot:Data-ATS`: `IDENTIFIER-ats.iot.REGION.amazonaws.com`
-* `iot:Job`: `IDENTIFIER.jobs.iot.REGION.amazonaws.com`
+* `iot:Jobs`: `IDENTIFIER.jobs.iot.REGION.amazonaws.com`
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">

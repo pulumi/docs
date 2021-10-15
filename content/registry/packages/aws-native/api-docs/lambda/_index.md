@@ -13,9 +13,9 @@ Explore the resources and functions of the aws-native.lambda module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="codesigningconfig" title="CodeSigningConfig"><span class="symbol resource"></span>CodeSigningConfig</a></li>
-    <li><a href="eventsourcemapping" title="EventSourceMapping"><span class="symbol resource"></span>EventSourceMapping</a></li>
-    <li><a href="function" title="Function"><span class="symbol resource"></span>Function</a></li>
+    <li><a href="codesigningconfig" title="CodeSigningConfig"><span class="api-symbol api-symbol--resource"></span>CodeSigningConfig</a></li>
+    <li><a href="eventsourcemapping" title="EventSourceMapping"><span class="api-symbol api-symbol--resource"></span>EventSourceMapping</a></li>
+    <li><a href="function" title="Function"><span class="api-symbol api-symbol--resource"></span>Function</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

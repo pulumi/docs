@@ -13,10 +13,10 @@ Explore the resources and functions of the aws.route53recoverycontrol module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
-    <li><a href="controlpanel" title="ControlPanel"><span class="symbol resource"></span>ControlPanel</a></li>
-    <li><a href="routingcontrol" title="RoutingControl"><span class="symbol resource"></span>RoutingControl</a></li>
-    <li><a href="safetyrule" title="SafetyRule"><span class="symbol resource"></span>SafetyRule</a></li>
+    <li><a href="cluster" title="Cluster"><span class="api-symbol api-symbol--resource"></span>Cluster</a></li>
+    <li><a href="controlpanel" title="ControlPanel"><span class="api-symbol api-symbol--resource"></span>ControlPanel</a></li>
+    <li><a href="routingcontrol" title="RoutingControl"><span class="api-symbol api-symbol--resource"></span>RoutingControl</a></li>
+    <li><a href="safetyrule" title="SafetyRule"><span class="api-symbol api-symbol--resource"></span>SafetyRule</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -28,6 +28,6 @@ Explore the resources and functions of the aws.route53recoverycontrol module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.24.1</dd>
+	<dd>4.25.0</dd>
 </dl>
 

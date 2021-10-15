@@ -13,28 +13,28 @@ Explore the resources and functions of the azure-native.devices module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="certificate" title="Certificate"><span class="symbol resource"></span>Certificate</a></li>
-    <li><a href="dpscertificate" title="DpsCertificate"><span class="symbol resource"></span>DpsCertificate</a></li>
-    <li><a href="iotdpsresource" title="IotDpsResource"><span class="symbol resource"></span>IotDpsResource</a></li>
-    <li><a href="iotdpsresourceprivateendpointconnection" title="IotDpsResourcePrivateEndpointConnection"><span class="symbol resource"></span>IotDpsResourcePrivateEndpointConnection</a></li>
-    <li><a href="iothubresource" title="IotHubResource"><span class="symbol resource"></span>IotHubResource</a></li>
-    <li><a href="iothubresourceeventhubconsumergroup" title="IotHubResourceEventHubConsumerGroup"><span class="symbol resource"></span>IotHubResourceEventHubConsumerGroup</a></li>
-    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
+    <li><a href="certificate" title="Certificate"><span class="api-symbol api-symbol--resource"></span>Certificate</a></li>
+    <li><a href="dpscertificate" title="DpsCertificate"><span class="api-symbol api-symbol--resource"></span>DpsCertificate</a></li>
+    <li><a href="iotdpsresource" title="IotDpsResource"><span class="api-symbol api-symbol--resource"></span>IotDpsResource</a></li>
+    <li><a href="iotdpsresourceprivateendpointconnection" title="IotDpsResourcePrivateEndpointConnection"><span class="api-symbol api-symbol--resource"></span>IotDpsResourcePrivateEndpointConnection</a></li>
+    <li><a href="iothubresource" title="IotHubResource"><span class="api-symbol api-symbol--resource"></span>IotHubResource</a></li>
+    <li><a href="iothubresourceeventhubconsumergroup" title="IotHubResourceEventHubConsumerGroup"><span class="api-symbol api-symbol--resource"></span>IotHubResourceEventHubConsumerGroup</a></li>
+    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="api-symbol api-symbol--resource"></span>PrivateEndpointConnection</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getcertificate" title="GetCertificate"><span class="symbol function"></span>GetCertificate</a></li>
-    <li><a href="getdpscertificate" title="GetDpsCertificate"><span class="symbol function"></span>GetDpsCertificate</a></li>
-    <li><a href="getiotdpsresource" title="GetIotDpsResource"><span class="symbol function"></span>GetIotDpsResource</a></li>
-    <li><a href="getiotdpsresourceprivateendpointconnection" title="GetIotDpsResourcePrivateEndpointConnection"><span class="symbol function"></span>GetIotDpsResourcePrivateEndpointConnection</a></li>
-    <li><a href="getiothubresource" title="GetIotHubResource"><span class="symbol function"></span>GetIotHubResource</a></li>
-    <li><a href="getiothubresourceeventhubconsumergroup" title="GetIotHubResourceEventHubConsumerGroup"><span class="symbol function"></span>GetIotHubResourceEventHubConsumerGroup</a></li>
-    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
-    <li><a href="listiotdpsresourcekeys" title="ListIotDpsResourceKeys"><span class="symbol function"></span>ListIotDpsResourceKeys</a></li>
-    <li><a href="listiotdpsresourcekeysforkeyname" title="ListIotDpsResourceKeysForKeyName"><span class="symbol function"></span>ListIotDpsResourceKeysForKeyName</a></li>
-    <li><a href="listiothubresourcekeys" title="ListIotHubResourceKeys"><span class="symbol function"></span>ListIotHubResourceKeys</a></li>
-    <li><a href="listiothubresourcekeysforkeyname" title="ListIotHubResourceKeysForKeyName"><span class="symbol function"></span>ListIotHubResourceKeysForKeyName</a></li>
+    <li><a href="getcertificate" title="GetCertificate"><span class="api-symbol api-symbol--function"></span>GetCertificate</a></li>
+    <li><a href="getdpscertificate" title="GetDpsCertificate"><span class="api-symbol api-symbol--function"></span>GetDpsCertificate</a></li>
+    <li><a href="getiotdpsresource" title="GetIotDpsResource"><span class="api-symbol api-symbol--function"></span>GetIotDpsResource</a></li>
+    <li><a href="getiotdpsresourceprivateendpointconnection" title="GetIotDpsResourcePrivateEndpointConnection"><span class="api-symbol api-symbol--function"></span>GetIotDpsResourcePrivateEndpointConnection</a></li>
+    <li><a href="getiothubresource" title="GetIotHubResource"><span class="api-symbol api-symbol--function"></span>GetIotHubResource</a></li>
+    <li><a href="getiothubresourceeventhubconsumergroup" title="GetIotHubResourceEventHubConsumerGroup"><span class="api-symbol api-symbol--function"></span>GetIotHubResourceEventHubConsumerGroup</a></li>
+    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="api-symbol api-symbol--function"></span>GetPrivateEndpointConnection</a></li>
+    <li><a href="listiotdpsresourcekeys" title="ListIotDpsResourceKeys"><span class="api-symbol api-symbol--function"></span>ListIotDpsResourceKeys</a></li>
+    <li><a href="listiotdpsresourcekeysforkeyname" title="ListIotDpsResourceKeysForKeyName"><span class="api-symbol api-symbol--function"></span>ListIotDpsResourceKeysForKeyName</a></li>
+    <li><a href="listiothubresourcekeys" title="ListIotHubResourceKeys"><span class="api-symbol api-symbol--function"></span>ListIotHubResourceKeys</a></li>
+    <li><a href="listiothubresourcekeysforkeyname" title="ListIotHubResourceKeysForKeyName"><span class="api-symbol api-symbol--function"></span>ListIotHubResourceKeysForKeyName</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -44,6 +44,6 @@ Explore the resources and functions of the azure-native.devices module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.38.0</dd>
+	<dd>1.39.0</dd>
 </dl>
 

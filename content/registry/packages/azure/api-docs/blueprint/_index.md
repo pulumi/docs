@@ -13,13 +13,13 @@ Explore the resources and functions of the azure.blueprint module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="assignment" title="Assignment"><span class="symbol resource"></span>Assignment</a></li>
+    <li><a href="assignment" title="Assignment"><span class="api-symbol api-symbol--resource"></span>Assignment</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getdefinition" title="GetDefinition"><span class="symbol function"></span>GetDefinition</a></li>
-    <li><a href="getpublishedversion" title="GetPublishedVersion"><span class="symbol function"></span>GetPublishedVersion</a></li>
+    <li><a href="getdefinition" title="GetDefinition"><span class="api-symbol api-symbol--function"></span>GetDefinition</a></li>
+    <li><a href="getpublishedversion" title="GetPublishedVersion"><span class="api-symbol api-symbol--function"></span>GetPublishedVersion</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -31,6 +31,6 @@ Explore the resources and functions of the azure.blueprint module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.22.0</dd>
+	<dd>4.23.0</dd>
 </dl>
 

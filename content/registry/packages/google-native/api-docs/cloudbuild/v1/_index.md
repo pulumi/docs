@@ -13,18 +13,18 @@ Explore the resources and functions of the google-native.cloudbuild/v1 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="build" title="Build"><span class="symbol resource"></span>Build</a></li>
-    <li><a href="githubenterpriseconfig" title="GithubEnterpriseConfig"><span class="symbol resource"></span>GithubEnterpriseConfig</a></li>
-    <li><a href="trigger" title="Trigger"><span class="symbol resource"></span>Trigger</a></li>
-    <li><a href="workerpool" title="WorkerPool"><span class="symbol resource"></span>WorkerPool</a></li>
+    <li><a href="build" title="Build"><span class="api-symbol api-symbol--resource"></span>Build</a></li>
+    <li><a href="githubenterpriseconfig" title="GithubEnterpriseConfig"><span class="api-symbol api-symbol--resource"></span>GithubEnterpriseConfig</a></li>
+    <li><a href="trigger" title="Trigger"><span class="api-symbol api-symbol--resource"></span>Trigger</a></li>
+    <li><a href="workerpool" title="WorkerPool"><span class="api-symbol api-symbol--resource"></span>WorkerPool</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getbuild" title="GetBuild"><span class="symbol function"></span>GetBuild</a></li>
-    <li><a href="getgithubenterpriseconfig" title="GetGithubEnterpriseConfig"><span class="symbol function"></span>GetGithubEnterpriseConfig</a></li>
-    <li><a href="gettrigger" title="GetTrigger"><span class="symbol function"></span>GetTrigger</a></li>
-    <li><a href="getworkerpool" title="GetWorkerPool"><span class="symbol function"></span>GetWorkerPool</a></li>
+    <li><a href="getbuild" title="GetBuild"><span class="api-symbol api-symbol--function"></span>GetBuild</a></li>
+    <li><a href="getgithubenterpriseconfig" title="GetGithubEnterpriseConfig"><span class="api-symbol api-symbol--function"></span>GetGithubEnterpriseConfig</a></li>
+    <li><a href="gettrigger" title="GetTrigger"><span class="api-symbol api-symbol--function"></span>GetTrigger</a></li>
+    <li><a href="getworkerpool" title="GetWorkerPool"><span class="api-symbol api-symbol--function"></span>GetWorkerPool</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

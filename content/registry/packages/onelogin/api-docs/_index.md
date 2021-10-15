@@ -13,25 +13,25 @@ A Pulumi package for creating and managing onelogin cloud resources.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="app" title="App"><span class="symbol resource"></span>App</a></li>
-    <li><a href="approleattachment" title="AppRoleAttachment"><span class="symbol resource"></span>AppRoleAttachment</a></li>
-    <li><a href="apprule" title="AppRule"><span class="symbol resource"></span>AppRule</a></li>
-    <li><a href="authserver" title="AuthServer"><span class="symbol resource"></span>AuthServer</a></li>
-    <li><a href="oidcapp" title="OidcApp"><span class="symbol resource"></span>OidcApp</a></li>
-    <li><a href="privilege" title="Privilege"><span class="symbol resource"></span>Privilege</a></li>
-    <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
-    <li><a href="role" title="Role"><span class="symbol resource"></span>Role</a></li>
-    <li><a href="samlapp" title="SamlApp"><span class="symbol resource"></span>SamlApp</a></li>
-    <li><a href="smarthook" title="SmartHook"><span class="symbol resource"></span>SmartHook</a></li>
-    <li><a href="smarthookenvironmentvariable" title="SmartHookEnvironmentVariable"><span class="symbol resource"></span>SmartHookEnvironmentVariable</a></li>
-    <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
-    <li><a href="usermapping" title="UserMapping"><span class="symbol resource"></span>UserMapping</a></li>
+    <li><a href="app" title="App"><span class="api-symbol api-symbol--resource"></span>App</a></li>
+    <li><a href="approleattachment" title="AppRoleAttachment"><span class="api-symbol api-symbol--resource"></span>AppRoleAttachment</a></li>
+    <li><a href="apprule" title="AppRule"><span class="api-symbol api-symbol--resource"></span>AppRule</a></li>
+    <li><a href="authserver" title="AuthServer"><span class="api-symbol api-symbol--resource"></span>AuthServer</a></li>
+    <li><a href="oidcapp" title="OidcApp"><span class="api-symbol api-symbol--resource"></span>OidcApp</a></li>
+    <li><a href="privilege" title="Privilege"><span class="api-symbol api-symbol--resource"></span>Privilege</a></li>
+    <li><a href="provider" title="Provider"><span class="api-symbol api-symbol--resource"></span>Provider</a></li>
+    <li><a href="role" title="Role"><span class="api-symbol api-symbol--resource"></span>Role</a></li>
+    <li><a href="samlapp" title="SamlApp"><span class="api-symbol api-symbol--resource"></span>SamlApp</a></li>
+    <li><a href="smarthook" title="SmartHook"><span class="api-symbol api-symbol--resource"></span>SmartHook</a></li>
+    <li><a href="smarthookenvironmentvariable" title="SmartHookEnvironmentVariable"><span class="api-symbol api-symbol--resource"></span>SmartHookEnvironmentVariable</a></li>
+    <li><a href="user" title="User"><span class="api-symbol api-symbol--resource"></span>User</a></li>
+    <li><a href="usermapping" title="UserMapping"><span class="api-symbol api-symbol--resource"></span>UserMapping</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getuser" title="GetUser"><span class="symbol function"></span>GetUser</a></li>
-    <li><a href="getusers" title="GetUsers"><span class="symbol function"></span>GetUsers</a></li>
+    <li><a href="getuser" title="GetUser"><span class="api-symbol api-symbol--function"></span>GetUser</a></li>
+    <li><a href="getusers" title="GetUsers"><span class="api-symbol api-symbol--function"></span>GetUsers</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

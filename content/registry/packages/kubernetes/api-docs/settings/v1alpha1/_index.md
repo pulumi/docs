@@ -13,8 +13,8 @@ Explore the resources and functions of the kubernetes.settings/v1alpha1 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="podpreset" title="PodPreset"><span class="symbol resource"></span>PodPreset</a></li>
-    <li><a href="podpresetlist" title="PodPresetList"><span class="symbol resource"></span>PodPresetList</a></li>
+    <li><a href="podpreset" title="PodPreset"><span class="api-symbol api-symbol--resource"></span>PodPreset</a></li>
+    <li><a href="podpresetlist" title="PodPresetList"><span class="api-symbol api-symbol--resource"></span>PodPresetList</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

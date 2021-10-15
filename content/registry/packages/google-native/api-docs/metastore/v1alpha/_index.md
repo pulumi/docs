@@ -13,24 +13,24 @@ Explore the resources and functions of the google-native.metastore/v1alpha modul
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="backup" title="Backup"><span class="symbol resource"></span>Backup</a></li>
-    <li><a href="metadataimport" title="MetadataImport"><span class="symbol resource"></span>MetadataImport</a></li>
-    <li><a href="service" title="Service"><span class="symbol resource"></span>Service</a></li>
-    <li><a href="servicebackupiampolicy" title="ServiceBackupIamPolicy"><span class="symbol resource"></span>ServiceBackupIamPolicy</a></li>
-    <li><a href="servicedatabaseiampolicy" title="ServiceDatabaseIamPolicy"><span class="symbol resource"></span>ServiceDatabaseIamPolicy</a></li>
-    <li><a href="servicedatabasetableiampolicy" title="ServiceDatabaseTableIamPolicy"><span class="symbol resource"></span>ServiceDatabaseTableIamPolicy</a></li>
-    <li><a href="serviceiampolicy" title="ServiceIamPolicy"><span class="symbol resource"></span>ServiceIamPolicy</a></li>
+    <li><a href="backup" title="Backup"><span class="api-symbol api-symbol--resource"></span>Backup</a></li>
+    <li><a href="metadataimport" title="MetadataImport"><span class="api-symbol api-symbol--resource"></span>MetadataImport</a></li>
+    <li><a href="service" title="Service"><span class="api-symbol api-symbol--resource"></span>Service</a></li>
+    <li><a href="servicebackupiampolicy" title="ServiceBackupIamPolicy"><span class="api-symbol api-symbol--resource"></span>ServiceBackupIamPolicy</a></li>
+    <li><a href="servicedatabaseiampolicy" title="ServiceDatabaseIamPolicy"><span class="api-symbol api-symbol--resource"></span>ServiceDatabaseIamPolicy</a></li>
+    <li><a href="servicedatabasetableiampolicy" title="ServiceDatabaseTableIamPolicy"><span class="api-symbol api-symbol--resource"></span>ServiceDatabaseTableIamPolicy</a></li>
+    <li><a href="serviceiampolicy" title="ServiceIamPolicy"><span class="api-symbol api-symbol--resource"></span>ServiceIamPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getbackup" title="GetBackup"><span class="symbol function"></span>GetBackup</a></li>
-    <li><a href="getmetadataimport" title="GetMetadataImport"><span class="symbol function"></span>GetMetadataImport</a></li>
-    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
-    <li><a href="getservicebackupiampolicy" title="GetServiceBackupIamPolicy"><span class="symbol function"></span>GetServiceBackupIamPolicy</a></li>
-    <li><a href="getservicedatabaseiampolicy" title="GetServiceDatabaseIamPolicy"><span class="symbol function"></span>GetServiceDatabaseIamPolicy</a></li>
-    <li><a href="getservicedatabasetableiampolicy" title="GetServiceDatabaseTableIamPolicy"><span class="symbol function"></span>GetServiceDatabaseTableIamPolicy</a></li>
-    <li><a href="getserviceiampolicy" title="GetServiceIamPolicy"><span class="symbol function"></span>GetServiceIamPolicy</a></li>
+    <li><a href="getbackup" title="GetBackup"><span class="api-symbol api-symbol--function"></span>GetBackup</a></li>
+    <li><a href="getmetadataimport" title="GetMetadataImport"><span class="api-symbol api-symbol--function"></span>GetMetadataImport</a></li>
+    <li><a href="getservice" title="GetService"><span class="api-symbol api-symbol--function"></span>GetService</a></li>
+    <li><a href="getservicebackupiampolicy" title="GetServiceBackupIamPolicy"><span class="api-symbol api-symbol--function"></span>GetServiceBackupIamPolicy</a></li>
+    <li><a href="getservicedatabaseiampolicy" title="GetServiceDatabaseIamPolicy"><span class="api-symbol api-symbol--function"></span>GetServiceDatabaseIamPolicy</a></li>
+    <li><a href="getservicedatabasetableiampolicy" title="GetServiceDatabaseTableIamPolicy"><span class="api-symbol api-symbol--function"></span>GetServiceDatabaseTableIamPolicy</a></li>
+    <li><a href="getserviceiampolicy" title="GetServiceIamPolicy"><span class="api-symbol api-symbol--function"></span>GetServiceIamPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

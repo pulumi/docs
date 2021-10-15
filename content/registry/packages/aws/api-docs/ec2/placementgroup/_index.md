@@ -125,6 +125,7 @@ const web = new aws.ec2.PlacementGroup("web", {
 <span class="k">def </span><span class="nx">PlacementGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                    <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">partition_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                    <span class="nx">strategy</span><span class="p">:</span> <span class="nx">Optional[Union[str, PlacementStrategy]]</span> = None<span class="p">,</span>
                    <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -274,6 +275,17 @@ The PlacementGroup resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}The name of the placement group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="partitioncount_csharp">
+<a href="#partitioncount_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of partitions to create in the
+placement group.  Can only be specified when the `strategy` is set to
+`"partition"`.  Valid values are 1 - 7 (default is `2`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -303,6 +315,17 @@ The PlacementGroup resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the placement group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="partitioncount_go">
+<a href="#partitioncount_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of partitions to create in the
+placement group.  Can only be specified when the `strategy` is set to
+`"partition"`.  Valid values are 1 - 7 (default is `2`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -336,6 +359,17 @@ The PlacementGroup resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}The name of the placement group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="partitioncount_nodejs">
+<a href="#partitioncount_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of partitions to create in the
+placement group.  Can only be specified when the `strategy` is set to
+`"partition"`.  Valid values are 1 - 7 (default is `2`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -365,6 +399,17 @@ The PlacementGroup resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the placement group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="partition_count_python">
+<a href="#partition_count_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of partitions to create in the
+placement group.  Can only be specified when the `strategy` is set to
+`"partition"`.  Valid values are 1 - 7 (default is `2`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -558,6 +603,7 @@ Get an existing PlacementGroup resource's state with the given name, ID, and opt
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">partition_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">placement_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">strategy</span><span class="p">:</span> <span class="nx">Optional[Union[str, PlacementStrategy]]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
@@ -692,6 +738,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the placement group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_partitioncount_csharp">
+<a href="#state_partitioncount_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of partitions to create in the
+placement group.  Can only be specified when the `strategy` is set to
+`"partition"`.  Valid values are 1 - 7 (default is `2`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_placementgroupid_csharp">
 <a href="#state_placementgroupid_csharp" style="color: inherit; text-decoration: inherit;">Placement<wbr>Group<wbr>Id</a>
 </span>
@@ -748,6 +805,17 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the placement group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_partitioncount_go">
+<a href="#state_partitioncount_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of partitions to create in the
+placement group.  Can only be specified when the `strategy` is set to
+`"partition"`.  Valid values are 1 - 7 (default is `2`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_placementgroupid_go">
@@ -808,6 +876,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the placement group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_partitioncount_nodejs">
+<a href="#state_partitioncount_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of partitions to create in the
+placement group.  Can only be specified when the `strategy` is set to
+`"partition"`.  Valid values are 1 - 7 (default is `2`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_placementgroupid_nodejs">
 <a href="#state_placementgroupid_nodejs" style="color: inherit; text-decoration: inherit;">placement<wbr>Group<wbr>Id</a>
 </span>
@@ -864,6 +943,17 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the placement group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_partition_count_python">
+<a href="#state_partition_count_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of partitions to create in the
+placement group.  Can only be specified when the `strategy` is set to
+`"partition"`.  Valid values are 1 - 7 (default is `2`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_placement_group_id_python">

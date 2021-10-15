@@ -13,9 +13,9 @@ Explore the resources and functions of the aws-native.events module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="apidestination" title="ApiDestination"><span class="symbol resource"></span>ApiDestination</a></li>
-    <li><a href="archive" title="Archive"><span class="symbol resource"></span>Archive</a></li>
-    <li><a href="connection" title="Connection"><span class="symbol resource"></span>Connection</a></li>
+    <li><a href="apidestination" title="ApiDestination"><span class="api-symbol api-symbol--resource"></span>ApiDestination</a></li>
+    <li><a href="archive" title="Archive"><span class="api-symbol api-symbol--resource"></span>Archive</a></li>
+    <li><a href="connection" title="Connection"><span class="api-symbol api-symbol--resource"></span>Connection</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

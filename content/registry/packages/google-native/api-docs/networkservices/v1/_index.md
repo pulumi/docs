@@ -13,20 +13,20 @@ Explore the resources and functions of the google-native.networkservices/v1 modu
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="edgecachekeysetiampolicy" title="EdgeCacheKeysetIamPolicy"><span class="symbol resource"></span>EdgeCacheKeysetIamPolicy</a></li>
-    <li><a href="edgecacheoriginiampolicy" title="EdgeCacheOriginIamPolicy"><span class="symbol resource"></span>EdgeCacheOriginIamPolicy</a></li>
-    <li><a href="edgecacheserviceiampolicy" title="EdgeCacheServiceIamPolicy"><span class="symbol resource"></span>EdgeCacheServiceIamPolicy</a></li>
-    <li><a href="endpointpolicy" title="EndpointPolicy"><span class="symbol resource"></span>EndpointPolicy</a></li>
-    <li><a href="endpointpolicyiampolicy" title="EndpointPolicyIamPolicy"><span class="symbol resource"></span>EndpointPolicyIamPolicy</a></li>
+    <li><a href="edgecachekeysetiampolicy" title="EdgeCacheKeysetIamPolicy"><span class="api-symbol api-symbol--resource"></span>EdgeCacheKeysetIamPolicy</a></li>
+    <li><a href="edgecacheoriginiampolicy" title="EdgeCacheOriginIamPolicy"><span class="api-symbol api-symbol--resource"></span>EdgeCacheOriginIamPolicy</a></li>
+    <li><a href="edgecacheserviceiampolicy" title="EdgeCacheServiceIamPolicy"><span class="api-symbol api-symbol--resource"></span>EdgeCacheServiceIamPolicy</a></li>
+    <li><a href="endpointpolicy" title="EndpointPolicy"><span class="api-symbol api-symbol--resource"></span>EndpointPolicy</a></li>
+    <li><a href="endpointpolicyiampolicy" title="EndpointPolicyIamPolicy"><span class="api-symbol api-symbol--resource"></span>EndpointPolicyIamPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getedgecachekeysetiampolicy" title="GetEdgeCacheKeysetIamPolicy"><span class="symbol function"></span>GetEdgeCacheKeysetIamPolicy</a></li>
-    <li><a href="getedgecacheoriginiampolicy" title="GetEdgeCacheOriginIamPolicy"><span class="symbol function"></span>GetEdgeCacheOriginIamPolicy</a></li>
-    <li><a href="getedgecacheserviceiampolicy" title="GetEdgeCacheServiceIamPolicy"><span class="symbol function"></span>GetEdgeCacheServiceIamPolicy</a></li>
-    <li><a href="getendpointpolicy" title="GetEndpointPolicy"><span class="symbol function"></span>GetEndpointPolicy</a></li>
-    <li><a href="getendpointpolicyiampolicy" title="GetEndpointPolicyIamPolicy"><span class="symbol function"></span>GetEndpointPolicyIamPolicy</a></li>
+    <li><a href="getedgecachekeysetiampolicy" title="GetEdgeCacheKeysetIamPolicy"><span class="api-symbol api-symbol--function"></span>GetEdgeCacheKeysetIamPolicy</a></li>
+    <li><a href="getedgecacheoriginiampolicy" title="GetEdgeCacheOriginIamPolicy"><span class="api-symbol api-symbol--function"></span>GetEdgeCacheOriginIamPolicy</a></li>
+    <li><a href="getedgecacheserviceiampolicy" title="GetEdgeCacheServiceIamPolicy"><span class="api-symbol api-symbol--function"></span>GetEdgeCacheServiceIamPolicy</a></li>
+    <li><a href="getendpointpolicy" title="GetEndpointPolicy"><span class="api-symbol api-symbol--function"></span>GetEndpointPolicy</a></li>
+    <li><a href="getendpointpolicyiampolicy" title="GetEndpointPolicyIamPolicy"><span class="api-symbol api-symbol--function"></span>GetEndpointPolicyIamPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

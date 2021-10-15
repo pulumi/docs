@@ -13,9 +13,9 @@ Explore the resources and functions of the aws-native.macie module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="customdataidentifier" title="CustomDataIdentifier"><span class="symbol resource"></span>CustomDataIdentifier</a></li>
-    <li><a href="findingsfilter" title="FindingsFilter"><span class="symbol resource"></span>FindingsFilter</a></li>
-    <li><a href="session" title="Session"><span class="symbol resource"></span>Session</a></li>
+    <li><a href="customdataidentifier" title="CustomDataIdentifier"><span class="api-symbol api-symbol--resource"></span>CustomDataIdentifier</a></li>
+    <li><a href="findingsfilter" title="FindingsFilter"><span class="api-symbol api-symbol--resource"></span>FindingsFilter</a></li>
+    <li><a href="session" title="Session"><span class="api-symbol api-symbol--resource"></span>Session</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

@@ -13,7 +13,7 @@ Explore the resources and functions of the aws-native.greengrassv2 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="componentversion" title="ComponentVersion"><span class="symbol resource"></span>ComponentVersion</a></li>
+    <li><a href="componentversion" title="ComponentVersion"><span class="api-symbol api-symbol--resource"></span>ComponentVersion</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

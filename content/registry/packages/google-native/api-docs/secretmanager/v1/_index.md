@@ -13,14 +13,14 @@ Explore the resources and functions of the google-native.secretmanager/v1 module
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="secret" title="Secret"><span class="symbol resource"></span>Secret</a></li>
-    <li><a href="secretiampolicy" title="SecretIamPolicy"><span class="symbol resource"></span>SecretIamPolicy</a></li>
+    <li><a href="secret" title="Secret"><span class="api-symbol api-symbol--resource"></span>Secret</a></li>
+    <li><a href="secretiampolicy" title="SecretIamPolicy"><span class="api-symbol api-symbol--resource"></span>SecretIamPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getsecret" title="GetSecret"><span class="symbol function"></span>GetSecret</a></li>
-    <li><a href="getsecretiampolicy" title="GetSecretIamPolicy"><span class="symbol function"></span>GetSecretIamPolicy</a></li>
+    <li><a href="getsecret" title="GetSecret"><span class="api-symbol api-symbol--function"></span>GetSecret</a></li>
+    <li><a href="getsecretiampolicy" title="GetSecretIamPolicy"><span class="api-symbol api-symbol--function"></span>GetSecretIamPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

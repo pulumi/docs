@@ -13,25 +13,25 @@ Explore the resources and functions of the alicloud.alb module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="acl" title="Acl"><span class="symbol resource"></span>Acl</a></li>
-    <li><a href="healthchecktemplate" title="HealthCheckTemplate"><span class="symbol resource"></span>HealthCheckTemplate</a></li>
-    <li><a href="listener" title="Listener"><span class="symbol resource"></span>Listener</a></li>
-    <li><a href="loadbalancer" title="LoadBalancer"><span class="symbol resource"></span>LoadBalancer</a></li>
-    <li><a href="rule" title="Rule"><span class="symbol resource"></span>Rule</a></li>
-    <li><a href="securitypolicy" title="SecurityPolicy"><span class="symbol resource"></span>SecurityPolicy</a></li>
-    <li><a href="servergroup" title="ServerGroup"><span class="symbol resource"></span>ServerGroup</a></li>
+    <li><a href="acl" title="Acl"><span class="api-symbol api-symbol--resource"></span>Acl</a></li>
+    <li><a href="healthchecktemplate" title="HealthCheckTemplate"><span class="api-symbol api-symbol--resource"></span>HealthCheckTemplate</a></li>
+    <li><a href="listener" title="Listener"><span class="api-symbol api-symbol--resource"></span>Listener</a></li>
+    <li><a href="loadbalancer" title="LoadBalancer"><span class="api-symbol api-symbol--resource"></span>LoadBalancer</a></li>
+    <li><a href="rule" title="Rule"><span class="api-symbol api-symbol--resource"></span>Rule</a></li>
+    <li><a href="securitypolicy" title="SecurityPolicy"><span class="api-symbol api-symbol--resource"></span>SecurityPolicy</a></li>
+    <li><a href="servergroup" title="ServerGroup"><span class="api-symbol api-symbol--resource"></span>ServerGroup</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getacls" title="GetAcls"><span class="symbol function"></span>GetAcls</a></li>
-    <li><a href="gethealthchecktemplates" title="GetHealthCheckTemplates"><span class="symbol function"></span>GetHealthCheckTemplates</a></li>
-    <li><a href="getlisteners" title="GetListeners"><span class="symbol function"></span>GetListeners</a></li>
-    <li><a href="getloadbalancers" title="GetLoadBalancers"><span class="symbol function"></span>GetLoadBalancers</a></li>
-    <li><a href="getrules" title="GetRules"><span class="symbol function"></span>GetRules</a></li>
-    <li><a href="getsecuritypolicies" title="GetSecurityPolicies"><span class="symbol function"></span>GetSecurityPolicies</a></li>
-    <li><a href="getservergroups" title="GetServerGroups"><span class="symbol function"></span>GetServerGroups</a></li>
-    <li><a href="getzones" title="GetZones"><span class="symbol function"></span>GetZones</a></li>
+    <li><a href="getacls" title="GetAcls"><span class="api-symbol api-symbol--function"></span>GetAcls</a></li>
+    <li><a href="gethealthchecktemplates" title="GetHealthCheckTemplates"><span class="api-symbol api-symbol--function"></span>GetHealthCheckTemplates</a></li>
+    <li><a href="getlisteners" title="GetListeners"><span class="api-symbol api-symbol--function"></span>GetListeners</a></li>
+    <li><a href="getloadbalancers" title="GetLoadBalancers"><span class="api-symbol api-symbol--function"></span>GetLoadBalancers</a></li>
+    <li><a href="getrules" title="GetRules"><span class="api-symbol api-symbol--function"></span>GetRules</a></li>
+    <li><a href="getsecuritypolicies" title="GetSecurityPolicies"><span class="api-symbol api-symbol--function"></span>GetSecurityPolicies</a></li>
+    <li><a href="getservergroups" title="GetServerGroups"><span class="api-symbol api-symbol--function"></span>GetServerGroups</a></li>
+    <li><a href="getzones" title="GetZones"><span class="api-symbol api-symbol--function"></span>GetZones</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

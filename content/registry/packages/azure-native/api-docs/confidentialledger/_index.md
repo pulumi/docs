@@ -13,12 +13,12 @@ Explore the resources and functions of the azure-native.confidentialledger modul
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="ledger" title="Ledger"><span class="symbol resource"></span>Ledger</a></li>
+    <li><a href="ledger" title="Ledger"><span class="api-symbol api-symbol--resource"></span>Ledger</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getledger" title="GetLedger"><span class="symbol function"></span>GetLedger</a></li>
+    <li><a href="getledger" title="GetLedger"><span class="api-symbol api-symbol--function"></span>GetLedger</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -28,6 +28,6 @@ Explore the resources and functions of the azure-native.confidentialledger modul
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.38.0</dd>
+	<dd>1.39.0</dd>
 </dl>
 

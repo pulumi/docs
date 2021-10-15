@@ -13,16 +13,16 @@ Explore the resources and functions of the google-native.firebasehosting/v1beta1
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="channel" title="Channel"><span class="symbol resource"></span>Channel</a></li>
-    <li><a href="domain" title="Domain"><span class="symbol resource"></span>Domain</a></li>
-    <li><a href="site" title="Site"><span class="symbol resource"></span>Site</a></li>
+    <li><a href="channel" title="Channel"><span class="api-symbol api-symbol--resource"></span>Channel</a></li>
+    <li><a href="domain" title="Domain"><span class="api-symbol api-symbol--resource"></span>Domain</a></li>
+    <li><a href="site" title="Site"><span class="api-symbol api-symbol--resource"></span>Site</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getchannel" title="GetChannel"><span class="symbol function"></span>GetChannel</a></li>
-    <li><a href="getdomain" title="GetDomain"><span class="symbol function"></span>GetDomain</a></li>
-    <li><a href="getsite" title="GetSite"><span class="symbol function"></span>GetSite</a></li>
+    <li><a href="getchannel" title="GetChannel"><span class="api-symbol api-symbol--function"></span>GetChannel</a></li>
+    <li><a href="getdomain" title="GetDomain"><span class="api-symbol api-symbol--function"></span>GetDomain</a></li>
+    <li><a href="getsite" title="GetSite"><span class="api-symbol api-symbol--function"></span>GetSite</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

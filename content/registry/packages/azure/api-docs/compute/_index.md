@@ -13,51 +13,51 @@ Explore the resources and functions of the azure.compute module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="availabilityset" title="AvailabilitySet"><span class="symbol resource"></span>AvailabilitySet</a></li>
-    <li><a href="bastionhost" title="BastionHost"><span class="symbol resource"></span>BastionHost</a></li>
-    <li><a href="configurationpolicyassignment" title="ConfigurationPolicyAssignment"><span class="symbol resource"></span>ConfigurationPolicyAssignment</a></li>
-    <li><a href="datadiskattachment" title="DataDiskAttachment"><span class="symbol resource"></span>DataDiskAttachment</a></li>
-    <li><a href="dedicatedhost" title="DedicatedHost"><span class="symbol resource"></span>DedicatedHost</a></li>
-    <li><a href="dedicatedhostgroup" title="DedicatedHostGroup"><span class="symbol resource"></span>DedicatedHostGroup</a></li>
-    <li><a href="diskaccess" title="DiskAccess"><span class="symbol resource"></span>DiskAccess</a></li>
-    <li><a href="diskencryptionset" title="DiskEncryptionSet"><span class="symbol resource"></span>DiskEncryptionSet</a></li>
-    <li><a href="extension" title="Extension"><span class="symbol resource"></span>Extension</a></li>
-    <li><a href="image" title="Image"><span class="symbol resource"></span>Image</a></li>
-    <li><a href="linuxvirtualmachine" title="LinuxVirtualMachine"><span class="symbol resource"></span>LinuxVirtualMachine</a></li>
-    <li><a href="linuxvirtualmachinescaleset" title="LinuxVirtualMachineScaleSet"><span class="symbol resource"></span>LinuxVirtualMachineScaleSet</a></li>
-    <li><a href="manageddisk" title="ManagedDisk"><span class="symbol resource"></span>ManagedDisk</a></li>
-    <li><a href="orchestratedvirtualmachinescaleset" title="OrchestratedVirtualMachineScaleSet"><span class="symbol resource"></span>OrchestratedVirtualMachineScaleSet</a></li>
-    <li><a href="scaleset" title="ScaleSet"><span class="symbol resource"></span>ScaleSet</a></li>
-    <li><a href="sharedimage" title="SharedImage"><span class="symbol resource"></span>SharedImage</a></li>
-    <li><a href="sharedimagegallery" title="SharedImageGallery"><span class="symbol resource"></span>SharedImageGallery</a></li>
-    <li><a href="sharedimageversion" title="SharedImageVersion"><span class="symbol resource"></span>SharedImageVersion</a></li>
-    <li><a href="snapshot" title="Snapshot"><span class="symbol resource"></span>Snapshot</a></li>
-    <li><a href="sshpublickey" title="SshPublicKey"><span class="symbol resource"></span>SshPublicKey</a></li>
-    <li><a href="virtualmachine" title="VirtualMachine"><span class="symbol resource"></span>VirtualMachine</a></li>
-    <li><a href="virtualmachinescalesetextension" title="VirtualMachineScaleSetExtension"><span class="symbol resource"></span>VirtualMachineScaleSetExtension</a></li>
-    <li><a href="windowsvirtualmachine" title="WindowsVirtualMachine"><span class="symbol resource"></span>WindowsVirtualMachine</a></li>
-    <li><a href="windowsvirtualmachinescaleset" title="WindowsVirtualMachineScaleSet"><span class="symbol resource"></span>WindowsVirtualMachineScaleSet</a></li>
+    <li><a href="availabilityset" title="AvailabilitySet"><span class="api-symbol api-symbol--resource"></span>AvailabilitySet</a></li>
+    <li><a href="bastionhost" title="BastionHost"><span class="api-symbol api-symbol--resource"></span>BastionHost</a></li>
+    <li><a href="configurationpolicyassignment" title="ConfigurationPolicyAssignment"><span class="api-symbol api-symbol--resource"></span>ConfigurationPolicyAssignment</a></li>
+    <li><a href="datadiskattachment" title="DataDiskAttachment"><span class="api-symbol api-symbol--resource"></span>DataDiskAttachment</a></li>
+    <li><a href="dedicatedhost" title="DedicatedHost"><span class="api-symbol api-symbol--resource"></span>DedicatedHost</a></li>
+    <li><a href="dedicatedhostgroup" title="DedicatedHostGroup"><span class="api-symbol api-symbol--resource"></span>DedicatedHostGroup</a></li>
+    <li><a href="diskaccess" title="DiskAccess"><span class="api-symbol api-symbol--resource"></span>DiskAccess</a></li>
+    <li><a href="diskencryptionset" title="DiskEncryptionSet"><span class="api-symbol api-symbol--resource"></span>DiskEncryptionSet</a></li>
+    <li><a href="extension" title="Extension"><span class="api-symbol api-symbol--resource"></span>Extension</a></li>
+    <li><a href="image" title="Image"><span class="api-symbol api-symbol--resource"></span>Image</a></li>
+    <li><a href="linuxvirtualmachine" title="LinuxVirtualMachine"><span class="api-symbol api-symbol--resource"></span>LinuxVirtualMachine</a></li>
+    <li><a href="linuxvirtualmachinescaleset" title="LinuxVirtualMachineScaleSet"><span class="api-symbol api-symbol--resource"></span>LinuxVirtualMachineScaleSet</a></li>
+    <li><a href="manageddisk" title="ManagedDisk"><span class="api-symbol api-symbol--resource"></span>ManagedDisk</a></li>
+    <li><a href="orchestratedvirtualmachinescaleset" title="OrchestratedVirtualMachineScaleSet"><span class="api-symbol api-symbol--resource"></span>OrchestratedVirtualMachineScaleSet</a></li>
+    <li><a href="scaleset" title="ScaleSet"><span class="api-symbol api-symbol--resource"></span>ScaleSet</a></li>
+    <li><a href="sharedimage" title="SharedImage"><span class="api-symbol api-symbol--resource"></span>SharedImage</a></li>
+    <li><a href="sharedimagegallery" title="SharedImageGallery"><span class="api-symbol api-symbol--resource"></span>SharedImageGallery</a></li>
+    <li><a href="sharedimageversion" title="SharedImageVersion"><span class="api-symbol api-symbol--resource"></span>SharedImageVersion</a></li>
+    <li><a href="snapshot" title="Snapshot"><span class="api-symbol api-symbol--resource"></span>Snapshot</a></li>
+    <li><a href="sshpublickey" title="SshPublicKey"><span class="api-symbol api-symbol--resource"></span>SshPublicKey</a></li>
+    <li><a href="virtualmachine" title="VirtualMachine"><span class="api-symbol api-symbol--resource"></span>VirtualMachine</a></li>
+    <li><a href="virtualmachinescalesetextension" title="VirtualMachineScaleSetExtension"><span class="api-symbol api-symbol--resource"></span>VirtualMachineScaleSetExtension</a></li>
+    <li><a href="windowsvirtualmachine" title="WindowsVirtualMachine"><span class="api-symbol api-symbol--resource"></span>WindowsVirtualMachine</a></li>
+    <li><a href="windowsvirtualmachinescaleset" title="WindowsVirtualMachineScaleSet"><span class="api-symbol api-symbol--resource"></span>WindowsVirtualMachineScaleSet</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getavailabilityset" title="GetAvailabilitySet"><span class="symbol function"></span>GetAvailabilitySet</a></li>
-    <li><a href="getdedicatedhost" title="GetDedicatedHost"><span class="symbol function"></span>GetDedicatedHost</a></li>
-    <li><a href="getdedicatedhostgroup" title="GetDedicatedHostGroup"><span class="symbol function"></span>GetDedicatedHostGroup</a></li>
-    <li><a href="getdiskaccess" title="GetDiskAccess"><span class="symbol function"></span>GetDiskAccess</a></li>
-    <li><a href="getdiskencryptionset" title="GetDiskEncryptionSet"><span class="symbol function"></span>GetDiskEncryptionSet</a></li>
-    <li><a href="getimage" title="GetImage"><span class="symbol function"></span>GetImage</a></li>
-    <li><a href="getimages" title="GetImages"><span class="symbol function"></span>GetImages</a></li>
-    <li><a href="getmanageddisk" title="GetManagedDisk"><span class="symbol function"></span>GetManagedDisk</a></li>
-    <li><a href="getplatformimage" title="GetPlatformImage"><span class="symbol function"></span>GetPlatformImage</a></li>
-    <li><a href="getsharedimage" title="GetSharedImage"><span class="symbol function"></span>GetSharedImage</a></li>
-    <li><a href="getsharedimagegallery" title="GetSharedImageGallery"><span class="symbol function"></span>GetSharedImageGallery</a></li>
-    <li><a href="getsharedimageversion" title="GetSharedImageVersion"><span class="symbol function"></span>GetSharedImageVersion</a></li>
-    <li><a href="getsharedimageversions" title="GetSharedImageVersions"><span class="symbol function"></span>GetSharedImageVersions</a></li>
-    <li><a href="getsnapshot" title="GetSnapshot"><span class="symbol function"></span>GetSnapshot</a></li>
-    <li><a href="getsshpublickey" title="GetSshPublicKey"><span class="symbol function"></span>GetSshPublicKey</a></li>
-    <li><a href="getvirtualmachine" title="GetVirtualMachine"><span class="symbol function"></span>GetVirtualMachine</a></li>
-    <li><a href="getvirtualmachinescaleset" title="GetVirtualMachineScaleSet"><span class="symbol function"></span>GetVirtualMachineScaleSet</a></li>
+    <li><a href="getavailabilityset" title="GetAvailabilitySet"><span class="api-symbol api-symbol--function"></span>GetAvailabilitySet</a></li>
+    <li><a href="getdedicatedhost" title="GetDedicatedHost"><span class="api-symbol api-symbol--function"></span>GetDedicatedHost</a></li>
+    <li><a href="getdedicatedhostgroup" title="GetDedicatedHostGroup"><span class="api-symbol api-symbol--function"></span>GetDedicatedHostGroup</a></li>
+    <li><a href="getdiskaccess" title="GetDiskAccess"><span class="api-symbol api-symbol--function"></span>GetDiskAccess</a></li>
+    <li><a href="getdiskencryptionset" title="GetDiskEncryptionSet"><span class="api-symbol api-symbol--function"></span>GetDiskEncryptionSet</a></li>
+    <li><a href="getimage" title="GetImage"><span class="api-symbol api-symbol--function"></span>GetImage</a></li>
+    <li><a href="getimages" title="GetImages"><span class="api-symbol api-symbol--function"></span>GetImages</a></li>
+    <li><a href="getmanageddisk" title="GetManagedDisk"><span class="api-symbol api-symbol--function"></span>GetManagedDisk</a></li>
+    <li><a href="getplatformimage" title="GetPlatformImage"><span class="api-symbol api-symbol--function"></span>GetPlatformImage</a></li>
+    <li><a href="getsharedimage" title="GetSharedImage"><span class="api-symbol api-symbol--function"></span>GetSharedImage</a></li>
+    <li><a href="getsharedimagegallery" title="GetSharedImageGallery"><span class="api-symbol api-symbol--function"></span>GetSharedImageGallery</a></li>
+    <li><a href="getsharedimageversion" title="GetSharedImageVersion"><span class="api-symbol api-symbol--function"></span>GetSharedImageVersion</a></li>
+    <li><a href="getsharedimageversions" title="GetSharedImageVersions"><span class="api-symbol api-symbol--function"></span>GetSharedImageVersions</a></li>
+    <li><a href="getsnapshot" title="GetSnapshot"><span class="api-symbol api-symbol--function"></span>GetSnapshot</a></li>
+    <li><a href="getsshpublickey" title="GetSshPublicKey"><span class="api-symbol api-symbol--function"></span>GetSshPublicKey</a></li>
+    <li><a href="getvirtualmachine" title="GetVirtualMachine"><span class="api-symbol api-symbol--function"></span>GetVirtualMachine</a></li>
+    <li><a href="getvirtualmachinescaleset" title="GetVirtualMachineScaleSet"><span class="api-symbol api-symbol--function"></span>GetVirtualMachineScaleSet</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -69,6 +69,6 @@ Explore the resources and functions of the azure.compute module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.22.0</dd>
+	<dd>4.23.0</dd>
 </dl>
 

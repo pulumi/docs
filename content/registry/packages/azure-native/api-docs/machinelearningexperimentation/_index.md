@@ -13,16 +13,16 @@ Explore the resources and functions of the azure-native.machinelearningexperimen
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="account" title="Account"><span class="symbol resource"></span>Account</a></li>
-    <li><a href="project" title="Project"><span class="symbol resource"></span>Project</a></li>
-    <li><a href="workspace" title="Workspace"><span class="symbol resource"></span>Workspace</a></li>
+    <li><a href="account" title="Account"><span class="api-symbol api-symbol--resource"></span>Account</a></li>
+    <li><a href="project" title="Project"><span class="api-symbol api-symbol--resource"></span>Project</a></li>
+    <li><a href="workspace" title="Workspace"><span class="api-symbol api-symbol--resource"></span>Workspace</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getaccount" title="GetAccount"><span class="symbol function"></span>GetAccount</a></li>
-    <li><a href="getproject" title="GetProject"><span class="symbol function"></span>GetProject</a></li>
-    <li><a href="getworkspace" title="GetWorkspace"><span class="symbol function"></span>GetWorkspace</a></li>
+    <li><a href="getaccount" title="GetAccount"><span class="api-symbol api-symbol--function"></span>GetAccount</a></li>
+    <li><a href="getproject" title="GetProject"><span class="api-symbol api-symbol--function"></span>GetProject</a></li>
+    <li><a href="getworkspace" title="GetWorkspace"><span class="api-symbol api-symbol--function"></span>GetWorkspace</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -32,6 +32,6 @@ Explore the resources and functions of the azure-native.machinelearningexperimen
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.38.0</dd>
+	<dd>1.39.0</dd>
 </dl>
 

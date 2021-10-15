@@ -13,42 +13,42 @@ Explore the resources and functions of the azure.storage module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="account" title="Account"><span class="symbol resource"></span>Account</a></li>
-    <li><a href="accountnetworkrules" title="AccountNetworkRules"><span class="symbol resource"></span>AccountNetworkRules</a></li>
-    <li><a href="blob" title="Blob"><span class="symbol resource"></span>Blob</a></li>
-    <li><a href="blobinventorypolicy" title="BlobInventoryPolicy"><span class="symbol resource"></span>BlobInventoryPolicy</a></li>
-    <li><a href="container" title="Container"><span class="symbol resource"></span>Container</a></li>
-    <li><a href="customermanagedkey" title="CustomerManagedKey"><span class="symbol resource"></span>CustomerManagedKey</a></li>
-    <li><a href="datalakegen2filesystem" title="DataLakeGen2Filesystem"><span class="symbol resource"></span>DataLakeGen2Filesystem</a></li>
-    <li><a href="datalakegen2path" title="DataLakeGen2Path"><span class="symbol resource"></span>DataLakeGen2Path</a></li>
-    <li><a href="encryptionscope" title="EncryptionScope"><span class="symbol resource"></span>EncryptionScope</a></li>
-    <li><a href="managementpolicy" title="ManagementPolicy"><span class="symbol resource"></span>ManagementPolicy</a></li>
-    <li><a href="objectreplication" title="ObjectReplication"><span class="symbol resource"></span>ObjectReplication</a></li>
-    <li><a href="queue" title="Queue"><span class="symbol resource"></span>Queue</a></li>
-    <li><a href="share" title="Share"><span class="symbol resource"></span>Share</a></li>
-    <li><a href="sharedirectory" title="ShareDirectory"><span class="symbol resource"></span>ShareDirectory</a></li>
-    <li><a href="sharefile" title="ShareFile"><span class="symbol resource"></span>ShareFile</a></li>
-    <li><a href="sync" title="Sync"><span class="symbol resource"></span>Sync</a></li>
-    <li><a href="synccloudendpoint" title="SyncCloudEndpoint"><span class="symbol resource"></span>SyncCloudEndpoint</a></li>
-    <li><a href="syncgroup" title="SyncGroup"><span class="symbol resource"></span>SyncGroup</a></li>
-    <li><a href="table" title="Table"><span class="symbol resource"></span>Table</a></li>
-    <li><a href="tableentity" title="TableEntity"><span class="symbol resource"></span>TableEntity</a></li>
-    <li><a href="zipblob" title="ZipBlob"><span class="symbol resource"></span>ZipBlob</a></li>
+    <li><a href="account" title="Account"><span class="api-symbol api-symbol--resource"></span>Account</a></li>
+    <li><a href="accountnetworkrules" title="AccountNetworkRules"><span class="api-symbol api-symbol--resource"></span>AccountNetworkRules</a></li>
+    <li><a href="blob" title="Blob"><span class="api-symbol api-symbol--resource"></span>Blob</a></li>
+    <li><a href="blobinventorypolicy" title="BlobInventoryPolicy"><span class="api-symbol api-symbol--resource"></span>BlobInventoryPolicy</a></li>
+    <li><a href="container" title="Container"><span class="api-symbol api-symbol--resource"></span>Container</a></li>
+    <li><a href="customermanagedkey" title="CustomerManagedKey"><span class="api-symbol api-symbol--resource"></span>CustomerManagedKey</a></li>
+    <li><a href="datalakegen2filesystem" title="DataLakeGen2Filesystem"><span class="api-symbol api-symbol--resource"></span>DataLakeGen2Filesystem</a></li>
+    <li><a href="datalakegen2path" title="DataLakeGen2Path"><span class="api-symbol api-symbol--resource"></span>DataLakeGen2Path</a></li>
+    <li><a href="encryptionscope" title="EncryptionScope"><span class="api-symbol api-symbol--resource"></span>EncryptionScope</a></li>
+    <li><a href="managementpolicy" title="ManagementPolicy"><span class="api-symbol api-symbol--resource"></span>ManagementPolicy</a></li>
+    <li><a href="objectreplication" title="ObjectReplication"><span class="api-symbol api-symbol--resource"></span>ObjectReplication</a></li>
+    <li><a href="queue" title="Queue"><span class="api-symbol api-symbol--resource"></span>Queue</a></li>
+    <li><a href="share" title="Share"><span class="api-symbol api-symbol--resource"></span>Share</a></li>
+    <li><a href="sharedirectory" title="ShareDirectory"><span class="api-symbol api-symbol--resource"></span>ShareDirectory</a></li>
+    <li><a href="sharefile" title="ShareFile"><span class="api-symbol api-symbol--resource"></span>ShareFile</a></li>
+    <li><a href="sync" title="Sync"><span class="api-symbol api-symbol--resource"></span>Sync</a></li>
+    <li><a href="synccloudendpoint" title="SyncCloudEndpoint"><span class="api-symbol api-symbol--resource"></span>SyncCloudEndpoint</a></li>
+    <li><a href="syncgroup" title="SyncGroup"><span class="api-symbol api-symbol--resource"></span>SyncGroup</a></li>
+    <li><a href="table" title="Table"><span class="api-symbol api-symbol--resource"></span>Table</a></li>
+    <li><a href="tableentity" title="TableEntity"><span class="api-symbol api-symbol--resource"></span>TableEntity</a></li>
+    <li><a href="zipblob" title="ZipBlob"><span class="api-symbol api-symbol--resource"></span>ZipBlob</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getaccount" title="GetAccount"><span class="symbol function"></span>GetAccount</a></li>
-    <li><a href="getaccountblobcontainersas" title="GetAccountBlobContainerSAS"><span class="symbol function"></span>GetAccountBlobContainerSAS</a></li>
-    <li><a href="getaccountsas" title="GetAccountSAS"><span class="symbol function"></span>GetAccountSAS</a></li>
-    <li><a href="getblob" title="GetBlob"><span class="symbol function"></span>GetBlob</a></li>
-    <li><a href="getencryptionscope" title="GetEncryptionScope"><span class="symbol function"></span>GetEncryptionScope</a></li>
-    <li><a href="getpolicy" title="GetPolicy"><span class="symbol function"></span>GetPolicy</a></li>
-    <li><a href="getshare" title="GetShare"><span class="symbol function"></span>GetShare</a></li>
-    <li><a href="getstoragecontainer" title="GetStorageContainer"><span class="symbol function"></span>GetStorageContainer</a></li>
-    <li><a href="getsync" title="GetSync"><span class="symbol function"></span>GetSync</a></li>
-    <li><a href="getsyncgroup" title="GetSyncGroup"><span class="symbol function"></span>GetSyncGroup</a></li>
-    <li><a href="gettableentity" title="GetTableEntity"><span class="symbol function"></span>GetTableEntity</a></li>
+    <li><a href="getaccount" title="GetAccount"><span class="api-symbol api-symbol--function"></span>GetAccount</a></li>
+    <li><a href="getaccountblobcontainersas" title="GetAccountBlobContainerSAS"><span class="api-symbol api-symbol--function"></span>GetAccountBlobContainerSAS</a></li>
+    <li><a href="getaccountsas" title="GetAccountSAS"><span class="api-symbol api-symbol--function"></span>GetAccountSAS</a></li>
+    <li><a href="getblob" title="GetBlob"><span class="api-symbol api-symbol--function"></span>GetBlob</a></li>
+    <li><a href="getencryptionscope" title="GetEncryptionScope"><span class="api-symbol api-symbol--function"></span>GetEncryptionScope</a></li>
+    <li><a href="getpolicy" title="GetPolicy"><span class="api-symbol api-symbol--function"></span>GetPolicy</a></li>
+    <li><a href="getshare" title="GetShare"><span class="api-symbol api-symbol--function"></span>GetShare</a></li>
+    <li><a href="getstoragecontainer" title="GetStorageContainer"><span class="api-symbol api-symbol--function"></span>GetStorageContainer</a></li>
+    <li><a href="getsync" title="GetSync"><span class="api-symbol api-symbol--function"></span>GetSync</a></li>
+    <li><a href="getsyncgroup" title="GetSyncGroup"><span class="api-symbol api-symbol--function"></span>GetSyncGroup</a></li>
+    <li><a href="gettableentity" title="GetTableEntity"><span class="api-symbol api-symbol--function"></span>GetTableEntity</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -60,6 +60,6 @@ Explore the resources and functions of the azure.storage module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.22.0</dd>
+	<dd>4.23.0</dd>
 </dl>
 

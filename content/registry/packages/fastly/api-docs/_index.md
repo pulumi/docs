@@ -13,39 +13,39 @@ A Pulumi package for creating and managing fastly cloud resources.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
-    <li><a href="serviceaclentriesv1" title="ServiceACLEntriesv1"><span class="symbol resource"></span>ServiceACLEntriesv1</a></li>
-    <li><a href="servicecompute" title="ServiceCompute"><span class="symbol resource"></span>ServiceCompute</a></li>
-    <li><a href="servicedictionaryitemsv1" title="ServiceDictionaryItemsv1"><span class="symbol resource"></span>ServiceDictionaryItemsv1</a></li>
-    <li><a href="servicedynamicsnippetcontentv1" title="ServiceDynamicSnippetContentv1"><span class="symbol resource"></span>ServiceDynamicSnippetContentv1</a></li>
-    <li><a href="servicewafconfiguration" title="ServiceWafConfiguration"><span class="symbol resource"></span>ServiceWafConfiguration</a></li>
-    <li><a href="servicev1" title="Servicev1"><span class="symbol resource"></span>Servicev1</a></li>
-    <li><a href="tlsactivation" title="TlsActivation"><span class="symbol resource"></span>TlsActivation</a></li>
-    <li><a href="tlscertificate" title="TlsCertificate"><span class="symbol resource"></span>TlsCertificate</a></li>
-    <li><a href="tlsplatformcertificate" title="TlsPlatformCertificate"><span class="symbol resource"></span>TlsPlatformCertificate</a></li>
-    <li><a href="tlsprivatekey" title="TlsPrivateKey"><span class="symbol resource"></span>TlsPrivateKey</a></li>
-    <li><a href="tlssubscription" title="TlsSubscription"><span class="symbol resource"></span>TlsSubscription</a></li>
-    <li><a href="tlssubscriptionvalidation" title="TlsSubscriptionValidation"><span class="symbol resource"></span>TlsSubscriptionValidation</a></li>
-    <li><a href="userv1" title="Userv1"><span class="symbol resource"></span>Userv1</a></li>
+    <li><a href="provider" title="Provider"><span class="api-symbol api-symbol--resource"></span>Provider</a></li>
+    <li><a href="serviceaclentriesv1" title="ServiceACLEntriesv1"><span class="api-symbol api-symbol--resource"></span>ServiceACLEntriesv1</a></li>
+    <li><a href="servicecompute" title="ServiceCompute"><span class="api-symbol api-symbol--resource"></span>ServiceCompute</a></li>
+    <li><a href="servicedictionaryitemsv1" title="ServiceDictionaryItemsv1"><span class="api-symbol api-symbol--resource"></span>ServiceDictionaryItemsv1</a></li>
+    <li><a href="servicedynamicsnippetcontentv1" title="ServiceDynamicSnippetContentv1"><span class="api-symbol api-symbol--resource"></span>ServiceDynamicSnippetContentv1</a></li>
+    <li><a href="servicewafconfiguration" title="ServiceWafConfiguration"><span class="api-symbol api-symbol--resource"></span>ServiceWafConfiguration</a></li>
+    <li><a href="servicev1" title="Servicev1"><span class="api-symbol api-symbol--resource"></span>Servicev1</a></li>
+    <li><a href="tlsactivation" title="TlsActivation"><span class="api-symbol api-symbol--resource"></span>TlsActivation</a></li>
+    <li><a href="tlscertificate" title="TlsCertificate"><span class="api-symbol api-symbol--resource"></span>TlsCertificate</a></li>
+    <li><a href="tlsplatformcertificate" title="TlsPlatformCertificate"><span class="api-symbol api-symbol--resource"></span>TlsPlatformCertificate</a></li>
+    <li><a href="tlsprivatekey" title="TlsPrivateKey"><span class="api-symbol api-symbol--resource"></span>TlsPrivateKey</a></li>
+    <li><a href="tlssubscription" title="TlsSubscription"><span class="api-symbol api-symbol--resource"></span>TlsSubscription</a></li>
+    <li><a href="tlssubscriptionvalidation" title="TlsSubscriptionValidation"><span class="api-symbol api-symbol--resource"></span>TlsSubscriptionValidation</a></li>
+    <li><a href="userv1" title="Userv1"><span class="api-symbol api-symbol--resource"></span>Userv1</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getfastlyipranges" title="GetFastlyIpRanges"><span class="symbol function"></span>GetFastlyIpRanges</a></li>
-    <li><a href="gettlsactivation" title="GetTlsActivation"><span class="symbol function"></span>GetTlsActivation</a></li>
-    <li><a href="gettlsactivationids" title="GetTlsActivationIds"><span class="symbol function"></span>GetTlsActivationIds</a></li>
-    <li><a href="gettlscertificate" title="GetTlsCertificate"><span class="symbol function"></span>GetTlsCertificate</a></li>
-    <li><a href="gettlscertificateids" title="GetTlsCertificateIds"><span class="symbol function"></span>GetTlsCertificateIds</a></li>
-    <li><a href="gettlsconfiguration" title="GetTlsConfiguration"><span class="symbol function"></span>GetTlsConfiguration</a></li>
-    <li><a href="gettlsconfigurationids" title="GetTlsConfigurationIds"><span class="symbol function"></span>GetTlsConfigurationIds</a></li>
-    <li><a href="gettlsdomain" title="GetTlsDomain"><span class="symbol function"></span>GetTlsDomain</a></li>
-    <li><a href="gettlsplatformcertificate" title="GetTlsPlatformCertificate"><span class="symbol function"></span>GetTlsPlatformCertificate</a></li>
-    <li><a href="gettlsplatformcertificateids" title="GetTlsPlatformCertificateIds"><span class="symbol function"></span>GetTlsPlatformCertificateIds</a></li>
-    <li><a href="gettlsprivatekey" title="GetTlsPrivateKey"><span class="symbol function"></span>GetTlsPrivateKey</a></li>
-    <li><a href="gettlsprivatekeyids" title="GetTlsPrivateKeyIds"><span class="symbol function"></span>GetTlsPrivateKeyIds</a></li>
-    <li><a href="gettlssubscription" title="GetTlsSubscription"><span class="symbol function"></span>GetTlsSubscription</a></li>
-    <li><a href="gettlssubscriptionids" title="GetTlsSubscriptionIds"><span class="symbol function"></span>GetTlsSubscriptionIds</a></li>
-    <li><a href="getwafrules" title="GetWafRules"><span class="symbol function"></span>GetWafRules</a></li>
+    <li><a href="getfastlyipranges" title="GetFastlyIpRanges"><span class="api-symbol api-symbol--function"></span>GetFastlyIpRanges</a></li>
+    <li><a href="gettlsactivation" title="GetTlsActivation"><span class="api-symbol api-symbol--function"></span>GetTlsActivation</a></li>
+    <li><a href="gettlsactivationids" title="GetTlsActivationIds"><span class="api-symbol api-symbol--function"></span>GetTlsActivationIds</a></li>
+    <li><a href="gettlscertificate" title="GetTlsCertificate"><span class="api-symbol api-symbol--function"></span>GetTlsCertificate</a></li>
+    <li><a href="gettlscertificateids" title="GetTlsCertificateIds"><span class="api-symbol api-symbol--function"></span>GetTlsCertificateIds</a></li>
+    <li><a href="gettlsconfiguration" title="GetTlsConfiguration"><span class="api-symbol api-symbol--function"></span>GetTlsConfiguration</a></li>
+    <li><a href="gettlsconfigurationids" title="GetTlsConfigurationIds"><span class="api-symbol api-symbol--function"></span>GetTlsConfigurationIds</a></li>
+    <li><a href="gettlsdomain" title="GetTlsDomain"><span class="api-symbol api-symbol--function"></span>GetTlsDomain</a></li>
+    <li><a href="gettlsplatformcertificate" title="GetTlsPlatformCertificate"><span class="api-symbol api-symbol--function"></span>GetTlsPlatformCertificate</a></li>
+    <li><a href="gettlsplatformcertificateids" title="GetTlsPlatformCertificateIds"><span class="api-symbol api-symbol--function"></span>GetTlsPlatformCertificateIds</a></li>
+    <li><a href="gettlsprivatekey" title="GetTlsPrivateKey"><span class="api-symbol api-symbol--function"></span>GetTlsPrivateKey</a></li>
+    <li><a href="gettlsprivatekeyids" title="GetTlsPrivateKeyIds"><span class="api-symbol api-symbol--function"></span>GetTlsPrivateKeyIds</a></li>
+    <li><a href="gettlssubscription" title="GetTlsSubscription"><span class="api-symbol api-symbol--function"></span>GetTlsSubscription</a></li>
+    <li><a href="gettlssubscriptionids" title="GetTlsSubscriptionIds"><span class="api-symbol api-symbol--function"></span>GetTlsSubscriptionIds</a></li>
+    <li><a href="getwafrules" title="GetWafRules"><span class="api-symbol api-symbol--function"></span>GetWafRules</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

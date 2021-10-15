@@ -13,36 +13,36 @@ Explore the resources and functions of the azure-native.resources module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="azurecliscript" title="AzureCliScript"><span class="symbol resource"></span>AzureCliScript</a></li>
-    <li><a href="azurepowershellscript" title="AzurePowerShellScript"><span class="symbol resource"></span>AzurePowerShellScript</a></li>
-    <li><a href="deployment" title="Deployment"><span class="symbol resource"></span>Deployment</a></li>
-    <li><a href="deploymentatmanagementgroupscope" title="DeploymentAtManagementGroupScope"><span class="symbol resource"></span>DeploymentAtManagementGroupScope</a></li>
-    <li><a href="deploymentatscope" title="DeploymentAtScope"><span class="symbol resource"></span>DeploymentAtScope</a></li>
-    <li><a href="deploymentatsubscriptionscope" title="DeploymentAtSubscriptionScope"><span class="symbol resource"></span>DeploymentAtSubscriptionScope</a></li>
-    <li><a href="deploymentattenantscope" title="DeploymentAtTenantScope"><span class="symbol resource"></span>DeploymentAtTenantScope</a></li>
-    <li><a href="deploymentscript" title="DeploymentScript"><span class="symbol resource"></span>DeploymentScript</a></li>
-    <li><a href="resource" title="Resource"><span class="symbol resource"></span>Resource</a></li>
-    <li><a href="resourcegroup" title="ResourceGroup"><span class="symbol resource"></span>ResourceGroup</a></li>
-    <li><a href="tagatscope" title="TagAtScope"><span class="symbol resource"></span>TagAtScope</a></li>
-    <li><a href="templatespec" title="TemplateSpec"><span class="symbol resource"></span>TemplateSpec</a></li>
-    <li><a href="templatespecversion" title="TemplateSpecVersion"><span class="symbol resource"></span>TemplateSpecVersion</a></li>
+    <li><a href="azurecliscript" title="AzureCliScript"><span class="api-symbol api-symbol--resource"></span>AzureCliScript</a></li>
+    <li><a href="azurepowershellscript" title="AzurePowerShellScript"><span class="api-symbol api-symbol--resource"></span>AzurePowerShellScript</a></li>
+    <li><a href="deployment" title="Deployment"><span class="api-symbol api-symbol--resource"></span>Deployment</a></li>
+    <li><a href="deploymentatmanagementgroupscope" title="DeploymentAtManagementGroupScope"><span class="api-symbol api-symbol--resource"></span>DeploymentAtManagementGroupScope</a></li>
+    <li><a href="deploymentatscope" title="DeploymentAtScope"><span class="api-symbol api-symbol--resource"></span>DeploymentAtScope</a></li>
+    <li><a href="deploymentatsubscriptionscope" title="DeploymentAtSubscriptionScope"><span class="api-symbol api-symbol--resource"></span>DeploymentAtSubscriptionScope</a></li>
+    <li><a href="deploymentattenantscope" title="DeploymentAtTenantScope"><span class="api-symbol api-symbol--resource"></span>DeploymentAtTenantScope</a></li>
+    <li><a href="deploymentscript" title="DeploymentScript"><span class="api-symbol api-symbol--resource"></span>DeploymentScript</a></li>
+    <li><a href="resource" title="Resource"><span class="api-symbol api-symbol--resource"></span>Resource</a></li>
+    <li><a href="resourcegroup" title="ResourceGroup"><span class="api-symbol api-symbol--resource"></span>ResourceGroup</a></li>
+    <li><a href="tagatscope" title="TagAtScope"><span class="api-symbol api-symbol--resource"></span>TagAtScope</a></li>
+    <li><a href="templatespec" title="TemplateSpec"><span class="api-symbol api-symbol--resource"></span>TemplateSpec</a></li>
+    <li><a href="templatespecversion" title="TemplateSpecVersion"><span class="api-symbol api-symbol--resource"></span>TemplateSpecVersion</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getazurecliscript" title="GetAzureCliScript"><span class="symbol function"></span>GetAzureCliScript</a></li>
-    <li><a href="getazurepowershellscript" title="GetAzurePowerShellScript"><span class="symbol function"></span>GetAzurePowerShellScript</a></li>
-    <li><a href="getdeployment" title="GetDeployment"><span class="symbol function"></span>GetDeployment</a></li>
-    <li><a href="getdeploymentatmanagementgroupscope" title="GetDeploymentAtManagementGroupScope"><span class="symbol function"></span>GetDeploymentAtManagementGroupScope</a></li>
-    <li><a href="getdeploymentatscope" title="GetDeploymentAtScope"><span class="symbol function"></span>GetDeploymentAtScope</a></li>
-    <li><a href="getdeploymentatsubscriptionscope" title="GetDeploymentAtSubscriptionScope"><span class="symbol function"></span>GetDeploymentAtSubscriptionScope</a></li>
-    <li><a href="getdeploymentattenantscope" title="GetDeploymentAtTenantScope"><span class="symbol function"></span>GetDeploymentAtTenantScope</a></li>
-    <li><a href="getdeploymentscript" title="GetDeploymentScript"><span class="symbol function"></span>GetDeploymentScript</a></li>
-    <li><a href="getresource" title="GetResource"><span class="symbol function"></span>GetResource</a></li>
-    <li><a href="getresourcegroup" title="GetResourceGroup"><span class="symbol function"></span>GetResourceGroup</a></li>
-    <li><a href="gettagatscope" title="GetTagAtScope"><span class="symbol function"></span>GetTagAtScope</a></li>
-    <li><a href="gettemplatespec" title="GetTemplateSpec"><span class="symbol function"></span>GetTemplateSpec</a></li>
-    <li><a href="gettemplatespecversion" title="GetTemplateSpecVersion"><span class="symbol function"></span>GetTemplateSpecVersion</a></li>
+    <li><a href="getazurecliscript" title="GetAzureCliScript"><span class="api-symbol api-symbol--function"></span>GetAzureCliScript</a></li>
+    <li><a href="getazurepowershellscript" title="GetAzurePowerShellScript"><span class="api-symbol api-symbol--function"></span>GetAzurePowerShellScript</a></li>
+    <li><a href="getdeployment" title="GetDeployment"><span class="api-symbol api-symbol--function"></span>GetDeployment</a></li>
+    <li><a href="getdeploymentatmanagementgroupscope" title="GetDeploymentAtManagementGroupScope"><span class="api-symbol api-symbol--function"></span>GetDeploymentAtManagementGroupScope</a></li>
+    <li><a href="getdeploymentatscope" title="GetDeploymentAtScope"><span class="api-symbol api-symbol--function"></span>GetDeploymentAtScope</a></li>
+    <li><a href="getdeploymentatsubscriptionscope" title="GetDeploymentAtSubscriptionScope"><span class="api-symbol api-symbol--function"></span>GetDeploymentAtSubscriptionScope</a></li>
+    <li><a href="getdeploymentattenantscope" title="GetDeploymentAtTenantScope"><span class="api-symbol api-symbol--function"></span>GetDeploymentAtTenantScope</a></li>
+    <li><a href="getdeploymentscript" title="GetDeploymentScript"><span class="api-symbol api-symbol--function"></span>GetDeploymentScript</a></li>
+    <li><a href="getresource" title="GetResource"><span class="api-symbol api-symbol--function"></span>GetResource</a></li>
+    <li><a href="getresourcegroup" title="GetResourceGroup"><span class="api-symbol api-symbol--function"></span>GetResourceGroup</a></li>
+    <li><a href="gettagatscope" title="GetTagAtScope"><span class="api-symbol api-symbol--function"></span>GetTagAtScope</a></li>
+    <li><a href="gettemplatespec" title="GetTemplateSpec"><span class="api-symbol api-symbol--function"></span>GetTemplateSpec</a></li>
+    <li><a href="gettemplatespecversion" title="GetTemplateSpecVersion"><span class="api-symbol api-symbol--function"></span>GetTemplateSpecVersion</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -52,6 +52,6 @@ Explore the resources and functions of the azure-native.resources module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.38.0</dd>
+	<dd>1.39.0</dd>
 </dl>
 

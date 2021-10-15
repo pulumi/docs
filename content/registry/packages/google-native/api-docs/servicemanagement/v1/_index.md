@@ -13,20 +13,20 @@ Explore the resources and functions of the google-native.servicemanagement/v1 mo
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="config" title="Config"><span class="symbol resource"></span>Config</a></li>
-    <li><a href="rollout" title="Rollout"><span class="symbol resource"></span>Rollout</a></li>
-    <li><a href="service" title="Service"><span class="symbol resource"></span>Service</a></li>
-    <li><a href="serviceconsumeriampolicy" title="ServiceConsumerIamPolicy"><span class="symbol resource"></span>ServiceConsumerIamPolicy</a></li>
-    <li><a href="serviceiampolicy" title="ServiceIamPolicy"><span class="symbol resource"></span>ServiceIamPolicy</a></li>
+    <li><a href="config" title="Config"><span class="api-symbol api-symbol--resource"></span>Config</a></li>
+    <li><a href="rollout" title="Rollout"><span class="api-symbol api-symbol--resource"></span>Rollout</a></li>
+    <li><a href="service" title="Service"><span class="api-symbol api-symbol--resource"></span>Service</a></li>
+    <li><a href="serviceconsumeriampolicy" title="ServiceConsumerIamPolicy"><span class="api-symbol api-symbol--resource"></span>ServiceConsumerIamPolicy</a></li>
+    <li><a href="serviceiampolicy" title="ServiceIamPolicy"><span class="api-symbol api-symbol--resource"></span>ServiceIamPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getconfig" title="GetConfig"><span class="symbol function"></span>GetConfig</a></li>
-    <li><a href="getrollout" title="GetRollout"><span class="symbol function"></span>GetRollout</a></li>
-    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
-    <li><a href="getserviceconsumeriampolicy" title="GetServiceConsumerIamPolicy"><span class="symbol function"></span>GetServiceConsumerIamPolicy</a></li>
-    <li><a href="getserviceiampolicy" title="GetServiceIamPolicy"><span class="symbol function"></span>GetServiceIamPolicy</a></li>
+    <li><a href="getconfig" title="GetConfig"><span class="api-symbol api-symbol--function"></span>GetConfig</a></li>
+    <li><a href="getrollout" title="GetRollout"><span class="api-symbol api-symbol--function"></span>GetRollout</a></li>
+    <li><a href="getservice" title="GetService"><span class="api-symbol api-symbol--function"></span>GetService</a></li>
+    <li><a href="getserviceconsumeriampolicy" title="GetServiceConsumerIamPolicy"><span class="api-symbol api-symbol--function"></span>GetServiceConsumerIamPolicy</a></li>
+    <li><a href="getserviceiampolicy" title="GetServiceIamPolicy"><span class="api-symbol api-symbol--function"></span>GetServiceIamPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

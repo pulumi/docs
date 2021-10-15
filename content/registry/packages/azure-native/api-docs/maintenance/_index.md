@@ -13,16 +13,16 @@ Explore the resources and functions of the azure-native.maintenance module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="configurationassignment" title="ConfigurationAssignment"><span class="symbol resource"></span>ConfigurationAssignment</a></li>
-    <li><a href="configurationassignmentparent" title="ConfigurationAssignmentParent"><span class="symbol resource"></span>ConfigurationAssignmentParent</a></li>
-    <li><a href="maintenanceconfiguration" title="MaintenanceConfiguration"><span class="symbol resource"></span>MaintenanceConfiguration</a></li>
+    <li><a href="configurationassignment" title="ConfigurationAssignment"><span class="api-symbol api-symbol--resource"></span>ConfigurationAssignment</a></li>
+    <li><a href="configurationassignmentparent" title="ConfigurationAssignmentParent"><span class="api-symbol api-symbol--resource"></span>ConfigurationAssignmentParent</a></li>
+    <li><a href="maintenanceconfiguration" title="MaintenanceConfiguration"><span class="api-symbol api-symbol--resource"></span>MaintenanceConfiguration</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getconfigurationassignment" title="GetConfigurationAssignment"><span class="symbol function"></span>GetConfigurationAssignment</a></li>
-    <li><a href="getconfigurationassignmentparent" title="GetConfigurationAssignmentParent"><span class="symbol function"></span>GetConfigurationAssignmentParent</a></li>
-    <li><a href="getmaintenanceconfiguration" title="GetMaintenanceConfiguration"><span class="symbol function"></span>GetMaintenanceConfiguration</a></li>
+    <li><a href="getconfigurationassignment" title="GetConfigurationAssignment"><span class="api-symbol api-symbol--function"></span>GetConfigurationAssignment</a></li>
+    <li><a href="getconfigurationassignmentparent" title="GetConfigurationAssignmentParent"><span class="api-symbol api-symbol--function"></span>GetConfigurationAssignmentParent</a></li>
+    <li><a href="getmaintenanceconfiguration" title="GetMaintenanceConfiguration"><span class="api-symbol api-symbol--function"></span>GetMaintenanceConfiguration</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -32,6 +32,6 @@ Explore the resources and functions of the azure-native.maintenance module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.38.0</dd>
+	<dd>1.39.0</dd>
 </dl>
 

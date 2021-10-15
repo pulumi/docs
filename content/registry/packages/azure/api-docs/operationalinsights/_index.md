@@ -13,13 +13,13 @@ Explore the resources and functions of the azure.operationalinsights module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="analyticssolution" title="AnalyticsSolution"><span class="symbol resource"></span>AnalyticsSolution</a></li>
-    <li><a href="analyticsworkspace" title="AnalyticsWorkspace"><span class="symbol resource"></span>AnalyticsWorkspace</a></li>
+    <li><a href="analyticssolution" title="AnalyticsSolution"><span class="api-symbol api-symbol--resource"></span>AnalyticsSolution</a></li>
+    <li><a href="analyticsworkspace" title="AnalyticsWorkspace"><span class="api-symbol api-symbol--resource"></span>AnalyticsWorkspace</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getanalyticsworkspace" title="GetAnalyticsWorkspace"><span class="symbol function"></span>GetAnalyticsWorkspace</a></li>
+    <li><a href="getanalyticsworkspace" title="GetAnalyticsWorkspace"><span class="api-symbol api-symbol--function"></span>GetAnalyticsWorkspace</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -31,6 +31,6 @@ Explore the resources and functions of the azure.operationalinsights module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.22.0</dd>
+	<dd>4.23.0</dd>
 </dl>
 

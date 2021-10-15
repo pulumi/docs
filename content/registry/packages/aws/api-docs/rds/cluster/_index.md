@@ -560,8 +560,10 @@ const example = new aws.rds.Cluster("example", {
             <span class="nx">copy_tags_to_snapshot</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">db_cluster_parameter_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">db_instance_parameter_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">db_subnet_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+            <span class="nx">enable_global_write_forwarding</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">enable_http_endpoint</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">enabled_cloudwatch_logs_exports</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
             <span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[Union[str, EngineType]]</span> = None<span class="p">,</span>
@@ -815,6 +817,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}A cluster parameter group to associate with the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dbinstanceparametergroupname_csharp">
+<a href="#dbinstanceparametergroupname_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Instance<wbr>Parameter<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Instance parameter group to associate with all instances of the DB cluster. The `db_instance_parameter_group_name` parameter is only valid in combination with the `allow_major_version_upgrade` parameter.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="dbsubnetgroupname_csharp">
 <a href="#dbsubnetgroupname_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Subnet<wbr>Group<wbr>Name</a>
 </span>
@@ -831,6 +842,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the DB instance should have deletion protection enabled. The database can't be deleted when this value is set to `true`. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enableglobalwriteforwarding_csharp">
+<a href="#enableglobalwriteforwarding_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Global<wbr>Write<wbr>Forwarding</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether cluster should forward writes to an associated global cluster. Applied to secondary clusters to enable them to forward writes to an `aws.rds.GlobalCluster`'s primary cluster. See the [Aurora Userguide documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database-write-forwarding.html) for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablehttpendpoint_csharp">
@@ -1160,6 +1180,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}A cluster parameter group to associate with the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dbinstanceparametergroupname_go">
+<a href="#dbinstanceparametergroupname_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Instance<wbr>Parameter<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Instance parameter group to associate with all instances of the DB cluster. The `db_instance_parameter_group_name` parameter is only valid in combination with the `allow_major_version_upgrade` parameter.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="dbsubnetgroupname_go">
 <a href="#dbsubnetgroupname_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Subnet<wbr>Group<wbr>Name</a>
 </span>
@@ -1176,6 +1205,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the DB instance should have deletion protection enabled. The database can't be deleted when this value is set to `true`. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enableglobalwriteforwarding_go">
+<a href="#enableglobalwriteforwarding_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Global<wbr>Write<wbr>Forwarding</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether cluster should forward writes to an associated global cluster. Applied to secondary clusters to enable them to forward writes to an `aws.rds.GlobalCluster`'s primary cluster. See the [Aurora Userguide documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database-write-forwarding.html) for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablehttpendpoint_go">
@@ -1505,6 +1543,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}A cluster parameter group to associate with the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dbinstanceparametergroupname_nodejs">
+<a href="#dbinstanceparametergroupname_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Instance<wbr>Parameter<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Instance parameter group to associate with all instances of the DB cluster. The `db_instance_parameter_group_name` parameter is only valid in combination with the `allow_major_version_upgrade` parameter.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="dbsubnetgroupname_nodejs">
 <a href="#dbsubnetgroupname_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Subnet<wbr>Group<wbr>Name</a>
 </span>
@@ -1521,6 +1568,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If the DB instance should have deletion protection enabled. The database can't be deleted when this value is set to `true`. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enableglobalwriteforwarding_nodejs">
+<a href="#enableglobalwriteforwarding_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Global<wbr>Write<wbr>Forwarding</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether cluster should forward writes to an associated global cluster. Applied to secondary clusters to enable them to forward writes to an `aws.rds.GlobalCluster`'s primary cluster. See the [Aurora Userguide documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database-write-forwarding.html) for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablehttpendpoint_nodejs">
@@ -1850,6 +1906,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}A cluster parameter group to associate with the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="db_instance_parameter_group_name_python">
+<a href="#db_instance_parameter_group_name_python" style="color: inherit; text-decoration: inherit;">db_<wbr>instance_<wbr>parameter_<wbr>group_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Instance parameter group to associate with all instances of the DB cluster. The `db_instance_parameter_group_name` parameter is only valid in combination with the `allow_major_version_upgrade` parameter.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="db_subnet_group_name_python">
 <a href="#db_subnet_group_name_python" style="color: inherit; text-decoration: inherit;">db_<wbr>subnet_<wbr>group_<wbr>name</a>
 </span>
@@ -1866,6 +1931,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the DB instance should have deletion protection enabled. The database can't be deleted when this value is set to `true`. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enable_global_write_forwarding_python">
+<a href="#enable_global_write_forwarding_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>global_<wbr>write_<wbr>forwarding</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether cluster should forward writes to an associated global cluster. Applied to secondary clusters to enable them to forward writes to an `aws.rds.GlobalCluster`'s primary cluster. See the [Aurora Userguide documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database-write-forwarding.html) for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_http_endpoint_python">
@@ -2433,8 +2507,10 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
         <span class="nx">copy_tags_to_snapshot</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">db_cluster_parameter_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">db_instance_parameter_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">db_subnet_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">enable_global_write_forwarding</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">enable_http_endpoint</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">enabled_cloudwatch_logs_exports</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -2694,6 +2770,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A cluster parameter group to associate with the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_dbinstanceparametergroupname_csharp">
+<a href="#state_dbinstanceparametergroupname_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Instance<wbr>Parameter<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Instance parameter group to associate with all instances of the DB cluster. The `db_instance_parameter_group_name` parameter is only valid in combination with the `allow_major_version_upgrade` parameter.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_dbsubnetgroupname_csharp">
 <a href="#state_dbsubnetgroupname_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Subnet<wbr>Group<wbr>Name</a>
 </span>
@@ -2710,6 +2795,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the DB instance should have deletion protection enabled. The database can't be deleted when this value is set to `true`. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_enableglobalwriteforwarding_csharp">
+<a href="#state_enableglobalwriteforwarding_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Global<wbr>Write<wbr>Forwarding</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether cluster should forward writes to an associated global cluster. Applied to secondary clusters to enable them to forward writes to an `aws.rds.GlobalCluster`'s primary cluster. See the [Aurora Userguide documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database-write-forwarding.html) for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablehttpendpoint_csharp">
@@ -3103,6 +3197,15 @@ load-balanced across replicas
     <dd>{{% md %}}A cluster parameter group to associate with the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_dbinstanceparametergroupname_go">
+<a href="#state_dbinstanceparametergroupname_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Instance<wbr>Parameter<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Instance parameter group to associate with all instances of the DB cluster. The `db_instance_parameter_group_name` parameter is only valid in combination with the `allow_major_version_upgrade` parameter.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_dbsubnetgroupname_go">
 <a href="#state_dbsubnetgroupname_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Subnet<wbr>Group<wbr>Name</a>
 </span>
@@ -3119,6 +3222,15 @@ load-balanced across replicas
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the DB instance should have deletion protection enabled. The database can't be deleted when this value is set to `true`. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_enableglobalwriteforwarding_go">
+<a href="#state_enableglobalwriteforwarding_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Global<wbr>Write<wbr>Forwarding</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether cluster should forward writes to an associated global cluster. Applied to secondary clusters to enable them to forward writes to an `aws.rds.GlobalCluster`'s primary cluster. See the [Aurora Userguide documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database-write-forwarding.html) for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablehttpendpoint_go">
@@ -3512,6 +3624,15 @@ load-balanced across replicas
     <dd>{{% md %}}A cluster parameter group to associate with the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_dbinstanceparametergroupname_nodejs">
+<a href="#state_dbinstanceparametergroupname_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Instance<wbr>Parameter<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Instance parameter group to associate with all instances of the DB cluster. The `db_instance_parameter_group_name` parameter is only valid in combination with the `allow_major_version_upgrade` parameter.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_dbsubnetgroupname_nodejs">
 <a href="#state_dbsubnetgroupname_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Subnet<wbr>Group<wbr>Name</a>
 </span>
@@ -3528,6 +3649,15 @@ load-balanced across replicas
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If the DB instance should have deletion protection enabled. The database can't be deleted when this value is set to `true`. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_enableglobalwriteforwarding_nodejs">
+<a href="#state_enableglobalwriteforwarding_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Global<wbr>Write<wbr>Forwarding</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether cluster should forward writes to an associated global cluster. Applied to secondary clusters to enable them to forward writes to an `aws.rds.GlobalCluster`'s primary cluster. See the [Aurora Userguide documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database-write-forwarding.html) for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablehttpendpoint_nodejs">
@@ -3921,6 +4051,15 @@ load-balanced across replicas
     <dd>{{% md %}}A cluster parameter group to associate with the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_db_instance_parameter_group_name_python">
+<a href="#state_db_instance_parameter_group_name_python" style="color: inherit; text-decoration: inherit;">db_<wbr>instance_<wbr>parameter_<wbr>group_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Instance parameter group to associate with all instances of the DB cluster. The `db_instance_parameter_group_name` parameter is only valid in combination with the `allow_major_version_upgrade` parameter.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_db_subnet_group_name_python">
 <a href="#state_db_subnet_group_name_python" style="color: inherit; text-decoration: inherit;">db_<wbr>subnet_<wbr>group_<wbr>name</a>
 </span>
@@ -3937,6 +4076,15 @@ load-balanced across replicas
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the DB instance should have deletion protection enabled. The database can't be deleted when this value is set to `true`. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_enable_global_write_forwarding_python">
+<a href="#state_enable_global_write_forwarding_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>global_<wbr>write_<wbr>forwarding</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether cluster should forward writes to an associated global cluster. Applied to secondary clusters to enable them to forward writes to an `aws.rds.GlobalCluster`'s primary cluster. See the [Aurora Userguide documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database-write-forwarding.html) for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_http_endpoint_python">

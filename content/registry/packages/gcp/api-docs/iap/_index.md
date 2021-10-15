@@ -13,37 +13,37 @@ Explore the resources and functions of the gcp.iap module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="appengineserviceiambinding" title="AppEngineServiceIamBinding"><span class="symbol resource"></span>AppEngineServiceIamBinding</a></li>
-    <li><a href="appengineserviceiammember" title="AppEngineServiceIamMember"><span class="symbol resource"></span>AppEngineServiceIamMember</a></li>
-    <li><a href="appengineserviceiampolicy" title="AppEngineServiceIamPolicy"><span class="symbol resource"></span>AppEngineServiceIamPolicy</a></li>
-    <li><a href="appengineversioniambinding" title="AppEngineVersionIamBinding"><span class="symbol resource"></span>AppEngineVersionIamBinding</a></li>
-    <li><a href="appengineversioniammember" title="AppEngineVersionIamMember"><span class="symbol resource"></span>AppEngineVersionIamMember</a></li>
-    <li><a href="appengineversioniampolicy" title="AppEngineVersionIamPolicy"><span class="symbol resource"></span>AppEngineVersionIamPolicy</a></li>
-    <li><a href="brand" title="Brand"><span class="symbol resource"></span>Brand</a></li>
-    <li><a href="client" title="Client"><span class="symbol resource"></span>Client</a></li>
-    <li><a href="tunneliambinding" title="TunnelIamBinding"><span class="symbol resource"></span>TunnelIamBinding</a></li>
-    <li><a href="tunneliammember" title="TunnelIamMember"><span class="symbol resource"></span>TunnelIamMember</a></li>
-    <li><a href="tunneliampolicy" title="TunnelIamPolicy"><span class="symbol resource"></span>TunnelIamPolicy</a></li>
-    <li><a href="tunnelinstanceiambinding" title="TunnelInstanceIAMBinding"><span class="symbol resource"></span>TunnelInstanceIAMBinding</a></li>
-    <li><a href="tunnelinstanceiammember" title="TunnelInstanceIAMMember"><span class="symbol resource"></span>TunnelInstanceIAMMember</a></li>
-    <li><a href="tunnelinstanceiampolicy" title="TunnelInstanceIAMPolicy"><span class="symbol resource"></span>TunnelInstanceIAMPolicy</a></li>
-    <li><a href="webbackendserviceiambinding" title="WebBackendServiceIamBinding"><span class="symbol resource"></span>WebBackendServiceIamBinding</a></li>
-    <li><a href="webbackendserviceiammember" title="WebBackendServiceIamMember"><span class="symbol resource"></span>WebBackendServiceIamMember</a></li>
-    <li><a href="webbackendserviceiampolicy" title="WebBackendServiceIamPolicy"><span class="symbol resource"></span>WebBackendServiceIamPolicy</a></li>
-    <li><a href="webiambinding" title="WebIamBinding"><span class="symbol resource"></span>WebIamBinding</a></li>
-    <li><a href="webiammember" title="WebIamMember"><span class="symbol resource"></span>WebIamMember</a></li>
-    <li><a href="webiampolicy" title="WebIamPolicy"><span class="symbol resource"></span>WebIamPolicy</a></li>
-    <li><a href="webtypeappengingiambinding" title="WebTypeAppEngingIamBinding"><span class="symbol resource"></span>WebTypeAppEngingIamBinding</a></li>
-    <li><a href="webtypeappengingiammember" title="WebTypeAppEngingIamMember"><span class="symbol resource"></span>WebTypeAppEngingIamMember</a></li>
-    <li><a href="webtypeappengingiampolicy" title="WebTypeAppEngingIamPolicy"><span class="symbol resource"></span>WebTypeAppEngingIamPolicy</a></li>
-    <li><a href="webtypecomputeiambinding" title="WebTypeComputeIamBinding"><span class="symbol resource"></span>WebTypeComputeIamBinding</a></li>
-    <li><a href="webtypecomputeiammember" title="WebTypeComputeIamMember"><span class="symbol resource"></span>WebTypeComputeIamMember</a></li>
-    <li><a href="webtypecomputeiampolicy" title="WebTypeComputeIamPolicy"><span class="symbol resource"></span>WebTypeComputeIamPolicy</a></li>
+    <li><a href="appengineserviceiambinding" title="AppEngineServiceIamBinding"><span class="api-symbol api-symbol--resource"></span>AppEngineServiceIamBinding</a></li>
+    <li><a href="appengineserviceiammember" title="AppEngineServiceIamMember"><span class="api-symbol api-symbol--resource"></span>AppEngineServiceIamMember</a></li>
+    <li><a href="appengineserviceiampolicy" title="AppEngineServiceIamPolicy"><span class="api-symbol api-symbol--resource"></span>AppEngineServiceIamPolicy</a></li>
+    <li><a href="appengineversioniambinding" title="AppEngineVersionIamBinding"><span class="api-symbol api-symbol--resource"></span>AppEngineVersionIamBinding</a></li>
+    <li><a href="appengineversioniammember" title="AppEngineVersionIamMember"><span class="api-symbol api-symbol--resource"></span>AppEngineVersionIamMember</a></li>
+    <li><a href="appengineversioniampolicy" title="AppEngineVersionIamPolicy"><span class="api-symbol api-symbol--resource"></span>AppEngineVersionIamPolicy</a></li>
+    <li><a href="brand" title="Brand"><span class="api-symbol api-symbol--resource"></span>Brand</a></li>
+    <li><a href="client" title="Client"><span class="api-symbol api-symbol--resource"></span>Client</a></li>
+    <li><a href="tunneliambinding" title="TunnelIamBinding"><span class="api-symbol api-symbol--resource"></span>TunnelIamBinding</a></li>
+    <li><a href="tunneliammember" title="TunnelIamMember"><span class="api-symbol api-symbol--resource"></span>TunnelIamMember</a></li>
+    <li><a href="tunneliampolicy" title="TunnelIamPolicy"><span class="api-symbol api-symbol--resource"></span>TunnelIamPolicy</a></li>
+    <li><a href="tunnelinstanceiambinding" title="TunnelInstanceIAMBinding"><span class="api-symbol api-symbol--resource"></span>TunnelInstanceIAMBinding</a></li>
+    <li><a href="tunnelinstanceiammember" title="TunnelInstanceIAMMember"><span class="api-symbol api-symbol--resource"></span>TunnelInstanceIAMMember</a></li>
+    <li><a href="tunnelinstanceiampolicy" title="TunnelInstanceIAMPolicy"><span class="api-symbol api-symbol--resource"></span>TunnelInstanceIAMPolicy</a></li>
+    <li><a href="webbackendserviceiambinding" title="WebBackendServiceIamBinding"><span class="api-symbol api-symbol--resource"></span>WebBackendServiceIamBinding</a></li>
+    <li><a href="webbackendserviceiammember" title="WebBackendServiceIamMember"><span class="api-symbol api-symbol--resource"></span>WebBackendServiceIamMember</a></li>
+    <li><a href="webbackendserviceiampolicy" title="WebBackendServiceIamPolicy"><span class="api-symbol api-symbol--resource"></span>WebBackendServiceIamPolicy</a></li>
+    <li><a href="webiambinding" title="WebIamBinding"><span class="api-symbol api-symbol--resource"></span>WebIamBinding</a></li>
+    <li><a href="webiammember" title="WebIamMember"><span class="api-symbol api-symbol--resource"></span>WebIamMember</a></li>
+    <li><a href="webiampolicy" title="WebIamPolicy"><span class="api-symbol api-symbol--resource"></span>WebIamPolicy</a></li>
+    <li><a href="webtypeappengingiambinding" title="WebTypeAppEngingIamBinding"><span class="api-symbol api-symbol--resource"></span>WebTypeAppEngingIamBinding</a></li>
+    <li><a href="webtypeappengingiammember" title="WebTypeAppEngingIamMember"><span class="api-symbol api-symbol--resource"></span>WebTypeAppEngingIamMember</a></li>
+    <li><a href="webtypeappengingiampolicy" title="WebTypeAppEngingIamPolicy"><span class="api-symbol api-symbol--resource"></span>WebTypeAppEngingIamPolicy</a></li>
+    <li><a href="webtypecomputeiambinding" title="WebTypeComputeIamBinding"><span class="api-symbol api-symbol--resource"></span>WebTypeComputeIamBinding</a></li>
+    <li><a href="webtypecomputeiammember" title="WebTypeComputeIamMember"><span class="api-symbol api-symbol--resource"></span>WebTypeComputeIamMember</a></li>
+    <li><a href="webtypecomputeiampolicy" title="WebTypeComputeIamPolicy"><span class="api-symbol api-symbol--resource"></span>WebTypeComputeIamPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getclient" title="GetClient"><span class="symbol function"></span>GetClient</a></li>
+    <li><a href="getclient" title="GetClient"><span class="api-symbol api-symbol--function"></span>GetClient</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

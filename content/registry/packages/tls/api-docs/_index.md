@@ -13,17 +13,17 @@ A Pulumi package to create TLS resources in Pulumi programs.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="certrequest" title="CertRequest"><span class="symbol resource"></span>CertRequest</a></li>
-    <li><a href="locallysignedcert" title="LocallySignedCert"><span class="symbol resource"></span>LocallySignedCert</a></li>
-    <li><a href="privatekey" title="PrivateKey"><span class="symbol resource"></span>PrivateKey</a></li>
-    <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
-    <li><a href="selfsignedcert" title="SelfSignedCert"><span class="symbol resource"></span>SelfSignedCert</a></li>
+    <li><a href="certrequest" title="CertRequest"><span class="api-symbol api-symbol--resource"></span>CertRequest</a></li>
+    <li><a href="locallysignedcert" title="LocallySignedCert"><span class="api-symbol api-symbol--resource"></span>LocallySignedCert</a></li>
+    <li><a href="privatekey" title="PrivateKey"><span class="api-symbol api-symbol--resource"></span>PrivateKey</a></li>
+    <li><a href="provider" title="Provider"><span class="api-symbol api-symbol--resource"></span>Provider</a></li>
+    <li><a href="selfsignedcert" title="SelfSignedCert"><span class="api-symbol api-symbol--resource"></span>SelfSignedCert</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getcertificate" title="GetCertificate"><span class="symbol function"></span>GetCertificate</a></li>
-    <li><a href="getpublickey" title="GetPublicKey"><span class="symbol function"></span>GetPublicKey</a></li>
+    <li><a href="getcertificate" title="GetCertificate"><span class="api-symbol api-symbol--function"></span>GetCertificate</a></li>
+    <li><a href="getpublickey" title="GetPublicKey"><span class="api-symbol api-symbol--function"></span>GetPublicKey</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

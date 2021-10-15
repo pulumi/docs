@@ -13,25 +13,25 @@ A Pulumi package for interacting with Docker in Pulumi programs
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="container" title="Container"><span class="symbol resource"></span>Container</a></li>
-    <li><a href="image" title="Image"><span class="symbol resource"></span>Image</a></li>
-    <li><a href="network" title="Network"><span class="symbol resource"></span>Network</a></li>
-    <li><a href="plugin" title="Plugin"><span class="symbol resource"></span>Plugin</a></li>
-    <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
-    <li><a href="registryimage" title="RegistryImage"><span class="symbol resource"></span>RegistryImage</a></li>
-    <li><a href="remoteimage" title="RemoteImage"><span class="symbol resource"></span>RemoteImage</a></li>
-    <li><a href="secret" title="Secret"><span class="symbol resource"></span>Secret</a></li>
-    <li><a href="service" title="Service"><span class="symbol resource"></span>Service</a></li>
-    <li><a href="serviceconfig" title="ServiceConfig"><span class="symbol resource"></span>ServiceConfig</a></li>
-    <li><a href="volume" title="Volume"><span class="symbol resource"></span>Volume</a></li>
+    <li><a href="container" title="Container"><span class="api-symbol api-symbol--resource"></span>Container</a></li>
+    <li><a href="image" title="Image"><span class="api-symbol api-symbol--resource"></span>Image</a></li>
+    <li><a href="network" title="Network"><span class="api-symbol api-symbol--resource"></span>Network</a></li>
+    <li><a href="plugin" title="Plugin"><span class="api-symbol api-symbol--resource"></span>Plugin</a></li>
+    <li><a href="provider" title="Provider"><span class="api-symbol api-symbol--resource"></span>Provider</a></li>
+    <li><a href="registryimage" title="RegistryImage"><span class="api-symbol api-symbol--resource"></span>RegistryImage</a></li>
+    <li><a href="remoteimage" title="RemoteImage"><span class="api-symbol api-symbol--resource"></span>RemoteImage</a></li>
+    <li><a href="secret" title="Secret"><span class="api-symbol api-symbol--resource"></span>Secret</a></li>
+    <li><a href="service" title="Service"><span class="api-symbol api-symbol--resource"></span>Service</a></li>
+    <li><a href="serviceconfig" title="ServiceConfig"><span class="api-symbol api-symbol--resource"></span>ServiceConfig</a></li>
+    <li><a href="volume" title="Volume"><span class="api-symbol api-symbol--resource"></span>Volume</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getnetwork" title="GetNetwork"><span class="symbol function"></span>GetNetwork</a></li>
-    <li><a href="getplugin" title="GetPlugin"><span class="symbol function"></span>GetPlugin</a></li>
-    <li><a href="getregistryimage" title="GetRegistryImage"><span class="symbol function"></span>GetRegistryImage</a></li>
-    <li><a href="getremoteimage" title="GetRemoteImage"><span class="symbol function"></span>GetRemoteImage</a></li>
+    <li><a href="getnetwork" title="GetNetwork"><span class="api-symbol api-symbol--function"></span>GetNetwork</a></li>
+    <li><a href="getplugin" title="GetPlugin"><span class="api-symbol api-symbol--function"></span>GetPlugin</a></li>
+    <li><a href="getregistryimage" title="GetRegistryImage"><span class="api-symbol api-symbol--function"></span>GetRegistryImage</a></li>
+    <li><a href="getremoteimage" title="GetRemoteImage"><span class="api-symbol api-symbol--function"></span>GetRemoteImage</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

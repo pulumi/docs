@@ -13,17 +13,17 @@ Explore the resources and functions of the gcp.container module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
-    <li><a href="nodepool" title="NodePool"><span class="symbol resource"></span>NodePool</a></li>
-    <li><a href="registry" title="Registry"><span class="symbol resource"></span>Registry</a></li>
+    <li><a href="cluster" title="Cluster"><span class="api-symbol api-symbol--resource"></span>Cluster</a></li>
+    <li><a href="nodepool" title="NodePool"><span class="api-symbol api-symbol--resource"></span>NodePool</a></li>
+    <li><a href="registry" title="Registry"><span class="api-symbol api-symbol--resource"></span>Registry</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getcluster" title="GetCluster"><span class="symbol function"></span>GetCluster</a></li>
-    <li><a href="getengineversions" title="GetEngineVersions"><span class="symbol function"></span>GetEngineVersions</a></li>
-    <li><a href="getregistryimage" title="GetRegistryImage"><span class="symbol function"></span>GetRegistryImage</a></li>
-    <li><a href="getregistryrepository" title="GetRegistryRepository"><span class="symbol function"></span>GetRegistryRepository</a></li>
+    <li><a href="getcluster" title="GetCluster"><span class="api-symbol api-symbol--function"></span>GetCluster</a></li>
+    <li><a href="getengineversions" title="GetEngineVersions"><span class="api-symbol api-symbol--function"></span>GetEngineVersions</a></li>
+    <li><a href="getregistryimage" title="GetRegistryImage"><span class="api-symbol api-symbol--function"></span>GetRegistryImage</a></li>
+    <li><a href="getregistryrepository" title="GetRegistryRepository"><span class="api-symbol api-symbol--function"></span>GetRegistryRepository</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

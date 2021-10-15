@@ -13,16 +13,16 @@ Explore the resources and functions of the azure-native.hybriddata module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="datamanager" title="DataManager"><span class="symbol resource"></span>DataManager</a></li>
-    <li><a href="datastore" title="DataStore"><span class="symbol resource"></span>DataStore</a></li>
-    <li><a href="jobdefinition" title="JobDefinition"><span class="symbol resource"></span>JobDefinition</a></li>
+    <li><a href="datamanager" title="DataManager"><span class="api-symbol api-symbol--resource"></span>DataManager</a></li>
+    <li><a href="datastore" title="DataStore"><span class="api-symbol api-symbol--resource"></span>DataStore</a></li>
+    <li><a href="jobdefinition" title="JobDefinition"><span class="api-symbol api-symbol--resource"></span>JobDefinition</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getdatamanager" title="GetDataManager"><span class="symbol function"></span>GetDataManager</a></li>
-    <li><a href="getdatastore" title="GetDataStore"><span class="symbol function"></span>GetDataStore</a></li>
-    <li><a href="getjobdefinition" title="GetJobDefinition"><span class="symbol function"></span>GetJobDefinition</a></li>
+    <li><a href="getdatamanager" title="GetDataManager"><span class="api-symbol api-symbol--function"></span>GetDataManager</a></li>
+    <li><a href="getdatastore" title="GetDataStore"><span class="api-symbol api-symbol--function"></span>GetDataStore</a></li>
+    <li><a href="getjobdefinition" title="GetJobDefinition"><span class="api-symbol api-symbol--function"></span>GetJobDefinition</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -32,6 +32,6 @@ Explore the resources and functions of the azure-native.hybriddata module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.38.0</dd>
+	<dd>1.39.0</dd>
 </dl>
 

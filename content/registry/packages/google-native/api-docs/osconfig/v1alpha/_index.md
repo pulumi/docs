@@ -13,12 +13,12 @@ Explore the resources and functions of the google-native.osconfig/v1alpha module
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="ospolicyassignment" title="OsPolicyAssignment"><span class="symbol resource"></span>OsPolicyAssignment</a></li>
+    <li><a href="ospolicyassignment" title="OsPolicyAssignment"><span class="api-symbol api-symbol--resource"></span>OsPolicyAssignment</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getospolicyassignment" title="GetOsPolicyAssignment"><span class="symbol function"></span>GetOsPolicyAssignment</a></li>
+    <li><a href="getospolicyassignment" title="GetOsPolicyAssignment"><span class="api-symbol api-symbol--function"></span>GetOsPolicyAssignment</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

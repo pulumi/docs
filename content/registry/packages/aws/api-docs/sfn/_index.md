@@ -13,14 +13,14 @@ Explore the resources and functions of the aws.sfn module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="activity" title="Activity"><span class="symbol resource"></span>Activity</a></li>
-    <li><a href="statemachine" title="StateMachine"><span class="symbol resource"></span>StateMachine</a></li>
+    <li><a href="activity" title="Activity"><span class="api-symbol api-symbol--resource"></span>Activity</a></li>
+    <li><a href="statemachine" title="StateMachine"><span class="api-symbol api-symbol--resource"></span>StateMachine</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getactivity" title="GetActivity"><span class="symbol function"></span>GetActivity</a></li>
-    <li><a href="getstatemachine" title="GetStateMachine"><span class="symbol function"></span>GetStateMachine</a></li>
+    <li><a href="getactivity" title="GetActivity"><span class="api-symbol api-symbol--function"></span>GetActivity</a></li>
+    <li><a href="getstatemachine" title="GetStateMachine"><span class="api-symbol api-symbol--function"></span>GetStateMachine</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -32,6 +32,6 @@ Explore the resources and functions of the aws.sfn module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.24.1</dd>
+	<dd>4.25.0</dd>
 </dl>
 

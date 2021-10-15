@@ -13,23 +13,23 @@ Explore the resources and functions of the azure-native.servicefabricmesh module
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="application" title="Application"><span class="symbol resource"></span>Application</a></li>
-    <li><a href="gateway" title="Gateway"><span class="symbol resource"></span>Gateway</a></li>
-    <li><a href="network" title="Network"><span class="symbol resource"></span>Network</a></li>
-    <li><a href="secret" title="Secret"><span class="symbol resource"></span>Secret</a></li>
-    <li><a href="secretvalue" title="SecretValue"><span class="symbol resource"></span>SecretValue</a></li>
-    <li><a href="volume" title="Volume"><span class="symbol resource"></span>Volume</a></li>
+    <li><a href="application" title="Application"><span class="api-symbol api-symbol--resource"></span>Application</a></li>
+    <li><a href="gateway" title="Gateway"><span class="api-symbol api-symbol--resource"></span>Gateway</a></li>
+    <li><a href="network" title="Network"><span class="api-symbol api-symbol--resource"></span>Network</a></li>
+    <li><a href="secret" title="Secret"><span class="api-symbol api-symbol--resource"></span>Secret</a></li>
+    <li><a href="secretvalue" title="SecretValue"><span class="api-symbol api-symbol--resource"></span>SecretValue</a></li>
+    <li><a href="volume" title="Volume"><span class="api-symbol api-symbol--resource"></span>Volume</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getapplication" title="GetApplication"><span class="symbol function"></span>GetApplication</a></li>
-    <li><a href="getgateway" title="GetGateway"><span class="symbol function"></span>GetGateway</a></li>
-    <li><a href="getnetwork" title="GetNetwork"><span class="symbol function"></span>GetNetwork</a></li>
-    <li><a href="getsecret" title="GetSecret"><span class="symbol function"></span>GetSecret</a></li>
-    <li><a href="getsecretvalue" title="GetSecretValue"><span class="symbol function"></span>GetSecretValue</a></li>
-    <li><a href="getvolume" title="GetVolume"><span class="symbol function"></span>GetVolume</a></li>
-    <li><a href="listsecretvalue" title="ListSecretValue"><span class="symbol function"></span>ListSecretValue</a></li>
+    <li><a href="getapplication" title="GetApplication"><span class="api-symbol api-symbol--function"></span>GetApplication</a></li>
+    <li><a href="getgateway" title="GetGateway"><span class="api-symbol api-symbol--function"></span>GetGateway</a></li>
+    <li><a href="getnetwork" title="GetNetwork"><span class="api-symbol api-symbol--function"></span>GetNetwork</a></li>
+    <li><a href="getsecret" title="GetSecret"><span class="api-symbol api-symbol--function"></span>GetSecret</a></li>
+    <li><a href="getsecretvalue" title="GetSecretValue"><span class="api-symbol api-symbol--function"></span>GetSecretValue</a></li>
+    <li><a href="getvolume" title="GetVolume"><span class="api-symbol api-symbol--function"></span>GetVolume</a></li>
+    <li><a href="listsecretvalue" title="ListSecretValue"><span class="api-symbol api-symbol--function"></span>ListSecretValue</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -39,6 +39,6 @@ Explore the resources and functions of the azure-native.servicefabricmesh module
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.38.0</dd>
+	<dd>1.39.0</dd>
 </dl>
 

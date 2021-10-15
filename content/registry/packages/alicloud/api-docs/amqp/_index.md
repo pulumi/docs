@@ -13,20 +13,20 @@ Explore the resources and functions of the alicloud.amqp module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="binding" title="Binding"><span class="symbol resource"></span>Binding</a></li>
-    <li><a href="exchange" title="Exchange"><span class="symbol resource"></span>Exchange</a></li>
-    <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
-    <li><a href="queue" title="Queue"><span class="symbol resource"></span>Queue</a></li>
-    <li><a href="virtualhost" title="VirtualHost"><span class="symbol resource"></span>VirtualHost</a></li>
+    <li><a href="binding" title="Binding"><span class="api-symbol api-symbol--resource"></span>Binding</a></li>
+    <li><a href="exchange" title="Exchange"><span class="api-symbol api-symbol--resource"></span>Exchange</a></li>
+    <li><a href="instance" title="Instance"><span class="api-symbol api-symbol--resource"></span>Instance</a></li>
+    <li><a href="queue" title="Queue"><span class="api-symbol api-symbol--resource"></span>Queue</a></li>
+    <li><a href="virtualhost" title="VirtualHost"><span class="api-symbol api-symbol--resource"></span>VirtualHost</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getbindings" title="GetBindings"><span class="symbol function"></span>GetBindings</a></li>
-    <li><a href="getexchanges" title="GetExchanges"><span class="symbol function"></span>GetExchanges</a></li>
-    <li><a href="getinstances" title="GetInstances"><span class="symbol function"></span>GetInstances</a></li>
-    <li><a href="getqueues" title="GetQueues"><span class="symbol function"></span>GetQueues</a></li>
-    <li><a href="getvirtualhosts" title="GetVirtualHosts"><span class="symbol function"></span>GetVirtualHosts</a></li>
+    <li><a href="getbindings" title="GetBindings"><span class="api-symbol api-symbol--function"></span>GetBindings</a></li>
+    <li><a href="getexchanges" title="GetExchanges"><span class="api-symbol api-symbol--function"></span>GetExchanges</a></li>
+    <li><a href="getinstances" title="GetInstances"><span class="api-symbol api-symbol--function"></span>GetInstances</a></li>
+    <li><a href="getqueues" title="GetQueues"><span class="api-symbol api-symbol--function"></span>GetQueues</a></li>
+    <li><a href="getvirtualhosts" title="GetVirtualHosts"><span class="api-symbol api-symbol--function"></span>GetVirtualHosts</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

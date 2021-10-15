@@ -13,15 +13,15 @@ Explore the resources and functions of the gcp.firebase module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="project" title="Project"><span class="symbol resource"></span>Project</a></li>
-    <li><a href="projectlocation" title="ProjectLocation"><span class="symbol resource"></span>ProjectLocation</a></li>
-    <li><a href="webapp" title="WebApp"><span class="symbol resource"></span>WebApp</a></li>
+    <li><a href="project" title="Project"><span class="api-symbol api-symbol--resource"></span>Project</a></li>
+    <li><a href="projectlocation" title="ProjectLocation"><span class="api-symbol api-symbol--resource"></span>ProjectLocation</a></li>
+    <li><a href="webapp" title="WebApp"><span class="api-symbol api-symbol--resource"></span>WebApp</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getwebapp" title="GetWebApp"><span class="symbol function"></span>GetWebApp</a></li>
-    <li><a href="getwebappconfig" title="GetWebAppConfig"><span class="symbol function"></span>GetWebAppConfig</a></li>
+    <li><a href="getwebapp" title="GetWebApp"><span class="api-symbol api-symbol--function"></span>GetWebApp</a></li>
+    <li><a href="getwebappconfig" title="GetWebAppConfig"><span class="api-symbol api-symbol--function"></span>GetWebAppConfig</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

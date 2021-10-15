@@ -13,12 +13,12 @@ Explore the resources and functions of the aws-native.wafv2 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="ipset" title="IPSet"><span class="symbol resource"></span>IPSet</a></li>
-    <li><a href="loggingconfiguration" title="LoggingConfiguration"><span class="symbol resource"></span>LoggingConfiguration</a></li>
-    <li><a href="regexpatternset" title="RegexPatternSet"><span class="symbol resource"></span>RegexPatternSet</a></li>
-    <li><a href="rulegroup" title="RuleGroup"><span class="symbol resource"></span>RuleGroup</a></li>
-    <li><a href="webacl" title="WebACL"><span class="symbol resource"></span>WebACL</a></li>
-    <li><a href="webaclassociation" title="WebACLAssociation"><span class="symbol resource"></span>WebACLAssociation</a></li>
+    <li><a href="ipset" title="IPSet"><span class="api-symbol api-symbol--resource"></span>IPSet</a></li>
+    <li><a href="loggingconfiguration" title="LoggingConfiguration"><span class="api-symbol api-symbol--resource"></span>LoggingConfiguration</a></li>
+    <li><a href="regexpatternset" title="RegexPatternSet"><span class="api-symbol api-symbol--resource"></span>RegexPatternSet</a></li>
+    <li><a href="rulegroup" title="RuleGroup"><span class="api-symbol api-symbol--resource"></span>RuleGroup</a></li>
+    <li><a href="webacl" title="WebACL"><span class="api-symbol api-symbol--resource"></span>WebACL</a></li>
+    <li><a href="webaclassociation" title="WebACLAssociation"><span class="api-symbol api-symbol--resource"></span>WebACLAssociation</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

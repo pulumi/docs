@@ -13,8 +13,8 @@ Explore the resources and functions of the aws-native.xray module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
-    <li><a href="samplingrule" title="SamplingRule"><span class="symbol resource"></span>SamplingRule</a></li>
+    <li><a href="group" title="Group"><span class="api-symbol api-symbol--resource"></span>Group</a></li>
+    <li><a href="samplingrule" title="SamplingRule"><span class="api-symbol api-symbol--resource"></span>SamplingRule</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

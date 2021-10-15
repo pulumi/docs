@@ -13,18 +13,18 @@ Explore the resources and functions of the google-native.containeranalysis/v1bet
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="note" title="Note"><span class="symbol resource"></span>Note</a></li>
-    <li><a href="noteiampolicy" title="NoteIamPolicy"><span class="symbol resource"></span>NoteIamPolicy</a></li>
-    <li><a href="occurrence" title="Occurrence"><span class="symbol resource"></span>Occurrence</a></li>
-    <li><a href="occurrenceiampolicy" title="OccurrenceIamPolicy"><span class="symbol resource"></span>OccurrenceIamPolicy</a></li>
+    <li><a href="note" title="Note"><span class="api-symbol api-symbol--resource"></span>Note</a></li>
+    <li><a href="noteiampolicy" title="NoteIamPolicy"><span class="api-symbol api-symbol--resource"></span>NoteIamPolicy</a></li>
+    <li><a href="occurrence" title="Occurrence"><span class="api-symbol api-symbol--resource"></span>Occurrence</a></li>
+    <li><a href="occurrenceiampolicy" title="OccurrenceIamPolicy"><span class="api-symbol api-symbol--resource"></span>OccurrenceIamPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getnote" title="GetNote"><span class="symbol function"></span>GetNote</a></li>
-    <li><a href="getnoteiampolicy" title="GetNoteIamPolicy"><span class="symbol function"></span>GetNoteIamPolicy</a></li>
-    <li><a href="getoccurrence" title="GetOccurrence"><span class="symbol function"></span>GetOccurrence</a></li>
-    <li><a href="getoccurrenceiampolicy" title="GetOccurrenceIamPolicy"><span class="symbol function"></span>GetOccurrenceIamPolicy</a></li>
+    <li><a href="getnote" title="GetNote"><span class="api-symbol api-symbol--function"></span>GetNote</a></li>
+    <li><a href="getnoteiampolicy" title="GetNoteIamPolicy"><span class="api-symbol api-symbol--function"></span>GetNoteIamPolicy</a></li>
+    <li><a href="getoccurrence" title="GetOccurrence"><span class="api-symbol api-symbol--function"></span>GetOccurrence</a></li>
+    <li><a href="getoccurrenceiampolicy" title="GetOccurrenceIamPolicy"><span class="api-symbol api-symbol--function"></span>GetOccurrenceIamPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

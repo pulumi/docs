@@ -74,13 +74,26 @@ const followedDatabase = new azure.kusto.Database("followedDatabase", {
     location: rg.location,
     clusterName: azurerm_kusto_cluster.cluster2.name,
 });
-const example = new azure.kusto.AttachedDatabaseConfiguration("example", {
+const exampleDatabase = new azure.kusto.Database("exampleDatabase", {
+    resourceGroupName: rg.name,
+    location: rg.location,
+    clusterName: azurerm_kusto_cluster.cluster2.name,
+});
+const exampleAttachedDatabaseConfiguration = new azure.kusto.AttachedDatabaseConfiguration("exampleAttachedDatabaseConfiguration", {
     resourceGroupName: rg.name,
     location: rg.location,
     clusterName: followerCluster.name,
     clusterResourceId: followedCluster.id,
-    databaseName: "*",
+    databaseName: exampleDatabase.name,
     defaultPrincipalModificationsKind: "None",
+    sharing: {
+        externalTablesToExcludes: ["ExternalTable2"],
+        externalTablesToIncludes: ["ExternalTable1"],
+        materializedViewsToExcludes: ["MaterializedViewTable2"],
+        materializedViewsToIncludes: ["MaterializedViewTable1"],
+        tablesToExcludes: ["Table2"],
+        tablesToIncludes: ["Table1"],
+    },
 });
 ```
 
@@ -114,7 +127,8 @@ const example = new azure.kusto.AttachedDatabaseConfiguration("example", {
                                   <span class="nx">default_principal_modification_kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                   <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                   <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                  <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+                                  <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                  <span class="nx">sharing</span><span class="p">:</span> <span class="nx">Optional[AttachedDatabaseConfigurationSharingArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">AttachedDatabaseConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AttachedDatabaseConfigurationArgs</a></span><span class="p">,</span>
@@ -305,6 +319,15 @@ The AttachedDatabaseConfiguration resource accepts the following [input]({{< rel
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Kusto Attached Database Configuration to create. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sharing_csharp">
+<a href="#sharing_csharp" style="color: inherit; text-decoration: inherit;">Sharing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#attacheddatabaseconfigurationsharing">Attached<wbr>Database<wbr>Configuration<wbr>Sharing<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `sharing` block as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -372,6 +395,15 @@ The AttachedDatabaseConfiguration resource accepts the following [input]({{< rel
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Kusto Attached Database Configuration to create. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sharing_go">
+<a href="#sharing_go" style="color: inherit; text-decoration: inherit;">Sharing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#attacheddatabaseconfigurationsharing">Attached<wbr>Database<wbr>Configuration<wbr>Sharing<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `sharing` block as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -439,6 +471,15 @@ The AttachedDatabaseConfiguration resource accepts the following [input]({{< rel
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Kusto Attached Database Configuration to create. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sharing_nodejs">
+<a href="#sharing_nodejs" style="color: inherit; text-decoration: inherit;">sharing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#attacheddatabaseconfigurationsharing">Attached<wbr>Database<wbr>Configuration<wbr>Sharing<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `sharing` block as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -506,6 +547,15 @@ The AttachedDatabaseConfiguration resource accepts the following [input]({{< rel
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Kusto Attached Database Configuration to create. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sharing_python">
+<a href="#sharing_python" style="color: inherit; text-decoration: inherit;">sharing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#attacheddatabaseconfigurationsharing">Attached<wbr>Database<wbr>Configuration<wbr>Sharing<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `sharing` block as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -623,7 +673,8 @@ Get an existing AttachedDatabaseConfiguration resource's state with the given na
         <span class="nx">default_principal_modification_kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AttachedDatabaseConfiguration</code></pre></div>
+        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">sharing</span><span class="p">:</span> <span class="nx">Optional[AttachedDatabaseConfigurationSharingArgs]</span> = None<span class="p">) -&gt;</span> AttachedDatabaseConfiguration</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -806,6 +857,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the resource group of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_sharing_csharp">
+<a href="#state_sharing_csharp" style="color: inherit; text-decoration: inherit;">Sharing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#attacheddatabaseconfigurationsharing">Attached<wbr>Database<wbr>Configuration<wbr>Sharing<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `sharing` block as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -882,6 +942,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the resource group of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_sharing_go">
+<a href="#state_sharing_go" style="color: inherit; text-decoration: inherit;">Sharing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#attacheddatabaseconfigurationsharing">Attached<wbr>Database<wbr>Configuration<wbr>Sharing<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `sharing` block as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -958,6 +1027,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the resource group of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_sharing_nodejs">
+<a href="#state_sharing_nodejs" style="color: inherit; text-decoration: inherit;">sharing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#attacheddatabaseconfigurationsharing">Attached<wbr>Database<wbr>Configuration<wbr>Sharing<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `sharing` block as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1034,6 +1112,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the resource group of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_sharing_python">
+<a href="#state_sharing_python" style="color: inherit; text-decoration: inherit;">sharing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#attacheddatabaseconfigurationsharing">Attached<wbr>Database<wbr>Configuration<wbr>Sharing<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `sharing` block as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1041,6 +1128,244 @@ The following state arguments are supported:
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="attacheddatabaseconfigurationsharing">Attached<wbr>Database<wbr>Configuration<wbr>Sharing</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="externaltablestoexcludes_csharp">
+<a href="#externaltablestoexcludes_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Tables<wbr>To<wbr>Excludes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of external tables exclude from the follower database.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="externaltablestoincludes_csharp">
+<a href="#externaltablestoincludes_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Tables<wbr>To<wbr>Includes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of external tables to include in the follower database.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="materializedviewstoexcludes_csharp">
+<a href="#materializedviewstoexcludes_csharp" style="color: inherit; text-decoration: inherit;">Materialized<wbr>Views<wbr>To<wbr>Excludes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of materialized views exclude from the follower database.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="materializedviewstoincludes_csharp">
+<a href="#materializedviewstoincludes_csharp" style="color: inherit; text-decoration: inherit;">Materialized<wbr>Views<wbr>To<wbr>Includes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of materialized views to include in the follower database.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tablestoexcludes_csharp">
+<a href="#tablestoexcludes_csharp" style="color: inherit; text-decoration: inherit;">Tables<wbr>To<wbr>Excludes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of tables to exclude from the follower database.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tablestoincludes_csharp">
+<a href="#tablestoincludes_csharp" style="color: inherit; text-decoration: inherit;">Tables<wbr>To<wbr>Includes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of tables to include in the follower database.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="externaltablestoexcludes_go">
+<a href="#externaltablestoexcludes_go" style="color: inherit; text-decoration: inherit;">External<wbr>Tables<wbr>To<wbr>Excludes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of external tables exclude from the follower database.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="externaltablestoincludes_go">
+<a href="#externaltablestoincludes_go" style="color: inherit; text-decoration: inherit;">External<wbr>Tables<wbr>To<wbr>Includes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of external tables to include in the follower database.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="materializedviewstoexcludes_go">
+<a href="#materializedviewstoexcludes_go" style="color: inherit; text-decoration: inherit;">Materialized<wbr>Views<wbr>To<wbr>Excludes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of materialized views exclude from the follower database.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="materializedviewstoincludes_go">
+<a href="#materializedviewstoincludes_go" style="color: inherit; text-decoration: inherit;">Materialized<wbr>Views<wbr>To<wbr>Includes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of materialized views to include in the follower database.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tablestoexcludes_go">
+<a href="#tablestoexcludes_go" style="color: inherit; text-decoration: inherit;">Tables<wbr>To<wbr>Excludes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of tables to exclude from the follower database.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tablestoincludes_go">
+<a href="#tablestoincludes_go" style="color: inherit; text-decoration: inherit;">Tables<wbr>To<wbr>Includes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of tables to include in the follower database.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="externaltablestoexcludes_nodejs">
+<a href="#externaltablestoexcludes_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Tables<wbr>To<wbr>Excludes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of external tables exclude from the follower database.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="externaltablestoincludes_nodejs">
+<a href="#externaltablestoincludes_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Tables<wbr>To<wbr>Includes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of external tables to include in the follower database.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="materializedviewstoexcludes_nodejs">
+<a href="#materializedviewstoexcludes_nodejs" style="color: inherit; text-decoration: inherit;">materialized<wbr>Views<wbr>To<wbr>Excludes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of materialized views exclude from the follower database.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="materializedviewstoincludes_nodejs">
+<a href="#materializedviewstoincludes_nodejs" style="color: inherit; text-decoration: inherit;">materialized<wbr>Views<wbr>To<wbr>Includes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of materialized views to include in the follower database.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tablestoexcludes_nodejs">
+<a href="#tablestoexcludes_nodejs" style="color: inherit; text-decoration: inherit;">tables<wbr>To<wbr>Excludes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of tables to exclude from the follower database.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tablestoincludes_nodejs">
+<a href="#tablestoincludes_nodejs" style="color: inherit; text-decoration: inherit;">tables<wbr>To<wbr>Includes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of tables to include in the follower database.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="external_tables_to_excludes_python">
+<a href="#external_tables_to_excludes_python" style="color: inherit; text-decoration: inherit;">external_<wbr>tables_<wbr>to_<wbr>excludes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of external tables exclude from the follower database.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="external_tables_to_includes_python">
+<a href="#external_tables_to_includes_python" style="color: inherit; text-decoration: inherit;">external_<wbr>tables_<wbr>to_<wbr>includes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of external tables to include in the follower database.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="materialized_views_to_excludes_python">
+<a href="#materialized_views_to_excludes_python" style="color: inherit; text-decoration: inherit;">materialized_<wbr>views_<wbr>to_<wbr>excludes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of materialized views exclude from the follower database.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="materialized_views_to_includes_python">
+<a href="#materialized_views_to_includes_python" style="color: inherit; text-decoration: inherit;">materialized_<wbr>views_<wbr>to_<wbr>includes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of materialized views to include in the follower database.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tables_to_excludes_python">
+<a href="#tables_to_excludes_python" style="color: inherit; text-decoration: inherit;">tables_<wbr>to_<wbr>excludes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of tables to exclude from the follower database.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tables_to_includes_python">
+<a href="#tables_to_includes_python" style="color: inherit; text-decoration: inherit;">tables_<wbr>to_<wbr>includes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of tables to include in the follower database.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 ## Import
 
 

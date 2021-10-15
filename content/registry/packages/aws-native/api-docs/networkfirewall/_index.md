@@ -13,10 +13,10 @@ Explore the resources and functions of the aws-native.networkfirewall module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="firewall" title="Firewall"><span class="symbol resource"></span>Firewall</a></li>
-    <li><a href="firewallpolicy" title="FirewallPolicy"><span class="symbol resource"></span>FirewallPolicy</a></li>
-    <li><a href="loggingconfiguration" title="LoggingConfiguration"><span class="symbol resource"></span>LoggingConfiguration</a></li>
-    <li><a href="rulegroup" title="RuleGroup"><span class="symbol resource"></span>RuleGroup</a></li>
+    <li><a href="firewall" title="Firewall"><span class="api-symbol api-symbol--resource"></span>Firewall</a></li>
+    <li><a href="firewallpolicy" title="FirewallPolicy"><span class="api-symbol api-symbol--resource"></span>FirewallPolicy</a></li>
+    <li><a href="loggingconfiguration" title="LoggingConfiguration"><span class="api-symbol api-symbol--resource"></span>LoggingConfiguration</a></li>
+    <li><a href="rulegroup" title="RuleGroup"><span class="api-symbol api-symbol--resource"></span>RuleGroup</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

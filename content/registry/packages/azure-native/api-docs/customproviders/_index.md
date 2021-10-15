@@ -13,14 +13,14 @@ Explore the resources and functions of the azure-native.customproviders module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="association" title="Association"><span class="symbol resource"></span>Association</a></li>
-    <li><a href="customresourceprovider" title="CustomResourceProvider"><span class="symbol resource"></span>CustomResourceProvider</a></li>
+    <li><a href="association" title="Association"><span class="api-symbol api-symbol--resource"></span>Association</a></li>
+    <li><a href="customresourceprovider" title="CustomResourceProvider"><span class="api-symbol api-symbol--resource"></span>CustomResourceProvider</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getassociation" title="GetAssociation"><span class="symbol function"></span>GetAssociation</a></li>
-    <li><a href="getcustomresourceprovider" title="GetCustomResourceProvider"><span class="symbol function"></span>GetCustomResourceProvider</a></li>
+    <li><a href="getassociation" title="GetAssociation"><span class="api-symbol api-symbol--function"></span>GetAssociation</a></li>
+    <li><a href="getcustomresourceprovider" title="GetCustomResourceProvider"><span class="api-symbol api-symbol--function"></span>GetCustomResourceProvider</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -30,6 +30,6 @@ Explore the resources and functions of the azure-native.customproviders module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.38.0</dd>
+	<dd>1.39.0</dd>
 </dl>
 

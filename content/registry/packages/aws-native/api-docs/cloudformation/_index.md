@@ -13,14 +13,14 @@ Explore the resources and functions of the aws-native.cloudformation module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="moduledefaultversion" title="ModuleDefaultVersion"><span class="symbol resource"></span>ModuleDefaultVersion</a></li>
-    <li><a href="moduleversion" title="ModuleVersion"><span class="symbol resource"></span>ModuleVersion</a></li>
-    <li><a href="publictypeversion" title="PublicTypeVersion"><span class="symbol resource"></span>PublicTypeVersion</a></li>
-    <li><a href="publisher" title="Publisher"><span class="symbol resource"></span>Publisher</a></li>
-    <li><a href="resourcedefaultversion" title="ResourceDefaultVersion"><span class="symbol resource"></span>ResourceDefaultVersion</a></li>
-    <li><a href="resourceversion" title="ResourceVersion"><span class="symbol resource"></span>ResourceVersion</a></li>
-    <li><a href="stackset" title="StackSet"><span class="symbol resource"></span>StackSet</a></li>
-    <li><a href="typeactivation" title="TypeActivation"><span class="symbol resource"></span>TypeActivation</a></li>
+    <li><a href="moduledefaultversion" title="ModuleDefaultVersion"><span class="api-symbol api-symbol--resource"></span>ModuleDefaultVersion</a></li>
+    <li><a href="moduleversion" title="ModuleVersion"><span class="api-symbol api-symbol--resource"></span>ModuleVersion</a></li>
+    <li><a href="publictypeversion" title="PublicTypeVersion"><span class="api-symbol api-symbol--resource"></span>PublicTypeVersion</a></li>
+    <li><a href="publisher" title="Publisher"><span class="api-symbol api-symbol--resource"></span>Publisher</a></li>
+    <li><a href="resourcedefaultversion" title="ResourceDefaultVersion"><span class="api-symbol api-symbol--resource"></span>ResourceDefaultVersion</a></li>
+    <li><a href="resourceversion" title="ResourceVersion"><span class="api-symbol api-symbol--resource"></span>ResourceVersion</a></li>
+    <li><a href="stackset" title="StackSet"><span class="api-symbol api-symbol--resource"></span>StackSet</a></li>
+    <li><a href="typeactivation" title="TypeActivation"><span class="api-symbol api-symbol--resource"></span>TypeActivation</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

@@ -462,8 +462,8 @@ The FunctionAppSlot resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#functionappslotauthsettings">Function<wbr>App<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auth_settings` block as defined below.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="clientaffinityenabled_csharp">
 <a href="#clientaffinityenabled_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Affinity<wbr>Enabled</a>
 </span>
@@ -471,7 +471,7 @@ The FunctionAppSlot resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Function App send session affinity cookies, which route client requests in the same session to the same instance?
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is no longer configurable in the service and has been deprecated. It will be removed in 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstrings_csharp">
 <a href="#connectionstrings_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Strings</a>
@@ -646,8 +646,8 @@ The FunctionAppSlot resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#functionappslotauthsettings">Function<wbr>App<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auth_settings` block as defined below.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="clientaffinityenabled_go">
 <a href="#clientaffinityenabled_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Affinity<wbr>Enabled</a>
 </span>
@@ -655,7 +655,7 @@ The FunctionAppSlot resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Function App send session affinity cookies, which route client requests in the same session to the same instance?
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is no longer configurable in the service and has been deprecated. It will be removed in 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstrings_go">
 <a href="#connectionstrings_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Strings</a>
@@ -830,8 +830,8 @@ The FunctionAppSlot resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#functionappslotauthsettings">Function<wbr>App<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auth_settings` block as defined below.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="clientaffinityenabled_nodejs">
 <a href="#clientaffinityenabled_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Affinity<wbr>Enabled</a>
 </span>
@@ -839,7 +839,7 @@ The FunctionAppSlot resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the Function App send session affinity cookies, which route client requests in the same session to the same instance?
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is no longer configurable in the service and has been deprecated. It will be removed in 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstrings_nodejs">
 <a href="#connectionstrings_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Strings</a>
@@ -1014,8 +1014,8 @@ The FunctionAppSlot resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#functionappslotauthsettings">Function<wbr>App<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auth_settings` block as defined below.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="client_affinity_enabled_python">
 <a href="#client_affinity_enabled_python" style="color: inherit; text-decoration: inherit;">client_<wbr>affinity_<wbr>enabled</a>
 </span>
@@ -1023,7 +1023,7 @@ The FunctionAppSlot resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Function App send session affinity cookies, which route client requests in the same session to the same instance?
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is no longer configurable in the service and has been deprecated. It will be removed in 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="connection_strings_python">
 <a href="#connection_strings_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>strings</a>
@@ -1547,8 +1547,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionappslotauthsettings">Function<wbr>App<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auth_settings` block as defined below.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_clientaffinityenabled_csharp">
 <a href="#state_clientaffinityenabled_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Affinity<wbr>Enabled</a>
 </span>
@@ -1556,7 +1556,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Function App send session affinity cookies, which route client requests in the same session to the same instance?
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is no longer configurable in the service and has been deprecated. It will be removed in 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionstrings_csharp">
 <a href="#state_connectionstrings_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Strings</a>
@@ -1776,8 +1776,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionappslotauthsettings">Function<wbr>App<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auth_settings` block as defined below.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_clientaffinityenabled_go">
 <a href="#state_clientaffinityenabled_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Affinity<wbr>Enabled</a>
 </span>
@@ -1785,7 +1785,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Function App send session affinity cookies, which route client requests in the same session to the same instance?
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is no longer configurable in the service and has been deprecated. It will be removed in 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionstrings_go">
 <a href="#state_connectionstrings_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Strings</a>
@@ -2005,8 +2005,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionappslotauthsettings">Function<wbr>App<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auth_settings` block as defined below.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_clientaffinityenabled_nodejs">
 <a href="#state_clientaffinityenabled_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Affinity<wbr>Enabled</a>
 </span>
@@ -2014,7 +2014,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the Function App send session affinity cookies, which route client requests in the same session to the same instance?
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is no longer configurable in the service and has been deprecated. It will be removed in 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionstrings_nodejs">
 <a href="#state_connectionstrings_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Strings</a>
@@ -2234,8 +2234,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionappslotauthsettings">Function<wbr>App<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auth_settings` block as defined below.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_client_affinity_enabled_python">
 <a href="#state_client_affinity_enabled_python" style="color: inherit; text-decoration: inherit;">client_<wbr>affinity_<wbr>enabled</a>
 </span>
@@ -2243,7 +2243,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Function App send session affinity cookies, which route client requests in the same session to the same instance?
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is no longer configurable in the service and has been deprecated. It will be removed in 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_connection_strings_python">
 <a href="#state_connection_strings_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>strings</a>

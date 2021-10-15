@@ -13,19 +13,19 @@ Explore the resources and functions of the aws.ecr module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="lifecyclepolicy" title="LifecyclePolicy"><span class="symbol resource"></span>LifecyclePolicy</a></li>
-    <li><a href="registrypolicy" title="RegistryPolicy"><span class="symbol resource"></span>RegistryPolicy</a></li>
-    <li><a href="replicationconfiguration" title="ReplicationConfiguration"><span class="symbol resource"></span>ReplicationConfiguration</a></li>
-    <li><a href="repository" title="Repository"><span class="symbol resource"></span>Repository</a></li>
-    <li><a href="repositorypolicy" title="RepositoryPolicy"><span class="symbol resource"></span>RepositoryPolicy</a></li>
+    <li><a href="lifecyclepolicy" title="LifecyclePolicy"><span class="api-symbol api-symbol--resource"></span>LifecyclePolicy</a></li>
+    <li><a href="registrypolicy" title="RegistryPolicy"><span class="api-symbol api-symbol--resource"></span>RegistryPolicy</a></li>
+    <li><a href="replicationconfiguration" title="ReplicationConfiguration"><span class="api-symbol api-symbol--resource"></span>ReplicationConfiguration</a></li>
+    <li><a href="repository" title="Repository"><span class="api-symbol api-symbol--resource"></span>Repository</a></li>
+    <li><a href="repositorypolicy" title="RepositoryPolicy"><span class="api-symbol api-symbol--resource"></span>RepositoryPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getauthorizationtoken" title="GetAuthorizationToken"><span class="symbol function"></span>GetAuthorizationToken</a></li>
-    <li><a href="getcredentials" title="GetCredentials"><span class="symbol function"></span>GetCredentials</a></li>
-    <li><a href="getimage" title="GetImage"><span class="symbol function"></span>GetImage</a></li>
-    <li><a href="getrepository" title="GetRepository"><span class="symbol function"></span>GetRepository</a></li>
+    <li><a href="getauthorizationtoken" title="GetAuthorizationToken"><span class="api-symbol api-symbol--function"></span>GetAuthorizationToken</a></li>
+    <li><a href="getcredentials" title="GetCredentials"><span class="api-symbol api-symbol--function"></span>GetCredentials</a></li>
+    <li><a href="getimage" title="GetImage"><span class="api-symbol api-symbol--function"></span>GetImage</a></li>
+    <li><a href="getrepository" title="GetRepository"><span class="api-symbol api-symbol--function"></span>GetRepository</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -37,6 +37,6 @@ Explore the resources and functions of the aws.ecr module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.24.1</dd>
+	<dd>4.25.0</dd>
 </dl>
 

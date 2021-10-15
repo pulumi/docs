@@ -13,13 +13,13 @@ Explore the resources and functions of the azure-native.machinelearningcompute m
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="operationalizationcluster" title="OperationalizationCluster"><span class="symbol resource"></span>OperationalizationCluster</a></li>
+    <li><a href="operationalizationcluster" title="OperationalizationCluster"><span class="api-symbol api-symbol--resource"></span>OperationalizationCluster</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getoperationalizationcluster" title="GetOperationalizationCluster"><span class="symbol function"></span>GetOperationalizationCluster</a></li>
-    <li><a href="listoperationalizationclusterkeys" title="ListOperationalizationClusterKeys"><span class="symbol function"></span>ListOperationalizationClusterKeys</a></li>
+    <li><a href="getoperationalizationcluster" title="GetOperationalizationCluster"><span class="api-symbol api-symbol--function"></span>GetOperationalizationCluster</a></li>
+    <li><a href="listoperationalizationclusterkeys" title="ListOperationalizationClusterKeys"><span class="api-symbol api-symbol--function"></span>ListOperationalizationClusterKeys</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -29,6 +29,6 @@ Explore the resources and functions of the azure-native.machinelearningcompute m
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.38.0</dd>
+	<dd>1.39.0</dd>
 </dl>
 

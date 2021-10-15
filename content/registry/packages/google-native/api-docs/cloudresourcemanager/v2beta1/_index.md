@@ -13,14 +13,14 @@ Explore the resources and functions of the google-native.cloudresourcemanager/v2
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="folder" title="Folder"><span class="symbol resource"></span>Folder</a></li>
-    <li><a href="folderiampolicy" title="FolderIamPolicy"><span class="symbol resource"></span>FolderIamPolicy</a></li>
+    <li><a href="folder" title="Folder"><span class="api-symbol api-symbol--resource"></span>Folder</a></li>
+    <li><a href="folderiampolicy" title="FolderIamPolicy"><span class="api-symbol api-symbol--resource"></span>FolderIamPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getfolder" title="GetFolder"><span class="symbol function"></span>GetFolder</a></li>
-    <li><a href="getfolderiampolicy" title="GetFolderIamPolicy"><span class="symbol function"></span>GetFolderIamPolicy</a></li>
+    <li><a href="getfolder" title="GetFolder"><span class="api-symbol api-symbol--function"></span>GetFolder</a></li>
+    <li><a href="getfolderiampolicy" title="GetFolderIamPolicy"><span class="api-symbol api-symbol--function"></span>GetFolderIamPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

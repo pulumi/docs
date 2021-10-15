@@ -13,17 +13,17 @@ Explore the resources and functions of the azure-native.elastic module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="monitor" title="Monitor"><span class="symbol resource"></span>Monitor</a></li>
-    <li><a href="tagrule" title="TagRule"><span class="symbol resource"></span>TagRule</a></li>
+    <li><a href="monitor" title="Monitor"><span class="api-symbol api-symbol--resource"></span>Monitor</a></li>
+    <li><a href="tagrule" title="TagRule"><span class="api-symbol api-symbol--resource"></span>TagRule</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getmonitor" title="GetMonitor"><span class="symbol function"></span>GetMonitor</a></li>
-    <li><a href="gettagrule" title="GetTagRule"><span class="symbol function"></span>GetTagRule</a></li>
-    <li><a href="listdeploymentinfo" title="ListDeploymentInfo"><span class="symbol function"></span>ListDeploymentInfo</a></li>
-    <li><a href="listmonitoredresource" title="ListMonitoredResource"><span class="symbol function"></span>ListMonitoredResource</a></li>
-    <li><a href="listvmhost" title="ListVMHost"><span class="symbol function"></span>ListVMHost</a></li>
+    <li><a href="getmonitor" title="GetMonitor"><span class="api-symbol api-symbol--function"></span>GetMonitor</a></li>
+    <li><a href="gettagrule" title="GetTagRule"><span class="api-symbol api-symbol--function"></span>GetTagRule</a></li>
+    <li><a href="listdeploymentinfo" title="ListDeploymentInfo"><span class="api-symbol api-symbol--function"></span>ListDeploymentInfo</a></li>
+    <li><a href="listmonitoredresource" title="ListMonitoredResource"><span class="api-symbol api-symbol--function"></span>ListMonitoredResource</a></li>
+    <li><a href="listvmhost" title="ListVMHost"><span class="api-symbol api-symbol--function"></span>ListVMHost</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -33,6 +33,6 @@ Explore the resources and functions of the azure-native.elastic module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.38.0</dd>
+	<dd>1.39.0</dd>
 </dl>
 

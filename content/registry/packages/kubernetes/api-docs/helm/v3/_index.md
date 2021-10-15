@@ -13,8 +13,8 @@ Explore the resources and functions of the kubernetes.helm/v3 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="chart" title="Chart"><span class="symbol resource"></span>Chart</a></li>
-    <li><a href="release" title="Release"><span class="symbol resource"></span>Release</a></li>
+    <li><a href="chart" title="Chart"><span class="api-symbol api-symbol--resource"></span>Chart</a></li>
+    <li><a href="release" title="Release"><span class="api-symbol api-symbol--resource"></span>Release</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

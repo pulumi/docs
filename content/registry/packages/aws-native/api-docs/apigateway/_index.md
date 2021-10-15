@@ -13,20 +13,20 @@ Explore the resources and functions of the aws-native.apigateway module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="account" title="Account"><span class="symbol resource"></span>Account</a></li>
-    <li><a href="apikey" title="ApiKey"><span class="symbol resource"></span>ApiKey</a></li>
-    <li><a href="authorizer" title="Authorizer"><span class="symbol resource"></span>Authorizer</a></li>
-    <li><a href="basepathmapping" title="BasePathMapping"><span class="symbol resource"></span>BasePathMapping</a></li>
-    <li><a href="clientcertificate" title="ClientCertificate"><span class="symbol resource"></span>ClientCertificate</a></li>
-    <li><a href="documentationversion" title="DocumentationVersion"><span class="symbol resource"></span>DocumentationVersion</a></li>
-    <li><a href="domainname" title="DomainName"><span class="symbol resource"></span>DomainName</a></li>
-    <li><a href="method" title="Method"><span class="symbol resource"></span>Method</a></li>
-    <li><a href="model" title="Model"><span class="symbol resource"></span>Model</a></li>
-    <li><a href="requestvalidator" title="RequestValidator"><span class="symbol resource"></span>RequestValidator</a></li>
-    <li><a href="resource" title="Resource"><span class="symbol resource"></span>Resource</a></li>
-    <li><a href="stage" title="Stage"><span class="symbol resource"></span>Stage</a></li>
-    <li><a href="usageplan" title="UsagePlan"><span class="symbol resource"></span>UsagePlan</a></li>
-    <li><a href="usageplankey" title="UsagePlanKey"><span class="symbol resource"></span>UsagePlanKey</a></li>
+    <li><a href="account" title="Account"><span class="api-symbol api-symbol--resource"></span>Account</a></li>
+    <li><a href="apikey" title="ApiKey"><span class="api-symbol api-symbol--resource"></span>ApiKey</a></li>
+    <li><a href="authorizer" title="Authorizer"><span class="api-symbol api-symbol--resource"></span>Authorizer</a></li>
+    <li><a href="basepathmapping" title="BasePathMapping"><span class="api-symbol api-symbol--resource"></span>BasePathMapping</a></li>
+    <li><a href="clientcertificate" title="ClientCertificate"><span class="api-symbol api-symbol--resource"></span>ClientCertificate</a></li>
+    <li><a href="documentationversion" title="DocumentationVersion"><span class="api-symbol api-symbol--resource"></span>DocumentationVersion</a></li>
+    <li><a href="domainname" title="DomainName"><span class="api-symbol api-symbol--resource"></span>DomainName</a></li>
+    <li><a href="method" title="Method"><span class="api-symbol api-symbol--resource"></span>Method</a></li>
+    <li><a href="model" title="Model"><span class="api-symbol api-symbol--resource"></span>Model</a></li>
+    <li><a href="requestvalidator" title="RequestValidator"><span class="api-symbol api-symbol--resource"></span>RequestValidator</a></li>
+    <li><a href="resource" title="Resource"><span class="api-symbol api-symbol--resource"></span>Resource</a></li>
+    <li><a href="stage" title="Stage"><span class="api-symbol api-symbol--resource"></span>Stage</a></li>
+    <li><a href="usageplan" title="UsagePlan"><span class="api-symbol api-symbol--resource"></span>UsagePlan</a></li>
+    <li><a href="usageplankey" title="UsagePlanKey"><span class="api-symbol api-symbol--resource"></span>UsagePlanKey</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

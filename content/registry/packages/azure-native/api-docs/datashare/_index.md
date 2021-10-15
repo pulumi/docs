@@ -13,83 +13,83 @@ Explore the resources and functions of the azure-native.datashare module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="adlsgen1filedataset" title="ADLSGen1FileDataSet"><span class="symbol resource"></span>ADLSGen1FileDataSet</a></li>
-    <li><a href="adlsgen1folderdataset" title="ADLSGen1FolderDataSet"><span class="symbol resource"></span>ADLSGen1FolderDataSet</a></li>
-    <li><a href="adlsgen2filedataset" title="ADLSGen2FileDataSet"><span class="symbol resource"></span>ADLSGen2FileDataSet</a></li>
-    <li><a href="adlsgen2filedatasetmapping" title="ADLSGen2FileDataSetMapping"><span class="symbol resource"></span>ADLSGen2FileDataSetMapping</a></li>
-    <li><a href="adlsgen2filesystemdataset" title="ADLSGen2FileSystemDataSet"><span class="symbol resource"></span>ADLSGen2FileSystemDataSet</a></li>
-    <li><a href="adlsgen2filesystemdatasetmapping" title="ADLSGen2FileSystemDataSetMapping"><span class="symbol resource"></span>ADLSGen2FileSystemDataSetMapping</a></li>
-    <li><a href="adlsgen2folderdataset" title="ADLSGen2FolderDataSet"><span class="symbol resource"></span>ADLSGen2FolderDataSet</a></li>
-    <li><a href="adlsgen2folderdatasetmapping" title="ADLSGen2FolderDataSetMapping"><span class="symbol resource"></span>ADLSGen2FolderDataSetMapping</a></li>
-    <li><a href="account" title="Account"><span class="symbol resource"></span>Account</a></li>
-    <li><a href="blobcontainerdataset" title="BlobContainerDataSet"><span class="symbol resource"></span>BlobContainerDataSet</a></li>
-    <li><a href="blobcontainerdatasetmapping" title="BlobContainerDataSetMapping"><span class="symbol resource"></span>BlobContainerDataSetMapping</a></li>
-    <li><a href="blobdataset" title="BlobDataSet"><span class="symbol resource"></span>BlobDataSet</a></li>
-    <li><a href="blobdatasetmapping" title="BlobDataSetMapping"><span class="symbol resource"></span>BlobDataSetMapping</a></li>
-    <li><a href="blobfolderdataset" title="BlobFolderDataSet"><span class="symbol resource"></span>BlobFolderDataSet</a></li>
-    <li><a href="blobfolderdatasetmapping" title="BlobFolderDataSetMapping"><span class="symbol resource"></span>BlobFolderDataSetMapping</a></li>
-    <li><a href="dataset" title="DataSet"><span class="symbol resource"></span>DataSet</a></li>
-    <li><a href="datasetmapping" title="DataSetMapping"><span class="symbol resource"></span>DataSetMapping</a></li>
-    <li><a href="invitation" title="Invitation"><span class="symbol resource"></span>Invitation</a></li>
-    <li><a href="kustoclusterdataset" title="KustoClusterDataSet"><span class="symbol resource"></span>KustoClusterDataSet</a></li>
-    <li><a href="kustoclusterdatasetmapping" title="KustoClusterDataSetMapping"><span class="symbol resource"></span>KustoClusterDataSetMapping</a></li>
-    <li><a href="kustodatabasedataset" title="KustoDatabaseDataSet"><span class="symbol resource"></span>KustoDatabaseDataSet</a></li>
-    <li><a href="kustodatabasedatasetmapping" title="KustoDatabaseDataSetMapping"><span class="symbol resource"></span>KustoDatabaseDataSetMapping</a></li>
-    <li><a href="scheduledsynchronizationsetting" title="ScheduledSynchronizationSetting"><span class="symbol resource"></span>ScheduledSynchronizationSetting</a></li>
-    <li><a href="scheduledtrigger" title="ScheduledTrigger"><span class="symbol resource"></span>ScheduledTrigger</a></li>
-    <li><a href="share" title="Share"><span class="symbol resource"></span>Share</a></li>
-    <li><a href="sharesubscription" title="ShareSubscription"><span class="symbol resource"></span>ShareSubscription</a></li>
-    <li><a href="sqldbtabledataset" title="SqlDBTableDataSet"><span class="symbol resource"></span>SqlDBTableDataSet</a></li>
-    <li><a href="sqldbtabledatasetmapping" title="SqlDBTableDataSetMapping"><span class="symbol resource"></span>SqlDBTableDataSetMapping</a></li>
-    <li><a href="sqldwtabledataset" title="SqlDWTableDataSet"><span class="symbol resource"></span>SqlDWTableDataSet</a></li>
-    <li><a href="sqldwtabledatasetmapping" title="SqlDWTableDataSetMapping"><span class="symbol resource"></span>SqlDWTableDataSetMapping</a></li>
-    <li><a href="synapseworkspacesqlpooltabledataset" title="SynapseWorkspaceSqlPoolTableDataSet"><span class="symbol resource"></span>SynapseWorkspaceSqlPoolTableDataSet</a></li>
-    <li><a href="synapseworkspacesqlpooltabledatasetmapping" title="SynapseWorkspaceSqlPoolTableDataSetMapping"><span class="symbol resource"></span>SynapseWorkspaceSqlPoolTableDataSetMapping</a></li>
-    <li><a href="synchronizationsetting" title="SynchronizationSetting"><span class="symbol resource"></span>SynchronizationSetting</a></li>
-    <li><a href="trigger" title="Trigger"><span class="symbol resource"></span>Trigger</a></li>
+    <li><a href="adlsgen1filedataset" title="ADLSGen1FileDataSet"><span class="api-symbol api-symbol--resource"></span>ADLSGen1FileDataSet</a></li>
+    <li><a href="adlsgen1folderdataset" title="ADLSGen1FolderDataSet"><span class="api-symbol api-symbol--resource"></span>ADLSGen1FolderDataSet</a></li>
+    <li><a href="adlsgen2filedataset" title="ADLSGen2FileDataSet"><span class="api-symbol api-symbol--resource"></span>ADLSGen2FileDataSet</a></li>
+    <li><a href="adlsgen2filedatasetmapping" title="ADLSGen2FileDataSetMapping"><span class="api-symbol api-symbol--resource"></span>ADLSGen2FileDataSetMapping</a></li>
+    <li><a href="adlsgen2filesystemdataset" title="ADLSGen2FileSystemDataSet"><span class="api-symbol api-symbol--resource"></span>ADLSGen2FileSystemDataSet</a></li>
+    <li><a href="adlsgen2filesystemdatasetmapping" title="ADLSGen2FileSystemDataSetMapping"><span class="api-symbol api-symbol--resource"></span>ADLSGen2FileSystemDataSetMapping</a></li>
+    <li><a href="adlsgen2folderdataset" title="ADLSGen2FolderDataSet"><span class="api-symbol api-symbol--resource"></span>ADLSGen2FolderDataSet</a></li>
+    <li><a href="adlsgen2folderdatasetmapping" title="ADLSGen2FolderDataSetMapping"><span class="api-symbol api-symbol--resource"></span>ADLSGen2FolderDataSetMapping</a></li>
+    <li><a href="account" title="Account"><span class="api-symbol api-symbol--resource"></span>Account</a></li>
+    <li><a href="blobcontainerdataset" title="BlobContainerDataSet"><span class="api-symbol api-symbol--resource"></span>BlobContainerDataSet</a></li>
+    <li><a href="blobcontainerdatasetmapping" title="BlobContainerDataSetMapping"><span class="api-symbol api-symbol--resource"></span>BlobContainerDataSetMapping</a></li>
+    <li><a href="blobdataset" title="BlobDataSet"><span class="api-symbol api-symbol--resource"></span>BlobDataSet</a></li>
+    <li><a href="blobdatasetmapping" title="BlobDataSetMapping"><span class="api-symbol api-symbol--resource"></span>BlobDataSetMapping</a></li>
+    <li><a href="blobfolderdataset" title="BlobFolderDataSet"><span class="api-symbol api-symbol--resource"></span>BlobFolderDataSet</a></li>
+    <li><a href="blobfolderdatasetmapping" title="BlobFolderDataSetMapping"><span class="api-symbol api-symbol--resource"></span>BlobFolderDataSetMapping</a></li>
+    <li><a href="dataset" title="DataSet"><span class="api-symbol api-symbol--resource"></span>DataSet</a></li>
+    <li><a href="datasetmapping" title="DataSetMapping"><span class="api-symbol api-symbol--resource"></span>DataSetMapping</a></li>
+    <li><a href="invitation" title="Invitation"><span class="api-symbol api-symbol--resource"></span>Invitation</a></li>
+    <li><a href="kustoclusterdataset" title="KustoClusterDataSet"><span class="api-symbol api-symbol--resource"></span>KustoClusterDataSet</a></li>
+    <li><a href="kustoclusterdatasetmapping" title="KustoClusterDataSetMapping"><span class="api-symbol api-symbol--resource"></span>KustoClusterDataSetMapping</a></li>
+    <li><a href="kustodatabasedataset" title="KustoDatabaseDataSet"><span class="api-symbol api-symbol--resource"></span>KustoDatabaseDataSet</a></li>
+    <li><a href="kustodatabasedatasetmapping" title="KustoDatabaseDataSetMapping"><span class="api-symbol api-symbol--resource"></span>KustoDatabaseDataSetMapping</a></li>
+    <li><a href="scheduledsynchronizationsetting" title="ScheduledSynchronizationSetting"><span class="api-symbol api-symbol--resource"></span>ScheduledSynchronizationSetting</a></li>
+    <li><a href="scheduledtrigger" title="ScheduledTrigger"><span class="api-symbol api-symbol--resource"></span>ScheduledTrigger</a></li>
+    <li><a href="share" title="Share"><span class="api-symbol api-symbol--resource"></span>Share</a></li>
+    <li><a href="sharesubscription" title="ShareSubscription"><span class="api-symbol api-symbol--resource"></span>ShareSubscription</a></li>
+    <li><a href="sqldbtabledataset" title="SqlDBTableDataSet"><span class="api-symbol api-symbol--resource"></span>SqlDBTableDataSet</a></li>
+    <li><a href="sqldbtabledatasetmapping" title="SqlDBTableDataSetMapping"><span class="api-symbol api-symbol--resource"></span>SqlDBTableDataSetMapping</a></li>
+    <li><a href="sqldwtabledataset" title="SqlDWTableDataSet"><span class="api-symbol api-symbol--resource"></span>SqlDWTableDataSet</a></li>
+    <li><a href="sqldwtabledatasetmapping" title="SqlDWTableDataSetMapping"><span class="api-symbol api-symbol--resource"></span>SqlDWTableDataSetMapping</a></li>
+    <li><a href="synapseworkspacesqlpooltabledataset" title="SynapseWorkspaceSqlPoolTableDataSet"><span class="api-symbol api-symbol--resource"></span>SynapseWorkspaceSqlPoolTableDataSet</a></li>
+    <li><a href="synapseworkspacesqlpooltabledatasetmapping" title="SynapseWorkspaceSqlPoolTableDataSetMapping"><span class="api-symbol api-symbol--resource"></span>SynapseWorkspaceSqlPoolTableDataSetMapping</a></li>
+    <li><a href="synchronizationsetting" title="SynchronizationSetting"><span class="api-symbol api-symbol--resource"></span>SynchronizationSetting</a></li>
+    <li><a href="trigger" title="Trigger"><span class="api-symbol api-symbol--resource"></span>Trigger</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getadlsgen1filedataset" title="GetADLSGen1FileDataSet"><span class="symbol function"></span>GetADLSGen1FileDataSet</a></li>
-    <li><a href="getadlsgen1folderdataset" title="GetADLSGen1FolderDataSet"><span class="symbol function"></span>GetADLSGen1FolderDataSet</a></li>
-    <li><a href="getadlsgen2filedataset" title="GetADLSGen2FileDataSet"><span class="symbol function"></span>GetADLSGen2FileDataSet</a></li>
-    <li><a href="getadlsgen2filedatasetmapping" title="GetADLSGen2FileDataSetMapping"><span class="symbol function"></span>GetADLSGen2FileDataSetMapping</a></li>
-    <li><a href="getadlsgen2filesystemdataset" title="GetADLSGen2FileSystemDataSet"><span class="symbol function"></span>GetADLSGen2FileSystemDataSet</a></li>
-    <li><a href="getadlsgen2filesystemdatasetmapping" title="GetADLSGen2FileSystemDataSetMapping"><span class="symbol function"></span>GetADLSGen2FileSystemDataSetMapping</a></li>
-    <li><a href="getadlsgen2folderdataset" title="GetADLSGen2FolderDataSet"><span class="symbol function"></span>GetADLSGen2FolderDataSet</a></li>
-    <li><a href="getadlsgen2folderdatasetmapping" title="GetADLSGen2FolderDataSetMapping"><span class="symbol function"></span>GetADLSGen2FolderDataSetMapping</a></li>
-    <li><a href="getaccount" title="GetAccount"><span class="symbol function"></span>GetAccount</a></li>
-    <li><a href="getblobcontainerdataset" title="GetBlobContainerDataSet"><span class="symbol function"></span>GetBlobContainerDataSet</a></li>
-    <li><a href="getblobcontainerdatasetmapping" title="GetBlobContainerDataSetMapping"><span class="symbol function"></span>GetBlobContainerDataSetMapping</a></li>
-    <li><a href="getblobdataset" title="GetBlobDataSet"><span class="symbol function"></span>GetBlobDataSet</a></li>
-    <li><a href="getblobdatasetmapping" title="GetBlobDataSetMapping"><span class="symbol function"></span>GetBlobDataSetMapping</a></li>
-    <li><a href="getblobfolderdataset" title="GetBlobFolderDataSet"><span class="symbol function"></span>GetBlobFolderDataSet</a></li>
-    <li><a href="getblobfolderdatasetmapping" title="GetBlobFolderDataSetMapping"><span class="symbol function"></span>GetBlobFolderDataSetMapping</a></li>
-    <li><a href="getdataset" title="GetDataSet"><span class="symbol function"></span>GetDataSet</a></li>
-    <li><a href="getdatasetmapping" title="GetDataSetMapping"><span class="symbol function"></span>GetDataSetMapping</a></li>
-    <li><a href="getinvitation" title="GetInvitation"><span class="symbol function"></span>GetInvitation</a></li>
-    <li><a href="getkustoclusterdataset" title="GetKustoClusterDataSet"><span class="symbol function"></span>GetKustoClusterDataSet</a></li>
-    <li><a href="getkustoclusterdatasetmapping" title="GetKustoClusterDataSetMapping"><span class="symbol function"></span>GetKustoClusterDataSetMapping</a></li>
-    <li><a href="getkustodatabasedataset" title="GetKustoDatabaseDataSet"><span class="symbol function"></span>GetKustoDatabaseDataSet</a></li>
-    <li><a href="getkustodatabasedatasetmapping" title="GetKustoDatabaseDataSetMapping"><span class="symbol function"></span>GetKustoDatabaseDataSetMapping</a></li>
-    <li><a href="getscheduledsynchronizationsetting" title="GetScheduledSynchronizationSetting"><span class="symbol function"></span>GetScheduledSynchronizationSetting</a></li>
-    <li><a href="getscheduledtrigger" title="GetScheduledTrigger"><span class="symbol function"></span>GetScheduledTrigger</a></li>
-    <li><a href="getshare" title="GetShare"><span class="symbol function"></span>GetShare</a></li>
-    <li><a href="getsharesubscription" title="GetShareSubscription"><span class="symbol function"></span>GetShareSubscription</a></li>
-    <li><a href="getsqldbtabledataset" title="GetSqlDBTableDataSet"><span class="symbol function"></span>GetSqlDBTableDataSet</a></li>
-    <li><a href="getsqldbtabledatasetmapping" title="GetSqlDBTableDataSetMapping"><span class="symbol function"></span>GetSqlDBTableDataSetMapping</a></li>
-    <li><a href="getsqldwtabledataset" title="GetSqlDWTableDataSet"><span class="symbol function"></span>GetSqlDWTableDataSet</a></li>
-    <li><a href="getsqldwtabledatasetmapping" title="GetSqlDWTableDataSetMapping"><span class="symbol function"></span>GetSqlDWTableDataSetMapping</a></li>
-    <li><a href="getsynapseworkspacesqlpooltabledataset" title="GetSynapseWorkspaceSqlPoolTableDataSet"><span class="symbol function"></span>GetSynapseWorkspaceSqlPoolTableDataSet</a></li>
-    <li><a href="getsynapseworkspacesqlpooltabledatasetmapping" title="GetSynapseWorkspaceSqlPoolTableDataSetMapping"><span class="symbol function"></span>GetSynapseWorkspaceSqlPoolTableDataSetMapping</a></li>
-    <li><a href="getsynchronizationsetting" title="GetSynchronizationSetting"><span class="symbol function"></span>GetSynchronizationSetting</a></li>
-    <li><a href="gettrigger" title="GetTrigger"><span class="symbol function"></span>GetTrigger</a></li>
-    <li><a href="listsharesubscriptionsourcesharesynchronizationsettings" title="ListShareSubscriptionSourceShareSynchronizationSettings"><span class="symbol function"></span>ListShareSubscriptionSourceShareSynchronizationSettings</a></li>
-    <li><a href="listsharesubscriptionsynchronizationdetails" title="ListShareSubscriptionSynchronizationDetails"><span class="symbol function"></span>ListShareSubscriptionSynchronizationDetails</a></li>
-    <li><a href="listsharesubscriptionsynchronizations" title="ListShareSubscriptionSynchronizations"><span class="symbol function"></span>ListShareSubscriptionSynchronizations</a></li>
-    <li><a href="listsharesynchronizationdetails" title="ListShareSynchronizationDetails"><span class="symbol function"></span>ListShareSynchronizationDetails</a></li>
-    <li><a href="listsharesynchronizations" title="ListShareSynchronizations"><span class="symbol function"></span>ListShareSynchronizations</a></li>
+    <li><a href="getadlsgen1filedataset" title="GetADLSGen1FileDataSet"><span class="api-symbol api-symbol--function"></span>GetADLSGen1FileDataSet</a></li>
+    <li><a href="getadlsgen1folderdataset" title="GetADLSGen1FolderDataSet"><span class="api-symbol api-symbol--function"></span>GetADLSGen1FolderDataSet</a></li>
+    <li><a href="getadlsgen2filedataset" title="GetADLSGen2FileDataSet"><span class="api-symbol api-symbol--function"></span>GetADLSGen2FileDataSet</a></li>
+    <li><a href="getadlsgen2filedatasetmapping" title="GetADLSGen2FileDataSetMapping"><span class="api-symbol api-symbol--function"></span>GetADLSGen2FileDataSetMapping</a></li>
+    <li><a href="getadlsgen2filesystemdataset" title="GetADLSGen2FileSystemDataSet"><span class="api-symbol api-symbol--function"></span>GetADLSGen2FileSystemDataSet</a></li>
+    <li><a href="getadlsgen2filesystemdatasetmapping" title="GetADLSGen2FileSystemDataSetMapping"><span class="api-symbol api-symbol--function"></span>GetADLSGen2FileSystemDataSetMapping</a></li>
+    <li><a href="getadlsgen2folderdataset" title="GetADLSGen2FolderDataSet"><span class="api-symbol api-symbol--function"></span>GetADLSGen2FolderDataSet</a></li>
+    <li><a href="getadlsgen2folderdatasetmapping" title="GetADLSGen2FolderDataSetMapping"><span class="api-symbol api-symbol--function"></span>GetADLSGen2FolderDataSetMapping</a></li>
+    <li><a href="getaccount" title="GetAccount"><span class="api-symbol api-symbol--function"></span>GetAccount</a></li>
+    <li><a href="getblobcontainerdataset" title="GetBlobContainerDataSet"><span class="api-symbol api-symbol--function"></span>GetBlobContainerDataSet</a></li>
+    <li><a href="getblobcontainerdatasetmapping" title="GetBlobContainerDataSetMapping"><span class="api-symbol api-symbol--function"></span>GetBlobContainerDataSetMapping</a></li>
+    <li><a href="getblobdataset" title="GetBlobDataSet"><span class="api-symbol api-symbol--function"></span>GetBlobDataSet</a></li>
+    <li><a href="getblobdatasetmapping" title="GetBlobDataSetMapping"><span class="api-symbol api-symbol--function"></span>GetBlobDataSetMapping</a></li>
+    <li><a href="getblobfolderdataset" title="GetBlobFolderDataSet"><span class="api-symbol api-symbol--function"></span>GetBlobFolderDataSet</a></li>
+    <li><a href="getblobfolderdatasetmapping" title="GetBlobFolderDataSetMapping"><span class="api-symbol api-symbol--function"></span>GetBlobFolderDataSetMapping</a></li>
+    <li><a href="getdataset" title="GetDataSet"><span class="api-symbol api-symbol--function"></span>GetDataSet</a></li>
+    <li><a href="getdatasetmapping" title="GetDataSetMapping"><span class="api-symbol api-symbol--function"></span>GetDataSetMapping</a></li>
+    <li><a href="getinvitation" title="GetInvitation"><span class="api-symbol api-symbol--function"></span>GetInvitation</a></li>
+    <li><a href="getkustoclusterdataset" title="GetKustoClusterDataSet"><span class="api-symbol api-symbol--function"></span>GetKustoClusterDataSet</a></li>
+    <li><a href="getkustoclusterdatasetmapping" title="GetKustoClusterDataSetMapping"><span class="api-symbol api-symbol--function"></span>GetKustoClusterDataSetMapping</a></li>
+    <li><a href="getkustodatabasedataset" title="GetKustoDatabaseDataSet"><span class="api-symbol api-symbol--function"></span>GetKustoDatabaseDataSet</a></li>
+    <li><a href="getkustodatabasedatasetmapping" title="GetKustoDatabaseDataSetMapping"><span class="api-symbol api-symbol--function"></span>GetKustoDatabaseDataSetMapping</a></li>
+    <li><a href="getscheduledsynchronizationsetting" title="GetScheduledSynchronizationSetting"><span class="api-symbol api-symbol--function"></span>GetScheduledSynchronizationSetting</a></li>
+    <li><a href="getscheduledtrigger" title="GetScheduledTrigger"><span class="api-symbol api-symbol--function"></span>GetScheduledTrigger</a></li>
+    <li><a href="getshare" title="GetShare"><span class="api-symbol api-symbol--function"></span>GetShare</a></li>
+    <li><a href="getsharesubscription" title="GetShareSubscription"><span class="api-symbol api-symbol--function"></span>GetShareSubscription</a></li>
+    <li><a href="getsqldbtabledataset" title="GetSqlDBTableDataSet"><span class="api-symbol api-symbol--function"></span>GetSqlDBTableDataSet</a></li>
+    <li><a href="getsqldbtabledatasetmapping" title="GetSqlDBTableDataSetMapping"><span class="api-symbol api-symbol--function"></span>GetSqlDBTableDataSetMapping</a></li>
+    <li><a href="getsqldwtabledataset" title="GetSqlDWTableDataSet"><span class="api-symbol api-symbol--function"></span>GetSqlDWTableDataSet</a></li>
+    <li><a href="getsqldwtabledatasetmapping" title="GetSqlDWTableDataSetMapping"><span class="api-symbol api-symbol--function"></span>GetSqlDWTableDataSetMapping</a></li>
+    <li><a href="getsynapseworkspacesqlpooltabledataset" title="GetSynapseWorkspaceSqlPoolTableDataSet"><span class="api-symbol api-symbol--function"></span>GetSynapseWorkspaceSqlPoolTableDataSet</a></li>
+    <li><a href="getsynapseworkspacesqlpooltabledatasetmapping" title="GetSynapseWorkspaceSqlPoolTableDataSetMapping"><span class="api-symbol api-symbol--function"></span>GetSynapseWorkspaceSqlPoolTableDataSetMapping</a></li>
+    <li><a href="getsynchronizationsetting" title="GetSynchronizationSetting"><span class="api-symbol api-symbol--function"></span>GetSynchronizationSetting</a></li>
+    <li><a href="gettrigger" title="GetTrigger"><span class="api-symbol api-symbol--function"></span>GetTrigger</a></li>
+    <li><a href="listsharesubscriptionsourcesharesynchronizationsettings" title="ListShareSubscriptionSourceShareSynchronizationSettings"><span class="api-symbol api-symbol--function"></span>ListShareSubscriptionSourceShareSynchronizationSettings</a></li>
+    <li><a href="listsharesubscriptionsynchronizationdetails" title="ListShareSubscriptionSynchronizationDetails"><span class="api-symbol api-symbol--function"></span>ListShareSubscriptionSynchronizationDetails</a></li>
+    <li><a href="listsharesubscriptionsynchronizations" title="ListShareSubscriptionSynchronizations"><span class="api-symbol api-symbol--function"></span>ListShareSubscriptionSynchronizations</a></li>
+    <li><a href="listsharesynchronizationdetails" title="ListShareSynchronizationDetails"><span class="api-symbol api-symbol--function"></span>ListShareSynchronizationDetails</a></li>
+    <li><a href="listsharesynchronizations" title="ListShareSynchronizations"><span class="api-symbol api-symbol--function"></span>ListShareSynchronizations</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -99,6 +99,6 @@ Explore the resources and functions of the azure-native.datashare module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.38.0</dd>
+	<dd>1.39.0</dd>
 </dl>
 

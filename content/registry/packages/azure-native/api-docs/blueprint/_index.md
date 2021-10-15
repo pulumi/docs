@@ -13,24 +13,24 @@ Explore the resources and functions of the azure-native.blueprint module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="artifact" title="Artifact"><span class="symbol resource"></span>Artifact</a></li>
-    <li><a href="assignment" title="Assignment"><span class="symbol resource"></span>Assignment</a></li>
-    <li><a href="blueprint" title="Blueprint"><span class="symbol resource"></span>Blueprint</a></li>
-    <li><a href="policyassignmentartifact" title="PolicyAssignmentArtifact"><span class="symbol resource"></span>PolicyAssignmentArtifact</a></li>
-    <li><a href="publishedblueprint" title="PublishedBlueprint"><span class="symbol resource"></span>PublishedBlueprint</a></li>
-    <li><a href="roleassignmentartifact" title="RoleAssignmentArtifact"><span class="symbol resource"></span>RoleAssignmentArtifact</a></li>
-    <li><a href="templateartifact" title="TemplateArtifact"><span class="symbol resource"></span>TemplateArtifact</a></li>
+    <li><a href="artifact" title="Artifact"><span class="api-symbol api-symbol--resource"></span>Artifact</a></li>
+    <li><a href="assignment" title="Assignment"><span class="api-symbol api-symbol--resource"></span>Assignment</a></li>
+    <li><a href="blueprint" title="Blueprint"><span class="api-symbol api-symbol--resource"></span>Blueprint</a></li>
+    <li><a href="policyassignmentartifact" title="PolicyAssignmentArtifact"><span class="api-symbol api-symbol--resource"></span>PolicyAssignmentArtifact</a></li>
+    <li><a href="publishedblueprint" title="PublishedBlueprint"><span class="api-symbol api-symbol--resource"></span>PublishedBlueprint</a></li>
+    <li><a href="roleassignmentartifact" title="RoleAssignmentArtifact"><span class="api-symbol api-symbol--resource"></span>RoleAssignmentArtifact</a></li>
+    <li><a href="templateartifact" title="TemplateArtifact"><span class="api-symbol api-symbol--resource"></span>TemplateArtifact</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getartifact" title="GetArtifact"><span class="symbol function"></span>GetArtifact</a></li>
-    <li><a href="getassignment" title="GetAssignment"><span class="symbol function"></span>GetAssignment</a></li>
-    <li><a href="getblueprint" title="GetBlueprint"><span class="symbol function"></span>GetBlueprint</a></li>
-    <li><a href="getpolicyassignmentartifact" title="GetPolicyAssignmentArtifact"><span class="symbol function"></span>GetPolicyAssignmentArtifact</a></li>
-    <li><a href="getpublishedblueprint" title="GetPublishedBlueprint"><span class="symbol function"></span>GetPublishedBlueprint</a></li>
-    <li><a href="getroleassignmentartifact" title="GetRoleAssignmentArtifact"><span class="symbol function"></span>GetRoleAssignmentArtifact</a></li>
-    <li><a href="gettemplateartifact" title="GetTemplateArtifact"><span class="symbol function"></span>GetTemplateArtifact</a></li>
+    <li><a href="getartifact" title="GetArtifact"><span class="api-symbol api-symbol--function"></span>GetArtifact</a></li>
+    <li><a href="getassignment" title="GetAssignment"><span class="api-symbol api-symbol--function"></span>GetAssignment</a></li>
+    <li><a href="getblueprint" title="GetBlueprint"><span class="api-symbol api-symbol--function"></span>GetBlueprint</a></li>
+    <li><a href="getpolicyassignmentartifact" title="GetPolicyAssignmentArtifact"><span class="api-symbol api-symbol--function"></span>GetPolicyAssignmentArtifact</a></li>
+    <li><a href="getpublishedblueprint" title="GetPublishedBlueprint"><span class="api-symbol api-symbol--function"></span>GetPublishedBlueprint</a></li>
+    <li><a href="getroleassignmentartifact" title="GetRoleAssignmentArtifact"><span class="api-symbol api-symbol--function"></span>GetRoleAssignmentArtifact</a></li>
+    <li><a href="gettemplateartifact" title="GetTemplateArtifact"><span class="api-symbol api-symbol--function"></span>GetTemplateArtifact</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -40,6 +40,6 @@ Explore the resources and functions of the azure-native.blueprint module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.38.0</dd>
+	<dd>1.39.0</dd>
 </dl>
 

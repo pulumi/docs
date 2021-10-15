@@ -13,14 +13,14 @@ Explore the resources and functions of the azure-native.azureactivedirectory mod
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="b2ctenant" title="B2CTenant"><span class="symbol resource"></span>B2CTenant</a></li>
-    <li><a href="guestusage" title="GuestUsage"><span class="symbol resource"></span>GuestUsage</a></li>
+    <li><a href="b2ctenant" title="B2CTenant"><span class="api-symbol api-symbol--resource"></span>B2CTenant</a></li>
+    <li><a href="guestusage" title="GuestUsage"><span class="api-symbol api-symbol--resource"></span>GuestUsage</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getb2ctenant" title="GetB2CTenant"><span class="symbol function"></span>GetB2CTenant</a></li>
-    <li><a href="getguestusage" title="GetGuestUsage"><span class="symbol function"></span>GetGuestUsage</a></li>
+    <li><a href="getb2ctenant" title="GetB2CTenant"><span class="api-symbol api-symbol--function"></span>GetB2CTenant</a></li>
+    <li><a href="getguestusage" title="GetGuestUsage"><span class="api-symbol api-symbol--function"></span>GetGuestUsage</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -30,6 +30,6 @@ Explore the resources and functions of the azure-native.azureactivedirectory mod
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.38.0</dd>
+	<dd>1.39.0</dd>
 </dl>
 

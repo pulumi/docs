@@ -13,50 +13,50 @@ Explore the resources and functions of the azure-native.security module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="adaptiveapplicationcontrol" title="AdaptiveApplicationControl"><span class="symbol resource"></span>AdaptiveApplicationControl</a></li>
-    <li><a href="advancedthreatprotection" title="AdvancedThreatProtection"><span class="symbol resource"></span>AdvancedThreatProtection</a></li>
-    <li><a href="alertssuppressionrule" title="AlertsSuppressionRule"><span class="symbol resource"></span>AlertsSuppressionRule</a></li>
-    <li><a href="assessment" title="Assessment"><span class="symbol resource"></span>Assessment</a></li>
-    <li><a href="assessmentmetadatainsubscription" title="AssessmentMetadataInSubscription"><span class="symbol resource"></span>AssessmentMetadataInSubscription</a></li>
-    <li><a href="assignment" title="Assignment"><span class="symbol resource"></span>Assignment</a></li>
-    <li><a href="automation" title="Automation"><span class="symbol resource"></span>Automation</a></li>
-    <li><a href="connector" title="Connector"><span class="symbol resource"></span>Connector</a></li>
-    <li><a href="customassessmentautomation" title="CustomAssessmentAutomation"><span class="symbol resource"></span>CustomAssessmentAutomation</a></li>
-    <li><a href="customentitystoreassignment" title="CustomEntityStoreAssignment"><span class="symbol resource"></span>CustomEntityStoreAssignment</a></li>
-    <li><a href="devicesecuritygroup" title="DeviceSecurityGroup"><span class="symbol resource"></span>DeviceSecurityGroup</a></li>
-    <li><a href="ingestionsetting" title="IngestionSetting"><span class="symbol resource"></span>IngestionSetting</a></li>
-    <li><a href="iotsecuritysolution" title="IotSecuritySolution"><span class="symbol resource"></span>IotSecuritySolution</a></li>
-    <li><a href="jitnetworkaccesspolicy" title="JitNetworkAccessPolicy"><span class="symbol resource"></span>JitNetworkAccessPolicy</a></li>
-    <li><a href="securitycontact" title="SecurityContact"><span class="symbol resource"></span>SecurityContact</a></li>
-    <li><a href="servervulnerabilityassessment" title="ServerVulnerabilityAssessment"><span class="symbol resource"></span>ServerVulnerabilityAssessment</a></li>
-    <li><a href="sqlvulnerabilityassessmentbaselinerule" title="SqlVulnerabilityAssessmentBaselineRule"><span class="symbol resource"></span>SqlVulnerabilityAssessmentBaselineRule</a></li>
-    <li><a href="standard" title="Standard"><span class="symbol resource"></span>Standard</a></li>
-    <li><a href="workspacesetting" title="WorkspaceSetting"><span class="symbol resource"></span>WorkspaceSetting</a></li>
+    <li><a href="adaptiveapplicationcontrol" title="AdaptiveApplicationControl"><span class="api-symbol api-symbol--resource"></span>AdaptiveApplicationControl</a></li>
+    <li><a href="advancedthreatprotection" title="AdvancedThreatProtection"><span class="api-symbol api-symbol--resource"></span>AdvancedThreatProtection</a></li>
+    <li><a href="alertssuppressionrule" title="AlertsSuppressionRule"><span class="api-symbol api-symbol--resource"></span>AlertsSuppressionRule</a></li>
+    <li><a href="assessment" title="Assessment"><span class="api-symbol api-symbol--resource"></span>Assessment</a></li>
+    <li><a href="assessmentmetadatainsubscription" title="AssessmentMetadataInSubscription"><span class="api-symbol api-symbol--resource"></span>AssessmentMetadataInSubscription</a></li>
+    <li><a href="assignment" title="Assignment"><span class="api-symbol api-symbol--resource"></span>Assignment</a></li>
+    <li><a href="automation" title="Automation"><span class="api-symbol api-symbol--resource"></span>Automation</a></li>
+    <li><a href="connector" title="Connector"><span class="api-symbol api-symbol--resource"></span>Connector</a></li>
+    <li><a href="customassessmentautomation" title="CustomAssessmentAutomation"><span class="api-symbol api-symbol--resource"></span>CustomAssessmentAutomation</a></li>
+    <li><a href="customentitystoreassignment" title="CustomEntityStoreAssignment"><span class="api-symbol api-symbol--resource"></span>CustomEntityStoreAssignment</a></li>
+    <li><a href="devicesecuritygroup" title="DeviceSecurityGroup"><span class="api-symbol api-symbol--resource"></span>DeviceSecurityGroup</a></li>
+    <li><a href="ingestionsetting" title="IngestionSetting"><span class="api-symbol api-symbol--resource"></span>IngestionSetting</a></li>
+    <li><a href="iotsecuritysolution" title="IotSecuritySolution"><span class="api-symbol api-symbol--resource"></span>IotSecuritySolution</a></li>
+    <li><a href="jitnetworkaccesspolicy" title="JitNetworkAccessPolicy"><span class="api-symbol api-symbol--resource"></span>JitNetworkAccessPolicy</a></li>
+    <li><a href="securitycontact" title="SecurityContact"><span class="api-symbol api-symbol--resource"></span>SecurityContact</a></li>
+    <li><a href="servervulnerabilityassessment" title="ServerVulnerabilityAssessment"><span class="api-symbol api-symbol--resource"></span>ServerVulnerabilityAssessment</a></li>
+    <li><a href="sqlvulnerabilityassessmentbaselinerule" title="SqlVulnerabilityAssessmentBaselineRule"><span class="api-symbol api-symbol--resource"></span>SqlVulnerabilityAssessmentBaselineRule</a></li>
+    <li><a href="standard" title="Standard"><span class="api-symbol api-symbol--resource"></span>Standard</a></li>
+    <li><a href="workspacesetting" title="WorkspaceSetting"><span class="api-symbol api-symbol--resource"></span>WorkspaceSetting</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getadaptiveapplicationcontrol" title="GetAdaptiveApplicationControl"><span class="symbol function"></span>GetAdaptiveApplicationControl</a></li>
-    <li><a href="getadvancedthreatprotection" title="GetAdvancedThreatProtection"><span class="symbol function"></span>GetAdvancedThreatProtection</a></li>
-    <li><a href="getalertssuppressionrule" title="GetAlertsSuppressionRule"><span class="symbol function"></span>GetAlertsSuppressionRule</a></li>
-    <li><a href="getassessment" title="GetAssessment"><span class="symbol function"></span>GetAssessment</a></li>
-    <li><a href="getassessmentmetadatainsubscription" title="GetAssessmentMetadataInSubscription"><span class="symbol function"></span>GetAssessmentMetadataInSubscription</a></li>
-    <li><a href="getassignment" title="GetAssignment"><span class="symbol function"></span>GetAssignment</a></li>
-    <li><a href="getautomation" title="GetAutomation"><span class="symbol function"></span>GetAutomation</a></li>
-    <li><a href="getconnector" title="GetConnector"><span class="symbol function"></span>GetConnector</a></li>
-    <li><a href="getcustomassessmentautomation" title="GetCustomAssessmentAutomation"><span class="symbol function"></span>GetCustomAssessmentAutomation</a></li>
-    <li><a href="getcustomentitystoreassignment" title="GetCustomEntityStoreAssignment"><span class="symbol function"></span>GetCustomEntityStoreAssignment</a></li>
-    <li><a href="getdevicesecuritygroup" title="GetDeviceSecurityGroup"><span class="symbol function"></span>GetDeviceSecurityGroup</a></li>
-    <li><a href="getingestionsetting" title="GetIngestionSetting"><span class="symbol function"></span>GetIngestionSetting</a></li>
-    <li><a href="getiotsecuritysolution" title="GetIotSecuritySolution"><span class="symbol function"></span>GetIotSecuritySolution</a></li>
-    <li><a href="getjitnetworkaccesspolicy" title="GetJitNetworkAccessPolicy"><span class="symbol function"></span>GetJitNetworkAccessPolicy</a></li>
-    <li><a href="getsecuritycontact" title="GetSecurityContact"><span class="symbol function"></span>GetSecurityContact</a></li>
-    <li><a href="getservervulnerabilityassessment" title="GetServerVulnerabilityAssessment"><span class="symbol function"></span>GetServerVulnerabilityAssessment</a></li>
-    <li><a href="getsqlvulnerabilityassessmentbaselinerule" title="GetSqlVulnerabilityAssessmentBaselineRule"><span class="symbol function"></span>GetSqlVulnerabilityAssessmentBaselineRule</a></li>
-    <li><a href="getstandard" title="GetStandard"><span class="symbol function"></span>GetStandard</a></li>
-    <li><a href="getworkspacesetting" title="GetWorkspaceSetting"><span class="symbol function"></span>GetWorkspaceSetting</a></li>
-    <li><a href="listingestionsettingconnectionstrings" title="ListIngestionSettingConnectionStrings"><span class="symbol function"></span>ListIngestionSettingConnectionStrings</a></li>
-    <li><a href="listingestionsettingtokens" title="ListIngestionSettingTokens"><span class="symbol function"></span>ListIngestionSettingTokens</a></li>
+    <li><a href="getadaptiveapplicationcontrol" title="GetAdaptiveApplicationControl"><span class="api-symbol api-symbol--function"></span>GetAdaptiveApplicationControl</a></li>
+    <li><a href="getadvancedthreatprotection" title="GetAdvancedThreatProtection"><span class="api-symbol api-symbol--function"></span>GetAdvancedThreatProtection</a></li>
+    <li><a href="getalertssuppressionrule" title="GetAlertsSuppressionRule"><span class="api-symbol api-symbol--function"></span>GetAlertsSuppressionRule</a></li>
+    <li><a href="getassessment" title="GetAssessment"><span class="api-symbol api-symbol--function"></span>GetAssessment</a></li>
+    <li><a href="getassessmentmetadatainsubscription" title="GetAssessmentMetadataInSubscription"><span class="api-symbol api-symbol--function"></span>GetAssessmentMetadataInSubscription</a></li>
+    <li><a href="getassignment" title="GetAssignment"><span class="api-symbol api-symbol--function"></span>GetAssignment</a></li>
+    <li><a href="getautomation" title="GetAutomation"><span class="api-symbol api-symbol--function"></span>GetAutomation</a></li>
+    <li><a href="getconnector" title="GetConnector"><span class="api-symbol api-symbol--function"></span>GetConnector</a></li>
+    <li><a href="getcustomassessmentautomation" title="GetCustomAssessmentAutomation"><span class="api-symbol api-symbol--function"></span>GetCustomAssessmentAutomation</a></li>
+    <li><a href="getcustomentitystoreassignment" title="GetCustomEntityStoreAssignment"><span class="api-symbol api-symbol--function"></span>GetCustomEntityStoreAssignment</a></li>
+    <li><a href="getdevicesecuritygroup" title="GetDeviceSecurityGroup"><span class="api-symbol api-symbol--function"></span>GetDeviceSecurityGroup</a></li>
+    <li><a href="getingestionsetting" title="GetIngestionSetting"><span class="api-symbol api-symbol--function"></span>GetIngestionSetting</a></li>
+    <li><a href="getiotsecuritysolution" title="GetIotSecuritySolution"><span class="api-symbol api-symbol--function"></span>GetIotSecuritySolution</a></li>
+    <li><a href="getjitnetworkaccesspolicy" title="GetJitNetworkAccessPolicy"><span class="api-symbol api-symbol--function"></span>GetJitNetworkAccessPolicy</a></li>
+    <li><a href="getsecuritycontact" title="GetSecurityContact"><span class="api-symbol api-symbol--function"></span>GetSecurityContact</a></li>
+    <li><a href="getservervulnerabilityassessment" title="GetServerVulnerabilityAssessment"><span class="api-symbol api-symbol--function"></span>GetServerVulnerabilityAssessment</a></li>
+    <li><a href="getsqlvulnerabilityassessmentbaselinerule" title="GetSqlVulnerabilityAssessmentBaselineRule"><span class="api-symbol api-symbol--function"></span>GetSqlVulnerabilityAssessmentBaselineRule</a></li>
+    <li><a href="getstandard" title="GetStandard"><span class="api-symbol api-symbol--function"></span>GetStandard</a></li>
+    <li><a href="getworkspacesetting" title="GetWorkspaceSetting"><span class="api-symbol api-symbol--function"></span>GetWorkspaceSetting</a></li>
+    <li><a href="listingestionsettingconnectionstrings" title="ListIngestionSettingConnectionStrings"><span class="api-symbol api-symbol--function"></span>ListIngestionSettingConnectionStrings</a></li>
+    <li><a href="listingestionsettingtokens" title="ListIngestionSettingTokens"><span class="api-symbol api-symbol--function"></span>ListIngestionSettingTokens</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -66,6 +66,6 @@ Explore the resources and functions of the azure-native.security module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.38.0</dd>
+	<dd>1.39.0</dd>
 </dl>
 

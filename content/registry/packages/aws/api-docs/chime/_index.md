@@ -13,12 +13,13 @@ Explore the resources and functions of the aws.chime module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="voiceconnector" title="VoiceConnector"><span class="symbol resource"></span>VoiceConnector</a></li>
-    <li><a href="voiceconnectorgroup" title="VoiceConnectorGroup"><span class="symbol resource"></span>VoiceConnectorGroup</a></li>
-    <li><a href="voiceconnectorlogging" title="VoiceConnectorLogging"><span class="symbol resource"></span>VoiceConnectorLogging</a></li>
-    <li><a href="voiceconnectororganization" title="VoiceConnectorOrganization"><span class="symbol resource"></span>VoiceConnectorOrganization</a></li>
-    <li><a href="voiceconnectorstreaming" title="VoiceConnectorStreaming"><span class="symbol resource"></span>VoiceConnectorStreaming</a></li>
-    <li><a href="voiceconnectortermination" title="VoiceConnectorTermination"><span class="symbol resource"></span>VoiceConnectorTermination</a></li>
+    <li><a href="voiceconnector" title="VoiceConnector"><span class="api-symbol api-symbol--resource"></span>VoiceConnector</a></li>
+    <li><a href="voiceconnectorgroup" title="VoiceConnectorGroup"><span class="api-symbol api-symbol--resource"></span>VoiceConnectorGroup</a></li>
+    <li><a href="voiceconnectorlogging" title="VoiceConnectorLogging"><span class="api-symbol api-symbol--resource"></span>VoiceConnectorLogging</a></li>
+    <li><a href="voiceconnectororganization" title="VoiceConnectorOrganization"><span class="api-symbol api-symbol--resource"></span>VoiceConnectorOrganization</a></li>
+    <li><a href="voiceconnectorstreaming" title="VoiceConnectorStreaming"><span class="api-symbol api-symbol--resource"></span>VoiceConnectorStreaming</a></li>
+    <li><a href="voiceconnectortermination" title="VoiceConnectorTermination"><span class="api-symbol api-symbol--resource"></span>VoiceConnectorTermination</a></li>
+    <li><a href="voiceconnectorterminationcredentials" title="VoiceConnectorTerminationCredentials"><span class="api-symbol api-symbol--resource"></span>VoiceConnectorTerminationCredentials</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -30,6 +31,6 @@ Explore the resources and functions of the aws.chime module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.24.1</dd>
+	<dd>4.25.0</dd>
 </dl>
 

@@ -13,14 +13,14 @@ Explore the resources and functions of the google-native.sourcerepo/v1 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="repo" title="Repo"><span class="symbol resource"></span>Repo</a></li>
-    <li><a href="repoiampolicy" title="RepoIamPolicy"><span class="symbol resource"></span>RepoIamPolicy</a></li>
+    <li><a href="repo" title="Repo"><span class="api-symbol api-symbol--resource"></span>Repo</a></li>
+    <li><a href="repoiampolicy" title="RepoIamPolicy"><span class="api-symbol api-symbol--resource"></span>RepoIamPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getrepo" title="GetRepo"><span class="symbol function"></span>GetRepo</a></li>
-    <li><a href="getrepoiampolicy" title="GetRepoIamPolicy"><span class="symbol function"></span>GetRepoIamPolicy</a></li>
+    <li><a href="getrepo" title="GetRepo"><span class="api-symbol api-symbol--function"></span>GetRepo</a></li>
+    <li><a href="getrepoiampolicy" title="GetRepoIamPolicy"><span class="api-symbol api-symbol--function"></span>GetRepoIamPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

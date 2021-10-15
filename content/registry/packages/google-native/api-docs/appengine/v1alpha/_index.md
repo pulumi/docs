@@ -13,14 +13,14 @@ Explore the resources and functions of the google-native.appengine/v1alpha modul
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="authorizedcertificate" title="AuthorizedCertificate"><span class="symbol resource"></span>AuthorizedCertificate</a></li>
-    <li><a href="domainmapping" title="DomainMapping"><span class="symbol resource"></span>DomainMapping</a></li>
+    <li><a href="authorizedcertificate" title="AuthorizedCertificate"><span class="api-symbol api-symbol--resource"></span>AuthorizedCertificate</a></li>
+    <li><a href="domainmapping" title="DomainMapping"><span class="api-symbol api-symbol--resource"></span>DomainMapping</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getauthorizedcertificate" title="GetAuthorizedCertificate"><span class="symbol function"></span>GetAuthorizedCertificate</a></li>
-    <li><a href="getdomainmapping" title="GetDomainMapping"><span class="symbol function"></span>GetDomainMapping</a></li>
+    <li><a href="getauthorizedcertificate" title="GetAuthorizedCertificate"><span class="api-symbol api-symbol--function"></span>GetAuthorizedCertificate</a></li>
+    <li><a href="getdomainmapping" title="GetDomainMapping"><span class="api-symbol api-symbol--function"></span>GetDomainMapping</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

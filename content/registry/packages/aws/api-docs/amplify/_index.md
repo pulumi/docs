@@ -13,11 +13,11 @@ Explore the resources and functions of the aws.amplify module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="app" title="App"><span class="symbol resource"></span>App</a></li>
-    <li><a href="backendenvironment" title="BackendEnvironment"><span class="symbol resource"></span>BackendEnvironment</a></li>
-    <li><a href="branch" title="Branch"><span class="symbol resource"></span>Branch</a></li>
-    <li><a href="domainassociation" title="DomainAssociation"><span class="symbol resource"></span>DomainAssociation</a></li>
-    <li><a href="webhook" title="Webhook"><span class="symbol resource"></span>Webhook</a></li>
+    <li><a href="app" title="App"><span class="api-symbol api-symbol--resource"></span>App</a></li>
+    <li><a href="backendenvironment" title="BackendEnvironment"><span class="api-symbol api-symbol--resource"></span>BackendEnvironment</a></li>
+    <li><a href="branch" title="Branch"><span class="api-symbol api-symbol--resource"></span>Branch</a></li>
+    <li><a href="domainassociation" title="DomainAssociation"><span class="api-symbol api-symbol--resource"></span>DomainAssociation</a></li>
+    <li><a href="webhook" title="Webhook"><span class="api-symbol api-symbol--resource"></span>Webhook</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -29,6 +29,6 @@ Explore the resources and functions of the aws.amplify module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.24.1</dd>
+	<dd>4.25.0</dd>
 </dl>
 

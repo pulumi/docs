@@ -13,17 +13,17 @@ Explore the resources and functions of the azure.datalake module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="analyticsaccount" title="AnalyticsAccount"><span class="symbol resource"></span>AnalyticsAccount</a></li>
-    <li><a href="analyticsfirewallrule" title="AnalyticsFirewallRule"><span class="symbol resource"></span>AnalyticsFirewallRule</a></li>
-    <li><a href="store" title="Store"><span class="symbol resource"></span>Store</a></li>
-    <li><a href="storefile" title="StoreFile"><span class="symbol resource"></span>StoreFile</a></li>
-    <li><a href="storefirewallrule" title="StoreFirewallRule"><span class="symbol resource"></span>StoreFirewallRule</a></li>
-    <li><a href="storevirtualnetworkrule" title="StoreVirtualNetworkRule"><span class="symbol resource"></span>StoreVirtualNetworkRule</a></li>
+    <li><a href="analyticsaccount" title="AnalyticsAccount"><span class="api-symbol api-symbol--resource"></span>AnalyticsAccount</a></li>
+    <li><a href="analyticsfirewallrule" title="AnalyticsFirewallRule"><span class="api-symbol api-symbol--resource"></span>AnalyticsFirewallRule</a></li>
+    <li><a href="store" title="Store"><span class="api-symbol api-symbol--resource"></span>Store</a></li>
+    <li><a href="storefile" title="StoreFile"><span class="api-symbol api-symbol--resource"></span>StoreFile</a></li>
+    <li><a href="storefirewallrule" title="StoreFirewallRule"><span class="api-symbol api-symbol--resource"></span>StoreFirewallRule</a></li>
+    <li><a href="storevirtualnetworkrule" title="StoreVirtualNetworkRule"><span class="api-symbol api-symbol--resource"></span>StoreVirtualNetworkRule</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getstore" title="GetStore"><span class="symbol function"></span>GetStore</a></li>
+    <li><a href="getstore" title="GetStore"><span class="api-symbol api-symbol--function"></span>GetStore</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -35,6 +35,6 @@ Explore the resources and functions of the azure.datalake module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.22.0</dd>
+	<dd>4.23.0</dd>
 </dl>
 

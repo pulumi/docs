@@ -13,19 +13,19 @@ Explore the resources and functions of the gcp.spanner module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="database" title="Database"><span class="symbol resource"></span>Database</a></li>
-    <li><a href="databaseiambinding" title="DatabaseIAMBinding"><span class="symbol resource"></span>DatabaseIAMBinding</a></li>
-    <li><a href="databaseiammember" title="DatabaseIAMMember"><span class="symbol resource"></span>DatabaseIAMMember</a></li>
-    <li><a href="databaseiampolicy" title="DatabaseIAMPolicy"><span class="symbol resource"></span>DatabaseIAMPolicy</a></li>
-    <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
-    <li><a href="instanceiambinding" title="InstanceIAMBinding"><span class="symbol resource"></span>InstanceIAMBinding</a></li>
-    <li><a href="instanceiammember" title="InstanceIAMMember"><span class="symbol resource"></span>InstanceIAMMember</a></li>
-    <li><a href="instanceiampolicy" title="InstanceIAMPolicy"><span class="symbol resource"></span>InstanceIAMPolicy</a></li>
+    <li><a href="database" title="Database"><span class="api-symbol api-symbol--resource"></span>Database</a></li>
+    <li><a href="databaseiambinding" title="DatabaseIAMBinding"><span class="api-symbol api-symbol--resource"></span>DatabaseIAMBinding</a></li>
+    <li><a href="databaseiammember" title="DatabaseIAMMember"><span class="api-symbol api-symbol--resource"></span>DatabaseIAMMember</a></li>
+    <li><a href="databaseiampolicy" title="DatabaseIAMPolicy"><span class="api-symbol api-symbol--resource"></span>DatabaseIAMPolicy</a></li>
+    <li><a href="instance" title="Instance"><span class="api-symbol api-symbol--resource"></span>Instance</a></li>
+    <li><a href="instanceiambinding" title="InstanceIAMBinding"><span class="api-symbol api-symbol--resource"></span>InstanceIAMBinding</a></li>
+    <li><a href="instanceiammember" title="InstanceIAMMember"><span class="api-symbol api-symbol--resource"></span>InstanceIAMMember</a></li>
+    <li><a href="instanceiampolicy" title="InstanceIAMPolicy"><span class="api-symbol api-symbol--resource"></span>InstanceIAMPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getinstance" title="GetInstance"><span class="symbol function"></span>GetInstance</a></li>
+    <li><a href="getinstance" title="GetInstance"><span class="api-symbol api-symbol--function"></span>GetInstance</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

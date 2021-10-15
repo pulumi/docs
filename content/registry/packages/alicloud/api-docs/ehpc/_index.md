@@ -13,12 +13,12 @@ Explore the resources and functions of the alicloud.ehpc module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="jobtemplate" title="JobTemplate"><span class="symbol resource"></span>JobTemplate</a></li>
+    <li><a href="jobtemplate" title="JobTemplate"><span class="api-symbol api-symbol--resource"></span>JobTemplate</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getjobtemplates" title="GetJobTemplates"><span class="symbol function"></span>GetJobTemplates</a></li>
+    <li><a href="getjobtemplates" title="GetJobTemplates"><span class="api-symbol api-symbol--function"></span>GetJobTemplates</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

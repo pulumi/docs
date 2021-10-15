@@ -13,14 +13,14 @@ Explore the resources and functions of the signalfx.aws module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="externalintegration" title="ExternalIntegration"><span class="symbol resource"></span>ExternalIntegration</a></li>
-    <li><a href="integration" title="Integration"><span class="symbol resource"></span>Integration</a></li>
-    <li><a href="tokenintegration" title="TokenIntegration"><span class="symbol resource"></span>TokenIntegration</a></li>
+    <li><a href="externalintegration" title="ExternalIntegration"><span class="api-symbol api-symbol--resource"></span>ExternalIntegration</a></li>
+    <li><a href="integration" title="Integration"><span class="api-symbol api-symbol--resource"></span>Integration</a></li>
+    <li><a href="tokenintegration" title="TokenIntegration"><span class="api-symbol api-symbol--resource"></span>TokenIntegration</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getservices" title="GetServices"><span class="symbol function"></span>GetServices</a></li>
+    <li><a href="getservices" title="GetServices"><span class="api-symbol api-symbol--function"></span>GetServices</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

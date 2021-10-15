@@ -13,33 +13,33 @@ Explore the resources and functions of the aws-native.ec2 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="carriergateway" title="CarrierGateway"><span class="symbol resource"></span>CarrierGateway</a></li>
-    <li><a href="dhcpoptions" title="DHCPOptions"><span class="symbol resource"></span>DHCPOptions</a></li>
-    <li><a href="ec2fleet" title="EC2Fleet"><span class="symbol resource"></span>EC2Fleet</a></li>
-    <li><a href="egressonlyinternetgateway" title="EgressOnlyInternetGateway"><span class="symbol resource"></span>EgressOnlyInternetGateway</a></li>
-    <li><a href="enclavecertificateiamroleassociation" title="EnclaveCertificateIamRoleAssociation"><span class="symbol resource"></span>EnclaveCertificateIamRoleAssociation</a></li>
-    <li><a href="flowlog" title="FlowLog"><span class="symbol resource"></span>FlowLog</a></li>
-    <li><a href="gatewayroutetableassociation" title="GatewayRouteTableAssociation"><span class="symbol resource"></span>GatewayRouteTableAssociation</a></li>
-    <li><a href="host" title="Host"><span class="symbol resource"></span>Host</a></li>
-    <li><a href="localgatewayroute" title="LocalGatewayRoute"><span class="symbol resource"></span>LocalGatewayRoute</a></li>
-    <li><a href="localgatewayroutetablevpcassociation" title="LocalGatewayRouteTableVPCAssociation"><span class="symbol resource"></span>LocalGatewayRouteTableVPCAssociation</a></li>
-    <li><a href="networkacl" title="NetworkAcl"><span class="symbol resource"></span>NetworkAcl</a></li>
-    <li><a href="networkinsightsanalysis" title="NetworkInsightsAnalysis"><span class="symbol resource"></span>NetworkInsightsAnalysis</a></li>
-    <li><a href="networkinsightspath" title="NetworkInsightsPath"><span class="symbol resource"></span>NetworkInsightsPath</a></li>
-    <li><a href="prefixlist" title="PrefixList"><span class="symbol resource"></span>PrefixList</a></li>
-    <li><a href="routetable" title="RouteTable"><span class="symbol resource"></span>RouteTable</a></li>
-    <li><a href="spotfleet" title="SpotFleet"><span class="symbol resource"></span>SpotFleet</a></li>
-    <li><a href="subnetnetworkaclassociation" title="SubnetNetworkAclAssociation"><span class="symbol resource"></span>SubnetNetworkAclAssociation</a></li>
-    <li><a href="subnetroutetableassociation" title="SubnetRouteTableAssociation"><span class="symbol resource"></span>SubnetRouteTableAssociation</a></li>
-    <li><a href="transitgateway" title="TransitGateway"><span class="symbol resource"></span>TransitGateway</a></li>
-    <li><a href="transitgatewayconnect" title="TransitGatewayConnect"><span class="symbol resource"></span>TransitGatewayConnect</a></li>
-    <li><a href="transitgatewaymulticastdomain" title="TransitGatewayMulticastDomain"><span class="symbol resource"></span>TransitGatewayMulticastDomain</a></li>
-    <li><a href="transitgatewaymulticastdomainassociation" title="TransitGatewayMulticastDomainAssociation"><span class="symbol resource"></span>TransitGatewayMulticastDomainAssociation</a></li>
-    <li><a href="transitgatewaymulticastgroupmember" title="TransitGatewayMulticastGroupMember"><span class="symbol resource"></span>TransitGatewayMulticastGroupMember</a></li>
-    <li><a href="transitgatewaymulticastgroupsource" title="TransitGatewayMulticastGroupSource"><span class="symbol resource"></span>TransitGatewayMulticastGroupSource</a></li>
-    <li><a href="transitgatewaypeeringattachment" title="TransitGatewayPeeringAttachment"><span class="symbol resource"></span>TransitGatewayPeeringAttachment</a></li>
-    <li><a href="transitgatewayvpcattachment" title="TransitGatewayVpcAttachment"><span class="symbol resource"></span>TransitGatewayVpcAttachment</a></li>
-    <li><a href="vpc" title="VPC"><span class="symbol resource"></span>VPC</a></li>
+    <li><a href="carriergateway" title="CarrierGateway"><span class="api-symbol api-symbol--resource"></span>CarrierGateway</a></li>
+    <li><a href="dhcpoptions" title="DHCPOptions"><span class="api-symbol api-symbol--resource"></span>DHCPOptions</a></li>
+    <li><a href="ec2fleet" title="EC2Fleet"><span class="api-symbol api-symbol--resource"></span>EC2Fleet</a></li>
+    <li><a href="egressonlyinternetgateway" title="EgressOnlyInternetGateway"><span class="api-symbol api-symbol--resource"></span>EgressOnlyInternetGateway</a></li>
+    <li><a href="enclavecertificateiamroleassociation" title="EnclaveCertificateIamRoleAssociation"><span class="api-symbol api-symbol--resource"></span>EnclaveCertificateIamRoleAssociation</a></li>
+    <li><a href="flowlog" title="FlowLog"><span class="api-symbol api-symbol--resource"></span>FlowLog</a></li>
+    <li><a href="gatewayroutetableassociation" title="GatewayRouteTableAssociation"><span class="api-symbol api-symbol--resource"></span>GatewayRouteTableAssociation</a></li>
+    <li><a href="host" title="Host"><span class="api-symbol api-symbol--resource"></span>Host</a></li>
+    <li><a href="localgatewayroute" title="LocalGatewayRoute"><span class="api-symbol api-symbol--resource"></span>LocalGatewayRoute</a></li>
+    <li><a href="localgatewayroutetablevpcassociation" title="LocalGatewayRouteTableVPCAssociation"><span class="api-symbol api-symbol--resource"></span>LocalGatewayRouteTableVPCAssociation</a></li>
+    <li><a href="networkacl" title="NetworkAcl"><span class="api-symbol api-symbol--resource"></span>NetworkAcl</a></li>
+    <li><a href="networkinsightsanalysis" title="NetworkInsightsAnalysis"><span class="api-symbol api-symbol--resource"></span>NetworkInsightsAnalysis</a></li>
+    <li><a href="networkinsightspath" title="NetworkInsightsPath"><span class="api-symbol api-symbol--resource"></span>NetworkInsightsPath</a></li>
+    <li><a href="prefixlist" title="PrefixList"><span class="api-symbol api-symbol--resource"></span>PrefixList</a></li>
+    <li><a href="routetable" title="RouteTable"><span class="api-symbol api-symbol--resource"></span>RouteTable</a></li>
+    <li><a href="spotfleet" title="SpotFleet"><span class="api-symbol api-symbol--resource"></span>SpotFleet</a></li>
+    <li><a href="subnetnetworkaclassociation" title="SubnetNetworkAclAssociation"><span class="api-symbol api-symbol--resource"></span>SubnetNetworkAclAssociation</a></li>
+    <li><a href="subnetroutetableassociation" title="SubnetRouteTableAssociation"><span class="api-symbol api-symbol--resource"></span>SubnetRouteTableAssociation</a></li>
+    <li><a href="transitgateway" title="TransitGateway"><span class="api-symbol api-symbol--resource"></span>TransitGateway</a></li>
+    <li><a href="transitgatewayconnect" title="TransitGatewayConnect"><span class="api-symbol api-symbol--resource"></span>TransitGatewayConnect</a></li>
+    <li><a href="transitgatewaymulticastdomain" title="TransitGatewayMulticastDomain"><span class="api-symbol api-symbol--resource"></span>TransitGatewayMulticastDomain</a></li>
+    <li><a href="transitgatewaymulticastdomainassociation" title="TransitGatewayMulticastDomainAssociation"><span class="api-symbol api-symbol--resource"></span>TransitGatewayMulticastDomainAssociation</a></li>
+    <li><a href="transitgatewaymulticastgroupmember" title="TransitGatewayMulticastGroupMember"><span class="api-symbol api-symbol--resource"></span>TransitGatewayMulticastGroupMember</a></li>
+    <li><a href="transitgatewaymulticastgroupsource" title="TransitGatewayMulticastGroupSource"><span class="api-symbol api-symbol--resource"></span>TransitGatewayMulticastGroupSource</a></li>
+    <li><a href="transitgatewaypeeringattachment" title="TransitGatewayPeeringAttachment"><span class="api-symbol api-symbol--resource"></span>TransitGatewayPeeringAttachment</a></li>
+    <li><a href="transitgatewayvpcattachment" title="TransitGatewayVpcAttachment"><span class="api-symbol api-symbol--resource"></span>TransitGatewayVpcAttachment</a></li>
+    <li><a href="vpc" title="VPC"><span class="api-symbol api-symbol--resource"></span>VPC</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

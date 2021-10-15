@@ -13,16 +13,16 @@ Explore the resources and functions of the azure.mariadb module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="configuration" title="Configuration"><span class="symbol resource"></span>Configuration</a></li>
-    <li><a href="database" title="Database"><span class="symbol resource"></span>Database</a></li>
-    <li><a href="firewallrule" title="FirewallRule"><span class="symbol resource"></span>FirewallRule</a></li>
-    <li><a href="server" title="Server"><span class="symbol resource"></span>Server</a></li>
-    <li><a href="virtualnetworkrule" title="VirtualNetworkRule"><span class="symbol resource"></span>VirtualNetworkRule</a></li>
+    <li><a href="configuration" title="Configuration"><span class="api-symbol api-symbol--resource"></span>Configuration</a></li>
+    <li><a href="database" title="Database"><span class="api-symbol api-symbol--resource"></span>Database</a></li>
+    <li><a href="firewallrule" title="FirewallRule"><span class="api-symbol api-symbol--resource"></span>FirewallRule</a></li>
+    <li><a href="server" title="Server"><span class="api-symbol api-symbol--resource"></span>Server</a></li>
+    <li><a href="virtualnetworkrule" title="VirtualNetworkRule"><span class="api-symbol api-symbol--resource"></span>VirtualNetworkRule</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getmariadbserver" title="GetMariaDbServer"><span class="symbol function"></span>GetMariaDbServer</a></li>
+    <li><a href="getmariadbserver" title="GetMariaDbServer"><span class="api-symbol api-symbol--function"></span>GetMariaDbServer</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -34,6 +34,6 @@ Explore the resources and functions of the azure.mariadb module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.22.0</dd>
+	<dd>4.23.0</dd>
 </dl>
 

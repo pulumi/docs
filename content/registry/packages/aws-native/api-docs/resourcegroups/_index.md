@@ -13,7 +13,7 @@ Explore the resources and functions of the aws-native.resourcegroups module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
+    <li><a href="group" title="Group"><span class="api-symbol api-symbol--resource"></span>Group</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

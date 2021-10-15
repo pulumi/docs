@@ -13,11 +13,11 @@ Explore the resources and functions of the gcp.binaryauthorization module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="attestor" title="Attestor"><span class="symbol resource"></span>Attestor</a></li>
-    <li><a href="attestoriambinding" title="AttestorIamBinding"><span class="symbol resource"></span>AttestorIamBinding</a></li>
-    <li><a href="attestoriammember" title="AttestorIamMember"><span class="symbol resource"></span>AttestorIamMember</a></li>
-    <li><a href="attestoriampolicy" title="AttestorIamPolicy"><span class="symbol resource"></span>AttestorIamPolicy</a></li>
-    <li><a href="policy" title="Policy"><span class="symbol resource"></span>Policy</a></li>
+    <li><a href="attestor" title="Attestor"><span class="api-symbol api-symbol--resource"></span>Attestor</a></li>
+    <li><a href="attestoriambinding" title="AttestorIamBinding"><span class="api-symbol api-symbol--resource"></span>AttestorIamBinding</a></li>
+    <li><a href="attestoriammember" title="AttestorIamMember"><span class="api-symbol api-symbol--resource"></span>AttestorIamMember</a></li>
+    <li><a href="attestoriampolicy" title="AttestorIamPolicy"><span class="api-symbol api-symbol--resource"></span>AttestorIamPolicy</a></li>
+    <li><a href="policy" title="Policy"><span class="api-symbol api-symbol--resource"></span>Policy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

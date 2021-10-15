@@ -13,9 +13,9 @@ no_edit_this_page: true
 
 <h2 id="modules">Modules</h2>
 <ul class="api">
-    <li><a href="v2/" title="v2"><span class="symbol module"></span>v2</a></li>
-    <li><a href="v2alpha/" title="v2alpha"><span class="symbol module"></span>v2alpha</a></li>
-    <li><a href="v2beta/" title="v2beta"><span class="symbol module"></span>v2beta</a></li>
+    <li><a href="v2/" title="v2"><span class="api-symbol api-symbol--module"></span>v2</a></li>
+    <li><a href="v2alpha/" title="v2alpha"><span class="api-symbol api-symbol--module"></span>v2alpha</a></li>
+    <li><a href="v2beta/" title="v2beta"><span class="api-symbol api-symbol--module"></span>v2beta</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

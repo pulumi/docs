@@ -13,26 +13,26 @@ Explore the resources and functions of the gcp.bigquery module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="appprofile" title="AppProfile"><span class="symbol resource"></span>AppProfile</a></li>
-    <li><a href="connection" title="Connection"><span class="symbol resource"></span>Connection</a></li>
-    <li><a href="datatransferconfig" title="DataTransferConfig"><span class="symbol resource"></span>DataTransferConfig</a></li>
-    <li><a href="dataset" title="Dataset"><span class="symbol resource"></span>Dataset</a></li>
-    <li><a href="datasetaccess" title="DatasetAccess"><span class="symbol resource"></span>DatasetAccess</a></li>
-    <li><a href="datasetiambinding" title="DatasetIamBinding"><span class="symbol resource"></span>DatasetIamBinding</a></li>
-    <li><a href="datasetiammember" title="DatasetIamMember"><span class="symbol resource"></span>DatasetIamMember</a></li>
-    <li><a href="datasetiampolicy" title="DatasetIamPolicy"><span class="symbol resource"></span>DatasetIamPolicy</a></li>
-    <li><a href="iambinding" title="IamBinding"><span class="symbol resource"></span>IamBinding</a></li>
-    <li><a href="iammember" title="IamMember"><span class="symbol resource"></span>IamMember</a></li>
-    <li><a href="iampolicy" title="IamPolicy"><span class="symbol resource"></span>IamPolicy</a></li>
-    <li><a href="job" title="Job"><span class="symbol resource"></span>Job</a></li>
-    <li><a href="reservation" title="Reservation"><span class="symbol resource"></span>Reservation</a></li>
-    <li><a href="routine" title="Routine"><span class="symbol resource"></span>Routine</a></li>
-    <li><a href="table" title="Table"><span class="symbol resource"></span>Table</a></li>
+    <li><a href="appprofile" title="AppProfile"><span class="api-symbol api-symbol--resource"></span>AppProfile</a></li>
+    <li><a href="connection" title="Connection"><span class="api-symbol api-symbol--resource"></span>Connection</a></li>
+    <li><a href="datatransferconfig" title="DataTransferConfig"><span class="api-symbol api-symbol--resource"></span>DataTransferConfig</a></li>
+    <li><a href="dataset" title="Dataset"><span class="api-symbol api-symbol--resource"></span>Dataset</a></li>
+    <li><a href="datasetaccess" title="DatasetAccess"><span class="api-symbol api-symbol--resource"></span>DatasetAccess</a></li>
+    <li><a href="datasetiambinding" title="DatasetIamBinding"><span class="api-symbol api-symbol--resource"></span>DatasetIamBinding</a></li>
+    <li><a href="datasetiammember" title="DatasetIamMember"><span class="api-symbol api-symbol--resource"></span>DatasetIamMember</a></li>
+    <li><a href="datasetiampolicy" title="DatasetIamPolicy"><span class="api-symbol api-symbol--resource"></span>DatasetIamPolicy</a></li>
+    <li><a href="iambinding" title="IamBinding"><span class="api-symbol api-symbol--resource"></span>IamBinding</a></li>
+    <li><a href="iammember" title="IamMember"><span class="api-symbol api-symbol--resource"></span>IamMember</a></li>
+    <li><a href="iampolicy" title="IamPolicy"><span class="api-symbol api-symbol--resource"></span>IamPolicy</a></li>
+    <li><a href="job" title="Job"><span class="api-symbol api-symbol--resource"></span>Job</a></li>
+    <li><a href="reservation" title="Reservation"><span class="api-symbol api-symbol--resource"></span>Reservation</a></li>
+    <li><a href="routine" title="Routine"><span class="api-symbol api-symbol--resource"></span>Routine</a></li>
+    <li><a href="table" title="Table"><span class="api-symbol api-symbol--resource"></span>Table</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getdefaultserviceaccount" title="GetDefaultServiceAccount"><span class="symbol function"></span>GetDefaultServiceAccount</a></li>
+    <li><a href="getdefaultserviceaccount" title="GetDefaultServiceAccount"><span class="api-symbol api-symbol--function"></span>GetDefaultServiceAccount</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

@@ -13,24 +13,24 @@ Explore the resources and functions of the gcp.datacatalog module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="entry" title="Entry"><span class="symbol resource"></span>Entry</a></li>
-    <li><a href="entrygroup" title="EntryGroup"><span class="symbol resource"></span>EntryGroup</a></li>
-    <li><a href="entrygroupiambinding" title="EntryGroupIamBinding"><span class="symbol resource"></span>EntryGroupIamBinding</a></li>
-    <li><a href="entrygroupiammember" title="EntryGroupIamMember"><span class="symbol resource"></span>EntryGroupIamMember</a></li>
-    <li><a href="entrygroupiampolicy" title="EntryGroupIamPolicy"><span class="symbol resource"></span>EntryGroupIamPolicy</a></li>
-    <li><a href="policytag" title="PolicyTag"><span class="symbol resource"></span>PolicyTag</a></li>
-    <li><a href="policytagiambinding" title="PolicyTagIamBinding"><span class="symbol resource"></span>PolicyTagIamBinding</a></li>
-    <li><a href="policytagiammember" title="PolicyTagIamMember"><span class="symbol resource"></span>PolicyTagIamMember</a></li>
-    <li><a href="policytagiampolicy" title="PolicyTagIamPolicy"><span class="symbol resource"></span>PolicyTagIamPolicy</a></li>
-    <li><a href="tag" title="Tag"><span class="symbol resource"></span>Tag</a></li>
-    <li><a href="tagtemplate" title="TagTemplate"><span class="symbol resource"></span>TagTemplate</a></li>
-    <li><a href="tagtemplateiambinding" title="TagTemplateIamBinding"><span class="symbol resource"></span>TagTemplateIamBinding</a></li>
-    <li><a href="tagtemplateiammember" title="TagTemplateIamMember"><span class="symbol resource"></span>TagTemplateIamMember</a></li>
-    <li><a href="tagtemplateiampolicy" title="TagTemplateIamPolicy"><span class="symbol resource"></span>TagTemplateIamPolicy</a></li>
-    <li><a href="taxonomy" title="Taxonomy"><span class="symbol resource"></span>Taxonomy</a></li>
-    <li><a href="taxonomyiambinding" title="TaxonomyIamBinding"><span class="symbol resource"></span>TaxonomyIamBinding</a></li>
-    <li><a href="taxonomyiammember" title="TaxonomyIamMember"><span class="symbol resource"></span>TaxonomyIamMember</a></li>
-    <li><a href="taxonomyiampolicy" title="TaxonomyIamPolicy"><span class="symbol resource"></span>TaxonomyIamPolicy</a></li>
+    <li><a href="entry" title="Entry"><span class="api-symbol api-symbol--resource"></span>Entry</a></li>
+    <li><a href="entrygroup" title="EntryGroup"><span class="api-symbol api-symbol--resource"></span>EntryGroup</a></li>
+    <li><a href="entrygroupiambinding" title="EntryGroupIamBinding"><span class="api-symbol api-symbol--resource"></span>EntryGroupIamBinding</a></li>
+    <li><a href="entrygroupiammember" title="EntryGroupIamMember"><span class="api-symbol api-symbol--resource"></span>EntryGroupIamMember</a></li>
+    <li><a href="entrygroupiampolicy" title="EntryGroupIamPolicy"><span class="api-symbol api-symbol--resource"></span>EntryGroupIamPolicy</a></li>
+    <li><a href="policytag" title="PolicyTag"><span class="api-symbol api-symbol--resource"></span>PolicyTag</a></li>
+    <li><a href="policytagiambinding" title="PolicyTagIamBinding"><span class="api-symbol api-symbol--resource"></span>PolicyTagIamBinding</a></li>
+    <li><a href="policytagiammember" title="PolicyTagIamMember"><span class="api-symbol api-symbol--resource"></span>PolicyTagIamMember</a></li>
+    <li><a href="policytagiampolicy" title="PolicyTagIamPolicy"><span class="api-symbol api-symbol--resource"></span>PolicyTagIamPolicy</a></li>
+    <li><a href="tag" title="Tag"><span class="api-symbol api-symbol--resource"></span>Tag</a></li>
+    <li><a href="tagtemplate" title="TagTemplate"><span class="api-symbol api-symbol--resource"></span>TagTemplate</a></li>
+    <li><a href="tagtemplateiambinding" title="TagTemplateIamBinding"><span class="api-symbol api-symbol--resource"></span>TagTemplateIamBinding</a></li>
+    <li><a href="tagtemplateiammember" title="TagTemplateIamMember"><span class="api-symbol api-symbol--resource"></span>TagTemplateIamMember</a></li>
+    <li><a href="tagtemplateiampolicy" title="TagTemplateIamPolicy"><span class="api-symbol api-symbol--resource"></span>TagTemplateIamPolicy</a></li>
+    <li><a href="taxonomy" title="Taxonomy"><span class="api-symbol api-symbol--resource"></span>Taxonomy</a></li>
+    <li><a href="taxonomyiambinding" title="TaxonomyIamBinding"><span class="api-symbol api-symbol--resource"></span>TaxonomyIamBinding</a></li>
+    <li><a href="taxonomyiammember" title="TaxonomyIamMember"><span class="api-symbol api-symbol--resource"></span>TaxonomyIamMember</a></li>
+    <li><a href="taxonomyiampolicy" title="TaxonomyIamPolicy"><span class="api-symbol api-symbol--resource"></span>TaxonomyIamPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

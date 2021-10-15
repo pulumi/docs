@@ -221,6 +221,7 @@ const example = new aws.glue.ResourcePolicy("example", {policy: glue_example_pol
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ResourcePolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                   <span class="nx">enable_hybrid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ResourcePolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -358,7 +359,15 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy to be applied to the aws glue data catalog.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enablehybrid_csharp">
+<a href="#enablehybrid_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Hybrid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -371,7 +380,15 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy to be applied to the aws glue data catalog.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enablehybrid_go">
+<a href="#enablehybrid_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Hybrid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -384,7 +401,15 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy to be applied to the aws glue data catalog.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enablehybrid_nodejs">
+<a href="#enablehybrid_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Hybrid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -397,7 +422,15 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The policy to be applied to the aws glue data catalog.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enable_hybrid_python">
+<a href="#enable_hybrid_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>hybrid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -471,6 +504,7 @@ Get an existing ResourcePolicy resource's state with the given name, ID, and opt
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">enable_hybrid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ResourcePolicy</code></pre></div>
 {{% /choosable %}}
 
@@ -584,6 +618,14 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_enablehybrid_csharp">
+<a href="#state_enablehybrid_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Hybrid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_policy_csharp">
 <a href="#state_policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
@@ -596,6 +638,14 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_enablehybrid_go">
+<a href="#state_enablehybrid_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Hybrid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_go">
 <a href="#state_policy_go" style="color: inherit; text-decoration: inherit;">Policy</a>
@@ -610,6 +660,14 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_enablehybrid_nodejs">
+<a href="#state_enablehybrid_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Hybrid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_policy_nodejs">
 <a href="#state_policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
@@ -622,6 +680,14 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_enable_hybrid_python">
+<a href="#state_enable_hybrid_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>hybrid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_python">
 <a href="#state_policy_python" style="color: inherit; text-decoration: inherit;">policy</a>

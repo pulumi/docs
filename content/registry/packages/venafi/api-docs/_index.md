@@ -13,10 +13,10 @@ A Pulumi package for creating and managing venafi cloud resources.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="certificate" title="Certificate"><span class="symbol resource"></span>Certificate</a></li>
-    <li><a href="policy" title="Policy"><span class="symbol resource"></span>Policy</a></li>
-    <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
-    <li><a href="sshcertificate" title="SshCertificate"><span class="symbol resource"></span>SshCertificate</a></li>
+    <li><a href="certificate" title="Certificate"><span class="api-symbol api-symbol--resource"></span>Certificate</a></li>
+    <li><a href="policy" title="Policy"><span class="api-symbol api-symbol--resource"></span>Policy</a></li>
+    <li><a href="provider" title="Provider"><span class="api-symbol api-symbol--resource"></span>Provider</a></li>
+    <li><a href="sshcertificate" title="SshCertificate"><span class="api-symbol api-symbol--resource"></span>SshCertificate</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

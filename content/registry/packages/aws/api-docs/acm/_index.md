@@ -13,13 +13,13 @@ Explore the resources and functions of the aws.acm module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="certificate" title="Certificate"><span class="symbol resource"></span>Certificate</a></li>
-    <li><a href="certificatevalidation" title="CertificateValidation"><span class="symbol resource"></span>CertificateValidation</a></li>
+    <li><a href="certificate" title="Certificate"><span class="api-symbol api-symbol--resource"></span>Certificate</a></li>
+    <li><a href="certificatevalidation" title="CertificateValidation"><span class="api-symbol api-symbol--resource"></span>CertificateValidation</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getcertificate" title="GetCertificate"><span class="symbol function"></span>GetCertificate</a></li>
+    <li><a href="getcertificate" title="GetCertificate"><span class="api-symbol api-symbol--function"></span>GetCertificate</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -31,6 +31,6 @@ Explore the resources and functions of the aws.acm module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.24.1</dd>
+	<dd>4.25.0</dd>
 </dl>
 

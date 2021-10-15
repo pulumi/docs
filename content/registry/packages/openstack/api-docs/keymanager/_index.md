@@ -13,15 +13,15 @@ Explore the resources and functions of the openstack.keymanager module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="containerv1" title="ContainerV1"><span class="symbol resource"></span>ContainerV1</a></li>
-    <li><a href="orderv1" title="OrderV1"><span class="symbol resource"></span>OrderV1</a></li>
-    <li><a href="secretv1" title="SecretV1"><span class="symbol resource"></span>SecretV1</a></li>
+    <li><a href="containerv1" title="ContainerV1"><span class="api-symbol api-symbol--resource"></span>ContainerV1</a></li>
+    <li><a href="orderv1" title="OrderV1"><span class="api-symbol api-symbol--resource"></span>OrderV1</a></li>
+    <li><a href="secretv1" title="SecretV1"><span class="api-symbol api-symbol--resource"></span>SecretV1</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getcontainer" title="GetContainer"><span class="symbol function"></span>GetContainer</a></li>
-    <li><a href="getsecret" title="GetSecret"><span class="symbol function"></span>GetSecret</a></li>
+    <li><a href="getcontainer" title="GetContainer"><span class="api-symbol api-symbol--function"></span>GetContainer</a></li>
+    <li><a href="getsecret" title="GetSecret"><span class="api-symbol api-symbol--function"></span>GetSecret</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

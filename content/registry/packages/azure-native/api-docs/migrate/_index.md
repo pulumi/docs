@@ -13,36 +13,36 @@ Explore the resources and functions of the azure-native.migrate module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="assessment" title="Assessment"><span class="symbol resource"></span>Assessment</a></li>
-    <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
-    <li><a href="hypervcollector" title="HyperVCollector"><span class="symbol resource"></span>HyperVCollector</a></li>
-    <li><a href="importcollector" title="ImportCollector"><span class="symbol resource"></span>ImportCollector</a></li>
-    <li><a href="migrateproject" title="MigrateProject"><span class="symbol resource"></span>MigrateProject</a></li>
-    <li><a href="movecollection" title="MoveCollection"><span class="symbol resource"></span>MoveCollection</a></li>
-    <li><a href="moveresource" title="MoveResource"><span class="symbol resource"></span>MoveResource</a></li>
-    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
-    <li><a href="project" title="Project"><span class="symbol resource"></span>Project</a></li>
-    <li><a href="servercollector" title="ServerCollector"><span class="symbol resource"></span>ServerCollector</a></li>
-    <li><a href="solution" title="Solution"><span class="symbol resource"></span>Solution</a></li>
-    <li><a href="vmwarecollector" title="VMwareCollector"><span class="symbol resource"></span>VMwareCollector</a></li>
+    <li><a href="assessment" title="Assessment"><span class="api-symbol api-symbol--resource"></span>Assessment</a></li>
+    <li><a href="group" title="Group"><span class="api-symbol api-symbol--resource"></span>Group</a></li>
+    <li><a href="hypervcollector" title="HyperVCollector"><span class="api-symbol api-symbol--resource"></span>HyperVCollector</a></li>
+    <li><a href="importcollector" title="ImportCollector"><span class="api-symbol api-symbol--resource"></span>ImportCollector</a></li>
+    <li><a href="migrateproject" title="MigrateProject"><span class="api-symbol api-symbol--resource"></span>MigrateProject</a></li>
+    <li><a href="movecollection" title="MoveCollection"><span class="api-symbol api-symbol--resource"></span>MoveCollection</a></li>
+    <li><a href="moveresource" title="MoveResource"><span class="api-symbol api-symbol--resource"></span>MoveResource</a></li>
+    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="api-symbol api-symbol--resource"></span>PrivateEndpointConnection</a></li>
+    <li><a href="project" title="Project"><span class="api-symbol api-symbol--resource"></span>Project</a></li>
+    <li><a href="servercollector" title="ServerCollector"><span class="api-symbol api-symbol--resource"></span>ServerCollector</a></li>
+    <li><a href="solution" title="Solution"><span class="api-symbol api-symbol--resource"></span>Solution</a></li>
+    <li><a href="vmwarecollector" title="VMwareCollector"><span class="api-symbol api-symbol--resource"></span>VMwareCollector</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getassessment" title="GetAssessment"><span class="symbol function"></span>GetAssessment</a></li>
-    <li><a href="getgroup" title="GetGroup"><span class="symbol function"></span>GetGroup</a></li>
-    <li><a href="gethypervcollector" title="GetHyperVCollector"><span class="symbol function"></span>GetHyperVCollector</a></li>
-    <li><a href="getimportcollector" title="GetImportCollector"><span class="symbol function"></span>GetImportCollector</a></li>
-    <li><a href="getmigrateproject" title="GetMigrateProject"><span class="symbol function"></span>GetMigrateProject</a></li>
-    <li><a href="getmovecollection" title="GetMoveCollection"><span class="symbol function"></span>GetMoveCollection</a></li>
-    <li><a href="getmoveresource" title="GetMoveResource"><span class="symbol function"></span>GetMoveResource</a></li>
-    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
-    <li><a href="getproject" title="GetProject"><span class="symbol function"></span>GetProject</a></li>
-    <li><a href="getprojectkeys" title="GetProjectKeys"><span class="symbol function"></span>GetProjectKeys</a></li>
-    <li><a href="getservercollector" title="GetServerCollector"><span class="symbol function"></span>GetServerCollector</a></li>
-    <li><a href="getsolution" title="GetSolution"><span class="symbol function"></span>GetSolution</a></li>
-    <li><a href="getsolutionconfig" title="GetSolutionConfig"><span class="symbol function"></span>GetSolutionConfig</a></li>
-    <li><a href="getvmwarecollector" title="GetVMwareCollector"><span class="symbol function"></span>GetVMwareCollector</a></li>
+    <li><a href="getassessment" title="GetAssessment"><span class="api-symbol api-symbol--function"></span>GetAssessment</a></li>
+    <li><a href="getgroup" title="GetGroup"><span class="api-symbol api-symbol--function"></span>GetGroup</a></li>
+    <li><a href="gethypervcollector" title="GetHyperVCollector"><span class="api-symbol api-symbol--function"></span>GetHyperVCollector</a></li>
+    <li><a href="getimportcollector" title="GetImportCollector"><span class="api-symbol api-symbol--function"></span>GetImportCollector</a></li>
+    <li><a href="getmigrateproject" title="GetMigrateProject"><span class="api-symbol api-symbol--function"></span>GetMigrateProject</a></li>
+    <li><a href="getmovecollection" title="GetMoveCollection"><span class="api-symbol api-symbol--function"></span>GetMoveCollection</a></li>
+    <li><a href="getmoveresource" title="GetMoveResource"><span class="api-symbol api-symbol--function"></span>GetMoveResource</a></li>
+    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="api-symbol api-symbol--function"></span>GetPrivateEndpointConnection</a></li>
+    <li><a href="getproject" title="GetProject"><span class="api-symbol api-symbol--function"></span>GetProject</a></li>
+    <li><a href="getprojectkeys" title="GetProjectKeys"><span class="api-symbol api-symbol--function"></span>GetProjectKeys</a></li>
+    <li><a href="getservercollector" title="GetServerCollector"><span class="api-symbol api-symbol--function"></span>GetServerCollector</a></li>
+    <li><a href="getsolution" title="GetSolution"><span class="api-symbol api-symbol--function"></span>GetSolution</a></li>
+    <li><a href="getsolutionconfig" title="GetSolutionConfig"><span class="api-symbol api-symbol--function"></span>GetSolutionConfig</a></li>
+    <li><a href="getvmwarecollector" title="GetVMwareCollector"><span class="api-symbol api-symbol--function"></span>GetVMwareCollector</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -52,6 +52,6 @@ Explore the resources and functions of the azure-native.migrate module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.38.0</dd>
+	<dd>1.39.0</dd>
 </dl>
 

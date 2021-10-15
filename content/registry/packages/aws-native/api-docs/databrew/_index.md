@@ -13,11 +13,11 @@ Explore the resources and functions of the aws-native.databrew module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="dataset" title="Dataset"><span class="symbol resource"></span>Dataset</a></li>
-    <li><a href="job" title="Job"><span class="symbol resource"></span>Job</a></li>
-    <li><a href="project" title="Project"><span class="symbol resource"></span>Project</a></li>
-    <li><a href="recipe" title="Recipe"><span class="symbol resource"></span>Recipe</a></li>
-    <li><a href="schedule" title="Schedule"><span class="symbol resource"></span>Schedule</a></li>
+    <li><a href="dataset" title="Dataset"><span class="api-symbol api-symbol--resource"></span>Dataset</a></li>
+    <li><a href="job" title="Job"><span class="api-symbol api-symbol--resource"></span>Job</a></li>
+    <li><a href="project" title="Project"><span class="api-symbol api-symbol--resource"></span>Project</a></li>
+    <li><a href="recipe" title="Recipe"><span class="api-symbol api-symbol--resource"></span>Recipe</a></li>
+    <li><a href="schedule" title="Schedule"><span class="api-symbol api-symbol--resource"></span>Schedule</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

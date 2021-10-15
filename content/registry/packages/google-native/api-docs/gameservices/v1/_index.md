@@ -13,20 +13,20 @@ Explore the resources and functions of the google-native.gameservices/v1 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="config" title="Config"><span class="symbol resource"></span>Config</a></li>
-    <li><a href="gameservercluster" title="GameServerCluster"><span class="symbol resource"></span>GameServerCluster</a></li>
-    <li><a href="gameserverdeployment" title="GameServerDeployment"><span class="symbol resource"></span>GameServerDeployment</a></li>
-    <li><a href="gameserverdeploymentiampolicy" title="GameServerDeploymentIamPolicy"><span class="symbol resource"></span>GameServerDeploymentIamPolicy</a></li>
-    <li><a href="realm" title="Realm"><span class="symbol resource"></span>Realm</a></li>
+    <li><a href="config" title="Config"><span class="api-symbol api-symbol--resource"></span>Config</a></li>
+    <li><a href="gameservercluster" title="GameServerCluster"><span class="api-symbol api-symbol--resource"></span>GameServerCluster</a></li>
+    <li><a href="gameserverdeployment" title="GameServerDeployment"><span class="api-symbol api-symbol--resource"></span>GameServerDeployment</a></li>
+    <li><a href="gameserverdeploymentiampolicy" title="GameServerDeploymentIamPolicy"><span class="api-symbol api-symbol--resource"></span>GameServerDeploymentIamPolicy</a></li>
+    <li><a href="realm" title="Realm"><span class="api-symbol api-symbol--resource"></span>Realm</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getconfig" title="GetConfig"><span class="symbol function"></span>GetConfig</a></li>
-    <li><a href="getgameservercluster" title="GetGameServerCluster"><span class="symbol function"></span>GetGameServerCluster</a></li>
-    <li><a href="getgameserverdeployment" title="GetGameServerDeployment"><span class="symbol function"></span>GetGameServerDeployment</a></li>
-    <li><a href="getgameserverdeploymentiampolicy" title="GetGameServerDeploymentIamPolicy"><span class="symbol function"></span>GetGameServerDeploymentIamPolicy</a></li>
-    <li><a href="getrealm" title="GetRealm"><span class="symbol function"></span>GetRealm</a></li>
+    <li><a href="getconfig" title="GetConfig"><span class="api-symbol api-symbol--function"></span>GetConfig</a></li>
+    <li><a href="getgameservercluster" title="GetGameServerCluster"><span class="api-symbol api-symbol--function"></span>GetGameServerCluster</a></li>
+    <li><a href="getgameserverdeployment" title="GetGameServerDeployment"><span class="api-symbol api-symbol--function"></span>GetGameServerDeployment</a></li>
+    <li><a href="getgameserverdeploymentiampolicy" title="GetGameServerDeploymentIamPolicy"><span class="api-symbol api-symbol--function"></span>GetGameServerDeploymentIamPolicy</a></li>
+    <li><a href="getrealm" title="GetRealm"><span class="api-symbol api-symbol--function"></span>GetRealm</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

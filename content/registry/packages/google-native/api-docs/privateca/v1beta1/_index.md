@@ -13,20 +13,20 @@ Explore the resources and functions of the google-native.privateca/v1beta1 modul
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="certificate" title="Certificate"><span class="symbol resource"></span>Certificate</a></li>
-    <li><a href="certificateauthority" title="CertificateAuthority"><span class="symbol resource"></span>CertificateAuthority</a></li>
-    <li><a href="certificateauthoritycertificaterevocationlistiampolicy" title="CertificateAuthorityCertificateRevocationListIamPolicy"><span class="symbol resource"></span>CertificateAuthorityCertificateRevocationListIamPolicy</a></li>
-    <li><a href="certificateauthorityiampolicy" title="CertificateAuthorityIamPolicy"><span class="symbol resource"></span>CertificateAuthorityIamPolicy</a></li>
-    <li><a href="reusableconfigiampolicy" title="ReusableConfigIamPolicy"><span class="symbol resource"></span>ReusableConfigIamPolicy</a></li>
+    <li><a href="certificate" title="Certificate"><span class="api-symbol api-symbol--resource"></span>Certificate</a></li>
+    <li><a href="certificateauthority" title="CertificateAuthority"><span class="api-symbol api-symbol--resource"></span>CertificateAuthority</a></li>
+    <li><a href="certificateauthoritycertificaterevocationlistiampolicy" title="CertificateAuthorityCertificateRevocationListIamPolicy"><span class="api-symbol api-symbol--resource"></span>CertificateAuthorityCertificateRevocationListIamPolicy</a></li>
+    <li><a href="certificateauthorityiampolicy" title="CertificateAuthorityIamPolicy"><span class="api-symbol api-symbol--resource"></span>CertificateAuthorityIamPolicy</a></li>
+    <li><a href="reusableconfigiampolicy" title="ReusableConfigIamPolicy"><span class="api-symbol api-symbol--resource"></span>ReusableConfigIamPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getcertificate" title="GetCertificate"><span class="symbol function"></span>GetCertificate</a></li>
-    <li><a href="getcertificateauthority" title="GetCertificateAuthority"><span class="symbol function"></span>GetCertificateAuthority</a></li>
-    <li><a href="getcertificateauthoritycertificaterevocationlistiampolicy" title="GetCertificateAuthorityCertificateRevocationListIamPolicy"><span class="symbol function"></span>GetCertificateAuthorityCertificateRevocationListIamPolicy</a></li>
-    <li><a href="getcertificateauthorityiampolicy" title="GetCertificateAuthorityIamPolicy"><span class="symbol function"></span>GetCertificateAuthorityIamPolicy</a></li>
-    <li><a href="getreusableconfigiampolicy" title="GetReusableConfigIamPolicy"><span class="symbol function"></span>GetReusableConfigIamPolicy</a></li>
+    <li><a href="getcertificate" title="GetCertificate"><span class="api-symbol api-symbol--function"></span>GetCertificate</a></li>
+    <li><a href="getcertificateauthority" title="GetCertificateAuthority"><span class="api-symbol api-symbol--function"></span>GetCertificateAuthority</a></li>
+    <li><a href="getcertificateauthoritycertificaterevocationlistiampolicy" title="GetCertificateAuthorityCertificateRevocationListIamPolicy"><span class="api-symbol api-symbol--function"></span>GetCertificateAuthorityCertificateRevocationListIamPolicy</a></li>
+    <li><a href="getcertificateauthorityiampolicy" title="GetCertificateAuthorityIamPolicy"><span class="api-symbol api-symbol--function"></span>GetCertificateAuthorityIamPolicy</a></li>
+    <li><a href="getreusableconfigiampolicy" title="GetReusableConfigIamPolicy"><span class="api-symbol api-symbol--function"></span>GetReusableConfigIamPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

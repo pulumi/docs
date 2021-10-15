@@ -13,16 +13,16 @@ Explore the resources and functions of the azure-native.domainregistration modul
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="domain" title="Domain"><span class="symbol resource"></span>Domain</a></li>
-    <li><a href="domainownershipidentifier" title="DomainOwnershipIdentifier"><span class="symbol resource"></span>DomainOwnershipIdentifier</a></li>
+    <li><a href="domain" title="Domain"><span class="api-symbol api-symbol--resource"></span>Domain</a></li>
+    <li><a href="domainownershipidentifier" title="DomainOwnershipIdentifier"><span class="api-symbol api-symbol--resource"></span>DomainOwnershipIdentifier</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getdomain" title="GetDomain"><span class="symbol function"></span>GetDomain</a></li>
-    <li><a href="getdomainownershipidentifier" title="GetDomainOwnershipIdentifier"><span class="symbol function"></span>GetDomainOwnershipIdentifier</a></li>
-    <li><a href="listdomainrecommendations" title="ListDomainRecommendations"><span class="symbol function"></span>ListDomainRecommendations</a></li>
-    <li><a href="listtopleveldomainagreements" title="ListTopLevelDomainAgreements"><span class="symbol function"></span>ListTopLevelDomainAgreements</a></li>
+    <li><a href="getdomain" title="GetDomain"><span class="api-symbol api-symbol--function"></span>GetDomain</a></li>
+    <li><a href="getdomainownershipidentifier" title="GetDomainOwnershipIdentifier"><span class="api-symbol api-symbol--function"></span>GetDomainOwnershipIdentifier</a></li>
+    <li><a href="listdomainrecommendations" title="ListDomainRecommendations"><span class="api-symbol api-symbol--function"></span>ListDomainRecommendations</a></li>
+    <li><a href="listtopleveldomainagreements" title="ListTopLevelDomainAgreements"><span class="api-symbol api-symbol--function"></span>ListTopLevelDomainAgreements</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -32,6 +32,6 @@ Explore the resources and functions of the azure-native.domainregistration modul
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.38.0</dd>
+	<dd>1.39.0</dd>
 </dl>
 

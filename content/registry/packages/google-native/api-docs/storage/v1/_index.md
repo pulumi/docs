@@ -13,28 +13,28 @@ Explore the resources and functions of the google-native.storage/v1 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="bucket" title="Bucket"><span class="symbol resource"></span>Bucket</a></li>
-    <li><a href="bucketaccesscontrol" title="BucketAccessControl"><span class="symbol resource"></span>BucketAccessControl</a></li>
-    <li><a href="bucketiampolicy" title="BucketIamPolicy"><span class="symbol resource"></span>BucketIamPolicy</a></li>
-    <li><a href="bucketobject" title="BucketObject"><span class="symbol resource"></span>BucketObject</a></li>
-    <li><a href="defaultobjectaccesscontrol" title="DefaultObjectAccessControl"><span class="symbol resource"></span>DefaultObjectAccessControl</a></li>
-    <li><a href="hmackey" title="HmacKey"><span class="symbol resource"></span>HmacKey</a></li>
-    <li><a href="notification" title="Notification"><span class="symbol resource"></span>Notification</a></li>
-    <li><a href="objectaccesscontrol" title="ObjectAccessControl"><span class="symbol resource"></span>ObjectAccessControl</a></li>
-    <li><a href="objectiampolicy" title="ObjectIamPolicy"><span class="symbol resource"></span>ObjectIamPolicy</a></li>
+    <li><a href="bucket" title="Bucket"><span class="api-symbol api-symbol--resource"></span>Bucket</a></li>
+    <li><a href="bucketaccesscontrol" title="BucketAccessControl"><span class="api-symbol api-symbol--resource"></span>BucketAccessControl</a></li>
+    <li><a href="bucketiampolicy" title="BucketIamPolicy"><span class="api-symbol api-symbol--resource"></span>BucketIamPolicy</a></li>
+    <li><a href="bucketobject" title="BucketObject"><span class="api-symbol api-symbol--resource"></span>BucketObject</a></li>
+    <li><a href="defaultobjectaccesscontrol" title="DefaultObjectAccessControl"><span class="api-symbol api-symbol--resource"></span>DefaultObjectAccessControl</a></li>
+    <li><a href="hmackey" title="HmacKey"><span class="api-symbol api-symbol--resource"></span>HmacKey</a></li>
+    <li><a href="notification" title="Notification"><span class="api-symbol api-symbol--resource"></span>Notification</a></li>
+    <li><a href="objectaccesscontrol" title="ObjectAccessControl"><span class="api-symbol api-symbol--resource"></span>ObjectAccessControl</a></li>
+    <li><a href="objectiampolicy" title="ObjectIamPolicy"><span class="api-symbol api-symbol--resource"></span>ObjectIamPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getbucket" title="GetBucket"><span class="symbol function"></span>GetBucket</a></li>
-    <li><a href="getbucketaccesscontrol" title="GetBucketAccessControl"><span class="symbol function"></span>GetBucketAccessControl</a></li>
-    <li><a href="getbucketiampolicy" title="GetBucketIamPolicy"><span class="symbol function"></span>GetBucketIamPolicy</a></li>
-    <li><a href="getbucketobject" title="GetBucketObject"><span class="symbol function"></span>GetBucketObject</a></li>
-    <li><a href="getdefaultobjectaccesscontrol" title="GetDefaultObjectAccessControl"><span class="symbol function"></span>GetDefaultObjectAccessControl</a></li>
-    <li><a href="gethmackey" title="GetHmacKey"><span class="symbol function"></span>GetHmacKey</a></li>
-    <li><a href="getnotification" title="GetNotification"><span class="symbol function"></span>GetNotification</a></li>
-    <li><a href="getobjectaccesscontrol" title="GetObjectAccessControl"><span class="symbol function"></span>GetObjectAccessControl</a></li>
-    <li><a href="getobjectiampolicy" title="GetObjectIamPolicy"><span class="symbol function"></span>GetObjectIamPolicy</a></li>
+    <li><a href="getbucket" title="GetBucket"><span class="api-symbol api-symbol--function"></span>GetBucket</a></li>
+    <li><a href="getbucketaccesscontrol" title="GetBucketAccessControl"><span class="api-symbol api-symbol--function"></span>GetBucketAccessControl</a></li>
+    <li><a href="getbucketiampolicy" title="GetBucketIamPolicy"><span class="api-symbol api-symbol--function"></span>GetBucketIamPolicy</a></li>
+    <li><a href="getbucketobject" title="GetBucketObject"><span class="api-symbol api-symbol--function"></span>GetBucketObject</a></li>
+    <li><a href="getdefaultobjectaccesscontrol" title="GetDefaultObjectAccessControl"><span class="api-symbol api-symbol--function"></span>GetDefaultObjectAccessControl</a></li>
+    <li><a href="gethmackey" title="GetHmacKey"><span class="api-symbol api-symbol--function"></span>GetHmacKey</a></li>
+    <li><a href="getnotification" title="GetNotification"><span class="api-symbol api-symbol--function"></span>GetNotification</a></li>
+    <li><a href="getobjectaccesscontrol" title="GetObjectAccessControl"><span class="api-symbol api-symbol--function"></span>GetObjectAccessControl</a></li>
+    <li><a href="getobjectiampolicy" title="GetObjectIamPolicy"><span class="api-symbol api-symbol--function"></span>GetObjectIamPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

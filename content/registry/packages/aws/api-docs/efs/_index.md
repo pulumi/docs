@@ -13,19 +13,19 @@ Explore the resources and functions of the aws.efs module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="accesspoint" title="AccessPoint"><span class="symbol resource"></span>AccessPoint</a></li>
-    <li><a href="backuppolicy" title="BackupPolicy"><span class="symbol resource"></span>BackupPolicy</a></li>
-    <li><a href="filesystem" title="FileSystem"><span class="symbol resource"></span>FileSystem</a></li>
-    <li><a href="filesystempolicy" title="FileSystemPolicy"><span class="symbol resource"></span>FileSystemPolicy</a></li>
-    <li><a href="mounttarget" title="MountTarget"><span class="symbol resource"></span>MountTarget</a></li>
+    <li><a href="accesspoint" title="AccessPoint"><span class="api-symbol api-symbol--resource"></span>AccessPoint</a></li>
+    <li><a href="backuppolicy" title="BackupPolicy"><span class="api-symbol api-symbol--resource"></span>BackupPolicy</a></li>
+    <li><a href="filesystem" title="FileSystem"><span class="api-symbol api-symbol--resource"></span>FileSystem</a></li>
+    <li><a href="filesystempolicy" title="FileSystemPolicy"><span class="api-symbol api-symbol--resource"></span>FileSystemPolicy</a></li>
+    <li><a href="mounttarget" title="MountTarget"><span class="api-symbol api-symbol--resource"></span>MountTarget</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getaccesspoint" title="GetAccessPoint"><span class="symbol function"></span>GetAccessPoint</a></li>
-    <li><a href="getaccesspoints" title="GetAccessPoints"><span class="symbol function"></span>GetAccessPoints</a></li>
-    <li><a href="getfilesystem" title="GetFileSystem"><span class="symbol function"></span>GetFileSystem</a></li>
-    <li><a href="getmounttarget" title="GetMountTarget"><span class="symbol function"></span>GetMountTarget</a></li>
+    <li><a href="getaccesspoint" title="GetAccessPoint"><span class="api-symbol api-symbol--function"></span>GetAccessPoint</a></li>
+    <li><a href="getaccesspoints" title="GetAccessPoints"><span class="api-symbol api-symbol--function"></span>GetAccessPoints</a></li>
+    <li><a href="getfilesystem" title="GetFileSystem"><span class="api-symbol api-symbol--function"></span>GetFileSystem</a></li>
+    <li><a href="getmounttarget" title="GetMountTarget"><span class="api-symbol api-symbol--function"></span>GetMountTarget</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -37,6 +37,6 @@ Explore the resources and functions of the aws.efs module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.24.1</dd>
+	<dd>4.25.0</dd>
 </dl>
 

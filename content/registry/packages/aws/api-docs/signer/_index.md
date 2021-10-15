@@ -13,15 +13,15 @@ Explore the resources and functions of the aws.signer module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="signingjob" title="SigningJob"><span class="symbol resource"></span>SigningJob</a></li>
-    <li><a href="signingprofile" title="SigningProfile"><span class="symbol resource"></span>SigningProfile</a></li>
-    <li><a href="signingprofilepermission" title="SigningProfilePermission"><span class="symbol resource"></span>SigningProfilePermission</a></li>
+    <li><a href="signingjob" title="SigningJob"><span class="api-symbol api-symbol--resource"></span>SigningJob</a></li>
+    <li><a href="signingprofile" title="SigningProfile"><span class="api-symbol api-symbol--resource"></span>SigningProfile</a></li>
+    <li><a href="signingprofilepermission" title="SigningProfilePermission"><span class="api-symbol api-symbol--resource"></span>SigningProfilePermission</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getsigningjob" title="GetSigningJob"><span class="symbol function"></span>GetSigningJob</a></li>
-    <li><a href="getsigningprofile" title="GetSigningProfile"><span class="symbol function"></span>GetSigningProfile</a></li>
+    <li><a href="getsigningjob" title="GetSigningJob"><span class="api-symbol api-symbol--function"></span>GetSigningJob</a></li>
+    <li><a href="getsigningprofile" title="GetSigningProfile"><span class="api-symbol api-symbol--function"></span>GetSigningProfile</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -33,6 +33,6 @@ Explore the resources and functions of the aws.signer module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.24.1</dd>
+	<dd>4.25.0</dd>
 </dl>
 

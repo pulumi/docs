@@ -13,11 +13,11 @@ Explore the resources and functions of the aws-native.mediaconnect module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="flow" title="Flow"><span class="symbol resource"></span>Flow</a></li>
-    <li><a href="flowentitlement" title="FlowEntitlement"><span class="symbol resource"></span>FlowEntitlement</a></li>
-    <li><a href="flowoutput" title="FlowOutput"><span class="symbol resource"></span>FlowOutput</a></li>
-    <li><a href="flowsource" title="FlowSource"><span class="symbol resource"></span>FlowSource</a></li>
-    <li><a href="flowvpcinterface" title="FlowVpcInterface"><span class="symbol resource"></span>FlowVpcInterface</a></li>
+    <li><a href="flow" title="Flow"><span class="api-symbol api-symbol--resource"></span>Flow</a></li>
+    <li><a href="flowentitlement" title="FlowEntitlement"><span class="api-symbol api-symbol--resource"></span>FlowEntitlement</a></li>
+    <li><a href="flowoutput" title="FlowOutput"><span class="api-symbol api-symbol--resource"></span>FlowOutput</a></li>
+    <li><a href="flowsource" title="FlowSource"><span class="api-symbol api-symbol--resource"></span>FlowSource</a></li>
+    <li><a href="flowvpcinterface" title="FlowVpcInterface"><span class="api-symbol api-symbol--resource"></span>FlowVpcInterface</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

@@ -13,23 +13,23 @@ Explore the resources and functions of the alicloud.edas module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="application" title="Application"><span class="symbol resource"></span>Application</a></li>
-    <li><a href="applicationdeployment" title="ApplicationDeployment"><span class="symbol resource"></span>ApplicationDeployment</a></li>
-    <li><a href="applicationscale" title="ApplicationScale"><span class="symbol resource"></span>ApplicationScale</a></li>
-    <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
-    <li><a href="deploygroup" title="DeployGroup"><span class="symbol resource"></span>DeployGroup</a></li>
-    <li><a href="instanceclusterattachment" title="InstanceClusterAttachment"><span class="symbol resource"></span>InstanceClusterAttachment</a></li>
-    <li><a href="k8sapplication" title="K8sApplication"><span class="symbol resource"></span>K8sApplication</a></li>
-    <li><a href="k8scluster" title="K8sCluster"><span class="symbol resource"></span>K8sCluster</a></li>
-    <li><a href="slbattachment" title="SlbAttachment"><span class="symbol resource"></span>SlbAttachment</a></li>
+    <li><a href="application" title="Application"><span class="api-symbol api-symbol--resource"></span>Application</a></li>
+    <li><a href="applicationdeployment" title="ApplicationDeployment"><span class="api-symbol api-symbol--resource"></span>ApplicationDeployment</a></li>
+    <li><a href="applicationscale" title="ApplicationScale"><span class="api-symbol api-symbol--resource"></span>ApplicationScale</a></li>
+    <li><a href="cluster" title="Cluster"><span class="api-symbol api-symbol--resource"></span>Cluster</a></li>
+    <li><a href="deploygroup" title="DeployGroup"><span class="api-symbol api-symbol--resource"></span>DeployGroup</a></li>
+    <li><a href="instanceclusterattachment" title="InstanceClusterAttachment"><span class="api-symbol api-symbol--resource"></span>InstanceClusterAttachment</a></li>
+    <li><a href="k8sapplication" title="K8sApplication"><span class="api-symbol api-symbol--resource"></span>K8sApplication</a></li>
+    <li><a href="k8scluster" title="K8sCluster"><span class="api-symbol api-symbol--resource"></span>K8sCluster</a></li>
+    <li><a href="slbattachment" title="SlbAttachment"><span class="api-symbol api-symbol--resource"></span>SlbAttachment</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getapplications" title="GetApplications"><span class="symbol function"></span>GetApplications</a></li>
-    <li><a href="getclusters" title="GetClusters"><span class="symbol function"></span>GetClusters</a></li>
-    <li><a href="getdeploygroups" title="GetDeployGroups"><span class="symbol function"></span>GetDeployGroups</a></li>
-    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
+    <li><a href="getapplications" title="GetApplications"><span class="api-symbol api-symbol--function"></span>GetApplications</a></li>
+    <li><a href="getclusters" title="GetClusters"><span class="api-symbol api-symbol--function"></span>GetClusters</a></li>
+    <li><a href="getdeploygroups" title="GetDeployGroups"><span class="api-symbol api-symbol--function"></span>GetDeployGroups</a></li>
+    <li><a href="getservice" title="GetService"><span class="api-symbol api-symbol--function"></span>GetService</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

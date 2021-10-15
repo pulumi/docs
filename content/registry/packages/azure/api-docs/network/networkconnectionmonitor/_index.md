@@ -2986,6 +2986,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The port for the Tcp connection.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="destinationportbehavior_csharp">
+<a href="#destinationportbehavior_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Port<wbr>Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The destination port behavior for the Tcp connection. Possible values are `None` and `ListenIfAvailable`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tracerouteenabled_csharp">
 <a href="#tracerouteenabled_csharp" style="color: inherit; text-decoration: inherit;">Trace<wbr>Route<wbr>Enabled</a>
 </span>
@@ -3006,6 +3015,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port for the Tcp connection.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destinationportbehavior_go">
+<a href="#destinationportbehavior_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Port<wbr>Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The destination port behavior for the Tcp connection. Possible values are `None` and `ListenIfAvailable`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tracerouteenabled_go">
@@ -3030,6 +3048,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The port for the Tcp connection.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="destinationportbehavior_nodejs">
+<a href="#destinationportbehavior_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Port<wbr>Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The destination port behavior for the Tcp connection. Possible values are `None` and `ListenIfAvailable`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tracerouteenabled_nodejs">
 <a href="#tracerouteenabled_nodejs" style="color: inherit; text-decoration: inherit;">trace<wbr>Route<wbr>Enabled</a>
 </span>
@@ -3050,6 +3077,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port for the Tcp connection.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destination_port_behavior_python">
+<a href="#destination_port_behavior_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>port_<wbr>behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The destination port behavior for the Tcp connection. Possible values are `None` and `ListenIfAvailable`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trace_route_enabled_python">

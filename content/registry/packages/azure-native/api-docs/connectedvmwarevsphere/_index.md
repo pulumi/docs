@@ -13,34 +13,34 @@ Explore the resources and functions of the azure-native.connectedvmwarevsphere m
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
-    <li><a href="datastore" title="Datastore"><span class="symbol resource"></span>Datastore</a></li>
-    <li><a href="guestagent" title="GuestAgent"><span class="symbol resource"></span>GuestAgent</a></li>
-    <li><a href="host" title="Host"><span class="symbol resource"></span>Host</a></li>
-    <li><a href="hybrididentitymetadatum" title="HybridIdentityMetadatum"><span class="symbol resource"></span>HybridIdentityMetadatum</a></li>
-    <li><a href="inventoryitem" title="InventoryItem"><span class="symbol resource"></span>InventoryItem</a></li>
-    <li><a href="machineextension" title="MachineExtension"><span class="symbol resource"></span>MachineExtension</a></li>
-    <li><a href="resourcepool" title="ResourcePool"><span class="symbol resource"></span>ResourcePool</a></li>
-    <li><a href="vcenter" title="VCenter"><span class="symbol resource"></span>VCenter</a></li>
-    <li><a href="virtualmachine" title="VirtualMachine"><span class="symbol resource"></span>VirtualMachine</a></li>
-    <li><a href="virtualmachinetemplate" title="VirtualMachineTemplate"><span class="symbol resource"></span>VirtualMachineTemplate</a></li>
-    <li><a href="virtualnetwork" title="VirtualNetwork"><span class="symbol resource"></span>VirtualNetwork</a></li>
+    <li><a href="cluster" title="Cluster"><span class="api-symbol api-symbol--resource"></span>Cluster</a></li>
+    <li><a href="datastore" title="Datastore"><span class="api-symbol api-symbol--resource"></span>Datastore</a></li>
+    <li><a href="guestagent" title="GuestAgent"><span class="api-symbol api-symbol--resource"></span>GuestAgent</a></li>
+    <li><a href="host" title="Host"><span class="api-symbol api-symbol--resource"></span>Host</a></li>
+    <li><a href="hybrididentitymetadatum" title="HybridIdentityMetadatum"><span class="api-symbol api-symbol--resource"></span>HybridIdentityMetadatum</a></li>
+    <li><a href="inventoryitem" title="InventoryItem"><span class="api-symbol api-symbol--resource"></span>InventoryItem</a></li>
+    <li><a href="machineextension" title="MachineExtension"><span class="api-symbol api-symbol--resource"></span>MachineExtension</a></li>
+    <li><a href="resourcepool" title="ResourcePool"><span class="api-symbol api-symbol--resource"></span>ResourcePool</a></li>
+    <li><a href="vcenter" title="VCenter"><span class="api-symbol api-symbol--resource"></span>VCenter</a></li>
+    <li><a href="virtualmachine" title="VirtualMachine"><span class="api-symbol api-symbol--resource"></span>VirtualMachine</a></li>
+    <li><a href="virtualmachinetemplate" title="VirtualMachineTemplate"><span class="api-symbol api-symbol--resource"></span>VirtualMachineTemplate</a></li>
+    <li><a href="virtualnetwork" title="VirtualNetwork"><span class="api-symbol api-symbol--resource"></span>VirtualNetwork</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getcluster" title="GetCluster"><span class="symbol function"></span>GetCluster</a></li>
-    <li><a href="getdatastore" title="GetDatastore"><span class="symbol function"></span>GetDatastore</a></li>
-    <li><a href="getguestagent" title="GetGuestAgent"><span class="symbol function"></span>GetGuestAgent</a></li>
-    <li><a href="gethost" title="GetHost"><span class="symbol function"></span>GetHost</a></li>
-    <li><a href="gethybrididentitymetadatum" title="GetHybridIdentityMetadatum"><span class="symbol function"></span>GetHybridIdentityMetadatum</a></li>
-    <li><a href="getinventoryitem" title="GetInventoryItem"><span class="symbol function"></span>GetInventoryItem</a></li>
-    <li><a href="getmachineextension" title="GetMachineExtension"><span class="symbol function"></span>GetMachineExtension</a></li>
-    <li><a href="getresourcepool" title="GetResourcePool"><span class="symbol function"></span>GetResourcePool</a></li>
-    <li><a href="getvcenter" title="GetVCenter"><span class="symbol function"></span>GetVCenter</a></li>
-    <li><a href="getvirtualmachine" title="GetVirtualMachine"><span class="symbol function"></span>GetVirtualMachine</a></li>
-    <li><a href="getvirtualmachinetemplate" title="GetVirtualMachineTemplate"><span class="symbol function"></span>GetVirtualMachineTemplate</a></li>
-    <li><a href="getvirtualnetwork" title="GetVirtualNetwork"><span class="symbol function"></span>GetVirtualNetwork</a></li>
+    <li><a href="getcluster" title="GetCluster"><span class="api-symbol api-symbol--function"></span>GetCluster</a></li>
+    <li><a href="getdatastore" title="GetDatastore"><span class="api-symbol api-symbol--function"></span>GetDatastore</a></li>
+    <li><a href="getguestagent" title="GetGuestAgent"><span class="api-symbol api-symbol--function"></span>GetGuestAgent</a></li>
+    <li><a href="gethost" title="GetHost"><span class="api-symbol api-symbol--function"></span>GetHost</a></li>
+    <li><a href="gethybrididentitymetadatum" title="GetHybridIdentityMetadatum"><span class="api-symbol api-symbol--function"></span>GetHybridIdentityMetadatum</a></li>
+    <li><a href="getinventoryitem" title="GetInventoryItem"><span class="api-symbol api-symbol--function"></span>GetInventoryItem</a></li>
+    <li><a href="getmachineextension" title="GetMachineExtension"><span class="api-symbol api-symbol--function"></span>GetMachineExtension</a></li>
+    <li><a href="getresourcepool" title="GetResourcePool"><span class="api-symbol api-symbol--function"></span>GetResourcePool</a></li>
+    <li><a href="getvcenter" title="GetVCenter"><span class="api-symbol api-symbol--function"></span>GetVCenter</a></li>
+    <li><a href="getvirtualmachine" title="GetVirtualMachine"><span class="api-symbol api-symbol--function"></span>GetVirtualMachine</a></li>
+    <li><a href="getvirtualmachinetemplate" title="GetVirtualMachineTemplate"><span class="api-symbol api-symbol--function"></span>GetVirtualMachineTemplate</a></li>
+    <li><a href="getvirtualnetwork" title="GetVirtualNetwork"><span class="api-symbol api-symbol--function"></span>GetVirtualNetwork</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -50,6 +50,6 @@ Explore the resources and functions of the azure-native.connectedvmwarevsphere m
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.38.0</dd>
+	<dd>1.39.0</dd>
 </dl>
 

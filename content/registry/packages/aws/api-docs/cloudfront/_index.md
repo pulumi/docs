@@ -13,23 +13,23 @@ Explore the resources and functions of the aws.cloudfront module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="cachepolicy" title="CachePolicy"><span class="symbol resource"></span>CachePolicy</a></li>
-    <li><a href="distribution" title="Distribution"><span class="symbol resource"></span>Distribution</a></li>
-    <li><a href="function" title="Function"><span class="symbol resource"></span>Function</a></li>
-    <li><a href="keygroup" title="KeyGroup"><span class="symbol resource"></span>KeyGroup</a></li>
-    <li><a href="monitoringsubscription" title="MonitoringSubscription"><span class="symbol resource"></span>MonitoringSubscription</a></li>
-    <li><a href="originaccessidentity" title="OriginAccessIdentity"><span class="symbol resource"></span>OriginAccessIdentity</a></li>
-    <li><a href="originrequestpolicy" title="OriginRequestPolicy"><span class="symbol resource"></span>OriginRequestPolicy</a></li>
-    <li><a href="publickey" title="PublicKey"><span class="symbol resource"></span>PublicKey</a></li>
-    <li><a href="realtimelogconfig" title="RealtimeLogConfig"><span class="symbol resource"></span>RealtimeLogConfig</a></li>
+    <li><a href="cachepolicy" title="CachePolicy"><span class="api-symbol api-symbol--resource"></span>CachePolicy</a></li>
+    <li><a href="distribution" title="Distribution"><span class="api-symbol api-symbol--resource"></span>Distribution</a></li>
+    <li><a href="function" title="Function"><span class="api-symbol api-symbol--resource"></span>Function</a></li>
+    <li><a href="keygroup" title="KeyGroup"><span class="api-symbol api-symbol--resource"></span>KeyGroup</a></li>
+    <li><a href="monitoringsubscription" title="MonitoringSubscription"><span class="api-symbol api-symbol--resource"></span>MonitoringSubscription</a></li>
+    <li><a href="originaccessidentity" title="OriginAccessIdentity"><span class="api-symbol api-symbol--resource"></span>OriginAccessIdentity</a></li>
+    <li><a href="originrequestpolicy" title="OriginRequestPolicy"><span class="api-symbol api-symbol--resource"></span>OriginRequestPolicy</a></li>
+    <li><a href="publickey" title="PublicKey"><span class="api-symbol api-symbol--resource"></span>PublicKey</a></li>
+    <li><a href="realtimelogconfig" title="RealtimeLogConfig"><span class="api-symbol api-symbol--resource"></span>RealtimeLogConfig</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getcachepolicy" title="GetCachePolicy"><span class="symbol function"></span>GetCachePolicy</a></li>
-    <li><a href="getdistribution" title="GetDistribution"><span class="symbol function"></span>GetDistribution</a></li>
-    <li><a href="getlogdeliverycanonicaluserid" title="GetLogDeliveryCanonicalUserId"><span class="symbol function"></span>GetLogDeliveryCanonicalUserId</a></li>
-    <li><a href="getoriginrequestpolicy" title="GetOriginRequestPolicy"><span class="symbol function"></span>GetOriginRequestPolicy</a></li>
+    <li><a href="getcachepolicy" title="GetCachePolicy"><span class="api-symbol api-symbol--function"></span>GetCachePolicy</a></li>
+    <li><a href="getdistribution" title="GetDistribution"><span class="api-symbol api-symbol--function"></span>GetDistribution</a></li>
+    <li><a href="getlogdeliverycanonicaluserid" title="GetLogDeliveryCanonicalUserId"><span class="api-symbol api-symbol--function"></span>GetLogDeliveryCanonicalUserId</a></li>
+    <li><a href="getoriginrequestpolicy" title="GetOriginRequestPolicy"><span class="api-symbol api-symbol--function"></span>GetOriginRequestPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -41,6 +41,6 @@ Explore the resources and functions of the aws.cloudfront module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.24.1</dd>
+	<dd>4.25.0</dd>
 </dl>
 

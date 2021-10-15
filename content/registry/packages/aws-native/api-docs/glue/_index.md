@@ -13,10 +13,10 @@ Explore the resources and functions of the aws-native.glue module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="registry" title="Registry"><span class="symbol resource"></span>Registry</a></li>
-    <li><a href="schema" title="Schema"><span class="symbol resource"></span>Schema</a></li>
-    <li><a href="schemaversion" title="SchemaVersion"><span class="symbol resource"></span>SchemaVersion</a></li>
-    <li><a href="schemaversionmetadata" title="SchemaVersionMetadata"><span class="symbol resource"></span>SchemaVersionMetadata</a></li>
+    <li><a href="registry" title="Registry"><span class="api-symbol api-symbol--resource"></span>Registry</a></li>
+    <li><a href="schema" title="Schema"><span class="api-symbol api-symbol--resource"></span>Schema</a></li>
+    <li><a href="schemaversion" title="SchemaVersion"><span class="api-symbol api-symbol--resource"></span>SchemaVersion</a></li>
+    <li><a href="schemaversionmetadata" title="SchemaVersionMetadata"><span class="api-symbol api-symbol--resource"></span>SchemaVersionMetadata</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

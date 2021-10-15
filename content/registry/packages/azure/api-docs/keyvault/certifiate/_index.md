@@ -1155,7 +1155,7 @@ The Certifiate resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1204,7 +1204,7 @@ The Certifiate resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1253,7 +1253,7 @@ The Certifiate resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1302,7 +1302,7 @@ The Certifiate resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1794,7 +1794,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_thumbprint_csharp">
@@ -1897,7 +1897,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_thumbprint_go">
@@ -2000,7 +2000,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_thumbprint_nodejs">
@@ -2103,7 +2103,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_thumbprint_python">

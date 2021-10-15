@@ -13,24 +13,24 @@ Explore the resources and functions of the aws.apigatewayv2 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="api" title="Api"><span class="symbol resource"></span>Api</a></li>
-    <li><a href="apimapping" title="ApiMapping"><span class="symbol resource"></span>ApiMapping</a></li>
-    <li><a href="authorizer" title="Authorizer"><span class="symbol resource"></span>Authorizer</a></li>
-    <li><a href="deployment" title="Deployment"><span class="symbol resource"></span>Deployment</a></li>
-    <li><a href="domainname" title="DomainName"><span class="symbol resource"></span>DomainName</a></li>
-    <li><a href="integration" title="Integration"><span class="symbol resource"></span>Integration</a></li>
-    <li><a href="integrationresponse" title="IntegrationResponse"><span class="symbol resource"></span>IntegrationResponse</a></li>
-    <li><a href="model" title="Model"><span class="symbol resource"></span>Model</a></li>
-    <li><a href="route" title="Route"><span class="symbol resource"></span>Route</a></li>
-    <li><a href="routeresponse" title="RouteResponse"><span class="symbol resource"></span>RouteResponse</a></li>
-    <li><a href="stage" title="Stage"><span class="symbol resource"></span>Stage</a></li>
-    <li><a href="vpclink" title="VpcLink"><span class="symbol resource"></span>VpcLink</a></li>
+    <li><a href="api" title="Api"><span class="api-symbol api-symbol--resource"></span>Api</a></li>
+    <li><a href="apimapping" title="ApiMapping"><span class="api-symbol api-symbol--resource"></span>ApiMapping</a></li>
+    <li><a href="authorizer" title="Authorizer"><span class="api-symbol api-symbol--resource"></span>Authorizer</a></li>
+    <li><a href="deployment" title="Deployment"><span class="api-symbol api-symbol--resource"></span>Deployment</a></li>
+    <li><a href="domainname" title="DomainName"><span class="api-symbol api-symbol--resource"></span>DomainName</a></li>
+    <li><a href="integration" title="Integration"><span class="api-symbol api-symbol--resource"></span>Integration</a></li>
+    <li><a href="integrationresponse" title="IntegrationResponse"><span class="api-symbol api-symbol--resource"></span>IntegrationResponse</a></li>
+    <li><a href="model" title="Model"><span class="api-symbol api-symbol--resource"></span>Model</a></li>
+    <li><a href="route" title="Route"><span class="api-symbol api-symbol--resource"></span>Route</a></li>
+    <li><a href="routeresponse" title="RouteResponse"><span class="api-symbol api-symbol--resource"></span>RouteResponse</a></li>
+    <li><a href="stage" title="Stage"><span class="api-symbol api-symbol--resource"></span>Stage</a></li>
+    <li><a href="vpclink" title="VpcLink"><span class="api-symbol api-symbol--resource"></span>VpcLink</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getapi" title="GetApi"><span class="symbol function"></span>GetApi</a></li>
-    <li><a href="getapis" title="GetApis"><span class="symbol function"></span>GetApis</a></li>
+    <li><a href="getapi" title="GetApi"><span class="api-symbol api-symbol--function"></span>GetApi</a></li>
+    <li><a href="getapis" title="GetApis"><span class="api-symbol api-symbol--function"></span>GetApis</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -42,6 +42,6 @@ Explore the resources and functions of the aws.apigatewayv2 module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.24.1</dd>
+	<dd>4.25.0</dd>
 </dl>
 

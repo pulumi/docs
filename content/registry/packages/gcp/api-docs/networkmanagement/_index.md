@@ -13,7 +13,7 @@ Explore the resources and functions of the gcp.networkmanagement module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="connectivitytest" title="ConnectivityTest"><span class="symbol resource"></span>ConnectivityTest</a></li>
+    <li><a href="connectivitytest" title="ConnectivityTest"><span class="api-symbol api-symbol--resource"></span>ConnectivityTest</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

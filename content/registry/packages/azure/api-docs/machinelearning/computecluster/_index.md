@@ -561,7 +561,7 @@ The ComputeCluster resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The priority of the VM. Changing this forces a new Machine Learning Compute Cluster to be created.
+    <dd>{{% md %}}The priority of the VM. Changing this forces a new Machine Learning Compute Cluster to be created. Accepted values are `Dedicated` and `LowPriority`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmsize_csharp">
@@ -673,7 +673,7 @@ The ComputeCluster resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The priority of the VM. Changing this forces a new Machine Learning Compute Cluster to be created.
+    <dd>{{% md %}}The priority of the VM. Changing this forces a new Machine Learning Compute Cluster to be created. Accepted values are `Dedicated` and `LowPriority`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmsize_go">
@@ -785,7 +785,7 @@ The ComputeCluster resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The priority of the VM. Changing this forces a new Machine Learning Compute Cluster to be created.
+    <dd>{{% md %}}The priority of the VM. Changing this forces a new Machine Learning Compute Cluster to be created. Accepted values are `Dedicated` and `LowPriority`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmsize_nodejs">
@@ -897,7 +897,7 @@ The ComputeCluster resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The priority of the VM. Changing this forces a new Machine Learning Compute Cluster to be created.
+    <dd>{{% md %}}The priority of the VM. Changing this forces a new Machine Learning Compute Cluster to be created. Accepted values are `Dedicated` and `LowPriority`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vm_size_python">
@@ -1273,7 +1273,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The priority of the VM. Changing this forces a new Machine Learning Compute Cluster to be created.
+    <dd>{{% md %}}The priority of the VM. Changing this forces a new Machine Learning Compute Cluster to be created. Accepted values are `Dedicated` and `LowPriority`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmsize_csharp">
@@ -1385,7 +1385,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The priority of the VM. Changing this forces a new Machine Learning Compute Cluster to be created.
+    <dd>{{% md %}}The priority of the VM. Changing this forces a new Machine Learning Compute Cluster to be created. Accepted values are `Dedicated` and `LowPriority`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmsize_go">
@@ -1497,7 +1497,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The priority of the VM. Changing this forces a new Machine Learning Compute Cluster to be created.
+    <dd>{{% md %}}The priority of the VM. Changing this forces a new Machine Learning Compute Cluster to be created. Accepted values are `Dedicated` and `LowPriority`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmsize_nodejs">
@@ -1609,7 +1609,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The priority of the VM. Changing this forces a new Machine Learning Compute Cluster to be created.
+    <dd>{{% md %}}The priority of the VM. Changing this forces a new Machine Learning Compute Cluster to be created. Accepted values are `Dedicated` and `LowPriority`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vm_size_python">

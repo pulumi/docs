@@ -13,12 +13,12 @@ Explore the resources and functions of the google-native.cloudbuild/v1beta1 modu
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="workerpool" title="WorkerPool"><span class="symbol resource"></span>WorkerPool</a></li>
+    <li><a href="workerpool" title="WorkerPool"><span class="api-symbol api-symbol--resource"></span>WorkerPool</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getworkerpool" title="GetWorkerPool"><span class="symbol function"></span>GetWorkerPool</a></li>
+    <li><a href="getworkerpool" title="GetWorkerPool"><span class="api-symbol api-symbol--function"></span>GetWorkerPool</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

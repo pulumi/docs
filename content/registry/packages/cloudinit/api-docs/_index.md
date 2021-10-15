@@ -13,13 +13,13 @@ A Pulumi package for creating and managing cloudinit cloud resources.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="config" title="Config"><span class="symbol resource"></span>Config</a></li>
-    <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
+    <li><a href="config" title="Config"><span class="api-symbol api-symbol--resource"></span>Config</a></li>
+    <li><a href="provider" title="Provider"><span class="api-symbol api-symbol--resource"></span>Provider</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getconfig" title="GetConfig"><span class="symbol function"></span>GetConfig</a></li>
+    <li><a href="getconfig" title="GetConfig"><span class="api-symbol api-symbol--function"></span>GetConfig</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

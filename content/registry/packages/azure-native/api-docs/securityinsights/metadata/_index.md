@@ -162,8 +162,8 @@ metadata = azure_native.securityinsights.Metadata("metadata",
         verticals=["Healthcare"],
     ),
     content_id="c00ee137-7475-47c8-9cce-ec6f0f1bedd0",
-    dependencies=azure_native.securityinsights.MetadataDependenciesArgs(
-        criteria=[
+    dependencies={
+        "criteria": [
             azure_native.securityinsights.MetadataDependenciesArgs(
                 criteria=[
                     azure_native.securityinsights.MetadataDependenciesArgs(
@@ -193,8 +193,8 @@ metadata = azure_native.securityinsights.Metadata("metadata",
                 kind="Parser",
             ),
         ],
-        operator="AND",
-    ),
+        "operator": "AND",
+    },
     first_publish_date="2021-05-18",
     kind="AnalyticsRule",
     last_publish_date="2021-05-18",

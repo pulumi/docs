@@ -13,15 +13,15 @@ Explore the resources and functions of the gcp.bigtable module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="gcpolicy" title="GCPolicy"><span class="symbol resource"></span>GCPolicy</a></li>
-    <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
-    <li><a href="instanceiambinding" title="InstanceIamBinding"><span class="symbol resource"></span>InstanceIamBinding</a></li>
-    <li><a href="instanceiammember" title="InstanceIamMember"><span class="symbol resource"></span>InstanceIamMember</a></li>
-    <li><a href="instanceiampolicy" title="InstanceIamPolicy"><span class="symbol resource"></span>InstanceIamPolicy</a></li>
-    <li><a href="table" title="Table"><span class="symbol resource"></span>Table</a></li>
-    <li><a href="tableiambinding" title="TableIamBinding"><span class="symbol resource"></span>TableIamBinding</a></li>
-    <li><a href="tableiammember" title="TableIamMember"><span class="symbol resource"></span>TableIamMember</a></li>
-    <li><a href="tableiampolicy" title="TableIamPolicy"><span class="symbol resource"></span>TableIamPolicy</a></li>
+    <li><a href="gcpolicy" title="GCPolicy"><span class="api-symbol api-symbol--resource"></span>GCPolicy</a></li>
+    <li><a href="instance" title="Instance"><span class="api-symbol api-symbol--resource"></span>Instance</a></li>
+    <li><a href="instanceiambinding" title="InstanceIamBinding"><span class="api-symbol api-symbol--resource"></span>InstanceIamBinding</a></li>
+    <li><a href="instanceiammember" title="InstanceIamMember"><span class="api-symbol api-symbol--resource"></span>InstanceIamMember</a></li>
+    <li><a href="instanceiampolicy" title="InstanceIamPolicy"><span class="api-symbol api-symbol--resource"></span>InstanceIamPolicy</a></li>
+    <li><a href="table" title="Table"><span class="api-symbol api-symbol--resource"></span>Table</a></li>
+    <li><a href="tableiambinding" title="TableIamBinding"><span class="api-symbol api-symbol--resource"></span>TableIamBinding</a></li>
+    <li><a href="tableiammember" title="TableIamMember"><span class="api-symbol api-symbol--resource"></span>TableIamMember</a></li>
+    <li><a href="tableiampolicy" title="TableIamPolicy"><span class="api-symbol api-symbol--resource"></span>TableIamPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

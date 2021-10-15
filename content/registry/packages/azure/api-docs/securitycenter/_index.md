@@ -13,17 +13,17 @@ Explore the resources and functions of the azure.securitycenter module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="advancedthreatprotection" title="AdvancedThreatProtection"><span class="symbol resource"></span>AdvancedThreatProtection</a></li>
-    <li><a href="assessment" title="Assessment"><span class="symbol resource"></span>Assessment</a></li>
-    <li><a href="assessmentmetadata" title="AssessmentMetadata"><span class="symbol resource"></span>AssessmentMetadata</a></li>
-    <li><a href="assessmentpolicy" title="AssessmentPolicy"><span class="symbol resource"></span>AssessmentPolicy</a></li>
-    <li><a href="autoprovisioning" title="AutoProvisioning"><span class="symbol resource"></span>AutoProvisioning</a></li>
-    <li><a href="automation" title="Automation"><span class="symbol resource"></span>Automation</a></li>
-    <li><a href="contact" title="Contact"><span class="symbol resource"></span>Contact</a></li>
-    <li><a href="servervulnerabilityassessment" title="ServerVulnerabilityAssessment"><span class="symbol resource"></span>ServerVulnerabilityAssessment</a></li>
-    <li><a href="setting" title="Setting"><span class="symbol resource"></span>Setting</a></li>
-    <li><a href="subscriptionpricing" title="SubscriptionPricing"><span class="symbol resource"></span>SubscriptionPricing</a></li>
-    <li><a href="workspace" title="Workspace"><span class="symbol resource"></span>Workspace</a></li>
+    <li><a href="advancedthreatprotection" title="AdvancedThreatProtection"><span class="api-symbol api-symbol--resource"></span>AdvancedThreatProtection</a></li>
+    <li><a href="assessment" title="Assessment"><span class="api-symbol api-symbol--resource"></span>Assessment</a></li>
+    <li><a href="assessmentmetadata" title="AssessmentMetadata"><span class="api-symbol api-symbol--resource"></span>AssessmentMetadata</a></li>
+    <li><a href="assessmentpolicy" title="AssessmentPolicy"><span class="api-symbol api-symbol--resource"></span>AssessmentPolicy</a></li>
+    <li><a href="autoprovisioning" title="AutoProvisioning"><span class="api-symbol api-symbol--resource"></span>AutoProvisioning</a></li>
+    <li><a href="automation" title="Automation"><span class="api-symbol api-symbol--resource"></span>Automation</a></li>
+    <li><a href="contact" title="Contact"><span class="api-symbol api-symbol--resource"></span>Contact</a></li>
+    <li><a href="servervulnerabilityassessment" title="ServerVulnerabilityAssessment"><span class="api-symbol api-symbol--resource"></span>ServerVulnerabilityAssessment</a></li>
+    <li><a href="setting" title="Setting"><span class="api-symbol api-symbol--resource"></span>Setting</a></li>
+    <li><a href="subscriptionpricing" title="SubscriptionPricing"><span class="api-symbol api-symbol--resource"></span>SubscriptionPricing</a></li>
+    <li><a href="workspace" title="Workspace"><span class="api-symbol api-symbol--resource"></span>Workspace</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -35,6 +35,6 @@ Explore the resources and functions of the azure.securitycenter module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.22.0</dd>
+	<dd>4.23.0</dd>
 </dl>
 

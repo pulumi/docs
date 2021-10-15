@@ -13,36 +13,36 @@ Explore the resources and functions of the azure.appservice module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="activeslot" title="ActiveSlot"><span class="symbol resource"></span>ActiveSlot</a></li>
-    <li><a href="appservice" title="AppService"><span class="symbol resource"></span>AppService</a></li>
-    <li><a href="certificate" title="Certificate"><span class="symbol resource"></span>Certificate</a></li>
-    <li><a href="certificatebinding" title="CertificateBinding"><span class="symbol resource"></span>CertificateBinding</a></li>
-    <li><a href="certificateorder" title="CertificateOrder"><span class="symbol resource"></span>CertificateOrder</a></li>
-    <li><a href="customhostnamebinding" title="CustomHostnameBinding"><span class="symbol resource"></span>CustomHostnameBinding</a></li>
-    <li><a href="environment" title="Environment"><span class="symbol resource"></span>Environment</a></li>
-    <li><a href="environmentv3" title="EnvironmentV3"><span class="symbol resource"></span>EnvironmentV3</a></li>
-    <li><a href="functionapp" title="FunctionApp"><span class="symbol resource"></span>FunctionApp</a></li>
-    <li><a href="functionappslot" title="FunctionAppSlot"><span class="symbol resource"></span>FunctionAppSlot</a></li>
-    <li><a href="hybridconnection" title="HybridConnection"><span class="symbol resource"></span>HybridConnection</a></li>
-    <li><a href="managedcertificate" title="ManagedCertificate"><span class="symbol resource"></span>ManagedCertificate</a></li>
-    <li><a href="plan" title="Plan"><span class="symbol resource"></span>Plan</a></li>
-    <li><a href="slot" title="Slot"><span class="symbol resource"></span>Slot</a></li>
-    <li><a href="slotvirtualnetworkswiftconnection" title="SlotVirtualNetworkSwiftConnection"><span class="symbol resource"></span>SlotVirtualNetworkSwiftConnection</a></li>
-    <li><a href="sourcecodetoken" title="SourceCodeToken"><span class="symbol resource"></span>SourceCodeToken</a></li>
-    <li><a href="staticsite" title="StaticSite"><span class="symbol resource"></span>StaticSite</a></li>
-    <li><a href="virtualnetworkswiftconnection" title="VirtualNetworkSwiftConnection"><span class="symbol resource"></span>VirtualNetworkSwiftConnection</a></li>
+    <li><a href="activeslot" title="ActiveSlot"><span class="api-symbol api-symbol--resource"></span>ActiveSlot</a></li>
+    <li><a href="appservice" title="AppService"><span class="api-symbol api-symbol--resource"></span>AppService</a></li>
+    <li><a href="certificate" title="Certificate"><span class="api-symbol api-symbol--resource"></span>Certificate</a></li>
+    <li><a href="certificatebinding" title="CertificateBinding"><span class="api-symbol api-symbol--resource"></span>CertificateBinding</a></li>
+    <li><a href="certificateorder" title="CertificateOrder"><span class="api-symbol api-symbol--resource"></span>CertificateOrder</a></li>
+    <li><a href="customhostnamebinding" title="CustomHostnameBinding"><span class="api-symbol api-symbol--resource"></span>CustomHostnameBinding</a></li>
+    <li><a href="environment" title="Environment"><span class="api-symbol api-symbol--resource"></span>Environment</a></li>
+    <li><a href="environmentv3" title="EnvironmentV3"><span class="api-symbol api-symbol--resource"></span>EnvironmentV3</a></li>
+    <li><a href="functionapp" title="FunctionApp"><span class="api-symbol api-symbol--resource"></span>FunctionApp</a></li>
+    <li><a href="functionappslot" title="FunctionAppSlot"><span class="api-symbol api-symbol--resource"></span>FunctionAppSlot</a></li>
+    <li><a href="hybridconnection" title="HybridConnection"><span class="api-symbol api-symbol--resource"></span>HybridConnection</a></li>
+    <li><a href="managedcertificate" title="ManagedCertificate"><span class="api-symbol api-symbol--resource"></span>ManagedCertificate</a></li>
+    <li><a href="plan" title="Plan"><span class="api-symbol api-symbol--resource"></span>Plan</a></li>
+    <li><a href="slot" title="Slot"><span class="api-symbol api-symbol--resource"></span>Slot</a></li>
+    <li><a href="slotvirtualnetworkswiftconnection" title="SlotVirtualNetworkSwiftConnection"><span class="api-symbol api-symbol--resource"></span>SlotVirtualNetworkSwiftConnection</a></li>
+    <li><a href="sourcecodetoken" title="SourceCodeToken"><span class="api-symbol api-symbol--resource"></span>SourceCodeToken</a></li>
+    <li><a href="staticsite" title="StaticSite"><span class="api-symbol api-symbol--resource"></span>StaticSite</a></li>
+    <li><a href="virtualnetworkswiftconnection" title="VirtualNetworkSwiftConnection"><span class="api-symbol api-symbol--resource"></span>VirtualNetworkSwiftConnection</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getappservice" title="GetAppService"><span class="symbol function"></span>GetAppService</a></li>
-    <li><a href="getappserviceenvironment" title="GetAppServiceEnvironment"><span class="symbol function"></span>GetAppServiceEnvironment</a></li>
-    <li><a href="getappserviceplan" title="GetAppServicePlan"><span class="symbol function"></span>GetAppServicePlan</a></li>
-    <li><a href="getcertificate" title="GetCertificate"><span class="symbol function"></span>GetCertificate</a></li>
-    <li><a href="getcertificateorder" title="GetCertificateOrder"><span class="symbol function"></span>GetCertificateOrder</a></li>
-    <li><a href="getenvironmentv3" title="GetEnvironmentV3"><span class="symbol function"></span>GetEnvironmentV3</a></li>
-    <li><a href="getfunctionapp" title="GetFunctionApp"><span class="symbol function"></span>GetFunctionApp</a></li>
-    <li><a href="getfunctionapphostkeys" title="GetFunctionAppHostKeys"><span class="symbol function"></span>GetFunctionAppHostKeys</a></li>
+    <li><a href="getappservice" title="GetAppService"><span class="api-symbol api-symbol--function"></span>GetAppService</a></li>
+    <li><a href="getappserviceenvironment" title="GetAppServiceEnvironment"><span class="api-symbol api-symbol--function"></span>GetAppServiceEnvironment</a></li>
+    <li><a href="getappserviceplan" title="GetAppServicePlan"><span class="api-symbol api-symbol--function"></span>GetAppServicePlan</a></li>
+    <li><a href="getcertificate" title="GetCertificate"><span class="api-symbol api-symbol--function"></span>GetCertificate</a></li>
+    <li><a href="getcertificateorder" title="GetCertificateOrder"><span class="api-symbol api-symbol--function"></span>GetCertificateOrder</a></li>
+    <li><a href="getenvironmentv3" title="GetEnvironmentV3"><span class="api-symbol api-symbol--function"></span>GetEnvironmentV3</a></li>
+    <li><a href="getfunctionapp" title="GetFunctionApp"><span class="api-symbol api-symbol--function"></span>GetFunctionApp</a></li>
+    <li><a href="getfunctionapphostkeys" title="GetFunctionAppHostKeys"><span class="api-symbol api-symbol--function"></span>GetFunctionAppHostKeys</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -54,6 +54,6 @@ Explore the resources and functions of the azure.appservice module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.22.0</dd>
+	<dd>4.23.0</dd>
 </dl>
 

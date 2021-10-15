@@ -13,12 +13,12 @@ Explore the resources and functions of the google-native.bigquerydatatransfer/v1
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="transferconfig" title="TransferConfig"><span class="symbol resource"></span>TransferConfig</a></li>
+    <li><a href="transferconfig" title="TransferConfig"><span class="api-symbol api-symbol--resource"></span>TransferConfig</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="gettransferconfig" title="GetTransferConfig"><span class="symbol function"></span>GetTransferConfig</a></li>
+    <li><a href="gettransferconfig" title="GetTransferConfig"><span class="api-symbol api-symbol--function"></span>GetTransferConfig</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

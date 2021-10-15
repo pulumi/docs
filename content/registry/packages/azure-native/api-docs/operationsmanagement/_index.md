@@ -13,16 +13,16 @@ Explore the resources and functions of the azure-native.operationsmanagement mod
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="managementassociation" title="ManagementAssociation"><span class="symbol resource"></span>ManagementAssociation</a></li>
-    <li><a href="managementconfiguration" title="ManagementConfiguration"><span class="symbol resource"></span>ManagementConfiguration</a></li>
-    <li><a href="solution" title="Solution"><span class="symbol resource"></span>Solution</a></li>
+    <li><a href="managementassociation" title="ManagementAssociation"><span class="api-symbol api-symbol--resource"></span>ManagementAssociation</a></li>
+    <li><a href="managementconfiguration" title="ManagementConfiguration"><span class="api-symbol api-symbol--resource"></span>ManagementConfiguration</a></li>
+    <li><a href="solution" title="Solution"><span class="api-symbol api-symbol--resource"></span>Solution</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getmanagementassociation" title="GetManagementAssociation"><span class="symbol function"></span>GetManagementAssociation</a></li>
-    <li><a href="getmanagementconfiguration" title="GetManagementConfiguration"><span class="symbol function"></span>GetManagementConfiguration</a></li>
-    <li><a href="getsolution" title="GetSolution"><span class="symbol function"></span>GetSolution</a></li>
+    <li><a href="getmanagementassociation" title="GetManagementAssociation"><span class="api-symbol api-symbol--function"></span>GetManagementAssociation</a></li>
+    <li><a href="getmanagementconfiguration" title="GetManagementConfiguration"><span class="api-symbol api-symbol--function"></span>GetManagementConfiguration</a></li>
+    <li><a href="getsolution" title="GetSolution"><span class="api-symbol api-symbol--function"></span>GetSolution</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -32,6 +32,6 @@ Explore the resources and functions of the azure-native.operationsmanagement mod
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.38.0</dd>
+	<dd>1.39.0</dd>
 </dl>
 

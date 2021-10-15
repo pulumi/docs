@@ -13,24 +13,24 @@ Explore the resources and functions of the google-native.iam/v1 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="key" title="Key"><span class="symbol resource"></span>Key</a></li>
-    <li><a href="organizationrole" title="OrganizationRole"><span class="symbol resource"></span>OrganizationRole</a></li>
-    <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
-    <li><a href="role" title="Role"><span class="symbol resource"></span>Role</a></li>
-    <li><a href="serviceaccount" title="ServiceAccount"><span class="symbol resource"></span>ServiceAccount</a></li>
-    <li><a href="serviceaccountiampolicy" title="ServiceAccountIamPolicy"><span class="symbol resource"></span>ServiceAccountIamPolicy</a></li>
-    <li><a href="workloadidentitypool" title="WorkloadIdentityPool"><span class="symbol resource"></span>WorkloadIdentityPool</a></li>
+    <li><a href="key" title="Key"><span class="api-symbol api-symbol--resource"></span>Key</a></li>
+    <li><a href="organizationrole" title="OrganizationRole"><span class="api-symbol api-symbol--resource"></span>OrganizationRole</a></li>
+    <li><a href="provider" title="Provider"><span class="api-symbol api-symbol--resource"></span>Provider</a></li>
+    <li><a href="role" title="Role"><span class="api-symbol api-symbol--resource"></span>Role</a></li>
+    <li><a href="serviceaccount" title="ServiceAccount"><span class="api-symbol api-symbol--resource"></span>ServiceAccount</a></li>
+    <li><a href="serviceaccountiampolicy" title="ServiceAccountIamPolicy"><span class="api-symbol api-symbol--resource"></span>ServiceAccountIamPolicy</a></li>
+    <li><a href="workloadidentitypool" title="WorkloadIdentityPool"><span class="api-symbol api-symbol--resource"></span>WorkloadIdentityPool</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getkey" title="GetKey"><span class="symbol function"></span>GetKey</a></li>
-    <li><a href="getorganizationrole" title="GetOrganizationRole"><span class="symbol function"></span>GetOrganizationRole</a></li>
-    <li><a href="getprovider" title="GetProvider"><span class="symbol function"></span>GetProvider</a></li>
-    <li><a href="getrole" title="GetRole"><span class="symbol function"></span>GetRole</a></li>
-    <li><a href="getserviceaccount" title="GetServiceAccount"><span class="symbol function"></span>GetServiceAccount</a></li>
-    <li><a href="getserviceaccountiampolicy" title="GetServiceAccountIamPolicy"><span class="symbol function"></span>GetServiceAccountIamPolicy</a></li>
-    <li><a href="getworkloadidentitypool" title="GetWorkloadIdentityPool"><span class="symbol function"></span>GetWorkloadIdentityPool</a></li>
+    <li><a href="getkey" title="GetKey"><span class="api-symbol api-symbol--function"></span>GetKey</a></li>
+    <li><a href="getorganizationrole" title="GetOrganizationRole"><span class="api-symbol api-symbol--function"></span>GetOrganizationRole</a></li>
+    <li><a href="getprovider" title="GetProvider"><span class="api-symbol api-symbol--function"></span>GetProvider</a></li>
+    <li><a href="getrole" title="GetRole"><span class="api-symbol api-symbol--function"></span>GetRole</a></li>
+    <li><a href="getserviceaccount" title="GetServiceAccount"><span class="api-symbol api-symbol--function"></span>GetServiceAccount</a></li>
+    <li><a href="getserviceaccountiampolicy" title="GetServiceAccountIamPolicy"><span class="api-symbol api-symbol--function"></span>GetServiceAccountIamPolicy</a></li>
+    <li><a href="getworkloadidentitypool" title="GetWorkloadIdentityPool"><span class="api-symbol api-symbol--function"></span>GetWorkloadIdentityPool</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

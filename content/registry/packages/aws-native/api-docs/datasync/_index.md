@@ -13,14 +13,14 @@ Explore the resources and functions of the aws-native.datasync module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="agent" title="Agent"><span class="symbol resource"></span>Agent</a></li>
-    <li><a href="locationefs" title="LocationEFS"><span class="symbol resource"></span>LocationEFS</a></li>
-    <li><a href="locationfsxwindows" title="LocationFSxWindows"><span class="symbol resource"></span>LocationFSxWindows</a></li>
-    <li><a href="locationnfs" title="LocationNFS"><span class="symbol resource"></span>LocationNFS</a></li>
-    <li><a href="locationobjectstorage" title="LocationObjectStorage"><span class="symbol resource"></span>LocationObjectStorage</a></li>
-    <li><a href="locations3" title="LocationS3"><span class="symbol resource"></span>LocationS3</a></li>
-    <li><a href="locationsmb" title="LocationSMB"><span class="symbol resource"></span>LocationSMB</a></li>
-    <li><a href="task" title="Task"><span class="symbol resource"></span>Task</a></li>
+    <li><a href="agent" title="Agent"><span class="api-symbol api-symbol--resource"></span>Agent</a></li>
+    <li><a href="locationefs" title="LocationEFS"><span class="api-symbol api-symbol--resource"></span>LocationEFS</a></li>
+    <li><a href="locationfsxwindows" title="LocationFSxWindows"><span class="api-symbol api-symbol--resource"></span>LocationFSxWindows</a></li>
+    <li><a href="locationnfs" title="LocationNFS"><span class="api-symbol api-symbol--resource"></span>LocationNFS</a></li>
+    <li><a href="locationobjectstorage" title="LocationObjectStorage"><span class="api-symbol api-symbol--resource"></span>LocationObjectStorage</a></li>
+    <li><a href="locations3" title="LocationS3"><span class="api-symbol api-symbol--resource"></span>LocationS3</a></li>
+    <li><a href="locationsmb" title="LocationSMB"><span class="api-symbol api-symbol--resource"></span>LocationSMB</a></li>
+    <li><a href="task" title="Task"><span class="api-symbol api-symbol--resource"></span>Task</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

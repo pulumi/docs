@@ -13,25 +13,25 @@ Explore the resources and functions of the aws.ec2transitgateway module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="peeringattachment" title="PeeringAttachment"><span class="symbol resource"></span>PeeringAttachment</a></li>
-    <li><a href="prefixlistreference" title="PrefixListReference"><span class="symbol resource"></span>PrefixListReference</a></li>
-    <li><a href="route" title="Route"><span class="symbol resource"></span>Route</a></li>
-    <li><a href="routetable" title="RouteTable"><span class="symbol resource"></span>RouteTable</a></li>
-    <li><a href="routetableassociation" title="RouteTableAssociation"><span class="symbol resource"></span>RouteTableAssociation</a></li>
-    <li><a href="routetablepropagation" title="RouteTablePropagation"><span class="symbol resource"></span>RouteTablePropagation</a></li>
-    <li><a href="transitgateway" title="TransitGateway"><span class="symbol resource"></span>TransitGateway</a></li>
-    <li><a href="vpcattachment" title="VpcAttachment"><span class="symbol resource"></span>VpcAttachment</a></li>
-    <li><a href="vpcattachmentaccepter" title="VpcAttachmentAccepter"><span class="symbol resource"></span>VpcAttachmentAccepter</a></li>
+    <li><a href="peeringattachment" title="PeeringAttachment"><span class="api-symbol api-symbol--resource"></span>PeeringAttachment</a></li>
+    <li><a href="prefixlistreference" title="PrefixListReference"><span class="api-symbol api-symbol--resource"></span>PrefixListReference</a></li>
+    <li><a href="route" title="Route"><span class="api-symbol api-symbol--resource"></span>Route</a></li>
+    <li><a href="routetable" title="RouteTable"><span class="api-symbol api-symbol--resource"></span>RouteTable</a></li>
+    <li><a href="routetableassociation" title="RouteTableAssociation"><span class="api-symbol api-symbol--resource"></span>RouteTableAssociation</a></li>
+    <li><a href="routetablepropagation" title="RouteTablePropagation"><span class="api-symbol api-symbol--resource"></span>RouteTablePropagation</a></li>
+    <li><a href="transitgateway" title="TransitGateway"><span class="api-symbol api-symbol--resource"></span>TransitGateway</a></li>
+    <li><a href="vpcattachment" title="VpcAttachment"><span class="api-symbol api-symbol--resource"></span>VpcAttachment</a></li>
+    <li><a href="vpcattachmentaccepter" title="VpcAttachmentAccepter"><span class="api-symbol api-symbol--resource"></span>VpcAttachmentAccepter</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getdirectconnectgatewayattachment" title="GetDirectConnectGatewayAttachment"><span class="symbol function"></span>GetDirectConnectGatewayAttachment</a></li>
-    <li><a href="getpeeringattachment" title="GetPeeringAttachment"><span class="symbol function"></span>GetPeeringAttachment</a></li>
-    <li><a href="getroutetable" title="GetRouteTable"><span class="symbol function"></span>GetRouteTable</a></li>
-    <li><a href="gettransitgateway" title="GetTransitGateway"><span class="symbol function"></span>GetTransitGateway</a></li>
-    <li><a href="getvpcattachment" title="GetVpcAttachment"><span class="symbol function"></span>GetVpcAttachment</a></li>
-    <li><a href="getvpnattachment" title="GetVpnAttachment"><span class="symbol function"></span>GetVpnAttachment</a></li>
+    <li><a href="getdirectconnectgatewayattachment" title="GetDirectConnectGatewayAttachment"><span class="api-symbol api-symbol--function"></span>GetDirectConnectGatewayAttachment</a></li>
+    <li><a href="getpeeringattachment" title="GetPeeringAttachment"><span class="api-symbol api-symbol--function"></span>GetPeeringAttachment</a></li>
+    <li><a href="getroutetable" title="GetRouteTable"><span class="api-symbol api-symbol--function"></span>GetRouteTable</a></li>
+    <li><a href="gettransitgateway" title="GetTransitGateway"><span class="api-symbol api-symbol--function"></span>GetTransitGateway</a></li>
+    <li><a href="getvpcattachment" title="GetVpcAttachment"><span class="api-symbol api-symbol--function"></span>GetVpcAttachment</a></li>
+    <li><a href="getvpnattachment" title="GetVpnAttachment"><span class="api-symbol api-symbol--function"></span>GetVpnAttachment</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -43,6 +43,6 @@ Explore the resources and functions of the aws.ec2transitgateway module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.24.1</dd>
+	<dd>4.25.0</dd>
 </dl>
 

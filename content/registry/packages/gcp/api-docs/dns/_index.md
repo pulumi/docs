@@ -13,15 +13,15 @@ Explore the resources and functions of the gcp.dns module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="managedzone" title="ManagedZone"><span class="symbol resource"></span>ManagedZone</a></li>
-    <li><a href="policy" title="Policy"><span class="symbol resource"></span>Policy</a></li>
-    <li><a href="recordset" title="RecordSet"><span class="symbol resource"></span>RecordSet</a></li>
+    <li><a href="managedzone" title="ManagedZone"><span class="api-symbol api-symbol--resource"></span>ManagedZone</a></li>
+    <li><a href="policy" title="Policy"><span class="api-symbol api-symbol--resource"></span>Policy</a></li>
+    <li><a href="recordset" title="RecordSet"><span class="api-symbol api-symbol--resource"></span>RecordSet</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getkeys" title="GetKeys"><span class="symbol function"></span>GetKeys</a></li>
-    <li><a href="getmanagedzone" title="GetManagedZone"><span class="symbol function"></span>GetManagedZone</a></li>
+    <li><a href="getkeys" title="GetKeys"><span class="api-symbol api-symbol--function"></span>GetKeys</a></li>
+    <li><a href="getmanagedzone" title="GetManagedZone"><span class="api-symbol api-symbol--function"></span>GetManagedZone</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

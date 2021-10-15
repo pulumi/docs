@@ -13,29 +13,29 @@ Explore the resources and functions of the azure.keyvault module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="accesspolicy" title="AccessPolicy"><span class="symbol resource"></span>AccessPolicy</a></li>
-    <li><a href="certifiate" title="Certifiate"><span class="symbol resource"></span>Certifiate</a></li>
-    <li><a href="certificate" title="Certificate"><span class="symbol resource"></span>Certificate</a></li>
-    <li><a href="certificateissuer" title="CertificateIssuer"><span class="symbol resource"></span>CertificateIssuer</a></li>
-    <li><a href="key" title="Key"><span class="symbol resource"></span>Key</a></li>
-    <li><a href="keyvault" title="KeyVault"><span class="symbol resource"></span>KeyVault</a></li>
-    <li><a href="managedhardwaresecuritymodule" title="ManagedHardwareSecurityModule"><span class="symbol resource"></span>ManagedHardwareSecurityModule</a></li>
-    <li><a href="managedstorageaccount" title="ManagedStorageAccount"><span class="symbol resource"></span>ManagedStorageAccount</a></li>
-    <li><a href="managedstorageaccountsastokendefinition" title="ManagedStorageAccountSasTokenDefinition"><span class="symbol resource"></span>ManagedStorageAccountSasTokenDefinition</a></li>
-    <li><a href="secret" title="Secret"><span class="symbol resource"></span>Secret</a></li>
+    <li><a href="accesspolicy" title="AccessPolicy"><span class="api-symbol api-symbol--resource"></span>AccessPolicy</a></li>
+    <li><a href="certifiate" title="Certifiate"><span class="api-symbol api-symbol--resource"></span>Certifiate</a></li>
+    <li><a href="certificate" title="Certificate"><span class="api-symbol api-symbol--resource"></span>Certificate</a></li>
+    <li><a href="certificateissuer" title="CertificateIssuer"><span class="api-symbol api-symbol--resource"></span>CertificateIssuer</a></li>
+    <li><a href="key" title="Key"><span class="api-symbol api-symbol--resource"></span>Key</a></li>
+    <li><a href="keyvault" title="KeyVault"><span class="api-symbol api-symbol--resource"></span>KeyVault</a></li>
+    <li><a href="managedhardwaresecuritymodule" title="ManagedHardwareSecurityModule"><span class="api-symbol api-symbol--resource"></span>ManagedHardwareSecurityModule</a></li>
+    <li><a href="managedstorageaccount" title="ManagedStorageAccount"><span class="api-symbol api-symbol--resource"></span>ManagedStorageAccount</a></li>
+    <li><a href="managedstorageaccountsastokendefinition" title="ManagedStorageAccountSasTokenDefinition"><span class="api-symbol api-symbol--resource"></span>ManagedStorageAccountSasTokenDefinition</a></li>
+    <li><a href="secret" title="Secret"><span class="api-symbol api-symbol--resource"></span>Secret</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getaccesspolicy" title="GetAccessPolicy"><span class="symbol function"></span>GetAccessPolicy</a></li>
-    <li><a href="getcertificate" title="GetCertificate"><span class="symbol function"></span>GetCertificate</a></li>
-    <li><a href="getcertificatedata" title="GetCertificateData"><span class="symbol function"></span>GetCertificateData</a></li>
-    <li><a href="getcertificateissuer" title="GetCertificateIssuer"><span class="symbol function"></span>GetCertificateIssuer</a></li>
-    <li><a href="getkey" title="GetKey"><span class="symbol function"></span>GetKey</a></li>
-    <li><a href="getkeyvault" title="GetKeyVault"><span class="symbol function"></span>GetKeyVault</a></li>
-    <li><a href="getmanagedhardwaresecuritymodule" title="GetManagedHardwareSecurityModule"><span class="symbol function"></span>GetManagedHardwareSecurityModule</a></li>
-    <li><a href="getsecret" title="GetSecret"><span class="symbol function"></span>GetSecret</a></li>
-    <li><a href="getsecrets" title="GetSecrets"><span class="symbol function"></span>GetSecrets</a></li>
+    <li><a href="getaccesspolicy" title="GetAccessPolicy"><span class="api-symbol api-symbol--function"></span>GetAccessPolicy</a></li>
+    <li><a href="getcertificate" title="GetCertificate"><span class="api-symbol api-symbol--function"></span>GetCertificate</a></li>
+    <li><a href="getcertificatedata" title="GetCertificateData"><span class="api-symbol api-symbol--function"></span>GetCertificateData</a></li>
+    <li><a href="getcertificateissuer" title="GetCertificateIssuer"><span class="api-symbol api-symbol--function"></span>GetCertificateIssuer</a></li>
+    <li><a href="getkey" title="GetKey"><span class="api-symbol api-symbol--function"></span>GetKey</a></li>
+    <li><a href="getkeyvault" title="GetKeyVault"><span class="api-symbol api-symbol--function"></span>GetKeyVault</a></li>
+    <li><a href="getmanagedhardwaresecuritymodule" title="GetManagedHardwareSecurityModule"><span class="api-symbol api-symbol--function"></span>GetManagedHardwareSecurityModule</a></li>
+    <li><a href="getsecret" title="GetSecret"><span class="api-symbol api-symbol--function"></span>GetSecret</a></li>
+    <li><a href="getsecrets" title="GetSecrets"><span class="api-symbol api-symbol--function"></span>GetSecrets</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -47,6 +47,6 @@ Explore the resources and functions of the azure.keyvault module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.22.0</dd>
+	<dd>4.23.0</dd>
 </dl>
 

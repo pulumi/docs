@@ -13,21 +13,21 @@ Explore the resources and functions of the azure-native.hybridnetwork module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="device" title="Device"><span class="symbol resource"></span>Device</a></li>
-    <li><a href="networkfunction" title="NetworkFunction"><span class="symbol resource"></span>NetworkFunction</a></li>
-    <li><a href="vendor" title="Vendor"><span class="symbol resource"></span>Vendor</a></li>
-    <li><a href="vendorskupreview" title="VendorSkuPreview"><span class="symbol resource"></span>VendorSkuPreview</a></li>
-    <li><a href="vendorskus" title="VendorSkus"><span class="symbol resource"></span>VendorSkus</a></li>
+    <li><a href="device" title="Device"><span class="api-symbol api-symbol--resource"></span>Device</a></li>
+    <li><a href="networkfunction" title="NetworkFunction"><span class="api-symbol api-symbol--resource"></span>NetworkFunction</a></li>
+    <li><a href="vendor" title="Vendor"><span class="api-symbol api-symbol--resource"></span>Vendor</a></li>
+    <li><a href="vendorskupreview" title="VendorSkuPreview"><span class="api-symbol api-symbol--resource"></span>VendorSkuPreview</a></li>
+    <li><a href="vendorskus" title="VendorSkus"><span class="api-symbol api-symbol--resource"></span>VendorSkus</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getdevice" title="GetDevice"><span class="symbol function"></span>GetDevice</a></li>
-    <li><a href="getnetworkfunction" title="GetNetworkFunction"><span class="symbol function"></span>GetNetworkFunction</a></li>
-    <li><a href="getvendor" title="GetVendor"><span class="symbol function"></span>GetVendor</a></li>
-    <li><a href="getvendorskupreview" title="GetVendorSkuPreview"><span class="symbol function"></span>GetVendorSkuPreview</a></li>
-    <li><a href="getvendorskus" title="GetVendorSkus"><span class="symbol function"></span>GetVendorSkus</a></li>
-    <li><a href="listdeviceregistrationkey" title="ListDeviceRegistrationKey"><span class="symbol function"></span>ListDeviceRegistrationKey</a></li>
+    <li><a href="getdevice" title="GetDevice"><span class="api-symbol api-symbol--function"></span>GetDevice</a></li>
+    <li><a href="getnetworkfunction" title="GetNetworkFunction"><span class="api-symbol api-symbol--function"></span>GetNetworkFunction</a></li>
+    <li><a href="getvendor" title="GetVendor"><span class="api-symbol api-symbol--function"></span>GetVendor</a></li>
+    <li><a href="getvendorskupreview" title="GetVendorSkuPreview"><span class="api-symbol api-symbol--function"></span>GetVendorSkuPreview</a></li>
+    <li><a href="getvendorskus" title="GetVendorSkus"><span class="api-symbol api-symbol--function"></span>GetVendorSkus</a></li>
+    <li><a href="listdeviceregistrationkey" title="ListDeviceRegistrationKey"><span class="api-symbol api-symbol--function"></span>ListDeviceRegistrationKey</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -37,6 +37,6 @@ Explore the resources and functions of the azure-native.hybridnetwork module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.38.0</dd>
+	<dd>1.39.0</dd>
 </dl>
 

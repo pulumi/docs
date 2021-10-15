@@ -13,26 +13,26 @@ Explore the resources and functions of the gcp.monitoring module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="alertpolicy" title="AlertPolicy"><span class="symbol resource"></span>AlertPolicy</a></li>
-    <li><a href="customservice" title="CustomService"><span class="symbol resource"></span>CustomService</a></li>
-    <li><a href="dashboard" title="Dashboard"><span class="symbol resource"></span>Dashboard</a></li>
-    <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
-    <li><a href="metricdescriptor" title="MetricDescriptor"><span class="symbol resource"></span>MetricDescriptor</a></li>
-    <li><a href="monitoredproject" title="MonitoredProject"><span class="symbol resource"></span>MonitoredProject</a></li>
-    <li><a href="notificationchannel" title="NotificationChannel"><span class="symbol resource"></span>NotificationChannel</a></li>
-    <li><a href="slo" title="Slo"><span class="symbol resource"></span>Slo</a></li>
-    <li><a href="uptimecheckconfig" title="UptimeCheckConfig"><span class="symbol resource"></span>UptimeCheckConfig</a></li>
+    <li><a href="alertpolicy" title="AlertPolicy"><span class="api-symbol api-symbol--resource"></span>AlertPolicy</a></li>
+    <li><a href="customservice" title="CustomService"><span class="api-symbol api-symbol--resource"></span>CustomService</a></li>
+    <li><a href="dashboard" title="Dashboard"><span class="api-symbol api-symbol--resource"></span>Dashboard</a></li>
+    <li><a href="group" title="Group"><span class="api-symbol api-symbol--resource"></span>Group</a></li>
+    <li><a href="metricdescriptor" title="MetricDescriptor"><span class="api-symbol api-symbol--resource"></span>MetricDescriptor</a></li>
+    <li><a href="monitoredproject" title="MonitoredProject"><span class="api-symbol api-symbol--resource"></span>MonitoredProject</a></li>
+    <li><a href="notificationchannel" title="NotificationChannel"><span class="api-symbol api-symbol--resource"></span>NotificationChannel</a></li>
+    <li><a href="slo" title="Slo"><span class="api-symbol api-symbol--resource"></span>Slo</a></li>
+    <li><a href="uptimecheckconfig" title="UptimeCheckConfig"><span class="api-symbol api-symbol--resource"></span>UptimeCheckConfig</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getappengineservice" title="GetAppEngineService"><span class="symbol function"></span>GetAppEngineService</a></li>
-    <li><a href="getclusteristioservice" title="GetClusterIstioService"><span class="symbol function"></span>GetClusterIstioService</a></li>
-    <li><a href="getistiocanonicalservice" title="GetIstioCanonicalService"><span class="symbol function"></span>GetIstioCanonicalService</a></li>
-    <li><a href="getmeshistioservice" title="GetMeshIstioService"><span class="symbol function"></span>GetMeshIstioService</a></li>
-    <li><a href="getnotificationchannel" title="GetNotificationChannel"><span class="symbol function"></span>GetNotificationChannel</a></li>
-    <li><a href="getsecretversion" title="GetSecretVersion"><span class="symbol function"></span>GetSecretVersion</a></li>
-    <li><a href="getuptimecheckips" title="GetUptimeCheckIPs"><span class="symbol function"></span>GetUptimeCheckIPs</a></li>
+    <li><a href="getappengineservice" title="GetAppEngineService"><span class="api-symbol api-symbol--function"></span>GetAppEngineService</a></li>
+    <li><a href="getclusteristioservice" title="GetClusterIstioService"><span class="api-symbol api-symbol--function"></span>GetClusterIstioService</a></li>
+    <li><a href="getistiocanonicalservice" title="GetIstioCanonicalService"><span class="api-symbol api-symbol--function"></span>GetIstioCanonicalService</a></li>
+    <li><a href="getmeshistioservice" title="GetMeshIstioService"><span class="api-symbol api-symbol--function"></span>GetMeshIstioService</a></li>
+    <li><a href="getnotificationchannel" title="GetNotificationChannel"><span class="api-symbol api-symbol--function"></span>GetNotificationChannel</a></li>
+    <li><a href="getsecretversion" title="GetSecretVersion"><span class="api-symbol api-symbol--function"></span>GetSecretVersion</a></li>
+    <li><a href="getuptimecheckips" title="GetUptimeCheckIPs"><span class="api-symbol api-symbol--function"></span>GetUptimeCheckIPs</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

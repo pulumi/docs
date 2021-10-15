@@ -13,12 +13,12 @@ Explore the resources and functions of the azure.managementgroups module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="managementgroup" title="ManagementGroup"><span class="symbol resource"></span>ManagementGroup</a></li>
+    <li><a href="managementgroup" title="ManagementGroup"><span class="api-symbol api-symbol--resource"></span>ManagementGroup</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getmanagementgroup" title="GetManagementGroup"><span class="symbol function"></span>GetManagementGroup</a></li>
+    <li><a href="getmanagementgroup" title="GetManagementGroup"><span class="api-symbol api-symbol--function"></span>GetManagementGroup</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -30,6 +30,6 @@ Explore the resources and functions of the azure.managementgroups module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.22.0</dd>
+	<dd>4.23.0</dd>
 </dl>
 

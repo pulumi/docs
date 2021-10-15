@@ -13,39 +13,39 @@ Explore the resources and functions of the azure.eventhub module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="authorizationrule" title="AuthorizationRule"><span class="symbol resource"></span>AuthorizationRule</a></li>
-    <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
-    <li><a href="consumergroup" title="ConsumerGroup"><span class="symbol resource"></span>ConsumerGroup</a></li>
-    <li><a href="domain" title="Domain"><span class="symbol resource"></span>Domain</a></li>
-    <li><a href="eventgridtopic" title="EventGridTopic"><span class="symbol resource"></span>EventGridTopic</a></li>
-    <li><a href="eventhub" title="EventHub"><span class="symbol resource"></span>EventHub</a></li>
-    <li><a href="eventhubauthorizationrule" title="EventHubAuthorizationRule"><span class="symbol resource"></span>EventHubAuthorizationRule</a></li>
-    <li><a href="eventhubconsumergroup" title="EventHubConsumerGroup"><span class="symbol resource"></span>EventHubConsumerGroup</a></li>
-    <li><a href="eventhubnamespace" title="EventHubNamespace"><span class="symbol resource"></span>EventHubNamespace</a></li>
-    <li><a href="eventhubnamespaceauthorizationrule" title="EventHubNamespaceAuthorizationRule"><span class="symbol resource"></span>EventHubNamespaceAuthorizationRule</a></li>
-    <li><a href="eventsubscription" title="EventSubscription"><span class="symbol resource"></span>EventSubscription</a></li>
-    <li><a href="eventhubnamespacedisasterrecoveryconfig" title="EventhubNamespaceDisasterRecoveryConfig"><span class="symbol resource"></span>EventhubNamespaceDisasterRecoveryConfig</a></li>
-    <li><a href="namespace" title="Namespace"><span class="symbol resource"></span>Namespace</a></li>
-    <li><a href="namespaceauthorizationrule" title="NamespaceAuthorizationRule"><span class="symbol resource"></span>NamespaceAuthorizationRule</a></li>
-    <li><a href="namespacecustomermanagedkey" title="NamespaceCustomerManagedKey"><span class="symbol resource"></span>NamespaceCustomerManagedKey</a></li>
-    <li><a href="queue" title="Queue"><span class="symbol resource"></span>Queue</a></li>
-    <li><a href="queueauthorizationrule" title="QueueAuthorizationRule"><span class="symbol resource"></span>QueueAuthorizationRule</a></li>
-    <li><a href="subscription" title="Subscription"><span class="symbol resource"></span>Subscription</a></li>
-    <li><a href="subscriptionrule" title="SubscriptionRule"><span class="symbol resource"></span>SubscriptionRule</a></li>
-    <li><a href="topic" title="Topic"><span class="symbol resource"></span>Topic</a></li>
-    <li><a href="topicauthorizationrule" title="TopicAuthorizationRule"><span class="symbol resource"></span>TopicAuthorizationRule</a></li>
+    <li><a href="authorizationrule" title="AuthorizationRule"><span class="api-symbol api-symbol--resource"></span>AuthorizationRule</a></li>
+    <li><a href="cluster" title="Cluster"><span class="api-symbol api-symbol--resource"></span>Cluster</a></li>
+    <li><a href="consumergroup" title="ConsumerGroup"><span class="api-symbol api-symbol--resource"></span>ConsumerGroup</a></li>
+    <li><a href="domain" title="Domain"><span class="api-symbol api-symbol--resource"></span>Domain</a></li>
+    <li><a href="eventgridtopic" title="EventGridTopic"><span class="api-symbol api-symbol--resource"></span>EventGridTopic</a></li>
+    <li><a href="eventhub" title="EventHub"><span class="api-symbol api-symbol--resource"></span>EventHub</a></li>
+    <li><a href="eventhubauthorizationrule" title="EventHubAuthorizationRule"><span class="api-symbol api-symbol--resource"></span>EventHubAuthorizationRule</a></li>
+    <li><a href="eventhubconsumergroup" title="EventHubConsumerGroup"><span class="api-symbol api-symbol--resource"></span>EventHubConsumerGroup</a></li>
+    <li><a href="eventhubnamespace" title="EventHubNamespace"><span class="api-symbol api-symbol--resource"></span>EventHubNamespace</a></li>
+    <li><a href="eventhubnamespaceauthorizationrule" title="EventHubNamespaceAuthorizationRule"><span class="api-symbol api-symbol--resource"></span>EventHubNamespaceAuthorizationRule</a></li>
+    <li><a href="eventsubscription" title="EventSubscription"><span class="api-symbol api-symbol--resource"></span>EventSubscription</a></li>
+    <li><a href="eventhubnamespacedisasterrecoveryconfig" title="EventhubNamespaceDisasterRecoveryConfig"><span class="api-symbol api-symbol--resource"></span>EventhubNamespaceDisasterRecoveryConfig</a></li>
+    <li><a href="namespace" title="Namespace"><span class="api-symbol api-symbol--resource"></span>Namespace</a></li>
+    <li><a href="namespaceauthorizationrule" title="NamespaceAuthorizationRule"><span class="api-symbol api-symbol--resource"></span>NamespaceAuthorizationRule</a></li>
+    <li><a href="namespacecustomermanagedkey" title="NamespaceCustomerManagedKey"><span class="api-symbol api-symbol--resource"></span>NamespaceCustomerManagedKey</a></li>
+    <li><a href="queue" title="Queue"><span class="api-symbol api-symbol--resource"></span>Queue</a></li>
+    <li><a href="queueauthorizationrule" title="QueueAuthorizationRule"><span class="api-symbol api-symbol--resource"></span>QueueAuthorizationRule</a></li>
+    <li><a href="subscription" title="Subscription"><span class="api-symbol api-symbol--resource"></span>Subscription</a></li>
+    <li><a href="subscriptionrule" title="SubscriptionRule"><span class="api-symbol api-symbol--resource"></span>SubscriptionRule</a></li>
+    <li><a href="topic" title="Topic"><span class="api-symbol api-symbol--resource"></span>Topic</a></li>
+    <li><a href="topicauthorizationrule" title="TopicAuthorizationRule"><span class="api-symbol api-symbol--resource"></span>TopicAuthorizationRule</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getauthorizationrule" title="GetAuthorizationRule"><span class="symbol function"></span>GetAuthorizationRule</a></li>
-    <li><a href="getcluster" title="GetCluster"><span class="symbol function"></span>GetCluster</a></li>
-    <li><a href="getconsumegroup" title="GetConsumeGroup"><span class="symbol function"></span>GetConsumeGroup</a></li>
-    <li><a href="geteventhub" title="GetEventHub"><span class="symbol function"></span>GetEventHub</a></li>
-    <li><a href="geteventhubnamespace" title="GetEventhubNamespace"><span class="symbol function"></span>GetEventhubNamespace</a></li>
-    <li><a href="getnamespace" title="GetNamespace"><span class="symbol function"></span>GetNamespace</a></li>
-    <li><a href="getnamespaceauthorizationrule" title="GetNamespaceAuthorizationRule"><span class="symbol function"></span>GetNamespaceAuthorizationRule</a></li>
-    <li><a href="getservicebusnamespace" title="GetServiceBusNamespace"><span class="symbol function"></span>GetServiceBusNamespace</a></li>
+    <li><a href="getauthorizationrule" title="GetAuthorizationRule"><span class="api-symbol api-symbol--function"></span>GetAuthorizationRule</a></li>
+    <li><a href="getcluster" title="GetCluster"><span class="api-symbol api-symbol--function"></span>GetCluster</a></li>
+    <li><a href="getconsumegroup" title="GetConsumeGroup"><span class="api-symbol api-symbol--function"></span>GetConsumeGroup</a></li>
+    <li><a href="geteventhub" title="GetEventHub"><span class="api-symbol api-symbol--function"></span>GetEventHub</a></li>
+    <li><a href="geteventhubnamespace" title="GetEventhubNamespace"><span class="api-symbol api-symbol--function"></span>GetEventhubNamespace</a></li>
+    <li><a href="getnamespace" title="GetNamespace"><span class="api-symbol api-symbol--function"></span>GetNamespace</a></li>
+    <li><a href="getnamespaceauthorizationrule" title="GetNamespaceAuthorizationRule"><span class="api-symbol api-symbol--function"></span>GetNamespaceAuthorizationRule</a></li>
+    <li><a href="getservicebusnamespace" title="GetServiceBusNamespace"><span class="api-symbol api-symbol--function"></span>GetServiceBusNamespace</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -57,6 +57,6 @@ Explore the resources and functions of the azure.eventhub module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.22.0</dd>
+	<dd>4.23.0</dd>
 </dl>
 

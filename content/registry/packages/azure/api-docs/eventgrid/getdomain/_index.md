@@ -437,7 +437,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The primary access key associated with the EventGrid Domain.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -453,7 +454,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The secondary access key associated with the EventGrid Domain.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="inboundiprules_csharp">
 <a href="#inboundiprules_csharp" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Ip<wbr>Rules</a>
@@ -554,7 +556,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The primary access key associated with the EventGrid Domain.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -570,7 +573,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The secondary access key associated with the EventGrid Domain.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="inboundiprules_go">
 <a href="#inboundiprules_go" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Ip<wbr>Rules</a>
@@ -671,7 +675,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The primary access key associated with the EventGrid Domain.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -687,7 +692,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The secondary access key associated with the EventGrid Domain.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="inboundiprules_nodejs">
 <a href="#inboundiprules_nodejs" style="color: inherit; text-decoration: inherit;">inbound<wbr>Ip<wbr>Rules</a>
@@ -788,7 +794,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The primary access key associated with the EventGrid Domain.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -804,7 +811,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The secondary access key associated with the EventGrid Domain.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="inbound_ip_rules_python">
 <a href="#inbound_ip_rules_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>ip_<wbr>rules</a>

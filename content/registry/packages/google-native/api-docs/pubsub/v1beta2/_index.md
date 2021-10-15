@@ -13,18 +13,18 @@ Explore the resources and functions of the google-native.pubsub/v1beta2 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="subscription" title="Subscription"><span class="symbol resource"></span>Subscription</a></li>
-    <li><a href="subscriptioniampolicy" title="SubscriptionIamPolicy"><span class="symbol resource"></span>SubscriptionIamPolicy</a></li>
-    <li><a href="topic" title="Topic"><span class="symbol resource"></span>Topic</a></li>
-    <li><a href="topiciampolicy" title="TopicIamPolicy"><span class="symbol resource"></span>TopicIamPolicy</a></li>
+    <li><a href="subscription" title="Subscription"><span class="api-symbol api-symbol--resource"></span>Subscription</a></li>
+    <li><a href="subscriptioniampolicy" title="SubscriptionIamPolicy"><span class="api-symbol api-symbol--resource"></span>SubscriptionIamPolicy</a></li>
+    <li><a href="topic" title="Topic"><span class="api-symbol api-symbol--resource"></span>Topic</a></li>
+    <li><a href="topiciampolicy" title="TopicIamPolicy"><span class="api-symbol api-symbol--resource"></span>TopicIamPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getsubscription" title="GetSubscription"><span class="symbol function"></span>GetSubscription</a></li>
-    <li><a href="getsubscriptioniampolicy" title="GetSubscriptionIamPolicy"><span class="symbol function"></span>GetSubscriptionIamPolicy</a></li>
-    <li><a href="gettopic" title="GetTopic"><span class="symbol function"></span>GetTopic</a></li>
-    <li><a href="gettopiciampolicy" title="GetTopicIamPolicy"><span class="symbol function"></span>GetTopicIamPolicy</a></li>
+    <li><a href="getsubscription" title="GetSubscription"><span class="api-symbol api-symbol--function"></span>GetSubscription</a></li>
+    <li><a href="getsubscriptioniampolicy" title="GetSubscriptionIamPolicy"><span class="api-symbol api-symbol--function"></span>GetSubscriptionIamPolicy</a></li>
+    <li><a href="gettopic" title="GetTopic"><span class="api-symbol api-symbol--function"></span>GetTopic</a></li>
+    <li><a href="gettopiciampolicy" title="GetTopicIamPolicy"><span class="api-symbol api-symbol--function"></span>GetTopicIamPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

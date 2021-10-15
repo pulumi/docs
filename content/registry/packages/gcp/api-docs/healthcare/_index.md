@@ -13,26 +13,26 @@ Explore the resources and functions of the gcp.healthcare module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="consentstore" title="ConsentStore"><span class="symbol resource"></span>ConsentStore</a></li>
-    <li><a href="consentstoreiambinding" title="ConsentStoreIamBinding"><span class="symbol resource"></span>ConsentStoreIamBinding</a></li>
-    <li><a href="consentstoreiammember" title="ConsentStoreIamMember"><span class="symbol resource"></span>ConsentStoreIamMember</a></li>
-    <li><a href="consentstoreiampolicy" title="ConsentStoreIamPolicy"><span class="symbol resource"></span>ConsentStoreIamPolicy</a></li>
-    <li><a href="dataset" title="Dataset"><span class="symbol resource"></span>Dataset</a></li>
-    <li><a href="datasetiambinding" title="DatasetIamBinding"><span class="symbol resource"></span>DatasetIamBinding</a></li>
-    <li><a href="datasetiammember" title="DatasetIamMember"><span class="symbol resource"></span>DatasetIamMember</a></li>
-    <li><a href="datasetiampolicy" title="DatasetIamPolicy"><span class="symbol resource"></span>DatasetIamPolicy</a></li>
-    <li><a href="dicomstore" title="DicomStore"><span class="symbol resource"></span>DicomStore</a></li>
-    <li><a href="dicomstoreiambinding" title="DicomStoreIamBinding"><span class="symbol resource"></span>DicomStoreIamBinding</a></li>
-    <li><a href="dicomstoreiammember" title="DicomStoreIamMember"><span class="symbol resource"></span>DicomStoreIamMember</a></li>
-    <li><a href="dicomstoreiampolicy" title="DicomStoreIamPolicy"><span class="symbol resource"></span>DicomStoreIamPolicy</a></li>
-    <li><a href="fhirstore" title="FhirStore"><span class="symbol resource"></span>FhirStore</a></li>
-    <li><a href="fhirstoreiambinding" title="FhirStoreIamBinding"><span class="symbol resource"></span>FhirStoreIamBinding</a></li>
-    <li><a href="fhirstoreiammember" title="FhirStoreIamMember"><span class="symbol resource"></span>FhirStoreIamMember</a></li>
-    <li><a href="fhirstoreiampolicy" title="FhirStoreIamPolicy"><span class="symbol resource"></span>FhirStoreIamPolicy</a></li>
-    <li><a href="hl7store" title="Hl7Store"><span class="symbol resource"></span>Hl7Store</a></li>
-    <li><a href="hl7storeiambinding" title="Hl7StoreIamBinding"><span class="symbol resource"></span>Hl7StoreIamBinding</a></li>
-    <li><a href="hl7storeiammember" title="Hl7StoreIamMember"><span class="symbol resource"></span>Hl7StoreIamMember</a></li>
-    <li><a href="hl7storeiampolicy" title="Hl7StoreIamPolicy"><span class="symbol resource"></span>Hl7StoreIamPolicy</a></li>
+    <li><a href="consentstore" title="ConsentStore"><span class="api-symbol api-symbol--resource"></span>ConsentStore</a></li>
+    <li><a href="consentstoreiambinding" title="ConsentStoreIamBinding"><span class="api-symbol api-symbol--resource"></span>ConsentStoreIamBinding</a></li>
+    <li><a href="consentstoreiammember" title="ConsentStoreIamMember"><span class="api-symbol api-symbol--resource"></span>ConsentStoreIamMember</a></li>
+    <li><a href="consentstoreiampolicy" title="ConsentStoreIamPolicy"><span class="api-symbol api-symbol--resource"></span>ConsentStoreIamPolicy</a></li>
+    <li><a href="dataset" title="Dataset"><span class="api-symbol api-symbol--resource"></span>Dataset</a></li>
+    <li><a href="datasetiambinding" title="DatasetIamBinding"><span class="api-symbol api-symbol--resource"></span>DatasetIamBinding</a></li>
+    <li><a href="datasetiammember" title="DatasetIamMember"><span class="api-symbol api-symbol--resource"></span>DatasetIamMember</a></li>
+    <li><a href="datasetiampolicy" title="DatasetIamPolicy"><span class="api-symbol api-symbol--resource"></span>DatasetIamPolicy</a></li>
+    <li><a href="dicomstore" title="DicomStore"><span class="api-symbol api-symbol--resource"></span>DicomStore</a></li>
+    <li><a href="dicomstoreiambinding" title="DicomStoreIamBinding"><span class="api-symbol api-symbol--resource"></span>DicomStoreIamBinding</a></li>
+    <li><a href="dicomstoreiammember" title="DicomStoreIamMember"><span class="api-symbol api-symbol--resource"></span>DicomStoreIamMember</a></li>
+    <li><a href="dicomstoreiampolicy" title="DicomStoreIamPolicy"><span class="api-symbol api-symbol--resource"></span>DicomStoreIamPolicy</a></li>
+    <li><a href="fhirstore" title="FhirStore"><span class="api-symbol api-symbol--resource"></span>FhirStore</a></li>
+    <li><a href="fhirstoreiambinding" title="FhirStoreIamBinding"><span class="api-symbol api-symbol--resource"></span>FhirStoreIamBinding</a></li>
+    <li><a href="fhirstoreiammember" title="FhirStoreIamMember"><span class="api-symbol api-symbol--resource"></span>FhirStoreIamMember</a></li>
+    <li><a href="fhirstoreiampolicy" title="FhirStoreIamPolicy"><span class="api-symbol api-symbol--resource"></span>FhirStoreIamPolicy</a></li>
+    <li><a href="hl7store" title="Hl7Store"><span class="api-symbol api-symbol--resource"></span>Hl7Store</a></li>
+    <li><a href="hl7storeiambinding" title="Hl7StoreIamBinding"><span class="api-symbol api-symbol--resource"></span>Hl7StoreIamBinding</a></li>
+    <li><a href="hl7storeiammember" title="Hl7StoreIamMember"><span class="api-symbol api-symbol--resource"></span>Hl7StoreIamMember</a></li>
+    <li><a href="hl7storeiampolicy" title="Hl7StoreIamPolicy"><span class="api-symbol api-symbol--resource"></span>Hl7StoreIamPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

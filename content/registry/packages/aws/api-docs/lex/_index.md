@@ -13,18 +13,18 @@ Explore the resources and functions of the aws.lex module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="bot" title="Bot"><span class="symbol resource"></span>Bot</a></li>
-    <li><a href="botalias" title="BotAlias"><span class="symbol resource"></span>BotAlias</a></li>
-    <li><a href="intent" title="Intent"><span class="symbol resource"></span>Intent</a></li>
-    <li><a href="slottype" title="SlotType"><span class="symbol resource"></span>SlotType</a></li>
+    <li><a href="bot" title="Bot"><span class="api-symbol api-symbol--resource"></span>Bot</a></li>
+    <li><a href="botalias" title="BotAlias"><span class="api-symbol api-symbol--resource"></span>BotAlias</a></li>
+    <li><a href="intent" title="Intent"><span class="api-symbol api-symbol--resource"></span>Intent</a></li>
+    <li><a href="slottype" title="SlotType"><span class="api-symbol api-symbol--resource"></span>SlotType</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getbot" title="GetBot"><span class="symbol function"></span>GetBot</a></li>
-    <li><a href="getbotalias" title="GetBotAlias"><span class="symbol function"></span>GetBotAlias</a></li>
-    <li><a href="getintent" title="GetIntent"><span class="symbol function"></span>GetIntent</a></li>
-    <li><a href="getslottype" title="GetSlotType"><span class="symbol function"></span>GetSlotType</a></li>
+    <li><a href="getbot" title="GetBot"><span class="api-symbol api-symbol--function"></span>GetBot</a></li>
+    <li><a href="getbotalias" title="GetBotAlias"><span class="api-symbol api-symbol--function"></span>GetBotAlias</a></li>
+    <li><a href="getintent" title="GetIntent"><span class="api-symbol api-symbol--function"></span>GetIntent</a></li>
+    <li><a href="getslottype" title="GetSlotType"><span class="api-symbol api-symbol--function"></span>GetSlotType</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -36,6 +36,6 @@ Explore the resources and functions of the aws.lex module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.24.1</dd>
+	<dd>4.25.0</dd>
 </dl>
 

@@ -13,16 +13,16 @@ Explore the resources and functions of the azure.appinsights module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="analyticsitem" title="AnalyticsItem"><span class="symbol resource"></span>AnalyticsItem</a></li>
-    <li><a href="apikey" title="ApiKey"><span class="symbol resource"></span>ApiKey</a></li>
-    <li><a href="insights" title="Insights"><span class="symbol resource"></span>Insights</a></li>
-    <li><a href="smartdetectionrule" title="SmartDetectionRule"><span class="symbol resource"></span>SmartDetectionRule</a></li>
-    <li><a href="webtest" title="WebTest"><span class="symbol resource"></span>WebTest</a></li>
+    <li><a href="analyticsitem" title="AnalyticsItem"><span class="api-symbol api-symbol--resource"></span>AnalyticsItem</a></li>
+    <li><a href="apikey" title="ApiKey"><span class="api-symbol api-symbol--resource"></span>ApiKey</a></li>
+    <li><a href="insights" title="Insights"><span class="api-symbol api-symbol--resource"></span>Insights</a></li>
+    <li><a href="smartdetectionrule" title="SmartDetectionRule"><span class="api-symbol api-symbol--resource"></span>SmartDetectionRule</a></li>
+    <li><a href="webtest" title="WebTest"><span class="api-symbol api-symbol--resource"></span>WebTest</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getinsights" title="GetInsights"><span class="symbol function"></span>GetInsights</a></li>
+    <li><a href="getinsights" title="GetInsights"><span class="api-symbol api-symbol--function"></span>GetInsights</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -34,6 +34,6 @@ Explore the resources and functions of the azure.appinsights module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.22.0</dd>
+	<dd>4.23.0</dd>
 </dl>
 

@@ -13,7 +13,7 @@ Explore the resources and functions of the aws-native.eventschemas module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="registrypolicy" title="RegistryPolicy"><span class="symbol resource"></span>RegistryPolicy</a></li>
+    <li><a href="registrypolicy" title="RegistryPolicy"><span class="api-symbol api-symbol--resource"></span>RegistryPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

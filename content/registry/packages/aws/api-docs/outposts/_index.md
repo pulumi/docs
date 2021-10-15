@@ -13,12 +13,12 @@ Explore the resources and functions of the aws.outposts module.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getoutpost" title="GetOutpost"><span class="symbol function"></span>GetOutpost</a></li>
-    <li><a href="getoutpostinstancetype" title="GetOutpostInstanceType"><span class="symbol function"></span>GetOutpostInstanceType</a></li>
-    <li><a href="getoutpostinstancetypes" title="GetOutpostInstanceTypes"><span class="symbol function"></span>GetOutpostInstanceTypes</a></li>
-    <li><a href="getoutposts" title="GetOutposts"><span class="symbol function"></span>GetOutposts</a></li>
-    <li><a href="getsite" title="GetSite"><span class="symbol function"></span>GetSite</a></li>
-    <li><a href="getsites" title="GetSites"><span class="symbol function"></span>GetSites</a></li>
+    <li><a href="getoutpost" title="GetOutpost"><span class="api-symbol api-symbol--function"></span>GetOutpost</a></li>
+    <li><a href="getoutpostinstancetype" title="GetOutpostInstanceType"><span class="api-symbol api-symbol--function"></span>GetOutpostInstanceType</a></li>
+    <li><a href="getoutpostinstancetypes" title="GetOutpostInstanceTypes"><span class="api-symbol api-symbol--function"></span>GetOutpostInstanceTypes</a></li>
+    <li><a href="getoutposts" title="GetOutposts"><span class="api-symbol api-symbol--function"></span>GetOutposts</a></li>
+    <li><a href="getsite" title="GetSite"><span class="api-symbol api-symbol--function"></span>GetSite</a></li>
+    <li><a href="getsites" title="GetSites"><span class="api-symbol api-symbol--function"></span>GetSites</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -30,6 +30,6 @@ Explore the resources and functions of the aws.outposts module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.24.1</dd>
+	<dd>4.25.0</dd>
 </dl>
 

@@ -13,57 +13,57 @@ Explore the resources and functions of the azure.apimanagement module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="api" title="Api"><span class="symbol resource"></span>Api</a></li>
-    <li><a href="apidiagnostic" title="ApiDiagnostic"><span class="symbol resource"></span>ApiDiagnostic</a></li>
-    <li><a href="apioperation" title="ApiOperation"><span class="symbol resource"></span>ApiOperation</a></li>
-    <li><a href="apioperationpolicy" title="ApiOperationPolicy"><span class="symbol resource"></span>ApiOperationPolicy</a></li>
-    <li><a href="apioperationtag" title="ApiOperationTag"><span class="symbol resource"></span>ApiOperationTag</a></li>
-    <li><a href="apipolicy" title="ApiPolicy"><span class="symbol resource"></span>ApiPolicy</a></li>
-    <li><a href="apirelease" title="ApiRelease"><span class="symbol resource"></span>ApiRelease</a></li>
-    <li><a href="apischema" title="ApiSchema"><span class="symbol resource"></span>ApiSchema</a></li>
-    <li><a href="apiversionset" title="ApiVersionSet"><span class="symbol resource"></span>ApiVersionSet</a></li>
-    <li><a href="authorizationserver" title="AuthorizationServer"><span class="symbol resource"></span>AuthorizationServer</a></li>
-    <li><a href="backend" title="Backend"><span class="symbol resource"></span>Backend</a></li>
-    <li><a href="certificate" title="Certificate"><span class="symbol resource"></span>Certificate</a></li>
-    <li><a href="customdomain" title="CustomDomain"><span class="symbol resource"></span>CustomDomain</a></li>
-    <li><a href="diagnostic" title="Diagnostic"><span class="symbol resource"></span>Diagnostic</a></li>
-    <li><a href="emailtemplate" title="EmailTemplate"><span class="symbol resource"></span>EmailTemplate</a></li>
-    <li><a href="gateway" title="Gateway"><span class="symbol resource"></span>Gateway</a></li>
-    <li><a href="gatewayapi" title="GatewayApi"><span class="symbol resource"></span>GatewayApi</a></li>
-    <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
-    <li><a href="groupuser" title="GroupUser"><span class="symbol resource"></span>GroupUser</a></li>
-    <li><a href="identityprovideraad" title="IdentityProviderAad"><span class="symbol resource"></span>IdentityProviderAad</a></li>
-    <li><a href="identityprovideraadb2c" title="IdentityProviderAadb2c"><span class="symbol resource"></span>IdentityProviderAadb2c</a></li>
-    <li><a href="identityproviderfacebook" title="IdentityProviderFacebook"><span class="symbol resource"></span>IdentityProviderFacebook</a></li>
-    <li><a href="identityprovidergoogle" title="IdentityProviderGoogle"><span class="symbol resource"></span>IdentityProviderGoogle</a></li>
-    <li><a href="identityprovidermicrosoft" title="IdentityProviderMicrosoft"><span class="symbol resource"></span>IdentityProviderMicrosoft</a></li>
-    <li><a href="identityprovidertwitter" title="IdentityProviderTwitter"><span class="symbol resource"></span>IdentityProviderTwitter</a></li>
-    <li><a href="logger" title="Logger"><span class="symbol resource"></span>Logger</a></li>
-    <li><a href="namedvalue" title="NamedValue"><span class="symbol resource"></span>NamedValue</a></li>
-    <li><a href="notificationrecipientemail" title="NotificationRecipientEmail"><span class="symbol resource"></span>NotificationRecipientEmail</a></li>
-    <li><a href="openidconnectprovider" title="OpenIdConnectProvider"><span class="symbol resource"></span>OpenIdConnectProvider</a></li>
-    <li><a href="policy" title="Policy"><span class="symbol resource"></span>Policy</a></li>
-    <li><a href="product" title="Product"><span class="symbol resource"></span>Product</a></li>
-    <li><a href="productapi" title="ProductApi"><span class="symbol resource"></span>ProductApi</a></li>
-    <li><a href="productgroup" title="ProductGroup"><span class="symbol resource"></span>ProductGroup</a></li>
-    <li><a href="productpolicy" title="ProductPolicy"><span class="symbol resource"></span>ProductPolicy</a></li>
-    <li><a href="property" title="Property"><span class="symbol resource"></span>Property</a></li>
-    <li><a href="rediscache" title="RedisCache"><span class="symbol resource"></span>RedisCache</a></li>
-    <li><a href="service" title="Service"><span class="symbol resource"></span>Service</a></li>
-    <li><a href="subscription" title="Subscription"><span class="symbol resource"></span>Subscription</a></li>
-    <li><a href="tag" title="Tag"><span class="symbol resource"></span>Tag</a></li>
-    <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
+    <li><a href="api" title="Api"><span class="api-symbol api-symbol--resource"></span>Api</a></li>
+    <li><a href="apidiagnostic" title="ApiDiagnostic"><span class="api-symbol api-symbol--resource"></span>ApiDiagnostic</a></li>
+    <li><a href="apioperation" title="ApiOperation"><span class="api-symbol api-symbol--resource"></span>ApiOperation</a></li>
+    <li><a href="apioperationpolicy" title="ApiOperationPolicy"><span class="api-symbol api-symbol--resource"></span>ApiOperationPolicy</a></li>
+    <li><a href="apioperationtag" title="ApiOperationTag"><span class="api-symbol api-symbol--resource"></span>ApiOperationTag</a></li>
+    <li><a href="apipolicy" title="ApiPolicy"><span class="api-symbol api-symbol--resource"></span>ApiPolicy</a></li>
+    <li><a href="apirelease" title="ApiRelease"><span class="api-symbol api-symbol--resource"></span>ApiRelease</a></li>
+    <li><a href="apischema" title="ApiSchema"><span class="api-symbol api-symbol--resource"></span>ApiSchema</a></li>
+    <li><a href="apiversionset" title="ApiVersionSet"><span class="api-symbol api-symbol--resource"></span>ApiVersionSet</a></li>
+    <li><a href="authorizationserver" title="AuthorizationServer"><span class="api-symbol api-symbol--resource"></span>AuthorizationServer</a></li>
+    <li><a href="backend" title="Backend"><span class="api-symbol api-symbol--resource"></span>Backend</a></li>
+    <li><a href="certificate" title="Certificate"><span class="api-symbol api-symbol--resource"></span>Certificate</a></li>
+    <li><a href="customdomain" title="CustomDomain"><span class="api-symbol api-symbol--resource"></span>CustomDomain</a></li>
+    <li><a href="diagnostic" title="Diagnostic"><span class="api-symbol api-symbol--resource"></span>Diagnostic</a></li>
+    <li><a href="emailtemplate" title="EmailTemplate"><span class="api-symbol api-symbol--resource"></span>EmailTemplate</a></li>
+    <li><a href="gateway" title="Gateway"><span class="api-symbol api-symbol--resource"></span>Gateway</a></li>
+    <li><a href="gatewayapi" title="GatewayApi"><span class="api-symbol api-symbol--resource"></span>GatewayApi</a></li>
+    <li><a href="group" title="Group"><span class="api-symbol api-symbol--resource"></span>Group</a></li>
+    <li><a href="groupuser" title="GroupUser"><span class="api-symbol api-symbol--resource"></span>GroupUser</a></li>
+    <li><a href="identityprovideraad" title="IdentityProviderAad"><span class="api-symbol api-symbol--resource"></span>IdentityProviderAad</a></li>
+    <li><a href="identityprovideraadb2c" title="IdentityProviderAadb2c"><span class="api-symbol api-symbol--resource"></span>IdentityProviderAadb2c</a></li>
+    <li><a href="identityproviderfacebook" title="IdentityProviderFacebook"><span class="api-symbol api-symbol--resource"></span>IdentityProviderFacebook</a></li>
+    <li><a href="identityprovidergoogle" title="IdentityProviderGoogle"><span class="api-symbol api-symbol--resource"></span>IdentityProviderGoogle</a></li>
+    <li><a href="identityprovidermicrosoft" title="IdentityProviderMicrosoft"><span class="api-symbol api-symbol--resource"></span>IdentityProviderMicrosoft</a></li>
+    <li><a href="identityprovidertwitter" title="IdentityProviderTwitter"><span class="api-symbol api-symbol--resource"></span>IdentityProviderTwitter</a></li>
+    <li><a href="logger" title="Logger"><span class="api-symbol api-symbol--resource"></span>Logger</a></li>
+    <li><a href="namedvalue" title="NamedValue"><span class="api-symbol api-symbol--resource"></span>NamedValue</a></li>
+    <li><a href="notificationrecipientemail" title="NotificationRecipientEmail"><span class="api-symbol api-symbol--resource"></span>NotificationRecipientEmail</a></li>
+    <li><a href="openidconnectprovider" title="OpenIdConnectProvider"><span class="api-symbol api-symbol--resource"></span>OpenIdConnectProvider</a></li>
+    <li><a href="policy" title="Policy"><span class="api-symbol api-symbol--resource"></span>Policy</a></li>
+    <li><a href="product" title="Product"><span class="api-symbol api-symbol--resource"></span>Product</a></li>
+    <li><a href="productapi" title="ProductApi"><span class="api-symbol api-symbol--resource"></span>ProductApi</a></li>
+    <li><a href="productgroup" title="ProductGroup"><span class="api-symbol api-symbol--resource"></span>ProductGroup</a></li>
+    <li><a href="productpolicy" title="ProductPolicy"><span class="api-symbol api-symbol--resource"></span>ProductPolicy</a></li>
+    <li><a href="property" title="Property"><span class="api-symbol api-symbol--resource"></span>Property</a></li>
+    <li><a href="rediscache" title="RedisCache"><span class="api-symbol api-symbol--resource"></span>RedisCache</a></li>
+    <li><a href="service" title="Service"><span class="api-symbol api-symbol--resource"></span>Service</a></li>
+    <li><a href="subscription" title="Subscription"><span class="api-symbol api-symbol--resource"></span>Subscription</a></li>
+    <li><a href="tag" title="Tag"><span class="api-symbol api-symbol--resource"></span>Tag</a></li>
+    <li><a href="user" title="User"><span class="api-symbol api-symbol--resource"></span>User</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getapi" title="GetApi"><span class="symbol function"></span>GetApi</a></li>
-    <li><a href="getapiversionset" title="GetApiVersionSet"><span class="symbol function"></span>GetApiVersionSet</a></li>
-    <li><a href="getgateway" title="GetGateway"><span class="symbol function"></span>GetGateway</a></li>
-    <li><a href="getgroup" title="GetGroup"><span class="symbol function"></span>GetGroup</a></li>
-    <li><a href="getproduct" title="GetProduct"><span class="symbol function"></span>GetProduct</a></li>
-    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
-    <li><a href="getuser" title="GetUser"><span class="symbol function"></span>GetUser</a></li>
+    <li><a href="getapi" title="GetApi"><span class="api-symbol api-symbol--function"></span>GetApi</a></li>
+    <li><a href="getapiversionset" title="GetApiVersionSet"><span class="api-symbol api-symbol--function"></span>GetApiVersionSet</a></li>
+    <li><a href="getgateway" title="GetGateway"><span class="api-symbol api-symbol--function"></span>GetGateway</a></li>
+    <li><a href="getgroup" title="GetGroup"><span class="api-symbol api-symbol--function"></span>GetGroup</a></li>
+    <li><a href="getproduct" title="GetProduct"><span class="api-symbol api-symbol--function"></span>GetProduct</a></li>
+    <li><a href="getservice" title="GetService"><span class="api-symbol api-symbol--function"></span>GetService</a></li>
+    <li><a href="getuser" title="GetUser"><span class="api-symbol api-symbol--function"></span>GetUser</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -75,6 +75,6 @@ Explore the resources and functions of the azure.apimanagement module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.22.0</dd>
+	<dd>4.23.0</dd>
 </dl>
 

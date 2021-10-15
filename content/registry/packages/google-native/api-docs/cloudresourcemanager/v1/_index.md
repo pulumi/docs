@@ -13,18 +13,18 @@ Explore the resources and functions of the google-native.cloudresourcemanager/v1
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="lien" title="Lien"><span class="symbol resource"></span>Lien</a></li>
-    <li><a href="organizationiampolicy" title="OrganizationIamPolicy"><span class="symbol resource"></span>OrganizationIamPolicy</a></li>
-    <li><a href="project" title="Project"><span class="symbol resource"></span>Project</a></li>
-    <li><a href="projectiampolicy" title="ProjectIamPolicy"><span class="symbol resource"></span>ProjectIamPolicy</a></li>
+    <li><a href="lien" title="Lien"><span class="api-symbol api-symbol--resource"></span>Lien</a></li>
+    <li><a href="organizationiampolicy" title="OrganizationIamPolicy"><span class="api-symbol api-symbol--resource"></span>OrganizationIamPolicy</a></li>
+    <li><a href="project" title="Project"><span class="api-symbol api-symbol--resource"></span>Project</a></li>
+    <li><a href="projectiampolicy" title="ProjectIamPolicy"><span class="api-symbol api-symbol--resource"></span>ProjectIamPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getlien" title="GetLien"><span class="symbol function"></span>GetLien</a></li>
-    <li><a href="getorganizationiampolicy" title="GetOrganizationIamPolicy"><span class="symbol function"></span>GetOrganizationIamPolicy</a></li>
-    <li><a href="getproject" title="GetProject"><span class="symbol function"></span>GetProject</a></li>
-    <li><a href="getprojectiampolicy" title="GetProjectIamPolicy"><span class="symbol function"></span>GetProjectIamPolicy</a></li>
+    <li><a href="getlien" title="GetLien"><span class="api-symbol api-symbol--function"></span>GetLien</a></li>
+    <li><a href="getorganizationiampolicy" title="GetOrganizationIamPolicy"><span class="api-symbol api-symbol--function"></span>GetOrganizationIamPolicy</a></li>
+    <li><a href="getproject" title="GetProject"><span class="api-symbol api-symbol--function"></span>GetProject</a></li>
+    <li><a href="getprojectiampolicy" title="GetProjectIamPolicy"><span class="api-symbol api-symbol--function"></span>GetProjectIamPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

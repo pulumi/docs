@@ -13,17 +13,17 @@ Explore the resources and functions of the gcp.diagflow module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="agent" title="Agent"><span class="symbol resource"></span>Agent</a></li>
-    <li><a href="cxagent" title="CxAgent"><span class="symbol resource"></span>CxAgent</a></li>
-    <li><a href="cxentitytype" title="CxEntityType"><span class="symbol resource"></span>CxEntityType</a></li>
-    <li><a href="cxenvironment" title="CxEnvironment"><span class="symbol resource"></span>CxEnvironment</a></li>
-    <li><a href="cxflow" title="CxFlow"><span class="symbol resource"></span>CxFlow</a></li>
-    <li><a href="cxintent" title="CxIntent"><span class="symbol resource"></span>CxIntent</a></li>
-    <li><a href="cxpage" title="CxPage"><span class="symbol resource"></span>CxPage</a></li>
-    <li><a href="cxversion" title="CxVersion"><span class="symbol resource"></span>CxVersion</a></li>
-    <li><a href="entitytype" title="EntityType"><span class="symbol resource"></span>EntityType</a></li>
-    <li><a href="fulfillment" title="Fulfillment"><span class="symbol resource"></span>Fulfillment</a></li>
-    <li><a href="intent" title="Intent"><span class="symbol resource"></span>Intent</a></li>
+    <li><a href="agent" title="Agent"><span class="api-symbol api-symbol--resource"></span>Agent</a></li>
+    <li><a href="cxagent" title="CxAgent"><span class="api-symbol api-symbol--resource"></span>CxAgent</a></li>
+    <li><a href="cxentitytype" title="CxEntityType"><span class="api-symbol api-symbol--resource"></span>CxEntityType</a></li>
+    <li><a href="cxenvironment" title="CxEnvironment"><span class="api-symbol api-symbol--resource"></span>CxEnvironment</a></li>
+    <li><a href="cxflow" title="CxFlow"><span class="api-symbol api-symbol--resource"></span>CxFlow</a></li>
+    <li><a href="cxintent" title="CxIntent"><span class="api-symbol api-symbol--resource"></span>CxIntent</a></li>
+    <li><a href="cxpage" title="CxPage"><span class="api-symbol api-symbol--resource"></span>CxPage</a></li>
+    <li><a href="cxversion" title="CxVersion"><span class="api-symbol api-symbol--resource"></span>CxVersion</a></li>
+    <li><a href="entitytype" title="EntityType"><span class="api-symbol api-symbol--resource"></span>EntityType</a></li>
+    <li><a href="fulfillment" title="Fulfillment"><span class="api-symbol api-symbol--resource"></span>Fulfillment</a></li>
+    <li><a href="intent" title="Intent"><span class="api-symbol api-symbol--resource"></span>Intent</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

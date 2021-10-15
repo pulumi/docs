@@ -13,16 +13,16 @@ Explore the resources and functions of the gcp.gameservices module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="gameservercluster" title="GameServerCluster"><span class="symbol resource"></span>GameServerCluster</a></li>
-    <li><a href="gameserverconfig" title="GameServerConfig"><span class="symbol resource"></span>GameServerConfig</a></li>
-    <li><a href="gameserverdeployment" title="GameServerDeployment"><span class="symbol resource"></span>GameServerDeployment</a></li>
-    <li><a href="gameserverdeploymentrollout" title="GameServerDeploymentRollout"><span class="symbol resource"></span>GameServerDeploymentRollout</a></li>
-    <li><a href="realm" title="Realm"><span class="symbol resource"></span>Realm</a></li>
+    <li><a href="gameservercluster" title="GameServerCluster"><span class="api-symbol api-symbol--resource"></span>GameServerCluster</a></li>
+    <li><a href="gameserverconfig" title="GameServerConfig"><span class="api-symbol api-symbol--resource"></span>GameServerConfig</a></li>
+    <li><a href="gameserverdeployment" title="GameServerDeployment"><span class="api-symbol api-symbol--resource"></span>GameServerDeployment</a></li>
+    <li><a href="gameserverdeploymentrollout" title="GameServerDeploymentRollout"><span class="api-symbol api-symbol--resource"></span>GameServerDeploymentRollout</a></li>
+    <li><a href="realm" title="Realm"><span class="api-symbol api-symbol--resource"></span>Realm</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getgameserverdeploymentrollout" title="GetGameServerDeploymentRollout"><span class="symbol function"></span>GetGameServerDeploymentRollout</a></li>
+    <li><a href="getgameserverdeploymentrollout" title="GetGameServerDeploymentRollout"><span class="api-symbol api-symbol--function"></span>GetGameServerDeploymentRollout</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

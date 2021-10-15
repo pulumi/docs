@@ -13,10 +13,10 @@ Explore the resources and functions of the aws-native.route53 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="dnssec" title="DNSSEC"><span class="symbol resource"></span>DNSSEC</a></li>
-    <li><a href="healthcheck" title="HealthCheck"><span class="symbol resource"></span>HealthCheck</a></li>
-    <li><a href="hostedzone" title="HostedZone"><span class="symbol resource"></span>HostedZone</a></li>
-    <li><a href="keysigningkey" title="KeySigningKey"><span class="symbol resource"></span>KeySigningKey</a></li>
+    <li><a href="dnssec" title="DNSSEC"><span class="api-symbol api-symbol--resource"></span>DNSSEC</a></li>
+    <li><a href="healthcheck" title="HealthCheck"><span class="api-symbol api-symbol--resource"></span>HealthCheck</a></li>
+    <li><a href="hostedzone" title="HostedZone"><span class="api-symbol api-symbol--resource"></span>HostedZone</a></li>
+    <li><a href="keysigningkey" title="KeySigningKey"><span class="api-symbol api-symbol--resource"></span>KeySigningKey</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

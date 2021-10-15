@@ -13,14 +13,14 @@ Explore the resources and functions of the google-native.cloudsearch/v1 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="datasource" title="DataSource"><span class="symbol resource"></span>DataSource</a></li>
-    <li><a href="searchapplication" title="SearchApplication"><span class="symbol resource"></span>SearchApplication</a></li>
+    <li><a href="datasource" title="DataSource"><span class="api-symbol api-symbol--resource"></span>DataSource</a></li>
+    <li><a href="searchapplication" title="SearchApplication"><span class="api-symbol api-symbol--resource"></span>SearchApplication</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getdatasource" title="GetDataSource"><span class="symbol function"></span>GetDataSource</a></li>
-    <li><a href="getsearchapplication" title="GetSearchApplication"><span class="symbol function"></span>GetSearchApplication</a></li>
+    <li><a href="getdatasource" title="GetDataSource"><span class="api-symbol api-symbol--function"></span>GetDataSource</a></li>
+    <li><a href="getsearchapplication" title="GetSearchApplication"><span class="api-symbol api-symbol--function"></span>GetSearchApplication</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

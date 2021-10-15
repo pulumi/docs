@@ -13,22 +13,22 @@ Explore the resources and functions of the alicloud.kvstore module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="account" title="Account"><span class="symbol resource"></span>Account</a></li>
-    <li><a href="auditlogconfig" title="AuditLogConfig"><span class="symbol resource"></span>AuditLogConfig</a></li>
-    <li><a href="backuppolicy" title="BackupPolicy"><span class="symbol resource"></span>BackupPolicy</a></li>
-    <li><a href="connection" title="Connection"><span class="symbol resource"></span>Connection</a></li>
-    <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
+    <li><a href="account" title="Account"><span class="api-symbol api-symbol--resource"></span>Account</a></li>
+    <li><a href="auditlogconfig" title="AuditLogConfig"><span class="api-symbol api-symbol--resource"></span>AuditLogConfig</a></li>
+    <li><a href="backuppolicy" title="BackupPolicy"><span class="api-symbol api-symbol--resource"></span>BackupPolicy</a></li>
+    <li><a href="connection" title="Connection"><span class="api-symbol api-symbol--resource"></span>Connection</a></li>
+    <li><a href="instance" title="Instance"><span class="api-symbol api-symbol--resource"></span>Instance</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getaccounts" title="GetAccounts"><span class="symbol function"></span>GetAccounts</a></li>
-    <li><a href="getconnections" title="GetConnections"><span class="symbol function"></span>GetConnections</a></li>
-    <li><a href="getinstanceclasses" title="GetInstanceClasses"><span class="symbol function"></span>GetInstanceClasses</a></li>
-    <li><a href="getinstanceengines" title="GetInstanceEngines"><span class="symbol function"></span>GetInstanceEngines</a></li>
-    <li><a href="getinstances" title="GetInstances"><span class="symbol function"></span>GetInstances</a></li>
-    <li><a href="getpermission" title="GetPermission"><span class="symbol function"></span>GetPermission</a></li>
-    <li><a href="getzones" title="GetZones"><span class="symbol function"></span>GetZones</a></li>
+    <li><a href="getaccounts" title="GetAccounts"><span class="api-symbol api-symbol--function"></span>GetAccounts</a></li>
+    <li><a href="getconnections" title="GetConnections"><span class="api-symbol api-symbol--function"></span>GetConnections</a></li>
+    <li><a href="getinstanceclasses" title="GetInstanceClasses"><span class="api-symbol api-symbol--function"></span>GetInstanceClasses</a></li>
+    <li><a href="getinstanceengines" title="GetInstanceEngines"><span class="api-symbol api-symbol--function"></span>GetInstanceEngines</a></li>
+    <li><a href="getinstances" title="GetInstances"><span class="api-symbol api-symbol--function"></span>GetInstances</a></li>
+    <li><a href="getpermission" title="GetPermission"><span class="api-symbol api-symbol--function"></span>GetPermission</a></li>
+    <li><a href="getzones" title="GetZones"><span class="api-symbol api-symbol--function"></span>GetZones</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

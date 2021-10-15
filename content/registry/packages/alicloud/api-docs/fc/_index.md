@@ -13,22 +13,22 @@ Explore the resources and functions of the alicloud.fc module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="alias" title="Alias"><span class="symbol resource"></span>Alias</a></li>
-    <li><a href="customdomain" title="CustomDomain"><span class="symbol resource"></span>CustomDomain</a></li>
-    <li><a href="function" title="Function"><span class="symbol resource"></span>Function</a></li>
-    <li><a href="functionasyncinvokeconfig" title="FunctionAsyncInvokeConfig"><span class="symbol resource"></span>FunctionAsyncInvokeConfig</a></li>
-    <li><a href="service" title="Service"><span class="symbol resource"></span>Service</a></li>
-    <li><a href="trigger" title="Trigger"><span class="symbol resource"></span>Trigger</a></li>
+    <li><a href="alias" title="Alias"><span class="api-symbol api-symbol--resource"></span>Alias</a></li>
+    <li><a href="customdomain" title="CustomDomain"><span class="api-symbol api-symbol--resource"></span>CustomDomain</a></li>
+    <li><a href="function" title="Function"><span class="api-symbol api-symbol--resource"></span>Function</a></li>
+    <li><a href="functionasyncinvokeconfig" title="FunctionAsyncInvokeConfig"><span class="api-symbol api-symbol--resource"></span>FunctionAsyncInvokeConfig</a></li>
+    <li><a href="service" title="Service"><span class="api-symbol api-symbol--resource"></span>Service</a></li>
+    <li><a href="trigger" title="Trigger"><span class="api-symbol api-symbol--resource"></span>Trigger</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getcustomdomains" title="GetCustomDomains"><span class="symbol function"></span>GetCustomDomains</a></li>
-    <li><a href="getfunctions" title="GetFunctions"><span class="symbol function"></span>GetFunctions</a></li>
-    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
-    <li><a href="getservices" title="GetServices"><span class="symbol function"></span>GetServices</a></li>
-    <li><a href="gettriggers" title="GetTriggers"><span class="symbol function"></span>GetTriggers</a></li>
-    <li><a href="getzones" title="GetZones"><span class="symbol function"></span>GetZones</a></li>
+    <li><a href="getcustomdomains" title="GetCustomDomains"><span class="api-symbol api-symbol--function"></span>GetCustomDomains</a></li>
+    <li><a href="getfunctions" title="GetFunctions"><span class="api-symbol api-symbol--function"></span>GetFunctions</a></li>
+    <li><a href="getservice" title="GetService"><span class="api-symbol api-symbol--function"></span>GetService</a></li>
+    <li><a href="getservices" title="GetServices"><span class="api-symbol api-symbol--function"></span>GetServices</a></li>
+    <li><a href="gettriggers" title="GetTriggers"><span class="api-symbol api-symbol--function"></span>GetTriggers</a></li>
+    <li><a href="getzones" title="GetZones"><span class="api-symbol api-symbol--function"></span>GetZones</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

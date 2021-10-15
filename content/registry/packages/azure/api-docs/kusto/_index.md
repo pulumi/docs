@@ -13,21 +13,21 @@ Explore the resources and functions of the azure.kusto module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="attacheddatabaseconfiguration" title="AttachedDatabaseConfiguration"><span class="symbol resource"></span>AttachedDatabaseConfiguration</a></li>
-    <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
-    <li><a href="clustercustomermanagedkey" title="ClusterCustomerManagedKey"><span class="symbol resource"></span>ClusterCustomerManagedKey</a></li>
-    <li><a href="clusterprincipalassignment" title="ClusterPrincipalAssignment"><span class="symbol resource"></span>ClusterPrincipalAssignment</a></li>
-    <li><a href="database" title="Database"><span class="symbol resource"></span>Database</a></li>
-    <li><a href="databaseprincipal" title="DatabasePrincipal"><span class="symbol resource"></span>DatabasePrincipal</a></li>
-    <li><a href="databaseprincipalassignment" title="DatabasePrincipalAssignment"><span class="symbol resource"></span>DatabasePrincipalAssignment</a></li>
-    <li><a href="eventgriddataconnection" title="EventGridDataConnection"><span class="symbol resource"></span>EventGridDataConnection</a></li>
-    <li><a href="eventhubdataconnection" title="EventhubDataConnection"><span class="symbol resource"></span>EventhubDataConnection</a></li>
-    <li><a href="iothubdataconnection" title="IotHubDataConnection"><span class="symbol resource"></span>IotHubDataConnection</a></li>
+    <li><a href="attacheddatabaseconfiguration" title="AttachedDatabaseConfiguration"><span class="api-symbol api-symbol--resource"></span>AttachedDatabaseConfiguration</a></li>
+    <li><a href="cluster" title="Cluster"><span class="api-symbol api-symbol--resource"></span>Cluster</a></li>
+    <li><a href="clustercustomermanagedkey" title="ClusterCustomerManagedKey"><span class="api-symbol api-symbol--resource"></span>ClusterCustomerManagedKey</a></li>
+    <li><a href="clusterprincipalassignment" title="ClusterPrincipalAssignment"><span class="api-symbol api-symbol--resource"></span>ClusterPrincipalAssignment</a></li>
+    <li><a href="database" title="Database"><span class="api-symbol api-symbol--resource"></span>Database</a></li>
+    <li><a href="databaseprincipal" title="DatabasePrincipal"><span class="api-symbol api-symbol--resource"></span>DatabasePrincipal</a></li>
+    <li><a href="databaseprincipalassignment" title="DatabasePrincipalAssignment"><span class="api-symbol api-symbol--resource"></span>DatabasePrincipalAssignment</a></li>
+    <li><a href="eventgriddataconnection" title="EventGridDataConnection"><span class="api-symbol api-symbol--resource"></span>EventGridDataConnection</a></li>
+    <li><a href="eventhubdataconnection" title="EventhubDataConnection"><span class="api-symbol api-symbol--resource"></span>EventhubDataConnection</a></li>
+    <li><a href="iothubdataconnection" title="IotHubDataConnection"><span class="api-symbol api-symbol--resource"></span>IotHubDataConnection</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getcluster" title="GetCluster"><span class="symbol function"></span>GetCluster</a></li>
+    <li><a href="getcluster" title="GetCluster"><span class="api-symbol api-symbol--function"></span>GetCluster</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -39,6 +39,6 @@ Explore the resources and functions of the azure.kusto module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.22.0</dd>
+	<dd>4.23.0</dd>
 </dl>
 

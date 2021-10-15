@@ -13,13 +13,13 @@ Explore the resources and functions of the aws.datasync module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="agent" title="Agent"><span class="symbol resource"></span>Agent</a></li>
-    <li><a href="efslocation" title="EfsLocation"><span class="symbol resource"></span>EfsLocation</a></li>
-    <li><a href="locationfsxwindows" title="LocationFsxWindows"><span class="symbol resource"></span>LocationFsxWindows</a></li>
-    <li><a href="locationsmb" title="LocationSmb"><span class="symbol resource"></span>LocationSmb</a></li>
-    <li><a href="nfslocation" title="NfsLocation"><span class="symbol resource"></span>NfsLocation</a></li>
-    <li><a href="s3location" title="S3Location"><span class="symbol resource"></span>S3Location</a></li>
-    <li><a href="task" title="Task"><span class="symbol resource"></span>Task</a></li>
+    <li><a href="agent" title="Agent"><span class="api-symbol api-symbol--resource"></span>Agent</a></li>
+    <li><a href="efslocation" title="EfsLocation"><span class="api-symbol api-symbol--resource"></span>EfsLocation</a></li>
+    <li><a href="locationfsxwindows" title="LocationFsxWindows"><span class="api-symbol api-symbol--resource"></span>LocationFsxWindows</a></li>
+    <li><a href="locationsmb" title="LocationSmb"><span class="api-symbol api-symbol--resource"></span>LocationSmb</a></li>
+    <li><a href="nfslocation" title="NfsLocation"><span class="api-symbol api-symbol--resource"></span>NfsLocation</a></li>
+    <li><a href="s3location" title="S3Location"><span class="api-symbol api-symbol--resource"></span>S3Location</a></li>
+    <li><a href="task" title="Task"><span class="api-symbol api-symbol--resource"></span>Task</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -31,6 +31,6 @@ Explore the resources and functions of the aws.datasync module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.24.1</dd>
+	<dd>4.25.0</dd>
 </dl>
 

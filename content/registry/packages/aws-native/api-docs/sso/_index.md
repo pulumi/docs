@@ -13,9 +13,9 @@ Explore the resources and functions of the aws-native.sso module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="assignment" title="Assignment"><span class="symbol resource"></span>Assignment</a></li>
-    <li><a href="instanceaccesscontrolattributeconfiguration" title="InstanceAccessControlAttributeConfiguration"><span class="symbol resource"></span>InstanceAccessControlAttributeConfiguration</a></li>
-    <li><a href="permissionset" title="PermissionSet"><span class="symbol resource"></span>PermissionSet</a></li>
+    <li><a href="assignment" title="Assignment"><span class="api-symbol api-symbol--resource"></span>Assignment</a></li>
+    <li><a href="instanceaccesscontrolattributeconfiguration" title="InstanceAccessControlAttributeConfiguration"><span class="api-symbol api-symbol--resource"></span>InstanceAccessControlAttributeConfiguration</a></li>
+    <li><a href="permissionset" title="PermissionSet"><span class="api-symbol api-symbol--resource"></span>PermissionSet</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

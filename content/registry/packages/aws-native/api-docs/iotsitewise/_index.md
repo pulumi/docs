@@ -13,13 +13,13 @@ Explore the resources and functions of the aws-native.iotsitewise module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="accesspolicy" title="AccessPolicy"><span class="symbol resource"></span>AccessPolicy</a></li>
-    <li><a href="asset" title="Asset"><span class="symbol resource"></span>Asset</a></li>
-    <li><a href="assetmodel" title="AssetModel"><span class="symbol resource"></span>AssetModel</a></li>
-    <li><a href="dashboard" title="Dashboard"><span class="symbol resource"></span>Dashboard</a></li>
-    <li><a href="gateway" title="Gateway"><span class="symbol resource"></span>Gateway</a></li>
-    <li><a href="portal" title="Portal"><span class="symbol resource"></span>Portal</a></li>
-    <li><a href="project" title="Project"><span class="symbol resource"></span>Project</a></li>
+    <li><a href="accesspolicy" title="AccessPolicy"><span class="api-symbol api-symbol--resource"></span>AccessPolicy</a></li>
+    <li><a href="asset" title="Asset"><span class="api-symbol api-symbol--resource"></span>Asset</a></li>
+    <li><a href="assetmodel" title="AssetModel"><span class="api-symbol api-symbol--resource"></span>AssetModel</a></li>
+    <li><a href="dashboard" title="Dashboard"><span class="api-symbol api-symbol--resource"></span>Dashboard</a></li>
+    <li><a href="gateway" title="Gateway"><span class="api-symbol api-symbol--resource"></span>Gateway</a></li>
+    <li><a href="portal" title="Portal"><span class="api-symbol api-symbol--resource"></span>Portal</a></li>
+    <li><a href="project" title="Project"><span class="api-symbol api-symbol--resource"></span>Project</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

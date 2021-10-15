@@ -13,39 +13,39 @@ A Pulumi package for creating and managing Civo cloud resources.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="dnsdomainname" title="DnsDomainName"><span class="symbol resource"></span>DnsDomainName</a></li>
-    <li><a href="dnsdomainrecord" title="DnsDomainRecord"><span class="symbol resource"></span>DnsDomainRecord</a></li>
-    <li><a href="firewall" title="Firewall"><span class="symbol resource"></span>Firewall</a></li>
-    <li><a href="firewallrule" title="FirewallRule"><span class="symbol resource"></span>FirewallRule</a></li>
-    <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
-    <li><a href="kubernetescluster" title="KubernetesCluster"><span class="symbol resource"></span>KubernetesCluster</a></li>
-    <li><a href="kubernetesnodepool" title="KubernetesNodePool"><span class="symbol resource"></span>KubernetesNodePool</a></li>
-    <li><a href="loadbalancer" title="LoadBalancer"><span class="symbol resource"></span>LoadBalancer</a></li>
-    <li><a href="network" title="Network"><span class="symbol resource"></span>Network</a></li>
-    <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
-    <li><a href="snapshot" title="Snapshot"><span class="symbol resource"></span>Snapshot</a></li>
-    <li><a href="sshkey" title="SshKey"><span class="symbol resource"></span>SshKey</a></li>
-    <li><a href="template" title="Template"><span class="symbol resource"></span>Template</a></li>
-    <li><a href="volume" title="Volume"><span class="symbol resource"></span>Volume</a></li>
-    <li><a href="volumeattachment" title="VolumeAttachment"><span class="symbol resource"></span>VolumeAttachment</a></li>
+    <li><a href="dnsdomainname" title="DnsDomainName"><span class="api-symbol api-symbol--resource"></span>DnsDomainName</a></li>
+    <li><a href="dnsdomainrecord" title="DnsDomainRecord"><span class="api-symbol api-symbol--resource"></span>DnsDomainRecord</a></li>
+    <li><a href="firewall" title="Firewall"><span class="api-symbol api-symbol--resource"></span>Firewall</a></li>
+    <li><a href="firewallrule" title="FirewallRule"><span class="api-symbol api-symbol--resource"></span>FirewallRule</a></li>
+    <li><a href="instance" title="Instance"><span class="api-symbol api-symbol--resource"></span>Instance</a></li>
+    <li><a href="kubernetescluster" title="KubernetesCluster"><span class="api-symbol api-symbol--resource"></span>KubernetesCluster</a></li>
+    <li><a href="kubernetesnodepool" title="KubernetesNodePool"><span class="api-symbol api-symbol--resource"></span>KubernetesNodePool</a></li>
+    <li><a href="loadbalancer" title="LoadBalancer"><span class="api-symbol api-symbol--resource"></span>LoadBalancer</a></li>
+    <li><a href="network" title="Network"><span class="api-symbol api-symbol--resource"></span>Network</a></li>
+    <li><a href="provider" title="Provider"><span class="api-symbol api-symbol--resource"></span>Provider</a></li>
+    <li><a href="snapshot" title="Snapshot"><span class="api-symbol api-symbol--resource"></span>Snapshot</a></li>
+    <li><a href="sshkey" title="SshKey"><span class="api-symbol api-symbol--resource"></span>SshKey</a></li>
+    <li><a href="template" title="Template"><span class="api-symbol api-symbol--resource"></span>Template</a></li>
+    <li><a href="volume" title="Volume"><span class="api-symbol api-symbol--resource"></span>Volume</a></li>
+    <li><a href="volumeattachment" title="VolumeAttachment"><span class="api-symbol api-symbol--resource"></span>VolumeAttachment</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getdnsdomainname" title="GetDnsDomainName"><span class="symbol function"></span>GetDnsDomainName</a></li>
-    <li><a href="getdnsdomainrecord" title="GetDnsDomainRecord"><span class="symbol function"></span>GetDnsDomainRecord</a></li>
-    <li><a href="getinstance" title="GetInstance"><span class="symbol function"></span>GetInstance</a></li>
-    <li><a href="getinstances" title="GetInstances"><span class="symbol function"></span>GetInstances</a></li>
-    <li><a href="getinstancessize" title="GetInstancesSize"><span class="symbol function"></span>GetInstancesSize</a></li>
-    <li><a href="getkubernetescluster" title="GetKubernetesCluster"><span class="symbol function"></span>GetKubernetesCluster</a></li>
-    <li><a href="getkubernetesversion" title="GetKubernetesVersion"><span class="symbol function"></span>GetKubernetesVersion</a></li>
-    <li><a href="getloadbalancer" title="GetLoadBalancer"><span class="symbol function"></span>GetLoadBalancer</a></li>
-    <li><a href="getnetwork" title="GetNetwork"><span class="symbol function"></span>GetNetwork</a></li>
-    <li><a href="getregion" title="GetRegion"><span class="symbol function"></span>GetRegion</a></li>
-    <li><a href="getsnapshot" title="GetSnapshot"><span class="symbol function"></span>GetSnapshot</a></li>
-    <li><a href="getsshkey" title="GetSshKey"><span class="symbol function"></span>GetSshKey</a></li>
-    <li><a href="gettemplate" title="GetTemplate"><span class="symbol function"></span>GetTemplate</a></li>
-    <li><a href="getvolume" title="GetVolume"><span class="symbol function"></span>GetVolume</a></li>
+    <li><a href="getdnsdomainname" title="GetDnsDomainName"><span class="api-symbol api-symbol--function"></span>GetDnsDomainName</a></li>
+    <li><a href="getdnsdomainrecord" title="GetDnsDomainRecord"><span class="api-symbol api-symbol--function"></span>GetDnsDomainRecord</a></li>
+    <li><a href="getinstance" title="GetInstance"><span class="api-symbol api-symbol--function"></span>GetInstance</a></li>
+    <li><a href="getinstances" title="GetInstances"><span class="api-symbol api-symbol--function"></span>GetInstances</a></li>
+    <li><a href="getinstancessize" title="GetInstancesSize"><span class="api-symbol api-symbol--function"></span>GetInstancesSize</a></li>
+    <li><a href="getkubernetescluster" title="GetKubernetesCluster"><span class="api-symbol api-symbol--function"></span>GetKubernetesCluster</a></li>
+    <li><a href="getkubernetesversion" title="GetKubernetesVersion"><span class="api-symbol api-symbol--function"></span>GetKubernetesVersion</a></li>
+    <li><a href="getloadbalancer" title="GetLoadBalancer"><span class="api-symbol api-symbol--function"></span>GetLoadBalancer</a></li>
+    <li><a href="getnetwork" title="GetNetwork"><span class="api-symbol api-symbol--function"></span>GetNetwork</a></li>
+    <li><a href="getregion" title="GetRegion"><span class="api-symbol api-symbol--function"></span>GetRegion</a></li>
+    <li><a href="getsnapshot" title="GetSnapshot"><span class="api-symbol api-symbol--function"></span>GetSnapshot</a></li>
+    <li><a href="getsshkey" title="GetSshKey"><span class="api-symbol api-symbol--function"></span>GetSshKey</a></li>
+    <li><a href="gettemplate" title="GetTemplate"><span class="api-symbol api-symbol--function"></span>GetTemplate</a></li>
+    <li><a href="getvolume" title="GetVolume"><span class="api-symbol api-symbol--function"></span>GetVolume</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

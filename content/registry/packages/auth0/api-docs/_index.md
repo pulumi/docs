@@ -13,24 +13,24 @@ A Pulumi package for creating and managing auth0 cloud resources.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="client" title="Client"><span class="symbol resource"></span>Client</a></li>
-    <li><a href="clientgrant" title="ClientGrant"><span class="symbol resource"></span>ClientGrant</a></li>
-    <li><a href="connection" title="Connection"><span class="symbol resource"></span>Connection</a></li>
-    <li><a href="customdomain" title="CustomDomain"><span class="symbol resource"></span>CustomDomain</a></li>
-    <li><a href="email" title="Email"><span class="symbol resource"></span>Email</a></li>
-    <li><a href="emailtemplate" title="EmailTemplate"><span class="symbol resource"></span>EmailTemplate</a></li>
-    <li><a href="globalclient" title="GlobalClient"><span class="symbol resource"></span>GlobalClient</a></li>
-    <li><a href="guardian" title="Guardian"><span class="symbol resource"></span>Guardian</a></li>
-    <li><a href="hook" title="Hook"><span class="symbol resource"></span>Hook</a></li>
-    <li><a href="logstream" title="LogStream"><span class="symbol resource"></span>LogStream</a></li>
-    <li><a href="prompt" title="Prompt"><span class="symbol resource"></span>Prompt</a></li>
-    <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
-    <li><a href="resourceserver" title="ResourceServer"><span class="symbol resource"></span>ResourceServer</a></li>
-    <li><a href="role" title="Role"><span class="symbol resource"></span>Role</a></li>
-    <li><a href="rule" title="Rule"><span class="symbol resource"></span>Rule</a></li>
-    <li><a href="ruleconfig" title="RuleConfig"><span class="symbol resource"></span>RuleConfig</a></li>
-    <li><a href="tenant" title="Tenant"><span class="symbol resource"></span>Tenant</a></li>
-    <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
+    <li><a href="client" title="Client"><span class="api-symbol api-symbol--resource"></span>Client</a></li>
+    <li><a href="clientgrant" title="ClientGrant"><span class="api-symbol api-symbol--resource"></span>ClientGrant</a></li>
+    <li><a href="connection" title="Connection"><span class="api-symbol api-symbol--resource"></span>Connection</a></li>
+    <li><a href="customdomain" title="CustomDomain"><span class="api-symbol api-symbol--resource"></span>CustomDomain</a></li>
+    <li><a href="email" title="Email"><span class="api-symbol api-symbol--resource"></span>Email</a></li>
+    <li><a href="emailtemplate" title="EmailTemplate"><span class="api-symbol api-symbol--resource"></span>EmailTemplate</a></li>
+    <li><a href="globalclient" title="GlobalClient"><span class="api-symbol api-symbol--resource"></span>GlobalClient</a></li>
+    <li><a href="guardian" title="Guardian"><span class="api-symbol api-symbol--resource"></span>Guardian</a></li>
+    <li><a href="hook" title="Hook"><span class="api-symbol api-symbol--resource"></span>Hook</a></li>
+    <li><a href="logstream" title="LogStream"><span class="api-symbol api-symbol--resource"></span>LogStream</a></li>
+    <li><a href="prompt" title="Prompt"><span class="api-symbol api-symbol--resource"></span>Prompt</a></li>
+    <li><a href="provider" title="Provider"><span class="api-symbol api-symbol--resource"></span>Provider</a></li>
+    <li><a href="resourceserver" title="ResourceServer"><span class="api-symbol api-symbol--resource"></span>ResourceServer</a></li>
+    <li><a href="role" title="Role"><span class="api-symbol api-symbol--resource"></span>Role</a></li>
+    <li><a href="rule" title="Rule"><span class="api-symbol api-symbol--resource"></span>Rule</a></li>
+    <li><a href="ruleconfig" title="RuleConfig"><span class="api-symbol api-symbol--resource"></span>RuleConfig</a></li>
+    <li><a href="tenant" title="Tenant"><span class="api-symbol api-symbol--resource"></span>Tenant</a></li>
+    <li><a href="user" title="User"><span class="api-symbol api-symbol--resource"></span>User</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

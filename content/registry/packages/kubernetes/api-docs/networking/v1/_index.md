@@ -13,12 +13,12 @@ Explore the resources and functions of the kubernetes.networking/v1 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="ingress" title="Ingress"><span class="symbol resource"></span>Ingress</a></li>
-    <li><a href="ingressclass" title="IngressClass"><span class="symbol resource"></span>IngressClass</a></li>
-    <li><a href="ingressclasslist" title="IngressClassList"><span class="symbol resource"></span>IngressClassList</a></li>
-    <li><a href="ingresslist" title="IngressList"><span class="symbol resource"></span>IngressList</a></li>
-    <li><a href="networkpolicy" title="NetworkPolicy"><span class="symbol resource"></span>NetworkPolicy</a></li>
-    <li><a href="networkpolicylist" title="NetworkPolicyList"><span class="symbol resource"></span>NetworkPolicyList</a></li>
+    <li><a href="ingress" title="Ingress"><span class="api-symbol api-symbol--resource"></span>Ingress</a></li>
+    <li><a href="ingressclass" title="IngressClass"><span class="api-symbol api-symbol--resource"></span>IngressClass</a></li>
+    <li><a href="ingressclasslist" title="IngressClassList"><span class="api-symbol api-symbol--resource"></span>IngressClassList</a></li>
+    <li><a href="ingresslist" title="IngressList"><span class="api-symbol api-symbol--resource"></span>IngressList</a></li>
+    <li><a href="networkpolicy" title="NetworkPolicy"><span class="api-symbol api-symbol--resource"></span>NetworkPolicy</a></li>
+    <li><a href="networkpolicylist" title="NetworkPolicyList"><span class="api-symbol api-symbol--resource"></span>NetworkPolicyList</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

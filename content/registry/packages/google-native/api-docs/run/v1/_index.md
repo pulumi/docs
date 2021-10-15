@@ -13,16 +13,16 @@ Explore the resources and functions of the google-native.run/v1 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="domainmapping" title="DomainMapping"><span class="symbol resource"></span>DomainMapping</a></li>
-    <li><a href="service" title="Service"><span class="symbol resource"></span>Service</a></li>
-    <li><a href="serviceiampolicy" title="ServiceIamPolicy"><span class="symbol resource"></span>ServiceIamPolicy</a></li>
+    <li><a href="domainmapping" title="DomainMapping"><span class="api-symbol api-symbol--resource"></span>DomainMapping</a></li>
+    <li><a href="service" title="Service"><span class="api-symbol api-symbol--resource"></span>Service</a></li>
+    <li><a href="serviceiampolicy" title="ServiceIamPolicy"><span class="api-symbol api-symbol--resource"></span>ServiceIamPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getdomainmapping" title="GetDomainMapping"><span class="symbol function"></span>GetDomainMapping</a></li>
-    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
-    <li><a href="getserviceiampolicy" title="GetServiceIamPolicy"><span class="symbol function"></span>GetServiceIamPolicy</a></li>
+    <li><a href="getdomainmapping" title="GetDomainMapping"><span class="api-symbol api-symbol--function"></span>GetDomainMapping</a></li>
+    <li><a href="getservice" title="GetService"><span class="api-symbol api-symbol--function"></span>GetService</a></li>
+    <li><a href="getserviceiampolicy" title="GetServiceIamPolicy"><span class="api-symbol api-symbol--function"></span>GetServiceIamPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

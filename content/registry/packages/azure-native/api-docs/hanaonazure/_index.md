@@ -13,16 +13,16 @@ Explore the resources and functions of the azure-native.hanaonazure module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="hanainstance" title="HanaInstance"><span class="symbol resource"></span>HanaInstance</a></li>
-    <li><a href="providerinstance" title="ProviderInstance"><span class="symbol resource"></span>ProviderInstance</a></li>
-    <li><a href="sapmonitor" title="SapMonitor"><span class="symbol resource"></span>SapMonitor</a></li>
+    <li><a href="hanainstance" title="HanaInstance"><span class="api-symbol api-symbol--resource"></span>HanaInstance</a></li>
+    <li><a href="providerinstance" title="ProviderInstance"><span class="api-symbol api-symbol--resource"></span>ProviderInstance</a></li>
+    <li><a href="sapmonitor" title="SapMonitor"><span class="api-symbol api-symbol--resource"></span>SapMonitor</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="gethanainstance" title="GetHanaInstance"><span class="symbol function"></span>GetHanaInstance</a></li>
-    <li><a href="getproviderinstance" title="GetProviderInstance"><span class="symbol function"></span>GetProviderInstance</a></li>
-    <li><a href="getsapmonitor" title="GetSapMonitor"><span class="symbol function"></span>GetSapMonitor</a></li>
+    <li><a href="gethanainstance" title="GetHanaInstance"><span class="api-symbol api-symbol--function"></span>GetHanaInstance</a></li>
+    <li><a href="getproviderinstance" title="GetProviderInstance"><span class="api-symbol api-symbol--function"></span>GetProviderInstance</a></li>
+    <li><a href="getsapmonitor" title="GetSapMonitor"><span class="api-symbol api-symbol--function"></span>GetSapMonitor</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -32,6 +32,6 @@ Explore the resources and functions of the azure-native.hanaonazure module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.38.0</dd>
+	<dd>1.39.0</dd>
 </dl>
 

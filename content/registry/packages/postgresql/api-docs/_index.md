@@ -13,17 +13,17 @@ A Pulumi package for creating and managing postgresql cloud resources.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="database" title="Database"><span class="symbol resource"></span>Database</a></li>
-    <li><a href="defaultprivileg" title="DefaultPrivileg"><span class="symbol resource"></span>DefaultPrivileg</a></li>
-    <li><a href="defaultprivileges" title="DefaultPrivileges"><span class="symbol resource"></span>DefaultPrivileges</a></li>
-    <li><a href="extension" title="Extension"><span class="symbol resource"></span>Extension</a></li>
-    <li><a href="grant" title="Grant"><span class="symbol resource"></span>Grant</a></li>
-    <li><a href="grantrole" title="GrantRole"><span class="symbol resource"></span>GrantRole</a></li>
-    <li><a href="physicalreplicationslot" title="PhysicalReplicationSlot"><span class="symbol resource"></span>PhysicalReplicationSlot</a></li>
-    <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
-    <li><a href="replicationslot" title="ReplicationSlot"><span class="symbol resource"></span>ReplicationSlot</a></li>
-    <li><a href="role" title="Role"><span class="symbol resource"></span>Role</a></li>
-    <li><a href="schema" title="Schema"><span class="symbol resource"></span>Schema</a></li>
+    <li><a href="database" title="Database"><span class="api-symbol api-symbol--resource"></span>Database</a></li>
+    <li><a href="defaultprivileg" title="DefaultPrivileg"><span class="api-symbol api-symbol--resource"></span>DefaultPrivileg</a></li>
+    <li><a href="defaultprivileges" title="DefaultPrivileges"><span class="api-symbol api-symbol--resource"></span>DefaultPrivileges</a></li>
+    <li><a href="extension" title="Extension"><span class="api-symbol api-symbol--resource"></span>Extension</a></li>
+    <li><a href="grant" title="Grant"><span class="api-symbol api-symbol--resource"></span>Grant</a></li>
+    <li><a href="grantrole" title="GrantRole"><span class="api-symbol api-symbol--resource"></span>GrantRole</a></li>
+    <li><a href="physicalreplicationslot" title="PhysicalReplicationSlot"><span class="api-symbol api-symbol--resource"></span>PhysicalReplicationSlot</a></li>
+    <li><a href="provider" title="Provider"><span class="api-symbol api-symbol--resource"></span>Provider</a></li>
+    <li><a href="replicationslot" title="ReplicationSlot"><span class="api-symbol api-symbol--resource"></span>ReplicationSlot</a></li>
+    <li><a href="role" title="Role"><span class="api-symbol api-symbol--resource"></span>Role</a></li>
+    <li><a href="schema" title="Schema"><span class="api-symbol api-symbol--resource"></span>Schema</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

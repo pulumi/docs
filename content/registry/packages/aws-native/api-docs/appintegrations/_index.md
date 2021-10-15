@@ -13,7 +13,7 @@ Explore the resources and functions of the aws-native.appintegrations module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="eventintegration" title="EventIntegration"><span class="symbol resource"></span>EventIntegration</a></li>
+    <li><a href="eventintegration" title="EventIntegration"><span class="api-symbol api-symbol--resource"></span>EventIntegration</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

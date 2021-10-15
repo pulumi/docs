@@ -13,7 +13,7 @@ Explore the resources and functions of the okta.network module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="zone" title="Zone"><span class="symbol resource"></span>Zone</a></li>
+    <li><a href="zone" title="Zone"><span class="api-symbol api-symbol--resource"></span>Zone</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

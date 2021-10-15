@@ -13,13 +13,13 @@ Explore the resources and functions of the aws-native.networkmanager module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="customergatewayassociation" title="CustomerGatewayAssociation"><span class="symbol resource"></span>CustomerGatewayAssociation</a></li>
-    <li><a href="device" title="Device"><span class="symbol resource"></span>Device</a></li>
-    <li><a href="globalnetwork" title="GlobalNetwork"><span class="symbol resource"></span>GlobalNetwork</a></li>
-    <li><a href="link" title="Link"><span class="symbol resource"></span>Link</a></li>
-    <li><a href="linkassociation" title="LinkAssociation"><span class="symbol resource"></span>LinkAssociation</a></li>
-    <li><a href="site" title="Site"><span class="symbol resource"></span>Site</a></li>
-    <li><a href="transitgatewayregistration" title="TransitGatewayRegistration"><span class="symbol resource"></span>TransitGatewayRegistration</a></li>
+    <li><a href="customergatewayassociation" title="CustomerGatewayAssociation"><span class="api-symbol api-symbol--resource"></span>CustomerGatewayAssociation</a></li>
+    <li><a href="device" title="Device"><span class="api-symbol api-symbol--resource"></span>Device</a></li>
+    <li><a href="globalnetwork" title="GlobalNetwork"><span class="api-symbol api-symbol--resource"></span>GlobalNetwork</a></li>
+    <li><a href="link" title="Link"><span class="api-symbol api-symbol--resource"></span>Link</a></li>
+    <li><a href="linkassociation" title="LinkAssociation"><span class="api-symbol api-symbol--resource"></span>LinkAssociation</a></li>
+    <li><a href="site" title="Site"><span class="api-symbol api-symbol--resource"></span>Site</a></li>
+    <li><a href="transitgatewayregistration" title="TransitGatewayRegistration"><span class="api-symbol api-symbol--resource"></span>TransitGatewayRegistration</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

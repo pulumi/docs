@@ -13,8 +13,8 @@ Explore the resources and functions of the aws-native.codeartifact module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="domain" title="Domain"><span class="symbol resource"></span>Domain</a></li>
-    <li><a href="repository" title="Repository"><span class="symbol resource"></span>Repository</a></li>
+    <li><a href="domain" title="Domain"><span class="api-symbol api-symbol--resource"></span>Domain</a></li>
+    <li><a href="repository" title="Repository"><span class="api-symbol api-symbol--resource"></span>Repository</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

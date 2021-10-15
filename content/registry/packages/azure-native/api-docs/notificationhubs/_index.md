@@ -13,21 +13,21 @@ Explore the resources and functions of the azure-native.notificationhubs module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="namespace" title="Namespace"><span class="symbol resource"></span>Namespace</a></li>
-    <li><a href="namespaceauthorizationrule" title="NamespaceAuthorizationRule"><span class="symbol resource"></span>NamespaceAuthorizationRule</a></li>
-    <li><a href="notificationhub" title="NotificationHub"><span class="symbol resource"></span>NotificationHub</a></li>
-    <li><a href="notificationhubauthorizationrule" title="NotificationHubAuthorizationRule"><span class="symbol resource"></span>NotificationHubAuthorizationRule</a></li>
+    <li><a href="namespace" title="Namespace"><span class="api-symbol api-symbol--resource"></span>Namespace</a></li>
+    <li><a href="namespaceauthorizationrule" title="NamespaceAuthorizationRule"><span class="api-symbol api-symbol--resource"></span>NamespaceAuthorizationRule</a></li>
+    <li><a href="notificationhub" title="NotificationHub"><span class="api-symbol api-symbol--resource"></span>NotificationHub</a></li>
+    <li><a href="notificationhubauthorizationrule" title="NotificationHubAuthorizationRule"><span class="api-symbol api-symbol--resource"></span>NotificationHubAuthorizationRule</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getnamespace" title="GetNamespace"><span class="symbol function"></span>GetNamespace</a></li>
-    <li><a href="getnamespaceauthorizationrule" title="GetNamespaceAuthorizationRule"><span class="symbol function"></span>GetNamespaceAuthorizationRule</a></li>
-    <li><a href="getnotificationhub" title="GetNotificationHub"><span class="symbol function"></span>GetNotificationHub</a></li>
-    <li><a href="getnotificationhubauthorizationrule" title="GetNotificationHubAuthorizationRule"><span class="symbol function"></span>GetNotificationHubAuthorizationRule</a></li>
-    <li><a href="getnotificationhubpnscredentials" title="GetNotificationHubPnsCredentials"><span class="symbol function"></span>GetNotificationHubPnsCredentials</a></li>
-    <li><a href="listnamespacekeys" title="ListNamespaceKeys"><span class="symbol function"></span>ListNamespaceKeys</a></li>
-    <li><a href="listnotificationhubkeys" title="ListNotificationHubKeys"><span class="symbol function"></span>ListNotificationHubKeys</a></li>
+    <li><a href="getnamespace" title="GetNamespace"><span class="api-symbol api-symbol--function"></span>GetNamespace</a></li>
+    <li><a href="getnamespaceauthorizationrule" title="GetNamespaceAuthorizationRule"><span class="api-symbol api-symbol--function"></span>GetNamespaceAuthorizationRule</a></li>
+    <li><a href="getnotificationhub" title="GetNotificationHub"><span class="api-symbol api-symbol--function"></span>GetNotificationHub</a></li>
+    <li><a href="getnotificationhubauthorizationrule" title="GetNotificationHubAuthorizationRule"><span class="api-symbol api-symbol--function"></span>GetNotificationHubAuthorizationRule</a></li>
+    <li><a href="getnotificationhubpnscredentials" title="GetNotificationHubPnsCredentials"><span class="api-symbol api-symbol--function"></span>GetNotificationHubPnsCredentials</a></li>
+    <li><a href="listnamespacekeys" title="ListNamespaceKeys"><span class="api-symbol api-symbol--function"></span>ListNamespaceKeys</a></li>
+    <li><a href="listnotificationhubkeys" title="ListNotificationHubKeys"><span class="api-symbol api-symbol--function"></span>ListNotificationHubKeys</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -37,6 +37,6 @@ Explore the resources and functions of the azure-native.notificationhubs module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.38.0</dd>
+	<dd>1.39.0</dd>
 </dl>
 

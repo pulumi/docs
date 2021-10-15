@@ -13,18 +13,18 @@ Explore the resources and functions of the gcp.sql module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="database" title="Database"><span class="symbol resource"></span>Database</a></li>
-    <li><a href="databaseinstance" title="DatabaseInstance"><span class="symbol resource"></span>DatabaseInstance</a></li>
-    <li><a href="sourcerepresentationinstance" title="SourceRepresentationInstance"><span class="symbol resource"></span>SourceRepresentationInstance</a></li>
-    <li><a href="sslcert" title="SslCert"><span class="symbol resource"></span>SslCert</a></li>
-    <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
+    <li><a href="database" title="Database"><span class="api-symbol api-symbol--resource"></span>Database</a></li>
+    <li><a href="databaseinstance" title="DatabaseInstance"><span class="api-symbol api-symbol--resource"></span>DatabaseInstance</a></li>
+    <li><a href="sourcerepresentationinstance" title="SourceRepresentationInstance"><span class="api-symbol api-symbol--resource"></span>SourceRepresentationInstance</a></li>
+    <li><a href="sslcert" title="SslCert"><span class="api-symbol api-symbol--resource"></span>SslCert</a></li>
+    <li><a href="user" title="User"><span class="api-symbol api-symbol--resource"></span>User</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getbackuprun" title="GetBackupRun"><span class="symbol function"></span>GetBackupRun</a></li>
-    <li><a href="getcacerts" title="GetCaCerts"><span class="symbol function"></span>GetCaCerts</a></li>
-    <li><a href="getdatabaseinstance" title="GetDatabaseInstance"><span class="symbol function"></span>GetDatabaseInstance</a></li>
+    <li><a href="getbackuprun" title="GetBackupRun"><span class="api-symbol api-symbol--function"></span>GetBackupRun</a></li>
+    <li><a href="getcacerts" title="GetCaCerts"><span class="api-symbol api-symbol--function"></span>GetCaCerts</a></li>
+    <li><a href="getdatabaseinstance" title="GetDatabaseInstance"><span class="api-symbol api-symbol--function"></span>GetDatabaseInstance</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

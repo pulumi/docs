@@ -13,34 +13,34 @@ Explore the resources and functions of the aws.cloudwatch module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="compositealarm" title="CompositeAlarm"><span class="symbol resource"></span>CompositeAlarm</a></li>
-    <li><a href="dashboard" title="Dashboard"><span class="symbol resource"></span>Dashboard</a></li>
-    <li><a href="eventapidestination" title="EventApiDestination"><span class="symbol resource"></span>EventApiDestination</a></li>
-    <li><a href="eventarchive" title="EventArchive"><span class="symbol resource"></span>EventArchive</a></li>
-    <li><a href="eventbus" title="EventBus"><span class="symbol resource"></span>EventBus</a></li>
-    <li><a href="eventbuspolicy" title="EventBusPolicy"><span class="symbol resource"></span>EventBusPolicy</a></li>
-    <li><a href="eventconnection" title="EventConnection"><span class="symbol resource"></span>EventConnection</a></li>
-    <li><a href="eventpermission" title="EventPermission"><span class="symbol resource"></span>EventPermission</a></li>
-    <li><a href="eventrule" title="EventRule"><span class="symbol resource"></span>EventRule</a></li>
-    <li><a href="eventtarget" title="EventTarget"><span class="symbol resource"></span>EventTarget</a></li>
-    <li><a href="logdestination" title="LogDestination"><span class="symbol resource"></span>LogDestination</a></li>
-    <li><a href="logdestinationpolicy" title="LogDestinationPolicy"><span class="symbol resource"></span>LogDestinationPolicy</a></li>
-    <li><a href="loggroup" title="LogGroup"><span class="symbol resource"></span>LogGroup</a></li>
-    <li><a href="logmetricfilter" title="LogMetricFilter"><span class="symbol resource"></span>LogMetricFilter</a></li>
-    <li><a href="logresourcepolicy" title="LogResourcePolicy"><span class="symbol resource"></span>LogResourcePolicy</a></li>
-    <li><a href="logstream" title="LogStream"><span class="symbol resource"></span>LogStream</a></li>
-    <li><a href="logsubscriptionfilter" title="LogSubscriptionFilter"><span class="symbol resource"></span>LogSubscriptionFilter</a></li>
-    <li><a href="metricalarm" title="MetricAlarm"><span class="symbol resource"></span>MetricAlarm</a></li>
-    <li><a href="metricstream" title="MetricStream"><span class="symbol resource"></span>MetricStream</a></li>
-    <li><a href="querydefinition" title="QueryDefinition"><span class="symbol resource"></span>QueryDefinition</a></li>
+    <li><a href="compositealarm" title="CompositeAlarm"><span class="api-symbol api-symbol--resource"></span>CompositeAlarm</a></li>
+    <li><a href="dashboard" title="Dashboard"><span class="api-symbol api-symbol--resource"></span>Dashboard</a></li>
+    <li><a href="eventapidestination" title="EventApiDestination"><span class="api-symbol api-symbol--resource"></span>EventApiDestination</a></li>
+    <li><a href="eventarchive" title="EventArchive"><span class="api-symbol api-symbol--resource"></span>EventArchive</a></li>
+    <li><a href="eventbus" title="EventBus"><span class="api-symbol api-symbol--resource"></span>EventBus</a></li>
+    <li><a href="eventbuspolicy" title="EventBusPolicy"><span class="api-symbol api-symbol--resource"></span>EventBusPolicy</a></li>
+    <li><a href="eventconnection" title="EventConnection"><span class="api-symbol api-symbol--resource"></span>EventConnection</a></li>
+    <li><a href="eventpermission" title="EventPermission"><span class="api-symbol api-symbol--resource"></span>EventPermission</a></li>
+    <li><a href="eventrule" title="EventRule"><span class="api-symbol api-symbol--resource"></span>EventRule</a></li>
+    <li><a href="eventtarget" title="EventTarget"><span class="api-symbol api-symbol--resource"></span>EventTarget</a></li>
+    <li><a href="logdestination" title="LogDestination"><span class="api-symbol api-symbol--resource"></span>LogDestination</a></li>
+    <li><a href="logdestinationpolicy" title="LogDestinationPolicy"><span class="api-symbol api-symbol--resource"></span>LogDestinationPolicy</a></li>
+    <li><a href="loggroup" title="LogGroup"><span class="api-symbol api-symbol--resource"></span>LogGroup</a></li>
+    <li><a href="logmetricfilter" title="LogMetricFilter"><span class="api-symbol api-symbol--resource"></span>LogMetricFilter</a></li>
+    <li><a href="logresourcepolicy" title="LogResourcePolicy"><span class="api-symbol api-symbol--resource"></span>LogResourcePolicy</a></li>
+    <li><a href="logstream" title="LogStream"><span class="api-symbol api-symbol--resource"></span>LogStream</a></li>
+    <li><a href="logsubscriptionfilter" title="LogSubscriptionFilter"><span class="api-symbol api-symbol--resource"></span>LogSubscriptionFilter</a></li>
+    <li><a href="metricalarm" title="MetricAlarm"><span class="api-symbol api-symbol--resource"></span>MetricAlarm</a></li>
+    <li><a href="metricstream" title="MetricStream"><span class="api-symbol api-symbol--resource"></span>MetricStream</a></li>
+    <li><a href="querydefinition" title="QueryDefinition"><span class="api-symbol api-symbol--resource"></span>QueryDefinition</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="geteventconnection" title="GetEventConnection"><span class="symbol function"></span>GetEventConnection</a></li>
-    <li><a href="geteventsource" title="GetEventSource"><span class="symbol function"></span>GetEventSource</a></li>
-    <li><a href="getloggroup" title="GetLogGroup"><span class="symbol function"></span>GetLogGroup</a></li>
-    <li><a href="getloggroups" title="GetLogGroups"><span class="symbol function"></span>GetLogGroups</a></li>
+    <li><a href="geteventconnection" title="GetEventConnection"><span class="api-symbol api-symbol--function"></span>GetEventConnection</a></li>
+    <li><a href="geteventsource" title="GetEventSource"><span class="api-symbol api-symbol--function"></span>GetEventSource</a></li>
+    <li><a href="getloggroup" title="GetLogGroup"><span class="api-symbol api-symbol--function"></span>GetLogGroup</a></li>
+    <li><a href="getloggroups" title="GetLogGroups"><span class="api-symbol api-symbol--function"></span>GetLogGroups</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -52,6 +52,6 @@ Explore the resources and functions of the aws.cloudwatch module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.24.1</dd>
+	<dd>4.25.0</dd>
 </dl>
 

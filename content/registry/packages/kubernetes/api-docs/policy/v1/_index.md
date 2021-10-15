@@ -13,8 +13,8 @@ Explore the resources and functions of the kubernetes.policy/v1 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="poddisruptionbudget" title="PodDisruptionBudget"><span class="symbol resource"></span>PodDisruptionBudget</a></li>
-    <li><a href="poddisruptionbudgetlist" title="PodDisruptionBudgetList"><span class="symbol resource"></span>PodDisruptionBudgetList</a></li>
+    <li><a href="poddisruptionbudget" title="PodDisruptionBudget"><span class="api-symbol api-symbol--resource"></span>PodDisruptionBudget</a></li>
+    <li><a href="poddisruptionbudgetlist" title="PodDisruptionBudgetList"><span class="api-symbol api-symbol--resource"></span>PodDisruptionBudgetList</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

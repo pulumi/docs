@@ -13,10 +13,10 @@ Explore the resources and functions of the aws.ec2clientvpn module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="authorizationrule" title="AuthorizationRule"><span class="symbol resource"></span>AuthorizationRule</a></li>
-    <li><a href="endpoint" title="Endpoint"><span class="symbol resource"></span>Endpoint</a></li>
-    <li><a href="networkassociation" title="NetworkAssociation"><span class="symbol resource"></span>NetworkAssociation</a></li>
-    <li><a href="route" title="Route"><span class="symbol resource"></span>Route</a></li>
+    <li><a href="authorizationrule" title="AuthorizationRule"><span class="api-symbol api-symbol--resource"></span>AuthorizationRule</a></li>
+    <li><a href="endpoint" title="Endpoint"><span class="api-symbol api-symbol--resource"></span>Endpoint</a></li>
+    <li><a href="networkassociation" title="NetworkAssociation"><span class="api-symbol api-symbol--resource"></span>NetworkAssociation</a></li>
+    <li><a href="route" title="Route"><span class="api-symbol api-symbol--resource"></span>Route</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -28,6 +28,6 @@ Explore the resources and functions of the aws.ec2clientvpn module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.24.1</dd>
+	<dd>4.25.0</dd>
 </dl>
 

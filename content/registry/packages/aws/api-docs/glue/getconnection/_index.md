@@ -124,6 +124,7 @@ const example = pulumi.output(aws.glue.getConnection({
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_connection(</span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetConnectionResult</code></pre></div>
 {{% /choosable %}}
 
@@ -158,6 +159,15 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}A concatenation of the catalog ID and connection name. For example, if your account ID is
 `123456789123` and the connection name is `conn` then the ID is `123456789123:conn`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The tags assigned to the resource
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -172,6 +182,15 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}A concatenation of the catalog ID and connection name. For example, if your account ID is
 `123456789123` and the connection name is `conn` then the ID is `123456789123:conn`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}The tags assigned to the resource
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -186,6 +205,15 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}A concatenation of the catalog ID and connection name. For example, if your account ID is
 `123456789123` and the connection name is `conn` then the ID is `123456789123:conn`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}The tags assigned to the resource
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -200,6 +228,15 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}A concatenation of the catalog ID and connection name. For example, if your account ID is
 `123456789123` and the connection name is `conn` then the ID is `123456789123:conn`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}The tags assigned to the resource
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -292,6 +329,15 @@ The following output properties are available:
         <span class="property-type"><a href="#getconnectionphysicalconnectionrequirement">List&lt;Get<wbr>Connection<wbr>Physical<wbr>Connection<wbr>Requirement&gt;</a></span>
     </dt>
     <dd>{{% md %}}A map of physical connection requirements, such as VPC and SecurityGroup.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The tags assigned to the resource
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -375,6 +421,15 @@ The following output properties are available:
         <span class="property-type"><a href="#getconnectionphysicalconnectionrequirement">[]Get<wbr>Connection<wbr>Physical<wbr>Connection<wbr>Requirement</a></span>
     </dt>
     <dd>{{% md %}}A map of physical connection requirements, such as VPC and SecurityGroup.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}The tags assigned to the resource
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -458,6 +513,15 @@ The following output properties are available:
         <span class="property-type"><a href="#getconnectionphysicalconnectionrequirement">Get<wbr>Connection<wbr>Physical<wbr>Connection<wbr>Requirement[]</a></span>
     </dt>
     <dd>{{% md %}}A map of physical connection requirements, such as VPC and SecurityGroup.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}The tags assigned to the resource
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -541,6 +605,15 @@ The following output properties are available:
         <span class="property-type"><a href="#getconnectionphysicalconnectionrequirement">Sequence[Get<wbr>Connection<wbr>Physical<wbr>Connection<wbr>Requirement]</a></span>
     </dt>
     <dd>{{% md %}}A map of physical connection requirements, such as VPC and SecurityGroup.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}The tags assigned to the resource
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

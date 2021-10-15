@@ -13,41 +13,41 @@ Explore the resources and functions of the azure-native.eventgrid module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="domain" title="Domain"><span class="symbol resource"></span>Domain</a></li>
-    <li><a href="domaintopic" title="DomainTopic"><span class="symbol resource"></span>DomainTopic</a></li>
-    <li><a href="eventchannel" title="EventChannel"><span class="symbol resource"></span>EventChannel</a></li>
-    <li><a href="eventsubscription" title="EventSubscription"><span class="symbol resource"></span>EventSubscription</a></li>
-    <li><a href="partnernamespace" title="PartnerNamespace"><span class="symbol resource"></span>PartnerNamespace</a></li>
-    <li><a href="partnerregistration" title="PartnerRegistration"><span class="symbol resource"></span>PartnerRegistration</a></li>
-    <li><a href="partnertopiceventsubscription" title="PartnerTopicEventSubscription"><span class="symbol resource"></span>PartnerTopicEventSubscription</a></li>
-    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
-    <li><a href="systemtopic" title="SystemTopic"><span class="symbol resource"></span>SystemTopic</a></li>
-    <li><a href="systemtopiceventsubscription" title="SystemTopicEventSubscription"><span class="symbol resource"></span>SystemTopicEventSubscription</a></li>
-    <li><a href="topic" title="Topic"><span class="symbol resource"></span>Topic</a></li>
+    <li><a href="domain" title="Domain"><span class="api-symbol api-symbol--resource"></span>Domain</a></li>
+    <li><a href="domaintopic" title="DomainTopic"><span class="api-symbol api-symbol--resource"></span>DomainTopic</a></li>
+    <li><a href="eventchannel" title="EventChannel"><span class="api-symbol api-symbol--resource"></span>EventChannel</a></li>
+    <li><a href="eventsubscription" title="EventSubscription"><span class="api-symbol api-symbol--resource"></span>EventSubscription</a></li>
+    <li><a href="partnernamespace" title="PartnerNamespace"><span class="api-symbol api-symbol--resource"></span>PartnerNamespace</a></li>
+    <li><a href="partnerregistration" title="PartnerRegistration"><span class="api-symbol api-symbol--resource"></span>PartnerRegistration</a></li>
+    <li><a href="partnertopiceventsubscription" title="PartnerTopicEventSubscription"><span class="api-symbol api-symbol--resource"></span>PartnerTopicEventSubscription</a></li>
+    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="api-symbol api-symbol--resource"></span>PrivateEndpointConnection</a></li>
+    <li><a href="systemtopic" title="SystemTopic"><span class="api-symbol api-symbol--resource"></span>SystemTopic</a></li>
+    <li><a href="systemtopiceventsubscription" title="SystemTopicEventSubscription"><span class="api-symbol api-symbol--resource"></span>SystemTopicEventSubscription</a></li>
+    <li><a href="topic" title="Topic"><span class="api-symbol api-symbol--resource"></span>Topic</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getdomain" title="GetDomain"><span class="symbol function"></span>GetDomain</a></li>
-    <li><a href="getdomaintopic" title="GetDomainTopic"><span class="symbol function"></span>GetDomainTopic</a></li>
-    <li><a href="geteventchannel" title="GetEventChannel"><span class="symbol function"></span>GetEventChannel</a></li>
-    <li><a href="geteventsubscription" title="GetEventSubscription"><span class="symbol function"></span>GetEventSubscription</a></li>
-    <li><a href="geteventsubscriptiondeliveryattributes" title="GetEventSubscriptionDeliveryAttributes"><span class="symbol function"></span>GetEventSubscriptionDeliveryAttributes</a></li>
-    <li><a href="geteventsubscriptionfullurl" title="GetEventSubscriptionFullUrl"><span class="symbol function"></span>GetEventSubscriptionFullUrl</a></li>
-    <li><a href="getpartnernamespace" title="GetPartnerNamespace"><span class="symbol function"></span>GetPartnerNamespace</a></li>
-    <li><a href="getpartnerregistration" title="GetPartnerRegistration"><span class="symbol function"></span>GetPartnerRegistration</a></li>
-    <li><a href="getpartnertopiceventsubscription" title="GetPartnerTopicEventSubscription"><span class="symbol function"></span>GetPartnerTopicEventSubscription</a></li>
-    <li><a href="getpartnertopiceventsubscriptiondeliveryattributes" title="GetPartnerTopicEventSubscriptionDeliveryAttributes"><span class="symbol function"></span>GetPartnerTopicEventSubscriptionDeliveryAttributes</a></li>
-    <li><a href="getpartnertopiceventsubscriptionfullurl" title="GetPartnerTopicEventSubscriptionFullUrl"><span class="symbol function"></span>GetPartnerTopicEventSubscriptionFullUrl</a></li>
-    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
-    <li><a href="getsystemtopic" title="GetSystemTopic"><span class="symbol function"></span>GetSystemTopic</a></li>
-    <li><a href="getsystemtopiceventsubscription" title="GetSystemTopicEventSubscription"><span class="symbol function"></span>GetSystemTopicEventSubscription</a></li>
-    <li><a href="getsystemtopiceventsubscriptiondeliveryattributes" title="GetSystemTopicEventSubscriptionDeliveryAttributes"><span class="symbol function"></span>GetSystemTopicEventSubscriptionDeliveryAttributes</a></li>
-    <li><a href="getsystemtopiceventsubscriptionfullurl" title="GetSystemTopicEventSubscriptionFullUrl"><span class="symbol function"></span>GetSystemTopicEventSubscriptionFullUrl</a></li>
-    <li><a href="gettopic" title="GetTopic"><span class="symbol function"></span>GetTopic</a></li>
-    <li><a href="listdomainsharedaccesskeys" title="ListDomainSharedAccessKeys"><span class="symbol function"></span>ListDomainSharedAccessKeys</a></li>
-    <li><a href="listpartnernamespacesharedaccesskeys" title="ListPartnerNamespaceSharedAccessKeys"><span class="symbol function"></span>ListPartnerNamespaceSharedAccessKeys</a></li>
-    <li><a href="listtopicsharedaccesskeys" title="ListTopicSharedAccessKeys"><span class="symbol function"></span>ListTopicSharedAccessKeys</a></li>
+    <li><a href="getdomain" title="GetDomain"><span class="api-symbol api-symbol--function"></span>GetDomain</a></li>
+    <li><a href="getdomaintopic" title="GetDomainTopic"><span class="api-symbol api-symbol--function"></span>GetDomainTopic</a></li>
+    <li><a href="geteventchannel" title="GetEventChannel"><span class="api-symbol api-symbol--function"></span>GetEventChannel</a></li>
+    <li><a href="geteventsubscription" title="GetEventSubscription"><span class="api-symbol api-symbol--function"></span>GetEventSubscription</a></li>
+    <li><a href="geteventsubscriptiondeliveryattributes" title="GetEventSubscriptionDeliveryAttributes"><span class="api-symbol api-symbol--function"></span>GetEventSubscriptionDeliveryAttributes</a></li>
+    <li><a href="geteventsubscriptionfullurl" title="GetEventSubscriptionFullUrl"><span class="api-symbol api-symbol--function"></span>GetEventSubscriptionFullUrl</a></li>
+    <li><a href="getpartnernamespace" title="GetPartnerNamespace"><span class="api-symbol api-symbol--function"></span>GetPartnerNamespace</a></li>
+    <li><a href="getpartnerregistration" title="GetPartnerRegistration"><span class="api-symbol api-symbol--function"></span>GetPartnerRegistration</a></li>
+    <li><a href="getpartnertopiceventsubscription" title="GetPartnerTopicEventSubscription"><span class="api-symbol api-symbol--function"></span>GetPartnerTopicEventSubscription</a></li>
+    <li><a href="getpartnertopiceventsubscriptiondeliveryattributes" title="GetPartnerTopicEventSubscriptionDeliveryAttributes"><span class="api-symbol api-symbol--function"></span>GetPartnerTopicEventSubscriptionDeliveryAttributes</a></li>
+    <li><a href="getpartnertopiceventsubscriptionfullurl" title="GetPartnerTopicEventSubscriptionFullUrl"><span class="api-symbol api-symbol--function"></span>GetPartnerTopicEventSubscriptionFullUrl</a></li>
+    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="api-symbol api-symbol--function"></span>GetPrivateEndpointConnection</a></li>
+    <li><a href="getsystemtopic" title="GetSystemTopic"><span class="api-symbol api-symbol--function"></span>GetSystemTopic</a></li>
+    <li><a href="getsystemtopiceventsubscription" title="GetSystemTopicEventSubscription"><span class="api-symbol api-symbol--function"></span>GetSystemTopicEventSubscription</a></li>
+    <li><a href="getsystemtopiceventsubscriptiondeliveryattributes" title="GetSystemTopicEventSubscriptionDeliveryAttributes"><span class="api-symbol api-symbol--function"></span>GetSystemTopicEventSubscriptionDeliveryAttributes</a></li>
+    <li><a href="getsystemtopiceventsubscriptionfullurl" title="GetSystemTopicEventSubscriptionFullUrl"><span class="api-symbol api-symbol--function"></span>GetSystemTopicEventSubscriptionFullUrl</a></li>
+    <li><a href="gettopic" title="GetTopic"><span class="api-symbol api-symbol--function"></span>GetTopic</a></li>
+    <li><a href="listdomainsharedaccesskeys" title="ListDomainSharedAccessKeys"><span class="api-symbol api-symbol--function"></span>ListDomainSharedAccessKeys</a></li>
+    <li><a href="listpartnernamespacesharedaccesskeys" title="ListPartnerNamespaceSharedAccessKeys"><span class="api-symbol api-symbol--function"></span>ListPartnerNamespaceSharedAccessKeys</a></li>
+    <li><a href="listtopicsharedaccesskeys" title="ListTopicSharedAccessKeys"><span class="api-symbol api-symbol--function"></span>ListTopicSharedAccessKeys</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -57,6 +57,6 @@ Explore the resources and functions of the azure-native.eventgrid module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.38.0</dd>
+	<dd>1.39.0</dd>
 </dl>
 

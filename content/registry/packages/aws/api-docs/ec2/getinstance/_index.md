@@ -680,6 +680,15 @@ See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API
     <dd>{{% md %}}The placement group of the Instance.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="placementpartitionnumber_csharp">
+<a href="#placementpartitionnumber_csharp" style="color: inherit; text-decoration: inherit;">Placement<wbr>Partition<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of the partition the instance is in.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="privatedns_csharp">
 <a href="#privatedns_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns</a>
 </span>
@@ -1060,6 +1069,15 @@ See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The placement group of the Instance.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="placementpartitionnumber_go">
+<a href="#placementpartitionnumber_go" style="color: inherit; text-decoration: inherit;">Placement<wbr>Partition<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of the partition the instance is in.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatedns_go">
@@ -1444,6 +1462,15 @@ See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API
     <dd>{{% md %}}The placement group of the Instance.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="placementpartitionnumber_nodejs">
+<a href="#placementpartitionnumber_nodejs" style="color: inherit; text-decoration: inherit;">placement<wbr>Partition<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of the partition the instance is in.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="privatedns_nodejs">
 <a href="#privatedns_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Dns</a>
 </span>
@@ -1824,6 +1851,15 @@ See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The placement group of the Instance.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="placement_partition_number_python">
+<a href="#placement_partition_number_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>partition_<wbr>number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of the partition the instance is in.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="private_dns_python">

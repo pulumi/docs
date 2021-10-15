@@ -13,19 +13,19 @@ Explore the resources and functions of the azure-native.webpubsub module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="webpubsub" title="WebPubSub"><span class="symbol resource"></span>WebPubSub</a></li>
-    <li><a href="webpubsubhub" title="WebPubSubHub"><span class="symbol resource"></span>WebPubSubHub</a></li>
-    <li><a href="webpubsubprivateendpointconnection" title="WebPubSubPrivateEndpointConnection"><span class="symbol resource"></span>WebPubSubPrivateEndpointConnection</a></li>
-    <li><a href="webpubsubsharedprivatelinkresource" title="WebPubSubSharedPrivateLinkResource"><span class="symbol resource"></span>WebPubSubSharedPrivateLinkResource</a></li>
+    <li><a href="webpubsub" title="WebPubSub"><span class="api-symbol api-symbol--resource"></span>WebPubSub</a></li>
+    <li><a href="webpubsubhub" title="WebPubSubHub"><span class="api-symbol api-symbol--resource"></span>WebPubSubHub</a></li>
+    <li><a href="webpubsubprivateendpointconnection" title="WebPubSubPrivateEndpointConnection"><span class="api-symbol api-symbol--resource"></span>WebPubSubPrivateEndpointConnection</a></li>
+    <li><a href="webpubsubsharedprivatelinkresource" title="WebPubSubSharedPrivateLinkResource"><span class="api-symbol api-symbol--resource"></span>WebPubSubSharedPrivateLinkResource</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getwebpubsub" title="GetWebPubSub"><span class="symbol function"></span>GetWebPubSub</a></li>
-    <li><a href="getwebpubsubhub" title="GetWebPubSubHub"><span class="symbol function"></span>GetWebPubSubHub</a></li>
-    <li><a href="getwebpubsubprivateendpointconnection" title="GetWebPubSubPrivateEndpointConnection"><span class="symbol function"></span>GetWebPubSubPrivateEndpointConnection</a></li>
-    <li><a href="getwebpubsubsharedprivatelinkresource" title="GetWebPubSubSharedPrivateLinkResource"><span class="symbol function"></span>GetWebPubSubSharedPrivateLinkResource</a></li>
-    <li><a href="listwebpubsubkeys" title="ListWebPubSubKeys"><span class="symbol function"></span>ListWebPubSubKeys</a></li>
+    <li><a href="getwebpubsub" title="GetWebPubSub"><span class="api-symbol api-symbol--function"></span>GetWebPubSub</a></li>
+    <li><a href="getwebpubsubhub" title="GetWebPubSubHub"><span class="api-symbol api-symbol--function"></span>GetWebPubSubHub</a></li>
+    <li><a href="getwebpubsubprivateendpointconnection" title="GetWebPubSubPrivateEndpointConnection"><span class="api-symbol api-symbol--function"></span>GetWebPubSubPrivateEndpointConnection</a></li>
+    <li><a href="getwebpubsubsharedprivatelinkresource" title="GetWebPubSubSharedPrivateLinkResource"><span class="api-symbol api-symbol--function"></span>GetWebPubSubSharedPrivateLinkResource</a></li>
+    <li><a href="listwebpubsubkeys" title="ListWebPubSubKeys"><span class="api-symbol api-symbol--function"></span>ListWebPubSubKeys</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -35,6 +35,6 @@ Explore the resources and functions of the azure-native.webpubsub module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.38.0</dd>
+	<dd>1.39.0</dd>
 </dl>
 

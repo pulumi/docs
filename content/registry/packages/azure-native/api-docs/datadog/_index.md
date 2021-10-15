@@ -13,17 +13,17 @@ Explore the resources and functions of the azure-native.datadog module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="monitor" title="Monitor"><span class="symbol resource"></span>Monitor</a></li>
+    <li><a href="monitor" title="Monitor"><span class="api-symbol api-symbol--resource"></span>Monitor</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getmonitor" title="GetMonitor"><span class="symbol function"></span>GetMonitor</a></li>
-    <li><a href="getmonitordefaultkey" title="GetMonitorDefaultKey"><span class="symbol function"></span>GetMonitorDefaultKey</a></li>
-    <li><a href="listmonitorapikeys" title="ListMonitorApiKeys"><span class="symbol function"></span>ListMonitorApiKeys</a></li>
-    <li><a href="listmonitorhosts" title="ListMonitorHosts"><span class="symbol function"></span>ListMonitorHosts</a></li>
-    <li><a href="listmonitorlinkedresources" title="ListMonitorLinkedResources"><span class="symbol function"></span>ListMonitorLinkedResources</a></li>
-    <li><a href="listmonitormonitoredresources" title="ListMonitorMonitoredResources"><span class="symbol function"></span>ListMonitorMonitoredResources</a></li>
+    <li><a href="getmonitor" title="GetMonitor"><span class="api-symbol api-symbol--function"></span>GetMonitor</a></li>
+    <li><a href="getmonitordefaultkey" title="GetMonitorDefaultKey"><span class="api-symbol api-symbol--function"></span>GetMonitorDefaultKey</a></li>
+    <li><a href="listmonitorapikeys" title="ListMonitorApiKeys"><span class="api-symbol api-symbol--function"></span>ListMonitorApiKeys</a></li>
+    <li><a href="listmonitorhosts" title="ListMonitorHosts"><span class="api-symbol api-symbol--function"></span>ListMonitorHosts</a></li>
+    <li><a href="listmonitorlinkedresources" title="ListMonitorLinkedResources"><span class="api-symbol api-symbol--function"></span>ListMonitorLinkedResources</a></li>
+    <li><a href="listmonitormonitoredresources" title="ListMonitorMonitoredResources"><span class="api-symbol api-symbol--function"></span>ListMonitorMonitoredResources</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -33,6 +33,6 @@ Explore the resources and functions of the azure-native.datadog module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.38.0</dd>
+	<dd>1.39.0</dd>
 </dl>
 

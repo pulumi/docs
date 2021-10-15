@@ -13,16 +13,16 @@ Explore the resources and functions of the alicloud.cdn module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="domain" title="Domain"><span class="symbol resource"></span>Domain</a></li>
-    <li><a href="domainconfig" title="DomainConfig"><span class="symbol resource"></span>DomainConfig</a></li>
-    <li><a href="domainnew" title="DomainNew"><span class="symbol resource"></span>DomainNew</a></li>
-    <li><a href="realtimelogdelivery" title="RealTimeLogDelivery"><span class="symbol resource"></span>RealTimeLogDelivery</a></li>
+    <li><a href="domain" title="Domain"><span class="api-symbol api-symbol--resource"></span>Domain</a></li>
+    <li><a href="domainconfig" title="DomainConfig"><span class="api-symbol api-symbol--resource"></span>DomainConfig</a></li>
+    <li><a href="domainnew" title="DomainNew"><span class="api-symbol api-symbol--resource"></span>DomainNew</a></li>
+    <li><a href="realtimelogdelivery" title="RealTimeLogDelivery"><span class="api-symbol api-symbol--resource"></span>RealTimeLogDelivery</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getrealtimelogdeliveries" title="GetRealTimeLogDeliveries"><span class="symbol function"></span>GetRealTimeLogDeliveries</a></li>
-    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
+    <li><a href="getrealtimelogdeliveries" title="GetRealTimeLogDeliveries"><span class="api-symbol api-symbol--function"></span>GetRealTimeLogDeliveries</a></li>
+    <li><a href="getservice" title="GetService"><span class="api-symbol api-symbol--function"></span>GetService</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

@@ -13,9 +13,9 @@ Explore the resources and functions of the gcp.vertex module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="aidataset" title="AiDataset"><span class="symbol resource"></span>AiDataset</a></li>
-    <li><a href="aifeaturestore" title="AiFeatureStore"><span class="symbol resource"></span>AiFeatureStore</a></li>
-    <li><a href="aifeaturestoreentitytype" title="AiFeatureStoreEntityType"><span class="symbol resource"></span>AiFeatureStoreEntityType</a></li>
+    <li><a href="aidataset" title="AiDataset"><span class="api-symbol api-symbol--resource"></span>AiDataset</a></li>
+    <li><a href="aifeaturestore" title="AiFeatureStore"><span class="api-symbol api-symbol--resource"></span>AiFeatureStore</a></li>
+    <li><a href="aifeaturestoreentitytype" title="AiFeatureStoreEntityType"><span class="api-symbol api-symbol--resource"></span>AiFeatureStoreEntityType</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

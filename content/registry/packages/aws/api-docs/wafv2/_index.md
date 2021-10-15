@@ -13,20 +13,20 @@ Explore the resources and functions of the aws.wafv2 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="ipset" title="IpSet"><span class="symbol resource"></span>IpSet</a></li>
-    <li><a href="regexpatternset" title="RegexPatternSet"><span class="symbol resource"></span>RegexPatternSet</a></li>
-    <li><a href="rulegroup" title="RuleGroup"><span class="symbol resource"></span>RuleGroup</a></li>
-    <li><a href="webacl" title="WebAcl"><span class="symbol resource"></span>WebAcl</a></li>
-    <li><a href="webaclassociation" title="WebAclAssociation"><span class="symbol resource"></span>WebAclAssociation</a></li>
-    <li><a href="webaclloggingconfiguration" title="WebAclLoggingConfiguration"><span class="symbol resource"></span>WebAclLoggingConfiguration</a></li>
+    <li><a href="ipset" title="IpSet"><span class="api-symbol api-symbol--resource"></span>IpSet</a></li>
+    <li><a href="regexpatternset" title="RegexPatternSet"><span class="api-symbol api-symbol--resource"></span>RegexPatternSet</a></li>
+    <li><a href="rulegroup" title="RuleGroup"><span class="api-symbol api-symbol--resource"></span>RuleGroup</a></li>
+    <li><a href="webacl" title="WebAcl"><span class="api-symbol api-symbol--resource"></span>WebAcl</a></li>
+    <li><a href="webaclassociation" title="WebAclAssociation"><span class="api-symbol api-symbol--resource"></span>WebAclAssociation</a></li>
+    <li><a href="webaclloggingconfiguration" title="WebAclLoggingConfiguration"><span class="api-symbol api-symbol--resource"></span>WebAclLoggingConfiguration</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getipset" title="GetIpSet"><span class="symbol function"></span>GetIpSet</a></li>
-    <li><a href="getregexpatternset" title="GetRegexPatternSet"><span class="symbol function"></span>GetRegexPatternSet</a></li>
-    <li><a href="getrulegroup" title="GetRuleGroup"><span class="symbol function"></span>GetRuleGroup</a></li>
-    <li><a href="getwebacl" title="GetWebAcl"><span class="symbol function"></span>GetWebAcl</a></li>
+    <li><a href="getipset" title="GetIpSet"><span class="api-symbol api-symbol--function"></span>GetIpSet</a></li>
+    <li><a href="getregexpatternset" title="GetRegexPatternSet"><span class="api-symbol api-symbol--function"></span>GetRegexPatternSet</a></li>
+    <li><a href="getrulegroup" title="GetRuleGroup"><span class="api-symbol api-symbol--function"></span>GetRuleGroup</a></li>
+    <li><a href="getwebacl" title="GetWebAcl"><span class="api-symbol api-symbol--function"></span>GetWebAcl</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -38,6 +38,6 @@ Explore the resources and functions of the aws.wafv2 module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.24.1</dd>
+	<dd>4.25.0</dd>
 </dl>
 

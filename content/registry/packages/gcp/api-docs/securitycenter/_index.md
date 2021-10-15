@@ -13,8 +13,8 @@ Explore the resources and functions of the gcp.securitycenter module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="notificationconfig" title="NotificationConfig"><span class="symbol resource"></span>NotificationConfig</a></li>
-    <li><a href="source" title="Source"><span class="symbol resource"></span>Source</a></li>
+    <li><a href="notificationconfig" title="NotificationConfig"><span class="api-symbol api-symbol--resource"></span>NotificationConfig</a></li>
+    <li><a href="source" title="Source"><span class="api-symbol api-symbol--resource"></span>Source</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

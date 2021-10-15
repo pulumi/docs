@@ -13,7 +13,7 @@ Explore the resources and functions of the kubernetes.authentication/v1beta1 mod
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="tokenreview" title="TokenReview"><span class="symbol resource"></span>TokenReview</a></li>
+    <li><a href="tokenreview" title="TokenReview"><span class="api-symbol api-symbol--resource"></span>TokenReview</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

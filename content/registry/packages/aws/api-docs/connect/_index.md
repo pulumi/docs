@@ -13,14 +13,14 @@ Explore the resources and functions of the aws.connect module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="contactflow" title="ContactFlow"><span class="symbol resource"></span>ContactFlow</a></li>
-    <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
+    <li><a href="contactflow" title="ContactFlow"><span class="api-symbol api-symbol--resource"></span>ContactFlow</a></li>
+    <li><a href="instance" title="Instance"><span class="api-symbol api-symbol--resource"></span>Instance</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getcontactflow" title="GetContactFlow"><span class="symbol function"></span>GetContactFlow</a></li>
-    <li><a href="getinstance" title="GetInstance"><span class="symbol function"></span>GetInstance</a></li>
+    <li><a href="getcontactflow" title="GetContactFlow"><span class="api-symbol api-symbol--function"></span>GetContactFlow</a></li>
+    <li><a href="getinstance" title="GetInstance"><span class="api-symbol api-symbol--function"></span>GetInstance</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -32,6 +32,6 @@ Explore the resources and functions of the aws.connect module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.24.1</dd>
+	<dd>4.25.0</dd>
 </dl>
 

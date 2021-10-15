@@ -13,8 +13,8 @@ Explore the resources and functions of the kubernetes.coordination/v1 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="lease" title="Lease"><span class="symbol resource"></span>Lease</a></li>
-    <li><a href="leaselist" title="LeaseList"><span class="symbol resource"></span>LeaseList</a></li>
+    <li><a href="lease" title="Lease"><span class="api-symbol api-symbol--resource"></span>Lease</a></li>
+    <li><a href="leaselist" title="LeaseList"><span class="api-symbol api-symbol--resource"></span>LeaseList</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

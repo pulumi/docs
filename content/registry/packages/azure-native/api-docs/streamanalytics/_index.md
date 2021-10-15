@@ -13,23 +13,23 @@ Explore the resources and functions of the azure-native.streamanalytics module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
-    <li><a href="function" title="Function"><span class="symbol resource"></span>Function</a></li>
-    <li><a href="input" title="Input"><span class="symbol resource"></span>Input</a></li>
-    <li><a href="output" title="Output"><span class="symbol resource"></span>Output</a></li>
-    <li><a href="privateendpoint" title="PrivateEndpoint"><span class="symbol resource"></span>PrivateEndpoint</a></li>
-    <li><a href="streamingjob" title="StreamingJob"><span class="symbol resource"></span>StreamingJob</a></li>
+    <li><a href="cluster" title="Cluster"><span class="api-symbol api-symbol--resource"></span>Cluster</a></li>
+    <li><a href="function" title="Function"><span class="api-symbol api-symbol--resource"></span>Function</a></li>
+    <li><a href="input" title="Input"><span class="api-symbol api-symbol--resource"></span>Input</a></li>
+    <li><a href="output" title="Output"><span class="api-symbol api-symbol--resource"></span>Output</a></li>
+    <li><a href="privateendpoint" title="PrivateEndpoint"><span class="api-symbol api-symbol--resource"></span>PrivateEndpoint</a></li>
+    <li><a href="streamingjob" title="StreamingJob"><span class="api-symbol api-symbol--resource"></span>StreamingJob</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getcluster" title="GetCluster"><span class="symbol function"></span>GetCluster</a></li>
-    <li><a href="getfunction" title="GetFunction"><span class="symbol function"></span>GetFunction</a></li>
-    <li><a href="getinput" title="GetInput"><span class="symbol function"></span>GetInput</a></li>
-    <li><a href="getoutput" title="GetOutput"><span class="symbol function"></span>GetOutput</a></li>
-    <li><a href="getprivateendpoint" title="GetPrivateEndpoint"><span class="symbol function"></span>GetPrivateEndpoint</a></li>
-    <li><a href="getstreamingjob" title="GetStreamingJob"><span class="symbol function"></span>GetStreamingJob</a></li>
-    <li><a href="listclusterstreamingjobs" title="ListClusterStreamingJobs"><span class="symbol function"></span>ListClusterStreamingJobs</a></li>
+    <li><a href="getcluster" title="GetCluster"><span class="api-symbol api-symbol--function"></span>GetCluster</a></li>
+    <li><a href="getfunction" title="GetFunction"><span class="api-symbol api-symbol--function"></span>GetFunction</a></li>
+    <li><a href="getinput" title="GetInput"><span class="api-symbol api-symbol--function"></span>GetInput</a></li>
+    <li><a href="getoutput" title="GetOutput"><span class="api-symbol api-symbol--function"></span>GetOutput</a></li>
+    <li><a href="getprivateendpoint" title="GetPrivateEndpoint"><span class="api-symbol api-symbol--function"></span>GetPrivateEndpoint</a></li>
+    <li><a href="getstreamingjob" title="GetStreamingJob"><span class="api-symbol api-symbol--function"></span>GetStreamingJob</a></li>
+    <li><a href="listclusterstreamingjobs" title="ListClusterStreamingJobs"><span class="api-symbol api-symbol--function"></span>ListClusterStreamingJobs</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -39,6 +39,6 @@ Explore the resources and functions of the azure-native.streamanalytics module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.38.0</dd>
+	<dd>1.39.0</dd>
 </dl>
 

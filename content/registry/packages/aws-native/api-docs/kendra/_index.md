@@ -13,9 +13,9 @@ Explore the resources and functions of the aws-native.kendra module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="datasource" title="DataSource"><span class="symbol resource"></span>DataSource</a></li>
-    <li><a href="faq" title="Faq"><span class="symbol resource"></span>Faq</a></li>
-    <li><a href="index" title="Index"><span class="symbol resource"></span>Index</a></li>
+    <li><a href="datasource" title="DataSource"><span class="api-symbol api-symbol--resource"></span>DataSource</a></li>
+    <li><a href="faq" title="Faq"><span class="api-symbol api-symbol--resource"></span>Faq</a></li>
+    <li><a href="index" title="Index"><span class="api-symbol api-symbol--resource"></span>Index</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

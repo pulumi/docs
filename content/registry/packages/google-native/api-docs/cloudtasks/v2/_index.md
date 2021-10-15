@@ -13,16 +13,16 @@ Explore the resources and functions of the google-native.cloudtasks/v2 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="queue" title="Queue"><span class="symbol resource"></span>Queue</a></li>
-    <li><a href="queueiampolicy" title="QueueIamPolicy"><span class="symbol resource"></span>QueueIamPolicy</a></li>
-    <li><a href="task" title="Task"><span class="symbol resource"></span>Task</a></li>
+    <li><a href="queue" title="Queue"><span class="api-symbol api-symbol--resource"></span>Queue</a></li>
+    <li><a href="queueiampolicy" title="QueueIamPolicy"><span class="api-symbol api-symbol--resource"></span>QueueIamPolicy</a></li>
+    <li><a href="task" title="Task"><span class="api-symbol api-symbol--resource"></span>Task</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getqueue" title="GetQueue"><span class="symbol function"></span>GetQueue</a></li>
-    <li><a href="getqueueiampolicy" title="GetQueueIamPolicy"><span class="symbol function"></span>GetQueueIamPolicy</a></li>
-    <li><a href="gettask" title="GetTask"><span class="symbol function"></span>GetTask</a></li>
+    <li><a href="getqueue" title="GetQueue"><span class="api-symbol api-symbol--function"></span>GetQueue</a></li>
+    <li><a href="getqueueiampolicy" title="GetQueueIamPolicy"><span class="api-symbol api-symbol--function"></span>GetQueueIamPolicy</a></li>
+    <li><a href="gettask" title="GetTask"><span class="api-symbol api-symbol--function"></span>GetTask</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

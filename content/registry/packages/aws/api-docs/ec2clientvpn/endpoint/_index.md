@@ -357,7 +357,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the repository.
+    <dd>{{% md %}}A brief description of the Client VPN endpoint.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsservers_csharp">
@@ -450,7 +450,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the repository.
+    <dd>{{% md %}}A brief description of the Client VPN endpoint.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsservers_go">
@@ -543,7 +543,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the repository.
+    <dd>{{% md %}}A brief description of the Client VPN endpoint.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsservers_nodejs">
@@ -636,7 +636,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the repository.
+    <dd>{{% md %}}A brief description of the Client VPN endpoint.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_servers_python">
@@ -1063,7 +1063,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the repository.
+    <dd>{{% md %}}A brief description of the Client VPN endpoint.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsname_csharp">
@@ -1191,7 +1191,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the repository.
+    <dd>{{% md %}}A brief description of the Client VPN endpoint.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsname_go">
@@ -1319,7 +1319,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the repository.
+    <dd>{{% md %}}A brief description of the Client VPN endpoint.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsname_nodejs">
@@ -1447,7 +1447,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the repository.
+    <dd>{{% md %}}A brief description of the Client VPN endpoint.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dns_name_python">

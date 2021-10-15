@@ -13,13 +13,13 @@ Explore the resources and functions of the gcp.certificateauthority module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="authority" title="Authority"><span class="symbol resource"></span>Authority</a></li>
-    <li><a href="capool" title="CaPool"><span class="symbol resource"></span>CaPool</a></li>
-    <li><a href="capooliambinding" title="CaPoolIamBinding"><span class="symbol resource"></span>CaPoolIamBinding</a></li>
-    <li><a href="capooliammember" title="CaPoolIamMember"><span class="symbol resource"></span>CaPoolIamMember</a></li>
-    <li><a href="capooliampolicy" title="CaPoolIamPolicy"><span class="symbol resource"></span>CaPoolIamPolicy</a></li>
-    <li><a href="certificate" title="Certificate"><span class="symbol resource"></span>Certificate</a></li>
-    <li><a href="certificatetemplate" title="CertificateTemplate"><span class="symbol resource"></span>CertificateTemplate</a></li>
+    <li><a href="authority" title="Authority"><span class="api-symbol api-symbol--resource"></span>Authority</a></li>
+    <li><a href="capool" title="CaPool"><span class="api-symbol api-symbol--resource"></span>CaPool</a></li>
+    <li><a href="capooliambinding" title="CaPoolIamBinding"><span class="api-symbol api-symbol--resource"></span>CaPoolIamBinding</a></li>
+    <li><a href="capooliammember" title="CaPoolIamMember"><span class="api-symbol api-symbol--resource"></span>CaPoolIamMember</a></li>
+    <li><a href="capooliampolicy" title="CaPoolIamPolicy"><span class="api-symbol api-symbol--resource"></span>CaPoolIamPolicy</a></li>
+    <li><a href="certificate" title="Certificate"><span class="api-symbol api-symbol--resource"></span>Certificate</a></li>
+    <li><a href="certificatetemplate" title="CertificateTemplate"><span class="api-symbol api-symbol--resource"></span>CertificateTemplate</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

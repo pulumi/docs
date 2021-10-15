@@ -13,16 +13,16 @@ Explore the resources and functions of the google-native.binaryauthorization/v1 
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="attestor" title="Attestor"><span class="symbol resource"></span>Attestor</a></li>
-    <li><a href="attestoriampolicy" title="AttestorIamPolicy"><span class="symbol resource"></span>AttestorIamPolicy</a></li>
-    <li><a href="policyiampolicy" title="PolicyIamPolicy"><span class="symbol resource"></span>PolicyIamPolicy</a></li>
+    <li><a href="attestor" title="Attestor"><span class="api-symbol api-symbol--resource"></span>Attestor</a></li>
+    <li><a href="attestoriampolicy" title="AttestorIamPolicy"><span class="api-symbol api-symbol--resource"></span>AttestorIamPolicy</a></li>
+    <li><a href="policyiampolicy" title="PolicyIamPolicy"><span class="api-symbol api-symbol--resource"></span>PolicyIamPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getattestor" title="GetAttestor"><span class="symbol function"></span>GetAttestor</a></li>
-    <li><a href="getattestoriampolicy" title="GetAttestorIamPolicy"><span class="symbol function"></span>GetAttestorIamPolicy</a></li>
-    <li><a href="getpolicyiampolicy" title="GetPolicyIamPolicy"><span class="symbol function"></span>GetPolicyIamPolicy</a></li>
+    <li><a href="getattestor" title="GetAttestor"><span class="api-symbol api-symbol--function"></span>GetAttestor</a></li>
+    <li><a href="getattestoriampolicy" title="GetAttestorIamPolicy"><span class="api-symbol api-symbol--function"></span>GetAttestorIamPolicy</a></li>
+    <li><a href="getpolicyiampolicy" title="GetPolicyIamPolicy"><span class="api-symbol api-symbol--function"></span>GetPolicyIamPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

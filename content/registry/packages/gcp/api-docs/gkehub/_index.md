@@ -13,9 +13,9 @@ Explore the resources and functions of the gcp.gkehub module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="feature" title="Feature"><span class="symbol resource"></span>Feature</a></li>
-    <li><a href="featuremembership" title="FeatureMembership"><span class="symbol resource"></span>FeatureMembership</a></li>
-    <li><a href="membership" title="Membership"><span class="symbol resource"></span>Membership</a></li>
+    <li><a href="feature" title="Feature"><span class="api-symbol api-symbol--resource"></span>Feature</a></li>
+    <li><a href="featuremembership" title="FeatureMembership"><span class="api-symbol api-symbol--resource"></span>FeatureMembership</a></li>
+    <li><a href="membership" title="Membership"><span class="api-symbol api-symbol--resource"></span>Membership</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

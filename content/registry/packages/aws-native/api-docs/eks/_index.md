@@ -13,8 +13,8 @@ Explore the resources and functions of the aws-native.eks module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="addon" title="Addon"><span class="symbol resource"></span>Addon</a></li>
-    <li><a href="fargateprofile" title="FargateProfile"><span class="symbol resource"></span>FargateProfile</a></li>
+    <li><a href="addon" title="Addon"><span class="api-symbol api-symbol--resource"></span>Addon</a></li>
+    <li><a href="fargateprofile" title="FargateProfile"><span class="api-symbol api-symbol--resource"></span>FargateProfile</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

@@ -13,19 +13,19 @@ Explore the resources and functions of the azure.devtest module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="globalvmshutdownschedule" title="GlobalVMShutdownSchedule"><span class="symbol resource"></span>GlobalVMShutdownSchedule</a></li>
-    <li><a href="lab" title="Lab"><span class="symbol resource"></span>Lab</a></li>
-    <li><a href="linuxvirtualmachine" title="LinuxVirtualMachine"><span class="symbol resource"></span>LinuxVirtualMachine</a></li>
-    <li><a href="policy" title="Policy"><span class="symbol resource"></span>Policy</a></li>
-    <li><a href="schedule" title="Schedule"><span class="symbol resource"></span>Schedule</a></li>
-    <li><a href="virtualnetwork" title="VirtualNetwork"><span class="symbol resource"></span>VirtualNetwork</a></li>
-    <li><a href="windowsvirtualmachine" title="WindowsVirtualMachine"><span class="symbol resource"></span>WindowsVirtualMachine</a></li>
+    <li><a href="globalvmshutdownschedule" title="GlobalVMShutdownSchedule"><span class="api-symbol api-symbol--resource"></span>GlobalVMShutdownSchedule</a></li>
+    <li><a href="lab" title="Lab"><span class="api-symbol api-symbol--resource"></span>Lab</a></li>
+    <li><a href="linuxvirtualmachine" title="LinuxVirtualMachine"><span class="api-symbol api-symbol--resource"></span>LinuxVirtualMachine</a></li>
+    <li><a href="policy" title="Policy"><span class="api-symbol api-symbol--resource"></span>Policy</a></li>
+    <li><a href="schedule" title="Schedule"><span class="api-symbol api-symbol--resource"></span>Schedule</a></li>
+    <li><a href="virtualnetwork" title="VirtualNetwork"><span class="api-symbol api-symbol--resource"></span>VirtualNetwork</a></li>
+    <li><a href="windowsvirtualmachine" title="WindowsVirtualMachine"><span class="api-symbol api-symbol--resource"></span>WindowsVirtualMachine</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getlab" title="GetLab"><span class="symbol function"></span>GetLab</a></li>
-    <li><a href="getvirtualnetwork" title="GetVirtualNetwork"><span class="symbol function"></span>GetVirtualNetwork</a></li>
+    <li><a href="getlab" title="GetLab"><span class="api-symbol api-symbol--function"></span>GetLab</a></li>
+    <li><a href="getvirtualnetwork" title="GetVirtualNetwork"><span class="api-symbol api-symbol--function"></span>GetVirtualNetwork</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -37,6 +37,6 @@ Explore the resources and functions of the azure.devtest module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.22.0</dd>
+	<dd>4.23.0</dd>
 </dl>
 

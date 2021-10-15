@@ -13,9 +13,9 @@ Explore the resources and functions of the aws-native.customerprofiles module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="domain" title="Domain"><span class="symbol resource"></span>Domain</a></li>
-    <li><a href="integration" title="Integration"><span class="symbol resource"></span>Integration</a></li>
-    <li><a href="objecttype" title="ObjectType"><span class="symbol resource"></span>ObjectType</a></li>
+    <li><a href="domain" title="Domain"><span class="api-symbol api-symbol--resource"></span>Domain</a></li>
+    <li><a href="integration" title="Integration"><span class="api-symbol api-symbol--resource"></span>Integration</a></li>
+    <li><a href="objecttype" title="ObjectType"><span class="api-symbol api-symbol--resource"></span>ObjectType</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

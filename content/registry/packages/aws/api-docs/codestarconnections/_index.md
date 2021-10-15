@@ -13,13 +13,13 @@ Explore the resources and functions of the aws.codestarconnections module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="connection" title="Connection"><span class="symbol resource"></span>Connection</a></li>
-    <li><a href="host" title="Host"><span class="symbol resource"></span>Host</a></li>
+    <li><a href="connection" title="Connection"><span class="api-symbol api-symbol--resource"></span>Connection</a></li>
+    <li><a href="host" title="Host"><span class="api-symbol api-symbol--resource"></span>Host</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getconnection" title="GetConnection"><span class="symbol function"></span>GetConnection</a></li>
+    <li><a href="getconnection" title="GetConnection"><span class="api-symbol api-symbol--function"></span>GetConnection</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -31,6 +31,6 @@ Explore the resources and functions of the aws.codestarconnections module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.24.1</dd>
+	<dd>4.25.0</dd>
 </dl>
 

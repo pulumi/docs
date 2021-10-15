@@ -13,14 +13,14 @@ Explore the resources and functions of the alicloud.dcdn module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="domain" title="Domain"><span class="symbol resource"></span>Domain</a></li>
-    <li><a href="domainconfig" title="DomainConfig"><span class="symbol resource"></span>DomainConfig</a></li>
+    <li><a href="domain" title="Domain"><span class="api-symbol api-symbol--resource"></span>Domain</a></li>
+    <li><a href="domainconfig" title="DomainConfig"><span class="api-symbol api-symbol--resource"></span>DomainConfig</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getdomains" title="GetDomains"><span class="symbol function"></span>GetDomains</a></li>
-    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
+    <li><a href="getdomains" title="GetDomains"><span class="api-symbol api-symbol--function"></span>GetDomains</a></li>
+    <li><a href="getservice" title="GetService"><span class="api-symbol api-symbol--function"></span>GetService</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

@@ -13,24 +13,24 @@ Explore the resources and functions of the alicloud.log module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="alert" title="Alert"><span class="symbol resource"></span>Alert</a></li>
-    <li><a href="audit" title="Audit"><span class="symbol resource"></span>Audit</a></li>
-    <li><a href="dashboard" title="Dashboard"><span class="symbol resource"></span>Dashboard</a></li>
-    <li><a href="etl" title="Etl"><span class="symbol resource"></span>Etl</a></li>
-    <li><a href="logtailattachment" title="LogTailAttachment"><span class="symbol resource"></span>LogTailAttachment</a></li>
-    <li><a href="logtailconfig" title="LogTailConfig"><span class="symbol resource"></span>LogTailConfig</a></li>
-    <li><a href="machinegroup" title="MachineGroup"><span class="symbol resource"></span>MachineGroup</a></li>
-    <li><a href="ossshipper" title="OssShipper"><span class="symbol resource"></span>OssShipper</a></li>
-    <li><a href="project" title="Project"><span class="symbol resource"></span>Project</a></li>
-    <li><a href="store" title="Store"><span class="symbol resource"></span>Store</a></li>
-    <li><a href="storeindex" title="StoreIndex"><span class="symbol resource"></span>StoreIndex</a></li>
+    <li><a href="alert" title="Alert"><span class="api-symbol api-symbol--resource"></span>Alert</a></li>
+    <li><a href="audit" title="Audit"><span class="api-symbol api-symbol--resource"></span>Audit</a></li>
+    <li><a href="dashboard" title="Dashboard"><span class="api-symbol api-symbol--resource"></span>Dashboard</a></li>
+    <li><a href="etl" title="Etl"><span class="api-symbol api-symbol--resource"></span>Etl</a></li>
+    <li><a href="logtailattachment" title="LogTailAttachment"><span class="api-symbol api-symbol--resource"></span>LogTailAttachment</a></li>
+    <li><a href="logtailconfig" title="LogTailConfig"><span class="api-symbol api-symbol--resource"></span>LogTailConfig</a></li>
+    <li><a href="machinegroup" title="MachineGroup"><span class="api-symbol api-symbol--resource"></span>MachineGroup</a></li>
+    <li><a href="ossshipper" title="OssShipper"><span class="api-symbol api-symbol--resource"></span>OssShipper</a></li>
+    <li><a href="project" title="Project"><span class="api-symbol api-symbol--resource"></span>Project</a></li>
+    <li><a href="store" title="Store"><span class="api-symbol api-symbol--resource"></span>Store</a></li>
+    <li><a href="storeindex" title="StoreIndex"><span class="api-symbol api-symbol--resource"></span>StoreIndex</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getprojects" title="GetProjects"><span class="symbol function"></span>GetProjects</a></li>
-    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
-    <li><a href="getstores" title="GetStores"><span class="symbol function"></span>GetStores</a></li>
+    <li><a href="getprojects" title="GetProjects"><span class="api-symbol api-symbol--function"></span>GetProjects</a></li>
+    <li><a href="getservice" title="GetService"><span class="api-symbol api-symbol--function"></span>GetService</a></li>
+    <li><a href="getstores" title="GetStores"><span class="api-symbol api-symbol--function"></span>GetStores</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

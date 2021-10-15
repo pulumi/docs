@@ -13,21 +13,21 @@ Explore the resources and functions of the azure.dns module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="arecord" title="ARecord"><span class="symbol resource"></span>ARecord</a></li>
-    <li><a href="aaaarecord" title="AaaaRecord"><span class="symbol resource"></span>AaaaRecord</a></li>
-    <li><a href="cnamerecord" title="CNameRecord"><span class="symbol resource"></span>CNameRecord</a></li>
-    <li><a href="caarecord" title="CaaRecord"><span class="symbol resource"></span>CaaRecord</a></li>
-    <li><a href="mxrecord" title="MxRecord"><span class="symbol resource"></span>MxRecord</a></li>
-    <li><a href="nsrecord" title="NsRecord"><span class="symbol resource"></span>NsRecord</a></li>
-    <li><a href="ptrrecord" title="PtrRecord"><span class="symbol resource"></span>PtrRecord</a></li>
-    <li><a href="srvrecord" title="SrvRecord"><span class="symbol resource"></span>SrvRecord</a></li>
-    <li><a href="txtrecord" title="TxtRecord"><span class="symbol resource"></span>TxtRecord</a></li>
-    <li><a href="zone" title="Zone"><span class="symbol resource"></span>Zone</a></li>
+    <li><a href="arecord" title="ARecord"><span class="api-symbol api-symbol--resource"></span>ARecord</a></li>
+    <li><a href="aaaarecord" title="AaaaRecord"><span class="api-symbol api-symbol--resource"></span>AaaaRecord</a></li>
+    <li><a href="cnamerecord" title="CNameRecord"><span class="api-symbol api-symbol--resource"></span>CNameRecord</a></li>
+    <li><a href="caarecord" title="CaaRecord"><span class="api-symbol api-symbol--resource"></span>CaaRecord</a></li>
+    <li><a href="mxrecord" title="MxRecord"><span class="api-symbol api-symbol--resource"></span>MxRecord</a></li>
+    <li><a href="nsrecord" title="NsRecord"><span class="api-symbol api-symbol--resource"></span>NsRecord</a></li>
+    <li><a href="ptrrecord" title="PtrRecord"><span class="api-symbol api-symbol--resource"></span>PtrRecord</a></li>
+    <li><a href="srvrecord" title="SrvRecord"><span class="api-symbol api-symbol--resource"></span>SrvRecord</a></li>
+    <li><a href="txtrecord" title="TxtRecord"><span class="api-symbol api-symbol--resource"></span>TxtRecord</a></li>
+    <li><a href="zone" title="Zone"><span class="api-symbol api-symbol--resource"></span>Zone</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getzone" title="GetZone"><span class="symbol function"></span>GetZone</a></li>
+    <li><a href="getzone" title="GetZone"><span class="api-symbol api-symbol--function"></span>GetZone</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -39,6 +39,6 @@ Explore the resources and functions of the azure.dns module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.22.0</dd>
+	<dd>4.23.0</dd>
 </dl>
 

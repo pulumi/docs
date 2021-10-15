@@ -13,8 +13,8 @@ Explore the resources and functions of the kubernetes.apiextensions/v1 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="customresourcedefinition" title="CustomResourceDefinition"><span class="symbol resource"></span>CustomResourceDefinition</a></li>
-    <li><a href="customresourcedefinitionlist" title="CustomResourceDefinitionList"><span class="symbol resource"></span>CustomResourceDefinitionList</a></li>
+    <li><a href="customresourcedefinition" title="CustomResourceDefinition"><span class="api-symbol api-symbol--resource"></span>CustomResourceDefinition</a></li>
+    <li><a href="customresourcedefinitionlist" title="CustomResourceDefinitionList"><span class="api-symbol api-symbol--resource"></span>CustomResourceDefinitionList</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
