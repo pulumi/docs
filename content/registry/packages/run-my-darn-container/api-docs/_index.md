@@ -26,6 +26,6 @@ no_edit_this_page: true
 	<dt>License</dt>
 	<dd></dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.0</dd>
 </dl>
 
