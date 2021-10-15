@@ -659,6 +659,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity type of the Microsoft SQL Server.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="userassignedidentityids_csharp">
+<a href="#userassignedidentityids_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of the User Assigned Identities of this SQL Server.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -690,6 +699,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity type of the Microsoft SQL Server.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="userassignedidentityids_go">
+<a href="#userassignedidentityids_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of the User Assigned Identities of this SQL Server.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -721,6 +739,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity type of the Microsoft SQL Server.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="userassignedidentityids_nodejs">
+<a href="#userassignedidentityids_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identity<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of the User Assigned Identities of this SQL Server.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -752,6 +779,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identity type of the Microsoft SQL Server.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="user_assigned_identity_ids_python">
+<a href="#user_assigned_identity_ids_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identity_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of the User Assigned Identities of this SQL Server.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

@@ -247,6 +247,7 @@ const exampleServer = new azure.mssql.Server("exampleServer", {
            <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">minimum_tls_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">primary_user_assigned_identity_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
@@ -479,6 +480,15 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}The name of the Microsoft SQL Server. This needs to be globally unique within Azure.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="primaryuserassignedidentityid_csharp">
+<a href="#primaryuserassignedidentityid_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>User<wbr>Assigned<wbr>Identity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the primary user managed identity id. Required if `type` is `UserAssigned` and should be combined with `user_assigned_identity_ids`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="publicnetworkaccessenabled_csharp">
 <a href="#publicnetworkaccessenabled_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access<wbr>Enabled</a>
 </span>
@@ -598,6 +608,15 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Microsoft SQL Server. This needs to be globally unique within Azure.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="primaryuserassignedidentityid_go">
+<a href="#primaryuserassignedidentityid_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>User<wbr>Assigned<wbr>Identity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the primary user managed identity id. Required if `type` is `UserAssigned` and should be combined with `user_assigned_identity_ids`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccessenabled_go">
@@ -721,6 +740,15 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}The name of the Microsoft SQL Server. This needs to be globally unique within Azure.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="primaryuserassignedidentityid_nodejs">
+<a href="#primaryuserassignedidentityid_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>User<wbr>Assigned<wbr>Identity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the primary user managed identity id. Required if `type` is `UserAssigned` and should be combined with `user_assigned_identity_ids`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="publicnetworkaccessenabled_nodejs">
 <a href="#publicnetworkaccessenabled_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access<wbr>Enabled</a>
 </span>
@@ -840,6 +868,15 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Microsoft SQL Server. This needs to be globally unique within Azure.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="primary_user_assigned_identity_id_python">
+<a href="#primary_user_assigned_identity_id_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>user_<wbr>assigned_<wbr>identity_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the primary user managed identity id. Required if `type` is `UserAssigned` and should be combined with `user_assigned_identity_ids`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_network_access_enabled_python">
@@ -1014,6 +1051,7 @@ Get an existing Server resource's state with the given name, ID, and optional ex
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">minimum_tls_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">primary_user_assigned_identity_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">restorable_dropped_database_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -1221,6 +1259,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the Microsoft SQL Server. This needs to be globally unique within Azure.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_primaryuserassignedidentityid_csharp">
+<a href="#state_primaryuserassignedidentityid_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>User<wbr>Assigned<wbr>Identity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the primary user managed identity id. Required if `type` is `UserAssigned` and should be combined with `user_assigned_identity_ids`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_publicnetworkaccessenabled_csharp">
 <a href="#state_publicnetworkaccessenabled_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access<wbr>Enabled</a>
 </span>
@@ -1358,6 +1405,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Microsoft SQL Server. This needs to be globally unique within Azure.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_primaryuserassignedidentityid_go">
+<a href="#state_primaryuserassignedidentityid_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>User<wbr>Assigned<wbr>Identity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the primary user managed identity id. Required if `type` is `UserAssigned` and should be combined with `user_assigned_identity_ids`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publicnetworkaccessenabled_go">
@@ -1499,6 +1555,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the Microsoft SQL Server. This needs to be globally unique within Azure.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_primaryuserassignedidentityid_nodejs">
+<a href="#state_primaryuserassignedidentityid_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>User<wbr>Assigned<wbr>Identity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the primary user managed identity id. Required if `type` is `UserAssigned` and should be combined with `user_assigned_identity_ids`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_publicnetworkaccessenabled_nodejs">
 <a href="#state_publicnetworkaccessenabled_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access<wbr>Enabled</a>
 </span>
@@ -1636,6 +1701,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Microsoft SQL Server. This needs to be globally unique within Azure.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_primary_user_assigned_identity_id_python">
+<a href="#state_primary_user_assigned_identity_id_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>user_<wbr>assigned_<wbr>identity_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the primary user managed identity id. Required if `type` is `UserAssigned` and should be combined with `user_assigned_identity_ids`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_public_network_access_enabled_python">
@@ -2028,7 +2102,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the identity type of the Microsoft SQL Server. At this time the only allowed value is `SystemAssigned`.
+    <dd>{{% md %}}Specifies the identity type of the Microsoft SQL Server. Possible values are `SystemAssigned` (where Azure will generate a Service Principal for you) and `UserAssigned` where you can specify the Service Principal IDs in the `user_assigned_identity_ids` field.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principalid_csharp">
@@ -2047,6 +2121,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) The tenant id of the Azure AD Administrator of this SQL Server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentityids_csharp">
+<a href="#userassignedidentityids_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of User Assigned Identity IDs to be assigned. Required if `type` is `UserAssigned` and should be combined with `primary_user_assigned_identity_id`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2059,7 +2142,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the identity type of the Microsoft SQL Server. At this time the only allowed value is `SystemAssigned`.
+    <dd>{{% md %}}Specifies the identity type of the Microsoft SQL Server. Possible values are `SystemAssigned` (where Azure will generate a Service Principal for you) and `UserAssigned` where you can specify the Service Principal IDs in the `user_assigned_identity_ids` field.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principalid_go">
@@ -2078,6 +2161,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) The tenant id of the Azure AD Administrator of this SQL Server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentityids_go">
+<a href="#userassignedidentityids_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of User Assigned Identity IDs to be assigned. Required if `type` is `UserAssigned` and should be combined with `primary_user_assigned_identity_id`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2090,7 +2182,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the identity type of the Microsoft SQL Server. At this time the only allowed value is `SystemAssigned`.
+    <dd>{{% md %}}Specifies the identity type of the Microsoft SQL Server. Possible values are `SystemAssigned` (where Azure will generate a Service Principal for you) and `UserAssigned` where you can specify the Service Principal IDs in the `user_assigned_identity_ids` field.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principalid_nodejs">
@@ -2109,6 +2201,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) The tenant id of the Azure AD Administrator of this SQL Server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentityids_nodejs">
+<a href="#userassignedidentityids_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identity<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of User Assigned Identity IDs to be assigned. Required if `type` is `UserAssigned` and should be combined with `primary_user_assigned_identity_id`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2121,7 +2222,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the identity type of the Microsoft SQL Server. At this time the only allowed value is `SystemAssigned`.
+    <dd>{{% md %}}Specifies the identity type of the Microsoft SQL Server. Possible values are `SystemAssigned` (where Azure will generate a Service Principal for you) and `UserAssigned` where you can specify the Service Principal IDs in the `user_assigned_identity_ids` field.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principal_id_python">
@@ -2140,6 +2241,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) The tenant id of the Azure AD Administrator of this SQL Server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="user_assigned_identity_ids_python">
+<a href="#user_assigned_identity_ids_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identity_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of User Assigned Identity IDs to be assigned. Required if `type` is `UserAssigned` and should be combined with `primary_user_assigned_identity_id`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import

@@ -38,6 +38,7 @@ Explore the resources and functions of the azure.datafactory module.
     <li><a href="linkedserviceazuresqldatabase" title="LinkedServiceAzureSqlDatabase"><span class="symbol resource"></span>LinkedServiceAzureSqlDatabase</a></li>
     <li><a href="linkedserviceazuretablestorage" title="LinkedServiceAzureTableStorage"><span class="symbol resource"></span>LinkedServiceAzureTableStorage</a></li>
     <li><a href="linkedservicecosmosdb" title="LinkedServiceCosmosDb"><span class="symbol resource"></span>LinkedServiceCosmosDb</a></li>
+    <li><a href="linkedservicecosmosdbmongoapi" title="LinkedServiceCosmosDbMongoApi"><span class="symbol resource"></span>LinkedServiceCosmosDbMongoApi</a></li>
     <li><a href="linkedservicedatalakestoragegen2" title="LinkedServiceDataLakeStorageGen2"><span class="symbol resource"></span>LinkedServiceDataLakeStorageGen2</a></li>
     <li><a href="linkedservicekeyvault" title="LinkedServiceKeyVault"><span class="symbol resource"></span>LinkedServiceKeyVault</a></li>
     <li><a href="linkedservicekusto" title="LinkedServiceKusto"><span class="symbol resource"></span>LinkedServiceKusto</a></li>
@@ -71,6 +72,6 @@ Explore the resources and functions of the azure.datafactory module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.22.0</dd>
+	<dd>4.23.0</dd>
 </dl>
 

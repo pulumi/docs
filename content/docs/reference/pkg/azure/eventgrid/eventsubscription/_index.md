@@ -210,6 +210,7 @@ const defaultEventSubscription = new azure.eventgrid.EventSubscription("defaultE
                       <span class="nx">azure_function_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionAzureFunctionEndpointArgs]</span> = None<span class="p">,</span>
                       <span class="nx">dead_letter_identity</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionDeadLetterIdentityArgs]</span> = None<span class="p">,</span>
                       <span class="nx">delivery_identity</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionDeliveryIdentityArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">delivery_properties</span><span class="p">:</span> <span class="nx">Optional[Sequence[EventSubscriptionDeliveryPropertyArgs]]</span> = None<span class="p">,</span>
                       <span class="nx">event_delivery_schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">eventhub_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionEventhubEndpointArgs]</span> = None<span class="p">,</span>
                       <span class="nx">eventhub_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -409,6 +410,15 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#eventsubscriptiondeliveryidentity">Event<wbr>Subscription<wbr>Delivery<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `delivery_identity` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deliveryproperties_csharp">
+<a href="#deliveryproperties_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptiondeliveryproperty">List&lt;Event<wbr>Subscription<wbr>Delivery<wbr>Property<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `delivery_property` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventdeliveryschema_csharp">
@@ -622,6 +632,15 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
     <dd>{{% md %}}A `delivery_identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deliveryproperties_go">
+<a href="#deliveryproperties_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptiondeliveryproperty">[]Event<wbr>Subscription<wbr>Delivery<wbr>Property<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `delivery_property` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="eventdeliveryschema_go">
 <a href="#eventdeliveryschema_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Delivery<wbr>Schema</a>
 </span>
@@ -833,6 +852,15 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
     <dd>{{% md %}}A `delivery_identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deliveryproperties_nodejs">
+<a href="#deliveryproperties_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptiondeliveryproperty">Event<wbr>Subscription<wbr>Delivery<wbr>Property<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `delivery_property` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="eventdeliveryschema_nodejs">
 <a href="#eventdeliveryschema_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Delivery<wbr>Schema</a>
 </span>
@@ -1042,6 +1070,15 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#eventsubscriptiondeliveryidentity">Event<wbr>Subscription<wbr>Delivery<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `delivery_identity` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="delivery_properties_python">
+<a href="#delivery_properties_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptiondeliveryproperty">Sequence[Event<wbr>Subscription<wbr>Delivery<wbr>Property<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A `delivery_property` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="event_delivery_schema_python">
@@ -1274,6 +1311,7 @@ Get an existing EventSubscription resource's state with the given name, ID, and 
         <span class="nx">azure_function_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionAzureFunctionEndpointArgs]</span> = None<span class="p">,</span>
         <span class="nx">dead_letter_identity</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionDeadLetterIdentityArgs]</span> = None<span class="p">,</span>
         <span class="nx">delivery_identity</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionDeliveryIdentityArgs]</span> = None<span class="p">,</span>
+        <span class="nx">delivery_properties</span><span class="p">:</span> <span class="nx">Optional[Sequence[EventSubscriptionDeliveryPropertyArgs]]</span> = None<span class="p">,</span>
         <span class="nx">event_delivery_schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">eventhub_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionEventhubEndpointArgs]</span> = None<span class="p">,</span>
         <span class="nx">eventhub_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1447,6 +1485,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventsubscriptiondeliveryidentity">Event<wbr>Subscription<wbr>Delivery<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `delivery_identity` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_deliveryproperties_csharp">
+<a href="#state_deliveryproperties_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptiondeliveryproperty">List&lt;Event<wbr>Subscription<wbr>Delivery<wbr>Property<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `delivery_property` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventdeliveryschema_csharp">
@@ -1660,6 +1707,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A `delivery_identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_deliveryproperties_go">
+<a href="#state_deliveryproperties_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptiondeliveryproperty">[]Event<wbr>Subscription<wbr>Delivery<wbr>Property<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `delivery_property` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_eventdeliveryschema_go">
 <a href="#state_eventdeliveryschema_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Delivery<wbr>Schema</a>
 </span>
@@ -1871,6 +1927,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A `delivery_identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_deliveryproperties_nodejs">
+<a href="#state_deliveryproperties_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptiondeliveryproperty">Event<wbr>Subscription<wbr>Delivery<wbr>Property<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `delivery_property` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_eventdeliveryschema_nodejs">
 <a href="#state_eventdeliveryschema_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Delivery<wbr>Schema</a>
 </span>
@@ -2080,6 +2145,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventsubscriptiondeliveryidentity">Event<wbr>Subscription<wbr>Delivery<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `delivery_identity` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_delivery_properties_python">
+<a href="#state_delivery_properties_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptiondeliveryproperty">Sequence[Event<wbr>Subscription<wbr>Delivery<wbr>Property<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A `delivery_property` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_event_delivery_schema_python">
@@ -4825,6 +4899,204 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of Managed Service Identity that is used for event delivery. Allowed value is `SystemAssigned`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="eventsubscriptiondeliveryproperty">Event<wbr>Subscription<wbr>Delivery<wbr>Property</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="headername_csharp">
+<a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the header to send on to the destination
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Either `Static` or `Dynamic`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="secret_csharp">
+<a href="#secret_csharp" style="color: inherit; text-decoration: inherit;">Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}True if the `value` is a secret and should be protected, otherwise false. If True, then this value won't be returned from Azure API calls
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sourcefield_csharp">
+<a href="#sourcefield_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Field</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If the `type` is `Dynamic`, then provide the payload field to be used as the value. Valid source fields differ by subscription type.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If the `type` is `Static`, then provide the value to use
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="headername_go">
+<a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the header to send on to the destination
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Either `Static` or `Dynamic`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="secret_go">
+<a href="#secret_go" style="color: inherit; text-decoration: inherit;">Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}True if the `value` is a secret and should be protected, otherwise false. If True, then this value won't be returned from Azure API calls
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sourcefield_go">
+<a href="#sourcefield_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Field</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If the `type` is `Dynamic`, then provide the payload field to be used as the value. Valid source fields differ by subscription type.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If the `type` is `Static`, then provide the value to use
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="headername_nodejs">
+<a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the header to send on to the destination
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Either `Static` or `Dynamic`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="secret_nodejs">
+<a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}True if the `value` is a secret and should be protected, otherwise false. If True, then this value won't be returned from Azure API calls
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sourcefield_nodejs">
+<a href="#sourcefield_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Field</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If the `type` is `Dynamic`, then provide the payload field to be used as the value. Valid source fields differ by subscription type.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If the `type` is `Static`, then provide the value to use
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="header_name_python">
+<a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the header to send on to the destination
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Either `Static` or `Dynamic`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="secret_python">
+<a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}True if the `value` is a secret and should be protected, otherwise false. If True, then this value won't be returned from Azure API calls
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="source_field_python">
+<a href="#source_field_python" style="color: inherit; text-decoration: inherit;">source_<wbr>field</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}If the `type` is `Dynamic`, then provide the payload field to be used as the value. Valid source fields differ by subscription type.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}If the `type` is `Static`, then provide the value to use
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

@@ -426,6 +426,7 @@ class MyStack : Stack
             StorageAccountName = exampleAccount.Name,
             StorageAccountAccessKey = exampleAccount.PrimaryAccessKey,
             OsType = "linux",
+            Version = "~3",
         });
     }
 
@@ -485,6 +486,7 @@ func main() {
 			StorageAccountName:      exampleAccount.Name,
 			StorageAccountAccessKey: exampleAccount.PrimaryAccessKey,
 			OsType:                  pulumi.String("linux"),
+			Version:                 pulumi.String("~3"),
 		})
 		if err != nil {
 			return err
@@ -525,7 +527,8 @@ example_function_app = azure.appservice.FunctionApp("exampleFunctionApp",
     app_service_plan_id=example_plan.id,
     storage_account_name=example_account.name,
     storage_account_access_key=example_account.primary_access_key,
-    os_type="linux")
+    os_type="linux",
+    version="~3")
 ```
 
 
@@ -563,6 +566,7 @@ const exampleFunctionApp = new azure.appservice.FunctionApp("exampleFunctionApp"
     storageAccountName: exampleAccount.name,
     storageAccountAccessKey: exampleAccount.primaryAccessKey,
     osType: "linux",
+    version: "~3",
 });
 ```
 
@@ -775,8 +779,8 @@ The FunctionApp resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#functionappauthsettings">Function<wbr>App<wbr>Auth<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `auth_settings` block as defined below.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="clientaffinityenabled_csharp">
 <a href="#clientaffinityenabled_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Affinity<wbr>Enabled</a>
 </span>
@@ -784,7 +788,7 @@ The FunctionApp resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Function App send session affinity cookies, which route client requests in the same session to the same instance?
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is no longer configurable in the service and has been deprecated. It will be removed in 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="clientcertmode_csharp">
 <a href="#clientcertmode_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Cert<wbr>Mode</a>
@@ -976,8 +980,8 @@ The FunctionApp resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#functionappauthsettings">Function<wbr>App<wbr>Auth<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `auth_settings` block as defined below.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="clientaffinityenabled_go">
 <a href="#clientaffinityenabled_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Affinity<wbr>Enabled</a>
 </span>
@@ -985,7 +989,7 @@ The FunctionApp resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Function App send session affinity cookies, which route client requests in the same session to the same instance?
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is no longer configurable in the service and has been deprecated. It will be removed in 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="clientcertmode_go">
 <a href="#clientcertmode_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Cert<wbr>Mode</a>
@@ -1177,8 +1181,8 @@ The FunctionApp resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#functionappauthsettings">Function<wbr>App<wbr>Auth<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `auth_settings` block as defined below.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="clientaffinityenabled_nodejs">
 <a href="#clientaffinityenabled_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Affinity<wbr>Enabled</a>
 </span>
@@ -1186,7 +1190,7 @@ The FunctionApp resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the Function App send session affinity cookies, which route client requests in the same session to the same instance?
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is no longer configurable in the service and has been deprecated. It will be removed in 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="clientcertmode_nodejs">
 <a href="#clientcertmode_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Cert<wbr>Mode</a>
@@ -1378,8 +1382,8 @@ The FunctionApp resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#functionappauthsettings">Function<wbr>App<wbr>Auth<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `auth_settings` block as defined below.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="client_affinity_enabled_python">
 <a href="#client_affinity_enabled_python" style="color: inherit; text-decoration: inherit;">client_<wbr>affinity_<wbr>enabled</a>
 </span>
@@ -1387,7 +1391,7 @@ The FunctionApp resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Function App send session affinity cookies, which route client requests in the same session to the same instance?
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is no longer configurable in the service and has been deprecated. It will be removed in 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="client_cert_mode_python">
 <a href="#client_cert_mode_python" style="color: inherit; text-decoration: inherit;">client_<wbr>cert_<wbr>mode</a>
@@ -1994,8 +1998,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionappauthsettings">Function<wbr>App<wbr>Auth<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `auth_settings` block as defined below.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_clientaffinityenabled_csharp">
 <a href="#state_clientaffinityenabled_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Affinity<wbr>Enabled</a>
 </span>
@@ -2003,7 +2007,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Function App send session affinity cookies, which route client requests in the same session to the same instance?
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is no longer configurable in the service and has been deprecated. It will be removed in 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientcertmode_csharp">
 <a href="#state_clientcertmode_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Cert<wbr>Mode</a>
@@ -2249,8 +2253,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionappauthsettings">Function<wbr>App<wbr>Auth<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `auth_settings` block as defined below.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_clientaffinityenabled_go">
 <a href="#state_clientaffinityenabled_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Affinity<wbr>Enabled</a>
 </span>
@@ -2258,7 +2262,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Function App send session affinity cookies, which route client requests in the same session to the same instance?
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is no longer configurable in the service and has been deprecated. It will be removed in 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientcertmode_go">
 <a href="#state_clientcertmode_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Cert<wbr>Mode</a>
@@ -2504,8 +2508,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionappauthsettings">Function<wbr>App<wbr>Auth<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `auth_settings` block as defined below.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_clientaffinityenabled_nodejs">
 <a href="#state_clientaffinityenabled_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Affinity<wbr>Enabled</a>
 </span>
@@ -2513,7 +2517,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the Function App send session affinity cookies, which route client requests in the same session to the same instance?
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is no longer configurable in the service and has been deprecated. It will be removed in 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientcertmode_nodejs">
 <a href="#state_clientcertmode_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Cert<wbr>Mode</a>
@@ -2759,8 +2763,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionappauthsettings">Function<wbr>App<wbr>Auth<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `auth_settings` block as defined below.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_client_affinity_enabled_python">
 <a href="#state_client_affinity_enabled_python" style="color: inherit; text-decoration: inherit;">client_<wbr>affinity_<wbr>enabled</a>
 </span>
@@ -2768,7 +2772,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Function App send session affinity cookies, which route client requests in the same session to the same instance?
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is no longer configurable in the service and has been deprecated. It will be removed in 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_client_cert_mode_python">
 <a href="#state_client_cert_mode_python" style="color: inherit; text-decoration: inherit;">client_<wbr>cert_<wbr>mode</a>
