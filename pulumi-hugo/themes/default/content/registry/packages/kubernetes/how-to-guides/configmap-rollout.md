@@ -3,6 +3,7 @@ title: "Kubernetes: Create, Update, and Destroy"
 meta_desc: Learn how to write and manage a Kubernetes application through it's lifecycle.
            Easily create, update, and destroy resources on a Kubernetes cluster.
 aliases: ["/docs/reference/tutorials/kubernetes/tutorial-configmap-rollout/"]
+layout: how-to-guide
 ---
 
 This tutorial shows you how to use Pulumi to write and manage a Kubernetes application through it's

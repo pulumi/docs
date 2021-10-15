@@ -3,6 +3,7 @@ title: "Running Containers on ECS Fargate"
 meta_desc: This tutorial will teach you to publish a Docker container to Elastic Container Registry (ECR)
            and deploy it to a load-balanced ECS Fargate Service.
 aliases: ["/docs/reference/tutorials/aws/tutorial-service/"]
+layout: how-to-guide
 ---
 
 {{< github-buttons "aws-ts-containers" >}}

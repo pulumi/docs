@@ -3,6 +3,7 @@ title: "S3 Static Website"
 h1: Host a Static Website on Amazon S3
 meta_desc: This tutorial will teach you to serve a static website hosted in a Amazon S3 bucket.
 aliases: ["/docs/reference/tutorials/aws/tutorial-s3-website/"]
+layout: how-to-guide
 ---
 
 {{< github-buttons "aws-js-s3-folder" "aws-py-s3-folder" >}}

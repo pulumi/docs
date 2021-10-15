@@ -2,6 +2,7 @@
 title: Azure Kubernetes Service (AKS) - Hello World!
 meta_desc: How to launch a new Managed Kubernetes Cluster on Azure Kubernetes Service (AKS).
 aliases: ["/docs/reference/tutorials/kubernetes/tutorial-aks/"]
+layout: how-to-guide
 ---
 
 In this tutorial, you'll use Python to deploy an instance of Azure Kubernetes Service (AKS). You can find a similar example in the [examples repo](https://github.com/pulumi/examples/tree/master/azure-py-aks).

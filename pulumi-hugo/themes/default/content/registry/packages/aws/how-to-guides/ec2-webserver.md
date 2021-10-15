@@ -3,6 +3,7 @@ title: Deploy a Webserver to AWS EC2
 meta_desc: This tutorial will teach you how to deploy a simple webserver to an
            AWS EC2 instance.
 aliases: ["/docs/reference/tutorials/aws/tutorial-ec2-webserver/"]
+layout: how-to-guide
 ---
 
 {{< github-buttons "aws-ts-webserver" "aws-js-webserver" "aws-py-webserver" "aws-cs-webserver" >}}

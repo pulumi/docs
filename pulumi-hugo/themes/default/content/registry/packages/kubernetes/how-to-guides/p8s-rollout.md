@@ -3,6 +3,7 @@ title: Gated Kubernetes Deployments with Prometheus
 meta_desc: Learn how to create a staged rollout (from 3-replica canary -> 10-replica
            staging), gated by checking that the P90 response time reported by Prometheus.
 aliases: ["/docs/reference/tutorials/kubernetes/tutorial-p8s-rollout/"]
+layout: how-to-guide
 ---
 
 In this tutorial, we see how to create a staged rollout (from 3-replica canary -> 10-replica

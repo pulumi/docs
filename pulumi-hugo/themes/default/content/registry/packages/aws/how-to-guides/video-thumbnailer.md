@@ -2,6 +2,7 @@
 title: Video Thumbnailer with AWS Lambda and Fargate
 meta_desc: This tutorial will teach you how to build a video thumbnailer using AWS Lambda and Fargate.
 aliases: ["/docs/reference/tutorials/aws/tutorial-thumbnailer/"]
+layout: how-to-guide
 ---
 
 In this tutorial, we'll use combine serverless, containers and cloud infrastructure together into a fully functioning

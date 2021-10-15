@@ -3,6 +3,7 @@ title: Web Server Virtual Machine Instance on GCE
 meta_desc: Learn how to deploy a simple webserver Virtual Machine instance to Google
            Compute Engine.
 aliases: ["/docs/reference/tutorials/gcp/tutorial-gce-webserver/"]
+layout: how-to-guide
 ---
 
 In this tutorial, we'll use JavaScript to deploy a simple webserver Virtual Machine instance to Google Compute Engine. The [code for this tutorial](https://github.com/pulumi/examples/tree/master/gcp-js-webserver) is available on GitHub.

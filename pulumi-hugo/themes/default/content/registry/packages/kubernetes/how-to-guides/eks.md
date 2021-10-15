@@ -2,6 +2,7 @@
 title: ECS for Kubernetes (EKS) - Hello World!
 meta_desc: How to launch a new Managed Kubernetes Cluster on Elastic Container Service for Kubernetes (EKS) on AWS.
 aliases: ["/docs/reference/tutorials/kubernetes/tutorial-eks/"]
+layout: how-to-guide
 ---
 
 In this tutorial, we'll launch a new Managed Kubernetes cluster in Elastic Container Service for Kubernetes (EKS) on AWS. The [code for this tutorial](https://github.com/pulumi/examples/tree/master/aws-ts-eks-hello-world) is available on GitHub.

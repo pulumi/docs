@@ -2,6 +2,7 @@
 title: "Kubernetes WordPress Helm Chart"
 meta_desc: Learn how to deploy a Wordpress Helm Chart to a Kubernets cluster.
 aliases: ["/docs/reference/tutorials/kubernetes/tutorial-wordpress-chart/"]
+layout: how-to-guide
 ---
 
 In this tutorial, we'll use the Helm API of `@pulumi/kubernetes` to deploy `v9.6.0` of the Wordpress

@@ -3,6 +3,7 @@ title: EKS - Migrating Node Groups with Zero Downtime
 meta_desc: Zero downtime Node Group Migrations in Elastic Kubernetes Servie (EKS). Learn
            Kubernetes Day 2 operations to administer & update a running cluster & workloads.
 aliases: ["/docs/reference/tutorials/kubernetes/tutorial-eks-migrate-nodegroups/"]
+layout: how-to-guide
 ---
 
 In this tutorial we'll launch a new, managed Kubernetes cluster in Elastic

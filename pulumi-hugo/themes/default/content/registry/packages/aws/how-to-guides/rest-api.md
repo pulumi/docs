@@ -3,6 +3,7 @@ title: "Serverless App Using API Gateways and Lambda"
 meta_desc: This tutorial will teach you how to create a Serverless App using
            AWS Api Gateway and AWS Lambda.
 aliases: ["/docs/reference/tutorials/aws/tutorial-rest-api/"]
+layout: how-to-guide
 ---
 
 In this tutorial, we'll show you how to write a Pulumi program that creates a serverless app serving static content, in addition to dynamic routes in AWS Lambda. We'll accomplish this using 5 lines of JavaScript, a few lines of configuration, and whatever static content we wish to serve. For this tutorial, we'll go with a simple HTML page and a favicon. After seeing this in action, we'll build on these basic concepts to explore additional containers, serverless, and infrastructure tutorials.

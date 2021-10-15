@@ -3,6 +3,7 @@ title: Deploy to Azure Container Instance (ACI)
 meta_desc: This tutorial will teach you how to deploy a simple NGINX container to
            Azure Container Instance (ACI).
 aliases: ["/docs/reference/tutorials/azure/tutorial-container-webserver/"]
+layout: how-to-guide
 ---
 
 In this tutorial, we'll use JavaScript to deploy a simple nginx container to Azure Container Instance (ACI).

@@ -3,6 +3,7 @@ title: Deploy NGINX to a Kubernetes Cluster
 meta_desc: How to deploy NGINX to a Kubernetes cluster with a publicly exposed IP using
            a Kubernetes Service.
 aliases: ["/docs/reference/tutorials/kubernetes/tutorial-exposed-deployment/"]
+layout: how-to-guide
 ---
 
 In this tutorial, we'll deploy `nginx` to a Kubernetes cluster, and publicly expose it to the
