@@ -265,6 +265,15 @@ The following output properties are available:
     <dd>{{% md %}}One or more `access_policy` blocks as defined below.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="enablerbacauthorization_csharp">
+<a href="#enablerbacauthorization_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Rbac<wbr>Authorization</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is Role Based Access Control (RBAC) for authorization of data actions enabled on this Key Vault?
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="enabledfordeployment_csharp">
 <a href="#enabledfordeployment_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>For<wbr>Deployment</a>
 </span>
@@ -398,6 +407,15 @@ The following output properties are available:
         <span class="property-type"><a href="#getkeyvaultaccesspolicy">[]Get<wbr>Key<wbr>Vault<wbr>Access<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}One or more `access_policy` blocks as defined below.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="enablerbacauthorization_go">
+<a href="#enablerbacauthorization_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Rbac<wbr>Authorization</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is Role Based Access Control (RBAC) for authorization of data actions enabled on this Key Vault?
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabledfordeployment_go">
@@ -535,6 +553,15 @@ The following output properties are available:
     <dd>{{% md %}}One or more `access_policy` blocks as defined below.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="enablerbacauthorization_nodejs">
+<a href="#enablerbacauthorization_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Rbac<wbr>Authorization</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Is Role Based Access Control (RBAC) for authorization of data actions enabled on this Key Vault?
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="enabledfordeployment_nodejs">
 <a href="#enabledfordeployment_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>For<wbr>Deployment</a>
 </span>
@@ -668,6 +695,15 @@ The following output properties are available:
         <span class="property-type"><a href="#getkeyvaultaccesspolicy">Sequence[Get<wbr>Key<wbr>Vault<wbr>Access<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}One or more `access_policy` blocks as defined below.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="enable_rbac_authorization_python">
+<a href="#enable_rbac_authorization_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>rbac_<wbr>authorization</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is Role Based Access Control (RBAC) for authorization of data actions enabled on this Key Vault?
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabled_for_deployment_python">

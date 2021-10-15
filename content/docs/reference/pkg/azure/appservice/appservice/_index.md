@@ -247,6 +247,7 @@ const exampleAppService = new azure.appservice.AppService("exampleAppService", {
                <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                <span class="nx">https_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[AppServiceIdentityArgs]</span> = None<span class="p">,</span>
+               <span class="nx">key_vault_reference_identity_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">logs</span><span class="p">:</span> <span class="nx">Optional[AppServiceLogsArgs]</span> = None<span class="p">,</span>
                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -483,6 +484,15 @@ The AppService resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}A Managed Service Identity block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="keyvaultreferenceidentityid_csharp">
+<a href="#keyvaultreferenceidentityid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Reference<wbr>Identity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The User Assigned Identity Id used for looking up KeyVault secrets. The identity must be assigned to the application. [For more information see - Access vaults with a user-assigned identity](https://docs.microsoft.com/en-us/azure/app-service/app-service-key-vault-references#access-vaults-with-a-user-assigned-identity)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -647,6 +657,15 @@ The AppService resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#appserviceidentity">App<wbr>Service<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Managed Service Identity block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyvaultreferenceidentityid_go">
+<a href="#keyvaultreferenceidentityid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Reference<wbr>Identity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The User Assigned Identity Id used for looking up KeyVault secrets. The identity must be assigned to the application. [For more information see - Access vaults with a user-assigned identity](https://docs.microsoft.com/en-us/azure/app-service/app-service-key-vault-references#access-vaults-with-a-user-assigned-identity)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
@@ -815,6 +834,15 @@ The AppService resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}A Managed Service Identity block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="keyvaultreferenceidentityid_nodejs">
+<a href="#keyvaultreferenceidentityid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Reference<wbr>Identity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The User Assigned Identity Id used for looking up KeyVault secrets. The identity must be assigned to the application. [For more information see - Access vaults with a user-assigned identity](https://docs.microsoft.com/en-us/azure/app-service/app-service-key-vault-references#access-vaults-with-a-user-assigned-identity)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -979,6 +1007,15 @@ The AppService resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#appserviceidentity">App<wbr>Service<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Managed Service Identity block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="key_vault_reference_identity_id_python">
+<a href="#key_vault_reference_identity_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>reference_<wbr>identity_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The User Assigned Identity Id used for looking up KeyVault secrets. The identity must be assigned to the application. [For more information see - Access vaults with a user-assigned identity](https://docs.microsoft.com/en-us/azure/app-service/app-service-key-vault-references#access-vaults-with-a-user-assigned-identity)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
@@ -1380,6 +1417,7 @@ Get an existing AppService resource's state with the given name, ID, and optiona
         <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">https_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[AppServiceIdentityArgs]</span> = None<span class="p">,</span>
+        <span class="nx">key_vault_reference_identity_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">logs</span><span class="p">:</span> <span class="nx">Optional[AppServiceLogsArgs]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1613,6 +1651,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A Managed Service Identity block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_keyvaultreferenceidentityid_csharp">
+<a href="#state_keyvaultreferenceidentityid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Reference<wbr>Identity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The User Assigned Identity Id used for looking up KeyVault secrets. The identity must be assigned to the application. [For more information see - Access vaults with a user-assigned identity](https://docs.microsoft.com/en-us/azure/app-service/app-service-key-vault-references#access-vaults-with-a-user-assigned-identity)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -1840,6 +1887,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#appserviceidentity">App<wbr>Service<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Managed Service Identity block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_keyvaultreferenceidentityid_go">
+<a href="#state_keyvaultreferenceidentityid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Reference<wbr>Identity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The User Assigned Identity Id used for looking up KeyVault secrets. The identity must be assigned to the application. [For more information see - Access vaults with a user-assigned identity](https://docs.microsoft.com/en-us/azure/app-service/app-service-key-vault-references#access-vaults-with-a-user-assigned-identity)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
@@ -2071,6 +2127,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A Managed Service Identity block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_keyvaultreferenceidentityid_nodejs">
+<a href="#state_keyvaultreferenceidentityid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Reference<wbr>Identity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The User Assigned Identity Id used for looking up KeyVault secrets. The identity must be assigned to the application. [For more information see - Access vaults with a user-assigned identity](https://docs.microsoft.com/en-us/azure/app-service/app-service-key-vault-references#access-vaults-with-a-user-assigned-identity)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -2298,6 +2363,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#appserviceidentity">App<wbr>Service<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Managed Service Identity block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_key_vault_reference_identity_id_python">
+<a href="#state_key_vault_reference_identity_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>reference_<wbr>identity_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The User Assigned Identity Id used for looking up KeyVault secrets. The identity must be assigned to the application. [For more information see - Access vaults with a user-assigned identity](https://docs.microsoft.com/en-us/azure/app-service/app-service-key-vault-references#access-vaults-with-a-user-assigned-identity)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
