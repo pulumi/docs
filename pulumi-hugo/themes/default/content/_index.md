@@ -90,7 +90,7 @@ manage:
       description: Automatic encryption for secrets and state.
 
     - title: Empower with guardrails
-      description: Identity and Policy as Code ensures continuous compliance.
+      description: Identity and Policy as Code ensure continuous compliance.
 
     - title: See who changed what and when
       description: Full change visibility and auditing across your entire organization.
