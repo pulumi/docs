@@ -21,6 +21,7 @@ Explore the resources and functions of the aws.glue module.
     <li><a href="job" title="Job"><span class="symbol resource"></span>Job</a></li>
     <li><a href="mltransform" title="MLTransform"><span class="symbol resource"></span>MLTransform</a></li>
     <li><a href="partition" title="Partition"><span class="symbol resource"></span>Partition</a></li>
+    <li><a href="partitionindex" title="PartitionIndex"><span class="symbol resource"></span>PartitionIndex</a></li>
     <li><a href="registry" title="Registry"><span class="symbol resource"></span>Registry</a></li>
     <li><a href="resourcepolicy" title="ResourcePolicy"><span class="symbol resource"></span>ResourcePolicy</a></li>
     <li><a href="schema" title="Schema"><span class="symbol resource"></span>Schema</a></li>
@@ -46,6 +47,6 @@ Explore the resources and functions of the aws.glue module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.24.1</dd>
+	<dd>4.25.0</dd>
 </dl>
 

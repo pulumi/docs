@@ -467,6 +467,7 @@ const fooInstance = new aws.ec2.Instance("fooInstance", {
              <span class="nx">monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceNetworkInterfaceArgs]]</span> = None<span class="p">,</span>
              <span class="nx">placement_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">placement_partition_number</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
              <span class="nx">private_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">root_block_device</span><span class="p">:</span> <span class="nx">Optional[InstanceRootBlockDeviceArgs]</span> = None<span class="p">,</span>
              <span class="nx">secondary_private_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -843,6 +844,15 @@ See Launch Template Specification below for more details.
     <dd>{{% md %}}Placement Group to start the instance in.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="placementpartitionnumber_csharp">
+<a href="#placementpartitionnumber_csharp" style="color: inherit; text-decoration: inherit;">Placement<wbr>Partition<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of the partition the instance is in. Valid only if the `aws.ec2.PlacementGroup` resource's `strategy` argument is set to `"partition"`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="privateip_csharp">
 <a href="#privateip_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip</a>
 </span>
@@ -876,7 +886,7 @@ See Launch Template Specification below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of security group names (EC2-Classic) or IDs (default VPC) to associate with.
+    <dd>{{% md %}}A list of security group names to associate with.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use of `securityGroups` is discouraged as it does not allow for changes and will force your instance to be replaced if changes are made. To avoid this, use `vpcSecurityGroupIds` which allows for updates.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="sourcedestcheck_csharp">
@@ -1190,6 +1200,15 @@ See Launch Template Specification below for more details.
     <dd>{{% md %}}Placement Group to start the instance in.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="placementpartitionnumber_go">
+<a href="#placementpartitionnumber_go" style="color: inherit; text-decoration: inherit;">Placement<wbr>Partition<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of the partition the instance is in. Valid only if the `aws.ec2.PlacementGroup` resource's `strategy` argument is set to `"partition"`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="privateip_go">
 <a href="#privateip_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip</a>
 </span>
@@ -1223,7 +1242,7 @@ See Launch Template Specification below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of security group names (EC2-Classic) or IDs (default VPC) to associate with.
+    <dd>{{% md %}}A list of security group names to associate with.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use of `securityGroups` is discouraged as it does not allow for changes and will force your instance to be replaced if changes are made. To avoid this, use `vpcSecurityGroupIds` which allows for updates.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="sourcedestcheck_go">
@@ -1537,6 +1556,15 @@ See Launch Template Specification below for more details.
     <dd>{{% md %}}Placement Group to start the instance in.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="placementpartitionnumber_nodejs">
+<a href="#placementpartitionnumber_nodejs" style="color: inherit; text-decoration: inherit;">placement<wbr>Partition<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of the partition the instance is in. Valid only if the `aws.ec2.PlacementGroup` resource's `strategy` argument is set to `"partition"`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="privateip_nodejs">
 <a href="#privateip_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip</a>
 </span>
@@ -1570,7 +1598,7 @@ See Launch Template Specification below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of security group names (EC2-Classic) or IDs (default VPC) to associate with.
+    <dd>{{% md %}}A list of security group names to associate with.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use of `securityGroups` is discouraged as it does not allow for changes and will force your instance to be replaced if changes are made. To avoid this, use `vpcSecurityGroupIds` which allows for updates.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="sourcedestcheck_nodejs">
@@ -1884,6 +1912,15 @@ See Launch Template Specification below for more details.
     <dd>{{% md %}}Placement Group to start the instance in.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="placement_partition_number_python">
+<a href="#placement_partition_number_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>partition_<wbr>number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of the partition the instance is in. Valid only if the `aws.ec2.PlacementGroup` resource's `strategy` argument is set to `"partition"`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="private_ip_python">
 <a href="#private_ip_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip</a>
 </span>
@@ -1917,7 +1954,7 @@ See Launch Template Specification below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of security group names (EC2-Classic) or IDs (default VPC) to associate with.
+    <dd>{{% md %}}A list of security group names to associate with.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use of `securityGroups` is discouraged as it does not allow for changes and will force your instance to be replaced if changes are made. To avoid this, use `vpcSecurityGroupIds` which allows for updates.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="source_dest_check_python">
@@ -2418,6 +2455,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
         <span class="nx">outpost_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">password_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">placement_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">placement_partition_number</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">primary_network_interface_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">private_dns</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">private_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -2809,6 +2847,15 @@ See Launch Template Specification below for more details.
     <dd>{{% md %}}Placement Group to start the instance in.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_placementpartitionnumber_csharp">
+<a href="#state_placementpartitionnumber_csharp" style="color: inherit; text-decoration: inherit;">Placement<wbr>Partition<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of the partition the instance is in. Valid only if the `aws.ec2.PlacementGroup` resource's `strategy` argument is set to `"partition"`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_primarynetworkinterfaceid_csharp">
 <a href="#state_primarynetworkinterfaceid_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Network<wbr>Interface<wbr>Id</a>
 </span>
@@ -2878,7 +2925,7 @@ See Launch Template Specification below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of security group names (EC2-Classic) or IDs (default VPC) to associate with.
+    <dd>{{% md %}}A list of security group names to associate with.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use of `securityGroups` is discouraged as it does not allow for changes and will force your instance to be replaced if changes are made. To avoid this, use `vpcSecurityGroupIds` which allows for updates.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcedestcheck_csharp">
@@ -3246,6 +3293,15 @@ See Launch Template Specification below for more details.
     <dd>{{% md %}}Placement Group to start the instance in.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_placementpartitionnumber_go">
+<a href="#state_placementpartitionnumber_go" style="color: inherit; text-decoration: inherit;">Placement<wbr>Partition<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of the partition the instance is in. Valid only if the `aws.ec2.PlacementGroup` resource's `strategy` argument is set to `"partition"`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_primarynetworkinterfaceid_go">
 <a href="#state_primarynetworkinterfaceid_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Network<wbr>Interface<wbr>Id</a>
 </span>
@@ -3315,7 +3371,7 @@ See Launch Template Specification below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of security group names (EC2-Classic) or IDs (default VPC) to associate with.
+    <dd>{{% md %}}A list of security group names to associate with.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use of `securityGroups` is discouraged as it does not allow for changes and will force your instance to be replaced if changes are made. To avoid this, use `vpcSecurityGroupIds` which allows for updates.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcedestcheck_go">
@@ -3674,6 +3730,15 @@ See Launch Template Specification below for more details.
     <dd>{{% md %}}Placement Group to start the instance in.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_placementpartitionnumber_nodejs">
+<a href="#state_placementpartitionnumber_nodejs" style="color: inherit; text-decoration: inherit;">placement<wbr>Partition<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of the partition the instance is in. Valid only if the `aws.ec2.PlacementGroup` resource's `strategy` argument is set to `"partition"`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_primarynetworkinterfaceid_nodejs">
 <a href="#state_primarynetworkinterfaceid_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Network<wbr>Interface<wbr>Id</a>
 </span>
@@ -3743,7 +3808,7 @@ See Launch Template Specification below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of security group names (EC2-Classic) or IDs (default VPC) to associate with.
+    <dd>{{% md %}}A list of security group names to associate with.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use of `securityGroups` is discouraged as it does not allow for changes and will force your instance to be replaced if changes are made. To avoid this, use `vpcSecurityGroupIds` which allows for updates.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcedestcheck_nodejs">
@@ -4102,6 +4167,15 @@ See Launch Template Specification below for more details.
     <dd>{{% md %}}Placement Group to start the instance in.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_placement_partition_number_python">
+<a href="#state_placement_partition_number_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>partition_<wbr>number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of the partition the instance is in. Valid only if the `aws.ec2.PlacementGroup` resource's `strategy` argument is set to `"partition"`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_primary_network_interface_id_python">
 <a href="#state_primary_network_interface_id_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>network_<wbr>interface_<wbr>id</a>
 </span>
@@ -4171,7 +4245,7 @@ See Launch Template Specification below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of security group names (EC2-Classic) or IDs (default VPC) to associate with.
+    <dd>{{% md %}}A list of security group names to associate with.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use of `securityGroups` is discouraged as it does not allow for changes and will force your instance to be replaced if changes are made. To avoid this, use `vpcSecurityGroupIds` which allows for updates.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_dest_check_python">

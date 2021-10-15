@@ -17,6 +17,7 @@ Explore the resources and functions of the aws.chime module.
     <li><a href="voiceconnectororganization" title="VoiceConnectorOrganization"><span class="symbol resource"></span>VoiceConnectorOrganization</a></li>
     <li><a href="voiceconnectorstreaming" title="VoiceConnectorStreaming"><span class="symbol resource"></span>VoiceConnectorStreaming</a></li>
     <li><a href="voiceconnectortermination" title="VoiceConnectorTermination"><span class="symbol resource"></span>VoiceConnectorTermination</a></li>
+    <li><a href="voiceconnectorterminationcredentials" title="VoiceConnectorTerminationCredentials"><span class="symbol resource"></span>VoiceConnectorTerminationCredentials</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -28,6 +29,6 @@ Explore the resources and functions of the aws.chime module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.24.1</dd>
+	<dd>4.25.0</dd>
 </dl>
 

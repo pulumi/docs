@@ -233,6 +233,7 @@ for (const range = {value: 0}; range.value < 2; range.value++) {
                     <span class="nx">monitoring_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">performance_insights_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                     <span class="nx">performance_insights_kms_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">performance_insights_retention_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                     <span class="nx">preferred_backup_window</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">preferred_maintenance_window</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">promotion_tier</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -468,7 +469,7 @@ in the Amazon RDS User Guide.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The database engine version. When managing the engine version in the cluster, it is recommended to add the `ignore_changes` for this argument to prevent the provider from proposing changes to the instance engine version directly.
+    <dd>{{% md %}}The database engine version.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifier_csharp">
@@ -524,7 +525,16 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN for the KMS key to encrypt Performance Insights data. When specifying `performance_insights_kms_key_id`, `performance_insights_enabled` needs to be set to true.
+    <dd>{{% md %}}ARN for the KMS key to encrypt Performance Insights data. When specifying `performance_insights_kms_key_id`, `performance_insights_enabled` needs to be set to true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="performanceinsightsretentionperiod_csharp">
+<a href="#performanceinsightsretentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Performance<wbr>Insights<wbr>Retention<wbr>Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Amount of time in days to retain Performance Insights data. Either 7 (7 days) or 731 (2 years). When specifying `performance_insights_retention_period`, `performance_insights_enabled` needs to be set to true. Defaults to '7'.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredbackupwindow_csharp">
@@ -681,7 +691,7 @@ in the Amazon RDS User Guide.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The database engine version. When managing the engine version in the cluster, it is recommended to add the `ignore_changes` for this argument to prevent the provider from proposing changes to the instance engine version directly.
+    <dd>{{% md %}}The database engine version.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifier_go">
@@ -737,7 +747,16 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN for the KMS key to encrypt Performance Insights data. When specifying `performance_insights_kms_key_id`, `performance_insights_enabled` needs to be set to true.
+    <dd>{{% md %}}ARN for the KMS key to encrypt Performance Insights data. When specifying `performance_insights_kms_key_id`, `performance_insights_enabled` needs to be set to true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="performanceinsightsretentionperiod_go">
+<a href="#performanceinsightsretentionperiod_go" style="color: inherit; text-decoration: inherit;">Performance<wbr>Insights<wbr>Retention<wbr>Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Amount of time in days to retain Performance Insights data. Either 7 (7 days) or 731 (2 years). When specifying `performance_insights_retention_period`, `performance_insights_enabled` needs to be set to true. Defaults to '7'.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredbackupwindow_go">
@@ -894,7 +913,7 @@ in the Amazon RDS User Guide.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The database engine version. When managing the engine version in the cluster, it is recommended to add the `ignore_changes` for this argument to prevent the provider from proposing changes to the instance engine version directly.
+    <dd>{{% md %}}The database engine version.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifier_nodejs">
@@ -950,7 +969,16 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN for the KMS key to encrypt Performance Insights data. When specifying `performance_insights_kms_key_id`, `performance_insights_enabled` needs to be set to true.
+    <dd>{{% md %}}ARN for the KMS key to encrypt Performance Insights data. When specifying `performance_insights_kms_key_id`, `performance_insights_enabled` needs to be set to true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="performanceinsightsretentionperiod_nodejs">
+<a href="#performanceinsightsretentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">performance<wbr>Insights<wbr>Retention<wbr>Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Amount of time in days to retain Performance Insights data. Either 7 (7 days) or 731 (2 years). When specifying `performance_insights_retention_period`, `performance_insights_enabled` needs to be set to true. Defaults to '7'.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredbackupwindow_nodejs">
@@ -1107,7 +1135,7 @@ in the Amazon RDS User Guide.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The database engine version. When managing the engine version in the cluster, it is recommended to add the `ignore_changes` for this argument to prevent the provider from proposing changes to the instance engine version directly.
+    <dd>{{% md %}}The database engine version.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifier_python">
@@ -1163,7 +1191,16 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN for the KMS key to encrypt Performance Insights data. When specifying `performance_insights_kms_key_id`, `performance_insights_enabled` needs to be set to true.
+    <dd>{{% md %}}ARN for the KMS key to encrypt Performance Insights data. When specifying `performance_insights_kms_key_id`, `performance_insights_enabled` needs to be set to true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="performance_insights_retention_period_python">
+<a href="#performance_insights_retention_period_python" style="color: inherit; text-decoration: inherit;">performance_<wbr>insights_<wbr>retention_<wbr>period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Amount of time in days to retain Performance Insights data. Either 7 (7 days) or 731 (2 years). When specifying `performance_insights_retention_period`, `performance_insights_enabled` needs to be set to true. Defaults to '7'.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferred_backup_window_python">
@@ -1633,6 +1670,7 @@ Get an existing ClusterInstance resource's state with the given name, ID, and op
         <span class="nx">monitoring_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">performance_insights_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">performance_insights_kms_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">performance_insights_retention_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">preferred_backup_window</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">preferred_maintenance_window</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1872,7 +1910,7 @@ in the Amazon RDS User Guide.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The database engine version. When managing the engine version in the cluster, it is recommended to add the `ignore_changes` for this argument to prevent the provider from proposing changes to the instance engine version directly.
+    <dd>{{% md %}}The database engine version.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engineversionactual_csharp">
@@ -1956,7 +1994,16 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN for the KMS key to encrypt Performance Insights data. When specifying `performance_insights_kms_key_id`, `performance_insights_enabled` needs to be set to true.
+    <dd>{{% md %}}ARN for the KMS key to encrypt Performance Insights data. When specifying `performance_insights_kms_key_id`, `performance_insights_enabled` needs to be set to true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_performanceinsightsretentionperiod_csharp">
+<a href="#state_performanceinsightsretentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Performance<wbr>Insights<wbr>Retention<wbr>Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Amount of time in days to retain Performance Insights data. Either 7 (7 days) or 731 (2 years). When specifying `performance_insights_retention_period`, `performance_insights_enabled` needs to be set to true. Defaults to '7'.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_csharp">
@@ -2166,7 +2213,7 @@ in the Amazon RDS User Guide.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The database engine version. When managing the engine version in the cluster, it is recommended to add the `ignore_changes` for this argument to prevent the provider from proposing changes to the instance engine version directly.
+    <dd>{{% md %}}The database engine version.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engineversionactual_go">
@@ -2250,7 +2297,16 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN for the KMS key to encrypt Performance Insights data. When specifying `performance_insights_kms_key_id`, `performance_insights_enabled` needs to be set to true.
+    <dd>{{% md %}}ARN for the KMS key to encrypt Performance Insights data. When specifying `performance_insights_kms_key_id`, `performance_insights_enabled` needs to be set to true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_performanceinsightsretentionperiod_go">
+<a href="#state_performanceinsightsretentionperiod_go" style="color: inherit; text-decoration: inherit;">Performance<wbr>Insights<wbr>Retention<wbr>Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Amount of time in days to retain Performance Insights data. Either 7 (7 days) or 731 (2 years). When specifying `performance_insights_retention_period`, `performance_insights_enabled` needs to be set to true. Defaults to '7'.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_go">
@@ -2460,7 +2516,7 @@ in the Amazon RDS User Guide.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The database engine version. When managing the engine version in the cluster, it is recommended to add the `ignore_changes` for this argument to prevent the provider from proposing changes to the instance engine version directly.
+    <dd>{{% md %}}The database engine version.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engineversionactual_nodejs">
@@ -2544,7 +2600,16 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN for the KMS key to encrypt Performance Insights data. When specifying `performance_insights_kms_key_id`, `performance_insights_enabled` needs to be set to true.
+    <dd>{{% md %}}ARN for the KMS key to encrypt Performance Insights data. When specifying `performance_insights_kms_key_id`, `performance_insights_enabled` needs to be set to true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_performanceinsightsretentionperiod_nodejs">
+<a href="#state_performanceinsightsretentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">performance<wbr>Insights<wbr>Retention<wbr>Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Amount of time in days to retain Performance Insights data. Either 7 (7 days) or 731 (2 years). When specifying `performance_insights_retention_period`, `performance_insights_enabled` needs to be set to true. Defaults to '7'.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_nodejs">
@@ -2754,7 +2819,7 @@ in the Amazon RDS User Guide.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The database engine version. When managing the engine version in the cluster, it is recommended to add the `ignore_changes` for this argument to prevent the provider from proposing changes to the instance engine version directly.
+    <dd>{{% md %}}The database engine version.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engine_version_actual_python">
@@ -2838,7 +2903,16 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN for the KMS key to encrypt Performance Insights data. When specifying `performance_insights_kms_key_id`, `performance_insights_enabled` needs to be set to true.
+    <dd>{{% md %}}ARN for the KMS key to encrypt Performance Insights data. When specifying `performance_insights_kms_key_id`, `performance_insights_enabled` needs to be set to true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_performance_insights_retention_period_python">
+<a href="#state_performance_insights_retention_period_python" style="color: inherit; text-decoration: inherit;">performance_<wbr>insights_<wbr>retention_<wbr>period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Amount of time in days to retain Performance Insights data. Either 7 (7 days) or 731 (2 years). When specifying `performance_insights_retention_period`, `performance_insights_enabled` needs to be set to true. Defaults to '7'.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_python">
