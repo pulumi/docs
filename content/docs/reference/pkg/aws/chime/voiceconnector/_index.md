@@ -3,6 +3,8 @@
 title: "VoiceConnector"
 title_tag: "aws.chime.VoiceConnector"
 meta_desc: "Documentation for the aws.chime.VoiceConnector resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

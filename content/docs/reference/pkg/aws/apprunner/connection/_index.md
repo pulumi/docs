@@ -3,6 +3,8 @@
 title: "Connection"
 title_tag: "aws.apprunner.Connection"
 meta_desc: "Documentation for the aws.apprunner.Connection resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

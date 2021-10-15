@@ -3,6 +3,8 @@
 title: "getApis"
 title_tag: "aws.apigatewayv2.getApis"
 meta_desc: "Documentation for the aws.apigatewayv2.getApis function with examples, input properties, output properties, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

@@ -3,6 +3,8 @@
 title: "GroupMembership"
 title_tag: "aws.quicksight.GroupMembership"
 meta_desc: "Documentation for the aws.quicksight.GroupMembership resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

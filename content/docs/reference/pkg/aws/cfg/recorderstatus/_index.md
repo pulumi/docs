@@ -3,6 +3,8 @@
 title: "RecorderStatus"
 title_tag: "aws.cfg.RecorderStatus"
 meta_desc: "Documentation for the aws.cfg.RecorderStatus resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

@@ -3,6 +3,8 @@
 title: "DeviceFleet"
 title_tag: "aws.sagemaker.DeviceFleet"
 meta_desc: "Documentation for the aws.sagemaker.DeviceFleet resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

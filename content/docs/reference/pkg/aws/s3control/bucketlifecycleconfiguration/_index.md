@@ -3,6 +3,8 @@
 title: "BucketLifecycleConfiguration"
 title_tag: "aws.s3control.BucketLifecycleConfiguration"
 meta_desc: "Documentation for the aws.s3control.BucketLifecycleConfiguration resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

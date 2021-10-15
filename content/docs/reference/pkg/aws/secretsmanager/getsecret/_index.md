@@ -3,6 +3,8 @@
 title: "getSecret"
 title_tag: "aws.secretsmanager.getSecret"
 meta_desc: "Documentation for the aws.secretsmanager.getSecret function with examples, input properties, output properties, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

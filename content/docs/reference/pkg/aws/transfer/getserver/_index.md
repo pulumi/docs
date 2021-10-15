@@ -3,6 +3,8 @@
 title: "getServer"
 title_tag: "aws.transfer.getServer"
 meta_desc: "Documentation for the aws.transfer.getServer function with examples, input properties, output properties, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

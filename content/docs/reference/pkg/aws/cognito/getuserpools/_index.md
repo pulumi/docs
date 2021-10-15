@@ -3,6 +3,8 @@
 title: "getUserPools"
 title_tag: "aws.cognito.getUserPools"
 meta_desc: "Documentation for the aws.cognito.getUserPools function with examples, input properties, output properties, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

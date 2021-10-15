@@ -3,6 +3,8 @@
 title: "getEbsVolumes"
 title_tag: "aws.ebs.getEbsVolumes"
 meta_desc: "Documentation for the aws.ebs.getEbsVolumes function with examples, input properties, output properties, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

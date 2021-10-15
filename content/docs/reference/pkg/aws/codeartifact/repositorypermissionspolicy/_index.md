@@ -3,6 +3,8 @@
 title: "RepositoryPermissionsPolicy"
 title_tag: "aws.codeartifact.RepositoryPermissionsPolicy"
 meta_desc: "Documentation for the aws.codeartifact.RepositoryPermissionsPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

@@ -3,6 +3,8 @@
 title: "getAuthorizationToken"
 title_tag: "aws.codeartifact.getAuthorizationToken"
 meta_desc: "Documentation for the aws.codeartifact.getAuthorizationToken function with examples, input properties, output properties, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

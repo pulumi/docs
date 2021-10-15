@@ -3,6 +3,8 @@
 title: "Resource"
 title_tag: "aws.cloudcontrol.Resource"
 meta_desc: "Documentation for the aws.cloudcontrol.Resource resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

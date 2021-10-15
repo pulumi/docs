@@ -3,6 +3,8 @@
 title: "AssessmentTemplate"
 title_tag: "aws.inspector.AssessmentTemplate"
 meta_desc: "Documentation for the aws.inspector.AssessmentTemplate resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

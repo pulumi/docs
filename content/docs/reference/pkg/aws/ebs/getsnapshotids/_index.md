@@ -3,6 +3,8 @@
 title: "getSnapshotIds"
 title_tag: "aws.ebs.getSnapshotIds"
 meta_desc: "Documentation for the aws.ebs.getSnapshotIds function with examples, input properties, output properties, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

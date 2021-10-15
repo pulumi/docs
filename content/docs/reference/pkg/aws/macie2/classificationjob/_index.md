@@ -3,6 +3,8 @@
 title: "ClassificationJob"
 title_tag: "aws.macie2.ClassificationJob"
 meta_desc: "Documentation for the aws.macie2.ClassificationJob resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

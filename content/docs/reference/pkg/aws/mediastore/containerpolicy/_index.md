@@ -3,6 +3,8 @@
 title: "ContainerPolicy"
 title_tag: "aws.mediastore.ContainerPolicy"
 meta_desc: "Documentation for the aws.mediastore.ContainerPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 
