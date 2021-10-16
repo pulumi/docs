@@ -1,6 +1,6 @@
 ---
-title: "AWS API Gateway"
-title_tag: "aws-apigateway.AWS API Gateway"
+title: "AWS QuickStart Aurora PostgreSQL"
+title_tag: "aws-quickstart-aurora-postgres.AWS QuickStart Aurora PostgreSQL"
 meta_desc: ""
 layout: api
 no_edit_this_page: true
@@ -13,8 +13,8 @@ no_edit_this_page: true
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="cluster" title="Cluster"><span class="api-symbol api-symbol--resource"></span>Cluster</a></li>
     <li><a href="provider" title="Provider"><span class="api-symbol api-symbol--resource"></span>Provider</a></li>
-    <li><a href="restapi" title="RestAPI"><span class="api-symbol api-symbol--resource"></span>RestAPI</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -24,6 +24,6 @@ no_edit_this_page: true
 	<dt>License</dt>
 	<dd></dd>
 	<dt>Version</dt>
-	<dd>0.0.4</dd>
+	<dd>0.0.3</dd>
 </dl>
 

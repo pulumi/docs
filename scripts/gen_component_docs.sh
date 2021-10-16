@@ -1,5 +1,12 @@
 #!/bin/bash
 
+set -o nounset -o errexit -o pipefail
+
+# This script provides a shortcut way to regenerate API docs for all
+# Pulumi-managed components in the registry.
+# WARNING: The list of components within might be outdated.
+# The proper way to address this is to implement https://github.com/pulumi/registry/issues/105.
+
 ensure_cloned() {
     local pkg=$1
     # Go one-level outside the docs repo.
@@ -12,39 +19,49 @@ ensure_cloned() {
     cd docs
 }
 
-ensure_cloned "aws-apigateway"
-./scripts/gen_resource_docs.sh "aws-apigateway" true "" "/schema.yaml"
-./scripts/gen_package_metadata.sh "aws-apigateway" "/schema.yaml" "" "Pulumi" "" "" true
+component="aws-apigateway"
+ensure_cloned "${component}"
+./scripts/gen_resource_docs.sh "${component}" true "" "/schema.yaml"
+./scripts/gen_package_metadata.sh "${component}" "/schema.yaml" "" "Pulumi" "" "" true
 
-ensure_cloned "aws-miniflux"
-./scripts/gen_resource_docs.sh "aws-miniflux" true "" "/schema.json"
-./scripts/gen_package_metadata.sh "aws-miniflux" "/schema.json" "" "Christian Nunciato" "" "infrastructure" true
+component="aws-miniflux"
+ensure_cloned "${component}"
+./scripts/gen_resource_docs.sh "${component}" true "" "/schema.json"
+./scripts/gen_package_metadata.sh "${component}" "/schema.json" "" "Christian Nunciato" "" "infrastructure" true
 
-ensure_cloned "aws-quickstart-aurora-postgres"
-./scripts/gen_resource_docs.sh "aws-quickstart-aurora-postgres" true "" "/schema.yaml"
-./scripts/gen_package_metadata.sh "aws-quickstart-aurora-postgres" "/schema.yaml" "" "Pulumi" "" "" true
+component="aws-quickstart-aurora-postgres"
+ensure_cloned "${component}"
+./scripts/gen_resource_docs.sh "${component}" true "" "/schema.yaml"
+./scripts/gen_package_metadata.sh "${component}" "/schema.yaml" "" "Pulumi" "" "" true
 
-ensure_cloned "aws-quickstart-redshift"
-./scripts/gen_resource_docs.sh "aws-quickstart-redshift" true "" "/schema.yaml"
-./scripts/gen_package_metadata.sh "aws-quickstart-redshift" "/schema.yaml" "" "Pulumi" "" "" true
+component="aws-quickstart-redshift"
+ensure_cloned "${component}"
+./scripts/gen_resource_docs.sh "${component}" true "" "/schema.yaml"
+./scripts/gen_package_metadata.sh "${component}" "/schema.yaml" "" "Pulumi" "" "" true
 
-ensure_cloned "aws-quickstart-vpc"
-./scripts/gen_resource_docs.sh "aws-quickstart-vpc" true "" "/schema.yaml"
-./scripts/gen_package_metadata.sh "aws-quickstart-vpc" "/schema.yaml" "" "Pulumi" "" "" true
+component="aws-quickstart-vpc"
+ensure_cloned "${component}"
+./scripts/gen_resource_docs.sh "${component}" true "" "/schema.yaml"
+./scripts/gen_package_metadata.sh "${component}" "/schema.yaml" "" "Pulumi" "" "" true
 
-ensure_cloned "aws-s3-replicated-bucket"
-./scripts/gen_resource_docs.sh "aws-s3-replicated-bucket" true "" "/schema.json"
-./scripts/gen_package_metadata.sh "aws-s3-replicated-bucket" "/schema.json" "" "Lee Zen" "" "" true
+component="aws-s3-replicated-bucket"
+ensure_cloned "${component}"
+./scripts/gen_resource_docs.sh "${component}" true "" "/schema.json"
+./scripts/gen_package_metadata.sh "${component}" "/schema.json" "" "Lee Zen" "" "" true
 
-ensure_cloned "azure-quickstart-acr-geo-replication"
-./scripts/gen_resource_docs.sh "azure-quickstart-acr-geo-replication" true "" "/schema.json"
-./scripts/gen_package_metadata.sh "azure-quickstart-acr-geo-replication" "/schema.json" "" "Ian Wahbe" "" "" true
+component="azure-quickstart-acr-geo-replication"
+ensure_cloned "${component}"
+./scripts/gen_resource_docs.sh "${component}" true "" "/schema.json"
+./scripts/gen_package_metadata.sh "${component}" "/schema.json" "" "Ian Wahbe" "" "" true
 
-#The schema.json for this component is in the default location of `provider/cmd/resource-pkg`.
-ensure_cloned "gcp-global-cloudrun"
-./scripts/gen_resource_docs.sh "gcp-global-cloudrun"
-./scripts/gen_package_metadata.sh "gcp-global-cloudrun" "" "" "Paul Stack" "" "" true
+# The schema.json for this component is in the default location of /provider/cmd/resource-{pkg}
+# so there is no need to specify the path for the schema.
+component="gcp-global-cloudrun"
+ensure_cloned "${component}"
+./scripts/gen_resource_docs.sh "${component}"
+./scripts/gen_package_metadata.sh "${component}" "" "" "Paul Stack" "" "" true
 
-ensure_cloned "run-my-darn-container"
-./scripts/gen_resource_docs.sh "run-my-darn-container" true "" "/schema.json"
-./scripts/gen_package_metadata.sh "run-my-darn-container" "/schema.json" "" "Lee Briggs" "" "infrastructure" true
+component="run-my-darn-container"
+ensure_cloned "${component}"
+./scripts/gen_resource_docs.sh "${component}" true "" "/schema.json"
+./scripts/gen_package_metadata.sh "${component}" "/schema.json" "" "Lee Briggs" "" "infrastructure" true
