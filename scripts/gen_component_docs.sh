@@ -52,7 +52,7 @@ ensure_cloned "${component}"
 component="azure-quickstart-acr-geo-replication"
 ensure_cloned "${component}"
 ./scripts/gen_resource_docs.sh "${component}" true "" "/schema.json"
-./scripts/gen_package_metadata.sh "${component}" "/schema.json" "" "Ian Wahbe" "" "" true
+./scripts/gen_package_metadata.sh "${component}" "/schema.json" "" "Ian Wahbe" "Azure QuickStart ACR Geo Replication" "" true
 
 # The schema.json for this component is in the default location of /provider/cmd/resource-{pkg}
 # so there is no need to specify the path for the schema.
