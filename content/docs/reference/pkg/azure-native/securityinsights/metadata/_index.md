@@ -135,99 +135,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	securityinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/securityinsights"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := securityinsights.NewMetadata(ctx, "metadata", &securityinsights.MetadataArgs{
-			Author: &securityinsights.MetadataAuthorArgs{
-				Email: pulumi.String("email@microsoft.com"),
-				Name:  pulumi.String("User Name"),
-			},
-			Categories: &securityinsights.MetadataCategoriesArgs{
-				Domains: pulumi.StringArray{
-					pulumi.String("Application"),
-					pulumi.String("Security – Insider Threat"),
-				},
-				Verticals: pulumi.StringArray{
-					pulumi.String("Healthcare"),
-				},
-			},
-			ContentId: pulumi.String("c00ee137-7475-47c8-9cce-ec6f0f1bedd0"),
-			Dependencies: &securityinsights.MetadataDependenciesArgs{
-				Criteria: []securityinsights.MetadataDependenciesArgs{
-					&securityinsights.MetadataDependenciesArgs{
-						Criteria: []securityinsights.MetadataDependenciesArgs{
-							&securityinsights.MetadataDependenciesArgs{
-								ContentId: pulumi.String("045d06d0-ee72-4794-aba4-cf5646e4c756"),
-								Kind:      pulumi.String("DataConnector"),
-								Name:      pulumi.String("Microsoft Defender for Endpoint"),
-							},
-							&securityinsights.MetadataDependenciesArgs{
-								ContentId: pulumi.String("dbfcb2cc-d782-40ef-8d94-fe7af58a6f2d"),
-								Kind:      pulumi.String("DataConnector"),
-							},
-							&securityinsights.MetadataDependenciesArgs{
-								ContentId: pulumi.String("de4dca9b-eb37-47d6-a56f-b8b06b261593"),
-								Kind:      pulumi.String("DataConnector"),
-								Version:   pulumi.String("2.0"),
-							},
-						},
-						Operator: pulumi.String("OR"),
-					},
-					&securityinsights.MetadataDependenciesArgs{
-						ContentId: pulumi.String("31ee11cc-9989-4de8-b176-5e0ef5c4dbab"),
-						Kind:      pulumi.String("Playbook"),
-						Version:   pulumi.String("1.0"),
-					},
-					&securityinsights.MetadataDependenciesArgs{
-						ContentId: pulumi.String("21ba424a-9438-4444-953a-7059539a7a1b"),
-						Kind:      pulumi.String("Parser"),
-					},
-				},
-				Operator: pulumi.String("AND"),
-			},
-			FirstPublishDate:                    pulumi.String("2021-05-18"),
-			Kind:                                pulumi.String("AnalyticsRule"),
-			LastPublishDate:                     pulumi.String("2021-05-18"),
-			MetadataName:                        pulumi.String("metadataName"),
-			OperationalInsightsResourceProvider: pulumi.String("Microsoft.OperationalInsights"),
-			ParentId:                            pulumi.String("/subscriptions/2e1dc338-d04d-4443-b721-037eff4fdcac/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/alertRules/ruleName"),
-			Providers: pulumi.StringArray{
-				pulumi.String("Amazon"),
-				pulumi.String("Microsoft"),
-			},
-			ResourceGroupName: pulumi.String("myRg"),
-			Source: &securityinsights.MetadataSourceArgs{
-				Kind:     pulumi.String("Solution"),
-				Name:     pulumi.String("Contoso Solution 1.0"),
-				SourceId: pulumi.String("b688a130-76f4-4a07-bf57-762222a3cadf"),
-			},
-			Support: &securityinsights.MetadataSupportArgs{
-				Email: pulumi.String("support@microsoft.com"),
-				Link:  pulumi.String("https://support.microsoft.com/"),
-				Name:  pulumi.String("Microsoft"),
-				Tier:  pulumi.String("Partner"),
-			},
-			Version:       pulumi.String("1.0.0.0"),
-			WorkspaceName: pulumi.String("myWorkspace"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 
@@ -252,8 +160,8 @@ metadata = azure_native.securityinsights.Metadata("metadata",
         verticals=["Healthcare"],
     ),
     content_id="c00ee137-7475-47c8-9cce-ec6f0f1bedd0",
-    dependencies=azure_native.securityinsights.MetadataDependenciesArgs(
-        criteria=[
+    dependencies={
+        "criteria": [
             azure_native.securityinsights.MetadataDependenciesArgs(
                 criteria=[
                     azure_native.securityinsights.MetadataDependenciesArgs(
@@ -283,8 +191,8 @@ metadata = azure_native.securityinsights.Metadata("metadata",
                 kind="Parser",
             ),
         ],
-        operator="AND",
-    ),
+        "operator": "AND",
+    },
     first_publish_date="2021-05-18",
     kind="AnalyticsRule",
     last_publish_date="2021-05-18",
