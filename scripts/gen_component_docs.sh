@@ -32,7 +32,7 @@ ensure_cloned "${component}"
 component="aws-quickstart-aurora-postgres"
 ensure_cloned "${component}"
 ./scripts/gen_resource_docs.sh "${component}" true "" "/schema.yaml"
-./scripts/gen_package_metadata.sh "${component}" "/schema.yaml" "" "Pulumi" "" "" true
+./scripts/gen_package_metadata.sh "${component}" "/schema.yaml" "" "Pulumi" "AWS QuickStart Aurora Postgres" "" true
 
 component="aws-quickstart-redshift"
 ensure_cloned "${component}"
