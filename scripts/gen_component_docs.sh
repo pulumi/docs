@@ -59,7 +59,7 @@ ensure_cloned "${component}"
 component="gcp-global-cloudrun"
 ensure_cloned "${component}"
 ./scripts/gen_resource_docs.sh "${component}"
-./scripts/gen_package_metadata.sh "${component}" "" "" "Paul Stack" "" "" true
+./scripts/gen_package_metadata.sh "${component}" "" "" "Paul Stack" "GCP Global CloudRun" "" true
 
 component="run-my-darn-container"
 ensure_cloned "${component}"
