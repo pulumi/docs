@@ -13,10 +13,10 @@ no_edit_this_page: true
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="awsinstance" title="AWSInstance"><span class="symbol resource"></span>AWSInstance</a></li>
-    <li><a href="azureinstance" title="AzureInstance"><span class="symbol resource"></span>AzureInstance</a></li>
-    <li><a href="gcpinstance" title="GCPInstance"><span class="symbol resource"></span>GCPInstance</a></li>
-    <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
+    <li><a href="awsinstance" title="AWSInstance"><span class="api-symbol api-symbol--resource"></span>AWSInstance</a></li>
+    <li><a href="azureinstance" title="AzureInstance"><span class="api-symbol api-symbol--resource"></span>AzureInstance</a></li>
+    <li><a href="gcpinstance" title="GCPInstance"><span class="api-symbol api-symbol--resource"></span>GCPInstance</a></li>
+    <li><a href="provider" title="Provider"><span class="api-symbol api-symbol--resource"></span>Provider</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
