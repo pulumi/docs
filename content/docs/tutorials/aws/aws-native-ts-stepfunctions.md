@@ -1,7 +1,7 @@
 ---
 title: ""
-h1: "AWS Step Functions"
-linktitle: "AWS Step Functions"
+h1: "AWS Step Functions with the AWS Native Provider"
+linktitle: "AWS Step Functions with the AWS Native Provider"
 no_edit_this_page: true
 cloud: aws
 language: native

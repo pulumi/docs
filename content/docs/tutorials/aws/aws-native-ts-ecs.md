@@ -1,7 +1,7 @@
 ---
 title: ""
-h1: "Create an ECS cluster on AWS"
-linktitle: "Create an ECS cluster on AWS"
+h1: "Create an ECS cluster on AWS with the AWS Native Provider"
+linktitle: "Create an ECS cluster on AWS with the AWS Native Provider"
 no_edit_this_page: true
 cloud: aws
 language: native
