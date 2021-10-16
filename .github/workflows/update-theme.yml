@@ -1,4 +1,4 @@
-name: "Scheduled jobs: Update pulumi-hugo"
+name: "Scheduled jobs: Update Hugo modules"
 on:
   schedule:
     - cron:  '*/60 * * * *'
@@ -32,9 +32,11 @@ jobs:
         run: |
           git config --global url."https://${{ secrets.PULUMI_BOT_TOKEN }}:x-oauth-basic@github.com/pulumi/pulumi-hugo-internal".insteadOf "https://github.com/pulumi/pulumi-hugo-internal"
 
-      - name: Update pulumi-hugo module
+      - name: Update Hugo modules
         run: |
           hugo mod get github.com/pulumi/pulumi-hugo/themes/default
+          hugo mod get github.com/pulumi/theme@release
+          hugo mod get github.com/pulumi/registry
 
       - name: Identify relevant commits
         run: |
@@ -49,10 +51,10 @@ jobs:
           branch: pulumi-hugo/refresh
           author: Pulumi Bot <bot@pulumi.com>
           committer: Pulumi Bot <bot@pulumi.com>
-          title: Update pulumi-hugo
-          commit-message: Update the module reference for pulumi/pulumi-hugo
+          title: Update Hugo modules
+          commit-message: Update Hugo module references
           token: ${{ secrets.PULUMI_BOT_TOKEN }}
           body: |
-            Brings in the latest from https://github.com/pulumi/pulumi-hugo, including:
+            Brings in the latest content from Hugo module repos, including:
 
             ${{ env.NEW_COMMITS }}

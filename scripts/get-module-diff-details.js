@@ -4,10 +4,8 @@ const execSync = require("child_process").execSync;
 
 // Find the commits that occurred between the two commits provided
 // and return a bulleted list of their GitHub links.
-async function getCommitsBetween(base, head) {
+async function getCommitsBetween(owner, repo, base, head) {
     const githubToken = process.env.GITHUB_TOKEN;
-    const [ owner ] = process.env.GITHUB_REPOSITORY.split("/");
-    const repo = "pulumi-hugo";
 
     const octokit = new Octokit({
         auth: githubToken,
@@ -25,34 +23,46 @@ async function getCommitsBetween(base, head) {
 
 const diff = execSync("git diff").toString("utf-8");
 const files = parseDiff(diff);
+const changes = {};
 
 // Loop through the files of the diff (if any) looking for changes to go.mod specifically.
 files.forEach(file => {
     if (file.from === file.to && file.to === "go.mod") {
-        let deletion, addition;
-
         file.chunks.map(chunk => {
             chunk.changes.map(change => {
-                if (change.del) {
-                    deletion = change.content;
-                } else if (change.add) {
-                    addition = change.content;
+
+                // Extract the repo owner, repo name, and commit SHA from the go.mod reference line.
+                const parts = change.content.match(/github.com\/(.+) [v\.0]+-[\d]+-([\w]+)/);
+
+                if (parts) {
+                    const [_, module, ref] = parts;
+
+                    if (module && ref) {
+                        const [ owner, repo ] = module.split("/");
+                        const key = `${owner}/${repo}`;
+
+                        if (!changes[key]) {
+                            changes[key] = {
+                                owner,
+                                repo,
+                            };
+                        }
+
+                        if (change.del) {
+                            changes[key].base = ref;
+                        } else if (change.add) {
+                            changes[key].head = ref;
+                        }
+                    }
                 }
             });
         });
 
-        if (deletion && addition) {
-            // Extract the Git SHA from the go.mod reference line -- e.g.,
-            // "github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20210409102228-8b0e4c5741cb // indirect"
-            const re = /github\.com\/pulumi\/pulumi-hugo\/themes\/default [v\.0]+-[\d]+-([\w]+)/;
-
-            const base = deletion.match(re)[1];
-            const head = addition.match(re)[1];
-
-            if (base && head) {
-                getCommitsBetween(base, head);
+        Object.values(changes).forEach(e => {
+            if (e.owner && e.repo && e.base && e.head) {
+                getCommitsBetween(e.owner, e.repo, e.base, e.head);
             }
-        }
+        });
     }
 });
 
