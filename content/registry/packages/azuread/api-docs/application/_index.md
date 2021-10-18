@@ -40,6 +40,7 @@ Applications can be imported using their object ID, e.g.
                 <span class="nx">device_only_auth_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                 <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">fallback_public_client_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                <span class="nx">feature_tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationFeatureTagArgs]]</span> = None<span class="p">,</span>
                 <span class="nx">group_membership_claims</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                 <span class="nx">identifier_uris</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                 <span class="nx">logo_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -54,6 +55,7 @@ Applications can be imported using their object ID, e.g.
                 <span class="nx">sign_in_audience</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">single_page_application</span><span class="p">:</span> <span class="nx">Optional[ApplicationSinglePageApplicationArgs]</span> = None<span class="p">,</span>
                 <span class="nx">support_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                 <span class="nx">template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">terms_of_service_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">web</span><span class="p">:</span> <span class="nx">Optional[ApplicationWebArgs]</span> = None<span class="p">)</span>
@@ -231,6 +233,15 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}Specifies whether the application is a public client. Appropriate for apps using token grant flows that don't use a redirect URI. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="featuretags_csharp">
+<a href="#featuretags_csharp" style="color: inherit; text-decoration: inherit;">Feature<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationfeaturetag">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Application<wbr>Feature<wbr>Tag<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `feature_tags` block as described below. Cannot be used together with the `tags` property.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="groupmembershipclaims_csharp">
 <a href="#groupmembershipclaims_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Membership<wbr>Claims</a>
 </span>
@@ -357,6 +368,15 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}URL of the application's support page.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A set of tags to apply to the application. Cannot be used together with the `feature_tags` block.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="templateid_csharp">
 <a href="#templateid_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Id</a>
 </span>
@@ -431,6 +451,15 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the application is a public client. Appropriate for apps using token grant flows that don't use a redirect URI. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="featuretags_go">
+<a href="#featuretags_go" style="color: inherit; text-decoration: inherit;">Feature<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationfeaturetag">[]Application<wbr>Feature<wbr>Tag<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `feature_tags` block as described below. Cannot be used together with the `tags` property.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupmembershipclaims_go">
@@ -559,6 +588,15 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}URL of the application's support page.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A set of tags to apply to the application. Cannot be used together with the `feature_tags` block.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="templateid_go">
 <a href="#templateid_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Id</a>
 </span>
@@ -633,6 +671,15 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the application is a public client. Appropriate for apps using token grant flows that don't use a redirect URI. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="featuretags_nodejs">
+<a href="#featuretags_nodejs" style="color: inherit; text-decoration: inherit;">feature<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationfeaturetag">Application<wbr>Feature<wbr>Tag<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `feature_tags` block as described below. Cannot be used together with the `tags` property.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupmembershipclaims_nodejs">
@@ -761,6 +808,15 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}URL of the application's support page.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A set of tags to apply to the application. Cannot be used together with the `feature_tags` block.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="templateid_nodejs">
 <a href="#templateid_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Id</a>
 </span>
@@ -835,6 +891,15 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the application is a public client. Appropriate for apps using token grant flows that don't use a redirect URI. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="feature_tags_python">
+<a href="#feature_tags_python" style="color: inherit; text-decoration: inherit;">feature_<wbr>tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationfeaturetag">Sequence[Application<wbr>Feature<wbr>Tag<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A `feature_tags` block as described below. Cannot be used together with the `tags` property.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_membership_claims_python">
@@ -961,6 +1026,15 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of the application's support page.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A set of tags to apply to the application. Cannot be used together with the `feature_tags` block.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="template_id_python">
@@ -1322,6 +1396,7 @@ Get an existing Application resource's state with the given name, ID, and option
         <span class="nx">disabled_by_microsoft</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">fallback_public_client_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">feature_tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationFeatureTagArgs]]</span> = None<span class="p">,</span>
         <span class="nx">group_membership_claims</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">identifier_uris</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">logo_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1340,6 +1415,7 @@ Get an existing Application resource's state with the given name, ID, and option
         <span class="nx">sign_in_audience</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">single_page_application</span><span class="p">:</span> <span class="nx">Optional[ApplicationSinglePageApplicationArgs]</span> = None<span class="p">,</span>
         <span class="nx">support_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">terms_of_service_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">web</span><span class="p">:</span> <span class="nx">Optional[ApplicationWebArgs]</span> = None<span class="p">) -&gt;</span> Application</code></pre></div>
@@ -1527,6 +1603,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies whether the application is a public client. Appropriate for apps using token grant flows that don't use a redirect URI. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_featuretags_csharp">
+<a href="#state_featuretags_csharp" style="color: inherit; text-decoration: inherit;">Feature<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationfeaturetag">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Application<wbr>Feature<wbr>Tag<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `feature_tags` block as described below. Cannot be used together with the `tags` property.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_groupmembershipclaims_csharp">
 <a href="#state_groupmembershipclaims_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Membership<wbr>Claims</a>
 </span>
@@ -1689,6 +1774,15 @@ The following state arguments are supported:
     <dd>{{% md %}}URL of the application's support page.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A set of tags to apply to the application. Cannot be used together with the `feature_tags` block.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_templateid_csharp">
 <a href="#state_templateid_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Id</a>
 </span>
@@ -1790,6 +1884,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the application is a public client. Appropriate for apps using token grant flows that don't use a redirect URI. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_featuretags_go">
+<a href="#state_featuretags_go" style="color: inherit; text-decoration: inherit;">Feature<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationfeaturetag">[]Application<wbr>Feature<wbr>Tag<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `feature_tags` block as described below. Cannot be used together with the `tags` property.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupmembershipclaims_go">
@@ -1954,6 +2057,15 @@ The following state arguments are supported:
     <dd>{{% md %}}URL of the application's support page.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A set of tags to apply to the application. Cannot be used together with the `feature_tags` block.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_templateid_go">
 <a href="#state_templateid_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Id</a>
 </span>
@@ -2055,6 +2167,15 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the application is a public client. Appropriate for apps using token grant flows that don't use a redirect URI. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_featuretags_nodejs">
+<a href="#state_featuretags_nodejs" style="color: inherit; text-decoration: inherit;">feature<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationfeaturetag">Application<wbr>Feature<wbr>Tag<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `feature_tags` block as described below. Cannot be used together with the `tags` property.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupmembershipclaims_nodejs">
@@ -2219,6 +2340,15 @@ The following state arguments are supported:
     <dd>{{% md %}}URL of the application's support page.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A set of tags to apply to the application. Cannot be used together with the `feature_tags` block.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_templateid_nodejs">
 <a href="#state_templateid_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Id</a>
 </span>
@@ -2320,6 +2450,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the application is a public client. Appropriate for apps using token grant flows that don't use a redirect URI. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_feature_tags_python">
+<a href="#state_feature_tags_python" style="color: inherit; text-decoration: inherit;">feature_<wbr>tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationfeaturetag">Sequence[Application<wbr>Feature<wbr>Tag<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A `feature_tags` block as described below. Cannot be used together with the `tags` property.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_group_membership_claims_python">
@@ -2482,6 +2621,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of the application's support page.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A set of tags to apply to the application. Cannot be used together with the `feature_tags` block.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_template_id_python">
@@ -3220,6 +3368,168 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value that is used for the `roles` claim in ID tokens and OAuth 2.0 access tokens that are authenticating an assigned service or user principal.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="applicationfeaturetag">Application<wbr>Feature<wbr>Tag</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="customsinglesignon_csharp">
+<a href="#customsinglesignon_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Single<wbr>Sign<wbr>On</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this application represents a custom SAML application for linked service principals. Enabling this will assign the `WindowsAzureActiveDirectoryCustomSingleSignOnApplication` tag. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enterprise_csharp">
+<a href="#enterprise_csharp" style="color: inherit; text-decoration: inherit;">Enterprise</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this application represents an Enterprise Application for linked service principals. Enabling this will assign the `WindowsAzureActiveDirectoryIntegratedApp` tag. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gallery_csharp">
+<a href="#gallery_csharp" style="color: inherit; text-decoration: inherit;">Gallery</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this application represents a gallery application for linked service principals. Enabling this will assign the `WindowsAzureActiveDirectoryGalleryApplicationNonPrimaryV1` tag. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hide_csharp">
+<a href="#hide_csharp" style="color: inherit; text-decoration: inherit;">Hide</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this app is invisible to users in My Apps and Office 365 Launcher. Enabling this will assign the `HideApp` tag. Defaults to `false`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="customsinglesignon_go">
+<a href="#customsinglesignon_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Single<wbr>Sign<wbr>On</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this application represents a custom SAML application for linked service principals. Enabling this will assign the `WindowsAzureActiveDirectoryCustomSingleSignOnApplication` tag. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enterprise_go">
+<a href="#enterprise_go" style="color: inherit; text-decoration: inherit;">Enterprise</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this application represents an Enterprise Application for linked service principals. Enabling this will assign the `WindowsAzureActiveDirectoryIntegratedApp` tag. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gallery_go">
+<a href="#gallery_go" style="color: inherit; text-decoration: inherit;">Gallery</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this application represents a gallery application for linked service principals. Enabling this will assign the `WindowsAzureActiveDirectoryGalleryApplicationNonPrimaryV1` tag. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hide_go">
+<a href="#hide_go" style="color: inherit; text-decoration: inherit;">Hide</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this app is invisible to users in My Apps and Office 365 Launcher. Enabling this will assign the `HideApp` tag. Defaults to `false`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="customsinglesignon_nodejs">
+<a href="#customsinglesignon_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Single<wbr>Sign<wbr>On</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether this application represents a custom SAML application for linked service principals. Enabling this will assign the `WindowsAzureActiveDirectoryCustomSingleSignOnApplication` tag. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enterprise_nodejs">
+<a href="#enterprise_nodejs" style="color: inherit; text-decoration: inherit;">enterprise</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether this application represents an Enterprise Application for linked service principals. Enabling this will assign the `WindowsAzureActiveDirectoryIntegratedApp` tag. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gallery_nodejs">
+<a href="#gallery_nodejs" style="color: inherit; text-decoration: inherit;">gallery</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether this application represents a gallery application for linked service principals. Enabling this will assign the `WindowsAzureActiveDirectoryGalleryApplicationNonPrimaryV1` tag. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hide_nodejs">
+<a href="#hide_nodejs" style="color: inherit; text-decoration: inherit;">hide</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether this app is invisible to users in My Apps and Office 365 Launcher. Enabling this will assign the `HideApp` tag. Defaults to `false`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="custom_single_sign_on_python">
+<a href="#custom_single_sign_on_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>single_<wbr>sign_<wbr>on</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this application represents a custom SAML application for linked service principals. Enabling this will assign the `WindowsAzureActiveDirectoryCustomSingleSignOnApplication` tag. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enterprise_python">
+<a href="#enterprise_python" style="color: inherit; text-decoration: inherit;">enterprise</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this application represents an Enterprise Application for linked service principals. Enabling this will assign the `WindowsAzureActiveDirectoryIntegratedApp` tag. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gallery_python">
+<a href="#gallery_python" style="color: inherit; text-decoration: inherit;">gallery</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this application represents a gallery application for linked service principals. Enabling this will assign the `WindowsAzureActiveDirectoryGalleryApplicationNonPrimaryV1` tag. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hide_python">
+<a href="#hide_python" style="color: inherit; text-decoration: inherit;">hide</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this app is invisible to users in My Apps and Office 365 Launcher. Enabling this will assign the `HideApp` tag. Defaults to `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

@@ -372,6 +372,15 @@ The following output properties are available:
     <dd>{{% md %}}The fallback application type as public client, such as an installed application running on a mobile device.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="featuretags_csharp">
+<a href="#featuretags_csharp" style="color: inherit; text-decoration: inherit;">Feature<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getapplicationfeaturetag">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Outputs.<wbr>Get<wbr>Application<wbr>Feature<wbr>Tag&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `features` block as described below.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="groupmembershipclaims_csharp">
 <a href="#groupmembershipclaims_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Membership<wbr>Claims</a>
 </span>
@@ -525,6 +534,15 @@ The following output properties are available:
     <dd>{{% md %}}URL of the application's support page.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of tags applied to the application.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="termsofserviceurl_csharp">
 <a href="#termsofserviceurl_csharp" style="color: inherit; text-decoration: inherit;">Terms<wbr>Of<wbr>Service<wbr>Url</a>
 </span>
@@ -617,6 +635,15 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The fallback application type as public client, such as an installed application running on a mobile device.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="featuretags_go">
+<a href="#featuretags_go" style="color: inherit; text-decoration: inherit;">Feature<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getapplicationfeaturetag">[]Get<wbr>Application<wbr>Feature<wbr>Tag</a></span>
+    </dt>
+    <dd>{{% md %}}A `features` block as described below.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="groupmembershipclaims_go">
@@ -772,6 +799,15 @@ The following output properties are available:
     <dd>{{% md %}}URL of the application's support page.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of tags applied to the application.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="termsofserviceurl_go">
 <a href="#termsofserviceurl_go" style="color: inherit; text-decoration: inherit;">Terms<wbr>Of<wbr>Service<wbr>Url</a>
 </span>
@@ -864,6 +900,15 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The fallback application type as public client, such as an installed application running on a mobile device.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="featuretags_nodejs">
+<a href="#featuretags_nodejs" style="color: inherit; text-decoration: inherit;">feature<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getapplicationfeaturetag">Get<wbr>Application<wbr>Feature<wbr>Tag[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `features` block as described below.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="groupmembershipclaims_nodejs">
@@ -1019,6 +1064,15 @@ The following output properties are available:
     <dd>{{% md %}}URL of the application's support page.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of tags applied to the application.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="termsofserviceurl_nodejs">
 <a href="#termsofserviceurl_nodejs" style="color: inherit; text-decoration: inherit;">terms<wbr>Of<wbr>Service<wbr>Url</a>
 </span>
@@ -1111,6 +1165,15 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The fallback application type as public client, such as an installed application running on a mobile device.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="feature_tags_python">
+<a href="#feature_tags_python" style="color: inherit; text-decoration: inherit;">feature_<wbr>tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getapplicationfeaturetag">Sequence[Get<wbr>Application<wbr>Feature<wbr>Tag]</a></span>
+    </dt>
+    <dd>{{% md %}}A `features` block as described below.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="group_membership_claims_python">
@@ -1264,6 +1327,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of the application's support page.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of tags applied to the application.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="terms_of_service_url_python">
@@ -1992,6 +2064,170 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value that is used for the `roles` claim in ID tokens and OAuth 2.0 access tokens that are authenticating an assigned service or user principal.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getapplicationfeaturetag">Get<wbr>Application<wbr>Feature<wbr>Tag</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="customsinglesignon_csharp">
+<a href="#customsinglesignon_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Single<wbr>Sign<wbr>On</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this application represents a custom SAML application for linked service principals.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enterprise_csharp">
+<a href="#enterprise_csharp" style="color: inherit; text-decoration: inherit;">Enterprise</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this application represents an Enterprise Application for linked service principals.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gallery_csharp">
+<a href="#gallery_csharp" style="color: inherit; text-decoration: inherit;">Gallery</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this application represents a gallery application for linked service principals.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hide_csharp">
+<a href="#hide_csharp" style="color: inherit; text-decoration: inherit;">Hide</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this app is visible to users in My Apps and Office 365 Launcher.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="customsinglesignon_go">
+<a href="#customsinglesignon_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Single<wbr>Sign<wbr>On</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this application represents a custom SAML application for linked service principals.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enterprise_go">
+<a href="#enterprise_go" style="color: inherit; text-decoration: inherit;">Enterprise</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this application represents an Enterprise Application for linked service principals.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gallery_go">
+<a href="#gallery_go" style="color: inherit; text-decoration: inherit;">Gallery</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this application represents a gallery application for linked service principals.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hide_go">
+<a href="#hide_go" style="color: inherit; text-decoration: inherit;">Hide</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this app is visible to users in My Apps and Office 365 Launcher.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="customsinglesignon_nodejs">
+<a href="#customsinglesignon_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Single<wbr>Sign<wbr>On</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether this application represents a custom SAML application for linked service principals.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enterprise_nodejs">
+<a href="#enterprise_nodejs" style="color: inherit; text-decoration: inherit;">enterprise</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether this application represents an Enterprise Application for linked service principals.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gallery_nodejs">
+<a href="#gallery_nodejs" style="color: inherit; text-decoration: inherit;">gallery</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether this application represents a gallery application for linked service principals.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hide_nodejs">
+<a href="#hide_nodejs" style="color: inherit; text-decoration: inherit;">hide</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether this app is visible to users in My Apps and Office 365 Launcher.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="custom_single_sign_on_python">
+<a href="#custom_single_sign_on_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>single_<wbr>sign_<wbr>on</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this application represents a custom SAML application for linked service principals.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enterprise_python">
+<a href="#enterprise_python" style="color: inherit; text-decoration: inherit;">enterprise</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this application represents an Enterprise Application for linked service principals.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gallery_python">
+<a href="#gallery_python" style="color: inherit; text-decoration: inherit;">gallery</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this application represents a gallery application for linked service principals.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hide_python">
+<a href="#hide_python" style="color: inherit; text-decoration: inherit;">hide</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this app is visible to users in My Apps and Office 365 Launcher.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
