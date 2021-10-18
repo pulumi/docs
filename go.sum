@@ -77,3 +77,5 @@ github.com/pulumi/theme v0.0.0-20211017013727-7c3cbbfbc30f h1:ayIqIPR4Vdw3BBuO9U
 github.com/pulumi/theme v0.0.0-20211017013727-7c3cbbfbc30f/go.mod h1:Ksr+ztEgwxDLYFRalb0SYu4WcGROgnF35iILealOMno=
 github.com/pulumi/theme v0.0.0-20211018062542-b0f4be1e4131 h1:YkEZXaIsOUFsjfCWf1RrKbGoT7V+5tmIlpN5u5bzfpk=
 github.com/pulumi/theme v0.0.0-20211018062542-b0f4be1e4131/go.mod h1:Ksr+ztEgwxDLYFRalb0SYu4WcGROgnF35iILealOMno=
+github.com/pulumi/theme v0.0.0-20211018062545-66e5ebab7332 h1:GraQaIW9A/+QwijhakuLsvgHGVtv2tGkIMAyn1ECT/A=
+github.com/pulumi/theme v0.0.0-20211018062545-66e5ebab7332/go.mod h1:Ksr+ztEgwxDLYFRalb0SYu4WcGROgnF35iILealOMno=
