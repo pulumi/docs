@@ -276,6 +276,30 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Azure resource type{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="createdat_csharp">
+<a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="createdby_csharp">
+<a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="createdbytype_csharp">
+<a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -292,13 +316,29 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="sourcecontrolid_csharp">
-<a href="#sourcecontrolid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Control<wbr>Id</a>
+        <span id="lastmodifiedat_csharp">
+<a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id (a Guid) of the source control{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="lastmodifiedby_csharp">
+<a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="lastmodifiedbytype_csharp">
+<a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -368,6 +408,30 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Azure resource type{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="createdat_go">
+<a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="createdby_go">
+<a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="createdbytype_go">
+<a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -384,13 +448,29 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="sourcecontrolid_go">
-<a href="#sourcecontrolid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Control<wbr>Id</a>
+        <span id="lastmodifiedat_go">
+<a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id (a Guid) of the source control{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="lastmodifiedby_go">
+<a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="lastmodifiedbytype_go">
+<a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -460,6 +540,30 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Azure resource type{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="createdat_nodejs">
+<a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="createdby_nodejs">
+<a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="createdbytype_nodejs">
+<a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -476,13 +580,29 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="sourcecontrolid_nodejs">
-<a href="#sourcecontrolid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Control<wbr>Id</a>
+        <span id="lastmodifiedat_nodejs">
+<a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id (a Guid) of the source control{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="lastmodifiedby_nodejs">
+<a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="lastmodifiedbytype_nodejs">
+<a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -552,6 +672,30 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Azure resource type{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="created_at_python">
+<a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="created_by_python">
+<a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="created_by_type_python">
+<a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -568,13 +712,29 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="source_control_id_python">
-<a href="#source_control_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>control_<wbr>id</a>
+        <span id="last_modified_at_python">
+<a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The id (a Guid) of the source control{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="last_modified_by_python">
+<a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="last_modified_by_type_python">
+<a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -682,6 +842,22 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Branch name of repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deploymentlogsurl_csharp">
+<a href="#deploymentlogsurl_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Logs<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Url to access repository action logs.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="displayurl_csharp">
+<a href="#displayurl_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Display url of repository.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="pathmapping_csharp">
 <a href="#pathmapping_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Mapping</a>
 </span>
@@ -709,6 +885,22 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Branch name of repository.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deploymentlogsurl_go">
+<a href="#deploymentlogsurl_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Logs<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Url to access repository action logs.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="displayurl_go">
+<a href="#displayurl_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Display url of repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pathmapping_go">
 <a href="#pathmapping_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Mapping</a>
@@ -738,6 +930,22 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Branch name of repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deploymentlogsurl_nodejs">
+<a href="#deploymentlogsurl_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Logs<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Url to access repository action logs.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="displayurl_nodejs">
+<a href="#displayurl_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Display url of repository.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="pathmapping_nodejs">
 <a href="#pathmapping_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Mapping</a>
 </span>
@@ -765,6 +973,22 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Branch name of repository.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deployment_logs_url_python">
+<a href="#deployment_logs_url_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>logs_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Url to access repository action logs.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="display_url_python">
+<a href="#display_url_python" style="color: inherit; text-decoration: inherit;">display_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Display url of repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_mapping_python">
 <a href="#path_mapping_python" style="color: inherit; text-decoration: inherit;">path_<wbr>mapping</a>

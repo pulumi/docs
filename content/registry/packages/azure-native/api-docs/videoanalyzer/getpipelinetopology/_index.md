@@ -1614,6 +1614,14 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="credentials_csharp">
+<a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#usernamepasswordcredentialsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Video<wbr>Analyzer.<wbr>Inputs.<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Credentials to be presented to the endpoint.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
 </span>
@@ -1621,14 +1629,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for Video Analyzer to connect to.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="credentials_csharp">
-<a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usernamepasswordcredentialsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Video<wbr>Analyzer.<wbr>Inputs.<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Credentials to be presented to the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trustedcertificates_csharp">
 <a href="#trustedcertificates_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Certificates</a>
@@ -1658,6 +1658,14 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="credentials_go">
+<a href="#credentials_go" style="color: inherit; text-decoration: inherit;">Credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#usernamepasswordcredentialsresponse">Username<wbr>Password<wbr>Credentials<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Credentials to be presented to the endpoint.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
 </span>
@@ -1665,14 +1673,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for Video Analyzer to connect to.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="credentials_go">
-<a href="#credentials_go" style="color: inherit; text-decoration: inherit;">Credentials</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usernamepasswordcredentialsresponse">Username<wbr>Password<wbr>Credentials<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Credentials to be presented to the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trustedcertificates_go">
 <a href="#trustedcertificates_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Certificates</a>
@@ -1702,6 +1702,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="credentials_nodejs">
+<a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#usernamepasswordcredentialsresponse">Username<wbr>Password<wbr>Credentials<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Credentials to be presented to the endpoint.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
@@ -1709,14 +1717,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for Video Analyzer to connect to.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="credentials_nodejs">
-<a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usernamepasswordcredentialsresponse">Username<wbr>Password<wbr>Credentials<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Credentials to be presented to the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trustedcertificates_nodejs">
 <a href="#trustedcertificates_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Certificates</a>
@@ -1746,6 +1746,14 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="credentials_python">
+<a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#usernamepasswordcredentialsresponse">Username<wbr>Password<wbr>Credentials<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Credentials to be presented to the endpoint.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
@@ -1753,14 +1761,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for Video Analyzer to connect to.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="credentials_python">
-<a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usernamepasswordcredentialsresponse">Username<wbr>Password<wbr>Credentials<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Credentials to be presented to the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trusted_certificates_python">
 <a href="#trusted_certificates_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>certificates</a>
@@ -1878,6 +1878,14 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="credentials_csharp">
+<a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#usernamepasswordcredentialsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Video<wbr>Analyzer.<wbr>Inputs.<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Credentials to be presented to the endpoint.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
 </span>
@@ -1885,14 +1893,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for Video Analyzer to connect to.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="credentials_csharp">
-<a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usernamepasswordcredentialsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Video<wbr>Analyzer.<wbr>Inputs.<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Credentials to be presented to the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tunnel_csharp">
 <a href="#tunnel_csharp" style="color: inherit; text-decoration: inherit;">Tunnel</a>
@@ -1906,6 +1906,14 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="credentials_go">
+<a href="#credentials_go" style="color: inherit; text-decoration: inherit;">Credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#usernamepasswordcredentialsresponse">Username<wbr>Password<wbr>Credentials<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Credentials to be presented to the endpoint.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
 </span>
@@ -1913,14 +1921,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for Video Analyzer to connect to.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="credentials_go">
-<a href="#credentials_go" style="color: inherit; text-decoration: inherit;">Credentials</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usernamepasswordcredentialsresponse">Username<wbr>Password<wbr>Credentials<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Credentials to be presented to the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tunnel_go">
 <a href="#tunnel_go" style="color: inherit; text-decoration: inherit;">Tunnel</a>
@@ -1934,6 +1934,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="credentials_nodejs">
+<a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#usernamepasswordcredentialsresponse">Username<wbr>Password<wbr>Credentials<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Credentials to be presented to the endpoint.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
@@ -1941,14 +1949,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for Video Analyzer to connect to.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="credentials_nodejs">
-<a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usernamepasswordcredentialsresponse">Username<wbr>Password<wbr>Credentials<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Credentials to be presented to the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tunnel_nodejs">
 <a href="#tunnel_nodejs" style="color: inherit; text-decoration: inherit;">tunnel</a>
@@ -1962,6 +1962,14 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="credentials_python">
+<a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#usernamepasswordcredentialsresponse">Username<wbr>Password<wbr>Credentials<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Credentials to be presented to the endpoint.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
@@ -1969,14 +1977,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for Video Analyzer to connect to.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="credentials_python">
-<a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usernamepasswordcredentialsresponse">Username<wbr>Password<wbr>Credentials<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Credentials to be presented to the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tunnel_python">
 <a href="#tunnel_python" style="color: inherit; text-decoration: inherit;">tunnel</a>
@@ -2092,7 +2092,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Video retention period indicates how long the video is kept in storage. Value must be specified in ISO8601 duration format (i.e. "PT1D" equals 1 day) and can vary between 1 day to 10 years, in 1 day increments. When absent (null), all video content is retained indefinitely. This property is only allowed for topologies where "kind" is set to "live".{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Video retention period indicates how long the video is kept in storage. Value must be specified in ISO8601 duration format (i.e. "P1D" equals 1 day) and can vary between 1 day to 10 years, in 1 day increments. When absent (null), all video content is retained indefinitely. This property is only allowed for topologies where "kind" is set to "live".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="segmentlength_csharp">
 <a href="#segmentlength_csharp" style="color: inherit; text-decoration: inherit;">Segment<wbr>Length</a>
@@ -2128,7 +2128,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Video retention period indicates how long the video is kept in storage. Value must be specified in ISO8601 duration format (i.e. "PT1D" equals 1 day) and can vary between 1 day to 10 years, in 1 day increments. When absent (null), all video content is retained indefinitely. This property is only allowed for topologies where "kind" is set to "live".{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Video retention period indicates how long the video is kept in storage. Value must be specified in ISO8601 duration format (i.e. "P1D" equals 1 day) and can vary between 1 day to 10 years, in 1 day increments. When absent (null), all video content is retained indefinitely. This property is only allowed for topologies where "kind" is set to "live".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="segmentlength_go">
 <a href="#segmentlength_go" style="color: inherit; text-decoration: inherit;">Segment<wbr>Length</a>
@@ -2164,7 +2164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Video retention period indicates how long the video is kept in storage. Value must be specified in ISO8601 duration format (i.e. "PT1D" equals 1 day) and can vary between 1 day to 10 years, in 1 day increments. When absent (null), all video content is retained indefinitely. This property is only allowed for topologies where "kind" is set to "live".{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Video retention period indicates how long the video is kept in storage. Value must be specified in ISO8601 duration format (i.e. "P1D" equals 1 day) and can vary between 1 day to 10 years, in 1 day increments. When absent (null), all video content is retained indefinitely. This property is only allowed for topologies where "kind" is set to "live".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="segmentlength_nodejs">
 <a href="#segmentlength_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Length</a>
@@ -2200,7 +2200,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Video retention period indicates how long the video is kept in storage. Value must be specified in ISO8601 duration format (i.e. "PT1D" equals 1 day) and can vary between 1 day to 10 years, in 1 day increments. When absent (null), all video content is retained indefinitely. This property is only allowed for topologies where "kind" is set to "live".{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Video retention period indicates how long the video is kept in storage. Value must be specified in ISO8601 duration format (i.e. "P1D" equals 1 day) and can vary between 1 day to 10 years, in 1 day increments. When absent (null), all video content is retained indefinitely. This property is only allowed for topologies where "kind" is set to "live".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="segment_length_python">
 <a href="#segment_length_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>length</a>
