@@ -3,6 +3,8 @@
 title: "Domain"
 title_tag: "aws.sagemaker.Domain"
 meta_desc: "Documentation for the aws.sagemaker.Domain resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

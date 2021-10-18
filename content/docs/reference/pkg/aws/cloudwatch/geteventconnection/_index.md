@@ -3,6 +3,8 @@
 title: "getEventConnection"
 title_tag: "aws.cloudwatch.getEventConnection"
 meta_desc: "Documentation for the aws.cloudwatch.getEventConnection function with examples, input properties, output properties, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

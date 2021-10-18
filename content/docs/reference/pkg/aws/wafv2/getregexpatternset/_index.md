@@ -3,6 +3,8 @@
 title: "getRegexPatternSet"
 title_tag: "aws.wafv2.getRegexPatternSet"
 meta_desc: "Documentation for the aws.wafv2.getRegexPatternSet function with examples, input properties, output properties, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

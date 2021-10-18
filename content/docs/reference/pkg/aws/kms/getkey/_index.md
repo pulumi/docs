@@ -3,6 +3,8 @@
 title: "getKey"
 title_tag: "aws.kms.getKey"
 meta_desc: "Documentation for the aws.kms.getKey function with examples, input properties, output properties, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

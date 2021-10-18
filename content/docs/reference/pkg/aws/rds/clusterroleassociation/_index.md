@@ -3,6 +3,8 @@
 title: "ClusterRoleAssociation"
 title_tag: "aws.rds.ClusterRoleAssociation"
 meta_desc: "Documentation for the aws.rds.ClusterRoleAssociation resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

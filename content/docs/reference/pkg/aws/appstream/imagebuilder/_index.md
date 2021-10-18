@@ -3,6 +3,8 @@
 title: "ImageBuilder"
 title_tag: "aws.appstream.ImageBuilder"
 meta_desc: "Documentation for the aws.appstream.ImageBuilder resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

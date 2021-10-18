@@ -3,6 +3,8 @@
 title: "Policy"
 title_tag: "aws.iot.Policy"
 meta_desc: "Documentation for the aws.iot.Policy resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

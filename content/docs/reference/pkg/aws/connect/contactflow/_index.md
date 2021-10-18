@@ -3,6 +3,8 @@
 title: "ContactFlow"
 title_tag: "aws.connect.ContactFlow"
 meta_desc: "Documentation for the aws.connect.ContactFlow resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

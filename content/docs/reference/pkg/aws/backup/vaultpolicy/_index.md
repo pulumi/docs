@@ -3,6 +3,8 @@
 title: "VaultPolicy"
 title_tag: "aws.backup.VaultPolicy"
 meta_desc: "Documentation for the aws.backup.VaultPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

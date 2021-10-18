@@ -3,6 +3,8 @@
 title: "DaemonSet"
 title_tag: "kubernetes.apps/v1.DaemonSet"
 meta_desc: "Documentation for the kubernetes.apps/v1.DaemonSet resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

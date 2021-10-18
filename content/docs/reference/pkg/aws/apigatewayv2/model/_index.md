@@ -3,6 +3,8 @@
 title: "Model"
 title_tag: "aws.apigatewayv2.Model"
 meta_desc: "Documentation for the aws.apigatewayv2.Model resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

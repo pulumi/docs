@@ -3,6 +3,8 @@
 title: "ApnsVoipChannel"
 title_tag: "aws.pinpoint.ApnsVoipChannel"
 meta_desc: "Documentation for the aws.pinpoint.ApnsVoipChannel resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

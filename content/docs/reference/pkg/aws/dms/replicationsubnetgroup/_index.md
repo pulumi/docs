@@ -3,6 +3,8 @@
 title: "ReplicationSubnetGroup"
 title_tag: "aws.dms.ReplicationSubnetGroup"
 meta_desc: "Documentation for the aws.dms.ReplicationSubnetGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

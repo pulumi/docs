@@ -3,6 +3,8 @@
 title: "ResourceAssociation"
 title_tag: "aws.ram.ResourceAssociation"
 meta_desc: "Documentation for the aws.ram.ResourceAssociation resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

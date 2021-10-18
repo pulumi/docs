@@ -3,6 +3,8 @@
 title: "getPrebuiltEcrImage"
 title_tag: "aws.sagemaker.getPrebuiltEcrImage"
 meta_desc: "Documentation for the aws.sagemaker.getPrebuiltEcrImage function with examples, input properties, output properties, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

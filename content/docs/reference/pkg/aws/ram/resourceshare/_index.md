@@ -3,6 +3,8 @@
 title: "ResourceShare"
 title_tag: "aws.ram.ResourceShare"
 meta_desc: "Documentation for the aws.ram.ResourceShare resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

@@ -3,6 +3,8 @@
 title: "PlacementGroup"
 title_tag: "aws.ec2.PlacementGroup"
 meta_desc: "Documentation for the aws.ec2.PlacementGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

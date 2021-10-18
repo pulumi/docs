@@ -3,6 +3,8 @@
 title: "PartitionIndex"
 title_tag: "aws.glue.PartitionIndex"
 meta_desc: "Documentation for the aws.glue.PartitionIndex resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

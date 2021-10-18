@@ -3,6 +3,8 @@
 title: "Workspace"
 title_tag: "aws.workspaces.Workspace"
 meta_desc: "Documentation for the aws.workspaces.Workspace resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

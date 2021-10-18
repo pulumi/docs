@@ -3,6 +3,8 @@
 title: "EndpointConfiguration"
 title_tag: "aws.sagemaker.EndpointConfiguration"
 meta_desc: "Documentation for the aws.sagemaker.EndpointConfiguration resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

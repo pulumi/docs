@@ -3,6 +3,8 @@
 title: "S3BucketAssociation"
 title_tag: "aws.macie.S3BucketAssociation"
 meta_desc: "Documentation for the aws.macie.S3BucketAssociation resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

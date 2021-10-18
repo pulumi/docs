@@ -3,6 +3,8 @@
 title: "getPublicKey"
 title_tag: "aws.kms.getPublicKey"
 meta_desc: "Documentation for the aws.kms.getPublicKey function with examples, input properties, output properties, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

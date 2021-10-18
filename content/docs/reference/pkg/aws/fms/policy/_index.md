@@ -3,6 +3,8 @@
 title: "Policy"
 title_tag: "aws.fms.Policy"
 meta_desc: "Documentation for the aws.fms.Policy resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

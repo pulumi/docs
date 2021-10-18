@@ -3,6 +3,8 @@
 title: "getVpnAttachment"
 title_tag: "aws.ec2transitgateway.getVpnAttachment"
 meta_desc: "Documentation for the aws.ec2transitgateway.getVpnAttachment function with examples, input properties, output properties, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

@@ -3,6 +3,8 @@
 title: "PriorityClass"
 title_tag: "kubernetes.scheduling.k8s.io/v1alpha1.PriorityClass"
 meta_desc: "Documentation for the kubernetes.scheduling.k8s.io/v1alpha1.PriorityClass resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 

@@ -3,6 +3,8 @@
 title: "Backup"
 title_tag: "aws.fsx.Backup"
 meta_desc: "Documentation for the aws.fsx.Backup resource with examples, input properties, output properties, lookup functions, and supporting types."
+layout: api
+no_edit_this_page: true
 ---
 
 
