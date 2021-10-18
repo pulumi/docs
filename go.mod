@@ -3,12 +3,7 @@ module github.com/pulumi/pulumi-docs
 go 1.16
 
 require (
-	github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20211015231249-90f2aab1a03c // indirect
-	github.com/pulumi/registry/themes/default v0.0.0-20210929002709-940e5a1d2c43 // indirect
-	github.com/pulumi/theme v0.0.0-20211015193555-271ef1f67093 // indirect
+	github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20211018004138-d0595a16d2c1 // indirect
+	github.com/pulumi/registry v0.0.0-20211018002248-032308df8c9b // indirect
+	github.com/pulumi/theme v0.0.0-20211017013727-7c3cbbfbc30f // indirect
 )
-
-// The override is needed because this repo is currently private and module at themes/default
-// will be considered a private Go module as well. We could configure an SSH key to get around
-// that but this is simpler for the time being.
-replace github.com/pulumi/registry/themes/default => ../registry/themes/default
