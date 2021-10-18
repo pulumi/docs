@@ -8,14 +8,14 @@ layout: product-packages
 overview:
     title: Build and reuse cloud infrastructure as code
     description: |
-        Pulumi Packages give you the building blocks to easily build and deploy cloud infrastructure with TypeScript/JavaScript, Python, Go, and C#. Provision resources from all of the top clouds and SaaS providers to build cloud infrastructure that meets your needs. For popular architectures like Kubernetes or serverless, use Pulumi components to get to production faster than ever.
+        Pulumi Packages give you the building blocks to easily build and deploy cloud infrastructure with TypeScript/JavaScript, Python, Go, and C#. Provision resources from the top clouds and SaaS providers to build cloud infrastructure that meets your needs. For popular architectures like Kubernetes or serverless, use Pulumi components to get to production faster than ever.
 
 details:
     title: A package for every cloud and architecture
     providers:
         title: Providers give you direct access to cloud resources
         description: |
-            Choose from over 60 providers to build your infrastructure from scratch with cloud and SaaS integrations. Get the most comprehensive resource coverage of AWS, Azure, Google Cloud, and Kubernetes with same-day access to new features by using Pulumi Native Providers.
+            Use over 60 providers to build your infrastructure from scratch with cloud and SaaS integrations. Pulumi Native Providers give you the most comprehensive resource coverage of AWS, Azure, Google Cloud, and Kubernetes with same-day access to new features.
         ide:
             - title: index.ts
               language: typescript
@@ -189,7 +189,7 @@ details:
     components:
         title: Components give you production-ready cloud architectures
         description: |
-            Build production-quality cloud architectures faster and smarter by reusing component libraries. These higher-level building blocks come with best practices and sensible defaults built in so you can spend less time on configuration and more time on building applications.
+            Build production-quality cloud architectures faster and smarter with components. These higher-level building blocks come with best practices and sensible defaults built in so you can spend less time on configuration and more time on building applications.
         ide:
             - title: index.ts
               language: typescript
