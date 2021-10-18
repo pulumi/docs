@@ -50,6 +50,7 @@ class MyStack : Stack
             Repository = new AzureNative.SecurityInsights.Inputs.RepositoryArgs
             {
                 Branch = "master",
+                DisplayUrl = "https://github.com/user/repo",
                 PathMapping = 
                 {
                     new AzureNative.SecurityInsights.Inputs.ContentPathMapArgs
@@ -103,7 +104,8 @@ func main() {
 			OperationalInsightsResourceProvider: pulumi.String("Microsoft.OperationalInsights"),
 			RepoType:                            pulumi.String("Github"),
 			Repository: &securityinsights.RepositoryArgs{
-				Branch: pulumi.String("master"),
+				Branch:     pulumi.String("master"),
+				DisplayUrl: pulumi.String("https://github.com/user/repo"),
 				PathMapping: securityinsights.ContentPathMapArray{
 					&securityinsights.ContentPathMapArgs{
 						ContentType: pulumi.String("AnalyticRules"),
@@ -152,6 +154,7 @@ source_control = azure_native.securityinsights.SourceControl("sourceControl",
     repo_type="Github",
     repository=azure_native.securityinsights.RepositoryArgs(
         branch="master",
+        display_url="https://github.com/user/repo",
         path_mapping=[
             azure_native.securityinsights.ContentPathMapArgs(
                 content_type="AnalyticRules",
@@ -193,6 +196,7 @@ const sourceControl = new azure_native.securityinsights.SourceControl("sourceCon
     repoType: "Github",
     repository: {
         branch: "master",
+        displayUrl: "https://github.com/user/repo",
         pathMapping: [
             {
                 contentType: "AnalyticRules",
@@ -237,9 +241,16 @@ const sourceControl = new azure_native.securityinsights.SourceControl("sourceCon
 <span class="k">def </span><span class="nx">SourceControl</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                   <span class="nx">content_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[str, ContentType]]]</span> = None<span class="p">,</span>
+                  <span class="nx">created_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">created_by</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">created_by_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, CreatedByType]]</span> = None<span class="p">,</span>
                   <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">last_modified_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">last_modified_by</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">last_modified_by_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, CreatedByType]]</span> = None<span class="p">,</span>
                   <span class="nx">operational_insights_resource_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">repo_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, RepoType]]</span> = None<span class="p">,</span>
                   <span class="nx">repository</span><span class="p">:</span> <span class="nx">Optional[RepositoryArgs]</span> = None<span class="p">,</span>
@@ -431,6 +442,30 @@ The SourceControl resource accepts the following [input]({{< relref "/docs/intro
     </dt>
     <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="createdat_csharp">
+<a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdby_csharp">
+<a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_csharp">
+<a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#createdbytype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Created<wbr>By<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -447,13 +482,45 @@ The SourceControl resource accepts the following [input]({{< relref "/docs/intro
     </dt>
     <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The id (a Guid) of the source control{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_csharp">
+<a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_csharp">
+<a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_csharp">
+<a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#createdbytype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Created<wbr>By<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sourcecontrolid_csharp">
 <a href="#sourcecontrolid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Control<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id (a Guid) of the source control{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Source control Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -515,6 +582,30 @@ The SourceControl resource accepts the following [input]({{< relref "/docs/intro
     </dt>
     <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="createdat_go">
+<a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdby_go">
+<a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_go">
+<a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#createdbytype">Created<wbr>By<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -531,13 +622,45 @@ The SourceControl resource accepts the following [input]({{< relref "/docs/intro
     </dt>
     <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The id (a Guid) of the source control{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_go">
+<a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_go">
+<a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_go">
+<a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#createdbytype">Created<wbr>By<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sourcecontrolid_go">
 <a href="#sourcecontrolid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Control<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id (a Guid) of the source control{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Source control Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -599,6 +722,30 @@ The SourceControl resource accepts the following [input]({{< relref "/docs/intro
     </dt>
     <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="createdat_nodejs">
+<a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdby_nodejs">
+<a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_nodejs">
+<a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#createdbytype">Created<wbr>By<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -615,13 +762,45 @@ The SourceControl resource accepts the following [input]({{< relref "/docs/intro
     </dt>
     <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The id (a Guid) of the source control{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_nodejs">
+<a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_nodejs">
+<a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_nodejs">
+<a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#createdbytype">Created<wbr>By<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sourcecontrolid_nodejs">
 <a href="#sourcecontrolid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Control<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id (a Guid) of the source control{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Source control Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -683,6 +862,30 @@ The SourceControl resource accepts the following [input]({{< relref "/docs/intro
     </dt>
     <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="created_at_python">
+<a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="created_by_python">
+<a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="created_by_type_python">
+<a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#createdbytype">Created<wbr>By<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -699,13 +902,45 @@ The SourceControl resource accepts the following [input]({{< relref "/docs/intro
     </dt>
     <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The id (a Guid) of the source control{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_at_python">
+<a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_by_python">
+<a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_by_type_python">
+<a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#createdbytype">Created<wbr>By<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="source_control_id_python">
 <a href="#source_control_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>control_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The id (a Guid) of the source control{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Source control Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1059,6 +1294,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Workbook</dd></dl>
 {{% /choosable %}}
 
+<h4 id="createdbytype">Created<wbr>By<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>User</dt>
+    <dd>User</dd><dt>Application</dt>
+    <dd>Application</dd><dt>Managed<wbr>Identity</dt>
+    <dd>ManagedIdentity</dd><dt>Key</dt>
+    <dd>Key</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Created<wbr>By<wbr>Type<wbr>User</dt>
+    <dd>User</dd><dt>Created<wbr>By<wbr>Type<wbr>Application</dt>
+    <dd>Application</dd><dt>Created<wbr>By<wbr>Type<wbr>Managed<wbr>Identity</dt>
+    <dd>ManagedIdentity</dd><dt>Created<wbr>By<wbr>Type<wbr>Key</dt>
+    <dd>Key</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>User</dt>
+    <dd>User</dd><dt>Application</dt>
+    <dd>Application</dd><dt>Managed<wbr>Identity</dt>
+    <dd>ManagedIdentity</dd><dt>Key</dt>
+    <dd>Key</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>USER</dt>
+    <dd>User</dd><dt>APPLICATION</dt>
+    <dd>Application</dd><dt>MANAGED_IDENTITY</dt>
+    <dd>ManagedIdentity</dd><dt>KEY</dt>
+    <dd>Key</dd></dl>
+{{% /choosable %}}
+
 <h4 id="repotype">Repo<wbr>Type</h4>
 
 {{% choosable language csharp %}}
@@ -1098,6 +1367,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Branch name of repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deploymentlogsurl_csharp">
+<a href="#deploymentlogsurl_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Logs<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Url to access repository action logs.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="displayurl_csharp">
+<a href="#displayurl_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Display url of repository.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="pathmapping_csharp">
 <a href="#pathmapping_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Mapping</a>
 </span>
@@ -1125,6 +1410,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Branch name of repository.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deploymentlogsurl_go">
+<a href="#deploymentlogsurl_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Logs<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Url to access repository action logs.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="displayurl_go">
+<a href="#displayurl_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Display url of repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pathmapping_go">
 <a href="#pathmapping_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Mapping</a>
@@ -1154,6 +1455,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Branch name of repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deploymentlogsurl_nodejs">
+<a href="#deploymentlogsurl_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Logs<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Url to access repository action logs.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="displayurl_nodejs">
+<a href="#displayurl_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Display url of repository.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="pathmapping_nodejs">
 <a href="#pathmapping_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Mapping</a>
 </span>
@@ -1181,6 +1498,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Branch name of repository.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deployment_logs_url_python">
+<a href="#deployment_logs_url_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>logs_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Url to access repository action logs.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="display_url_python">
+<a href="#display_url_python" style="color: inherit; text-decoration: inherit;">display_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Display url of repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_mapping_python">
 <a href="#path_mapping_python" style="color: inherit; text-decoration: inherit;">path_<wbr>mapping</a>
@@ -1212,6 +1545,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Branch name of repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deploymentlogsurl_csharp">
+<a href="#deploymentlogsurl_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Logs<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Url to access repository action logs.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="displayurl_csharp">
+<a href="#displayurl_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Display url of repository.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="pathmapping_csharp">
 <a href="#pathmapping_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Mapping</a>
 </span>
@@ -1239,6 +1588,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Branch name of repository.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deploymentlogsurl_go">
+<a href="#deploymentlogsurl_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Logs<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Url to access repository action logs.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="displayurl_go">
+<a href="#displayurl_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Display url of repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pathmapping_go">
 <a href="#pathmapping_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Mapping</a>
@@ -1268,6 +1633,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Branch name of repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deploymentlogsurl_nodejs">
+<a href="#deploymentlogsurl_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Logs<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Url to access repository action logs.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="displayurl_nodejs">
+<a href="#displayurl_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Display url of repository.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="pathmapping_nodejs">
 <a href="#pathmapping_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Mapping</a>
 </span>
@@ -1295,6 +1676,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Branch name of repository.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deployment_logs_url_python">
+<a href="#deployment_logs_url_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>logs_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Url to access repository action logs.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="display_url_python">
+<a href="#display_url_python" style="color: inherit; text-decoration: inherit;">display_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Display url of repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_mapping_python">
 <a href="#path_mapping_python" style="color: inherit; text-decoration: inherit;">path_<wbr>mapping</a>

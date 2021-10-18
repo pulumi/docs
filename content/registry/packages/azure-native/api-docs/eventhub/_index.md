@@ -24,6 +24,7 @@ Explore the resources and functions of the azure-native.eventhub module.
     <li><a href="namespacenetworkruleset" title="NamespaceNetworkRuleSet"><span class="api-symbol api-symbol--resource"></span>NamespaceNetworkRuleSet</a></li>
     <li><a href="namespacevirtualnetworkrule" title="NamespaceVirtualNetworkRule"><span class="api-symbol api-symbol--resource"></span>NamespaceVirtualNetworkRule</a></li>
     <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="api-symbol api-symbol--resource"></span>PrivateEndpointConnection</a></li>
+    <li><a href="schemaregistry" title="SchemaRegistry"><span class="api-symbol api-symbol--resource"></span>SchemaRegistry</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -39,6 +40,7 @@ Explore the resources and functions of the azure-native.eventhub module.
     <li><a href="getnamespacenetworkruleset" title="GetNamespaceNetworkRuleSet"><span class="api-symbol api-symbol--function"></span>GetNamespaceNetworkRuleSet</a></li>
     <li><a href="getnamespacevirtualnetworkrule" title="GetNamespaceVirtualNetworkRule"><span class="api-symbol api-symbol--function"></span>GetNamespaceVirtualNetworkRule</a></li>
     <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="api-symbol api-symbol--function"></span>GetPrivateEndpointConnection</a></li>
+    <li><a href="getschemaregistry" title="GetSchemaRegistry"><span class="api-symbol api-symbol--function"></span>GetSchemaRegistry</a></li>
     <li><a href="listdisasterrecoveryconfigkeys" title="ListDisasterRecoveryConfigKeys"><span class="api-symbol api-symbol--function"></span>ListDisasterRecoveryConfigKeys</a></li>
     <li><a href="listeventhubkeys" title="ListEventHubKeys"><span class="api-symbol api-symbol--function"></span>ListEventHubKeys</a></li>
     <li><a href="listnamespacekeys" title="ListNamespaceKeys"><span class="api-symbol api-symbol--function"></span>ListNamespaceKeys</a></li>
@@ -51,6 +53,6 @@ Explore the resources and functions of the azure-native.eventhub module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.39.0</dd>
+	<dd>1.40.0</dd>
 </dl>
 
