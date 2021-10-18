@@ -5,7 +5,9 @@ meta_desc: Pulumi's open source infrastructure as code SDK enables you to create
 
 hero:
   title: [ "Developer-First", "Infrastructure" ]
-  description: Adopt Cloud Engineering to Tame Modern Cloud Complexity. Your Cloud, Your Language, Your Way.
+  description: |
+    Adopt Cloud Engineering to Tame Modern Cloud Complexity.<br />
+    Your Cloud, Your Language, Your Way.
   cta_text: Get Started
 
 overview:

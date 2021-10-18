@@ -9,7 +9,7 @@
                 <span class="rainbow-text" data-text={{index (.Params.hero.title) 0}}>{{ index (.Params.hero.title) 0 }}</span><br />
                 <span class="rainbow-text" data-text={{index (.Params.hero.title) 1}}>{{ index (.Params.hero.title) 1 }}</span>
             </h1>
-            <p class="text-center max-w-xl leading-7">{{ .Params.hero.description }}</p>
+            <p class="text-center max-w-xl leading-7">{{ .Params.hero.description | markdownify }}</p>
             <div class="mt-8 text-center">
                 <div class="pb-12">
                     <a class="home-hero-btn-primary" href="{{ relref . "/docs/get-started" }}">{{ .Params.hero.cta_text }}</a>
@@ -209,7 +209,7 @@
                     <div>
                         <h5>{{ $item.title }}</h5>
                     </div>
-                    <div>
+                    <div class="description">
                         <p>{{ $item.description | markdownify }}</p>
                     </div>
                 </div>

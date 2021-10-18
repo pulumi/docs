@@ -32,11 +32,14 @@
 
         <div class="container mx-auto p-6">
             <h2 class="text-center mb-12">{{ .Params.details.title }}</h2>
-
             <h3 class="text-center">{{ .Params.details.providers.title }}</h3>
-
-            <div class="w-full flex flex-wrap">
-                <div class="w-full lg:w-2/3 order-last lg:order-first">
+            <div>
+                <div class="max-w-3xl mx-auto my-6">
+                    <div class="text-center">
+                        <p>{{ .Params.details.providers.description }}</p>
+                    </div>
+                </div>
+                <div class="card bg-white p-6">
                     <pulumi-chooser type="language" options="typescript,python,go,csharp">
                         {{ range $item := .Params.details.providers.ide }}
                             <pulumi-choosable type="language" class="highlight" value="{{ $item.language }}">
@@ -45,33 +48,21 @@
                         {{ end }}
                     </pulumi-chooser>
                 </div>
-
-                <div class="w-full lg:w-1/3 order-first my-8 lg:my-0 lg:order-last lg:pt-24 px-6">
-                    <div class="card bg-white p-6">
-                        <p>{{ .Params.details.providers.description }}</p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
     <section id="components" class="relative my-16 lg:my-32">
-        <div class="shape-background home-manage-section">
-            <div class="shape-container">
-                <div class="dot-background-container">
-                    <div class="dot-background-overlay"></div>
-                    <div class="dot-background no-animate"></div>
-                </div>
-                <div class="circle-left"></div>
-                <div class="circle-right"></div>
-            </div>
-        </div>
-
         <div class="container mx-auto p-6">
             <h3 class="text-center">{{ .Params.details.components.title }}</h3>
 
-            <div class="w-full flex flex-wrap">
-                <div class="w-full lg:w-2/3 order-last lg:order-first">
+            <div>
+                <div class="max-w-3xl mx-auto my-6">
+                    <div class="text-center">
+                        <p>{{ .Params.details.components.description }}</p>
+                    </div>
+                </div>
+                <div class="card bg-white p-6">
                     <pulumi-chooser type="language" options="typescript,python,go,csharp">
                         {{ range $item := .Params.details.components.ide }}
                             <pulumi-choosable type="language" class="highlight" value="{{ $item.language }}">
@@ -79,12 +70,6 @@
                             </pulumi-choosable>
                         {{ end }}
                     </pulumi-chooser>
-                </div>
-
-                <div class="w-full lg:w-1/3 order-first my-8 lg:my-0 lg:order-last lg:pt-24 px-6">
-                    <div class="card bg-white p-6">
-                        <p>{{ .Params.details.components.description }}</p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -100,19 +85,23 @@
                     <div class="circle-right"></div>
                 </div>
             </div>
-            {{ range $item := .Params.benefits.items }}
-                <div class="benefits-item card z-10 bg-white">
-                    <div class="icon-section">
-                        {{ partial "color-icon.html" (dict "icon" $item.icon "icon_color" $item.icon_color) }}
+            <div class="flex flex-wrap">
+                {{ range $item := .Params.benefits.items }}
+                    <div class="w-full lg:w-1/2 p-6">
+                        <div class="card z-10 bg-white p-6">
+                            <div class="icon-section">
+                                {{ partial "color-icon.html" (dict "icon" $item.icon "icon_color" $item.icon_color) }}
+                            </div>
+                            <div>
+                                <h5>{{ $item.title }}</h5>
+                            </div>
+                            <div class="description">
+                                <p>{{ $item.description }}</p>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <h5>{{ $item.title }}</h5>
-                    </div>
-                    <div class="description">
-                        <p>{{ $item.description }}</p>
-                    </div>
-                </div>
-            {{ end }}
+                {{ end }}
+            </div>
         </div>
     </section>
 
@@ -153,7 +142,7 @@
                 <div class="w-full lg:w-1/2 px-4 py-2 lg:p-8 lg:px-4">
                     <div class="lg:shadow-2xl bg-violet-600 p-8 lg:px-12 lg:pt-4 g:pb-12 rounded-xl h-full">
                         <h4 class="text-white">{{ .Params.get_started.browse.title }}</h4>
-                        <p class="mb-24 text-white">{{ .Params.get_started.browse.description }}</p>
+                        <p class="mb-12 text-white">{{ .Params.get_started.browse.description }}</p>
                         <a href="{{ relref . "/registry" }}" class="btn-secondary">{{ .Params.get_started.browse.cta_text }}</a>
                     </div>
                 </div>
@@ -161,7 +150,7 @@
                 <div class="w-full lg:w-1/2 px-4 py-2 lg:p-8 lg:px-4">
                     <div class="border lg:border-none lg:shadow-2xl p-8 lg:px-12 lg:pt-4 g:pb-12 rounded-xl bg-white h-full">
                         <h4>{{ .Params.get_started.publish.title }}</h4>
-                        <p class="mb-24">{{ .Params.get_started.publish.description }}</p>
+                        <p class="mb-12">{{ .Params.get_started.publish.description }}</p>
                         <a href="{{ relref . "/docs/guides/pulumi-packages/#process-of-authoring-a-pulumi-package" }}" class="btn-secondary">{{ .Params.get_started.publish.cta_text }}</a>
                     </div>
                 </div>
