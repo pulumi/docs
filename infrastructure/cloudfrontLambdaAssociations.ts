@@ -140,23 +140,16 @@ function getRegistryRedirect(uri: string): string | undefined {
 }
 
 function getCloudProvidersRedirect(uri: string): string | undefined {
-    if (uri.includes("/docs/intro/cloud-providers/azure-classic/setup")) {
-        return "/registry/packages/azure/installation-configuration";
-    }
     if (uri.includes("/docs/intro/cloud-providers/azure-classic")) {
-        return "/registry/packages/azure";
-    }
-
-    if (uri.includes("/docs/intro/cloud-providers/azure/setup")) {
-        return "/registry/packages/azure-native/installation-configuration";
-    }
-    if (uri.includes("/docs/intro/cloud-providers/azure/version-guide")) {
-        return "/registry/packages/azure-native/version-guide";
+        return uri.replace("docs/intro/cloud-providers", "registry/packages")
+            .replace("azure-classic", "azure")
+            .replace("setup", "installation-configuration");
     }
     if (uri.includes("/docs/intro/cloud-providers/azure")) {
-        return "/registry/packages/azure-native";
+        return uri.replace("docs/intro/cloud-providers", "registry/packages")
+            .replace("azure", "azure-native")
+            .replace("setup", "installation-configuration");
     }
-
     if (uri.match(/\/docs\/intro\/cloud-providers/)) {
         return uri.replace("docs/intro/cloud-providers", "registry/packages")
             .replace("packet", "equinix-metal")
