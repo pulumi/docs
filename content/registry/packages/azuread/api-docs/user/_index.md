@@ -165,6 +165,7 @@ const example = new azuread.User("example", {
          <span class="nx">job_title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">mail</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">mail_nickname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">manager_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">mobile_phone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">office_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">onpremises_immutable_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -505,6 +506,15 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}The mail alias for the user. Defaults to the user name part of the user principal name (UPN).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="managerid_csharp">
+<a href="#managerid_csharp" style="color: inherit; text-decoration: inherit;">Manager<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The object ID of the user's manager.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="mobilephone_csharp">
 <a href="#mobilephone_csharp" style="color: inherit; text-decoration: inherit;">Mobile<wbr>Phone</a>
 </span>
@@ -813,6 +823,15 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mail alias for the user. Defaults to the user name part of the user principal name (UPN).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="managerid_go">
+<a href="#managerid_go" style="color: inherit; text-decoration: inherit;">Manager<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The object ID of the user's manager.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mobilephone_go">
@@ -1125,6 +1144,15 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}The mail alias for the user. Defaults to the user name part of the user principal name (UPN).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="managerid_nodejs">
+<a href="#managerid_nodejs" style="color: inherit; text-decoration: inherit;">manager<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The object ID of the user's manager.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="mobilephone_nodejs">
 <a href="#mobilephone_nodejs" style="color: inherit; text-decoration: inherit;">mobile<wbr>Phone</a>
 </span>
@@ -1433,6 +1461,15 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The mail alias for the user. Defaults to the user name part of the user principal name (UPN).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="manager_id_python">
+<a href="#manager_id_python" style="color: inherit; text-decoration: inherit;">manager_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The object ID of the user's manager.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mobile_phone_python">
@@ -2108,6 +2145,7 @@ Get an existing User resource's state with the given name, ID, and optional extr
         <span class="nx">job_title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">mail</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">mail_nickname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">manager_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">mobile_phone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">object_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">office_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -2465,6 +2503,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mail alias for the user. Defaults to the user name part of the user principal name (UPN).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_managerid_csharp">
+<a href="#state_managerid_csharp" style="color: inherit; text-decoration: inherit;">Manager<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The object ID of the user's manager.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mobilephone_csharp">
@@ -2894,6 +2941,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The mail alias for the user. Defaults to the user name part of the user principal name (UPN).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_managerid_go">
+<a href="#state_managerid_go" style="color: inherit; text-decoration: inherit;">Manager<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The object ID of the user's manager.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_mobilephone_go">
 <a href="#state_mobilephone_go" style="color: inherit; text-decoration: inherit;">Mobile<wbr>Phone</a>
 </span>
@@ -3321,6 +3377,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The mail alias for the user. Defaults to the user name part of the user principal name (UPN).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_managerid_nodejs">
+<a href="#state_managerid_nodejs" style="color: inherit; text-decoration: inherit;">manager<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The object ID of the user's manager.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_mobilephone_nodejs">
 <a href="#state_mobilephone_nodejs" style="color: inherit; text-decoration: inherit;">mobile<wbr>Phone</a>
 </span>
@@ -3746,6 +3811,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The mail alias for the user. Defaults to the user name part of the user principal name (UPN).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_manager_id_python">
+<a href="#state_manager_id_python" style="color: inherit; text-decoration: inherit;">manager_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The object ID of the user's manager.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mobile_phone_python">

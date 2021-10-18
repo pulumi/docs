@@ -375,6 +375,14 @@ The following output properties are available:
     <dd>{{% md %}}Display name for the permission that appears in the admin consent and app assignment experiences.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="featuretags_csharp">
+<a href="#featuretags_csharp" style="color: inherit; text-decoration: inherit;">Feature<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceprincipalfeaturetag">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Outputs.<wbr>Get<wbr>Service<wbr>Principal<wbr>Feature<wbr>Tag&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="features_csharp">
 <a href="#features_csharp" style="color: inherit; text-decoration: inherit;">Features</a>
 </span>
@@ -382,7 +390,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getserviceprincipalfeature">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Outputs.<wbr>Get<wbr>Service<wbr>Principal<wbr>Feature&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `features` block as described below.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This block has been renamed to `feature_tags` and will be removed in version 3.0 of the provider{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="homepageurl_csharp">
 <a href="#homepageurl_csharp" style="color: inherit; text-decoration: inherit;">Homepage<wbr>Url</a>
@@ -622,6 +630,14 @@ The following output properties are available:
     <dd>{{% md %}}Display name for the permission that appears in the admin consent and app assignment experiences.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="featuretags_go">
+<a href="#featuretags_go" style="color: inherit; text-decoration: inherit;">Feature<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceprincipalfeaturetag">[]Get<wbr>Service<wbr>Principal<wbr>Feature<wbr>Tag</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="features_go">
 <a href="#features_go" style="color: inherit; text-decoration: inherit;">Features</a>
 </span>
@@ -629,7 +645,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getserviceprincipalfeature">[]Get<wbr>Service<wbr>Principal<wbr>Feature</a></span>
     </dt>
     <dd>{{% md %}}A `features` block as described below.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This block has been renamed to `feature_tags` and will be removed in version 3.0 of the provider{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="homepageurl_go">
 <a href="#homepageurl_go" style="color: inherit; text-decoration: inherit;">Homepage<wbr>Url</a>
@@ -869,6 +885,14 @@ The following output properties are available:
     <dd>{{% md %}}Display name for the permission that appears in the admin consent and app assignment experiences.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="featuretags_nodejs">
+<a href="#featuretags_nodejs" style="color: inherit; text-decoration: inherit;">feature<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceprincipalfeaturetag">Get<wbr>Service<wbr>Principal<wbr>Feature<wbr>Tag[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="features_nodejs">
 <a href="#features_nodejs" style="color: inherit; text-decoration: inherit;">features</a>
 </span>
@@ -876,7 +900,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getserviceprincipalfeature">Get<wbr>Service<wbr>Principal<wbr>Feature[]</a></span>
     </dt>
     <dd>{{% md %}}A `features` block as described below.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This block has been renamed to `feature_tags` and will be removed in version 3.0 of the provider{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="homepageurl_nodejs">
 <a href="#homepageurl_nodejs" style="color: inherit; text-decoration: inherit;">homepage<wbr>Url</a>
@@ -1116,6 +1140,14 @@ The following output properties are available:
     <dd>{{% md %}}Display name for the permission that appears in the admin consent and app assignment experiences.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="feature_tags_python">
+<a href="#feature_tags_python" style="color: inherit; text-decoration: inherit;">feature_<wbr>tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceprincipalfeaturetag">Sequence[Get<wbr>Service<wbr>Principal<wbr>Feature<wbr>Tag]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="features_python">
 <a href="#features_python" style="color: inherit; text-decoration: inherit;">features</a>
 </span>
@@ -1123,7 +1155,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getserviceprincipalfeature">Sequence[Get<wbr>Service<wbr>Principal<wbr>Feature]</a></span>
     </dt>
     <dd>{{% md %}}A `features` block as described below.
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This block has been renamed to `feature_tags` and will be removed in version 3.0 of the provider{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="homepage_url_python">
 <a href="#homepage_url_python" style="color: inherit; text-decoration: inherit;">homepage_<wbr>url</a>
@@ -1683,6 +1715,154 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether this app is visible to users in My Apps and Office 365 Launcher.
 {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getserviceprincipalfeaturetag">Get<wbr>Service<wbr>Principal<wbr>Feature<wbr>Tag</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="customsinglesignon_csharp">
+<a href="#customsinglesignon_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Single<wbr>Sign<wbr>On</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enterprise_csharp">
+<a href="#enterprise_csharp" style="color: inherit; text-decoration: inherit;">Enterprise</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="gallery_csharp">
+<a href="#gallery_csharp" style="color: inherit; text-decoration: inherit;">Gallery</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="hide_csharp">
+<a href="#hide_csharp" style="color: inherit; text-decoration: inherit;">Hide</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="customsinglesignon_go">
+<a href="#customsinglesignon_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Single<wbr>Sign<wbr>On</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enterprise_go">
+<a href="#enterprise_go" style="color: inherit; text-decoration: inherit;">Enterprise</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="gallery_go">
+<a href="#gallery_go" style="color: inherit; text-decoration: inherit;">Gallery</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="hide_go">
+<a href="#hide_go" style="color: inherit; text-decoration: inherit;">Hide</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="customsinglesignon_nodejs">
+<a href="#customsinglesignon_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Single<wbr>Sign<wbr>On</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enterprise_nodejs">
+<a href="#enterprise_nodejs" style="color: inherit; text-decoration: inherit;">enterprise</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="gallery_nodejs">
+<a href="#gallery_nodejs" style="color: inherit; text-decoration: inherit;">gallery</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="hide_nodejs">
+<a href="#hide_nodejs" style="color: inherit; text-decoration: inherit;">hide</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="custom_single_sign_on_python">
+<a href="#custom_single_sign_on_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>single_<wbr>sign_<wbr>on</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enterprise_python">
+<a href="#enterprise_python" style="color: inherit; text-decoration: inherit;">enterprise</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="gallery_python">
+<a href="#gallery_python" style="color: inherit; text-decoration: inherit;">gallery</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="hide_python">
+<a href="#hide_python" style="color: inherit; text-decoration: inherit;">hide</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getserviceprincipaloauth2permissionscope">Get<wbr>Service<wbr>Principal<wbr>Oauth2Permission<wbr>Scope</h4>
