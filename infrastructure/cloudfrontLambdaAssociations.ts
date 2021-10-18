@@ -132,7 +132,78 @@ function getEdgeRedirectsLambdaCallback():
 }
 
 function getRedirect(uri: string): string | undefined {
-    return getSDKRedirect(uri);
+    return getRegistryRedirect(uri) || getSDKRedirect(uri);
+}
+
+function getRegistryRedirect(uri: string): string | undefined {
+    return getCloudProvidersRedirect(uri) || getAPIDocsRedirect(uri) || getTutorialsRedirect(uri) || undefined;
+}
+
+function getCloudProvidersRedirect(uri: string): string | undefined {
+    if (uri.includes("/docs/intro/cloud-providers/azure-classic/setup")) {
+        return "/registry/packages/azure/installation-configuration";
+    }
+    if (uri.includes("/docs/intro/cloud-providers/azure-classic")) {
+        return "/registry/packages/azure";
+    }
+
+    if (uri.includes("/docs/intro/cloud-providers/azure/setup")) {
+        return "/registry/packages/azure-native/installation-configuration";
+    }
+    if (uri.includes("/docs/intro/cloud-providers/azure/version-guide")) {
+        return "/registry/packages/azure-native/version-guide";
+    }
+    if (uri.includes("/docs/intro/cloud-providers/azure")) {
+        return "/registry/packages/azure-native";
+    }
+
+    if (uri.match(/\/docs\/intro\/cloud-providers/)) {
+        return uri.replace("docs/intro/cloud-providers", "registry/packages")
+            .replace("packet", "equinix-metal")
+            .replace("setup", "installation-configuration");
+    }
+
+    if (uri.match(/\/docs\/reference\/clouds/)) {
+        return uri.replace("docs/reference/clouds", "registry/packages")
+            .replace("packet", "equinix-metal")
+            .replace("setup", "installation-configuration");
+    }
+
+    return undefined;
+}
+
+function getAPIDocsRedirect(uri: string): string | undefined {
+    if (uri.match(/\/docs\/reference\/pkg\/nodejs|python|dotnet\//)) {
+        return undefined;
+    }
+
+    const apiDocsPage = uri.match(/\/docs\/reference\/pkg\/([^\/]+)/);
+    if (apiDocsPage) {
+        const packageName = apiDocsPage[1];
+
+        return uri.replace("docs/reference/pkg", "registry/packages")
+            .replace(packageName, `${packageName}/api-docs`);
+    }
+
+    return undefined;
+}
+
+function getTutorialsRedirect(uri: string): string | undefined {
+    const tutorialsPage = uri.match(/\/docs\/(?:reference\/)?tutorials\/([^\/]+)/);
+    if (tutorialsPage) {
+        const packageName = tutorialsPage[1];
+
+        // Don't redirect cloudfx, as we don't have a new home for its tutorial content yet.
+        if (packageName === "cloudfx") {
+            return undefined;
+        }
+
+        return uri.replace("docs/tutorials", "registry/packages")
+            .replace("docs/reference/tutorials", "registry/packages")
+            .replace(packageName, `${packageName}/how-to-guides`);
+    }
+
+    return undefined;
 }
 
 // getSDKRedirect conditionally redirects based on whether the request URL points

@@ -59,9 +59,3 @@ jobs:
         with:
           name: origin-bucket-metadata
           path: origin-bucket-metadata.json
-
-      - name: Archive Sentry release
-        uses: actions/upload-artifact@v2
-        with:
-          name: sentry-release
-          path: sentry-release

@@ -44,9 +44,6 @@ build:
 	@echo -e "\033[0;32mBUILD:\033[0m"
 	./scripts/build-site.sh
 
-.PHONY: lint
-lint:
-	yarn run lint-markdown
 
 .PHONY: test
 test:
@@ -80,14 +77,12 @@ new_learn_topic:
 ci_push::
 	$(MAKE) banner
 	$(MAKE) ensure
-	$(MAKE) lint
 	./scripts/ci-push.sh
 
 .PHONY: ci_pull_request
 ci_pull_request:
 	$(MAKE) banner
 	$(MAKE) ensure
-	$(MAKE) lint
 	./scripts/ci-pull-request.sh
 
 .PHONY: ci_pull_request_closed

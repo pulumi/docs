@@ -7,11 +7,6 @@
 # also this script to commit each provider's docs changes automatically.
 GIT_COMMIT=${1:-}
 
-# Pass an output dir for package metadata as the second argument to
-# additionally generate the package metadata for each package. Package
-# metadata will not be generated if an output dir is not passed.
-PKG_METADATA_OUT_DIR=${2:-}
-
 # Adding a new repo to this list? Ensure that the repo's `Makefile` has a target called
 # `generate_schema`.
 REPOS=(
@@ -58,6 +53,7 @@ REPOS=(
     "nomad"
     "ns1"
     "okta"
+    "onelogin"
     "openstack"
     "opsgenie"
     "packet"
@@ -89,9 +85,7 @@ fi
 for REPO in "${REPOS[@]}" ; do \
     ./scripts/gen_resource_docs.sh "${REPO}" true
 
-    if [ -n "${PKG_METADATA_OUT_DIR:-}" ]; then
-      ./scripts/gen_package_metadata.sh "${PKG_METADATA_OUT_DIR}" "${REPO}"
-    fi
+    ./scripts/gen_package_metadata.sh "${REPO}"
 
     if [ "${GIT_COMMIT:-}" == "true" ]; then
       git add "./content/docs/reference/pkg/${REPO}/*"
