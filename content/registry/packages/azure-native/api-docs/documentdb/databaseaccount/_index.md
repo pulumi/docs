@@ -2031,7 +2031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Cosmos DB capability. For example, "name": "EnableCassandra". Current values also include "EnableTable" and "EnableGremlin".{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Name of the Cosmos DB capability. For example, "name": "EnableCassandra". Current values also include "EnableTable", "EnableGremlin", and "EnableServerless".{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4668,4 +4668,3 @@ $ pulumi import azure-native:documentdb:DatabaseAccount ddb1 /subscriptions/subi
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 </dl>
-
