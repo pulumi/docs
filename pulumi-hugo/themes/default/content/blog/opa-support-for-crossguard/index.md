@@ -196,7 +196,7 @@ We can now navigate to the URL for our update and see that the policy was enforc
 
 ## Using OPA Rego with Pulumi
 
-OPA-based rules are easy to write for Pulumi. The `input` object represents each individual resource that will be deployed by Pulumi, and the rules are applied independently to each Pulumi resource when it is deployed. The schema for each resource is the same as the properties available when defining the resource as defined in the [Pulumi API Reference]({{< relref "/docs/reference/pkg" >}}). Critically, although we highlighted Kubernetes above, Pulumi's resource model spans any cloud or Kubernetes, with providers for more than 50 Cloud and SaaS platforms available. And OPA-based rules can target any or all of these in a single deployment.
+OPA-based rules are easy to write for Pulumi. The `input` object represents each individual resource that will be deployed by Pulumi, and the rules are applied independently to each Pulumi resource when it is deployed. The schema for each resource is the same as the properties available when defining the resource as defined in the [Pulumi API Reference]({{< relref "/registry" >}}). Critically, although we highlighted Kubernetes above, Pulumi's resource model spans any cloud or Kubernetes, with providers for more than 50 Cloud and SaaS platforms available. And OPA-based rules can target any or all of these in a single deployment.
 
 For example - the policy file above could be expanded to include:
 

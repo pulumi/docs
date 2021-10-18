@@ -28,15 +28,15 @@ key_features:
               icon: global
               icon_color: yellow
               description: |
-                Access the full breadth of services in AWS, Azure, GCP, and [50+ providers](/docs/intro/cloud-providers/) through
+                Access the full breadth of services in AWS, Azure, GCP, and [60+ providers](/registry/) through
                 a complete and consistent SDK interface.
 
             - title: Create reusable infrastructure
               icon: puzzle
               icon_color: yellow
               description:
-                Deploy and configure cloud infrastructure with  [Pulumi Packages](/docs/guides/pulumi-packages/), which can be
-                shared and reused by anyone and in any language.
+                Build and share cloud infrastructure with reusable [Pulumi Packages](/product/packages), which
+                encapsulate your cloud architectures and best practices. 
 
         - description: Deploy cloud infrastructure and applications together
           features:

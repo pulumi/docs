@@ -12,7 +12,7 @@ hero:
         helps create, deploy, and manage 100% of your Microsoft Azure infrastructure, including
         containers, serverless functions, and infrastructure using modern programming languages.
     cta_text: See what's new
-    cta_url: "/blog/full-coverage-of-azure-resources-with-azure-native"
+    cta_url: "/registry/packages/azure-native"
     ide:
         tabs:
             - title: index.ts
@@ -143,7 +143,7 @@ detail_sections:
         Resource Manager giving you the full power of Azure at your fingertips. Every
         property of each resource is always represented in the SDKs.
     cta: Learn More
-    cta_url: "/blog/full-coverage-of-azure-resources-with-azure-native"
+    cta_url: "/registry/packages/azure-native"
     items:
         - title: Everything In One Place
           icon: cloud-with-nodes
@@ -167,7 +167,7 @@ detail_sections:
 
   - title: Always Up to Date
     description: |
-        Pulumi's Microsoft Azure provider is designed to stay up-to-date with additions and changes
+        Pulumi's Microsoft Azure Native provider is designed to stay up-to-date with additions and changes
         to Azure APIs. The `azure-native` SDK is generated automatically from the Azure API
         specifications published by Microsoft, which means you'll always have access to the latest
         Azure features and improvements.
@@ -192,7 +192,7 @@ detail_sections:
         - title: All Languages
           icon: code
           icon_color: yellow
-          description: The Pulumi Azure provider is available in all Pulumi languages, including JavaScript, TypeScript, Python, Go, and .NET Core. All SDKs are open source on GitHub and available as npm, NuGet, PyPI, and Go modules.
+          description: The Pulumi Azure Native provider is available in all Pulumi languages, including JavaScript, TypeScript, Python, Go, and .NET Core. All SDKs are open source on GitHub and available as npm, NuGet, PyPI, and Go modules.
 
 superpowers:
   - title: Multi Cloud
@@ -201,8 +201,8 @@ superpowers:
     icon_type: cloud
     description: |
         Pulumi allows you to use top programming languages across all public clouds with support
-        for dozens of popular infrastructure service providers including private and hybrid clouds
-        helping ensure any multi-cloud strategy is succesful one.
+        for over 60 popular infrastructure service providers including private and hybrid clouds
+        helping ensure any multi-cloud strategy is successful.
 
   - title: Reduce Provisioning Time
     cta: Learn more
@@ -224,11 +224,11 @@ superpowers:
 
   - title: Smart Architecture
     cta: Learn more
-    cta_url: "/docs/intro/concepts"
+    cta_url: "/product/packages"
     icon_type: architecture
     description: |
         YAML and templated DSLs force you to write the same boilerplate code over and over.
-        Pulumi’s Azure libraries allows you to codify those patterns and best practices so
+        Pulumi Packages allow you to codify those patterns and best practices so
         you can stop reinventing the wheel and start inventing the platforms of the future.
 
   - title: Be Proactive, Not Reactive

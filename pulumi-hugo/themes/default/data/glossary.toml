@@ -116,7 +116,7 @@ link = "/docs/intro/concepts/resources#dynamic-providers"
 [[entries]]
 term = "Packages"
 description = "Pulumi packages are normal NPM or Python packages. They transitively depend on @pulumi/pulumi which defines how resources created by a Pulumi program will be communicated to the Pulumi engine. The ability to register resources with the Pulumi engine is the only difference between a Pulumi package and any other NPM package."
-link = "/docs/reference/pkg"
+link = "/registry"
 
 [[entries]]
 term = "Runtime Code"
@@ -136,7 +136,7 @@ link = "/docs/intro/concepts/stack#stack-tags"
 [[entries]]
 term = "API"
 description = "Application Programming Interface. Pulumi offers APIs for working with a wide variety of cloud platforms, as well as higher-level APIs that make it easier to deliver cloud applications and infrastructure."
-link = "/docs/reference/pkg"
+link = "/registry"
 
 [[entries]]
 term = "CLI"

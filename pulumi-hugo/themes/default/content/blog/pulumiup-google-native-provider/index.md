@@ -13,7 +13,7 @@ Today at [PulumiUP]({{< relref "/pulumi-up" >}}), we announced the public previe
 
 <!--more-->
 
-The Google Cloud Native provider works directly with the Google Cloud APIs, as surfaced by the [Google API Discovery Service](https://developers.google.com/discovery/), instead of depending on a handwritten layer like other current infrastructure as code technologies. This new approach is similar to that which we've taken for our [Kubernetes]({{<relref "/docs/intro/cloud-providers/kubernetes">}}) and [Azure Native]({{<relref "/docs/intro/cloud-providers/azure">}}) providers and ensures higher quality and complete coverage of the resources available in GCP.
+The Google Cloud Native provider works directly with the Google Cloud APIs, as surfaced by the [Google API Discovery Service](https://developers.google.com/discovery/), instead of depending on a handwritten layer like other current infrastructure as code technologies. This new approach is similar to that which we've taken for our [Kubernetes]({{<relref "/registry/packages/kubernetes">}}) and [Azure Native]({{<relref "/registry/packages/azure">}}) providers and ensures higher quality and complete coverage of the resources available in GCP.
 
 ## Full API coverage
 
@@ -157,7 +157,7 @@ class Program
 
 {{< /chooser >}}
 
-API documentation is available in our [API reference]({{< relref "/docs/reference/pkg/google-native">}}).
+API documentation is available in our [API reference]({{< relref "/registry/packages/google-native/api-docs">}}).
 
 ## Works side-by-side with the existing Pulumi GCP Provider
 
@@ -217,4 +217,4 @@ The preview of the Google Cloud Native provider is ready for you to try. It’s 
 The Google Cloud Native announcement is just one part of Pulumi’s Cloud Engineering Platform. Watch the PulumiUP event for more.
 
 👉 [PulumiUP]({{< relref "/pulumi-up" >}})
-👉 [Google Cloud Native API reference]({{< relref "/docs/reference/pkg/google-native" >}})
+👉 [Google Cloud Native API reference]({{< relref "/registry/packages/google-native/api-docs" >}})

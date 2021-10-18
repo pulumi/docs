@@ -78,7 +78,7 @@
 
                     {{ range $item := .Params.build.items }}
                         <h6>{{ $item.title }}</h6>
-                        <p>{{ $item.description }}</p>
+                        <p>{{ $item.description | markdownify }}</p>
                     {{ end }}
 
                     <div class="mt-16">
@@ -118,7 +118,7 @@
                             {{ partial "color-icon.html" (dict "icon" $item.icon "icon_color" $item.icon_color) }}
                         </div>
                         <h5>{{ $item.title }}</h5>
-                        <p>{{ $item.description }}</p>
+                        <p>{{ $item.description | markdownify }}</p>
                     </div>
                 {{ end }}
             </div>
@@ -143,7 +143,7 @@
             </div>
             <div class="w-full lg:w-1/2 order-first lg:order-last lg:ml-32 z-10 bg-white px-8 rounded">
                 <h2>{{ .Params.deploy.title }}</h2>
-                <p class="text-lg">{{ .Params.deploy.description }}</p>
+                <p class="text-lg">{{ .Params.deploy.description | markdownify }}</p>
 
                 {{ range $item := .Params.deploy.items }}
                     <h6>{{ $item.title }}</h6>
@@ -172,11 +172,11 @@
         <div class="container mx-auto flex flex-col lg:flex-row">
             <div class="w-full lg:w-1/2 lg:mr-32 z-10 bg-white px-8 rounded">
                 <h2>{{ .Params.manage.title }}</h2>
-                <p class="text-lg">{{ .Params.manage.description }}</p>
+                <p class="text-lg">{{ .Params.manage.description | markdownify }}</p>
 
                 {{ range $item := .Params.manage.items }}
                     <h6>{{ $item.title }}</h6>
-                    <p>{{ $item.description }}</p>
+                    <p>{{ $item.description | markdownify }}</p>
                 {{ end }}
 
                 <div class="mt-16">
@@ -209,8 +209,8 @@
                     <div>
                         <h5>{{ $item.title }}</h5>
                     </div>
-                    <div class="description">
-                        <p>{{ $item.description }}</p>
+                    <div>
+                        <p>{{ $item.description | markdownify }}</p>
                     </div>
                 </div>
             {{ end }}

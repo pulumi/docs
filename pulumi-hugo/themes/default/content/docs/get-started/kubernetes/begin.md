@@ -58,7 +58,7 @@ Next, we'll configure Kubernetes.
 
 ### Configure Kubernetes
 
-<a href="{{< relref "/docs/intro/cloud-providers/kubernetes/setup" >}}" target="_blank">Configure Kubernetes</a> so the Pulumi CLI can connect to a Kubernetes cluster. If you have previously configured the <a href="https://kubernetes.io/docs/reference/kubectl/overview/" target="_blank">kubectl CLI</a>, `kubectl`, Pulumi will respect and use your configuration settings.
+<a href="{{< relref "/registry/packages/kubernetes/installation-configuration" >}}" target="_blank">Configure Kubernetes</a> so the Pulumi CLI can connect to a Kubernetes cluster. If you have previously configured the <a href="https://kubernetes.io/docs/reference/kubectl/overview/" target="_blank">kubectl CLI</a>, `kubectl`, Pulumi will respect and use your configuration settings.
 
 Next, we'll create a new Pulumi project.
 

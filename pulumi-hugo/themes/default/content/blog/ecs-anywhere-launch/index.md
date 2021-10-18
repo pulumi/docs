@@ -67,7 +67,7 @@ pulumi config set numberNodes 2
 
 The first tells Pulumi which region to deploy the resources to (and we’ll also use it when setting up our nodes and CloudWatch logging). The second tells us how many nodes to create, and we’ll need at least two to allow ECS to perform a rolling deployment.
 
-Since we’re using a third-party compute provider to prove that ECS can deploy the containers to non-AWS infrastructure, we need to provide an API token. In this example, we’ll add it to the config, but you should read our [Setup Guide](https://www.pulumi.com/docs/intro/cloud-providers/digitalocean/setup/) for more information on how to deploy.
+Since we’re using a third-party compute provider to prove that ECS can deploy the containers to non-AWS infrastructure, we need to provide an API token. In this example, we’ll add it to the config, but you should read our [Setup Guide](https://www.pulumi.com/registry/packages/digitalocean/installation-configuration/) for more information on how to deploy.
 
 To add your token to the config (as a secret), you should run the following command:
 

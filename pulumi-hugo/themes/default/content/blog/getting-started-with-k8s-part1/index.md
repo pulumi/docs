@@ -53,7 +53,7 @@ const cluster = new eks.Cluster("cluster", {
 export const kubeconfig = cluster.kubeconfig;
 ```
 
-You can try out the code by following the complete [tutorial]({{< relref "/docs/tutorials/kubernetes/eks" >}}).
+You can try out the code by following the complete [tutorial]({{< relref "/registry/packages/kubernetes/how-to-guides/eks" >}}).
 
 {{% /choosable %}}
 {{% choosable cloud azure %}}
@@ -245,7 +245,7 @@ export const k8sProvider = new k8s.Provider("gkeK8s", {
 });
 ```
 
-You can try out the code by following the complete [tutorial]({{< relref "/docs/tutorials/kubernetes/gke" >}}).
+You can try out the code by following the complete [tutorial]({{< relref "/registry/packages/kubernetes/how-to-guides/gke" >}}).
 
 {{% /choosable %}}
 {{< /chooser >}}
@@ -257,5 +257,5 @@ This article covers how to set up a Kubernetes cluster on AWS, Azure, and GCP us
 This is the first in a series of articles on using infrastructure as code for Kubernetes. In the next article, we'll cover basic Kubernetes objects such as pods, services, and volumes. We'll also cover higher-level abstractions such as deployments and replicasets. Stay tuned! In the meantime, learn more about Pulumi:
 
 - Watch educational content on [Pulumi TV](https://www.youtube.com/pulumitv)
-- Learn more about Pulumi's [support for Kubernetes](https://www.pulumi.com/docs/intro/cloud-providers/kubernetes/)
+- Learn more about Pulumi's [support for Kubernetes](https://www.pulumi.com/registry/packages/kubernetes/)
 - Practice [Kubernetes Tutorials](https://www.pulumi.com/docs/tutorials/kubernetes/) using Pulumi

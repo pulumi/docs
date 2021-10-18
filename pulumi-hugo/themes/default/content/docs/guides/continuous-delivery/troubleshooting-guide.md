@@ -161,7 +161,7 @@ In almost all cases, specifying the credentials through environment variables wi
 
 * Check that there are not typos in the name of the environment variables.
 
-> Refer to the [Cloud Providers]({{< relref "/docs/intro/cloud-providers" >}}) docs and the respective setup pages for each to find the correct
+> Refer to the [Cloud Providers]({{< relref "/registry" >}}) docs and the respective setup pages for each to find the correct
 environment variables to use.
 
 #### Still need help?

@@ -17,7 +17,7 @@ Here are some highlights we've added in partnership with the community
 since launching:
 
 - Over 100 [examples](https://github.com/pulumi/examples),
-    [tutorials]({{< relref "/docs/tutorials" >}}), and a brand new
+    [tutorials]({{< relref "/registry" >}}), and a brand new
     [Getting Started guide]({{< relref "/docs/get-started" >}}).
 - [A native Kubernetes provider with 100% Kubernetes API/version coverage.]({{< relref "pulumi-a-better-way-to-kubernetes" >}})
 - A steady stream of improvements across

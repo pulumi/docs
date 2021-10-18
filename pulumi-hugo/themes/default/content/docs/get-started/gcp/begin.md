@@ -64,7 +64,7 @@ In this guide, you will need an IAM user account with permissions that can creat
 
 {{% configure-gcp %}}
 
-For additional information on setting and using Google Cloud credentials, see [Google Cloud Setup]({{< relref "/docs/intro/cloud-providers/gcp/setup" >}}).
+For additional information on setting and using Google Cloud credentials, see [Google Cloud Setup]({{< relref "/registry/packages/gcp/installation-configuration" >}}).
 
 Next, you'll create a new Pulumi project.
 

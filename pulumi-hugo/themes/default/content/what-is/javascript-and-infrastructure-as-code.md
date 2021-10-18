@@ -62,7 +62,7 @@ The Serverless Framework is another reason for JavaScript’s popularity for ser
 There are platforms available that can really boost your productivity when it comes to JavaScript and Infrastructure as Code. Here are a few qualities to look for:
 
 - **Support for Standard Languages.** Of course, you need a platform that [fully supports JavaScript and Node.js]({{< relref "/docs/intro/languages/javascript" >}}).
-- **Multi-cloud support.** Make sure the platform allows you to build, manage and deploy your infrastructure to [any cloud provider]({{< relref "/docs/intro/cloud-providers" >}}).
+- **Multi-cloud support.** Make sure the platform allows you to build, manage and deploy your infrastructure to [any cloud provider]({{< relref "/registry" >}}).
 - **Improves on the Serverless Framework.** While the Serverless Framework definitely helps with serverless computing, it only helps with that part of your application. Find a platform that lets you adopt a more holistic approach and treats the entire program as cloud-native. You should be able to write entire applications within that platform. Some parts of that application may be serverless functions, but you should also be able to include resources such as containers, databases, and cloud services.
 
 ## Pulumi Corporation

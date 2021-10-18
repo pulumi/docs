@@ -78,7 +78,7 @@ After successfully logging in, you are ready to go.
 The Azure CLI, and thus Pulumi, will use the default subscription for the account. You can change the active subscription with the [`az account set`](https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest#az_account_set) command.
 {{% /notes %}}
 
-For additional information on authenticating with Azure, or to login with a service principal, see [Azure Setup]({{< relref "/docs/intro/cloud-providers/azure/setup" >}}).
+For additional information on authenticating with Azure, or to login with a service principal, see [Azure Setup]({{< relref "/registry/packages/azure/installation-configuration" >}}).
 
 Next, you'll create a new Pulumi project.
 

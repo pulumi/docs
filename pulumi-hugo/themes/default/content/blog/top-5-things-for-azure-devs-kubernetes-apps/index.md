@@ -284,7 +284,7 @@ app_svc = k8s.core.v1.Service('my-aks-service',
 pulumi.export('application IP', app_svc.status.apply(lambda status: status.loadbalancer.ingress[0].ip))
 ```
 
-This example provides a sketch of the process to create an AKS cluster and deploy a custom container. For a fully worked example, check out the [`Azure Kubernetes Service (AKS) - Hello World!`]({{< relref "/docs/tutorials/kubernetes/aks" >}}) tutorial.
+This example provides a sketch of the process to create an AKS cluster and deploy a custom container. For a fully worked example, check out the [`Azure Kubernetes Service (AKS) - Hello World!`]({{< relref "/registry/packages/kubernetes/how-to-guides/aks" >}}) tutorial.
 
 ## Summary
 

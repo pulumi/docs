@@ -12,7 +12,7 @@ tags:
 
 So you want to be an Azure dev and all-around infrastructure wizard? Let's start with the basics, virtual machines! In the [previous article]({{< relref "/blog/top-5-things-for-azure-devs-intro">}}), the common use case for virtual machines is migrating applications from dedicated hardware. You want full control of the machine to install required software for the application or configure storage and networking.
 
-Azure provides many ways to create and configure virtual machines ranging from [the Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) to [the Azure Portal](https://azure.microsoft.com/en-us/features/azure-portal/). In this article, we'll first create a virtual machine using the portal to understand the requirements and process; then, we'll do it with code using [Pulumi's Azure Native provider](https://www.pulumi.com/docs/intro/cloud-providers/azure/), which is built directly from the Azure Resource Manager API.
+Azure provides many ways to create and configure virtual machines ranging from [the Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) to [the Azure Portal](https://azure.microsoft.com/en-us/features/azure-portal/). In this article, we'll first create a virtual machine using the portal to understand the requirements and process; then, we'll do it with code using [Pulumi's Azure Native provider](https://www.pulumi.com/registry/packages/azure/), which is built directly from the Azure Resource Manager API.
 
 <!--more-->
 
@@ -179,7 +179,7 @@ export("public_ip", public_ip_addr.ip_address)
 
 On the face of it, this seems more complex than using the Azure Portal. The critical thing to remember is that this process is reproducible, so if you require additional virtual machines, you can add a loop to create the necessary number of VMs.
 
-But what about provisioning? Because this is code, you can write a [provisioning script](https://github.com/pulumi/examples/blob/master/aws-py-ec2-provisioners/provisioners.py) using Pulumi's [dynamic provider]({{< relref "/docs/tutorials/aws/aws-py-dynamicresource" >}}) that connects to the webserver, copies files, and executes commands. Here's a code snippet of a dynamic provider that copies files to your VM using `scp`.
+But what about provisioning? Because this is code, you can write a [provisioning script](https://github.com/pulumi/examples/blob/master/aws-py-ec2-provisioners/provisioners.py) using Pulumi's [dynamic provider]({{< relref "/registry/packages/aws/how-to-guides/aws-py-dynamicresource" >}}) that connects to the webserver, copies files, and executes commands. Here's a code snippet of a dynamic provider that copies files to your VM using `scp`.
 
 ```python
 # CopyFileProvider implements the resource lifecycle for the CopyFile resource type below.

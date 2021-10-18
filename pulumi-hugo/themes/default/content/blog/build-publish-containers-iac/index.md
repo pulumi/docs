@@ -50,7 +50,7 @@ Amazon Elastic Container Registry (ECR) provides managed Docker container hostin
 
 #### Create a New Project
 
-To start, create a new project and [ensure it is configured to use your AWS account]({{< relref "/docs/intro/cloud-providers/aws/setup" >}}), and then scaffold your project with the imports and overall program structure that we will fill in one piece at a time:
+To start, create a new project and [ensure it is configured to use your AWS account]({{< relref "/registry/packages/aws/installation-configuration" >}}), and then scaffold your project with the imports and overall program structure that we will fill in one piece at a time:
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -407,7 +407,7 @@ Azure Container Registry (ACR) allows you to build, store, secure, scan, replica
 
 #### Create a New Project
 
-To start, create a new project and [ensure it is configured to use your Azure account]({{< relref "/docs/intro/cloud-providers/azure/setup" >}}), and then scaffold your project with the imports and overall program structure that we will fill in one piece at a time:
+To start, create a new project and [ensure it is configured to use your Azure account]({{< relref "/registry/packages/azure/installation-configuration" >}}), and then scaffold your project with the imports and overall program structure that we will fill in one piece at a time:
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -898,7 +898,7 @@ Google Container Registry (GCR) enables you to store, manage, and secure your Do
 
 #### Create a New Project
 
-To start, create a new project and [ensure it is configured to use your GCP account]({{< relref "/docs/intro/cloud-providers/gcp/setup" >}}), then scaffold your project with the imports and overall program structure that we will fill in one piece at a time:
+To start, create a new project and [ensure it is configured to use your GCP account]({{< relref "/registry/packages/gcp/installation-configuration" >}}), then scaffold your project with the imports and overall program structure that we will fill in one piece at a time:
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -1130,7 +1130,7 @@ var imageName = Output.Format($"{registryUrl}/myapp");
 
 #### Learn More About GCR
 
-GCR uses Google Cloud Storage to store images, which may be configured separately, including configuring IAM and lifecycle policies. For more details on this, please refer to [Pulumi's Google Cloud API](https://www.pulumi.com/docs/reference/pkg/gcp/container/registry/) or [Google's own Container Registry](https://cloud.google.com/container-registry) documentation.
+GCR uses Google Cloud Storage to store images, which may be configured separately, including configuring IAM and lifecycle policies. For more details on this, please refer to [Pulumi's Google Cloud API](https://www.pulumi.com/registry/packages/gcp/api-docs/container/registry/) or [Google's own Container Registry](https://cloud.google.com/container-registry) documentation.
 
 > To view another cloud provider's registry details, [select a new cloud in the switcher above](#prepare-a-container-registry).
 
@@ -1146,7 +1146,7 @@ DigitalOcean's Container Registry is an easy way to store and manage private con
 
 #### Create a New Project
 
-To start, create a new project and [ensure it is configured to use your DigitalOcean account]({{< relref "/docs/intro/cloud-providers/digitalocean/setup" >}}) and then scaffold your project with the imports and overall program structure that we will fill in one piece at a time:
+To start, create a new project and [ensure it is configured to use your DigitalOcean account]({{< relref "/registry/packages/digitalocean/installation-configuration" >}}) and then scaffold your project with the imports and overall program structure that we will fill in one piece at a time:
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -1719,7 +1719,7 @@ At this stage, we can run `pulumi up` to check that the program works and to pro
 
 ## Build and Publish Your Container
 
-Now we are ready to build and publish your container image to the chosen registry. [The Docker provider's `Image` component]({{< relref "/docs/reference/pkg/docker" >}}) internally uses the Docker engine to perform the necessary steps to carry this out, including building, tagging, capturing, and streaming container build logs as progress is made and pushing the final result.
+Now we are ready to build and publish your container image to the chosen registry. [The Docker provider's `Image` component]({{< relref "/registry/packages/docker/api-docs" >}}) internally uses the Docker engine to perform the necessary steps to carry this out, including building, tagging, capturing, and streaming container build logs as progress is made and pushing the final result.
 
 Simply pass the path to your application's `Dockerfile` as the build context, the registry's URL as the image's name, and the registry configuration object built up earlier to facilitate authentication:
 
@@ -1909,18 +1909,18 @@ Outputs:
   ~ fullImageName: "...cloud-specific url.../my-repo-dc811b0:78d0fce7c2450c15a6153b6b11208fcb6b9edea7bb7ef3b7b6194f3fc101a170"
 ```
 
-The Pulumi Docker `Image` component supports a number of additional options to control its behavior, including passing build arguments, environment variables, extra options for the Docker build, as well as various controls for image caching. For full details on each of these, refer to [the API documentation]({{< relref "/docs/reference/pkg/docker/image" >}}).
+The Pulumi Docker `Image` component supports a number of additional options to control its behavior, including passing build arguments, environment variables, extra options for the Docker build, as well as various controls for image caching. For full details on each of these, refer to [the API documentation]({{< relref "/registry/packages/docker/api-docs/image" >}}).
 
 ## Consume the Container Image
 
 The same container image URLs exported above can be used as inputs to other resources, including infrastructure that will run your container inside of a container orchestration system such as Kubernetes, Amazon ECS, and so on.
 
-> This article assumes you already have a containerized environment to deploy to, like a Kubernetes cluster, and have [configured your project accordingly]({{< relref "/docs/intro/cloud-providers/kubernetes/setup" >}}). If not, you can provision one using Pulumi first. Pulumi supports many clouds and infrastructure resources, but here are a few starting points to get up and running with:
+> This article assumes you already have a containerized environment to deploy to, like a Kubernetes cluster, and have [configured your project accordingly]({{< relref "/registry/packages/kubernetes/installation-configuration" >}}). If not, you can provision one using Pulumi first. Pulumi supports many clouds and infrastructure resources, but here are a few starting points to get up and running with:
 
 - [AWS Elastic Container Service ECS]({{< relref "/docs/guides/crosswalk/aws/ecs" >}}),
 - [AWS Elastic Kubernetes Service (EKS)]({{< relref "/docs/guides/crosswalk/aws/eks" >}}),
-- [Azure Kubernetes Service (AKS)]({{< relref "/docs/tutorials/kubernetes/aks" >}}),
-- [Google Cloud Kubernetes Engine (GKE)]({{< relref "/docs/tutorials/kubernetes/gke" >}}),
+- [Azure Kubernetes Service (AKS)]({{< relref "/registry/packages/kubernetes/how-to-guides/aks" >}}),
+- [Google Cloud Kubernetes Engine (GKE)]({{< relref "/registry/packages/kubernetes/how-to-guides/gke" >}}),
 - [DigitalOcean Kubernetes](https://www.digitalocean.com/community/tutorials/how-to-manage-digitalocean-and-kubernetes-infrastructure-with-pulumi).
 
 This example demonstrates deploying our Nginx web server as a load balanced service within Kubernetes. To do so, we'll declare our Kubernetes configuration, right inside of our existing program defined above, and export its resulting IP address:

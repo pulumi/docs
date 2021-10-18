@@ -47,7 +47,7 @@ started.
 For local clusters such as those that are self-managed, or provisioned by a
 tool like Docker Desktop, Pulumi can still deploy workloads to these these
 systems given that the [`pulumi/kubernetes`][pulumi-kubernetes] workload SDK only requires a valid `kubeconfig`
-file. For more information on Pulumi's Kubernetes support, check out the [Kubernetes reference page]({{< relref "/docs/intro/cloud-providers/kubernetes" >}}).
+file. For more information on Pulumi's Kubernetes support, check out the [Kubernetes reference page]({{< relref "/registry/packages/kubernetes" >}}).
 
 We will use the cloud SDKs to provision the managed Kubernetes clusters. Given
 that we're working with real code, we are afforded developer benefits such as:
@@ -94,7 +94,7 @@ use.
 
 For further examples on how to use Pulumi to create Kubernetes
 clusters, or deploy workloads to a cluster, check out the rest of the
-[Kubernetes tutorials]({{< relref "/docs/tutorials/kubernetes" >}}).
+[Kubernetes tutorials]({{< relref "/registry/packages/kubernetes/how-to-guides" >}}).
 
 As always, you can check out our code on
 [GitHub](https://github.com/pulumi), follow us on

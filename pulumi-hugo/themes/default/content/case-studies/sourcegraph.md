@@ -49,4 +49,4 @@ By adopting Pulumi, the team is able to achieve their rapid deployment goals whi
 
 ## Deploy to GKE with Pulumi
 
-Just like Sourcegraph, you can use Pulumi to deploy your applications to GKE in a snap. Learn how to acquire your deployment superpowers here: [GKE + Pulumi]({{< relref "/docs/tutorials/kubernetes/gke" >}}).
+Just like Sourcegraph, you can use Pulumi to deploy your applications to GKE in a snap. Learn how to acquire your deployment superpowers here: [GKE + Pulumi]({{< relref "/registry/packages/kubernetes/how-to-guides/gke" >}}).

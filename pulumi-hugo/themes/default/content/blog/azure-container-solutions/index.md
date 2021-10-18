@@ -181,4 +181,4 @@ Function-as-a-Service products are often designed for short-lived, event-driven 
 
 There are a number of options for running containers in Azure, and choosing the right one for your workload might be difficult. We've tried to give an overview of the current state of the world, but Microsoft continues to add options and capabilities to all these products.
 
-If you’ve settled on a container solution, and are ready to get started, Pulumi’s [Azure Native provider]({{< relref "/docs/intro/cloud-providers/azure/" >}}) supports all of the methods of running containers and can quickly get you started. Check out our [Azure  getting started guide]({{< relref "docs/get-started/azure" >}}), or join one of our upcoming [Azure Workshops]({{< relref "/resources" >}})!
+If you’ve settled on a container solution, and are ready to get started, Pulumi’s [Azure Native provider]({{< relref "/registry/packages/azure-native" >}}) supports all of the methods of running containers and can quickly get you started. Check out our [Azure  getting started guide]({{< relref "/docs/get-started/azure" >}}), or join one of our upcoming [Azure Workshops]({{< relref "/resources" >}})!

@@ -29,7 +29,7 @@ Choose your cloud provider to learn how to build a registry.
 
 In this example, we create an ECR repository configured to scan an image’s Operating System components. Scanning for vulnerabilities in an application is currently [out of scope](https://aws.amazon.com/blogs/containers/amazon-ecr-native-container-image-scanning/). We also set a policy for the repository that controls the actions allowed and a lifecycle policy that expires an image after a set time.
 
-With Pulumi, it’s possible to build an image locally using Docker and push it to your repository. To push the image, we obtain the credentials required to push from the registry. Finally, we export the credentials and the URL for the registry. Read more about ECR in the [API Reference]({{< relref "/docs/reference/pkg/aws/ecr" >}}).
+With Pulumi, it’s possible to build an image locally using Docker and push it to your repository. To push the image, we obtain the credentials required to push from the registry. Finally, we export the credentials and the URL for the registry. Read more about ECR in the [API Reference]({{< relref "/registry/packages/aws/api-docs/ecr" >}}).
 
 ```typescript
 import * as docker from "@pulumi/docker";
@@ -119,7 +119,7 @@ export const repoEndpoint = repo.repositoryUrl;
 
 In this example, we create an [Azure Resource Group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal#what-is-a-resource-group) to contain the resources for the registry, such as the [App Service](https://docs.microsoft.com/en-us/azure/app-service/) that hosts the registry.
 
-We instantiate a registry with the [containerservice module]({{< relref "/docs/reference/pkg/azure/containerservice" >}}) and use the [Image module]({{< relref "/docs/reference/pkg/docker/image" >}}) in the [Docker package]({{< relref "/docs/reference/pkg/docker" >}}) to build and push the image to the registry. We export the registry URL and the username and password in case we should want to push or pull and image using the Docker CLI.
+We instantiate a registry with the [containerservice module]({{< relref "/registry/packages/azure/api-docs/containerservice" >}}) and use the [Image module]({{< relref "/registry/packages/docker/api-docs/image" >}}) in the [Docker package]({{< relref "/registry/packages/docker/api-docs" >}}) to build and push the image to the registry. We export the registry URL and the username and password in case we should want to push or pull and image using the Docker CLI.
 
 ```typescript
 import * as azure from "@pulumi/azure";
@@ -174,7 +174,7 @@ $ gcloud auth login
 $ gcloud auth configure-docker
 ```
 
-We use the [Image module]({{< relref "/docs/reference/pkg/docker/image" >}}) in the [Docker package]({{< relref "/docs/reference/pkg/docker" >}}) to build and push the image to the registry. We export the registry URL and the username and password in case we should want to push or pull an image using the Docker CLI.
+We use the [Image module]({{< relref "/registry/packages/docker/api-docs/image" >}}) in the [Docker package]({{< relref "/registry/packages/docker/api-docs" >}}) to build and push the image to the registry. We export the registry URL and the username and password in case we should want to push or pull an image using the Docker CLI.
 
 ```typescript
 import * as docker from "@pulumi/docker";
@@ -203,6 +203,6 @@ export const repoEndpoint = pulumi.interpolate`gcr.io/${gcp.config.project}`;
 
 Container registries are just one of the many resources used for deploying modern applications. Implementations among cloud service providers differ by the functionality they offer and how they are deployed. The commonality among them is that they provide a secure place to store and retrieve Docker or OCI compliant container images. Explore how to create and manage resources for the cloud service provider of your choice with Pulumi. Great places to start are:
 
-- [Tutorials]({{< relref "/docs/tutorials" >}})
+- [Tutorials]({{< relref "/registry" >}})
 - [Examples](https://github.com/pulumi/examples)
 - [API Reference]({{< relref "/docs/reference/pkg" >}})

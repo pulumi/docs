@@ -3,6 +3,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
+    <!-- Our CSS and JS bundles. -->
+    {{ partial "assets" }}
+
     <!-- Google Site Verification for Google Webmaster tools and YouTube. -->
     <meta name="google-site-verification" content="N-ezSTIu4P3bSc4TqidV4wWCkMzFiMN269ZgDYArGkk" />
 
@@ -106,9 +109,6 @@
     <!-- RSS link for the blog. -->
     <link rel="alternate" type="application/rss+xml" href="{{ "/blog/rss.xml" | absURL }}" title="Pulumi Blog" />
 
-    <!-- Our CSS bundle. -->
-    <link rel="stylesheet" href="{{ getenv "REL_CSS_BUNDLE" }}">
-
     <!-- Lazy-load Sentry.  -->
     <script src='https://js.sentry-cdn.com/02614bf2f18e4615a73218b810563ced.min.js' crossorigin="anonymous"></script>
     <script>
@@ -145,9 +145,6 @@
             });
         </script>
     {{ end }}
-
-    <!-- Preload the component JavaScript to help our Google Page Speed score. -->
-    <link rel="preload" href="/js/components/components.esm.js" as="script" crossorigin="anonymous">
 
     {{/* Tests to enforce required frontmatter for certain content types. */}}
     {{ if and (eq .Type "blog") .IsPage }}

@@ -334,7 +334,7 @@ source and free to use.
 
 For further examples on how to use Pulumi to create Kubernetes
 clusters, or deploy workloads to a cluster, check out the rest of the
-[Kubernetes tutorials]({{< relref "/docs/tutorials/kubernetes" >}}).
+[Kubernetes tutorials]({{< relref "/registry/packages/kubernetes/how-to-guides" >}}).
 
 As always, you can check out our code on
 [GitHub](https://github.com/pulumi), follow us on
@@ -345,7 +345,7 @@ any questions, need support, or just want to say hello.
 
 <!-- markdownlint-disable url -->
 [v2.4.0 release]: https://github.com/pulumi/pulumi-kubernetes/releases/tag/v2.4.0
-[Kustomize]: {{< relref "/docs/reference/pkg/kubernetes/kustomize/directory" >}}
-[Helm]: {{< relref "/docs/reference/pkg/kubernetes/helm/v3/chart" >}}
-[YAML]: {{< relref "/docs/reference/pkg/kubernetes/yaml/configgroup" >}}
+[Kustomize]: {{< relref "/registry/packages/kubernetes/api-docs/kustomize/directory" >}}
+[Helm]: {{< relref "/registry/packages/kubernetes/api-docs/helm/v3/chart" >}}
+[YAML]: {{< relref "/registry/packages/kubernetes/api-docs/yaml/configgroup" >}}
 <!-- markdownlint-enable url -->

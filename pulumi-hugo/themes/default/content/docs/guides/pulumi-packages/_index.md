@@ -15,9 +15,9 @@ Pulumi Packages are the core technology that enables cloud infrastructure resour
 
 There are currently 3 different types of Pulumi Packages:
 
-1. **Native Pulumi Provider Package:** Use the full features of the Pulumi resource model to create a provider for a new cloud platform. Examples: the [`kubernetes`]({{<relref "/docs/reference/pkg/kubernetes">}}), [`azure-native`]({{<relref "/docs/reference/pkg/azure-native">}}), and [`google-native`]({{<relref "/docs/reference/pkg/google-native">}}) packages.
-2. **Bridged Provider Package:** Take an existing resource provider from another supported ecosystem (like a Terraform provider), and bridge it to be exposed as a Pulumi Package. Examples: the [`aws`]({{<relref "/docs/reference/pkg/aws">}}), [`tls`]({{<relref "/docs/reference/pkg/tls">}}), and [`cloudflare`]({{<relref "/docs/reference/pkg/cloudflare">}}) packages.
-3. **Component Package:** Write a Pulumi Component in your language of choice and expose it to users in all Pulumi languages. Example: the [`eks`]({{<relref "/docs/reference/pkg/eks">}}) package.
+1. **Native Pulumi Provider Package:** Use the full features of the Pulumi resource model to create a provider for a new cloud platform. Examples: the [`kubernetes`]({{<relref "/registry/packages/kubernetes">}}), [`azure-native`]({{<relref "/registry/packages/azure-native/api-docs">}}), and [`google-native`]({{<relref "/registry/packages/google-native/api-docs">}}) packages.
+2. **Bridged Provider Package:** Take an existing resource provider from another supported ecosystem (like a Terraform provider), and bridge it to be exposed as a Pulumi Package. Examples: the [`aws`]({{<relref "/registry/packages/aws">}}), [`tls`]({{<relref "/registry/packages/tls/api-docs">}}), and [`cloudflare`]({{<relref "/registry/packages/cloudflare/api-docs">}}) packages.
+3. **Component Package:** Write a Pulumi Component in your language of choice and expose it to users in all Pulumi languages. Example: the [`eks`]({{<relref "/registry/packages/eks/api-docs">}}) package.
 
 ## Process of authoring a Pulumi Package
 

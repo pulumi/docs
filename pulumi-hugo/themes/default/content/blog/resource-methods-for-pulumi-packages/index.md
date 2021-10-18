@@ -14,7 +14,7 @@ It's now possible to provide resource methods from Pulumi Packages. Resource met
 
 <!--more-->
 
-When authoring component resources, it's often useful to provide additional functionality through methods on the component. For example, the `Cluster` component in the [`eks`]({{< relref "/docs/reference/pkg/eks" >}}) package has a [`getKubeconfig`](https://github.com/pulumi/pulumi-eks/blob/700d73e961976e58762cb9c723ad2fa838052f46/nodejs/eks/cluster.ts#L1482) method that can be used to generate a kubeconfig for authentication with the cluster that does not use the default AWS credential provider chain, but is instead scoped based on the passed-in arguments. Until now, that method has only been available from JavaScript/TypeScript (the language the `Cluster` component was written in). With the new support for resource methods for Pulumi Packages, we can make this method available to all the Pulumi languages, which is exactly what we've done in pulumi-eks [v0.34.0](https://github.com/pulumi/pulumi-eks/releases/tag/v0.34.0).
+When authoring component resources, it's often useful to provide additional functionality through methods on the component. For example, the `Cluster` component in the [`eks`]({{< relref "/registry/packages/eks" >}}) package has a [`getKubeconfig`](https://github.com/pulumi/pulumi-eks/blob/700d73e961976e58762cb9c723ad2fa838052f46/nodejs/eks/cluster.ts#L1482) method that can be used to generate a kubeconfig for authentication with the cluster that does not use the default AWS credential provider chain, but is instead scoped based on the passed-in arguments. Until now, that method has only been available from JavaScript/TypeScript (the language the `Cluster` component was written in). With the new support for resource methods for Pulumi Packages, we can make this method available to all the Pulumi languages, which is exactly what we've done in pulumi-eks [v0.34.0](https://github.com/pulumi/pulumi-eks/releases/tag/v0.34.0).
 
 {{< chooser language "typescript,python,csharp,go" >}}
 
@@ -64,7 +64,7 @@ This post will show how you can provide resource methods from your [component pa
 
 ## Authoring Methods
 
-It's always been possible to provide module-level functions from Pulumi Packages. For example, the [`aws`]({{< relref "/docs/reference/pkg/aws" >}}) package provides many module-level functions, such as the [`getAmi`]({{< relref "/docs/reference/pkg/aws/ec2/getami" >}}) function, which can be used to get the ID of an existing Amazon Machine Image (AMI). Functions are declared in the package's [schema]({{< relref "/docs/guides/pulumi-packages/schema" >}}), and their functionality is implemented in the provider through the `Invoke` remote procedure call (RPC).
+It's always been possible to provide module-level functions from Pulumi Packages. For example, the [`aws`]({{< relref "/registry/packages/aws" >}}) package provides many module-level functions, such as the [`getAmi`]({{< relref "/registry/packages/aws/api-docs/ec2/getami" >}}) function, which can be used to get the ID of an existing Amazon Machine Image (AMI). Functions are declared in the package's [schema]({{< relref "/docs/guides/pulumi-packages/schema" >}}), and their functionality is implemented in the provider through the `Invoke` remote procedure call (RPC).
 
 Methods are authored in a similar manner to functions. Methods are declared in the schema and implemented in the provider's `Call` RPC (similar to `Invoke`).
 

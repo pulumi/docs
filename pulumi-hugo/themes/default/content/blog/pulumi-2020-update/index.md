@@ -63,7 +63,7 @@ In addition to the major areas above, we've continued to ship many other improve
 
 * [The ability to generate Kubernetes YAML]({{< relref "/blog/kubernetes-yaml-generation" >}}) gives you infrastructure authoring capabilities in your language of choice, while still letting you drive deployments using other YAML-based tools, such as `kubectl`.
 
-* [We've been steadily adding more and more providers and now have over 30 of them]({{< relref "/docs/reference/pkg" >}}), including Aiven, Cloudflare, Consul, Datadog, DigitalOcean, DNSimple, F5 BIG-IP, Fastly, GitLab, Kafka, Linode, MySQL, New Relic, Okta, Packet, PostgreSQL, RabbitMQ, SignalFX, Vault, and more.
+* [We've been steadily adding more and more providers and now have over 30 of them]({{< relref "/registry" >}}), including Aiven, Cloudflare, Consul, Datadog, DigitalOcean, DNSimple, F5 BIG-IP, Fastly, GitLab, Kafka, Linode, MySQL, New Relic, Okta, Packet, PostgreSQL, RabbitMQ, SignalFX, Vault, and more.
 
 ## Goodies Still to Come
 

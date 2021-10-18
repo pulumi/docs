@@ -4,8 +4,8 @@ title: Pulumi - Modern Infrastructure as Code
 meta_desc: Pulumi's open source infrastructure as code SDK enables you to create, deploy, and manage infrastructure on any cloud, using your favorite languages.
 
 hero:
-  title: [ "Cloud Engineering", "for Everyone" ]
-  description: Modern Infrastructure as Code for Developers and Infrastructure Teams. From Open Source to Enterprise.
+  title: [ "Developer-First", "Infrastructure" ]
+  description: Adopt Cloud Engineering to Tame Modern Cloud Complexity. Your Cloud, Your Language, Your Way.
   cta_text: Get Started
 
 overview:
@@ -55,7 +55,7 @@ use_cases:
   - title: All architectures welcome
     icon: nodes
     icon_color: purple
-    description: "Choose from over 50 cloud providers, including public, private, and hybrid architectures."
+    description: "Choose from over 60 cloud providers, including public, private, and hybrid architectures."
 
   - title: Modernize your approach
     icon: download-from-cloud
@@ -84,15 +84,15 @@ deploy:
 manage:
   title: Manage
   description: |
-    Manage cloud applications and infrastructure with a shared platform that helps teams adopt Cloud Engineering through collaboration, visibility, and policies and controls.
+    Manage cloud applications and infrastructure with a shared platform that helps teams adopt [Cloud Engineering](/cloud-engineering/) through collaboration, visibility, and policies and controls.
   items:
     - title: Secure by default
       description: Automatic encryption for secrets and state.
 
     - title: Empower with guardrails
-      description: Identity plus policy as code ensures continuous compliance.
+      description: Identity and Policy as Code ensure continuous compliance.
 
-    - title: See who changed what, when
+    - title: See who changed what and when
       description: Full change visibility and auditing across your entire organization.
 
 benefits:
@@ -102,22 +102,22 @@ benefits:
       icon: code-window
       icon_color: salmon
       description: |
-        One consistent approach to cloud engineering provides full access to over 50 cloud providers
-        and works for the entire team as you scale up, eliminating accidental complexity.
+        Build with over 60 cloud providers using a consistent, cloud engineering approach that
+        works for developers and infrastructure teams and eliminates accidental complexity.
 
     - title: Bring the cloud closer to application development
       icon: download-from-cloud
       icon_color: violet
       description: |
-        Leverage a rich and programmable cloud interface, with reusable packages that abstract
-        away complexity, to bring cloud concepts closer to your application architectures.
+        Leverage a rich, programmable cloud interface and [reusable packages](/product/packages/) that abstract
+        away complexity, bringing cloud concepts closer to application architectures.
 
     - title: Use engineering practices with infrastructure
       icon: exchange
       icon_color: blue
       description: |
-        Adopt infrastructure as code automation, combined with tried and true software engineering
-        practices—including modularity, testing, and CI/CD—to do more with less.
+        Do more with less. Combine Infrastructure as Code automation with tried-and-true software engineering
+        practices &mdash; including modularity, testing, and CI/CD.
     - title: Foster collaboration and innovate faster
       icon: lightning
       icon_color: yellow

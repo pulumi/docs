@@ -15,9 +15,9 @@ But, did you know that you can manage any cloud resource in AWS, Azure, or Googl
 <!--more-->
 
 You can use the
-[AWS]({{< relref "/docs/reference/pkg/aws" >}}),
-[Azure]({{< relref "/docs/reference/pkg/azure" >}}),
-or [Google Cloud]({{< relref "/docs/reference/pkg/gcp" >}})
+[AWS]({{< relref "/registry/packages/aws/api-docs" >}}),
+[Azure]({{< relref "/registry/packages/azure/api-docs" >}}),
+or [Google Cloud]({{< relref "/registry/packages/gcp/api-docs" >}})
 libraries to manage cloud resources. Using these libraries, you can
 directly manage the properties of any cloud resource.
 
@@ -108,11 +108,11 @@ just a few lines of JavaScript:
 
 These are just a few examples of the AWS resources you can manage in
 Pulumi. You can provision
-[Athena databases]({{< relref "/docs/reference/pkg/aws/athena" >}}),
-[DynamoDB tables]({{< relref "/docs/reference/pkg/aws/dynamodb" >}}),
-[IAM users, roles, groups, and role policies]({{< relref "/docs/reference/pkg/aws/iam" >}}),
-[Kinesis streams]({{< relref "/docs/reference/pkg/aws/kinesis" >}}), and more.
+[Athena databases]({{< relref "/registry/packages/aws/api-docs/athena" >}}),
+[DynamoDB tables]({{< relref "/registry/packages/aws/api-docs/dynamodb" >}}),
+[IAM users, roles, groups, and role policies]({{< relref "/registry/packages/aws/api-docs/iam" >}}),
+[Kinesis streams]({{< relref "/registry/packages/aws/api-docs/kinesis" >}}), and more.
 
 To learn more, take a look at the
-[AWS API documentation]({{< relref "/docs/reference/pkg/aws" >}})
+[AWS API documentation]({{< relref "/registry/packages/aws/api-docs" >}})
 and the [sample code that provisions a variety of infrastructure resources](https://github.com/pulumi/examples/blob/master/aws-ts-resources/index.ts).

@@ -44,7 +44,7 @@ I work in the financial industry, and compliance is important. So, I searched fo
 Before reinventing the wheel, I searched for existing packages in
 JavaScript for manipulating IAM Policy documents.
 
-Pulumi has the [`aws.iam.getPolicyDocument`]({{< relref "/docs/reference/pkg/aws/iam/getpolicydocument" >}}) API. That looked interesting because it allows writing the policies as Policy as Code. But you cannot properly unit test the IAM Policy document produced by
+Pulumi has the [`aws.iam.getPolicyDocument`]({{< relref "/registry/packages/aws/api-docs/iam/getpolicydocument" >}}) API. That looked interesting because it allows writing the policies as Policy as Code. But you cannot properly unit test the IAM Policy document produced by
 `aws.iam.getPolicyDocument` function. When Pulumi runs in testing mode, that function is not available unless you mock it. Huh. That is not very helpful.
 
 I dug further to find Node.js packages for manipulating IAM Policy documents. Not much. Except for [AWS CDK](https://docs.aws.amazon.com/cdk/api/latest/typescript/api/aws-iam.html). But you must drag the whole CDK Node.js package into your project only to handle IAM Policy documents. But, the AWS CDK was a good starting point for designing [@thinkinglabs/aws-iam-policy](https://github.com/thinkinglabs/aws-iam-policy).

@@ -76,8 +76,8 @@ the [default, ambient kubeconfig credentials][default-kubeconfig].
 The role permissions for the operator can be adjusted to control what in-cluster API resources are allowed.
 
 [nginx-stack]: https://github.com/metral/pulumi-nginx/blob/master/index.ts
-[k8s-provider]: {{< relref "/docs/reference/pkg/kubernetes/provider" >}}
-[default-kubeconfig]: {{< relref "/docs/intro/cloud-providers/kubernetes/setup#steps" >}}
+[k8s-provider]: {{< relref "/registry/packages/kubernetes/api-docs/provider" >}}
+[default-kubeconfig]: {{< relref "/registry/packages/kubernetes/installation-configuration#steps" >}}
 
 Choose your preferred language below, or check out [Create Pulumi Stacks using kubectl][stacks-use-kubectl].
 

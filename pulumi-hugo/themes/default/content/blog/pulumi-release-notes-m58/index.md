@@ -108,7 +108,7 @@ class Program
 
 {{< /chooser >}}
 
-Get started in the [Confluent Cloud provider docs]({{< relref "/docs/intro/cloud-providers/confluent" >}}).
+Get started in the [Confluent Cloud provider docs]({{< relref "/registry/packages/confluent" >}}).
 
 ### GitHub Actions guide in all languages
 

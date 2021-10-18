@@ -121,8 +121,8 @@ See the [FAQ][crosswalk-faq] for more details.
 [pulumi-kq]: https://github.com/pulumi/pulumi-query
 [k8s-clientgo]: https://github.com/kubernetes/client-go
 [gh-pulumi]: https://github.com/pulumi
-[pulumi-cloud-k8s]: /docs/intro/cloud-providers/kubernetes
-[pulumi-cloud-k8s]: {{< relref "/docs/intro/cloud-providers/kubernetes" >}}
+[pulumi-cloud-k8s]: /registry/packages/kubernetes
+[pulumi-cloud-k8s]: {{< relref "/registry/packages/kubernetes" >}}
 [pulumi-cd]: {{< relref "/docs/guides/continuous-delivery" >}}
 [pulumi-slack]: https://slack.pulumi.com/
 [pulumi-twitter]: https://twitter.com/pulumicorp

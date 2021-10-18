@@ -676,7 +676,7 @@ For a complete example, check out our Kubernetes [Graceful App Rollout][tutorial
 tutorial for more details on how to update a Deployment automatically
 when it's ConfigMap changes.
 
-[tutorial-app-rollout]: {{< relref "/docs/tutorials/kubernetes/configmap-rollout" >}}
+[tutorial-app-rollout]: {{< relref "/registry/packages/kubernetes/how-to-guides/configmap-rollout" >}}
 
 ## Deploy a Job
 
@@ -1026,4 +1026,4 @@ Coming soon.
 To learn more about how to work with Kubernetes and Pulumi, check out the
 [Kubernetes Tutorials][k8s-tutorials] for details.
 
-[k8s-tutorials]: {{< relref "/docs/tutorials/kubernetes" >}}
+[k8s-tutorials]: {{< relref "/registry/packages/kubernetes/how-to-guides" >}}

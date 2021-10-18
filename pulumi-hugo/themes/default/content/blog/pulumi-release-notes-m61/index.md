@@ -33,7 +33,7 @@ It's been a busy few weeks at Pulumi, including for some of our community contri
 
 Pulumi's existing Helm `Chart` resource provides support for deploying Helm charts via templating the chart and deploying it as Pulumi resources.  This means that some features of Helm that are not availabe via Helm templating do not behave quite the same using the Pulumi Helm `Chart` resource as they do when deployed via the `helm` CLI itself - for example features like [Helm lifecycle hooks](https://helm.sh/docs/topics/charts_hooks/) and handling sub-charts and [dependencies](https://helm.sh/docs/topics/charts/#chart-dependencies). As Helm and its usage evolved over the years, Pulumi users using the `Chart` resource have noted that in many cases they would like a resource that provides the exact same behave as the `helm` CLI, but can be orchestrated as part of a Pulumi deployment.
 
-The new [Helm `Release`]({{< relref "/docs/reference/pkg/kubernetes/helm/v3/release" >}}) resource provides Pulumi users more options to choose the right tool for their use-case. In contrast to the existing Helm `Chart` integration, which is implemented as a Component Resource that extracts the corresponding Kubernetes resources' manifests from the chart and installs them as if they were individually specified in the Pulumi user program, the new Helm `Release` resource uses the Helm SDK directly to perform the deployment, providing the exact same behavior as a corresponding `helm` CLI deployment.
+The new [Helm `Release`]({{< relref "/registry/packages/kubernetes/api-docs/helm/v3/release" >}}) resource provides Pulumi users more options to choose the right tool for their use-case. In contrast to the existing Helm `Chart` integration, which is implemented as a Component Resource that extracts the corresponding Kubernetes resources' manifests from the chart and installs them as if they were individually specified in the Pulumi user program, the new Helm `Release` resource uses the Helm SDK directly to perform the deployment, providing the exact same behavior as a corresponding `helm` CLI deployment.
 
 You can get started with the Helm Release resource in versions [v3.7.0](https://github.com/pulumi/pulumi-kubernetes/releases/tag/v3.7.0) and higher of the Pulumi Kubernetes Provider and SDK in all Pulumi supported languages.For example, in the following snippet we  install Redis through a Helm Chart:
 
@@ -362,7 +362,7 @@ Learn more in the [announcement blog post]({{< relref "/blog/full-access-to-helm
 
 You can now use Pulumi's modern infrastructure-as-code solution to manage new resources! Our new provider for MinIO gives you access to the full range of high-performance, S3-compatible object storage offered by [MinIO](https://min.io). Likewise, our new provider for Snowflake lets you create and manage many of the data engineering, data lake, data warehouse, and other data resources in [Snowflake's](https://snowflake.com) data cloud.
 
-Learn more in the [MinIO]({{< relref "/docs/intro/cloud-providers/minio">}}) and [Snowflake]({{< relref "/docs/intro/cloud-providers/snowflake">}}) provider docs
+Learn more in the [MinIO]({{< relref "/registry/packages/minio">}}) and [Snowflake]({{< relref "/registry/packages/snowflake">}}) provider docs
 
 ### New resources in the Azure Native provider
 

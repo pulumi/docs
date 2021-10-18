@@ -30,5 +30,5 @@ Here are a few pointers:
 - An example resource, [SQS](https://www.pulumi.com/docs/reference/pkg/aws/sqs/queue/)
 - [AWS package](https://www.pulumi.com/docs/reference/pkg/aws/)
 - [Azure package](https://www.pulumi.com/docs/reference/pkg/azure/)
-- [GCP package](https://www.pulumi.com/docs/reference/pkg/gcp/)
+- [GCP package](https://www.pulumi.com/registry/packages/gcp/api-docs/)
 - [Root API reference](https://www.pulumi.com/docs/reference/pkg/)

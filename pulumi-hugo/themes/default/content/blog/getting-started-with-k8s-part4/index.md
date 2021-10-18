@@ -91,5 +91,5 @@ Stateful applications present additional challenges when deployed in Kubernetes.
  In the next series installment, we'll examine Kubernetes networking. Until then, you can learn more about Kubernetes with these resources:
 
 - Watch educational content on [Pulumi TV](https://www.youtube.com/pulumitv)
-- Learn more about Pulumi's [support for Kubernetes]({{< relref "/docs/intro/cloud-providers/kubernetes" >}})
-- Practice [Kubernetes Tutorials]({{< relref "/docs/tutorials/kubernetes" >}}) using Pulumi
+- Learn more about Pulumi's [support for Kubernetes]({{< relref "/registry/packages/kubernetes" >}})
+- Practice [Kubernetes Tutorials]({{< relref "/registry/packages/kubernetes/how-to-guides" >}}) using Pulumi

@@ -28,7 +28,7 @@ Updated January 2021 to include Python, .NET, and Go support.
 To get started, download the free and open source
 [Pulumi SDK]({{< relref "/docs/get-started/install" >}}), which includes
 the `pulumi` CLI we'll use below. If you don't
-have the AWS CLI installed and configured, [set that up too]({{< relref "/docs/intro/cloud-providers/aws/setup" >}}).
+have the AWS CLI installed and configured, [set that up too]({{< relref "/registry/packages/aws/installation-configuration" >}}).
 You'll need AWS credentials to access your AWS account and
 provision resources.
 
@@ -375,7 +375,7 @@ sizes.
 We've seen how Pulumi takes care of the heavy lifting with AWS EKS so that
 you don't have to. You can use Pulumi to easily deploy new clusters,
 managed AWS resources, and Kubernetes apps, all with the same powerful toolchain. Support is
-also available for Azure AKS, [Google GKE]({{< relref "/docs/tutorials/kubernetes/gke" >}}),
+also available for Azure AKS, [Google GKE]({{< relref "/registry/packages/kubernetes/how-to-guides/gke" >}}),
 DigitalOcean's Managed Kubernetes, and custom clusters (including Minikube).
 
 For more information:

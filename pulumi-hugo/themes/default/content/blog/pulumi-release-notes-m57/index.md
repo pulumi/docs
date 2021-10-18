@@ -10,7 +10,7 @@ tags:
     - features
 ---
 
-We regularly ship updates across the Pulumi ecosystem, with a release of the Pulumi CLI every two weeks, frequent releases of our [cloud providers]({{< relref "/docs/intro/cloud-providers" >}}), and regular updates to the Pulumi Service. You can read about most of those changes in the the `CHANGELOG.md` files in each open source repository. To highlight some of the most exciting releases—including, for the first time, updates to the Pulumi Service—we're trying something new: a regular release notes post for Pulumi release news, features, and updates. If you find it useful, or have ideas on how we could improve it, let us know [on Twitter](https://twitter.com/pulumicorp) or in the [Pulumi Community Slack](https://slack.pulumi.com)!
+We regularly ship updates across the Pulumi ecosystem, with a release of the Pulumi CLI every two weeks, frequent releases of our [cloud providers]({{< relref "/registry" >}}), and regular updates to the Pulumi Service. You can read about most of those changes in the the `CHANGELOG.md` files in each open source repository. To highlight some of the most exciting releases—including, for the first time, updates to the Pulumi Service—we're trying something new: a regular release notes post for Pulumi release news, features, and updates. If you find it useful, or have ideas on how we could improve it, let us know [on Twitter](https://twitter.com/pulumicorp) or in the [Pulumi Community Slack](https://slack.pulumi.com)!
 
 In this update:
 
@@ -126,7 +126,7 @@ class Program
 
 {{< /chooser >}}
 
-Get started in the [SumoLogic provider docs]({{< relref "/docs/intro/cloud-providers/sumologic" >}}).
+Get started in the [SumoLogic provider docs]({{< relref "/registry/packages/sumologic" >}}).
 
 ### 100 new resources in the Azure Native provider
 

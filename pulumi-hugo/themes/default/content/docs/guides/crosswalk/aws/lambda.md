@@ -155,7 +155,7 @@ docsBucket.onObjectCreated("docsHandler", new aws.lambda.CallbackFunction("docsH
 ```
 
 For more information about the properties available on `CallbackFunction`, refer to the [API documentation](
-{{< relref "/docs/reference/pkg/aws/lambda" >}}).
+{{< relref "/registry/packages/aws/api-docs/lambda" >}}).
 
 ### Register an Event Handler by Creating a Lambda Function Resource
 

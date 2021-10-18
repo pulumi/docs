@@ -175,7 +175,7 @@ Depending on what you're trying to accomplish, you may prefer to start with (1) 
 
 ### Deploy Stacks Using Pulumi
 
-The Pulumi AWS package [provides a CloudFormation Stack]({{< relref "/docs/reference/pkg/aws/cloudformation/stack" >}}) resource type. Using this type, you can deploy an existing AWS CloudFormation template written in YAML or JSON.
+The Pulumi AWS package [provides a CloudFormation Stack]({{< relref "/registry/packages/aws/api-docs/cloudformation/stack" >}}) resource type. Using this type, you can deploy an existing AWS CloudFormation template written in YAML or JSON.
 
 For instance, this code deploys a simple CloudFormation template using the given parameters, and exports the resulting VPC ID:
 

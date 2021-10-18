@@ -1,14 +1,14 @@
 {
-  "name": "pulumi-hugo",
-  "version": "0.0.1",
-  "private": true,
-  "repository": "git@github.com:pulumi/pulumi-hugo",
-  "author": "Christian Nunciato <c@nunciato.org>",
-  "license": "MIT",
-  "dependencies": {
-    "concurrently": "^6.0.0",
-    "js-yaml": "^3.13.1",
-    "markdownlint": "^0.17.2",
-    "sass":"^1.39.2"
-  }
+    "name": "pulumi-hugo",
+    "version": "0.0.1",
+    "private": true,
+    "repository": "git@github.com:pulumi/pulumi-hugo",
+    "author": "Christian Nunciato <c@nunciato.org>",
+    "license": "MIT",
+    "dependencies": {
+        "concurrently": "^6.0.0",
+        "js-yaml": "^3.13.1",
+        "markdownlint": "^0.17.2",
+        "sass":"^1.39.2"
+    }
 }

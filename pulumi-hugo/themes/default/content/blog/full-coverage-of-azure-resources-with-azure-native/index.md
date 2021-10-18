@@ -15,7 +15,7 @@ Today, we’re excited to announce that this new provider is now the default way
 
 <!--more-->
 
-Already use the [classic Pulumi-Azure provider](https://www.pulumi.com/docs/reference/pkg/azure/)? You can migrate to Azure-Native now using the [migration guide]({{< relref "/docs/intro/cloud-providers/azure/from-classic" >}}). If you prefer to wait until general availability, stay tuned for updates: we expect to reach general availability in the spring of this year.
+Already use the [classic Pulumi-Azure provider](https://www.pulumi.com/docs/reference/pkg/azure/)? You can migrate to Azure-Native now using the [migration guide]({{< relref "/registry/packages/azure-native/from-classic" >}}). If you prefer to wait until general availability, stay tuned for updates: we expect to reach general availability in the spring of this year.
 
 Alongside this announcement, we’re also formalizing a new concept: a Pulumi “native provider”. A native provider provides functionality mapped directly from the underlying API; in the case of the new Azure Provider, functionality is mapped directly from the Azure Resource Manager API surface. Going forward, you’ll be able to find these next-generation Pulumi providers directly from the name by looking for the “-Native” suffix.
 

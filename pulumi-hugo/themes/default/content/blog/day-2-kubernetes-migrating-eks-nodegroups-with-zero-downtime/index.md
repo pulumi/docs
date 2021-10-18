@@ -154,7 +154,7 @@ use.
 
 For further examples on how to use Pulumi to create Kubernetes
 clusters, or deploy workloads to a cluster, check out the rest of the
-[Kubernetes tutorials]({{< relref "/docs/tutorials/kubernetes" >}}).
+[Kubernetes tutorials]({{< relref "/registry/packages/kubernetes/how-to-guides" >}}).
 
 As always, you can check out our code on
 [GitHub](https://github.com/pulumi), follow us on
@@ -170,6 +170,6 @@ migrating your existing configuration code to Pulumi, please don't hesitate to [
 [ingress-nginx]: https://github.com/kubernetes/ingress-nginx
 [echoserver]: https://github.com/kubernetes-retired/contrib/blob/master/ingress/echoheaders/echo-app.yaml
 [pod-lifecycle]: https://kubernetes.io/docs/concepts/workloads/pods/pod/#termination-of-pods
-[eks-nodegroup-tutorial]: {{< relref "/docs/tutorials/kubernetes/eks-migrate-nodegroups" >}}
+[eks-nodegroup-tutorial]: {{< relref "/registry/packages/kubernetes/how-to-guides/eks-migrate-nodegroups" >}}
 [crosswalk-aws]: {{< relref "/docs/guides/crosswalk/aws" >}}.
-[tutorial-ha-refs]: {{< relref "/docs/tutorials/kubernetes/eks-migrate-nodegroups#kubernetes-workloads-high-availability-ha-rolling-updates" >}}
+[tutorial-ha-refs]: {{< relref "/registry/packages/kubernetes/how-to-guides/eks-migrate-nodegroups#kubernetes-workloads-high-availability-ha-rolling-updates" >}}

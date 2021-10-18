@@ -1,9 +1,33 @@
 languageCode: en-us
 title: Pulumi - Modern Infrastructure as Code
 
-theme: default
-
 refLinksErrorLevel: WARNING
+
+module:
+  imports:
+    - path: github.com/pulumi/theme
+      mounts:
+        - source: assets
+          target: assets
+        - source: static
+          target: static
+        - source: layouts
+          target: layouts
+    - path: github.com/pulumi/pulumi-hugo/themes/default
+      mounts:
+        - source: content
+          target: content
+        - source: static
+          target: static
+        - source: layouts
+          target: layouts
+        - source: data
+          target: data
+        - source: assets
+          target: assets
+        - source: archetypes
+          target: archetypes
+
 
 disableKinds:
   - category
@@ -72,8 +96,10 @@ markup:
 
 params:
     canonicalURL: https://www.pulumi.com
-    repositoryURL: https://github.com/pulumi/pulumi-hugo
-    repositoryBranch: master
+    contentRepositoryURL: https://github.com/pulumi/pulumi-hugo
+    contentRepositoryBaseBranch: master
+    registryRepositoryURL: https://github.com/pulumi/registry
+    registryRepositoryBaseBranch: master
     meta_desc: |
         Pulumi's open source infrastructure as code SDK enables you to create, deploy,
         and manage infrastructure on any cloud, using your favorite languages.

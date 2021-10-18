@@ -135,7 +135,7 @@ Okay, but this all feels very Ops-centric still -- we’re writing YAML, not a p
 
 Before, we had a ton of YAML, now infrastructure as code tools lets us cut a window from the Ops silo to the Dev silo, so we can share stuff, talk a bit more, and work together. You can stand up the infrastructure to deploy your application on Kubernetes right there in the application code! Fortunately, Pulumi has a bunch of different examples of how to do this.
 
-First, you need [Pulumi installed](https://www.pulumi.com/docs/get-started/install/). Then, you need to [configure Kubernetes for Pulumi](https://www.pulumi.com/docs/intro/cloud-providers/kubernetes/setup/). From here, we can deploy to Kubernetes without touching a shred of YAML directly.
+First, you need [Pulumi installed](https://www.pulumi.com/docs/get-started/install/). Then, you need to [configure Kubernetes for Pulumi](https://www.pulumi.com/registry/packages/kubernetes/installation-configuration/). From here, we can deploy to Kubernetes without touching a shred of YAML directly.
 
 Below is an example of the code required to deploy NGINX to Kubernetes, with two replicas, but this time, in more familiar Python instead of YAML.
 

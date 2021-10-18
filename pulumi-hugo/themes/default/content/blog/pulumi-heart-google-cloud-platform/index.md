@@ -96,7 +96,7 @@ will it proceed (with a full audit history):
     ...
 
 Learn more about working with Pulumi and Google Cloud infrastructure in
-this [GCE Web Server]({{< relref "/docs/tutorials/gcp/gce-webserver" >}})
+this [GCE Web Server]({{< relref "/registry/packages/gcp/how-to-guides/gce-webserver" >}})
 tutorial.
 
 ## Working with Kubernetes and Google Container Engine (GKE)
@@ -160,7 +160,7 @@ k8s_cluster = Cluster('gke-cluster',
 ```
 
 Learn more about using Pulumi with Kubernetes and GKE in this
-[Hello GKE]({{< relref "/docs/tutorials/kubernetes/gke" >}}) tutorial.
+[Hello GKE]({{< relref "/registry/packages/kubernetes/how-to-guides/gke" >}}) tutorial.
 
 ## Super Simple Serverless with Google Cloud Functions
 
@@ -264,8 +264,8 @@ Here are a few resources to learn more about working with Pulumi and
 GCP:
 
 - [Google Cloud Platform Getting Started Guide]({{< relref "/docs/get-started/gcp" >}})
-- [GKE Tutorial]({{< relref "/docs/tutorials/kubernetes/gke" >}})
-- [GCE Tutorial]({{< relref "/docs/tutorials/gcp/gce-webserver" >}})
+- [GKE Tutorial]({{< relref "/registry/packages/kubernetes/how-to-guides/gke" >}})
+- [GCE Tutorial]({{< relref "/registry/packages/gcp/how-to-guides/gce-webserver" >}})
 - Example: [Serverless Slackbot with Cloud Functions in JavaScript](https://github.com/pulumi/examples/tree/master/gcp-ts-slackbot)
 - Example: [GKE + Kubernetes Pod Deployment in Python](https://github.com/pulumi/examples/tree/master/gcp-py-gke)
 - [Pulumi Community Slack](https://slack.pulumi.com/)
