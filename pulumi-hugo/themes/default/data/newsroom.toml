@@ -1,4 +1,10 @@
 [[releases]]
+date = "18th October 2021"
+title = "Pulumi Ushers in the Developer-first Infrastructure Era with New Package Registry Powering Software Sharing and Reuse"
+summary = "Growing collection of Pulumi Packages provides cloud building blocks and reusable cloud architectures for AWS, Azure, Google Cloud, Kubernetes, and top cloud software platforms in industry-standard languages"
+url = "http://info.pulumi.com/press-release/pulumi-registry"
+
+[[releases]]
 date = "30th September 2021"
 title = "Pulumi AWS Native Provider Speeds Users Into the Future of Modern Cloud Application Development on AWS"
 summary = "Pulumi now provides same-day support for new AWS Cloud Control API-supported services and features, allowing customers to harness modern cloud architectures using industry standard languages, software tools, and cloud engineering best practices"
