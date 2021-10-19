@@ -14,7 +14,6 @@ no_edit_this_page: true
 
 This resource allows you to create and manage environments for a GitHub repository.
 
-
 {{% examples %}}
 
 ## Example Usage
@@ -1031,6 +1030,16 @@ The following state arguments are supported:
     <dd>{{% md %}}Up to 6 IDs for users who may review jobs that reference the environment. Reviewers must have at least read access to the repository. Only one of the required reviewers needs to approve the job for it to proceed.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
+## Import
+
+
+GitHub Repository Environment can be imported using an ID made up of `name` of the repository combined with the `environment` name of the environment, separated by a `:` character, e.g.
+
+```sh
+ $ pulumi import github:index/repositoryEnvironment:RepositoryEnvironment daily terraform:daily
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

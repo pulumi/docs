@@ -261,6 +261,7 @@ const example = new github.Repository("example", {
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Repository</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+               <span class="nx">allow_auto_merge</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                <span class="nx">allow_merge_commit</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                <span class="nx">allow_rebase_merge</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                <span class="nx">allow_squash_merge</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -413,6 +414,15 @@ The Repository resource accepts the following [input]({{< relref "/docs/intro/co
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="allowautomerge_csharp">
+<a href="#allowautomerge_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Auto<wbr>Merge</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set to `true` to allow auto-merging pull requests on the repository.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowmergecommit_csharp">
 <a href="#allowmergecommit_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Merge<wbr>Commit</a>
@@ -639,6 +649,15 @@ Repositories are created as public (e.g. open source) by default.
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="allowautomerge_go">
+<a href="#allowautomerge_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Auto<wbr>Merge</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set to `true` to allow auto-merging pull requests on the repository.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="allowmergecommit_go">
 <a href="#allowmergecommit_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Merge<wbr>Commit</a>
 </span>
@@ -864,6 +883,15 @@ Repositories are created as public (e.g. open source) by default.
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="allowautomerge_nodejs">
+<a href="#allowautomerge_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Auto<wbr>Merge</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Set to `true` to allow auto-merging pull requests on the repository.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="allowmergecommit_nodejs">
 <a href="#allowmergecommit_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Merge<wbr>Commit</a>
 </span>
@@ -1088,6 +1116,15 @@ Repositories are created as public (e.g. open source) by default.
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="allow_auto_merge_python">
+<a href="#allow_auto_merge_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>auto_<wbr>merge</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set to `true` to allow auto-merging pull requests on the repository.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_merge_commit_python">
 <a href="#allow_merge_commit_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>merge_<wbr>commit</a>
@@ -1702,6 +1739,7 @@ Get an existing Repository resource's state with the given name, ID, and optiona
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">allow_auto_merge</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">allow_merge_commit</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">allow_rebase_merge</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">allow_squash_merge</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -1846,6 +1884,15 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_allowautomerge_csharp">
+<a href="#state_allowautomerge_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Auto<wbr>Merge</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set to `true` to allow auto-merging pull requests on the repository.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowmergecommit_csharp">
 <a href="#state_allowmergecommit_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Merge<wbr>Commit</a>
@@ -2152,6 +2199,15 @@ Repositories are created as public (e.g. open source) by default.
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_allowautomerge_go">
+<a href="#state_allowautomerge_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Auto<wbr>Merge</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set to `true` to allow auto-merging pull requests on the repository.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_allowmergecommit_go">
 <a href="#state_allowmergecommit_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Merge<wbr>Commit</a>
 </span>
@@ -2457,6 +2513,15 @@ Repositories are created as public (e.g. open source) by default.
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_allowautomerge_nodejs">
+<a href="#state_allowautomerge_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Auto<wbr>Merge</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Set to `true` to allow auto-merging pull requests on the repository.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_allowmergecommit_nodejs">
 <a href="#state_allowmergecommit_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Merge<wbr>Commit</a>
 </span>
@@ -2761,6 +2826,15 @@ Repositories are created as public (e.g. open source) by default.
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_allow_auto_merge_python">
+<a href="#state_allow_auto_merge_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>auto_<wbr>merge</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set to `true` to allow auto-merging pull requests on the repository.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allow_merge_commit_python">
 <a href="#state_allow_merge_commit_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>merge_<wbr>commit</a>

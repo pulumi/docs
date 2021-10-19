@@ -323,6 +323,15 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="allowautomerge_csharp">
+<a href="#allowautomerge_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Auto<wbr>Merge</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the repository allows auto-merging pull requests.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="allowmergecommit_csharp">
 <a href="#allowmergecommit_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Merge<wbr>Commit</a>
 </span>
@@ -559,6 +568,15 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="allowautomerge_go">
+<a href="#allowautomerge_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Auto<wbr>Merge</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the repository allows auto-merging pull requests.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allowmergecommit_go">
 <a href="#allowmergecommit_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Merge<wbr>Commit</a>
@@ -797,6 +815,15 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="allowautomerge_nodejs">
+<a href="#allowautomerge_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Auto<wbr>Merge</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the repository allows auto-merging pull requests.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="allowmergecommit_nodejs">
 <a href="#allowmergecommit_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Merge<wbr>Commit</a>
 </span>
@@ -1033,6 +1060,15 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="allow_auto_merge_python">
+<a href="#allow_auto_merge_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>auto_<wbr>merge</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the repository allows auto-merging pull requests.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allow_merge_commit_python">
 <a href="#allow_merge_commit_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>merge_<wbr>commit</a>

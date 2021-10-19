@@ -46,7 +46,7 @@ class MyStack : Stack
         var exampleTeam = new Github.Team("exampleTeam", new Github.TeamArgs
         {
         });
-        // Protect the master branch of the foo repository. Additionally, require that
+        // Protect the main branch of the foo repository. Additionally, require that
         // the "ci/travis" context to be passing and only allow the engineers team merge
         // to the branch.
         var exampleBranchProtection = new Github.BranchProtection("exampleBranchProtection", new Github.BranchProtectionArgs
@@ -181,7 +181,7 @@ import pulumi_github as github
 example_repository = github.Repository("exampleRepository")
 example_user = github.get_user(username="example")
 example_team = github.Team("exampleTeam")
-# Protect the master branch of the foo repository. Additionally, require that
+# Protect the main branch of the foo repository. Additionally, require that
 # the "ci/travis" context to be passing and only allow the engineers team merge
 # to the branch.
 example_branch_protection = github.BranchProtection("exampleBranchProtection",
@@ -224,7 +224,7 @@ const exampleUser = github.getUser({
     username: "example",
 });
 const exampleTeam = new github.Team("exampleTeam", {});
-// Protect the master branch of the foo repository. Additionally, require that
+// Protect the main branch of the foo repository. Additionally, require that
 // the "ci/travis" context to be passing and only allow the engineers team merge
 // to the branch.
 const exampleBranchProtection = new github.BranchProtection("exampleBranchProtection", {

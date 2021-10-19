@@ -37,7 +37,8 @@ construction to achieve fine-grained programmatic control over provider settings
              <span class="nx">insecure</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">organization</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+             <span class="nx">token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">write_delay_ms</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[ProviderArgs]</a></span> = None<span class="p">,</span>
@@ -220,6 +221,15 @@ and `app_auth` are not set.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OAuth token used to connect to GitHub. Anonymous mode is enabled if both `token` and `app_auth` are not set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="writedelayms_csharp">
+<a href="#writedelayms_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Delay<wbr>Ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Amount of time in milliseconds to sleep in between writes to GitHub API. Defaults to 1000ms or 1s if not set.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -279,6 +289,15 @@ and `app_auth` are not set.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OAuth token used to connect to GitHub. Anonymous mode is enabled if both `token` and `app_auth` are not set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="writedelayms_go">
+<a href="#writedelayms_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Delay<wbr>Ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Amount of time in milliseconds to sleep in between writes to GitHub API. Defaults to 1000ms or 1s if not set.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -338,6 +357,15 @@ and `app_auth` are not set.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OAuth token used to connect to GitHub. Anonymous mode is enabled if both `token` and `app_auth` are not set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="writedelayms_nodejs">
+<a href="#writedelayms_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Delay<wbr>Ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Amount of time in milliseconds to sleep in between writes to GitHub API. Defaults to 1000ms or 1s if not set.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -397,6 +425,15 @@ and `app_auth` are not set.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The OAuth token used to connect to GitHub. Anonymous mode is enabled if both `token` and `app_auth` are not set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="write_delay_ms_python">
+<a href="#write_delay_ms_python" style="color: inherit; text-decoration: inherit;">write_<wbr>delay_<wbr>ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Amount of time in milliseconds to sleep in between writes to GitHub API. Defaults to 1000ms or 1s if not set.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
