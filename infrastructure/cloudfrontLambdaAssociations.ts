@@ -131,7 +131,7 @@ function getEdgeRedirectsLambdaCallback():
     };
 }
 
-export function getRedirect(uri: string): string | undefined {
+function getRedirect(uri: string): string | undefined {
     return getRegistryRedirect(uri) || getSDKRedirect(uri);
 }
 
