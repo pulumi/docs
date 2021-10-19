@@ -140,23 +140,17 @@ function getRegistryRedirect(uri: string): string | undefined {
 }
 
 function getCloudProvidersRedirect(uri: string): string | undefined {
-    if (uri.includes("/docs/intro/cloud-providers/azure-classic/setup")) {
-        return "/registry/packages/azure/installation-configuration";
-    }
-    if (uri.includes("/docs/intro/cloud-providers/azure-classic")) {
-        return "/registry/packages/azure";
-    }
 
-    if (uri.includes("/docs/intro/cloud-providers/azure/setup")) {
-        return "/registry/packages/azure-native/installation-configuration";
-    }
-    if (uri.includes("/docs/intro/cloud-providers/azure/version-guide")) {
-        return "/registry/packages/azure-native/version-guide";
+    if (uri.includes("/docs/intro/cloud-providers/azure-classic")) {
+        return uri.replace("docs/intro/cloud-providers", "registry/packages")
+            .replace("azure-classic", "azure")
+            .replace("setup", "installation-configuration");
     }
     if (uri.includes("/docs/intro/cloud-providers/azure")) {
-        return "/registry/packages/azure-native";
+        return uri.replace("docs/intro/cloud-providers", "registry/packages")
+            .replace("azure", "azure-native")
+            .replace("setup", "installation-configuration");
     }
-
     if (uri.match(/\/docs\/intro\/cloud-providers/)) {
         return uri.replace("docs/intro/cloud-providers", "registry/packages")
             .replace("packet", "equinix-metal")
@@ -190,6 +184,7 @@ function getAPIDocsRedirect(uri: string): string | undefined {
 
 function getTutorialsRedirect(uri: string): string | undefined {
     const tutorialsPage = uri.match(/\/docs\/(?:reference\/)?tutorials\/([^\/]+)/);
+    
     if (tutorialsPage) {
         const packageName = tutorialsPage[1];
 
@@ -198,8 +193,23 @@ function getTutorialsRedirect(uri: string): string | undefined {
             return undefined;
         }
 
+        const isAWSNativeGuide = AWS_NATIVE_TUTORIALS.some((awsNativeGuide) => uri.includes(awsNativeGuide))
+        if (isAWSNativeGuide) {
+            return uri.replace("docs/tutorials/aws", "registry/packages/aws-native/how-to-guides")
+                .replace("docs/reference/tutorials/aws", "registry/packages/aws-native/how-to-guides");
+        }
+
+        const isAzureNativeGuide = AZURE_NATIVE_TUTORIALS.some((azureNativeGuide) => uri.includes(azureNativeGuide))
+        if (isAzureNativeGuide) {
+            return uri.replace("docs/tutorials/azure", "registry/packages/azure-native/how-to-guides")
+                .replace("docs/reference/tutorials/azure", "registry/packages/azure-native/how-to-guides");
+        }
+
         return uri.replace("docs/tutorials", "registry/packages")
             .replace("docs/reference/tutorials", "registry/packages")
+            .replace("aws-stackreference-architecture", "aws-ts-stackreference-architecture")
+            .replace("aws-pern-voting-app", "aws-ts-pern-voting-app")
+            .replace("aws-django-voting-app", "aws-py-django-voting-app")
             .replace(packageName, `${packageName}/how-to-guides`);
     }
 
@@ -285,3 +295,60 @@ function dotnetSDKRedirect(uri: string): string | undefined {
 
     return undefined;
 }
+
+// These are how-to guides that have the improper package because our template-creating script was not parsing classic-azure or aws-native correctly
+const AZURE_NATIVE_TUTORIALS = [
+    "azure-cs-aks-cosmos-helm",
+    "azure-cs-credential-rotation-one-set",
+    "azure-cs-appservice-docker",
+    "azure-go-appservice-docker",
+    "azure-py-appservice-docker",
+    "azure-ts-appservice-docker",
+    "azure-cs-appservice",
+    "azure-py-appservice",
+    "azure-ts-appservice",
+    "azure-cs-aci",
+    "azure-go-aci",
+    "azure-py-aci",
+    "azure-ts-aci",
+    "azure-cs-cosmosdb-logicapp",
+    "azure-py-cosmosdb-logicapp",
+    "azure-ts-cosmosdb-logicapp",
+    "azure-ts-functions-many",
+    "azure-cs-functions",
+    "azure-cs-aks-helm",
+    "azure-go-aks-helm",
+    "azure-py-aks-helm",
+    "azure-ts-aks-helm",
+    "azure-cs-aks",
+    "azure-go-aks",
+    "azure-py-aks",
+    "azure-ts-aks",
+    "azure-cs-synapse",
+    "azure-py-synapse",
+    "azure-ts-synapse",
+    "azure-py-virtual-data-center",
+    "azure-cs-call-azure-api",
+    "azure-go-call-azure-sdk",
+    "azure-py-call-azure-sdk",
+    "azure-ts-call-azure-sdk",
+    "azure-cs-net5-aks-webapp",
+    "azure-ts-webapp-privateendpoint-vnet-injection",
+    "azure-ts-functions",
+    "azure-py-minecraft-server",
+    "azure-cs-aks-multicluster",
+    "azure-go-aks-multicluster",
+    "azure-py-aks-multicluster",
+    "azure-ts-aks-multicluster",
+    "azure-cs-static-website",
+    "azure-go-static-website",
+    "azure-py-static-website",
+    "azure-ts-static-website",
+    "azure-py-webserver",
+    "azure-ts-webserver",
+];
+const AWS_NATIVE_TUTORIALS = [
+    "aws-native-ts-stepfunctions",
+    "aws-native-ts-ecs",
+    "aws-native-ts-s3-folder",
+];
