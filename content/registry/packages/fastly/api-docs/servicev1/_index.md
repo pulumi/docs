@@ -222,6 +222,8 @@ const demo = new fastly.Servicev1("demo", {
               <span class="nx">s3loggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1S3loggingArgs]]</span> = None<span class="p">,</span>
               <span class="nx">snippets</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SnippetArgs]]</span> = None<span class="p">,</span>
               <span class="nx">splunks</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SplunkArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">stale_if_error</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+              <span class="nx">stale_if_error_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
               <span class="nx">sumologics</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SumologicArgs]]</span> = None<span class="p">,</span>
               <span class="nx">syslogs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SyslogArgs]]</span> = None<span class="p">,</span>
               <span class="nx">vcls</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1VclArgs]]</span> = None<span class="p">,</span>
@@ -715,6 +717,24 @@ The Servicev1 resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="staleiferror_csharp">
+<a href="#staleiferror_csharp" style="color: inherit; text-decoration: inherit;">Stale<wbr>If<wbr>Error</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables serving a stale object if there is an error
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staleiferrorttl_csharp">
+<a href="#staleiferrorttl_csharp" style="color: inherit; text-decoration: inherit;">Stale<wbr>If<wbr>Error<wbr>Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The default time-to-live (TTL) for serving the stale object for the version
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sumologics_csharp">
 <a href="#sumologics_csharp" style="color: inherit; text-decoration: inherit;">Sumologics</a>
 </span>
@@ -1118,6 +1138,24 @@ The Servicev1 resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#servicev1splunk">[]Servicev1Splunk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staleiferror_go">
+<a href="#staleiferror_go" style="color: inherit; text-decoration: inherit;">Stale<wbr>If<wbr>Error</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables serving a stale object if there is an error
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staleiferrorttl_go">
+<a href="#staleiferrorttl_go" style="color: inherit; text-decoration: inherit;">Stale<wbr>If<wbr>Error<wbr>Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The default time-to-live (TTL) for serving the stale object for the version
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sumologics_go">
 <a href="#sumologics_go" style="color: inherit; text-decoration: inherit;">Sumologics</a>
@@ -1523,6 +1561,24 @@ The Servicev1 resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="staleiferror_nodejs">
+<a href="#staleiferror_nodejs" style="color: inherit; text-decoration: inherit;">stale<wbr>If<wbr>Error</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enables serving a stale object if there is an error
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staleiferrorttl_nodejs">
+<a href="#staleiferrorttl_nodejs" style="color: inherit; text-decoration: inherit;">stale<wbr>If<wbr>Error<wbr>Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The default time-to-live (TTL) for serving the stale object for the version
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sumologics_nodejs">
 <a href="#sumologics_nodejs" style="color: inherit; text-decoration: inherit;">sumologics</a>
 </span>
@@ -1927,6 +1983,24 @@ The Servicev1 resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="stale_if_error_python">
+<a href="#stale_if_error_python" style="color: inherit; text-decoration: inherit;">stale_<wbr>if_<wbr>error</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables serving a stale object if there is an error
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stale_if_error_ttl_python">
+<a href="#stale_if_error_ttl_python" style="color: inherit; text-decoration: inherit;">stale_<wbr>if_<wbr>error_<wbr>ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The default time-to-live (TTL) for serving the stale object for the version
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sumologics_python">
 <a href="#sumologics_python" style="color: inherit; text-decoration: inherit;">sumologics</a>
 </span>
@@ -2158,6 +2232,8 @@ Get an existing Servicev1 resource's state with the given name, ID, and optional
         <span class="nx">s3loggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1S3loggingArgs]]</span> = None<span class="p">,</span>
         <span class="nx">snippets</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SnippetArgs]]</span> = None<span class="p">,</span>
         <span class="nx">splunks</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SplunkArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">stale_if_error</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">stale_if_error_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">sumologics</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SumologicArgs]]</span> = None<span class="p">,</span>
         <span class="nx">syslogs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SyslogArgs]]</span> = None<span class="p">,</span>
         <span class="nx">vcls</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1VclArgs]]</span> = None<span class="p">,</span>
@@ -2652,6 +2728,24 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_staleiferror_csharp">
+<a href="#state_staleiferror_csharp" style="color: inherit; text-decoration: inherit;">Stale<wbr>If<wbr>Error</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables serving a stale object if there is an error
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_staleiferrorttl_csharp">
+<a href="#state_staleiferrorttl_csharp" style="color: inherit; text-decoration: inherit;">Stale<wbr>If<wbr>Error<wbr>Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The default time-to-live (TTL) for serving the stale object for the version
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_sumologics_csharp">
 <a href="#state_sumologics_csharp" style="color: inherit; text-decoration: inherit;">Sumologics</a>
 </span>
@@ -3073,6 +3167,24 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicev1splunk">[]Servicev1Splunk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_staleiferror_go">
+<a href="#state_staleiferror_go" style="color: inherit; text-decoration: inherit;">Stale<wbr>If<wbr>Error</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables serving a stale object if there is an error
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_staleiferrorttl_go">
+<a href="#state_staleiferrorttl_go" style="color: inherit; text-decoration: inherit;">Stale<wbr>If<wbr>Error<wbr>Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The default time-to-live (TTL) for serving the stale object for the version
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sumologics_go">
 <a href="#state_sumologics_go" style="color: inherit; text-decoration: inherit;">Sumologics</a>
@@ -3496,6 +3608,24 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_staleiferror_nodejs">
+<a href="#state_staleiferror_nodejs" style="color: inherit; text-decoration: inherit;">stale<wbr>If<wbr>Error</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enables serving a stale object if there is an error
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_staleiferrorttl_nodejs">
+<a href="#state_staleiferrorttl_nodejs" style="color: inherit; text-decoration: inherit;">stale<wbr>If<wbr>Error<wbr>Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The default time-to-live (TTL) for serving the stale object for the version
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_sumologics_nodejs">
 <a href="#state_sumologics_nodejs" style="color: inherit; text-decoration: inherit;">sumologics</a>
 </span>
@@ -3918,6 +4048,24 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_stale_if_error_python">
+<a href="#state_stale_if_error_python" style="color: inherit; text-decoration: inherit;">stale_<wbr>if_<wbr>error</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables serving a stale object if there is an error
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_stale_if_error_ttl_python">
+<a href="#state_stale_if_error_ttl_python" style="color: inherit; text-decoration: inherit;">stale_<wbr>if_<wbr>error_<wbr>ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The default time-to-live (TTL) for serving the stale object for the version
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_sumologics_python">
 <a href="#state_sumologics_python" style="color: inherit; text-decoration: inherit;">sumologics</a>
 </span>
@@ -4268,7 +4416,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Comma separated list of OpenSSL Ciphers to try when negotiating to the backend
+    <dd>{{% md %}}Cipher list consisting of one or more cipher strings separated by colons. Commas or spaces are also acceptable separators but colons are normally used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslclientcert_csharp">
@@ -4497,7 +4645,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Comma separated list of OpenSSL Ciphers to try when negotiating to the backend
+    <dd>{{% md %}}Cipher list consisting of one or more cipher strings separated by colons. Commas or spaces are also acceptable separators but colons are normally used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslclientcert_go">
@@ -4726,7 +4874,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Comma separated list of OpenSSL Ciphers to try when negotiating to the backend
+    <dd>{{% md %}}Cipher list consisting of one or more cipher strings separated by colons. Commas or spaces are also acceptable separators but colons are normally used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslclientcert_nodejs">
@@ -4955,7 +5103,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Comma separated list of OpenSSL Ciphers to try when negotiating to the backend
+    <dd>{{% md %}}Cipher list consisting of one or more cipher strings separated by colons. Commas or spaces are also acceptable separators but colons are normally used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_client_cert_python">
@@ -6383,7 +6531,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If `true`, the dictionary is a private dictionary, and items are not readable in the UI or via API. Default is `false`. It is important to note that changing this attribute will delete and recreate the dictionary, and discard the current items in the dictionary. Using a write-only/private dictionary should only be done if the items are managed outside of the provider
+    <dd>{{% md %}}If `true`, the dictionary is a [private dictionary](https://docs.fastly.com/en/guides/private-dictionaries). Default is `false`. Please note that changing this attribute will delete and recreate the dictionary, and discard the current items in the dictionary. `fastly.Servicev1` resource will only manage the dictionary object itself, and items under private dictionaries can not be managed using `fastly.ServiceDictionaryItemsv1` resource. Therefore, using a write-only/private dictionary should only be done if the items are managed outside of his provider.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6423,7 +6571,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If `true`, the dictionary is a private dictionary, and items are not readable in the UI or via API. Default is `false`. It is important to note that changing this attribute will delete and recreate the dictionary, and discard the current items in the dictionary. Using a write-only/private dictionary should only be done if the items are managed outside of the provider
+    <dd>{{% md %}}If `true`, the dictionary is a [private dictionary](https://docs.fastly.com/en/guides/private-dictionaries). Default is `false`. Please note that changing this attribute will delete and recreate the dictionary, and discard the current items in the dictionary. `fastly.Servicev1` resource will only manage the dictionary object itself, and items under private dictionaries can not be managed using `fastly.ServiceDictionaryItemsv1` resource. Therefore, using a write-only/private dictionary should only be done if the items are managed outside of his provider.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6463,7 +6611,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If `true`, the dictionary is a private dictionary, and items are not readable in the UI or via API. Default is `false`. It is important to note that changing this attribute will delete and recreate the dictionary, and discard the current items in the dictionary. Using a write-only/private dictionary should only be done if the items are managed outside of the provider
+    <dd>{{% md %}}If `true`, the dictionary is a [private dictionary](https://docs.fastly.com/en/guides/private-dictionaries). Default is `false`. Please note that changing this attribute will delete and recreate the dictionary, and discard the current items in the dictionary. `fastly.Servicev1` resource will only manage the dictionary object itself, and items under private dictionaries can not be managed using `fastly.ServiceDictionaryItemsv1` resource. Therefore, using a write-only/private dictionary should only be done if the items are managed outside of his provider.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6503,7 +6651,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If `true`, the dictionary is a private dictionary, and items are not readable in the UI or via API. Default is `false`. It is important to note that changing this attribute will delete and recreate the dictionary, and discard the current items in the dictionary. Using a write-only/private dictionary should only be done if the items are managed outside of the provider
+    <dd>{{% md %}}If `true`, the dictionary is a [private dictionary](https://docs.fastly.com/en/guides/private-dictionaries). Default is `false`. Please note that changing this attribute will delete and recreate the dictionary, and discard the current items in the dictionary. `fastly.Servicev1` resource will only manage the dictionary object itself, and items under private dictionaries can not be managed using `fastly.ServiceDictionaryItemsv1` resource. Therefore, using a write-only/private dictionary should only be done if the items are managed outside of his provider.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
