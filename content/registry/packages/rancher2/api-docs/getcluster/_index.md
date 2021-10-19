@@ -2725,27 +2725,11 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="dnsprefix_csharp">
-<a href="#dnsprefix_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Prefix</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="httpapplicationrouting_csharp">
 <a href="#httpapplicationrouting_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Application<wbr>Routing</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="kubernetesversion_csharp">
-<a href="#kubernetesversion_csharp" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2822,14 +2806,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="networkplugin_csharp">
-<a href="#networkplugin_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Plugin</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="networkpodcidr_csharp">
 <a href="#networkpodcidr_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Pod<wbr>Cidr</a>
 </span>
@@ -2851,14 +2827,6 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="nodepools_csharp">
-<a href="#nodepools_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Pools</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteraksconfigv2nodepool">List&lt;Get<wbr>Cluster<wbr>Aks<wbr>Config<wbr>V2Node<wbr>Pool&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2942,11 +2910,43 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dnsprefix_csharp">
+<a href="#dnsprefix_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="imported_csharp">
 <a href="#imported_csharp" style="color: inherit; text-decoration: inherit;">Imported</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kubernetesversion_csharp">
+<a href="#kubernetesversion_csharp" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkplugin_csharp">
+<a href="#networkplugin_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Plugin</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nodepools_csharp">
+<a href="#nodepools_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Pools</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusteraksconfigv2nodepool">List&lt;Get<wbr>Cluster<wbr>Aks<wbr>Config<wbr>V2Node<wbr>Pool&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2962,27 +2962,11 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="dnsprefix_go">
-<a href="#dnsprefix_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Prefix</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="httpapplicationrouting_go">
 <a href="#httpapplicationrouting_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Application<wbr>Routing</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="kubernetesversion_go">
-<a href="#kubernetesversion_go" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3059,14 +3043,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="networkplugin_go">
-<a href="#networkplugin_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Plugin</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="networkpodcidr_go">
 <a href="#networkpodcidr_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Pod<wbr>Cidr</a>
 </span>
@@ -3088,14 +3064,6 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="nodepools_go">
-<a href="#nodepools_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Pools</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteraksconfigv2nodepool">[]Get<wbr>Cluster<wbr>Aks<wbr>Config<wbr>V2Node<wbr>Pool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3179,11 +3147,43 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dnsprefix_go">
+<a href="#dnsprefix_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="imported_go">
 <a href="#imported_go" style="color: inherit; text-decoration: inherit;">Imported</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kubernetesversion_go">
+<a href="#kubernetesversion_go" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkplugin_go">
+<a href="#networkplugin_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Plugin</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nodepools_go">
+<a href="#nodepools_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Pools</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusteraksconfigv2nodepool">[]Get<wbr>Cluster<wbr>Aks<wbr>Config<wbr>V2Node<wbr>Pool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3199,27 +3199,11 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="dnsprefix_nodejs">
-<a href="#dnsprefix_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Prefix</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="httpapplicationrouting_nodejs">
 <a href="#httpapplicationrouting_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Application<wbr>Routing</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="kubernetesversion_nodejs">
-<a href="#kubernetesversion_nodejs" style="color: inherit; text-decoration: inherit;">kubernetes<wbr>Version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3296,14 +3280,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="networkplugin_nodejs">
-<a href="#networkplugin_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Plugin</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="networkpodcidr_nodejs">
 <a href="#networkpodcidr_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Pod<wbr>Cidr</a>
 </span>
@@ -3325,14 +3301,6 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="nodepools_nodejs">
-<a href="#nodepools_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Pools</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteraksconfigv2nodepool">Get<wbr>Cluster<wbr>Aks<wbr>Config<wbr>V2Node<wbr>Pool[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3416,11 +3384,43 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dnsprefix_nodejs">
+<a href="#dnsprefix_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="imported_nodejs">
 <a href="#imported_nodejs" style="color: inherit; text-decoration: inherit;">imported</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kubernetesversion_nodejs">
+<a href="#kubernetesversion_nodejs" style="color: inherit; text-decoration: inherit;">kubernetes<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkplugin_nodejs">
+<a href="#networkplugin_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Plugin</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nodepools_nodejs">
+<a href="#nodepools_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Pools</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusteraksconfigv2nodepool">Get<wbr>Cluster<wbr>Aks<wbr>Config<wbr>V2Node<wbr>Pool[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3436,27 +3436,11 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="dns_prefix_python">
-<a href="#dns_prefix_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>prefix</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="http_application_routing_python">
 <a href="#http_application_routing_python" style="color: inherit; text-decoration: inherit;">http_<wbr>application_<wbr>routing</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="kubernetes_version_python">
-<a href="#kubernetes_version_python" style="color: inherit; text-decoration: inherit;">kubernetes_<wbr>version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3533,14 +3517,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="network_plugin_python">
-<a href="#network_plugin_python" style="color: inherit; text-decoration: inherit;">network_<wbr>plugin</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="network_pod_cidr_python">
 <a href="#network_pod_cidr_python" style="color: inherit; text-decoration: inherit;">network_<wbr>pod_<wbr>cidr</a>
 </span>
@@ -3562,14 +3538,6 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="node_pools_python">
-<a href="#node_pools_python" style="color: inherit; text-decoration: inherit;">node_<wbr>pools</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteraksconfigv2nodepool">Sequence[Get<wbr>Cluster<wbr>Aks<wbr>Config<wbr>V2Node<wbr>Pool]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3653,11 +3621,43 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dns_prefix_python">
+<a href="#dns_prefix_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="imported_python">
 <a href="#imported_python" style="color: inherit; text-decoration: inherit;">imported</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kubernetes_version_python">
+<a href="#kubernetes_version_python" style="color: inherit; text-decoration: inherit;">kubernetes_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="network_plugin_python">
+<a href="#network_plugin_python" style="color: inherit; text-decoration: inherit;">network_<wbr>plugin</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="node_pools_python">
+<a href="#node_pools_python" style="color: inherit; text-decoration: inherit;">node_<wbr>pools</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusteraksconfigv2nodepool">Sequence[Get<wbr>Cluster<wbr>Aks<wbr>Config<wbr>V2Node<wbr>Pool]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

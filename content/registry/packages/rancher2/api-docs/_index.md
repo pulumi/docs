@@ -41,6 +41,7 @@ A Pulumi package for creating and managing rancher2 resources.
     <li><a href="clustersync" title="ClusterSync"><span class="api-symbol api-symbol--resource"></span>ClusterSync</a></li>
     <li><a href="clustertemplate" title="ClusterTemplate"><span class="api-symbol api-symbol--resource"></span>ClusterTemplate</a></li>
     <li><a href="clusterv2" title="ClusterV2"><span class="api-symbol api-symbol--resource"></span>ClusterV2</a></li>
+    <li><a href="configmapv2" title="ConfigMapV2"><span class="api-symbol api-symbol--resource"></span>ConfigMapV2</a></li>
     <li><a href="etcdbackup" title="EtcdBackup"><span class="api-symbol api-symbol--resource"></span>EtcdBackup</a></li>
     <li><a href="feature" title="Feature"><span class="api-symbol api-symbol--resource"></span>Feature</a></li>
     <li><a href="globaldns" title="GlobalDns"><span class="api-symbol api-symbol--resource"></span>GlobalDns</a></li>
@@ -88,6 +89,7 @@ A Pulumi package for creating and managing rancher2 resources.
     <li><a href="getclusterscan" title="GetClusterScan"><span class="api-symbol api-symbol--function"></span>GetClusterScan</a></li>
     <li><a href="getclustertemplate" title="GetClusterTemplate"><span class="api-symbol api-symbol--function"></span>GetClusterTemplate</a></li>
     <li><a href="getclusterv2" title="GetClusterV2"><span class="api-symbol api-symbol--function"></span>GetClusterV2</a></li>
+    <li><a href="getconfigmapv2" title="GetConfigMapV2"><span class="api-symbol api-symbol--function"></span>GetConfigMapV2</a></li>
     <li><a href="getetcdbackup" title="GetEtcdBackup"><span class="api-symbol api-symbol--function"></span>GetEtcdBackup</a></li>
     <li><a href="getglobaldnsprovider" title="GetGlobalDnsProvider"><span class="api-symbol api-symbol--function"></span>GetGlobalDnsProvider</a></li>
     <li><a href="getglobalrole" title="GetGlobalRole"><span class="api-symbol api-symbol--function"></span>GetGlobalRole</a></li>
@@ -99,6 +101,7 @@ A Pulumi package for creating and managing rancher2 resources.
     <li><a href="getnodetemplate" title="GetNodeTemplate"><span class="api-symbol api-symbol--function"></span>GetNodeTemplate</a></li>
     <li><a href="getnotifier" title="GetNotifier"><span class="api-symbol api-symbol--function"></span>GetNotifier</a></li>
     <li><a href="getpodsecuritypolicytemplate" title="GetPodSecurityPolicyTemplate"><span class="api-symbol api-symbol--function"></span>GetPodSecurityPolicyTemplate</a></li>
+    <li><a href="getprincipal" title="GetPrincipal"><span class="api-symbol api-symbol--function"></span>GetPrincipal</a></li>
     <li><a href="getproject" title="GetProject"><span class="api-symbol api-symbol--function"></span>GetProject</a></li>
     <li><a href="getprojectalertgroup" title="GetProjectAlertGroup"><span class="api-symbol api-symbol--function"></span>GetProjectAlertGroup</a></li>
     <li><a href="getprojectalertrule" title="GetProjectAlertRule"><span class="api-symbol api-symbol--function"></span>GetProjectAlertRule</a></li>
@@ -123,6 +126,6 @@ A Pulumi package for creating and managing rancher2 resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/rancher/terraform-provider-rancher2).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.3.0</dd>
+	<dd>3.4.0</dd>
 </dl>
 
