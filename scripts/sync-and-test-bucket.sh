@@ -71,8 +71,8 @@ aws s3 cp "$build_dir/latest-version" "${destination_bucket_uri}/latest-version"
 # Smoke test the deployed website. Specs are in ../cypress/integration.
 echo "Running tests..."
 
-# echo "Checking links on $s3_website_url..."
-# ./scripts/check-links.sh "url" "$s3_website_url"
+echo "Checking links on $s3_website_url..."
+./scripts/check-links.sh "url" "$s3_website_url"
 
 echo "Running browser tests on $s3_website_url..."
 ./scripts/run-browser-tests.sh "$s3_website_url"
