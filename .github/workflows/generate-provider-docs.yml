@@ -19,38 +19,6 @@ on:
       # it's essentially anything that isn't using the resource based docs
 
 jobs:
-  registry-pull-request:
-    runs-on: ubuntu-18.04
-    needs: build-tfgen-provider-docs
-    steps:
-      - name: checkout registry repo
-        uses: actions/checkout@v2
-        with:
-          repository: pulumi/registry
-      - name: pull-request
-        uses: repo-sync/pull-request@v2
-        with:
-          source_branch: "${{ env.PROVIDER_SHORT_NAME }}/${{ github.run_id }}-${{ github.run_number }}"
-          destination_branch: "master"
-          pr_title: "Regen metadata for ${{ env.PROVIDER_SHORT_NAME }}@${{ env.PROVIDER_VERSION }}"
-          pr_body: ""
-          pr_label: "automation/tfgen-provider-docs,automation/merge"
-          github_token: ${{ secrets.PULUMI_BOT_TOKEN }}
-  pull-request:
-    runs-on: ubuntu-18.04
-    needs: build-tfgen-provider-docs
-    steps:
-      - name: checkout docs repo
-        uses: actions/checkout@v2
-      - name: pull-request
-        uses: repo-sync/pull-request@v2
-        with:
-          source_branch: "${{ env.PROVIDER_SHORT_NAME }}/${{ github.run_id }}-${{ github.run_number }}"
-          destination_branch: "master"
-          pr_title: "Regen docs ${{ env.PROVIDER_SHORT_NAME }}@${{ env.PROVIDER_VERSION }}"
-          pr_body: ""
-          pr_label: "automation/tfgen-provider-docs,automation/merge"
-          github_token: ${{ secrets.PULUMI_BOT_TOKEN }}
 
   build-tfgen-provider-docs:
     runs-on: ubuntu-18.04
@@ -135,25 +103,34 @@ jobs:
       - name: git status
         run: git status && git diff
         working-directory: docs
-      - name: commit changes
-        uses: EndBug/add-and-commit@v4
-        with:
-          ref: "${{ env.PROVIDER_SHORT_NAME }}/${{ github.run_id }}-${{ github.run_number }}"
-          author_name: pulumi-bot
-          author_email: "bot@pulumi.com"
-          cwd: docs
       - if: github.event.action != 'non-resource-provider'
         name: git status
         run: git status && git diff
         working-directory: registry
-      - if: github.event.action != 'non-resource-provider'
-        name: commit changes
-        uses: EndBug/add-and-commit@v4
+      - name: Create registry PR
+        uses: peter-evans/create-pull-request@v3
         with:
-          ref: "${{ env.PROVIDER_SHORT_NAME }}/${{ github.run_id }}-${{ github.run_number }}"
-          author_name: pulumi-bot
-          author_email: "bot@pulumi.com"
-          cwd: registry
+          path: registry
+          token: ${{ secrets.PULUMI_BOT_TOKEN }}
+          committer: Pulumi Bot <bot@pulumi.com>
+          author: Pulumi Bot <bot@pulumi.com>
+          commit-message: "Regenerate metadata file"
+          labels: "automation/tfgen-provider-docs,automation/merge"
+          title: "Regen metadata for ${{ env.PROVIDER_SHORT_NAME }}@${{ env.PROVIDER_VERSION }}"
+          body: ""
+          branch: "${{ env.PROVIDER_SHORT_NAME }}/${{ github.run_id }}-${{ github.run_number }}"
+      - name: Create docs PR
+        uses: peter-evans/create-pull-request@v3
+        with:
+          path: docs
+          token: ${{ secrets.PULUMI_BOT_TOKEN }}
+          committer: Pulumi Bot <bot@pulumi.com>
+          author: Pulumi Bot <bot@pulumi.com>
+          commit-message: "Regenerate docs"
+          labels: "automation/tfgen-provider-docs,automation/merge"
+          title: "Regen docs ${{ env.PROVIDER_SHORT_NAME }}@${{ env.PROVIDER_VERSION }}"
+          body: ""
+          branch: "${{ env.PROVIDER_SHORT_NAME }}/${{ github.run_id }}-${{ github.run_number }}"
     strategy:
       matrix:
         dotnetversion:
