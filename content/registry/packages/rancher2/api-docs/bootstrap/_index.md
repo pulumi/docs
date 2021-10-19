@@ -27,7 +27,7 @@ no_edit_this_page: true
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Bootstrap</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-              <span class="nx">current_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">initial_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">telemetry</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
               <span class="nx">token_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -162,13 +162,13 @@ The Bootstrap resource accepts the following [input]({{< relref "/docs/intro/con
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="currentpassword_csharp">
-<a href="#currentpassword_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Password</a>
+        <span id="initialpassword_csharp">
+<a href="#initialpassword_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current password for Admin user. Just needed for recover if admin password has been changed from other resources and token is expired (string)
+    <dd>{{% md %}}Initial password for Admin user. Default: `admin` (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
@@ -220,13 +220,13 @@ The Bootstrap resource accepts the following [input]({{< relref "/docs/intro/con
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="currentpassword_go">
-<a href="#currentpassword_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Password</a>
+        <span id="initialpassword_go">
+<a href="#initialpassword_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current password for Admin user. Just needed for recover if admin password has been changed from other resources and token is expired (string)
+    <dd>{{% md %}}Initial password for Admin user. Default: `admin` (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
@@ -278,13 +278,13 @@ The Bootstrap resource accepts the following [input]({{< relref "/docs/intro/con
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="currentpassword_nodejs">
-<a href="#currentpassword_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Password</a>
+        <span id="initialpassword_nodejs">
+<a href="#initialpassword_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current password for Admin user. Just needed for recover if admin password has been changed from other resources and token is expired (string)
+    <dd>{{% md %}}Initial password for Admin user. Default: `admin` (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
@@ -336,13 +336,13 @@ The Bootstrap resource accepts the following [input]({{< relref "/docs/intro/con
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="current_password_python">
-<a href="#current_password_python" style="color: inherit; text-decoration: inherit;">current_<wbr>password</a>
+        <span id="initial_password_python">
+<a href="#initial_password_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Current password for Admin user. Just needed for recover if admin password has been changed from other resources and token is expired (string)
+    <dd>{{% md %}}Initial password for Admin user. Default: `admin` (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
@@ -400,6 +400,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="currentpassword_csharp">
+<a href="#currentpassword_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Computed/Sensitive) Current password for Admin user (string)
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -467,6 +476,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="currentpassword_go">
+<a href="#currentpassword_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Computed/Sensitive) Current password for Admin user (string)
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -533,6 +551,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="currentpassword_nodejs">
+<a href="#currentpassword_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Computed/Sensitive) Current password for Admin user (string)
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -598,6 +625,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="current_password_python">
+<a href="#current_password_python" style="color: inherit; text-decoration: inherit;">current_<wbr>password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}(Computed/Sensitive) Current password for Admin user (string)
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -679,6 +715,7 @@ Get an existing Bootstrap resource's state with the given name, ID, and optional
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">current_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">initial_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">telemetry</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">temp_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -808,7 +845,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current password for Admin user. Just needed for recover if admin password has been changed from other resources and token is expired (string)
+    <dd>{{% md %}}(Computed/Sensitive) Current password for Admin user (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_initialpassword_csharp">
+<a href="#state_initialpassword_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Initial password for Admin user. Default: `admin` (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_csharp">
@@ -920,7 +966,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current password for Admin user. Just needed for recover if admin password has been changed from other resources and token is expired (string)
+    <dd>{{% md %}}(Computed/Sensitive) Current password for Admin user (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_initialpassword_go">
+<a href="#state_initialpassword_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Initial password for Admin user. Default: `admin` (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_go">
@@ -1032,7 +1087,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current password for Admin user. Just needed for recover if admin password has been changed from other resources and token is expired (string)
+    <dd>{{% md %}}(Computed/Sensitive) Current password for Admin user (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_initialpassword_nodejs">
+<a href="#state_initialpassword_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Initial password for Admin user. Default: `admin` (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_nodejs">
@@ -1144,7 +1208,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Current password for Admin user. Just needed for recover if admin password has been changed from other resources and token is expired (string)
+    <dd>{{% md %}}(Computed/Sensitive) Current password for Admin user (string)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_initial_password_python">
+<a href="#state_initial_password_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Initial password for Admin user. Default: `admin` (string)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_python">
