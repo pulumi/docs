@@ -197,14 +197,14 @@ function getTutorialsRedirect(uri: string): string | undefined {
         if (isAWSNativeGuide) {
             return uri.replace("docs/tutorials", "registry/packages")
             .replace("docs/reference/tutorials", "registry/packages")
-            .replace("/aws/", "/aws-native/how-to-guides");
+            .replace("/aws/", "/aws-native/how-to-guides/");
         }
 
         const isAzureNativeGuide = AZURE_NATIVE_TUTORIALS.some((azureNativeGuide) => uri.includes(azureNativeGuide))
         if (isAzureNativeGuide) {
             return uri.replace("docs/tutorials", "registry/packages")
             .replace("docs/reference/tutorials", "registry/packages")
-            .replace("/azure/", "/azure-native/how-to-guides");
+            .replace("/azure/", "/azure-native/how-to-guides/");
         }
 
         return uri.replace("docs/tutorials", "registry/packages")
