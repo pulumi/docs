@@ -37,15 +37,18 @@ response to a single `pulumi up` command line invocation:
 ```typescript
 import * as awsx from "@pulumi/awsx";
 
-// Create a load balancer on port 80 and spin up two instances of Nginx.
-const lb = new awsx.lb.ApplicationListener("nginx", { port: 80 });
-const nginx = new awsx.ecs.FargateService("nginx", {
+// Build and publish a Docker image to a private ECR registry.
+const img = awsx.ecs.Image.fromPath("app-img", "./app");
+
+// Create a load balancer on port 80.
+const lb = new awsx.lb.ApplicationListener("app", { port: 80 });
+
+// Create a Fargate service task that can scale out.
+const appService = new awsx.ecs.FargateService("app-svc", {
     taskDefinitionArgs: {
-        containers: {
-            nginx: {
-                image: "nginx",
-                portMappings: [ lb ],
-            },
+        container: {
+            image: img,
+            portMappings: [ lb ],
         },
     },
     desiredCount: 2,
