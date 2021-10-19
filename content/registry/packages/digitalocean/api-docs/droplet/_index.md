@@ -138,6 +138,7 @@ const web = new digitalocean.Droplet("web", {
             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
             <span class="nx">backups</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">droplet_agent</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+            <span class="nx">graceful_shutdown</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">ipv6</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -331,6 +332,16 @@ being installed, set to `false`. To make installation errors fatal, explicitly
 set it to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="gracefulshutdown_csharp">
+<a href="#gracefulshutdown_csharp" style="color: inherit; text-decoration: inherit;">Graceful<wbr>Shutdown</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A boolean indicating whether the droplet
+should be gracefully shut down before it is deleted.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ipv6_csharp">
 <a href="#ipv6_csharp" style="color: inherit; text-decoration: inherit;">Ipv6</a>
 </span>
@@ -485,6 +496,16 @@ the control panel. By default, the agent is installed on new Droplets but
 installation errors (i.e. OS not supported) are ignored. To prevent it from
 being installed, set to `false`. To make installation errors fatal, explicitly
 set it to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gracefulshutdown_go">
+<a href="#gracefulshutdown_go" style="color: inherit; text-decoration: inherit;">Graceful<wbr>Shutdown</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A boolean indicating whether the droplet
+should be gracefully shut down before it is deleted.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6_go">
@@ -643,6 +664,16 @@ being installed, set to `false`. To make installation errors fatal, explicitly
 set it to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="gracefulshutdown_nodejs">
+<a href="#gracefulshutdown_nodejs" style="color: inherit; text-decoration: inherit;">graceful<wbr>Shutdown</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}A boolean indicating whether the droplet
+should be gracefully shut down before it is deleted.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ipv6_nodejs">
 <a href="#ipv6_nodejs" style="color: inherit; text-decoration: inherit;">ipv6</a>
 </span>
@@ -797,6 +828,16 @@ the control panel. By default, the agent is installed on new Droplets but
 installation errors (i.e. OS not supported) are ignored. To prevent it from
 being installed, set to `false`. To make installation errors fatal, explicitly
 set it to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="graceful_shutdown_python">
+<a href="#graceful_shutdown_python" style="color: inherit; text-decoration: inherit;">graceful_<wbr>shutdown</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A boolean indicating whether the droplet
+should be gracefully shut down before it is deleted.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6_python">
@@ -1405,6 +1446,7 @@ Get an existing Droplet resource's state with the given name, ID, and optional e
         <span class="nx">disk</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">droplet_agent</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">droplet_urn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">graceful_shutdown</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">ipv4_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">ipv4_address_private</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1588,6 +1630,16 @@ set it to `true`.
     </dt>
     <dd>{{% md %}}The uniform resource name of the Droplet
 * `name`- The name of the Droplet
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_gracefulshutdown_csharp">
+<a href="#state_gracefulshutdown_csharp" style="color: inherit; text-decoration: inherit;">Graceful<wbr>Shutdown</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A boolean indicating whether the droplet
+should be gracefully shut down before it is deleted.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_image_csharp">
@@ -1853,6 +1905,16 @@ set it to `true`.
 * `name`- The name of the Droplet
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_gracefulshutdown_go">
+<a href="#state_gracefulshutdown_go" style="color: inherit; text-decoration: inherit;">Graceful<wbr>Shutdown</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A boolean indicating whether the droplet
+should be gracefully shut down before it is deleted.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_image_go">
 <a href="#state_image_go" style="color: inherit; text-decoration: inherit;">Image</a>
 </span>
@@ -2116,6 +2178,16 @@ set it to `true`.
 * `name`- The name of the Droplet
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_gracefulshutdown_nodejs">
+<a href="#state_gracefulshutdown_nodejs" style="color: inherit; text-decoration: inherit;">graceful<wbr>Shutdown</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}A boolean indicating whether the droplet
+should be gracefully shut down before it is deleted.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_image_nodejs">
 <a href="#state_image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
@@ -2377,6 +2449,16 @@ set it to `true`.
     </dt>
     <dd>{{% md %}}The uniform resource name of the Droplet
 * `name`- The name of the Droplet
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_graceful_shutdown_python">
+<a href="#state_graceful_shutdown_python" style="color: inherit; text-decoration: inherit;">graceful_<wbr>shutdown</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A boolean indicating whether the droplet
+should be gracefully shut down before it is deleted.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_image_python">
