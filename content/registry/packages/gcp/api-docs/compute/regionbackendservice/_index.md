@@ -1156,6 +1156,68 @@ const defaultRegionBackendService = new gcp.compute.RegionBackendService("defaul
 
 
 
+### Region Backend Service Connection Tracking
+
+
+{{< example csharp >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const healthCheck = new gcp.compute.RegionHealthCheck("healthCheck", {
+    region: "us-central1",
+    tcpHealthCheck: {
+        port: 22,
+    },
+}, {
+    provider: google_beta,
+});
+const _default = new gcp.compute.RegionBackendService("default", {
+    region: "us-central1",
+    healthChecks: [healthCheck.id],
+    connectionDrainingTimeoutSec: 10,
+    sessionAffinity: "CLIENT_IP",
+    protocol: "TCP",
+    loadBalancingScheme: "EXTERNAL",
+    connectionTrackingPolicy: [{
+        trackingMode: "PER_SESSION",
+        connectionPersistenceOnUnhealthyBackends: "NEVER_PERSIST",
+        idleTimeoutSec: 60,
+    }],
+}, {
+    provider: google_beta,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 

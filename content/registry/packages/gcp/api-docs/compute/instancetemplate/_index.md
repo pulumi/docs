@@ -861,8 +861,8 @@ packets with non-matching source or destination IPs. This defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable [Virtual Displays](https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver) on this instance.
-**Note**: `allow_stopping_for_update` must be set to true in order to update this field.
+    <dd>{{% md %}}) Enable [Virtual Displays](https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver) on this instance.
+**Note**: `allow_stopping_for_update` must be set to true in order to update this field. Note: This attribute is currently in beta and will be removed from the google provider. Please use the google-beta provider to continue using this attribute.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="guestaccelerators_csharp">
@@ -1110,8 +1110,8 @@ packets with non-matching source or destination IPs. This defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable [Virtual Displays](https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver) on this instance.
-**Note**: `allow_stopping_for_update` must be set to true in order to update this field.
+    <dd>{{% md %}}) Enable [Virtual Displays](https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver) on this instance.
+**Note**: `allow_stopping_for_update` must be set to true in order to update this field. Note: This attribute is currently in beta and will be removed from the google provider. Please use the google-beta provider to continue using this attribute.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="guestaccelerators_go">
@@ -1359,8 +1359,8 @@ packets with non-matching source or destination IPs. This defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable [Virtual Displays](https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver) on this instance.
-**Note**: `allow_stopping_for_update` must be set to true in order to update this field.
+    <dd>{{% md %}}) Enable [Virtual Displays](https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver) on this instance.
+**Note**: `allow_stopping_for_update` must be set to true in order to update this field. Note: This attribute is currently in beta and will be removed from the google provider. Please use the google-beta provider to continue using this attribute.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="guestaccelerators_nodejs">
@@ -1608,8 +1608,8 @@ packets with non-matching source or destination IPs. This defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable [Virtual Displays](https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver) on this instance.
-**Note**: `allow_stopping_for_update` must be set to true in order to update this field.
+    <dd>{{% md %}}) Enable [Virtual Displays](https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver) on this instance.
+**Note**: `allow_stopping_for_update` must be set to true in order to update this field. Note: This attribute is currently in beta and will be removed from the google provider. Please use the google-beta provider to continue using this attribute.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="guest_accelerators_python">
@@ -2163,8 +2163,8 @@ documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable [Virtual Displays](https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver) on this instance.
-**Note**: `allow_stopping_for_update` must be set to true in order to update this field.
+    <dd>{{% md %}}) Enable [Virtual Displays](https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver) on this instance.
+**Note**: `allow_stopping_for_update` must be set to true in order to update this field. Note: This attribute is currently in beta and will be removed from the google provider. Please use the google-beta provider to continue using this attribute.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_guestaccelerators_csharp">
@@ -2439,8 +2439,8 @@ documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable [Virtual Displays](https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver) on this instance.
-**Note**: `allow_stopping_for_update` must be set to true in order to update this field.
+    <dd>{{% md %}}) Enable [Virtual Displays](https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver) on this instance.
+**Note**: `allow_stopping_for_update` must be set to true in order to update this field. Note: This attribute is currently in beta and will be removed from the google provider. Please use the google-beta provider to continue using this attribute.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_guestaccelerators_go">
@@ -2715,8 +2715,8 @@ documented below.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable [Virtual Displays](https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver) on this instance.
-**Note**: `allow_stopping_for_update` must be set to true in order to update this field.
+    <dd>{{% md %}}) Enable [Virtual Displays](https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver) on this instance.
+**Note**: `allow_stopping_for_update` must be set to true in order to update this field. Note: This attribute is currently in beta and will be removed from the google provider. Please use the google-beta provider to continue using this attribute.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_guestaccelerators_nodejs">
@@ -2991,8 +2991,8 @@ documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable [Virtual Displays](https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver) on this instance.
-**Note**: `allow_stopping_for_update` must be set to true in order to update this field.
+    <dd>{{% md %}}) Enable [Virtual Displays](https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver) on this instance.
+**Note**: `allow_stopping_for_update` must be set to true in order to update this field. Note: This attribute is currently in beta and will be removed from the google provider. Please use the google-beta provider to continue using this attribute.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_guest_accelerators_python">
