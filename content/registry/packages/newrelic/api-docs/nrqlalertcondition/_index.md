@@ -13,6 +13,279 @@ no_edit_this_page: true
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Use this resource to create and manage NRQL alert conditions in New Relic.
+## NRQL
+
+The `nrql` block supports the following arguments:
+
+- `query` - (Required) The NRQL query to execute for the condition.
+- `evaluation_offset` - (Optional) **DEPRECATED:** Use `aggregation_method` instead. Represented in minutes and must be within 1-20 minutes (inclusive). NRQL queries are evaluated based on their `aggregation_window` size. The start time depends on this value. It's recommended to set this to 3 windows. An offset of less than 3 windows will trigger violations sooner, but you may see more false positives and negatives due to data latency. With `evaluation_offset` set to 3 windows and an `aggregation_window` of 60 seconds, the NRQL time window applied to your query will be: `SINCE 3 minutes ago UNTIL 2 minutes ago`. `evaluation_offset` cannot be set with `aggregation_method`, `aggregation_delay`, or `aggregation_timer`.<br>
+- `since_value` - (Optional)  **DEPRECATED:** Use `aggregation_method` instead. The value to be used in the `SINCE <X> minutes ago` clause for the NRQL query. Must be between 1-20 (inclusive). <br>
+
+## Terms
+
+> **NOTE:** The direct use of the `term` has been deprecated, and users should use `critical` and `warning` instead.  What follows now applies to the named priority attributes for `critical` and `warning`, but for those attributes the priority is not allowed.
+
+NRQL alert conditions support up to two terms. At least one `term` must have `priority` set to `critical` and the second optional `term` must have `priority` set to `warning`.
+
+The `term` block supports the following arguments:
+
+- `operator` - (Optional) Valid values are `above`, `below`, or `equals` (case insensitive). Defaults to `equals`. Note that when using a `type` of `outlier` or `baseline`, the only valid option here is `above`.
+- `priority` - (Optional) `critical` or `warning`. Defaults to `critical`.
+- `threshold` - (Required) The value which will trigger a violation. Must be `0` or greater.
+<br>For _baseline_ NRQL alert conditions, the value must be in the range [1, 1000]. The value is the number of standard deviations from the baseline that the metric must exceed in order to create a violation.
+- `threshold_duration` - (Optional) The duration, in seconds, that the threshold must violate in order to create a violation. Value must be a multiple of the `aggregation_window` (which has a default of 60 seconds).
+<br>For _baseline_ and _outlier_ NRQL alert conditions, the value must be within 120-3600 seconds (inclusive).
+<br>For _static_ NRQL alert conditions with the `sum` value function, the value must be within 120-7200 seconds (inclusive).
+<br>For _static_ NRQL alert conditions with the `single_value` value function, the value must be within 60-7200 seconds (inclusive).
+
+- `threshold_occurrences` - (Optional) The criteria for how many data points must be in violation for the specified threshold duration. Valid values are: `all` or `at_least_once` (case insensitive).
+- `duration` - (Optional) **DEPRECATED:** Use `threshold_duration` instead. The duration of time, in _minutes_, that the threshold must violate for in order to create a violation. Must be within 1-120 (inclusive).
+- `time_function` - (Optional) **DEPRECATED:** Use `threshold_occurrences` instead. The criteria for how many data points must be in violation for the specified threshold duration. Valid values are: `all` or `any`.
+
+## Upgrade from 1.x to 2.x
+
+There have been several deprecations in the `newrelic.NrqlAlertCondition`
+resource.  Users will need to make some updates in order to have a smooth
+upgrade.
+
+An example resource from 1.x might look like the following.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as newrelic from "@pulumi/newrelic";
+
+const nrqlAlertCondition = new newrelic.NrqlAlertCondition("nrqlAlertCondition", {
+    policyId: newrelic_alert_policy.z.id,
+    type: "static",
+    runbookUrl: "https://localhost",
+    enabled: true,
+    valueFunction: "sum",
+    violationTimeLimit: "TWENTY_FOUR_HOURS",
+    critical: {
+        operator: "above",
+        thresholdDuration: 120,
+        threshold: 3,
+        thresholdOccurrences: "AT_LEAST_ONCE",
+    },
+    nrql: {
+        query: `SELECT count(*) FROM TransactionError WHERE appName like '%Dummy App%' FACET appName`,
+    },
+});
+```
+```python
+import pulumi
+import pulumi_newrelic as newrelic
+
+nrql_alert_condition = newrelic.NrqlAlertCondition("nrqlAlertCondition",
+    policy_id=newrelic_alert_policy["z"]["id"],
+    type="static",
+    runbook_url="https://localhost",
+    enabled=True,
+    value_function="sum",
+    violation_time_limit="TWENTY_FOUR_HOURS",
+    critical=newrelic.NrqlAlertConditionCriticalArgs(
+        operator="above",
+        threshold_duration=120,
+        threshold=3,
+        threshold_occurrences="AT_LEAST_ONCE",
+    ),
+    nrql=newrelic.NrqlAlertConditionNrqlArgs(
+        query="SELECT count(*) FROM TransactionError WHERE appName like '%Dummy App%' FACET appName",
+    ))
+```
+```csharp
+using Pulumi;
+using NewRelic = Pulumi.NewRelic;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var nrqlAlertCondition = new NewRelic.NrqlAlertCondition("nrqlAlertCondition", new NewRelic.NrqlAlertConditionArgs
+        {
+            PolicyId = newrelic_alert_policy.Z.Id,
+            Type = "static",
+            RunbookUrl = "https://localhost",
+            Enabled = true,
+            ValueFunction = "sum",
+            ViolationTimeLimit = "TWENTY_FOUR_HOURS",
+            Critical = new NewRelic.Inputs.NrqlAlertConditionCriticalArgs
+            {
+                Operator = "above",
+                ThresholdDuration = 120,
+                Threshold = 3,
+                ThresholdOccurrences = "AT_LEAST_ONCE",
+            },
+            Nrql = new NewRelic.Inputs.NrqlAlertConditionNrqlArgs
+            {
+                Query = "SELECT count(*) FROM TransactionError WHERE appName like '%Dummy App%' FACET appName",
+            },
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-newrelic/sdk/v4/go/newrelic"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := newrelic.NewNrqlAlertCondition(ctx, "nrqlAlertCondition", &newrelic.NrqlAlertConditionArgs{
+			PolicyId:           pulumi.Any(newrelic_alert_policy.Z.Id),
+			Type:               pulumi.String("static"),
+			RunbookUrl:         pulumi.String("https://localhost"),
+			Enabled:            pulumi.Bool(true),
+			ValueFunction:      pulumi.String("sum"),
+			ViolationTimeLimit: pulumi.String("TWENTY_FOUR_HOURS"),
+			Critical: &newrelic.NrqlAlertConditionCriticalArgs{
+				Operator:             pulumi.String("above"),
+				ThresholdDuration:    pulumi.Int(120),
+				Threshold:            pulumi.Float64(3),
+				ThresholdOccurrences: pulumi.String("AT_LEAST_ONCE"),
+			},
+			Nrql: &newrelic.NrqlAlertConditionNrqlArgs{
+				Query: pulumi.String(fmt.Sprintf("%v%v%v%v%v", "SELECT count(*) FROM TransactionError WHERE appName like '", "%", "Dummy App", "%", "' FACET appName")),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+After making the appropriate adjustments mentioned in the deprecation warnings,
+the resource now looks like the following.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as newrelic from "@pulumi/newrelic";
+
+const nrqlAlertCondition = new newrelic.NrqlAlertCondition("nrqlAlertCondition", {
+    policyId: newrelic_alert_policy.z.id,
+    type: "static",
+    runbookUrl: "https://localhost",
+    enabled: true,
+    valueFunction: "sum",
+    violationTimeLimitSeconds: 86400,
+    terms: [{
+        priority: "critical",
+        operator: "above",
+        threshold: 3,
+        duration: 5,
+        timeFunction: "any",
+    }],
+    nrql: {
+        query: `SELECT count(*) FROM TransactionError WHERE appName like '%Dummy App%' FACET appName`,
+    },
+});
+```
+```python
+import pulumi
+import pulumi_newrelic as newrelic
+
+nrql_alert_condition = newrelic.NrqlAlertCondition("nrqlAlertCondition",
+    policy_id=newrelic_alert_policy["z"]["id"],
+    type="static",
+    runbook_url="https://localhost",
+    enabled=True,
+    value_function="sum",
+    violation_time_limit_seconds=86400,
+    terms=[newrelic.NrqlAlertConditionTermArgs(
+        priority="critical",
+        operator="above",
+        threshold=3,
+        duration=5,
+        time_function="any",
+    )],
+    nrql=newrelic.NrqlAlertConditionNrqlArgs(
+        query="SELECT count(*) FROM TransactionError WHERE appName like '%Dummy App%' FACET appName",
+    ))
+```
+```csharp
+using Pulumi;
+using NewRelic = Pulumi.NewRelic;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var nrqlAlertCondition = new NewRelic.NrqlAlertCondition("nrqlAlertCondition", new NewRelic.NrqlAlertConditionArgs
+        {
+            PolicyId = newrelic_alert_policy.Z.Id,
+            Type = "static",
+            RunbookUrl = "https://localhost",
+            Enabled = true,
+            ValueFunction = "sum",
+            ViolationTimeLimitSeconds = 86400,
+            Terms = 
+            {
+                new NewRelic.Inputs.NrqlAlertConditionTermArgs
+                {
+                    Priority = "critical",
+                    Operator = "above",
+                    Threshold = 3,
+                    Duration = 5,
+                    TimeFunction = "any",
+                },
+            },
+            Nrql = new NewRelic.Inputs.NrqlAlertConditionNrqlArgs
+            {
+                Query = "SELECT count(*) FROM TransactionError WHERE appName like '%Dummy App%' FACET appName",
+            },
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-newrelic/sdk/v4/go/newrelic"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := newrelic.NewNrqlAlertCondition(ctx, "nrqlAlertCondition", &newrelic.NrqlAlertConditionArgs{
+			PolicyId:                  pulumi.Any(newrelic_alert_policy.Z.Id),
+			Type:                      pulumi.String("static"),
+			RunbookUrl:                pulumi.String("https://localhost"),
+			Enabled:                   pulumi.Bool(true),
+			ValueFunction:             pulumi.String("sum"),
+			ViolationTimeLimitSeconds: pulumi.Int(86400),
+			Terms: newrelic.NrqlAlertConditionTermArray{
+				&newrelic.NrqlAlertConditionTermArgs{
+					Priority:     pulumi.String("critical"),
+					Operator:     pulumi.String("above"),
+					Threshold:    pulumi.Float64(3),
+					Duration:     pulumi.Int(5),
+					TimeFunction: pulumi.String("any"),
+				},
+			},
+			Nrql: &newrelic.NrqlAlertConditionNrqlArgs{
+				Query: pulumi.String(fmt.Sprintf("%v%v%v%v%v", "SELECT count(*) FROM TransactionError WHERE appName like '", "%", "Dummy App", "%", "' FACET appName")),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+> > > > > > > v2.30.0
 
 
 
@@ -29,6 +302,9 @@ Use this resource to create and manage NRQL alert conditions in New Relic.
 <span class="k">def </span><span class="nx">NrqlAlertCondition</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                        <span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                       <span class="nx">aggregation_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                       <span class="nx">aggregation_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">aggregation_timer</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                        <span class="nx">aggregation_window</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                        <span class="nx">baseline_direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                        <span class="nx">close_violations_on_expiration</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -206,6 +482,33 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The New Relic account ID of the account you wish to create the condition. Defaults to the account ID set in your environment variable `NEW_RELIC_ACCOUNT_ID`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="aggregationdelay_csharp">
+<a href="#aggregationdelay_csharp" style="color: inherit; text-decoration: inherit;">Aggregation<wbr>Delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}How long we wait for data that belongs in each aggregation window. Depending on your data, a longer delay may increase accuracy but delay notifications. Use `aggregation_delay` with the `event_flow` and `cadence` methods. The maximum delay is 1200 seconds (20 minutes) when using `event_flow` and 3600 seconds (60 minutes) when using `cadence`. In both cases, the minimum delay is 0 seconds and the default is 120 seconds. `aggregation_delay` cannot be set with `nrql.evaluation_offset`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="aggregationmethod_csharp">
+<a href="#aggregationmethod_csharp" style="color: inherit; text-decoration: inherit;">Aggregation<wbr>Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Determines when we consider an aggregation window to be complete so that we can evaluate the signal for violations. Possible values are `cadence`, `event_flow` or `event_timer`. Default is `event_flow`. `aggregation_method` cannot be set with `nrql.evaluation_offset`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="aggregationtimer_csharp">
+<a href="#aggregationtimer_csharp" style="color: inherit; text-decoration: inherit;">Aggregation<wbr>Timer</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}How long we wait after each data point arrives to make sure we've processed the whole batch. Use `aggregation_timer` with the `event_timer` method. The timer value can range from 0 seconds to 1200 seconds (20 minutes); the default is 60 seconds. `aggregation_timer` cannot be set with `nrql.evaluation_offset`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aggregationwindow_csharp">
@@ -430,6 +733,33 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}The New Relic account ID of the account you wish to create the condition. Defaults to the account ID set in your environment variable `NEW_RELIC_ACCOUNT_ID`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="aggregationdelay_go">
+<a href="#aggregationdelay_go" style="color: inherit; text-decoration: inherit;">Aggregation<wbr>Delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}How long we wait for data that belongs in each aggregation window. Depending on your data, a longer delay may increase accuracy but delay notifications. Use `aggregation_delay` with the `event_flow` and `cadence` methods. The maximum delay is 1200 seconds (20 minutes) when using `event_flow` and 3600 seconds (60 minutes) when using `cadence`. In both cases, the minimum delay is 0 seconds and the default is 120 seconds. `aggregation_delay` cannot be set with `nrql.evaluation_offset`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="aggregationmethod_go">
+<a href="#aggregationmethod_go" style="color: inherit; text-decoration: inherit;">Aggregation<wbr>Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Determines when we consider an aggregation window to be complete so that we can evaluate the signal for violations. Possible values are `cadence`, `event_flow` or `event_timer`. Default is `event_flow`. `aggregation_method` cannot be set with `nrql.evaluation_offset`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="aggregationtimer_go">
+<a href="#aggregationtimer_go" style="color: inherit; text-decoration: inherit;">Aggregation<wbr>Timer</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}How long we wait after each data point arrives to make sure we've processed the whole batch. Use `aggregation_timer` with the `event_timer` method. The timer value can range from 0 seconds to 1200 seconds (20 minutes); the default is 60 seconds. `aggregation_timer` cannot be set with `nrql.evaluation_offset`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="aggregationwindow_go">
 <a href="#aggregationwindow_go" style="color: inherit; text-decoration: inherit;">Aggregation<wbr>Window</a>
 </span>
@@ -652,6 +982,33 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}The New Relic account ID of the account you wish to create the condition. Defaults to the account ID set in your environment variable `NEW_RELIC_ACCOUNT_ID`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="aggregationdelay_nodejs">
+<a href="#aggregationdelay_nodejs" style="color: inherit; text-decoration: inherit;">aggregation<wbr>Delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}How long we wait for data that belongs in each aggregation window. Depending on your data, a longer delay may increase accuracy but delay notifications. Use `aggregation_delay` with the `event_flow` and `cadence` methods. The maximum delay is 1200 seconds (20 minutes) when using `event_flow` and 3600 seconds (60 minutes) when using `cadence`. In both cases, the minimum delay is 0 seconds and the default is 120 seconds. `aggregation_delay` cannot be set with `nrql.evaluation_offset`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="aggregationmethod_nodejs">
+<a href="#aggregationmethod_nodejs" style="color: inherit; text-decoration: inherit;">aggregation<wbr>Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Determines when we consider an aggregation window to be complete so that we can evaluate the signal for violations. Possible values are `cadence`, `event_flow` or `event_timer`. Default is `event_flow`. `aggregation_method` cannot be set with `nrql.evaluation_offset`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="aggregationtimer_nodejs">
+<a href="#aggregationtimer_nodejs" style="color: inherit; text-decoration: inherit;">aggregation<wbr>Timer</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}How long we wait after each data point arrives to make sure we've processed the whole batch. Use `aggregation_timer` with the `event_timer` method. The timer value can range from 0 seconds to 1200 seconds (20 minutes); the default is 60 seconds. `aggregation_timer` cannot be set with `nrql.evaluation_offset`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="aggregationwindow_nodejs">
 <a href="#aggregationwindow_nodejs" style="color: inherit; text-decoration: inherit;">aggregation<wbr>Window</a>
 </span>
@@ -872,6 +1229,33 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The New Relic account ID of the account you wish to create the condition. Defaults to the account ID set in your environment variable `NEW_RELIC_ACCOUNT_ID`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="aggregation_delay_python">
+<a href="#aggregation_delay_python" style="color: inherit; text-decoration: inherit;">aggregation_<wbr>delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}How long we wait for data that belongs in each aggregation window. Depending on your data, a longer delay may increase accuracy but delay notifications. Use `aggregation_delay` with the `event_flow` and `cadence` methods. The maximum delay is 1200 seconds (20 minutes) when using `event_flow` and 3600 seconds (60 minutes) when using `cadence`. In both cases, the minimum delay is 0 seconds and the default is 120 seconds. `aggregation_delay` cannot be set with `nrql.evaluation_offset`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="aggregation_method_python">
+<a href="#aggregation_method_python" style="color: inherit; text-decoration: inherit;">aggregation_<wbr>method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Determines when we consider an aggregation window to be complete so that we can evaluate the signal for violations. Possible values are `cadence`, `event_flow` or `event_timer`. Default is `event_flow`. `aggregation_method` cannot be set with `nrql.evaluation_offset`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="aggregation_timer_python">
+<a href="#aggregation_timer_python" style="color: inherit; text-decoration: inherit;">aggregation_<wbr>timer</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}How long we wait after each data point arrives to make sure we've processed the whole batch. Use `aggregation_timer` with the `event_timer` method. The timer value can range from 0 seconds to 1200 seconds (20 minutes); the default is 60 seconds. `aggregation_timer` cannot be set with `nrql.evaluation_offset`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aggregation_window_python">
@@ -1138,6 +1522,9 @@ Get an existing NrqlAlertCondition resource's state with the given name, ID, and
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">aggregation_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">aggregation_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">aggregation_timer</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">aggregation_window</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">baseline_direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">close_violations_on_expiration</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -1280,6 +1667,33 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The New Relic account ID of the account you wish to create the condition. Defaults to the account ID set in your environment variable `NEW_RELIC_ACCOUNT_ID`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_aggregationdelay_csharp">
+<a href="#state_aggregationdelay_csharp" style="color: inherit; text-decoration: inherit;">Aggregation<wbr>Delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}How long we wait for data that belongs in each aggregation window. Depending on your data, a longer delay may increase accuracy but delay notifications. Use `aggregation_delay` with the `event_flow` and `cadence` methods. The maximum delay is 1200 seconds (20 minutes) when using `event_flow` and 3600 seconds (60 minutes) when using `cadence`. In both cases, the minimum delay is 0 seconds and the default is 120 seconds. `aggregation_delay` cannot be set with `nrql.evaluation_offset`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_aggregationmethod_csharp">
+<a href="#state_aggregationmethod_csharp" style="color: inherit; text-decoration: inherit;">Aggregation<wbr>Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Determines when we consider an aggregation window to be complete so that we can evaluate the signal for violations. Possible values are `cadence`, `event_flow` or `event_timer`. Default is `event_flow`. `aggregation_method` cannot be set with `nrql.evaluation_offset`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_aggregationtimer_csharp">
+<a href="#state_aggregationtimer_csharp" style="color: inherit; text-decoration: inherit;">Aggregation<wbr>Timer</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}How long we wait after each data point arrives to make sure we've processed the whole batch. Use `aggregation_timer` with the `event_timer` method. The timer value can range from 0 seconds to 1200 seconds (20 minutes); the default is 60 seconds. `aggregation_timer` cannot be set with `nrql.evaluation_offset`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_aggregationwindow_csharp">
@@ -1504,6 +1918,33 @@ The following state arguments are supported:
     <dd>{{% md %}}The New Relic account ID of the account you wish to create the condition. Defaults to the account ID set in your environment variable `NEW_RELIC_ACCOUNT_ID`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_aggregationdelay_go">
+<a href="#state_aggregationdelay_go" style="color: inherit; text-decoration: inherit;">Aggregation<wbr>Delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}How long we wait for data that belongs in each aggregation window. Depending on your data, a longer delay may increase accuracy but delay notifications. Use `aggregation_delay` with the `event_flow` and `cadence` methods. The maximum delay is 1200 seconds (20 minutes) when using `event_flow` and 3600 seconds (60 minutes) when using `cadence`. In both cases, the minimum delay is 0 seconds and the default is 120 seconds. `aggregation_delay` cannot be set with `nrql.evaluation_offset`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_aggregationmethod_go">
+<a href="#state_aggregationmethod_go" style="color: inherit; text-decoration: inherit;">Aggregation<wbr>Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Determines when we consider an aggregation window to be complete so that we can evaluate the signal for violations. Possible values are `cadence`, `event_flow` or `event_timer`. Default is `event_flow`. `aggregation_method` cannot be set with `nrql.evaluation_offset`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_aggregationtimer_go">
+<a href="#state_aggregationtimer_go" style="color: inherit; text-decoration: inherit;">Aggregation<wbr>Timer</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}How long we wait after each data point arrives to make sure we've processed the whole batch. Use `aggregation_timer` with the `event_timer` method. The timer value can range from 0 seconds to 1200 seconds (20 minutes); the default is 60 seconds. `aggregation_timer` cannot be set with `nrql.evaluation_offset`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_aggregationwindow_go">
 <a href="#state_aggregationwindow_go" style="color: inherit; text-decoration: inherit;">Aggregation<wbr>Window</a>
 </span>
@@ -1726,6 +2167,33 @@ The following state arguments are supported:
     <dd>{{% md %}}The New Relic account ID of the account you wish to create the condition. Defaults to the account ID set in your environment variable `NEW_RELIC_ACCOUNT_ID`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_aggregationdelay_nodejs">
+<a href="#state_aggregationdelay_nodejs" style="color: inherit; text-decoration: inherit;">aggregation<wbr>Delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}How long we wait for data that belongs in each aggregation window. Depending on your data, a longer delay may increase accuracy but delay notifications. Use `aggregation_delay` with the `event_flow` and `cadence` methods. The maximum delay is 1200 seconds (20 minutes) when using `event_flow` and 3600 seconds (60 minutes) when using `cadence`. In both cases, the minimum delay is 0 seconds and the default is 120 seconds. `aggregation_delay` cannot be set with `nrql.evaluation_offset`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_aggregationmethod_nodejs">
+<a href="#state_aggregationmethod_nodejs" style="color: inherit; text-decoration: inherit;">aggregation<wbr>Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Determines when we consider an aggregation window to be complete so that we can evaluate the signal for violations. Possible values are `cadence`, `event_flow` or `event_timer`. Default is `event_flow`. `aggregation_method` cannot be set with `nrql.evaluation_offset`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_aggregationtimer_nodejs">
+<a href="#state_aggregationtimer_nodejs" style="color: inherit; text-decoration: inherit;">aggregation<wbr>Timer</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}How long we wait after each data point arrives to make sure we've processed the whole batch. Use `aggregation_timer` with the `event_timer` method. The timer value can range from 0 seconds to 1200 seconds (20 minutes); the default is 60 seconds. `aggregation_timer` cannot be set with `nrql.evaluation_offset`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_aggregationwindow_nodejs">
 <a href="#state_aggregationwindow_nodejs" style="color: inherit; text-decoration: inherit;">aggregation<wbr>Window</a>
 </span>
@@ -1946,6 +2414,33 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The New Relic account ID of the account you wish to create the condition. Defaults to the account ID set in your environment variable `NEW_RELIC_ACCOUNT_ID`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_aggregation_delay_python">
+<a href="#state_aggregation_delay_python" style="color: inherit; text-decoration: inherit;">aggregation_<wbr>delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}How long we wait for data that belongs in each aggregation window. Depending on your data, a longer delay may increase accuracy but delay notifications. Use `aggregation_delay` with the `event_flow` and `cadence` methods. The maximum delay is 1200 seconds (20 minutes) when using `event_flow` and 3600 seconds (60 minutes) when using `cadence`. In both cases, the minimum delay is 0 seconds and the default is 120 seconds. `aggregation_delay` cannot be set with `nrql.evaluation_offset`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_aggregation_method_python">
+<a href="#state_aggregation_method_python" style="color: inherit; text-decoration: inherit;">aggregation_<wbr>method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Determines when we consider an aggregation window to be complete so that we can evaluate the signal for violations. Possible values are `cadence`, `event_flow` or `event_timer`. Default is `event_flow`. `aggregation_method` cannot be set with `nrql.evaluation_offset`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_aggregation_timer_python">
+<a href="#state_aggregation_timer_python" style="color: inherit; text-decoration: inherit;">aggregation_<wbr>timer</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}How long we wait after each data point arrives to make sure we've processed the whole batch. Use `aggregation_timer` with the `event_timer` method. The timer value can range from 0 seconds to 1200 seconds (20 minutes); the default is 60 seconds. `aggregation_timer` cannot be set with `nrql.evaluation_offset`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_aggregation_window_python">
@@ -2425,8 +2920,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The NRQL query to execute for the condition.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="evaluationoffset_csharp">
 <a href="#evaluationoffset_csharp" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Offset</a>
 </span>
@@ -2435,7 +2930,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Represented in minutes and must be within 1-20 minutes (inclusive). NRQL queries are evaluated in one-minute time windows. The start time depends on this value. It's recommended to set this to 3 minutes. An offset of less than 3 minutes will trigger violations sooner, but you may see more false positives and negatives due to data latency. With `evaluation_offset` set to 3 minutes, the NRQL time window applied to your query will be: `SINCE 3 minutes ago UNTIL 2 minutes ago`.<br>
 <small>\***Note**: One of `evaluation_offset` _or_ `since_value` must be set, but not both.</small>
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `signal.aggregation_method` attribute instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="sincevalue_csharp">
 <a href="#sincevalue_csharp" style="color: inherit; text-decoration: inherit;">Since<wbr>Value</a>
@@ -2445,7 +2940,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}**DEPRECATED:** Use `evaluation_offset` instead. The value to be used in the `SINCE <X> minutes ago` clause for the NRQL query. Must be between 1-20 (inclusive). <br>
 <small>\***Note**: One of `evaluation_offset` _or_ `since_value` must be set, but not both.</small>
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `evaluation_offset` attribute instead{{% /md %}}</p></dd></dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `signal.aggregation_method` attribute instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2458,8 +2953,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The NRQL query to execute for the condition.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="evaluationoffset_go">
 <a href="#evaluationoffset_go" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Offset</a>
 </span>
@@ -2468,7 +2963,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Represented in minutes and must be within 1-20 minutes (inclusive). NRQL queries are evaluated in one-minute time windows. The start time depends on this value. It's recommended to set this to 3 minutes. An offset of less than 3 minutes will trigger violations sooner, but you may see more false positives and negatives due to data latency. With `evaluation_offset` set to 3 minutes, the NRQL time window applied to your query will be: `SINCE 3 minutes ago UNTIL 2 minutes ago`.<br>
 <small>\***Note**: One of `evaluation_offset` _or_ `since_value` must be set, but not both.</small>
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `signal.aggregation_method` attribute instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="sincevalue_go">
 <a href="#sincevalue_go" style="color: inherit; text-decoration: inherit;">Since<wbr>Value</a>
@@ -2478,7 +2973,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}**DEPRECATED:** Use `evaluation_offset` instead. The value to be used in the `SINCE <X> minutes ago` clause for the NRQL query. Must be between 1-20 (inclusive). <br>
 <small>\***Note**: One of `evaluation_offset` _or_ `since_value` must be set, but not both.</small>
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `evaluation_offset` attribute instead{{% /md %}}</p></dd></dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `signal.aggregation_method` attribute instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2491,8 +2986,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The NRQL query to execute for the condition.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="evaluationoffset_nodejs">
 <a href="#evaluationoffset_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Offset</a>
 </span>
@@ -2501,7 +2996,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Represented in minutes and must be within 1-20 minutes (inclusive). NRQL queries are evaluated in one-minute time windows. The start time depends on this value. It's recommended to set this to 3 minutes. An offset of less than 3 minutes will trigger violations sooner, but you may see more false positives and negatives due to data latency. With `evaluation_offset` set to 3 minutes, the NRQL time window applied to your query will be: `SINCE 3 minutes ago UNTIL 2 minutes ago`.<br>
 <small>\***Note**: One of `evaluation_offset` _or_ `since_value` must be set, but not both.</small>
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `signal.aggregation_method` attribute instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="sincevalue_nodejs">
 <a href="#sincevalue_nodejs" style="color: inherit; text-decoration: inherit;">since<wbr>Value</a>
@@ -2511,7 +3006,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}**DEPRECATED:** Use `evaluation_offset` instead. The value to be used in the `SINCE <X> minutes ago` clause for the NRQL query. Must be between 1-20 (inclusive). <br>
 <small>\***Note**: One of `evaluation_offset` _or_ `since_value` must be set, but not both.</small>
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `evaluation_offset` attribute instead{{% /md %}}</p></dd></dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `signal.aggregation_method` attribute instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2524,8 +3019,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The NRQL query to execute for the condition.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="evaluation_offset_python">
 <a href="#evaluation_offset_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>offset</a>
 </span>
@@ -2534,7 +3029,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Represented in minutes and must be within 1-20 minutes (inclusive). NRQL queries are evaluated in one-minute time windows. The start time depends on this value. It's recommended to set this to 3 minutes. An offset of less than 3 minutes will trigger violations sooner, but you may see more false positives and negatives due to data latency. With `evaluation_offset` set to 3 minutes, the NRQL time window applied to your query will be: `SINCE 3 minutes ago UNTIL 2 minutes ago`.<br>
 <small>\***Note**: One of `evaluation_offset` _or_ `since_value` must be set, but not both.</small>
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `signal.aggregation_method` attribute instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="since_value_python">
 <a href="#since_value_python" style="color: inherit; text-decoration: inherit;">since_<wbr>value</a>
@@ -2544,7 +3039,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}**DEPRECATED:** Use `evaluation_offset` instead. The value to be used in the `SINCE <X> minutes ago` clause for the NRQL query. Must be between 1-20 (inclusive). <br>
 <small>\***Note**: One of `evaluation_offset` _or_ `since_value` must be set, but not both.</small>
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `evaluation_offset` attribute instead{{% /md %}}</p></dd></dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `signal.aggregation_method` attribute instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 <h4 id="nrqlalertconditionterm">Nrql<wbr>Alert<wbr>Condition<wbr>Term</h4>
@@ -3095,7 +3590,7 @@ Alert conditions can be imported using a composite ID of `<policy_id>:<condition
  $ pulumi import newrelic:index/nrqlAlertCondition:NrqlAlertCondition foo 538291:6789035:outlier
 ```
 
- The actual values for `policy_id` and `condition_id` can be retrieved from the following New Relic URL when viewing the NRQL alert condition you want to import<small>alerts.newrelic.com/accounts/**\<account_id\>**/policies/**\<policy_id\>**/conditions/**\<condition_id\>**/edit</small>
+ The actual values for `policy_id` and `condition_id` can be retrieved from the following New Relic URL when viewing the NRQL alert condition you want to import<<<<<<< HEAD <small>alerts.newrelic.com/accounts/**\<account_id\>**/policies/**\<policy_id\>**/conditions/**\<condition_id\>**/edit</small> ======= <small>alerts.newrelic.com/accounts/**\<account_id\>**/policies/**\<policy_id\>**/conditions/**\<condition_id\>**/edit</small>
 
 
 

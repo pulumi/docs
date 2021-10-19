@@ -27,6 +27,8 @@ no_edit_this_page: true
 {{< example csharp >}}
 
 ```csharp
+using System.Collections.Generic;
+using System.Text.Json;
 using Pulumi;
 using NewRelic = Pulumi.NewRelic;
 
@@ -45,7 +47,12 @@ class MyStack : Stack
                     {
                         new NewRelic.Inputs.OneDashboardRawPageWidgetArgs
                         {
+                            Title = "Custom widget",
+                            Row = 1,
                             Column = 1,
+                            Width = 1,
+                            Height = 1,
+                            VisualizationId = "viz.custom",
                             Configuration = @"      {
         ""legend"": {
           ""enabled"": false
@@ -62,17 +69,16 @@ class MyStack : Stack
           ""zero"": false
         }
       }
-      
 ",
-                            Height = 1,
-                            Row = 1,
-                            Title = "Custom widget",
-                            VisualizationId = "viz.custom",
-                            Width = 1,
                         },
                         new NewRelic.Inputs.OneDashboardRawPageWidgetArgs
                         {
+                            Title = "Server CPU",
+                            Row = 1,
                             Column = 2,
+                            Width = 1,
+                            Height = 1,
+                            VisualizationId = "viz.testing",
                             Configuration = @"      {
         ""nrqlQueries"": [
           {
@@ -81,13 +87,36 @@ class MyStack : Stack
           }
         ]
       }
-      
 ",
-                            Height = 1,
+                        },
+                        new NewRelic.Inputs.OneDashboardRawPageWidgetArgs
+                        {
+                            Title = "Docker Server CPU",
                             Row = 1,
-                            Title = "Server CPU",
-                            VisualizationId = "viz.testing",
+                            Column = 3,
+                            Height = 1,
                             Width = 1,
+                            VisualizationId = "viz.bar",
+                            Configuration = JsonSerializer.Serialize(new Dictionary<string, object?>
+                            {
+                                { "facet", new Dictionary<string, object?>
+                                {
+                                    { "showOtherSeries", false },
+                                } },
+                                { "nrqlQueries", new[]
+                                    {
+                                        new Dictionary<string, object?>
+                                        {
+                                            { "accountId", local.AccountID },
+                                            { "query", "SELECT average(cpuPercent) FROM SystemSample since 3 hours ago facet hostname limit 400" },
+                                        },
+                                    }
+                                 },
+                            }),
+                            LinkedEntityGuids = 
+                            {
+                                "MzI5ODAxNnxWSVp8REFTSEJPQVJEfDI2MTcxNDc",
+                            },
                         },
                     },
                 },
@@ -104,53 +133,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-```go
-package main
-
-import (
-	"fmt"
-
-	"github.com/pulumi/pulumi-newrelic/sdk/v4/go/newrelic"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := newrelic.NewOneDashboardRaw(ctx, "exampledash", &newrelic.OneDashboardRawArgs{
-			Pages: newrelic.OneDashboardRawPageArray{
-				&newrelic.OneDashboardRawPageArgs{
-					Name: pulumi.String("Page Name"),
-					Widgets: newrelic.OneDashboardRawPageWidgetArray{
-						&newrelic.OneDashboardRawPageWidgetArgs{
-							Column:          pulumi.Int(1),
-							Configuration:   pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "      {\n", "        \"legend\": {\n", "          \"enabled\": false\n", "        },\n", "        \"nrqlQueries\": [\n", "          {\n", "            \"accountId\": ` + accountID + `,\n", "            \"query\": \"SELECT average(loadAverageOneMinute), average(loadAverageFiveMinute), average(loadAverageFifteenMinute) from SystemSample SINCE 60 minutes ago    TIMESERIES\"\n", "          }\n", "        ],\n", "        \"yAxisLeft\": {\n", "          \"max\": 100,\n", "          \"min\": 50,\n", "          \"zero\": false\n", "        }\n", "      }\n", "      \n")),
-							Height:          pulumi.Int(1),
-							Row:             pulumi.Int(1),
-							Title:           pulumi.String("Custom widget"),
-							VisualizationId: pulumi.String("viz.custom"),
-							Width:           pulumi.Int(1),
-						},
-						&newrelic.OneDashboardRawPageWidgetArgs{
-							Column:          pulumi.Int(2),
-							Configuration:   pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v", "      {\n", "        \"nrqlQueries\": [\n", "          {\n", "            \"accountId\": ` + accountID + `,\n", "            \"query\": \"SELECT average(cpuPercent) FROM SystemSample since 3 hours ago facet hostname limit 400\"\n", "          }\n", "        ]\n", "      }\n", "      \n")),
-							Height:          pulumi.Int(1),
-							Row:             pulumi.Int(1),
-							Title:           pulumi.String("Server CPU"),
-							VisualizationId: pulumi.String("viz.testing"),
-							Width:           pulumi.Int(1),
-						},
-					},
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
+Coming soon!
 
 {{< /example >}}
 
@@ -159,13 +142,19 @@ func main() {
 
 ```python
 import pulumi
+import json
 import pulumi_newrelic as newrelic
 
 exampledash = newrelic.OneDashboardRaw("exampledash", pages=[newrelic.OneDashboardRawPageArgs(
     name="Page Name",
     widgets=[
         newrelic.OneDashboardRawPageWidgetArgs(
+            title="Custom widget",
+            row=1,
             column=1,
+            width=1,
+            height=1,
+            visualization_id="viz.custom",
             configuration="""      {
         "legend": {
           "enabled": false
@@ -182,16 +171,15 @@ exampledash = newrelic.OneDashboardRaw("exampledash", pages=[newrelic.OneDashboa
           "zero": false
         }
       }
-      
 """,
-            height=1,
-            row=1,
-            title="Custom widget",
-            visualization_id="viz.custom",
-            width=1,
         ),
         newrelic.OneDashboardRawPageWidgetArgs(
+            title="Server CPU",
+            row=1,
             column=2,
+            width=1,
+            height=1,
+            visualization_id="viz.testing",
             configuration="""      {
         "nrqlQueries": [
           {
@@ -200,13 +188,25 @@ exampledash = newrelic.OneDashboardRaw("exampledash", pages=[newrelic.OneDashboa
           }
         ]
       }
-      
 """,
-            height=1,
+        ),
+        newrelic.OneDashboardRawPageWidgetArgs(
+            title="Docker Server CPU",
             row=1,
-            title="Server CPU",
-            visualization_id="viz.testing",
+            column=3,
+            height=1,
             width=1,
+            visualization_id="viz.bar",
+            configuration=json.dumps({
+                "facet": {
+                    "showOtherSeries": False,
+                },
+                "nrqlQueries": [{
+                    "accountId": local["accountID"],
+                    "query": "SELECT average(cpuPercent) FROM SystemSample since 3 hours ago facet hostname limit 400",
+                }],
+            }),
+            linked_entity_guids=["MzI5ODAxNnxWSVp8REFTSEJPQVJEfDI2MTcxNDc"],
         ),
     ],
 )])
@@ -223,19 +223,23 @@ exampledash = newrelic.OneDashboardRaw("exampledash", pages=[newrelic.OneDashboa
 import * as pulumi from "@pulumi/pulumi";
 import * as newrelic from "@pulumi/newrelic";
 
-const exampledash = new newrelic.OneDashboardRaw("exampledash", {
-    pages: [{
-        name: "Page Name",
-        widgets: [
-            {
-                column: 1,
-                configuration: `      {
+const exampledash = new newrelic.OneDashboardRaw("exampledash", {pages: [{
+    name: "Page Name",
+    widgets: [
+        {
+            title: "Custom widget",
+            row: 1,
+            column: 1,
+            width: 1,
+            height: 1,
+            visualizationId: "viz.custom",
+            configuration: `      {
         "legend": {
           "enabled": false
         },
         "nrqlQueries": [
           {
-            "accountId": \` + accountID + \`,
+            "accountId": ` + accountID + `,
             "query": "SELECT average(loadAverageOneMinute), average(loadAverageFiveMinute), average(loadAverageFifteenMinute) from SystemSample SINCE 60 minutes ago    TIMESERIES"
           }
         ],
@@ -245,33 +249,45 @@ const exampledash = new newrelic.OneDashboardRaw("exampledash", {
           "zero": false
         }
       }
-      `,
-                height: 1,
-                row: 1,
-                title: "Custom widget",
-                visualizationId: "viz.custom",
-                width: 1,
-            },
-            {
-                column: 2,
-                configuration: `      {
+`,
+        },
+        {
+            title: "Server CPU",
+            row: 1,
+            column: 2,
+            width: 1,
+            height: 1,
+            visualizationId: "viz.testing",
+            configuration: `      {
         "nrqlQueries": [
           {
-            "accountId": \` + accountID + \`,
+            "accountId": ` + accountID + `,
             "query": "SELECT average(cpuPercent) FROM SystemSample since 3 hours ago facet hostname limit 400"
           }
         ]
       }
-      `,
-                height: 1,
-                row: 1,
-                title: "Server CPU",
-                visualizationId: "viz.testing",
-                width: 1,
-            },
-        ],
-    }],
-});
+`,
+        },
+        {
+            title: "Docker Server CPU",
+            row: 1,
+            column: 3,
+            height: 1,
+            width: 1,
+            visualizationId: "viz.bar",
+            configuration: JSON.stringify({
+                facet: {
+                    showOtherSeries: false,
+                },
+                nrqlQueries: [{
+                    accountId: local.accountID,
+                    query: "SELECT average(cpuPercent) FROM SystemSample since 3 hours ago facet hostname limit 400",
+                }],
+            }),
+            linkedEntityGuids: ["MzI5ODAxNnxWSVp8REFTSEJPQVJEfDI2MTcxNDc"],
+        },
+    ],
+}]});
 ```
 
 
@@ -1390,6 +1406,15 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="linkedentityguids_csharp">
+<a href="#linkedentityguids_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Entity<wbr>Guids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Related entity GUIDs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="width_csharp">
 <a href="#width_csharp" style="color: inherit; text-decoration: inherit;">Width</a>
 </span>
@@ -1464,6 +1489,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="linkedentityguids_go">
+<a href="#linkedentityguids_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Entity<wbr>Guids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Related entity GUIDs.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="width_go">
 <a href="#width_go" style="color: inherit; text-decoration: inherit;">Width</a>
@@ -1540,6 +1574,15 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="linkedentityguids_nodejs">
+<a href="#linkedentityguids_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Entity<wbr>Guids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Related entity GUIDs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="width_nodejs">
 <a href="#width_nodejs" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
@@ -1614,6 +1657,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="linked_entity_guids_python">
+<a href="#linked_entity_guids_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>entity_<wbr>guids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Related entity GUIDs.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="width_python">
 <a href="#width_python" style="color: inherit; text-decoration: inherit;">width</a>
