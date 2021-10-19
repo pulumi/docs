@@ -79,8 +79,6 @@ You can see other details such as who applied the update and when, as well as co
 
 Custom stack tags can help you group and filter your stacks.
 
-![Stack tags](/images/docs/reference/service/stack-tags.png)
-
 To create a custom tag:
 
 1. Navigate to **Projects** and then a specific stack.

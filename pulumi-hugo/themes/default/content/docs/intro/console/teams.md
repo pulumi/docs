@@ -43,8 +43,6 @@ GitHub teams into Pulumi.
 For these teams, membership is managed on GitHub, while the set of stack
 permissions granted to team members is managed on the Pulumi Console.
 
-![Importing a GitHub-based team](/images/docs/reference/service/add-github-team-card.png)
-
 ## Team Permissions
 
 By default only organization admins can create teams.

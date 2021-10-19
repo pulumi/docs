@@ -44,8 +44,6 @@ To edit your profile information:
 1. Use the **Edit profile** button.
 1. Save your changes.
 
-![User-profile page](/images/docs/reference/service/user-profile-page.png)
-
 ### Adding New Identities{#adding-new-identities}
 
 You can associate your Pulumi account with multiple identities. In addition to the one you have originally configured, you can add your identities with the following third party providers:

@@ -133,5 +133,3 @@ still get a workflow template that is customized to your stack.
 This option is more suitable for teams that want to use different services for their VCS repo and CI/CD needs. For example, you want
 to be able to use Azure Pipelines with a GitHub repository and just want the workflow template for Azure Pipelines.
 {{% /notes %}}
-
-![Get Workflow](/images/docs/reference/console/get-workflow.png)
