@@ -381,6 +381,15 @@ The following output properties are available:
     <dd>{{% md %}}The image ID used to create the server.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="imagename_csharp">
+<a href="#imagename_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The image name used to create the server.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="keypair_csharp">
 <a href="#keypair_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Pair</a>
 </span>
@@ -416,6 +425,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}An array of maps, detailed below.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="powerstate_csharp">
+<a href="#powerstate_csharp" style="color: inherit; text-decoration: inherit;">Power<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -518,6 +535,15 @@ The following output properties are available:
     <dd>{{% md %}}The image ID used to create the server.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="imagename_go">
+<a href="#imagename_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The image name used to create the server.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="keypair_go">
 <a href="#keypair_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Pair</a>
 </span>
@@ -553,6 +579,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}An array of maps, detailed below.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="powerstate_go">
+<a href="#powerstate_go" style="color: inherit; text-decoration: inherit;">Power<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -655,6 +689,15 @@ The following output properties are available:
     <dd>{{% md %}}The image ID used to create the server.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="imagename_nodejs">
+<a href="#imagename_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The image name used to create the server.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="keypair_nodejs">
 <a href="#keypair_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Pair</a>
 </span>
@@ -690,6 +733,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}An array of maps, detailed below.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="powerstate_nodejs">
+<a href="#powerstate_nodejs" style="color: inherit; text-decoration: inherit;">power<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -792,6 +843,15 @@ The following output properties are available:
     <dd>{{% md %}}The image ID used to create the server.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="image_name_python">
+<a href="#image_name_python" style="color: inherit; text-decoration: inherit;">image_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The image name used to create the server.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="key_pair_python">
 <a href="#key_pair_python" style="color: inherit; text-decoration: inherit;">key_<wbr>pair</a>
 </span>
@@ -827,6 +887,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}An array of maps, detailed below.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="power_state_python">
+<a href="#power_state_python" style="color: inherit; text-decoration: inherit;">power_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>

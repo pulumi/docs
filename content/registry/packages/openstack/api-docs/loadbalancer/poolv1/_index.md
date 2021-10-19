@@ -530,6 +530,7 @@ const pool1 = new openstack.loadbalancer.PoolV1("pool_1", {
            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
            <span class="nx">lb_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">lb_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">members</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
            <span class="nx">monitor_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -705,7 +706,19 @@ Changing this creates a new pool.
     </dt>
     <dd>{{% md %}}The backend load balancing provider. For example:
 `haproxy`, `F5`, etc.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="members_csharp">
+<a href="#members_csharp" style="color: inherit; text-decoration: inherit;">Members</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}An existing node to add to the pool. Changing this
+updates the members of the pool. The member object structure is documented
+below. Please note that the `member` block is deprecated in favor of the
+`openstack.loadbalancer.MemberV1` resource.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use openstack_lb_member_v1 instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="monitorids_csharp">
 <a href="#monitorids_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Ids</a>
@@ -793,7 +806,19 @@ Changing this creates a new pool.
     </dt>
     <dd>{{% md %}}The backend load balancing provider. For example:
 `haproxy`, `F5`, etc.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="members_go">
+<a href="#members_go" style="color: inherit; text-decoration: inherit;">Members</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}An existing node to add to the pool. Changing this
+updates the members of the pool. The member object structure is documented
+below. Please note that the `member` block is deprecated in favor of the
+`openstack.loadbalancer.MemberV1` resource.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use openstack_lb_member_v1 instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="monitorids_go">
 <a href="#monitorids_go" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Ids</a>
@@ -881,7 +906,19 @@ Changing this creates a new pool.
     </dt>
     <dd>{{% md %}}The backend load balancing provider. For example:
 `haproxy`, `F5`, etc.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="members_nodejs">
+<a href="#members_nodejs" style="color: inherit; text-decoration: inherit;">members</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}An existing node to add to the pool. Changing this
+updates the members of the pool. The member object structure is documented
+below. Please note that the `member` block is deprecated in favor of the
+`openstack.loadbalancer.MemberV1` resource.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use openstack_lb_member_v1 instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="monitorids_nodejs">
 <a href="#monitorids_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Ids</a>
@@ -969,7 +1006,19 @@ Changing this creates a new pool.
     </dt>
     <dd>{{% md %}}The backend load balancing provider. For example:
 `haproxy`, `F5`, etc.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="members_python">
+<a href="#members_python" style="color: inherit; text-decoration: inherit;">members</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}An existing node to add to the pool. Changing this
+updates the members of the pool. The member object structure is documented
+below. Please note that the `member` block is deprecated in favor of the
+`openstack.loadbalancer.MemberV1` resource.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use openstack_lb_member_v1 instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="monitor_ids_python">
 <a href="#monitor_ids_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>ids</a>
@@ -1087,6 +1136,7 @@ Get an existing PoolV1 resource's state with the given name, ID, and optional ex
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">lb_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">lb_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">members</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">monitor_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1224,7 +1274,19 @@ members of the pool. The current specification supports 'ROUND_ROBIN' and
     </dt>
     <dd>{{% md %}}The backend load balancing provider. For example:
 `haproxy`, `F5`, etc.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="state_members_csharp">
+<a href="#state_members_csharp" style="color: inherit; text-decoration: inherit;">Members</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}An existing node to add to the pool. Changing this
+updates the members of the pool. The member object structure is documented
+below. Please note that the `member` block is deprecated in favor of the
+`openstack.loadbalancer.MemberV1` resource.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use openstack_lb_member_v1 instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitorids_csharp">
 <a href="#state_monitorids_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Ids</a>
@@ -1312,7 +1374,19 @@ members of the pool. The current specification supports 'ROUND_ROBIN' and
     </dt>
     <dd>{{% md %}}The backend load balancing provider. For example:
 `haproxy`, `F5`, etc.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="state_members_go">
+<a href="#state_members_go" style="color: inherit; text-decoration: inherit;">Members</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}An existing node to add to the pool. Changing this
+updates the members of the pool. The member object structure is documented
+below. Please note that the `member` block is deprecated in favor of the
+`openstack.loadbalancer.MemberV1` resource.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use openstack_lb_member_v1 instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitorids_go">
 <a href="#state_monitorids_go" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Ids</a>
@@ -1400,7 +1474,19 @@ members of the pool. The current specification supports 'ROUND_ROBIN' and
     </dt>
     <dd>{{% md %}}The backend load balancing provider. For example:
 `haproxy`, `F5`, etc.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="state_members_nodejs">
+<a href="#state_members_nodejs" style="color: inherit; text-decoration: inherit;">members</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}An existing node to add to the pool. Changing this
+updates the members of the pool. The member object structure is documented
+below. Please note that the `member` block is deprecated in favor of the
+`openstack.loadbalancer.MemberV1` resource.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use openstack_lb_member_v1 instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitorids_nodejs">
 <a href="#state_monitorids_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Ids</a>
@@ -1488,7 +1574,19 @@ members of the pool. The current specification supports 'ROUND_ROBIN' and
     </dt>
     <dd>{{% md %}}The backend load balancing provider. For example:
 `haproxy`, `F5`, etc.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="state_members_python">
+<a href="#state_members_python" style="color: inherit; text-decoration: inherit;">members</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}An existing node to add to the pool. Changing this
+updates the members of the pool. The member object structure is documented
+below. Please note that the `member` block is deprecated in favor of the
+`openstack.loadbalancer.MemberV1` resource.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use openstack_lb_member_v1 instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitor_ids_python">
 <a href="#state_monitor_ids_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>ids</a>

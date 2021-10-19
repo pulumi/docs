@@ -36,6 +36,7 @@ no_edit_this_page: true
              <span class="nx">config_drive</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">flavor_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">flavor_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">floating_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">image_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -52,7 +53,8 @@ no_edit_this_page: true
              <span class="nx">stop_before_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
              <span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">vendor_options</span><span class="p">:</span> <span class="nx">Optional[InstanceVendorOptionsArgs]</span> = None<span class="p">)</span>
+             <span class="nx">vendor_options</span><span class="p">:</span> <span class="nx">Optional[InstanceVendorOptionsArgs]</span> = None<span class="p">,</span>
+             <span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceVolumeArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[InstanceArgs]</a></span> = None<span class="p">,</span>
@@ -277,7 +279,15 @@ the desired flavor for the server. Changing this resizes the existing server.
     </dt>
     <dd>{{% md %}}The name of the
 desired flavor for the server. Changing this resizes the existing server.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="floatingip_csharp">
+<a href="#floatingip_csharp" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the openstack_compute_floatingip_associate_v2 resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="forcedelete_csharp">
 <a href="#forcedelete_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Delete</a>
@@ -462,7 +472,15 @@ Changing this creates a new server.
     </dt>
     <dd>{{% md %}}Map of additional vendor-specific options.
 Supported options are described below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="volumes_csharp">
+<a href="#volumes_csharp" style="color: inherit; text-decoration: inherit;">Volumes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancevolume">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Compute.<wbr>Inputs.<wbr>Instance<wbr>Volume<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use block_device or openstack_compute_volume_attach_v2 instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -563,7 +581,15 @@ the desired flavor for the server. Changing this resizes the existing server.
     </dt>
     <dd>{{% md %}}The name of the
 desired flavor for the server. Changing this resizes the existing server.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="floatingip_go">
+<a href="#floatingip_go" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the openstack_compute_floatingip_associate_v2 resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="forcedelete_go">
 <a href="#forcedelete_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Delete</a>
@@ -748,7 +774,15 @@ Changing this creates a new server.
     </dt>
     <dd>{{% md %}}Map of additional vendor-specific options.
 Supported options are described below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="volumes_go">
+<a href="#volumes_go" style="color: inherit; text-decoration: inherit;">Volumes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancevolume">[]Instance<wbr>Volume<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use block_device or openstack_compute_volume_attach_v2 instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -849,7 +883,15 @@ the desired flavor for the server. Changing this resizes the existing server.
     </dt>
     <dd>{{% md %}}The name of the
 desired flavor for the server. Changing this resizes the existing server.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="floatingip_nodejs">
+<a href="#floatingip_nodejs" style="color: inherit; text-decoration: inherit;">floating<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the openstack_compute_floatingip_associate_v2 resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="forcedelete_nodejs">
 <a href="#forcedelete_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Delete</a>
@@ -1034,7 +1076,15 @@ Changing this creates a new server.
     </dt>
     <dd>{{% md %}}Map of additional vendor-specific options.
 Supported options are described below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="volumes_nodejs">
+<a href="#volumes_nodejs" style="color: inherit; text-decoration: inherit;">volumes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancevolume">Instance<wbr>Volume<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use block_device or openstack_compute_volume_attach_v2 instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1135,7 +1185,15 @@ the desired flavor for the server. Changing this resizes the existing server.
     </dt>
     <dd>{{% md %}}The name of the
 desired flavor for the server. Changing this resizes the existing server.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="floating_ip_python">
+<a href="#floating_ip_python" style="color: inherit; text-decoration: inherit;">floating_<wbr>ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the openstack_compute_floatingip_associate_v2 resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="force_delete_python">
 <a href="#force_delete_python" style="color: inherit; text-decoration: inherit;">force_<wbr>delete</a>
@@ -1320,7 +1378,15 @@ Changing this creates a new server.
     </dt>
     <dd>{{% md %}}Map of additional vendor-specific options.
 Supported options are described below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="volumes_python">
+<a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancevolume">Sequence[Instance<wbr>Volume<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use block_device or openstack_compute_volume_attach_v2 instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 
@@ -1477,6 +1543,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
         <span class="nx">config_drive</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">flavor_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">flavor_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">floating_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">image_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1493,7 +1560,8 @@ Get an existing Instance resource's state with the given name, ID, and optional 
         <span class="nx">stop_before_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-        <span class="nx">vendor_options</span><span class="p">:</span> <span class="nx">Optional[InstanceVendorOptionsArgs]</span> = None<span class="p">) -&gt;</span> Instance</code></pre></div>
+        <span class="nx">vendor_options</span><span class="p">:</span> <span class="nx">Optional[InstanceVendorOptionsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceVolumeArgs]]</span> = None<span class="p">) -&gt;</span> Instance</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1719,7 +1787,15 @@ the desired flavor for the server. Changing this resizes the existing server.
     </dt>
     <dd>{{% md %}}The name of the
 desired flavor for the server. Changing this resizes the existing server.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="state_floatingip_csharp">
+<a href="#state_floatingip_csharp" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the openstack_compute_floatingip_associate_v2 resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedelete_csharp">
 <a href="#state_forcedelete_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Delete</a>
@@ -1904,7 +1980,15 @@ Changing this creates a new server.
     </dt>
     <dd>{{% md %}}Map of additional vendor-specific options.
 Supported options are described below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="state_volumes_csharp">
+<a href="#state_volumes_csharp" style="color: inherit; text-decoration: inherit;">Volumes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancevolume">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Compute.<wbr>Inputs.<wbr>Instance<wbr>Volume<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use block_device or openstack_compute_volume_attach_v2 instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2023,7 +2107,15 @@ the desired flavor for the server. Changing this resizes the existing server.
     </dt>
     <dd>{{% md %}}The name of the
 desired flavor for the server. Changing this resizes the existing server.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="state_floatingip_go">
+<a href="#state_floatingip_go" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the openstack_compute_floatingip_associate_v2 resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedelete_go">
 <a href="#state_forcedelete_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Delete</a>
@@ -2208,7 +2300,15 @@ Changing this creates a new server.
     </dt>
     <dd>{{% md %}}Map of additional vendor-specific options.
 Supported options are described below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="state_volumes_go">
+<a href="#state_volumes_go" style="color: inherit; text-decoration: inherit;">Volumes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancevolume">[]Instance<wbr>Volume<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use block_device or openstack_compute_volume_attach_v2 instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2327,7 +2427,15 @@ the desired flavor for the server. Changing this resizes the existing server.
     </dt>
     <dd>{{% md %}}The name of the
 desired flavor for the server. Changing this resizes the existing server.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="state_floatingip_nodejs">
+<a href="#state_floatingip_nodejs" style="color: inherit; text-decoration: inherit;">floating<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the openstack_compute_floatingip_associate_v2 resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedelete_nodejs">
 <a href="#state_forcedelete_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Delete</a>
@@ -2512,7 +2620,15 @@ Changing this creates a new server.
     </dt>
     <dd>{{% md %}}Map of additional vendor-specific options.
 Supported options are described below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="state_volumes_nodejs">
+<a href="#state_volumes_nodejs" style="color: inherit; text-decoration: inherit;">volumes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancevolume">Instance<wbr>Volume<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use block_device or openstack_compute_volume_attach_v2 instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2631,7 +2747,15 @@ the desired flavor for the server. Changing this resizes the existing server.
     </dt>
     <dd>{{% md %}}The name of the
 desired flavor for the server. Changing this resizes the existing server.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="state_floating_ip_python">
+<a href="#state_floating_ip_python" style="color: inherit; text-decoration: inherit;">floating_<wbr>ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the openstack_compute_floatingip_associate_v2 resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_force_delete_python">
 <a href="#state_force_delete_python" style="color: inherit; text-decoration: inherit;">force_<wbr>delete</a>
@@ -2816,7 +2940,15 @@ Changing this creates a new server.
     </dt>
     <dd>{{% md %}}Map of additional vendor-specific options.
 Supported options are described below.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="state_volumes_python">
+<a href="#state_volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancevolume">Sequence[Instance<wbr>Volume<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use block_device or openstack_compute_volume_attach_v2 instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 
@@ -3317,15 +3449,15 @@ network. Changing this creates a new server.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="floatingip_csharp">
 <a href="#floatingip_csharp" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the openstack_compute_floatingip_associate_v2 resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="mac_csharp">
 <a href="#mac_csharp" style="color: inherit; text-decoration: inherit;">Mac</a>
@@ -3395,15 +3527,15 @@ network. Changing this creates a new server.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="floatingip_go">
 <a href="#floatingip_go" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the openstack_compute_floatingip_associate_v2 resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="mac_go">
 <a href="#mac_go" style="color: inherit; text-decoration: inherit;">Mac</a>
@@ -3473,15 +3605,15 @@ network. Changing this creates a new server.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="floatingip_nodejs">
 <a href="#floatingip_nodejs" style="color: inherit; text-decoration: inherit;">floating<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the openstack_compute_floatingip_associate_v2 resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="mac_nodejs">
 <a href="#mac_nodejs" style="color: inherit; text-decoration: inherit;">mac</a>
@@ -3551,15 +3683,15 @@ network. Changing this creates a new server.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="floating_ip_python">
 <a href="#floating_ip_python" style="color: inherit; text-decoration: inherit;">floating_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the openstack_compute_floatingip_associate_v2 resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="mac_python">
 <a href="#mac_python" style="color: inherit; text-decoration: inherit;">mac</a>
@@ -4144,6 +4276,120 @@ to ignore manual confirmation of the instance resizing. This can be helpful
 to work with some OpenStack clouds which automatically confirm resizing of
 instances after some timeout.
 {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instancevolume">Instance<wbr>Volume</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="volumeid_csharp">
+<a href="#volumeid_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="device_csharp">
+<a href="#device_csharp" style="color: inherit; text-decoration: inherit;">Device</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="volumeid_go">
+<a href="#volumeid_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="device_go">
+<a href="#device_go" style="color: inherit; text-decoration: inherit;">Device</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="volumeid_nodejs">
+<a href="#volumeid_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="device_nodejs">
+<a href="#device_nodejs" style="color: inherit; text-decoration: inherit;">device</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="volume_id_python">
+<a href="#volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="device_python">
+<a href="#device_python" style="color: inherit; text-decoration: inherit;">device</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
