@@ -51,16 +51,21 @@ class MyStack : Stack
                 PolicyEnforcementMode = "ENFORCING",
             },
         });
-        var defaultPermission = clientWithAuthz.ResourceServerId.Apply(resourceServerId => Keycloak.OpenId.GetClientAuthorizationPolicy.InvokeAsync(new Keycloak.OpenId.GetClientAuthorizationPolicyArgs
+        var defaultPermission = Output.Tuple(realm.Id, clientWithAuthz.ResourceServerId).Apply(values =>
         {
-            RealmId = keycloak_realm.Test.Id,
-            ResourceServerId = resourceServerId,
-            Name = "Default Permission",
-        }));
+            var id = values.Item1;
+            var resourceServerId = values.Item2;
+            return Keycloak.OpenId.GetClientAuthorizationPolicy.InvokeAsync(new Keycloak.OpenId.GetClientAuthorizationPolicyArgs
+            {
+                RealmId = id,
+                ResourceServerId = resourceServerId,
+                Name = "Default Permission",
+            });
+        });
         var resource = new Keycloak.OpenId.ClientAuthorizationResource("resource", new Keycloak.OpenId.ClientAuthorizationResourceArgs
         {
             ResourceServerId = clientWithAuthz.ResourceServerId,
-            RealmId = keycloak_realm.Test.Id,
+            RealmId = realm.Id,
             Uris = 
             {
                 "/endpoint/*",
@@ -73,7 +78,7 @@ class MyStack : Stack
         var permission = new Keycloak.OpenId.ClientAuthorizationPermission("permission", new Keycloak.OpenId.ClientAuthorizationPermissionArgs
         {
             ResourceServerId = clientWithAuthz.ResourceServerId,
-            RealmId = keycloak_realm.Test.Id,
+            RealmId = realm.Id,
             Policies = 
             {
                 defaultPermission.Apply(defaultPermission => defaultPermission.Id),
@@ -126,7 +131,7 @@ func main() {
 		}
 		resource, err := openid.NewClientAuthorizationResource(ctx, "resource", &openid.ClientAuthorizationResourceArgs{
 			ResourceServerId: clientWithAuthz.ResourceServerId,
-			RealmId:          pulumi.Any(keycloak_realm.Test.Id),
+			RealmId:          realm.ID(),
 			Uris: pulumi.StringArray{
 				pulumi.String("/endpoint/*"),
 			},
@@ -139,7 +144,7 @@ func main() {
 		}
 		_, err = openid.NewClientAuthorizationPermission(ctx, "permission", &openid.ClientAuthorizationPermissionArgs{
 			ResourceServerId: clientWithAuthz.ResourceServerId,
-			RealmId:          pulumi.Any(keycloak_realm.Test.Id),
+			RealmId:          realm.ID(),
 			Policies: pulumi.StringArray{
 				defaultPermission.ApplyT(func(defaultPermission openid.GetClientAuthorizationPolicyResult) (string, error) {
 					return defaultPermission.Id, nil
@@ -178,19 +183,19 @@ client_with_authz = keycloak.openid.Client("clientWithAuthz",
     authorization=keycloak.openid.ClientAuthorizationArgs(
         policy_enforcement_mode="ENFORCING",
     ))
-default_permission = client_with_authz.resource_server_id.apply(lambda resource_server_id: keycloak.openid.get_client_authorization_policy(realm_id=keycloak_realm["test"]["id"],
+default_permission = pulumi.Output.all(realm.id, client_with_authz.resource_server_id).apply(lambda id, resource_server_id: keycloak.openid.get_client_authorization_policy(realm_id=id,
     resource_server_id=resource_server_id,
     name="Default Permission"))
 resource = keycloak.openid.ClientAuthorizationResource("resource",
     resource_server_id=client_with_authz.resource_server_id,
-    realm_id=keycloak_realm["test"]["id"],
+    realm_id=realm.id,
     uris=["/endpoint/*"],
     attributes={
         "foo": "bar",
     })
 permission = keycloak.openid.ClientAuthorizationPermission("permission",
     resource_server_id=client_with_authz.resource_server_id,
-    realm_id=keycloak_realm["test"]["id"],
+    realm_id=realm.id,
     policies=[default_permission.id],
     resources=[resource.id])
 ```
@@ -219,14 +224,14 @@ const clientWithAuthz = new keycloak.openid.Client("clientWithAuthz", {
         policyEnforcementMode: "ENFORCING",
     },
 });
-const defaultPermission = clientWithAuthz.resourceServerId.apply(resourceServerId => keycloak.openid.getClientAuthorizationPolicy({
-    realmId: keycloak_realm.test.id,
+const defaultPermission = pulumi.all([realm.id, clientWithAuthz.resourceServerId]).apply(([id, resourceServerId]) => keycloak.openid.getClientAuthorizationPolicy({
+    realmId: id,
     resourceServerId: resourceServerId,
     name: "Default Permission",
 }));
 const resource = new keycloak.openid.ClientAuthorizationResource("resource", {
     resourceServerId: clientWithAuthz.resourceServerId,
-    realmId: keycloak_realm.test.id,
+    realmId: realm.id,
     uris: ["/endpoint/*"],
     attributes: {
         foo: "bar",
@@ -234,7 +239,7 @@ const resource = new keycloak.openid.ClientAuthorizationResource("resource", {
 });
 const permission = new keycloak.openid.ClientAuthorizationPermission("permission", {
     resourceServerId: clientWithAuthz.resourceServerId,
-    realmId: keycloak_realm.test.id,
+    realmId: realm.id,
     policies: [defaultPermission.id],
     resources: [resource.id],
 });

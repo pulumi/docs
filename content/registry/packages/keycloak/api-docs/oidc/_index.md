@@ -26,6 +26,6 @@ Explore the resources and functions of the keycloak.oidc module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`keycloak` Terraform Provider](https://github.com/mrparkers/terraform-provider-keycloak).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.4.0</dd>
+	<dd>4.5.0</dd>
 </dl>
 

@@ -46,12 +46,12 @@ class MyStack : Stack
         });
         var samlClient = new Keycloak.Saml.Client("samlClient", new Keycloak.Saml.ClientArgs
         {
-            RealmId = keycloak_realm.Test.Id,
+            RealmId = realm.Id,
             ClientId = "saml-client",
         });
         var samlScriptMapper = new Keycloak.Saml.ScriptProtocolMapper("samlScriptMapper", new Keycloak.Saml.ScriptProtocolMapperArgs
         {
-            RealmId = keycloak_realm.Test.Id,
+            RealmId = realm.Id,
             ClientId = samlClient.Id,
             Script = "exports = 'foo';",
             SamlAttributeName = "displayName",
@@ -79,7 +79,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := keycloak.NewRealm(ctx, "realm", &keycloak.RealmArgs{
+		realm, err := keycloak.NewRealm(ctx, "realm", &keycloak.RealmArgs{
 			Realm:   pulumi.String("my-realm"),
 			Enabled: pulumi.Bool(true),
 		})
@@ -87,14 +87,14 @@ func main() {
 			return err
 		}
 		samlClient, err := saml.NewClient(ctx, "samlClient", &saml.ClientArgs{
-			RealmId:  pulumi.Any(keycloak_realm.Test.Id),
+			RealmId:  realm.ID(),
 			ClientId: pulumi.String("saml-client"),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = saml.NewScriptProtocolMapper(ctx, "samlScriptMapper", &saml.ScriptProtocolMapperArgs{
-			RealmId:                 pulumi.Any(keycloak_realm.Test.Id),
+			RealmId:                 realm.ID(),
 			ClientId:                samlClient.ID(),
 			Script:                  pulumi.String("exports = 'foo';"),
 			SamlAttributeName:       pulumi.String("displayName"),
@@ -122,10 +122,10 @@ realm = keycloak.Realm("realm",
     realm="my-realm",
     enabled=True)
 saml_client = keycloak.saml.Client("samlClient",
-    realm_id=keycloak_realm["test"]["id"],
+    realm_id=realm.id,
     client_id="saml-client")
 saml_script_mapper = keycloak.saml.ScriptProtocolMapper("samlScriptMapper",
-    realm_id=keycloak_realm["test"]["id"],
+    realm_id=realm.id,
     client_id=saml_client.id,
     script="exports = 'foo';",
     saml_attribute_name="displayName",
@@ -148,11 +148,11 @@ const realm = new keycloak.Realm("realm", {
     enabled: true,
 });
 const samlClient = new keycloak.saml.Client("samlClient", {
-    realmId: keycloak_realm.test.id,
+    realmId: realm.id,
     clientId: "saml-client",
 });
 const samlScriptMapper = new keycloak.saml.ScriptProtocolMapper("samlScriptMapper", {
-    realmId: keycloak_realm.test.id,
+    realmId: realm.id,
     clientId: samlClient.id,
     script: "exports = 'foo';",
     samlAttributeName: "displayName",

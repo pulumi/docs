@@ -247,8 +247,10 @@ const ldapUserFederation = new keycloak.ldap.UserFederation("ldapUserFederation"
                    <span class="nx">read_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">search_scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">start_tls</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                    <span class="nx">sync_registrations</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                    <span class="nx">trust_email</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                   <span class="nx">use_password_modify_extended_op</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                    <span class="nx">use_truststore_spi</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">user_object_classes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                    <span class="nx">username_ldap_attribute</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -603,6 +605,15 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 - `SUBTREE`: Search entire LDAP subtree.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="starttls_csharp">
+<a href="#starttls_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Tls</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When `true`, Keycloak will encrypt the connection to LDAP using STARTTLS, which will disable connection pooling.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="syncregistrations_csharp">
 <a href="#syncregistrations_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Registrations</a>
 </span>
@@ -619,6 +630,15 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If enabled, email provided by this provider is not verified even if verification is enabled for the realm.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usepasswordmodifyextendedop_csharp">
+<a href="#usepasswordmodifyextendedop_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Password<wbr>Modify<wbr>Extended<wbr>Op</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When `true`, use the LDAPv3 Password Modify Extended Operation (RFC-3062).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usetruststorespi_csharp">
@@ -870,6 +890,15 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 - `SUBTREE`: Search entire LDAP subtree.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="starttls_go">
+<a href="#starttls_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Tls</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When `true`, Keycloak will encrypt the connection to LDAP using STARTTLS, which will disable connection pooling.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="syncregistrations_go">
 <a href="#syncregistrations_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Registrations</a>
 </span>
@@ -886,6 +915,15 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If enabled, email provided by this provider is not verified even if verification is enabled for the realm.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usepasswordmodifyextendedop_go">
+<a href="#usepasswordmodifyextendedop_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Password<wbr>Modify<wbr>Extended<wbr>Op</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When `true`, use the LDAPv3 Password Modify Extended Operation (RFC-3062).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usetruststorespi_go">
@@ -1137,6 +1175,15 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 - `SUBTREE`: Search entire LDAP subtree.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="starttls_nodejs">
+<a href="#starttls_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Tls</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}When `true`, Keycloak will encrypt the connection to LDAP using STARTTLS, which will disable connection pooling.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="syncregistrations_nodejs">
 <a href="#syncregistrations_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Registrations</a>
 </span>
@@ -1153,6 +1200,15 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If enabled, email provided by this provider is not verified even if verification is enabled for the realm.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usepasswordmodifyextendedop_nodejs">
+<a href="#usepasswordmodifyextendedop_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Password<wbr>Modify<wbr>Extended<wbr>Op</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}When `true`, use the LDAPv3 Password Modify Extended Operation (RFC-3062).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usetruststorespi_nodejs">
@@ -1404,6 +1460,15 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 - `SUBTREE`: Search entire LDAP subtree.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="start_tls_python">
+<a href="#start_tls_python" style="color: inherit; text-decoration: inherit;">start_<wbr>tls</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When `true`, Keycloak will encrypt the connection to LDAP using STARTTLS, which will disable connection pooling.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sync_registrations_python">
 <a href="#sync_registrations_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>registrations</a>
 </span>
@@ -1420,6 +1485,15 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If enabled, email provided by this provider is not verified even if verification is enabled for the realm.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="use_password_modify_extended_op_python">
+<a href="#use_password_modify_extended_op_python" style="color: inherit; text-decoration: inherit;">use_<wbr>password_<wbr>modify_<wbr>extended_<wbr>op</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When `true`, use the LDAPv3 Password Modify Extended Operation (RFC-3062).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_truststore_spi_python">
@@ -1541,8 +1615,10 @@ Get an existing UserFederation resource's state with the given name, ID, and opt
         <span class="nx">read_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">search_scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">start_tls</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">sync_registrations</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">trust_email</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">use_password_modify_extended_op</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">use_truststore_spi</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">user_object_classes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">username_ldap_attribute</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1844,6 +1920,15 @@ The following state arguments are supported:
 - `SUBTREE`: Search entire LDAP subtree.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_starttls_csharp">
+<a href="#state_starttls_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Tls</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When `true`, Keycloak will encrypt the connection to LDAP using STARTTLS, which will disable connection pooling.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_syncregistrations_csharp">
 <a href="#state_syncregistrations_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Registrations</a>
 </span>
@@ -1860,6 +1945,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If enabled, email provided by this provider is not verified even if verification is enabled for the realm.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_usepasswordmodifyextendedop_csharp">
+<a href="#state_usepasswordmodifyextendedop_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Password<wbr>Modify<wbr>Extended<wbr>Op</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When `true`, use the LDAPv3 Password Modify Extended Operation (RFC-3062).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usetruststorespi_csharp">
@@ -2111,6 +2205,15 @@ The following state arguments are supported:
 - `SUBTREE`: Search entire LDAP subtree.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_starttls_go">
+<a href="#state_starttls_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Tls</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When `true`, Keycloak will encrypt the connection to LDAP using STARTTLS, which will disable connection pooling.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_syncregistrations_go">
 <a href="#state_syncregistrations_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Registrations</a>
 </span>
@@ -2127,6 +2230,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If enabled, email provided by this provider is not verified even if verification is enabled for the realm.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_usepasswordmodifyextendedop_go">
+<a href="#state_usepasswordmodifyextendedop_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Password<wbr>Modify<wbr>Extended<wbr>Op</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When `true`, use the LDAPv3 Password Modify Extended Operation (RFC-3062).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usetruststorespi_go">
@@ -2378,6 +2490,15 @@ The following state arguments are supported:
 - `SUBTREE`: Search entire LDAP subtree.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_starttls_nodejs">
+<a href="#state_starttls_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Tls</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}When `true`, Keycloak will encrypt the connection to LDAP using STARTTLS, which will disable connection pooling.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_syncregistrations_nodejs">
 <a href="#state_syncregistrations_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Registrations</a>
 </span>
@@ -2394,6 +2515,15 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If enabled, email provided by this provider is not verified even if verification is enabled for the realm.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_usepasswordmodifyextendedop_nodejs">
+<a href="#state_usepasswordmodifyextendedop_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Password<wbr>Modify<wbr>Extended<wbr>Op</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}When `true`, use the LDAPv3 Password Modify Extended Operation (RFC-3062).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usetruststorespi_nodejs">
@@ -2645,6 +2775,15 @@ The following state arguments are supported:
 - `SUBTREE`: Search entire LDAP subtree.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_start_tls_python">
+<a href="#state_start_tls_python" style="color: inherit; text-decoration: inherit;">start_<wbr>tls</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When `true`, Keycloak will encrypt the connection to LDAP using STARTTLS, which will disable connection pooling.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_sync_registrations_python">
 <a href="#state_sync_registrations_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>registrations</a>
 </span>
@@ -2661,6 +2800,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If enabled, email provided by this provider is not verified even if verification is enabled for the realm.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_use_password_modify_extended_op_python">
+<a href="#state_use_password_modify_extended_op_python" style="color: inherit; text-decoration: inherit;">use_<wbr>password_<wbr>modify_<wbr>extended_<wbr>op</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When `true`, use the LDAPv3 Password Modify Extended Operation (RFC-3062).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_use_truststore_spi_python">

@@ -14,6 +14,7 @@ Explore the resources and functions of the keycloak.openid module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="audienceprotocolmapper" title="AudienceProtocolMapper"><span class="api-symbol api-symbol--resource"></span>AudienceProtocolMapper</a></li>
+    <li><a href="audienceresolveprotocolmappter" title="AudienceResolveProtocolMappter"><span class="api-symbol api-symbol--resource"></span>AudienceResolveProtocolMappter</a></li>
     <li><a href="client" title="Client"><span class="api-symbol api-symbol--resource"></span>Client</a></li>
     <li><a href="clientaggregatepolicy" title="ClientAggregatePolicy"><span class="api-symbol api-symbol--resource"></span>ClientAggregatePolicy</a></li>
     <li><a href="clientauthorizationpermission" title="ClientAuthorizationPermission"><span class="api-symbol api-symbol--resource"></span>ClientAuthorizationPermission</a></li>
@@ -59,6 +60,6 @@ Explore the resources and functions of the keycloak.openid module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`keycloak` Terraform Provider](https://github.com/mrparkers/terraform-provider-keycloak).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.4.0</dd>
+	<dd>4.5.0</dd>
 </dl>
 

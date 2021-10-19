@@ -27,6 +27,7 @@ A Pulumi package for creating and managing keycloak cloud resources.
     <li><a href="customidentityprovidermapping" title="CustomIdentityProviderMapping"><span class="api-symbol api-symbol--resource"></span>CustomIdentityProviderMapping</a></li>
     <li><a href="customuserfederation" title="CustomUserFederation"><span class="api-symbol api-symbol--resource"></span>CustomUserFederation</a></li>
     <li><a href="defaultgroups" title="DefaultGroups"><span class="api-symbol api-symbol--resource"></span>DefaultGroups</a></li>
+    <li><a href="defaultroles" title="DefaultRoles"><span class="api-symbol api-symbol--resource"></span>DefaultRoles</a></li>
     <li><a href="genericclientprotocolmapper" title="GenericClientProtocolMapper"><span class="api-symbol api-symbol--resource"></span>GenericClientProtocolMapper</a></li>
     <li><a href="genericclientrolemapper" title="GenericClientRoleMapper"><span class="api-symbol api-symbol--resource"></span>GenericClientRoleMapper</a></li>
     <li><a href="group" title="Group"><span class="api-symbol api-symbol--resource"></span>Group</a></li>
@@ -38,6 +39,12 @@ A Pulumi package for creating and managing keycloak cloud resources.
     <li><a href="provider" title="Provider"><span class="api-symbol api-symbol--resource"></span>Provider</a></li>
     <li><a href="realm" title="Realm"><span class="api-symbol api-symbol--resource"></span>Realm</a></li>
     <li><a href="realmevents" title="RealmEvents"><span class="api-symbol api-symbol--resource"></span>RealmEvents</a></li>
+    <li><a href="realmkeystoreaesgenerated" title="RealmKeystoreAesGenerated"><span class="api-symbol api-symbol--resource"></span>RealmKeystoreAesGenerated</a></li>
+    <li><a href="realmkeystoreecdsagenerated" title="RealmKeystoreEcdsaGenerated"><span class="api-symbol api-symbol--resource"></span>RealmKeystoreEcdsaGenerated</a></li>
+    <li><a href="realmkeystorehmacgenerated" title="RealmKeystoreHmacGenerated"><span class="api-symbol api-symbol--resource"></span>RealmKeystoreHmacGenerated</a></li>
+    <li><a href="realmkeystorejavagenerated" title="RealmKeystoreJavaGenerated"><span class="api-symbol api-symbol--resource"></span>RealmKeystoreJavaGenerated</a></li>
+    <li><a href="realmkeystorersa" title="RealmKeystoreRsa"><span class="api-symbol api-symbol--resource"></span>RealmKeystoreRsa</a></li>
+    <li><a href="realmkeystorersagenerated" title="RealmKeystoreRsaGenerated"><span class="api-symbol api-symbol--resource"></span>RealmKeystoreRsaGenerated</a></li>
     <li><a href="requiredaction" title="RequiredAction"><span class="api-symbol api-symbol--resource"></span>RequiredAction</a></li>
     <li><a href="role" title="Role"><span class="api-symbol api-symbol--resource"></span>Role</a></li>
     <li><a href="user" title="User"><span class="api-symbol api-symbol--resource"></span>User</a></li>
@@ -69,6 +76,6 @@ A Pulumi package for creating and managing keycloak cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`keycloak` Terraform Provider](https://github.com/mrparkers/terraform-provider-keycloak).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.4.0</dd>
+	<dd>4.5.0</dd>
 </dl>
 

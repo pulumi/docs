@@ -47,12 +47,12 @@ class MyStack : Stack
         });
         var samlClient = new Keycloak.Saml.Client("samlClient", new Keycloak.Saml.ClientArgs
         {
-            RealmId = keycloak_realm.Test.Id,
+            RealmId = realm.Id,
             ClientId = "saml-client",
         });
         var samlUserAttributeMapper = new Keycloak.Saml.UserAttributeProtocolMapper("samlUserAttributeMapper", new Keycloak.Saml.UserAttributeProtocolMapperArgs
         {
-            RealmId = keycloak_realm.Test.Id,
+            RealmId = realm.Id,
             ClientId = samlClient.Id,
             UserAttribute = "displayName",
             SamlAttributeName = "displayName",
@@ -80,7 +80,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := keycloak.NewRealm(ctx, "realm", &keycloak.RealmArgs{
+		realm, err := keycloak.NewRealm(ctx, "realm", &keycloak.RealmArgs{
 			Realm:   pulumi.String("my-realm"),
 			Enabled: pulumi.Bool(true),
 		})
@@ -88,14 +88,14 @@ func main() {
 			return err
 		}
 		samlClient, err := saml.NewClient(ctx, "samlClient", &saml.ClientArgs{
-			RealmId:  pulumi.Any(keycloak_realm.Test.Id),
+			RealmId:  realm.ID(),
 			ClientId: pulumi.String("saml-client"),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = saml.NewUserAttributeProtocolMapper(ctx, "samlUserAttributeMapper", &saml.UserAttributeProtocolMapperArgs{
-			RealmId:                 pulumi.Any(keycloak_realm.Test.Id),
+			RealmId:                 realm.ID(),
 			ClientId:                samlClient.ID(),
 			UserAttribute:           pulumi.String("displayName"),
 			SamlAttributeName:       pulumi.String("displayName"),
@@ -123,10 +123,10 @@ realm = keycloak.Realm("realm",
     realm="my-realm",
     enabled=True)
 saml_client = keycloak.saml.Client("samlClient",
-    realm_id=keycloak_realm["test"]["id"],
+    realm_id=realm.id,
     client_id="saml-client")
 saml_user_attribute_mapper = keycloak.saml.UserAttributeProtocolMapper("samlUserAttributeMapper",
-    realm_id=keycloak_realm["test"]["id"],
+    realm_id=realm.id,
     client_id=saml_client.id,
     user_attribute="displayName",
     saml_attribute_name="displayName",
@@ -149,11 +149,11 @@ const realm = new keycloak.Realm("realm", {
     enabled: true,
 });
 const samlClient = new keycloak.saml.Client("samlClient", {
-    realmId: keycloak_realm.test.id,
+    realmId: realm.id,
     clientId: "saml-client",
 });
 const samlUserAttributeMapper = new keycloak.saml.UserAttributeProtocolMapper("samlUserAttributeMapper", {
-    realmId: keycloak_realm.test.id,
+    realmId: realm.id,
     clientId: samlClient.id,
     userAttribute: "displayName",
     samlAttributeName: "displayName",

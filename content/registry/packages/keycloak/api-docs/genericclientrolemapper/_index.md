@@ -232,7 +232,7 @@ class MyStack : Stack
         var clientBRoleMapper = new Keycloak.GenericClientRoleMapper("clientBRoleMapper", new Keycloak.GenericClientRoleMapperArgs
         {
             RealmId = realm.Id,
-            ClientId = keycloak_client.Client_b.Id,
+            ClientId = clientB.Id,
             RoleId = clientRoleA.Id,
         });
     }
@@ -301,7 +301,7 @@ func main() {
 		}
 		_, err = keycloak.NewGenericClientRoleMapper(ctx, "clientBRoleMapper", &keycloak.GenericClientRoleMapperArgs{
 			RealmId:  realm.ID(),
-			ClientId: pulumi.Any(keycloak_client.Client_b.Id),
+			ClientId: clientB.ID(),
 			RoleId:   clientRoleA.ID(),
 		})
 		if err != nil {
@@ -346,7 +346,7 @@ client_role_b = keycloak.Role("clientRoleB",
     description="My Client Role")
 client_b_role_mapper = keycloak.GenericClientRoleMapper("clientBRoleMapper",
     realm_id=realm.id,
-    client_id=keycloak_client["client_b"]["id"],
+    client_id=client_b.id,
     role_id=client_role_a.id)
 ```
 
@@ -390,7 +390,7 @@ const clientRoleB = new keycloak.Role("clientRoleB", {
 });
 const clientBRoleMapper = new keycloak.GenericClientRoleMapper("clientBRoleMapper", {
     realmId: realm.id,
-    clientId: keycloak_client.client_b.id,
+    clientId: clientB.id,
     roleId: clientRoleA.id,
 });
 ```
@@ -583,7 +583,7 @@ class MyStack : Stack
         var clientBRoleMapper = new Keycloak.GenericClientRoleMapper("clientBRoleMapper", new Keycloak.GenericClientRoleMapperArgs
         {
             RealmId = realm.Id,
-            ClientScopeId = keycloak_client_scope.Client_scope.Id,
+            ClientScopeId = clientScope.Id,
             RoleId = clientRole.Id,
         });
     }
@@ -632,7 +632,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = openid.NewClientScope(ctx, "clientScope", &openid.ClientScopeArgs{
+		clientScope, err := openid.NewClientScope(ctx, "clientScope", &openid.ClientScopeArgs{
 			RealmId: realm.ID(),
 		})
 		if err != nil {
@@ -640,7 +640,7 @@ func main() {
 		}
 		_, err = keycloak.NewGenericClientRoleMapper(ctx, "clientBRoleMapper", &keycloak.GenericClientRoleMapperArgs{
 			RealmId:       realm.ID(),
-			ClientScopeId: pulumi.Any(keycloak_client_scope.Client_scope.Id),
+			ClientScopeId: clientScope.ID(),
 			RoleId:        clientRole.ID(),
 		})
 		if err != nil {
@@ -676,7 +676,7 @@ client_role = keycloak.Role("clientRole",
 client_scope = keycloak.openid.ClientScope("clientScope", realm_id=realm.id)
 client_b_role_mapper = keycloak.GenericClientRoleMapper("clientBRoleMapper",
     realm_id=realm.id,
-    client_scope_id=keycloak_client_scope["client_scope"]["id"],
+    client_scope_id=client_scope.id,
     role_id=client_role.id)
 ```
 
@@ -709,7 +709,7 @@ const clientRole = new keycloak.Role("clientRole", {
 const clientScope = new keycloak.openid.ClientScope("clientScope", {realmId: realm.id});
 const clientBRoleMapper = new keycloak.GenericClientRoleMapper("clientBRoleMapper", {
     realmId: realm.id,
-    clientScopeId: keycloak_client_scope.client_scope.id,
+    clientScopeId: clientScope.id,
     roleId: clientRole.id,
 });
 ```
