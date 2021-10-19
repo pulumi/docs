@@ -186,7 +186,7 @@ function getTutorialsRedirect(uri: string): string | undefined {
     const tutorialsPage = uri.match(/\/docs\/(?:reference\/)?tutorials\/([^\/]+)/);
     
     if (tutorialsPage) {
-        let packageName = tutorialsPage[1];
+        const packageName = tutorialsPage[1];
 
         // Don't redirect cloudfx, as we don't have a new home for its tutorial content yet.
         if (packageName === "cloudfx") {
