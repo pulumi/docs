@@ -36,6 +36,7 @@ Before importing a Kubernetes cluster, the cluster's default node pool must be t
 <span class="k">def </span><span class="nx">KubernetesCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                       <span class="nx">auto_upgrade</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                      <span class="nx">ha</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                       <span class="nx">maintenance_policy</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterMaintenancePolicyArgs]</span> = None<span class="p">,</span>
                       <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">node_pool</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterNodePoolArgs]</span> = None<span class="p">,</span>
@@ -209,6 +210,15 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
     <dd>{{% md %}}A boolean value indicating whether the cluster will be automatically upgraded to new patch releases during its maintenance window.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ha_csharp">
+<a href="#ha_csharp" style="color: inherit; text-decoration: inherit;">Ha</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable/disable the high availability control plane for a cluster. High availability can only be set when creating a cluster. Any update will create a new cluster. Default: false
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maintenancepolicy_csharp">
 <a href="#maintenancepolicy_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Policy</a>
 </span>
@@ -292,6 +302,15 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value indicating whether the cluster will be automatically upgraded to new patch releases during its maintenance window.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ha_go">
+<a href="#ha_go" style="color: inherit; text-decoration: inherit;">Ha</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable/disable the high availability control plane for a cluster. High availability can only be set when creating a cluster. Any update will create a new cluster. Default: false
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancepolicy_go">
@@ -379,6 +398,15 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
     <dd>{{% md %}}A boolean value indicating whether the cluster will be automatically upgraded to new patch releases during its maintenance window.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ha_nodejs">
+<a href="#ha_nodejs" style="color: inherit; text-decoration: inherit;">ha</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable/disable the high availability control plane for a cluster. High availability can only be set when creating a cluster. Any update will create a new cluster. Default: false
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maintenancepolicy_nodejs">
 <a href="#maintenancepolicy_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Policy</a>
 </span>
@@ -462,6 +490,15 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value indicating whether the cluster will be automatically upgraded to new patch releases during its maintenance window.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ha_python">
+<a href="#ha_python" style="color: inherit; text-decoration: inherit;">ha</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable/disable the high availability control plane for a cluster. High availability can only be set when creating a cluster. Any update will create a new cluster. Default: false
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenance_policy_python">
@@ -906,6 +943,7 @@ Get an existing KubernetesCluster resource's state with the given name, ID, and 
         <span class="nx">cluster_urn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">created_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">ha</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">ipv4_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">kube_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[KubernetesClusterKubeConfigArgs]]</span> = None<span class="p">,</span>
         <span class="nx">maintenance_policy</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterMaintenancePolicyArgs]</span> = None<span class="p">,</span>
@@ -1076,6 +1114,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The base URL of the API server on the Kubernetes master node.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_ha_csharp">
+<a href="#state_ha_csharp" style="color: inherit; text-decoration: inherit;">Ha</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable/disable the high availability control plane for a cluster. High availability can only be set when creating a cluster. Any update will create a new cluster. Default: false
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_ipv4address_csharp">
 <a href="#state_ipv4address_csharp" style="color: inherit; text-decoration: inherit;">Ipv4Address</a>
 </span>
@@ -1239,6 +1286,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base URL of the API server on the Kubernetes master node.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ha_go">
+<a href="#state_ha_go" style="color: inherit; text-decoration: inherit;">Ha</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable/disable the high availability control plane for a cluster. High availability can only be set when creating a cluster. Any update will create a new cluster. Default: false
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv4address_go">
@@ -1406,6 +1462,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The base URL of the API server on the Kubernetes master node.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_ha_nodejs">
+<a href="#state_ha_nodejs" style="color: inherit; text-decoration: inherit;">ha</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable/disable the high availability control plane for a cluster. High availability can only be set when creating a cluster. Any update will create a new cluster. Default: false
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_ipv4address_nodejs">
 <a href="#state_ipv4address_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Address</a>
 </span>
@@ -1569,6 +1634,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The base URL of the API server on the Kubernetes master node.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ha_python">
+<a href="#state_ha_python" style="color: inherit; text-decoration: inherit;">ha</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable/disable the high availability control plane for a cluster. High availability can only be set when creating a cluster. Any update will create a new cluster. Default: false
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv4_address_python">

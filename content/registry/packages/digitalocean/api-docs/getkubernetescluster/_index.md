@@ -190,6 +190,14 @@ The following output properties are available:
     <dd>{{% md %}}The base URL of the API server on the Kubernetes master node.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="ha_csharp">
+<a href="#ha_csharp" style="color: inherit; text-decoration: inherit;">Ha</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -363,6 +371,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The base URL of the API server on the Kubernetes master node.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="ha_go">
+<a href="#ha_go" style="color: inherit; text-decoration: inherit;">Ha</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -538,6 +554,14 @@ The following output properties are available:
     <dd>{{% md %}}The base URL of the API server on the Kubernetes master node.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="ha_nodejs">
+<a href="#ha_nodejs" style="color: inherit; text-decoration: inherit;">ha</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -711,6 +735,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The base URL of the API server on the Kubernetes master node.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="ha_python">
+<a href="#ha_python" style="color: inherit; text-decoration: inherit;">ha</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
