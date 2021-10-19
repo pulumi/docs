@@ -196,13 +196,13 @@ function getTutorialsRedirect(uri: string): string | undefined {
         const isAWSNativeGuide = AWS_NATIVE_TUTORIALS.some((awsNativeGuide) => uri.includes(awsNativeGuide))
         if (isAWSNativeGuide) {
             return uri.replace("docs/tutorials/aws", "registry/packages/aws-native/how-to-guides")
-            .replace("docs/reference/tutorials/aws", "registry/packages/aws-native/how-to-guides");
+                .replace("docs/reference/tutorials/aws", "registry/packages/aws-native/how-to-guides");
         }
 
         const isAzureNativeGuide = AZURE_NATIVE_TUTORIALS.some((azureNativeGuide) => uri.includes(azureNativeGuide))
         if (isAzureNativeGuide) {
             return uri.replace("docs/tutorials/azure", "registry/packages/azure-native/how-to-guides")
-            .replace("docs/reference/tutorials/azure", "registry/packages/azure-native/how-to-guides");
+                .replace("docs/reference/tutorials/azure", "registry/packages/azure-native/how-to-guides");
         }
 
         return uri.replace("docs/tutorials", "registry/packages")
@@ -296,7 +296,7 @@ function dotnetSDKRedirect(uri: string): string | undefined {
     return undefined;
 }
 
-// these are how-to guides that have the improper package because our template-creating script was not parsing classic-azure or aws-native correctly
+// These are how-to guides that have the improper package because our template-creating script was not parsing classic-azure or aws-native correctly
 const AZURE_NATIVE_TUTORIALS = [
     "azure-cs-aks-cosmos-helm",
     "azure-cs-credential-rotation-one-set",
