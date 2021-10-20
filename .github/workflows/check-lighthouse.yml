@@ -1,0 +1,24 @@
+name: "Scheduled jobs: Lighthouse CI"
+on:
+  schedule:
+    # * is a special character in YAML so you have to quote this string.
+    # Run every day at 3:00PM UTC.
+    - cron:  '0 15 * * *'
+jobs:
+  all:
+    name: Lighthouse
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Run Lighthouse
+        uses: treosh/lighthouse-ci-action@v8
+        with:
+          urls: |
+            https://www.pulumi.com/
+            https://www.pulumi.com/product/
+            https://www.pulumi.com/pricing/
+            https://www.pulumi.com/docs/get-started/
+            https://www.pulumi.com/docs/intro/concepts/resources/
+            https://www.pulumi.com/registry/
+            https://www.pulumi.com/registry/packages/aws/api-docs/s3/bucket/
+          uploadArtifacts: true
+
