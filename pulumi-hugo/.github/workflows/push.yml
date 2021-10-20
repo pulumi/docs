@@ -1,0 +1,39 @@
+name: Build
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Install Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+
+      - name: Install Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.16.x
+
+      - name: Install Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.82.0'
+          extended: true
+
+      - name: Check out branch
+        uses: actions/checkout@v2
+
+      - name: Fetch the latest pulumi/theme
+        run: |
+          hugo mod get github.com/pulumi/theme
+          hugo mod tidy
+
+      - name: Commit any changes to go.mod/go.sum
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          file_pattern: go.*
+          commit_message: Update go.mod
