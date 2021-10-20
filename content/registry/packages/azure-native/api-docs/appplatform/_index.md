@@ -19,6 +19,7 @@ Explore the resources and functions of the azure-native.appplatform module.
     <li><a href="customdomain" title="CustomDomain"><span class="api-symbol api-symbol--resource"></span>CustomDomain</a></li>
     <li><a href="deployment" title="Deployment"><span class="api-symbol api-symbol--resource"></span>Deployment</a></li>
     <li><a href="service" title="Service"><span class="api-symbol api-symbol--resource"></span>Service</a></li>
+    <li><a href="storage" title="Storage"><span class="api-symbol api-symbol--resource"></span>Storage</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -31,6 +32,7 @@ Explore the resources and functions of the azure-native.appplatform module.
     <li><a href="getdeployment" title="GetDeployment"><span class="api-symbol api-symbol--function"></span>GetDeployment</a></li>
     <li><a href="getdeploymentlogfileurl" title="GetDeploymentLogFileUrl"><span class="api-symbol api-symbol--function"></span>GetDeploymentLogFileUrl</a></li>
     <li><a href="getservice" title="GetService"><span class="api-symbol api-symbol--function"></span>GetService</a></li>
+    <li><a href="getstorage" title="GetStorage"><span class="api-symbol api-symbol--function"></span>GetStorage</a></li>
     <li><a href="listservicetestkeys" title="ListServiceTestKeys"><span class="api-symbol api-symbol--function"></span>ListServiceTestKeys</a></li>
 </ul>
 
@@ -41,6 +43,6 @@ Explore the resources and functions of the azure-native.appplatform module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.40.0</dd>
+	<dd>1.41.0</dd>
 </dl>
 

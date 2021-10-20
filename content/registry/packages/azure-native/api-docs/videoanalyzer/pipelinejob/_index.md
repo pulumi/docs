@@ -44,7 +44,12 @@ class MyStack : Stack
                 new AzureNative.VideoAnalyzer.Inputs.ParameterDefinitionArgs
                 {
                     Name = "timesequences",
-                    Value = "[[2020-10-05T03:30:00Z, 2020-10-05T04:30:00Z]]",
+                    Value = "[[\"2020-10-05T03:30:00Z\", \"2020-10-05T04:30:00Z\"]]",
+                },
+                new AzureNative.VideoAnalyzer.Inputs.ParameterDefinitionArgs
+                {
+                    Name = "videoSourceName",
+                    Value = "camera001",
                 },
             },
             PipelineJobName = "pipelineJob1",
@@ -80,7 +85,11 @@ func main() {
 			Parameters: []videoanalyzer.ParameterDefinitionArgs{
 				&videoanalyzer.ParameterDefinitionArgs{
 					Name:  pulumi.String("timesequences"),
-					Value: pulumi.String("[[2020-10-05T03:30:00Z, 2020-10-05T04:30:00Z]]"),
+					Value: pulumi.String("[[\"2020-10-05T03:30:00Z\", \"2020-10-05T04:30:00Z\"]]"),
+				},
+				&videoanalyzer.ParameterDefinitionArgs{
+					Name:  pulumi.String("videoSourceName"),
+					Value: pulumi.String("camera001"),
 				},
 			},
 			PipelineJobName:   pulumi.String("pipelineJob1"),
@@ -110,10 +119,16 @@ import pulumi_azure_native as azure_native
 pipeline_job = azure_native.videoanalyzer.PipelineJob("pipelineJob",
     account_name="testaccount2",
     description="Pipeline Job 1 Dsecription",
-    parameters=[azure_native.videoanalyzer.ParameterDefinitionArgs(
-        name="timesequences",
-        value="[[2020-10-05T03:30:00Z, 2020-10-05T04:30:00Z]]",
-    )],
+    parameters=[
+        azure_native.videoanalyzer.ParameterDefinitionArgs(
+            name="timesequences",
+            value="[[\"2020-10-05T03:30:00Z\", \"2020-10-05T04:30:00Z\"]]",
+        ),
+        azure_native.videoanalyzer.ParameterDefinitionArgs(
+            name="videoSourceName",
+            value="camera001",
+        ),
+    ],
     pipeline_job_name="pipelineJob1",
     resource_group_name="testrg",
     topology_name="pipelinetopology1")
@@ -134,10 +149,16 @@ import * as azure_native from "@pulumi/azure-native";
 const pipelineJob = new azure_native.videoanalyzer.PipelineJob("pipelineJob", {
     accountName: "testaccount2",
     description: "Pipeline Job 1 Dsecription",
-    parameters: [{
-        name: "timesequences",
-        value: "[[2020-10-05T03:30:00Z, 2020-10-05T04:30:00Z]]",
-    }],
+    parameters: [
+        {
+            name: "timesequences",
+            value: "[[\"2020-10-05T03:30:00Z\", \"2020-10-05T04:30:00Z\"]]",
+        },
+        {
+            name: "videoSourceName",
+            value: "camera001",
+        },
+    ],
     pipelineJobName: "pipelineJob1",
     resourceGroupName: "testrg",
     topologyName: "pipelinetopology1",
@@ -1227,7 +1248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-native:videoanalyzer:PipelineJob pipelineJob1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Media/videoAnalyzers/{accountName}/pipelineJobs/{pipelineJobName} 
+$ pulumi import azure-native:videoanalyzer:PipelineJob pipelineJob1 /subscriptions/591e76c3-3e97-44db-879c-3e2b12961b62/resourceGroups/testrg/providers/Microsoft.Media/videoAnalyzers/testaccount2/pipelineJobs/pipelineJob1 
 ```
 
 

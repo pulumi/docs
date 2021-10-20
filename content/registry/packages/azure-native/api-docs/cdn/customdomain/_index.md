@@ -528,6 +528,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="customhttpsparameters_csharp">
+<a href="#customhttpsparameters_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Https<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cdnmanagedhttpsparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Outputs.<wbr>Cdn<wbr>Managed<wbr>Https<wbr>Parameters<wbr>Response</a> | <a href="#usermanagedhttpsparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Outputs.<wbr>User<wbr>Managed<wbr>Https<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Certificate parameters for securing custom HTTPS{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="validationdata_csharp">
 <a href="#validationdata_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Data</a>
 </span>
@@ -603,6 +611,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="customhttpsparameters_go">
+<a href="#customhttpsparameters_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Https<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cdnmanagedhttpsparametersresponse">Cdn<wbr>Managed<wbr>Https<wbr>Parameters<wbr>Response</a> | <a href="#usermanagedhttpsparametersresponse">User<wbr>Managed<wbr>Https<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Certificate parameters for securing custom HTTPS{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="validationdata_go">
 <a href="#validationdata_go" style="color: inherit; text-decoration: inherit;">Validation<wbr>Data</a>
@@ -680,6 +696,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="customhttpsparameters_nodejs">
+<a href="#customhttpsparameters_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Https<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cdnmanagedhttpsparametersresponse">Cdn<wbr>Managed<wbr>Https<wbr>Parameters<wbr>Response</a> | <a href="#usermanagedhttpsparametersresponse">User<wbr>Managed<wbr>Https<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Certificate parameters for securing custom HTTPS{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="validationdata_nodejs">
 <a href="#validationdata_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Data</a>
 </span>
@@ -756,6 +780,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="custom_https_parameters_python">
+<a href="#custom_https_parameters_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>https_<wbr>parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cdnmanagedhttpsparametersresponse">Cdn<wbr>Managed<wbr>Https<wbr>Parameters<wbr>Response</a> | <a href="#usermanagedhttpsparametersresponse">User<wbr>Managed<wbr>Https<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Certificate parameters for securing custom HTTPS{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="validation_data_python">
 <a href="#validation_data_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>data</a>
 </span>
@@ -774,6 +806,476 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="cdncertificatesourceparametersresponse">Cdn<wbr>Certificate<wbr>Source<wbr>Parameters<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="certificatetype_csharp">
+<a href="#certificatetype_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of certificate used{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="odatatype_csharp">
+<a href="#odatatype_csharp" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="certificatetype_go">
+<a href="#certificatetype_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of certificate used{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="odatatype_go">
+<a href="#odatatype_go" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="certificatetype_nodejs">
+<a href="#certificatetype_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of certificate used{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="odatatype_nodejs">
+<a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="certificate_type_python">
+<a href="#certificate_type_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of certificate used{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="odata_type_python">
+<a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="cdnmanagedhttpsparametersresponse">Cdn<wbr>Managed<wbr>Https<wbr>Parameters<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="certificatesourceparameters_csharp">
+<a href="#certificatesourceparameters_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Source<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cdncertificatesourceparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Cdn<wbr>Certificate<wbr>Source<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the certificate source parameters using CDN managed certificate for enabling SSL.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="protocoltype_csharp">
+<a href="#protocoltype_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Defines the TLS extension protocol that is used for secure delivery.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimumtlsversion_csharp">
+<a href="#minimumtlsversion_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Tls<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}TLS protocol version that will be used for Https{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="certificatesourceparameters_go">
+<a href="#certificatesourceparameters_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Source<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cdncertificatesourceparametersresponse">Cdn<wbr>Certificate<wbr>Source<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the certificate source parameters using CDN managed certificate for enabling SSL.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="protocoltype_go">
+<a href="#protocoltype_go" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Defines the TLS extension protocol that is used for secure delivery.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimumtlsversion_go">
+<a href="#minimumtlsversion_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Tls<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}TLS protocol version that will be used for Https{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="certificatesourceparameters_nodejs">
+<a href="#certificatesourceparameters_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Source<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cdncertificatesourceparametersresponse">Cdn<wbr>Certificate<wbr>Source<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the certificate source parameters using CDN managed certificate for enabling SSL.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="protocoltype_nodejs">
+<a href="#protocoltype_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Defines the TLS extension protocol that is used for secure delivery.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimumtlsversion_nodejs">
+<a href="#minimumtlsversion_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Tls<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}TLS protocol version that will be used for Https{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="certificate_source_parameters_python">
+<a href="#certificate_source_parameters_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>source_<wbr>parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cdncertificatesourceparametersresponse">Cdn<wbr>Certificate<wbr>Source<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the certificate source parameters using CDN managed certificate for enabling SSL.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="protocol_type_python">
+<a href="#protocol_type_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Defines the TLS extension protocol that is used for secure delivery.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimum_tls_version_python">
+<a href="#minimum_tls_version_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>tls_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}TLS protocol version that will be used for Https{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="keyvaultcertificatesourceparametersresponse">Key<wbr>Vault<wbr>Certificate<wbr>Source<wbr>Parameters<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="deleterule_csharp">
+<a href="#deleterule_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Describes the action that shall be taken when the certificate is removed from Key Vault.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="odatatype_csharp">
+<a href="#odatatype_csharp" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource group of the user's Key Vault containing the SSL certificate{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secretname_csharp">
+<a href="#secretname_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of Key Vault Secret (representing the full certificate PFX) in Key Vault.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subscriptionid_csharp">
+<a href="#subscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Subscription Id of the user's Key Vault containing the SSL certificate{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="updaterule_csharp">
+<a href="#updaterule_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Describes the action that shall be taken when the certificate is updated in Key Vault.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vaultname_csharp">
+<a href="#vaultname_csharp" style="color: inherit; text-decoration: inherit;">Vault<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the user's Key Vault containing the SSL certificate{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="secretversion_csharp">
+<a href="#secretversion_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version(GUID) of Key Vault Secret in Key Vault.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="deleterule_go">
+<a href="#deleterule_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Describes the action that shall be taken when the certificate is removed from Key Vault.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="odatatype_go">
+<a href="#odatatype_go" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource group of the user's Key Vault containing the SSL certificate{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secretname_go">
+<a href="#secretname_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of Key Vault Secret (representing the full certificate PFX) in Key Vault.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subscriptionid_go">
+<a href="#subscriptionid_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Subscription Id of the user's Key Vault containing the SSL certificate{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="updaterule_go">
+<a href="#updaterule_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Describes the action that shall be taken when the certificate is updated in Key Vault.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vaultname_go">
+<a href="#vaultname_go" style="color: inherit; text-decoration: inherit;">Vault<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the user's Key Vault containing the SSL certificate{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="secretversion_go">
+<a href="#secretversion_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version(GUID) of Key Vault Secret in Key Vault.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="deleterule_nodejs">
+<a href="#deleterule_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Describes the action that shall be taken when the certificate is removed from Key Vault.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="odatatype_nodejs">
+<a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource group of the user's Key Vault containing the SSL certificate{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secretname_nodejs">
+<a href="#secretname_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of Key Vault Secret (representing the full certificate PFX) in Key Vault.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subscriptionid_nodejs">
+<a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Subscription Id of the user's Key Vault containing the SSL certificate{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="updaterule_nodejs">
+<a href="#updaterule_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Describes the action that shall be taken when the certificate is updated in Key Vault.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vaultname_nodejs">
+<a href="#vaultname_nodejs" style="color: inherit; text-decoration: inherit;">vault<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the user's Key Vault containing the SSL certificate{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="secretversion_nodejs">
+<a href="#secretversion_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version(GUID) of Key Vault Secret in Key Vault.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="delete_rule_python">
+<a href="#delete_rule_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Describes the action that shall be taken when the certificate is removed from Key Vault.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="odata_type_python">
+<a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource group of the user's Key Vault containing the SSL certificate{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secret_name_python">
+<a href="#secret_name_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of Key Vault Secret (representing the full certificate PFX) in Key Vault.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subscription_id_python">
+<a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Subscription Id of the user's Key Vault containing the SSL certificate{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="update_rule_python">
+<a href="#update_rule_python" style="color: inherit; text-decoration: inherit;">update_<wbr>rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Describes the action that shall be taken when the certificate is updated in Key Vault.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vault_name_python">
+<a href="#vault_name_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the user's Key Vault containing the SSL certificate{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="secret_version_python">
+<a href="#secret_version_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The version(GUID) of Key Vault Secret in Key Vault.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
 
@@ -983,6 +1485,120 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="usermanagedhttpsparametersresponse">User<wbr>Managed<wbr>Https<wbr>Parameters<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="certificatesourceparameters_csharp">
+<a href="#certificatesourceparameters_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Source<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyvaultcertificatesourceparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Certificate<wbr>Source<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the certificate source parameters using user's keyvault certificate for enabling SSL.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="protocoltype_csharp">
+<a href="#protocoltype_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Defines the TLS extension protocol that is used for secure delivery.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimumtlsversion_csharp">
+<a href="#minimumtlsversion_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Tls<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}TLS protocol version that will be used for Https{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="certificatesourceparameters_go">
+<a href="#certificatesourceparameters_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Source<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyvaultcertificatesourceparametersresponse">Key<wbr>Vault<wbr>Certificate<wbr>Source<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the certificate source parameters using user's keyvault certificate for enabling SSL.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="protocoltype_go">
+<a href="#protocoltype_go" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Defines the TLS extension protocol that is used for secure delivery.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimumtlsversion_go">
+<a href="#minimumtlsversion_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Tls<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}TLS protocol version that will be used for Https{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="certificatesourceparameters_nodejs">
+<a href="#certificatesourceparameters_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Source<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyvaultcertificatesourceparametersresponse">Key<wbr>Vault<wbr>Certificate<wbr>Source<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the certificate source parameters using user's keyvault certificate for enabling SSL.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="protocoltype_nodejs">
+<a href="#protocoltype_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Defines the TLS extension protocol that is used for secure delivery.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimumtlsversion_nodejs">
+<a href="#minimumtlsversion_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Tls<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}TLS protocol version that will be used for Https{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="certificate_source_parameters_python">
+<a href="#certificate_source_parameters_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>source_<wbr>parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyvaultcertificatesourceparametersresponse">Key<wbr>Vault<wbr>Certificate<wbr>Source<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the certificate source parameters using user's keyvault certificate for enabling SSL.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="protocol_type_python">
+<a href="#protocol_type_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Defines the TLS extension protocol that is used for secure delivery.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimum_tls_version_python">
+<a href="#minimum_tls_version_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>tls_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}TLS protocol version that will be used for Https{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
