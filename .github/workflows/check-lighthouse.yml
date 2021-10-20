@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Run Lighthouse
-        uses: treosh/lighthouse-ci-action@v7
+        uses: treosh/lighthouse-ci-action@v8
         with:
           urls: |
             https://www.pulumi.com/
@@ -18,7 +18,7 @@ jobs:
             https://www.pulumi.com/pricing/
             https://www.pulumi.com/docs/get-started/
             https://www.pulumi.com/docs/intro/concepts/resources/
-            https://www.pulumi.com/docs/reference/pkg/aws/s3/bucket/
+            https://www.pulumi.com/registry/
+            https://www.pulumi.com/registry/packages/aws/api-docs/s3/bucket/
           uploadArtifacts: true
-          temporaryPublicStorage: true
 
