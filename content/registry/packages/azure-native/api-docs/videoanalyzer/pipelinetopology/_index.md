@@ -84,6 +84,11 @@ class MyStack : Stack
                         Title = "Parking Lot (Camera 1)",
                     },
                     VideoName = "camera001",
+                    VideoPublishingOptions = new AzureNative.VideoAnalyzer.Inputs.VideoPublishingOptionsArgs
+                    {
+                        DisableArchive = "false",
+                        DisableRtspPublishing = "true",
+                    },
                 },
             },
             Sku = new AzureNative.VideoAnalyzer.Inputs.SkuArgs
@@ -167,6 +172,10 @@ pipeline_topology = azure_native.videoanalyzer.PipelineTopology("pipelineTopolog
             title="Parking Lot (Camera 1)",
         ),
         "videoName": "camera001",
+        "videoPublishingOptions": azure_native.videoanalyzer.VideoPublishingOptionsArgs(
+            disable_archive="false",
+            disable_rtsp_publishing="true",
+        ),
     }],
     sku=azure_native.videoanalyzer.SkuArgs(
         name="Live_S1",
@@ -231,6 +240,10 @@ const pipelineTopology = new azure_native.videoanalyzer.PipelineTopology("pipeli
             title: "Parking Lot (Camera 1)",
         },
         videoName: "camera001",
+        videoPublishingOptions: {
+            disableArchive: "false",
+            disableRtspPublishing: "true",
+        },
     }],
     sku: {
         name: "Live_S1",
@@ -5421,7 +5434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-native:videoanalyzer:PipelineTopology pipelineTopology1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Media/videoAnalyzers/{accountName}/pipelineTopologies/{pipelineTopologyName} 
+$ pulumi import azure-native:videoanalyzer:PipelineTopology pipelineTopology1 /subscriptions/591e76c3-3e97-44db-879c-3e2b12961b62/resourceGroups/testrg/providers/Microsoft.Media/videoAnalyzers/testaccount2/pipelineTopologies/pipelineTopology1 
 ```
 
 
