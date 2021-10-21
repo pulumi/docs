@@ -1,0 +1,95 @@
+{{ define "hero" }}
+    {{ partial "hero" (dict "title" .Params.title )}}
+{{ end }}
+
+{{ define "main" }}
+    <!-- Get the webinars as they contain the CES sessions -->
+    {{ $webinars := (where $.Site.Pages "Type" "webinars") }}
+
+    <!-- Create slices for each section of CES so we create the nav -->
+    {{ $cesKeynotes := slice }}
+    {{ $cesBuild := slice }}
+    {{ $cesDeploy := slice }}
+    {{ $cesManage := slice }}
+
+    {{ range sort $webinars ".Params.main.sortable_date" "asc" }}
+        {{ if isset .Params "cloud_engineering_summit" }}
+
+            {{ if eq .Params.cloud_engineering_summit.track "keynote" }}
+                {{ $cesKeynotes = $cesKeynotes | append . }}
+            {{ end }}
+
+            {{ if eq .Params.cloud_engineering_summit.track "build" }}
+                {{ $cesBuild = $cesBuild | append . }}
+            {{ end }}
+
+            {{ if eq .Params.cloud_engineering_summit.track "deploy" }}
+                {{ $cesDeploy = $cesDeploy | append . }}
+            {{ end }}
+
+            {{ if eq .Params.cloud_engineering_summit.track "manage" }}
+                {{ $cesManage = $cesManage | append . }}
+            {{ end }}
+        {{ end }}
+    {{ end }}
+
+    <section id="keynotes" class="container mx-auto my-12 p-6">
+        <h2>Keynotes</h2>
+        <ul class="list-none p-0">
+            {{ range $cesKeynotes }}
+                <li>
+                    <a href="/resources/{{ .Params.url_slug }}/">{{ .Params.title }}</a>
+                </li>
+            {{ end }}
+        </ul>
+    </section>
+
+    <section class="container mx-auto my-12 p-6">
+        <h2>Tracks</h2>
+        <div class="card bg-white p-6">
+            <ul class="list-none p-0" data-faq-type="faq-pricing">
+                <li class="accordion-item text-2xl py-3 border-b-2">
+                    {{ partial "accordian-header" (dict "text" "Build" "large_header" true) }}
+
+                    <div class="accordion-item-body-no-animation text-base">
+                        <ul class="list-none p-0">
+                            {{ range $cesBuild }}
+                                <li>
+                                    <a href="/resources/{{ .Params.url_slug }}/">{{ .Params.title }}</a>
+                                </li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="accordion-item text-2xl py-3 border-b-2">
+                    {{ partial "accordian-header" (dict "text" "Deploy" "large_header" true) }}
+
+                    <div class="accordion-item-body-no-animation text-base">
+                        <ul class="list-none p-0">
+                            {{ range $cesDeploy }}
+                                <li>
+                                    <a href="/resources/{{ .Params.url_slug }}/">{{ .Params.title }}</a>
+                                </li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="accordion-item text-2xl py-3 border-b-2">
+                    {{ partial "accordian-header" (dict "text" "Manage" "large_header" true) }}
+
+                    <div class="accordion-item-body-no-animation text-base">
+                        <ul class="list-none p-0">
+                            {{ range $cesManage }}
+                                <li>
+                                    <a href="/resources/{{ .Params.url_slug }}/">{{ .Params.title }}</a>
+                                </li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+{{ end }}
