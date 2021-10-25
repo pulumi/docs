@@ -33,6 +33,6 @@ Explore the resources and functions of the azure-native.signalrservice module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.41.0</dd>
+	<dd>1.42.0</dd>
 </dl>
 
