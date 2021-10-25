@@ -43,6 +43,7 @@ A native Pulumi package for creating and managing Azure resources.
     <li><a href="cdn/" title="cdn"><span class="api-symbol api-symbol--module"></span>cdn</a></li>
     <li><a href="certificateregistration/" title="certificateregistration"><span class="api-symbol api-symbol--module"></span>certificateregistration</a></li>
     <li><a href="changeanalysis/" title="changeanalysis"><span class="api-symbol api-symbol--module"></span>changeanalysis</a></li>
+    <li><a href="chaos/" title="chaos"><span class="api-symbol api-symbol--module"></span>chaos</a></li>
     <li><a href="cognitiveservices/" title="cognitiveservices"><span class="api-symbol api-symbol--module"></span>cognitiveservices</a></li>
     <li><a href="communication/" title="communication"><span class="api-symbol api-symbol--module"></span>communication</a></li>
     <li><a href="compute/" title="compute"><span class="api-symbol api-symbol--module"></span>compute</a></li>
@@ -148,6 +149,7 @@ A native Pulumi package for creating and managing Azure resources.
     <li><a href="recoveryservices/" title="recoveryservices"><span class="api-symbol api-symbol--module"></span>recoveryservices</a></li>
     <li><a href="redhatopenshift/" title="redhatopenshift"><span class="api-symbol api-symbol--module"></span>redhatopenshift</a></li>
     <li><a href="relay/" title="relay"><span class="api-symbol api-symbol--module"></span>relay</a></li>
+    <li><a href="resourceconnector/" title="resourceconnector"><span class="api-symbol api-symbol--module"></span>resourceconnector</a></li>
     <li><a href="resourcegraph/" title="resourcegraph"><span class="api-symbol api-symbol--module"></span>resourcegraph</a></li>
     <li><a href="resources/" title="resources"><span class="api-symbol api-symbol--module"></span>resources</a></li>
     <li><a href="saas/" title="saas"><span class="api-symbol api-symbol--module"></span>saas</a></li>
@@ -199,6 +201,6 @@ A native Pulumi package for creating and managing Azure resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.41.0</dd>
+	<dd>1.42.0</dd>
 </dl>
 

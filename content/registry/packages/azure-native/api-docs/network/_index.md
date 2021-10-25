@@ -81,6 +81,7 @@ Explore the resources and functions of the azure-native.network module.
     <li><a href="routefilter" title="RouteFilter"><span class="api-symbol api-symbol--resource"></span>RouteFilter</a></li>
     <li><a href="routefilterrule" title="RouteFilterRule"><span class="api-symbol api-symbol--resource"></span>RouteFilterRule</a></li>
     <li><a href="routetable" title="RouteTable"><span class="api-symbol api-symbol--resource"></span>RouteTable</a></li>
+    <li><a href="routingintent" title="RoutingIntent"><span class="api-symbol api-symbol--resource"></span>RoutingIntent</a></li>
     <li><a href="rulesengine" title="RulesEngine"><span class="api-symbol api-symbol--resource"></span>RulesEngine</a></li>
     <li><a href="securityadminconfiguration" title="SecurityAdminConfiguration"><span class="api-symbol api-symbol--resource"></span>SecurityAdminConfiguration</a></li>
     <li><a href="securitypartnerprovider" title="SecurityPartnerProvider"><span class="api-symbol api-symbol--resource"></span>SecurityPartnerProvider</a></li>
@@ -191,6 +192,7 @@ Explore the resources and functions of the azure-native.network module.
     <li><a href="getroutefilter" title="GetRouteFilter"><span class="api-symbol api-symbol--function"></span>GetRouteFilter</a></li>
     <li><a href="getroutefilterrule" title="GetRouteFilterRule"><span class="api-symbol api-symbol--function"></span>GetRouteFilterRule</a></li>
     <li><a href="getroutetable" title="GetRouteTable"><span class="api-symbol api-symbol--function"></span>GetRouteTable</a></li>
+    <li><a href="getroutingintent" title="GetRoutingIntent"><span class="api-symbol api-symbol--function"></span>GetRoutingIntent</a></li>
     <li><a href="getrulesengine" title="GetRulesEngine"><span class="api-symbol api-symbol--function"></span>GetRulesEngine</a></li>
     <li><a href="getsecurityadminconfiguration" title="GetSecurityAdminConfiguration"><span class="api-symbol api-symbol--function"></span>GetSecurityAdminConfiguration</a></li>
     <li><a href="getsecuritypartnerprovider" title="GetSecurityPartnerProvider"><span class="api-symbol api-symbol--function"></span>GetSecurityPartnerProvider</a></li>
@@ -234,6 +236,8 @@ Explore the resources and functions of the azure-native.network module.
     <li><a href="listeffectiveconnectivityconfiguration" title="ListEffectiveConnectivityConfiguration"><span class="api-symbol api-symbol--function"></span>ListEffectiveConnectivityConfiguration</a></li>
     <li><a href="listeffectivevirtualnetworkbynetworkgroup" title="ListEffectiveVirtualNetworkByNetworkGroup"><span class="api-symbol api-symbol--function"></span>ListEffectiveVirtualNetworkByNetworkGroup</a></li>
     <li><a href="listeffectivevirtualnetworkbynetworkmanager" title="ListEffectiveVirtualNetworkByNetworkManager"><span class="api-symbol api-symbol--function"></span>ListEffectiveVirtualNetworkByNetworkManager</a></li>
+    <li><a href="listfirewallpolicyidpssignature" title="ListFirewallPolicyIdpsSignature"><span class="api-symbol api-symbol--function"></span>ListFirewallPolicyIdpsSignature</a></li>
+    <li><a href="listfirewallpolicyidpssignaturesfiltervalue" title="ListFirewallPolicyIdpsSignaturesFilterValue"><span class="api-symbol api-symbol--function"></span>ListFirewallPolicyIdpsSignaturesFilterValue</a></li>
     <li><a href="listnetworkmanagerdeploymentstatus" title="ListNetworkManagerDeploymentStatus"><span class="api-symbol api-symbol--function"></span>ListNetworkManagerDeploymentStatus</a></li>
     <li><a href="listnetworkmanagereffectivesecurityadminrule" title="ListNetworkManagerEffectiveSecurityAdminRule"><span class="api-symbol api-symbol--function"></span>ListNetworkManagerEffectiveSecurityAdminRule</a></li>
 </ul>
@@ -245,6 +249,6 @@ Explore the resources and functions of the azure-native.network module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.41.0</dd>
+	<dd>1.42.0</dd>
 </dl>
 

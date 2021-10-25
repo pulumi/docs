@@ -20,6 +20,7 @@ Explore the resources and functions of the azure-native.avs module.
     <li><a href="datastore" title="Datastore"><span class="api-symbol api-symbol--resource"></span>Datastore</a></li>
     <li><a href="globalreachconnection" title="GlobalReachConnection"><span class="api-symbol api-symbol--resource"></span>GlobalReachConnection</a></li>
     <li><a href="hcxenterprisesite" title="HcxEnterpriseSite"><span class="api-symbol api-symbol--resource"></span>HcxEnterpriseSite</a></li>
+    <li><a href="placementpolicy" title="PlacementPolicy"><span class="api-symbol api-symbol--resource"></span>PlacementPolicy</a></li>
     <li><a href="privatecloud" title="PrivateCloud"><span class="api-symbol api-symbol--resource"></span>PrivateCloud</a></li>
     <li><a href="scriptexecution" title="ScriptExecution"><span class="api-symbol api-symbol--resource"></span>ScriptExecution</a></li>
     <li><a href="workloadnetworkdhcp" title="WorkloadNetworkDhcp"><span class="api-symbol api-symbol--resource"></span>WorkloadNetworkDhcp</a></li>
@@ -40,6 +41,7 @@ Explore the resources and functions of the azure-native.avs module.
     <li><a href="getdatastore" title="GetDatastore"><span class="api-symbol api-symbol--function"></span>GetDatastore</a></li>
     <li><a href="getglobalreachconnection" title="GetGlobalReachConnection"><span class="api-symbol api-symbol--function"></span>GetGlobalReachConnection</a></li>
     <li><a href="gethcxenterprisesite" title="GetHcxEnterpriseSite"><span class="api-symbol api-symbol--function"></span>GetHcxEnterpriseSite</a></li>
+    <li><a href="getplacementpolicy" title="GetPlacementPolicy"><span class="api-symbol api-symbol--function"></span>GetPlacementPolicy</a></li>
     <li><a href="getprivatecloud" title="GetPrivateCloud"><span class="api-symbol api-symbol--function"></span>GetPrivateCloud</a></li>
     <li><a href="getscriptexecution" title="GetScriptExecution"><span class="api-symbol api-symbol--function"></span>GetScriptExecution</a></li>
     <li><a href="getscriptexecutionlogs" title="GetScriptExecutionLogs"><span class="api-symbol api-symbol--function"></span>GetScriptExecutionLogs</a></li>
@@ -60,6 +62,6 @@ Explore the resources and functions of the azure-native.avs module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.41.0</dd>
+	<dd>1.42.0</dd>
 </dl>
 
