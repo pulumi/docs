@@ -42,7 +42,7 @@ class MyStack : Stack
         {
             Location = exampleResourceGroup.Location,
             ResourceGroupName = exampleResourceGroup.Name,
-            AdministratorLogin = "psqladminun",
+            AdministratorLogin = "psqladmin",
             AdministratorLoginPassword = "H@Sh1CoR3!",
             SkuName = "GP_Gen5_4",
             Version = "9.6",
@@ -85,7 +85,7 @@ func main() {
 		_, err = postgresql.NewServer(ctx, "exampleServer", &postgresql.ServerArgs{
 			Location:                     exampleResourceGroup.Location,
 			ResourceGroupName:            exampleResourceGroup.Name,
-			AdministratorLogin:           pulumi.String("psqladminun"),
+			AdministratorLogin:           pulumi.String("psqladmin"),
 			AdministratorLoginPassword:   pulumi.String("H@Sh1CoR3!"),
 			SkuName:                      pulumi.String("GP_Gen5_4"),
 			Version:                      pulumi.String("9.6"),
@@ -119,7 +119,7 @@ example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", locati
 example_server = azure.postgresql.Server("exampleServer",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
-    administrator_login="psqladminun",
+    administrator_login="psqladmin",
     administrator_login_password="H@Sh1CoR3!",
     sku_name="GP_Gen5_4",
     version="9.6",
@@ -147,7 +147,7 @@ const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup"
 const exampleServer = new azure.postgresql.Server("exampleServer", {
     location: exampleResourceGroup.location,
     resourceGroupName: exampleResourceGroup.name,
-    administratorLogin: "psqladminun",
+    administratorLogin: "psqladmin",
     administratorLoginPassword: "H@Sh1CoR3!",
     skuName: "GP_Gen5_4",
     version: "9.6",

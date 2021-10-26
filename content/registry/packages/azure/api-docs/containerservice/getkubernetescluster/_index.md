@@ -1285,6 +1285,15 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagent">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `oms_agent` block.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="openservicemeshes_csharp">
+<a href="#openservicemeshes_csharp" style="color: inherit; text-decoration: inherit;">Open<wbr>Service<wbr>Meshes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofileopenservicemesh">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Open<wbr>Service<wbr>Mesh&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An `open_service_mesh` block.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1334,6 +1343,15 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagent">[]Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent</a></span>
     </dt>
     <dd>{{% md %}}A `oms_agent` block.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="openservicemeshes_go">
+<a href="#openservicemeshes_go" style="color: inherit; text-decoration: inherit;">Open<wbr>Service<wbr>Meshes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofileopenservicemesh">[]Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Open<wbr>Service<wbr>Mesh</a></span>
+    </dt>
+    <dd>{{% md %}}An `open_service_mesh` block.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1383,6 +1401,15 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagent">Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent[]</a></span>
     </dt>
     <dd>{{% md %}}A `oms_agent` block.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="openservicemeshes_nodejs">
+<a href="#openservicemeshes_nodejs" style="color: inherit; text-decoration: inherit;">open<wbr>Service<wbr>Meshes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofileopenservicemesh">Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Open<wbr>Service<wbr>Mesh[]</a></span>
+    </dt>
+    <dd>{{% md %}}An `open_service_mesh` block.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1432,6 +1459,15 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagent">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent]</a></span>
     </dt>
     <dd>{{% md %}}A `oms_agent` block.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="open_service_meshes_python">
+<a href="#open_service_meshes_python" style="color: inherit; text-decoration: inherit;">open_<wbr>service_<wbr>meshes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofileopenservicemesh">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Open<wbr>Service<wbr>Mesh]</a></span>
+    </dt>
+    <dd>{{% md %}}An `open_service_mesh` block.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2256,6 +2292,62 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the User Assigned Identity assigned to the Kubelets.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getkubernetesclusteraddonprofileopenservicemesh">Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Open<wbr>Service<wbr>Mesh</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is Role Based Access Control enabled?
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is Role Based Access Control enabled?
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Is Role Based Access Control enabled?
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is Role Based Access Control enabled?
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

@@ -1697,6 +1697,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The allocation method used for the Private IP Address. Possible values are `Dynamic` and `Static`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="gatewayloadbalancerfrontendipconfigurationid_csharp">
+<a href="#gatewayloadbalancerfrontendipconfigurationid_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Load<wbr>Balancer<wbr>Frontend<wbr>Ip<wbr>Configuration<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Frontend IP Configuration ID of a Gateway Sku Load Balancer.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="primary_csharp">
 <a href="#primary_csharp" style="color: inherit; text-decoration: inherit;">Primary</a>
 </span>
@@ -1762,6 +1771,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation method used for the Private IP Address. Possible values are `Dynamic` and `Static`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gatewayloadbalancerfrontendipconfigurationid_go">
+<a href="#gatewayloadbalancerfrontendipconfigurationid_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Load<wbr>Balancer<wbr>Frontend<wbr>Ip<wbr>Configuration<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Frontend IP Configuration ID of a Gateway Sku Load Balancer.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primary_go">
@@ -1831,6 +1849,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The allocation method used for the Private IP Address. Possible values are `Dynamic` and `Static`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="gatewayloadbalancerfrontendipconfigurationid_nodejs">
+<a href="#gatewayloadbalancerfrontendipconfigurationid_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Load<wbr>Balancer<wbr>Frontend<wbr>Ip<wbr>Configuration<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Frontend IP Configuration ID of a Gateway Sku Load Balancer.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="primary_nodejs">
 <a href="#primary_nodejs" style="color: inherit; text-decoration: inherit;">primary</a>
 </span>
@@ -1896,6 +1923,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The allocation method used for the Private IP Address. Possible values are `Dynamic` and `Static`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gateway_load_balancer_frontend_ip_configuration_id_python">
+<a href="#gateway_load_balancer_frontend_ip_configuration_id_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>load_<wbr>balancer_<wbr>frontend_<wbr>ip_<wbr>configuration_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Frontend IP Configuration ID of a Gateway Sku Load Balancer.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primary_python">

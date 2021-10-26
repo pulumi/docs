@@ -65,6 +65,10 @@ class MyStack : Stack
                 {
                     Name = "MongoDBv3.4",
                 },
+                new Azure.CosmosDB.Inputs.AccountCapabilityArgs
+                {
+                    Name = "EnableMongo",
+                },
             },
             ConsistencyPolicy = new Azure.CosmosDB.Inputs.AccountConsistencyPolicyArgs
             {
@@ -138,6 +142,9 @@ func main() {
 				&cosmosdb.AccountCapabilityArgs{
 					Name: pulumi.String("MongoDBv3.4"),
 				},
+				&cosmosdb.AccountCapabilityArgs{
+					Name: pulumi.String("EnableMongo"),
+				},
 			},
 			ConsistencyPolicy: &cosmosdb.AccountConsistencyPolicyArgs{
 				ConsistencyLevel:     pulumi.String("BoundedStaleness"),
@@ -194,6 +201,9 @@ db = azure.cosmosdb.Account("db",
         azure.cosmosdb.AccountCapabilityArgs(
             name="MongoDBv3.4",
         ),
+        azure.cosmosdb.AccountCapabilityArgs(
+            name="EnableMongo",
+        ),
     ],
     consistency_policy=azure.cosmosdb.AccountConsistencyPolicyArgs(
         consistency_level="BoundedStaleness",
@@ -244,6 +254,9 @@ const db = new azure.cosmosdb.Account("db", {
         },
         {
             name: "MongoDBv3.4",
+        },
+        {
+            name: "EnableMongo",
         },
     ],
     consistencyPolicy: {

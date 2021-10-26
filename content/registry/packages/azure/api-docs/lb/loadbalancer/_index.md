@@ -365,7 +365,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SKU of the Azure Load Balancer. Accepted values are `Basic` and `Standard`. Defaults to `Basic`.
+    <dd>{{% md %}}The SKU of the Azure Load Balancer. Accepted values are `Basic`, `Standard` and `Gateway`. Defaults to `Basic`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skutier_csharp">
@@ -432,7 +432,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SKU of the Azure Load Balancer. Accepted values are `Basic` and `Standard`. Defaults to `Basic`.
+    <dd>{{% md %}}The SKU of the Azure Load Balancer. Accepted values are `Basic`, `Standard` and `Gateway`. Defaults to `Basic`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skutier_go">
@@ -499,7 +499,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SKU of the Azure Load Balancer. Accepted values are `Basic` and `Standard`. Defaults to `Basic`.
+    <dd>{{% md %}}The SKU of the Azure Load Balancer. Accepted values are `Basic`, `Standard` and `Gateway`. Defaults to `Basic`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skutier_nodejs">
@@ -566,7 +566,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The SKU of the Azure Load Balancer. Accepted values are `Basic` and `Standard`. Defaults to `Basic`.
+    <dd>{{% md %}}The SKU of the Azure Load Balancer. Accepted values are `Basic`, `Standard` and `Gateway`. Defaults to `Basic`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_tier_python">
@@ -912,7 +912,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SKU of the Azure Load Balancer. Accepted values are `Basic` and `Standard`. Defaults to `Basic`.
+    <dd>{{% md %}}The SKU of the Azure Load Balancer. Accepted values are `Basic`, `Standard` and `Gateway`. Defaults to `Basic`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skutier_csharp">
@@ -997,7 +997,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SKU of the Azure Load Balancer. Accepted values are `Basic` and `Standard`. Defaults to `Basic`.
+    <dd>{{% md %}}The SKU of the Azure Load Balancer. Accepted values are `Basic`, `Standard` and `Gateway`. Defaults to `Basic`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skutier_go">
@@ -1082,7 +1082,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SKU of the Azure Load Balancer. Accepted values are `Basic` and `Standard`. Defaults to `Basic`.
+    <dd>{{% md %}}The SKU of the Azure Load Balancer. Accepted values are `Basic`, `Standard` and `Gateway`. Defaults to `Basic`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skutier_nodejs">
@@ -1167,7 +1167,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The SKU of the Azure Load Balancer. Accepted values are `Basic` and `Standard`. Defaults to `Basic`.
+    <dd>{{% md %}}The SKU of the Azure Load Balancer. Accepted values are `Basic`, `Standard` and `Gateway`. Defaults to `Basic`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sku_tier_python">
@@ -1220,6 +1220,15 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A list of Availability Zones which the Load Balancer's IP Addresses should be created in. Possible values are `Zone-Redundant`, `1`, `2`, `3`, and `No-Zone`. Availability Zone can only be updated whenever the name of the front end ip configuration changes. Defaults to `Zone-Redundant`. 
 `No-Zones` - A `non-zonal` resource will be created and the resource will not be replicated or distributed to any Availability Zones.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gatewayloadbalancerfrontendipconfigurationid_csharp">
+<a href="#gatewayloadbalancerfrontendipconfigurationid_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Load<wbr>Balancer<wbr>Frontend<wbr>Ip<wbr>Configuration<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Frontend IP Configuration ID of a Gateway Sku Load Balancer.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
@@ -1343,6 +1352,15 @@ The following state arguments are supported:
 `No-Zones` - A `non-zonal` resource will be created and the resource will not be replicated or distributed to any Availability Zones.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="gatewayloadbalancerfrontendipconfigurationid_go">
+<a href="#gatewayloadbalancerfrontendipconfigurationid_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Load<wbr>Balancer<wbr>Frontend<wbr>Ip<wbr>Configuration<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Frontend IP Configuration ID of a Gateway Sku Load Balancer.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -1464,6 +1482,15 @@ The following state arguments are supported:
 `No-Zones` - A `non-zonal` resource will be created and the resource will not be replicated or distributed to any Availability Zones.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="gatewayloadbalancerfrontendipconfigurationid_nodejs">
+<a href="#gatewayloadbalancerfrontendipconfigurationid_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Load<wbr>Balancer<wbr>Frontend<wbr>Ip<wbr>Configuration<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Frontend IP Configuration ID of a Gateway Sku Load Balancer.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -1583,6 +1610,15 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A list of Availability Zones which the Load Balancer's IP Addresses should be created in. Possible values are `Zone-Redundant`, `1`, `2`, `3`, and `No-Zone`. Availability Zone can only be updated whenever the name of the front end ip configuration changes. Defaults to `Zone-Redundant`. 
 `No-Zones` - A `non-zonal` resource will be created and the resource will not be replicated or distributed to any Availability Zones.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gateway_load_balancer_frontend_ip_configuration_id_python">
+<a href="#gateway_load_balancer_frontend_ip_configuration_id_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>load_<wbr>balancer_<wbr>frontend_<wbr>ip_<wbr>configuration_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Frontend IP Configuration ID of a Gateway Sku Load Balancer.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">

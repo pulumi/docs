@@ -190,6 +190,8 @@ const exampleSecuritySolution = new azure.iot.SecuritySolution("exampleSecurityS
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">SecuritySolution</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                     <span class="nx">additional_workspaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[SecuritySolutionAdditionalWorkspaceArgs]]</span> = None<span class="p">,</span>
+                     <span class="nx">disabled_data_sources</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                      <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                      <span class="nx">events_to_exports</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -359,6 +361,24 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}Specifies the name of the resource group in which to create the Iot Security Solution. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="additionalworkspaces_csharp">
+<a href="#additionalworkspaces_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Workspaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitysolutionadditionalworkspace">List&lt;Security<wbr>Solution<wbr>Additional<wbr>Workspace<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `additional_workspace` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disableddatasources_csharp">
+<a href="#disableddatasources_csharp" style="color: inherit; text-decoration: inherit;">Disabled<wbr>Data<wbr>Sources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of disabled data sources for the Iot Security Solution. Possible value is `TwinData`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span>
@@ -478,6 +498,24 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the resource group in which to create the Iot Security Solution. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="additionalworkspaces_go">
+<a href="#additionalworkspaces_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Workspaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitysolutionadditionalworkspace">[]Security<wbr>Solution<wbr>Additional<wbr>Workspace<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `additional_workspace` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disableddatasources_go">
+<a href="#disableddatasources_go" style="color: inherit; text-decoration: inherit;">Disabled<wbr>Data<wbr>Sources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of disabled data sources for the Iot Security Solution. Possible value is `TwinData`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
@@ -601,6 +639,24 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}Specifies the name of the resource group in which to create the Iot Security Solution. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="additionalworkspaces_nodejs">
+<a href="#additionalworkspaces_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Workspaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitysolutionadditionalworkspace">Security<wbr>Solution<wbr>Additional<wbr>Workspace<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `additional_workspace` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disableddatasources_nodejs">
+<a href="#disableddatasources_nodejs" style="color: inherit; text-decoration: inherit;">disabled<wbr>Data<wbr>Sources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of disabled data sources for the Iot Security Solution. Possible value is `TwinData`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
@@ -720,6 +776,24 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the resource group in which to create the Iot Security Solution. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="additional_workspaces_python">
+<a href="#additional_workspaces_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>workspaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitysolutionadditionalworkspace">Sequence[Security<wbr>Solution<wbr>Additional<wbr>Workspace<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A `additional_workspace` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disabled_data_sources_python">
+<a href="#disabled_data_sources_python" style="color: inherit; text-decoration: inherit;">disabled_<wbr>data_<wbr>sources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of disabled data sources for the Iot Security Solution. Possible value is `TwinData`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
@@ -884,6 +958,8 @@ Get an existing SecuritySolution resource's state with the given name, ID, and o
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">additional_workspaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[SecuritySolutionAdditionalWorkspaceArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">disabled_data_sources</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">events_to_exports</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -1009,6 +1085,24 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_additionalworkspaces_csharp">
+<a href="#state_additionalworkspaces_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Workspaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitysolutionadditionalworkspace">List&lt;Security<wbr>Solution<wbr>Additional<wbr>Workspace<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `additional_workspace` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_disableddatasources_csharp">
+<a href="#state_disableddatasources_csharp" style="color: inherit; text-decoration: inherit;">Disabled<wbr>Data<wbr>Sources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of disabled data sources for the Iot Security Solution. Possible value is `TwinData`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
 </span>
@@ -1129,6 +1223,24 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_additionalworkspaces_go">
+<a href="#state_additionalworkspaces_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Workspaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitysolutionadditionalworkspace">[]Security<wbr>Solution<wbr>Additional<wbr>Workspace<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `additional_workspace` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_disableddatasources_go">
+<a href="#state_disableddatasources_go" style="color: inherit; text-decoration: inherit;">Disabled<wbr>Data<wbr>Sources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of disabled data sources for the Iot Security Solution. Possible value is `TwinData`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1251,6 +1363,24 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_additionalworkspaces_nodejs">
+<a href="#state_additionalworkspaces_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Workspaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitysolutionadditionalworkspace">Security<wbr>Solution<wbr>Additional<wbr>Workspace<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `additional_workspace` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_disableddatasources_nodejs">
+<a href="#state_disableddatasources_nodejs" style="color: inherit; text-decoration: inherit;">disabled<wbr>Data<wbr>Sources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of disabled data sources for the Iot Security Solution. Possible value is `TwinData`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
@@ -1371,6 +1501,24 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_additional_workspaces_python">
+<a href="#state_additional_workspaces_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>workspaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitysolutionadditionalworkspace">Sequence[Security<wbr>Solution<wbr>Additional<wbr>Workspace<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A `additional_workspace` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_disabled_data_sources_python">
+<a href="#state_disabled_data_sources_python" style="color: inherit; text-decoration: inherit;">disabled_<wbr>data_<wbr>sources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of disabled data sources for the Iot Security Solution. Possible value is `TwinData`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1498,6 +1646,96 @@ The following state arguments are supported:
 ## Supporting Types
 
 
+
+<h4 id="securitysolutionadditionalworkspace">Security<wbr>Solution<wbr>Additional<wbr>Workspace</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="datatypes_csharp">
+<a href="#datatypes_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of data types which sent to workspace. Possible values are `Alerts` and `RawEvents`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="workspaceid_csharp">
+<a href="#workspaceid_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource ID of the Log Analytics Workspace.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="datatypes_go">
+<a href="#datatypes_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of data types which sent to workspace. Possible values are `Alerts` and `RawEvents`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="workspaceid_go">
+<a href="#workspaceid_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource ID of the Log Analytics Workspace.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="datatypes_nodejs">
+<a href="#datatypes_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of data types which sent to workspace. Possible values are `Alerts` and `RawEvents`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="workspaceid_nodejs">
+<a href="#workspaceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource ID of the Log Analytics Workspace.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="data_types_python">
+<a href="#data_types_python" style="color: inherit; text-decoration: inherit;">data_<wbr>types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of data types which sent to workspace. Possible values are `Alerts` and `RawEvents`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="workspace_id_python">
+<a href="#workspace_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource ID of the Log Analytics Workspace.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="securitysolutionrecommendationsenabled">Security<wbr>Solution<wbr>Recommendations<wbr>Enabled</h4>
 

@@ -2352,6 +2352,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A location where the container registry should be geo-replicated.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="regionalendpointenabled_csharp">
+<a href="#regionalendpointenabled_csharp" style="color: inherit; text-decoration: inherit;">Regional<wbr>Endpoint<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether regional endpoint is enabled for this Container Registry? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -2381,6 +2390,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A location where the container registry should be geo-replicated.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="regionalendpointenabled_go">
+<a href="#regionalendpointenabled_go" style="color: inherit; text-decoration: inherit;">Regional<wbr>Endpoint<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether regional endpoint is enabled for this Container Registry? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -2414,6 +2432,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A location where the container registry should be geo-replicated.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="regionalendpointenabled_nodejs">
+<a href="#regionalendpointenabled_nodejs" style="color: inherit; text-decoration: inherit;">regional<wbr>Endpoint<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether regional endpoint is enabled for this Container Registry? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -2443,6 +2470,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A location where the container registry should be geo-replicated.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="regional_endpoint_enabled_python">
+<a href="#regional_endpoint_enabled_python" style="color: inherit; text-decoration: inherit;">regional_<wbr>endpoint_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether regional endpoint is enabled for this Container Registry? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">

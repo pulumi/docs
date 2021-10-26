@@ -1792,6 +1792,15 @@ The following state arguments are supported:
     <dd>{{% md %}}(Required) The object id of the Azure AD Administrator of this SQL Server.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="azureadauthenticationonly_csharp">
+<a href="#azureadauthenticationonly_csharp" style="color: inherit; text-decoration: inherit;">Azuread<wbr>Authentication<wbr>Only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Specifies whether only AD Users and administrators (like `azuread_administrator.0.login_username`) can be used to login or also local database users (like `administrator_login`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
 </span>
@@ -1821,6 +1830,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required) The object id of the Azure AD Administrator of this SQL Server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="azureadauthenticationonly_go">
+<a href="#azureadauthenticationonly_go" style="color: inherit; text-decoration: inherit;">Azuread<wbr>Authentication<wbr>Only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Specifies whether only AD Users and administrators (like `azuread_administrator.0.login_username`) can be used to login or also local database users (like `administrator_login`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
@@ -1854,6 +1872,15 @@ The following state arguments are supported:
     <dd>{{% md %}}(Required) The object id of the Azure AD Administrator of this SQL Server.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="azureadauthenticationonly_nodejs">
+<a href="#azureadauthenticationonly_nodejs" style="color: inherit; text-decoration: inherit;">azuread<wbr>Authentication<wbr>Only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Specifies whether only AD Users and administrators (like `azuread_administrator.0.login_username`) can be used to login or also local database users (like `administrator_login`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
@@ -1883,6 +1910,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Required) The object id of the Azure AD Administrator of this SQL Server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="azuread_authentication_only_python">
+<a href="#azuread_authentication_only_python" style="color: inherit; text-decoration: inherit;">azuread_<wbr>authentication_<wbr>only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Specifies whether only AD Users and administrators (like `azuread_administrator.0.login_username`) can be used to login or also local database users (like `administrator_login`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
