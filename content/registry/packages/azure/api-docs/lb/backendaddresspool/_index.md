@@ -204,7 +204,8 @@ const exampleBackendAddressPool = new azure.lb.BackendAddressPool("exampleBacken
                        <span class="nx">backend_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[BackendAddressPoolBackendAddressArgs]]</span> = None<span class="p">,</span>
                        <span class="nx">loadbalancer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                       <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+                       <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">tunnel_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[BackendAddressPoolTunnelInterfaceArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">BackendAddressPool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BackendAddressPoolArgs</a></span><span class="p">,</span>
@@ -366,7 +367,16 @@ The BackendAddressPool resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="tunnelinterfaces_csharp">
+<a href="#tunnelinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Tunnel<wbr>Interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backendaddresspooltunnelinterface">List&lt;Backend<wbr>Address<wbr>Pool<wbr>Tunnel<wbr>Interface<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `tunnel_interface` blocks as defined below.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -404,7 +414,16 @@ The BackendAddressPool resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="tunnelinterfaces_go">
+<a href="#tunnelinterfaces_go" style="color: inherit; text-decoration: inherit;">Tunnel<wbr>Interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backendaddresspooltunnelinterface">[]Backend<wbr>Address<wbr>Pool<wbr>Tunnel<wbr>Interface<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `tunnel_interface` blocks as defined below.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -442,7 +461,16 @@ The BackendAddressPool resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="tunnelinterfaces_nodejs">
+<a href="#tunnelinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">tunnel<wbr>Interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backendaddresspooltunnelinterface">Backend<wbr>Address<wbr>Pool<wbr>Tunnel<wbr>Interface<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `tunnel_interface` blocks as defined below.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -480,7 +508,16 @@ The BackendAddressPool resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="tunnel_interfaces_python">
+<a href="#tunnel_interfaces_python" style="color: inherit; text-decoration: inherit;">tunnel_<wbr>interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backendaddresspooltunnelinterface">Sequence[Backend<wbr>Address<wbr>Pool<wbr>Tunnel<wbr>Interface<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `tunnel_interface` blocks as defined below.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -668,7 +705,8 @@ Get an existing BackendAddressPool resource's state with the given name, ID, and
         <span class="nx">loadbalancer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">outbound_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
-        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> BackendAddressPool</code></pre></div>
+        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">tunnel_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[BackendAddressPoolTunnelInterfaceArgs]]</span> = None<span class="p">) -&gt;</span> BackendAddressPool</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -840,7 +878,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnelinterfaces_csharp">
+<a href="#state_tunnelinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Tunnel<wbr>Interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backendaddresspooltunnelinterface">List&lt;Backend<wbr>Address<wbr>Pool<wbr>Tunnel<wbr>Interface<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `tunnel_interface` blocks as defined below.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -905,7 +952,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnelinterfaces_go">
+<a href="#state_tunnelinterfaces_go" style="color: inherit; text-decoration: inherit;">Tunnel<wbr>Interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backendaddresspooltunnelinterface">[]Backend<wbr>Address<wbr>Pool<wbr>Tunnel<wbr>Interface<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `tunnel_interface` blocks as defined below.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -970,7 +1026,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnelinterfaces_nodejs">
+<a href="#state_tunnelinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">tunnel<wbr>Interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backendaddresspooltunnelinterface">Backend<wbr>Address<wbr>Pool<wbr>Tunnel<wbr>Interface<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `tunnel_interface` blocks as defined below.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1035,7 +1100,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel_interfaces_python">
+<a href="#state_tunnel_interfaces_python" style="color: inherit; text-decoration: inherit;">tunnel_<wbr>interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backendaddresspooltunnelinterface">Sequence[Backend<wbr>Address<wbr>Pool<wbr>Tunnel<wbr>Interface<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `tunnel_interface` blocks as defined below.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1163,6 +1237,168 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="backendaddresspooltunnelinterface">Backend<wbr>Address<wbr>Pool<wbr>Tunnel<wbr>Interface</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="identifier_csharp">
+<a href="#identifier_csharp" style="color: inherit; text-decoration: inherit;">Identifier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The unique identifier of this Gateway Lodbalancer Tunnel Interface.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="port_csharp">
+<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The port number that this Gateway Lodbalancer Tunnel Interface listens to.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="protocol_csharp">
+<a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocol used for this Gateway Lodbalancer Tunnel Interface. Possible values are `Native` and `VXLAN`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The traffic type of this Gateway Lodbalancer Tunnel Interface. Possible values are `Internal` and `External`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="identifier_go">
+<a href="#identifier_go" style="color: inherit; text-decoration: inherit;">Identifier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The unique identifier of this Gateway Lodbalancer Tunnel Interface.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="port_go">
+<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The port number that this Gateway Lodbalancer Tunnel Interface listens to.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="protocol_go">
+<a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocol used for this Gateway Lodbalancer Tunnel Interface. Possible values are `Native` and `VXLAN`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The traffic type of this Gateway Lodbalancer Tunnel Interface. Possible values are `Internal` and `External`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="identifier_nodejs">
+<a href="#identifier_nodejs" style="color: inherit; text-decoration: inherit;">identifier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The unique identifier of this Gateway Lodbalancer Tunnel Interface.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="port_nodejs">
+<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The port number that this Gateway Lodbalancer Tunnel Interface listens to.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="protocol_nodejs">
+<a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocol used for this Gateway Lodbalancer Tunnel Interface. Possible values are `Native` and `VXLAN`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The traffic type of this Gateway Lodbalancer Tunnel Interface. Possible values are `Internal` and `External`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="identifier_python">
+<a href="#identifier_python" style="color: inherit; text-decoration: inherit;">identifier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The unique identifier of this Gateway Lodbalancer Tunnel Interface.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="port_python">
+<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The port number that this Gateway Lodbalancer Tunnel Interface listens to.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="protocol_python">
+<a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The protocol used for this Gateway Lodbalancer Tunnel Interface. Possible values are `Native` and `VXLAN`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The traffic type of this Gateway Lodbalancer Tunnel Interface. Possible values are `Internal` and `External`.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

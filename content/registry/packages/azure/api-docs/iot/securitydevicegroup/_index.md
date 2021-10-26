@@ -63,7 +63,7 @@ class MyStack : Stack
             IothubId = exampleIoTHub.Id,
             AllowRule = new Azure.Iot.Inputs.SecurityDeviceGroupAllowRuleArgs
             {
-                ConnectionToIpNotAlloweds = 
+                ConnectionToIpsNotAlloweds = 
                 {
                     "10.0.0.0/24",
                 },
@@ -138,7 +138,7 @@ func main() {
 		_, err = iot.NewSecurityDeviceGroup(ctx, "exampleSecurityDeviceGroup", &iot.SecurityDeviceGroupArgs{
 			IothubId: exampleIoTHub.ID(),
 			AllowRule: &iot.SecurityDeviceGroupAllowRuleArgs{
-				ConnectionToIpNotAlloweds: pulumi.StringArray{
+				ConnectionToIpsNotAlloweds: pulumi.StringArray{
 					pulumi.String("10.0.0.0/24"),
 				},
 			},
@@ -187,7 +187,7 @@ example_security_solution = azure.iot.SecuritySolution("exampleSecuritySolution"
 example_security_device_group = azure.iot.SecurityDeviceGroup("exampleSecurityDeviceGroup",
     iothub_id=example_io_t_hub.id,
     allow_rule=azure.iot.SecurityDeviceGroupAllowRuleArgs(
-        connection_to_ip_not_alloweds=["10.0.0.0/24"],
+        connection_to_ips_not_alloweds=["10.0.0.0/24"],
     ),
     range_rules=[azure.iot.SecurityDeviceGroupRangeRuleArgs(
         type="ActiveConnectionsNotInAllowedRange",
@@ -227,7 +227,7 @@ const exampleSecuritySolution = new azure.iot.SecuritySolution("exampleSecurityS
 const exampleSecurityDeviceGroup = new azure.iot.SecurityDeviceGroup("exampleSecurityDeviceGroup", {
     iothubId: exampleIoTHub.id,
     allowRule: {
-        connectionToIpNotAlloweds: ["10.0.0.0/24"],
+        connectionToIpsNotAlloweds: ["10.0.0.0/24"],
     },
     rangeRules: [{
         type: "ActiveConnectionsNotInAllowedRange",
@@ -912,26 +912,59 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="connectionfromipsnotalloweds_csharp">
+<a href="#connectionfromipsnotalloweds_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>From<wbr>Ips<wbr>Not<wbr>Alloweds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Specifies which IP is not allowed to be connected to in current device group for inbound connection.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="connectiontoipnotalloweds_csharp">
 <a href="#connectiontoipnotalloweds_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>To<wbr>Ip<wbr>Not<wbr>Alloweds</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Specifies which Ip is not allowed to be connected to in current device group.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `connection_to_ips_not_allowed` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
+        <span id="connectiontoipsnotalloweds_csharp">
+<a href="#connectiontoipsnotalloweds_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>To<wbr>Ips<wbr>Not<wbr>Alloweds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Specifies which IP is not allowed to be connected to in current device group for outbound connection.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="localusernotalloweds_csharp">
 <a href="#localusernotalloweds_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>User<wbr>Not<wbr>Alloweds</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Specifies which local user is not allowed to Login in current device group.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `local_users_not_allowed` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
+        <span id="localusersnotalloweds_csharp">
+<a href="#localusersnotalloweds_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Users<wbr>Not<wbr>Alloweds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Specifies which local user is not allowed to Login in current device group.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="processnotalloweds_csharp">
 <a href="#processnotalloweds_csharp" style="color: inherit; text-decoration: inherit;">Process<wbr>Not<wbr>Alloweds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `processes_not_allowed` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="processesnotalloweds_csharp">
+<a href="#processesnotalloweds_csharp" style="color: inherit; text-decoration: inherit;">Processes<wbr>Not<wbr>Alloweds</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
@@ -943,26 +976,59 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="connectionfromipsnotalloweds_go">
+<a href="#connectionfromipsnotalloweds_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>From<wbr>Ips<wbr>Not<wbr>Alloweds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Specifies which IP is not allowed to be connected to in current device group for inbound connection.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="connectiontoipnotalloweds_go">
 <a href="#connectiontoipnotalloweds_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>To<wbr>Ip<wbr>Not<wbr>Alloweds</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Specifies which Ip is not allowed to be connected to in current device group.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `connection_to_ips_not_allowed` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
+        <span id="connectiontoipsnotalloweds_go">
+<a href="#connectiontoipsnotalloweds_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>To<wbr>Ips<wbr>Not<wbr>Alloweds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Specifies which IP is not allowed to be connected to in current device group for outbound connection.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="localusernotalloweds_go">
 <a href="#localusernotalloweds_go" style="color: inherit; text-decoration: inherit;">Local<wbr>User<wbr>Not<wbr>Alloweds</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Specifies which local user is not allowed to Login in current device group.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `local_users_not_allowed` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
+        <span id="localusersnotalloweds_go">
+<a href="#localusersnotalloweds_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Users<wbr>Not<wbr>Alloweds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Specifies which local user is not allowed to Login in current device group.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="processnotalloweds_go">
 <a href="#processnotalloweds_go" style="color: inherit; text-decoration: inherit;">Process<wbr>Not<wbr>Alloweds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `processes_not_allowed` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="processesnotalloweds_go">
+<a href="#processesnotalloweds_go" style="color: inherit; text-decoration: inherit;">Processes<wbr>Not<wbr>Alloweds</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
@@ -974,26 +1040,59 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="connectionfromipsnotalloweds_nodejs">
+<a href="#connectionfromipsnotalloweds_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>From<wbr>Ips<wbr>Not<wbr>Alloweds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Specifies which IP is not allowed to be connected to in current device group for inbound connection.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="connectiontoipnotalloweds_nodejs">
 <a href="#connectiontoipnotalloweds_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>To<wbr>Ip<wbr>Not<wbr>Alloweds</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Specifies which Ip is not allowed to be connected to in current device group.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `connection_to_ips_not_allowed` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
+        <span id="connectiontoipsnotalloweds_nodejs">
+<a href="#connectiontoipsnotalloweds_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>To<wbr>Ips<wbr>Not<wbr>Alloweds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Specifies which IP is not allowed to be connected to in current device group for outbound connection.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="localusernotalloweds_nodejs">
 <a href="#localusernotalloweds_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>User<wbr>Not<wbr>Alloweds</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Specifies which local user is not allowed to Login in current device group.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `local_users_not_allowed` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
+        <span id="localusersnotalloweds_nodejs">
+<a href="#localusersnotalloweds_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Users<wbr>Not<wbr>Alloweds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Specifies which local user is not allowed to Login in current device group.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="processnotalloweds_nodejs">
 <a href="#processnotalloweds_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Not<wbr>Alloweds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `processes_not_allowed` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="processesnotalloweds_nodejs">
+<a href="#processesnotalloweds_nodejs" style="color: inherit; text-decoration: inherit;">processes<wbr>Not<wbr>Alloweds</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
@@ -1005,26 +1104,59 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="connection_from_ips_not_alloweds_python">
+<a href="#connection_from_ips_not_alloweds_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>from_<wbr>ips_<wbr>not_<wbr>alloweds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Specifies which IP is not allowed to be connected to in current device group for inbound connection.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="connection_to_ip_not_alloweds_python">
 <a href="#connection_to_ip_not_alloweds_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>to_<wbr>ip_<wbr>not_<wbr>alloweds</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Specifies which Ip is not allowed to be connected to in current device group.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `connection_to_ips_not_allowed` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
+        <span id="connection_to_ips_not_alloweds_python">
+<a href="#connection_to_ips_not_alloweds_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>to_<wbr>ips_<wbr>not_<wbr>alloweds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Specifies which IP is not allowed to be connected to in current device group for outbound connection.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="local_user_not_alloweds_python">
 <a href="#local_user_not_alloweds_python" style="color: inherit; text-decoration: inherit;">local_<wbr>user_<wbr>not_<wbr>alloweds</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Specifies which local user is not allowed to Login in current device group.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `local_users_not_allowed` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
+        <span id="local_users_not_alloweds_python">
+<a href="#local_users_not_alloweds_python" style="color: inherit; text-decoration: inherit;">local_<wbr>users_<wbr>not_<wbr>alloweds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Specifies which local user is not allowed to Login in current device group.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="process_not_alloweds_python">
 <a href="#process_not_alloweds_python" style="color: inherit; text-decoration: inherit;">process_<wbr>not_<wbr>alloweds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `processes_not_allowed` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="processes_not_alloweds_python">
+<a href="#processes_not_alloweds_python" style="color: inherit; text-decoration: inherit;">processes_<wbr>not_<wbr>alloweds</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>

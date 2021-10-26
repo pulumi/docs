@@ -92,7 +92,7 @@ class MyStack : Stack
             Version = "12",
             DelegatedSubnetId = exampleSubnet.Id,
             PrivateDnsZoneId = exampleZone.Id,
-            AdministratorLogin = "psqladminun",
+            AdministratorLogin = "psqladmin",
             AdministratorPassword = "H@Sh1CoR3!",
             StorageMb = 32768,
             SkuName = "GP_Standard_D4s_v3",
@@ -187,7 +187,7 @@ func main() {
 			Version:               pulumi.String("12"),
 			DelegatedSubnetId:     exampleSubnet.ID(),
 			PrivateDnsZoneId:      exampleZone.ID(),
-			AdministratorLogin:    pulumi.String("psqladminun"),
+			AdministratorLogin:    pulumi.String("psqladmin"),
 			AdministratorPassword: pulumi.String("H@Sh1CoR3!"),
 			StorageMb:             pulumi.Int(32768),
 			SkuName:               pulumi.String("GP_Standard_D4s_v3"),
@@ -240,7 +240,7 @@ example_flexible_server = azure.postgresql.FlexibleServer("exampleFlexibleServer
     version="12",
     delegated_subnet_id=example_subnet.id,
     private_dns_zone_id=example_zone.id,
-    administrator_login="psqladminun",
+    administrator_login="psqladmin",
     administrator_password="H@Sh1CoR3!",
     storage_mb=32768,
     sku_name="GP_Standard_D4s_v3",
@@ -289,7 +289,7 @@ const exampleFlexibleServer = new azure.postgresql.FlexibleServer("exampleFlexib
     version: "12",
     delegatedSubnetId: exampleSubnet.id,
     privateDnsZoneId: exampleZone.id,
-    administratorLogin: "psqladminun",
+    administratorLogin: "psqladmin",
     administratorPassword: "H@Sh1CoR3!",
     storageMb: 32768,
     skuName: "GP_Standard_D4s_v3",
@@ -628,7 +628,7 @@ The FlexibleServer resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The availability zone of the PostgreSQL Flexible Server. Possible values are `1`, `2` and `3`. Changing this forces a new PostgreSQL Flexible Server to be created.
+    <dd>{{% md %}}The Availability Zone of the PostgreSQL Flexible Server. Possible values are `1`, `2` and `3`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -794,7 +794,7 @@ The FlexibleServer resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The availability zone of the PostgreSQL Flexible Server. Possible values are `1`, `2` and `3`. Changing this forces a new PostgreSQL Flexible Server to be created.
+    <dd>{{% md %}}The Availability Zone of the PostgreSQL Flexible Server. Possible values are `1`, `2` and `3`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -960,7 +960,7 @@ The FlexibleServer resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The availability zone of the PostgreSQL Flexible Server. Possible values are `1`, `2` and `3`. Changing this forces a new PostgreSQL Flexible Server to be created.
+    <dd>{{% md %}}The Availability Zone of the PostgreSQL Flexible Server. Possible values are `1`, `2` and `3`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1126,7 +1126,7 @@ The FlexibleServer resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The availability zone of the PostgreSQL Flexible Server. Possible values are `1`, `2` and `3`. Changing this forces a new PostgreSQL Flexible Server to be created.
+    <dd>{{% md %}}The Availability Zone of the PostgreSQL Flexible Server. Possible values are `1`, `2` and `3`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1628,7 +1628,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The availability zone of the PostgreSQL Flexible Server. Possible values are `1`, `2` and `3`. Changing this forces a new PostgreSQL Flexible Server to be created.
+    <dd>{{% md %}}The Availability Zone of the PostgreSQL Flexible Server. Possible values are `1`, `2` and `3`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1821,7 +1821,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The availability zone of the PostgreSQL Flexible Server. Possible values are `1`, `2` and `3`. Changing this forces a new PostgreSQL Flexible Server to be created.
+    <dd>{{% md %}}The Availability Zone of the PostgreSQL Flexible Server. Possible values are `1`, `2` and `3`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2014,7 +2014,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The availability zone of the PostgreSQL Flexible Server. Possible values are `1`, `2` and `3`. Changing this forces a new PostgreSQL Flexible Server to be created.
+    <dd>{{% md %}}The Availability Zone of the PostgreSQL Flexible Server. Possible values are `1`, `2` and `3`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2207,7 +2207,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The availability zone of the PostgreSQL Flexible Server. Possible values are `1`, `2` and `3`. Changing this forces a new PostgreSQL Flexible Server to be created.
+    <dd>{{% md %}}The Availability Zone of the PostgreSQL Flexible Server. Possible values are `1`, `2` and `3`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2240,7 +2240,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The availability zone of the standby Flexible Server. Possible values are `1`, `2` and `3`.
+    <dd>{{% md %}}The Availability Zone of the standby Flexible Server. Possible values are `1`, `2` and `3`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2262,7 +2262,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The availability zone of the standby Flexible Server. Possible values are `1`, `2` and `3`.
+    <dd>{{% md %}}The Availability Zone of the standby Flexible Server. Possible values are `1`, `2` and `3`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2284,7 +2284,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The availability zone of the standby Flexible Server. Possible values are `1`, `2` and `3`.
+    <dd>{{% md %}}The Availability Zone of the standby Flexible Server. Possible values are `1`, `2` and `3`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2306,7 +2306,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The availability zone of the standby Flexible Server. Possible values are `1`, `2` and `3`.
+    <dd>{{% md %}}The Availability Zone of the standby Flexible Server. Possible values are `1`, `2` and `3`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

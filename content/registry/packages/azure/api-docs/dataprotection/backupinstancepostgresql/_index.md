@@ -50,7 +50,7 @@ class MyStack : Stack
             BackupRetentionDays = 7,
             GeoRedundantBackupEnabled = false,
             AutoGrowEnabled = true,
-            AdministratorLogin = "psqladminun",
+            AdministratorLogin = "psqladmin",
             AdministratorLoginPassword = "H@Sh1CoR3!",
             Version = "9.5",
             SslEnforcementEnabled = true,
@@ -134,7 +134,7 @@ class MyStack : Stack
                 var exampleServerName = values.Item1;
                 var exampleDatabaseName = values.Item2;
                 var exampleServerName1 = values.Item3;
-                return $"Server={exampleServerName}.postgres.database.azure.com;Database={exampleDatabaseName};Port=5432;User Id=psqladminun@{exampleServerName1};Password=H@Sh1CoR3!;Ssl Mode=Require;";
+                return $"Server={exampleServerName}.postgres.database.azure.com;Database={exampleDatabaseName};Port=5432;User Id=psqladmin@{exampleServerName1};Password=H@Sh1CoR3!;Ssl Mode=Require;";
             }),
             KeyVaultId = exampleKeyVault.Id,
         });
@@ -207,7 +207,7 @@ func main() {
 			BackupRetentionDays:        pulumi.Int(7),
 			GeoRedundantBackupEnabled:  pulumi.Bool(false),
 			AutoGrowEnabled:            pulumi.Bool(true),
-			AdministratorLogin:         pulumi.String("psqladminun"),
+			AdministratorLogin:         pulumi.String("psqladmin"),
 			AdministratorLoginPassword: pulumi.String("H@Sh1CoR3!"),
 			Version:                    pulumi.String("9.5"),
 			SslEnforcementEnabled:      pulumi.Bool(true),
@@ -296,7 +296,7 @@ func main() {
 				exampleServerName := _args[0].(string)
 				exampleDatabaseName := _args[1].(string)
 				exampleServerName1 := _args[2].(string)
-				return fmt.Sprintf("%v%v%v%v%v%v%v", "Server=", exampleServerName, ".postgres.database.azure.com;Database=", exampleDatabaseName, ";Port=5432;User Id=psqladminun@", exampleServerName1, ";Password=H@Sh1CoR3!;Ssl Mode=Require;"), nil
+				return fmt.Sprintf("%v%v%v%v%v%v%v", "Server=", exampleServerName, ".postgres.database.azure.com;Database=", exampleDatabaseName, ";Port=5432;User Id=psqladmin@", exampleServerName1, ";Password=H@Sh1CoR3!;Ssl Mode=Require;"), nil
 			}).(pulumi.StringOutput),
 			KeyVaultId: exampleKeyVault.ID(),
 		})
@@ -359,7 +359,7 @@ example_server = azure.postgresql.Server("exampleServer",
     backup_retention_days=7,
     geo_redundant_backup_enabled=False,
     auto_grow_enabled=True,
-    administrator_login="psqladminun",
+    administrator_login="psqladmin",
     administrator_login_password="H@Sh1CoR3!",
     version="9.5",
     ssl_enforcement_enabled=True)
@@ -420,7 +420,7 @@ example_key_vault = azure.keyvault.KeyVault("exampleKeyVault",
         ),
     ])
 example_secret = azure.keyvault.Secret("exampleSecret",
-    value=pulumi.Output.all(example_server.name, example_database.name, example_server.name).apply(lambda exampleServerName, exampleDatabaseName, exampleServerName1: f"Server={example_server_name}.postgres.database.azure.com;Database={example_database_name};Port=5432;User Id=psqladminun@{example_server_name1};Password=H@Sh1CoR3!;Ssl Mode=Require;"),
+    value=pulumi.Output.all(example_server.name, example_database.name, example_server.name).apply(lambda exampleServerName, exampleDatabaseName, exampleServerName1: f"Server={example_server_name}.postgres.database.azure.com;Database={example_database_name};Port=5432;User Id=psqladmin@{example_server_name1};Password=H@Sh1CoR3!;Ssl Mode=Require;"),
     key_vault_id=example_key_vault.id)
 example_backup_policy_postgresql = azure.dataprotection.BackupPolicyPostgresql("exampleBackupPolicyPostgresql",
     resource_group_name=example_resource_group.name,
@@ -460,7 +460,7 @@ const exampleServer = new azure.postgresql.Server("exampleServer", {
     backupRetentionDays: 7,
     geoRedundantBackupEnabled: false,
     autoGrowEnabled: true,
-    administratorLogin: "psqladminun",
+    administratorLogin: "psqladmin",
     administratorLoginPassword: "H@Sh1CoR3!",
     version: "9.5",
     sslEnforcementEnabled: true,
@@ -526,7 +526,7 @@ const exampleKeyVault = new azure.keyvault.KeyVault("exampleKeyVault", {
     ],
 });
 const exampleSecret = new azure.keyvault.Secret("exampleSecret", {
-    value: pulumi.interpolate`Server=${exampleServer.name}.postgres.database.azure.com;Database=${exampleDatabase.name};Port=5432;User Id=psqladminun@${exampleServer.name};Password=H@Sh1CoR3!;Ssl Mode=Require;`,
+    value: pulumi.interpolate`Server=${exampleServer.name}.postgres.database.azure.com;Database=${exampleDatabase.name};Port=5432;User Id=psqladmin@${exampleServer.name};Password=H@Sh1CoR3!;Ssl Mode=Require;`,
     keyVaultId: exampleKeyVault.id,
 });
 const exampleBackupPolicyPostgresql = new azure.dataprotection.BackupPolicyPostgresql("exampleBackupPolicyPostgresql", {

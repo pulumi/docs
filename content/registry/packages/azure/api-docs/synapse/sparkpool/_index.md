@@ -14,245 +14,6 @@ no_edit_this_page: true
 
 Manages a Synapse Spark Pool.
 
-{{% examples %}}
-
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-
-
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using Azure = Pulumi.Azure;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
-        {
-            Location = "West Europe",
-        });
-        var exampleAccount = new Azure.Storage.Account("exampleAccount", new Azure.Storage.AccountArgs
-        {
-            ResourceGroupName = exampleResourceGroup.Name,
-            Location = exampleResourceGroup.Location,
-            AccountTier = "Standard",
-            AccountReplicationType = "LRS",
-            AccountKind = "StorageV2",
-            IsHnsEnabled = true,
-        });
-        var exampleDataLakeGen2Filesystem = new Azure.Storage.DataLakeGen2Filesystem("exampleDataLakeGen2Filesystem", new Azure.Storage.DataLakeGen2FilesystemArgs
-        {
-            StorageAccountId = exampleAccount.Id,
-        });
-        var exampleWorkspace = new Azure.Synapse.Workspace("exampleWorkspace", new Azure.Synapse.WorkspaceArgs
-        {
-            ResourceGroupName = exampleResourceGroup.Name,
-            Location = exampleResourceGroup.Location,
-            StorageDataLakeGen2FilesystemId = exampleDataLakeGen2Filesystem.Id,
-            SqlAdministratorLogin = "sqladminuser",
-            SqlAdministratorLoginPassword = "H@Sh1CoR3!",
-        });
-        var exampleSparkPool = new Azure.Synapse.SparkPool("exampleSparkPool", new Azure.Synapse.SparkPoolArgs
-        {
-            SynapseWorkspaceId = exampleWorkspace.Id,
-            NodeSizeFamily = "MemoryOptimized",
-            NodeSize = "Small",
-            AutoScale = new Azure.Synapse.Inputs.SparkPoolAutoScaleArgs
-            {
-                MaxNodeCount = 50,
-                MinNodeCount = 3,
-            },
-            AutoPause = new Azure.Synapse.Inputs.SparkPoolAutoPauseArgs
-            {
-                DelayInMinutes = 15,
-            },
-            Tags = 
-            {
-                { "ENV", "Production" },
-            },
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/storage"
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/synapse"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
-			Location: pulumi.String("West Europe"),
-		})
-		if err != nil {
-			return err
-		}
-		exampleAccount, err := storage.NewAccount(ctx, "exampleAccount", &storage.AccountArgs{
-			ResourceGroupName:      exampleResourceGroup.Name,
-			Location:               exampleResourceGroup.Location,
-			AccountTier:            pulumi.String("Standard"),
-			AccountReplicationType: pulumi.String("LRS"),
-			AccountKind:            pulumi.String("StorageV2"),
-			IsHnsEnabled:           pulumi.Bool(true),
-		})
-		if err != nil {
-			return err
-		}
-		exampleDataLakeGen2Filesystem, err := storage.NewDataLakeGen2Filesystem(ctx, "exampleDataLakeGen2Filesystem", &storage.DataLakeGen2FilesystemArgs{
-			StorageAccountId: exampleAccount.ID(),
-		})
-		if err != nil {
-			return err
-		}
-		exampleWorkspace, err := synapse.NewWorkspace(ctx, "exampleWorkspace", &synapse.WorkspaceArgs{
-			ResourceGroupName:               exampleResourceGroup.Name,
-			Location:                        exampleResourceGroup.Location,
-			StorageDataLakeGen2FilesystemId: exampleDataLakeGen2Filesystem.ID(),
-			SqlAdministratorLogin:           pulumi.String("sqladminuser"),
-			SqlAdministratorLoginPassword:   pulumi.String("H@Sh1CoR3!"),
-		})
-		if err != nil {
-			return err
-		}
-		_, err = synapse.NewSparkPool(ctx, "exampleSparkPool", &synapse.SparkPoolArgs{
-			SynapseWorkspaceId: exampleWorkspace.ID(),
-			NodeSizeFamily:     pulumi.String("MemoryOptimized"),
-			NodeSize:           pulumi.String("Small"),
-			AutoScale: &synapse.SparkPoolAutoScaleArgs{
-				MaxNodeCount: pulumi.Int(50),
-				MinNodeCount: pulumi.Int(3),
-			},
-			AutoPause: &synapse.SparkPoolAutoPauseArgs{
-				DelayInMinutes: pulumi.Int(15),
-			},
-			Tags: pulumi.StringMap{
-				"ENV": pulumi.String("Production"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_azure as azure
-
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
-example_account = azure.storage.Account("exampleAccount",
-    resource_group_name=example_resource_group.name,
-    location=example_resource_group.location,
-    account_tier="Standard",
-    account_replication_type="LRS",
-    account_kind="StorageV2",
-    is_hns_enabled=True)
-example_data_lake_gen2_filesystem = azure.storage.DataLakeGen2Filesystem("exampleDataLakeGen2Filesystem", storage_account_id=example_account.id)
-example_workspace = azure.synapse.Workspace("exampleWorkspace",
-    resource_group_name=example_resource_group.name,
-    location=example_resource_group.location,
-    storage_data_lake_gen2_filesystem_id=example_data_lake_gen2_filesystem.id,
-    sql_administrator_login="sqladminuser",
-    sql_administrator_login_password="H@Sh1CoR3!")
-example_spark_pool = azure.synapse.SparkPool("exampleSparkPool",
-    synapse_workspace_id=example_workspace.id,
-    node_size_family="MemoryOptimized",
-    node_size="Small",
-    auto_scale=azure.synapse.SparkPoolAutoScaleArgs(
-        max_node_count=50,
-        min_node_count=3,
-    ),
-    auto_pause=azure.synapse.SparkPoolAutoPauseArgs(
-        delay_in_minutes=15,
-    ),
-    tags={
-        "ENV": "Production",
-    })
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
-
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
-const exampleAccount = new azure.storage.Account("exampleAccount", {
-    resourceGroupName: exampleResourceGroup.name,
-    location: exampleResourceGroup.location,
-    accountTier: "Standard",
-    accountReplicationType: "LRS",
-    accountKind: "StorageV2",
-    isHnsEnabled: "true",
-});
-const exampleDataLakeGen2Filesystem = new azure.storage.DataLakeGen2Filesystem("exampleDataLakeGen2Filesystem", {storageAccountId: exampleAccount.id});
-const exampleWorkspace = new azure.synapse.Workspace("exampleWorkspace", {
-    resourceGroupName: exampleResourceGroup.name,
-    location: exampleResourceGroup.location,
-    storageDataLakeGen2FilesystemId: exampleDataLakeGen2Filesystem.id,
-    sqlAdministratorLogin: "sqladminuser",
-    sqlAdministratorLoginPassword: "H@Sh1CoR3!",
-});
-const exampleSparkPool = new azure.synapse.SparkPool("exampleSparkPool", {
-    synapseWorkspaceId: exampleWorkspace.id,
-    nodeSizeFamily: "MemoryOptimized",
-    nodeSize: "Small",
-    autoScale: {
-        maxNodeCount: 50,
-        minNodeCount: 3,
-    },
-    autoPause: {
-        delayInMinutes: 15,
-    },
-    tags: {
-        ENV: "Production",
-    },
-});
-```
-
-
-{{< /example >}}
-
-
-
-
-
-{{% /examples %}}
-
-
 
 
 ## Create a SparkPool Resource {#create}
@@ -269,11 +30,16 @@ const exampleSparkPool = new azure.synapse.SparkPool("exampleSparkPool", {
               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
               <span class="nx">auto_pause</span><span class="p">:</span> <span class="nx">Optional[SparkPoolAutoPauseArgs]</span> = None<span class="p">,</span>
               <span class="nx">auto_scale</span><span class="p">:</span> <span class="nx">Optional[SparkPoolAutoScaleArgs]</span> = None<span class="p">,</span>
+              <span class="nx">cache_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+              <span class="nx">compute_isolation_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+              <span class="nx">dynamic_executor_allocation_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
               <span class="nx">library_requirement</span><span class="p">:</span> <span class="nx">Optional[SparkPoolLibraryRequirementArgs]</span> = None<span class="p">,</span>
               <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
               <span class="nx">node_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">node_size_family</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">session_level_packages_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+              <span class="nx">spark_config</span><span class="p">:</span> <span class="nx">Optional[SparkPoolSparkConfigArgs]</span> = None<span class="p">,</span>
               <span class="nx">spark_events_folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">spark_log_folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">spark_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -453,6 +219,33 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}An `auto_scale` block as defined below. Exactly one of `node_count` or `auto_scale` must be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="cachesize_csharp">
+<a href="#cachesize_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The cache size in the Spark Pool.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="computeisolationenabled_csharp">
+<a href="#computeisolationenabled_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Isolation<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether compute isolation is enabled or not. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dynamicexecutorallocationenabled_csharp">
+<a href="#dynamicexecutorallocationenabled_csharp" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Executor<wbr>Allocation<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether Dynamic Executor Allocation is enabled or not. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="libraryrequirement_csharp">
 <a href="#libraryrequirement_csharp" style="color: inherit; text-decoration: inherit;">Library<wbr>Requirement</a>
 </span>
@@ -478,6 +271,24 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of nodes in the Spark Pool. Exactly one of `node_count` or `auto_scale` must be specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sessionlevelpackagesenabled_csharp">
+<a href="#sessionlevelpackagesenabled_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Level<wbr>Packages<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether session level packages are enabled or not. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sparkconfig_csharp">
+<a href="#sparkconfig_csharp" style="color: inherit; text-decoration: inherit;">Spark<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sparkpoolsparkconfig">Spark<wbr>Pool<wbr>Spark<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `spark_config` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sparkeventsfolder_csharp">
@@ -565,6 +376,33 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}An `auto_scale` block as defined below. Exactly one of `node_count` or `auto_scale` must be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="cachesize_go">
+<a href="#cachesize_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The cache size in the Spark Pool.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="computeisolationenabled_go">
+<a href="#computeisolationenabled_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Isolation<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether compute isolation is enabled or not. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dynamicexecutorallocationenabled_go">
+<a href="#dynamicexecutorallocationenabled_go" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Executor<wbr>Allocation<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether Dynamic Executor Allocation is enabled or not. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="libraryrequirement_go">
 <a href="#libraryrequirement_go" style="color: inherit; text-decoration: inherit;">Library<wbr>Requirement</a>
 </span>
@@ -590,6 +428,24 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of nodes in the Spark Pool. Exactly one of `node_count` or `auto_scale` must be specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sessionlevelpackagesenabled_go">
+<a href="#sessionlevelpackagesenabled_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Level<wbr>Packages<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether session level packages are enabled or not. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sparkconfig_go">
+<a href="#sparkconfig_go" style="color: inherit; text-decoration: inherit;">Spark<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sparkpoolsparkconfig">Spark<wbr>Pool<wbr>Spark<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `spark_config` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sparkeventsfolder_go">
@@ -677,6 +533,33 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}An `auto_scale` block as defined below. Exactly one of `node_count` or `auto_scale` must be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="cachesize_nodejs">
+<a href="#cachesize_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The cache size in the Spark Pool.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="computeisolationenabled_nodejs">
+<a href="#computeisolationenabled_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Isolation<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether compute isolation is enabled or not. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dynamicexecutorallocationenabled_nodejs">
+<a href="#dynamicexecutorallocationenabled_nodejs" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Executor<wbr>Allocation<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether Dynamic Executor Allocation is enabled or not. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="libraryrequirement_nodejs">
 <a href="#libraryrequirement_nodejs" style="color: inherit; text-decoration: inherit;">library<wbr>Requirement</a>
 </span>
@@ -702,6 +585,24 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of nodes in the Spark Pool. Exactly one of `node_count` or `auto_scale` must be specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sessionlevelpackagesenabled_nodejs">
+<a href="#sessionlevelpackagesenabled_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Level<wbr>Packages<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether session level packages are enabled or not. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sparkconfig_nodejs">
+<a href="#sparkconfig_nodejs" style="color: inherit; text-decoration: inherit;">spark<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sparkpoolsparkconfig">Spark<wbr>Pool<wbr>Spark<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `spark_config` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sparkeventsfolder_nodejs">
@@ -789,6 +690,33 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}An `auto_scale` block as defined below. Exactly one of `node_count` or `auto_scale` must be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="cache_size_python">
+<a href="#cache_size_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The cache size in the Spark Pool.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="compute_isolation_enabled_python">
+<a href="#compute_isolation_enabled_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>isolation_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether compute isolation is enabled or not. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dynamic_executor_allocation_enabled_python">
+<a href="#dynamic_executor_allocation_enabled_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>executor_<wbr>allocation_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether Dynamic Executor Allocation is enabled or not. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="library_requirement_python">
 <a href="#library_requirement_python" style="color: inherit; text-decoration: inherit;">library_<wbr>requirement</a>
 </span>
@@ -814,6 +742,24 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of nodes in the Spark Pool. Exactly one of `node_count` or `auto_scale` must be specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="session_level_packages_enabled_python">
+<a href="#session_level_packages_enabled_python" style="color: inherit; text-decoration: inherit;">session_<wbr>level_<wbr>packages_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether session level packages are enabled or not. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="spark_config_python">
+<a href="#spark_config_python" style="color: inherit; text-decoration: inherit;">spark_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sparkpoolsparkconfig">Spark<wbr>Pool<wbr>Spark<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `spark_config` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spark_events_folder_python">
@@ -926,11 +872,16 @@ Get an existing SparkPool resource's state with the given name, ID, and optional
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">auto_pause</span><span class="p">:</span> <span class="nx">Optional[SparkPoolAutoPauseArgs]</span> = None<span class="p">,</span>
         <span class="nx">auto_scale</span><span class="p">:</span> <span class="nx">Optional[SparkPoolAutoScaleArgs]</span> = None<span class="p">,</span>
+        <span class="nx">cache_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">compute_isolation_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">dynamic_executor_allocation_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">library_requirement</span><span class="p">:</span> <span class="nx">Optional[SparkPoolLibraryRequirementArgs]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">node_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">node_size_family</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">session_level_packages_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">spark_config</span><span class="p">:</span> <span class="nx">Optional[SparkPoolSparkConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">spark_events_folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">spark_log_folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">spark_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1066,6 +1017,33 @@ The following state arguments are supported:
     <dd>{{% md %}}An `auto_scale` block as defined below. Exactly one of `node_count` or `auto_scale` must be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_cachesize_csharp">
+<a href="#state_cachesize_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The cache size in the Spark Pool.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_computeisolationenabled_csharp">
+<a href="#state_computeisolationenabled_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Isolation<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether compute isolation is enabled or not. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_dynamicexecutorallocationenabled_csharp">
+<a href="#state_dynamicexecutorallocationenabled_csharp" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Executor<wbr>Allocation<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether Dynamic Executor Allocation is enabled or not. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_libraryrequirement_csharp">
 <a href="#state_libraryrequirement_csharp" style="color: inherit; text-decoration: inherit;">Library<wbr>Requirement</a>
 </span>
@@ -1109,6 +1087,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kind of nodes that the Spark Pool provides. Possible value is `MemoryOptimized`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_sessionlevelpackagesenabled_csharp">
+<a href="#state_sessionlevelpackagesenabled_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Level<wbr>Packages<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether session level packages are enabled or not. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_sparkconfig_csharp">
+<a href="#state_sparkconfig_csharp" style="color: inherit; text-decoration: inherit;">Spark<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sparkpoolsparkconfig">Spark<wbr>Pool<wbr>Spark<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `spark_config` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sparkeventsfolder_csharp">
@@ -1178,6 +1174,33 @@ The following state arguments are supported:
     <dd>{{% md %}}An `auto_scale` block as defined below. Exactly one of `node_count` or `auto_scale` must be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_cachesize_go">
+<a href="#state_cachesize_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The cache size in the Spark Pool.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_computeisolationenabled_go">
+<a href="#state_computeisolationenabled_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Isolation<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether compute isolation is enabled or not. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_dynamicexecutorallocationenabled_go">
+<a href="#state_dynamicexecutorallocationenabled_go" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Executor<wbr>Allocation<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether Dynamic Executor Allocation is enabled or not. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_libraryrequirement_go">
 <a href="#state_libraryrequirement_go" style="color: inherit; text-decoration: inherit;">Library<wbr>Requirement</a>
 </span>
@@ -1221,6 +1244,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kind of nodes that the Spark Pool provides. Possible value is `MemoryOptimized`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_sessionlevelpackagesenabled_go">
+<a href="#state_sessionlevelpackagesenabled_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Level<wbr>Packages<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether session level packages are enabled or not. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_sparkconfig_go">
+<a href="#state_sparkconfig_go" style="color: inherit; text-decoration: inherit;">Spark<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sparkpoolsparkconfig">Spark<wbr>Pool<wbr>Spark<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `spark_config` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sparkeventsfolder_go">
@@ -1290,6 +1331,33 @@ The following state arguments are supported:
     <dd>{{% md %}}An `auto_scale` block as defined below. Exactly one of `node_count` or `auto_scale` must be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_cachesize_nodejs">
+<a href="#state_cachesize_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The cache size in the Spark Pool.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_computeisolationenabled_nodejs">
+<a href="#state_computeisolationenabled_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Isolation<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether compute isolation is enabled or not. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_dynamicexecutorallocationenabled_nodejs">
+<a href="#state_dynamicexecutorallocationenabled_nodejs" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Executor<wbr>Allocation<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether Dynamic Executor Allocation is enabled or not. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_libraryrequirement_nodejs">
 <a href="#state_libraryrequirement_nodejs" style="color: inherit; text-decoration: inherit;">library<wbr>Requirement</a>
 </span>
@@ -1333,6 +1401,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kind of nodes that the Spark Pool provides. Possible value is `MemoryOptimized`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_sessionlevelpackagesenabled_nodejs">
+<a href="#state_sessionlevelpackagesenabled_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Level<wbr>Packages<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether session level packages are enabled or not. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_sparkconfig_nodejs">
+<a href="#state_sparkconfig_nodejs" style="color: inherit; text-decoration: inherit;">spark<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sparkpoolsparkconfig">Spark<wbr>Pool<wbr>Spark<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `spark_config` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sparkeventsfolder_nodejs">
@@ -1402,6 +1488,33 @@ The following state arguments are supported:
     <dd>{{% md %}}An `auto_scale` block as defined below. Exactly one of `node_count` or `auto_scale` must be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_cache_size_python">
+<a href="#state_cache_size_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The cache size in the Spark Pool.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_compute_isolation_enabled_python">
+<a href="#state_compute_isolation_enabled_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>isolation_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether compute isolation is enabled or not. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_dynamic_executor_allocation_enabled_python">
+<a href="#state_dynamic_executor_allocation_enabled_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>executor_<wbr>allocation_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether Dynamic Executor Allocation is enabled or not. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_library_requirement_python">
 <a href="#state_library_requirement_python" style="color: inherit; text-decoration: inherit;">library_<wbr>requirement</a>
 </span>
@@ -1445,6 +1558,24 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The kind of nodes that the Spark Pool provides. Possible value is `MemoryOptimized`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_session_level_packages_enabled_python">
+<a href="#state_session_level_packages_enabled_python" style="color: inherit; text-decoration: inherit;">session_<wbr>level_<wbr>packages_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether session level packages are enabled or not. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_spark_config_python">
+<a href="#state_spark_config_python" style="color: inherit; text-decoration: inherit;">spark_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sparkpoolsparkconfig">Spark<wbr>Pool<wbr>Spark<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `spark_config` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spark_events_folder_python">
@@ -1733,6 +1864,96 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the library requirements file.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="sparkpoolsparkconfig">Spark<wbr>Pool<wbr>Spark<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="content_csharp">
+<a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The contents of a spark configuration.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="filename_csharp">
+<a href="#filename_csharp" style="color: inherit; text-decoration: inherit;">Filename</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the file where the spark configuration `content` will be stored.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="content_go">
+<a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The contents of a spark configuration.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="filename_go">
+<a href="#filename_go" style="color: inherit; text-decoration: inherit;">Filename</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the file where the spark configuration `content` will be stored.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="content_nodejs">
+<a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The contents of a spark configuration.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="filename_nodejs">
+<a href="#filename_nodejs" style="color: inherit; text-decoration: inherit;">filename</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the file where the spark configuration `content` will be stored.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="content_python">
+<a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The contents of a spark configuration.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="filename_python">
+<a href="#filename_python" style="color: inherit; text-decoration: inherit;">filename</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the file where the spark configuration `content` will be stored.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import

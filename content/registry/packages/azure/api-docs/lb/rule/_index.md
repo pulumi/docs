@@ -225,6 +225,7 @@ const exampleRule = new azure.lb.Rule("exampleRule", {
 <span class="k">def </span><span class="nx">Rule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
          <span class="nx">backend_address_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">backend_address_pool_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
          <span class="nx">backend_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
          <span class="nx">disable_outbound_snat</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
          <span class="nx">enable_floating_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -419,15 +420,23 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the resource.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="backendaddresspoolid_csharp">
 <a href="#backendaddresspoolid_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Address<wbr>Pool<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A reference to a Backend Address Pool over which this Load Balancing Rule operates.
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been deprecated by `backend_address_pool_ids` and will be removed in the next major version of the provider{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="backendaddresspoolids_csharp">
+<a href="#backendaddresspoolids_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Address<wbr>Pool<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of reference to a Backend Address Pool over which this Load Balancing Rule operates.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableoutboundsnat_csharp">
@@ -549,15 +558,23 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the resource.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="backendaddresspoolid_go">
 <a href="#backendaddresspoolid_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Address<wbr>Pool<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A reference to a Backend Address Pool over which this Load Balancing Rule operates.
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been deprecated by `backend_address_pool_ids` and will be removed in the next major version of the provider{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="backendaddresspoolids_go">
+<a href="#backendaddresspoolids_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Address<wbr>Pool<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of reference to a Backend Address Pool over which this Load Balancing Rule operates.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableoutboundsnat_go">
@@ -679,15 +696,23 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the resource.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="backendaddresspoolid_nodejs">
 <a href="#backendaddresspoolid_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Address<wbr>Pool<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A reference to a Backend Address Pool over which this Load Balancing Rule operates.
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been deprecated by `backend_address_pool_ids` and will be removed in the next major version of the provider{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="backendaddresspoolids_nodejs">
+<a href="#backendaddresspoolids_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Address<wbr>Pool<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of reference to a Backend Address Pool over which this Load Balancing Rule operates.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableoutboundsnat_nodejs">
@@ -809,15 +834,23 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the resource.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="backend_address_pool_id_python">
 <a href="#backend_address_pool_id_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>address_<wbr>pool_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A reference to a Backend Address Pool over which this Load Balancing Rule operates.
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been deprecated by `backend_address_pool_ids` and will be removed in the next major version of the provider{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="backend_address_pool_ids_python">
+<a href="#backend_address_pool_ids_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>address_<wbr>pool_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of reference to a Backend Address Pool over which this Load Balancing Rule operates.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_outbound_snat_python">
@@ -988,6 +1021,7 @@ Get an existing Rule resource's state with the given name, ID, and optional extr
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">backend_address_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">backend_address_pool_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">backend_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">disable_outbound_snat</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">enable_floating_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -1112,15 +1146,23 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_backendaddresspoolid_csharp">
 <a href="#state_backendaddresspoolid_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Address<wbr>Pool<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A reference to a Backend Address Pool over which this Load Balancing Rule operates.
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been deprecated by `backend_address_pool_ids` and will be removed in the next major version of the provider{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_backendaddresspoolids_csharp">
+<a href="#state_backendaddresspoolids_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Address<wbr>Pool<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of reference to a Backend Address Pool over which this Load Balancing Rule operates.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backendport_csharp">
@@ -1250,15 +1292,23 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_backendaddresspoolid_go">
 <a href="#state_backendaddresspoolid_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Address<wbr>Pool<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A reference to a Backend Address Pool over which this Load Balancing Rule operates.
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been deprecated by `backend_address_pool_ids` and will be removed in the next major version of the provider{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_backendaddresspoolids_go">
+<a href="#state_backendaddresspoolids_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Address<wbr>Pool<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of reference to a Backend Address Pool over which this Load Balancing Rule operates.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backendport_go">
@@ -1388,15 +1438,23 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_backendaddresspoolid_nodejs">
 <a href="#state_backendaddresspoolid_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Address<wbr>Pool<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A reference to a Backend Address Pool over which this Load Balancing Rule operates.
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been deprecated by `backend_address_pool_ids` and will be removed in the next major version of the provider{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_backendaddresspoolids_nodejs">
+<a href="#state_backendaddresspoolids_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Address<wbr>Pool<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of reference to a Backend Address Pool over which this Load Balancing Rule operates.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backendport_nodejs">
@@ -1526,15 +1584,23 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_backend_address_pool_id_python">
 <a href="#state_backend_address_pool_id_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>address_<wbr>pool_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A reference to a Backend Address Pool over which this Load Balancing Rule operates.
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been deprecated by `backend_address_pool_ids` and will be removed in the next major version of the provider{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_backend_address_pool_ids_python">
+<a href="#state_backend_address_pool_ids_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>address_<wbr>pool_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of reference to a Backend Address Pool over which this Load Balancing Rule operates.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_port_python">

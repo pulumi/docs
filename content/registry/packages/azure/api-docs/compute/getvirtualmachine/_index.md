@@ -274,6 +274,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getvirtualmachineidentity">List&lt;Get<wbr>Virtual<wbr>Machine<wbr>Identity&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as defined below.
+*
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
@@ -291,6 +292,42 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="privateipaddress_csharp">
+<a href="#privateipaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Primary Private IP Address assigned to this Virtual Machine.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="privateipaddresses_csharp">
+<a href="#privateipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of Private IP Addresses assigned to this Virtual Machine.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="publicipaddress_csharp">
+<a href="#publicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Primary Public IP Address assigned to this Virtual Machine.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="publicipaddresses_csharp">
+<a href="#publicipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of the Public IP Addresses assigned to this Virtual Machine.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -320,6 +357,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getvirtualmachineidentity">[]Get<wbr>Virtual<wbr>Machine<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as defined below.
+*
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
@@ -337,6 +375,42 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="privateipaddress_go">
+<a href="#privateipaddress_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Primary Private IP Address assigned to this Virtual Machine.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="privateipaddresses_go">
+<a href="#privateipaddresses_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of Private IP Addresses assigned to this Virtual Machine.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="publicipaddress_go">
+<a href="#publicipaddress_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Primary Public IP Address assigned to this Virtual Machine.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="publicipaddresses_go">
+<a href="#publicipaddresses_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of the Public IP Addresses assigned to this Virtual Machine.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -366,6 +440,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getvirtualmachineidentity">Get<wbr>Virtual<wbr>Machine<wbr>Identity[]</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as defined below.
+*
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
@@ -383,6 +458,42 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="privateipaddress_nodejs">
+<a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Primary Private IP Address assigned to this Virtual Machine.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="privateipaddresses_nodejs">
+<a href="#privateipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of Private IP Addresses assigned to this Virtual Machine.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="publicipaddress_nodejs">
+<a href="#publicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Primary Public IP Address assigned to this Virtual Machine.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="publicipaddresses_nodejs">
+<a href="#publicipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of the Public IP Addresses assigned to this Virtual Machine.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -412,6 +523,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getvirtualmachineidentity">Sequence[Get<wbr>Virtual<wbr>Machine<wbr>Identity]</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as defined below.
+*
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
@@ -429,6 +541,42 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="private_ip_address_python">
+<a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Primary Private IP Address assigned to this Virtual Machine.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="private_ip_addresses_python">
+<a href="#private_ip_addresses_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of Private IP Addresses assigned to this Virtual Machine.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="public_ip_address_python">
+<a href="#public_ip_address_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Primary Public IP Address assigned to this Virtual Machine.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="public_ip_addresses_python">
+<a href="#public_ip_addresses_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of the Public IP Addresses assigned to this Virtual Machine.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>

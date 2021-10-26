@@ -290,7 +290,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service level of the file system. Valid values include `Premium`, `Standard`, or `Ultra`.
+    <dd>{{% md %}}The service level of the file system. Valid values include `Premium`, `Standard`, or `Ultra`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sizeintb_csharp">
@@ -357,7 +357,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service level of the file system. Valid values include `Premium`, `Standard`, or `Ultra`.
+    <dd>{{% md %}}The service level of the file system. Valid values include `Premium`, `Standard`, or `Ultra`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sizeintb_go">
@@ -424,7 +424,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service level of the file system. Valid values include `Premium`, `Standard`, or `Ultra`.
+    <dd>{{% md %}}The service level of the file system. Valid values include `Premium`, `Standard`, or `Ultra`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sizeintb_nodejs">
@@ -491,7 +491,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The service level of the file system. Valid values include `Premium`, `Standard`, or `Ultra`.
+    <dd>{{% md %}}The service level of the file system. Valid values include `Premium`, `Standard`, or `Ultra`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_in_tb_python">
@@ -763,7 +763,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service level of the file system. Valid values include `Premium`, `Standard`, or `Ultra`.
+    <dd>{{% md %}}The service level of the file system. Valid values include `Premium`, `Standard`, or `Ultra`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sizeintb_csharp">
@@ -830,7 +830,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service level of the file system. Valid values include `Premium`, `Standard`, or `Ultra`.
+    <dd>{{% md %}}The service level of the file system. Valid values include `Premium`, `Standard`, or `Ultra`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sizeintb_go">
@@ -897,7 +897,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service level of the file system. Valid values include `Premium`, `Standard`, or `Ultra`.
+    <dd>{{% md %}}The service level of the file system. Valid values include `Premium`, `Standard`, or `Ultra`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sizeintb_nodejs">
@@ -964,7 +964,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The service level of the file system. Valid values include `Premium`, `Standard`, or `Ultra`.
+    <dd>{{% md %}}The service level of the file system. Valid values include `Premium`, `Standard`, or `Ultra`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_in_tb_python">

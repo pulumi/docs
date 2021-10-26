@@ -153,6 +153,15 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="autokeyrotationenabled_csharp">
+<a href="#autokeyrotationenabled_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Key<wbr>Rotation<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the Azure Disk Encryption Set Key automatically rotated to latest version?
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -199,6 +208,15 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="autokeyrotationenabled_go">
+<a href="#autokeyrotationenabled_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Key<wbr>Rotation<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the Azure Disk Encryption Set Key automatically rotated to latest version?
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -247,6 +265,15 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="autokeyrotationenabled_nodejs">
+<a href="#autokeyrotationenabled_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Key<wbr>Rotation<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Is the Azure Disk Encryption Set Key automatically rotated to latest version?
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -293,6 +320,15 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="auto_key_rotation_enabled_python">
+<a href="#auto_key_rotation_enabled_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>key_<wbr>rotation_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the Azure Disk Encryption Set Key automatically rotated to latest version?
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>

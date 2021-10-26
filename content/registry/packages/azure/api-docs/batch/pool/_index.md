@@ -465,6 +465,7 @@ const examplePool = new azure.batch.Pool("examplePool", {
          <span class="nx">container_configuration</span><span class="p">:</span> <span class="nx">Optional[PoolContainerConfigurationArgs]</span> = None<span class="p">,</span>
          <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">fixed_scale</span><span class="p">:</span> <span class="nx">Optional[PoolFixedScaleArgs]</span> = None<span class="p">,</span>
+         <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[PoolIdentityArgs]</span> = None<span class="p">,</span>
          <span class="nx">max_tasks_per_node</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
          <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
          <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -694,6 +695,15 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}A `fixed_scale` block that describes the scale settings when using fixed scale.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="identity_csharp">
+<a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#poolidentity">Pool<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxtaskspernode_csharp">
 <a href="#maxtaskspernode_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Tasks<wbr>Per<wbr>Node</a>
 </span>
@@ -839,6 +849,15 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type"><a href="#poolfixedscale">Pool<wbr>Fixed<wbr>Scale<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `fixed_scale` block that describes the scale settings when using fixed scale.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_go">
+<a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#poolidentity">Pool<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxtaskspernode_go">
@@ -988,6 +1007,15 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}A `fixed_scale` block that describes the scale settings when using fixed scale.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="identity_nodejs">
+<a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#poolidentity">Pool<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxtaskspernode_nodejs">
 <a href="#maxtaskspernode_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Tasks<wbr>Per<wbr>Node</a>
 </span>
@@ -1135,6 +1163,15 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}A `fixed_scale` block that describes the scale settings when using fixed scale.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="identity_python">
+<a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#poolidentity">Pool<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="max_tasks_per_node_python">
 <a href="#max_tasks_per_node_python" style="color: inherit; text-decoration: inherit;">max_<wbr>tasks_<wbr>per_<wbr>node</a>
 </span>
@@ -1266,6 +1303,7 @@ Get an existing Pool resource's state with the given name, ID, and optional extr
         <span class="nx">container_configuration</span><span class="p">:</span> <span class="nx">Optional[PoolContainerConfigurationArgs]</span> = None<span class="p">,</span>
         <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">fixed_scale</span><span class="p">:</span> <span class="nx">Optional[PoolFixedScaleArgs]</span> = None<span class="p">,</span>
+        <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[PoolIdentityArgs]</span> = None<span class="p">,</span>
         <span class="nx">max_tasks_per_node</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1442,6 +1480,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A `fixed_scale` block that describes the scale settings when using fixed scale.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_identity_csharp">
+<a href="#state_identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#poolidentity">Pool<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_maxtaskspernode_csharp">
 <a href="#state_maxtaskspernode_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Tasks<wbr>Per<wbr>Node</a>
 </span>
@@ -1587,6 +1634,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#poolfixedscale">Pool<wbr>Fixed<wbr>Scale<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `fixed_scale` block that describes the scale settings when using fixed scale.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_identity_go">
+<a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#poolidentity">Pool<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxtaskspernode_go">
@@ -1736,6 +1792,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A `fixed_scale` block that describes the scale settings when using fixed scale.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_identity_nodejs">
+<a href="#state_identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#poolidentity">Pool<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_maxtaskspernode_nodejs">
 <a href="#state_maxtaskspernode_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Tasks<wbr>Per<wbr>Node</a>
 </span>
@@ -1881,6 +1946,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#poolfixedscale">Pool<wbr>Fixed<wbr>Scale<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `fixed_scale` block that describes the scale settings when using fixed scale.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_identity_python">
+<a href="#state_identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#poolidentity">Pool<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_tasks_per_node_python">
@@ -2609,6 +2683,96 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of low priority nodes in the Batch pool. Defaults to `0`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="poolidentity">Pool<wbr>Identity</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="identityids_csharp">
+<a href="#identityids_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of user assigned identity ids.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity type of the Batch Account. Only possible values is `UserAssigned`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="identityids_go">
+<a href="#identityids_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of user assigned identity ids.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity type of the Batch Account. Only possible values is `UserAssigned`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="identityids_nodejs">
+<a href="#identityids_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of user assigned identity ids.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity type of the Batch Account. Only possible values is `UserAssigned`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="identity_ids_python">
+<a href="#identity_ids_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of user assigned identity ids.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The identity type of the Batch Account. Only possible values is `UserAssigned`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

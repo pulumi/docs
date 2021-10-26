@@ -3178,6 +3178,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#kubernetesclusteraddonprofileomsagent">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent</a></span>
     </dt>
     <dd>{{% md %}}A `oms_agent` block as defined below. For more details, please visit [How to onboard Azure Monitor for containers](https://docs.microsoft.com/en-us/azure/monitoring/monitoring-container-insights-onboard).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="openservicemesh_csharp">
+<a href="#openservicemesh_csharp" style="color: inherit; text-decoration: inherit;">Open<wbr>Service<wbr>Mesh</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofileopenservicemesh">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Open<wbr>Service<wbr>Mesh</a></span>
+    </dt>
+    <dd>{{% md %}}An `open_service_mesh` block as defined below. For more details, please visit [Open Service Mesh for AKS](https://docs.microsoft.com/azure/aks/open-service-mesh-about).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3236,6 +3245,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#kubernetesclusteraddonprofileomsagent">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent</a></span>
     </dt>
     <dd>{{% md %}}A `oms_agent` block as defined below. For more details, please visit [How to onboard Azure Monitor for containers](https://docs.microsoft.com/en-us/azure/monitoring/monitoring-container-insights-onboard).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="openservicemesh_go">
+<a href="#openservicemesh_go" style="color: inherit; text-decoration: inherit;">Open<wbr>Service<wbr>Mesh</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofileopenservicemesh">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Open<wbr>Service<wbr>Mesh</a></span>
+    </dt>
+    <dd>{{% md %}}An `open_service_mesh` block as defined below. For more details, please visit [Open Service Mesh for AKS](https://docs.microsoft.com/azure/aks/open-service-mesh-about).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3294,6 +3312,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#kubernetesclusteraddonprofileomsagent">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent</a></span>
     </dt>
     <dd>{{% md %}}A `oms_agent` block as defined below. For more details, please visit [How to onboard Azure Monitor for containers](https://docs.microsoft.com/en-us/azure/monitoring/monitoring-container-insights-onboard).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="openservicemesh_nodejs">
+<a href="#openservicemesh_nodejs" style="color: inherit; text-decoration: inherit;">open<wbr>Service<wbr>Mesh</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofileopenservicemesh">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Open<wbr>Service<wbr>Mesh</a></span>
+    </dt>
+    <dd>{{% md %}}An `open_service_mesh` block as defined below. For more details, please visit [Open Service Mesh for AKS](https://docs.microsoft.com/azure/aks/open-service-mesh-about).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3352,6 +3379,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#kubernetesclusteraddonprofileomsagent">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent</a></span>
     </dt>
     <dd>{{% md %}}A `oms_agent` block as defined below. For more details, please visit [How to onboard Azure Monitor for containers](https://docs.microsoft.com/en-us/azure/monitoring/monitoring-container-insights-onboard).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="open_service_mesh_python">
+<a href="#open_service_mesh_python" style="color: inherit; text-decoration: inherit;">open_<wbr>service_<wbr>mesh</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofileopenservicemesh">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Open<wbr>Service<wbr>Mesh</a></span>
+    </dt>
+    <dd>{{% md %}}An `open_service_mesh` block as defined below. For more details, please visit [Open Service Mesh for AKS](https://docs.microsoft.com/azure/aks/open-service-mesh-about).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4288,6 +4324,60 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of a user assigned identity.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="kubernetesclusteraddonprofileopenservicemesh">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Open<wbr>Service<wbr>Mesh</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is Open Service Mesh enabled?
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is Open Service Mesh enabled?
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Is Open Service Mesh enabled?
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is Open Service Mesh enabled?
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

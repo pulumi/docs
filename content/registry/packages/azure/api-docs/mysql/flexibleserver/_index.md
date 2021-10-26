@@ -89,7 +89,7 @@ class MyStack : Stack
         {
             ResourceGroupName = exampleResourceGroup.Name,
             Location = exampleResourceGroup.Location,
-            AdministratorLogin = "psqladminun",
+            AdministratorLogin = "psqladmin",
             AdministratorPassword = "H@Sh1CoR3!",
             BackupRetentionDays = 7,
             DelegatedSubnetId = exampleSubnet.Id,
@@ -183,7 +183,7 @@ func main() {
 		_, err = mysql.NewFlexibleServer(ctx, "exampleFlexibleServer", &mysql.FlexibleServerArgs{
 			ResourceGroupName:     exampleResourceGroup.Name,
 			Location:              exampleResourceGroup.Location,
-			AdministratorLogin:    pulumi.String("psqladminun"),
+			AdministratorLogin:    pulumi.String("psqladmin"),
 			AdministratorPassword: pulumi.String("H@Sh1CoR3!"),
 			BackupRetentionDays:   pulumi.Int(7),
 			DelegatedSubnetId:     exampleSubnet.ID(),
@@ -235,7 +235,7 @@ example_zone_virtual_network_link = azure.privatedns.ZoneVirtualNetworkLink("exa
 example_flexible_server = azure.mysql.FlexibleServer("exampleFlexibleServer",
     resource_group_name=example_resource_group.name,
     location=example_resource_group.location,
-    administrator_login="psqladminun",
+    administrator_login="psqladmin",
     administrator_password="H@Sh1CoR3!",
     backup_retention_days=7,
     delegated_subnet_id=example_subnet.id,
@@ -283,7 +283,7 @@ const exampleZoneVirtualNetworkLink = new azure.privatedns.ZoneVirtualNetworkLin
 const exampleFlexibleServer = new azure.mysql.FlexibleServer("exampleFlexibleServer", {
     resourceGroupName: exampleResourceGroup.name,
     location: exampleResourceGroup.location,
-    administratorLogin: "psqladminun",
+    administratorLogin: "psqladmin",
     administratorPassword: "H@Sh1CoR3!",
     backupRetentionDays: 7,
     delegatedSubnetId: exampleSubnet.id,
