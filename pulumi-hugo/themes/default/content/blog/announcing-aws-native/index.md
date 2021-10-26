@@ -39,6 +39,9 @@ In this example, we can see how the new AWS S3 Object Lambda feature can be used
 {{% choosable language typescript %}}
 
 ```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as awsnative from "@pulumi/aws-native";
+
 const bucket = new awsnative.s3.Bucket("source");
 
 const accessPoint = new awsnative.s3.AccessPoint("ap", {
