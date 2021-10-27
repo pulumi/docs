@@ -2,16 +2,18 @@ package cmd
 
 import (
 	"fmt"
-	"github.com/golang/glog"
-	pschema "github.com/pulumi/pulumi/pkg/v3/codegen/schema"
 	"strings"
 	"time"
 
+	"github.com/golang/glog"
+
 	"github.com/pkg/errors"
+
+	"github.com/spf13/cobra"
 
 	"gopkg.in/yaml.v2"
 
-	"github.com/spf13/cobra"
+	pschema "github.com/pulumi/pulumi/pkg/v3/codegen/schema"
 
 	"github.com/pulumi/docs/tools/resourcedocsgen/pkg"
 )
