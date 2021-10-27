@@ -2491,8 +2491,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>Assessments</dt>
-    <dd>Assessments</dd><dt>Sub<wbr>Assessments</dt>
-    <dd>SubAssessments</dd><dt>Alerts</dt>
+    <dd>Assessments</dd><dt>Assessments<wbr>Snapshot</dt>
+    <dd>AssessmentsSnapshot</dd><dt>Sub<wbr>Assessments</dt>
+    <dd>SubAssessments</dd><dt>Sub<wbr>Assessments<wbr>Snapshot</dt>
+    <dd>SubAssessmentsSnapshot</dd><dt>Alerts</dt>
     <dd>Alerts</dd><dt>Secure<wbr>Scores</dt>
     <dd>SecureScores</dd><dt>Secure<wbr>Scores<wbr>Snapshot</dt>
     <dd>SecureScoresSnapshot</dd><dt>Secure<wbr>Score<wbr>Controls</dt>
@@ -2504,8 +2506,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="tabular"><dt>Event<wbr>Source<wbr>Assessments</dt>
-    <dd>Assessments</dd><dt>Event<wbr>Source<wbr>Sub<wbr>Assessments</dt>
-    <dd>SubAssessments</dd><dt>Event<wbr>Source<wbr>Alerts</dt>
+    <dd>Assessments</dd><dt>Event<wbr>Source<wbr>Assessments<wbr>Snapshot</dt>
+    <dd>AssessmentsSnapshot</dd><dt>Event<wbr>Source<wbr>Sub<wbr>Assessments</dt>
+    <dd>SubAssessments</dd><dt>Event<wbr>Source<wbr>Sub<wbr>Assessments<wbr>Snapshot</dt>
+    <dd>SubAssessmentsSnapshot</dd><dt>Event<wbr>Source<wbr>Alerts</dt>
     <dd>Alerts</dd><dt>Event<wbr>Source<wbr>Secure<wbr>Scores</dt>
     <dd>SecureScores</dd><dt>Event<wbr>Source<wbr>Secure<wbr>Scores<wbr>Snapshot</dt>
     <dd>SecureScoresSnapshot</dd><dt>Event<wbr>Source<wbr>Secure<wbr>Score<wbr>Controls</dt>
@@ -2517,8 +2521,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="tabular"><dt>Assessments</dt>
-    <dd>Assessments</dd><dt>Sub<wbr>Assessments</dt>
-    <dd>SubAssessments</dd><dt>Alerts</dt>
+    <dd>Assessments</dd><dt>Assessments<wbr>Snapshot</dt>
+    <dd>AssessmentsSnapshot</dd><dt>Sub<wbr>Assessments</dt>
+    <dd>SubAssessments</dd><dt>Sub<wbr>Assessments<wbr>Snapshot</dt>
+    <dd>SubAssessmentsSnapshot</dd><dt>Alerts</dt>
     <dd>Alerts</dd><dt>Secure<wbr>Scores</dt>
     <dd>SecureScores</dd><dt>Secure<wbr>Scores<wbr>Snapshot</dt>
     <dd>SecureScoresSnapshot</dd><dt>Secure<wbr>Score<wbr>Controls</dt>
@@ -2530,8 +2536,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="tabular"><dt>ASSESSMENTS</dt>
-    <dd>Assessments</dd><dt>SUB_ASSESSMENTS</dt>
-    <dd>SubAssessments</dd><dt>ALERTS</dt>
+    <dd>Assessments</dd><dt>ASSESSMENTS_SNAPSHOT</dt>
+    <dd>AssessmentsSnapshot</dd><dt>SUB_ASSESSMENTS</dt>
+    <dd>SubAssessments</dd><dt>SUB_ASSESSMENTS_SNAPSHOT</dt>
+    <dd>SubAssessmentsSnapshot</dd><dt>ALERTS</dt>
     <dd>Alerts</dd><dt>SECURE_SCORES</dt>
     <dd>SecureScores</dd><dt>SECURE_SCORES_SNAPSHOT</dt>
     <dd>SecureScoresSnapshot</dd><dt>SECURE_SCORE_CONTROLS</dt>
@@ -2634,7 +2642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-native:security:Automation exampleAutomation /subscriptions/a5caac9c-5c04-49af-b3d0-e204f40345d5/resourceGroups/exampleResourceGroup/providers/Microsoft.Security/automations/exampleAutomation 
+$ pulumi import azure-native:security:Automation exampleAutomation /subscriptions/a5caac9c-5c04-49af-b3d0-e204f40345d5/resourceGroups/exampleResourceGroup/providers/Microsoft.Security/SecurityAutomations/exampleAutomation 
 ```
 
 

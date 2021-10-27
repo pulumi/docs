@@ -27,6 +27,7 @@ Explore the resources and functions of the azure-native.security module.
     <li><a href="ingestionsetting" title="IngestionSetting"><span class="api-symbol api-symbol--resource"></span>IngestionSetting</a></li>
     <li><a href="iotsecuritysolution" title="IotSecuritySolution"><span class="api-symbol api-symbol--resource"></span>IotSecuritySolution</a></li>
     <li><a href="jitnetworkaccesspolicy" title="JitNetworkAccessPolicy"><span class="api-symbol api-symbol--resource"></span>JitNetworkAccessPolicy</a></li>
+    <li><a href="securityconnector" title="SecurityConnector"><span class="api-symbol api-symbol--resource"></span>SecurityConnector</a></li>
     <li><a href="securitycontact" title="SecurityContact"><span class="api-symbol api-symbol--resource"></span>SecurityContact</a></li>
     <li><a href="servervulnerabilityassessment" title="ServerVulnerabilityAssessment"><span class="api-symbol api-symbol--resource"></span>ServerVulnerabilityAssessment</a></li>
     <li><a href="sqlvulnerabilityassessmentbaselinerule" title="SqlVulnerabilityAssessmentBaselineRule"><span class="api-symbol api-symbol--resource"></span>SqlVulnerabilityAssessmentBaselineRule</a></li>
@@ -50,6 +51,7 @@ Explore the resources and functions of the azure-native.security module.
     <li><a href="getingestionsetting" title="GetIngestionSetting"><span class="api-symbol api-symbol--function"></span>GetIngestionSetting</a></li>
     <li><a href="getiotsecuritysolution" title="GetIotSecuritySolution"><span class="api-symbol api-symbol--function"></span>GetIotSecuritySolution</a></li>
     <li><a href="getjitnetworkaccesspolicy" title="GetJitNetworkAccessPolicy"><span class="api-symbol api-symbol--function"></span>GetJitNetworkAccessPolicy</a></li>
+    <li><a href="getsecurityconnector" title="GetSecurityConnector"><span class="api-symbol api-symbol--function"></span>GetSecurityConnector</a></li>
     <li><a href="getsecuritycontact" title="GetSecurityContact"><span class="api-symbol api-symbol--function"></span>GetSecurityContact</a></li>
     <li><a href="getservervulnerabilityassessment" title="GetServerVulnerabilityAssessment"><span class="api-symbol api-symbol--function"></span>GetServerVulnerabilityAssessment</a></li>
     <li><a href="getsqlvulnerabilityassessmentbaselinerule" title="GetSqlVulnerabilityAssessmentBaselineRule"><span class="api-symbol api-symbol--function"></span>GetSqlVulnerabilityAssessmentBaselineRule</a></li>
@@ -66,6 +68,6 @@ Explore the resources and functions of the azure-native.security module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.42.0</dd>
+	<dd>1.43.0</dd>
 </dl>
 
