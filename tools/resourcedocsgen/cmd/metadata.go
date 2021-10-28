@@ -357,8 +357,9 @@ func getCategoryFromKeywords(keywords []string) (pkg.PackageCategory, error) {
 		return defaultPackageCategory, nil
 	}
 
+	categoryName := strings.Replace(*categoryTag, "category/", "", -1)
 	var category pkg.PackageCategory
-	if n, ok := categoryNameMap[*categoryTag]; !ok {
+	if n, ok := categoryNameMap[categoryName]; !ok {
 		return defaultPackageCategory, errors.New(fmt.Sprintf("invalid category tag %s", *categoryTag))
 	} else {
 		category = n
