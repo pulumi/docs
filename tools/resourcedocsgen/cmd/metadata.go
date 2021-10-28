@@ -5,14 +5,20 @@ import (
 	"strings"
 	"time"
 
-	"github.com/pkg/errors"
+	"github.com/golang/glog"
 
-	"gopkg.in/yaml.v2"
+	"github.com/pkg/errors"
 
 	"github.com/spf13/cobra"
 
+	"gopkg.in/yaml.v2"
+
+	pschema "github.com/pulumi/pulumi/pkg/v3/codegen/schema"
+
 	"github.com/pulumi/docs/tools/resourcedocsgen/pkg"
 )
+
+const defaultPackageCategory = pkg.PackageCategoryCloud
 
 var categoryNameMap = map[string]pkg.PackageCategory{
 	"cloud":          pkg.PackageCategoryCloud,
@@ -227,40 +233,46 @@ func packageMetadataCmd() *cobra.Command {
 				status = pkg.PackageStatusPublicPreview
 			}
 
-			var category pkg.PackageCategory
-			// If a category was passed-in, use that as the override.
-			if categoryStr != "" {
-				if n, ok := categoryNameMap[categoryStr]; !ok {
-					return errors.New(fmt.Sprintf("invalid category name %s", categoryStr))
-				} else {
-					category = n
-				}
-			} else if c, ok := categoryLookup[mainSpec.Name]; ok {
-				// Otherwise, try to lookup the package in our existing category
-				// lookup.
-				category = c
-			} else {
-				// The default is to categorize the package as "Cloud".
-				category = pkg.PackageCategoryCloud
+			category, err := getPackageCategory(mainSpec, categoryStr)
+			if err != nil {
+				return errors.Wrap(err, "getting category")
 			}
 
+			// If the title was not overridden, then try to determine
+			// the title from the schema.
 			if title == "" {
-				title = mainSpec.Name
-			}
-			if v, ok := titleLookup[mainSpec.Name]; ok {
-				title = v
+				// If the schema for this package does not have the
+				// displayName, then use its package name.
+				if mainSpec.DisplayName == "" {
+					title = mainSpec.Name
+					// Eventually all of Pulumi's own packages will have the displayName
+					// set in their schema but for the time being until they are updated
+					// with that info, let's lookup the proper title from the lookup map.
+					if v, ok := titleLookup[mainSpec.Name]; ok {
+						title = v
+					}
+				} else {
+					title = mainSpec.DisplayName
+				}
 			}
 
-			// TODO[pulumi/pulumi#7813]: Use tags in the schema spec to determine
-			// if the package is a native provider or not.
-			native := mainSpec.Attribution == ""
-			// Due to the way we currently detect if a package is a native provider
-			// or not (see above) a package cannot be both a native provider AND a
-			// component so if a package is a component, override the native property
-			// to false.
-			if component {
-				native = false
+			native := isNative(mainSpec.Keywords)
+
+			if !component {
+				component = isComponent(mainSpec.Keywords)
 			}
+
+			if native && component {
+				msg := fmt.Sprintf("package %q cannot be tagged as both native and component. only one is applicable", mainSpec.Name)
+				return errors.New(msg)
+			}
+
+			if publisher == "" && mainSpec.Publisher != "" {
+				publisher = mainSpec.Publisher
+			} else if publisher == "" {
+				publisher = "Pulumi"
+			}
+
 			pm := pkg.PackageMeta{
 				Name:          mainSpec.Name,
 				UpdatedOn:     updatedOn,
@@ -292,7 +304,7 @@ func packageMetadataCmd() *cobra.Command {
 	cmd.Flags().StringVar(&metadataOutDir, "metadataOutDir", "", "The directory path to where the docs will be written to")
 	cmd.Flags().StringVar(&categoryStr, "category", "", fmt.Sprintf("The category for the package. Value must match one of the keys in the map: %v", categoryNameMap))
 	cmd.Flags().BoolVar(&featured, "featured", false, "Whether or not this package should be marked as featured in its metadata")
-	cmd.Flags().StringVar(&publisher, "publisher", "Pulumi", "The publisher's display name to be shown in the package")
+	cmd.Flags().StringVar(&publisher, "publisher", "", "The publisher's display name to be shown in the package")
 	cmd.Flags().StringVar(&title, "title", "", "The display name of the package. If ommitted, the name of the package will be used")
 	cmd.Flags().Int64Var(&updatedOn, "updatedOn", time.Now().Unix(), "The timestamp (epoch) to use for when the package was last updated")
 	cmd.Flags().BoolVar(&component, "component", false, "Whether or not this package is a component and not a provider")
@@ -300,4 +312,86 @@ func packageMetadataCmd() *cobra.Command {
 	cmd.MarkFlagRequired("metadataOutDir")
 
 	return cmd
+}
+
+func getPackageCategory(mainSpec *pschema.PackageSpec, categoryOverrideStr string) (pkg.PackageCategory, error) {
+	var category pkg.PackageCategory
+	var err error
+
+	// If a category override was passed-in, use that instead of what's in the schema.
+	if categoryOverrideStr != "" {
+		glog.V(2).Infof("Using category override name %s\n", categoryOverrideStr)
+		if n, ok := categoryNameMap[categoryOverrideStr]; !ok {
+			return "", errors.New(fmt.Sprintf("invalid override for category name %s", categoryOverrideStr))
+		} else {
+			category = n
+		}
+	} else if c, ok := categoryLookup[mainSpec.Name]; ok {
+		glog.V(2).Infoln("Using the category for this package from the lookup map")
+		// TODO: This condition can be removed when all packages under the `pulumi` org
+		// have a proper category tag in their schema.
+		category = c
+	}
+
+	if category != "" {
+		return category, nil
+	}
+
+	glog.V(2).Infoln("Looking-up category from the keywords in the schema")
+	category, err = getCategoryFromKeywords(mainSpec.Keywords)
+	if err != nil {
+		return "", errors.Wrap(err, "getting the category from keywords")
+	}
+
+	return category, nil
+}
+
+// getCategoryFromKeywords searches for a tag in the provided keywords slice
+// with a prefix of category/. Returns the converted category type if such a tag
+// is found. Otherwise, returns PackageCategoryCloud always as the default.
+func getCategoryFromKeywords(keywords []string) (pkg.PackageCategory, error) {
+	categoryTag := getTagWithPrefixFromKeywords(keywords, "category/")
+	if categoryTag == nil {
+		return defaultPackageCategory, nil
+	}
+
+	categoryName := strings.Replace(*categoryTag, "category/", "", -1)
+	var category pkg.PackageCategory
+	if n, ok := categoryNameMap[categoryName]; !ok {
+		return defaultPackageCategory, errors.New(fmt.Sprintf("invalid category tag %s", *categoryTag))
+	} else {
+		category = n
+	}
+
+	return category, nil
+}
+
+func isComponent(keywords []string) bool {
+	return getTagFromKeywords(keywords, "kind/component") != nil
+}
+
+func isNative(keywords []string) bool {
+	return getTagFromKeywords(keywords, "kind/native") != nil
+}
+
+func getTagWithPrefixFromKeywords(keywords []string, tagPrefix string) *string {
+	for _, k := range keywords {
+		if strings.HasPrefix(k, tagPrefix) {
+			return &k
+		}
+	}
+
+	glog.V(2).Infof("A tag with the prefix %q was not found in the package's keywords", tagPrefix)
+	return nil
+}
+
+func getTagFromKeywords(keywords []string, tag string) *string {
+	for _, k := range keywords {
+		if k == tag {
+			return &k
+		}
+	}
+
+	glog.V(2).Infof("The tag %q was not found in the package's keywords", tag)
+	return nil
 }
