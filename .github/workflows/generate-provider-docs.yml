@@ -3,6 +3,8 @@ env:
   PROVIDER_CATEGORY: ${{ github.event.client_payload.category }}
   PROVIDER_DISPLAY_NAME: ${{ github.event.client_payload.display-name }}
   PROVIDER_IS_COMPONENT: ${{ github.event.client_payload.is-component }}
+  # This should always have the "pulumi-" prefix as it is set in the incoming
+  # repository_dispatch event.
   PROVIDER_NAME: ${{ github.event.client_payload.project }}
   PROVIDER_SCHEMA_PATH: ${{ github.event.client_payload.schema-path }}
   PROVIDER_SHORT_NAME: ${{ github.event.client_payload.project-shortname }}
@@ -20,29 +22,45 @@ on:
 
 jobs:
 
-  build-tfgen-provider-docs:
+  build-provider-docs:
+    if: github.event.action != 'non-resource-provider'
+    runs-on: ubuntu-18.04
+    steps:
+      - run: echo "Building docs for a resource based provider"
+
+      - name: Install pulumictl
+        uses: jaxxstorm/action-install-gh-release@v1.1.0
+        with:
+          repo: pulumi/pulumictl
+
+      - name: Install Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.16.x
+
+      - name: Dispatch Event
+        env:
+          GITHUB_TOKEN: ${{ secrets.PULUMI_BOT_TOKEN }}
+        run: pulumictl create docs-build ${{ env.PROVIDER_NAME }} ${{ env.PROVIDER_VERSION }} -d "pulumi/registry"
+
+  non-resource-provider-docs:
+    if: github.event.action == 'non-resource-provider'
     runs-on: ubuntu-18.04
     steps:
       - run: echo "Building ${{ env.PROVIDER_NAME }} docs @ ${{ env.PROVIDER_VERSION }}"
-      - if: github.event.action != 'non-resource-provider'
-        run: echo "Building docs for a resource based provider"
-      - if: github.event.action == 'non-resource-provider'
-        run: echo "Building docs for a non-resource based provider"
+
+      - run: echo "Building docs for a non-resource based provider"
+
       - name: checkout docs repo
         uses: actions/checkout@v2
         with:
           path: docs
-      - if: github.event.action != 'non-resource-provider'
-        name: checkout registry repo
-        uses: actions/checkout@v2
-        with:
-          repository: pulumi/registry
-          path: registry
       - name: checkout pulumi repo
         uses: actions/checkout@v2
         with:
           repository: pulumi/pulumi
           path: pulumi
+
       - name: checkout tfgen provider
         uses: actions/checkout@v2
         with:
@@ -50,6 +68,7 @@ jobs:
           ref: ${{ env.PROVIDER_VERSION }}
           path: ${{ env.PROVIDER_NAME }}
           token: ${{ env.GITHUB_TOKEN }}
+
       - name: Install pulumictl
         uses: jaxxstorm/action-install-gh-release@v1.1.0
         with:
@@ -58,6 +77,7 @@ jobs:
         uses: actions/setup-go@v2
         with:
           go-version: ${{ matrix.goversion }}
+
       - name: Install Hugo
         uses: peaceiris/actions-hugo@v2
         with:
@@ -65,60 +85,39 @@ jobs:
           extended: true
       - name: setup node
         uses: actions/setup-node@v2-beta
+
       - name: Setup Python
         uses: actions/setup-python@v1
         with:
           python-version: ${{matrix.pythonversion}}
+
       - name: Install Pipenv
         run:  pip3 install pipenv
+
       - name: Setup DotNet
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: ${{matrix.dotnetverson}}
+
       - run: make ensure ensure_tools
         working-directory: docs
-      - if: github.event.action == 'non-resource-provider'
-        name: run yarn install in nodejs sdk
+
+      - name: run yarn install in nodejs sdk
         run: yarn install && yarn run tsc
         working-directory: ${{ env.PROVIDER_NAME }}/sdk/nodejs
-      - if: github.event.action == 'non-resource-provider'
-        name: run typedoc
+
+      - name: run typedoc
         run: PKGS=${{ env.PROVIDER_SHORT_NAME }} NOBUILD=true ./scripts/run_typedoc.sh
         working-directory: docs
-      - if: github.event.action == 'non-resource-provider'
-        name: generate python docs
+
+      - name: generate python docs
         run: ./scripts/generate_python_docs.sh "${{ env.PROVIDER_SHORT_NAME }}"
         working-directory: docs
-      # We only want to run resource docs for providers with a schema - for legacy purposes they are referred to as
-      # tfgen-providers in this script
-      - if: github.event.action != 'non-resource-provider'
-        name: generate resource docs
-        run: ./scripts/gen_resource_docs.sh "${{ env.PROVIDER_SHORT_NAME }}" true "${{ env.PROVIDER_VERSION }}" "${{ env.PROVIDER_SCHEMA_PATH }}"
-        working-directory: docs
-      # Generate the package metadata only for those packages for which we also generate resource docs.
-      - if: github.event.action != 'non-resource-provider'
-        name: generate package metadata
-        run: ./scripts/gen_package_metadata.sh "${{ env.PROVIDER_SHORT_NAME }}" "${{ env.PROVIDER_SCHEMA_PATH }}" "${{ env.PROVIDER_VERSION }}" "${{ env.PROVIDER_PUBLISHER_NAME }}" "${{ env.PROVIDER_DISPLAY_NAME }}" "${{ env.PROVIDER_CATEGORY }}" "${{ env.PROVIDER_IS_COMPONENT }}"
-        working-directory: docs
+
       - name: git status
         run: git status && git diff
         working-directory: docs
-      - if: github.event.action != 'non-resource-provider'
-        name: git status
-        run: git status && git diff
-        working-directory: registry
-      - name: Create registry PR
-        uses: peter-evans/create-pull-request@v3
-        with:
-          path: registry
-          token: ${{ secrets.PULUMI_BOT_TOKEN }}
-          committer: Pulumi Bot <bot@pulumi.com>
-          author: Pulumi Bot <bot@pulumi.com>
-          commit-message: "Regenerate metadata file"
-          labels: "automation/tfgen-provider-docs,automation/merge"
-          title: "Regen metadata for ${{ env.PROVIDER_SHORT_NAME }}@${{ env.PROVIDER_VERSION }}"
-          body: ""
-          branch: "${{ env.PROVIDER_SHORT_NAME }}/${{ github.run_id }}-${{ github.run_number }}"
+
       - name: Create docs PR
         uses: peter-evans/create-pull-request@v3
         with:
