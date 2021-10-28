@@ -178,6 +178,7 @@ const read = new consul.AclRole("read", {
             <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">node_identities</span><span class="p">:</span> <span class="nx">Optional[Sequence[AclRoleNodeIdentityArgs]]</span> = None<span class="p">,</span>
             <span class="nx">policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
             <span class="nx">service_identities</span><span class="p">:</span> <span class="nx">Optional[Sequence[AclRoleServiceIdentityArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -336,6 +337,15 @@ The AclRole resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}The namespace to create the role within.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="nodeidentities_csharp">
+<a href="#nodeidentities_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aclrolenodeidentity">List&lt;Acl<wbr>Role<wbr>Node<wbr>Identity<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of node identities that should be applied to the role.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="policies_csharp">
 <a href="#policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
 </span>
@@ -351,8 +361,7 @@ The AclRole resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aclroleserviceidentity">List&lt;Acl<wbr>Role<wbr>Service<wbr>Identity<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of service identities that should
-be applied to the role.
+    <dd>{{% md %}}The list of service identities that should be applied to the role.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -386,6 +395,15 @@ be applied to the role.
     <dd>{{% md %}}The namespace to create the role within.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="nodeidentities_go">
+<a href="#nodeidentities_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aclrolenodeidentity">[]Acl<wbr>Role<wbr>Node<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The list of node identities that should be applied to the role.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="policies_go">
 <a href="#policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
 </span>
@@ -401,8 +419,7 @@ be applied to the role.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aclroleserviceidentity">[]Acl<wbr>Role<wbr>Service<wbr>Identity<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The list of service identities that should
-be applied to the role.
+    <dd>{{% md %}}The list of service identities that should be applied to the role.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -436,6 +453,15 @@ be applied to the role.
     <dd>{{% md %}}The namespace to create the role within.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="nodeidentities_nodejs">
+<a href="#nodeidentities_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aclrolenodeidentity">Acl<wbr>Role<wbr>Node<wbr>Identity<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of node identities that should be applied to the role.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="policies_nodejs">
 <a href="#policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
 </span>
@@ -451,8 +477,7 @@ be applied to the role.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aclroleserviceidentity">Acl<wbr>Role<wbr>Service<wbr>Identity<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of service identities that should
-be applied to the role.
+    <dd>{{% md %}}The list of service identities that should be applied to the role.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -486,6 +511,15 @@ be applied to the role.
     <dd>{{% md %}}The namespace to create the role within.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="node_identities_python">
+<a href="#node_identities_python" style="color: inherit; text-decoration: inherit;">node_<wbr>identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aclrolenodeidentity">Sequence[Acl<wbr>Role<wbr>Node<wbr>Identity<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of node identities that should be applied to the role.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="policies_python">
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
 </span>
@@ -501,8 +535,7 @@ be applied to the role.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aclroleserviceidentity">Sequence[Acl<wbr>Role<wbr>Service<wbr>Identity<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of service identities that should
-be applied to the role.
+    <dd>{{% md %}}The list of service identities that should be applied to the role.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -580,6 +613,7 @@ Get an existing AclRole resource's state with the given name, ID, and optional e
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">node_identities</span><span class="p">:</span> <span class="nx">Optional[Sequence[AclRoleNodeIdentityArgs]]</span> = None<span class="p">,</span>
         <span class="nx">policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">service_identities</span><span class="p">:</span> <span class="nx">Optional[Sequence[AclRoleServiceIdentityArgs]]</span> = None<span class="p">) -&gt;</span> AclRole</code></pre></div>
 {{% /choosable %}}
@@ -721,6 +755,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The namespace to create the role within.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_nodeidentities_csharp">
+<a href="#state_nodeidentities_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aclrolenodeidentity">List&lt;Acl<wbr>Role<wbr>Node<wbr>Identity<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of node identities that should be applied to the role.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_policies_csharp">
 <a href="#state_policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
 </span>
@@ -736,8 +779,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aclroleserviceidentity">List&lt;Acl<wbr>Role<wbr>Service<wbr>Identity<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of service identities that should
-be applied to the role.
+    <dd>{{% md %}}The list of service identities that should be applied to the role.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -771,6 +813,15 @@ be applied to the role.
     <dd>{{% md %}}The namespace to create the role within.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_nodeidentities_go">
+<a href="#state_nodeidentities_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aclrolenodeidentity">[]Acl<wbr>Role<wbr>Node<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The list of node identities that should be applied to the role.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_policies_go">
 <a href="#state_policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
 </span>
@@ -786,8 +837,7 @@ be applied to the role.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aclroleserviceidentity">[]Acl<wbr>Role<wbr>Service<wbr>Identity<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The list of service identities that should
-be applied to the role.
+    <dd>{{% md %}}The list of service identities that should be applied to the role.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -821,6 +871,15 @@ be applied to the role.
     <dd>{{% md %}}The namespace to create the role within.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_nodeidentities_nodejs">
+<a href="#state_nodeidentities_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aclrolenodeidentity">Acl<wbr>Role<wbr>Node<wbr>Identity<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of node identities that should be applied to the role.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_policies_nodejs">
 <a href="#state_policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
 </span>
@@ -836,8 +895,7 @@ be applied to the role.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aclroleserviceidentity">Acl<wbr>Role<wbr>Service<wbr>Identity<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of service identities that should
-be applied to the role.
+    <dd>{{% md %}}The list of service identities that should be applied to the role.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -871,6 +929,15 @@ be applied to the role.
     <dd>{{% md %}}The namespace to create the role within.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_node_identities_python">
+<a href="#state_node_identities_python" style="color: inherit; text-decoration: inherit;">node_<wbr>identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aclrolenodeidentity">Sequence[Acl<wbr>Role<wbr>Node<wbr>Identity<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of node identities that should be applied to the role.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_policies_python">
 <a href="#state_policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
 </span>
@@ -886,8 +953,7 @@ be applied to the role.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aclroleserviceidentity">Sequence[Acl<wbr>Role<wbr>Service<wbr>Identity<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of service identities that should
-be applied to the role.
+    <dd>{{% md %}}The list of service identities that should be applied to the role.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -899,6 +965,96 @@ be applied to the role.
 ## Supporting Types
 
 
+
+<h4 id="aclrolenodeidentity">Acl<wbr>Role<wbr>Node<wbr>Identity</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="datacenter_csharp">
+<a href="#datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The datacenter of the node.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="nodename_csharp">
+<a href="#nodename_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the node.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="datacenter_go">
+<a href="#datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The datacenter of the node.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="nodename_go">
+<a href="#nodename_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the node.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="datacenter_nodejs">
+<a href="#datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The datacenter of the node.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="nodename_nodejs">
+<a href="#nodename_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the node.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="datacenter_python">
+<a href="#datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The datacenter of the node.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="node_name_python">
+<a href="#node_name_python" style="color: inherit; text-decoration: inherit;">node_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the node.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="aclroleserviceidentity">Acl<wbr>Role<wbr>Service<wbr>Identity</h4>
 

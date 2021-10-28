@@ -166,10 +166,13 @@ const test = new consul.AclToken("test", {
              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
              <span class="nx">accessor_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">expiration_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">local</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">node_identities</span><span class="p">:</span> <span class="nx">Optional[Sequence[AclTokenNodeIdentityArgs]]</span> = None<span class="p">,</span>
              <span class="nx">policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
-             <span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span>
+             <span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+             <span class="nx">service_identities</span><span class="p">:</span> <span class="nx">Optional[Sequence[AclTokenServiceIdentityArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">AclToken</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[AclTokenArgs]</a></span> = None<span class="p">,</span>
@@ -318,6 +321,15 @@ generate a random uuid.
     <dd>{{% md %}}The description of the token.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="expirationtime_csharp">
+<a href="#expirationtime_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If set this represents the point after which a token should be considered revoked and is eligible for destruction.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="local_csharp">
 <a href="#local_csharp" style="color: inherit; text-decoration: inherit;">Local</a>
 </span>
@@ -336,6 +348,15 @@ generate a random uuid.
     <dd>{{% md %}}The namespace to create the token within.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="nodeidentities_csharp">
+<a href="#nodeidentities_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#acltokennodeidentity">List&lt;Acl<wbr>Token<wbr>Node<wbr>Identity<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of node identities that should be applied to the token.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="policies_csharp">
 <a href="#policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
 </span>
@@ -352,6 +373,15 @@ generate a random uuid.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of roles attached to the token.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceidentities_csharp">
+<a href="#serviceidentities_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#acltokenserviceidentity">List&lt;Acl<wbr>Token<wbr>Service<wbr>Identity<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of service identities that should be applied to the token.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -377,6 +407,15 @@ generate a random uuid.
     <dd>{{% md %}}The description of the token.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="expirationtime_go">
+<a href="#expirationtime_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If set this represents the point after which a token should be considered revoked and is eligible for destruction.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="local_go">
 <a href="#local_go" style="color: inherit; text-decoration: inherit;">Local</a>
 </span>
@@ -395,6 +434,15 @@ generate a random uuid.
     <dd>{{% md %}}The namespace to create the token within.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="nodeidentities_go">
+<a href="#nodeidentities_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#acltokennodeidentity">[]Acl<wbr>Token<wbr>Node<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The list of node identities that should be applied to the token.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="policies_go">
 <a href="#policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
 </span>
@@ -411,6 +459,15 @@ generate a random uuid.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of roles attached to the token.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceidentities_go">
+<a href="#serviceidentities_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#acltokenserviceidentity">[]Acl<wbr>Token<wbr>Service<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The list of service identities that should be applied to the token.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -436,6 +493,15 @@ generate a random uuid.
     <dd>{{% md %}}The description of the token.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="expirationtime_nodejs">
+<a href="#expirationtime_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If set this represents the point after which a token should be considered revoked and is eligible for destruction.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="local_nodejs">
 <a href="#local_nodejs" style="color: inherit; text-decoration: inherit;">local</a>
 </span>
@@ -454,6 +520,15 @@ generate a random uuid.
     <dd>{{% md %}}The namespace to create the token within.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="nodeidentities_nodejs">
+<a href="#nodeidentities_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#acltokennodeidentity">Acl<wbr>Token<wbr>Node<wbr>Identity<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of node identities that should be applied to the token.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="policies_nodejs">
 <a href="#policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
 </span>
@@ -470,6 +545,15 @@ generate a random uuid.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of roles attached to the token.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceidentities_nodejs">
+<a href="#serviceidentities_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#acltokenserviceidentity">Acl<wbr>Token<wbr>Service<wbr>Identity<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of service identities that should be applied to the token.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -495,6 +579,15 @@ generate a random uuid.
     <dd>{{% md %}}The description of the token.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="expiration_time_python">
+<a href="#expiration_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}If set this represents the point after which a token should be considered revoked and is eligible for destruction.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="local_python">
 <a href="#local_python" style="color: inherit; text-decoration: inherit;">local</a>
 </span>
@@ -513,6 +606,15 @@ generate a random uuid.
     <dd>{{% md %}}The namespace to create the token within.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="node_identities_python">
+<a href="#node_identities_python" style="color: inherit; text-decoration: inherit;">node_<wbr>identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#acltokennodeidentity">Sequence[Acl<wbr>Token<wbr>Node<wbr>Identity<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of node identities that should be applied to the token.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="policies_python">
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
 </span>
@@ -529,6 +631,15 @@ generate a random uuid.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of roles attached to the token.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="service_identities_python">
+<a href="#service_identities_python" style="color: inherit; text-decoration: inherit;">service_<wbr>identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#acltokenserviceidentity">Sequence[Acl<wbr>Token<wbr>Service<wbr>Identity<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of service identities that should be applied to the token.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -605,10 +716,13 @@ Get an existing AclToken resource's state with the given name, ID, and optional 
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">accessor_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">expiration_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">local</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">node_identities</span><span class="p">:</span> <span class="nx">Optional[Sequence[AclTokenNodeIdentityArgs]]</span> = None<span class="p">,</span>
         <span class="nx">policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
-        <span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> AclToken</code></pre></div>
+        <span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">service_identities</span><span class="p">:</span> <span class="nx">Optional[Sequence[AclTokenServiceIdentityArgs]]</span> = None<span class="p">) -&gt;</span> AclToken</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -740,6 +854,15 @@ generate a random uuid.
     <dd>{{% md %}}The description of the token.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_expirationtime_csharp">
+<a href="#state_expirationtime_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If set this represents the point after which a token should be considered revoked and is eligible for destruction.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_local_csharp">
 <a href="#state_local_csharp" style="color: inherit; text-decoration: inherit;">Local</a>
 </span>
@@ -758,6 +881,15 @@ generate a random uuid.
     <dd>{{% md %}}The namespace to create the token within.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_nodeidentities_csharp">
+<a href="#state_nodeidentities_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#acltokennodeidentity">List&lt;Acl<wbr>Token<wbr>Node<wbr>Identity<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of node identities that should be applied to the token.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_policies_csharp">
 <a href="#state_policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
 </span>
@@ -774,6 +906,15 @@ generate a random uuid.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of roles attached to the token.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_serviceidentities_csharp">
+<a href="#state_serviceidentities_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#acltokenserviceidentity">List&lt;Acl<wbr>Token<wbr>Service<wbr>Identity<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of service identities that should be applied to the token.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -799,6 +940,15 @@ generate a random uuid.
     <dd>{{% md %}}The description of the token.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_expirationtime_go">
+<a href="#state_expirationtime_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If set this represents the point after which a token should be considered revoked and is eligible for destruction.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_local_go">
 <a href="#state_local_go" style="color: inherit; text-decoration: inherit;">Local</a>
 </span>
@@ -817,6 +967,15 @@ generate a random uuid.
     <dd>{{% md %}}The namespace to create the token within.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_nodeidentities_go">
+<a href="#state_nodeidentities_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#acltokennodeidentity">[]Acl<wbr>Token<wbr>Node<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The list of node identities that should be applied to the token.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_policies_go">
 <a href="#state_policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
 </span>
@@ -833,6 +992,15 @@ generate a random uuid.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of roles attached to the token.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_serviceidentities_go">
+<a href="#state_serviceidentities_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#acltokenserviceidentity">[]Acl<wbr>Token<wbr>Service<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The list of service identities that should be applied to the token.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -858,6 +1026,15 @@ generate a random uuid.
     <dd>{{% md %}}The description of the token.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_expirationtime_nodejs">
+<a href="#state_expirationtime_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If set this represents the point after which a token should be considered revoked and is eligible for destruction.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_local_nodejs">
 <a href="#state_local_nodejs" style="color: inherit; text-decoration: inherit;">local</a>
 </span>
@@ -876,6 +1053,15 @@ generate a random uuid.
     <dd>{{% md %}}The namespace to create the token within.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_nodeidentities_nodejs">
+<a href="#state_nodeidentities_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#acltokennodeidentity">Acl<wbr>Token<wbr>Node<wbr>Identity<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of node identities that should be applied to the token.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_policies_nodejs">
 <a href="#state_policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
 </span>
@@ -892,6 +1078,15 @@ generate a random uuid.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of roles attached to the token.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_serviceidentities_nodejs">
+<a href="#state_serviceidentities_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#acltokenserviceidentity">Acl<wbr>Token<wbr>Service<wbr>Identity<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of service identities that should be applied to the token.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -917,6 +1112,15 @@ generate a random uuid.
     <dd>{{% md %}}The description of the token.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_expiration_time_python">
+<a href="#state_expiration_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}If set this represents the point after which a token should be considered revoked and is eligible for destruction.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_local_python">
 <a href="#state_local_python" style="color: inherit; text-decoration: inherit;">local</a>
 </span>
@@ -935,6 +1139,15 @@ generate a random uuid.
     <dd>{{% md %}}The namespace to create the token within.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_node_identities_python">
+<a href="#state_node_identities_python" style="color: inherit; text-decoration: inherit;">node_<wbr>identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#acltokennodeidentity">Sequence[Acl<wbr>Token<wbr>Node<wbr>Identity<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of node identities that should be applied to the token.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_policies_python">
 <a href="#state_policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
 </span>
@@ -951,6 +1164,15 @@ generate a random uuid.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of roles attached to the token.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_service_identities_python">
+<a href="#state_service_identities_python" style="color: inherit; text-decoration: inherit;">service_<wbr>identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#acltokenserviceidentity">Sequence[Acl<wbr>Token<wbr>Service<wbr>Identity<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of service identities that should be applied to the token.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -958,6 +1180,190 @@ generate a random uuid.
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="acltokennodeidentity">Acl<wbr>Token<wbr>Node<wbr>Identity</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="datacenter_csharp">
+<a href="#datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The datacenter of the node.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="nodename_csharp">
+<a href="#nodename_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the node.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="datacenter_go">
+<a href="#datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The datacenter of the node.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="nodename_go">
+<a href="#nodename_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the node.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="datacenter_nodejs">
+<a href="#datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The datacenter of the node.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="nodename_nodejs">
+<a href="#nodename_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the node.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="datacenter_python">
+<a href="#datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The datacenter of the node.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="node_name_python">
+<a href="#node_name_python" style="color: inherit; text-decoration: inherit;">node_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the node.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="acltokenserviceidentity">Acl<wbr>Token<wbr>Service<wbr>Identity</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="servicename_csharp">
+<a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datacenters_csharp">
+<a href="#datacenters_csharp" style="color: inherit; text-decoration: inherit;">Datacenters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of datacenters the policy is valid within.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="servicename_go">
+<a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datacenters_go">
+<a href="#datacenters_go" style="color: inherit; text-decoration: inherit;">Datacenters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The list of datacenters the policy is valid within.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="servicename_nodejs">
+<a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datacenters_nodejs">
+<a href="#datacenters_nodejs" style="color: inherit; text-decoration: inherit;">datacenters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The list of datacenters the policy is valid within.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="service_name_python">
+<a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datacenters_python">
+<a href="#datacenters_python" style="color: inherit; text-decoration: inherit;">datacenters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The list of datacenters the policy is valid within.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 ## Import
 
 
