@@ -61,7 +61,3 @@ ensure_cloned "${component}"
 ./scripts/gen_resource_docs.sh "${component}"
 ./scripts/gen_package_metadata.sh "${component}" "" "" "Paul Stack" "GCP Global CloudRun" "" true
 
-component="run-my-darn-container"
-ensure_cloned "${component}"
-./scripts/gen_resource_docs.sh "${component}" true "" "/schema.json"
-./scripts/gen_package_metadata.sh "${component}" "/schema.json" "" "Lee Briggs" "" "infrastructure" true
