@@ -108,7 +108,7 @@ const test = pulumi.output(consul.getAclToken({
     accessorId: "00000000-0000-0000-0000-000000000002",
 }));
 
-export const consulAclPolicies = test.policies!;
+export const consulAclPolicies = test.policies;
 ```
 
 
@@ -135,10 +135,7 @@ export const consulAclPolicies = test.policies!;
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_acl_token(</span><span class="nx">accessor_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                  <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                  <span class="nx">local</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                   <span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                  <span class="nx">policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetAclTokenPolicy]]</span> = None<span class="p">,</span>
                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAclTokenResult</code></pre></div>
 {{% /choosable %}}
 
@@ -174,24 +171,6 @@ The following arguments are supported:
     <dd>{{% md %}}The accessor ID of the ACL token.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="description_csharp">
-<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The description of the ACL token.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="local_csharp">
-<a href="#local_csharp" style="color: inherit; text-decoration: inherit;">Local</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the ACL token is local to the datacenter it was created within.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
 </span>
@@ -199,16 +178,6 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to lookup the ACL token.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="policies_csharp">
-<a href="#policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getacltokenpolicy">List&lt;Get<wbr>Acl<wbr>Token<wbr>Policy&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}A list of policies associated with the ACL token. Each entry has
-an `id` and a `name` attribute.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -224,24 +193,6 @@ an `id` and a `name` attribute.
     <dd>{{% md %}}The accessor ID of the ACL token.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="description_go">
-<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The description of the ACL token.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="local_go">
-<a href="#local_go" style="color: inherit; text-decoration: inherit;">Local</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the ACL token is local to the datacenter it was created within.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
 </span>
@@ -249,16 +200,6 @@ an `id` and a `name` attribute.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to lookup the ACL token.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="policies_go">
-<a href="#policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getacltokenpolicy">[]Get<wbr>Acl<wbr>Token<wbr>Policy</a></span>
-    </dt>
-    <dd>{{% md %}}A list of policies associated with the ACL token. Each entry has
-an `id` and a `name` attribute.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -274,24 +215,6 @@ an `id` and a `name` attribute.
     <dd>{{% md %}}The accessor ID of the ACL token.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="description_nodejs">
-<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The description of the ACL token.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="local_nodejs">
-<a href="#local_nodejs" style="color: inherit; text-decoration: inherit;">local</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Whether the ACL token is local to the datacenter it was created within.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
@@ -299,16 +222,6 @@ an `id` and a `name` attribute.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to lookup the ACL token.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="policies_nodejs">
-<a href="#policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getacltokenpolicy">Get<wbr>Acl<wbr>Token<wbr>Policy[]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of policies associated with the ACL token. Each entry has
-an `id` and a `name` attribute.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -324,24 +237,6 @@ an `id` and a `name` attribute.
     <dd>{{% md %}}The accessor ID of the ACL token.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="description_python">
-<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The description of the ACL token.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="local_python">
-<a href="#local_python" style="color: inherit; text-decoration: inherit;">local</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the ACL token is local to the datacenter it was created within.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
@@ -349,16 +244,6 @@ an `id` and a `name` attribute.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace to lookup the ACL token.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="policies_python">
-<a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getacltokenpolicy">Sequence[Get<wbr>Acl<wbr>Token<wbr>Policy]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of policies associated with the ACL token. Each entry has
-an `id` and a `name` attribute.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -382,15 +267,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -398,6 +274,24 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the ACL token.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="expirationtime_csharp">
+<a href="#expirationtime_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If set this represents the point after which a token should be considered revoked and is eligible for destruction.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="local_csharp">
@@ -409,13 +303,14 @@ The following output properties are available:
     <dd>{{% md %}}Whether the ACL token is local to the datacenter it was created within.
 {{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="namespace_csharp">
-<a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
+        <span id="nodeidentities_csharp">
+<a href="#nodeidentities_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#getacltokennodeidentity">List&lt;Get<wbr>Acl<wbr>Token<wbr>Node<wbr>Identity&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The list of node identities attached to the token. Each entry has a `node_name` and a `datacenter` attributes.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policies_csharp">
 <a href="#policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -423,9 +318,34 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getacltokenpolicy">List&lt;Get<wbr>Acl<wbr>Token<wbr>Policy&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of policies associated with the ACL token. Each entry has
-an `id` and a `name` attribute.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of policies associated with the ACL token. Each entry has an `id` and a `name` attribute.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="roles_csharp">
+<a href="#roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getacltokenrole">List&lt;Get<wbr>Acl<wbr>Token<wbr>Role&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of roles attached to the token.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="serviceidentities_csharp">
+<a href="#serviceidentities_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getacltokenserviceidentity">List&lt;Get<wbr>Acl<wbr>Token<wbr>Service<wbr>Identity&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of service identities attached to the token. Each entry has a `service_name` and a `datacenters` attribute.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="namespace_csharp">
+<a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -439,15 +359,6 @@ an `id` and a `name` attribute.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -455,6 +366,24 @@ an `id` and a `name` attribute.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the ACL token.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="expirationtime_go">
+<a href="#expirationtime_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If set this represents the point after which a token should be considered revoked and is eligible for destruction.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="local_go">
@@ -466,13 +395,14 @@ an `id` and a `name` attribute.
     <dd>{{% md %}}Whether the ACL token is local to the datacenter it was created within.
 {{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="namespace_go">
-<a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
+        <span id="nodeidentities_go">
+<a href="#nodeidentities_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#getacltokennodeidentity">[]Get<wbr>Acl<wbr>Token<wbr>Node<wbr>Identity</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The list of node identities attached to the token. Each entry has a `node_name` and a `datacenter` attributes.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policies_go">
 <a href="#policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -480,9 +410,34 @@ an `id` and a `name` attribute.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getacltokenpolicy">[]Get<wbr>Acl<wbr>Token<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}A list of policies associated with the ACL token. Each entry has
-an `id` and a `name` attribute.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of policies associated with the ACL token. Each entry has an `id` and a `name` attribute.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="roles_go">
+<a href="#roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getacltokenrole">[]Get<wbr>Acl<wbr>Token<wbr>Role</a></span>
+    </dt>
+    <dd>{{% md %}}The list of roles attached to the token.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="serviceidentities_go">
+<a href="#serviceidentities_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getacltokenserviceidentity">[]Get<wbr>Acl<wbr>Token<wbr>Service<wbr>Identity</a></span>
+    </dt>
+    <dd>{{% md %}}The list of service identities attached to the token. Each entry has a `service_name` and a `datacenters` attribute.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="namespace_go">
+<a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -496,15 +451,6 @@ an `id` and a `name` attribute.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -512,6 +458,24 @@ an `id` and a `name` attribute.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the ACL token.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="expirationtime_nodejs">
+<a href="#expirationtime_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If set this represents the point after which a token should be considered revoked and is eligible for destruction.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="local_nodejs">
@@ -523,13 +487,14 @@ an `id` and a `name` attribute.
     <dd>{{% md %}}Whether the ACL token is local to the datacenter it was created within.
 {{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="namespace_nodejs">
-<a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
+        <span id="nodeidentities_nodejs">
+<a href="#nodeidentities_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#getacltokennodeidentity">Get<wbr>Acl<wbr>Token<wbr>Node<wbr>Identity[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The list of node identities attached to the token. Each entry has a `node_name` and a `datacenter` attributes.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policies_nodejs">
 <a href="#policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -537,9 +502,34 @@ an `id` and a `name` attribute.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getacltokenpolicy">Get<wbr>Acl<wbr>Token<wbr>Policy[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of policies associated with the ACL token. Each entry has
-an `id` and a `name` attribute.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of policies associated with the ACL token. Each entry has an `id` and a `name` attribute.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="roles_nodejs">
+<a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getacltokenrole">Get<wbr>Acl<wbr>Token<wbr>Role[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of roles attached to the token.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="serviceidentities_nodejs">
+<a href="#serviceidentities_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getacltokenserviceidentity">Get<wbr>Acl<wbr>Token<wbr>Service<wbr>Identity[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of service identities attached to the token. Each entry has a `service_name` and a `datacenters` attribute.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="namespace_nodejs">
+<a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -553,15 +543,6 @@ an `id` and a `name` attribute.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -569,6 +550,24 @@ an `id` and a `name` attribute.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the ACL token.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="expiration_time_python">
+<a href="#expiration_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}If set this represents the point after which a token should be considered revoked and is eligible for destruction.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="local_python">
@@ -580,13 +579,14 @@ an `id` and a `name` attribute.
     <dd>{{% md %}}Whether the ACL token is local to the datacenter it was created within.
 {{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="namespace_python">
-<a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
+        <span id="node_identities_python">
+<a href="#node_identities_python" style="color: inherit; text-decoration: inherit;">node_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#getacltokennodeidentity">Sequence[Get<wbr>Acl<wbr>Token<wbr>Node<wbr>Identity]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The list of node identities attached to the token. Each entry has a `node_name` and a `datacenter` attributes.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policies_python">
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -594,9 +594,34 @@ an `id` and a `name` attribute.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getacltokenpolicy">Sequence[Get<wbr>Acl<wbr>Token<wbr>Policy]</a></span>
     </dt>
-    <dd>{{% md %}}A list of policies associated with the ACL token. Each entry has
-an `id` and a `name` attribute.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of policies associated with the ACL token. Each entry has an `id` and a `name` attribute.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="roles_python">
+<a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getacltokenrole">Sequence[Get<wbr>Acl<wbr>Token<wbr>Role]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of roles attached to the token.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="service_identities_python">
+<a href="#service_identities_python" style="color: inherit; text-decoration: inherit;">service_<wbr>identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getacltokenserviceidentity">Sequence[Get<wbr>Acl<wbr>Token<wbr>Service<wbr>Identity]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of service identities attached to the token. Each entry has a `service_name` and a `datacenters` attribute.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="namespace_python">
+<a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -604,6 +629,90 @@ an `id` and a `name` attribute.
 
 ## Supporting Types
 
+
+<h4 id="getacltokennodeidentity">Get<wbr>Acl<wbr>Token<wbr>Node<wbr>Identity</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="datacenter_csharp">
+<a href="#datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="nodename_csharp">
+<a href="#nodename_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="datacenter_go">
+<a href="#datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="nodename_go">
+<a href="#nodename_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="datacenter_nodejs">
+<a href="#datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="nodename_nodejs">
+<a href="#nodename_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="datacenter_python">
+<a href="#datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="node_name_python">
+<a href="#node_name_python" style="color: inherit; text-decoration: inherit;">node_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="getacltokenpolicy">Get<wbr>Acl<wbr>Token<wbr>Policy</h4>
 
@@ -682,6 +791,174 @@ an `id` and a `name` attribute.
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getacltokenrole">Get<wbr>Acl<wbr>Token<wbr>Role</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getacltokenserviceidentity">Get<wbr>Acl<wbr>Token<wbr>Service<wbr>Identity</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="datacenters_csharp">
+<a href="#datacenters_csharp" style="color: inherit; text-decoration: inherit;">Datacenters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="servicename_csharp">
+<a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="datacenters_go">
+<a href="#datacenters_go" style="color: inherit; text-decoration: inherit;">Datacenters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="servicename_go">
+<a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="datacenters_nodejs">
+<a href="#datacenters_nodejs" style="color: inherit; text-decoration: inherit;">datacenters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="servicename_nodejs">
+<a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="datacenters_python">
+<a href="#datacenters_python" style="color: inherit; text-decoration: inherit;">datacenters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="service_name_python">
+<a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
