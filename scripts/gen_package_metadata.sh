@@ -35,10 +35,6 @@ COMPONENT=${7:-}
 METADATA_OUT_DIR=../../../registry/themes/default/data/registry/packages
 TOOL_RESDOCGEN="./tools/resourcedocsgen/"
 
-if [ -z "${TITLE:-}" ]; then
-    TITLE=${REPO_OVERRIDE}
-fi
-
 if [ -z "${REPO_OVERRIDE:-}" ]; then
   echo "Specify the repo name. Usage is gen_package_metadata.sh <METADATA_OUT_DIR> <REPO_OVERRIDE> <VERSION> [PUBLISHER] [TITLE] [CATEGORY]."
   exit 1
