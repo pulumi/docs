@@ -46,6 +46,7 @@ Explore the resources and functions of the f5bigip.ltm module.
     <li><a href="getirule" title="GetIrule"><span class="api-symbol api-symbol--function"></span>GetIrule</a></li>
     <li><a href="getmonitor" title="GetMonitor"><span class="api-symbol api-symbol--function"></span>GetMonitor</a></li>
     <li><a href="getnode" title="GetNode"><span class="api-symbol api-symbol--function"></span>GetNode</a></li>
+    <li><a href="getpolicy" title="GetPolicy"><span class="api-symbol api-symbol--function"></span>GetPolicy</a></li>
     <li><a href="getpool" title="GetPool"><span class="api-symbol api-symbol--function"></span>GetPool</a></li>
 </ul>
 
@@ -58,6 +59,6 @@ Explore the resources and functions of the f5bigip.ltm module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/F5Networks/terraform-provider-bigip).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.4.1</dd>
+	<dd>3.5.0</dd>
 </dl>
 
