@@ -26,7 +26,8 @@ In addition to the common properties, the following arguments are supported:
      + `type` - (Required) Must be either `S3BucketAuthentication` or `AWSRoleBasedAuthentication`.
      + `access_key` - (Required) Your AWS access key if using type `S3BucketAuthentication`.
      + `secret_key` - (Required) Your AWS secret key if using type `S3BucketAuthentication`.
-     + `role_arn` - (Required) Your AWS role ARN if using type `AWSRoleBasedAuthentication`.
+     + `role_arn` - (Required) Your AWS role ARN if using type `AWSRoleBasedAuthentication`.This is not supported for AWS China regions.
+     + `region` - (Optional) Your AWS Bucket region.
  - `path` - (Required) The location to scan for new data.
      + `type` - (Required) type of polling source. This has to be `S3BucketPathExpression` for `S3 Audit source`.
      + `bucket_name` - (Required) The name of the bucket.
@@ -2045,6 +2046,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="rolearn_csharp">
 <a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
 </span>
@@ -2075,6 +2084,14 @@ The following state arguments are supported:
             title="Optional">
         <span id="accesskey_go">
 <a href="#accesskey_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2117,6 +2134,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="rolearn_nodejs">
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
@@ -2147,6 +2172,14 @@ The following state arguments are supported:
             title="Optional">
         <span id="access_key_python">
 <a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

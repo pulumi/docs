@@ -46,6 +46,8 @@ The following attributes are exported:
 
 - `id` - Unique identifier for the SAML Configuration.
 - `certificate` - Authentication Request Signing Certificate for the user.
+- `assertion_consumer_url` - The URL on Sumo Logic where the IdP will redirect to with its authentication response.
+- `entity_id` - A unique identifier that is the intended audience of the SAML assertion.
 
 {{% examples %}}
 
@@ -956,8 +958,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="assertionconsumerurl_csharp">
+<a href="#assertionconsumerurl_csharp" style="color: inherit; text-decoration: inherit;">Assertion<wbr>Consumer<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="certificate_csharp">
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="entityid_csharp">
+<a href="#entityid_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -976,8 +994,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="assertionconsumerurl_go">
+<a href="#assertionconsumerurl_go" style="color: inherit; text-decoration: inherit;">Assertion<wbr>Consumer<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="certificate_go">
 <a href="#certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="entityid_go">
+<a href="#entityid_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -996,8 +1030,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="assertionconsumerurl_nodejs">
+<a href="#assertionconsumerurl_nodejs" style="color: inherit; text-decoration: inherit;">assertion<wbr>Consumer<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="certificate_nodejs">
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="entityid_nodejs">
+<a href="#entityid_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1016,8 +1066,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="assertion_consumer_url_python">
+<a href="#assertion_consumer_url_python" style="color: inherit; text-decoration: inherit;">assertion_<wbr>consumer_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="certificate_python">
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="entity_id_python">
+<a href="#entity_id_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1049,12 +1115,14 @@ Get an existing SamlConfiguration resource's state with the given name, ID, and 
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">assertion_consumer_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">authn_request_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">configuration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">debug_mode</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">disable_requested_authn_context</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">email_attribute</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">entity_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">is_redirect_binding</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">issuer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">logout_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -1179,6 +1247,14 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_assertionconsumerurl_csharp">
+<a href="#state_assertionconsumerurl_csharp" style="color: inherit; text-decoration: inherit;">Assertion<wbr>Consumer<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_authnrequesturl_csharp">
 <a href="#state_authnrequesturl_csharp" style="color: inherit; text-decoration: inherit;">Authn<wbr>Request<wbr>Url</a>
 </span>
@@ -1221,6 +1297,14 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_emailattribute_csharp">
 <a href="#state_emailattribute_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Attribute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_entityid_csharp">
+<a href="#state_entityid_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1327,6 +1411,14 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_assertionconsumerurl_go">
+<a href="#state_assertionconsumerurl_go" style="color: inherit; text-decoration: inherit;">Assertion<wbr>Consumer<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_authnrequesturl_go">
 <a href="#state_authnrequesturl_go" style="color: inherit; text-decoration: inherit;">Authn<wbr>Request<wbr>Url</a>
 </span>
@@ -1369,6 +1461,14 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_emailattribute_go">
 <a href="#state_emailattribute_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Attribute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_entityid_go">
+<a href="#state_entityid_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1475,6 +1575,14 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_assertionconsumerurl_nodejs">
+<a href="#state_assertionconsumerurl_nodejs" style="color: inherit; text-decoration: inherit;">assertion<wbr>Consumer<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_authnrequesturl_nodejs">
 <a href="#state_authnrequesturl_nodejs" style="color: inherit; text-decoration: inherit;">authn<wbr>Request<wbr>Url</a>
 </span>
@@ -1517,6 +1625,14 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_emailattribute_nodejs">
 <a href="#state_emailattribute_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Attribute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_entityid_nodejs">
+<a href="#state_entityid_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1623,6 +1739,14 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_assertion_consumer_url_python">
+<a href="#state_assertion_consumer_url_python" style="color: inherit; text-decoration: inherit;">assertion_<wbr>consumer_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_authn_request_url_python">
 <a href="#state_authn_request_url_python" style="color: inherit; text-decoration: inherit;">authn_<wbr>request_<wbr>url</a>
 </span>
@@ -1665,6 +1789,14 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_email_attribute_python">
 <a href="#state_email_attribute_python" style="color: inherit; text-decoration: inherit;">email_<wbr>attribute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_entity_id_python">
+<a href="#state_entity_id_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

@@ -21,7 +21,7 @@ The following arguments are supported:
 - `description` - (Optional) Description of the dashboard.
 - `folder_id` - (Optional) The identifier of the folder to save the dashboard in. By default it is saved in your
   personal folder.
-- `refresh_interval` - (Optional) Interval of time (in seconds) to automatically refresh the dashboard.
+- `refresh_interval` - (Optional) Interval of time (in seconds) to automatically refresh the dashboard. Valid values are 120,300,900,1800,3600,7200,86400.
 - `theme` - (Optional) Theme of the dashboard.
 - `topology_label_map` - (Block List, Max: 1, Optional) Topology labels for the dashboard. See
   topology label map schema
@@ -207,7 +207,7 @@ class MyStack : Stack
             Title = "Api Health Dashboard",
             Description = "Demo dashboard description",
             FolderId = personalFolder.Apply(personalFolder => personalFolder.Id),
-            RefreshInterval = 60,
+            RefreshInterval = 120,
             Theme = "Dark",
             TimeRange = new SumoLogic.Inputs.DashboardTimeRangeArgs
             {
@@ -544,7 +544,7 @@ api_dashboard = sumologic.Dashboard("api-dashboard",
     title="Api Health Dashboard",
     description="Demo dashboard description",
     folder_id=personal_folder.id,
-    refresh_interval=60,
+    refresh_interval=120,
     theme="Dark",
     time_range=sumologic.DashboardTimeRangeArgs(
         begin_bounded_time_range=sumologic.DashboardTimeRangeBeginBoundedTimeRangeArgs(
@@ -789,7 +789,7 @@ const api_dashboard = new sumologic.Dashboard("api-dashboard", {
     title: "Api Health Dashboard",
     description: "Demo dashboard description",
     folderId: personalFolder.then(personalFolder => personalFolder.id),
-    refreshInterval: 60,
+    refreshInterval: 120,
     theme: "Dark",
     timeRange: {
         beginBoundedTimeRange: {

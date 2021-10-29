@@ -17,14 +17,15 @@ Provides the ability to create, read, delete, update connections.
 
 The following arguments are supported:
 
-- `type` - (Required) Type of connection. Only `WebhookDefinition` is implimented right now.
+- `type` - (Required) Type of connection. Only `WebhookConnection` is implemented right now.
 - `name` - (Required) Name of connection. Name should be a valid alphanumeric value.
 - `description` - (Optional) Description of the connection.
 - `url` - (Required) URL for the webhook connection.
 - `headers` - (Optional) Map of access authorization headers.
 - `custom_headers` - (Optional) Map of custom webhook headers
 - `default_payload` - (Required) Default payload of the webhook.
-- `webhook_type` - (Optional) Type of webhook. Valid values are `AWSLambda`, `Azure`, `Datadog`, `HipChat`, `PagerDuty`, `Slack`, `Webhook`, `NewRelic`, and `MicrosoftTeams`. Default: `Webhook`
+- `connection_subtype` - (Optional) The subtype of the connection. Valid values are `Incident` and `Event`. NOTE: This is only used for the `ServiceNow` webhook type.
+- `webhook_type` - (Optional) Type of webhook. Valid values are `AWSLambda`, `Azure`, `Datadog`, `HipChat`, `PagerDuty`, `Slack`, `Webhook`, `NewRelic`, `MicrosoftTeams`, and `ServiceNow`. Default: `Webhook`
 
 Additional data provided in state
 
@@ -208,6 +209,7 @@ const connection = new sumologic.Connection("connection", {
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Connection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+               <span class="nx">connection_subtype</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">custom_headers</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                <span class="nx">default_payload</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -369,6 +371,14 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="connectionsubtype_csharp">
+<a href="#connectionsubtype_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Subtype</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="customheaders_csharp">
 <a href="#customheaders_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Headers</a>
 </span>
@@ -431,6 +441,14 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
             title="Required">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connectionsubtype_go">
+<a href="#connectionsubtype_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Subtype</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -505,6 +523,14 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="connectionsubtype_nodejs">
+<a href="#connectionsubtype_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Subtype</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="customheaders_nodejs">
 <a href="#customheaders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Headers</a>
 </span>
@@ -567,6 +593,14 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
             title="Required">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connection_subtype_python">
+<a href="#connection_subtype_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>subtype</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -685,6 +719,7 @@ Get an existing Connection resource's state with the given name, ID, and optiona
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">connection_subtype</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">custom_headers</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">default_payload</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -805,6 +840,14 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_connectionsubtype_csharp">
+<a href="#state_connectionsubtype_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Subtype</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_customheaders_csharp">
 <a href="#state_customheaders_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Headers</a>
 </span>
@@ -872,6 +915,14 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_connectionsubtype_go">
+<a href="#state_connectionsubtype_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Subtype</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customheaders_go">
 <a href="#state_customheaders_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Headers</a>
@@ -941,6 +992,14 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_connectionsubtype_nodejs">
+<a href="#state_connectionsubtype_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Subtype</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_customheaders_nodejs">
 <a href="#state_customheaders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Headers</a>
 </span>
@@ -1008,6 +1067,14 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_connection_subtype_python">
+<a href="#state_connection_subtype_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>subtype</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_custom_headers_python">
 <a href="#state_custom_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>headers</a>
