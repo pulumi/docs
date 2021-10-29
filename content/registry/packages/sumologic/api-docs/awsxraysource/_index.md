@@ -2033,6 +2033,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="rolearn_csharp">
 <a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
 </span>
@@ -2063,6 +2071,14 @@ The following state arguments are supported:
             title="Optional">
         <span id="accesskey_go">
 <a href="#accesskey_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2105,6 +2121,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="rolearn_nodejs">
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
@@ -2135,6 +2159,14 @@ The following state arguments are supported:
             title="Optional">
         <span id="access_key_python">
 <a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

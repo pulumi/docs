@@ -20,7 +20,7 @@ The behavior for defining more than one password policy resources is undefined.
 The following arguments are supported:
 
 - `min_length` - (Optional) The minimum length of the password. Defaults to 8.
-- `max_length` - (Optional) The maximum length of the password. Defaults to 128.
+- `max_length` - (Optional) The maximum length of the password. Defaults to 128. (128 is now the only accepted value; other values are no longer supported, and this field may be deprecated in the future.)
 - `must_contain_lowercase` - (Optional) If the password must contain lower case characters. Defaults to true.
 - `must_contain_uppercase` - (Optional) If the password must contain upper case characters. Defaults to true.
 - `must_contain_digits` - (Optional) If the password must contain digits. Defaults to true.

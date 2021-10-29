@@ -63,6 +63,11 @@ class MyStack : Stack
                     FieldName = "FieldName1",
                     FieldType = "boolean",
                 },
+                new SumoLogic.Inputs.LookupTableFieldArgs
+                {
+                    FieldName = "FieldName2",
+                    FieldType = "string",
+                },
             },
             ParentFolderId = "<personal folder id>",
             PrimaryKeys = 
@@ -100,6 +105,10 @@ func main() {
 					FieldName: "FieldName1",
 					FieldType: "boolean",
 				},
+				&sumologic.LookupTableFieldArgs{
+					FieldName: "FieldName2",
+					FieldType: "string",
+				},
 			},
 			ParentFolderId: pulumi.String("<personal folder id>"),
 			PrimaryKeys: pulumi.StringArray{
@@ -128,10 +137,16 @@ import pulumi_sumologic as sumologic
 
 lookup_table = sumologic.LookupTable("lookupTable",
     description="some description",
-    fields=[sumologic.LookupTableFieldArgs(
-        field_name="FieldName1",
-        field_type="boolean",
-    )],
+    fields=[
+        sumologic.LookupTableFieldArgs(
+            field_name="FieldName1",
+            field_type="boolean",
+        ),
+        sumologic.LookupTableFieldArgs(
+            field_name="FieldName2",
+            field_type="string",
+        ),
+    ],
     parent_folder_id="<personal folder id>",
     primary_keys=["FieldName1"],
     size_limit_action="DeleteOldData",
@@ -151,10 +166,16 @@ import * as sumologic from "@pulumi/sumologic";
 
 const lookupTable = new sumologic.LookupTable("lookupTable", {
     description: "some description",
-    fields: [{
-        fieldName: "FieldName1",
-        fieldType: "boolean",
-    }],
+    fields: [
+        {
+            fieldName: "FieldName1",
+            fieldType: "boolean",
+        },
+        {
+            fieldName: "FieldName2",
+            fieldType: "string",
+        },
+    ],
     parentFolderId: "<personal folder id>",
     primaryKeys: ["FieldName1"],
     sizeLimitAction: "DeleteOldData",

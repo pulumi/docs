@@ -14,8 +14,210 @@ no_edit_this_page: true
 
 Provides the ability to create, read, delete, and update [Monitors](https://help.sumologic.com/?cid=10020).
 
-## Example Logs Monitor
+## Monitor Folders
 
+<<<<<<< HEAD
+NOTE: Monitor folders are considered a different resource from Library content folders.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as sumologic from "@pulumi/sumologic";
+
+const tfMonitorFolder1 = new sumologic.MonitorFolder("tf_monitor_folder_1", {
+    description: "a folder for monitors",
+});
+```
+```python
+import pulumi
+import pulumi_sumologic as sumologic
+
+tf_monitor_folder1 = sumologic.MonitorFolder("tfMonitorFolder1", description="a folder for monitors")
+```
+```csharp
+using Pulumi;
+using SumoLogic = Pulumi.SumoLogic;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var tfMonitorFolder1 = new SumoLogic.MonitorFolder("tfMonitorFolder1", new SumoLogic.MonitorFolderArgs
+        {
+            Description = "a folder for monitors",
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-sumologic/sdk/go/sumologic"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := sumologic.NewMonitorFolder(ctx, "tfMonitorFolder1", &sumologic.MonitorFolderArgs{
+			Description: pulumi.String("a folder for monitors"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+=======
+NOTE: Monitor folders are considered a different resource from Library content folders. See [sumologic.MonitorFolder][2] for more details.
+> > > > > > > v2.11.0
+
+## Argument reference
+
+The following arguments are supported:
+
+- `type` - (Optional) The type of object model. Valid value:
+  - `MonitorsLibraryMonitor`
+- `name` - (Required) The name of the monitor. The name must be alphanumeric.
+- `description` - (Required) The description of the monitor.
+- `is_disabled` - (Optional) Whether or not the monitor is disabled. Disabled monitors will not run and will not generate or send notifications.
+- `parent_id` - (Optional) The ID of the Monitor Folder that contains this monitor. Defaults to the root folder.
+- `content_type` - (Optional) The type of the content object. Valid value:
+  - `Monitor`
+- `monitor_type` - (Required) The type of monitor. Valid values:
+  - `Logs`: A logs query monitor.
+  - `Metrics`: A metrics query monitor.
+- `queries` - (Required) All queries from the monitor.
+- `trigger_conditions` - (Required if not using `triggers`) Defines the conditions of when to send notifications. NOTE: `trigger_conditions` supplants the `triggers` argument.
+- `triggers` - (Deprecated) Defines the conditions of when to send notifications.
+- `notifications` - (Optional) The notifications the monitor will send when the respective trigger condition is met.
+- `group_notifications` - (Optional) Whether or not to group notifications for individual items that meet the trigger condition. Defaults to true.
+- `playbook` - (Optional - Beta) Notes such as links and instruction to help you resolve alerts triggered by this monitor. {{Markdown}} supported. It will be enabled only if available for your organization. Please contact your Sumo Logic account team to learn more.
+
+Additional data provided in state:
+
+- `id` - (Computed) The ID for this monitor.
+- `status` - (Computed) The current status for this monitor. Values are:
+  - `Critical`
+  - `Warning`
+  - `MissingData`
+  - `Normal`
+  - `Disabled`
+
+## The `trigger_conditions` block
+
+A `trigger_conditions` block configures conditions for sending notifications.
+### Example
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+```
+```python
+import pulumi
+```
+```csharp
+using Pulumi;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		return nil
+	})
+}
+```
+### Arguments
+A `trigger_conditions` block contains one or more subblocks of the following types:
+- `logs_static_condition`
+- `metrics_static_condition`
+- `logs_outlier_condition`
+- `metrics_outlier_condition`
+- `logs_missing_data_condition`
+- `metrics_missing_data_condition`
+
+Subblocks should be limited to at most 1 missing data condition and at most 1 static / outlier condition.
+
+Here is a summary of arguments for each condition type (fields which are not marked as `Required` are optional):
+#### logs_static_condition
+  - `field`
+  - `critical`
+    - `time_range` (Required)
+    - `alert` (Required)
+      - `threshold`
+      - `threshold_type`
+    - `resolution` (Required)
+      - `threshold`
+      - `threshold_type`
+  - `warning`
+    - `time_range` (Required)
+    - `alert` (Required)
+      - `threshold`
+      - `threshold_type`
+    - `resolution` (Required)
+      - `threshold`
+      - `threshold_type`
+#### metrics_static_condition
+  - `critical`
+    - `time_range` (Required)
+    - `occurrence_type` (Required)
+    - `alert` (Required)
+      - `threshold`
+      - `threshold_type`
+    - `resolution` (Required)
+      - `threshold`
+      - `threshold_type`
+  - `warning`
+    - `time_range` (Required)
+    - `occurrence_type` (Required)
+    - `alert` (Required)
+      - `threshold`
+      - `threshold_type`
+    - `resolution` (Required)
+      - `threshold`
+      - `threshold_type`
+#### logs_outlier_condition
+  - `field`
+  - `direction`
+  - `critical`
+     - `window`
+     - `consecutive`
+     - `threshold`
+  - `warning`
+     - `window`
+     - `consecutive`
+     - `threshold`
+#### metrics_outlier_condition
+  - `direction`
+  - `critical`
+     - `baseline_window`
+     - `threshold`
+  - `warning`
+    - `baseline_window`
+    - `threshold`
+#### logs_missing_data_condition
+  - `time_range` (Required)
+#### metrics_missing_data_condition
+  - `time_range` (Required)
+  - `trigger_source` (Required)
+
+## The `triggers` block
+
+The `triggers` block is deprecated. Please use `trigger_conditions` to specify notification conditions.
+
+Here's an example logs monitor that uses `triggers` to specify trigger conditions:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as sumologic from "@pulumi/sumologic";
@@ -301,713 +503,6 @@ func main() {
 }
 ```
 
-## Example Metrics Monitor
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as sumologic from "@pulumi/sumologic";
-
-const tfMetricsMonitor1 = new sumologic.Monitor("tf_metrics_monitor_1", {
-    contentType: "Monitor",
-    description: "tf metrics monitor",
-    isDisabled: false,
-    monitorType: "Metrics",
-    notifications: [{
-        notification: {
-            connectionType: "Email",
-            messageBody: "Triggered {{TriggerType}} Alert on {{Name}}: {{QueryURL}}",
-            recipients: ["abc@example.com"],
-            subject: "Triggered {{TriggerType}} Alert on Monitor {{Name}}",
-            timeZone: "PST",
-        },
-        runForTriggerTypes: [
-            "Critical",
-            "ResolvedCritical",
-        ],
-    }],
-    queries: [{
-        query: "metric=CPU_Idle _sourceCategory=event-action",
-        rowId: "A",
-    }],
-    triggers: [
-        {
-            detectionMethod: "StaticCondition",
-            occurrenceType: "AtLeastOnce",
-            threshold: 40,
-            thresholdType: "GreaterThanOrEqual",
-            timeRange: "15m",
-            triggerSource: "AnyTimeSeries",
-            triggerType: "Critical",
-        },
-        {
-            detectionMethod: "StaticCondition",
-            occurrenceType: "Always",
-            threshold: 40,
-            thresholdType: "LessThan",
-            timeRange: "15m",
-            triggerSource: "AnyTimeSeries",
-            triggerType: "ResolvedCritical",
-        },
-    ],
-    type: "MonitorsLibraryMonitor",
-});
-```
-```python
-import pulumi
-import pulumi_sumologic as sumologic
-
-tf_metrics_monitor1 = sumologic.Monitor("tfMetricsMonitor1",
-    content_type="Monitor",
-    description="tf metrics monitor",
-    is_disabled=False,
-    monitor_type="Metrics",
-    notifications=[sumologic.MonitorNotificationArgs(
-        notification=sumologic.MonitorNotificationNotificationArgs(
-            connection_type="Email",
-            message_body="Triggered {{TriggerType}} Alert on {{Name}}: {{QueryURL}}",
-            recipients=["abc@example.com"],
-            subject="Triggered {{TriggerType}} Alert on Monitor {{Name}}",
-            time_zone="PST",
-        ),
-        run_for_trigger_types=[
-            "Critical",
-            "ResolvedCritical",
-        ],
-    )],
-    queries=[sumologic.MonitorQueryArgs(
-        query="metric=CPU_Idle _sourceCategory=event-action",
-        row_id="A",
-    )],
-    triggers=[
-        sumologic.MonitorTriggerArgs(
-            detection_method="StaticCondition",
-            occurrence_type="AtLeastOnce",
-            threshold=40,
-            threshold_type="GreaterThanOrEqual",
-            time_range="15m",
-            trigger_source="AnyTimeSeries",
-            trigger_type="Critical",
-        ),
-        sumologic.MonitorTriggerArgs(
-            detection_method="StaticCondition",
-            occurrence_type="Always",
-            threshold=40,
-            threshold_type="LessThan",
-            time_range="15m",
-            trigger_source="AnyTimeSeries",
-            trigger_type="ResolvedCritical",
-        ),
-    ],
-    type="MonitorsLibraryMonitor")
-```
-```csharp
-using Pulumi;
-using SumoLogic = Pulumi.SumoLogic;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var tfMetricsMonitor1 = new SumoLogic.Monitor("tfMetricsMonitor1", new SumoLogic.MonitorArgs
-        {
-            ContentType = "Monitor",
-            Description = "tf metrics monitor",
-            IsDisabled = false,
-            MonitorType = "Metrics",
-            Notifications = 
-            {
-                new SumoLogic.Inputs.MonitorNotificationArgs
-                {
-                    Notification = new SumoLogic.Inputs.MonitorNotificationNotificationArgs
-                    {
-                        ConnectionType = "Email",
-                        MessageBody = "Triggered {{TriggerType}} Alert on {{Name}}: {{QueryURL}}",
-                        Recipients = 
-                        {
-                            "abc@example.com",
-                        },
-                        Subject = "Triggered {{TriggerType}} Alert on Monitor {{Name}}",
-                        TimeZone = "PST",
-                    },
-                    RunForTriggerTypes = 
-                    {
-                        "Critical",
-                        "ResolvedCritical",
-                    },
-                },
-            },
-            Queries = 
-            {
-                new SumoLogic.Inputs.MonitorQueryArgs
-                {
-                    Query = "metric=CPU_Idle _sourceCategory=event-action",
-                    RowId = "A",
-                },
-            },
-            Triggers = 
-            {
-                new SumoLogic.Inputs.MonitorTriggerArgs
-                {
-                    DetectionMethod = "StaticCondition",
-                    OccurrenceType = "AtLeastOnce",
-                    Threshold = 40,
-                    ThresholdType = "GreaterThanOrEqual",
-                    TimeRange = "15m",
-                    TriggerSource = "AnyTimeSeries",
-                    TriggerType = "Critical",
-                },
-                new SumoLogic.Inputs.MonitorTriggerArgs
-                {
-                    DetectionMethod = "StaticCondition",
-                    OccurrenceType = "Always",
-                    Threshold = 40,
-                    ThresholdType = "LessThan",
-                    TimeRange = "15m",
-                    TriggerSource = "AnyTimeSeries",
-                    TriggerType = "ResolvedCritical",
-                },
-            },
-            Type = "MonitorsLibraryMonitor",
-        });
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-sumologic/sdk/go/sumologic"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := sumologic.NewMonitor(ctx, "tfMetricsMonitor1", &sumologic.MonitorArgs{
-			ContentType: pulumi.String("Monitor"),
-			Description: pulumi.String("tf metrics monitor"),
-			IsDisabled:  pulumi.Bool(false),
-			MonitorType: pulumi.String("Metrics"),
-			Notifications: sumologic.MonitorNotificationArray{
-				&sumologic.MonitorNotificationArgs{
-					Notification: &sumologic.MonitorNotificationNotificationArgs{
-						ConnectionType: pulumi.String("Email"),
-						MessageBody:    pulumi.String("Triggered {{TriggerType}} Alert on {{Name}}: {{QueryURL}}"),
-						Recipients: pulumi.StringArray{
-							pulumi.String("abc@example.com"),
-						},
-						Subject:  pulumi.String("Triggered {{TriggerType}} Alert on Monitor {{Name}}"),
-						TimeZone: pulumi.String("PST"),
-					},
-					RunForTriggerTypes: pulumi.StringArray{
-						pulumi.String("Critical"),
-						pulumi.String("ResolvedCritical"),
-					},
-				},
-			},
-			Queries: sumologic.MonitorQueryArray{
-				&sumologic.MonitorQueryArgs{
-					Query: pulumi.String("metric=CPU_Idle _sourceCategory=event-action"),
-					RowId: pulumi.String("A"),
-				},
-			},
-			Triggers: sumologic.MonitorTriggerArray{
-				&sumologic.MonitorTriggerArgs{
-					DetectionMethod: pulumi.String("StaticCondition"),
-					OccurrenceType:  pulumi.String("AtLeastOnce"),
-					Threshold:       pulumi.Float64(40),
-					ThresholdType:   pulumi.String("GreaterThanOrEqual"),
-					TimeRange:       pulumi.String("15m"),
-					TriggerSource:   pulumi.String("AnyTimeSeries"),
-					TriggerType:     pulumi.String("Critical"),
-				},
-				&sumologic.MonitorTriggerArgs{
-					DetectionMethod: pulumi.String("StaticCondition"),
-					OccurrenceType:  pulumi.String("Always"),
-					Threshold:       pulumi.Float64(40),
-					ThresholdType:   pulumi.String("LessThan"),
-					TimeRange:       pulumi.String("15m"),
-					TriggerSource:   pulumi.String("AnyTimeSeries"),
-					TriggerType:     pulumi.String("ResolvedCritical"),
-				},
-			},
-			Type: pulumi.String("MonitorsLibraryMonitor"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-## Example Logs Monitor with Webhook Connection and Folder
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as sumologic from "@pulumi/sumologic";
-
-const tfMonitorFolder1 = new sumologic.MonitorFolder("tfMonitorFolder1", {description: "A folder for Monitors"});
-const examplePagerdutyConnection = new sumologic.Connection("examplePagerdutyConnection", {
-    description: "PagerDuty connection for notifications from Monitors",
-    type: "WebhookConnection",
-    webhookType: "PagerDuty",
-    url: "https://events.pagerduty.com/",
-    defaultPayload: `{
-  "service_key": "pagerduty_api_integration_key",
-  "event_type": "trigger",
-  "description": "PagerDuty connection for notifications",
-  "client": "Sumo Logic",
-  "client_url": ""
-}
-`,
-});
-const tfLogsMonitor2 = new sumologic.Monitor("tfLogsMonitor2", {
-    description: "logs monitor with webhook",
-    type: "MonitorsLibraryMonitor",
-    parentId: tfMonitorFolder1.id,
-    isDisabled: false,
-    contentType: "Monitor",
-    monitorType: "Logs",
-    queries: [{
-        rowId: "A",
-        query: "_sourceCategory=event-action info",
-    }],
-    triggers: [
-        {
-            thresholdType: "GreaterThan",
-            threshold: 40,
-            timeRange: "15m",
-            occurrenceType: "ResultCount",
-            triggerSource: "AllResults",
-            triggerType: "Critical",
-            detectionMethod: "StaticCondition",
-        },
-        {
-            thresholdType: "LessThanOrEqual",
-            threshold: 40,
-            timeRange: "15m",
-            occurrenceType: "ResultCount",
-            triggerSource: "AllResults",
-            triggerType: "ResolvedCritical",
-            detectionMethod: "StaticCondition",
-        },
-    ],
-    notifications: [
-        {
-            notification: {
-                connectionType: "Email",
-                recipients: ["abc@example.com"],
-                subject: "Monitor Alert: {{TriggerType}} on {{Name}}",
-                timeZone: "PST",
-                messageBody: "Triggered {{TriggerType}} Alert on {{Name}}: {{QueryURL}}",
-            },
-            runForTriggerTypes: [
-                "Critical",
-                "ResolvedCritical",
-            ],
-        },
-        {
-            notification: {
-                connectionType: "PagerDuty",
-                connectionId: examplePagerdutyConnection.id,
-                payloadOverride: `{
-  "service_key": "your_pagerduty_api_integration_key",
-  "event_type": "trigger",
-  "description": "Alert: Triggered {{TriggerType}} for Monitor {{Name}}",
-  "client": "Sumo Logic",
-  "client_url": "{{QueryUrl}}"
-}
-`,
-            },
-            runForTriggerTypes: [
-                "Critical",
-                "ResolvedCritical",
-            ],
-        },
-    ],
-});
-```
-```python
-import pulumi
-import pulumi_sumologic as sumologic
-
-tf_monitor_folder1 = sumologic.MonitorFolder("tfMonitorFolder1", description="A folder for Monitors")
-example_pagerduty_connection = sumologic.Connection("examplePagerdutyConnection",
-    description="PagerDuty connection for notifications from Monitors",
-    type="WebhookConnection",
-    webhook_type="PagerDuty",
-    url="https://events.pagerduty.com/",
-    default_payload="""{
-  "service_key": "pagerduty_api_integration_key",
-  "event_type": "trigger",
-  "description": "PagerDuty connection for notifications",
-  "client": "Sumo Logic",
-  "client_url": ""
-}
-""")
-tf_logs_monitor2 = sumologic.Monitor("tfLogsMonitor2",
-    description="logs monitor with webhook",
-    type="MonitorsLibraryMonitor",
-    parent_id=tf_monitor_folder1.id,
-    is_disabled=False,
-    content_type="Monitor",
-    monitor_type="Logs",
-    queries=[sumologic.MonitorQueryArgs(
-        row_id="A",
-        query="_sourceCategory=event-action info",
-    )],
-    triggers=[
-        sumologic.MonitorTriggerArgs(
-            threshold_type="GreaterThan",
-            threshold=40,
-            time_range="15m",
-            occurrence_type="ResultCount",
-            trigger_source="AllResults",
-            trigger_type="Critical",
-            detection_method="StaticCondition",
-        ),
-        sumologic.MonitorTriggerArgs(
-            threshold_type="LessThanOrEqual",
-            threshold=40,
-            time_range="15m",
-            occurrence_type="ResultCount",
-            trigger_source="AllResults",
-            trigger_type="ResolvedCritical",
-            detection_method="StaticCondition",
-        ),
-    ],
-    notifications=[
-        sumologic.MonitorNotificationArgs(
-            notification=sumologic.MonitorNotificationNotificationArgs(
-                connection_type="Email",
-                recipients=["abc@example.com"],
-                subject="Monitor Alert: {{TriggerType}} on {{Name}}",
-                time_zone="PST",
-                message_body="Triggered {{TriggerType}} Alert on {{Name}}: {{QueryURL}}",
-            ),
-            run_for_trigger_types=[
-                "Critical",
-                "ResolvedCritical",
-            ],
-        ),
-        sumologic.MonitorNotificationArgs(
-            notification=sumologic.MonitorNotificationNotificationArgs(
-                connection_type="PagerDuty",
-                connection_id=example_pagerduty_connection.id,
-                payload_override="""{
-  "service_key": "your_pagerduty_api_integration_key",
-  "event_type": "trigger",
-  "description": "Alert: Triggered {{TriggerType}} for Monitor {{Name}}",
-  "client": "Sumo Logic",
-  "client_url": "{{QueryUrl}}"
-}
-""",
-            ),
-            run_for_trigger_types=[
-                "Critical",
-                "ResolvedCritical",
-            ],
-        ),
-    ])
-```
-```csharp
-using Pulumi;
-using SumoLogic = Pulumi.SumoLogic;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var tfMonitorFolder1 = new SumoLogic.MonitorFolder("tfMonitorFolder1", new SumoLogic.MonitorFolderArgs
-        {
-            Description = "A folder for Monitors",
-        });
-        var examplePagerdutyConnection = new SumoLogic.Connection("examplePagerdutyConnection", new SumoLogic.ConnectionArgs
-        {
-            Description = "PagerDuty connection for notifications from Monitors",
-            Type = "WebhookConnection",
-            WebhookType = "PagerDuty",
-            Url = "https://events.pagerduty.com/",
-            DefaultPayload = @"{
-  ""service_key"": ""pagerduty_api_integration_key"",
-  ""event_type"": ""trigger"",
-  ""description"": ""PagerDuty connection for notifications"",
-  ""client"": ""Sumo Logic"",
-  ""client_url"": """"
-}
-",
-        });
-        var tfLogsMonitor2 = new SumoLogic.Monitor("tfLogsMonitor2", new SumoLogic.MonitorArgs
-        {
-            Description = "logs monitor with webhook",
-            Type = "MonitorsLibraryMonitor",
-            ParentId = tfMonitorFolder1.Id,
-            IsDisabled = false,
-            ContentType = "Monitor",
-            MonitorType = "Logs",
-            Queries = 
-            {
-                new SumoLogic.Inputs.MonitorQueryArgs
-                {
-                    RowId = "A",
-                    Query = "_sourceCategory=event-action info",
-                },
-            },
-            Triggers = 
-            {
-                new SumoLogic.Inputs.MonitorTriggerArgs
-                {
-                    ThresholdType = "GreaterThan",
-                    Threshold = 40,
-                    TimeRange = "15m",
-                    OccurrenceType = "ResultCount",
-                    TriggerSource = "AllResults",
-                    TriggerType = "Critical",
-                    DetectionMethod = "StaticCondition",
-                },
-                new SumoLogic.Inputs.MonitorTriggerArgs
-                {
-                    ThresholdType = "LessThanOrEqual",
-                    Threshold = 40,
-                    TimeRange = "15m",
-                    OccurrenceType = "ResultCount",
-                    TriggerSource = "AllResults",
-                    TriggerType = "ResolvedCritical",
-                    DetectionMethod = "StaticCondition",
-                },
-            },
-            Notifications = 
-            {
-                new SumoLogic.Inputs.MonitorNotificationArgs
-                {
-                    Notification = new SumoLogic.Inputs.MonitorNotificationNotificationArgs
-                    {
-                        ConnectionType = "Email",
-                        Recipients = 
-                        {
-                            "abc@example.com",
-                        },
-                        Subject = "Monitor Alert: {{TriggerType}} on {{Name}}",
-                        TimeZone = "PST",
-                        MessageBody = "Triggered {{TriggerType}} Alert on {{Name}}: {{QueryURL}}",
-                    },
-                    RunForTriggerTypes = 
-                    {
-                        "Critical",
-                        "ResolvedCritical",
-                    },
-                },
-                new SumoLogic.Inputs.MonitorNotificationArgs
-                {
-                    Notification = new SumoLogic.Inputs.MonitorNotificationNotificationArgs
-                    {
-                        ConnectionType = "PagerDuty",
-                        ConnectionId = examplePagerdutyConnection.Id,
-                        PayloadOverride = @"{
-  ""service_key"": ""your_pagerduty_api_integration_key"",
-  ""event_type"": ""trigger"",
-  ""description"": ""Alert: Triggered {{TriggerType}} for Monitor {{Name}}"",
-  ""client"": ""Sumo Logic"",
-  ""client_url"": ""{{QueryUrl}}""
-}
-",
-                    },
-                    RunForTriggerTypes = 
-                    {
-                        "Critical",
-                        "ResolvedCritical",
-                    },
-                },
-            },
-        });
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"fmt"
-
-	"github.com/pulumi/pulumi-sumologic/sdk/go/sumologic"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		tfMonitorFolder1, err := sumologic.NewMonitorFolder(ctx, "tfMonitorFolder1", &sumologic.MonitorFolderArgs{
-			Description: pulumi.String("A folder for Monitors"),
-		})
-		if err != nil {
-			return err
-		}
-		examplePagerdutyConnection, err := sumologic.NewConnection(ctx, "examplePagerdutyConnection", &sumologic.ConnectionArgs{
-			Description:    pulumi.String("PagerDuty connection for notifications from Monitors"),
-			Type:           pulumi.String("WebhookConnection"),
-			WebhookType:    pulumi.String("PagerDuty"),
-			Url:            pulumi.String("https://events.pagerduty.com/"),
-			DefaultPayload: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v", "{\n", "  \"service_key\": \"pagerduty_api_integration_key\",\n", "  \"event_type\": \"trigger\",\n", "  \"description\": \"PagerDuty connection for notifications\",\n", "  \"client\": \"Sumo Logic\",\n", "  \"client_url\": \"\"\n", "}\n")),
-		})
-		if err != nil {
-			return err
-		}
-		_, err = sumologic.NewMonitor(ctx, "tfLogsMonitor2", &sumologic.MonitorArgs{
-			Description: pulumi.String("logs monitor with webhook"),
-			Type:        pulumi.String("MonitorsLibraryMonitor"),
-			ParentId:    tfMonitorFolder1.ID(),
-			IsDisabled:  pulumi.Bool(false),
-			ContentType: pulumi.String("Monitor"),
-			MonitorType: pulumi.String("Logs"),
-			Queries: sumologic.MonitorQueryArray{
-				&sumologic.MonitorQueryArgs{
-					RowId: pulumi.String("A"),
-					Query: pulumi.String("_sourceCategory=event-action info"),
-				},
-			},
-			Triggers: sumologic.MonitorTriggerArray{
-				&sumologic.MonitorTriggerArgs{
-					ThresholdType:   pulumi.String("GreaterThan"),
-					Threshold:       pulumi.Float64(40),
-					TimeRange:       pulumi.String("15m"),
-					OccurrenceType:  pulumi.String("ResultCount"),
-					TriggerSource:   pulumi.String("AllResults"),
-					TriggerType:     pulumi.String("Critical"),
-					DetectionMethod: pulumi.String("StaticCondition"),
-				},
-				&sumologic.MonitorTriggerArgs{
-					ThresholdType:   pulumi.String("LessThanOrEqual"),
-					Threshold:       pulumi.Float64(40),
-					TimeRange:       pulumi.String("15m"),
-					OccurrenceType:  pulumi.String("ResultCount"),
-					TriggerSource:   pulumi.String("AllResults"),
-					TriggerType:     pulumi.String("ResolvedCritical"),
-					DetectionMethod: pulumi.String("StaticCondition"),
-				},
-			},
-			Notifications: sumologic.MonitorNotificationArray{
-				&sumologic.MonitorNotificationArgs{
-					Notification: &sumologic.MonitorNotificationNotificationArgs{
-						ConnectionType: pulumi.String("Email"),
-						Recipients: pulumi.StringArray{
-							pulumi.String("abc@example.com"),
-						},
-						Subject:     pulumi.String("Monitor Alert: {{TriggerType}} on {{Name}}"),
-						TimeZone:    pulumi.String("PST"),
-						MessageBody: pulumi.String("Triggered {{TriggerType}} Alert on {{Name}}: {{QueryURL}}"),
-					},
-					RunForTriggerTypes: pulumi.StringArray{
-						pulumi.String("Critical"),
-						pulumi.String("ResolvedCritical"),
-					},
-				},
-				&sumologic.MonitorNotificationArgs{
-					Notification: &sumologic.MonitorNotificationNotificationArgs{
-						ConnectionType:  pulumi.String("PagerDuty"),
-						ConnectionId:    examplePagerdutyConnection.ID(),
-						PayloadOverride: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v", "{\n", "  \"service_key\": \"your_pagerduty_api_integration_key\",\n", "  \"event_type\": \"trigger\",\n", "  \"description\": \"Alert: Triggered {{TriggerType}} for Monitor {{Name}}\",\n", "  \"client\": \"Sumo Logic\",\n", "  \"client_url\": \"{{QueryUrl}}\"\n", "}\n")),
-					},
-					RunForTriggerTypes: pulumi.StringArray{
-						pulumi.String("Critical"),
-						pulumi.String("ResolvedCritical"),
-					},
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-## Example Monitor Folder
-
-NOTE: Monitor folders are considered a different resource from Library content folders.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as sumologic from "@pulumi/sumologic";
-
-const tfMonitorFolder1 = new sumologic.MonitorFolder("tf_monitor_folder_1", {
-    description: "a folder for monitors",
-});
-```
-```python
-import pulumi
-import pulumi_sumologic as sumologic
-
-tf_monitor_folder1 = sumologic.MonitorFolder("tfMonitorFolder1", description="a folder for monitors")
-```
-```csharp
-using Pulumi;
-using SumoLogic = Pulumi.SumoLogic;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var tfMonitorFolder1 = new SumoLogic.MonitorFolder("tfMonitorFolder1", new SumoLogic.MonitorFolderArgs
-        {
-            Description = "a folder for monitors",
-        });
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-sumologic/sdk/go/sumologic"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := sumologic.NewMonitorFolder(ctx, "tfMonitorFolder1", &sumologic.MonitorFolderArgs{
-			Description: pulumi.String("a folder for monitors"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-## Argument reference
-
-The following arguments are supported:
-
-- `type` - (Optional) The type of object model. Valid value:
-  - `MonitorsLibraryMonitor`
-- `name` - (Required) The name of the monitor. The name must be alphanumeric.
-- `description` - (Required) The description of the monitor.
-- `is_disabled` - (Optional) Whether or not the monitor is disabled. Disabled monitors will not run and will not generate or send notifications.
-- `parent_id` - (Optional) The ID of the Monitor Folder that contains this monitor. Defaults to the root folder.
-- `content_type` - (Optional) The type of the content object. Valid value:
-  - `Monitor`
-- `monitor_type` - (Required) The type of monitor. Valid values:
-  - `Logs`: A logs query monitor.
-  - `Metrics`: A metrics query monitor.
-- `queries` - (Required) All queries from the monitor.
-- `triggers` - (Required) Defines the conditions of when to send notifications.
-- `notifications` - (Optional) The notifications the monitor will send when the respective trigger condition is met.
-- `group_notifications` - (Optional) Whether or not to group notifications for individual items that meet the trigger condition. Defaults to true.
-
-Additional data provided in state:
-
-- `id` - (Computed) The ID for this monitor.
-- `status` - (Computed) The current status for this monitor. Values are:
-  - `Critical`
-  - `Warning`
-  - `MissingData`
-  - `Normal`
-  - `Disabled`
-
 
 
 ## Create a Monitor Resource {#create}
@@ -1026,6 +521,7 @@ Additional data provided in state:
             <span class="nx">created_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">created_by</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">evaluation_delay</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">group_notifications</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">is_disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">is_locked</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -1037,9 +533,11 @@ Additional data provided in state:
             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[MonitorNotificationArgs]]</span> = None<span class="p">,</span>
             <span class="nx">parent_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">playbook</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">post_request_map</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
             <span class="nx">queries</span><span class="p">:</span> <span class="nx">Optional[Sequence[MonitorQueryArgs]]</span> = None<span class="p">,</span>
             <span class="nx">statuses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+            <span class="nx">trigger_conditions</span><span class="p">:</span> <span class="nx">Optional[MonitorTriggerConditionsArgs]</span> = None<span class="p">,</span>
             <span class="nx">triggers</span><span class="p">:</span> <span class="nx">Optional[Sequence[MonitorTriggerArgs]]</span> = None<span class="p">,</span>
             <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span>
@@ -1212,6 +710,14 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="evaluationdelay_csharp">
+<a href="#evaluationdelay_csharp" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="groupnotifications_csharp">
 <a href="#groupnotifications_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Notifications</a>
 </span>
@@ -1292,6 +798,14 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="playbook_csharp">
+<a href="#playbook_csharp" style="color: inherit; text-decoration: inherit;">Playbook</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="postrequestmap_csharp">
 <a href="#postrequestmap_csharp" style="color: inherit; text-decoration: inherit;">Post<wbr>Request<wbr>Map</a>
 </span>
@@ -1316,13 +830,21 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="triggerconditions_csharp">
+<a href="#triggerconditions_csharp" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Conditions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditions">Pulumi.<wbr>Sumo<wbr>Logic.<wbr>Inputs.<wbr>Monitor<wbr>Trigger<wbr>Conditions<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="triggers_csharp">
 <a href="#triggers_csharp" style="color: inherit; text-decoration: inherit;">Triggers</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitortrigger">List&lt;Pulumi.<wbr>Sumo<wbr>Logic.<wbr>Inputs.<wbr>Monitor<wbr>Trigger<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field `triggers` is deprecated and will be removed in a future release of the provider -- please use `trigger_conditions` instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1378,6 +900,14 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="evaluationdelay_go">
+<a href="#evaluationdelay_go" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Delay</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1464,6 +994,14 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="playbook_go">
+<a href="#playbook_go" style="color: inherit; text-decoration: inherit;">Playbook</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="postrequestmap_go">
 <a href="#postrequestmap_go" style="color: inherit; text-decoration: inherit;">Post<wbr>Request<wbr>Map</a>
 </span>
@@ -1488,13 +1026,21 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="triggerconditions_go">
+<a href="#triggerconditions_go" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Conditions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditions">Monitor<wbr>Trigger<wbr>Conditions<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="triggers_go">
 <a href="#triggers_go" style="color: inherit; text-decoration: inherit;">Triggers</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitortrigger">[]Monitor<wbr>Trigger<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field `triggers` is deprecated and will be removed in a future release of the provider -- please use `trigger_conditions` instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1550,6 +1096,14 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="evaluationdelay_nodejs">
+<a href="#evaluationdelay_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Delay</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1636,6 +1190,14 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="playbook_nodejs">
+<a href="#playbook_nodejs" style="color: inherit; text-decoration: inherit;">playbook</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="postrequestmap_nodejs">
 <a href="#postrequestmap_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Request<wbr>Map</a>
 </span>
@@ -1660,13 +1222,21 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="triggerconditions_nodejs">
+<a href="#triggerconditions_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Conditions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditions">Monitor<wbr>Trigger<wbr>Conditions<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="triggers_nodejs">
 <a href="#triggers_nodejs" style="color: inherit; text-decoration: inherit;">triggers</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitortrigger">Monitor<wbr>Trigger<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field `triggers` is deprecated and will be removed in a future release of the provider -- please use `trigger_conditions` instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1722,6 +1292,14 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="evaluation_delay_python">
+<a href="#evaluation_delay_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>delay</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1808,6 +1386,14 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="playbook_python">
+<a href="#playbook_python" style="color: inherit; text-decoration: inherit;">playbook</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="post_request_map_python">
 <a href="#post_request_map_python" style="color: inherit; text-decoration: inherit;">post_<wbr>request_<wbr>map</a>
 </span>
@@ -1832,13 +1418,21 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="trigger_conditions_python">
+<a href="#trigger_conditions_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>conditions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditions">Monitor<wbr>Trigger<wbr>Conditions<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="triggers_python">
 <a href="#triggers_python" style="color: inherit; text-decoration: inherit;">triggers</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitortrigger">Sequence[Monitor<wbr>Trigger<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field `triggers` is deprecated and will be removed in a future release of the provider -- please use `trigger_conditions` instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1932,6 +1526,7 @@ Get an existing Monitor resource's state with the given name, ID, and optional e
         <span class="nx">created_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">created_by</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">evaluation_delay</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">group_notifications</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">is_disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">is_locked</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -1943,9 +1538,11 @@ Get an existing Monitor resource's state with the given name, ID, and optional e
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[MonitorNotificationArgs]]</span> = None<span class="p">,</span>
         <span class="nx">parent_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">playbook</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">post_request_map</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">queries</span><span class="p">:</span> <span class="nx">Optional[Sequence[MonitorQueryArgs]]</span> = None<span class="p">,</span>
         <span class="nx">statuses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">trigger_conditions</span><span class="p">:</span> <span class="nx">Optional[MonitorTriggerConditionsArgs]</span> = None<span class="p">,</span>
         <span class="nx">triggers</span><span class="p">:</span> <span class="nx">Optional[Sequence[MonitorTriggerArgs]]</span> = None<span class="p">,</span>
         <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> Monitor</code></pre></div>
@@ -2093,6 +1690,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_evaluationdelay_csharp">
+<a href="#state_evaluationdelay_csharp" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_groupnotifications_csharp">
 <a href="#state_groupnotifications_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Notifications</a>
 </span>
@@ -2181,6 +1786,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_playbook_csharp">
+<a href="#state_playbook_csharp" style="color: inherit; text-decoration: inherit;">Playbook</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_postrequestmap_csharp">
 <a href="#state_postrequestmap_csharp" style="color: inherit; text-decoration: inherit;">Post<wbr>Request<wbr>Map</a>
 </span>
@@ -2205,13 +1818,21 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_triggerconditions_csharp">
+<a href="#state_triggerconditions_csharp" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Conditions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditions">Pulumi.<wbr>Sumo<wbr>Logic.<wbr>Inputs.<wbr>Monitor<wbr>Trigger<wbr>Conditions<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_triggers_csharp">
 <a href="#state_triggers_csharp" style="color: inherit; text-decoration: inherit;">Triggers</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitortrigger">List&lt;Pulumi.<wbr>Sumo<wbr>Logic.<wbr>Inputs.<wbr>Monitor<wbr>Trigger<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field `triggers` is deprecated and will be removed in a future release of the provider -- please use `trigger_conditions` instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2259,6 +1880,14 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_evaluationdelay_go">
+<a href="#state_evaluationdelay_go" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Delay</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2353,6 +1982,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_playbook_go">
+<a href="#state_playbook_go" style="color: inherit; text-decoration: inherit;">Playbook</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_postrequestmap_go">
 <a href="#state_postrequestmap_go" style="color: inherit; text-decoration: inherit;">Post<wbr>Request<wbr>Map</a>
 </span>
@@ -2377,13 +2014,21 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_triggerconditions_go">
+<a href="#state_triggerconditions_go" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Conditions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditions">Monitor<wbr>Trigger<wbr>Conditions<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_triggers_go">
 <a href="#state_triggers_go" style="color: inherit; text-decoration: inherit;">Triggers</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitortrigger">[]Monitor<wbr>Trigger<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field `triggers` is deprecated and will be removed in a future release of the provider -- please use `trigger_conditions` instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2431,6 +2076,14 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_evaluationdelay_nodejs">
+<a href="#state_evaluationdelay_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Delay</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2525,6 +2178,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_playbook_nodejs">
+<a href="#state_playbook_nodejs" style="color: inherit; text-decoration: inherit;">playbook</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_postrequestmap_nodejs">
 <a href="#state_postrequestmap_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Request<wbr>Map</a>
 </span>
@@ -2549,13 +2210,21 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_triggerconditions_nodejs">
+<a href="#state_triggerconditions_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Conditions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditions">Monitor<wbr>Trigger<wbr>Conditions<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_triggers_nodejs">
 <a href="#state_triggers_nodejs" style="color: inherit; text-decoration: inherit;">triggers</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitortrigger">Monitor<wbr>Trigger<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field `triggers` is deprecated and will be removed in a future release of the provider -- please use `trigger_conditions` instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2603,6 +2272,14 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_evaluation_delay_python">
+<a href="#state_evaluation_delay_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>delay</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -2697,6 +2374,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_playbook_python">
+<a href="#state_playbook_python" style="color: inherit; text-decoration: inherit;">playbook</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_post_request_map_python">
 <a href="#state_post_request_map_python" style="color: inherit; text-decoration: inherit;">post_<wbr>request_<wbr>map</a>
 </span>
@@ -2721,13 +2406,21 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_trigger_conditions_python">
+<a href="#state_trigger_conditions_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>conditions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditions">Monitor<wbr>Trigger<wbr>Conditions<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_triggers_python">
 <a href="#state_triggers_python" style="color: inherit; text-decoration: inherit;">triggers</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitortrigger">Sequence[Monitor<wbr>Trigger<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field `triggers` is deprecated and will be removed in a future release of the provider -- please use `trigger_conditions` instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3434,6 +3127,2372 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
+
+<h4 id="monitortriggerconditions">Monitor<wbr>Trigger<wbr>Conditions</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="logsmissingdatacondition_csharp">
+<a href="#logsmissingdatacondition_csharp" style="color: inherit; text-decoration: inherit;">Logs<wbr>Missing<wbr>Data<wbr>Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionslogsmissingdatacondition">Pulumi.<wbr>Sumo<wbr>Logic.<wbr>Inputs.<wbr>Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Missing<wbr>Data<wbr>Condition</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="logsoutliercondition_csharp">
+<a href="#logsoutliercondition_csharp" style="color: inherit; text-decoration: inherit;">Logs<wbr>Outlier<wbr>Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionslogsoutliercondition">Pulumi.<wbr>Sumo<wbr>Logic.<wbr>Inputs.<wbr>Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Outlier<wbr>Condition</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="logsstaticcondition_csharp">
+<a href="#logsstaticcondition_csharp" style="color: inherit; text-decoration: inherit;">Logs<wbr>Static<wbr>Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionslogsstaticcondition">Pulumi.<wbr>Sumo<wbr>Logic.<wbr>Inputs.<wbr>Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Static<wbr>Condition</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metricsmissingdatacondition_csharp">
+<a href="#metricsmissingdatacondition_csharp" style="color: inherit; text-decoration: inherit;">Metrics<wbr>Missing<wbr>Data<wbr>Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionsmetricsmissingdatacondition">Pulumi.<wbr>Sumo<wbr>Logic.<wbr>Inputs.<wbr>Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Missing<wbr>Data<wbr>Condition</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metricsoutliercondition_csharp">
+<a href="#metricsoutliercondition_csharp" style="color: inherit; text-decoration: inherit;">Metrics<wbr>Outlier<wbr>Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionsmetricsoutliercondition">Pulumi.<wbr>Sumo<wbr>Logic.<wbr>Inputs.<wbr>Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Outlier<wbr>Condition</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metricsstaticcondition_csharp">
+<a href="#metricsstaticcondition_csharp" style="color: inherit; text-decoration: inherit;">Metrics<wbr>Static<wbr>Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionsmetricsstaticcondition">Pulumi.<wbr>Sumo<wbr>Logic.<wbr>Inputs.<wbr>Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Static<wbr>Condition</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="logsmissingdatacondition_go">
+<a href="#logsmissingdatacondition_go" style="color: inherit; text-decoration: inherit;">Logs<wbr>Missing<wbr>Data<wbr>Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionslogsmissingdatacondition">Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Missing<wbr>Data<wbr>Condition</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="logsoutliercondition_go">
+<a href="#logsoutliercondition_go" style="color: inherit; text-decoration: inherit;">Logs<wbr>Outlier<wbr>Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionslogsoutliercondition">Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Outlier<wbr>Condition</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="logsstaticcondition_go">
+<a href="#logsstaticcondition_go" style="color: inherit; text-decoration: inherit;">Logs<wbr>Static<wbr>Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionslogsstaticcondition">Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Static<wbr>Condition</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metricsmissingdatacondition_go">
+<a href="#metricsmissingdatacondition_go" style="color: inherit; text-decoration: inherit;">Metrics<wbr>Missing<wbr>Data<wbr>Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionsmetricsmissingdatacondition">Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Missing<wbr>Data<wbr>Condition</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metricsoutliercondition_go">
+<a href="#metricsoutliercondition_go" style="color: inherit; text-decoration: inherit;">Metrics<wbr>Outlier<wbr>Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionsmetricsoutliercondition">Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Outlier<wbr>Condition</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metricsstaticcondition_go">
+<a href="#metricsstaticcondition_go" style="color: inherit; text-decoration: inherit;">Metrics<wbr>Static<wbr>Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionsmetricsstaticcondition">Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Static<wbr>Condition</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="logsmissingdatacondition_nodejs">
+<a href="#logsmissingdatacondition_nodejs" style="color: inherit; text-decoration: inherit;">logs<wbr>Missing<wbr>Data<wbr>Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionslogsmissingdatacondition">Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Missing<wbr>Data<wbr>Condition</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="logsoutliercondition_nodejs">
+<a href="#logsoutliercondition_nodejs" style="color: inherit; text-decoration: inherit;">logs<wbr>Outlier<wbr>Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionslogsoutliercondition">Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Outlier<wbr>Condition</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="logsstaticcondition_nodejs">
+<a href="#logsstaticcondition_nodejs" style="color: inherit; text-decoration: inherit;">logs<wbr>Static<wbr>Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionslogsstaticcondition">Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Static<wbr>Condition</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metricsmissingdatacondition_nodejs">
+<a href="#metricsmissingdatacondition_nodejs" style="color: inherit; text-decoration: inherit;">metrics<wbr>Missing<wbr>Data<wbr>Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionsmetricsmissingdatacondition">Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Missing<wbr>Data<wbr>Condition</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metricsoutliercondition_nodejs">
+<a href="#metricsoutliercondition_nodejs" style="color: inherit; text-decoration: inherit;">metrics<wbr>Outlier<wbr>Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionsmetricsoutliercondition">Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Outlier<wbr>Condition</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metricsstaticcondition_nodejs">
+<a href="#metricsstaticcondition_nodejs" style="color: inherit; text-decoration: inherit;">metrics<wbr>Static<wbr>Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionsmetricsstaticcondition">Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Static<wbr>Condition</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="logs_missing_data_condition_python">
+<a href="#logs_missing_data_condition_python" style="color: inherit; text-decoration: inherit;">logs_<wbr>missing_<wbr>data_<wbr>condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionslogsmissingdatacondition">Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Missing<wbr>Data<wbr>Condition</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="logs_outlier_condition_python">
+<a href="#logs_outlier_condition_python" style="color: inherit; text-decoration: inherit;">logs_<wbr>outlier_<wbr>condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionslogsoutliercondition">Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Outlier<wbr>Condition</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="logs_static_condition_python">
+<a href="#logs_static_condition_python" style="color: inherit; text-decoration: inherit;">logs_<wbr>static_<wbr>condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionslogsstaticcondition">Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Static<wbr>Condition</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metrics_missing_data_condition_python">
+<a href="#metrics_missing_data_condition_python" style="color: inherit; text-decoration: inherit;">metrics_<wbr>missing_<wbr>data_<wbr>condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionsmetricsmissingdatacondition">Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Missing<wbr>Data<wbr>Condition</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metrics_outlier_condition_python">
+<a href="#metrics_outlier_condition_python" style="color: inherit; text-decoration: inherit;">metrics_<wbr>outlier_<wbr>condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionsmetricsoutliercondition">Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Outlier<wbr>Condition</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metrics_static_condition_python">
+<a href="#metrics_static_condition_python" style="color: inherit; text-decoration: inherit;">metrics_<wbr>static_<wbr>condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionsmetricsstaticcondition">Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Static<wbr>Condition</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="monitortriggerconditionslogsmissingdatacondition">Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Missing<wbr>Data<wbr>Condition</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="timerange_csharp">
+<a href="#timerange_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="timerange_go">
+<a href="#timerange_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="timerange_nodejs">
+<a href="#timerange_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="time_range_python">
+<a href="#time_range_python" style="color: inherit; text-decoration: inherit;">time_<wbr>range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="monitortriggerconditionslogsoutliercondition">Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Outlier<wbr>Condition</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="critical_csharp">
+<a href="#critical_csharp" style="color: inherit; text-decoration: inherit;">Critical</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionslogsoutlierconditioncritical">Pulumi.<wbr>Sumo<wbr>Logic.<wbr>Inputs.<wbr>Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Outlier<wbr>Condition<wbr>Critical</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="direction_csharp">
+<a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="field_csharp">
+<a href="#field_csharp" style="color: inherit; text-decoration: inherit;">Field</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="warning_csharp">
+<a href="#warning_csharp" style="color: inherit; text-decoration: inherit;">Warning</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionslogsoutlierconditionwarning">Pulumi.<wbr>Sumo<wbr>Logic.<wbr>Inputs.<wbr>Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Outlier<wbr>Condition<wbr>Warning</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="critical_go">
+<a href="#critical_go" style="color: inherit; text-decoration: inherit;">Critical</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionslogsoutlierconditioncritical">Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Outlier<wbr>Condition<wbr>Critical</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="direction_go">
+<a href="#direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="field_go">
+<a href="#field_go" style="color: inherit; text-decoration: inherit;">Field</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="warning_go">
+<a href="#warning_go" style="color: inherit; text-decoration: inherit;">Warning</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionslogsoutlierconditionwarning">Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Outlier<wbr>Condition<wbr>Warning</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="critical_nodejs">
+<a href="#critical_nodejs" style="color: inherit; text-decoration: inherit;">critical</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionslogsoutlierconditioncritical">Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Outlier<wbr>Condition<wbr>Critical</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="direction_nodejs">
+<a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="field_nodejs">
+<a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="warning_nodejs">
+<a href="#warning_nodejs" style="color: inherit; text-decoration: inherit;">warning</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionslogsoutlierconditionwarning">Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Outlier<wbr>Condition<wbr>Warning</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="critical_python">
+<a href="#critical_python" style="color: inherit; text-decoration: inherit;">critical</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionslogsoutlierconditioncritical">Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Outlier<wbr>Condition<wbr>Critical</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="direction_python">
+<a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="field_python">
+<a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="warning_python">
+<a href="#warning_python" style="color: inherit; text-decoration: inherit;">warning</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionslogsoutlierconditionwarning">Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Outlier<wbr>Condition<wbr>Warning</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="monitortriggerconditionslogsoutlierconditioncritical">Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Outlier<wbr>Condition<wbr>Critical</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="consecutive_csharp">
+<a href="#consecutive_csharp" style="color: inherit; text-decoration: inherit;">Consecutive</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_csharp">
+<a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="window_csharp">
+<a href="#window_csharp" style="color: inherit; text-decoration: inherit;">Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="consecutive_go">
+<a href="#consecutive_go" style="color: inherit; text-decoration: inherit;">Consecutive</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_go">
+<a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="window_go">
+<a href="#window_go" style="color: inherit; text-decoration: inherit;">Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="consecutive_nodejs">
+<a href="#consecutive_nodejs" style="color: inherit; text-decoration: inherit;">consecutive</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_nodejs">
+<a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="window_nodejs">
+<a href="#window_nodejs" style="color: inherit; text-decoration: inherit;">window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="consecutive_python">
+<a href="#consecutive_python" style="color: inherit; text-decoration: inherit;">consecutive</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_python">
+<a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="window_python">
+<a href="#window_python" style="color: inherit; text-decoration: inherit;">window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="monitortriggerconditionslogsoutlierconditionwarning">Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Outlier<wbr>Condition<wbr>Warning</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="consecutive_csharp">
+<a href="#consecutive_csharp" style="color: inherit; text-decoration: inherit;">Consecutive</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_csharp">
+<a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="window_csharp">
+<a href="#window_csharp" style="color: inherit; text-decoration: inherit;">Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="consecutive_go">
+<a href="#consecutive_go" style="color: inherit; text-decoration: inherit;">Consecutive</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_go">
+<a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="window_go">
+<a href="#window_go" style="color: inherit; text-decoration: inherit;">Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="consecutive_nodejs">
+<a href="#consecutive_nodejs" style="color: inherit; text-decoration: inherit;">consecutive</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_nodejs">
+<a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="window_nodejs">
+<a href="#window_nodejs" style="color: inherit; text-decoration: inherit;">window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="consecutive_python">
+<a href="#consecutive_python" style="color: inherit; text-decoration: inherit;">consecutive</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_python">
+<a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="window_python">
+<a href="#window_python" style="color: inherit; text-decoration: inherit;">window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="monitortriggerconditionslogsstaticcondition">Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Static<wbr>Condition</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="critical_csharp">
+<a href="#critical_csharp" style="color: inherit; text-decoration: inherit;">Critical</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionslogsstaticconditioncritical">Pulumi.<wbr>Sumo<wbr>Logic.<wbr>Inputs.<wbr>Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Static<wbr>Condition<wbr>Critical</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="field_csharp">
+<a href="#field_csharp" style="color: inherit; text-decoration: inherit;">Field</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="warning_csharp">
+<a href="#warning_csharp" style="color: inherit; text-decoration: inherit;">Warning</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionslogsstaticconditionwarning">Pulumi.<wbr>Sumo<wbr>Logic.<wbr>Inputs.<wbr>Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Static<wbr>Condition<wbr>Warning</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="critical_go">
+<a href="#critical_go" style="color: inherit; text-decoration: inherit;">Critical</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionslogsstaticconditioncritical">Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Static<wbr>Condition<wbr>Critical</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="field_go">
+<a href="#field_go" style="color: inherit; text-decoration: inherit;">Field</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="warning_go">
+<a href="#warning_go" style="color: inherit; text-decoration: inherit;">Warning</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionslogsstaticconditionwarning">Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Static<wbr>Condition<wbr>Warning</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="critical_nodejs">
+<a href="#critical_nodejs" style="color: inherit; text-decoration: inherit;">critical</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionslogsstaticconditioncritical">Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Static<wbr>Condition<wbr>Critical</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="field_nodejs">
+<a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="warning_nodejs">
+<a href="#warning_nodejs" style="color: inherit; text-decoration: inherit;">warning</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionslogsstaticconditionwarning">Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Static<wbr>Condition<wbr>Warning</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="critical_python">
+<a href="#critical_python" style="color: inherit; text-decoration: inherit;">critical</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionslogsstaticconditioncritical">Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Static<wbr>Condition<wbr>Critical</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="field_python">
+<a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="warning_python">
+<a href="#warning_python" style="color: inherit; text-decoration: inherit;">warning</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionslogsstaticconditionwarning">Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Static<wbr>Condition<wbr>Warning</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="monitortriggerconditionslogsstaticconditioncritical">Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Static<wbr>Condition<wbr>Critical</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="alert_csharp">
+<a href="#alert_csharp" style="color: inherit; text-decoration: inherit;">Alert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionslogsstaticconditioncriticalalert">Pulumi.<wbr>Sumo<wbr>Logic.<wbr>Inputs.<wbr>Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Static<wbr>Condition<wbr>Critical<wbr>Alert</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resolution_csharp">
+<a href="#resolution_csharp" style="color: inherit; text-decoration: inherit;">Resolution</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionslogsstaticconditioncriticalresolution">Pulumi.<wbr>Sumo<wbr>Logic.<wbr>Inputs.<wbr>Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Static<wbr>Condition<wbr>Critical<wbr>Resolution</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="timerange_csharp">
+<a href="#timerange_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="alert_go">
+<a href="#alert_go" style="color: inherit; text-decoration: inherit;">Alert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionslogsstaticconditioncriticalalert">Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Static<wbr>Condition<wbr>Critical<wbr>Alert</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resolution_go">
+<a href="#resolution_go" style="color: inherit; text-decoration: inherit;">Resolution</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionslogsstaticconditioncriticalresolution">Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Static<wbr>Condition<wbr>Critical<wbr>Resolution</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="timerange_go">
+<a href="#timerange_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="alert_nodejs">
+<a href="#alert_nodejs" style="color: inherit; text-decoration: inherit;">alert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionslogsstaticconditioncriticalalert">Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Static<wbr>Condition<wbr>Critical<wbr>Alert</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resolution_nodejs">
+<a href="#resolution_nodejs" style="color: inherit; text-decoration: inherit;">resolution</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionslogsstaticconditioncriticalresolution">Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Static<wbr>Condition<wbr>Critical<wbr>Resolution</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="timerange_nodejs">
+<a href="#timerange_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="alert_python">
+<a href="#alert_python" style="color: inherit; text-decoration: inherit;">alert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionslogsstaticconditioncriticalalert">Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Static<wbr>Condition<wbr>Critical<wbr>Alert</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resolution_python">
+<a href="#resolution_python" style="color: inherit; text-decoration: inherit;">resolution</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionslogsstaticconditioncriticalresolution">Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Static<wbr>Condition<wbr>Critical<wbr>Resolution</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="time_range_python">
+<a href="#time_range_python" style="color: inherit; text-decoration: inherit;">time_<wbr>range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="monitortriggerconditionslogsstaticconditioncriticalalert">Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Static<wbr>Condition<wbr>Critical<wbr>Alert</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_csharp">
+<a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thresholdtype_csharp">
+<a href="#thresholdtype_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_go">
+<a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thresholdtype_go">
+<a href="#thresholdtype_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_nodejs">
+<a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thresholdtype_nodejs">
+<a href="#thresholdtype_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_python">
+<a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_type_python">
+<a href="#threshold_type_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="monitortriggerconditionslogsstaticconditioncriticalresolution">Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Static<wbr>Condition<wbr>Critical<wbr>Resolution</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_csharp">
+<a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thresholdtype_csharp">
+<a href="#thresholdtype_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_go">
+<a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thresholdtype_go">
+<a href="#thresholdtype_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_nodejs">
+<a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thresholdtype_nodejs">
+<a href="#thresholdtype_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_python">
+<a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_type_python">
+<a href="#threshold_type_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="monitortriggerconditionslogsstaticconditionwarning">Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Static<wbr>Condition<wbr>Warning</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="alert_csharp">
+<a href="#alert_csharp" style="color: inherit; text-decoration: inherit;">Alert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionslogsstaticconditionwarningalert">Pulumi.<wbr>Sumo<wbr>Logic.<wbr>Inputs.<wbr>Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Static<wbr>Condition<wbr>Warning<wbr>Alert</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resolution_csharp">
+<a href="#resolution_csharp" style="color: inherit; text-decoration: inherit;">Resolution</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionslogsstaticconditionwarningresolution">Pulumi.<wbr>Sumo<wbr>Logic.<wbr>Inputs.<wbr>Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Static<wbr>Condition<wbr>Warning<wbr>Resolution</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="timerange_csharp">
+<a href="#timerange_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="alert_go">
+<a href="#alert_go" style="color: inherit; text-decoration: inherit;">Alert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionslogsstaticconditionwarningalert">Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Static<wbr>Condition<wbr>Warning<wbr>Alert</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resolution_go">
+<a href="#resolution_go" style="color: inherit; text-decoration: inherit;">Resolution</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionslogsstaticconditionwarningresolution">Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Static<wbr>Condition<wbr>Warning<wbr>Resolution</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="timerange_go">
+<a href="#timerange_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="alert_nodejs">
+<a href="#alert_nodejs" style="color: inherit; text-decoration: inherit;">alert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionslogsstaticconditionwarningalert">Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Static<wbr>Condition<wbr>Warning<wbr>Alert</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resolution_nodejs">
+<a href="#resolution_nodejs" style="color: inherit; text-decoration: inherit;">resolution</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionslogsstaticconditionwarningresolution">Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Static<wbr>Condition<wbr>Warning<wbr>Resolution</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="timerange_nodejs">
+<a href="#timerange_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="alert_python">
+<a href="#alert_python" style="color: inherit; text-decoration: inherit;">alert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionslogsstaticconditionwarningalert">Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Static<wbr>Condition<wbr>Warning<wbr>Alert</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resolution_python">
+<a href="#resolution_python" style="color: inherit; text-decoration: inherit;">resolution</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionslogsstaticconditionwarningresolution">Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Static<wbr>Condition<wbr>Warning<wbr>Resolution</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="time_range_python">
+<a href="#time_range_python" style="color: inherit; text-decoration: inherit;">time_<wbr>range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="monitortriggerconditionslogsstaticconditionwarningalert">Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Static<wbr>Condition<wbr>Warning<wbr>Alert</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_csharp">
+<a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thresholdtype_csharp">
+<a href="#thresholdtype_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_go">
+<a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thresholdtype_go">
+<a href="#thresholdtype_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_nodejs">
+<a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thresholdtype_nodejs">
+<a href="#thresholdtype_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_python">
+<a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_type_python">
+<a href="#threshold_type_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="monitortriggerconditionslogsstaticconditionwarningresolution">Monitor<wbr>Trigger<wbr>Conditions<wbr>Logs<wbr>Static<wbr>Condition<wbr>Warning<wbr>Resolution</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_csharp">
+<a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thresholdtype_csharp">
+<a href="#thresholdtype_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_go">
+<a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thresholdtype_go">
+<a href="#thresholdtype_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_nodejs">
+<a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thresholdtype_nodejs">
+<a href="#thresholdtype_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_python">
+<a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_type_python">
+<a href="#threshold_type_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="monitortriggerconditionsmetricsmissingdatacondition">Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Missing<wbr>Data<wbr>Condition</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="timerange_csharp">
+<a href="#timerange_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="triggersource_csharp">
+<a href="#triggersource_csharp" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="timerange_go">
+<a href="#timerange_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="triggersource_go">
+<a href="#triggersource_go" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="timerange_nodejs">
+<a href="#timerange_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="triggersource_nodejs">
+<a href="#triggersource_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="time_range_python">
+<a href="#time_range_python" style="color: inherit; text-decoration: inherit;">time_<wbr>range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="trigger_source_python">
+<a href="#trigger_source_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="monitortriggerconditionsmetricsoutliercondition">Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Outlier<wbr>Condition</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="critical_csharp">
+<a href="#critical_csharp" style="color: inherit; text-decoration: inherit;">Critical</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionsmetricsoutlierconditioncritical">Pulumi.<wbr>Sumo<wbr>Logic.<wbr>Inputs.<wbr>Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Outlier<wbr>Condition<wbr>Critical</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="direction_csharp">
+<a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="warning_csharp">
+<a href="#warning_csharp" style="color: inherit; text-decoration: inherit;">Warning</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionsmetricsoutlierconditionwarning">Pulumi.<wbr>Sumo<wbr>Logic.<wbr>Inputs.<wbr>Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Outlier<wbr>Condition<wbr>Warning</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="critical_go">
+<a href="#critical_go" style="color: inherit; text-decoration: inherit;">Critical</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionsmetricsoutlierconditioncritical">Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Outlier<wbr>Condition<wbr>Critical</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="direction_go">
+<a href="#direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="warning_go">
+<a href="#warning_go" style="color: inherit; text-decoration: inherit;">Warning</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionsmetricsoutlierconditionwarning">Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Outlier<wbr>Condition<wbr>Warning</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="critical_nodejs">
+<a href="#critical_nodejs" style="color: inherit; text-decoration: inherit;">critical</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionsmetricsoutlierconditioncritical">Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Outlier<wbr>Condition<wbr>Critical</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="direction_nodejs">
+<a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="warning_nodejs">
+<a href="#warning_nodejs" style="color: inherit; text-decoration: inherit;">warning</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionsmetricsoutlierconditionwarning">Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Outlier<wbr>Condition<wbr>Warning</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="critical_python">
+<a href="#critical_python" style="color: inherit; text-decoration: inherit;">critical</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionsmetricsoutlierconditioncritical">Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Outlier<wbr>Condition<wbr>Critical</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="direction_python">
+<a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="warning_python">
+<a href="#warning_python" style="color: inherit; text-decoration: inherit;">warning</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionsmetricsoutlierconditionwarning">Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Outlier<wbr>Condition<wbr>Warning</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="monitortriggerconditionsmetricsoutlierconditioncritical">Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Outlier<wbr>Condition<wbr>Critical</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="baselinewindow_csharp">
+<a href="#baselinewindow_csharp" style="color: inherit; text-decoration: inherit;">Baseline<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_csharp">
+<a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="baselinewindow_go">
+<a href="#baselinewindow_go" style="color: inherit; text-decoration: inherit;">Baseline<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_go">
+<a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="baselinewindow_nodejs">
+<a href="#baselinewindow_nodejs" style="color: inherit; text-decoration: inherit;">baseline<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_nodejs">
+<a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="baseline_window_python">
+<a href="#baseline_window_python" style="color: inherit; text-decoration: inherit;">baseline_<wbr>window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_python">
+<a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="monitortriggerconditionsmetricsoutlierconditionwarning">Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Outlier<wbr>Condition<wbr>Warning</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="baselinewindow_csharp">
+<a href="#baselinewindow_csharp" style="color: inherit; text-decoration: inherit;">Baseline<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_csharp">
+<a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="baselinewindow_go">
+<a href="#baselinewindow_go" style="color: inherit; text-decoration: inherit;">Baseline<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_go">
+<a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="baselinewindow_nodejs">
+<a href="#baselinewindow_nodejs" style="color: inherit; text-decoration: inherit;">baseline<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_nodejs">
+<a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="baseline_window_python">
+<a href="#baseline_window_python" style="color: inherit; text-decoration: inherit;">baseline_<wbr>window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_python">
+<a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="monitortriggerconditionsmetricsstaticcondition">Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Static<wbr>Condition</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="critical_csharp">
+<a href="#critical_csharp" style="color: inherit; text-decoration: inherit;">Critical</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionsmetricsstaticconditioncritical">Pulumi.<wbr>Sumo<wbr>Logic.<wbr>Inputs.<wbr>Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Static<wbr>Condition<wbr>Critical</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="warning_csharp">
+<a href="#warning_csharp" style="color: inherit; text-decoration: inherit;">Warning</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionsmetricsstaticconditionwarning">Pulumi.<wbr>Sumo<wbr>Logic.<wbr>Inputs.<wbr>Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Static<wbr>Condition<wbr>Warning</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="critical_go">
+<a href="#critical_go" style="color: inherit; text-decoration: inherit;">Critical</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionsmetricsstaticconditioncritical">Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Static<wbr>Condition<wbr>Critical</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="warning_go">
+<a href="#warning_go" style="color: inherit; text-decoration: inherit;">Warning</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionsmetricsstaticconditionwarning">Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Static<wbr>Condition<wbr>Warning</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="critical_nodejs">
+<a href="#critical_nodejs" style="color: inherit; text-decoration: inherit;">critical</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionsmetricsstaticconditioncritical">Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Static<wbr>Condition<wbr>Critical</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="warning_nodejs">
+<a href="#warning_nodejs" style="color: inherit; text-decoration: inherit;">warning</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionsmetricsstaticconditionwarning">Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Static<wbr>Condition<wbr>Warning</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="critical_python">
+<a href="#critical_python" style="color: inherit; text-decoration: inherit;">critical</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionsmetricsstaticconditioncritical">Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Static<wbr>Condition<wbr>Critical</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="warning_python">
+<a href="#warning_python" style="color: inherit; text-decoration: inherit;">warning</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionsmetricsstaticconditionwarning">Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Static<wbr>Condition<wbr>Warning</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="monitortriggerconditionsmetricsstaticconditioncritical">Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Static<wbr>Condition<wbr>Critical</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="alert_csharp">
+<a href="#alert_csharp" style="color: inherit; text-decoration: inherit;">Alert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionsmetricsstaticconditioncriticalalert">Pulumi.<wbr>Sumo<wbr>Logic.<wbr>Inputs.<wbr>Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Static<wbr>Condition<wbr>Critical<wbr>Alert</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="occurrencetype_csharp">
+<a href="#occurrencetype_csharp" style="color: inherit; text-decoration: inherit;">Occurrence<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resolution_csharp">
+<a href="#resolution_csharp" style="color: inherit; text-decoration: inherit;">Resolution</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionsmetricsstaticconditioncriticalresolution">Pulumi.<wbr>Sumo<wbr>Logic.<wbr>Inputs.<wbr>Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Static<wbr>Condition<wbr>Critical<wbr>Resolution</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="timerange_csharp">
+<a href="#timerange_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="alert_go">
+<a href="#alert_go" style="color: inherit; text-decoration: inherit;">Alert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionsmetricsstaticconditioncriticalalert">Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Static<wbr>Condition<wbr>Critical<wbr>Alert</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="occurrencetype_go">
+<a href="#occurrencetype_go" style="color: inherit; text-decoration: inherit;">Occurrence<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resolution_go">
+<a href="#resolution_go" style="color: inherit; text-decoration: inherit;">Resolution</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionsmetricsstaticconditioncriticalresolution">Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Static<wbr>Condition<wbr>Critical<wbr>Resolution</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="timerange_go">
+<a href="#timerange_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="alert_nodejs">
+<a href="#alert_nodejs" style="color: inherit; text-decoration: inherit;">alert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionsmetricsstaticconditioncriticalalert">Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Static<wbr>Condition<wbr>Critical<wbr>Alert</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="occurrencetype_nodejs">
+<a href="#occurrencetype_nodejs" style="color: inherit; text-decoration: inherit;">occurrence<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resolution_nodejs">
+<a href="#resolution_nodejs" style="color: inherit; text-decoration: inherit;">resolution</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionsmetricsstaticconditioncriticalresolution">Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Static<wbr>Condition<wbr>Critical<wbr>Resolution</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="timerange_nodejs">
+<a href="#timerange_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="alert_python">
+<a href="#alert_python" style="color: inherit; text-decoration: inherit;">alert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionsmetricsstaticconditioncriticalalert">Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Static<wbr>Condition<wbr>Critical<wbr>Alert</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="occurrence_type_python">
+<a href="#occurrence_type_python" style="color: inherit; text-decoration: inherit;">occurrence_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resolution_python">
+<a href="#resolution_python" style="color: inherit; text-decoration: inherit;">resolution</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionsmetricsstaticconditioncriticalresolution">Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Static<wbr>Condition<wbr>Critical<wbr>Resolution</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="time_range_python">
+<a href="#time_range_python" style="color: inherit; text-decoration: inherit;">time_<wbr>range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="monitortriggerconditionsmetricsstaticconditioncriticalalert">Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Static<wbr>Condition<wbr>Critical<wbr>Alert</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_csharp">
+<a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thresholdtype_csharp">
+<a href="#thresholdtype_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_go">
+<a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thresholdtype_go">
+<a href="#thresholdtype_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_nodejs">
+<a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thresholdtype_nodejs">
+<a href="#thresholdtype_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_python">
+<a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_type_python">
+<a href="#threshold_type_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="monitortriggerconditionsmetricsstaticconditioncriticalresolution">Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Static<wbr>Condition<wbr>Critical<wbr>Resolution</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_csharp">
+<a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thresholdtype_csharp">
+<a href="#thresholdtype_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_go">
+<a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thresholdtype_go">
+<a href="#thresholdtype_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_nodejs">
+<a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thresholdtype_nodejs">
+<a href="#thresholdtype_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_python">
+<a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_type_python">
+<a href="#threshold_type_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="monitortriggerconditionsmetricsstaticconditionwarning">Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Static<wbr>Condition<wbr>Warning</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="alert_csharp">
+<a href="#alert_csharp" style="color: inherit; text-decoration: inherit;">Alert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionsmetricsstaticconditionwarningalert">Pulumi.<wbr>Sumo<wbr>Logic.<wbr>Inputs.<wbr>Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Static<wbr>Condition<wbr>Warning<wbr>Alert</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="occurrencetype_csharp">
+<a href="#occurrencetype_csharp" style="color: inherit; text-decoration: inherit;">Occurrence<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resolution_csharp">
+<a href="#resolution_csharp" style="color: inherit; text-decoration: inherit;">Resolution</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionsmetricsstaticconditionwarningresolution">Pulumi.<wbr>Sumo<wbr>Logic.<wbr>Inputs.<wbr>Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Static<wbr>Condition<wbr>Warning<wbr>Resolution</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="timerange_csharp">
+<a href="#timerange_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="alert_go">
+<a href="#alert_go" style="color: inherit; text-decoration: inherit;">Alert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionsmetricsstaticconditionwarningalert">Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Static<wbr>Condition<wbr>Warning<wbr>Alert</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="occurrencetype_go">
+<a href="#occurrencetype_go" style="color: inherit; text-decoration: inherit;">Occurrence<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resolution_go">
+<a href="#resolution_go" style="color: inherit; text-decoration: inherit;">Resolution</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionsmetricsstaticconditionwarningresolution">Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Static<wbr>Condition<wbr>Warning<wbr>Resolution</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="timerange_go">
+<a href="#timerange_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="alert_nodejs">
+<a href="#alert_nodejs" style="color: inherit; text-decoration: inherit;">alert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionsmetricsstaticconditionwarningalert">Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Static<wbr>Condition<wbr>Warning<wbr>Alert</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="occurrencetype_nodejs">
+<a href="#occurrencetype_nodejs" style="color: inherit; text-decoration: inherit;">occurrence<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resolution_nodejs">
+<a href="#resolution_nodejs" style="color: inherit; text-decoration: inherit;">resolution</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionsmetricsstaticconditionwarningresolution">Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Static<wbr>Condition<wbr>Warning<wbr>Resolution</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="timerange_nodejs">
+<a href="#timerange_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="alert_python">
+<a href="#alert_python" style="color: inherit; text-decoration: inherit;">alert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionsmetricsstaticconditionwarningalert">Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Static<wbr>Condition<wbr>Warning<wbr>Alert</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="occurrence_type_python">
+<a href="#occurrence_type_python" style="color: inherit; text-decoration: inherit;">occurrence_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resolution_python">
+<a href="#resolution_python" style="color: inherit; text-decoration: inherit;">resolution</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monitortriggerconditionsmetricsstaticconditionwarningresolution">Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Static<wbr>Condition<wbr>Warning<wbr>Resolution</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="time_range_python">
+<a href="#time_range_python" style="color: inherit; text-decoration: inherit;">time_<wbr>range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="monitortriggerconditionsmetricsstaticconditionwarningalert">Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Static<wbr>Condition<wbr>Warning<wbr>Alert</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_csharp">
+<a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thresholdtype_csharp">
+<a href="#thresholdtype_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_go">
+<a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thresholdtype_go">
+<a href="#thresholdtype_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_nodejs">
+<a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thresholdtype_nodejs">
+<a href="#thresholdtype_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_python">
+<a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_type_python">
+<a href="#threshold_type_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="monitortriggerconditionsmetricsstaticconditionwarningresolution">Monitor<wbr>Trigger<wbr>Conditions<wbr>Metrics<wbr>Static<wbr>Condition<wbr>Warning<wbr>Resolution</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_csharp">
+<a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thresholdtype_csharp">
+<a href="#thresholdtype_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_go">
+<a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thresholdtype_go">
+<a href="#thresholdtype_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_nodejs">
+<a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="thresholdtype_nodejs">
+<a href="#thresholdtype_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_python">
+<a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threshold_type_python">
+<a href="#threshold_type_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
 ## Import
 
 
@@ -3443,7 +5502,7 @@ Monitors can be imported using the monitor ID, such ashcl
  $ pulumi import sumologic:index/monitor:Monitor test 1234567890
 ```
 
- [1]https://help.sumologic.com/?cid=10020
+ [1]https://help.sumologic.com/?cid=10020 [2]monitor_folder.html.markdown
 
 
 

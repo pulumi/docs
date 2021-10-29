@@ -34,6 +34,7 @@ construction to achieve fine-grained programmatic control over provider settings
              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
              <span class="nx">access_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">admin_mode</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">base_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">environment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -181,6 +182,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="adminmode_csharp">
+<a href="#adminmode_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="baseurl_csharp">
 <a href="#baseurl_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Url</a>
 </span>
@@ -214,6 +223,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="adminmode_go">
+<a href="#adminmode_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -253,6 +270,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="adminmode_nodejs">
+<a href="#adminmode_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="baseurl_nodejs">
 <a href="#baseurl_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Url</a>
 </span>
@@ -286,6 +311,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="admin_mode_python">
+<a href="#admin_mode_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

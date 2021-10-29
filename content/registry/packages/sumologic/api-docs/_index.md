@@ -24,12 +24,26 @@ A Pulumi package for creating and managing sumologic cloud resources.
     <li><a href="collectoringestbudgetassignment" title="CollectorIngestBudgetAssignment"><span class="api-symbol api-symbol--resource"></span>CollectorIngestBudgetAssignment</a></li>
     <li><a href="connection" title="Connection"><span class="api-symbol api-symbol--resource"></span>Connection</a></li>
     <li><a href="content" title="Content"><span class="api-symbol api-symbol--resource"></span>Content</a></li>
+    <li><a href="cseaggregationrule" title="CseAggregationRule"><span class="api-symbol api-symbol--resource"></span>CseAggregationRule</a></li>
+    <li><a href="csechainrule" title="CseChainRule"><span class="api-symbol api-symbol--resource"></span>CseChainRule</a></li>
+    <li><a href="csecustomentitytype" title="CseCustomEntityType"><span class="api-symbol api-symbol--resource"></span>CseCustomEntityType</a></li>
+    <li><a href="csecustominsight" title="CseCustomInsight"><span class="api-symbol api-symbol--resource"></span>CseCustomInsight</a></li>
+    <li><a href="cseentitycriticalityconfig" title="CseEntityCriticalityConfig"><span class="api-symbol api-symbol--resource"></span>CseEntityCriticalityConfig</a></li>
+    <li><a href="cseinsightsconfiguration" title="CseInsightsConfiguration"><span class="api-symbol api-symbol--resource"></span>CseInsightsConfiguration</a></li>
+    <li><a href="cseinsightsresolution" title="CseInsightsResolution"><span class="api-symbol api-symbol--resource"></span>CseInsightsResolution</a></li>
+    <li><a href="cseinsightsstatus" title="CseInsightsStatus"><span class="api-symbol api-symbol--resource"></span>CseInsightsStatus</a></li>
+    <li><a href="cselogmapping" title="CseLogMapping"><span class="api-symbol api-symbol--resource"></span>CseLogMapping</a></li>
+    <li><a href="csematchrule" title="CseMatchRule"><span class="api-symbol api-symbol--resource"></span>CseMatchRule</a></li>
+    <li><a href="csenetworkblock" title="CseNetworkBlock"><span class="api-symbol api-symbol--resource"></span>CseNetworkBlock</a></li>
+    <li><a href="cseruletuningexpression" title="CseRuleTuningExpression"><span class="api-symbol api-symbol--resource"></span>CseRuleTuningExpression</a></li>
+    <li><a href="csethresholdrule" title="CseThresholdRule"><span class="api-symbol api-symbol--resource"></span>CseThresholdRule</a></li>
     <li><a href="dashboard" title="Dashboard"><span class="api-symbol api-symbol--resource"></span>Dashboard</a></li>
     <li><a href="elbsource" title="ElbSource"><span class="api-symbol api-symbol--resource"></span>ElbSource</a></li>
     <li><a href="field" title="Field"><span class="api-symbol api-symbol--resource"></span>Field</a></li>
     <li><a href="fieldextractionrule" title="FieldExtractionRule"><span class="api-symbol api-symbol--resource"></span>FieldExtractionRule</a></li>
     <li><a href="folder" title="Folder"><span class="api-symbol api-symbol--resource"></span>Folder</a></li>
     <li><a href="gcpsource" title="GcpSource"><span class="api-symbol api-symbol--resource"></span>GcpSource</a></li>
+    <li><a href="hierarchy" title="Hierarchy"><span class="api-symbol api-symbol--resource"></span>Hierarchy</a></li>
     <li><a href="httpsource" title="HttpSource"><span class="api-symbol api-symbol--resource"></span>HttpSource</a></li>
     <li><a href="ingestbudget" title="IngestBudget"><span class="api-symbol api-symbol--resource"></span>IngestBudget</a></li>
     <li><a href="ingestbudgetv2" title="IngestBudgetV2"><span class="api-symbol api-symbol--resource"></span>IngestBudgetV2</a></li>
@@ -40,6 +54,7 @@ A Pulumi package for creating and managing sumologic cloud resources.
     <li><a href="monitorfolder" title="MonitorFolder"><span class="api-symbol api-symbol--resource"></span>MonitorFolder</a></li>
     <li><a href="partition" title="Partition"><span class="api-symbol api-symbol--resource"></span>Partition</a></li>
     <li><a href="passwordpolicy" title="PasswordPolicy"><span class="api-symbol api-symbol--resource"></span>PasswordPolicy</a></li>
+    <li><a href="policies" title="Policies"><span class="api-symbol api-symbol--resource"></span>Policies</a></li>
     <li><a href="pollingsource" title="PollingSource"><span class="api-symbol api-symbol--resource"></span>PollingSource</a></li>
     <li><a href="provider" title="Provider"><span class="api-symbol api-symbol--resource"></span>Provider</a></li>
     <li><a href="role" title="Role"><span class="api-symbol api-symbol--resource"></span>Role</a></li>
@@ -48,13 +63,16 @@ A Pulumi package for creating and managing sumologic cloud resources.
     <li><a href="samlconfiguration" title="SamlConfiguration"><span class="api-symbol api-symbol--resource"></span>SamlConfiguration</a></li>
     <li><a href="scheduledview" title="ScheduledView"><span class="api-symbol api-symbol--resource"></span>ScheduledView</a></li>
     <li><a href="subdomain" title="Subdomain"><span class="api-symbol api-symbol--resource"></span>Subdomain</a></li>
+    <li><a href="token" title="Token"><span class="api-symbol api-symbol--resource"></span>Token</a></li>
     <li><a href="user" title="User"><span class="api-symbol api-symbol--resource"></span>User</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getadminrecommendedfolder" title="GetAdminRecommendedFolder"><span class="api-symbol api-symbol--function"></span>GetAdminRecommendedFolder</a></li>
     <li><a href="getcalleridentity" title="GetCallerIdentity"><span class="api-symbol api-symbol--function"></span>GetCallerIdentity</a></li>
     <li><a href="getcollector" title="GetCollector"><span class="api-symbol api-symbol--function"></span>GetCollector</a></li>
+    <li><a href="getcselogmappingvendorproduct" title="GetCseLogMappingVendorProduct"><span class="api-symbol api-symbol--function"></span>GetCseLogMappingVendorProduct</a></li>
     <li><a href="gethttpsource" title="GetHttpSource"><span class="api-symbol api-symbol--function"></span>GetHttpSource</a></li>
     <li><a href="getmyuserid" title="GetMyUserId"><span class="api-symbol api-symbol--function"></span>GetMyUserId</a></li>
     <li><a href="getpersonalfolder" title="GetPersonalFolder"><span class="api-symbol api-symbol--function"></span>GetPersonalFolder</a></li>
@@ -70,6 +88,6 @@ A Pulumi package for creating and managing sumologic cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`sumologic` Terraform Provider](https://github.com/SumoLogic/terraform-provider-sumologic).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.0</dd>
 </dl>
 
