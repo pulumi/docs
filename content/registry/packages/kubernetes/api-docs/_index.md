@@ -54,6 +54,6 @@ A Pulumi package for creating and managing Kubernetes resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>3.8.2</dd>
+	<dd>3.8.3</dd>
 </dl>
 
