@@ -457,6 +457,24 @@ The following output properties are available:
     <dd>{{% md %}}The number of minutes after the last notification before the monitor re-notifies on the current status.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="renotifyoccurrences_csharp">
+<a href="#renotifyoccurrences_csharp" style="color: inherit; text-decoration: inherit;">Renotify<wbr>Occurrences</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of re-notification messages that should be sent on the current status.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="renotifystatuses_csharp">
+<a href="#renotifystatuses_csharp" style="color: inherit; text-decoration: inherit;">Renotify<wbr>Statuses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The types of statuses for which re-notification messages should be sent. Valid values are `alert`, `warn`, `no data`.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="requirefullwindow_csharp">
 <a href="#requirefullwindow_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Full<wbr>Window</a>
 </span>
@@ -692,6 +710,24 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of minutes after the last notification before the monitor re-notifies on the current status.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="renotifyoccurrences_go">
+<a href="#renotifyoccurrences_go" style="color: inherit; text-decoration: inherit;">Renotify<wbr>Occurrences</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of re-notification messages that should be sent on the current status.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="renotifystatuses_go">
+<a href="#renotifystatuses_go" style="color: inherit; text-decoration: inherit;">Renotify<wbr>Statuses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The types of statuses for which re-notification messages should be sent. Valid values are `alert`, `warn`, `no data`.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="requirefullwindow_go">
@@ -931,6 +967,24 @@ The following output properties are available:
     <dd>{{% md %}}The number of minutes after the last notification before the monitor re-notifies on the current status.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="renotifyoccurrences_nodejs">
+<a href="#renotifyoccurrences_nodejs" style="color: inherit; text-decoration: inherit;">renotify<wbr>Occurrences</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of re-notification messages that should be sent on the current status.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="renotifystatuses_nodejs">
+<a href="#renotifystatuses_nodejs" style="color: inherit; text-decoration: inherit;">renotify<wbr>Statuses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The types of statuses for which re-notification messages should be sent. Valid values are `alert`, `warn`, `no data`.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="requirefullwindow_nodejs">
 <a href="#requirefullwindow_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Full<wbr>Window</a>
 </span>
@@ -1166,6 +1220,24 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of minutes after the last notification before the monitor re-notifies on the current status.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="renotify_occurrences_python">
+<a href="#renotify_occurrences_python" style="color: inherit; text-decoration: inherit;">renotify_<wbr>occurrences</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of re-notification messages that should be sent on the current status.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="renotify_statuses_python">
+<a href="#renotify_statuses_python" style="color: inherit; text-decoration: inherit;">renotify_<wbr>statuses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The types of statuses for which re-notification messages should be sent. Valid values are `alert`, `warn`, `no data`.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="require_full_window_python">

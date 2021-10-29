@@ -49,12 +49,10 @@ class MyStack : Stack
                 },
             },
             Enabled = true,
-            HasExtendedTitle = true,
             Message = "The rule has triggered.",
             Name = "My rule",
             Options = new Datadog.Inputs.SecurityMonitoringRuleOptionsArgs
             {
-                DetectionMethod = "threshold",
                 EvaluationWindow = 300,
                 KeepAlive = 600,
                 MaxSignalDuration = 900,
@@ -118,12 +116,10 @@ func main() {
 					Status: pulumi.String("high"),
 				},
 			},
-			Enabled:          pulumi.Bool(true),
-			HasExtendedTitle: pulumi.Bool(true),
-			Message:          pulumi.String("The rule has triggered."),
-			Name:             pulumi.String("My rule"),
+			Enabled: pulumi.Bool(true),
+			Message: pulumi.String("The rule has triggered."),
+			Name:    pulumi.String("My rule"),
 			Options: &datadog.SecurityMonitoringRuleOptionsArgs{
-				DetectionMethod:   pulumi.String("threshold"),
 				EvaluationWindow:  pulumi.Int(300),
 				KeepAlive:         pulumi.Int(600),
 				MaxSignalDuration: pulumi.Int(900),
@@ -175,11 +171,9 @@ myrule = datadog.SecurityMonitoringRule("myrule",
         status="high",
     )],
     enabled=True,
-    has_extended_title=True,
     message="The rule has triggered.",
     name="My rule",
     options=datadog.SecurityMonitoringRuleOptionsArgs(
-        detection_method="threshold",
         evaluation_window=300,
         keep_alive=600,
         max_signal_duration=900,
@@ -219,11 +213,9 @@ const myrule = new datadog.SecurityMonitoringRule("myrule", {
         status: "high",
     }],
     enabled: true,
-    hasExtendedTitle: true,
     message: "The rule has triggered.",
     name: "My rule",
     options: {
-        detectionMethod: "threshold",
         evaluationWindow: 300,
         keepAlive: 600,
         maxSignalDuration: 900,
@@ -278,7 +270,8 @@ const myrule = new datadog.SecurityMonitoringRule("myrule", {
                            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[SecurityMonitoringRuleOptionsArgs]</span> = None<span class="p">,</span>
                            <span class="nx">queries</span><span class="p">:</span> <span class="nx">Optional[Sequence[SecurityMonitoringRuleQueryArgs]]</span> = None<span class="p">,</span>
-                           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span>
+                           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">SecurityMonitoringRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecurityMonitoringRuleArgs</a></span><span class="p">,</span>
@@ -487,6 +480,15 @@ The SecurityMonitoringRule resource accepts the following [input]({{< relref "/d
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Tags for generated signals.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The rule type. Valid values are `log_detection`, `infrastructure_configuration`, `workload_security`, `cloud_configuration`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -572,6 +574,15 @@ The SecurityMonitoringRule resource accepts the following [input]({{< relref "/d
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Tags for generated signals.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The rule type. Valid values are `log_detection`, `infrastructure_configuration`, `workload_security`, `cloud_configuration`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -657,6 +668,15 @@ The SecurityMonitoringRule resource accepts the following [input]({{< relref "/d
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Tags for generated signals.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The rule type. Valid values are `log_detection`, `infrastructure_configuration`, `workload_security`, `cloud_configuration`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -742,6 +762,15 @@ The SecurityMonitoringRule resource accepts the following [input]({{< relref "/d
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Tags for generated signals.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The rule type. Valid values are `log_detection`, `infrastructure_configuration`, `workload_security`, `cloud_configuration`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -824,7 +853,8 @@ Get an existing SecurityMonitoringRule resource's state with the given name, ID,
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[SecurityMonitoringRuleOptionsArgs]</span> = None<span class="p">,</span>
         <span class="nx">queries</span><span class="p">:</span> <span class="nx">Optional[Sequence[SecurityMonitoringRuleQueryArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> SecurityMonitoringRule</code></pre></div>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> SecurityMonitoringRule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1016,6 +1046,15 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Tags for generated signals.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_type_csharp">
+<a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The rule type. Valid values are `log_detection`, `infrastructure_configuration`, `workload_security`, `cloud_configuration`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1101,6 +1140,15 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Tags for generated signals.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_type_go">
+<a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The rule type. Valid values are `log_detection`, `infrastructure_configuration`, `workload_security`, `cloud_configuration`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1186,6 +1234,15 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Tags for generated signals.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_type_nodejs">
+<a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The rule type. Valid values are `log_detection`, `infrastructure_configuration`, `workload_security`, `cloud_configuration`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1271,6 +1328,15 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Tags for generated signals.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_type_python">
+<a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The rule type. Valid values are `log_detection`, `infrastructure_configuration`, `workload_security`, `cloud_configuration`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1294,8 +1360,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Severity of the Security Signal.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_csharp">
 <a href="#condition_csharp" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -1303,8 +1368,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A rule case contains logical operations (`>`,`>=`, `&&`, `||`) to determine if a signal should be generated based on the event counts in the previously defined queries.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1312,7 +1376,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the case.
+    <dd>{{% md %}}The name of the rule.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notifications_csharp">
@@ -1321,8 +1385,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Notification targets for each rule case.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1334,8 +1397,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Severity of the Security Signal.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_go">
 <a href="#condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -1343,8 +1405,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A rule case contains logical operations (`>`,`>=`, `&&`, `||`) to determine if a signal should be generated based on the event counts in the previously defined queries.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1352,7 +1413,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the case.
+    <dd>{{% md %}}The name of the rule.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notifications_go">
@@ -1361,8 +1422,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Notification targets for each rule case.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1374,8 +1434,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Severity of the Security Signal.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_nodejs">
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -1383,8 +1442,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A rule case contains logical operations (`>`,`>=`, `&&`, `||`) to determine if a signal should be generated based on the event counts in the previously defined queries.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1392,7 +1450,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the case.
+    <dd>{{% md %}}The name of the rule.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notifications_nodejs">
@@ -1401,8 +1459,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Notification targets for each rule case.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1414,8 +1471,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Severity of the Security Signal.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_python">
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -1423,8 +1479,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A rule case contains logical operations (`>`,`>=`, `&&`, `||`) to determine if a signal should be generated based on the event counts in the previously defined queries.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1432,7 +1487,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the case.
+    <dd>{{% md %}}The name of the rule.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notifications_python">
@@ -1441,8 +1496,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Notification targets for each rule case.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="securitymonitoringrulefilter">Security<wbr>Monitoring<wbr>Rule<wbr>Filter</h4>
@@ -1456,8 +1510,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of filtering action (require or suppress).
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="query_csharp">
 <a href="#query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
@@ -1465,7 +1518,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Query to run on logs.
+    <dd>{{% md %}}Queries for selecting logs which are part of the rule.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1478,8 +1531,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of filtering action (require or suppress).
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="query_go">
 <a href="#query_go" style="color: inherit; text-decoration: inherit;">Query</a>
@@ -1487,7 +1539,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Query to run on logs.
+    <dd>{{% md %}}Queries for selecting logs which are part of the rule.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1500,8 +1552,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of filtering action (require or suppress).
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="query_nodejs">
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
@@ -1509,7 +1560,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Query to run on logs.
+    <dd>{{% md %}}Queries for selecting logs which are part of the rule.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1522,8 +1573,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of filtering action (require or suppress).
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="query_python">
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
@@ -1531,7 +1581,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Query to run on logs.
+    <dd>{{% md %}}Queries for selecting logs which are part of the rule.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1546,8 +1596,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A time window is specified to match when at least one of the cases matches true. This is a sliding window and evaluates in real time.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keepalive_csharp">
 <a href="#keepalive_csharp" style="color: inherit; text-decoration: inherit;">Keep<wbr>Alive</a>
@@ -1555,8 +1604,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Once a signal is generated, the signal will remain “open” if a case is matched at least once within this keep alive window.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxsignalduration_csharp">
 <a href="#maxsignalduration_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Signal<wbr>Duration</a>
@@ -1564,8 +1612,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A signal will “close” regardless of the query being matched once the time exceeds the maximum duration. This time is calculated from the first seen timestamp.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="detectionmethod_csharp">
 <a href="#detectionmethod_csharp" style="color: inherit; text-decoration: inherit;">Detection<wbr>Method</a>
@@ -1573,8 +1620,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The detection method. Default to `threshold`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="newvalueoptions_csharp">
 <a href="#newvalueoptions_csharp" style="color: inherit; text-decoration: inherit;">New<wbr>Value<wbr>Options</a>
@@ -1582,8 +1628,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitymonitoringruleoptionsnewvalueoptions">Security<wbr>Monitoring<wbr>Rule<wbr>Options<wbr>New<wbr>Value<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}Specific options for `new_value` detection method.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1595,8 +1640,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A time window is specified to match when at least one of the cases matches true. This is a sliding window and evaluates in real time.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keepalive_go">
 <a href="#keepalive_go" style="color: inherit; text-decoration: inherit;">Keep<wbr>Alive</a>
@@ -1604,8 +1648,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Once a signal is generated, the signal will remain “open” if a case is matched at least once within this keep alive window.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxsignalduration_go">
 <a href="#maxsignalduration_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Signal<wbr>Duration</a>
@@ -1613,8 +1656,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A signal will “close” regardless of the query being matched once the time exceeds the maximum duration. This time is calculated from the first seen timestamp.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="detectionmethod_go">
 <a href="#detectionmethod_go" style="color: inherit; text-decoration: inherit;">Detection<wbr>Method</a>
@@ -1622,8 +1664,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The detection method. Default to `threshold`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="newvalueoptions_go">
 <a href="#newvalueoptions_go" style="color: inherit; text-decoration: inherit;">New<wbr>Value<wbr>Options</a>
@@ -1631,8 +1672,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitymonitoringruleoptionsnewvalueoptions">Security<wbr>Monitoring<wbr>Rule<wbr>Options<wbr>New<wbr>Value<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}Specific options for `new_value` detection method.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1644,8 +1684,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}A time window is specified to match when at least one of the cases matches true. This is a sliding window and evaluates in real time.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keepalive_nodejs">
 <a href="#keepalive_nodejs" style="color: inherit; text-decoration: inherit;">keep<wbr>Alive</a>
@@ -1653,8 +1692,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Once a signal is generated, the signal will remain “open” if a case is matched at least once within this keep alive window.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxsignalduration_nodejs">
 <a href="#maxsignalduration_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Signal<wbr>Duration</a>
@@ -1662,8 +1700,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}A signal will “close” regardless of the query being matched once the time exceeds the maximum duration. This time is calculated from the first seen timestamp.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="detectionmethod_nodejs">
 <a href="#detectionmethod_nodejs" style="color: inherit; text-decoration: inherit;">detection<wbr>Method</a>
@@ -1671,8 +1708,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The detection method. Default to `threshold`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="newvalueoptions_nodejs">
 <a href="#newvalueoptions_nodejs" style="color: inherit; text-decoration: inherit;">new<wbr>Value<wbr>Options</a>
@@ -1680,8 +1716,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitymonitoringruleoptionsnewvalueoptions">Security<wbr>Monitoring<wbr>Rule<wbr>Options<wbr>New<wbr>Value<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}Specific options for `new_value` detection method.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1693,8 +1728,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A time window is specified to match when at least one of the cases matches true. This is a sliding window and evaluates in real time.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keep_alive_python">
 <a href="#keep_alive_python" style="color: inherit; text-decoration: inherit;">keep_<wbr>alive</a>
@@ -1702,8 +1736,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Once a signal is generated, the signal will remain “open” if a case is matched at least once within this keep alive window.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="max_signal_duration_python">
 <a href="#max_signal_duration_python" style="color: inherit; text-decoration: inherit;">max_<wbr>signal_<wbr>duration</a>
@@ -1711,8 +1744,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A signal will “close” regardless of the query being matched once the time exceeds the maximum duration. This time is calculated from the first seen timestamp.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="detection_method_python">
 <a href="#detection_method_python" style="color: inherit; text-decoration: inherit;">detection_<wbr>method</a>
@@ -1720,8 +1752,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The detection method. Default to `threshold`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="new_value_options_python">
 <a href="#new_value_options_python" style="color: inherit; text-decoration: inherit;">new_<wbr>value_<wbr>options</a>
@@ -1729,8 +1760,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitymonitoringruleoptionsnewvalueoptions">Security<wbr>Monitoring<wbr>Rule<wbr>Options<wbr>New<wbr>Value<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}Specific options for `new_value` detection method.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="securitymonitoringruleoptionsnewvalueoptions">Security<wbr>Monitoring<wbr>Rule<wbr>Options<wbr>New<wbr>Value<wbr>Options</h4>
@@ -1744,8 +1774,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration in days after which a learned value is forgotten.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="learningduration_csharp">
 <a href="#learningduration_csharp" style="color: inherit; text-decoration: inherit;">Learning<wbr>Duration</a>
@@ -1753,8 +1782,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration in days during which values are learned, and after which signals will be generated for values that weren't learned. If set to 0, a signal will be generated for all new values after the first value is learned.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1766,8 +1794,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration in days after which a learned value is forgotten.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="learningduration_go">
 <a href="#learningduration_go" style="color: inherit; text-decoration: inherit;">Learning<wbr>Duration</a>
@@ -1775,8 +1802,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration in days during which values are learned, and after which signals will be generated for values that weren't learned. If set to 0, a signal will be generated for all new values after the first value is learned.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1788,8 +1814,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The duration in days after which a learned value is forgotten.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="learningduration_nodejs">
 <a href="#learningduration_nodejs" style="color: inherit; text-decoration: inherit;">learning<wbr>Duration</a>
@@ -1797,8 +1822,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The duration in days during which values are learned, and after which signals will be generated for values that weren't learned. If set to 0, a signal will be generated for all new values after the first value is learned.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1810,8 +1834,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration in days after which a learned value is forgotten.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="learning_duration_python">
 <a href="#learning_duration_python" style="color: inherit; text-decoration: inherit;">learning_<wbr>duration</a>
@@ -1819,8 +1842,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration in days during which values are learned, and after which signals will be generated for values that weren't learned. If set to 0, a signal will be generated for all new values after the first value is learned.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="securitymonitoringrulequery">Security<wbr>Monitoring<wbr>Rule<wbr>Query</h4>
@@ -1834,8 +1856,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Query to run on logs.
+    <dd>{{% md %}}Queries for selecting logs which are part of the rule.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="agentrules_csharp">
+<a href="#agentrules_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitymonitoringrulequeryagentrule">List&lt;Security<wbr>Monitoring<wbr>Rule<wbr>Query<wbr>Agent<wbr>Rule&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aggregation_csharp">
 <a href="#aggregation_csharp" style="color: inherit; text-decoration: inherit;">Aggregation</a>
@@ -1843,8 +1873,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The aggregation type.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="distinctfields_csharp">
 <a href="#distinctfields_csharp" style="color: inherit; text-decoration: inherit;">Distinct<wbr>Fields</a>
@@ -1852,8 +1881,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Field for which the cardinality is measured. Sent as an array.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupbyfields_csharp">
 <a href="#groupbyfields_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>By<wbr>Fields</a>
@@ -1861,8 +1889,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Fields to group by.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metric_csharp">
 <a href="#metric_csharp" style="color: inherit; text-decoration: inherit;">Metric</a>
@@ -1870,8 +1897,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target field to aggregate over when using the sum or max aggregations.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1879,7 +1905,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the query.
+    <dd>{{% md %}}The name of the rule.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1892,8 +1918,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Query to run on logs.
+    <dd>{{% md %}}Queries for selecting logs which are part of the rule.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="agentrules_go">
+<a href="#agentrules_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitymonitoringrulequeryagentrule">[]Security<wbr>Monitoring<wbr>Rule<wbr>Query<wbr>Agent<wbr>Rule</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aggregation_go">
 <a href="#aggregation_go" style="color: inherit; text-decoration: inherit;">Aggregation</a>
@@ -1901,8 +1935,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The aggregation type.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="distinctfields_go">
 <a href="#distinctfields_go" style="color: inherit; text-decoration: inherit;">Distinct<wbr>Fields</a>
@@ -1910,8 +1943,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Field for which the cardinality is measured. Sent as an array.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupbyfields_go">
 <a href="#groupbyfields_go" style="color: inherit; text-decoration: inherit;">Group<wbr>By<wbr>Fields</a>
@@ -1919,8 +1951,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Fields to group by.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metric_go">
 <a href="#metric_go" style="color: inherit; text-decoration: inherit;">Metric</a>
@@ -1928,8 +1959,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target field to aggregate over when using the sum or max aggregations.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1937,7 +1967,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the query.
+    <dd>{{% md %}}The name of the rule.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1950,8 +1980,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Query to run on logs.
+    <dd>{{% md %}}Queries for selecting logs which are part of the rule.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="agentrules_nodejs">
+<a href="#agentrules_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitymonitoringrulequeryagentrule">Security<wbr>Monitoring<wbr>Rule<wbr>Query<wbr>Agent<wbr>Rule[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aggregation_nodejs">
 <a href="#aggregation_nodejs" style="color: inherit; text-decoration: inherit;">aggregation</a>
@@ -1959,8 +1997,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The aggregation type.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="distinctfields_nodejs">
 <a href="#distinctfields_nodejs" style="color: inherit; text-decoration: inherit;">distinct<wbr>Fields</a>
@@ -1968,8 +2005,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Field for which the cardinality is measured. Sent as an array.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupbyfields_nodejs">
 <a href="#groupbyfields_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>By<wbr>Fields</a>
@@ -1977,8 +2013,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Fields to group by.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metric_nodejs">
 <a href="#metric_nodejs" style="color: inherit; text-decoration: inherit;">metric</a>
@@ -1986,8 +2021,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target field to aggregate over when using the sum or max aggregations.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1995,7 +2029,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the query.
+    <dd>{{% md %}}The name of the rule.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2008,8 +2042,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Query to run on logs.
+    <dd>{{% md %}}Queries for selecting logs which are part of the rule.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="agent_rules_python">
+<a href="#agent_rules_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitymonitoringrulequeryagentrule">Sequence[Security<wbr>Monitoring<wbr>Rule<wbr>Query<wbr>Agent<wbr>Rule]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aggregation_python">
 <a href="#aggregation_python" style="color: inherit; text-decoration: inherit;">aggregation</a>
@@ -2017,8 +2059,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The aggregation type.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="distinct_fields_python">
 <a href="#distinct_fields_python" style="color: inherit; text-decoration: inherit;">distinct_<wbr>fields</a>
@@ -2026,8 +2067,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Field for which the cardinality is measured. Sent as an array.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_by_fields_python">
 <a href="#group_by_fields_python" style="color: inherit; text-decoration: inherit;">group_<wbr>by_<wbr>fields</a>
@@ -2035,8 +2075,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Fields to group by.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metric_python">
 <a href="#metric_python" style="color: inherit; text-decoration: inherit;">metric</a>
@@ -2044,8 +2083,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The target field to aggregate over when using the sum or max aggregations.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2053,8 +2091,90 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the query.
+    <dd>{{% md %}}The name of the rule.
 {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="securitymonitoringrulequeryagentrule">Security<wbr>Monitoring<wbr>Rule<wbr>Query<wbr>Agent<wbr>Rule</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="agentruleid_csharp">
+<a href="#agentruleid_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Rule<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="expression_csharp">
+<a href="#expression_csharp" style="color: inherit; text-decoration: inherit;">Expression</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="agentruleid_go">
+<a href="#agentruleid_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Rule<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="expression_go">
+<a href="#expression_go" style="color: inherit; text-decoration: inherit;">Expression</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="agentruleid_nodejs">
+<a href="#agentruleid_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Rule<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="expression_nodejs">
+<a href="#expression_nodejs" style="color: inherit; text-decoration: inherit;">expression</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="agent_rule_id_python">
+<a href="#agent_rule_id_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>rule_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="expression_python">
+<a href="#expression_python" style="color: inherit; text-decoration: inherit;">expression</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

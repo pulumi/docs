@@ -40,6 +40,7 @@ A Pulumi package for creating and managing Datadog resources.
     <li><a href="metricmetadata" title="MetricMetadata"><span class="api-symbol api-symbol--resource"></span>MetricMetadata</a></li>
     <li><a href="metrictagconfiguration" title="MetricTagConfiguration"><span class="api-symbol api-symbol--resource"></span>MetricTagConfiguration</a></li>
     <li><a href="monitor" title="Monitor"><span class="api-symbol api-symbol--resource"></span>Monitor</a></li>
+    <li><a href="monitorjson" title="MonitorJson"><span class="api-symbol api-symbol--resource"></span>MonitorJson</a></li>
     <li><a href="organizationsettings" title="OrganizationSettings"><span class="api-symbol api-symbol--resource"></span>OrganizationSettings</a></li>
     <li><a href="provider" title="Provider"><span class="api-symbol api-symbol--resource"></span>Provider</a></li>
     <li><a href="role" title="Role"><span class="api-symbol api-symbol--resource"></span>Role</a></li>
@@ -52,6 +53,8 @@ A Pulumi package for creating and managing Datadog resources.
     <li><a href="syntheticsprivatelocation" title="SyntheticsPrivateLocation"><span class="api-symbol api-symbol--resource"></span>SyntheticsPrivateLocation</a></li>
     <li><a href="syntheticstest" title="SyntheticsTest"><span class="api-symbol api-symbol--resource"></span>SyntheticsTest</a></li>
     <li><a href="user" title="User"><span class="api-symbol api-symbol--resource"></span>User</a></li>
+    <li><a href="webhook" title="Webhook"><span class="api-symbol api-symbol--resource"></span>Webhook</a></li>
+    <li><a href="webhookcustomvariable" title="WebhookCustomVariable"><span class="api-symbol api-symbol--resource"></span>WebhookCustomVariable</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -65,6 +68,7 @@ A Pulumi package for creating and managing Datadog resources.
     <li><a href="getmonitors" title="GetMonitors"><span class="api-symbol api-symbol--function"></span>GetMonitors</a></li>
     <li><a href="getpermissions" title="GetPermissions"><span class="api-symbol api-symbol--function"></span>GetPermissions</a></li>
     <li><a href="getrole" title="GetRole"><span class="api-symbol api-symbol--function"></span>GetRole</a></li>
+    <li><a href="getroles" title="GetRoles"><span class="api-symbol api-symbol--function"></span>GetRoles</a></li>
     <li><a href="getsecuritymonitoringfilters" title="GetSecurityMonitoringFilters"><span class="api-symbol api-symbol--function"></span>GetSecurityMonitoringFilters</a></li>
     <li><a href="getsecuritymonitoringrules" title="GetSecurityMonitoringRules"><span class="api-symbol api-symbol--function"></span>GetSecurityMonitoringRules</a></li>
     <li><a href="getservicelevelobjective" title="GetServiceLevelObjective"><span class="api-symbol api-symbol--function"></span>GetServiceLevelObjective</a></li>
@@ -83,6 +87,6 @@ A Pulumi package for creating and managing Datadog resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`datadog` Terraform Provider](https://github.com/terraform-providers/terraform-provider-datadog).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.2.0</dd>
+	<dd>4.3.0</dd>
 </dl>
 

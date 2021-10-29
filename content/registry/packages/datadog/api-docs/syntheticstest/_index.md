@@ -1457,7 +1457,7 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Array with the different device IDs used to run the test (only for `browser` tests). Valid values are `laptop_large`, `tablet`, `mobile_small`, `chrome.laptop_large`, `chrome.tablet`, `chrome.mobile_small`, `firefox.laptop_large`, `firefox.tablet`, `firefox.mobile_small`, `edge.laptop_large`, `edge.tablet`, `edge.mobile_small`.
+    <dd>{{% md %}}Required if `type = "browser"`. Array with the different device IDs used to run the test. Valid values are `laptop_large`, `tablet`, `mobile_small`, `chrome.laptop_large`, `chrome.tablet`, `chrome.mobile_small`, `firefox.laptop_large`, `firefox.tablet`, `firefox.mobile_small`, `edge.laptop_large`, `edge.tablet`, `edge.mobile_small`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_csharp">
@@ -1501,7 +1501,7 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestrequestdefinition">Synthetics<wbr>Test<wbr>Request<wbr>Definition<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The synthetics test request. Required if `type = "api"`.
+    <dd>{{% md %}}Required if `type = "api"`. The synthetics test request.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestheaders_csharp">
@@ -1640,7 +1640,7 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Array with the different device IDs used to run the test (only for `browser` tests). Valid values are `laptop_large`, `tablet`, `mobile_small`, `chrome.laptop_large`, `chrome.tablet`, `chrome.mobile_small`, `firefox.laptop_large`, `firefox.tablet`, `firefox.mobile_small`, `edge.laptop_large`, `edge.tablet`, `edge.mobile_small`.
+    <dd>{{% md %}}Required if `type = "browser"`. Array with the different device IDs used to run the test. Valid values are `laptop_large`, `tablet`, `mobile_small`, `chrome.laptop_large`, `chrome.tablet`, `chrome.mobile_small`, `firefox.laptop_large`, `firefox.tablet`, `firefox.mobile_small`, `edge.laptop_large`, `edge.tablet`, `edge.mobile_small`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_go">
@@ -1684,7 +1684,7 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestrequestdefinition">Synthetics<wbr>Test<wbr>Request<wbr>Definition<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The synthetics test request. Required if `type = "api"`.
+    <dd>{{% md %}}Required if `type = "api"`. The synthetics test request.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestheaders_go">
@@ -1823,7 +1823,7 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Array with the different device IDs used to run the test (only for `browser` tests). Valid values are `laptop_large`, `tablet`, `mobile_small`, `chrome.laptop_large`, `chrome.tablet`, `chrome.mobile_small`, `firefox.laptop_large`, `firefox.tablet`, `firefox.mobile_small`, `edge.laptop_large`, `edge.tablet`, `edge.mobile_small`.
+    <dd>{{% md %}}Required if `type = "browser"`. Array with the different device IDs used to run the test. Valid values are `laptop_large`, `tablet`, `mobile_small`, `chrome.laptop_large`, `chrome.tablet`, `chrome.mobile_small`, `firefox.laptop_large`, `firefox.tablet`, `firefox.mobile_small`, `edge.laptop_large`, `edge.tablet`, `edge.mobile_small`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_nodejs">
@@ -1867,7 +1867,7 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestrequestdefinition">Synthetics<wbr>Test<wbr>Request<wbr>Definition<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The synthetics test request. Required if `type = "api"`.
+    <dd>{{% md %}}Required if `type = "api"`. The synthetics test request.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestheaders_nodejs">
@@ -2006,7 +2006,7 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Array with the different device IDs used to run the test (only for `browser` tests). Valid values are `laptop_large`, `tablet`, `mobile_small`, `chrome.laptop_large`, `chrome.tablet`, `chrome.mobile_small`, `firefox.laptop_large`, `firefox.tablet`, `firefox.mobile_small`, `edge.laptop_large`, `edge.tablet`, `edge.mobile_small`.
+    <dd>{{% md %}}Required if `type = "browser"`. Array with the different device IDs used to run the test. Valid values are `laptop_large`, `tablet`, `mobile_small`, `chrome.laptop_large`, `chrome.tablet`, `chrome.mobile_small`, `firefox.laptop_large`, `firefox.tablet`, `firefox.mobile_small`, `edge.laptop_large`, `edge.tablet`, `edge.mobile_small`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_python">
@@ -2050,7 +2050,7 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestrequestdefinition">Synthetics<wbr>Test<wbr>Request<wbr>Definition<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The synthetics test request. Required if `type = "api"`.
+    <dd>{{% md %}}Required if `type = "api"`. The synthetics test request.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_headers_python">
@@ -2390,7 +2390,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Array with the different device IDs used to run the test (only for `browser` tests). Valid values are `laptop_large`, `tablet`, `mobile_small`, `chrome.laptop_large`, `chrome.tablet`, `chrome.mobile_small`, `firefox.laptop_large`, `firefox.tablet`, `firefox.mobile_small`, `edge.laptop_large`, `edge.tablet`, `edge.mobile_small`.
+    <dd>{{% md %}}Required if `type = "browser"`. Array with the different device IDs used to run the test. Valid values are `laptop_large`, `tablet`, `mobile_small`, `chrome.laptop_large`, `chrome.tablet`, `chrome.mobile_small`, `firefox.laptop_large`, `firefox.tablet`, `firefox.mobile_small`, `edge.laptop_large`, `edge.tablet`, `edge.mobile_small`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locations_csharp">
@@ -2461,7 +2461,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestrequestdefinition">Synthetics<wbr>Test<wbr>Request<wbr>Definition<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The synthetics test request. Required if `type = "api"`.
+    <dd>{{% md %}}Required if `type = "api"`. The synthetics test request.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestheaders_csharp">
@@ -2582,7 +2582,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Array with the different device IDs used to run the test (only for `browser` tests). Valid values are `laptop_large`, `tablet`, `mobile_small`, `chrome.laptop_large`, `chrome.tablet`, `chrome.mobile_small`, `firefox.laptop_large`, `firefox.tablet`, `firefox.mobile_small`, `edge.laptop_large`, `edge.tablet`, `edge.mobile_small`.
+    <dd>{{% md %}}Required if `type = "browser"`. Array with the different device IDs used to run the test. Valid values are `laptop_large`, `tablet`, `mobile_small`, `chrome.laptop_large`, `chrome.tablet`, `chrome.mobile_small`, `firefox.laptop_large`, `firefox.tablet`, `firefox.mobile_small`, `edge.laptop_large`, `edge.tablet`, `edge.mobile_small`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locations_go">
@@ -2653,7 +2653,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestrequestdefinition">Synthetics<wbr>Test<wbr>Request<wbr>Definition<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The synthetics test request. Required if `type = "api"`.
+    <dd>{{% md %}}Required if `type = "api"`. The synthetics test request.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestheaders_go">
@@ -2774,7 +2774,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Array with the different device IDs used to run the test (only for `browser` tests). Valid values are `laptop_large`, `tablet`, `mobile_small`, `chrome.laptop_large`, `chrome.tablet`, `chrome.mobile_small`, `firefox.laptop_large`, `firefox.tablet`, `firefox.mobile_small`, `edge.laptop_large`, `edge.tablet`, `edge.mobile_small`.
+    <dd>{{% md %}}Required if `type = "browser"`. Array with the different device IDs used to run the test. Valid values are `laptop_large`, `tablet`, `mobile_small`, `chrome.laptop_large`, `chrome.tablet`, `chrome.mobile_small`, `firefox.laptop_large`, `firefox.tablet`, `firefox.mobile_small`, `edge.laptop_large`, `edge.tablet`, `edge.mobile_small`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locations_nodejs">
@@ -2845,7 +2845,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestrequestdefinition">Synthetics<wbr>Test<wbr>Request<wbr>Definition<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The synthetics test request. Required if `type = "api"`.
+    <dd>{{% md %}}Required if `type = "api"`. The synthetics test request.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestheaders_nodejs">
@@ -2966,7 +2966,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Array with the different device IDs used to run the test (only for `browser` tests). Valid values are `laptop_large`, `tablet`, `mobile_small`, `chrome.laptop_large`, `chrome.tablet`, `chrome.mobile_small`, `firefox.laptop_large`, `firefox.tablet`, `firefox.mobile_small`, `edge.laptop_large`, `edge.tablet`, `edge.mobile_small`.
+    <dd>{{% md %}}Required if `type = "browser"`. Array with the different device IDs used to run the test. Valid values are `laptop_large`, `tablet`, `mobile_small`, `chrome.laptop_large`, `chrome.tablet`, `chrome.mobile_small`, `firefox.laptop_large`, `firefox.tablet`, `firefox.mobile_small`, `edge.laptop_large`, `edge.tablet`, `edge.mobile_small`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locations_python">
@@ -3037,7 +3037,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestrequestdefinition">Synthetics<wbr>Test<wbr>Request<wbr>Definition<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The synthetics test request. Required if `type = "api"`.
+    <dd>{{% md %}}Required if `type = "api"`. The synthetics test request.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_request_headers_python">
@@ -4455,6 +4455,14 @@ The following state arguments are supported:
     <dd>{{% md %}}DNS server port to use for DNS tests.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="followredirects_csharp">
+<a href="#followredirects_csharp" style="color: inherit; text-decoration: inherit;">Follow<wbr>Redirects</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
 </span>
@@ -4498,6 +4506,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port to use when performing the test.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servername_csharp">
+<a href="#servername_csharp" style="color: inherit; text-decoration: inherit;">Servername</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}For SSL tests, it specifies on which server you want to initiate the TLS handshake, allowing the server to present one of multiple possible certificates on the same IP address and TCP port number.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shouldtrackhops_csharp">
@@ -4566,6 +4583,14 @@ The following state arguments are supported:
     <dd>{{% md %}}DNS server port to use for DNS tests.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="followredirects_go">
+<a href="#followredirects_go" style="color: inherit; text-decoration: inherit;">Follow<wbr>Redirects</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
 </span>
@@ -4609,6 +4634,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port to use when performing the test.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servername_go">
+<a href="#servername_go" style="color: inherit; text-decoration: inherit;">Servername</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}For SSL tests, it specifies on which server you want to initiate the TLS handshake, allowing the server to present one of multiple possible certificates on the same IP address and TCP port number.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shouldtrackhops_go">
@@ -4677,6 +4711,14 @@ The following state arguments are supported:
     <dd>{{% md %}}DNS server port to use for DNS tests.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="followredirects_nodejs">
+<a href="#followredirects_nodejs" style="color: inherit; text-decoration: inherit;">follow<wbr>Redirects</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
@@ -4720,6 +4762,15 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Port to use when performing the test.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servername_nodejs">
+<a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">servername</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}For SSL tests, it specifies on which server you want to initiate the TLS handshake, allowing the server to present one of multiple possible certificates on the same IP address and TCP port number.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shouldtrackhops_nodejs">
@@ -4788,6 +4839,14 @@ The following state arguments are supported:
     <dd>{{% md %}}DNS server port to use for DNS tests.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="follow_redirects_python">
+<a href="#follow_redirects_python" style="color: inherit; text-decoration: inherit;">follow_<wbr>redirects</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
@@ -4831,6 +4890,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port to use when performing the test.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servername_python">
+<a href="#servername_python" style="color: inherit; text-decoration: inherit;">servername</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}For SSL tests, it specifies on which server you want to initiate the TLS handshake, allowing the server to present one of multiple possible certificates on the same IP address and TCP port number.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="should_track_hops_python">
@@ -6521,7 +6589,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}For API HTTP test, whether or not the test should follow redirects.
+    <dd>{{% md %}}Determines whether or not the API HTTP test should follow redirects.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minfailureduration_csharp">
@@ -6621,7 +6689,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}For API HTTP test, whether or not the test should follow redirects.
+    <dd>{{% md %}}Determines whether or not the API HTTP test should follow redirects.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minfailureduration_go">
@@ -6721,7 +6789,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}For API HTTP test, whether or not the test should follow redirects.
+    <dd>{{% md %}}Determines whether or not the API HTTP test should follow redirects.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minfailureduration_nodejs">
@@ -6821,7 +6889,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}For API HTTP test, whether or not the test should follow redirects.
+    <dd>{{% md %}}Determines whether or not the API HTTP test should follow redirects.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_failure_duration_python">
@@ -7430,6 +7498,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Port to use when performing the test.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="servername_csharp">
+<a href="#servername_csharp" style="color: inherit; text-decoration: inherit;">Servername</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}For SSL tests, it specifies on which server you want to initiate the TLS handshake, allowing the server to present one of multiple possible certificates on the same IP address and TCP port number.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="shouldtrackhops_csharp">
 <a href="#shouldtrackhops_csharp" style="color: inherit; text-decoration: inherit;">Should<wbr>Track<wbr>Hops</a>
 </span>
@@ -7531,6 +7608,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port to use when performing the test.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servername_go">
+<a href="#servername_go" style="color: inherit; text-decoration: inherit;">Servername</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}For SSL tests, it specifies on which server you want to initiate the TLS handshake, allowing the server to present one of multiple possible certificates on the same IP address and TCP port number.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shouldtrackhops_go">
@@ -7636,6 +7722,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Port to use when performing the test.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="servername_nodejs">
+<a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">servername</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}For SSL tests, it specifies on which server you want to initiate the TLS handshake, allowing the server to present one of multiple possible certificates on the same IP address and TCP port number.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="shouldtrackhops_nodejs">
 <a href="#shouldtrackhops_nodejs" style="color: inherit; text-decoration: inherit;">should<wbr>Track<wbr>Hops</a>
 </span>
@@ -7737,6 +7832,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port to use when performing the test.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servername_python">
+<a href="#servername_python" style="color: inherit; text-decoration: inherit;">servername</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}For SSL tests, it specifies on which server you want to initiate the TLS handshake, allowing the server to present one of multiple possible certificates on the same IP address and TCP port number.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="should_track_hops_python">
