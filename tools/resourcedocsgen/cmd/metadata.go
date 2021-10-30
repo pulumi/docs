@@ -256,7 +256,12 @@ func packageMetadataCmd() *cobra.Command {
 				}
 			}
 
-			native := isNative(mainSpec.Keywords)
+			native := mainSpec.Attribution == ""
+			// If native is false, check if the schema has the "kind/native" tag in the Keywords
+			// array.
+			if !native {
+				native = isNative(mainSpec.Keywords)
+			}
 
 			if !component {
 				component = isComponent(mainSpec.Keywords)
