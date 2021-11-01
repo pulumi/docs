@@ -96,7 +96,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-pagerduty/sdk/v2/go/pagerduty"
+	"github.com/pulumi/pulumi-pagerduty/sdk/v3/go/pagerduty"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -268,6 +268,7 @@ const snow = new pagerduty.ExtensionServiceNow("snow", {
                         <span class="nx">referer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">snow_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">snow_user</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">summary</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">sync_options</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">task_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -490,6 +491,15 @@ The ExtensionServiceNow resource accepts the following [input]({{< relref "/docs
     <dd>{{% md %}}The name of the service extension.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="summary_csharp">
+<a href="#summary_csharp" style="color: inherit; text-decoration: inherit;">Summary</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A short-form, server-generated string that provides succinct, important information about an object suitable for primary labeling of an entity in a client. In many cases, this will be identical to `name`, though it is not intended to be an identifier.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -589,6 +599,15 @@ The ExtensionServiceNow resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service extension.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="summary_go">
+<a href="#summary_go" style="color: inherit; text-decoration: inherit;">Summary</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A short-form, server-generated string that provides succinct, important information about an object suitable for primary labeling of an entity in a client. In many cases, this will be identical to `name`, though it is not intended to be an identifier.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
@@ -692,6 +711,15 @@ The ExtensionServiceNow resource accepts the following [input]({{< relref "/docs
     <dd>{{% md %}}The name of the service extension.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="summary_nodejs">
+<a href="#summary_nodejs" style="color: inherit; text-decoration: inherit;">summary</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A short-form, server-generated string that provides succinct, important information about an object suitable for primary labeling of an entity in a client. In many cases, this will be identical to `name`, though it is not intended to be an identifier.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -791,6 +819,15 @@ The ExtensionServiceNow resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the service extension.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="summary_python">
+<a href="#summary_python" style="color: inherit; text-decoration: inherit;">summary</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A short-form, server-generated string that provides succinct, important information about an object suitable for primary labeling of an entity in a client. In many cases, this will be identical to `name`, though it is not intended to be an identifier.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
@@ -917,6 +954,7 @@ Get an existing ExtensionServiceNow resource's state with the given name, ID, an
         <span class="nx">referer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">snow_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">snow_user</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">summary</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">sync_options</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">task_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1104,6 +1142,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The ServiceNow username.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_summary_csharp">
+<a href="#state_summary_csharp" style="color: inherit; text-decoration: inherit;">Summary</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A short-form, server-generated string that provides succinct, important information about an object suitable for primary labeling of an entity in a client. In many cases, this will be identical to `name`, though it is not intended to be an identifier.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_syncoptions_csharp">
 <a href="#state_syncoptions_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Options</a>
 </span>
@@ -1212,6 +1259,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ServiceNow username.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_summary_go">
+<a href="#state_summary_go" style="color: inherit; text-decoration: inherit;">Summary</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A short-form, server-generated string that provides succinct, important information about an object suitable for primary labeling of an entity in a client. In many cases, this will be identical to `name`, though it is not intended to be an identifier.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_syncoptions_go">
@@ -1324,6 +1380,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The ServiceNow username.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_summary_nodejs">
+<a href="#state_summary_nodejs" style="color: inherit; text-decoration: inherit;">summary</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A short-form, server-generated string that provides succinct, important information about an object suitable for primary labeling of an entity in a client. In many cases, this will be identical to `name`, though it is not intended to be an identifier.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_syncoptions_nodejs">
 <a href="#state_syncoptions_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Options</a>
 </span>
@@ -1432,6 +1497,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ServiceNow username.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_summary_python">
+<a href="#state_summary_python" style="color: inherit; text-decoration: inherit;">summary</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A short-form, server-generated string that provides succinct, important information about an object suitable for primary labeling of an entity in a client. In many cases, this will be identical to `name`, though it is not intended to be an identifier.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sync_options_python">

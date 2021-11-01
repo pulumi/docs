@@ -89,7 +89,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-pagerduty/sdk/v2/go/pagerduty"
+	"github.com/pulumi/pulumi-pagerduty/sdk/v3/go/pagerduty"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -112,9 +112,9 @@ func main() {
 		}
 		_, err = pagerduty.NewEscalationPolicy(ctx, "exampleEscalationPolicy", &pagerduty.EscalationPolicyArgs{
 			NumLoops: pulumi.Int(2),
-			Teams: pulumi.StringArray{
+			Teams: pulumi.String(pulumi.String{
 				exampleTeam.ID(),
-			},
+			}),
 			Rules: pagerduty.EscalationPolicyRuleArray{
 				&pagerduty.EscalationPolicyRuleArgs{
 					EscalationDelayInMinutes: pulumi.Int(10),
@@ -234,7 +234,7 @@ const exampleEscalationPolicy = new pagerduty.EscalationPolicy("exampleEscalatio
                      <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">num_loops</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                      <span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[EscalationPolicyRuleArgs]]</span> = None<span class="p">,</span>
-                     <span class="nx">teams</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span>
+                     <span class="nx">teams</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">EscalationPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EscalationPolicyArgs</a></span><span class="p">,</span>
@@ -403,7 +403,7 @@ The EscalationPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#teams_csharp" style="color: inherit; text-decoration: inherit;">Teams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Teams associated with the policy. Account must have the `teams` ability to use this parameter.
 {{% /md %}}</dd></dl>
@@ -451,7 +451,7 @@ The EscalationPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#teams_go" style="color: inherit; text-decoration: inherit;">Teams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Teams associated with the policy. Account must have the `teams` ability to use this parameter.
 {{% /md %}}</dd></dl>
@@ -499,7 +499,7 @@ The EscalationPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#teams_nodejs" style="color: inherit; text-decoration: inherit;">teams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Teams associated with the policy. Account must have the `teams` ability to use this parameter.
 {{% /md %}}</dd></dl>
@@ -547,7 +547,7 @@ The EscalationPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#teams_python" style="color: inherit; text-decoration: inherit;">teams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Teams associated with the policy. Account must have the `teams` ability to use this parameter.
 {{% /md %}}</dd></dl>
@@ -628,7 +628,7 @@ Get an existing EscalationPolicy resource's state with the given name, ID, and o
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">num_loops</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[EscalationPolicyRuleArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">teams</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> EscalationPolicy</code></pre></div>
+        <span class="nx">teams</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> EscalationPolicy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -780,7 +780,7 @@ The following state arguments are supported:
 <a href="#state_teams_csharp" style="color: inherit; text-decoration: inherit;">Teams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Teams associated with the policy. Account must have the `teams` ability to use this parameter.
 {{% /md %}}</dd></dl>
@@ -828,7 +828,7 @@ The following state arguments are supported:
 <a href="#state_teams_go" style="color: inherit; text-decoration: inherit;">Teams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Teams associated with the policy. Account must have the `teams` ability to use this parameter.
 {{% /md %}}</dd></dl>
@@ -876,7 +876,7 @@ The following state arguments are supported:
 <a href="#state_teams_nodejs" style="color: inherit; text-decoration: inherit;">teams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Teams associated with the policy. Account must have the `teams` ability to use this parameter.
 {{% /md %}}</dd></dl>
@@ -924,7 +924,7 @@ The following state arguments are supported:
 <a href="#state_teams_python" style="color: inherit; text-decoration: inherit;">teams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Teams associated with the policy. Account must have the `teams` ability to use this parameter.
 {{% /md %}}</dd></dl>

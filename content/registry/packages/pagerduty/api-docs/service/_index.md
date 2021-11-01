@@ -170,7 +170,7 @@ const exampleService = new pagerduty.Service("exampleService", {
             <span class="nx">alert_creation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">alert_grouping</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">alert_grouping_parameters</span><span class="p">:</span> <span class="nx">Optional[ServiceAlertGroupingParametersArgs]</span> = None<span class="p">,</span>
-            <span class="nx">alert_grouping_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+            <span class="nx">alert_grouping_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">auto_resolve_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">escalation_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -322,7 +322,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time in seconds that an incident changes to the Triggered State after being Acknowledged. Disabled if set to the `"null"` string.
+    <dd>{{% md %}}Time in seconds that an incident changes to the Triggered State after being Acknowledged. Disabled if set to the `"null"` string.  If not passed in, will default to '"1800"'.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertcreation_csharp">
@@ -332,16 +332,16 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be one of two values. PagerDuty receives events from your monitoring systems and can then create incidents in different ways. Value "create_incidents" is default: events will create an incident that cannot be merged. Value "create_alerts_and_incidents" is the alternative: events will create an alert and then add it to a new incident, these incidents can be merged. This option is recommended.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="alertgrouping_csharp">
 <a href="#alertgrouping_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Grouping</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Deprecated) Defines how alerts on this service will be automatically grouped into incidents. Note that the alert grouping features are available only on certain plans. If not set, each alert will create a separate incident; If value is set to `time`: All alerts within a specified duration will be grouped into the same incident. This duration is set in the `alert_grouping_timeout` setting (described below). Available on Standard, Enterprise, and Event Intelligence plans; If value is set to `intelligent` - Alerts will be intelligently grouped based on a machine learning model that looks at the alert summary, timing, and the history of grouped alerts. Available on Enterprise and Event Intelligence plan.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Deprecated) Defines how alerts on this service will be automatically grouped into incidents. Note that the alert grouping features are available only on certain plans. If not set, each alert will create a separate incident; If value is set to `time`: All alerts within a specified duration will be grouped into the same incident. This duration is set in the `alert_grouping_timeout` setting (described below). Available on Standard, Enterprise, and Event Intelligence plans; If value is set to `intelligent` - Alerts will be intelligently grouped based on a machine learning model that looks at the alert summary, timing, and the history of grouped alerts. Available on Enterprise and Event Intelligence plan. This field is deprecated, use `alert_grouping_parameters.type` instead,
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alert_grouping_parameters.type`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="alertgroupingparameters_csharp">
 <a href="#alertgroupingparameters_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Grouping<wbr>Parameters</a>
@@ -350,16 +350,16 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicealertgroupingparameters">Service<wbr>Alert<wbr>Grouping<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines how alerts on this service will be automatically grouped into incidents. Note that the alert grouping features are available only on certain plans. If not set, each alert will create a separate incident.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="alertgroupingtimeout_csharp">
 <a href="#alertgroupingtimeout_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Grouping<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Deprecated) The duration in minutes within which to automatically group incoming alerts. This setting applies only when `alert_grouping` is set to `time`. To continue grouping alerts until the incident is resolved, set this value to `0`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Deprecated) The duration in minutes within which to automatically group incoming alerts. This setting applies only when `alert_grouping` is set to `time`. To continue grouping alerts until the incident is resolved, set this value to `0`. This field is deprecated, use `alert_grouping_parameters.config.timeout` instead,
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alert_grouping_parameters.config.timeout`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="autoresolvetimeout_csharp">
 <a href="#autoresolvetimeout_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Resolve<wbr>Timeout</a>
@@ -430,7 +430,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time in seconds that an incident changes to the Triggered State after being Acknowledged. Disabled if set to the `"null"` string.
+    <dd>{{% md %}}Time in seconds that an incident changes to the Triggered State after being Acknowledged. Disabled if set to the `"null"` string.  If not passed in, will default to '"1800"'.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertcreation_go">
@@ -440,16 +440,16 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be one of two values. PagerDuty receives events from your monitoring systems and can then create incidents in different ways. Value "create_incidents" is default: events will create an incident that cannot be merged. Value "create_alerts_and_incidents" is the alternative: events will create an alert and then add it to a new incident, these incidents can be merged. This option is recommended.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="alertgrouping_go">
 <a href="#alertgrouping_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Grouping</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Deprecated) Defines how alerts on this service will be automatically grouped into incidents. Note that the alert grouping features are available only on certain plans. If not set, each alert will create a separate incident; If value is set to `time`: All alerts within a specified duration will be grouped into the same incident. This duration is set in the `alert_grouping_timeout` setting (described below). Available on Standard, Enterprise, and Event Intelligence plans; If value is set to `intelligent` - Alerts will be intelligently grouped based on a machine learning model that looks at the alert summary, timing, and the history of grouped alerts. Available on Enterprise and Event Intelligence plan.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Deprecated) Defines how alerts on this service will be automatically grouped into incidents. Note that the alert grouping features are available only on certain plans. If not set, each alert will create a separate incident; If value is set to `time`: All alerts within a specified duration will be grouped into the same incident. This duration is set in the `alert_grouping_timeout` setting (described below). Available on Standard, Enterprise, and Event Intelligence plans; If value is set to `intelligent` - Alerts will be intelligently grouped based on a machine learning model that looks at the alert summary, timing, and the history of grouped alerts. Available on Enterprise and Event Intelligence plan. This field is deprecated, use `alert_grouping_parameters.type` instead,
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alert_grouping_parameters.type`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="alertgroupingparameters_go">
 <a href="#alertgroupingparameters_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Grouping<wbr>Parameters</a>
@@ -458,16 +458,16 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicealertgroupingparameters">Service<wbr>Alert<wbr>Grouping<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines how alerts on this service will be automatically grouped into incidents. Note that the alert grouping features are available only on certain plans. If not set, each alert will create a separate incident.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="alertgroupingtimeout_go">
 <a href="#alertgroupingtimeout_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Grouping<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Deprecated) The duration in minutes within which to automatically group incoming alerts. This setting applies only when `alert_grouping` is set to `time`. To continue grouping alerts until the incident is resolved, set this value to `0`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Deprecated) The duration in minutes within which to automatically group incoming alerts. This setting applies only when `alert_grouping` is set to `time`. To continue grouping alerts until the incident is resolved, set this value to `0`. This field is deprecated, use `alert_grouping_parameters.config.timeout` instead,
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alert_grouping_parameters.config.timeout`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="autoresolvetimeout_go">
 <a href="#autoresolvetimeout_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Resolve<wbr>Timeout</a>
@@ -538,7 +538,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time in seconds that an incident changes to the Triggered State after being Acknowledged. Disabled if set to the `"null"` string.
+    <dd>{{% md %}}Time in seconds that an incident changes to the Triggered State after being Acknowledged. Disabled if set to the `"null"` string.  If not passed in, will default to '"1800"'.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertcreation_nodejs">
@@ -548,16 +548,16 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be one of two values. PagerDuty receives events from your monitoring systems and can then create incidents in different ways. Value "create_incidents" is default: events will create an incident that cannot be merged. Value "create_alerts_and_incidents" is the alternative: events will create an alert and then add it to a new incident, these incidents can be merged. This option is recommended.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="alertgrouping_nodejs">
 <a href="#alertgrouping_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Grouping</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Deprecated) Defines how alerts on this service will be automatically grouped into incidents. Note that the alert grouping features are available only on certain plans. If not set, each alert will create a separate incident; If value is set to `time`: All alerts within a specified duration will be grouped into the same incident. This duration is set in the `alert_grouping_timeout` setting (described below). Available on Standard, Enterprise, and Event Intelligence plans; If value is set to `intelligent` - Alerts will be intelligently grouped based on a machine learning model that looks at the alert summary, timing, and the history of grouped alerts. Available on Enterprise and Event Intelligence plan.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Deprecated) Defines how alerts on this service will be automatically grouped into incidents. Note that the alert grouping features are available only on certain plans. If not set, each alert will create a separate incident; If value is set to `time`: All alerts within a specified duration will be grouped into the same incident. This duration is set in the `alert_grouping_timeout` setting (described below). Available on Standard, Enterprise, and Event Intelligence plans; If value is set to `intelligent` - Alerts will be intelligently grouped based on a machine learning model that looks at the alert summary, timing, and the history of grouped alerts. Available on Enterprise and Event Intelligence plan. This field is deprecated, use `alert_grouping_parameters.type` instead,
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alert_grouping_parameters.type`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="alertgroupingparameters_nodejs">
 <a href="#alertgroupingparameters_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Grouping<wbr>Parameters</a>
@@ -566,16 +566,16 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicealertgroupingparameters">Service<wbr>Alert<wbr>Grouping<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines how alerts on this service will be automatically grouped into incidents. Note that the alert grouping features are available only on certain plans. If not set, each alert will create a separate incident.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="alertgroupingtimeout_nodejs">
 <a href="#alertgroupingtimeout_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Grouping<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Deprecated) The duration in minutes within which to automatically group incoming alerts. This setting applies only when `alert_grouping` is set to `time`. To continue grouping alerts until the incident is resolved, set this value to `0`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Deprecated) The duration in minutes within which to automatically group incoming alerts. This setting applies only when `alert_grouping` is set to `time`. To continue grouping alerts until the incident is resolved, set this value to `0`. This field is deprecated, use `alert_grouping_parameters.config.timeout` instead,
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alert_grouping_parameters.config.timeout`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="autoresolvetimeout_nodejs">
 <a href="#autoresolvetimeout_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Resolve<wbr>Timeout</a>
@@ -646,7 +646,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time in seconds that an incident changes to the Triggered State after being Acknowledged. Disabled if set to the `"null"` string.
+    <dd>{{% md %}}Time in seconds that an incident changes to the Triggered State after being Acknowledged. Disabled if set to the `"null"` string.  If not passed in, will default to '"1800"'.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alert_creation_python">
@@ -656,16 +656,16 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Must be one of two values. PagerDuty receives events from your monitoring systems and can then create incidents in different ways. Value "create_incidents" is default: events will create an incident that cannot be merged. Value "create_alerts_and_incidents" is the alternative: events will create an alert and then add it to a new incident, these incidents can be merged. This option is recommended.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="alert_grouping_python">
 <a href="#alert_grouping_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>grouping</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}(Deprecated) Defines how alerts on this service will be automatically grouped into incidents. Note that the alert grouping features are available only on certain plans. If not set, each alert will create a separate incident; If value is set to `time`: All alerts within a specified duration will be grouped into the same incident. This duration is set in the `alert_grouping_timeout` setting (described below). Available on Standard, Enterprise, and Event Intelligence plans; If value is set to `intelligent` - Alerts will be intelligently grouped based on a machine learning model that looks at the alert summary, timing, and the history of grouped alerts. Available on Enterprise and Event Intelligence plan.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Deprecated) Defines how alerts on this service will be automatically grouped into incidents. Note that the alert grouping features are available only on certain plans. If not set, each alert will create a separate incident; If value is set to `time`: All alerts within a specified duration will be grouped into the same incident. This duration is set in the `alert_grouping_timeout` setting (described below). Available on Standard, Enterprise, and Event Intelligence plans; If value is set to `intelligent` - Alerts will be intelligently grouped based on a machine learning model that looks at the alert summary, timing, and the history of grouped alerts. Available on Enterprise and Event Intelligence plan. This field is deprecated, use `alert_grouping_parameters.type` instead,
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alert_grouping_parameters.type`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="alert_grouping_parameters_python">
 <a href="#alert_grouping_parameters_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>grouping_<wbr>parameters</a>
@@ -674,16 +674,16 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicealertgroupingparameters">Service<wbr>Alert<wbr>Grouping<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines how alerts on this service will be automatically grouped into incidents. Note that the alert grouping features are available only on certain plans. If not set, each alert will create a separate incident.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="alert_grouping_timeout_python">
 <a href="#alert_grouping_timeout_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>grouping_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}(Deprecated) The duration in minutes within which to automatically group incoming alerts. This setting applies only when `alert_grouping` is set to `time`. To continue grouping alerts until the incident is resolved, set this value to `0`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Deprecated) The duration in minutes within which to automatically group incoming alerts. This setting applies only when `alert_grouping` is set to `time`. To continue grouping alerts until the incident is resolved, set this value to `0`. This field is deprecated, use `alert_grouping_parameters.config.timeout` instead,
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alert_grouping_parameters.config.timeout`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="auto_resolve_timeout_python">
 <a href="#auto_resolve_timeout_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>resolve_<wbr>timeout</a>
@@ -939,7 +939,7 @@ Get an existing Service resource's state with the given name, ID, and optional e
         <span class="nx">alert_creation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">alert_grouping</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">alert_grouping_parameters</span><span class="p">:</span> <span class="nx">Optional[ServiceAlertGroupingParametersArgs]</span> = None<span class="p">,</span>
-        <span class="nx">alert_grouping_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">alert_grouping_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">auto_resolve_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">created_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1069,7 +1069,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time in seconds that an incident changes to the Triggered State after being Acknowledged. Disabled if set to the `"null"` string.
+    <dd>{{% md %}}Time in seconds that an incident changes to the Triggered State after being Acknowledged. Disabled if set to the `"null"` string.  If not passed in, will default to '"1800"'.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alertcreation_csharp">
@@ -1079,16 +1079,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be one of two values. PagerDuty receives events from your monitoring systems and can then create incidents in different ways. Value "create_incidents" is default: events will create an incident that cannot be merged. Value "create_alerts_and_incidents" is the alternative: events will create an alert and then add it to a new incident, these incidents can be merged. This option is recommended.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_alertgrouping_csharp">
 <a href="#state_alertgrouping_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Grouping</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Deprecated) Defines how alerts on this service will be automatically grouped into incidents. Note that the alert grouping features are available only on certain plans. If not set, each alert will create a separate incident; If value is set to `time`: All alerts within a specified duration will be grouped into the same incident. This duration is set in the `alert_grouping_timeout` setting (described below). Available on Standard, Enterprise, and Event Intelligence plans; If value is set to `intelligent` - Alerts will be intelligently grouped based on a machine learning model that looks at the alert summary, timing, and the history of grouped alerts. Available on Enterprise and Event Intelligence plan.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Deprecated) Defines how alerts on this service will be automatically grouped into incidents. Note that the alert grouping features are available only on certain plans. If not set, each alert will create a separate incident; If value is set to `time`: All alerts within a specified duration will be grouped into the same incident. This duration is set in the `alert_grouping_timeout` setting (described below). Available on Standard, Enterprise, and Event Intelligence plans; If value is set to `intelligent` - Alerts will be intelligently grouped based on a machine learning model that looks at the alert summary, timing, and the history of grouped alerts. Available on Enterprise and Event Intelligence plan. This field is deprecated, use `alert_grouping_parameters.type` instead,
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alert_grouping_parameters.type`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_alertgroupingparameters_csharp">
 <a href="#state_alertgroupingparameters_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Grouping<wbr>Parameters</a>
@@ -1097,16 +1097,16 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicealertgroupingparameters">Service<wbr>Alert<wbr>Grouping<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines how alerts on this service will be automatically grouped into incidents. Note that the alert grouping features are available only on certain plans. If not set, each alert will create a separate incident.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_alertgroupingtimeout_csharp">
 <a href="#state_alertgroupingtimeout_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Grouping<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Deprecated) The duration in minutes within which to automatically group incoming alerts. This setting applies only when `alert_grouping` is set to `time`. To continue grouping alerts until the incident is resolved, set this value to `0`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Deprecated) The duration in minutes within which to automatically group incoming alerts. This setting applies only when `alert_grouping` is set to `time`. To continue grouping alerts until the incident is resolved, set this value to `0`. This field is deprecated, use `alert_grouping_parameters.config.timeout` instead,
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alert_grouping_parameters.config.timeout`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoresolvetimeout_csharp">
 <a href="#state_autoresolvetimeout_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Resolve<wbr>Timeout</a>
@@ -1209,7 +1209,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time in seconds that an incident changes to the Triggered State after being Acknowledged. Disabled if set to the `"null"` string.
+    <dd>{{% md %}}Time in seconds that an incident changes to the Triggered State after being Acknowledged. Disabled if set to the `"null"` string.  If not passed in, will default to '"1800"'.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alertcreation_go">
@@ -1219,16 +1219,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be one of two values. PagerDuty receives events from your monitoring systems and can then create incidents in different ways. Value "create_incidents" is default: events will create an incident that cannot be merged. Value "create_alerts_and_incidents" is the alternative: events will create an alert and then add it to a new incident, these incidents can be merged. This option is recommended.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_alertgrouping_go">
 <a href="#state_alertgrouping_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Grouping</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Deprecated) Defines how alerts on this service will be automatically grouped into incidents. Note that the alert grouping features are available only on certain plans. If not set, each alert will create a separate incident; If value is set to `time`: All alerts within a specified duration will be grouped into the same incident. This duration is set in the `alert_grouping_timeout` setting (described below). Available on Standard, Enterprise, and Event Intelligence plans; If value is set to `intelligent` - Alerts will be intelligently grouped based on a machine learning model that looks at the alert summary, timing, and the history of grouped alerts. Available on Enterprise and Event Intelligence plan.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Deprecated) Defines how alerts on this service will be automatically grouped into incidents. Note that the alert grouping features are available only on certain plans. If not set, each alert will create a separate incident; If value is set to `time`: All alerts within a specified duration will be grouped into the same incident. This duration is set in the `alert_grouping_timeout` setting (described below). Available on Standard, Enterprise, and Event Intelligence plans; If value is set to `intelligent` - Alerts will be intelligently grouped based on a machine learning model that looks at the alert summary, timing, and the history of grouped alerts. Available on Enterprise and Event Intelligence plan. This field is deprecated, use `alert_grouping_parameters.type` instead,
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alert_grouping_parameters.type`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_alertgroupingparameters_go">
 <a href="#state_alertgroupingparameters_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Grouping<wbr>Parameters</a>
@@ -1237,16 +1237,16 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicealertgroupingparameters">Service<wbr>Alert<wbr>Grouping<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines how alerts on this service will be automatically grouped into incidents. Note that the alert grouping features are available only on certain plans. If not set, each alert will create a separate incident.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_alertgroupingtimeout_go">
 <a href="#state_alertgroupingtimeout_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Grouping<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Deprecated) The duration in minutes within which to automatically group incoming alerts. This setting applies only when `alert_grouping` is set to `time`. To continue grouping alerts until the incident is resolved, set this value to `0`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Deprecated) The duration in minutes within which to automatically group incoming alerts. This setting applies only when `alert_grouping` is set to `time`. To continue grouping alerts until the incident is resolved, set this value to `0`. This field is deprecated, use `alert_grouping_parameters.config.timeout` instead,
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alert_grouping_parameters.config.timeout`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoresolvetimeout_go">
 <a href="#state_autoresolvetimeout_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Resolve<wbr>Timeout</a>
@@ -1349,7 +1349,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time in seconds that an incident changes to the Triggered State after being Acknowledged. Disabled if set to the `"null"` string.
+    <dd>{{% md %}}Time in seconds that an incident changes to the Triggered State after being Acknowledged. Disabled if set to the `"null"` string.  If not passed in, will default to '"1800"'.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alertcreation_nodejs">
@@ -1359,16 +1359,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be one of two values. PagerDuty receives events from your monitoring systems and can then create incidents in different ways. Value "create_incidents" is default: events will create an incident that cannot be merged. Value "create_alerts_and_incidents" is the alternative: events will create an alert and then add it to a new incident, these incidents can be merged. This option is recommended.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_alertgrouping_nodejs">
 <a href="#state_alertgrouping_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Grouping</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Deprecated) Defines how alerts on this service will be automatically grouped into incidents. Note that the alert grouping features are available only on certain plans. If not set, each alert will create a separate incident; If value is set to `time`: All alerts within a specified duration will be grouped into the same incident. This duration is set in the `alert_grouping_timeout` setting (described below). Available on Standard, Enterprise, and Event Intelligence plans; If value is set to `intelligent` - Alerts will be intelligently grouped based on a machine learning model that looks at the alert summary, timing, and the history of grouped alerts. Available on Enterprise and Event Intelligence plan.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Deprecated) Defines how alerts on this service will be automatically grouped into incidents. Note that the alert grouping features are available only on certain plans. If not set, each alert will create a separate incident; If value is set to `time`: All alerts within a specified duration will be grouped into the same incident. This duration is set in the `alert_grouping_timeout` setting (described below). Available on Standard, Enterprise, and Event Intelligence plans; If value is set to `intelligent` - Alerts will be intelligently grouped based on a machine learning model that looks at the alert summary, timing, and the history of grouped alerts. Available on Enterprise and Event Intelligence plan. This field is deprecated, use `alert_grouping_parameters.type` instead,
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alert_grouping_parameters.type`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_alertgroupingparameters_nodejs">
 <a href="#state_alertgroupingparameters_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Grouping<wbr>Parameters</a>
@@ -1377,16 +1377,16 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicealertgroupingparameters">Service<wbr>Alert<wbr>Grouping<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines how alerts on this service will be automatically grouped into incidents. Note that the alert grouping features are available only on certain plans. If not set, each alert will create a separate incident.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_alertgroupingtimeout_nodejs">
 <a href="#state_alertgroupingtimeout_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Grouping<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Deprecated) The duration in minutes within which to automatically group incoming alerts. This setting applies only when `alert_grouping` is set to `time`. To continue grouping alerts until the incident is resolved, set this value to `0`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Deprecated) The duration in minutes within which to automatically group incoming alerts. This setting applies only when `alert_grouping` is set to `time`. To continue grouping alerts until the incident is resolved, set this value to `0`. This field is deprecated, use `alert_grouping_parameters.config.timeout` instead,
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alert_grouping_parameters.config.timeout`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoresolvetimeout_nodejs">
 <a href="#state_autoresolvetimeout_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Resolve<wbr>Timeout</a>
@@ -1489,7 +1489,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time in seconds that an incident changes to the Triggered State after being Acknowledged. Disabled if set to the `"null"` string.
+    <dd>{{% md %}}Time in seconds that an incident changes to the Triggered State after being Acknowledged. Disabled if set to the `"null"` string.  If not passed in, will default to '"1800"'.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alert_creation_python">
@@ -1499,16 +1499,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Must be one of two values. PagerDuty receives events from your monitoring systems and can then create incidents in different ways. Value "create_incidents" is default: events will create an incident that cannot be merged. Value "create_alerts_and_incidents" is the alternative: events will create an alert and then add it to a new incident, these incidents can be merged. This option is recommended.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_alert_grouping_python">
 <a href="#state_alert_grouping_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>grouping</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}(Deprecated) Defines how alerts on this service will be automatically grouped into incidents. Note that the alert grouping features are available only on certain plans. If not set, each alert will create a separate incident; If value is set to `time`: All alerts within a specified duration will be grouped into the same incident. This duration is set in the `alert_grouping_timeout` setting (described below). Available on Standard, Enterprise, and Event Intelligence plans; If value is set to `intelligent` - Alerts will be intelligently grouped based on a machine learning model that looks at the alert summary, timing, and the history of grouped alerts. Available on Enterprise and Event Intelligence plan.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Deprecated) Defines how alerts on this service will be automatically grouped into incidents. Note that the alert grouping features are available only on certain plans. If not set, each alert will create a separate incident; If value is set to `time`: All alerts within a specified duration will be grouped into the same incident. This duration is set in the `alert_grouping_timeout` setting (described below). Available on Standard, Enterprise, and Event Intelligence plans; If value is set to `intelligent` - Alerts will be intelligently grouped based on a machine learning model that looks at the alert summary, timing, and the history of grouped alerts. Available on Enterprise and Event Intelligence plan. This field is deprecated, use `alert_grouping_parameters.type` instead,
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alert_grouping_parameters.type`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_alert_grouping_parameters_python">
 <a href="#state_alert_grouping_parameters_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>grouping_<wbr>parameters</a>
@@ -1517,16 +1517,16 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicealertgroupingparameters">Service<wbr>Alert<wbr>Grouping<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines how alerts on this service will be automatically grouped into incidents. Note that the alert grouping features are available only on certain plans. If not set, each alert will create a separate incident.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_alert_grouping_timeout_python">
 <a href="#state_alert_grouping_timeout_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>grouping_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}(Deprecated) The duration in minutes within which to automatically group incoming alerts. This setting applies only when `alert_grouping` is set to `time`. To continue grouping alerts until the incident is resolved, set this value to `0`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Deprecated) The duration in minutes within which to automatically group incoming alerts. This setting applies only when `alert_grouping` is set to `time`. To continue grouping alerts until the incident is resolved, set this value to `0`. This field is deprecated, use `alert_grouping_parameters.config.timeout` instead,
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alert_grouping_parameters.config.timeout`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_resolve_timeout_python">
 <a href="#state_auto_resolve_timeout_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>resolve_<wbr>timeout</a>

@@ -949,7 +949,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulesetruleactionsseverity">List&lt;Ruleset<wbr>Rule<wbr>Actions<wbr>Severity&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The [severity level](https://support.pagerduty.com/docs/rulesets#section-set-severity-with-event-rules) of the event. Can be either `info`,`error`,`warning`, or `critical`.
+    <dd>{{% md %}}The [severity level](https://support.pagerduty.com/docs/rulesets#section-set-severity-with-event-rules) of the event. Can be either `info`,`warning`,`error`, or `critical`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="suppresses_csharp">
@@ -1025,7 +1025,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulesetruleactionsseverity">[]Ruleset<wbr>Rule<wbr>Actions<wbr>Severity</a></span>
     </dt>
-    <dd>{{% md %}}The [severity level](https://support.pagerduty.com/docs/rulesets#section-set-severity-with-event-rules) of the event. Can be either `info`,`error`,`warning`, or `critical`.
+    <dd>{{% md %}}The [severity level](https://support.pagerduty.com/docs/rulesets#section-set-severity-with-event-rules) of the event. Can be either `info`,`warning`,`error`, or `critical`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="suppresses_go">
@@ -1101,7 +1101,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulesetruleactionsseverity">Ruleset<wbr>Rule<wbr>Actions<wbr>Severity[]</a></span>
     </dt>
-    <dd>{{% md %}}The [severity level](https://support.pagerduty.com/docs/rulesets#section-set-severity-with-event-rules) of the event. Can be either `info`,`error`,`warning`, or `critical`.
+    <dd>{{% md %}}The [severity level](https://support.pagerduty.com/docs/rulesets#section-set-severity-with-event-rules) of the event. Can be either `info`,`warning`,`error`, or `critical`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="suppresses_nodejs">
@@ -1177,7 +1177,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulesetruleactionsseverity">Sequence[Ruleset<wbr>Rule<wbr>Actions<wbr>Severity]</a></span>
     </dt>
-    <dd>{{% md %}}The [severity level](https://support.pagerduty.com/docs/rulesets#section-set-severity-with-event-rules) of the event. Can be either `info`,`error`,`warning`, or `critical`.
+    <dd>{{% md %}}The [severity level](https://support.pagerduty.com/docs/rulesets#section-set-severity-with-event-rules) of the event. Can be either `info`,`warning`,`error`, or `critical`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="suppresses_python">

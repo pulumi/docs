@@ -66,10 +66,10 @@ class MyStack : Stack
             UserId = example.Id,
             StartDelayInMinutes = 1,
             Urgency = "high",
-            ContactMethod = new Pagerduty.Inputs.UserNotificationRuleContactMethodArgs
+            ContactMethod = 
             {
-                Type = "phone_contact_method",
-                Id = phone.Id,
+                { "type", "phone_contact_method" },
+                { "id", phone.Id },
             },
         });
         var lowUrgencyEmail = new Pagerduty.UserNotificationRule("lowUrgencyEmail", new Pagerduty.UserNotificationRuleArgs
@@ -77,10 +77,10 @@ class MyStack : Stack
             UserId = example.Id,
             StartDelayInMinutes = 1,
             Urgency = "low",
-            ContactMethod = new Pagerduty.Inputs.UserNotificationRuleContactMethodArgs
+            ContactMethod = 
             {
-                Type = "email_contact_method",
-                Id = email.Id,
+                { "type", "email_contact_method" },
+                { "id", email.Id },
             },
         });
         var lowUrgencySms = new Pagerduty.UserNotificationRule("lowUrgencySms", new Pagerduty.UserNotificationRuleArgs
@@ -88,10 +88,10 @@ class MyStack : Stack
             UserId = example.Id,
             StartDelayInMinutes = 10,
             Urgency = "low",
-            ContactMethod = new Pagerduty.Inputs.UserNotificationRuleContactMethodArgs
+            ContactMethod = 
             {
-                Type = "sms_contact_method",
-                Id = sms.Id,
+                { "type", "sms_contact_method" },
+                { "id", sms.Id },
             },
         });
     }
@@ -109,7 +109,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-pagerduty/sdk/v2/go/pagerduty"
+	"github.com/pulumi/pulumi-pagerduty/sdk/v3/go/pagerduty"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -154,9 +154,9 @@ func main() {
 			UserId:              example.ID(),
 			StartDelayInMinutes: pulumi.Int(1),
 			Urgency:             pulumi.String("high"),
-			ContactMethod: &pagerduty.UserNotificationRuleContactMethodArgs{
-				Type: pulumi.String("phone_contact_method"),
-				Id:   phone.ID(),
+			ContactMethod: pulumi.StringMap{
+				"type": pulumi.String("phone_contact_method"),
+				"id":   phone.ID(),
 			},
 		})
 		if err != nil {
@@ -166,9 +166,9 @@ func main() {
 			UserId:              example.ID(),
 			StartDelayInMinutes: pulumi.Int(1),
 			Urgency:             pulumi.String("low"),
-			ContactMethod: &pagerduty.UserNotificationRuleContactMethodArgs{
-				Type: pulumi.String("email_contact_method"),
-				Id:   email.ID(),
+			ContactMethod: pulumi.StringMap{
+				"type": pulumi.String("email_contact_method"),
+				"id":   email.ID(),
 			},
 		})
 		if err != nil {
@@ -178,9 +178,9 @@ func main() {
 			UserId:              example.ID(),
 			StartDelayInMinutes: pulumi.Int(10),
 			Urgency:             pulumi.String("low"),
-			ContactMethod: &pagerduty.UserNotificationRuleContactMethodArgs{
-				Type: pulumi.String("sms_contact_method"),
-				Id:   sms.ID(),
+			ContactMethod: pulumi.StringMap{
+				"type": pulumi.String("sms_contact_method"),
+				"id":   sms.ID(),
 			},
 		})
 		if err != nil {
@@ -223,26 +223,26 @@ high_urgency_phone = pagerduty.UserNotificationRule("highUrgencyPhone",
     user_id=example.id,
     start_delay_in_minutes=1,
     urgency="high",
-    contact_method=pagerduty.UserNotificationRuleContactMethodArgs(
-        type="phone_contact_method",
-        id=phone.id,
-    ))
+    contact_method={
+        "type": "phone_contact_method",
+        "id": phone.id,
+    })
 low_urgency_email = pagerduty.UserNotificationRule("lowUrgencyEmail",
     user_id=example.id,
     start_delay_in_minutes=1,
     urgency="low",
-    contact_method=pagerduty.UserNotificationRuleContactMethodArgs(
-        type="email_contact_method",
-        id=email.id,
-    ))
+    contact_method={
+        "type": "email_contact_method",
+        "id": email.id,
+    })
 low_urgency_sms = pagerduty.UserNotificationRule("lowUrgencySms",
     user_id=example.id,
     start_delay_in_minutes=10,
     urgency="low",
-    contact_method=pagerduty.UserNotificationRuleContactMethodArgs(
-        type="sms_contact_method",
-        id=sms.id,
-    ))
+    contact_method={
+        "type": "sms_contact_method",
+        "id": sms.id,
+    })
 ```
 
 
@@ -330,7 +330,7 @@ const lowUrgencySms = new pagerduty.UserNotificationRule("lowUrgencySms", {
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">UserNotificationRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                         <span class="nx">contact_method</span><span class="p">:</span> <span class="nx">Optional[UserNotificationRuleContactMethodArgs]</span> = None<span class="p">,</span>
+                         <span class="nx">contact_method</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                          <span class="nx">start_delay_in_minutes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                          <span class="nx">urgency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">user_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
@@ -467,7 +467,7 @@ The UserNotificationRule resource accepts the following [input]({{< relref "/doc
 <a href="#contactmethod_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usernotificationrulecontactmethod">User<wbr>Notification<wbr>Rule<wbr>Contact<wbr>Method<wbr>Args</a></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A contact method block, configured as a block described below.
 {{% /md %}}</dd><dt class="property-required"
@@ -507,7 +507,7 @@ The UserNotificationRule resource accepts the following [input]({{< relref "/doc
 <a href="#contactmethod_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usernotificationrulecontactmethod">User<wbr>Notification<wbr>Rule<wbr>Contact<wbr>Method<wbr>Args</a></span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A contact method block, configured as a block described below.
 {{% /md %}}</dd><dt class="property-required"
@@ -547,7 +547,7 @@ The UserNotificationRule resource accepts the following [input]({{< relref "/doc
 <a href="#contactmethod_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usernotificationrulecontactmethod">User<wbr>Notification<wbr>Rule<wbr>Contact<wbr>Method<wbr>Args</a></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A contact method block, configured as a block described below.
 {{% /md %}}</dd><dt class="property-required"
@@ -587,7 +587,7 @@ The UserNotificationRule resource accepts the following [input]({{< relref "/doc
 <a href="#contact_method_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usernotificationrulecontactmethod">User<wbr>Notification<wbr>Rule<wbr>Contact<wbr>Method<wbr>Args</a></span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A contact method block, configured as a block described below.
 {{% /md %}}</dd><dt class="property-required"
@@ -691,7 +691,7 @@ Get an existing UserNotificationRule resource's state with the given name, ID, a
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">contact_method</span><span class="p">:</span> <span class="nx">Optional[UserNotificationRuleContactMethodArgs]</span> = None<span class="p">,</span>
+        <span class="nx">contact_method</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">start_delay_in_minutes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">urgency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">user_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> UserNotificationRule</code></pre></div>
@@ -811,7 +811,7 @@ The following state arguments are supported:
 <a href="#state_contactmethod_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usernotificationrulecontactmethod">User<wbr>Notification<wbr>Rule<wbr>Contact<wbr>Method<wbr>Args</a></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A contact method block, configured as a block described below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -851,7 +851,7 @@ The following state arguments are supported:
 <a href="#state_contactmethod_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usernotificationrulecontactmethod">User<wbr>Notification<wbr>Rule<wbr>Contact<wbr>Method<wbr>Args</a></span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A contact method block, configured as a block described below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -891,7 +891,7 @@ The following state arguments are supported:
 <a href="#state_contactmethod_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usernotificationrulecontactmethod">User<wbr>Notification<wbr>Rule<wbr>Contact<wbr>Method<wbr>Args</a></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A contact method block, configured as a block described below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -931,7 +931,7 @@ The following state arguments are supported:
 <a href="#state_contact_method_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usernotificationrulecontactmethod">User<wbr>Notification<wbr>Rule<wbr>Contact<wbr>Method<wbr>Args</a></span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A contact method block, configured as a block described below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -968,100 +968,6 @@ The following state arguments are supported:
 
 
 
-
-## Supporting Types
-
-
-
-<h4 id="usernotificationrulecontactmethod">User<wbr>Notification<wbr>Rule<wbr>Contact<wbr>Method</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The id of the referenced contact method.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of contact method. Can be `email_contact_method`, `phone_contact_method`, `push_notification_contact_method` or `sms_contact_method`.
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The id of the referenced contact method.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of contact method. Can be `email_contact_method`, `phone_contact_method`, `push_notification_contact_method` or `sms_contact_method`.
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The id of the referenced contact method.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of contact method. Can be `email_contact_method`, `phone_contact_method`, `push_notification_contact_method` or `sms_contact_method`.
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The id of the referenced contact method.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of contact method. Can be `email_contact_method`, `phone_contact_method`, `push_notification_contact_method` or `sms_contact_method`.
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
 ## Import
 
 

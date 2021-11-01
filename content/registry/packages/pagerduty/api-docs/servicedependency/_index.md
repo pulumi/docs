@@ -36,50 +36,44 @@ class MyStack : Stack
     {
         var foo = new Pagerduty.ServiceDependency("foo", new Pagerduty.ServiceDependencyArgs
         {
-            Dependencies = 
+            Dependency = new Pagerduty.Inputs.ServiceDependencyDependencyArgs
             {
-                new Pagerduty.Inputs.ServiceDependencyDependencyArgs
+                DependentServices = 
                 {
-                    DependentServices = 
+                    new Pagerduty.Inputs.ServiceDependencyDependencyDependentServiceArgs
                     {
-                        new Pagerduty.Inputs.ServiceDependencyDependencyDependentServiceArgs
-                        {
-                            Id = pagerduty_business_service.Foo.Id,
-                            Type = "business_service",
-                        },
+                        Id = pagerduty_business_service.Foo.Id,
+                        Type = "business_service",
                     },
-                    SupportingServices = 
+                },
+                SupportingServices = 
+                {
+                    new Pagerduty.Inputs.ServiceDependencyDependencySupportingServiceArgs
                     {
-                        new Pagerduty.Inputs.ServiceDependencyDependencySupportingServiceArgs
-                        {
-                            Id = pagerduty_service.Foo.Id,
-                            Type = "service",
-                        },
+                        Id = pagerduty_service.Foo.Id,
+                        Type = "service",
                     },
                 },
             },
         });
         var bar = new Pagerduty.ServiceDependency("bar", new Pagerduty.ServiceDependencyArgs
         {
-            Dependencies = 
+            Dependency = new Pagerduty.Inputs.ServiceDependencyDependencyArgs
             {
-                new Pagerduty.Inputs.ServiceDependencyDependencyArgs
+                DependentServices = 
                 {
-                    DependentServices = 
+                    new Pagerduty.Inputs.ServiceDependencyDependencyDependentServiceArgs
                     {
-                        new Pagerduty.Inputs.ServiceDependencyDependencyDependentServiceArgs
-                        {
-                            Id = pagerduty_business_service.Foo.Id,
-                            Type = "business_service",
-                        },
+                        Id = pagerduty_business_service.Foo.Id,
+                        Type = "business_service",
                     },
-                    SupportingServices = 
+                },
+                SupportingServices = 
+                {
+                    new Pagerduty.Inputs.ServiceDependencyDependencySupportingServiceArgs
                     {
-                        new Pagerduty.Inputs.ServiceDependencyDependencySupportingServiceArgs
-                        {
-                            Id = pagerduty_service.Two.Id,
-                            Type = "service",
-                        },
+                        Id = pagerduty_service.Two.Id,
+                        Type = "service",
                     },
                 },
             },
@@ -99,26 +93,24 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-pagerduty/sdk/v2/go/pagerduty"
+	"github.com/pulumi/pulumi-pagerduty/sdk/v3/go/pagerduty"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := pagerduty.NewServiceDependency(ctx, "foo", &pagerduty.ServiceDependencyArgs{
-			Dependencies: pagerduty.ServiceDependencyDependencyArray{
-				&pagerduty.ServiceDependencyDependencyArgs{
-					DependentServices: pagerduty.ServiceDependencyDependencyDependentServiceArray{
-						&pagerduty.ServiceDependencyDependencyDependentServiceArgs{
-							Id:   pulumi.Any(pagerduty_business_service.Foo.Id),
-							Type: pulumi.String("business_service"),
-						},
+			Dependency: &pagerduty.ServiceDependencyDependencyArgs{
+				DependentServices: pagerduty.ServiceDependencyDependencyDependentServiceArray{
+					&pagerduty.ServiceDependencyDependencyDependentServiceArgs{
+						Id:   pulumi.Any(pagerduty_business_service.Foo.Id),
+						Type: pulumi.String("business_service"),
 					},
-					SupportingServices: pagerduty.ServiceDependencyDependencySupportingServiceArray{
-						&pagerduty.ServiceDependencyDependencySupportingServiceArgs{
-							Id:   pulumi.Any(pagerduty_service.Foo.Id),
-							Type: pulumi.String("service"),
-						},
+				},
+				SupportingServices: pagerduty.ServiceDependencyDependencySupportingServiceArray{
+					&pagerduty.ServiceDependencyDependencySupportingServiceArgs{
+						Id:   pulumi.Any(pagerduty_service.Foo.Id),
+						Type: pulumi.String("service"),
 					},
 				},
 			},
@@ -127,19 +119,17 @@ func main() {
 			return err
 		}
 		_, err = pagerduty.NewServiceDependency(ctx, "bar", &pagerduty.ServiceDependencyArgs{
-			Dependencies: pagerduty.ServiceDependencyDependencyArray{
-				&pagerduty.ServiceDependencyDependencyArgs{
-					DependentServices: pagerduty.ServiceDependencyDependencyDependentServiceArray{
-						&pagerduty.ServiceDependencyDependencyDependentServiceArgs{
-							Id:   pulumi.Any(pagerduty_business_service.Foo.Id),
-							Type: pulumi.String("business_service"),
-						},
+			Dependency: &pagerduty.ServiceDependencyDependencyArgs{
+				DependentServices: pagerduty.ServiceDependencyDependencyDependentServiceArray{
+					&pagerduty.ServiceDependencyDependencyDependentServiceArgs{
+						Id:   pulumi.Any(pagerduty_business_service.Foo.Id),
+						Type: pulumi.String("business_service"),
 					},
-					SupportingServices: pagerduty.ServiceDependencyDependencySupportingServiceArray{
-						&pagerduty.ServiceDependencyDependencySupportingServiceArgs{
-							Id:   pulumi.Any(pagerduty_service.Two.Id),
-							Type: pulumi.String("service"),
-						},
+				},
+				SupportingServices: pagerduty.ServiceDependencyDependencySupportingServiceArray{
+					&pagerduty.ServiceDependencyDependencySupportingServiceArgs{
+						Id:   pulumi.Any(pagerduty_service.Two.Id),
+						Type: pulumi.String("service"),
 					},
 				},
 			},
@@ -162,7 +152,7 @@ func main() {
 import pulumi
 import pulumi_pagerduty as pagerduty
 
-foo = pagerduty.ServiceDependency("foo", dependencies=[pagerduty.ServiceDependencyDependencyArgs(
+foo = pagerduty.ServiceDependency("foo", dependency=pagerduty.ServiceDependencyDependencyArgs(
     dependent_services=[pagerduty.ServiceDependencyDependencyDependentServiceArgs(
         id=pagerduty_business_service["foo"]["id"],
         type="business_service",
@@ -171,8 +161,8 @@ foo = pagerduty.ServiceDependency("foo", dependencies=[pagerduty.ServiceDependen
         id=pagerduty_service["foo"]["id"],
         type="service",
     )],
-)])
-bar = pagerduty.ServiceDependency("bar", dependencies=[pagerduty.ServiceDependencyDependencyArgs(
+))
+bar = pagerduty.ServiceDependency("bar", dependency=pagerduty.ServiceDependencyDependencyArgs(
     dependent_services=[pagerduty.ServiceDependencyDependencyDependentServiceArgs(
         id=pagerduty_business_service["foo"]["id"],
         type="business_service",
@@ -181,7 +171,7 @@ bar = pagerduty.ServiceDependency("bar", dependencies=[pagerduty.ServiceDependen
         id=pagerduty_service["two"]["id"],
         type="service",
     )],
-)])
+))
 ```
 
 
@@ -195,7 +185,7 @@ bar = pagerduty.ServiceDependency("bar", dependencies=[pagerduty.ServiceDependen
 import * as pulumi from "@pulumi/pulumi";
 import * as pagerduty from "@pulumi/pagerduty";
 
-const foo = new pagerduty.ServiceDependency("foo", {dependencies: [{
+const foo = new pagerduty.ServiceDependency("foo", {dependency: {
     dependentServices: [{
         id: pagerduty_business_service.foo.id,
         type: "business_service",
@@ -204,8 +194,8 @@ const foo = new pagerduty.ServiceDependency("foo", {dependencies: [{
         id: pagerduty_service.foo.id,
         type: "service",
     }],
-}]});
-const bar = new pagerduty.ServiceDependency("bar", {dependencies: [{
+}});
+const bar = new pagerduty.ServiceDependency("bar", {dependency: {
     dependentServices: [{
         id: pagerduty_business_service.foo.id,
         type: "business_service",
@@ -214,7 +204,7 @@ const bar = new pagerduty.ServiceDependency("bar", {dependencies: [{
         id: pagerduty_service.two.id,
         type: "service",
     }],
-}]});
+}});
 ```
 
 
@@ -241,7 +231,7 @@ const bar = new pagerduty.ServiceDependency("bar", {dependencies: [{
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ServiceDependency</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                      <span class="nx">dependencies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceDependencyDependencyArgs]]</span> = None<span class="p">)</span>
+                      <span class="nx">dependency</span><span class="p">:</span> <span class="nx">Optional[ServiceDependencyDependencyArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ServiceDependency</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                       <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceDependencyArgs</a></span><span class="p">,</span>
@@ -371,52 +361,52 @@ The ServiceDependency resource accepts the following [input]({{< relref "/docs/i
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="dependencies_csharp">
-<a href="#dependencies_csharp" style="color: inherit; text-decoration: inherit;">Dependencies</a>
+        <span id="dependency_csharp">
+<a href="#dependency_csharp" style="color: inherit; text-decoration: inherit;">Dependency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicedependencydependency">List&lt;Service<wbr>Dependency<wbr>Dependency<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#servicedependencydependency">Service<wbr>Dependency<wbr>Dependency<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The relationship between the `supporting_service` and `dependent_service`.
+    <dd>{{% md %}}The relationship between the `supporting_service` and `dependent_service`. One and only one dependency block must be defined.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="dependencies_go">
-<a href="#dependencies_go" style="color: inherit; text-decoration: inherit;">Dependencies</a>
+        <span id="dependency_go">
+<a href="#dependency_go" style="color: inherit; text-decoration: inherit;">Dependency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicedependencydependency">[]Service<wbr>Dependency<wbr>Dependency<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicedependencydependency">Service<wbr>Dependency<wbr>Dependency<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The relationship between the `supporting_service` and `dependent_service`.
+    <dd>{{% md %}}The relationship between the `supporting_service` and `dependent_service`. One and only one dependency block must be defined.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="dependencies_nodejs">
-<a href="#dependencies_nodejs" style="color: inherit; text-decoration: inherit;">dependencies</a>
+        <span id="dependency_nodejs">
+<a href="#dependency_nodejs" style="color: inherit; text-decoration: inherit;">dependency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicedependencydependency">Service<wbr>Dependency<wbr>Dependency<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#servicedependencydependency">Service<wbr>Dependency<wbr>Dependency<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The relationship between the `supporting_service` and `dependent_service`.
+    <dd>{{% md %}}The relationship between the `supporting_service` and `dependent_service`. One and only one dependency block must be defined.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="dependencies_python">
-<a href="#dependencies_python" style="color: inherit; text-decoration: inherit;">dependencies</a>
+        <span id="dependency_python">
+<a href="#dependency_python" style="color: inherit; text-decoration: inherit;">dependency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicedependencydependency">Sequence[Service<wbr>Dependency<wbr>Dependency<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicedependencydependency">Service<wbr>Dependency<wbr>Dependency<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The relationship between the `supporting_service` and `dependent_service`.
+    <dd>{{% md %}}The relationship between the `supporting_service` and `dependent_service`. One and only one dependency block must be defined.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -491,7 +481,7 @@ Get an existing ServiceDependency resource's state with the given name, ID, and 
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">dependencies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceDependencyDependencyArgs]]</span> = None<span class="p">) -&gt;</span> ServiceDependency</code></pre></div>
+        <span class="nx">dependency</span><span class="p">:</span> <span class="nx">Optional[ServiceDependencyDependencyArgs]</span> = None<span class="p">) -&gt;</span> ServiceDependency</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -604,52 +594,52 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="state_dependencies_csharp">
-<a href="#state_dependencies_csharp" style="color: inherit; text-decoration: inherit;">Dependencies</a>
+        <span id="state_dependency_csharp">
+<a href="#state_dependency_csharp" style="color: inherit; text-decoration: inherit;">Dependency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicedependencydependency">List&lt;Service<wbr>Dependency<wbr>Dependency<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#servicedependencydependency">Service<wbr>Dependency<wbr>Dependency<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The relationship between the `supporting_service` and `dependent_service`.
+    <dd>{{% md %}}The relationship between the `supporting_service` and `dependent_service`. One and only one dependency block must be defined.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="state_dependencies_go">
-<a href="#state_dependencies_go" style="color: inherit; text-decoration: inherit;">Dependencies</a>
+        <span id="state_dependency_go">
+<a href="#state_dependency_go" style="color: inherit; text-decoration: inherit;">Dependency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicedependencydependency">[]Service<wbr>Dependency<wbr>Dependency<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicedependencydependency">Service<wbr>Dependency<wbr>Dependency<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The relationship between the `supporting_service` and `dependent_service`.
+    <dd>{{% md %}}The relationship between the `supporting_service` and `dependent_service`. One and only one dependency block must be defined.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="state_dependencies_nodejs">
-<a href="#state_dependencies_nodejs" style="color: inherit; text-decoration: inherit;">dependencies</a>
+        <span id="state_dependency_nodejs">
+<a href="#state_dependency_nodejs" style="color: inherit; text-decoration: inherit;">dependency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicedependencydependency">Service<wbr>Dependency<wbr>Dependency<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#servicedependencydependency">Service<wbr>Dependency<wbr>Dependency<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The relationship between the `supporting_service` and `dependent_service`.
+    <dd>{{% md %}}The relationship between the `supporting_service` and `dependent_service`. One and only one dependency block must be defined.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="state_dependencies_python">
-<a href="#state_dependencies_python" style="color: inherit; text-decoration: inherit;">dependencies</a>
+        <span id="state_dependency_python">
+<a href="#state_dependency_python" style="color: inherit; text-decoration: inherit;">dependency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicedependencydependency">Sequence[Service<wbr>Dependency<wbr>Dependency<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicedependencydependency">Service<wbr>Dependency<wbr>Dependency<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The relationship between the `supporting_service` and `dependent_service`.
+    <dd>{{% md %}}The relationship between the `supporting_service` and `dependent_service`. One and only one dependency block must be defined.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -673,7 +663,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicedependencydependencydependentservice">List&lt;Service<wbr>Dependency<wbr>Dependency<wbr>Dependent<wbr>Service&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The service that id dependent on the supporting service.
+    <dd>{{% md %}}The service that dependents on the supporting service.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="supportingservices_csharp">
@@ -682,7 +672,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicedependencydependencysupportingservice">List&lt;Service<wbr>Dependency<wbr>Dependency<wbr>Supporting<wbr>Service&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The service that supports  the  dependent service.
+    <dd>{{% md %}}The service that supports the dependent service.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
@@ -703,7 +693,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicedependencydependencydependentservice">[]Service<wbr>Dependency<wbr>Dependency<wbr>Dependent<wbr>Service</a></span>
     </dt>
-    <dd>{{% md %}}The service that id dependent on the supporting service.
+    <dd>{{% md %}}The service that dependents on the supporting service.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="supportingservices_go">
@@ -712,7 +702,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicedependencydependencysupportingservice">[]Service<wbr>Dependency<wbr>Dependency<wbr>Supporting<wbr>Service</a></span>
     </dt>
-    <dd>{{% md %}}The service that supports  the  dependent service.
+    <dd>{{% md %}}The service that supports the dependent service.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
@@ -733,7 +723,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicedependencydependencydependentservice">Service<wbr>Dependency<wbr>Dependency<wbr>Dependent<wbr>Service[]</a></span>
     </dt>
-    <dd>{{% md %}}The service that id dependent on the supporting service.
+    <dd>{{% md %}}The service that dependents on the supporting service.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="supportingservices_nodejs">
@@ -742,7 +732,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicedependencydependencysupportingservice">Service<wbr>Dependency<wbr>Dependency<wbr>Supporting<wbr>Service[]</a></span>
     </dt>
-    <dd>{{% md %}}The service that supports  the  dependent service.
+    <dd>{{% md %}}The service that supports the dependent service.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
@@ -763,7 +753,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicedependencydependencydependentservice">Sequence[Service<wbr>Dependency<wbr>Dependency<wbr>Dependent<wbr>Service]</a></span>
     </dt>
-    <dd>{{% md %}}The service that id dependent on the supporting service.
+    <dd>{{% md %}}The service that dependents on the supporting service.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="supporting_services_python">
@@ -772,7 +762,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicedependencydependencysupportingservice">Sequence[Service<wbr>Dependency<wbr>Dependency<wbr>Supporting<wbr>Service]</a></span>
     </dt>
-    <dd>{{% md %}}The service that supports  the  dependent service.
+    <dd>{{% md %}}The service that supports the dependent service.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">

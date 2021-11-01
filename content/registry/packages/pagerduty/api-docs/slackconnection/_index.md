@@ -16,7 +16,7 @@ A [slack connection](https://developer.pagerduty.com/api-reference/reference/int
 
 **NOTES for using this resource:**
 * To first use this resource you will need to [map your PagerDuty account to a valid Slack Workspace](https://support.pagerduty.com/docs/slack-integration-guide#integration-walkthrough). *This can only be done through the PagerDuty UI.*
-* This resource requires a PagerDuty [user-level API key](https://support.pagerduty.com/docs/generating-api-keys#section-generating-a-personal-rest-api-key) set as the `PAGERDUTY_USER_TOKEN` environment variable.
+* This resource requires a PagerDuty [user-level API key](https://support.pagerduty.com/docs/generating-api-keys#section-generating-a-personal-rest-api-key). This can be set as the `user_token` on the provider tag or as the `PAGERDUTY_USER_TOKEN` environment variable.
 
 {{% examples %}}
 
@@ -51,6 +51,7 @@ class MyStack : Stack
             SourceType = "team_reference",
             WorkspaceId = "T02A123LV1A",
             ChannelId = "C02CABCDAC9",
+            NotificationType = "responder",
             Configs = 
             {
                 new Pagerduty.Inputs.SlackConnectionConfigArgs
@@ -93,7 +94,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-pagerduty/sdk/v2/go/pagerduty"
+	"github.com/pulumi/pulumi-pagerduty/sdk/v3/go/pagerduty"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -110,10 +111,11 @@ func main() {
 			return err
 		}
 		_, err = pagerduty.NewSlackConnection(ctx, "fooSlackConnection", &pagerduty.SlackConnectionArgs{
-			SourceId:    fooTeam.ID(),
-			SourceType:  pulumi.String("team_reference"),
-			WorkspaceId: pulumi.String("T02A123LV1A"),
-			ChannelId:   pulumi.String("C02CABCDAC9"),
+			SourceId:         fooTeam.ID(),
+			SourceType:       pulumi.String("team_reference"),
+			WorkspaceId:      pulumi.String("T02A123LV1A"),
+			ChannelId:        pulumi.String("C02CABCDAC9"),
+			NotificationType: pulumi.String("responder"),
 			Configs: pagerduty.SlackConnectionConfigArray{
 				&pagerduty.SlackConnectionConfigArgs{
 					Events: pulumi.StringArray{
@@ -162,6 +164,7 @@ foo_slack_connection = pagerduty.SlackConnection("fooSlackConnection",
     source_type="team_reference",
     workspace_id="T02A123LV1A",
     channel_id="C02CABCDAC9",
+    notification_type="responder",
     configs=[pagerduty.SlackConnectionConfigArgs(
         events=[
             "incident.triggered",
@@ -202,6 +205,7 @@ const fooSlackConnection = new pagerduty.SlackConnection("fooSlackConnection", {
     sourceType: "team_reference",
     workspaceId: "T02A123LV1A",
     channelId: "C02CABCDAC9",
+    notificationType: "responder",
     configs: [{
         events: [
             "incident.triggered",
