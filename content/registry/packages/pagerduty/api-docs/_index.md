@@ -30,6 +30,8 @@ A Pulumi package for creating and managing pagerduty cloud resources.
     <li><a href="serviceeventrule" title="ServiceEventRule"><span class="api-symbol api-symbol--resource"></span>ServiceEventRule</a></li>
     <li><a href="serviceintegration" title="ServiceIntegration"><span class="api-symbol api-symbol--resource"></span>ServiceIntegration</a></li>
     <li><a href="slackconnection" title="SlackConnection"><span class="api-symbol api-symbol--resource"></span>SlackConnection</a></li>
+    <li><a href="tag" title="Tag"><span class="api-symbol api-symbol--resource"></span>Tag</a></li>
+    <li><a href="tagassignment" title="TagAssignment"><span class="api-symbol api-symbol--resource"></span>TagAssignment</a></li>
     <li><a href="team" title="Team"><span class="api-symbol api-symbol--resource"></span>Team</a></li>
     <li><a href="teammembership" title="TeamMembership"><span class="api-symbol api-symbol--resource"></span>TeamMembership</a></li>
     <li><a href="user" title="User"><span class="api-symbol api-symbol--resource"></span>User</a></li>
@@ -47,6 +49,7 @@ A Pulumi package for creating and managing pagerduty cloud resources.
     <li><a href="getschedule" title="GetSchedule"><span class="api-symbol api-symbol--function"></span>GetSchedule</a></li>
     <li><a href="getservice" title="GetService"><span class="api-symbol api-symbol--function"></span>GetService</a></li>
     <li><a href="getserviceintegration" title="GetServiceIntegration"><span class="api-symbol api-symbol--function"></span>GetServiceIntegration</a></li>
+    <li><a href="gettag" title="GetTag"><span class="api-symbol api-symbol--function"></span>GetTag</a></li>
     <li><a href="getteam" title="GetTeam"><span class="api-symbol api-symbol--function"></span>GetTeam</a></li>
     <li><a href="getuser" title="GetUser"><span class="api-symbol api-symbol--function"></span>GetUser</a></li>
     <li><a href="getusercontactmethod" title="GetUserContactMethod"><span class="api-symbol api-symbol--function"></span>GetUserContactMethod</a></li>
@@ -62,6 +65,6 @@ A Pulumi package for creating and managing pagerduty cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`pagerduty` Terraform Provider](https://github.com/PagerDuty/terraform-provider-pagerduty).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.2.0</dd>
+	<dd>3.0.0</dd>
 </dl>
 

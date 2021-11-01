@@ -50,10 +50,10 @@ class MyStack : Stack
             UserId = me.Apply(me => me.Id),
             StartDelayInMinutes = 5,
             Urgency = "high",
-            ContactMethod = new Pagerduty.Inputs.UserNotificationRuleContactMethodArgs
+            ContactMethod = 
             {
-                Type = "push_notification_contact_method",
-                Id = phonePush.Apply(phonePush => phonePush.Id),
+                { "type", "push_notification_contact_method" },
+                { "id", phonePush.Apply(phonePush => phonePush.Id) },
             },
         });
     }
@@ -71,7 +71,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-pagerduty/sdk/v2/go/pagerduty"
+	"github.com/pulumi/pulumi-pagerduty/sdk/v3/go/pagerduty"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -95,9 +95,9 @@ func main() {
 			UserId:              pulumi.String(me.Id),
 			StartDelayInMinutes: pulumi.Int(5),
 			Urgency:             pulumi.String("high"),
-			ContactMethod: &pagerduty.UserNotificationRuleContactMethodArgs{
-				Type: pulumi.String("push_notification_contact_method"),
-				Id:   pulumi.String(phonePush.Id),
+			ContactMethod: pulumi.StringMap{
+				"type": pulumi.String("push_notification_contact_method"),
+				"id":   pulumi.String(phonePush.Id),
 			},
 		})
 		if err != nil {
@@ -126,10 +126,10 @@ low_urgency_sms = pagerduty.UserNotificationRule("lowUrgencySms",
     user_id=me.id,
     start_delay_in_minutes=5,
     urgency="high",
-    contact_method=pagerduty.UserNotificationRuleContactMethodArgs(
-        type="push_notification_contact_method",
-        id=phone_push.id,
-    ))
+    contact_method={
+        "type": "push_notification_contact_method",
+        "id": phone_push.id,
+    })
 ```
 
 
@@ -347,6 +347,51 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="address_csharp">
+<a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The "address" to deliver to: `email`, `phone number`, etc., depending on the type.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="blacklisted_csharp">
+<a href="#blacklisted_csharp" style="color: inherit; text-decoration: inherit;">Blacklisted</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, this phone has been blacklisted by PagerDuty and no messages will be sent to it. (Phone and SMS contact methods only.)
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="countrycode_csharp">
+<a href="#countrycode_csharp" style="color: inherit; text-decoration: inherit;">Country<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The 1-to-3 digit country calling code. (Phone and SMS contact methods only.)
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="devicetype_csharp">
+<a href="#devicetype_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Either `ios` or `android`, depending on the type of the device receiving notifications. (Push notification contact method only.)
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, this phone is capable of receiving SMS messages. (Phone and SMS contact methods only.)
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -363,6 +408,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The label (e.g., "Work", "Mobile", "Ashley's iPhone", etc.).
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="sendshortemail_csharp">
+<a href="#sendshortemail_csharp" style="color: inherit; text-decoration: inherit;">Send<wbr>Short<wbr>Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Send an abbreviated email message instead of the standard email output. (Email contact method only.)
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
@@ -386,6 +440,51 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="address_go">
+<a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The "address" to deliver to: `email`, `phone number`, etc., depending on the type.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="blacklisted_go">
+<a href="#blacklisted_go" style="color: inherit; text-decoration: inherit;">Blacklisted</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, this phone has been blacklisted by PagerDuty and no messages will be sent to it. (Phone and SMS contact methods only.)
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="countrycode_go">
+<a href="#countrycode_go" style="color: inherit; text-decoration: inherit;">Country<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The 1-to-3 digit country calling code. (Phone and SMS contact methods only.)
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="devicetype_go">
+<a href="#devicetype_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Either `ios` or `android`, depending on the type of the device receiving notifications. (Push notification contact method only.)
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, this phone is capable of receiving SMS messages. (Phone and SMS contact methods only.)
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -402,6 +501,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The label (e.g., "Work", "Mobile", "Ashley's iPhone", etc.).
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="sendshortemail_go">
+<a href="#sendshortemail_go" style="color: inherit; text-decoration: inherit;">Send<wbr>Short<wbr>Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Send an abbreviated email message instead of the standard email output. (Email contact method only.)
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
@@ -425,6 +533,51 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="address_nodejs">
+<a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The "address" to deliver to: `email`, `phone number`, etc., depending on the type.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="blacklisted_nodejs">
+<a href="#blacklisted_nodejs" style="color: inherit; text-decoration: inherit;">blacklisted</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If true, this phone has been blacklisted by PagerDuty and no messages will be sent to it. (Phone and SMS contact methods only.)
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="countrycode_nodejs">
+<a href="#countrycode_nodejs" style="color: inherit; text-decoration: inherit;">country<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The 1-to-3 digit country calling code. (Phone and SMS contact methods only.)
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="devicetype_nodejs">
+<a href="#devicetype_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Either `ios` or `android`, depending on the type of the device receiving notifications. (Push notification contact method only.)
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If true, this phone is capable of receiving SMS messages. (Phone and SMS contact methods only.)
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -441,6 +594,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The label (e.g., "Work", "Mobile", "Ashley's iPhone", etc.).
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="sendshortemail_nodejs">
+<a href="#sendshortemail_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>Short<wbr>Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Send an abbreviated email message instead of the standard email output. (Email contact method only.)
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
@@ -464,6 +626,51 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="address_python">
+<a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The "address" to deliver to: `email`, `phone number`, etc., depending on the type.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="blacklisted_python">
+<a href="#blacklisted_python" style="color: inherit; text-decoration: inherit;">blacklisted</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, this phone has been blacklisted by PagerDuty and no messages will be sent to it. (Phone and SMS contact methods only.)
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="country_code_python">
+<a href="#country_code_python" style="color: inherit; text-decoration: inherit;">country_<wbr>code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The 1-to-3 digit country calling code. (Phone and SMS contact methods only.)
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="device_type_python">
+<a href="#device_type_python" style="color: inherit; text-decoration: inherit;">device_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Either `ios` or `android`, depending on the type of the device receiving notifications. (Push notification contact method only.)
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, this phone is capable of receiving SMS messages. (Phone and SMS contact methods only.)
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -480,6 +687,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The label (e.g., "Work", "Mobile", "Ashley's iPhone", etc.).
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="send_short_email_python">
+<a href="#send_short_email_python" style="color: inherit; text-decoration: inherit;">send_<wbr>short_<wbr>email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Send an abbreviated email message instead of the standard email output. (Email contact method only.)
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
