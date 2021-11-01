@@ -97,7 +97,7 @@ In `__main__.py`, create a new bucket object by adding the following right after
 ```python
 bucketObject = s3.BucketObject(
     'index.html',
-    bucket=bucket,
+    bucket=bucket.id,
     source=pulumi.FileAsset('index.html')
 )
 ```
